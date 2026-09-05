@@ -1,0 +1,72 @@
+<div class="view">
+    <div class="view-header">
+        <h2>📊 15. Verjetnostni račun</h2>
+        <p>Klasična verjetnost, pogojna verjetnost in Bernoullijevo zaporedje</p>
+    </div>
+
+    <div class="card">
+        <h3>📖 Osnovni pojmi</h3>
+        <ul style="padding-left: 20px; color: var(--text-secondary);">
+            <li><strong>Poskus:</strong> Postopek z več možnimi izidi (npr. met kocke)</li>
+            <li><strong>Izid:</strong> En sam rezultat poskusa</li>
+            <li><strong>Dogodek:</strong> Množica izidov, ki nas zanimajo</li>
+            <li><strong>Prostor izidov (Ω):</strong> Množica vseh možnih izidov</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h3>📝 Osnovne formule</h3>
+        <div class="formula-grid">
+            <div class="formula-card">
+                <strong>Klasična verjetnost</strong><br>
+                <code>P(A) = |A|/|Ω|</code>
+            </div>
+            <div class="formula-card">
+                <strong>Nasprotni dogodek</strong><br>
+                <code>P(¬A) = 1 - P(A)</code>
+            </div>
+            <div class="formula-card">
+                <strong>Unija</strong><br>
+                <code>P(A∪B) = P(A)+P(B)-P(A∩B)</code>
+            </div>
+            <div class="formula-card">
+                <strong>Pogojna verjetnost</strong><br>
+                <code>P(A|B) = P(A∩B)/P(B)</code>
+            </div>
+            <div class="formula-card">
+                <strong>Neodvisni dogodki</strong><br>
+                <code>P(A∩B) = P(A)·P(B)</code>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h3>📊 Bernoullijevo zaporedje</h3>
+        <div class="formula-card">
+            <code>P(X = k) = C(n,k) · pᵏ · (1-p)ⁿ⁻ᵏ</code>
+        </div>
+        <ul style="margin-top: 8px; padding-left: 20px; color: var(--text-secondary);">
+            <li><strong>Pričakovana vrednost:</strong> E(X) = n·p</li>
+            <li><strong>Standardni odklon:</strong> σ = √(n·p·(1-p))</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h3>📝 Primeri</h3>
+        <div style="background: var(--bg-primary); padding: 16px; border-radius: var(--radius-sm);">
+            <p><strong>Primer 1:</strong> Vržemo dve kocki. Verjetnost vsote 7?</p>
+            <p>|Ω| = 36, ugodnih = 6 → P = 6/36 = 1/6</p>
+            <p style="margin-top: 8px;"><strong>Primer 2:</strong> Kovanec vržemo 5-krat. Verjetnost grba natanko 3-krat?</p>
+            <p>P(X=3) = C(5,3)·(1/2)³·(1/2)² = 10/32 = 5/16</p>
+            <p style="margin-top: 8px;"><strong>Primer 3:</strong> Totalna verjetnost</p>
+            <p>P(A) = Σ P(A|Bᵢ)·P(Bᵢ)</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <h3>📈 Bayesova formula</h3>
+        <div class="formula-card">
+            <code>P(Bₖ|A) = P(A|Bₖ)·P(Bₖ) / Σ P(A|Bᵢ)·P(Bᵢ)</code>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,56 @@
+<div class="view">
+    <div class="view-header">
+        <h2>🔀 11. Zaporedja in vrste</h2>
+        <p>Aritmetično in geometrijsko zaporedje</p>
+    </div>
+
+    <div class="card">
+        <h3>📖 Aritmetično zaporedje</h3>
+        <div class="formula-card">
+            <code>aₙ = a₁ + (n-1)d</code>
+            <br><br>
+            <code>Sₙ = n/2 · (a₁ + aₙ) = n/2 · (2a₁ + (n-1)d)</code>
+        </div>
+        <p style="margin-top: 8px; color: var(--text-secondary);">d = razlika, Sₙ = vsota prvih n členov</p>
+    </div>
+
+    <div class="card interactive-section">
+        <h3>🧮 Aritmetično zaporedje - kalkulator</h3>
+        <div class="input-group">
+            <label>a₁ =</label>
+            <input type="number" id="arithA1" value="2" step="any">
+            <label>d =</label>
+            <input type="number" id="arithD" value="3" step="any">
+            <label>n =</label>
+            <input type="number" id="arithN" value="5" min="1">
+            <button class="btn btn-primary" id="calcArithmetic">Izračunaj</button>
+        </div>
+        <div id="arithResult" class="result-box">Rezultati bodo prikazani tukaj.</div>
+    </div>
+
+    <div class="card">
+        <h3>📖 Geometrijsko zaporedje</h3>
+        <div class="formula-card">
+            <code>aₙ = a₁ · qⁿ⁻¹</code>
+            <br><br>
+            <code>Sₙ = a₁ · (qⁿ - 1) / (q - 1)</code>
+            <br><br>
+            <code>Neskončna vsota: S = a₁ / (1 - q), |q| &lt; 1</code>
+        </div>
+        <p style="margin-top: 8px; color: var(--text-secondary);">q = količnik</p>
+    </div>
+
+    <div class="card interactive-section">
+        <h3>🧮 Geometrijsko zaporedje - kalkulator</h3>
+        <div class="input-group">
+            <label>a₁ =</label>
+            <input type="number" id="geomA1" value="2" step="any">
+            <label>q =</label>
+            <input type="number" id="geomQ" value="2" step="any">
+            <label>n =</label>
+            <input type="number" id="geomN" value="5" min="1">
+            <button class="btn btn-primary" id="calcGeometric">Izračunaj</button>
+        </div>
+        <div id="geomResult" class="result-box">Rezultati bodo prikazani tukaj.</div>
+    </div>
+</div>

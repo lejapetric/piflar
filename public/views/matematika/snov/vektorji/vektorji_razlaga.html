@@ -1,0 +1,71 @@
+<div class="view">
+    <div class="view-header">
+        <h2>➡️ 9. Vektorji</h2>
+        <p>Operacije z vektorji, skalarni in vektorski produkt</p>
+    </div>
+
+    <div class="card">
+        <h3>📖 Osnovni pojmi</h3>
+        <ul style="padding-left: 20px; color: var(--text-secondary);">
+            <li><strong>Vektor:</strong> usmerjena daljica (velikost, smer, orientacija)</li>
+            <li><strong>Koordinate v ravnini:</strong> ā = (a₁, a₂)</li>
+            <li><strong>Koordinate v prostoru:</strong> ā = (a₁, a₂, a₃)</li>
+            <li><strong>AB = B - A</strong></li>
+            <li><strong>Dolžina (norma):</strong> |ā| = √(a₁² + a₂² + a₃²)</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h3>🔗 Operacije z vektorji</h3>
+        <div class="formula-grid">
+            <div class="formula-card">
+                <strong>Seštevanje</strong><br>
+                <code>ā ± b̄ = (a₁±b₁, a₂±b₂, a₃±b₃)</code>
+            </div>
+            <div class="formula-card">
+                <strong>Množenje s skalarjem</strong><br>
+                <code>k·ā = (k·a₁, k·a₂, k·a₃)</code>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h3>📐 Skalarni produkt</h3>
+        <div class="formula-card">
+            <code>ā · b̄ = |ā| · |b̄| · cos φ = a₁b₁ + a₂b₂ + a₃b₃</code>
+        </div>
+        <ul style="margin-top: 8px; padding-left: 20px; color: var(--text-secondary);">
+            <li><strong>Pravokotnost:</strong> ā · b̄ = 0 ⇔ ā ⊥ b̄</li>
+            <li><strong>Kot med vektorjema:</strong> cos φ = (ā·b̄)/(|ā|·|b̄|)</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h3>📐 Vektorski produkt (prostor)</h3>
+        <div class="formula-card">
+            <code>ā × b̄ = (a₂b₃ - a₃b₂, a₃b₁ - a₁b₃, a₁b₂ - a₂b₁)</code>
+        </div>
+        <ul style="margin-top: 8px; padding-left: 20px; color: var(--text-secondary);">
+            <li><strong>Ploščina paralelograma:</strong> |ā × b̄|</li>
+            <li><strong>Vzporednost:</strong> ā × b̄ = 0 ⇔ ā ∥ b̄</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h3>📦 Mešani produkt</h3>
+        <div class="formula-card">
+            <code>ā · (b̄ × c̄) = determinanta</code>
+        </div>
+        <p style="margin-top: 8px; color: var(--text-secondary);"><strong>Prostornina paralelepipeda:</strong> |ā · (b̄ × c̄)|</p>
+    </div>
+
+    <div class="card">
+        <h3>📝 Primeri</h3>
+        <div style="background: var(--bg-primary); padding: 16px; border-radius: var(--radius-sm);">
+            <p><strong>Primer 1:</strong> ā = (1,2,3), b̄ = (4,5,6)</p>
+            <p>ā × b̄ = (-3, 6, -3)</p>
+            <p style="margin-top: 8px;"><strong>Primer 2:</strong> ā = (1,0,2), b̄ = (2,1,0)</p>
+            <p>|ā × b̄| = √21 (ploščina paralelograma)</p>
+        </div>
+    </div>
+</div>

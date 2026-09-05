@@ -1,0 +1,80 @@
+<div class="view">
+    <div class="view-header">
+        <h2>🔢 3. Številske množice in kompleksna števila</h2>
+        <p>Hierarhija številskih množic in računanje s kompleksnimi števili</p>
+    </div>
+
+    <div class="card">
+        <h3>📖 Številske množice (hierarhija)</h3>
+        <div style="background: var(--bg-primary); padding: 16px; border-radius: var(--radius-sm); font-family: monospace; font-size: 16px; line-height: 2;">
+            ℕ ⊂ ℤ ⊂ ℚ ⊂ ℝ ⊂ ℂ
+        </div>
+        <ul style="margin-top: 12px; padding-left: 20px; color: var(--text-secondary);">
+            <li><strong>ℕ</strong> – Naravna števila: {1, 2, 3, 4, ...}</li>
+            <li><strong>ℤ</strong> – Cela števila: {..., -3, -2, -1, 0, 1, 2, 3, ...}</li>
+            <li><strong>ℚ</strong> – Racionalna števila: {p/q | p, q ∈ ℤ, q ≠ 0}</li>
+            <li><strong>ℝ</strong> – Realna števila (vsa števila na številski premici)</li>
+            <li><strong>ℂ</strong> – Kompleksna števila</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h3>📖 Kompleksna števila</h3>
+        <div class="formula-grid">
+            <div class="formula-card">
+                <strong>Imaginarna enota</strong><br>
+                <code>i² = -1</code>
+            </div>
+            <div class="formula-card">
+                <strong>Splošna oblika</strong><br>
+                <code>z = a + bi</code>
+                <p style="font-size: 14px; color: var(--text-secondary);">a = Re(z), b = Im(z)</p>
+            </div>
+            <div class="formula-card">
+                <strong>Konjugirano število</strong><br>
+                <code>z̄ = a - bi</code>
+            </div>
+            <div class="formula-card">
+                <strong>Absolutna vrednost</strong><br>
+                <code>|z| = √(a² + b²)</code>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h3>📝 Računske operacije</h3>
+        <div class="formula-grid">
+            <div class="formula-card">
+                <strong>Seštevanje</strong><br>
+                <code>(a+bi) ± (c+di) = (a±c) + (b±d)i</code>
+            </div>
+            <div class="formula-card">
+                <strong>Množenje</strong><br>
+                <code>(a+bi)(c+di) = (ac-bd) + (ad+bc)i</code>
+            </div>
+            <div class="formula-card">
+                <strong>Deljenje</strong><br>
+                <code>razširimo s konjugiranim imenovalcem</code>
+            </div>
+        </div>
+        <div style="margin-top: 12px; background: var(--bg-primary); padding: 12px; border-radius: var(--radius-sm);">
+            <strong>Primer deljenja:</strong><br>
+            <code>(3+2i)/(1-4i) · (1+4i)/(1+4i) = -5/17 + (14/17)i</code>
+        </div>
+    </div>
+
+    <div class="card">
+        <h3>🔄 Potence imaginarne enote</h3>
+        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; text-align: center;">
+            <div class="formula-card"><code>i¹ = i</code></div>
+            <div class="formula-card"><code>i² = -1</code></div>
+            <div class="formula-card"><code>i³ = -i</code></div>
+            <div class="formula-card"><code>i⁴ = 1</code></div>
+        </div>
+        <p style="margin-top: 12px; color: var(--text-secondary);">💡 Perioda 4: iⁿ = i^(n mod 4)</p>
+        <div style="margin-top: 8px; background: var(--bg-primary); padding: 12px; border-radius: var(--radius-sm);">
+            <strong>Primer:</strong> i²⁰²⁶ = ?<br>
+            2026 ÷ 4 = 506 ostanka 2 → i²⁰²⁶ = -1
+        </div>
+    </div>
+</div>

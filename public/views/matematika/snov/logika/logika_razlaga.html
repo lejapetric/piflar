@@ -1,0 +1,91 @@
+<div class="view">
+    <div class="view-header">
+        <h2>🧠 1. Logika</h2>
+        <p>Osnove logike, logični vezniki in resničnostne tabele</p>
+    </div>
+
+    <div class="card">
+        <h3>📖 Osnovni pojmi</h3>
+        <p><strong>Izjava</strong> je poved, za katero lahko rečemo, da je resnična (1, R) ali neresnična (0, N).</p>
+        <p style="margin-top: 8px;"><strong>Primer:</strong> "Danes sije sonce."</p>
+    </div>
+
+    <div class="card">
+        <h3>🔗 Logični vezniki</h3>
+        <div class="formula-grid">
+            <div class="formula-card">
+                <strong>NEGACIJA (NE, ¬)</strong><br>
+                <code>¬A</code>
+                <p style="margin-top: 4px; font-size: 14px; color: var(--text-secondary);">Obrne resničnost izjave.</p>
+                <table style="margin-top: 8px; width: 100%; font-size: 14px; border-collapse: collapse;">
+                    <tr><th style="text-align: left; padding: 4px;">A</th><th style="text-align: left; padding: 4px;">¬A</th></tr>
+                    <tr><td style="padding: 4px;">R</td><td style="padding: 4px;">N</td></tr>
+                    <tr><td style="padding: 4px;">N</td><td style="padding: 4px;">R</td></tr>
+                </table>
+            </div>
+
+            <div class="formula-card">
+                <strong>KONJUNKCIJA (IN, ∧)</strong><br>
+                <code>A ∧ B</code>
+                <p style="margin-top: 4px; font-size: 14px; color: var(--text-secondary);">Resnično le, ko sta obe izjavi resnični.</p>
+                <table style="margin-top: 8px; width: 100%; font-size: 14px; border-collapse: collapse;">
+                    <tr><th style="text-align: left; padding: 4px;">A</th><th style="text-align: left; padding: 4px;">B</th><th style="text-align: left; padding: 4px;">A∧B</th></tr>
+                    <tr><td style="padding: 4px;">R</td><td style="padding: 4px;">R</td><td style="padding: 4px;">R</td></tr>
+                    <tr><td style="padding: 4px;">R</td><td style="padding: 4px;">N</td><td style="padding: 4px;">N</td></tr>
+                    <tr><td style="padding: 4px;">N</td><td style="padding: 4px;">R</td><td style="padding: 4px;">N</td></tr>
+                    <tr><td style="padding: 4px;">N</td><td style="padding: 4px;">N</td><td style="padding: 4px;">N</td></tr>
+                </table>
+            </div>
+
+            <div class="formula-card">
+                <strong>DISJUNKCIJA (ALI, ∨)</strong><br>
+                <code>A ∨ B</code>
+                <p style="margin-top: 4px; font-size: 14px; color: var(--text-secondary);">Neresnično le, ko sta obe izjavi neresnični.</p>
+                <table style="margin-top: 8px; width: 100%; font-size: 14px; border-collapse: collapse;">
+                    <tr><th style="text-align: left; padding: 4px;">A</th><th style="text-align: left; padding: 4px;">B</th><th style="text-align: left; padding: 4px;">A∨B</th></tr>
+                    <tr><td style="padding: 4px;">R</td><td style="padding: 4px;">R</td><td style="padding: 4px;">R</td></tr>
+                    <tr><td style="padding: 4px;">R</td><td style="padding: 4px;">N</td><td style="padding: 4px;">R</td></tr>
+                    <tr><td style="padding: 4px;">N</td><td style="padding: 4px;">R</td><td style="padding: 4px;">R</td></tr>
+                    <tr><td style="padding: 4px;">N</td><td style="padding: 4px;">N</td><td style="padding: 4px;">N</td></tr>
+                </table>
+            </div>
+
+            <div class="formula-card">
+                <strong>IMPLIKACIJA (ČE..., POTEM..., ⇒)</strong><br>
+                <code>A ⇒ B</code>
+                <p style="margin-top: 4px; font-size: 14px; color: var(--text-secondary);">Neresnična le, ko je A resnična in B neresnična.</p>
+                <table style="margin-top: 8px; width: 100%; font-size: 14px; border-collapse: collapse;">
+                    <tr><th style="text-align: left; padding: 4px;">A</th><th style="text-align: left; padding: 4px;">B</th><th style="text-align: left; padding: 4px;">A⇒B</th></tr>
+                    <tr><td style="padding: 4px;">R</td><td style="padding: 4px;">R</td><td style="padding: 4px;">R</td></tr>
+                    <tr><td style="padding: 4px;">R</td><td style="padding: 4px;">N</td><td style="padding: 4px;">N</td></tr>
+                    <tr><td style="padding: 4px;">N</td><td style="padding: 4px;">R</td><td style="padding: 4px;">R</td></tr>
+                    <tr><td style="padding: 4px;">N</td><td style="padding: 4px;">N</td><td style="padding: 4px;">R</td></tr>
+                </table>
+            </div>
+
+            <div class="formula-card">
+                <strong>EKIVALENCA (TAKRAT, KO..., ⇔)</strong><br>
+                <code>A ⇔ B</code>
+                <p style="margin-top: 4px; font-size: 14px; color: var(--text-secondary);">Resnična, kadar imata obe izjavi enako vrednost.</p>
+                <table style="margin-top: 8px; width: 100%; font-size: 14px; border-collapse: collapse;">
+                    <tr><th style="text-align: left; padding: 4px;">A</th><th style="text-align: left; padding: 4px;">B</th><th style="text-align: left; padding: 4px;">A⇔B</th></tr>
+                    <tr><td style="padding: 4px;">R</td><td style="padding: 4px;">R</td><td style="padding: 4px;">R</td></tr>
+                    <tr><td style="padding: 4px;">R</td><td style="padding: 4px;">N</td><td style="padding: 4px;">N</td></tr>
+                    <tr><td style="padding: 4px;">N</td><td style="padding: 4px;">R</td><td style="padding: 4px;">N</td></tr>
+                    <tr><td style="padding: 4px;">N</td><td style="padding: 4px;">N</td><td style="padding: 4px;">R</td></tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h3>📝 De Morganova zakona</h3>
+        <div class="formula-card">
+            <code>¬(A ∧ B) = ¬A ∨ ¬B</code>
+        </div>
+        <div class="formula-card">
+            <code>¬(A ∨ B) = ¬A ∧ ¬B</code>
+        </div>
+        <p style="margin-top: 12px; color: var(--text-secondary);">💡 Negacija "IN" postane "ALI" in obratno.</p>
+    </div>
+</div>

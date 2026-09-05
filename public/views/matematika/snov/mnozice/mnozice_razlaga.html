@@ -1,0 +1,74 @@
+<div class="view">
+    <div class="view-header">
+        <h2>📊 2. Množice</h2>
+        <p>Osnovni pojmi, operacije z množicami in Vennovi diagrami</p>
+    </div>
+
+    <div class="card">
+        <h3>📖 Osnovni pojmi</h3>
+        <p><strong>Množica</strong> je zbirka dobro določenih, razločljivih objektov (elementov).</p>
+        <p style="margin-top: 8px;"><strong>Element:</strong> x ∈ A ali x ∉ A</p>
+        <p><strong>Prazna množica:</strong> ∅ ali {}</p>
+        <p><strong>Univerzalna množica:</strong> U</p>
+        <p><strong>Moč množice:</strong> |A| (število elementov)</p>
+    </div>
+
+    <div class="card">
+        <h3>🔗 Operacije z množicami</h3>
+        <div class="formula-grid">
+            <div class="formula-card">
+                <strong>PRESEK (∩)</strong><br>
+                <code>A ∩ B = {x | x ∈ A in x ∈ B}</code>
+                <p style="margin-top: 4px; font-size: 14px; color: var(--text-secondary);">Skupni elementi</p>
+            </div>
+            <div class="formula-card">
+                <strong>UNIJA (∪)</strong><br>
+                <code>A ∪ B = {x | x ∈ A ali x ∈ B}</code>
+                <p style="margin-top: 4px; font-size: 14px; color: var(--text-secondary);">Vsi elementi iz obeh množic</p>
+            </div>
+            <div class="formula-card">
+                <strong>RAZLIKA (\)</strong><br>
+                <code>A \ B = {x | x ∈ A in x ∉ B}</code>
+                <p style="margin-top: 4px; font-size: 14px; color: var(--text-secondary);">Elementi v A, ki niso v B</p>
+            </div>
+            <div class="formula-card">
+                <strong>KOMPLEMENT (^c)</strong><br>
+                <code>A^c = U \ A = {x ∈ U | x ∉ A}</code>
+                <p style="margin-top: 4px; font-size: 14px; color: var(--text-secondary);">Vsi elementi razen tistih v A</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h3>📝 Pomembne zakonitosti</h3>
+        <div class="formula-grid">
+            <div class="formula-card">
+                <strong>De Morganova zakona</strong><br>
+                <code>(A ∩ B)^c = A^c ∪ B^c</code><br>
+                <code>(A ∪ B)^c = A^c ∩ B^c</code>
+            </div>
+            <div class="formula-card">
+                <strong>Distributivnost</strong><br>
+                <code>A ∩ (B ∪ C) = (A ∩ B) ∪ (A ∩ C)</code><br>
+                <code>A ∪ (B ∩ C) = (A ∪ B) ∩ (A ∪ C)</code>
+            </div>
+            <div class="formula-card">
+                <strong>Število elementov</strong><br>
+                <code>|A ∪ B| = |A| + |B| - |A ∩ B|</code>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h3>📊 Vennov diagram - primer</h3>
+        <div style="background: var(--bg-primary); padding: 16px; border-radius: var(--radius-sm);">
+            <p><strong>Primer:</strong> U = {1,2,3,4,5,6,7}, A = {1,2,3,4}, B = {3,4,5,6}</p>
+            <ul style="margin-top: 8px; padding-left: 20px; color: var(--text-secondary);">
+                <li>A ∩ B = {3,4}</li>
+                <li>A ∪ B = {1,2,3,4,5,6}</li>
+                <li>A \ B = {1,2}</li>
+                <li>A^c = {5,6,7}</li>
+            </ul>
+        </div>
+    </div>
+</div>

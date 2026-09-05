@@ -1,0 +1,89 @@
+<div class="view">
+    <div class="view-header">
+        <h2>📈 6. Funkcije</h2>
+        <p>Linearne, kvadratne, kotne, eksponentne in logaritemske funkcije</p>
+    </div>
+
+    <div class="card">
+        <h3>📖 Splošne lastnosti funkcij</h3>
+        <ul style="padding-left: 20px; color: var(--text-secondary);">
+            <li><strong>Definicijsko območje (D_f)</strong> - množica dovoljenih vrednosti x</li>
+            <li><strong>Zaloga vrednosti (Z_f)</strong> - množica vrednosti, ki jih funkcija zavzame</li>
+            <li><strong>Ničle:</strong> f(x) = 0</li>
+            <li><strong>Presečišče z osjo y:</strong> f(0)</li>
+            <li><strong>Soda funkcija:</strong> f(-x) = f(x) (simetrična glede na os y)</li>
+            <li><strong>Liha funkcija:</strong> f(-x) = -f(x) (simetrična glede na izhodišče)</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h3>📈 Linearna funkcija</h3>
+        <div class="formula-card">
+            <code>f(x) = kx + n</code>
+        </div>
+        <ul style="margin-top: 8px; padding-left: 20px; color: var(--text-secondary);">
+            <li>k = smerni koeficient (naklon)</li>
+            <li>n = začetna vrednost (presečišče z osjo y)</li>
+            <li>Vzporedni premici: k₁ = k₂</li>
+            <li>Pravokotni premici: k₁ · k₂ = -1</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h3>📈 Kvadratna funkcija</h3>
+        <div class="formula-card">
+            <code>f(x) = ax² + bx + c (a ≠ 0)</code>
+        </div>
+        <div class="formula-card">
+            <strong>Temenska oblika:</strong><br>
+            <code>f(x) = a(x - p)² + q, T(p, q)</code><br>
+            <code>p = -b/(2a), q = c - b²/(4a)</code>
+        </div>
+        <div class="formula-card">
+            <strong>Ničli:</strong><br>
+            <code>x₁,₂ = (-b ± √D)/(2a), D = b² - 4ac</code>
+        </div>
+    </div>
+
+    <div class="card">
+        <h3>📐 Kotne funkcije</h3>
+        <div class="formula-grid">
+            <div class="formula-card">
+                <strong>Osnovne zveze</strong><br>
+                <code>sin²x + cos²x = 1</code><br>
+                <code>tan x = sin x / cos x</code>
+            </div>
+            <div class="formula-card">
+                <strong>Adicijski formuli</strong><br>
+                <code>sin(x+y) = sin x cos y + cos x sin y</code><br>
+                <code>cos(x+y) = cos x cos y - sin x sin y</code>
+            </div>
+            <div class="formula-card">
+                <strong>Dvojni kot</strong><br>
+                <code>sin 2x = 2 sin x cos x</code><br>
+                <code>cos 2x = cos²x - sin²x</code>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h3>📈 Eksponentna in logaritemska funkcija</h3>
+        <div class="formula-grid">
+            <div class="formula-card">
+                <strong>Eksponentna</strong><br>
+                <code>f(x) = aˣ (a > 0, a ≠ 1)</code>
+                <p style="font-size: 14px; color: var(--text-secondary);">a > 1: narašča, 0 < a < 1: pada</p>
+            </div>
+            <div class="formula-card">
+                <strong>Logaritemska</strong><br>
+                <code>f(x) = logₐ x (a > 0, a ≠ 1, x > 0)</code>
+            </div>
+        </div>
+        <div style="margin-top: 12px; background: var(--bg-primary); padding: 12px; border-radius: var(--radius-sm);">
+            <strong>Lastnosti logaritmov:</strong><br>
+            <code>logₐ(x·y) = logₐ x + logₐ y</code><br>
+            <code>logₐ(x/y) = logₐ x - logₐ y</code><br>
+            <code>logₐ(xⁿ) = n · logₐ x</code>
+        </div>
+    </div>
+</div>

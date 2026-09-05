@@ -1,0 +1,75 @@
+<div class="view">
+    <div class="view-header">
+        <h2>📍 10. Pravokotni koordinatni sistem</h2>
+        <p>Točke, premice in ravnine v 2D in 3D</p>
+    </div>
+
+    <div class="card">
+        <h3>📖 2D - Ravnina</h3>
+        <div class="formula-grid">
+            <div class="formula-card">
+                <strong>Razdalja</strong><br>
+                <code>d(A,B) = √((x₂-x₁)² + (y₂-y₁)²)</code>
+            </div>
+            <div class="formula-card">
+                <strong>Razpolovišče</strong><br>
+                <code>S((x₁+x₂)/2, (y₁+y₂)/2)</code>
+            </div>
+            <div class="formula-card">
+                <strong>Težišče trikotnika</strong><br>
+                <code>T((x₁+x₂+x₃)/3, (y₁+y₂+y₃)/3)</code>
+            </div>
+            <div class="formula-card">
+                <strong>Premica</strong><br>
+                <code>y = kx + n</code><br>
+                <code>k = (y₂-y₁)/(x₂-x₁)</code>
+            </div>
+            <div class="formula-card">
+                <strong>Razdalja točke do premice</strong><br>
+                <code>d(T,p) = |ax₀+by₀+c|/√(a²+b²)</code>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h3>📖 3D - Prostor</h3>
+        <div class="formula-grid">
+            <div class="formula-card">
+                <strong>Razdalja</strong><br>
+                <code>d(A,B) = √((x₂-x₁)² + (y₂-y₁)² + (z₂-z₁)²)</code>
+            </div>
+            <div class="formula-card">
+                <strong>Premica (parametrično)</strong><br>
+                <code>(x,y,z) = (x₀,y₀,z₀) + t(a,b,c)</code>
+            </div>
+            <div class="formula-card">
+                <strong>Ravnina</strong><br>
+                <code>ax + by + cz + d = 0</code>
+            </div>
+            <div class="formula-card">
+                <strong>Razdalja točke do ravnine</strong><br>
+                <code>d(T,π) = |ax₀+by₀+cz₀+d|/√(a²+b²+c²)</code>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h3>📝 Primeri</h3>
+        <div style="background: var(--bg-primary); padding: 16px; border-radius: var(--radius-sm);">
+            <p><strong>Primer 1 (2D):</strong> A(1,2), B(4,6)</p>
+            <p>d = √((4-1)² + (6-2)²) = 5</p>
+            <p>S = ((1+4)/2, (2+6)/2) = (2.5, 4)</p>
+            <p style="margin-top: 8px;"><strong>Primer 2 (3D):</strong> A(1,2,3), B(4,6,7)</p>
+            <p>d = √(9 + 16 + 16) = √41</p>
+        </div>
+    </div>
+
+    <div class="card">
+        <h3>📊 Medsebojne lege premic</h3>
+        <ul style="padding-left: 20px; color: var(--text-secondary);">
+            <li><strong>Vzporedni:</strong> k₁ = k₂</li>
+            <li><strong>Pravokotni:</strong> k₁ · k₂ = -1</li>
+            <li><strong>Presečišče:</strong> rešitev sistema dveh enačb</li>
+        </ul>
+    </div>
+</div>

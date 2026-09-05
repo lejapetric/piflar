@@ -1,0 +1,109 @@
+<div class="view">
+    <div class="view-header">
+        <h2>📐 7. Geometrija</h2>
+        <p>Geometrija v ravnini in prostoru</p>
+    </div>
+
+    <div class="card">
+        <h3>📖 Pravokotni trikotnik</h3>
+        <div class="formula-grid">
+            <div class="formula-card">
+                <strong>Pitagorov izrek</strong><br>
+                <code>a² + b² = c²</code>
+            </div>
+            <div class="formula-card">
+                <strong>Ploščina</strong><br>
+                <code>S = ab/2</code>
+            </div>
+            <div class="formula-card">
+                <strong>Evklidova izreka</strong><br>
+                <code>a² = c·p, b² = c·q, v² = p·q</code>
+            </div>
+        </div>
+    </div>
+
+    <div class="card interactive-section">
+        <h3>🧮 Pitagorov izrek</h3>
+        <div class="input-group">
+            <label>a =</label>
+            <input type="number" id="pythA" value="3" step="any" min="0">
+            <label>b =</label>
+            <input type="number" id="pythB" value="4" step="any" min="0">
+            <button class="btn btn-primary" id="calcPythagorean">Izračunaj c</button>
+        </div>
+        <div id="pythResult" class="result-box">Rezultat bo prikazan tukaj.</div>
+    </div>
+
+    <div class="card">
+        <h3>📖 Splošni trikotnik</h3>
+        <div class="formula-grid">
+            <div class="formula-card">
+                <strong>Sinusni izrek</strong><br>
+                <code>a/sin α = b/sin β = c/sin γ = 2R</code>
+            </div>
+            <div class="formula-card">
+                <strong>Kosinusni izrek</strong><br>
+                <code>a² = b² + c² - 2bc·cos α</code>
+            </div>
+            <div class="formula-card">
+                <strong>Heronova formula</strong><br>
+                <code>S = √(s(s-a)(s-b)(s-c))</code>
+                <p style="font-size: 14px; color: var(--text-secondary);">s = (a+b+c)/2</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h3>📖 Krog in krožni deli</h3>
+        <div class="formula-grid">
+            <div class="formula-card">
+                <strong>Ploščina kroga</strong><br>
+                <code>S = πr²</code>
+            </div>
+            <div class="formula-card">
+                <strong>Obseg kroga</strong><br>
+                <code>O = 2πr</code>
+            </div>
+            <div class="formula-card">
+                <strong>Krožni izsek</strong><br>
+                <code>S = πr²α/360°</code>
+            </div>
+        </div>
+    </div>
+
+    <div class="card interactive-section">
+        <h3>📍 Razdalja med točkama</h3>
+        <div class="input-group">
+            <label>Točka 1:</label>
+            <input type="number" id="distX1" value="1" step="any" placeholder="x₁">
+            <input type="number" id="distY1" value="2" step="any" placeholder="y₁">
+            <label>Točka 2:</label>
+            <input type="number" id="distX2" value="4" step="any" placeholder="x₂">
+            <input type="number" id="distY2" value="6" step="any" placeholder="y₂">
+            <button class="btn btn-primary" id="calcDistance">Izračunaj</button>
+        </div>
+        <div id="distResult" class="result-box">Rezultat bo prikazan tukaj.</div>
+    </div>
+
+    <div class="card">
+        <h3>📦 Telesa v prostoru</h3>
+        <div class="formula-grid">
+            <div class="formula-card">
+                <strong>Kocka</strong><br>
+                <code>V = a³, P = 6a²</code>
+            </div>
+            <div class="formula-card">
+                <strong>Valj</strong><br>
+                <code>V = πr²v, P = 2πr² + 2πrv</code>
+            </div>
+            <div class="formula-card">
+                <strong>Stožec</strong><br>
+                <code>V = (1/3)πr²v, P = πr² + πrs</code>
+            </div>
+            <div class="formula-card">
+                <strong>Krogla</strong><br>
+                <code>V = (4/3)πr³, P = 4πr²</code>
+            </div>
+        </div>
+    </div>
+</div>

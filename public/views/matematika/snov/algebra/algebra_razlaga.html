@@ -1,0 +1,62 @@
+<div class="view">
+    <div class="view-header">
+        <h2>✏️ 4. Algebra</h2>
+        <p>Algebrski izrazi, enačbe in neenačbe</p>
+    </div>
+
+    <div class="card">
+        <h3>📖 Formule za okrajšano množenje</h3>
+        <div class="formula-grid">
+            <div class="formula-card"><code>(a + b)² = a² + 2ab + b²</code></div>
+            <div class="formula-card"><code>(a - b)² = a² - 2ab + b²</code></div>
+            <div class="formula-card"><code>a² - b² = (a - b)(a + b)</code></div>
+            <div class="formula-card"><code>(a + b)³ = a³ + 3a²b + 3ab² + b³</code></div>
+            <div class="formula-card"><code>(a - b)³ = a³ - 3a²b + 3ab² - b³</code></div>
+            <div class="formula-card"><code>a³ + b³ = (a + b)(a² - ab + b²)</code></div>
+            <div class="formula-card"><code>a³ - b³ = (a - b)(a² + ab + b²)</code></div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h3>📊 Kvadratna enačba</h3>
+        <div class="formula-card">
+            <code>ax² + bx + c = 0</code>
+            <br><br>
+            <code>x₁,₂ = (-b ± √(b² - 4ac)) / 2a</code>
+        </div>
+        <p style="margin-top: 8px; color: var(--text-secondary);">Diskriminanta: D = b² - 4ac</p>
+        <ul style="margin-top: 8px; padding-left: 20px; color: var(--text-secondary);">
+            <li>D &gt; 0 → dve realni rešitvi</li>
+            <li>D = 0 → ena dvojna rešitev</li>
+            <li>D &lt; 0 → ni realnih rešitev</li>
+        </ul>
+    </div>
+
+    <div class="card interactive-section">
+        <h3>🧮 Kalkulator kvadratne enačbe</h3>
+        <div class="input-group">
+            <label>a =</label>
+            <input type="number" id="quadA" value="1" step="any">
+            <label>b =</label>
+            <input type="number" id="quadB" value="-5" step="any">
+            <label>c =</label>
+            <input type="number" id="quadC" value="6" step="any">
+            <button class="btn btn-primary" id="solveQuadratic">Reši</button>
+        </div>
+        <div id="quadResult" class="result-box">Rešitve bodo prikazane tukaj.</div>
+    </div>
+
+    <div class="card">
+        <h3>📈 Linearne in kvadratne neenačbe</h3>
+        <div class="formula-card">
+            <strong>Linearna neenačba:</strong>
+            <code>ax + b &gt; 0</code>
+            <p style="margin-top: 4px; font-size: 14px; color: var(--text-secondary);">Ko množimo/delimo z negativnim številom, se znak obrne.</p>
+        </div>
+        <div class="formula-card">
+            <strong>Kvadratna neenačba:</strong>
+            <code>x² - 5x + 6 &gt; 0</code>
+            <p style="margin-top: 4px; font-size: 14px; color: var(--text-secondary);">Rešitev: x ∈ (-∞, 2) ∪ (3, ∞)</p>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,96 @@
+<div class="view">
+    <div class="view-header">
+        <h2>📉 16. Statistika</h2>
+        <p>Srednje vrednosti, razpršenost in normalna porazdelitev</p>
+    </div>
+
+    <div class="card">
+        <h3>📊 Srednje vrednosti</h3>
+        <div class="formula-grid">
+            <div class="formula-card">
+                <strong>Aritmetična sredina</strong><br>
+                <code>x̄ = (1/n)Σxᵢ</code>
+            </div>
+            <div class="formula-card">
+                <strong>Mediana</strong><br>
+                <code>x̃ = srednja vrednost v urejenem nizu</code>
+            </div>
+            <div class="formula-card">
+                <strong>Modus</strong><br>
+                <code>M₀ = najpogostejša vrednost</code>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h3>📊 Meritve razpršenosti</h3>
+        <div class="formula-grid">
+            <div class="formula-card">
+                <strong>Varianca</strong><br>
+                <code>σ² = (1/n)Σ(xᵢ - x̄)²</code>
+            </div>
+            <div class="formula-card">
+                <strong>Standardni odklon</strong><br>
+                <code>σ = √σ²</code>
+            </div>
+            <div class="formula-card">
+                <strong>Koeficient variacije</strong><br>
+                <code>CV = (σ/x̄)·100%</code>
+            </div>
+            <div class="formula-card">
+                <strong>Rang</strong><br>
+                <code>R = x_max - x_min</code>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h3>📈 Normalna porazdelitev</h3>
+        <div class="formula-card">
+            <strong>Standardizacija</strong><br>
+            <code>z = (x - x̄)/σ</code>
+        </div>
+        <ul style="margin-top: 8px; padding-left: 20px; color: var(--text-secondary);">
+            <li>68% podatkov v x̄ ± σ</li>
+            <li>95% podatkov v x̄ ± 2σ</li>
+            <li>99.7% podatkov v x̄ ± 3σ</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h3>📊 Kvartili in boks-plot</h3>
+        <ul style="padding-left: 20px; color: var(--text-secondary);">
+            <li><strong>Q₁</strong> - 25. percentil</li>
+            <li><strong>Q₂</strong> - 50. percentil (mediana)</li>
+            <li><strong>Q₃</strong> - 75. percentil</li>
+            <li><strong>IQR</strong> = Q₃ - Q₁</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h3>📈 Regresija in korelacija</h3>
+        <div class="formula-grid">
+            <div class="formula-card">
+                <strong>Korelacijski koeficient</strong><br>
+                <code>r = Σ(xᵢ-x̄)(yᵢ-ȳ) / √(Σ(xᵢ-x̄)²·Σ(yᵢ-ȳ)²)</code>
+            </div>
+            <div class="formula-card">
+                <strong>Regresijska premica</strong><br>
+                <code>y = kx + n</code><br>
+                <code>k = Σ(xᵢ-x̄)(yᵢ-ȳ) / Σ(xᵢ-x̄)²</code><br>
+                <code>n = ȳ - k·x̄</code>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <h3>📝 Primer</h3>
+        <div style="background: var(--bg-primary); padding: 16px; border-radius: var(--radius-sm);">
+            <p><strong>Podatki:</strong> 3, 7, 5, 9, 7, 4, 7</p>
+            <p><strong>Aritmetična sredina:</strong> x̄ = 42/7 = 6</p>
+            <p><strong>Mediana:</strong> 3,4,5,7,7,7,9 → x̃ = 7</p>
+            <p><strong>Modus:</strong> M₀ = 7 (pojavi se 3-krat)</p>
+            <p><strong>Standardni odklon:</strong> σ ≈ 1.93</p>
+        </div>
+    </div>
+</div>
