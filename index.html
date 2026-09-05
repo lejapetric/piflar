@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Piflar.si</title>
+    <title>Piflar.si - Matematika na Maturi</title>
     <meta name="description" content="Piflar.si - interaktivna učna aplikacija za pripravo na maturo iz matematike. 16 poglavij, vaje, izračuni in nasveti.">
     <link rel="stylesheet" href="public/style/style.css">
 </head>
@@ -11,14 +11,14 @@
     <!-- Header -->
     <div id="header"></div>
 
-    <!-- Glavna vsebina z sidebarjem -->
+    <!-- Glavna vsebina -->
     <div id="mainContent" class="main-content">
-        <div style="display: flex; gap: 24px; max-width: 1400px; margin: 0 auto; padding: 24px;">
-            <!-- Sidebar -->
-            <div id="sidebar"></div>
+        <!-- Sidebar (JavaScript ga bo napolnil) -->
+        <div id="sidebar"></div>
 
-            <!-- Glavna vsebina -->
-            <div class="view" style="flex: 1;">
+        <!-- Glavna vsebina -->
+        <div class="view-container" style="max-width: 1400px; margin: 0 auto; padding: 24px;">
+            <div class="view">
                 <div class="view-header">
                     <h2>Piflar.si</h2>
                     <p style="font-size: 1.3rem; font-weight: 300;">Interaktivna učna platforma za pripravo na maturo iz matematike</p>
@@ -67,19 +67,19 @@
                 <div class="card">
                     <h3>🚀 Hitri začetki</h3>
                     <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-top: 12px;">
-                        <a href="#" data-view="algebra" class="quick-link" style="display: block; padding: 12px; background: var(--bg-primary); border-radius: var(--radius-sm); text-decoration: none; color: var(--text-primary); border: 1px solid var(--border-color);">
+                        <a href="#" data-view="algebra" class="quick-link">
                             <strong>✏️ Algebra</strong><br>
                             <small style="color: var(--text-secondary);">Kvadratne enačbe in formule</small>
                         </a>
-                        <a href="#" data-view="geometry" class="quick-link" style="display: block; padding: 12px; background: var(--bg-primary); border-radius: var(--radius-sm); text-decoration: none; color: var(--text-primary); border: 1px solid var(--border-color);">
+                        <a href="#" data-view="geometry" class="quick-link">
                             <strong>📐 Geometrija</strong><br>
                             <small style="color: var(--text-secondary);">Pitagorov izrek in razdalje</small>
                         </a>
-                        <a href="#" data-view="sequences" class="quick-link" style="display: block; padding: 12px; background: var(--bg-primary); border-radius: var(--radius-sm); text-decoration: none; color: var(--text-primary); border: 1px solid var(--border-color);">
+                        <a href="#" data-view="sequences" class="quick-link">
                             <strong>🔀 Zaporedja</strong><br>
                             <small style="color: var(--text-secondary);">Aritmetična in geometrijska</small>
                         </a>
-                        <a href="#" data-view="combinatorics" class="quick-link" style="display: block; padding: 12px; background: var(--bg-primary); border-radius: var(--radius-sm); text-decoration: none; color: var(--text-primary); border: 1px solid var(--border-color);">
+                        <a href="#" data-view="combinatorics" class="quick-link">
                             <strong>🎲 Kombinatorika</strong><br>
                             <small style="color: var(--text-secondary);">Faktoriale in kombinacije</small>
                         </a>

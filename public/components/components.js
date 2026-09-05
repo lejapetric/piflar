@@ -9,14 +9,18 @@ document.addEventListener('DOMContentLoaded', function() {
         const path = window.location.pathname;
         console.log('🔍 Analiziram pot:', path);
         
-        if (path.includes('/views/matematika/snov/')) {
-            return '../../../';
+        // Za korensko stran (/)
+        if (path === '/' || path === '/index.html') {
+            return 'public/';
+        }
+        else if (path.includes('/views/matematika/snov/')) {
+            return '../../../public/';
         }
         else if (path.includes('/views/matematika/')) {
-            return '../../';
+            return '../../public/';
         }
         else if (path.includes('/views/')) {
-            return '../';
+            return '../public/';
         }
         else if (path.includes('/public/')) {
             return '';
@@ -42,31 +46,21 @@ document.addEventListener('DOMContentLoaded', function() {
             })
             .then(data => {
                 console.log(`✅ ${id} naložen, dolžina: ${data.length} znakov`);
+                console.log(`📄 Vsebina ${id}:`, data.substring(0, 200) + '...');
+                
                 const element = document.getElementById(id);
                 if (element) {
                     element.innerHTML = data;
+                    console.log(`✅ ${id} vstavljen v element`);
                     
                     if (id === 'sidebar') {
                         // Sidebar je privzeto skrit
                         element.style.display = 'none';
                         element.style.transform = 'translateX(-100%)';
-                        setTimeout(() => {
-                            initSidebarControls();
-                            initSidebarNavigation();
-                        }, 50);
-                    }
-                    if (id === 'header') {
-                        setTimeout(() => {
-                            initHeaderControls();
-                        }, 50);
-                    }
-                    if (id === 'footer') {
-                        setTimeout(() => {
-                            initFooterLinks();
-                        }, 50);
+                        console.log('📌 Sidebar nastavljen na skrit');
                     }
                 } else {
-                    console.error(`❌ Element z id "${id}" ne obstaja`);
+                    console.error(`❌ Element z id "${id}" ne obstaja v DOM`);
                 }
                 return true;
             })
@@ -80,13 +74,13 @@ document.addEventListener('DOMContentLoaded', function() {
             });
     }
 
-    // ===== INICIALIZACIJA HEADER KONTROL =====
-    function initHeaderControls() {
-        console.log('🔄 Inicializiram header kontrole');
+    // ===== SIDEBAR KONTROLE =====
+    function initSidebarControls() {
+        console.log('🔄 Inicializiram sidebar kontrole');
         
+        // ---------- GUMB ZA ODPIRANJE ----------
         const openBtn = document.getElementById('openSidebar');
         if (openBtn) {
-            console.log('✅ Gumb za odpiranje najden');
             const newOpenBtn = openBtn.cloneNode(true);
             openBtn.parentNode.replaceChild(newOpenBtn, openBtn);
             
@@ -96,34 +90,117 @@ document.addEventListener('DOMContentLoaded', function() {
                 console.log('🔄 Klik na openSidebar - odpiranje sidebarja');
                 openSidebar();
             });
+            console.log('✅ Gumb za odpiranje nastavljen');
         } else {
             console.warn('⚠️ Gumb #openSidebar ni najden');
         }
+
+        // ---------- GUMB ZA ZAPIRANJE ----------
+        const closeBtn = document.getElementById('closeSidebar');
+        if (closeBtn) {
+            const newCloseBtn = closeBtn.cloneNode(true);
+            closeBtn.parentNode.replaceChild(newCloseBtn, closeBtn);
+            
+            newCloseBtn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                e.preventDefault();
+                console.log('🔄 Klik na closeSidebar - zapiranje sidebarja');
+                closeSidebar();
+            });
+            console.log('✅ Gumb za zapiranje nastavljen');
+        } else {
+            console.warn('⚠️ Gumb #closeSidebar ni najden');
+        }
+
+        // ---------- KLIK ZUNAJ SIDEBARJA ----------
+        document.removeEventListener('click', window._sidebarOutsideClick);
+        window._sidebarOutsideClick = function(e) {
+            const sidebar = document.getElementById('sidebar');
+            const openBtn = document.getElementById('openSidebar');
+            
+            if (!sidebar || !sidebar.classList.contains('open')) return;
+            
+            const isSidebar = sidebar.contains(e.target);
+            const isOpenBtn = openBtn && openBtn.contains(e.target);
+            const isCloseBtn = document.getElementById('closeSidebar') && document.getElementById('closeSidebar').contains(e.target);
+            
+            if (!isSidebar && !isOpenBtn && !isCloseBtn) {
+                console.log('🔄 Klik zunaj sidebarja - zapiranje');
+                closeSidebar();
+            }
+        };
+        document.addEventListener('click', window._sidebarOutsideClick);
     }
 
-    // ===== INICIALIZACIJA FOOTER POVEZAV =====
-    function initFooterLinks() {
-        console.log('🔄 Inicializiram footer povezave');
-        document.querySelectorAll('.footer-section a[data-view]').forEach(link => {
-            const newLink = link.cloneNode(true);
-            link.parentNode.replaceChild(newLink, link);
+    // ===== ODPIRANJE/ZAPIRANJE SIDEBAR =====
+    function openSidebar() {
+        console.log('🔄 Odpiram sidebar');
+        const sidebar = document.getElementById('sidebar');
+        const mainContent = document.getElementById('mainContent');
+        
+        if (sidebar) {
+            if (sidebar.classList.contains('open')) {
+                console.log('⚠️ Sidebar je že odprt');
+                return;
+            }
             
-            newLink.addEventListener('click', function(e) {
-                e.preventDefault();
-                const view = this.dataset.view;
-                if (view) {
-                    navigateTo(view);
-                    closeSidebar();
-                }
+            // Najprej nastavimo display block
+            sidebar.style.display = 'block';
+            sidebar.style.transform = 'translateX(-100%)';
+            
+            // Počakamo na naslednji frame
+            requestAnimationFrame(() => {
+                sidebar.classList.add('open');
+                console.log('✅ Sidebar dobil class "open"');
             });
-        });
+            
+            // Dodamo overlay
+            const overlay = document.getElementById('overlay');
+            if (overlay) {
+                overlay.classList.add('visible');
+            }
+            
+            if (mainContent && window.innerWidth > 768) {
+                mainContent.classList.add('shifted');
+            }
+        } else {
+            console.error('❌ Sidebar element ne obstaja');
+        }
+    }
+
+    function closeSidebar() {
+        console.log('🔄 Zapiram sidebar');
+        const sidebar = document.getElementById('sidebar');
+        const mainContent = document.getElementById('mainContent');
+        
+        if (sidebar) {
+            if (!sidebar.classList.contains('open')) {
+                console.log('⚠️ Sidebar je že zaprt');
+                return;
+            }
+            
+            sidebar.classList.remove('open');
+            
+            // Odstranimo overlay
+            const overlay = document.getElementById('overlay');
+            if (overlay) {
+                overlay.classList.remove('visible');
+            }
+            
+            setTimeout(() => {
+                sidebar.style.display = 'none';
+                sidebar.style.transform = 'translateX(-100%)';
+                console.log('✅ Sidebar skrit');
+            }, 350);
+        }
+        if (mainContent) mainContent.classList.remove('shifted');
     }
 
     // ===== INICIALIZACIJA SIDEBAR NAVIGACIJE =====
     function initSidebarNavigation() {
         console.log('🔄 Inicializiram sidebar navigacijo');
         const navLinks = document.querySelectorAll('.sidebar-nav a[data-view]');
-        console.log(`📊 Najdeno ${navLinks.length} povezav v sidebarju`);
+        console.log(`Najdeno ${navLinks.length} povezav v sidebarju`);
         
         navLinks.forEach(link => {
             const newLink = link.cloneNode(true);
@@ -146,91 +223,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
         });
-    }
-
-    // ===== SIDEBAR KONTROLE =====
-    function initSidebarControls() {
-        console.log('🔄 Inicializiram sidebar kontrole');
-        
-        // Gumb za zapiranje
-        const closeBtn = document.getElementById('closeSidebar');
-        if (closeBtn) {
-            console.log('✅ Gumb za zapiranje najden');
-            const newCloseBtn = closeBtn.cloneNode(true);
-            closeBtn.parentNode.replaceChild(newCloseBtn, closeBtn);
-            
-            newCloseBtn.addEventListener('click', function(e) {
-                e.stopPropagation();
-                e.preventDefault();
-                console.log('🔄 Klik na closeSidebar - zapiranje sidebarja');
-                closeSidebar();
-            });
-        } else {
-            console.warn('⚠️ Gumb #closeSidebar ni najden');
-        }
-
-        // Klik na karkoli zunaj sidebarja zapre sidebar
-        document.addEventListener('click', function(e) {
-            const sidebar = document.getElementById('sidebar');
-            const openBtn = document.getElementById('openSidebar');
-            
-            // Če sidebar ni odprt, ne naredimo nič
-            if (!sidebar || !sidebar.classList.contains('open')) return;
-            
-            // Preverimo, ali je klik na sidebar ali na gumb za odpiranje
-            const isSidebar = sidebar.contains(e.target);
-            const isOpenBtn = openBtn && openBtn.contains(e.target);
-            
-            // Če klik ni na sidebar in ni na gumb za odpiranje, zapremo sidebar
-            if (!isSidebar && !isOpenBtn) {
-                console.log('🔄 Klik zunaj sidebarja - zapiranje');
-                closeSidebar();
-            }
-        });
-    }
-
-    // ===== ODPIRANJE/ZAPIRANJE SIDEBAR =====
-    function openSidebar() {
-        console.log('🔄 Odpiram sidebar');
-        const sidebar = document.getElementById('sidebar');
-        const mainContent = document.getElementById('mainContent');
-        
-        if (sidebar) {
-            // Najprej nastavimo display block in odstranimo transform
-            sidebar.style.display = 'block';
-            sidebar.style.transform = 'translateX(-100%)';
-            
-            // Počakamo na naslednji frame, da se display aplicira
-            requestAnimationFrame(() => {
-                // Nato dodamo class open, ki sproži animacijo
-                sidebar.classList.add('open');
-                console.log('✅ Sidebar dobil class "open"');
-            });
-            
-            if (mainContent && window.innerWidth > 768) {
-                mainContent.classList.add('shifted');
-            }
-        } else {
-            console.error('❌ Sidebar element ne obstaja');
-        }
-    }
-
-    function closeSidebar() {
-        console.log('🔄 Zapiram sidebar');
-        const sidebar = document.getElementById('sidebar');
-        const mainContent = document.getElementById('mainContent');
-        
-        if (sidebar) {
-            // Odstranimo class open
-            sidebar.classList.remove('open');
-            // Počakamo, da se animacija konča, nato skrijemo sidebar
-            setTimeout(() => {
-                sidebar.style.display = 'none';
-                sidebar.style.transform = 'translateX(-100%)';
-                console.log('✅ Sidebar skrit');
-            }, 350); // Malo daljši čas za boljšo animacijo
-        }
-        if (mainContent) mainContent.classList.remove('shifted');
     }
 
     // ===== NAVIGACIJA =====
@@ -261,10 +253,9 @@ document.addEventListener('DOMContentLoaded', function() {
         let path = `views/matematika/snov/${folderName}/`;
         console.log(`📁 Navigiram na: ${path}`);
         
+        // Uporabi router ali pa kar direktna navigacija
         if (typeof router !== 'undefined' && router) {
-            if (typeof router.navigateAndClose === 'function') {
-                router.navigateAndClose(view);
-            } else if (typeof router.navigate === 'function') {
+            if (typeof router.navigate === 'function') {
                 router.navigate(view);
             } else {
                 window.location.href = path;
@@ -272,17 +263,11 @@ document.addEventListener('DOMContentLoaded', function() {
         } else {
             window.location.href = path;
         }
-        
-        document.querySelectorAll('.sidebar-nav a[data-view]').forEach(link => {
-            link.classList.remove('active');
-            if (link.dataset.view === view) {
-                link.classList.add('active');
-            }
-        });
     }
 
     // ===== NALOŽI VSE KOMPONENTE =====
     console.log('🚀 Začenjam nalaganje komponent...');
+    console.log('📁 Base path:', basePath);
     
     Promise.all([
         loadComponent('header', 'components/header.html'),
@@ -290,36 +275,29 @@ document.addEventListener('DOMContentLoaded', function() {
         loadComponent('footer', 'components/footer.html')
     ]).then(() => {
         console.log('✅ Vse komponente uspešno naložene!');
-        initHeaderControls();
+        
         initSidebarControls();
         initSidebarNavigation();
-        initFooterLinks();
         updateDate();
         
         const sidebar = document.getElementById('sidebar');
         if (sidebar) {
+            console.log('📌 Sidebar element obstaja');
+            console.log('📌 Vsebina sidebarja:', sidebar.innerHTML.substring(0, 200) + '...');
+            
             const links = sidebar.querySelectorAll('.sidebar-nav a[data-view]');
             console.log(`✅ Sidebar inicializiran z ${links.length} povezavami`);
-            // Sidebar je privzeto skrit
+            
             sidebar.style.display = 'none';
             sidebar.style.transform = 'translateX(-100%)';
+        } else {
+            console.error('❌ Sidebar element NE OBSTAJA v DOM!');
         }
     }).catch(error => {
         console.error('❌ Napaka pri nalaganju komponent:', error);
     });
 
-    // ===== RESIZE DOGODEK =====
-    window.addEventListener('resize', function() {
-        const sidebar = document.getElementById('sidebar');
-        const mainContent = document.getElementById('mainContent');
-        if (sidebar && sidebar.classList.contains('open') && window.innerWidth > 768) {
-            if (mainContent) mainContent.classList.add('shifted');
-        } else {
-            if (mainContent) mainContent.classList.remove('shifted');
-        }
-    });
-
-    // ===== TRENUTNI DATUM V HEADERJU =====
+    // ===== TRENUTNI DATUM =====
     function updateDate() {
         const dateElement = document.getElementById('currentDate');
         if (dateElement) {
@@ -333,9 +311,4 @@ document.addEventListener('DOMContentLoaded', function() {
     window.openSidebar = openSidebar;
     window.closeSidebar = closeSidebar;
     window.navigateTo = navigateTo;
-    window.reinitSidebar = function() {
-        initSidebarControls();
-        initSidebarNavigation();
-        console.log('✅ Sidebar ponovno inicializiran');
-    };
 });
