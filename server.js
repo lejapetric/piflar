@@ -12,14 +12,14 @@ const PORT = 3000;
 app.use(cors());
 app.use(bodyParser.json());
 
-// Servirajte statične datoteke iz korenske mape
+// Serve static files from root directory
 app.use(express.static(__dirname));
 
 // API routes
 app.use('/api', apiRoutes);
 
-// Serve index.html za vse non-API routes (SPA)
-app.get('*', (req, res) => {
+// Catch-all route for SPA - FIX: use named wildcard '/*path'
+app.get('/*path', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'));
 });
 

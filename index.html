@@ -1,69 +1,131 @@
-<div class="view">
-    <div class="view-header">
-        <h2>📐 Matematika na Maturi</h2>
-        <p>Interaktivna učna aplikacija za pripravo na maturo iz matematike</p>
-    </div>
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Piflar.si</title>
+    <meta name="description" content="Piflar.si - interaktivna učna aplikacija za pripravo na maturo iz matematike. 16 poglavij, vaje, izračuni in nasveti.">
+    <link rel="stylesheet" href="public/style/style.css">
+</head>
+<body>
+    <!-- Header -->
+    <div id="header"></div>
 
-    <div class="card">
-        <h3>🎯 O aplikaciji</h3>
-        <p>Ta aplikacija vam pomaga pri učenju matematike za maturo z interaktivnimi primeri in izračuni. Vsebuje 16 poglavij, ki pokrivajo celotno snov.</p>
-        <p style="margin-top: 12px;">📚 Izberite poglavje iz menija na levi strani za začetek učenja.</p>
-    </div>
+    <!-- Glavna vsebina z sidebarjem -->
+    <div id="mainContent" class="main-content">
+        <div style="display: flex; gap: 24px; max-width: 1400px; margin: 0 auto; padding: 24px;">
+            <!-- Sidebar -->
+            <div id="sidebar"></div>
 
-    <div class="formula-grid">
-        <div class="card">
-            <h3>📊 Hitri izračuni</h3>
-            <p>Uporabite interaktivne kalkulatorje za:</p>
-            <ul style="margin-top: 8px; padding-left: 20px; color: var(--text-secondary);">
-                <li>Kvadratne enačbe</li>
-                <li>Zaporedja (aritmetična/geometrična)</li>
-                <li>Kombinatoriko (faktoriale, kombinacije)</li>
-                <li>Geometrijo (Pitagorov izrek, razdalje)</li>
-            </ul>
+            <!-- Glavna vsebina -->
+            <div class="view" style="flex: 1;">
+                <div class="view-header">
+                    <h2>Piflar.si</h2>
+                    <p style="font-size: 1.3rem; font-weight: 300;">Interaktivna učna platforma za pripravo na maturo iz matematike</p>
+                    <p style="margin-top: 8px; opacity: 0.8;">📍 Slovenija · 16 poglavij · 180 minut · Vse za maturo</p>
+                </div>
+
+                <!-- Predstavitev -->
+                <div class="card" style="border-left: 4px solid #4f46e5;">
+                    <h3>🎯 Kaj je Piflar.si?</h3>
+                    <p style="font-size: 1.05rem; line-height: 1.7;">
+                        <strong>Piflar.si</strong> je brezplačna interaktivna učna aplikacija, namenjena vsem dijakom, 
+                        ki se pripravljajo na <strong>maturo iz matematike</strong>. 
+                        Platforma vsebuje <strong>16 poglavij</strong>, ki pokrivajo celotno srednješolsko snov, 
+                        interaktivne kalkulatorje, primere z rešitvami in praktične nasvete za uspešno opravljanje mature.
+                    </p>
+                    <p style="margin-top: 12px; color: var(--text-secondary);">
+                        🚀 <strong>Začni zdaj:</strong> Izberi poglavje v meniju na levi strani in se loti učenja.
+                    </p>
+                </div>
+
+                <div class="formula-grid">
+                    <div class="card">
+                        <h3>📊 Kaj ponuja Piflar.si?</h3>
+                        <ul style="margin-top: 8px; padding-left: 20px; color: var(--text-secondary);">
+                            <li><strong>📚 16 poglavij</strong> - celotna snov za maturo</li>
+                            <li><strong>🧮 Interaktivni kalkulatorji</strong> - kvadratne enačbe, zaporedja, kombinatorika</li>
+                            <li><strong>📐 Geometrijski izračuni</strong> - Pitagorov izrek, razdalje</li>
+                            <li><strong>💡 Primeri z rešitvami</strong> - učenje po korakih</li>
+                            <li><strong>📝 Nasveti za maturo</strong> - časovni management in strategije</li>
+                        </ul>
+                    </div>
+                    <div class="card">
+                        <h3>📈 Poglavja</h3>
+                        <p>16 poglavij, ki pokrivajo vso snov za maturo iz matematike:</p>
+                        <ul style="margin-top: 8px; padding-left: 20px; color: var(--text-secondary);">
+                            <li>Logika in množice</li>
+                            <li>Algebra in enačbe</li>
+                            <li>Geometrija in vektorji</li>
+                            <li>Zaporedja in funkcije</li>
+                            <li>Diferencialni in integralni račun</li>
+                            <li>Kombinatorika, verjetnost in statistika</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>🚀 Hitri začetki</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-top: 12px;">
+                        <a href="#" data-view="algebra" class="quick-link" style="display: block; padding: 12px; background: var(--bg-primary); border-radius: var(--radius-sm); text-decoration: none; color: var(--text-primary); border: 1px solid var(--border-color);">
+                            <strong>✏️ Algebra</strong><br>
+                            <small style="color: var(--text-secondary);">Kvadratne enačbe in formule</small>
+                        </a>
+                        <a href="#" data-view="geometry" class="quick-link" style="display: block; padding: 12px; background: var(--bg-primary); border-radius: var(--radius-sm); text-decoration: none; color: var(--text-primary); border: 1px solid var(--border-color);">
+                            <strong>📐 Geometrija</strong><br>
+                            <small style="color: var(--text-secondary);">Pitagorov izrek in razdalje</small>
+                        </a>
+                        <a href="#" data-view="sequences" class="quick-link" style="display: block; padding: 12px; background: var(--bg-primary); border-radius: var(--radius-sm); text-decoration: none; color: var(--text-primary); border: 1px solid var(--border-color);">
+                            <strong>🔀 Zaporedja</strong><br>
+                            <small style="color: var(--text-secondary);">Aritmetična in geometrijska</small>
+                        </a>
+                        <a href="#" data-view="combinatorics" class="quick-link" style="display: block; padding: 12px; background: var(--bg-primary); border-radius: var(--radius-sm); text-decoration: none; color: var(--text-primary); border: 1px solid var(--border-color);">
+                            <strong>🎲 Kombinatorika</strong><br>
+                            <small style="color: var(--text-secondary);">Faktoriale in kombinacije</small>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Zakaj Piflar.si -->
+                <div class="card" style="background: linear-gradient(135deg, #eef2ff 0%, #ffffff 100%);">
+                    <h3>⭐ Zakaj Piflar.si?</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; margin-top: 12px;">
+                        <div>
+                            <p style="font-size: 2rem; margin: 0;">🎓</p>
+                            <p><strong>Brezplačno</strong><br><small style="color: var(--text-secondary);">Popolnoma brezplačno za vse dijake</small></p>
+                        </div>
+                        <div>
+                            <p style="font-size: 2rem; margin: 0;">📱</p>
+                            <p><strong>Dostopno</strong><br><small style="color: var(--text-secondary);">Deluje na računalniku, tablici in telefonu</small></p>
+                        </div>
+                        <div>
+                            <p style="font-size: 2rem; margin: 0;">🧠</p>
+                            <p><strong>Interaktivno</strong><br><small style="color: var(--text-secondary);">Učenje s praktičnimi primeri in izračuni</small></p>
+                        </div>
+                        <div>
+                            <p style="font-size: 2rem; margin: 0;">📊</p>
+                            <p><strong>Celotna snov</strong><br><small style="color: var(--text-secondary);">16 poglavij za popolno pripravo</small></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="card">
+                    <h3>📝 Nasveti za maturo</h3>
+                    <ul style="margin-top: 8px; padding-left: 20px; color: var(--text-secondary);">
+                        <li><strong>Redno vadite:</strong> Vsak dan rešite vsaj nekaj nalog</li>
+                        <li><strong>Uporabljajte formule:</strong> Seznami formul so dovoljeni na maturi</li>
+                        <li><strong>Preverite rešitve:</strong> Vedno preverite, ali je rešitev smiselna</li>
+                        <li><strong>Časovni management:</strong> Na maturi imate 180 minut za reševanje</li>
+                    </ul>
+                </div>
+            </div>
         </div>
-        <div class="card">
-            <h3>📈 Poglavja</h3>
-            <p>16 poglavij, ki pokrivajo vso snov za maturo iz matematike:</p>
-            <ul style="margin-top: 8px; padding-left: 20px; color: var(--text-secondary);">
-                <li>Logika in množice</li>
-                <li>Algebra in enačbe</li>
-                <li>Geometrija in vektorji</li>
-                <li>Zaporedja in funkcije</li>
-                <li>Diferencialni in integralni račun</li>
-                <li>Kombinatorika, verjetnost in statistika</li>
-            </ul>
-        </div>
     </div>
 
-    <div class="card">
-        <h3>🚀 Hitre povezave</h3>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-top: 12px;">
-            <a href="#" data-view="algebra" class="quick-link" style="display: block; padding: 12px; background: var(--bg-primary); border-radius: var(--radius-sm); text-decoration: none; color: var(--text-primary); border: 1px solid var(--border-color);">
-                <strong>✏️ Algebra</strong><br>
-                <small style="color: var(--text-secondary);">Kvadratne enačbe in formule</small>
-            </a>
-            <a href="#" data-view="geometry" class="quick-link" style="display: block; padding: 12px; background: var(--bg-primary); border-radius: var(--radius-sm); text-decoration: none; color: var(--text-primary); border: 1px solid var(--border-color);">
-                <strong>📐 Geometrija</strong><br>
-                <small style="color: var(--text-secondary);">Pitagorov izrek in razdalje</small>
-            </a>
-            <a href="#" data-view="sequences" class="quick-link" style="display: block; padding: 12px; background: var(--bg-primary); border-radius: var(--radius-sm); text-decoration: none; color: var(--text-primary); border: 1px solid var(--border-color);">
-                <strong>🔀 Zaporedja</strong><br>
-                <small style="color: var(--text-secondary);">Aritmetična in geometrijska</small>
-            </a>
-            <a href="#" data-view="combinatorics" class="quick-link" style="display: block; padding: 12px; background: var(--bg-primary); border-radius: var(--radius-sm); text-decoration: none; color: var(--text-primary); border: 1px solid var(--border-color);">
-                <strong>🎲 Kombinatorika</strong><br>
-                <small style="color: var(--text-secondary);">Faktoriale in kombinacije</small>
-            </a>
-        </div>
-    </div>
+    <!-- Footer -->
+    <div id="footer"></div>
 
-    <div class="card">
-        <h3>📝 Nasveti za maturo</h3>
-        <ul style="margin-top: 8px; padding-left: 20px; color: var(--text-secondary);">
-            <li><strong>Redno vadite:</strong> Vsak dan rešite vsaj nekaj nalog</li>
-            <li><strong>Uporabljajte formule:</strong> Seznami formul so dovoljeni na maturi</li>
-            <li><strong>Preverite rešitve:</strong> Vedno preverite, ali je rešitev smiselna</li>
-            <li><strong>Časovni management:</strong> Na maturi imate 180 minut za reševanje</li>
-        </ul>
-    </div>
-</div>
+    <!-- JavaScript -->
+    <script src="public/components/components.js"></script>
+</body>
+</html>
