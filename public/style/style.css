@@ -1,3 +1,4 @@
+/* public/style/style.css */
 /* ===== RESET AND BASE STYLES ===== */
 * {
     margin: 0;
@@ -565,4 +566,128 @@ body {
     .sidebar-header h2 {
         font-size: 17px;
     }
+}
+
+/* ===== NAV GROUP (Matematika / Fizika) ===== */
+.nav-group {
+  border-bottom: 1px solid #1e293b;
+}
+
+.nav-group-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px 16px 10px 20px;
+}
+
+.nav-group-title {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #f1f5f9;
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 15px;
+  flex: 1;
+  padding: 4px 0;
+  transition: color 0.2s;
+}
+
+.nav-group-title:hover {
+  color: #93c5fd;
+}
+
+.nav-group-title .icon {
+  font-size: 20px;
+  width: 28px;
+  text-align: center;
+}
+
+/* Gumb za dropdown (▸ / ▾) */
+.dropdown-toggle {
+  background: none;
+  border: none;
+  color: #94a3b8;
+  font-size: 14px;
+  cursor: pointer;
+  padding: 4px 8px;
+  border-radius: 4px;
+  transition: transform 0.2s, color 0.2s, background 0.2s;
+  line-height: 1;
+}
+
+.dropdown-toggle:hover {
+  color: #f1f5f9;
+  background: #1e293b;
+}
+
+.dropdown-toggle.open {
+  transform: rotate(90deg);
+  color: #60a5fa;
+}
+
+/* Skriti dropdowni privzeto */
+.nav-sub,
+.nav-sub-list {
+  display: none;
+}
+
+.nav-sub.open,
+.nav-sub-list.open {
+  display: block;
+}
+
+/* Pod-skupine (Snov / Matura) */
+.nav-sub-group {
+  border-top: 1px solid #1e293b;
+}
+
+.nav-sub-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 16px 8px 36px;
+  color: #cbd5e1;
+  font-size: 14px;
+}
+
+.nav-sub-header .icon {
+  font-size: 16px;
+  width: 22px;
+  text-align: center;
+}
+
+.nav-sub-header .label {
+  flex: 1;
+}
+
+/* Seznam linkov znotraj dropdowna */
+.nav-sub-list a {
+  display: block;
+  padding: 7px 16px 7px 56px;
+  color: #94a3b8;
+  text-decoration: none;
+  font-size: 13.5px;
+  border-left: 3px solid transparent;
+  transition: all 0.2s;
+}
+
+.nav-sub-list a:hover {
+  background: #1e293b;
+  color: #f1f5f9;
+  border-left-color: #3b82f6;
+}
+
+.nav-sub-list a.active {
+  background: #1e293b;
+  color: #f1f5f9;
+  border-left-color: #3b82f6;
+}
+
+.nav-link-special {
+  font-weight: 600;
+  color: #93c5fd !important;
+  border-top: 1px solid #1e293b;
+  margin-top: 4px;
+  padding-top: 8px !important;
 }

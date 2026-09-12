@@ -1,0 +1,19 @@
+[
+  { "slug": "algebra", "naslov": "Algebra", "opis": "...", "poglavja": [] },
+  { "slug": "analiza", "naslov": "Analiza", "opis": "...", "poglavja": [] },
+  { "slug": "domov", "naslov": "Domov", "opis": "...", "poglavja": [] },
+  { "slug": "funkcije", "naslov": "Funkcije", "opis": "...", "poglavja": [] },
+  { "slug": "geometrija", "naslov": "Geometrija", "opis": "...", "poglavja": [] },
+  { "slug": "integrali", "naslov": "Integrali", "opis": "...", "poglavja": [] },
+  { "slug": "kombinatorika", "naslov": "Kombinatorika", "opis": "...", "poglavja": [] },
+  { "slug": "koordinate", "naslov": "Koordinate", "opis": "...", "poglavja": [] },
+  { "slug": "logika", "naslov": "Logika", "opis": "...", "poglavja": [] },
+  { "slug": "mnozice", "naslov": "Množice", "opis": "...", "poglavja": [] },
+  { "slug": "oblike", "naslov": "Oblike", "opis": "...", "poglavja": [] },
+  { "slug": "potence", "naslov": "Potence", "opis": "...", "poglavja": [] },
+  { "slug": "statistika", "naslov": "Statistika", "opis": "...", "poglavja": [] },
+  { "slug": "stevila", "naslov": "Števila", "opis": "...", "poglavja": [] },
+  { "slug": "vektorji", "naslov": "Vektorji", "opis": "...", "poglavja": [] },
+  { "slug": "verjetnost", "naslov": "Verjetnost", "opis": "...", "poglavja": [] },
+  { "slug": "zaporedja", "naslov": "Zaporedja", "opis": "...", "poglavja": [] }
+]

@@ -1,0 +1,29 @@
+[
+  {
+    "id": "osnovna-naloge-2023",
+    "naslov": "Osnovna raven – naloge 2023",
+    "raven": "osnovna",
+    "tip": "naloge",
+    "leto": 2023,
+    "opis": "Maturitetne naloge osnovne ravni 2023 z razlagami.",
+    "naloge": [
+      {
+        "id": "nal1",
+        "naslov": "Naloga 1",
+        "besedilo": "Reši enačbo 2x + 5 = 13.",
+        "status": "resene",
+        "razlaga": "2x = 8, torej x = 4.",
+        "rezultat": "x = 4"
+      }
+    ]
+  },
+  {
+    "id": "visja-pole-2023",
+    "naslov": "Višja raven – pole 2023",
+    "raven": "visja",
+    "tip": "pole",
+    "leto": 2023,
+    "opis": "Maturitetne pole višje ravni 2023 z razlagami.",
+    "naloge": []
+  }
+]

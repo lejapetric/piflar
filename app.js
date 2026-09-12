@@ -1,3 +1,4 @@
+// app.js
 // API service za komunikacijo z backendom
 const mathApi = {
     async solveQuadratic(a, b, c) {

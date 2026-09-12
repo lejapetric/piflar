@@ -1,93 +1,127 @@
+<!-- public/components/sidebar.html -->
 <div class="sidebar-header">
-    <h2>📐 Matematika</h2>
-    <button id="closeSidebar" class="close-btn">×</button>
+  <h2>📚 Piflar.si</h2>
+  <button id="closeSidebar" class="close-btn" aria-label="Zapri meni">×</button>
 </div>
 
 <nav class="sidebar-nav">
-    <a href="#" data-view="home" class="active">
-        <span class="icon">🏠</span>
-        <span class="label">Domov</span>
-    </a>
 
-    <a href="#" data-view="logic">
-        <span class="icon">🧠</span>
-        <span class="label">1. Logika</span>
-    </a>
-
-    <a href="#" data-view="sets">
-        <span class="icon">📊</span>
-        <span class="label">2. Množice</span>
-    </a>
-
-    <a href="#" data-view="numbers">
-        <span class="icon">🔢</span>
-        <span class="label">3. Številske množice</span>
-    </a>
-
-    <a href="#" data-view="algebra">
-        <span class="icon">✏️</span>
-        <span class="label">4. Algebra</span>
-    </a>
-
-    <a href="#" data-view="powers">
-        <span class="icon">⬆️</span>
-        <span class="label">5. Potence in koreni</span>
-    </a>
-
-    <a href="#" data-view="functions">
-        <span class="icon">📈</span>
-        <span class="label">6. Funkcije</span>
-    </a>
-
-    <a href="#" data-view="geometry">
+  <!-- ============================================== -->
+  <!-- MATEMATIKA                                      -->
+  <!-- ============================================== -->
+  <div class="nav-group">
+    <div class="nav-group-header">
+      <a href="/views/matematika/matematika.html" class="nav-group-title">
         <span class="icon">📐</span>
-        <span class="label">7. Geometrija</span>
-    </a>
+        <span class="label">Matematika</span>
+      </a>
+      <button class="dropdown-toggle" data-target="matematika-sub" aria-label="Razširi matematiko">▸</button>
+    </div>
 
-    <a href="#" data-view="shapes">
-        <span class="icon">🔷</span>
-        <span class="label">8. Liki in telesa</span>
-    </a>
+    <div class="nav-sub" id="matematika-sub">
 
-    <a href="#" data-view="vectors">
-        <span class="icon">➡️</span>
-        <span class="label">9. Vektorji</span>
-    </a>
+      <!-- Snov (pod-dropdown) -->
+      <div class="nav-sub-group">
+        <div class="nav-sub-header">
+          <span class="icon">📖</span>
+          <span class="label">Snov</span>
+          <button class="dropdown-toggle" data-target="matematika-snov" aria-label="Razširi snov">▸</button>
+        </div>
+        <div class="nav-sub-list" id="matematika-snov">
+          <a href="/views/matematika/snov/logika/">1. Logika</a>
+          <a href="/views/matematika/snov/mnozice/">2. Množice</a>
+          <a href="/views/matematika/snov/stevila/">3. Številske množice</a>
+          <a href="/views/matematika/snov/algebra/">4. Algebra</a>
+          <a href="/views/matematika/snov/potence/">5. Potence in koreni</a>
+          <a href="/views/matematika/snov/funkcije/">6. Funkcije</a>
+          <a href="/views/matematika/snov/geometrija/">7. Geometrija</a>
+          <a href="/views/matematika/snov/oblike/">8. Liki in telesa</a>
+          <a href="/views/matematika/snov/vektorji/">9. Vektorji</a>
+          <a href="/views/matematika/snov/koordinate/">10. Koordinate</a>
+          <a href="/views/matematika/snov/zaporedja/">11. Zaporedja</a>
+          <a href="/views/matematika/snov/analiza/">12. Diferencialni račun</a>
+          <a href="/views/matematika/snov/integrali/">13. Integrali</a>
+          <a href="/views/matematika/snov/kombinatorika/">14. Kombinatorika</a>
+          <a href="/views/matematika/snov/verjetnost/">15. Verjetnost</a>
+          <a href="/views/matematika/snov/statistika/">16. Statistika</a>
+          <a href="/views/matematika/snov/snov.html" class="nav-link-special">📚 Vse snovi (pregled)</a>
+        </div>
+      </div>
 
-    <a href="#" data-view="coordinates">
-        <span class="icon">📍</span>
-        <span class="label">10. Koordinate</span>
-    </a>
+      <!-- Matura (pod-dropdown) -->
+      <div class="nav-sub-group">
+        <div class="nav-sub-header">
+          <span class="icon">🎓</span>
+          <span class="label">Matura</span>
+          <button class="dropdown-toggle" data-target="matematika-matura" aria-label="Razširi maturo">▸</button>
+        </div>
+        <div class="nav-sub-list" id="matematika-matura">
+          <a href="/views/matematika/matura/matura.html" class="nav-link-special">📄 Pregled mature</a>
+          <a href="/views/matematika/matura/osnovna_raven/naloge/resene/">Osnovna — rešene naloge</a>
+          <a href="/views/matematika/matura/osnovna_raven/naloge/neresene/">Osnovna — nerešene naloge</a>
+          <a href="/views/matematika/matura/osnovna_raven/pole/resene/">Osnovna — rešene pole</a>
+          <a href="/views/matematika/matura/osnovna_raven/pole/neresene/">Osnovna — nerešene pole</a>
+          <a href="/views/matematika/matura/visja_raven/naloge/resene/">Višja — rešene naloge</a>
+          <a href="/views/matematika/matura/visja_raven/naloge/neresene/">Višja — nerešene naloge</a>
+          <a href="/views/matematika/matura/visja_raven/pole/resene/">Višja — rešene pole</a>
+          <a href="/views/matematika/matura/visja_raven/pole/neresene/">Višja — nerešene pole</a>
+        </div>
+      </div>
 
-    <a href="#" data-view="sequences">
-        <span class="icon">🔀</span>
-        <span class="label">11. Zaporedja</span>
-    </a>
+    </div>
+  </div>
 
-    <a href="#" data-view="calculus">
-        <span class="icon">∫</span>
-        <span class="label">12. Diferencialni račun</span>
-    </a>
+  <!-- ============================================== -->
+  <!-- FIZIKA                                          -->
+  <!-- ============================================== -->
+  <div class="nav-group">
+    <div class="nav-group-header">
+      <a href="/views/fizika/fizika.html" class="nav-group-title">
+        <span class="icon">⚛️</span>
+        <span class="label">Fizika</span>
+      </a>
+      <button class="dropdown-toggle" data-target="fizika-sub" aria-label="Razširi fiziko">▸</button>
+    </div>
 
-    <a href="#" data-view="integrals">
-        <span class="icon">∫</span>
-        <span class="label">13. Integrali</span>
-    </a>
+    <div class="nav-sub" id="fizika-sub">
 
-    <a href="#" data-view="combinatorics">
-        <span class="icon">🎲</span>
-        <span class="label">14. Kombinatorika</span>
-    </a>
+      <!-- Snov -->
+      <div class="nav-sub-group">
+        <div class="nav-sub-header">
+          <span class="icon">📖</span>
+          <span class="label">Snov</span>
+          <button class="dropdown-toggle" data-target="fizika-snov" aria-label="Razširi snov">▸</button>
+        </div>
+        <div class="nav-sub-list" id="fizika-snov">
+          <a href="/views/fizika/snov/mehanika/">1. Mehanika</a>
+          <a href="/views/fizika/snov/termodinamika/">2. Termodinamika</a>
+          <a href="/views/fizika/snov/elektrika/">3. Elektrika in magnetizem</a>
+          <a href="/views/fizika/snov/optika/">4. Optika</a>
+          <a href="/views/fizika/snov/valovanje/">5. Valovanje</a>
+          <a href="/views/fizika/snov/moderna/">6. Moderna fizika</a>
+          <a href="/views/fizika/snov/snov.html" class="nav-link-special">📚 Vse snovi (pregled)</a>
+        </div>
+      </div>
 
-    <a href="#" data-view="probability">
-        <span class="icon">📊</span>
-        <span class="label">15. Verjetnost</span>
-    </a>
+      <!-- Matura -->
+      <div class="nav-sub-group">
+        <div class="nav-sub-header">
+          <span class="icon">🎓</span>
+          <span class="label">Matura</span>
+          <button class="dropdown-toggle" data-target="fizika-matura" aria-label="Razširi maturo">▸</button>
+        </div>
+        <div class="nav-sub-list" id="fizika-matura">
+          <a href="/views/fizika/matura/matura.html" class="nav-link-special">📄 Pregled mature</a>
+          <a href="/views/fizika/matura/osnovna_raven/naloge/resene/">Osnovna — rešene naloge</a>
+          <a href="/views/fizika/matura/osnovna_raven/naloge/neresene/">Osnovna — nerešene naloge</a>
+          <a href="/views/fizika/matura/visja_raven/naloge/resene/">Višja — rešene naloge</a>
+          <a href="/views/fizika/matura/visja_raven/naloge/neresene/">Višja — nerešene naloge</a>
+        </div>
+      </div>
 
-    <a href="#" data-view="statistics">
-        <span class="icon">📉</span>
-        <span class="label">16. Statistika</span>
-    </a>
+    </div>
+  </div>
+
 </nav>
 
 <div id="overlay" class="overlay"></div>

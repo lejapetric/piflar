@@ -1,32 +1,67 @@
-const express = require('express');
-const cors = require('cors');
-const bodyParser = require('body-parser');
-const path = require('path');
-const apiRoutes = require('./api/routes');
-const { errorHandler, notFound } = require('./api/middleware/error-handler');
+// server.js
+import express from "express";
+import passport from "passport";
+import { dirname, join } from "node:path";
+import { fileURLToPath } from "node:url";
+import cors from "cors";
+import dotenv from "dotenv";
 
-const app = express();
-const PORT = 3000;
+dotenv.config();
 
-// Middleware
-app.use(cors());
-app.use(bodyParser.json());
+import apiRouter from "./api/routes/api.js";
 
-// Serve static files from root directory
-app.use(express.static(__dirname));
+import swaggerJsDoc from "swagger-jsdoc";
+import swaggerUi from "swagger-ui-express";
 
-// API routes
-app.use('/api', apiRoutes);
-
-// Catch-all route for SPA - FIX: use named wildcard '/*path'
-app.get('/*path', (req, res) => {
-    res.sendFile(path.join(__dirname, 'index.html'));
+const swaggerDocument = swaggerJsDoc({
+  definition: {
+    openapi: "3.1.1",
+    info: {
+      title: "Piflar.si API Documentation",
+      version: "0.1.0",
+      description: "API za maturitetno stran (matematika, fizika).",
+    },
+    servers: [
+      { url: "http://localhost:3000/api", description: "Development server" },
+    ],
+  },
+  apis: ["./api/models/*", "./api/controllers/*.js"],
 });
 
-// Error handling
-app.use(notFound);
-app.use(errorHandler);
+const port = process.env.PORT || 3000;
+const app = express();
+const __dirname = dirname(fileURLToPath(import.meta.url));
 
-app.listen(PORT, () => {
-    console.log(`Server running on http://localhost:${PORT}`);
+app.use(cors());
+
+// Serviraj statične datoteke iz public/
+app.use(express.static(join(__dirname, "public")));
+app.use(express.json());
+app.use(express.urlencoded({ extended: true }));
+
+// Swagger
+app.get("/api/swagger.json", (req, res) =>
+  res.status(200).json(swaggerDocument)
+);
+
+app.use(
+  "/api/docs",
+  swaggerUi.serve,
+  swaggerUi.setup(swaggerDocument, {
+    customCss: ".swagger-ui .topbar { display: none }",
+  })
+);
+
+// API routing
+app.use("/api", apiRouter);
+
+// Catch-all — pošlji index.html za vse ostale poti (SPA fallback)
+app.get(/.*/, (req, res) => {
+  res.sendFile(join(__dirname, "public", "views", "index.html"));
+});
+
+app.listen(port, () => {
+  console.log(
+    `Piflar.si started in ${process.env.NODE_ENV || "development"} listening on port ${port}!`
+  );
 });

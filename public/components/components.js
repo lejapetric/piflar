@@ -1,314 +1,120 @@
-// components.js
+// public/components/components.js
 
-document.addEventListener('DOMContentLoaded', function() {
-    console.log('✅ components.js se je zagnal');
-    console.log('📍 Trenutna pot:', window.location.pathname);
+document.addEventListener("DOMContentLoaded", async () => {
+  console.log("✅ components.js zagnan");
 
-    // ===== DOLOČIMO PRAVO POT DO KOMPONENT =====
-    function getBasePath() {
-        const path = window.location.pathname;
-        console.log('🔍 Analiziram pot:', path);
-        
-        // Za korensko stran (/)
-        if (path === '/' || path === '/index.html') {
-            return 'public/';
-        }
-        else if (path.includes('/views/matematika/snov/')) {
-            return '../../../public/';
-        }
-        else if (path.includes('/views/matematika/')) {
-            return '../../public/';
-        }
-        else if (path.includes('/views/')) {
-            return '../public/';
-        }
-        else if (path.includes('/public/')) {
-            return '';
-        }
-        else {
-            return 'public/';
-        }
+  // ============================================================
+  // 1. NALOŽI KOMPONENTE (header, sidebar, footer) prek fetch
+  // ============================================================
+  async function loadComponent(url, targetId) {
+    const el = document.getElementById(targetId);
+    if (!el) return;
+    try {
+      const res = await fetch(url);
+      if (!res.ok) throw new Error(`${url} → ${res.status}`);
+      el.innerHTML = await res.text();
+      console.log(`✅ Naložen ${url}`);
+    } catch (err) {
+      console.error(`❌ Napaka pri nalaganju ${url}:`, err);
     }
+  }
 
-    const basePath = getBasePath();
-    console.log('📁 Uporabljam basePath:', basePath);
+  await Promise.all([
+    loadComponent("/components/header.html", "header"),
+    loadComponent("/components/sidebar.html", "sidebar"),
+    loadComponent("/components/footer.html", "footer"),
+  ]);
 
-    // ===== NALAGANJE KOMPONENT =====
-    function loadComponent(id, file) {
-        const fullPath = basePath + file;
-        console.log(`📥 Nalagam ${id} iz ${fullPath}`);
-        return fetch(fullPath)
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error(`HTTP error! status: ${response.status} - ${fullPath}`);
-                }
-                return response.text();
-            })
-            .then(data => {
-                console.log(`✅ ${id} naložen, dolžina: ${data.length} znakov`);
-                console.log(`📄 Vsebina ${id}:`, data.substring(0, 200) + '...');
-                
-                const element = document.getElementById(id);
-                if (element) {
-                    element.innerHTML = data;
-                    console.log(`✅ ${id} vstavljen v element`);
-                    
-                    if (id === 'sidebar') {
-                        // Sidebar je privzeto skrit
-                        element.style.display = 'none';
-                        element.style.transform = 'translateX(-100%)';
-                        console.log('📌 Sidebar nastavljen na skrit');
-                    }
-                } else {
-                    console.error(`❌ Element z id "${id}" ne obstaja v DOM`);
-                }
-                return true;
-            })
-            .catch(error => {
-                console.error(`❌ Napaka pri nalaganju ${fullPath}:`, error);
-                const element = document.getElementById(id);
-                if (element) {
-                    element.innerHTML = `<p style="color: red; padding: 20px; text-align: center;">❌ Napaka pri nalaganju komponente ${id}</p>`;
-                }
-                return false;
-            });
-    }
+  // ============================================================
+  // 2. SIDEBAR TOGGLE (odpri/zapri)
+  // ============================================================
+  const sidebarEl = document.getElementById("sidebar");
+  const mainContent = document.getElementById("mainContent");
 
-    // ===== SIDEBAR KONTROLE =====
-    function initSidebarControls() {
-        console.log('🔄 Inicializiram sidebar kontrole');
-        
-        // ---------- GUMB ZA ODPIRANJE ----------
-        const openBtn = document.getElementById('openSidebar');
-        if (openBtn) {
-            const newOpenBtn = openBtn.cloneNode(true);
-            openBtn.parentNode.replaceChild(newOpenBtn, openBtn);
-            
-            newOpenBtn.addEventListener('click', function(e) {
-                e.stopPropagation();
-                e.preventDefault();
-                console.log('🔄 Klik na openSidebar - odpiranje sidebarja');
-                openSidebar();
-            });
-            console.log('✅ Gumb za odpiranje nastavljen');
-        } else {
-            console.warn('⚠️ Gumb #openSidebar ni najden');
-        }
+  // Overlay (ustvari, če ga ni)
+  let overlay = document.getElementById("overlay");
+  if (!overlay) {
+    overlay = document.createElement("div");
+    overlay.id = "overlay";
+    overlay.className = "overlay";
+    document.body.appendChild(overlay);
+  }
 
-        // ---------- GUMB ZA ZAPIRANJE ----------
-        const closeBtn = document.getElementById('closeSidebar');
-        if (closeBtn) {
-            const newCloseBtn = closeBtn.cloneNode(true);
-            closeBtn.parentNode.replaceChild(newCloseBtn, closeBtn);
-            
-            newCloseBtn.addEventListener('click', function(e) {
-                e.stopPropagation();
-                e.preventDefault();
-                console.log('🔄 Klik na closeSidebar - zapiranje sidebarja');
-                closeSidebar();
-            });
-            console.log('✅ Gumb za zapiranje nastavljen');
-        } else {
-            console.warn('⚠️ Gumb #closeSidebar ni najden');
-        }
+  function openSidebar() {
+    sidebarEl.classList.add("open");
+    mainContent.classList.add("shifted");
+    overlay.classList.add("visible");
+  }
 
-        // ---------- KLIK ZUNAJ SIDEBARJA ----------
-        document.removeEventListener('click', window._sidebarOutsideClick);
-        window._sidebarOutsideClick = function(e) {
-            const sidebar = document.getElementById('sidebar');
-            const openBtn = document.getElementById('openSidebar');
-            
-            if (!sidebar || !sidebar.classList.contains('open')) return;
-            
-            const isSidebar = sidebar.contains(e.target);
-            const isOpenBtn = openBtn && openBtn.contains(e.target);
-            const isCloseBtn = document.getElementById('closeSidebar') && document.getElementById('closeSidebar').contains(e.target);
-            
-            if (!isSidebar && !isOpenBtn && !isCloseBtn) {
-                console.log('🔄 Klik zunaj sidebarja - zapiranje');
-                closeSidebar();
-            }
-        };
-        document.addEventListener('click', window._sidebarOutsideClick);
-    }
+  function closeSidebar() {
+    sidebarEl.classList.remove("open");
+    mainContent.classList.remove("shifted");
+    overlay.classList.remove("visible");
+  }
 
-    // ===== ODPIRANJE/ZAPIRANJE SIDEBAR =====
-    function openSidebar() {
-        console.log('🔄 Odpiram sidebar');
-        const sidebar = document.getElementById('sidebar');
-        const mainContent = document.getElementById('mainContent');
-        
-        if (sidebar) {
-            if (sidebar.classList.contains('open')) {
-                console.log('⚠️ Sidebar je že odprt');
-                return;
-            }
-            
-            // Najprej nastavimo display block
-            sidebar.style.display = 'block';
-            sidebar.style.transform = 'translateX(-100%)';
-            
-            // Počakamo na naslednji frame
-            requestAnimationFrame(() => {
-                sidebar.classList.add('open');
-                console.log('✅ Sidebar dobil class "open"');
-            });
-            
-            // Dodamo overlay
-            const overlay = document.getElementById('overlay');
-            if (overlay) {
-                overlay.classList.add('visible');
-            }
-            
-            if (mainContent && window.innerWidth > 768) {
-                mainContent.classList.add('shifted');
-            }
-        } else {
-            console.error('❌ Sidebar element ne obstaja');
-        }
-    }
+  // Gumb ☰ v headerju
+  const menuBtn = document.getElementById("openSidebar") || document.getElementById("menuBtn");
+  if (menuBtn) menuBtn.addEventListener("click", openSidebar);
 
-    function closeSidebar() {
-        console.log('🔄 Zapiram sidebar');
-        const sidebar = document.getElementById('sidebar');
-        const mainContent = document.getElementById('mainContent');
-        
-        if (sidebar) {
-            if (!sidebar.classList.contains('open')) {
-                console.log('⚠️ Sidebar je že zaprt');
-                return;
-            }
-            
-            sidebar.classList.remove('open');
-            
-            // Odstranimo overlay
-            const overlay = document.getElementById('overlay');
-            if (overlay) {
-                overlay.classList.remove('visible');
-            }
-            
-            setTimeout(() => {
-                sidebar.style.display = 'none';
-                sidebar.style.transform = 'translateX(-100%)';
-                console.log('✅ Sidebar skrit');
-            }, 350);
-        }
-        if (mainContent) mainContent.classList.remove('shifted');
-    }
+  // Gumb × v sidebaru
+  const closeBtn = document.getElementById("closeSidebar") || document.getElementById("closeBtn");
+  if (closeBtn) closeBtn.addEventListener("click", closeSidebar);
 
-    // ===== INICIALIZACIJA SIDEBAR NAVIGACIJE =====
-    function initSidebarNavigation() {
-        console.log('🔄 Inicializiram sidebar navigacijo');
-        const navLinks = document.querySelectorAll('.sidebar-nav a[data-view]');
-        console.log(`Najdeno ${navLinks.length} povezav v sidebarju`);
-        
-        navLinks.forEach(link => {
-            const newLink = link.cloneNode(true);
-            link.parentNode.replaceChild(newLink, link);
-            
-            newLink.addEventListener('click', function(e) {
-                e.preventDefault();
-                e.stopPropagation();
-                const view = this.dataset.view;
-                console.log(`🔄 Klik na sidebar povezavo: ${view}`);
-                
-                if (view) {
-                    document.querySelectorAll('.sidebar-nav a[data-view]').forEach(l => {
-                        l.classList.remove('active');
-                    });
-                    this.classList.add('active');
-                    
-                    navigateTo(view);
-                    closeSidebar();
-                }
-            });
-        });
-    }
+  overlay.addEventListener("click", closeSidebar);
 
-    // ===== NAVIGACIJA =====
-    function navigateTo(view) {
-        console.log(`🔄 Navigacija na: ${view}`);
-        
-        const viewMap = {
-            'home': 'domov',
-            'logic': 'logika',
-            'sets': 'mnozice',
-            'numbers': 'stevila',
-            'algebra': 'algebra',
-            'powers': 'potence',
-            'functions': 'funkcije',
-            'geometry': 'geometrija',
-            'shapes': 'oblike',
-            'vectors': 'vektorji',
-            'coordinates': 'koordinate',
-            'sequences': 'zaporedja',
-            'calculus': 'analiza',
-            'integrals': 'integrali',
-            'combinatorics': 'kombinatorika',
-            'probability': 'verjetnost',
-            'statistics': 'statistika'
-        };
-        
-        const folderName = viewMap[view] || view;
-        let path = `views/matematika/snov/${folderName}/`;
-        console.log(`📁 Navigiram na: ${path}`);
-        
-        // Uporabi router ali pa kar direktna navigacija
-        if (typeof router !== 'undefined' && router) {
-            if (typeof router.navigate === 'function') {
-                router.navigate(view);
-            } else {
-                window.location.href = path;
-            }
-        } else {
-            window.location.href = path;
-        }
-    }
+  // ============================================================
+  // 3. DROPDOWN TOGGLE (▸ / ▾)
+  // ============================================================
+  document.querySelectorAll(".dropdown-toggle").forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
 
-    // ===== NALOŽI VSE KOMPONENTE =====
-    console.log('🚀 Začenjam nalaganje komponent...');
-    console.log('📁 Base path:', basePath);
-    
-    Promise.all([
-        loadComponent('header', 'components/header.html'),
-        loadComponent('sidebar', 'components/sidebar.html'),
-        loadComponent('footer', 'components/footer.html')
-    ]).then(() => {
-        console.log('✅ Vse komponente uspešno naložene!');
-        
-        initSidebarControls();
-        initSidebarNavigation();
-        updateDate();
-        
-        const sidebar = document.getElementById('sidebar');
-        if (sidebar) {
-            console.log('📌 Sidebar element obstaja');
-            console.log('📌 Vsebina sidebarja:', sidebar.innerHTML.substring(0, 200) + '...');
-            
-            const links = sidebar.querySelectorAll('.sidebar-nav a[data-view]');
-            console.log(`✅ Sidebar inicializiran z ${links.length} povezavami`);
-            
-            sidebar.style.display = 'none';
-            sidebar.style.transform = 'translateX(-100%)';
-        } else {
-            console.error('❌ Sidebar element NE OBSTAJA v DOM!');
-        }
-    }).catch(error => {
-        console.error('❌ Napaka pri nalaganju komponent:', error);
+      const targetId = btn.getAttribute("data-target");
+      const target = document.getElementById(targetId);
+      if (!target) {
+        console.warn("Ni elementa z id:", targetId);
+        return;
+      }
+
+      const isOpen = target.classList.toggle("open");
+      btn.classList.toggle("open", isOpen);
     });
+  });
 
-    // ===== TRENUTNI DATUM =====
-    function updateDate() {
-        const dateElement = document.getElementById('currentDate');
-        if (dateElement) {
-            const now = new Date();
-            const options = { day: '2-digit', month: '2-digit', year: 'numeric' };
-            dateElement.textContent = now.toLocaleDateString('sl-SI', options);
-        }
+  // ============================================================
+  // 4. OZNAČI AKTIVNI LINK
+  // ============================================================
+  const currentPath = window.location.pathname;
+
+  document.querySelectorAll(".sidebar-nav a").forEach((link) => {
+    const href = link.getAttribute("href");
+    if (href && href !== "/" && currentPath.startsWith(href)) {
+      link.classList.add("active");
     }
+  });
 
-    // ===== GLOBALNE FUNKCIJE =====
-    window.openSidebar = openSidebar;
-    window.closeSidebar = closeSidebar;
-    window.navigateTo = navigateTo;
+  // ============================================================
+  // 5. ODPRI DROPDOWNE, ČE JE AKTIVNI LINK ZNOTRAJ
+  // ============================================================
+  document.querySelectorAll(".nav-sub-list").forEach((list) => {
+    if (list.querySelector("a.active")) {
+      list.classList.add("open");
+
+      const parentSub = list.closest(".nav-sub");
+      if (parentSub) parentSub.classList.add("open");
+
+      const toggle = document.querySelector(`.dropdown-toggle[data-target="${list.id}"]`);
+      if (toggle) toggle.classList.add("open");
+
+      if (parentSub) {
+        const parentToggle = document.querySelector(
+          `.dropdown-toggle[data-target="${parentSub.id}"]`
+        );
+        if (parentToggle) parentToggle.classList.add("open");
+      }
+    }
+  });
+
+  console.log("✅ components.js končan");
 });
