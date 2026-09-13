@@ -1,3 +1,4 @@
+/*
 // app.js
 // API service za komunikacijo z backendom
 const mathApi = {
@@ -398,3 +399,5 @@ function bindGeometryInteractions() {
         });
     }
 }
+
+*/
