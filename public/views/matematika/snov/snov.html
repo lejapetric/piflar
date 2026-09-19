@@ -4,208 +4,291 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Snov — Matematika | Piflar.si</title>
-  <meta name="description" content="Pregled vseh matematičnih snovi za maturo: logika, množice, algebra, funkcije, geometrija, analiza, kombinatorika, verjetnost in statistika.">
+  <meta name="description" content="Pregled vseh 16 matematičnih poglavij za maturo: logika, množice, algebra, funkcije, geometrija, analiza, kombinatorika, verjetnost in statistika.">
   <link rel="stylesheet" href="/style/style.css">
 </head>
 <body>
 
-  <!-- Header (napolni components.js) -->
   <div id="header"></div>
 
   <div id="mainContent" class="main-content">
-    <!-- Sidebar (napolni components.js) -->
     <div id="sidebar"></div>
 
-    <!-- Glavna vsebina -->
     <div class="view-container">
       <div class="view">
 
-        <div class="view-header">
-          <h2>📚 Snov — Matematika</h2>
-          <p>Pregled vseh poglavij, ki jih pokriva maturitetni program iz matematike.</p>
-          <p style="margin-top:8px; opacity:0.8;">
-            📖 16 poglavij · 🎯 Osnovna in višja raven · 🧮 Interaktivni kalkulatorji
+        <!-- Page header -->
+        <header class="page-header">
+          <span class="page-eyebrow">Matematika · Snov</span>
+          <h1>Pregled snovi</h1>
+          <p>
+            Vseh 17 poglavij, ki jih pokriva maturitetni program iz matematike.
+            Vsako poglavje vsebuje razlago, primere in vaje.
           </p>
-        </div>
+          <div class="page-meta">
+            <div class="page-meta-item">
+              <strong>17</strong>
+              <span>Poglavij</span>
+            </div>
+            <div class="page-meta-item">
+              <strong>4</strong>
+              <span>Sklopi</span>
+            </div>
+            <div class="page-meta-item">
+              <strong>2</strong>
+              <span>Ravni</span>
+            </div>
+          </div>
+        </header>
 
         <!-- Uvod -->
-        <div class="card" style="border-left: 4px solid var(--primary);">
-          <h3>🎓 Kaj je matematika?</h3>
-          <p style="font-size: 1.05rem; line-height: 1.7;">
-            <strong>Matematika</strong> je znanost o številih, strukturah, prostoru in spremembah.
-            Je univerzalni jezik, s katerim opisujemo vzorce, dokazujemo trditve in rešujemo probleme.
-            Na maturi iz matematike se preverja znanje <strong>16 poglavij</strong>, ki jih lahko razdelimo
-            v štiri velike sklope: <strong>logika in množice</strong>, <strong>algebra in funkcije</strong>,
-            <strong>geometrija in vektorji</strong> ter <strong>analiza, kombinatorika in statistika</strong>.
+        <div class="intro-card">
+          <h3>Kaj je matematika?</h3>
+          <p>
+            <strong>Matematika</strong> je znanost o številih, strukturah, prostoru in
+            spremembah. Je univerzalni jezik, s katerim opisujemo vzorce, dokazujemo
+            trditve in rešujemo probleme.
+          </p>
+          <p>
+            Na maturi iz matematike se preverja znanje <strong>16 poglavij</strong>, ki jih
+            lahko razdelimo v štiri velike sklope: <strong>logika in množice</strong>,
+            <strong>algebra in funkcije</strong>, <strong>geometrija in vektorji</strong>
+            ter <strong>analiza, kombinatorika in statistika</strong>.
           </p>
         </div>
 
         <!-- Štirje sklopi -->
-        <div class="formula-grid">
-
-          <div class="card">
-            <h3>🧠 1. Logika in množice</h3>
-            <p style="color: var(--text-secondary);">
-              Osnova matematičnega mišljenja. Naučimo se sklepati, dokazovati in delati z množicami.
-            </p>
-            <ul style="margin-top:8px; padding-left:20px; color: var(--text-secondary);">
-              <li><a href="/views/matematika/snov/logika/">Logika</a></li>
-              <li><a href="/views/matematika/snov/mnozice/">Množice</a></li>
-              <li><a href="/views/matematika/snov/stevila/">Številske množice</a></li>
-            </ul>
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>Sklopi</h2>
+            <p>16 poglavij je razdeljenih v štiri logične sklope.</p>
           </div>
 
-          <div class="card">
-            <h3>✏️ 2. Algebra in funkcije</h3>
-            <p style="color: var(--text-secondary);">
-              Računanje z izrazi, reševanje enačb in neenačb ter proučevanje funkcij.
-            </p>
-            <ul style="margin-top:8px; padding-left:20px; color: var(--text-secondary);">
-              <li><a href="/views/matematika/snov/algebra/">Algebra</a></li>
-              <li><a href="/views/matematika/snov/potence/">Potence in koreni</a></li>
-              <li><a href="/views/matematika/snov/funkcije/">Funkcije</a></li>
-              <li><a href="/views/matematika/snov/zaporedja/">Zaporedja</a></li>
-            </ul>
-          </div>
+          <div class="two-col">
+            <div class="info-card">
+              <h3>1. Logika in množice</h3>
+              <p>Osnova matematičnega mišljenja. Naučimo se sklepati, dokazovati in delati z množicami.</p>
+              <ul>
+                <li><a href="/views/matematika/snov/logika/">Logika</a></li>
+                <li><a href="/views/matematika/snov/mnozice/">Množice</a></li>
+                <li><a href="/views/matematika/snov/stevila/">Številske množice</a></li>
+              </ul>
+            </div>
 
-          <div class="card">
-            <h3>📐 3. Geometrija in vektorji</h3>
-            <p style="color: var(--text-secondary);">
-              Obdelava likov, teles, kotov, razdalj in vektorskega računa.
-            </p>
-            <ul style="margin-top:8px; padding-left:20px; color: var(--text-secondary);">
-              <li><a href="/views/matematika/snov/geometrija/">Geometrija</a></li>
-              <li><a href="/views/matematika/snov/oblike/">Liki in telesa</a></li>
-              <li><a href="/views/matematika/snov/vektorji/">Vektorji</a></li>
-              <li><a href="/views/matematika/snov/koordinate/">Koordinate</a></li>
-            </ul>
-          </div>
+            <div class="info-card">
+              <h3>2. Algebra in funkcije</h3>
+              <p>Računanje z izrazi, reševanje enačb in neenačb ter proučevanje funkcij.</p>
+              <ul>
+                <li><a href="/views/matematika/snov/algebra/">Algebra</a></li>
+                <li><a href="/views/matematika/snov/potence/">Potence in koreni</a></li>
+                <li><a href="/views/matematika/snov/funkcije/">Funkcije</a></li>
+                <li><a href="/views/matematika/snov/zaporedja/">Zaporedja</a></li>
+              </ul>
+            </div>
 
-          <div class="card">
-            <h3>∫ 4. Analiza, kombinatorika in statistika</h3>
-            <p style="color: var(--text-secondary);">
-              Odvodi, integrali, štetje, verjetnost in obdelava podatkov.
-            </p>
-            <ul style="margin-top:8px; padding-left:20px; color: var(--text-secondary);">
-              <li><a href="/views/matematika/snov/analiza/">Diferencialni račun</a></li>
-              <li><a href="/views/matematika/snov/integrali/">Integrali</a></li>
-              <li><a href="/views/matematika/snov/kombinatorika/">Kombinatorika</a></li>
-              <li><a href="/views/matematika/snov/verjetnost/">Verjetnost</a></li>
-              <li><a href="/views/matematika/snov/statistika/">Statistika</a></li>
-            </ul>
-          </div>
+            <div class="info-card">
+              <h3>3. Geometrija in vektorji</h3>
+              <p>Obdelava likov, teles, kotov, razdalj in vektorskega računa.</p>
+              <ul>
+                <li><a href="/views/matematika/snov/geometrija/">Geometrija</a></li>
+                <li><a href="/views/matematika/snov/oblike/">Liki in telesa</a></li>
+                <li><a href="/views/matematika/snov/vektorji/">Vektorji</a></li>
+                <li><a href="/views/matematika/snov/koordinate/">Koordinate</a></li>
+              </ul>
+            </div>
 
-        </div>
+            <div class="info-card">
+              <h3>4. Analiza, kombinatorika in statistika</h3>
+              <p>Odvodi, integrali, štetje, verjetnost in obdelava podatkov.</p>
+              <ul>
+                <li><a href="/views/matematika/snov/diferencialni_racun/">Diferencialni račun</a></li>
+                <li><a href="/views/matematika/snov/integralski_racun/">Integrali</a></li>
+                <li><a href="/views/matematika/snov/kombinatorika/">Kombinatorika</a></li>
+                <li><a href="/views/matematika/snov/verjetnost/">Verjetnost</a></li>
+                <li><a href="/views/matematika/snov/statistika/">Statistika</a></li>
+              </ul>
+            </div>
+          </div>
+        </section>
 
         <!-- Vseh 16 poglavij -->
-        <div class="card">
-          <h3>📖 Vseh 16 poglavij</h3>
-          <p style="color: var(--text-secondary); margin-bottom:12px;">
-            Klikni na poglavje in se loti učenja.
-          </p>
-          <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:10px;">
-            <a class="quick-link" href="/views/matematika/snov/logika/">
-              <strong>1. Logika</strong>
-              <small>Izjave, sklepanje, dokazi</small>
-            </a>
-            <a class="quick-link" href="/views/matematika/snov/mnozice/">
-              <strong>2. Množice</strong>
-              <small>Unije, preseki, podmnožice</small>
-            </a>
-            <a class="quick-link" href="/views/matematika/snov/stevila/">
-              <strong>3. Številske množice</strong>
-              <small>N, Z, Q, R, C</small>
-            </a>
-            <a class="quick-link" href="/views/matematika/snov/algebra/">
-              <strong>4. Algebra</strong>
-              <small>Enačbe, neenačbe, polinomi</small>
-            </a>
-            <a class="quick-link" href="/views/matematika/snov/potence/">
-              <strong>5. Potence in koreni</strong>
-              <small>Pravila, racionalizacija</small>
-            </a>
-            <a class="quick-link" href="/views/matematika/snov/funkcije/">
-              <strong>6. Funkcije</strong>
-              <small>Linearne, kvadratne, eksponentne</small>
-            </a>
-            <a class="quick-link" href="/views/matematika/snov/geometrija/">
-              <strong>7. Geometrija</strong>
-              <small>Koti, trikotniki, krogi</small>
-            </a>
-            <a class="quick-link" href="/views/matematika/snov/oblike/">
-              <strong>8. Liki in telesa</strong>
-              <small>Ploščine, prostornine</small>
-            </a>
-            <a class="quick-link" href="/views/matematika/snov/vektorji/">
-              <strong>9. Vektorji</strong>
-              <small>Seštevanje, skalarni produkt</small>
-            </a>
-            <a class="quick-link" href="/views/matematika/snov/koordinate/">
-              <strong>10. Koordinate</strong>
-              <small>Razdalje, premice</small>
-            </a>
-            <a class="quick-link" href="/views/matematika/snov/zaporedja/">
-              <strong>11. Zaporedja</strong>
-              <small>Aritmetična, geometrijska</small>
-            </a>
-            <a class="quick-link" href="/views/matematika/snov/analiza/">
-              <strong>12. Diferencialni račun</strong>
-              <small>Limite, odvodi</small>
-            </a>
-            <a class="quick-link" href="/views/matematika/snov/integrali/">
-              <strong>13. Integrali</strong>
-              <small>Nedoločeni, določeni</small>
-            </a>
-            <a class="quick-link" href="/views/matematika/snov/kombinatorika/">
-              <strong>14. Kombinatorika</strong>
-              <small>Permutacije, kombinacije</small>
-            </a>
-            <a class="quick-link" href="/views/matematika/snov/verjetnost/">
-              <strong>15. Verjetnost</strong>
-              <small>Dogodki, verjetnost</small>
-            </a>
-            <a class="quick-link" href="/views/matematika/snov/statistika/">
-              <strong>16. Statistika</strong>
-              <small>Povprečje, mediana, grafi</small>
-            </a>
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>Vseh 16 poglavij</h2>
+            <p>Klikni na poglavje in se loti učenja.</p>
           </div>
-        </div>
 
-        <!-- Povezave do mature -->
-        <div class="card" style="background: linear-gradient(135deg, #eef2ff 0%, #ffffff 100%);">
-          <h3>🎯 Priprava na maturo</h3>
-          <p style="color: var(--text-secondary); margin-bottom:12px;">
-            Ko predelaš snov, preveri znanje z maturitetnimi polami in nalogami.
-          </p>
-          <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap:10px;">
-            <a class="quick-link" href="/views/matematika/matura/osnovna_raven/naloge/resene/">
-              <strong>✅ Osnovna raven — rešene naloge</strong>
-              <small>Primeri z razlago</small>
+          <div class="link-list">
+            <a class="link-item" href="/views/matematika/snov/logika/">
+              <span class="link-item-text">
+                <strong>1. Logika</strong>
+                <small>Izjave, sklepanje, dokazi</small>
+              </span>
+              <span class="arrow">→</span>
             </a>
-            <a class="quick-link" href="/views/matematika/matura/osnovna_raven/naloge/neresene/">
-              <strong>📝 Osnovna raven — nerešene naloge</strong>
-              <small>Za samostojno vadbo</small>
+            <a class="link-item" href="/views/matematika/snov/mnozice/">
+              <span class="link-item-text">
+                <strong>2. Množice</strong>
+                <small>Unije, preseki, podmnožice</small>
+              </span>
+              <span class="arrow">→</span>
             </a>
-            <a class="quick-link" href="/views/matematika/matura/visja_raven/naloge/resene/">
-              <strong>✅ Višja raven — rešene naloge</strong>
-              <small>Zahtevnejši primeri</small>
+            <a class="link-item" href="/views/matematika/snov/stevila/">
+              <span class="link-item-text">
+                <strong>3. Številske množice</strong>
+                <small>N, Z, Q, R, C</small>
+              </span>
+              <span class="arrow">→</span>
             </a>
-            <a class="quick-link" href="/views/matematika/matura/visja_raven/naloge/neresene/">
-              <strong>📝 Višja raven — neresene naloge</strong>
-              <small>Izziv zase</small>
+            <a class="link-item" href="/views/matematika/snov/algebra/">
+              <span class="link-item-text">
+                <strong>4. Algebra</strong>
+                <small>Enačbe, neenačbe, polinomi</small>
+              </span>
+              <span class="arrow">→</span>
+            </a>
+            <a class="link-item" href="/views/matematika/snov/potence/">
+              <span class="link-item-text">
+                <strong>5. Potence in koreni</strong>
+                <small>Pravila, racionalizacija</small>
+              </span>
+              <span class="arrow">→</span>
+            </a>
+            <a class="link-item" href="/views/matematika/snov/funkcije/">
+              <span class="link-item-text">
+                <strong>6. Funkcije</strong>
+                <small>Linearne, kvadratne, eksponentne</small>
+              </span>
+              <span class="arrow">→</span>
+            </a>
+            <a class="link-item" href="/views/matematika/snov/geometrija/">
+              <span class="link-item-text">
+                <strong>7. Geometrija</strong>
+                <small>Koti, trikotniki, krogi</small>
+              </span>
+              <span class="arrow">→</span>
+            </a>
+            <a class="link-item" href="/views/matematika/snov/oblike/">
+              <span class="link-item-text">
+                <strong>8. Liki in telesa</strong>
+                <small>Ploščine, prostornine</small>
+              </span>
+              <span class="arrow">→</span>
+            </a>
+            <a class="link-item" href="/views/matematika/snov/vektorji/">
+              <span class="link-item-text">
+                <strong>9. Vektorji</strong>
+                <small>Seštevanje, skalarni produkt</small>
+              </span>
+              <span class="arrow">→</span>
+            </a>
+            <a class="link-item" href="/views/matematika/snov/koordinate/">
+              <span class="link-item-text">
+                <strong>10. Koordinate</strong>
+                <small>Razdalje, premice</small>
+              </span>
+              <span class="arrow">→</span>
+            </a>
+            <a class="link-item" href="/views/matematika/snov/zaporedja/">
+              <span class="link-item-text">
+                <strong>11. Zaporedja</strong>
+                <small>Aritmetična, geometrijska</small>
+              </span>
+              <span class="arrow">→</span>
+            </a>
+            <a class="link-item" href="/views/matematika/snov/analiza/">
+              <span class="link-item-text">
+                <strong>12. Diferencialni račun</strong>
+                <small>Limite, odvodi</small>
+              </span>
+              <span class="arrow">→</span>
+            </a>
+            <a class="link-item" href="/views/matematika/snov/integrali/">
+              <span class="link-item-text">
+                <strong>13. Integrali</strong>
+                <small>Nedoločeni, določeni</small>
+              </span>
+              <span class="arrow">→</span>
+            </a>
+            <a class="link-item" href="/views/matematika/snov/kombinatorika/">
+              <span class="link-item-text">
+                <strong>14. Kombinatorika</strong>
+                <small>Permutacije, kombinacije</small>
+              </span>
+              <span class="arrow">→</span>
+            </a>
+            <a class="link-item" href="/views/matematika/snov/verjetnost/">
+              <span class="link-item-text">
+                <strong>15. Verjetnost</strong>
+                <small>Dogodki, verjetnost</small>
+              </span>
+              <span class="arrow">→</span>
+            </a>
+            <a class="link-item" href="/views/matematika/snov/statistika/">
+              <span class="link-item-text">
+                <strong>16. Statistika</strong>
+                <small>Povprečje, mediana, grafi</small>
+              </span>
+              <span class="arrow">→</span>
             </a>
           </div>
-        </div>
+        </section>
+
+        <!-- Priprava na maturo -->
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>Priprava na maturo</h2>
+            <p>Ko predelaš snov, preveri znanje z maturitetnimi polami in nalogami.</p>
+          </div>
+
+          <div class="link-list">
+            <a class="link-item" href="/views/matematika/matura/osnovna_raven/naloge/resene/">
+              <span class="link-item-text">
+                <strong>Osnovna raven — rešene naloge</strong>
+                <small>Primeri z razlago</small>
+              </span>
+              <span class="arrow">→</span>
+            </a>
+            <a class="link-item" href="/views/matematika/matura/osnovna_raven/naloge/neresene/">
+              <span class="link-item-text">
+                <strong>Osnovna raven — nerešene naloge</strong>
+                <small>Za samostojno vadbo</small>
+              </span>
+              <span class="arrow">→</span>
+            </a>
+            <a class="link-item" href="/views/matematika/matura/visja_raven/naloge/resene/">
+              <span class="link-item-text">
+                <strong>Višja raven — rešene naloge</strong>
+                <small>Zahtevnejši primeri</small>
+              </span>
+              <span class="arrow">→</span>
+            </a>
+            <a class="link-item" href="/views/matematika/matura/visja_raven/naloge/neresene/">
+              <span class="link-item-text">
+                <strong>Višja raven — nerešene naloge</strong>
+                <small>Izziv zase</small>
+              </span>
+              <span class="arrow">→</span>
+            </a>
+          </div>
+        </section>
 
         <!-- Zunanje povezave -->
-        <div class="card">
-          <h3>🔗 Koristne povezave</h3>
-          <ul style="padding-left:20px; color: var(--text-secondary);">
-            <li><a href="https://www.ric.si/" target="_blank" rel="noopener">RIC — Državni izpitni center</a> (uradne informacije o maturi)</li>
-            <li><a href="https://www.ric.si/matura/predmeti-in-izpitni-roki/matematika/" target="_blank" rel="noopener">RIC — Matematika na maturi</a> (izpitni katalog)</li>
-            <li><a href="https://eucheniki.sio.si/" target="_blank" rel="noopener">SIO — e-Učbeniki</a> (prosto dostopni učbeniki)</li>
-            <li><a href="/api/matematika" target="_blank">API — seznam snovi (JSON)</a></li>
-            <li><a href="/api/matura" target="_blank">API — maturitetne pole (JSON)</a></li>
+        <div class="external-links">
+          <h3>Uradne informacije</h3>
+          <ul>
+            <li>
+              <a href="https://www.ric.si/" target="_blank" rel="noopener">RIC — Državni izpitni center</a>
+              <span> · uradne informacije o maturi</span>
+            </li>
+            <li>
+              <a href="https://www.ric.si/matura/predmeti-in-izpitni-roki/matematika/" target="_blank" rel="noopener">Izpitni katalog za matematiko</a>
+              <span> · cilji in vsebine izpita</span>
+            </li>
+            <li>
+              <a href="https://eucheniki.sio.si/" target="_blank" rel="noopener">SIO — e-Učbeniki</a>
+              <span> · prosto dostopni učbeniki</span>
+            </li>
           </ul>
         </div>
 
@@ -213,7 +296,6 @@
     </div>
   </div>
 
-  <!-- Footer (napolni components.js) -->
   <div id="footer"></div>
 
   <script src="/components/components.js"></script>

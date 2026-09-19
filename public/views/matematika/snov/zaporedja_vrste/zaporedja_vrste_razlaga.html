@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zaporedja — razlaga in postopki | Piflar.si</title>
+  <meta name="description" content="Celovita razlaga zaporedij za maturo: aritmetično, geometrijsko, limite, vsote, konvergenca. Postopki po korakih.">
+  <link rel="stylesheet" href="/style/style.css">
+</head>
+<body>
+  <div id="header"></div>
+
+  <div id="mainContent" class="main-content">
+    <div id="sidebar"></div>
+
+    <div class="view-container">
+      <div class="view">
+
+        <!-- ============ PAGE HEADER ============ -->
+        <header class="page-header">
+          <span class="page-eyebrow">Matematika · Snov</span>
+          <h1>Zaporedja</h1>
+          <p>
+            Vse o zaporedjih za maturo: aritmetično in geometrijsko zaporedje,
+            splošni člen, vsote, limite, konvergenca in vrste.
+            Vsak tip naloge ima postopek po korakih.
+          </p>
+          <div class="page-meta">
+            <div class="page-meta-item">
+              <strong>11</strong>
+              <span>Tipov nalog</span>
+            </div>
+            <div class="page-meta-item">
+              <strong>35+</strong>
+              <span>Primerov</span>
+            </div>
+            <div class="page-meta-item">
+              <strong>~55 min</strong>
+              <span>Branja</span>
+            </div>
+          </div>
+        </header>
+
+        <!-- ============ 1. TEORIJA ============ -->
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>1. Teorija — formule in pravila</h2>
+            <p>Kar moraš znati na pamet, preden se lotiš nalog.</p>
+          </div>
+
+          <div class="info-card">
+            <h3>Osnovni pojmi</h3>
+            <ul>
+              <li><strong>Zaporedje</strong> je funkcija \(a: \mathbb{N} \to \mathbb{R}\), \(a_n\) je \(n\)-ti člen.</li>
+              <li><strong>Splošni člen</strong> \(a_n\) — formula za \(n\)-ti člen.</li>
+              <li><strong>Rekurzivna formula</strong> — \(a_{n+1}\) izražen z \(a_n\).</li>
+              <li><strong>Naraščajoče:</strong> \(a_{n+1} > a_n\) za vsak \(n\).</li>
+              <li><strong>Padajoče:</strong> \(a_{n+1} < a_n\) za vsak \(n\).</li>
+              <li><strong>Omejeno:</strong> obstaja \(M\), da je \(|a_n| \leq M\) za vsak \(n\).</li>
+            </ul>
+          </div>
+
+          <div class="info-card">
+            <h3>Aritmetično zaporedje</h3>
+            <ul>
+              <li><strong>Definicija:</strong> \(a_{n+1} - a_n = d\) (konstantna diferenca)</li>
+              <li><strong>Splošni člen:</strong> \(a_n = a_1 + (n-1) d\)</li>
+              <li><strong>Vsota prvih \(n\) členov:</strong> \(S_n = \dfrac{n}{2}(a_1 + a_n) = \dfrac{n}{2}(2a_1 + (n-1)d)\)</li>
+              <li><strong>Lastnost:</strong> \(a_n = \dfrac{a_{n-1} + a_{n+1}}{2}\) (aritmetična sredina)</li>
+              <li><strong>Naraščajoče:</strong> \(d > 0\); <strong>padajoče:</strong> \(d < 0\); <strong>konstantno:</strong> \(d = 0\)</li>
+            </ul>
+          </div>
+
+          <div class="info-card">
+            <h3>Geometrijsko zaporedje</h3>
+            <ul>
+              <li><strong>Definicija:</strong> \(\dfrac{a_{n+1}}{a_n} = q\) (konstanten količnik)</li>
+              <li><strong>Splošni člen:</strong> \(a_n = a_1 \cdot q^{n-1}\)</li>
+              <li><strong>Vsota prvih \(n\) členov:</strong> \(S_n = a_1 \cdot \dfrac{q^n - 1}{q - 1}\) (za \(q \neq 1\))</li>
+              <li><strong>Vsota neskončne vrste</strong> (za \(|q| < 1\)): \(S_\infty = \dfrac{a_1}{1 - q}\)</li>
+              <li><strong>Lastnost:</strong> \(a_n^2 = a_{n-1} \cdot a_{n+1}\) (geometrijska sredina)</li>
+              <li><strong>Naraščajoče:</strong> \(a_1 > 0, q > 1\) ali \(a_1 < 0, 0 < q < 1\)</li>
+            </ul>
+          </div>
+
+          <div class="info-card">
+            <h3>Limita zaporedja</h3>
+            <ul>
+              <li>\(\lim_{n \to \infty} a_n = L\) — členi se približujejo \(L\).</li>
+              <li><strong>Konvergentno:</strong> limita obstaja in je končna.</li>
+              <li><strong>Divergentno:</strong> limita ne obstaja ali je \(\pm\infty\).</li>
+              <li>\(\lim_{n \to \infty} \dfrac{1}{n} = 0\), \(\lim_{n \to \infty} c = c\), \(\lim_{n \to \infty} q^n = 0\) za \(|q| < 1\)</li>
+              <li><strong>Pravila:</strong> limita vsote = vsota limit, limita produkta = produkt limit ...</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ============ 2. TIPI NALOG ============ -->
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>2. Tipi nalog — postopki po korakih</h2>
+            <p>Za vsak tip: kako ga prepoznaš, kako ga rešiš, primer.</p>
+          </div>
+
+          <!-- ====================== TIP 1 ====================== -->
+          <div class="info-card">
+            <h3>Tip 1: Določitev členov aritmetičnega zaporedja</h3>
+            <p><strong>Kako prepoznaš:</strong> "Prvi člen je ..., diferenca je ...", "zapišite prvih nekaj členov".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Zapiši \(a_1\) in \(d\).</li>
+              <li>Uporabi formulo \(a_n = a_1 + (n-1)d\).</li>
+              <li>Za vsak \(n\) izračunaj \(a_n\).</li>
+            </ol>
+            <div class="math-block">
+              $$\text{Primer: } a_1 = 2, \quad d = 3$$
+            </div>
+            <p>1. \(a_2 = 2 + 3 = 5\). 2. \(a_3 = 2 + 6 = 8\). 3. \(a_4 = 2 + 9 = 11\). 4. Splošni člen: \(a_n = 3n - 1\).</p>
+          </div>
+
+          <!-- ====================== TIP 2 ====================== -->
+          <div class="info-card">
+            <h3>Tip 2: Iskanje \(a_1\) in \(d\) iz dveh znanih členov</h3>
+            <p><strong>Kako prepoznaš:</strong> "Peti člen je ..., osmi člen je ...", "izračunajte \(a_1\) in \(d\)".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Zapiši dve enačbi: \(a_m = a_1 + (m-1)d\), \(a_n = a_1 + (n-1)d\).</li>
+              <li>Odštej enačbi: \(a_n - a_m = (n-m)d\).</li>
+              <li>Izračunaj \(d = \dfrac{a_n - a_m}{n - m}\).</li>
+              <li>Vstavi \(d\) v eno od enačb in izračunaj \(a_1\).</li>
+            </ol>
+            <div class="math-block">
+              $$\text{Primer: } a_4 = 17, \quad a_5 + a_7 = 50$$
+            </div>
+            <p>1. \(a_4 = a_1 + 3d = 17\). 2. \(a_5 + a_7 = 2a_1 + 10d = 50\). 3. Iz prve: \(a_1 = 17 - 3d\). 4. Vstavi v drugo: \(2(17 - 3d) + 10d = 50 \Rightarrow 34 + 4d = 50 \Rightarrow d = 4\). 5. \(a_1 = 17 - 12 = 5\).</p>
+          </div>
+
+          <!-- ====================== TIP 3 ====================== -->
+          <div class="info-card">
+            <h3>Tip 3: Vsota prvih \(n\) členov aritmetičnega zaporedja</h3>
+            <p><strong>Kako prepoznaš:</strong> "Izračunajte vsoto prvih 100 členov".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Zapiši \(a_1\) in \(d\).</li>
+              <li>Uporabi \(S_n = \dfrac{n}{2}(2a_1 + (n-1)d)\).</li>
+              <li>Izračunaj.</li>
+            </ol>
+            <div class="math-block">
+              $$\text{Primer: } a_1 = 2, d = 3, n = 100$$
+            </div>
+            <p>1. \(S_{100} = \dfrac{100}{2}(2 \cdot 2 + 99 \cdot 3) = 50(4 + 297) = 50 \cdot 301 = 15050\).</p>
+          </div>
+
+          <!-- ====================== TIP 4 ====================== -->
+          <div class="info-card">
+            <h3>Tip 4: Določitev \(a_1\) in \(q\) iz dveh znanih členov (geometrijsko)</h3>
+            <p><strong>Kako prepoznaš:</strong> "Tretji člen je ..., šesti člen je ...".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Zapiši: \(a_m = a_1 q^{m-1}\), \(a_n = a_1 q^{n-1}\).</li>
+              <li>Deli enačbi: \(\dfrac{a_n}{a_m} = q^{n-m}\).</li>
+              <li>Izračunaj \(q = \sqrt[n-m]{\dfrac{a_n}{a_m}}\) (pazi na predznak!).</li>
+              <li>Vstavi \(q\) v eno od enačb in izračunaj \(a_1\).</li>
+            </ol>
+            <div class="math-block">
+              $$\text{Primer: } a_3 = 40, \quad a_6 = 320$$
+            </div>
+            <p>1. \(\dfrac{a_6}{a_3} = q^3 = \dfrac{320}{40} = 8 \Rightarrow q = 2\). 2. \(a_3 = a_1 \cdot 4 = 40 \Rightarrow a_1 = 10\).</p>
+          </div>
+
+          <!-- ====================== TIP 5 ====================== -->
+          <div class="info-card">
+            <h3>Tip 5: Vsota prvih \(n\) členov geometrijskega zaporedja</h3>
+            <p><strong>Kako prepoznaš:</strong> "Vsota prvih 12 členov je ...".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Zapiši \(a_1\) in \(q\).</li>
+              <li>Uporabi \(S_n = a_1 \cdot \dfrac{q^n - 1}{q - 1}\).</li>
+              <li>Če je \(|q| < 1\), lahko izračunaš tudi \(S_\infty = \dfrac{a_1}{1 - q}\).</li>
+            </ol>
+            <div class="math-block">
+              $$\text{Primer: } a_1 = 4, q = 2, n = 12$$
+            </div>
+            <p>1. \(S_{12} = 4 \cdot \dfrac{2^{12} - 1}{2 - 1} = 4 \cdot (4096 - 1) = 4 \cdot 4095 = 16380\).</p>
+          </div>
+
+          <!-- ====================== TIP 6 ====================== -->
+          <div class="info-card">
+            <h3>Tip 6: Vsota neskončne geometrijske vrste</h3>
+            <p><strong>Kako prepoznaš:</strong> "Izračunajte vsoto vrste \(a_1 + a_2 + a_3 + \ldots\)".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Preveri, da je \(|q| < 1\) (sicer vrsta divergira).</li>
+              <li>Uporabi \(S_\infty = \dfrac{a_1}{1 - q}\).</li>
+            </ol>
+            <div class="math-block">
+              $$\text{Primer: } 2 + \frac{2}{3} + \frac{2}{9} + \ldots$$
+            </div>
+            <p>1. \(a_1 = 2, q = \dfrac{1}{3}\). 2. \(|q| < 1\). 3. \(S_\infty = \dfrac{2}{1 - \frac{1}{3}} = \dfrac{2}{\frac{2}{3}} = 3\).</p>
+          </div>
+
+          <!-- ====================== TIP 7 ====================== -->
+          <div class="info-card">
+            <h3>Tip 7: Preverjanje, ali je zaporedje aritmetično/geometrijsko</h3>
+            <p><strong>Kako prepoznaš:</strong> "Ali je zaporedje aritmetično/geometrijsko?".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li><strong>Aritmetično:</strong> preveri, ali je \(a_{n+1} - a_n\) konstanten za vse \(n\).</li>
+              <li><strong>Geometrijsko:</strong> preveri, ali je \(\dfrac{a_{n+1}}{a_n}\) konstanten za vse \(n\).</li>
+              <li>Če nobeno, zaporedje ni ne aritmetično ne geometrijsko.</li>
+            </ol>
+            <div class="math-block">
+              $$\text{Primer: } a_n = 20 - 3n$$
+            </div>
+            <p>1. \(a_{n+1} - a_n = (20 - 3(n+1)) - (20 - 3n) = -3\). 2. Konstantno → <strong>aritmetično</strong> z \(d = -3\). 3. \(a_1 = 17\).</p>
+          </div>
+
+          <!-- ====================== TIP 8 ====================== -->
+          <div class="info-card">
+            <h3>Tip 8: Iskanje \(x\), da so tri števila členi zaporedja</h3>
+            <p><strong>Kako prepoznaš:</strong> "Za katere \(x\) so \(x^2 - 7, 1 - x, 2\) zaporedni členi ...".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li><strong>Aritmetično:</strong> \(b = \dfrac{a + c}{2}\) (srednji člen je povprečje).</li>
+              <li><strong>Geometrijsko:</strong> \(b^2 = a \cdot c\) (kvadrat srednjega je produkt).</li>
+              <li>Reši enačbo za \(x\).</li>
+            </ol>
+            <div class="math-block">
+              $$\text{Primer: } 11, x, 7 \text{ so členi aritmetičnega zaporedja}$$
+            </div>
+            <p>1. \(x = \dfrac{11 + 7}{2} = 9\).</p>
+            <div class="math-block">
+              $$\text{Primer: } x^2 - 7, 1 - x, 2 \text{ so členi geometrijskega zaporedja}$$
+            </div>
+            <p>1. \((1-x)^2 = (x^2 - 7) \cdot 2\). 2. \(1 - 2x + x^2 = 2x^2 - 14\). 3. \(x^2 + 2x - 15 = 0 \Rightarrow x_1 = 3, x_2 = -5\). 4. Preveri, kateri \(x\) daje padajoče zaporedje (če zahteva).</p>
+          </div>
+
+          <!-- ====================== TIP 9 ====================== -->
+          <div class="info-card">
+            <h3>Tip 9: Limita zaporedja</h3>
+            <p><strong>Kako prepoznaš:</strong> "Izračunajte \(\lim_{n \to \infty} a_n\)".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Če je \(a_n\) racionalna funkcija v \(n\): deli števec in imenovalec z najvišjo potenco \(n\).</li>
+              <li>Uporabi \(\lim_{n \to \infty} \dfrac{1}{n^k} = 0\).</li>
+              <li>Če je \(a_n = q^n\): \(\lim = 0\), če \(|q| < 1\); \(\lim = \infty\), če \(q > 1\); \(\lim\) ne obstaja, če \(q \leq -1\).</li>
+            </ol>
+            <div class="math-block">
+              $$\text{Primer: } a_n = \frac{3n - 1}{2n + 5}$$
+            </div>
+            <p>1. Deli z \(n\): \(\dfrac{3 - \frac{1}{n}}{2 + \frac{5}{n}}\). 2. \(\lim_{n \to \infty} = \dfrac{3 - 0}{2 + 0} = \dfrac{3}{2}\).</p>
+            <div class="math-block">
+              $$\text{Primer: } a_n = \frac{3n}{2n+1}$$
+            </div>
+            <p>1. Deli z \(n\): \(\dfrac{3}{2 + \frac{1}{n}}\). 2. Limita: \(\dfrac{3}{2}\). 3. Zaporedje je omejeno (med \(1\) in \(\dfrac{3}{2}\)).</p>
+          </div>
+
+          <!-- ====================== TIP 10 ====================== -->
+          <div class="info-card">
+            <h3>Tip 10: Dokazovanje, da je zaporedje naraščajoče/padajoče</h3>
+            <p><strong>Kako prepoznaš:</strong> "Dokažite, da je zaporedje naraščajoče".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Izračunaj \(a_{n+1} - a_n\).</li>
+              <li>Pokaži, da je ta razlika \(> 0\) (naraščajoče) ali \(< 0\) (padajoče) za vsak \(n\).</li>
+              <li>Alternativa: izračunaj \(\dfrac{a_{n+1}}{a_n}\) in primerjaj z 1 (za pozitivne člene).</li>
+            </ol>
+            <div class="math-block">
+              $$\text{Primer: } a_n = 2^n + 1$$
+            </div>
+            <p>1. \(a_{n+1} - a_n = (2^{n+1} + 1) - (2^n + 1) = 2^n > 0\). 2. Zaporedje je <strong>naraščajoče</strong>.</p>
+          </div>
+
+          <!-- ====================== TIP 11 ====================== -->
+          <div class="info-card">
+            <h3>Tip 11: Besedilne naloge (vrinjeni členi, geometrijski kontekst)</h3>
+            <p><strong>Kako prepoznaš:</strong> "Med števili \(a\) in \(b\) vrinite ...", "stranice trikotnika tvorijo ...".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Preberi, kaj tvori zaporedje (stranice, dolžine, količine ...).</li>
+              <li>Zapiši enačbe iz pogojev.</li>
+              <li>Reši sistem za \(a_1\) in \(d\) (ali \(q\)).</li>
+              <li>Preveri, da rešitve ustrezajo pogojem (npr. stranice trikotnika morajo biti pozitivne).</li>
+            </ol>
+            <div class="math-block">
+              $$\text{Primer: Med 7 in 448 vrinite 5 števil, da dobite aritmetično zaporedje.}$$
+            </div>
+            <p>1. \(a_1 = 7, a_7 = 448\). 2. \(a_7 = 7 + 6d = 448 \Rightarrow 6d = 441 \Rightarrow d = 73{,}5\). 3. Vrinjeni členi: \(80{,}5, 154, 227{,}5, 301, 374{,}5\).</p>
+            <div class="math-block">
+              $$\text{Primer: Stranice trikotnika tvorijo aritmetično zaporedje z diferenco 3, obseg je 30.}$$
+            </div>
+            <p>1. Stranice: \(a, a+3, a+6\). 2. Obseg: \(a + (a+3) + (a+6) = 30 \Rightarrow 3a + 9 = 30 \Rightarrow a = 7\). 3. Stranice: \(7, 10, 13\).</p>
+          </div>
+        </section>
+
+        <!-- ============ 3. POGOSTE NAPAKE ============ -->
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>3. Pogoste napake</h2>
+          </div>
+          <div class="info-card">
+            <ul>
+              <li>Zamenjaš \(a_n\) (splošni člen) s \(S_n\) (vsota).</li>
+              <li>Pri geometrijskem zaporedju pozabiš, da je \(q\) lahko <strong>negativen</strong> (zaporedje izmenično).</li>
+              <li>Pri \(S_n = a_1 \dfrac{q^n - 1}{q - 1}\) uporabiš napačen predznak ali zamenjaš \(q^n - 1\) z \(1 - q^n\).</li>
+              <li>Pri neskončni vrsti pozabiš preveriti \(|q| < 1\).</li>
+              <li>Pri limiti \(\dfrac{\infty}{\infty}\) pozabiš deliti z najvišjo potenco.</li>
+              <li>Pri iskanju \(q\) iz \(q^{n-m}\) pozabiš, da ima <strong>dve rešitvi</strong> (če je \(n-m\) sod).</li>
+              <li>Pri besedilnih nalogah ne preveriš smiselnosti (npr. stranice trikotnika morajo biti pozitivne).</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ============ 4. POVEZAVE ============ -->
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>4. Vadi naprej</h2>
+            <p>Ko predelaš razlago, preveri znanje z nalogami.</p>
+          </div>
+          <div class="link-list">
+            <a class="link-item" href="/views/matematika/matura/osnovna_raven/naloge/resene/">
+              <span class="link-item-text">
+                <strong>Rešene naloge — osnovna raven</strong>
+                <small>Primeri z razlago</small>
+              </span>
+              <span class="arrow">→</span>
+            </a>
+            <a class="link-item" href="/views/matematika/matura/visja_raven/naloge/resene/">
+              <span class="link-item-text">
+                <strong>Rešene naloge — višja raven</strong>
+                <small>Zahtevnejši primeri</small>
+              </span>
+              <span class="arrow">→</span>
+            </a>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+
+  <script src="/components/components.js"></script>
+</body>
+</html>

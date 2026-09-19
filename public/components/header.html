@@ -1,10 +1,18 @@
 <!-- public/components/header.html -->
 <header class="header">
     <button id="openSidebar" class="menu-btn" aria-label="Odpri meni">
-        ☰
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <line x1="3" y1="6" x2="21" y2="6"></line>
+            <line x1="3" y1="12" x2="21" y2="12"></line>
+            <line x1="3" y1="18" x2="21" y2="18"></line>
+        </svg>
     </button>
-    <h1 id="pageTitle">Matematika na Maturi</h1>
+
+    <a href="/" class="header-brand" aria-label="Piflar.si — domov">
+        <span class="header-brand-text">Piflar<span class="header-brand-dot">.</span>si</span>
+    </a>
+
     <div class="header-actions">
-        <span id="currentDate"></span>
+        <span id="currentDate" class="header-date"></span>
     </div>
 </header>

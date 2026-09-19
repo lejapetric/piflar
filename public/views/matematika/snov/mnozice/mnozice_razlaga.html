@@ -1,74 +1,365 @@
-<div class="view">
-    <div class="view-header">
-        <h2>📊 2. Množice</h2>
-        <p>Osnovni pojmi, operacije z množicami in Vennovi diagrami</p>
-    </div>
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Množice, logika in števila — razlaga in postopki | Piflar.si</title>
+  <meta name="description" content="Celovita razlaga množic, logike in števil za maturo: operacije z množicami, Vennovi diagrami, izjave, deljivost, praštevila, številske množice.">
+  <link rel="stylesheet" href="/style/style.css">
+</head>
+<body>
+  <div id="header"></div>
 
-    <div class="card">
-        <h3>📖 Osnovni pojmi</h3>
-        <p><strong>Množica</strong> je zbirka dobro določenih, razločljivih objektov (elementov).</p>
-        <p style="margin-top: 8px;"><strong>Element:</strong> x ∈ A ali x ∉ A</p>
-        <p><strong>Prazna množica:</strong> ∅ ali {}</p>
-        <p><strong>Univerzalna množica:</strong> U</p>
-        <p><strong>Moč množice:</strong> |A| (število elementov)</p>
-    </div>
+  <div id="mainContent" class="main-content">
+    <div id="sidebar"></div>
 
-    <div class="card">
-        <h3>🔗 Operacije z množicami</h3>
-        <div class="formula-grid">
-            <div class="formula-card">
-                <strong>PRESEK (∩)</strong><br>
-                <code>A ∩ B = {x | x ∈ A in x ∈ B}</code>
-                <p style="margin-top: 4px; font-size: 14px; color: var(--text-secondary);">Skupni elementi</p>
-            </div>
-            <div class="formula-card">
-                <strong>UNIJA (∪)</strong><br>
-                <code>A ∪ B = {x | x ∈ A ali x ∈ B}</code>
-                <p style="margin-top: 4px; font-size: 14px; color: var(--text-secondary);">Vsi elementi iz obeh množic</p>
-            </div>
-            <div class="formula-card">
-                <strong>RAZLIKA (\)</strong><br>
-                <code>A \ B = {x | x ∈ A in x ∉ B}</code>
-                <p style="margin-top: 4px; font-size: 14px; color: var(--text-secondary);">Elementi v A, ki niso v B</p>
-            </div>
-            <div class="formula-card">
-                <strong>KOMPLEMENT (^c)</strong><br>
-                <code>A^c = U \ A = {x ∈ U | x ∉ A}</code>
-                <p style="margin-top: 4px; font-size: 14px; color: var(--text-secondary);">Vsi elementi razen tistih v A</p>
-            </div>
-        </div>
-    </div>
+    <div class="view-container">
+      <div class="view">
 
-    <div class="card">
-        <h3>📝 Pomembne zakonitosti</h3>
-        <div class="formula-grid">
-            <div class="formula-card">
-                <strong>De Morganova zakona</strong><br>
-                <code>(A ∩ B)^c = A^c ∪ B^c</code><br>
-                <code>(A ∪ B)^c = A^c ∩ B^c</code>
+        <!-- ============ PAGE HEADER ============ -->
+        <header class="page-header">
+          <span class="page-eyebrow">Matematika · Snov</span>
+          <h1>Množice, logika in števila</h1>
+          <p>
+            Osnova matematičnega mišljenja: operacije z množicami, Vennovi diagrami,
+            logične izjave, deljivost, praštevila in številske množice.
+            Vsak tip naloge ima postopek po korakih.
+          </p>
+          <div class="page-meta">
+            <div class="page-meta-item">
+              <strong>10</strong>
+              <span>Tipov nalog</span>
             </div>
-            <div class="formula-card">
-                <strong>Distributivnost</strong><br>
-                <code>A ∩ (B ∪ C) = (A ∩ B) ∪ (A ∩ C)</code><br>
-                <code>A ∪ (B ∩ C) = (A ∪ B) ∩ (A ∪ C)</code>
+            <div class="page-meta-item">
+              <strong>35+</strong>
+              <span>Primerov</span>
             </div>
-            <div class="formula-card">
-                <strong>Število elementov</strong><br>
-                <code>|A ∪ B| = |A| + |B| - |A ∩ B|</code>
+            <div class="page-meta-item">
+              <strong>~50 min</strong>
+              <span>Branja</span>
             </div>
-        </div>
-    </div>
+          </div>
+        </header>
 
-    <div class="card">
-        <h3>📊 Vennov diagram - primer</h3>
-        <div style="background: var(--bg-primary); padding: 16px; border-radius: var(--radius-sm);">
-            <p><strong>Primer:</strong> U = {1,2,3,4,5,6,7}, A = {1,2,3,4}, B = {3,4,5,6}</p>
-            <ul style="margin-top: 8px; padding-left: 20px; color: var(--text-secondary);">
-                <li>A ∩ B = {3,4}</li>
-                <li>A ∪ B = {1,2,3,4,5,6}</li>
-                <li>A \ B = {1,2}</li>
-                <li>A^c = {5,6,7}</li>
+        <!-- ============ 1. TEORIJA ============ -->
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>1. Teorija — formule in pravila</h2>
+            <p>Kar moraš znati na pamet, preden se lotiš nalog.</p>
+          </div>
+
+          <div class="info-card">
+            <h3>Množice — osnovne operacije</h3>
+            <ul>
+              <li><strong>Unija:</strong> \(A \cup B\) — vsi elementi, ki so v \(A\) <em>ali</em> v \(B\).</li>
+              <li><strong>Presek:</strong> \(A \cap B\) — elementi, ki so v \(A\) <em>in</em> v \(B\).</li>
+              <li><strong>Razlika:</strong> \(A \setminus B\) — elementi, ki so v \(A\), a <em>ne</em> v \(B\).</li>
+              <li><strong>Komplement:</strong> \(A^C\) — elementi univerzalne množice, ki niso v \(A\).</li>
+              <li><strong>Podmnožica:</strong> \(A \subseteq B\) — vsak element \(A\) je tudi v \(B\).</li>
+              <li><strong>Moč množice:</strong> \(m(A)\) — število elementov.</li>
+              <li><strong>Potenčna množica:</strong> \(\mathcal{P}(A)\) — množica vseh podmnožic \(A\); \(m(\mathcal{P}(A)) = 2^{m(A)}\).</li>
+              <li><strong>Kartezični produkt:</strong> \(A \times B = \{(a,b) ; a \in A, b \in B\}\).</li>
             </ul>
-        </div>
+          </div>
+
+          <div class="info-card">
+            <h3>Logika — izjave in povezave</h3>
+            <ul>
+              <li><strong>Negacija:</strong> \(\neg A\) (ne \(A\))</li>
+              <li><strong>Konjunkcija:</strong> \(A \land B\) (in) — resnična le, če sta obe resnični</li>
+              <li><strong>Disjunkcija:</strong> \(A \lor B\) (ali) — resnična, če je vsaj ena resnična</li>
+              <li><strong>Implikacija:</strong> \(A \Rightarrow B\) (če \(A\), potem \(B\)) — neresnična le, ko je \(A\) resnična in \(B\) neresnična</li>
+              <li><strong>Ekvivalenca:</strong> \(A \iff B\) (\(A\) natanko takrat, ko \(B\))</li>
+            </ul>
+            <p><strong>De Morganova zakona:</strong></p>
+            <ul>
+              <li>\(\neg(A \land B) = \neg A \lor \neg B\)</li>
+              <li>\(\neg(A \lor B) = \neg A \land \neg B\)</li>
+            </ul>
+          </div>
+
+          <div class="info-card">
+            <h3>Številske množice</h3>
+            <ul>
+              <li>\(\mathbb{N}\) — naravna števila: \(1, 2, 3, \ldots\)</li>
+              <li>\(\mathbb{Z}\) — cela števila: \(\ldots, -2, -1, 0, 1, 2, \ldots\)</li>
+              <li>\(\mathbb{Q}\) — racionalna: \(\dfrac{a}{b}, a, b \in \mathbb{Z}, b \neq 0\)</li>
+              <li>\(\mathbb{R}\) — realna števila (racionalna + iracionalna)</li>
+              <li>\(\mathbb{C}\) — kompleksna števila</li>
+              <li>\(\mathbb{N} \subset \mathbb{Z} \subset \mathbb{Q} \subset \mathbb{R} \subset \mathbb{C}\)</li>
+            </ul>
+          </div>
+
+          <div class="info-card">
+            <h3>Deljivost in praštevila</h3>
+            <ul>
+              <li><strong>Deljivost z 2:</strong> zadnja števka soda</li>
+              <li><strong>Deljivost s 3:</strong> vsota števk deljiva s 3</li>
+              <li><strong>Deljivost s 4:</strong> zadnji dve števki deljivi s 4</li>
+              <li><strong>Deljivost s 5:</strong> zadnja števka 0 ali 5</li>
+              <li><strong>Deljivost z 8:</strong> zadnje tri števke deljive z 8</li>
+              <li><strong>Deljivost z 9:</strong> vsota števk deljiva z 9</li>
+              <li><strong>Deljivost z 10:</strong> zadnja števka 0</li>
+              <li><strong>Deljivost z 6:</strong> deljivo z 2 <em>in</em> s 3</li>
+              <li><strong>Praštevilo:</strong> naravno število \(> 1\), deljivo le z 1 in samim seboj</li>
+              <li><strong>Tuji števili:</strong> \(D(a,b) = 1\) (največji skupni delitelj je 1)</li>
+              <li><strong>Največji skupni delitelj:</strong> \(D(a,b)\) — največje število, ki deli oba</li>
+              <li><strong>Najmanjši skupni večkratnik:</strong> \(v(a,b)\) — najmanjše število, ki je deljivo z obema</li>
+              <li>\(D(a,b) \cdot v(a,b) = a \cdot b\)</li>
+            </ul>
+          </div>
+
+          <div class="info-card">
+            <h3>Intervali</h3>
+            <ul>
+              <li>\([a, b]\) — zaprt interval (vključuje \(a, b\))</li>
+              <li>\((a, b)\) — odprt interval (ne vključuje \(a, b\))</li>
+              <li>\([a, b)\) — polodprt (vključuje \(a\), ne \(b\))</li>
+              <li>\((-\infty, a]\) — vsa števila \(\leq a\)</li>
+              <li>\((a, \infty)\) — vsa števila \(> a\)</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ============ 2. TIPI NALOG ============ -->
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>2. Tipi nalog — postopki po korakih</h2>
+            <p>Za vsak tip: kako ga prepoznaš, kako ga rešiš, primer.</p>
+          </div>
+
+          <!-- ====================== TIP 1 ====================== -->
+          <div class="info-card">
+            <h3>Tip 1: Operacije z množicami</h3>
+            <p><strong>Kako prepoznaš:</strong> \(A \cup B\), \(A \cap B\), \(A \setminus B\), \(A \times B\).</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Zapiši elemente vsake množice.</li>
+              <li><strong>Unija</strong> \(A \cup B\): prepiši vse elemente iz \(A\) in \(B\), <em>brez ponavljanja</em>.</li>
+              <li><strong>Presek</strong> \(A \cap B\): prepiši elemente, ki so v obeh.</li>
+              <li><strong>Razlika</strong> \(A \setminus B\): prepiši elemente iz \(A\), ki niso v \(B\).</li>
+              <li><strong>Kartezični produkt</strong> \(A \times B\): vsak element \(A\) z vsakim elementom \(B\), kot urejeni par \((a, b)\).</li>
+            </ol>
+            <div class="math-block">
+              $$\text{Primer: } A = \{1,2,3\}, B = \{3,4,6\}$$
+            </div>
+            <p>1. \(A \cup B = \{1,2,3,4,6\}\). 2. \(A \cap B = \{3\}\). 3. \(A \setminus B = \{1,2\}\). 4. \(A \times B = \{(1,3),(1,4),(1,6),(2,3),(2,4),(2,6),(3,3),(3,4),(3,6)\}\).</p>
+          </div>
+
+          <!-- ====================== TIP 2 ====================== -->
+          <div class="info-card">
+            <h3>Tip 2: Vennovi diagrami</h3>
+            <p><strong>Kako prepoznaš:</strong> "Označite množico na sliki", "zapišite elemente iz diagrama".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Preberi, katero operacijo iščeš (npr. \(A \cap B\), \((A \cup B) \cap C\)).</li>
+              <li>Na diagramu poišči območje, ki ustreza operaciji:
+                <ul>
+                  <li>\(A \cap B\) → presek krogov</li>
+                  <li>\(A \cup B\) → oba kroga skupaj</li>
+                  <li>\(A \setminus B\) → del kroga \(A\), ki ni v \(B\)</li>
+                </ul>
+              </li>
+              <li>Preberi številke/elemente iz tega območja.</li>
+            </ol>
+            <div class="math-block">
+              $$\text{Primer: Na diagramu so števila 1, 2, 3, 4, 5, 6, 7. } A = \{1,2,5,4\}, B = \{6,5,4\}, C = \{3,4,7\}$$
+            </div>
+            <p>1. \(A \cap B = \{4, 5\}\) (v obeh krogih). 2. \(B \cup A = \{1,2,5,4,6\}\). 3. \(A \setminus C = \{1,2,5\}\).</p>
+          </div>
+
+          <!-- ====================== TIP 3 ====================== -->
+          <div class="info-card">
+            <h3>Tip 3: Moč množice in podmnožice</h3>
+            <p><strong>Kako prepoznaš:</strong> "Zapišite vse podmnožice", "koliko podmnožic ima množica".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Preštej elemente: \(m(A) = n\).</li>
+              <li>Število vseh podmnožic: \(2^n\).</li>
+              <li>Naštej jih sistematično: najprej prazna, nato enočlenske, dvočlenske, ..., nato cela množica.</li>
+              <li>Pazi: prazna množica \(\emptyset\) in cela množica \(A\) sta vedno podmnožici.</li>
+            </ol>
+            <div class="math-block">
+              $$\text{Primer: } A = \{1, 2, 3\} \Rightarrow m(A) = 3 \Rightarrow 2^3 = 8 \text{ podmnožic}$$
+            </div>
+            <p>\(\emptyset, \{1\}, \{2\}, \{3\}, \{1,2\}, \{1,3\}, \{2,3\}, \{1,2,3\}\).</p>
+          </div>
+
+          <!-- ====================== TIP 4 ====================== -->
+          <div class="info-card">
+            <h3>Tip 4: Logične izjave in njihova vrednost</h3>
+            <p><strong>Kako prepoznaš:</strong> "Obkrožite 1, če je izjava resnična", "ugotovite vrednost izjave".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Preberi izjavo.</li>
+              <li>Preveri, ali je resnična za <strong>vse</strong> elemente (\(\forall\)) ali le za <strong>nekaj</strong> (\(\exists\)).</li>
+              <li>Če je protiprimer, je izjava neresnična.</li>
+              <li>Pri sestavljenih izjavah uporabi resničnostno tabelo.</li>
+            </ol>
+            <div class="math-block">
+              $$\text{Resničnostna tabela za } A \land B, A \lor B, A \Rightarrow B$$
+            </div>
+            <ul>
+              <li>\(A \land B\): resnična le, ko sta obe resnični.</li>
+              <li>\(A \lor B\): neresnična le, ko sta obe neresnični.</li>
+              <li>\(A \Rightarrow B\): neresnična le, ko je \(A\) resnična in \(B\) neresnična.</li>
+            </ul>
+          </div>
+
+          <!-- ====================== TIP 5 ====================== -->
+          <div class="info-card">
+            <h3>Tip 5: Deljivost števil</h3>
+            <p><strong>Kako prepoznaš:</strong> "Ali je število deljivo z ...", "obkrožite DA/NE".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Preveri pravila za deljivost (glej teorijo).</li>
+              <li>Za sestavljena števila (npr. 6 = 2 · 3) preveri, ali je deljivo z vsemi prafaktorji.</li>
+              <li>Pazi: deljivost z 8 in 9 sta strožji kot z 2 in 3.</li>
+            </ol>
+            <div class="math-block">
+              $$\text{Primer: } 102030405060$$
+            </div>
+            <p>1. z 2: zadnja števka 0 → DA. 2. s 3: vsota števk \(1+0+2+0+3+0+4+0+5+0+6+0 = 21\) → deljivo s 3 → DA. 3. s 4: zadnji dve števki 60 → deljivo s 4 → DA. 4. s 5: zadnja števka 0 → DA. 5. s 6: deljivo z 2 in 3 → DA. 6. z 8: zadnje tri 060 = 60, ni deljivo z 8 → NE. 7. z 9: vsota 21, ni deljivo z 9 → NE.</p>
+          </div>
+
+          <!-- ====================== TIP 6 ====================== -->
+          <div class="info-card">
+            <h3>Tip 6: Praštevila in prafaktorizacija</h3>
+            <p><strong>Kako prepoznaš:</strong> "Razcepíte na prafaktorje", "ali je število praštevilo".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Preveri, ali je število deljivo z 2, 3, 5, 7, 11, ...</li>
+              <li>Deli z najmanjšim praštevilom, ki deli število.</li>
+              <li>Ponavljaj, dokler ne dobiš 1.</li>
+              <li>Zapiši kot produkt praštevil (s potencami).</li>
+            </ol>
+            <div class="math-block">
+              $$\text{Primer: } 45 = 3^2 \cdot 5, \quad 48 = 2^4 \cdot 3, \quad 60 = 2^2 \cdot 3 \cdot 5$$
+            </div>
+          </div>
+
+          <!-- ====================== TIP 7 ====================== -->
+          <div class="info-card">
+            <h3>Tip 7: Največji skupni delitelj in najmanjši skupni večkratnik</h3>
+            <p><strong>Kako prepoznaš:</strong> "Izračunajte \(D(a,b)\) in \(v(a,b)\)".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Razcepí obe števili na prafaktorje.</li>
+              <li>\(D(a,b)\) = produkt <strong>skupnih</strong> prafaktorjev z <strong>najmanjšo</strong> potenco.</li>
+              <li>\(v(a,b)\) = produkt <strong>vseh</strong> prafaktorjev z <strong>največjo</strong> potenco.</li>
+              <li>Preveri: \(D(a,b) \cdot v(a,b) = a \cdot b\).</li>
+            </ol>
+            <div class="math-block">
+              $$\text{Primer: } a = 45 = 3^2 \cdot 5, \quad b = 60 = 2^2 \cdot 3 \cdot 5$$
+            </div>
+            <p>1. \(D(45,60) = 3 \cdot 5 = 15\). 2. \(v(45,60) = 2^2 \cdot 3^2 \cdot 5 = 180\). 3. Preveri: \(15 \cdot 180 = 2700 = 45 \cdot 60\). ✓</p>
+          </div>
+
+          <!-- ====================== TIP 8 ====================== -->
+          <div class="info-card">
+            <h3>Tip 8: Intervali in neenačbe</h3>
+            <p><strong>Kako prepoznaš:</strong> "Zapišite interval", "ponazorite na številski premici".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Reši neenačbo (kot pri linearnih neenačbah).</li>
+              <li>Rešitev zapiši kot interval.</li>
+              <li>Ponazori na številski premici: polni krožec = vključeno, prazni = izključeno.</li>
+            </ol>
+            <div class="math-block">
+              $$\text{Primer: } |x| \leq 3 \Rightarrow x \in [-3, 3]$$
+            </div>
+          </div>
+
+          <!-- ====================== TIP 9 ====================== -->
+          <div class="info-card">
+            <h3>Tip 9: Operacije z intervali</h3>
+            <p><strong>Kako prepoznaš:</strong> \(A \cup B\), \(A \cap B\), \(A \setminus B\) z intervali.</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Nariši oba intervala na številski premici.</li>
+              <li><strong>Unija</strong> \(A \cup B\): vse, kar je pokrito z vsaj enim intervalom.</li>
+              <li><strong>Presek</strong> \(A \cap B\): vse, kar je pokrito z obema.</li>
+              <li><strong>Razlika</strong> \(A \setminus B\): kar je v \(A\), a ne v \(B\).</li>
+              <li>Zapiši rezultat kot interval (ali unijo intervalov).</li>
+            </ol>
+            <div class="math-block">
+              $$\text{Primer: } A = [-2, 3), \quad B = [1, 5]$$
+            </div>
+            <p>1. \(A \cup B = [-2, 5]\). 2. \(A \cap B = [1, 3)\). 3. \(A \setminus B = [-2, 1)\).</p>
+          </div>
+
+          <!-- ====================== TIP 10 ====================== -->
+          <div class="info-card">
+            <h3>Tip 10: Besedilne naloge z odstotki in razmerji</h3>
+            <p><strong>Kako prepoznaš:</strong> "Vsota dveh števil je ...", "razmerje ...", "za ... % večje".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Določi neznanki \(x, y\).</li>
+              <li>Zapiši enačbe iz besedila:
+                <ul>
+                  <li>"Vsota je \(S\)" → \(x + y = S\)</li>
+                  <li>"Razmerje \(a:b\)" → \(\dfrac{x}{y} = \dfrac{a}{b}\)</li>
+                  <li>"\(x\) je za \(p\,\%\) večji od \(y\)" → \(x = y \cdot (1 + p/100)\)</li>
+                </ul>
+              </li>
+              <li>Reši sistem.</li>
+              <li>Preveri smiselnost.</li>
+            </ol>
+            <div class="math-block">
+              $$\text{Primer: Vsota dveh števil je 5661. Drugo število je za 22\,\% večje od prvega.}$$
+            </div>
+            <p>1. \(x + y = 5661\). 2. \(y = 1{,}22x\). 3. \(x + 1{,}22x = 5661 \Rightarrow 2{,}22x = 5661 \Rightarrow x = 2550\). 4. \(y = 3111\).</p>
+          </div>
+        </section>
+
+        <!-- ============ 3. POGOSTE NAPAKE ============ -->
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>3. Pogoste napake</h2>
+          </div>
+          <div class="info-card">
+            <ul>
+              <li>Pri uniji <strong>ponavljaš</strong> elemente (npr. \(\{1,2,2,3\}\) namesto \(\{1,2,3\}\)).</li>
+              <li>Pri preseku <strong>zapišeš elemente iz obeh</strong> namesto le skupnih.</li>
+              <li>Pri \(A \setminus B\) <strong>zamenjaš vrstni red</strong> (npr. \(B \setminus A \neq A \setminus B\)).</li>
+              <li>Pri moči podmnožic pozabiš <strong>prazno množico</strong> ali <strong>celo množico</strong>.</li>
+              <li>Pri deljivosti pozabiš, da mora biti število deljivo z <strong>vsemi</strong> prafaktorji (npr. za 6: z 2 <em>in</em> s 3).</li>
+              <li>Pri intervalih zamenjaš <strong>odprt/zaprt</strong> konec.</li>
+              <li>Pri logiki zamenjaš <strong>implikacijo</strong> (\(A \Rightarrow B\)) z <strong>ekvivalenco</strong> (\(A \iff B\)).</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ============ 4. POVEZAVE ============ -->
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>4. Vadi naprej</h2>
+            <p>Ko predelaš razlago, preveri znanje z nalogami.</p>
+          </div>
+          <div class="link-list">
+            <a class="link-item" href="/views/matematika/matura/osnovna_raven/naloge/resene/">
+              <span class="link-item-text">
+                <strong>Rešene naloge — osnovna raven</strong>
+                <small>Primeri z razlago</small>
+              </span>
+              <span class="arrow">→</span>
+            </a>
+            <a class="link-item" href="/views/matematika/matura/visja_raven/naloge/resene/">
+              <span class="link-item-text">
+                <strong>Rešene naloge — višja raven</strong>
+                <small>Zahtevnejši primeri</small>
+              </span>
+              <span class="arrow">→</span>
+            </a>
+          </div>
+        </section>
+
+      </div>
     </div>
-</div>
+  </div>
+
+  <div id="footer"></div>
+
+  <script src="/components/components.js"></script>
+</body>
+</html>

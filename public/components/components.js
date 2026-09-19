@@ -1,10 +1,45 @@
-// public/components/components.js
-
 document.addEventListener("DOMContentLoaded", async () => {
   console.log("✅ components.js zagnan");
 
   // ============================================================
-  // 1. NALOŽI KOMPONENTE (header, sidebar, footer) prek fetch
+  // 0. NALOŽI MATHJAX
+  // ============================================================
+  await new Promise((resolve) => {
+    const script = document.createElement('script');
+    script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+    script.async = true;
+    script.onload = () => {
+      console.log("✅ MathJax naložen");
+      resolve();
+    };
+    document.head.appendChild(script);
+  });
+
+  // Konfiguracija MathJax (mora biti pred nalaganjem, ampak ker nalagamo dinamično,
+  // nastavimo window.MathJax pred nalaganjem)
+  window.MathJax = {
+    tex: {
+      inlineMath: [['\\(', '\\)']],
+      displayMath: [['$$', '$$'], ['\\[', '\\]']],
+      processEscapes: true,
+      processEnvironments: true
+    },
+    options: {
+      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    svg: { fontCache: 'global' },
+    startup: {
+      typeset: true,
+      pageReady: () => {
+        return MathJax.startup.defaultPageReady().then(() => {
+          console.log("✅ MathJax typeset končan");
+        });
+      }
+    }
+  };
+
+  // ============================================================
+  // 1. NALOŽI KOMPONENTE
   // ============================================================
   async function loadComponent(url, targetId) {
     const el = document.getElementById(targetId);
@@ -25,13 +60,22 @@ document.addEventListener("DOMContentLoaded", async () => {
     loadComponent("/components/footer.html", "footer"),
   ]);
 
+  // Po nalaganju komponent znova procesiraj MathJax (če je treba)
+  if (window.MathJax && window.MathJax.typesetPromise) {
+    try {
+      await window.MathJax.typesetPromise();
+      console.log("✅ MathJax ponovno procesiran");
+    } catch (e) {
+      console.warn("MathJax typeset warning:", e);
+    }
+  }
+
   // ============================================================
   // 2. SIDEBAR TOGGLE (odpri/zapri)
   // ============================================================
   const sidebarEl = document.getElementById("sidebar");
   const mainContent = document.getElementById("mainContent");
 
-  // Overlay (ustvari, če ga ni)
   let overlay = document.getElementById("overlay");
   if (!overlay) {
     overlay = document.createElement("div");
@@ -41,22 +85,22 @@ document.addEventListener("DOMContentLoaded", async () => {
   }
 
   function openSidebar() {
+    if (!sidebarEl || !mainContent) return;
     sidebarEl.classList.add("open");
     mainContent.classList.add("shifted");
     overlay.classList.add("visible");
   }
 
   function closeSidebar() {
+    if (!sidebarEl || !mainContent) return;
     sidebarEl.classList.remove("open");
     mainContent.classList.remove("shifted");
     overlay.classList.remove("visible");
   }
 
-  // Gumb ☰ v headerju
   const menuBtn = document.getElementById("openSidebar") || document.getElementById("menuBtn");
   if (menuBtn) menuBtn.addEventListener("click", openSidebar);
 
-  // Gumb × v sidebaru
   const closeBtn = document.getElementById("closeSidebar") || document.getElementById("closeBtn");
   if (closeBtn) closeBtn.addEventListener("click", closeSidebar);
 
@@ -97,24 +141,49 @@ document.addEventListener("DOMContentLoaded", async () => {
   // ============================================================
   // 5. ODPRI DROPDOWNE, ČE JE AKTIVNI LINK ZNOTRAJ
   // ============================================================
-  document.querySelectorAll(".nav-sub-list").forEach((list) => {
+  document.querySelectorAll(".nav-sub-list, .nav-sub-sub-list").forEach((list) => {
     if (list.querySelector("a.active")) {
       list.classList.add("open");
-
-      const parentSub = list.closest(".nav-sub");
-      if (parentSub) parentSub.classList.add("open");
 
       const toggle = document.querySelector(`.dropdown-toggle[data-target="${list.id}"]`);
       if (toggle) toggle.classList.add("open");
 
-      if (parentSub) {
-        const parentToggle = document.querySelector(
-          `.dropdown-toggle[data-target="${parentSub.id}"]`
-        );
-        if (parentToggle) parentToggle.classList.add("open");
+      // Odpri vse starše
+      let parent = list.parentElement;
+      while (parent && parent !== document.body) {
+        if (parent.classList.contains("nav-sub") || parent.classList.contains("nav-sub-group")) {
+          parent.classList.add("open");
+          const pid = parent.id;
+          if (pid) {
+            const pt = document.querySelector(`.dropdown-toggle[data-target="${pid}"]`);
+            if (pt) pt.classList.add("open");
+          }
+        }
+        parent = parent.parentElement;
       }
     }
   });
+
+  // ============================================================
+  // 6. ZAPRI SIDEBAR OB KLIKU NA LINK (mobilni)
+  // ============================================================
+  document.querySelectorAll(".sidebar-nav a").forEach((link) => {
+    link.addEventListener("click", () => {
+      if (window.innerWidth <= 768) {
+        closeSidebar();
+      }
+    });
+  });
+
+  // ============================================================
+  // 7. NASTAVI DATUM V HEADERJU
+  // ============================================================
+  const dateEl = document.getElementById("currentDate");
+  if (dateEl) {
+    const now = new Date();
+    const options = { day: "numeric", month: "long", year: "numeric" };
+    dateEl.textContent = now.toLocaleDateString("sl-SI", options);
+  }
 
   console.log("✅ components.js končan");
 });

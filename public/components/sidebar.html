@@ -1,7 +1,14 @@
 <!-- public/components/sidebar.html -->
 <div class="sidebar-header">
-  <h2>📚 Piflar.si</h2>
-  <button id="closeSidebar" class="close-btn" aria-label="Zapri meni">×</button>
+  <a href="/" class="sidebar-logo">
+    <span class="header-brand-text">Piflar<span class="header-brand-dot">.</span>si</span>
+  </a>
+  <button id="closeSidebar" class="close-btn" aria-label="Zapri meni">
+    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <line x1="18" y1="6" x2="6" y2="18"></line>
+      <line x1="6" y1="6" x2="18" y2="18"></line>
+    </svg>
+  </button>
 </div>
 
 <nav class="sidebar-nav">
@@ -12,64 +19,102 @@
   <div class="nav-group">
     <div class="nav-group-header">
       <a href="/views/matematika/matematika.html" class="nav-group-title">
-        <span class="icon">📐</span>
         <span class="label">Matematika</span>
       </a>
-      <button class="dropdown-toggle" data-target="matematika-sub" aria-label="Razširi matematiko">▸</button>
+      <button class="dropdown-toggle" data-target="matematika-sub" aria-label="Razširi matematiko">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+      </button>
     </div>
 
     <div class="nav-sub" id="matematika-sub">
 
-      <!-- Snov (pod-dropdown) -->
+      <!-- Snov -->
       <div class="nav-sub-group">
         <div class="nav-sub-header">
-          <span class="icon">📖</span>
-          <span class="label">Snov</span>
-          <button class="dropdown-toggle" data-target="matematika-snov" aria-label="Razširi snov">▸</button>
+          <a href="/views/matematika/snov/snov.html" class="label">Snov</a>
+          <button class="dropdown-toggle" data-target="matematika-snov" aria-label="Razširi snov">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </button>
         </div>
         <div class="nav-sub-list" id="matematika-snov">
-          <a href="/views/matematika/snov/logika/">1. Logika</a>
-          <a href="/views/matematika/snov/mnozice/">2. Množice</a>
-          <a href="/views/matematika/snov/stevila/">3. Številske množice</a>
-          <a href="/views/matematika/snov/algebra/">4. Algebra</a>
-          <a href="/views/matematika/snov/potence/">5. Potence in koreni</a>
-          <a href="/views/matematika/snov/funkcije/">6. Funkcije</a>
-          <a href="/views/matematika/snov/geometrija/">7. Geometrija</a>
-          <a href="/views/matematika/snov/oblike/">8. Liki in telesa</a>
-          <a href="/views/matematika/snov/vektorji/">9. Vektorji</a>
-          <a href="/views/matematika/snov/koordinate/">10. Koordinate</a>
-          <a href="/views/matematika/snov/zaporedja/">11. Zaporedja</a>
-          <a href="/views/matematika/snov/analiza/">12. Diferencialni račun</a>
-          <a href="/views/matematika/snov/integrali/">13. Integrali</a>
-          <a href="/views/matematika/snov/kombinatorika/">14. Kombinatorika</a>
-          <a href="/views/matematika/snov/verjetnost/">15. Verjetnost</a>
-          <a href="/views/matematika/snov/statistika/">16. Statistika</a>
-          <a href="/views/matematika/snov/snov.html" class="nav-link-special">📚 Vse snovi (pregled)</a>
+          <a href="/views/matematika/snov/osnove_logike/osnove_logike_razlaga.html">4.1 Osnove logike</a>
+          <a href="/views/matematika/snov/mnozice/mnozice_razlaga.html">4.2 Množice</a>
+          <a href="/views/matematika/snov/stevilske_mnozice/stevilske_mnozice_razlaga.html">4.3 Številske množice</a>
+          <a href="/views/matematika/snov/algebrski_izrazi_enacbe_neenacbe/algebrski_izrazi_enacbe_neenacbe_razlaga.html">4.4 Algebrski izrazi, enačbe in neenačbe</a>
+          <a href="/views/matematika/snov/potence_koreni/potence_koreni_razlaga.html">4.5 Potence in koreni</a>
+          <a href="/views/matematika/snov/geometrija_ravnina_prostor/geometrija_ravnina_prostor_razlaga.html">4.6 Geometrija v ravnini in prostoru</a>
+          <a href="/views/matematika/snov/geometrijski_liki_telesa/geometrijski_liki_telesa_razlaga.html">4.7 Geometrijski liki in telesa</a>
+          <a href="/views/matematika/snov/vektorji_ravnina_prostor/vektorji_ravnina_prostor_razlaga.html">4.8 Vektorji v ravnini in prostoru</a>
+          <a href="/views/matematika/snov/pravokotni_koordinatni_sistem_ravnina/pravokotni_koordinatni_sistem_ravnina_razlaga.html">4.9 Pravokotni koordinatni sistem v ravnini</a>
+          <a href="/views/matematika/snov/funkcije/funkcije_razlaga.html">4.10 Funkcije</a>
+          <a href="/views/matematika/snov/stoznice/stoznice_razlaga.html">4.11 Stožnice</a>
+          <a href="/views/matematika/snov/zaporedja_vrste/zaporedja_vrste_razlaga.html">4.12 Zaporedja in vrste</a>
+          <a href="/views/matematika/snov/diferencialni_racun/diferencialni_racun_razlaga.html">4.13 Diferencialni račun</a>
+          <a href="/views/matematika/snov/integralski_racun/integralski_racun_razlaga.html">4.14 Integralski račun</a>
+          <a href="/views/matematika/snov/kombinatorika/kombinatorika_razlaga.html">4.15 Kombinatorika</a>
+          <a href="/views/matematika/snov/verjetnostni_racun/verjetnostni_racun_razlaga.html">4.16 Verjetnostni račun</a>
+          <a href="/views/matematika/snov/statistika/statistika_razlaga.html">4.17 Statistika</a>
         </div>
       </div>
 
-      <!-- Matura (pod-dropdown) -->
+      <!-- Matura -->
       <div class="nav-sub-group">
         <div class="nav-sub-header">
-          <span class="icon">🎓</span>
-          <span class="label">Matura</span>
-          <button class="dropdown-toggle" data-target="matematika-matura" aria-label="Razširi maturo">▸</button>
+          <a href="/views/matematika/matura/matura.html" class="label">Matura</a>
+          <button class="dropdown-toggle" data-target="matematika-matura" aria-label="Razširi maturo">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </button>
         </div>
-        <div class="nav-sub-list" id="matematika-matura">
-          <a href="/views/matematika/matura/matura.html" class="nav-link-special">📄 Pregled mature</a>
-          <a href="/views/matematika/matura/osnovna_raven/naloge/resene/">Osnovna — rešene naloge</a>
-          <a href="/views/matematika/matura/osnovna_raven/naloge/neresene/">Osnovna — nerešene naloge</a>
-          <a href="/views/matematika/matura/osnovna_raven/pole/resene/">Osnovna — rešene pole</a>
-          <a href="/views/matematika/matura/osnovna_raven/pole/neresene/">Osnovna — nerešene pole</a>
-          <a href="/views/matematika/matura/visja_raven/naloge/resene/">Višja — rešene naloge</a>
-          <a href="/views/matematika/matura/visja_raven/naloge/neresene/">Višja — nerešene naloge</a>
-          <a href="/views/matematika/matura/visja_raven/pole/resene/">Višja — rešene pole</a>
-          <a href="/views/matematika/matura/visja_raven/pole/neresene/">Višja — nerešene pole</a>
-        </div>
-      </div>
+        <div class="nav-sub" id="matematika-matura">
 
-    </div>
-  </div>
+          <!-- Osnovna raven -->
+          <div class="nav-sub-sub-group">
+            <div class="nav-sub-sub-header">
+              <span class="label">Osnovna raven</span>
+              <button class="dropdown-toggle" data-target="matematika-matura-osnovna" aria-label="Razširi osnovno raven">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </button>
+            </div>
+            <div class="nav-sub-sub-list" id="matematika-matura-osnovna">
+              <a href="/views/matematika/matura/osnovna_raven/naloge/resene/">Rešene naloge</a>
+              <a href="/views/matematika/matura/osnovna_raven/naloge/neresene/">Nerešene naloge</a>
+              <a href="/views/matematika/matura/osnovna_raven/pole/resene/">Rešene pole</a>
+              <a href="/views/matematika/matura/osnovna_raven/pole/neresene/">Nerešene pole</a>
+            </div>
+          </div>
+
+          <!-- Višja raven -->
+          <div class="nav-sub-sub-group">
+            <div class="nav-sub-sub-header">
+              <span class="label">Višja raven</span>
+              <button class="dropdown-toggle" data-target="matematika-matura-visja" aria-label="Razširi višjo raven">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </button>
+            </div>
+            <div class="nav-sub-sub-list" id="matematika-matura-visja">
+              <a href="/views/matematika/matura/visja_raven/naloge/resene/">Rešene naloge</a>
+              <a href="/views/matematika/matura/visja_raven/naloge/neresene/">Nerešene naloge</a>
+              <a href="/views/matematika/matura/visja_raven/pole/resene/">Rešene pole</a>
+              <a href="/views/matematika/matura/visja_raven/pole/neresene/">Nerešene pole</a>
+            </div>
+          </div>
+
+        </div> <!-- /#matematika-matura -->
+      </div> <!-- /.nav-sub-group (Matura) -->
+
+    </div> <!-- /#matematika-sub -->
+  </div> <!-- /.nav-group (Matematika) -->
+
 
   <!-- ============================================== -->
   <!-- FIZIKA                                          -->
@@ -77,10 +122,13 @@
   <div class="nav-group">
     <div class="nav-group-header">
       <a href="/views/fizika/fizika.html" class="nav-group-title">
-        <span class="icon">⚛️</span>
         <span class="label">Fizika</span>
       </a>
-      <button class="dropdown-toggle" data-target="fizika-sub" aria-label="Razširi fiziko">▸</button>
+      <button class="dropdown-toggle" data-target="fizika-sub" aria-label="Razširi fiziko">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+          <polyline points="9 18 15 12 9 6"></polyline>
+        </svg>
+      </button>
     </div>
 
     <div class="nav-sub" id="fizika-sub">
@@ -88,9 +136,12 @@
       <!-- Snov -->
       <div class="nav-sub-group">
         <div class="nav-sub-header">
-          <span class="icon">📖</span>
-          <span class="label">Snov</span>
-          <button class="dropdown-toggle" data-target="fizika-snov" aria-label="Razširi snov">▸</button>
+          <a href="/views/fizika/snov/snov.html" class="label">Snov</a>
+          <button class="dropdown-toggle" data-target="fizika-snov" aria-label="Razširi snov">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </button>
         </div>
         <div class="nav-sub-list" id="fizika-snov">
           <a href="/views/fizika/snov/mehanika/">1. Mehanika</a>
@@ -99,28 +150,57 @@
           <a href="/views/fizika/snov/optika/">4. Optika</a>
           <a href="/views/fizika/snov/valovanje/">5. Valovanje</a>
           <a href="/views/fizika/snov/moderna/">6. Moderna fizika</a>
-          <a href="/views/fizika/snov/snov.html" class="nav-link-special">📚 Vse snovi (pregled)</a>
         </div>
       </div>
 
       <!-- Matura -->
       <div class="nav-sub-group">
         <div class="nav-sub-header">
-          <span class="icon">🎓</span>
-          <span class="label">Matura</span>
-          <button class="dropdown-toggle" data-target="fizika-matura" aria-label="Razširi maturo">▸</button>
+          <a href="/views/fizika/matura/matura.html" class="label">Matura</a>
+          <button class="dropdown-toggle" data-target="fizika-matura" aria-label="Razširi maturo">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <polyline points="9 18 15 12 9 6"></polyline>
+            </svg>
+          </button>
         </div>
-        <div class="nav-sub-list" id="fizika-matura">
-          <a href="/views/fizika/matura/matura.html" class="nav-link-special">📄 Pregled mature</a>
-          <a href="/views/fizika/matura/osnovna_raven/naloge/resene/">Osnovna — rešene naloge</a>
-          <a href="/views/fizika/matura/osnovna_raven/naloge/neresene/">Osnovna — nerešene naloge</a>
-          <a href="/views/fizika/matura/visja_raven/naloge/resene/">Višja — rešene naloge</a>
-          <a href="/views/fizika/matura/visja_raven/naloge/neresene/">Višja — nerešene naloge</a>
-        </div>
-      </div>
+        <div class="nav-sub" id="fizika-matura">
 
-    </div>
-  </div>
+          <!-- Osnovna raven -->
+          <div class="nav-sub-sub-group">
+            <div class="nav-sub-sub-header">
+              <span class="label">Osnovna raven</span>
+              <button class="dropdown-toggle" data-target="fizika-matura-osnovna" aria-label="Razširi osnovno raven">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </button>
+            </div>
+            <div class="nav-sub-sub-list" id="fizika-matura-osnovna">
+              <a href="/views/fizika/matura/osnovna_raven/naloge/resene/">Rešene naloge</a>
+              <a href="/views/fizika/matura/osnovna_raven/naloge/neresene/">Nerešene naloge</a>
+            </div>
+          </div>
+
+          <!-- Višja raven -->
+          <div class="nav-sub-sub-group">
+            <div class="nav-sub-sub-header">
+              <span class="label">Višja raven</span>
+              <button class="dropdown-toggle" data-target="fizika-matura-visja" aria-label="Razširi višjo raven">
+                <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <polyline points="9 18 15 12 9 6"></polyline>
+                </svg>
+              </button>
+            </div>
+            <div class="nav-sub-sub-list" id="fizika-matura-visja">
+              <a href="/views/fizika/matura/visja_raven/naloge/resene/">Rešene naloge</a>
+              <a href="/views/fizika/matura/visja_raven/naloge/neresene/">Nerešene naloge</a>
+            </div>
+          </div>
+
+        </div> <!-- /#fizika-matura -->
+      </div> <!-- /.nav-sub-group (Matura) -->
+
+    </div> <!-- /#fizika-sub -->
+  </div> <!-- /.nav-group (Fizika) -->
 
 </nav>
-

@@ -1,81 +1,196 @@
 <!DOCTYPE html>
 <html lang="sl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Matematika na Maturi</title>
-    <link rel="stylesheet" href="../style/style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matematika | Piflar.si</title>
+  <meta name="description" content="Matematika za maturo — 16 poglavij, razlage, rešeni primeri in maturitetne naloge.">
+  <link rel="stylesheet" href="/style/style.css">
 </head>
 <body>
-    <!-- SAMO GLAVNA VSEBINA - BREZ SIDEBARJA -->
-    <div class="view">
-        <div class="view-header">
-            <h2>📐 Matematika na Maturi</h2>
-            <p>Interaktivna učna aplikacija za pripravo na maturo iz matematike</p>
-        </div>
+  <div id="header"></div>
 
-        <div class="card">
-            <h3>🎯 O aplikaciji</h3>
-            <p>Ta aplikacija vam pomaga pri učenju matematike za maturo z interaktivnimi primeri in izračuni. Vsebuje 16 poglavij, ki pokrivajo celotno snov.</p>
-            <p style="margin-top: 12px;">📚 Izberite poglavje iz menija na levi strani za začetek učenja.</p>
-        </div>
+  <div id="mainContent" class="main-content">
+    <div id="sidebar"></div>
 
-        <div class="formula-grid">
-            <div class="card">
-                <h3>📊 Hitri izračuni</h3>
-                <p>Uporabite interaktivne kalkulatorje za:</p>
-                <ul style="margin-top: 8px; padding-left: 20px; color: var(--text-secondary);">
-                    <li>Kvadratne enačbe</li>
-                    <li>Zaporedja (aritmetična/geometrična)</li>
-                    <li>Kombinatoriko (faktoriale, kombinacije)</li>
-                    <li>Geometrijo (Pitagorov izrek, razdalje)</li>
-                </ul>
+    <div class="view-container">
+      <div class="view">
+
+        <!-- Page header -->
+        <header class="page-header">
+          <span class="page-eyebrow">Predmet</span>
+          <h1>Matematika</h1>
+          <p>
+            Celotna srednješolska snov za maturo iz matematike — 16 poglavij z
+            razlagami, rešenimi primeri in maturitetnimi nalogami.
+          </p>
+          <div class="page-meta">
+            <div class="page-meta-item">
+              <strong>16</strong>
+              <span>Poglavij</span>
             </div>
-            <div class="card">
-                <h3>📈 Poglavja</h3>
-                <p>16 poglavij, ki pokrivajo vso snov za maturo iz matematike:</p>
-                <ul style="margin-top: 8px; padding-left: 20px; color: var(--text-secondary);">
-                    <li>Logika in množice</li>
-                    <li>Algebra in enačbe</li>
-                    <li>Geometrija in vektorji</li>
-                    <li>Zaporedja in funkcije</li>
-                    <li>Diferencialni in integralni račun</li>
-                    <li>Kombinatorika, verjetnost in statistika</li>
-                </ul>
+            <div class="page-meta-item">
+              <strong>4</strong>
+              <span>Sklopi</span>
             </div>
+            <div class="page-meta-item">
+              <strong>2</strong>
+              <span>Ravni mature</span>
+            </div>
+            <div class="page-meta-item">
+              <strong>100+</strong>
+              <span>Rešenih primerov</span>
+            </div>
+          </div>
+        </header>
+
+        <!-- Uvod -->
+        <div class="intro-card">
+          <h3>Kaj najdeš tukaj?</h3>
+          <p>
+            Matematika je razdeljena na <strong>16 poglavij</strong>, ki pokrivajo celotno
+            srednješolsko snov. Za vsako poglavje so na voljo razlage, primeri in
+            interaktivni kalkulatorji.
+          </p>
+          <p>
+            Poleg snovi najdeš še <strong>maturitetne pole in naloge</strong> za osnovno
+            in višjo raven — rešene in nerešene.
+          </p>
         </div>
 
-        <div class="card">
-            <h3>🚀 Hitre povezave</h3>
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-top: 12px;">
-                <a href="#" data-view="algebra" class="quick-link" style="display: block; padding: 12px; background: var(--bg-primary); border-radius: var(--radius-sm); text-decoration: none; color: var(--text-primary); border: 1px solid var(--border-color);">
-                    <strong>✏️ Algebra</strong><br>
-                    <small style="color: var(--text-secondary);">Kvadratne enačbe in formule</small>
-                </a>
-                <a href="#" data-view="geometry" class="quick-link" style="display: block; padding: 12px; background: var(--bg-primary); border-radius: var(--radius-sm); text-decoration: none; color: var(--text-primary); border: 1px solid var(--border-color);">
-                    <strong>📐 Geometrija</strong><br>
-                    <small style="color: var(--text-secondary);">Pitagorov izrek in razdalje</small>
-                </a>
-                <a href="#" data-view="sequences" class="quick-link" style="display: block; padding: 12px; background: var(--bg-primary); border-radius: var(--radius-sm); text-decoration: none; color: var(--text-primary); border: 1px solid var(--border-color);">
-                    <strong>🔀 Zaporedja</strong><br>
-                    <small style="color: var(--text-secondary);">Aritmetična in geometrijska</small>
-                </a>
-                <a href="#" data-view="combinatorics" class="quick-link" style="display: block; padding: 12px; background: var(--bg-primary); border-radius: var(--radius-sm); text-decoration: none; color: var(--text-primary); border: 1px solid var(--border-color);">
-                    <strong>🎲 Kombinatorika</strong><br>
-                    <small style="color: var(--text-secondary);">Faktoriale in kombinacije</small>
-                </a>
+        <!-- Dva glavna sklopa -->
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>Kje začeti</h2>
+            <p>Dva glavna dela matematike na Piflar.si.</p>
+          </div>
+
+          <div class="two-col">
+            <a class="link-item" href="/views/matematika/snov/snov.html">
+              <span class="link-item-text">
+                <strong>Snov</strong>
+                <small>16 poglavij z razlagami in primeri</small>
+              </span>
+              <span class="arrow">→</span>
+            </a>
+            <a class="link-item" href="/views/matematika/matura/matura.html">
+              <span class="link-item-text">
+                <strong>Matura</strong>
+                <small>Pole in naloge za osnovno in višjo raven</small>
+              </span>
+              <span class="arrow">→</span>
+            </a>
+          </div>
+        </section>
+
+        <!-- Sklopi snovi -->
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>Sklopi snovi</h2>
+            <p>16 poglavij je razdeljenih v štiri logične sklope.</p>
+          </div>
+
+          <div class="two-col">
+            <div class="info-card">
+              <h3>Logika in množice</h3>
+              <p>Osnova matematičnega mišljenja — sklepanje, dokazovanje in delo z množicami.</p>
+              <ul>
+                <li><a href="/views/matematika/snov/logika/">Logika</a></li>
+                <li><a href="/views/matematika/snov/mnozice/">Množice</a></li>
+                <li><a href="/views/matematika/snov/stevila/">Številske množice</a></li>
+              </ul>
             </div>
+
+            <div class="info-card">
+              <h3>Algebra in funkcije</h3>
+              <p>Računanje z izrazi, reševanje enačb in neenačb ter proučevanje funkcij.</p>
+              <ul>
+                <li><a href="/views/matematika/snov/algebra/">Algebra</a></li>
+                <li><a href="/views/matematika/snov/potence/">Potence in koreni</a></li>
+                <li><a href="/views/matematika/snov/funkcije/">Funkcije</a></li>
+                <li><a href="/views/matematika/snov/zaporedja/">Zaporedja</a></li>
+              </ul>
+            </div>
+
+            <div class="info-card">
+              <h3>Geometrija in vektorji</h3>
+              <p>Liki, telesa, koti, razdalje in vektorski račun.</p>
+              <ul>
+                <li><a href="/views/matematika/snov/geometrija/">Geometrija</a></li>
+                <li><a href="/views/matematika/snov/oblike/">Liki in telesa</a></li>
+                <li><a href="/views/matematika/snov/vektorji/">Vektorji</a></li>
+                <li><a href="/views/matematika/snov/koordinate/">Koordinate</a></li>
+              </ul>
+            </div>
+
+            <div class="info-card">
+              <h3>Analiza in statistika</h3>
+              <p>Odvodi, integrali, štetje, verjetnost in obdelava podatkov.</p>
+              <ul>
+                <li><a href="/views/matematika/snov/analiza/">Diferencialni račun</a></li>
+                <li><a href="/views/matematika/snov/integrali/">Integrali</a></li>
+                <li><a href="/views/matematika/snov/kombinatorika/">Kombinatorika</a></li>
+                <li><a href="/views/matematika/snov/verjetnost/">Verjetnost</a></li>
+                <li><a href="/views/matematika/snov/statistika/">Statistika</a></li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <!-- Hitri začetki -->
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>Hitri začetki</h2>
+            <p>Najpogosteje obiskana poglavja.</p>
+          </div>
+
+          <div class="link-list">
+            <a class="link-item" href="/views/matematika/snov/algebra/">
+              <span class="link-item-text">
+                <strong>Algebra</strong>
+                <small>Enačbe in neenačbe</small>
+              </span>
+              <span class="arrow">→</span>
+            </a>
+            <a class="link-item" href="/views/matematika/snov/geometrija/">
+              <span class="link-item-text">
+                <strong>Geometrija</strong>
+                <small>Koti, trikotniki, krogi</small>
+              </span>
+              <span class="arrow">→</span>
+            </a>
+            <a class="link-item" href="/views/matematika/snov/funkcije/">
+              <span class="link-item-text">
+                <strong>Funkcije</strong>
+                <small>Linearne, kvadratne, eksponentne</small>
+              </span>
+              <span class="arrow">→</span>
+            </a>
+            <a class="link-item" href="/views/matematika/snov/statistika/">
+              <span class="link-item-text">
+                <strong>Statistika</strong>
+                <small>Povprečje, mediana, grafi</small>
+              </span>
+              <span class="arrow">→</span>
+            </a>
+          </div>
+        </section>
+
+        <!-- Nasvet -->
+        <div class="note-band">
+          <p>
+            <strong>Nasvet:</strong> Če se pripravljaš na maturo, začni s
+            <a href="/views/matematika/matura/matura.html" style="color: var(--primary-dark); font-weight: 600;">pregledom mature</a>
+            — tako boš vedel, kaj te čaka, in se lažje lotil snovi.
+          </p>
         </div>
 
-        <div class="card">
-            <h3>📝 Nasveti za maturo</h3>
-            <ul style="margin-top: 8px; padding-left: 20px; color: var(--text-secondary);">
-                <li><strong>Redno vadite:</strong> Vsak dan rešite vsaj nekaj nalog</li>
-                <li><strong>Uporabljajte formule:</strong> Seznami formul so dovoljeni na maturi</li>
-                <li><strong>Preverite rešitve:</strong> Vedno preverite, ali je rešitev smiselna</li>
-                <li><strong>Časovni management:</strong> Na maturi imate 180 minut za reševanje</li>
-            </ul>
-        </div>
+      </div>
     </div>
+  </div>
+
+  <div id="footer"></div>
+
+  <script src="/components/components.js"></script>
 </body>
 </html>
