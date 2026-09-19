@@ -6,6 +6,7 @@
   <title>Integralski račun — razlaga in postopki | Piflar.si</title>
   <meta name="description" content="Celovita razlaga integralskega računa za maturo: nedoločeni integral, določeni integral, substitucija, per partes, parcialni ulomki, ploščine in prostornine vrtenin.">
   <link rel="stylesheet" href="/style/style.css">
+  <link rel="stylesheet" href="/views/matematika/snov/integralski_racun/integralski_style.css">
 </head>
 <body>
   <div id="header"></div>
@@ -20,12 +21,7 @@
         <header class="page-header">
           <span class="page-eyebrow">Matematika · Snov · 4.14</span>
           <h1>Integralski račun</h1>
-          <p>
-            Vse o integralih za maturo: nedoločeni in določeni integral, primitivna
-            funkcija, uvedba nove spremenljivke, integracija per partes, parcialni
-            ulomki, ploščine in prostornine vrtenin. Vsak tip naloge ima postopek
-            po korakih.
-          </p>
+          <p>Vse o integralih za maturo: nedoločeni in določeni integral, primitivna funkcija, uvedba nove spremenljivke, integracija per partes, parcialni ulomki, ploščine in prostornine vrtenin. Vsak tip naloge ima postopek po korakih.</p>
           <div class="page-meta">
             <div class="page-meta-item">
               <strong>14</strong>
@@ -51,88 +47,172 @@
 
           <div class="info-card">
             <h3>Osnovni pojmi</h3>
-            <ul>
-              <li><strong>Primitivna funkcija</strong> \(F(x)\) funkcije \(f(x)\): velja \(F'(x) = f(x)\).</li>
-              <li><strong>Nedoločeni integral:</strong> \(\int f(x)\,dx = F(x) + C\), kjer je \(C \in \mathbb{R}\) integracijska konstanta.</li>
-              <li><strong>Določeni integral:</strong> \(\int_a^b f(x)\,dx = F(b) - F(a)\) (Newton–Leibnizova formula).</li>
-              <li><strong>Zveza:</strong> odvajanje in integriranje sta inverzni operaciji: \(\left(\int f(x)\,dx\right)' = f(x)\).</li>
-              <li><strong>Geometrijski pomen:</strong> če je \(f(x) \geq 0\), je \(\int_a^b f(x)\,dx\) ploščina lika med grafom \(f\), osjo \(x\) in premicama \(x=a\), \(x=b\).</li>
-            </ul>
+            <div class="concept-list">
+
+              <div class="concept">
+                <h4>Primitivna funkcija</h4>
+                <div class="concept-formula">\(F'(x) = f(x)\)</div>
+                <p class="concept-desc">To je funkcija \(F\), ki jo moraš <strong>odvajati</strong>, da dobiš nazaj \(f\). Iščeš torej tisto funkcijo, katere odvod je enak dani funkciji. Postopku iskanja rečemo <strong>integriranje</strong>.</p>
+              </div>
+
+              <div class="concept">
+                <h4>Nedoločeni integral</h4>
+                <div class="concept-formula">\(\int f(x)\,dx = F(x) + C\)</div>
+                <p class="concept-desc">Z njim zapišemo <strong>vse</strong> primitivne funkcije hkrati. Zakaj \(+ C\)? Ker ima vsaka funkcija neskončno mnogo primitivnih — npr. odvod \(x^2\), \(x^2 + 5\) in \(x^2 - 7\) je enak (\(2x\)), saj je odvod konstante 0. Rezultat je torej <strong>družina funkcij</strong>, ne eno samo število.</p>
+              </div>
+
+              <div class="concept">
+                <h4>Določeni integral</h4>
+                <div class="concept-formula">\(\int_a^b f(x)\,dx = F(b) - F(a)\)</div>
+                <p class="concept-desc">Rezultat je <strong>število</strong>. Vstaviš zgornjo mejo \(b\), odšteješ spodnjo mejo \(a\). \(C\) izgine, ker se pri odštevanju pokrajša.</p>
+              </div>
+
+              <div class="concept">
+                <h4>Zveza med odvodom in integralom</h4>
+                <div class="concept-formula">\(\left(\int f(x)\,dx\right)' = f(x)\)</div>
+                <p class="concept-desc">Odvajanje in integriranje sta <strong>nasprotni operaciji</strong>. Če integriraš, nato pa odvajaš, dobiš nazaj isto funkcijo.</p>
+              </div>
+
+              <div class="concept">
+                <h4>Geometrijski pomen določenega integrala</h4>
+                <div class="concept-formula">\(S = \int_a^b f(x)\,dx\) &nbsp; (če je \(f(x) \geq 0\))</div>
+                <p class="concept-desc">Pove <strong>ploščino lika</strong> med grafom in abscisno osjo. Če je graf pod osjo, je integral negativen — ploščina je pa vedno pozitivna.</p>
+              </div>
+
+              <div class="concept">
+                <h4>Razlika: nedoločeni vs. določeni integral</h4>
+                <div class="concept-formula">\(\int f(x)\,dx\) &nbsp;vs.&nbsp; \(\int_a^b f(x)\,dx\)</div>
+                <p class="concept-desc">Prvi vrne <strong>funkcijo</strong>, drugi <strong>število</strong>. Prvi je "družina funkcij", drugi pa "ploščina pod krivuljo".</p>
+              </div>
+
+            </div>
           </div>
 
           <div class="info-card">
             <h3>Tabela osnovnih integralov</h3>
             <div class="formula-grid">
-              <div class="formula-card"><code>∫ c dx = cx + C</code></div>
-              <div class="formula-card"><code>∫ xⁿ dx = xⁿ⁺¹/(n+1) + C (n ≠ −1)</code></div>
-              <div class="formula-card"><code>∫ 1/x dx = ln|x| + C</code></div>
-              <div class="formula-card"><code>∫ eˣ dx = eˣ + C</code></div>
-              <div class="formula-card"><code>∫ aˣ dx = aˣ/ln a + C</code></div>
-              <div class="formula-card"><code>∫ sin x dx = −cos x + C</code></div>
-              <div class="formula-card"><code>∫ cos x dx = sin x + C</code></div>
-              <div class="formula-card"><code>∫ 1/cos²x dx = tan x + C</code></div>
-              <div class="formula-card"><code>∫ 1/(1+x²) dx = arctan x + C</code></div>
-              <div class="formula-card"><code>∫ 1/√(1−x²) dx = arcsin x + C</code></div>
-              <div class="formula-card"><code>∫ dx/(x²+a²) = (1/a)·arctan(x/a) + C</code></div>
-              <div class="formula-card"><code>∫ f'(x)/f(x) dx = ln|f(x)| + C</code></div>
+              <div class="formula-card">\(\displaystyle\int x^{\alpha}\,dx = \dfrac{x^{\alpha+1}}{\alpha+1} + C \quad (\alpha \neq -1)\)</div>
+              <div class="formula-card">\(\displaystyle\int \dfrac{dx}{x} = \ln|x| + C\)</div>
+              <div class="formula-card">\(\displaystyle\int a^x\,dx = \dfrac{a^x}{\ln a} + C \quad (a > 0)\)</div>
+              <div class="formula-card">\(\displaystyle\int \sin x\,dx = -\cos x + C\)</div>
+              <div class="formula-card">\(\displaystyle\int \cos x\,dx = \sin x + C\)</div>
+              <div class="formula-card">\(\displaystyle\int \dfrac{dx}{\cos^2 x} = \operatorname{tg} x + C\)</div>
+              <div class="formula-card">\(\displaystyle\int \dfrac{dx}{\sin^2 x} = -\operatorname{ctg} x + C\)</div>
+              <div class="formula-card">\(\displaystyle\int \operatorname{sh} x\,dx = \operatorname{ch} x + C\)</div>
+              <div class="formula-card">\(\displaystyle\int \operatorname{ch} x\,dx = \operatorname{sh} x + C\)</div>
+              <div class="formula-card">\(\displaystyle\int \dfrac{dx}{1+x^2} = \operatorname{arc\,tg} x + C\)</div>
+              <div class="formula-card">\(\displaystyle\int \dfrac{dx}{1-x^2} = \dfrac{1}{2}\ln\left|\dfrac{1+x}{1-x}\right| + C\)</div>
+              <div class="formula-card">\(\displaystyle\int \dfrac{dx}{\sqrt{1-x^2}} = \operatorname{arc\,sin} x + C\)</div>
+              <div class="formula-card last-three">\(\displaystyle\int \dfrac{dx}{\sqrt{x^2 \pm 1}} = \ln\left|x + \sqrt{x^2 \pm 1}\right| + C\)</div>
+              <div class="formula-card last-three">\(\displaystyle\int \sqrt{x^2+1}\,dx = \dfrac{1}{2}\left(\ln\left(x+\sqrt{x^2+1}\right) + x\sqrt{x^2+1}\right) + C\)</div>
+              <div class="formula-card last-three">\(\displaystyle\int \sqrt{x^2-1}\,dx = \dfrac{x}{2}\sqrt{x^2-1} - \dfrac{1}{2}\ln\left|x + \operatorname{sgn}(x)\sqrt{x^2-1}\right| + C\)</div>
             </div>
-            <p style="margin-top: 12px; color: var(--text-secondary);">
-              💡 Tabelo integralov se nauči <strong>skupaj s tabelo odvodov</strong> — vsak integral je "obratni" odvod.
-            </p>
+            <p style="margin-top: 12px; color: var(--text-secondary);">💡 Tabelo integralov se nauči <strong>skupaj s tabelo odvodov</strong> — vsak integral je "obratni" odvod.</p>
           </div>
 
           <div class="info-card">
-            <h3>Lastnosti nedoločenega integrala</h3>
-            <ul>
-              <li>\(\int (f \pm g)\,dx = \int f\,dx \pm \int g\,dx\)</li>
-              <li>\(\int c \cdot f(x)\,dx = c \cdot \int f(x)\,dx\) (za \(c \in \mathbb{R}\))</li>
-              <li>\(\int f'(x)\,dx = f(x) + C\)</li>
-              <li>\(\left(\int f(x)\,dx\right)' = f(x)\)</li>
-            </ul>
+            <h3>Lastnosti integralov</h3>
+            <div class="two-col-props">
+
+              <div class="prop-column">
+                <h4 class="prop-title">Nedoločeni integral</h4>
+
+                <div class="prop">
+                  <div class="prop-formula">\(\int (f \pm g)\,dx = \int f\,dx \pm \int g\,dx\)</div>
+                  <p class="prop-desc">Vsoto ali razliko funkcij integriraš po delih — vsak člen posebej.</p>
+                </div>
+
+                <div class="prop">
+                  <div class="prop-formula">\(\int c \cdot f(x)\,dx = c \cdot \int f(x)\,dx\)</div>
+                  <p class="prop-desc">Konstanto lahko izpostaviš pred integral.</p>
+                </div>
+
+                <div class="prop">
+                  <div class="prop-formula">\(\int f'(x)\,dx = f(x) + C\)</div>
+                  <p class="prop-desc">Integral odvoda vrne prvotno funkcijo (integracija je obrat odvajanja).</p>
+                </div>
+
+                <div class="prop">
+                  <div class="prop-formula">\(\left(\int f(x)\,dx\right)' = f(x)\)</div>
+                  <p class="prop-desc">Če integral odvajaš, dobiš nazaj prvotno funkcijo \(f\).</p>
+                </div>
+              </div>
+
+              <div class="prop-column">
+                <h4 class="prop-title">Določeni integral</h4>
+
+                <div class="prop">
+                  <div class="prop-formula">\(\int_a^a f(x)\,dx = 0\)</div>
+                  <p class="prop-desc">Če sta meji enaki, je ploščina nič (ni širine).</p>
+                </div>
+
+                <div class="prop">
+                  <div class="prop-formula">\(\int_a^b f(x)\,dx = -\int_b^a f(x)\,dx\)</div>
+                  <p class="prop-desc">Zamenjava mej obrne predznak integrala.</p>
+                </div>
+
+                <div class="prop">
+                  <div class="prop-formula">\(\int_a^b c\,dx = c(b-a)\)</div>
+                  <p class="prop-desc">Integral konstante = konstanta × dolžina intervala (ploščina pravokotnika).</p>
+                </div>
+
+                <div class="prop">
+                  <div class="prop-formula">\(\int_a^b (f \pm g)\,dx = \int_a^b f\,dx \pm \int_a^b g\,dx\)</div>
+                  <p class="prop-desc">Tudi pri določenem integralu velja linearnost (po členih).</p>
+                </div>
+
+                <div class="prop">
+                  <div class="prop-formula">\(\int_a^b c\,f(x)\,dx = c \int_a^b f(x)\,dx\)</div>
+                  <p class="prop-desc">Konstanto lahko izpostaviš tudi pri določenem integralu.</p>
+                </div>
+
+                <div class="prop">
+                  <div class="prop-formula">\(\int_a^b f\,dx = \int_a^c f\,dx + \int_c^b f\,dx\)</div>
+                  <p class="prop-desc">Aditivnost — integral lahko razdeliš na dva dela (razbiješ interval).</p>
+                </div>
+
+                <div class="prop">
+                  <div class="prop-formula">\(f(x) \geq 0 \Rightarrow \int_a^b f(x)\,dx \geq 0\)</div>
+                  <p class="prop-desc">Če je funkcija nenegativna, je integral (ploščina) tudi nenegativen.</p>
+                </div>
+              </div>
+
+            </div>
           </div>
 
-          <div class="info-card">
-            <h3>Lastnosti določenega integrala</h3>
-            <ul>
-              <li>\(\int_a^a f(x)\,dx = 0\)</li>
-              <li>\(\int_a^b f(x)\,dx = -\int_b^a f(x)\,dx\)</li>
-              <li>\(\int_a^b c\,dx = c(b-a)\)</li>
-              <li>\(\int_a^b (f \pm g)\,dx = \int_a^b f\,dx \pm \int_a^b g\,dx\)</li>
-              <li>\(\int_a^b c\,f(x)\,dx = c \int_a^b f(x)\,dx\)</li>
-              <li><strong>Aditivnost:</strong> \(\int_a^b f\,dx = \int_a^c f\,dx + \int_c^b f\,dx\)</li>
-              <li>Če je \(f(x) \geq 0\) na \([a,b]\), je \(\int_a^b f(x)\,dx \geq 0\).</li>
-            </ul>
-          </div>
 
-          <div class="info-card">
-            <h3>Metode integriranja</h3>
-            <ul>
-              <li><strong>Uvedba nove spremenljivke (substitucija):</strong> \(\int f(g(x)) \cdot g'(x)\,dx = \int f(u)\,du\), kjer \(u = g(x)\).</li>
-              <li><strong>Integracija per partes:</strong> \(\int u\,dv = uv - \int v\,du\). Uporabno za produkte (npr. \(x e^x\), \(\ln x\), \(x \sin x\)).</li>
-              <li><strong>Integracija racionalnih funkcij:</strong> razcep na parcialne ulomke.</li>
-            </ul>
-          </div>
+        <div class="info-card">
+        <h3>Uporaba določenega integrala</h3>
+        <div class="concept-list">
 
-          <div class="info-card">
-            <h3>Uporaba določenega integrala</h3>
-            <ul>
-              <li><strong>Ploščina lika med grafom in osjo \(x\):</strong> \(S = \int_a^b |f(x)|\,dx\)</li>
-              <li><strong>Ploščina med dvema grafoma:</strong> \(S = \int_a^b (f(x) - g(x))\,dx\), kjer je \(f \geq g\).</li>
-              <li><strong>Prostornina vrtenine okoli osi \(x\):</strong> \(V = \pi \int_a^b [f(x)]^2\,dx\)</li>
-              <li><strong>Povprečna vrednost funkcije na \([a,b]\):</strong> \(\bar{f} = \dfrac{1}{b-a}\int_a^b f(x)\,dx\)</li>
-            </ul>
-          </div>
+            <div class="concept">
+            <h4>Ploščina lika med grafom in osjo \(x\)</h4>
+            <div class="concept-formula">\(S = \int_a^b |f(x)|\,dx\)</div>
+            <p class="concept-desc">Ploščina lika, ki ga omejujeta <strong>graf funkcije</strong> in <strong>abscisna os</strong> med \(a\) in \(b\). Absolutna vrednost poskrbi, da je ploščina vedno pozitivna.</p>
+            </div>
 
-          <div class="info-card">
-            <h3>Znane limite (potrebne pri integralih)</h3>
-            <ul>
-              <li>\(\lim_{x \to 0} \dfrac{\sin x}{x} = 1\)</li>
-              <li>\(\lim_{n \to \infty} \left(1 + \dfrac{1}{n}\right)^n = e\)</li>
-              <li>\(\lim_{x \to \infty} \dfrac{1}{x} = 0\)</li>
-            </ul>
-          </div>
-        </section>
+            <div class="concept">
+            <h4>Ploščina med dvema grafoma</h4>
+            <div class="concept-formula">\(S = \int_a^b (f(x) - g(x))\,dx, \quad f \geq g\)</div>
+            <p class="concept-desc">Ploščina lika med <strong>dvema krivuljama</strong>. Odšteješ spodnjo funkcijo od zgornje in integriraš med presečišči.</p>
+            </div>
 
+            <div class="concept">
+            <h4>Prostornina vrtenine okoli osi \(x\)</h4>
+            <div class="concept-formula">\(V = \pi \int_a^b [f(x)]^2\,dx\)</div>
+            <p class="concept-desc">Prostornina telesa, ki nastane, ko lik <strong>zavrtimo okoli abscisne osi</strong>. Funkcijo kvadriraš, integriraš in pomnožiš s \(\pi\).</p>
+            </div>
+
+            <div class="concept">
+            <h4>Povprečna vrednost funkcije</h4>
+            <div class="concept-formula">\(\bar{f} = \dfrac{1}{b-a}\int_a^b f(x)\,dx\)</div>
+            <p class="concept-desc">Pove <strong>povprečno vrednost</strong> funkcije na intervalu \([a,b]\). Integral deliš z dolžino intervala.</p>
+            </div>
+
+        </div>
+        </div>
+
+ 
         <!-- ============ 2. TIPI NALOG ============ -->
         <section class="subsection">
           <div class="subsection-head">
@@ -140,323 +220,606 @@
             <p>Za vsak tip: kako ga prepoznaš, kako ga rešiš, primer.</p>
           </div>
 
-          <!-- TIP 1 -->
-          <div class="info-card">
-            <h3>Tip 1: Osnovni nedoločeni integral (polinom)</h3>
-            <p><strong>Kako prepoznaš:</strong> integral polinoma ali vsote členov \(x^n\).</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Vsak člen integriraj posebej: \(\int x^n dx = \dfrac{x^{n+1}}{n+1}\).</li>
-              <li>Ne pozabi prišteti \(C\).</li>
-              <li>Preveri z odvajanjem rezultata.</li>
-            </ol>
-            <div class="math-block">
-              $$\text{Primer: } \int (3x^2 - 4x + 5)\,dx = x^3 - 2x^2 + 5x + C$$
-            </div>
-            <div class="math-block">
-              $$\text{Primer: } \int (x^2 - 2x)\,dx = \frac{x^3}{3} - x^2 + C$$
-            </div>
-            <div class="math-block">
-              $$\text{Primer: } \int (4 + x^2 + \sin x)\,dx = 4x + \frac{x^3}{3} - \cos x + C$$
-            </div>
-          </div>
+            <!-- TIP 1 -->
+                <div class="info-card">
+                <div class="tip-header">
+                    <h3>Tip 1: Osnovni nedoločeni integral (polinom)</h3>
+                    <div class="tip-formula">
+                    \(\displaystyle\int x^n\,dx = \dfrac{x^{n+1}}{n+1} + C\)
+                    </div>
+                </div>
 
-          <!-- TIP 2 -->
-          <div class="info-card">
-            <h3>Tip 2: Integral z eksponentno, logaritemsko in kotno funkcijo</h3>
-            <p><strong>Kako prepoznaš:</strong> nastopajo \(e^x\), \(a^x\), \(\sin x\), \(\cos x\), \(\ln x\).</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Uporabi tabelo osnovnih integralov.</li>
-              <li>Vsoto integriraj po členih.</li>
-              <li>Preveri z odvajanjem.</li>
-            </ol>
-            <div class="math-block">
-              $$\text{Primer: } \int (2\sin x - e^x + \tfrac{1}{x})\,dx = -2\cos x - e^x + \ln|x| + C$$
-            </div>
-            <div class="math-block">
-              $$\text{Primer: } \int \left(2x^2 - 3x + 3\sqrt{x} - e + x + 5\right)dx$$
-            </div>
-            <p>
-              1. \(\int 2x^2 dx = \tfrac{2}{3}x^3\). 2. \(\int -3x\,dx = -\tfrac{3}{2}x^2\).
-              3. \(\int 3\sqrt{x}\,dx = 3 \cdot \tfrac{2}{3}x^{3/2} = 2x^{3/2}\).
-              4. \(\int -e\,dx = -ex\). 5. \(\int x\,dx = \tfrac{x^2}{2}\). 6. \(\int 5\,dx = 5x\).
-              Skupaj: \(\tfrac{2}{3}x^3 - \tfrac{3}{2}x^2 + 2x^{3/2} - ex + \tfrac{x^2}{2} + 5x + C = \tfrac{2}{3}x^3 - x^2 + 2x^{3/2} - ex + 5x + C\).
-            </p>
-          </div>
+                <p><strong>Kako prepoznaš:</strong> integral polinoma ali vsote členov oblike \(x^n\) (npr. \(3x^2\), \(-4x\), \(5\)).</p>
 
-          <!-- TIP 3 -->
-          <div class="info-card">
-            <h3>Tip 3: Integral z ulomkom (1/x, 1/(1+x²), 1/√(1−x²))</h3>
-            <p><strong>Kako prepoznaš:</strong> v imenovalcu je \(x\), \(1+x^2\) ali \(\sqrt{1-x^2}\).</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Prepoznaj obliko in uporabi ustrezno formulo.</li>
-              <li>\(\int \tfrac{1}{x}\,dx = \ln|x| + C\).</li>
-              <li>\(\int \tfrac{1}{1+x^2}\,dx = \arctan x + C\).</li>
-              <li>\(\int \tfrac{1}{\sqrt{1-x^2}}\,dx = \arcsin x + C\).</li>
-              <li>Za \(\int \tfrac{dx}{x^2+a^2} = \tfrac{1}{a}\arctan\tfrac{x}{a} + C\).</li>
-            </ol>
-            <div class="math-block">
-              $$\text{Primer: } \int \left(\frac{1}{x^2} - 2\cos x + e^{3x}\right)dx = -\frac{1}{x} - 2\sin x + \frac{e^{3x}}{3} + C$$
-            </div>
-          </div>
+                <p><strong>Postopek:</strong></p>
+                <ol>
+                    <li><strong>Razbij vsoto na posamezne člene.</strong> Vsak člen integriraš posebej. Npr. \(\int (3x^2 - 4x + 5)\,dx = \int 3x^2\,dx - \int 4x\,dx + \int 5\,dx\).</li>
+                    <li><strong>Izpostavi konstanto</strong> pred integral: \(\int 3x^2\,dx = 3\int x^2\,dx\).</li>
+                    <li><strong>Uporabi formulo</strong> \(\int x^n\,dx = \dfrac{x^{n+1}}{n+1}\) za vsak člen posebej. Pri konstanti velja \(\int c\,dx = cx\) (ker je \(x^0\), sledi \(\dfrac{x^1}{1} = x\)).</li>
+                    <li><strong>Na koncu prištej \(C\)</strong> — integracijsko konstanto. Brez nje je rezultat napačen, ker ima funkcija neskončno mnogo primitivnih.</li>
+                    <li><strong>Preveri z odvajanjem:</strong> odvajaj dobljeni rezultat in preveri, da dobiš nazaj prvotno funkcijo.</li>
+                </ol>
 
-          <!-- TIP 4 -->
-          <div class="info-card">
-            <h3>Tip 4: Uvedba nove spremenljivke (substitucija)</h3>
-            <p><strong>Kako prepoznaš:</strong> v integralu nastopa sestavljena funkcija \(f(g(x)) \cdot g'(x)\), npr. \(\sin(2x+1)\), \(e^{3x}\), \((2x+5)^7\).</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Izberi \(u = g(x)\) (notranja funkcija).</li>
-              <li>Izračunaj \(du = g'(x)\,dx\).</li>
-              <li>Zamenjaj v integralu: \(\int f(g(x))g'(x)\,dx = \int f(u)\,du\).</li>
-              <li>Integriraj po \(u\).</li>
-              <li>Vrni \(u = g(x)\).</li>
-            </ol>
-            <div class="math-block">
-              $$\text{Primer: } \int 2x \cdot e^{x^2}\,dx = \int e^u\,du = e^u + C = e^{x^2} + C, \quad u = x^2$$
-            </div>
-            <div class="math-block">
-              $$\text{Primer: } \int \sin(3x)\,dx = -\frac{1}{3}\cos(3x) + C, \quad u = 3x$$
-            </div>
-          </div>
+                <p><strong>Primer 1:</strong> Izračunaj \(\displaystyle\int (3x^2 - 4x + 5)\,dx\).</p>
+                <div class="plain-example">
+                    <p><strong>Korak 1:</strong> Razbijemo vsoto na tri člene in izpostavimo konstante:<br>
+                    \(\displaystyle\int (3x^2 - 4x + 5)\,dx = 3\int x^2\,dx - 4\int x\,dx + 5\int 1\,dx\)</p>
+                    <p><strong>Korak 2:</strong> Uporabimo formulo \(\int x^n\,dx = \dfrac{x^{n+1}}{n+1}\) na vsakem členu posebej:</p>
+                    <ul>
+                    <li>\(3\int x^2\,dx = 3 \cdot \dfrac{x^3}{3} = x^3\)</li>
+                    <li>\(-4\int x\,dx = -4 \cdot \dfrac{x^2}{2} = -2x^2\)</li>
+                    <li>\(5\int 1\,dx = 5x\)</li>
+                    </ul>
+                    <p><strong>Korak 3:</strong> Sestavimo rezultat in prištejemo \(C\):<br>
+                    \(\displaystyle\int (3x^2 - 4x + 5)\,dx = x^3 - 2x^2 + 5x + C\)</p>
+                    <p><strong>Korak 4 (preverjanje):</strong> Odvajaj rezultat:<br>
+                    \((x^3 - 2x^2 + 5x + C)' = 3x^2 - 4x + 5\) ✓ — dobili smo nazaj prvotno funkcijo, torej je rezultat pravilen.</p>
+                </div>
 
-          <!-- TIP 5 -->
-          <div class="info-card">
-            <h3>Tip 5: Integracija per partes</h3>
-            <p><strong>Kako prepoznaš:</strong> produkt dveh različnih funkcij, npr. \(x e^x\), \(x \sin x\), \(\ln x\), \(x \cos x\).</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Uporabi \(\int u\,dv = uv - \int v\,du\).</li>
-              <li>Izberi \(u\) in \(dv\) po pravilu <strong>LIATE</strong> (Logaritemska, Inverzna, Algebrajska, Trigonometrična, Eksponentna) — \(u\) je tisto, kar je prej na seznamu.</li>
-              <li>Izračunaj \(du\) in \(v\).</li>
-              <li>Vstavi v formulo in reši preostali integral.</li>
-            </ol>
-            <div class="math-block">
-              $$\text{Primer: } \int x e^x\,dx = x e^x - \int e^x\,dx = x e^x - e^x + C = e^x(x-1) + C$$
-            </div>
-            <div class="math-block">
-              $$\text{Primer: } \int \ln x\,dx = x \ln x - \int x \cdot \frac{1}{x}\,dx = x \ln x - x + C$$
-            </div>
-          </div>
+                <p><strong>Primer 2:</strong> Izračunaj \(\displaystyle\int (x^2 - 2x)\,dx\).</p>
+                <div class="plain-example">
+                    <p><strong>Korak 1:</strong> Razbijemo vsoto in izpostavimo konstanto:<br>
+                    \(\displaystyle\int (x^2 - 2x)\,dx = \int x^2\,dx - 2\int x\,dx\)</p>
+                    <p><strong>Korak 2:</strong> Integriramo vsak člen:<br>
+                    \(\displaystyle\int x^2\,dx = \dfrac{x^3}{3}, \quad -2\int x\,dx = -2 \cdot \dfrac{x^2}{2} = -x^2\)</p>
+                    <p><strong>Korak 3:</strong> Sestavimo in prištejemo \(C\):<br>
+                    \(\displaystyle\int (x^2 - 2x)\,dx = \dfrac{x^3}{3} - x^2 + C\)</p>
+                    <p><strong>Korak 4 (preverjanje):</strong> \(\left(\dfrac{x^3}{3} - x^2 + C\right)' = x^2 - 2x\) ✓</p>
+                </div>
 
-          <!-- TIP 6 -->
-          <div class="info-card">
-            <h3>Tip 6: Integracija racionalnih funkcij (parcialni ulomki)</h3>
-            <p><strong>Kako prepoznaš:</strong> ulomek \(\dfrac{p(x)}{q(x)}\), kjer je \(q(x)\) razcepljiv na linearne faktorje.</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Če je stopnja števca \(\geq\) stopnja imenovalca, najprej deli (polinom + ostanek).</li>
-              <li>Imenovalec razstavi na faktorje.</li>
-              <li>Zapiši razcep na parcialne ulomke.</li>
-              <li>Reši sistem za koeficiente.</li>
-              <li>Integriraj vsak parcialni ulomek (\(\to \ln|x-a|\) ali \(\to \arctan\)).</li>
-            </ol>
-            <div class="math-block">
-              $$\text{Primer: } \int \frac{dx}{x^2 - 1} = \int \frac{1}{2}\left(\frac{1}{x-1} - \frac{1}{x+1}\right)dx = \frac{1}{2}\ln\left|\frac{x-1}{x+1}\right| + C$$
+                <p><strong>Primer 3:</strong> Izračunaj \(\displaystyle\int (4 + x^2 + \sin x)\,dx\).</p>
+                <div class="plain-example">
+                    <p><strong>Korak 1:</strong> Razbijemo na tri člene:<br>
+                    \(\displaystyle\int (4 + x^2 + \sin x)\,dx = \int 4\,dx + \int x^2\,dx + \int \sin x\,dx\)</p>
+                    <p><strong>Korak 2:</strong> Integriramo vsak člen posebej (uporabimo tabelo osnovnih integralov):<br>
+                    \(\displaystyle\int 4\,dx = 4x, \quad \int x^2\,dx = \dfrac{x^3}{3}, \quad \int \sin x\,dx = -\cos x\)</p>
+                    <p><strong>Korak 3:</strong> Sestavimo in prištejemo \(C\):<br>
+                    \(\displaystyle\int (4 + x^2 + \sin x)\,dx = 4x + \dfrac{x^3}{3} - \cos x + C\)</p>
+                    <p><strong>Korak 4 (preverjanje):</strong> \(\left(4x + \dfrac{x^3}{3} - \cos x + C\right)' = 4 + x^2 + \sin x\) ✓</p>
+                </div>
             </div>
-          </div>
 
-          <!-- TIP 7 -->
-          <div class="info-card">
-            <h3>Tip 7: Določeni integral (osnovni)</h3>
-            <p><strong>Kako prepoznaš:</strong> \(\int_a^b f(x)\,dx\) z mejama.</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Izračunaj nedoločeni integral \(F(x)\).</li>
-              <li>Uporabi Newton–Leibnizovo formulo: \(\int_a^b f(x)\,dx = F(b) - F(a)\).</li>
-              <li>Vstavi meji in izračunaj razliko.</li>
-            </ol>
-            <div class="math-block">
-              $$\text{Primer: } \int_0^2 (x^2 + 1)\,dx = \left[\frac{x^3}{3} + x\right]_0^2 = \frac{8}{3} + 2 - 0 = \frac{14}{3}$$
-            </div>
-            <div class="math-block">
-              $$\text{Primer: } \int_0^{\pi/6} (6\cos x + 1)\,dx = [6\sin x + x]_0^{\pi/6} = 6 \cdot \frac{1}{2} + \frac{\pi}{6} = 3 + \frac{\pi}{6}$$
-            </div>
-            <div class="math-block">
-              $$\text{Primer: } \int_0^2 (\sin x + 3\cos x - x)\,dx = [-\cos x + 3\sin x - \tfrac{x^2}{2}]_0^2$$
-            </div>
-          </div>
+        <!-- TIP 2 -->
+<div class="info-card">
+  <div class="tip-header">
+    <h3>Tip 2: Integral z eksponentno, logaritemsko in kotno funkcijo</h3>
+    <div class="tip-formula">
+      \(\displaystyle\int e^x\,dx = e^x + C\)
+    </div>
+  </div>
 
-          <!-- TIP 8 -->
-          <div class="info-card">
-            <h3>Tip 8: Ploščina lika med grafom in osjo \(x\)</h3>
-            <p><strong>Kako prepoznaš:</strong> "Izračunajte ploščino lika, ki ga omejujeta graf in abscisna os."</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Poišči ničle funkcije (kjer graf seka os \(x\)).</li>
-              <li>Razdeli interval na podintervale glede na ničle.</li>
-              <li>Na vsakem podintervalu uporabi \(S = \int |f(x)|\,dx\).</li>
-              <li>Če je funkcija negativna, integral vzemi po absolutni vrednosti.</li>
-            </ol>
-            <div class="math-block">
-              $$\text{Primer: } f(x) = 2x + 3\cos x \text{ na } [0, \pi]$$
-            </div>
-            <p>Ploščina: \(S = \int_0^\pi |2x + 3\cos x|\,dx\). Ker je funkcija na \([0,\pi]\) delno pozitivna in delno negativna, je treba poiskati ničle in razdeliti interval.</p>
-          </div>
+  <p><strong>Kako prepoznaš:</strong> v integralu nastopajo \(e^x\), \(a^x\), \(\sin x\), \(\cos x\) ali \(\ln x\).</p>
 
-          <!-- TIP 9 -->
-          <div class="info-card">
-            <h3>Tip 9: Ploščina med dvema grafoma</h3>
-            <p><strong>Kako prepoznaš:</strong> "ploščina lika med krivuljama \(f\) in \(g\)".</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Poišči presečišča: \(f(x) = g(x)\).</li>
-              <li>Preveri, katera funkcija je zgoraj na intervalu.</li>
-              <li>\(S = \int_a^b (f(x) - g(x))\,dx\) (zgornja − spodnja).</li>
-            </ol>
-            <div class="math-block">
-              $$\text{Primer: } y = 1 - x^2, \quad y = 4 - 4x^2$$
-            </div>
-            <p>Presečišče: \(1 - x^2 = 4 - 4x^2 \Rightarrow 3x^2 = 3 \Rightarrow x = \pm 1\). Zgornja: \(4 - 4x^2\), spodnja: \(1 - x^2\). \(S = \int_{-1}^{1} (3 - 3x^2)\,dx = [3x - x^3]_{-1}^1 = (3 - 1) - (-3 + 1) = 4\).</p>
-          </div>
+  <p><strong>Postopek:</strong></p>
+  <ol>
+    <li><strong>Prepoznaj obliko</strong> posamezne funkcije in poišči ustrezno formulo v tabeli integralov.</li>
+    <li><strong>Vsoto integriraj po členih</strong> — vsak člen posebej.</li>
+    <li><strong>Konstanto izpostavi</strong> pred integral.</li>
+    <li><strong>Prištej \(C\)</strong> na koncu.</li>
+    <li><strong>Preveri z odvajanjem</strong> — odvajaj rezultat in primerjaj s prvotno funkcijo.</li>
+  </ol>
 
-          <!-- TIP 10 -->
-          <div class="info-card">
-            <h3>Tip 10: Prostornina vrtenine okoli osi \(x\)</h3>
-            <p><strong>Kako prepoznaš:</strong> "lik zavrtimo okoli abscisne osi", "prostornina rotacijskega telesa".</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Določi meje \(a, b\).</li>
-              <li>Uporabi \(V = \pi \int_a^b [f(x)]^2\,dx\).</li>
-              <li>Kvadriraj funkcijo, integriraj, pomnoži s \(\pi\).</li>
-            </ol>
-            <div class="math-block">
-              $$\text{Primer: } f(x) = \sqrt{x}, \quad [0,4] \Rightarrow V = \pi\int_0^4 x\,dx = \pi \cdot \frac{16}{2} = 8\pi$$
-            </div>
-          </div>
+  <p><strong>Primer 1:</strong> Izračunaj \(\displaystyle\int (2\sin x - e^x + \tfrac{1}{x})\,dx\).</p>
+  <div class="plain-example">
+    <p><strong>Korak 1:</strong> Razbijemo na tri člene:<br>
+    \(\displaystyle\int (2\sin x - e^x + \tfrac{1}{x})\,dx = 2\int \sin x\,dx - \int e^x\,dx + \int \dfrac{1}{x}\,dx\)</p>
+    <p><strong>Korak 2:</strong> Uporabimo tabelo integralov:</p>
+    <ul>
+      <li>\(2\int \sin x\,dx = 2 \cdot (-\cos x) = -2\cos x\)</li>
+      <li>\(\int e^x\,dx = e^x\)</li>
+      <li>\(\int \dfrac{1}{x}\,dx = \ln|x|\)</li>
+    </ul>
+    <p><strong>Korak 3:</strong> Sestavimo in prištejemo \(C\):<br>
+    \(\displaystyle\int (2\sin x - e^x + \tfrac{1}{x})\,dx = -2\cos x - e^x + \ln|x| + C\)</p>
+    <p><strong>Korak 4 (preverjanje):</strong> \((-2\cos x - e^x + \ln|x| + C)' = 2\sin x - e^x + \dfrac{1}{x}\) ✓</p>
+  </div>
 
-          <!-- TIP 11 -->
-          <div class="info-card">
-            <h3>Tip 11: Limite (povezane z integrali in odvodi)</h3>
-            <p><strong>Kako prepoznaš:</strong> \(\lim_{x\to a} \dfrac{f(x)}{g(x)}\), kjer nastopa \(0/0\).</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Poskusi vstaviti \(x = a\).</li>
-              <li>Če dobiš \(0/0\): razstavi, racionaliziraj ali uporabi L'Hôpitalovo pravilo.</li>
-              <li>Za limite oblike \(\lim_{x\to 0} \dfrac{\sin(kx)}{x} = k\).</li>
-              <li>Za limite z \(\infty/\infty\): deli z najvišjo potenco.</li>
-            </ol>
-            <div class="math-block">
-              $$\text{Primer: } \lim_{x\to 7} \frac{x^2 - 49}{x^2 - 2x - 35} = \lim_{x\to 7} \frac{(x-7)(x+7)}{(x-7)(x+5)} = \frac{14}{12} = \frac{7}{6}$$
-            </div>
-            <div class="math-block">
-              $$\text{Primer: } \lim_{x\to 0} \frac{\sin 3x}{5x} = \frac{3}{5}$$
-            </div>
-            <div class="math-block">
-              $$\text{Primer: } \lim_{x\to 2} \frac{\sqrt{x} - \sqrt{2}}{x - 2} = \lim_{x\to 2} \frac{1}{\sqrt{x} + \sqrt{2}} = \frac{1}{2\sqrt{2}}$$
-            </div>
-            <div class="math-block">
-              $$\text{Primer: } \lim_{x\to 0} \frac{(x-1)(2x+1)}{x^2-1} = \frac{(-1)(1)}{-1} = 1$$
-            </div>
-            <div class="math-block">
-              $$\text{Primer: } \lim_{x\to 1} \frac{(x-1)(2x+1)}{x^2-1} = \lim_{x\to 1} \frac{(x-1)(2x+1)}{(x-1)(x+1)} = \frac{3}{2}$$
-            </div>
-            <div class="math-block">
-              $$\text{Primer: } \lim_{x\to\infty} \frac{(x-1)(2x+1)}{x^2-1} = \lim_{x\to\infty} \frac{2x^2 - x - 1}{x^2-1} = 2$$
-            </div>
-          </div>
+  <p><strong>Primer 2:</strong> Izračunaj \(\displaystyle\int \left(2x^2 - 3x + 3\sqrt{x} - e + x + 5\right)dx\).</p>
+  <div class="plain-example">
+    <p><strong>Korak 1:</strong> Razbijemo na člene:<br>
+    \(\displaystyle\int 2x^2\,dx - \int 3x\,dx + \int 3\sqrt{x}\,dx - \int e\,dx + \int x\,dx + \int 5\,dx\)</p>
+    <p><strong>Korak 2:</strong> Integriramo vsak člen posebej:</p>
+    <ul>
+      <li>\(\int 2x^2\,dx = \dfrac{2x^3}{3}\)</li>
+      <li>\(-\int 3x\,dx = -\dfrac{3x^2}{2}\)</li>
+      <li>\(\int 3\sqrt{x}\,dx = 3 \cdot \dfrac{2x^{3/2}}{3} = 2x^{3/2}\)</li>
+      <li>\(-\int e\,dx = -ex\)</li>
+      <li>\(\int x\,dx = \dfrac{x^2}{2}\)</li>
+      <li>\(\int 5\,dx = 5x\)</li>
+    </ul>
+    <p><strong>Korak 3:</strong> Sestavimo (združimo \(-3x^2/2 + x^2/2 = -x^2\)) in prištejemo \(C\):<br>
+    \(\displaystyle\int (\ldots)\,dx = \dfrac{2}{3}x^3 - x^2 + 2x^{3/2} - ex + 5x + C\)</p>
+    <p><strong>Korak 4 (preverjanje):</strong> Odvajaj rezultat in primerjaj s prvotno funkcijo — dobiš nazaj \(2x^2 - 3x + 3\sqrt{x} - e + x + 5\) ✓</p>
+  </div>
+</div>
 
-          <!-- TIP 12 -->
-          <div class="info-card">
-            <h3>Tip 12: Odvodi (povezani z integrali)</h3>
-            <p><strong>Kako prepoznaš:</strong> "izračunajte odvod funkcije".</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Uporabi pravila: \((x^n)' = n x^{n-1}\), \((\sin x)' = \cos x\), \((\cos x)' = -\sin x\), \((e^x)' = e^x\), \((\ln x)' = \tfrac{1}{x}\).</li>
-              <li>Za sestavljene funkcije uporabi verižno pravilo.</li>
-              <li>Za produkte uporabi produktno pravilo: \((uv)' = u'v + uv'\).</li>
-              <li>Za kvociente uporabi kvocientno pravilo: \((u/v)' = (u'v - uv')/v^2\).</li>
-            </ol>
-            <div class="math-block">
-              $$\text{Primer: } f(x) = 2x^3 - 3x + 4 \Rightarrow f'(x) = 6x^2 - 3$$
-            </div>
-            <div class="math-block">
-              $$\text{Primer: } f(x) = 2\sin x - 1 \Rightarrow f'(x) = 2\cos x$$
-            </div>
-            <div class="math-block">
-              $$\text{Primer: } f(x) = \frac{1}{x^2} - 2\cos x + e^{3x} \Rightarrow f'(x) = -\frac{2}{x^3} + 2\sin x + 3e^{3x}$$
-            </div>
-            <div class="math-block">
-              $$\text{Primer: } f(x) = \ln(2x+5) \Rightarrow f'(x) = \frac{2}{2x+5}$$
-            </div>
-            <div class="math-block">
-              $$\text{Primer: } f(x) = 5x^2 - 2021x + \cos x \Rightarrow f'(x) = 10x - 2021 - \sin x$$
-            </div>
-            <div class="math-block">
-              $$\text{Primer: } f(x) = \frac{1}{4}(1-x)^2 - \cos x \Rightarrow f'(x) = -\frac{1}{2}(1-x) + \sin x$$
-            </div>
-            <div class="math-block">
-              $$\text{Primer: } f(x) = \sin x - e^{-x} \Rightarrow f'(x) = \cos x + e^{-x}$$
-            </div>
-            <div class="math-block">
-              $$\text{Primer: } (x^{-1} + \sin x + \ln x)' = -x^{-2} + \cos x + \frac{1}{x}$$
-            </div>
-            <div class="math-block">
-              $$\text{Primer: } f(x) = 3\sqrt{x} \Rightarrow f'(x) = \frac{3}{2\sqrt{x}}$$
-            </div>
-            <div class="math-block">
-              $$\text{Primer: } f(x) = x^2\sin x \Rightarrow f'(x) = 2x\sin x + x^2\cos x$$
-            </div>
-            <div class="math-block">
-              $$\text{Primer: } f(x) = \frac{1+x}{x} \Rightarrow f'(x) = -\frac{1}{x^2}$$
-            </div>
-            <div class="math-block">
-              $$\text{Primer: } f(x) = -3x^2 \Rightarrow f'(x) = -6x, \quad g(x) = \cos x \Rightarrow g'(x) = -\sin x, \quad h(x) = 2e^x \Rightarrow h'(x) = 2e^x$$
-            </div>
-            <div class="math-block">
-              $$\text{Primer: } f(x) = \sin 3x + 4\cos x \Rightarrow f'(x) = 3\cos 3x - 4\sin x$$
-            </div>
-          </div>
+<!-- TIP 3 -->
+<div class="info-card">
+  <div class="tip-header">
+    <h3>Tip 3: Integral z ulomkom</h3>
+    <div class="tip-formula">
+      \(\displaystyle\int \dfrac{1}{x}\,dx = \ln|x| + C\)
+    </div>
+  </div>
 
-          <!-- TIP 13 -->
-          <div class="info-card">
-            <h3>Tip 13: Tangenta in normala na graf</h3>
-            <p><strong>Kako prepoznaš:</strong> "zapišite enačbo tangente/normale v točki".</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Izračunaj \(y_0 = f(x_0)\).</li>
-              <li>Izračunaj odvod \(f'(x)\) in vstavi \(x_0\): \(k = f'(x_0)\).</li>
-              <li>Tangenta: \(y - y_0 = k(x - x_0)\).</li>
-              <li>Normala: \(y - y_0 = -\dfrac{1}{k}(x - x_0)\) (če \(k \neq 0\)).</li>
-              <li>Za vzporednost s premico \(y = kx + n\): \(f'(x_0) = k\).</li>
-              <li>Za pravokotnost: \(f'(x_0) \cdot k = -1\).</li>
-            </ol>
-            <div class="math-block">
-              $$\text{Primer: } f(x) = x^3 - x, \text{ tangenti vzporedni } 2x - y - 3 = 0$$
-            </div>
-            <p>Premica ima \(k = 2\). Torej \(f'(x) = 3x^2 - 1 = 2 \Rightarrow x^2 = 1 \Rightarrow x = \pm 1\). Tangenti: \(y = 2x\) (v \(x=1\)) in \(y = 2x + 2\) (v \(x=-1\)).</p>
-            <div class="math-block">
-              $$\text{Primer: } f(x) = x^3 - 3x, \quad A(-2, y_0)$$
-            </div>
-            <p>\(y_0 = -8 + 6 = -2\). \(f'(x) = 3x^2 - 3\), \(k = f'(-2) = 12 - 3 = 9\). Tangenta: \(y + 2 = 9(x+2) \Rightarrow y = 9x + 16\). Normala: \(y + 2 = -\tfrac{1}{9}(x+2)\).</p>
-            <div class="math-block">
-              $$\text{Primer: } f(x) = a\ln x + x^2 - 2, \text{ tangenta v } x_0 = 1 \perp 2x + 3y - 1 = 0$$
-            </div>
-            <p>Premica \(y = -\tfrac{2}{3}x + \tfrac{1}{3}\) ima \(k = -\tfrac{2}{3}\). Pravokotnost: \(f'(1) \cdot (-\tfrac{2}{3}) = -1 \Rightarrow f'(1) = \tfrac{3}{2}\). \(f'(x) = \tfrac{a}{x} + 2x\), \(f'(1) = a + 2 = \tfrac{3}{2} \Rightarrow a = -\tfrac{1}{2}\).</p>
-          </div>
+  <p><strong>Kako prepoznaš:</strong> v imenovalcu je \(x\), \(1+x^2\), \(\sqrt{1-x^2}\) ali \(x^2 + a^2\).</p>
 
-          <!-- TIP 14 -->
-          <div class="info-card">
-            <h3>Tip 14: Stacionarne točke in ekstremi</h3>
-            <p><strong>Kako prepoznaš:</strong> "izračunajte stacionarne točke", "lokalni minimum".</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Reši \(f'(x) = 0\) — dobiš stacionarne točke.</li>
-              <li>Za vsako preveri predznak \(f''(x)\): \(f'' > 0\) → minimum, \(f'' < 0\) → maksimum.</li>
-              <li>Izračunaj \(y = f(x)\).</li>
-            </ol>
-            <div class="math-block">
-              $$\text{Primer: } f(x) = 2x^3 - x^2 - x + 5 \Rightarrow f'(x) = 6x^2 - 2x - 1 = 0$$
-            </div>
-            <p>\(x_{1,2} = \dfrac{2 \pm \sqrt{4 + 24}}{12} = \dfrac{2 \pm \sqrt{28}}{12} = \dfrac{1 \pm \sqrt{7}}{6}\).</p>
-            <div class="math-block">
-              $$\text{Primer: } p(x) = x^3 + 4x^2 + ax + 20, \text{ lokalni minimum v } A(-1, y_1)$$
-            </div>
-            <p>\(p'(x) = 3x^2 + 8x + a\). \(p'(-1) = 3 - 8 + a = 0 \Rightarrow a = 5\). \(y_1 = p(-1) = -1 + 4 - 5 + 20 = 18\).</p>
-          </div>
-        </section>
+  <p><strong>Postopek:</strong></p>
+  <ol>
+    <li><strong>Prepoznaj obliko</strong> ulomka in izberi ustrezno formulo iz tabele.</li>
+    <li>\(\int \tfrac{1}{x}\,dx = \ln|x| + C\).</li>
+    <li>\(\int \tfrac{1}{1+x^2}\,dx = \arctan x + C\).</li>
+    <li>\(\int \tfrac{1}{\sqrt{1-x^2}}\,dx = \arcsin x + C\).</li>
+    <li>\(\int \tfrac{dx}{x^2+a^2} = \tfrac{1}{a}\arctan\tfrac{x}{a} + C\).</li>
+    <li>Prištej \(C\) in preveri z odvajanjem.</li>
+  </ol>
+
+  <p><strong>Primer:</strong> Izračunaj \(\displaystyle\int \left(\dfrac{1}{x^2} - 2\cos x + e^{3x}\right)dx\).</p>
+  <div class="plain-example">
+    <p><strong>Korak 1:</strong> Razbijemo na tri člene:<br>
+    \(\displaystyle\int \dfrac{1}{x^2}\,dx - 2\int \cos x\,dx + \int e^{3x}\,dx\)</p>
+    <p><strong>Korak 2:</strong> Integriramo vsak člen:</p>
+    <ul>
+      <li>\(\int x^{-2}\,dx = \dfrac{x^{-1}}{-1} = -\dfrac{1}{x}\)</li>
+      <li>\(-2\int \cos x\,dx = -2\sin x\)</li>
+      <li>\(\int e^{3x}\,dx = \dfrac{e^{3x}}{3}\) (uporabimo \(\int e^{kx}dx = \frac{e^{kx}}{k}\))</li>
+    </ul>
+    <p><strong>Korak 3:</strong> Sestavimo in prištejemo \(C\):<br>
+    \(\displaystyle\int \left(\dfrac{1}{x^2} - 2\cos x + e^{3x}\right)dx = -\dfrac{1}{x} - 2\sin x + \dfrac{e^{3x}}{3} + C\)</p>
+    <p><strong>Korak 4 (preverjanje):</strong> Odvajaj in primerjaj — \(\dfrac{1}{x^2} - 2\cos x + e^{3x}\) ✓</p>
+  </div>
+</div>
+
+<!-- TIP 4 -->
+<div class="info-card">
+  <div class="tip-header">
+    <h3>Tip 4: Uvedba nove spremenljivke (substitucija)</h3>
+    <div class="tip-formula">
+      \(\displaystyle\int f(g(x))g'(x)\,dx = \int f(u)\,du, \quad u = g(x)\)
+    </div>
+  </div>
+
+  <p><strong>Kako prepoznaš:</strong> v integralu nastopa <strong>sestavljena funkcija</strong> in njen odvod, npr. \(\sin(2x+1)\), \(e^{x^2}\), \((2x+5)^7\).</p>
+
+  <p><strong>Postopek:</strong></p>
+  <ol>
+    <li><strong>Izberi \(u = g(x)\)</strong> — notranja funkcija (tisto, kar je "znotraj" oklepaja, eksponenta, korena).</li>
+    <li><strong>Izračunaj \(du = g'(x)\,dx\)</strong> — odvajaj \(u\) in zapiši diferencial.</li>
+    <li><strong>Zamenjaj v integralu:</strong> \(\int f(g(x))g'(x)\,dx = \int f(u)\,du\). Vsi \(x\)-i morajo izginiti!</li>
+    <li><strong>Integriraj po \(u\)</strong> — uporabi tabelo.</li>
+    <li><strong>Vrni \(u = g(x)\)</strong> — zamenjaj nazaj.</li>
+    <li><strong>Preveri z odvajanjem</strong> rezultat.</li>
+  </ol>
+
+  <p><strong>Primer 1:</strong> Izračunaj \(\displaystyle\int 2x \cdot e^{x^2}\,dx\).</p>
+  <div class="plain-example">
+    <p><strong>Korak 1:</strong> Izberemo \(u = x^2\) (notranja funkcija).</p>
+    <p><strong>Korak 2:</strong> \(du = 2x\,dx\) (odvod \(x^2\) je \(2x\)).</p>
+    <p><strong>Korak 3:</strong> Zamenjamo: \(\displaystyle\int 2x \cdot e^{x^2}\,dx = \int e^u\,du\).</p>
+    <p><strong>Korak 4:</strong> \(\displaystyle\int e^u\,du = e^u + C\).</p>
+    <p><strong>Korak 5:</strong> Vrnemo \(u = x^2\): \(e^{x^2} + C\).</p>
+    <p><strong>Korak 6 (preverjanje):</strong> \(\left(e^{x^2} + C\right)' = e^{x^2} \cdot 2x = 2x e^{x^2}\) ✓</p>
+  </div>
+
+  <p><strong>Primer 2:</strong> Izračunaj \(\displaystyle\int \sin(3x)\,dx\).</p>
+  <div class="plain-example">
+    <p><strong>Korak 1:</strong> \(u = 3x\).</p>
+    <p><strong>Korak 2:</strong> \(du = 3\,dx \Rightarrow dx = \dfrac{du}{3}\).</p>
+    <p><strong>Korak 3:</strong> \(\displaystyle\int \sin(3x)\,dx = \int \sin u \cdot \dfrac{du}{3} = \dfrac{1}{3}\int \sin u\,du\).</p>
+    <p><strong>Korak 4:</strong> \(\dfrac{1}{3}(-\cos u) + C = -\dfrac{1}{3}\cos u + C\).</p>
+    <p><strong>Korak 5:</strong> Vrnemo \(u = 3x\): \(-\dfrac{1}{3}\cos(3x) + C\).</p>
+    <p><strong>Korak 6 (preverjanje):</strong> \(\left(-\dfrac{1}{3}\cos(3x) + C\right)' = -\dfrac{1}{3} \cdot (-\sin(3x)) \cdot 3 = \sin(3x)\) ✓</p>
+  </div>
+</div>
+
+<!-- TIP 5 -->
+<div class="info-card">
+  <div class="tip-header">
+    <h3>Tip 5: Integracija per partes</h3>
+    <div class="tip-formula">
+      \(\displaystyle\int u\,dv = uv - \int v\,du\)
+    </div>
+  </div>
+
+  <p><strong>Kako prepoznaš:</strong> v integralu je <strong>produkt dveh različnih funkcij</strong>, npr. \(x e^x\), \(x \sin x\), \(\ln x\), \(x \cos x\), \(x^2 \ln x\).</p>
+
+  <p><strong>Postopek:</strong></p>
+  <ol>
+    <li><strong>Izberi \(u\) in \(dv\)</strong> po pravilu <strong>LIATE</strong>:<br>
+      <em>L</em>ogaritemska &gt; <em>I</em>nverzna &gt; <em>A</em>lgebrajska &gt; <em>T</em>rigonometrična &gt; <em>E</em>ksponentna.<br>
+      \(u\) je funkcija, ki je prej na seznamu (bolj "komplicirana"). \(dv\) je preostanek.</li>
+    <li><strong>Izračunaj \(du\)</strong> (odvajaj \(u\)) in <strong>\(v\)</strong> (integriraj \(dv\)).</li>
+    <li><strong>Vstavi v formulo:</strong> \(\int u\,dv = uv - \int v\,du\).</li>
+    <li><strong>Reši preostali integral</strong> \(\int v\,du\) — običajno je lažji.</li>
+    <li><strong>Prištej \(C\)</strong> na koncu.</li>
+  </ol>
+
+  <p><strong>Primer 1:</strong> Izračunaj \(\displaystyle\int x e^x\,dx\).</p>
+  <div class="plain-example">
+    <p><strong>Korak 1:</strong> \(u = x\) (algebrajska), \(dv = e^x\,dx\) (eksponentna).</p>
+    <p><strong>Korak 2:</strong> \(du = dx\), \(v = e^x\).</p>
+    <p><strong>Korak 3:</strong> \(\displaystyle\int x e^x\,dx = x \cdot e^x - \int e^x\,dx\).</p>
+    <p><strong>Korak 4:</strong> \(= x e^x - e^x + C = e^x(x - 1) + C\).</p>
+    <p><strong>Korak 5 (preverjanje):</strong> \(\left(e^x(x-1) + C\right)' = e^x(x-1) + e^x \cdot 1 = e^x \cdot x\) ✓</p>
+  </div>
+
+  <p><strong>Primer 2:</strong> Izračunaj \(\displaystyle\int \ln x\,dx\).</p>
+  <div class="plain-example">
+    <p><strong>Korak 1:</strong> \(u = \ln x\) (logaritemska), \(dv = dx\).</p>
+    <p><strong>Korak 2:</strong> \(du = \dfrac{1}{x}\,dx\), \(v = x\).</p>
+    <p><strong>Korak 3:</strong> \(\displaystyle\int \ln x\,dx = x \ln x - \int x \cdot \dfrac{1}{x}\,dx = x \ln x - \int 1\,dx\).</p>
+    <p><strong>Korak 4:</strong> \(= x \ln x - x + C\).</p>
+    <p><strong>Korak 5 (preverjanje):</strong> \((x \ln x - x + C)' = \ln x + x \cdot \dfrac{1}{x} - 1 = \ln x\) ✓</p>
+  </div>
+</div>
+
+<!-- TIP 6 -->
+<div class="info-card">
+  <div class="tip-header">
+    <h3>Tip 6: Integracija racionalnih funkcij (parcialni ulomki)</h3>
+    <div class="tip-formula">
+      \(\displaystyle\int \dfrac{p(x)}{q(x)}\,dx \to\) razcep na parcialne ulomke
+    </div>
+  </div>
+
+  <p><strong>Kako prepoznaš:</strong> ulomek \(\dfrac{p(x)}{q(x)}\), kjer je \(q(x)\) razcepljiv na linearne faktorje (npr. \(x^2 - 1 = (x-1)(x+1)\)).</p>
+
+  <p><strong>Postopek:</strong></p>
+  <ol>
+    <li><strong>Preveri stopnji:</strong> če je stopnja števca \(\geq\) stopnja imenovalca, najprej <strong>deli</strong> (polinom + ostanek).</li>
+    <li><strong>Razstavi imenovalec</strong> na linearne faktorje (npr. \(x^2 - 1 = (x-1)(x+1)\)).</li>
+    <li><strong>Zapiši razcep</strong> na parcialne ulomke: \(\dfrac{A}{x-1} + \dfrac{B}{x+1}\).</li>
+    <li><strong>Reši koeficiente</strong> \(A, B\) — pomnoži z imenovalcem in primerjaj.</li>
+    <li><strong>Integriraj vsak del posebej</strong> — oblika \(\dfrac{A}{x-a}\) da \(A \ln|x-a|\).</li>
+  </ol>
+
+  <p><strong>Primer:</strong> Izračunaj \(\displaystyle\int \dfrac{dx}{x^2 - 1}\).</p>
+  <div class="plain-example">
+    <p><strong>Korak 1:</strong> Imenovalec razstavimo: \(x^2 - 1 = (x-1)(x+1)\).</p>
+    <p><strong>Korak 2:</strong> Zapišemo razcep:<br>
+    \(\dfrac{1}{(x-1)(x+1)} = \dfrac{A}{x-1} + \dfrac{B}{x+1}\).</p>
+    <p><strong>Korak 3:</strong> Pomnožimo z \((x-1)(x+1)\):<br>
+    \(1 = A(x+1) + B(x-1)\).</p>
+    <p><strong>Korak 4:</strong> Vstavimo \(x = 1\): \(1 = 2A \Rightarrow A = \tfrac{1}{2}\). Vstavimo \(x = -1\): \(1 = -2B \Rightarrow B = -\tfrac{1}{2}\).</p>
+    <p><strong>Korak 5:</strong> Integriramo:<br>
+    \(\displaystyle\int \dfrac{1/2}{x-1}\,dx - \int \dfrac{1/2}{x+1}\,dx = \dfrac{1}{2}\ln|x-1| - \dfrac{1}{2}\ln|x+1| + C = \dfrac{1}{2}\ln\left|\dfrac{x-1}{x+1}\right| + C\)</p>
+    <p><strong>Korak 6 (preverjanje):</strong> Odvajaj rezultat — \(\dfrac{1}{x^2-1}\) ✓</p>
+  </div>
+</div>
+
+<!-- TIP 7 -->
+<div class="info-card">
+  <div class="tip-header">
+    <h3>Tip 7: Določeni integral (osnovni)</h3>
+    <div class="tip-formula">
+      \(\displaystyle\int_a^b f(x)\,dx = F(b) - F(a)\)
+    </div>
+  </div>
+
+  <p><strong>Kako prepoznaš:</strong> integral ima <strong>meji</strong> \(a\) in \(b\) (zapisano kot \(\int_a^b\)).</p>
+
+  <p><strong>Postopek:</strong></p>
+  <ol>
+    <li><strong>Izračunaj nedoločeni integral</strong> \(F(x)\) — brez \(C\), ker se itak pokrajša.</li>
+    <li><strong>Uporabi Newton–Leibnizovo formulo:</strong> \(\int_a^b f(x)\,dx = F(b) - F(a)\).</li>
+    <li><strong>Vstavi zgornjo mejo \(b\)</strong> v \(F\) in odštej \(F(a)\).</li>
+    <li><strong>Izračunaj razliko</strong> — dobiš število.</li>
+  </ol>
+
+  <p><strong>Primer 1:</strong> Izračunaj \(\displaystyle\int_0^2 (x^2 + 1)\,dx\).</p>
+  <div class="plain-example">
+    <p><strong>Korak 1:</strong> Nedoločeni integral: \(F(x) = \dfrac{x^3}{3} + x\).</p>
+    <p><strong>Korak 2:</strong> Uporabimo formulo:<br>
+    \(\displaystyle\int_0^2 (x^2 + 1)\,dx = \left[\dfrac{x^3}{3} + x\right]_0^2\)</p>
+    <p><strong>Korak 3:</strong> Vstavimo \(x = 2\) in \(x = 0\):<br>
+    \(= \left(\dfrac{8}{3} + 2\right) - \left(\dfrac{0}{3} + 0\right) = \dfrac{8}{3} + 2 = \dfrac{14}{3}\)</p>
+    <p><strong>Rezultat:</strong> \(\dfrac{14}{3}\)</p>
+  </div>
+
+  <p><strong>Primer 2:</strong> Izračunaj \(\displaystyle\int_0^{\pi/6} (6\cos x + 1)\,dx\).</p>
+  <div class="plain-example">
+    <p><strong>Korak 1:</strong> \(F(x) = 6\sin x + x\).</p>
+    <p><strong>Korak 2:</strong> \(\left[6\sin x + x\right]_0^{\pi/6}\).</p>
+    <p><strong>Korak 3:</strong> Vstavimo: \(6\sin\dfrac{\pi}{6} + \dfrac{\pi}{6} - (6\sin 0 + 0) = 6 \cdot \dfrac{1}{2} + \dfrac{\pi}{6} = 3 + \dfrac{\pi}{6}\).</p>
+    <p><strong>Rezultat:</strong> \(3 + \dfrac{\pi}{6}\)</p>
+  </div>
+
+  <p><strong>Primer 3:</strong> Izračunaj \(\displaystyle\int_0^2 (\sin x + 3\cos x - x)\,dx\).</p>
+  <div class="plain-example">
+    <p><strong>Korak 1:</strong> \(F(x) = -\cos x + 3\sin x - \dfrac{x^2}{2}\).</p>
+    <p><strong>Korak 2:</strong> \(\left[-\cos x + 3\sin x - \dfrac{x^2}{2}\right]_0^2\).</p>
+    <p><strong>Korak 3:</strong> Vstavimo:<br>
+    \(= (-\cos 2 + 3\sin 2 - 2) - (-\cos 0 + 3\sin 0 - 0)\)<br>
+    \(= -\cos 2 + 3\sin 2 - 2 + 1 = -\cos 2 + 3\sin 2 - 1\)</p>
+    <p><strong>Rezultat:</strong> \(-\cos 2 + 3\sin 2 - 1\) (približno \(1{,}146\))</p>
+  </div>
+</div>
+
+         <!-- TIP 8 -->
+<div class="info-card">
+  <div class="tip-header">
+    <h3>Tip 8: Ploščina lika med grafom in osjo \(x\)</h3>
+    <div class="tip-formula">
+      \(\displaystyle S = \int_a^b |f(x)|\,dx\)
+    </div>
+  </div>
+
+  <p><strong>Kako prepoznaš:</strong> "Izračunajte ploščino lika, ki ga omejujeta graf funkcije in abscisna os."</p>
+
+  <p><strong>Postopek:</strong></p>
+  <ol>
+    <li><strong>Poišči ničle funkcije</strong> — reši \(f(x) = 0\). Tam graf seka os \(x\).</li>
+    <li><strong>Razdeli interval</strong> \([a,b]\) na podintervale glede na ničle. Na vsakem podintervalu je funkcija bodisi pozitivna bodisi negativna.</li>
+    <li><strong>Na vsakem podintervalu</strong> uporabi \(S = \int |f(x)|\,dx\). Kjer je funkcija negativna, vzemi integral z minusom (ali absolutno vrednost).</li>
+    <li><strong>Seštej ploščine</strong> vseh podintervalov.</li>
+  </ol>
+
+  <p><strong>Primer:</strong> Izračunaj ploščino lika med grafom \(f(x) = x^2 - 4\) in abscisno osjo na intervalu \([-3, 3]\).</p>
+  <div class="plain-example">
+    <p><strong>Korak 1:</strong> Ničle: \(x^2 - 4 = 0 \Rightarrow x = \pm 2\). Interval razdelimo na \([-3, -2]\), \([-2, 2]\), \([2, 3]\).</p>
+    <p><strong>Korak 2:</strong> Preverimo predznak na vsakem intervalu:</p>
+    <ul>
+      <li>Na \([-3,-2]\): \(f(-2{,}5) = 2{,}25 > 0\) → pozitivna</li>
+      <li>Na \([-2, 2]\): \(f(0) = -4 < 0\) → negativna</li>
+      <li>Na \([2, 3]\): \(f(2{,}5) = 2{,}25 > 0\) → pozitivna</li>
+    </ul>
+    <p><strong>Korak 3:</strong> Izračunamo ploščine:</p>
+    <ul>
+      <li>\(S_1 = \displaystyle\int_{-3}^{-2}(x^2 - 4)\,dx = \left[\dfrac{x^3}{3} - 4x\right]_{-3}^{-2} = \left(-\dfrac{8}{3} + 8\right) - (-9 + 12) = \dfrac{16}{3} - 3 = \dfrac{7}{3}\)</li>
+      <li>\(S_2 = \left|\displaystyle\int_{-2}^{2}(x^2 - 4)\,dx\right| = \left|\left[\dfrac{x^3}{3} - 4x\right]_{-2}^{2}\right| = \left|\left(\dfrac{8}{3} - 8\right) - \left(-\dfrac{8}{3} + 8\right)\right| = \left|-\dfrac{32}{3}\right| = \dfrac{32}{3}\)</li>
+      <li>\(S_3 = \displaystyle\int_{2}^{3}(x^2 - 4)\,dx = \left[\dfrac{x^3}{3} - 4x\right]_{2}^{3} = (9 - 12) - \left(\dfrac{8}{3} - 8\right) = -3 + \dfrac{16}{3} = \dfrac{7}{3}\)</li>
+    </ul>
+    <p><strong>Korak 4:</strong> Skupna ploščina: \(S = \dfrac{7}{3} + \dfrac{32}{3} + \dfrac{7}{3} = \dfrac{46}{3}\).</p>
+  </div>
+</div>
+
+<!-- TIP 9 -->
+<div class="info-card">
+  <div class="tip-header">
+    <h3>Tip 9: Ploščina med dvema grafoma</h3>
+    <div class="tip-formula">
+      \(\displaystyle S = \int_a^b (f(x) - g(x))\,dx\)
+    </div>
+  </div>
+
+  <p><strong>Kako prepoznaš:</strong> "ploščina lika med krivuljama \(f\) in \(g\)" ali "med dvema grafoma".</p>
+
+  <p><strong>Postopek:</strong></p>
+  <ol>
+    <li><strong>Poišči presečišča</strong> obeh funkcij: reši \(f(x) = g(x)\). Rešitve so meje integracije \(a, b\).</li>
+    <li><strong>Preveri, katera funkcija je zgoraj</strong> na intervalu \([a,b]\). Vstavi testno točko (npr. sredino intervala) v obe funkciji in primerjaj.</li>
+    <li><strong>Uporabi formulo:</strong> \(S = \int_a^b (\text{zgornja} - \text{spodnja})\,dx\).</li>
+    <li><strong>Integriraj in izračunaj</strong> — dobiš ploščino.</li>
+  </ol>
+
+  <p><strong>Primer:</strong> Izračunaj ploščino lika med \(y = 1 - x^2\) in \(y = 4 - 4x^2\).</p>
+  <div class="plain-example">
+    <p><strong>Korak 1:</strong> Presečišča: \(1 - x^2 = 4 - 4x^2 \Rightarrow 3x^2 = 3 \Rightarrow x = \pm 1\). Meje: \(a = -1, b = 1\).</p>
+    <p><strong>Korak 2:</strong> Testna točka \(x = 0\): \(f(0) = 1\), \(g(0) = 4\). Ker je \(g > f\), je \(g\) zgornja funkcija.</p>
+    <p><strong>Korak 3:</strong> Formula: \(S = \displaystyle\int_{-1}^{1} \left[(4 - 4x^2) - (1 - x^2)\right]dx = \int_{-1}^{1}(3 - 3x^2)\,dx\)</p>
+    <p><strong>Korak 4:</strong> \(S = \left[3x - x^3\right]_{-1}^{1} = (3 - 1) - (-3 + 1) = 2 - (-2) = 4\).</p>
+    <p><strong>Rezultat:</strong> \(S = 4\).</p>
+  </div>
+</div>
+
+<!-- TIP 10 -->
+<div class="info-card">
+  <div class="tip-header">
+    <h3>Tip 10: Prostornina vrtenine okoli osi \(x\)</h3>
+    <div class="tip-formula">
+      \(\displaystyle V = \pi \int_a^b [f(x)]^2\,dx\)
+    </div>
+  </div>
+
+  <p><strong>Kako prepoznaš:</strong> "lik zavrtimo okoli abscisne osi", "prostornina rotacijskega telesa", "vrtenina".</p>
+
+  <p><strong>Postopek:</strong></p>
+  <ol>
+    <li><strong>Določi meje \(a, b\)</strong> — kje se lik začne in konča (npr. ničle funkcije).</li>
+    <li><strong>Kvadriraj funkcijo:</strong> izračunaj \([f(x)]^2\).</li>
+    <li><strong>Integriraj:</strong> \(\int_a^b [f(x)]^2\,dx\).</li>
+    <li><strong>Pomnoži s \(\pi\)</strong> — dobiš prostornino.</li>
+  </ol>
+
+  <p><strong>Primer:</strong> Izračunaj prostornino telesa, ki nastane, ko lik med \(f(x) = \sqrt{x}\) in osjo \(x\) na \([0,4]\) zavrtimo okoli osi \(x\).</p>
+  <div class="plain-example">
+    <p><strong>Korak 1:</strong> Meje: \(a = 0, b = 4\).</p>
+    <p><strong>Korak 2:</strong> Kvadriramo: \([f(x)]^2 = (\sqrt{x})^2 = x\).</p>
+    <p><strong>Korak 3:</strong> Integriramo: \(\displaystyle\int_0^4 x\,dx = \left[\dfrac{x^2}{2}\right]_0^4 = \dfrac{16}{2} - 0 = 8\).</p>
+    <p><strong>Korak 4:</strong> Pomnožimo s \(\pi\): \(V = 8\pi\).</p>
+    <p><strong>Rezultat:</strong> \(V = 8\pi\).</p>
+  </div>
+</div>
+
+<!-- TIP 11 -->
+<div class="info-card">
+  <div class="tip-header">
+    <h3>Tip 11: Limite (povezane z integrali in odvodi)</h3>
+    <div class="tip-formula">
+      \(\displaystyle\lim_{x \to 0} \dfrac{\sin x}{x} = 1\)
+    </div>
+  </div>
+
+  <p><strong>Kako prepoznaš:</strong> \(\lim_{x\to a} \dfrac{f(x)}{g(x)}\), kjer vstavljanje \(x = a\) da obliko \(0/0\) ali \(\infty/\infty\).</p>
+
+  <p><strong>Postopek:</strong></p>
+  <ol>
+    <li><strong>Poskusi vstaviti \(x = a\).</strong> Če dobiš končno število, si končal.</li>
+    <li><strong>Če dobiš \(0/0\):</strong>
+      <ul>
+        <li>razstavi (npr. razlika kvadratov),</li>
+        <li>racionaliziraj (množi s konjugiranim),</li>
+        <li>ali uporabi L'Hôpitalovo pravilo: \(\lim \dfrac{f}{g} = \lim \dfrac{f'}{g'}\).</li>
+      </ul>
+    </li>
+    <li><strong>Za \(\lim_{x\to 0} \dfrac{\sin(kx)}{x} = k\)</strong> — uporabi znano limito.</li>
+    <li><strong>Za \(\infty/\infty\):</strong> deli števec in imenovalec z najvišjo potenco \(x\).</li>
+  </ol>
+
+  <p><strong>Primer 1:</strong> Izračunaj \(\displaystyle\lim_{x\to 7} \dfrac{x^2 - 49}{x^2 - 2x - 35}\).</p>
+  <div class="plain-example">
+    <p><strong>Korak 1:</strong> Vstavimo \(x = 7\): \(\dfrac{0}{0}\) — nedoločena oblika.</p>
+    <p><strong>Korak 2:</strong> Razstavimo števec in imenovalec:<br>
+    Števec: \(x^2 - 49 = (x-7)(x+7)\). Imenovalec: \(x^2 - 2x - 35 = (x-7)(x+5)\).</p>
+    <p><strong>Korak 3:</strong> Krajšamo \((x-7)\):<br>
+    \(\displaystyle\lim_{x\to 7} \dfrac{(x-7)(x+7)}{(x-7)(x+5)} = \lim_{x\to 7} \dfrac{x+7}{x+5}\)</p>
+    <p><strong>Korak 4:</strong> Vstavimo \(x = 7\): \(\dfrac{14}{12} = \dfrac{7}{6}\).</p>
+  </div>
+
+  <p><strong>Primer 2:</strong> Izračunaj \(\displaystyle\lim_{x\to 0} \dfrac{\sin 3x}{5x}\).</p>
+  <div class="plain-example">
+    <p><strong>Korak 1:</strong> Vstavimo \(x = 0\): \(\dfrac{0}{0}\).</p>
+    <p><strong>Korak 2:</strong> Preoblikujemo: \(\dfrac{\sin 3x}{5x} = \dfrac{\sin 3x}{3x} \cdot \dfrac{3}{5}\).</p>
+    <p><strong>Korak 3:</strong> Ker \(\lim_{x\to 0}\dfrac{\sin 3x}{3x} = 1\), je rezultat \(\dfrac{3}{5}\).</p>
+  </div>
+
+  <p><strong>Primer 3:</strong> Izračunaj \(\displaystyle\lim_{x\to 2} \dfrac{\sqrt{x} - \sqrt{2}}{x - 2}\).</p>
+  <div class="plain-example">
+    <p><strong>Korak 1:</strong> Vstavimo \(x = 2\): \(\dfrac{0}{0}\).</p>
+    <p><strong>Korak 2:</strong> Racionaliziramo — pomnožimo s konjugiranim \(\sqrt{x} + \sqrt{2}\):<br>
+    \(\dfrac{\sqrt{x} - \sqrt{2}}{x - 2} \cdot \dfrac{\sqrt{x} + \sqrt{2}}{\sqrt{x} + \sqrt{2}} = \dfrac{x - 2}{(x-2)(\sqrt{x} + \sqrt{2})}\)</p>
+    <p><strong>Korak 3:</strong> Krajšamo \((x-2)\): \(\dfrac{1}{\sqrt{x} + \sqrt{2}}\).</p>
+    <p><strong>Korak 4:</strong> Vstavimo \(x = 2\): \(\dfrac{1}{2\sqrt{2}}\).</p>
+  </div>
+</div>
+
+<!-- TIP 12 -->
+<div class="info-card">
+  <div class="tip-header">
+    <h3>Tip 12: Odvodi</h3>
+    <div class="tip-formula">
+      \(\displaystyle (x^n)' = n x^{n-1}\)
+    </div>
+  </div>
+
+  <p><strong>Kako prepoznaš:</strong> "izračunajte odvod funkcije \(f'(x)\)".</p>
+
+  <p><strong>Postopek:</strong></p>
+  <ol>
+    <li><strong>Prepoznaj strukturo:</strong> je funkcija vsota, produkt, kvocient ali sestavljena funkcija?</li>
+    <li><strong>Uporabi ustrezno pravilo:</strong>
+      <ul>
+        <li><strong>Vsota:</strong> \((f + g)' = f' + g'\)</li>
+        <li><strong>Produkt:</strong> \((uv)' = u'v + uv'\)</li>
+        <li><strong>Kvocient:</strong> \((u/v)' = \dfrac{u'v - uv'}{v^2}\)</li>
+        <li><strong>Verižno pravilo (sestavljena):</strong> \((f(g(x)))' = f'(g(x)) \cdot g'(x)\)</li>
+      </ul>
+    </li>
+    <li><strong>Uporabi tabelo odvodov:</strong> \((x^n)' = nx^{n-1}\), \((\sin x)' = \cos x\), \((\cos x)' = -\sin x\), \((e^x)' = e^x\), \((\ln x)' = \tfrac{1}{x}\).</li>
+    <li><strong>Poenostavi rezultat.</strong></li>
+  </ol>
+
+  <p><strong>Primer 1:</strong> Odvajaj \(f(x) = 2x^3 - 3x + 4\).</p>
+  <div class="plain-example">
+    <p><strong>Korak 1:</strong> Vsota treh členov — odvajamo po členih.</p>
+    <p><strong>Korak 2:</strong> Uporabimo \((x^n)' = nx^{n-1}\):</p>
+    <ul>
+      <li>\((2x^3)' = 6x^2\)</li>
+      <li>\((-3x)' = -3\)</li>
+      <li>\((4)' = 0\)</li>
+    </ul>
+    <p><strong>Korak 3:</strong> \(f'(x) = 6x^2 - 3\).</p>
+  </div>
+
+  <p><strong>Primer 2:</strong> Odvajaj \(f(x) = x^2 \sin x\).</p>
+  <div class="plain-example">
+    <p><strong>Korak 1:</strong> Produkt dveh funkcij: \(u = x^2\), \(v = \sin x\).</p>
+    <p><strong>Korak 2:</strong> \(u' = 2x\), \(v' = \cos x\).</p>
+    <p><strong>Korak 3:</strong> Uporabimo \((uv)' = u'v + uv'\):<br>
+    \(f'(x) = 2x \cdot \sin x + x^2 \cdot \cos x\).</p>
+    <p><strong>Korak 4:</strong> \(f'(x) = 2x\sin x + x^2\cos x\).</p>
+  </div>
+
+  <p><strong>Primer 3:</strong> Odvajaj \(f(x) = \ln(2x + 5)\).</p>
+  <div class="plain-example">
+    <p><strong>Korak 1:</strong> Sestavljena funkcija: zunanja je \(\ln\), notranja \(2x + 5\).</p>
+    <p><strong>Korak 2:</strong> Verižno pravilo: \(f'(x) = \dfrac{1}{2x+5} \cdot (2x+5)' = \dfrac{1}{2x+5} \cdot 2\).</p>
+    <p><strong>Korak 3:</strong> \(f'(x) = \dfrac{2}{2x+5}\).</p>
+  </div>
+</div>
+
+<!-- TIP 13 -->
+<div class="info-card">
+  <div class="tip-header">
+    <h3>Tip 13: Tangenta in normala na graf</h3>
+    <div class="tip-formula">
+      \(\displaystyle y - y_0 = k(x - x_0), \quad k = f'(x_0)\)
+    </div>
+  </div>
+
+  <p><strong>Kako prepoznaš:</strong> "zapišite enačbo tangente/normale v točki", "tangenta je vzporedna/pravokotna na premico".</p>
+
+  <p><strong>Postopek:</strong></p>
+  <ol>
+    <li><strong>Izračunaj \(y_0 = f(x_0)\)</strong> — y-koordinata dotikališča.</li>
+    <li><strong>Izračunaj odvod \(f'(x)\)</strong> in vstavi \(x_0\): \(k = f'(x_0)\) — smerni koeficient tangente.</li>
+    <li><strong>Tangenta:</strong> \(y - y_0 = k(x - x_0)\) ali \(y = kx + n\).</li>
+    <li><strong>Normala:</strong> \(y - y_0 = -\dfrac{1}{k}(x - x_0)\) (če \(k \neq 0\)).</li>
+    <li><strong>Za vzporednost</strong> s premico \(y = k_1 x + n\): \(f'(x_0) = k_1\).</li>
+    <li><strong>Za pravokotnost:</strong> \(f'(x_0) \cdot k_1 = -1\).</li>
+  </ol>
+
+  <p><strong>Primer 1:</strong> Zapiši enačbo tangente na \(f(x) = x^3 - x\), ki je vzporedna premici \(2x - y - 3 = 0\).</p>
+  <div class="plain-example">
+    <p><strong>Korak 1:</strong> Premica v obliki \(y = kx + n\): \(y = 2x - 3\), torej \(k_1 = 2\).</p>
+    <p><strong>Korak 2:</strong> Odvod: \(f'(x) = 3x^2 - 1\). Vzporednost: \(f'(x_0) = 2 \Rightarrow 3x_0^2 - 1 = 2 \Rightarrow x_0^2 = 1 \Rightarrow x_0 = \pm 1\).</p>
+    <p><strong>Korak 3:</strong> Za \(x_0 = 1\): \(y_0 = 1 - 1 = 0\), \(k = 2\). Tangenta: \(y - 0 = 2(x - 1) \Rightarrow y = 2x - 2\).</p>
+    <p><strong>Korak 4:</strong> Za \(x_0 = -1\): \(y_0 = -1 + 1 = 0\), \(k = 2\). Tangenta: \(y = 2(x + 1) \Rightarrow y = 2x + 2\).</p>
+    <p><strong>Rezultat:</strong> \(y = 2x - 2\) in \(y = 2x + 2\).</p>
+  </div>
+
+  <p><strong>Primer 2:</strong> Zapiši tangento in normalo na \(f(x) = x^3 - 3x\) v točki \(A(-2, y_0)\).</p>
+  <div class="plain-example">
+    <p><strong>Korak 1:</strong> \(y_0 = f(-2) = -8 + 6 = -2\).</p>
+    <p><strong>Korak 2:</strong> \(f'(x) = 3x^2 - 3\), \(k = f'(-2) = 12 - 3 = 9\).</p>
+    <p><strong>Korak 3:</strong> Tangenta: \(y + 2 = 9(x + 2) \Rightarrow y = 9x + 16\).</p>
+    <p><strong>Korak 4:</strong> Normala: \(y + 2 = -\dfrac{1}{9}(x + 2)\).</p>
+  </div>
+</div>
+
+<!-- TIP 14 -->
+<div class="info-card">
+  <div class="tip-header">
+    <h3>Tip 14: Stacionarne točke in ekstremi</h3>
+    <div class="tip-formula">
+      \(\displaystyle f'(x_0) = 0 \Rightarrow x_0\) je stacionarna točka
+    </div>
+  </div>
+
+  <p><strong>Kako prepoznaš:</strong> "izračunajte stacionarne točke", "lokalni minimum/maksimum", "ekstrem funkcije".</p>
+
+  <p><strong>Postopek:</strong></p>
+  <ol>
+    <li><strong>Reši \(f'(x) = 0\)</strong> — rešitve so stacionarne točke (kandidati za ekstreme).</li>
+    <li><strong>Preveri tip ekstrema</strong> z drugim odvodom:
+      <ul>
+        <li>\(f''(x_0) > 0\) → <strong>lokalni minimum</strong></li>
+        <li>\(f''(x_0) < 0\) → <strong>lokalni maksimum</strong></li>
+        <li>\(f''(x_0) = 0\) → nič ne pove, preveri predznak \(f'\) okoli \(x_0\)</li>
+      </ul>
+    </li>
+    <li><strong>Izračunaj \(y\)-koordinato</strong> ekstrema: \(y_0 = f(x_0)\).</li>
+    <li><strong>Zapiši ekstrem</strong> kot točko: \(T_{\min}(x_0, y_0)\) ali \(T_{\max}(x_0, y_0)\).</li>
+  </ol>
+
+  <p><strong>Primer 1:</strong> Poišči stacionarne točke funkcije \(f(x) = 2x^3 - x^2 - x + 5\).</p>
+  <div class="plain-example">
+    <p><strong>Korak 1:</strong> Odvod: \(f'(x) = 6x^2 - 2x - 1\).</p>
+    <p><strong>Korak 2:</strong> Rešimo \(f'(x) = 0\): \(6x^2 - 2x - 1 = 0\).</p>
+    <p><strong>Korak 3:</strong> \(x_{1,2} = \dfrac{2 \pm \sqrt{4 + 24}}{12} = \dfrac{2 \pm \sqrt{28}}{12} = \dfrac{2 \pm 2\sqrt{7}}{12} = \dfrac{1 \pm \sqrt{7}}{6}\).</p>
+    <p><strong>Korak 4:</strong> Stacionarni točki: \(x_1 = \dfrac{1 + \sqrt{7}}{6} \approx 0{,}61\), \(x_2 = \dfrac{1 - \sqrt{7}}{6} \approx -0{,}27\).</p>
+  </div>
+
+  <p><strong>Primer 2:</strong> Polinom \(p(x) = x^3 + 4x^2 + ax + 20\) ima lokalni minimum v točki \(A(-1, y_1)\). Izračunaj \(a\) in \(y_1\).</p>
+  <div class="plain-example">
+    <p><strong>Korak 1:</strong> Odvod: \(p'(x) = 3x^2 + 8x + a\).</p>
+    <p><strong>Korak 2:</strong> V točki \(x = -1\) je ekstrem, torej \(p'(-1) = 0\):<br>
+    \(3(1) + 8(-1) + a = 0 \Rightarrow 3 - 8 + a = 0 \Rightarrow a = 5\).</p>
+    <p><strong>Korak 3:</strong> Izračunamo \(y_1 = p(-1) = -1 + 4 - 5 + 20 = 18\).</p>
+    <p><strong>Korak 4:</strong> Preverimo tip: \(p''(x) = 6x + 8\), \(p''(-1) = -6 + 8 = 2 > 0\) → res minimum. ✓</p>
+    <p><strong>Rezultat:</strong> \(a = 5\), \(y_1 = 18\).</p>
+  </div>
+</div>
 
         <!-- ============ 3. POGOSTE NAPAKE ============ -->
         <section class="subsection">
@@ -489,7 +852,7 @@
           <div class="info-card">
             <h3>📋 Kaj moraš znati na pamet</h3>
             <ul>
-              <li><strong>Tabela integralov</strong> (12 osnovnih) — glej zgoraj.</li>
+              <li><strong>Tabela integralov</strong> (15 osnovnih) — glej zgoraj.</li>
               <li><strong>Newton–Leibnizova formula:</strong> \(\int_a^b f = F(b) - F(a)\).</li>
               <li><strong>Ploščina:</strong> \(S = \int_a^b |f(x)|\,dx\) ali \(\int_a^b (f-g)\,dx\).</li>
               <li><strong>Prostornina vrtenine:</strong> \(V = \pi\int_a^b [f(x)]^2\,dx\).</li>

@@ -1,0 +1,585 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diferencialni račun — razlaga in postopki | Piflar.si</title>
+  <meta name="description" content="Celovita razlaga diferencialnega računa za maturo: odvod, diferencialni količnik, pravila odvajanja, tangenta, ekstremi, naraščanje in padanje, konveksnost in konkavnost.">
+  <link rel="stylesheet" href="/style/style.css">
+  <link rel="stylesheet" href="/views/matematika/snov/diferencialni_racun/diferencialni_style.css">
+</head>
+<body>
+  <div id="header"></div>
+
+  <div id="mainContent" class="main-content">
+    <div id="sidebar"></div>
+
+    <div class="view-container">
+      <div class="view">
+
+        <!-- ============ PAGE HEADER ============ -->
+        <header class="page-header">
+          <span class="page-eyebrow">Matematika · Snov · 4.13</span>
+          <h1>Diferencialni račun</h1>
+          <p>Vse o odvodih za maturo: diferencialni količnik, pravila odvajanja, geometrijski pomen odvoda, tangenta in normala, ekstremi, naraščanje in padanje, konveksnost in konkavnost, prevoji. Vsak tip naloge ima postopek po korakih.</p>
+          <div class="page-meta">
+            <div class="page-meta-item"><strong>12</strong><span>Tipov nalog</span></div>
+            <div class="page-meta-item"><strong>40+</strong><span>Primerov</span></div>
+            <div class="page-meta-item"><strong>~60 min</strong><span>Branja</span></div>
+          </div>
+        </header>
+
+        <!-- ============ 1. TEORIJA ============ -->
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>1. Teorija — formule in pravila</h2>
+            <p>Kar moraš znati na pamet, preden se lotiš nalog.</p>
+          </div>
+
+          <div class="info-card">
+            <h3>Osnovni pojmi</h3>
+            <div class="concept-list">
+
+              <div class="concept">
+                <h4>Diferenčni količnik</h4>
+                <div class="concept-formula">\(\dfrac{\Delta y}{\Delta x} = \dfrac{f(x_0 + h) - f(x_0)}{h}\)</div>
+                <p class="concept-desc">Pove <strong>povprečno hitrost spreminjanja</strong> funkcije na intervalu \([x_0, x_0 + h]\). Je naklon sekante skozi dve točki na grafu.</p>
+              </div>
+
+              <div class="concept">
+                <h4>Odvod funkcije v točki</h4>
+                <div class="concept-formula">\(f'(x_0) = \lim_{h \to 0} \dfrac{f(x_0 + h) - f(x_0)}{h}\)</div>
+                <p class="concept-desc">Limita diferenčnega količnika, ko gre \(h \to 0\). Pove <strong>trenutno hitrost spreminjanja</strong> oziroma naklon tangente v točki \(x_0\).</p>
+              </div>
+
+              <div class="concept">
+                <h4>Geometrijski pomen odvoda</h4>
+                <div class="concept-formula">\(k_t = f'(x_0)\)</div>
+                <p class="concept-desc">Odvod v točki je <strong>smerni koeficient tangente</strong> na graf funkcije v tej točki. Tangenta se grafa dotakne in ima enako smer kot graf.</p>
+              </div>
+
+              <div class="concept">
+                <h4>Tangenta in normala</h4>
+                <div class="concept-formula">\(y - y_0 = f'(x_0)(x - x_0)\)</div>
+                <p class="concept-desc">Enačba <strong>tangente</strong> v točki \((x_0, y_0)\). Normala je pravokotna na tangento in ima smerni koeficient \(-\dfrac{1}{f'(x_0)}\).</p>
+              </div>
+
+              <div class="concept">
+                <h4>Ekstremi</h4>
+                <div class="concept-formula">\(f'(x_0) = 0\)</div>
+                <p class="concept-desc">V <strong>stacionarni točki</strong> je tangenta vodoravna. Z drugim odvodom ugotovimo, ali je to minimum (\(f'' > 0\)) ali maksimum (\(f'' < 0\)).</p>
+              </div>
+
+              <div class="concept">
+                <h4>Naraščanje in padanje</h4>
+                <div class="concept-formula">\(f'(x) > 0 \Rightarrow\) narašča, \(f'(x) < 0 \Rightarrow\) pada</div>
+                <p class="concept-desc">Kjer je odvod <strong>pozitiven</strong>, funkcija narašča. Kjer je <strong>negativen</strong>, pada. Kjer je \(f' = 0\), je možen ekstrem.</p>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="info-card">
+            <h3>Tabela osnovnih odvodov</h3>
+            <div class="formula-grid">
+              <div class="formula-card">\(\displaystyle (c)' = 0\)</div>
+              <div class="formula-card">\(\displaystyle (x^n)' = n x^{n-1}\)</div>
+              <div class="formula-card">\(\displaystyle (e^x)' = e^x\)</div>
+              <div class="formula-card">\(\displaystyle (a^x)' = a^x \ln a\)</div>
+              <div class="formula-card">\(\displaystyle (\ln x)' = \dfrac{1}{x}\)</div>
+              <div class="formula-card">\(\displaystyle (\log_a x)' = \dfrac{1}{x \ln a}\)</div>
+              <div class="formula-card">\(\displaystyle (\sin x)' = \cos x\)</div>
+              <div class="formula-card">\(\displaystyle (\cos x)' = -\sin x\)</div>
+              <div class="formula-card">\(\displaystyle (\tan x)' = \dfrac{1}{\cos^2 x}\)</div>
+              <div class="formula-card">\(\displaystyle (\cot x)' = -\dfrac{1}{\sin^2 x}\)</div>
+              <div class="formula-card">\(\displaystyle (\arcsin x)' = \dfrac{1}{\sqrt{1-x^2}}\)</div>
+              <div class="formula-card">\(\displaystyle (\arctan x)' = \dfrac{1}{1+x^2}\)</div>
+            </div>
+            <p style="margin-top: 12px; color: var(--text-secondary);">💡 Vsak odvod se nauči <strong>skupaj z pripadajočim integralom</strong> — odvajanje in integriranje sta obratni operaciji.</p>
+          </div>
+
+          <div class="info-card">
+            <h3>Pravila odvajanja</h3>
+            <div class="concept-list">
+
+              <div class="concept">
+                <h4>Vsota in razlika</h4>
+                <div class="concept-formula">\((f \pm g)' = f' \pm g'\)</div>
+                <p class="concept-desc">Vsoto ali razliko funkcij odvajaš <strong>po členih</strong>.</p>
+              </div>
+
+              <div class="concept">
+                <h4>Konstanta</h4>
+                <div class="concept-formula">\((c \cdot f)' = c \cdot f'\)</div>
+                <p class="concept-desc">Konstanto lahko izpostaviš pred odvod.</p>
+              </div>
+
+              <div class="concept">
+                <h4>Produkt</h4>
+                <div class="concept-formula">\((uv)' = u'v + uv'\)</div>
+                <p class="concept-desc">Odvod produkta ni produkt odvodov! Uporabi <strong>produktno pravilo</strong>.</p>
+              </div>
+
+              <div class="concept">
+                <h4>Kvocient</h4>
+                <div class="concept-formula">\(\left(\dfrac{u}{v}\right)' = \dfrac{u'v - uv'}{v^2}\)</div>
+                <p class="concept-desc">Uporabi <strong>kvocientno pravilo</strong>. Vrstni red v števcu je pomemben!</p>
+              </div>
+
+              <div class="concept">
+                <h4>Verižno pravilo</h4>
+                <div class="concept-formula">\((f(g(x)))' = f'(g(x)) \cdot g'(x)\)</div>
+                <p class="concept-desc">Za <strong>sestavljene funkcije</strong> — odvajaj zunanjo, pomnoži z odvodom notranje.</p>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="info-card">
+            <h3>Uporaba odvoda</h3>
+            <div class="concept-list">
+
+              <div class="concept">
+                <h4>Tangenta na graf</h4>
+                <div class="concept-formula">\(y - y_0 = k(x - x_0), \quad k = f'(x_0)\)</div>
+                <p class="concept-desc">Enačba premice, ki se grafa dotakne v točki \((x_0, y_0)\) in ima enako smer.</p>
+              </div>
+
+              <div class="concept">
+                <h4>Normala na graf</h4>
+                <div class="concept-formula">\(y - y_0 = -\dfrac{1}{f'(x_0)}(x - x_0)\)</div>
+                <p class="concept-desc">Premica, <strong>pravokotna</strong> na tangento v isti točki.</p>
+              </div>
+
+              <div class="concept">
+                <h4>Stacionarne točke in ekstremi</h4>
+                <div class="concept-formula">\(f'(x_0) = 0, \quad f''(x_0) \neq 0\)</div>
+                <p class="concept-desc">Kjer je prvi odvod nič, je možen ekstrem. Drugi odvod pove tip: \(f'' > 0\) → minimum, \(f'' < 0\) → maksimum.</p>
+              </div>
+
+              <div class="concept">
+                <h4>Prevoj in konveksnost</h4>
+                <div class="concept-formula">\(f''(x_0) = 0\)</div>
+                <p class="concept-desc">Kjer je drugi odvod nič in se predznak spremeni, je <strong>prevoj</strong>. \(f'' > 0\) → konveksno (odprto navzgor), \(f'' < 0\) → konkavno.</p>
+              </div>
+
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ 2. TIPI NALOG ============ -->
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>2. Tipi nalog — postopki po korakih</h2>
+            <p>Za vsak tip: kako ga prepoznaš, kako ga rešiš, primer.</p>
+          </div>
+
+          <!-- TIP 1 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 1: Odvod polinoma</h3>
+              <div class="tip-formula">\((x^n)' = n x^{n-1}\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> funkcija je polinom ali vsota členov oblike \(x^n\) (npr. \(3x^2\), \(-4x\), \(5\)).</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Vsak člen odvajaj posebej (vsota/razlika).</li>
+              <li>Izpostavi konstanto pred odvod.</li>
+              <li>Uporabi \((x^n)' = nx^{n-1}\). Konstanta ima odvod 0.</li>
+              <li>Poenostavi rezultat.</li>
+            </ol>
+            <p><strong>Primer 1:</strong> Odvajaj \(f(x) = 2x^3 - 3x + 4\).</p>
+            <div class="plain-example">
+              <p><strong>Korak 1:</strong> Odvajamo po členih:<br>
+              \(f'(x) = (2x^3)' - (3x)' + (4)'\)</p>
+              <p><strong>Korak 2:</strong> Uporabimo \((x^n)' = nx^{n-1}\):</p>
+              <ul>
+                <li>\((2x^3)' = 2 \cdot 3x^2 = 6x^2\)</li>
+                <li>\((3x)' = 3\)</li>
+                <li>\((4)' = 0\)</li>
+              </ul>
+              <p><strong>Korak 3:</strong> Sestavimo: \(f'(x) = 6x^2 - 3\).</p>
+            </div>
+            <p><strong>Primer 2:</strong> Odvajaj \(f(x) = -3x^2\).</p>
+            <div class="plain-example">
+              <p><strong>Korak 1:</strong> Konstanto izpostavimo: \(f'(x) = -3 \cdot (x^2)'\).</p>
+              <p><strong>Korak 2:</strong> \((x^2)' = 2x\), torej \(f'(x) = -3 \cdot 2x = -6x\).</p>
+            </div>
+            <p><strong>Primer 3:</strong> Odvajaj \(f(x) = 5x^2 - 2021x + \cos x\).</p>
+            <div class="plain-example">
+              <p><strong>Korak 1:</strong> Po členih: \(f'(x) = (5x^2)' - (2021x)' + (\cos x)'\).</p>
+              <p><strong>Korak 2:</strong> \(= 10x - 2021 - \sin x\).</p>
+            </div>
+          </div>
+
+          <!-- TIP 2 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 2: Odvod eksponentne, logaritemske in kotne funkcije</h3>
+              <div class="tip-formula">\((\sin x)' = \cos x, \quad (e^x)' = e^x\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> funkcija vsebuje \(e^x\), \(a^x\), \(\sin x\), \(\cos x\), \(\tan x\), \(\ln x\).</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Prepoznaj obliko in uporabi ustrezno formulo iz tabele.</li>
+              <li>Če je funkcija sestavljena (npr. \(\sin(3x)\)), uporabi verižno pravilo.</li>
+              <li>Vsoto odvajaj po členih.</li>
+            </ol>
+            <p><strong>Primer 1:</strong> Odvajaj \(f(x) = 2\sin x - 1\).</p>
+            <div class="plain-example">
+              <p><strong>Korak 1:</strong> \(f'(x) = 2(\sin x)' - (1)'\).</p>
+              <p><strong>Korak 2:</strong> \(= 2\cos x - 0 = 2\cos x\).</p>
+            </div>
+            <p><strong>Primer 2:</strong> Odvajaj \(f(x) = \sin x - e^{-x}\).</p>
+            <div class="plain-example">
+              <p><strong>Korak 1:</strong> \(f'(x) = (\sin x)' - (e^{-x})'\).</p>
+              <p><strong>Korak 2:</strong> \((\sin x)' = \cos x\). Za \(e^{-x}\) uporabimo verižno pravilo: \((e^{-x})' = e^{-x} \cdot (-1) = -e^{-x}\).</p>
+              <p><strong>Korak 3:</strong> \(f'(x) = \cos x - (-e^{-x}) = \cos x + e^{-x}\).</p>
+            </div>
+            <p><strong>Primer 3:</strong> Odvajaj \(f(x) = \sin 3x + 4\cos x\).</p>
+            <div class="plain-example">
+              <p><strong>Korak 1:</strong> Za \(\sin 3x\) uporabimo verižno pravilo: \((\sin 3x)' = \cos 3x \cdot 3 = 3\cos 3x\).</p>
+              <p><strong>Korak 2:</strong> \((4\cos x)' = -4\sin x\).</p>
+              <p><strong>Korak 3:</strong> \(f'(x) = 3\cos 3x - 4\sin x\).</p>
+            </div>
+          </div>
+
+          <!-- TIP 3 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 3: Odvod produkta (produktno pravilo)</h3>
+              <div class="tip-formula">\((uv)' = u'v + uv'\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> funkcija je <strong>produkt dveh funkcij</strong>, npr. \(x^2 \sin x\), \(x e^x\), \(x \ln x\).</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Določi \(u\) in \(v\).</li>
+              <li>Izračunaj \(u'\) in \(v'\).</li>
+              <li>Uporabi \((uv)' = u'v + uv'\).</li>
+              <li>Poenostavi.</li>
+            </ol>
+            <p><strong>Primer:</strong> Odvajaj \(f(x) = x^2 \sin x\).</p>
+            <div class="plain-example">
+              <p><strong>Korak 1:</strong> \(u = x^2\), \(v = \sin x\).</p>
+              <p><strong>Korak 2:</strong> \(u' = 2x\), \(v' = \cos x\).</p>
+              <p><strong>Korak 3:</strong> \(f'(x) = u'v + uv' = 2x \cdot \sin x + x^2 \cdot \cos x\).</p>
+              <p><strong>Korak 4:</strong> \(f'(x) = 2x\sin x + x^2\cos x\).</p>
+            </div>
+          </div>
+
+          <!-- TIP 4 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 4: Odvod kvocienta (kvocientno pravilo)</h3>
+              <div class="tip-formula">\(\left(\dfrac{u}{v}\right)' = \dfrac{u'v - uv'}{v^2}\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> funkcija je <strong>ulomek dveh funkcij</strong>, npr. \(\dfrac{1+x}{x}\), \(\dfrac{\sin x}{x}\), \(\dfrac{x^2}{x+1}\).</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Določi \(u\) (števec) in \(v\) (imenovalec).</li>
+              <li>Izračunaj \(u'\) in \(v'\).</li>
+              <li>Uporabi formulo: \(\dfrac{u'v - uv'}{v^2}\).</li>
+              <li>Poenostavi (pazi na predznak!).</li>
+            </ol>
+            <p><strong>Primer:</strong> Odvajaj \(f(x) = \dfrac{1+x}{x}\).</p>
+            <div class="plain-example">
+              <p><strong>Korak 1:</strong> \(u = 1+x\), \(v = x\).</p>
+              <p><strong>Korak 2:</strong> \(u' = 1\), \(v' = 1\).</p>
+              <p><strong>Korak 3:</strong> \(f'(x) = \dfrac{1 \cdot x - (1+x) \cdot 1}{x^2} = \dfrac{x - 1 - x}{x^2} = \dfrac{-1}{x^2}\).</p>
+              <p><strong>Korak 4:</strong> \(f'(x) = -\dfrac{1}{x^2}\).</p>
+            </div>
+          </div>
+
+          <!-- TIP 5 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 5: Verižno pravilo (sestavljena funkcija)</h3>
+              <div class="tip-formula">\((f(g(x)))' = f'(g(x)) \cdot g'(x)\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> funkcija je <strong>sestavljena</strong>, npr. \(\ln(2x+5)\), \(\sin(3x)\), \(e^{x^2}\), \(\sqrt{3x+1}\).</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Prepoznaj zunanjo funkcijo \(f\) in notranjo \(g\).</li>
+              <li>Odvajaj zunanjo (pusti notranjo pri miru).</li>
+              <li>Pomnoži z odvodom notranje.</li>
+              <li>Poenostavi.</li>
+            </ol>
+            <p><strong>Primer:</strong> Odvajaj \(f(x) = \ln(2x + 5)\).</p>
+            <div class="plain-example">
+              <p><strong>Korak 1:</strong> Zunanja: \(\ln\), notranja: \(2x + 5\).</p>
+              <p><strong>Korak 2:</strong> Odvod zunanje: \(\dfrac{1}{2x+5}\). Odvod notranje: \(2\).</p>
+              <p><strong>Korak 3:</strong> \(f'(x) = \dfrac{1}{2x+5} \cdot 2 = \dfrac{2}{2x+5}\).</p>
+            </div>
+          </div>
+
+          <!-- TIP 6 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 6: Diferenčni količnik in limita</h3>
+              <div class="tip-formula">\(f'(x) = \lim_{h \to 0} \dfrac{f(x+h) - f(x)}{h}\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "izračunaj diferenčni količnik", "izračunaj odvod po definiciji".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Izračunaj \(f(x+h)\).</li>
+              <li>Odštej \(f(x)\) in poenostavi števec.</li>
+              <li>Deli s \(h\) in okrajšaj.</li>
+              <li>Izračunaj limito, ko \(h \to 0\).</li>
+            </ol>
+            <p><strong>Primer:</strong> Izračunaj odvod \(f(x) = x^2\) po definiciji.</p>
+            <div class="plain-example">
+              <p><strong>Korak 1:</strong> \(f(x+h) = (x+h)^2 = x^2 + 2xh + h^2\).</p>
+              <p><strong>Korak 2:</strong> \(f(x+h) - f(x) = x^2 + 2xh + h^2 - x^2 = 2xh + h^2 = h(2x + h)\).</p>
+              <p><strong>Korak 3:</strong> \(\dfrac{f(x+h)-f(x)}{h} = \dfrac{h(2x+h)}{h} = 2x + h\).</p>
+              <p><strong>Korak 4:</strong> \(\lim_{h \to 0}(2x+h) = 2x\). Torej \(f'(x) = 2x\).</p>
+            </div>
+          </div>
+
+          <!-- TIP 7 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 7: Tangenta in normala na graf</h3>
+              <div class="tip-formula">\(y - y_0 = f'(x_0)(x - x_0)\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "zapišite enačbo tangente/normale v točki \(x_0\)", "tangenta je vzporedna/pravokotna na premico".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Izračunaj \(y_0 = f(x_0)\).</li>
+              <li>Izračunaj odvod \(f'(x)\) in vstavi \(x_0\): \(k = f'(x_0)\).</li>
+              <li>Tangenta: \(y - y_0 = k(x - x_0)\).</li>
+              <li>Normala: \(y - y_0 = -\dfrac{1}{k}(x - x_0)\) (za \(k \neq 0\)).</li>
+            </ol>
+            <p><strong>Primer 1:</strong> Zapiši tangento na \(f(x) = x^3 - x\), ki je vzporedna premici \(2x - y - 3 = 0\).</p>
+            <div class="plain-example">
+              <p><strong>Korak 1:</strong> Premica: \(y = 2x - 3\), \(k_1 = 2\).</p>
+              <p><strong>Korak 2:</strong> \(f'(x) = 3x^2 - 1\). Vzporednost: \(3x_0^2 - 1 = 2 \Rightarrow x_0 = \pm 1\).</p>
+              <p><strong>Korak 3:</strong> Za \(x_0 = 1\): \(y_0 = 0\), \(k = 2\). Tangenta: \(y = 2x - 2\).</p>
+              <p><strong>Korak 4:</strong> Za \(x_0 = -1\): \(y_0 = 0\), \(k = 2\). Tangenta: \(y = 2x + 2\).</p>
+            </div>
+            <p><strong>Primer 2:</strong> Zapiši tangento in normalo na \(f(x) = x^3 - 3x\) v točki \(A(-2, y_0)\).</p>
+            <div class="plain-example">
+              <p><strong>Korak 1:</strong> \(y_0 = f(-2) = -8 + 6 = -2\).</p>
+              <p><strong>Korak 2:</strong> \(f'(x) = 3x^2 - 3\), \(k = f'(-2) = 12 - 3 = 9\).</p>
+              <p><strong>Korak 3:</strong> Tangenta: \(y + 2 = 9(x + 2) \Rightarrow y = 9x + 16\).</p>
+              <p><strong>Korak 4:</strong> Normala: \(y + 2 = -\dfrac{1}{9}(x + 2)\).</p>
+            </div>
+          </div>
+
+          <!-- TIP 8 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 8: Stacionarne točke in ekstremi</h3>
+              <div class="tip-formula">\(f'(x_0) = 0, \quad f''(x_0) \neq 0\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "izračunajte stacionarne točke", "lokalni minimum/maksimum", "ekstrem funkcije".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Reši \(f'(x) = 0\) — dobiš stacionarne točke.</li>
+              <li>Izračunaj drugi odvod \(f''(x)\).</li>
+              <li>Za vsako stacionarno točko preveri \(f''(x_0)\): \(> 0\) → minimum, \(< 0\) → maksimum.</li>
+              <li>Izračunaj \(y_0 = f(x_0)\).</li>
+            </ol>
+            <p><strong>Primer 1:</strong> Poišči ekstreme \(f(x) = 2x^3 - x^2 - x + 5\).</p>
+            <div class="plain-example">
+              <p><strong>Korak 1:</strong> \(f'(x) = 6x^2 - 2x - 1 = 0\). Rešitvi: \(x_{1,2} = \dfrac{1 \pm \sqrt{7}}{6}\).</p>
+              <p><strong>Korak 2:</strong> \(f''(x) = 12x - 2\).</p>
+              <p><strong>Korak 3:</strong> \(f''(x_1) = 12 \cdot \dfrac{1+\sqrt{7}}{6} - 2 = 2(1+\sqrt{7}) - 2 = 2\sqrt{7} > 0\) → minimum. \(f''(x_2) = -2\sqrt{7} < 0\) → maksimum.</p>
+              <p><strong>Korak 4:</strong> Izračunamo \(y\)-koordinate z vstavitvijo v \(f\).</p>
+            </div>
+            <p><strong>Primer 2:</strong> Polinom \(p(x) = x^3 + 4x^2 + ax + 20\) ima lokalni minimum v \(A(-1, y_1)\). Poišči \(a\) in \(y_1\).</p>
+            <div class="plain-example">
+              <p><strong>Korak 1:</strong> \(p'(x) = 3x^2 + 8x + a\).</p>
+              <p><strong>Korak 2:</strong> \(p'(-1) = 0 \Rightarrow 3 - 8 + a = 0 \Rightarrow a = 5\).</p>
+              <p><strong>Korak 3:</strong> \(y_1 = p(-1) = -1 + 4 - 5 + 20 = 18\).</p>
+              <p><strong>Korak 4:</strong> Preverimo: \(p''(x) = 6x + 8\), \(p''(-1) = 2 > 0\) → res minimum. ✓</p>
+            </div>
+          </div>
+
+          <!-- TIP 9 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 9: Naraščanje in padanje</h3>
+              <div class="tip-formula">\(f'(x) > 0 \Rightarrow \nearrow, \quad f'(x) < 0 \Rightarrow \searrow\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "določite intervale naraščanja in padanja".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Reši \(f'(x) = 0\) — ničle odvoda.</li>
+              <li>Nariši znakovno tabelo: na vsakem intervalu med ničlami preveri predznak \(f'\).</li>
+              <li>Kjer je \(f' > 0\), funkcija narašča; kjer \(f' < 0\), pada.</li>
+            </ol>
+            <p><strong>Primer:</strong> Določi intervale naraščanja in padanja za \(f(x) = x^2 - 4x\).</p>
+            <div class="plain-example">
+              <p><strong>Korak 1:</strong> \(f'(x) = 2x - 4 = 0 \Rightarrow x = 2\).</p>
+              <p><strong>Korak 2:</strong> Preverimo predznak: za \(x < 2\): \(f'(0) = -4 < 0\) → pada. Za \(x > 2\): \(f'(3) = 2 > 0\) → narašča.</p>
+              <p><strong>Korak 3:</strong> Funkcija pada na \((-\infty, 2)\) in narašča na \((2, \infty)\). V \(x = 2\) je minimum.</p>
+            </div>
+          </div>
+
+          <!-- TIP 10 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 10: Konveksnost, konkavnost in prevoj</h3>
+              <div class="tip-formula">\(f''(x) = 0 \Rightarrow\) možni prevoj</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "določite prevoje", "konveksnost/konkavnost".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Izračunaj \(f''(x)\).</li>
+              <li>Reši \(f''(x) = 0\) — kandidati za prevoj.</li>
+              <li>Preveri, ali se predznak \(f''\) spremeni v teh točkah. Če se, je prevoj.</li>
+              <li>Kjer je \(f'' > 0\): konveksno. Kjer \(f'' < 0\): konkavno.</li>
+            </ol>
+            <p><strong>Primer:</strong> Poišči prevoj funkcije \(f(x) = x^3 - 3x^2\).</p>
+            <div class="plain-example">
+              <p><strong>Korak 1:</strong> \(f'(x) = 3x^2 - 6x\), \(f''(x) = 6x - 6\).</p>
+              <p><strong>Korak 2:</strong> \(f''(x) = 0 \Rightarrow x = 1\).</p>
+              <p><strong>Korak 3:</strong> Za \(x < 1\): \(f''(0) = -6 < 0\) (konkavno). Za \(x > 1\): \(f''(2) = 6 > 0\) (konveksno). Predznak se spremeni → prevoj v \(x = 1\).</p>
+              <p><strong>Korak 4:</strong> \(y = f(1) = 1 - 3 = -2\). Prevoj: \(P(1, -2)\).</p>
+            </div>
+          </div>
+
+          <!-- TIP 11 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 11: Odvod inverzne funkcije</h3>
+              <div class="tip-formula">\((f^{-1})'(y_0) = \dfrac{1}{f'(x_0)}, \quad y_0 = f(x_0)\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "zapišite predpis inverzne funkcije in njen odvod".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Zapiši \(y = f(x)\).</li>
+              <li>Zamenjaj \(x\) in \(y\): \(x = f(y)\).</li>
+              <li>Izrazi \(y\) — dobiš \(f^{-1}(x)\).</li>
+              <li>Odvod: \((f^{-1})'(x) = \dfrac{1}{f'(f^{-1}(x))}\).</li>
+            </ol>
+            <p><strong>Primer:</strong> \(f(x) = 5x\). Poišči \(f^{-1}\) in \((f^{-1})'\).</p>
+            <div class="plain-example">
+              <p><strong>Korak 1:</strong> \(y = 5x\).</p>
+              <p><strong>Korak 2:</strong> \(x = 5y \Rightarrow y = \dfrac{x}{5}\). Torej \(f^{-1}(x) = \dfrac{x}{5}\).</p>
+              <p><strong>Korak 3:</strong> Odvod \(f'(x) = 5\). Torej \((f^{-1})'(x) = \dfrac{1}{5}\).</p>
+            </div>
+          </div>
+
+          <!-- TIP 12 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 12: Kot med krivuljama</h3>
+              <div class="tip-formula">\(\tan\varphi = \left|\dfrac{k_1 - k_2}{1 + k_1 k_2}\right|\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "izračunajte kot med krivuljama", "pod kolikšnim kotom seka graf abscisno os".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Poišči presečišče krivulj: reši \(f(x) = g(x)\).</li>
+              <li>Izračunaj smerna koeficienta tangent v presečišču: \(k_1 = f'(x_0)\), \(k_2 = g'(x_0)\).</li>
+              <li>Uporabi formulo za kot med premicama.</li>
+              <li>Za kot z abscisno osjo: \(k = \tan\alpha \Rightarrow \alpha = \arctan k\).</li>
+            </ol>
+            <p><strong>Primer:</strong> Pod kolikšnim kotom graf \(f(x) = x^2 - 4\) seka abscisno os?</p>
+            <div class="plain-example">
+              <p><strong>Korak 1:</strong> Ničle: \(x^2 - 4 = 0 \Rightarrow x = \pm 2\).</p>
+              <p><strong>Korak 2:</strong> \(f'(x) = 2x\). V \(x = 2\): \(k = 4\). V \(x = -2\): \(k = -4\).</p>
+              <p><strong>Korak 3:</strong> \(\tan\alpha = 4 \Rightarrow \alpha = \arctan 4 \approx 75{,}96°\). Za \(x = -2\): \(\alpha = \arctan(-4) \approx -75{,}96°\), kot je \(75{,}96°\).</p>
+            </div>
+          </div>
+
+        </section>
+
+        <!-- ============ 3. POGOSTE NAPAKE ============ -->
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>3. Pogoste napake</h2>
+          </div>
+          <div class="info-card">
+            <ul>
+              <li>Zamenjaš produktno pravilo s "produkt odvodov": \((uv)' \neq u'v'\).</li>
+              <li>Pozabiš na minus pri odvodu kosinusa: \((\cos x)' = -\sin x\).</li>
+              <li>Pri verižnem pravilu pozabiš pomnožiti z odvodom notranje funkcije.</li>
+              <li>Pri kvocientnem pravilu zamenjaš vrstni red: \((u/v)' \neq (uv' - u'v)/v^2\).</li>
+              <li>Pri tangenti zamenjaš \(k = f'(x_0)\) s \(k = f(x_0)\).</li>
+              <li>Pri ekstremih pozabiš preveriti \(f''(x_0)\) — lahko je prevoj.</li>
+              <li>Pri naraščanju/padanju pozabiš, da \(f' = 0\) še ne pomeni ekstrema (lahko je prevoj).</li>
+              <li>Pri kotu med krivuljama pozabiš absolutno vrednost v formuli.</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ============ 4. ŠTUDIJSKI VODIČ ============ -->
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>4. Študijski vodič — hitri pregled</h2>
+            <p>Kaj moraš znati na pamet in kako pristopiti k nalogi.</p>
+          </div>
+
+          <div class="info-card">
+            <h3>📋 Kaj moraš znati na pamet</h3>
+            <ul>
+              <li><strong>Tabela odvodov</strong> (12 osnovnih) — glej zgoraj.</li>
+              <li><strong>Pravila:</strong> vsota, produkt, kvocient, verižno.</li>
+              <li><strong>Tangenta:</strong> \(y - y_0 = f'(x_0)(x - x_0)\).</li>
+              <li><strong>Normala:</strong> \(y - y_0 = -\dfrac{1}{f'(x_0)}(x - x_0)\).</li>
+              <li><strong>Ekstremi:</strong> \(f' = 0\), preveri \(f''\).</li>
+              <li><strong>Naraščanje:</strong> \(f' > 0\). <strong>Padanje:</strong> \(f' < 0\).</li>
+              <li><strong>Prevoj:</strong> \(f'' = 0\) in sprememba predznaka.</li>
+            </ul>
+          </div>
+
+          <div class="info-card">
+            <h3>🎯 Kako pristopiti k nalogi</h3>
+            <ol>
+              <li><strong>Preberi nalogo in prepoznaj tip:</strong> odvod, tangenta, ekstrem, naraščanje, prevoj, kot?</li>
+              <li><strong>Za odvod:</strong> prepoznaj strukturo (vsota, produkt, kvocient, sestavljena) in uporabi ustrezno pravilo.</li>
+              <li><strong>Za tangento:</strong> izračunaj \(y_0 = f(x_0)\), \(k = f'(x_0)\), zapiši enačbo.</li>
+              <li><strong>Za ekstrem:</strong> reši \(f' = 0\), preveri \(f''\), izračunaj \(y_0\).</li>
+              <li><strong>Za naraščanje:</strong> reši \(f' = 0\), naredi znakovno tabelo.</li>
+              <li><strong>Za prevoj:</strong> reši \(f'' = 0\), preveri spremembo predznaka.</li>
+              <li><strong>Za kot:</strong> izračunaj \(k = f'(x_0)\), uporabi \(\tan\alpha = k\).</li>
+            </ol>
+          </div>
+
+          <div class="info-card">
+            <h3>⏱️ Časovni načrt za en večer</h3>
+            <ul>
+              <li><strong>30 min:</strong> Teorija — tabela odvodov, pravila, uporaba.</li>
+              <li><strong>60 min:</strong> Tipi 1–6 (polinom, eksponentna, produkt, kvocient, verižno, diferenčni količnik).</li>
+              <li><strong>45 min:</strong> Tipi 7–9 (tangenta, ekstremi, naraščanje).</li>
+              <li><strong>45 min:</strong> Tipi 10–12 (prevoj, inverzna, kot).</li>
+              <li><strong>30 min:</strong> Ponovi pogoste napake in študijski vodič.</li>
+              <li><strong>30 min:</strong> Reši 2–3 izpitne pole za vajo.</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ============ 5. POVEZAVE ============ -->
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>5. Vadi naprej</h2>
+            <p>Ko predelaš razlago, preveri znanje z nalogami.</p>
+          </div>
+          <div class="link-list">
+            <a class="link-item" href="/views/matematika/matura/osnovna_raven/naloge/resene/">
+              <span class="link-item-text">
+                <strong>Rešene naloge — osnovna raven</strong>
+                <small>Primeri z razlago</small>
+              </span>
+              <span class="arrow">→</span>
+            </a>
+            <a class="link-item" href="/views/matematika/matura/visja_raven/naloge/resene/">
+              <span class="link-item-text">
+                <strong>Rešene naloge — višja raven</strong>
+                <small>Zahtevnejši primeri</small>
+              </span>
+              <span class="arrow">→</span>
+            </a>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+
+  <script src="/components/components.js"></script>
+</body>
+</html>
