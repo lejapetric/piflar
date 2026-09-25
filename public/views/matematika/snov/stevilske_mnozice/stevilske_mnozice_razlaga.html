@@ -1,80 +1,595 @@
-<div class="view">
-    <div class="view-header">
-        <h2>🔢 3. Številske množice in kompleksna števila</h2>
-        <p>Hierarhija številskih množic in računanje s kompleksnimi števili</p>
-    </div>
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Številske množice — razlaga in postopki | Piflar.si</title>
+  <meta name="description" content="Celovita razlaga številskih množic za maturo: naravna, cela, racionalna, realna in kompleksna števila, deljivost, praštevila, D in v, absolutna vrednost.">
+  <link rel="stylesheet" href="/style/style.css">
+  <link rel="stylesheet" href="/views/matematika/snov/stevilske_mnozice/stevilske_mnozice_style.css">
+</head>
+<body>
+  <div id="header"></div>
 
-    <div class="card">
-        <h3>📖 Številske množice (hierarhija)</h3>
-        <div style="background: var(--bg-primary); padding: 16px; border-radius: var(--radius-sm); font-family: monospace; font-size: 16px; line-height: 2;">
-            ℕ ⊂ ℤ ⊂ ℚ ⊂ ℝ ⊂ ℂ
-        </div>
-        <ul style="margin-top: 12px; padding-left: 20px; color: var(--text-secondary);">
-            <li><strong>ℕ</strong> – Naravna števila: {1, 2, 3, 4, ...}</li>
-            <li><strong>ℤ</strong> – Cela števila: {..., -3, -2, -1, 0, 1, 2, 3, ...}</li>
-            <li><strong>ℚ</strong> – Racionalna števila: {p/q | p, q ∈ ℤ, q ≠ 0}</li>
-            <li><strong>ℝ</strong> – Realna števila (vsa števila na številski premici)</li>
-            <li><strong>ℂ</strong> – Kompleksna števila</li>
-        </ul>
-    </div>
+  <div id="mainContent" class="main-content">
+    <div id="sidebar"></div>
 
-    <div class="card">
-        <h3>📖 Kompleksna števila</h3>
-        <div class="formula-grid">
-            <div class="formula-card">
-                <strong>Imaginarna enota</strong><br>
-                <code>i² = -1</code>
-            </div>
-            <div class="formula-card">
-                <strong>Splošna oblika</strong><br>
-                <code>z = a + bi</code>
-                <p style="font-size: 14px; color: var(--text-secondary);">a = Re(z), b = Im(z)</p>
-            </div>
-            <div class="formula-card">
-                <strong>Konjugirano število</strong><br>
-                <code>z̄ = a - bi</code>
-            </div>
-            <div class="formula-card">
-                <strong>Absolutna vrednost</strong><br>
-                <code>|z| = √(a² + b²)</code>
-            </div>
-        </div>
-    </div>
+    <div class="view-container">
+      <div class="view">
 
-    <div class="card">
-        <h3>📝 Računske operacije</h3>
-        <div class="formula-grid">
-            <div class="formula-card">
-                <strong>Seštevanje</strong><br>
-                <code>(a+bi) ± (c+di) = (a±c) + (b±d)i</code>
-            </div>
-            <div class="formula-card">
-                <strong>Množenje</strong><br>
-                <code>(a+bi)(c+di) = (ac-bd) + (ad+bc)i</code>
-            </div>
-            <div class="formula-card">
-                <strong>Deljenje</strong><br>
-                <code>razširimo s konjugiranim imenovalcem</code>
-            </div>
-        </div>
-        <div style="margin-top: 12px; background: var(--bg-primary); padding: 12px; border-radius: var(--radius-sm);">
-            <strong>Primer deljenja:</strong><br>
-            <code>(3+2i)/(1-4i) · (1+4i)/(1+4i) = -5/17 + (14/17)i</code>
-        </div>
-    </div>
+        <header class="page-header">
+          <span class="page-eyebrow">Matematika · Snov · 4.3</span>
+          <h1>Številske množice</h1>
+          <p>Vse o številskih množicah za maturo: hierarhija ℕ ⊂ ℤ ⊂ ℚ ⊂ ℝ ⊂ ℂ, deljivost, praštevila in prafaktorizacija, največji skupni delitelj in najmanjši skupni večkratnik, absolutna vrednost, intervali, kompleksna števila.</p>
+          <div class="page-meta">
+            <div class="page-meta-item"><strong>12</strong><span>Tipov nalog</span></div>
+            <div class="page-meta-item"><strong>40+</strong><span>Primerov</span></div>
+            <div class="page-meta-item"><strong>~55 min</strong><span>Branja</span></div>
+          </div>
+        </header>
 
-    <div class="card">
-        <h3>🔄 Potence imaginarne enote</h3>
-        <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; text-align: center;">
-            <div class="formula-card"><code>i¹ = i</code></div>
-            <div class="formula-card"><code>i² = -1</code></div>
-            <div class="formula-card"><code>i³ = -i</code></div>
-            <div class="formula-card"><code>i⁴ = 1</code></div>
+        <!-- ============ MATURA FORMULE ============ -->
+        <div class="matura-formule">
+          <h3>📋 Formule na maturi — osnovna raven</h3>
+          <p>Na maturitetnem listu s formulami so za <strong>številske množice</strong> relevantni naslednji simboli in zveze:</p>
+          <div class="matura-grid">
+            <div class="matura-levo">
+              <ul>
+                <li><strong>Množice:</strong> \(\mathbb{N} \subset \mathbb{Z} \subset \mathbb{Q} \subset \mathbb{R} \subset \mathbb{C}\)</li>
+                <li><strong>Intervali:</strong> \([a, b]\), \((a, b)\), \([a, b)\), \((-\infty, a]\)</li>
+                <li><strong>Absolutna vrednost:</strong> \(|a| = \begin{cases} a, & a \geq 0 \\ -a, & a < 0 \end{cases}\)</li>
+                <li><strong>Kompleksna števila:</strong> \(z = a + bi\), \(i^2 = -1\), \(\overline{z} = a - bi\), \(|z| = \sqrt{a^2 + b^2}\)</li>
+                <li><strong>D in v:</strong> \(D(a,b) \cdot v(a,b) = a \cdot b\)</li>
+              </ul>
+            </div>
+            <div class="matura-slika">
+              <img src="/views/matematika/images/formule_osnovna_raven.png" alt="Formule na maturi — osnovna raven">
+            </div>
+          </div>
         </div>
-        <p style="margin-top: 12px; color: var(--text-secondary);">💡 Perioda 4: iⁿ = i^(n mod 4)</p>
-        <div style="margin-top: 8px; background: var(--bg-primary); padding: 12px; border-radius: var(--radius-sm);">
-            <strong>Primer:</strong> i²⁰²⁶ = ?<br>
-            2026 ÷ 4 = 506 ostanka 2 → i²⁰²⁶ = -1
-        </div>
+
+        <!-- ============ 1. TEORIJA ============ -->
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>1. Teorija — pravila in zveze</h2>
+            <p>Kar moraš znati na pamet, preden se lotiš nalog.</p>
+          </div>
+
+          <div class="info-card">
+            <h3>Hierarhija številskih množic</h3>
+            <div class="formula-grid">
+              <div class="formula-card">\(\mathbb{N} \subset \mathbb{Z} \subset \mathbb{Q} \subset \mathbb{R} \subset \mathbb{C}\)</div>
+            </div>
+            <div class="concept-list two-col" style="margin-top: var(--space-4);">
+              <div class="concept">
+                <h4>ℕ — Naravna števila</h4>
+                <div class="concept-formula">\(\mathbb{N} = \{1, 2, 3, 4, \ldots\}\)</div>
+                <p class="concept-desc">Števila za štetje. \(\mathbb{N}_0 = \{0, 1, 2, \ldots\}\).</p>
+              </div>
+              <div class="concept">
+                <h4>ℤ — Cela števila</h4>
+                <div class="concept-formula">\(\mathbb{Z} = \{\ldots, -2, -1, 0, 1, 2, \ldots\}\)</div>
+                <p class="concept-desc">Naravna števila + 0 + negativna števila.</p>
+              </div>
+              <div class="concept">
+                <h4>ℚ — Racionalna števila</h4>
+                <div class="concept-formula">\(\mathbb{Q} = \left\{\dfrac{p}{q}; p, q \in \mathbb{Z}, q \neq 0\right\}\)</div>
+                <p class="concept-desc">Ulomki. Decimalni zapis je <strong>končen ali periodičen</strong>.</p>
+              </div>
+              <div class="concept">
+                <h4>ℝ — Realna števila</h4>
+                <div class="concept-formula">\(\mathbb{R} = \mathbb{Q} \cup \mathbb{I}\)</div>
+                <p class="concept-desc">Vsa števila na številski premici, vključno z iracionalnimi (npr. \(\pi\), \(\sqrt{2}\), \(e\)).</p>
+              </div>
+              <div class="concept">
+                <h4>ℂ — Kompleksna števila</h4>
+                <div class="concept-formula">\(z = a + bi\), \(i^2 = -1\)</div>
+                <p class="concept-desc">Razširitev realnih števil. \(a = \operatorname{Re}(z)\), \(b = \operatorname{Im}(z)\).</p>
+              </div>
+              <div class="concept">
+                <h4>𝕀 — Iracionalna števila</h4>
+                <div class="concept-formula">\(\sqrt{2}, \pi, e, \sqrt{3}\)</div>
+                <p class="concept-desc">Realna števila, ki jih <strong>ne moremo</strong> zapisati kot ulomek.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <h3>Deljivost</h3>
+            <div class="concept-list two-col">
+              <div class="concept">
+                <h4>Deljivost z 2</h4>
+                <div class="concept-formula">zadnja števka soda</div>
+              </div>
+              <div class="concept">
+                <h4>Deljivost s 3</h4>
+                <div class="concept-formula">vsota števk deljiva s 3</div>
+              </div>
+              <div class="concept">
+                <h4>Deljivost s 4</h4>
+                <div class="concept-formula">zadnji dve števki deljivi s 4</div>
+              </div>
+              <div class="concept">
+                <h4>Deljivost s 5</h4>
+                <div class="concept-formula">zadnja števka 0 ali 5</div>
+              </div>
+              <div class="concept">
+                <h4>Deljivost s 6</h4>
+                <div class="concept-formula">deljivo z 2 <strong>in</strong> s 3</div>
+              </div>
+              <div class="concept">
+                <h4>Deljivost z 8</h4>
+                <div class="concept-formula">zadnje tri števke deljive z 8</div>
+              </div>
+              <div class="concept">
+                <h4>Deljivost z 9</h4>
+                <div class="concept-formula">vsota števk deljiva z 9</div>
+              </div>
+              <div class="concept">
+                <h4>Deljivost z 10</h4>
+                <div class="concept-formula">zadnja števka 0</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <h3>Praštevila, D in v</h3>
+            <div class="concept-list two-col">
+              <div class="concept">
+                <h4>Praštevilo</h4>
+                <div class="concept-formula">\(p > 1\), deljivo le z 1 in samim seboj</div>
+                <p class="concept-desc">Primeri: 2, 3, 5, 7, 11, 13, 17, 19, 23, …</p>
+              </div>
+              <div class="concept">
+                <h4>Sestavljeno število</h4>
+                <div class="concept-formula">\(n > 1\), ni praštevilo</div>
+                <p class="concept-desc">Primeri: 4, 6, 8, 9, 10, 12, …</p>
+              </div>
+              <div class="concept">
+                <h4>Prafaktorizacija</h4>
+                <div class="concept-formula">\(n = p_1^{a_1} \cdot p_2^{a_2} \cdots p_k^{a_k}\)</div>
+                <p class="concept-desc">Vsako naravno število \(> 1\) se da zapisati kot produkt praštevil — <strong>enolično</strong>.</p>
+              </div>
+              <div class="concept">
+                <h4>Največji skupni delitelj</h4>
+                <div class="concept-formula">\(D(a, b)\)</div>
+                <p class="concept-desc">Največje število, ki deli oba. Produkt <strong>skupnih</strong> prafaktorjev z <strong>najmanjšo</strong> potenco.</p>
+              </div>
+              <div class="concept">
+                <h4>Najmanjši skupni večkratnik</h4>
+                <div class="concept-formula">\(v(a, b)\)</div>
+                <p class="concept-desc">Najmanjše število, ki je deljivo z obema. Produkt <strong>vseh</strong> prafaktorjev z <strong>največjo</strong> potenco.</p>
+              </div>
+              <div class="concept">
+                <h4>Zveza med D in v</h4>
+                <div class="concept-formula">\(D(a, b) \cdot v(a, b) = a \cdot b\)</div>
+                <p class="concept-desc">Uporabno za preverjanje.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <h3>Absolutna vrednost</h3>
+            <div class="concept-list two-col">
+              <div class="concept">
+                <h4>Definicija</h4>
+                <div class="concept-formula">\(|a| = \begin{cases} a, & a \geq 0 \\ -a, & a < 0 \end{cases}\)</div>
+                <p class="concept-desc">Vedno <strong>nenegativna</strong>. Pove razdaljo od 0 na številski premici.</p>
+              </div>
+              <div class="concept">
+                <h4>Lastnosti</h4>
+                <div class="concept-formula">\(|ab| = |a||b|\), \(\left|\dfrac{a}{b}\right| = \dfrac{|a|}{|b|}\)</div>
+                <p class="concept-desc">Absolutna vrednost produkta/kvocienta je produkt/kvocient absolutnih vrednosti.</p>
+              </div>
+              <div class="concept">
+                <h4>Enačba \(|x| = a\)</h4>
+                <div class="concept-formula">\(x = a \lor x = -a\)</div>
+                <p class="concept-desc">Dve rešitvi (če \(a > 0\)).</p>
+              </div>
+              <div class="concept">
+                <h4>Neenačba \(|x| < a\)</h4>
+                <div class="concept-formula">\(-a < x < a\)</div>
+                <p class="concept-desc">Rešitev je <strong>interval</strong>.</p>
+              </div>
+              <div class="concept">
+                <h4>Neenačba \(|x| > a\)</h4>
+                <div class="concept-formula">\(x < -a \lor x > a\)</div>
+                <p class="concept-desc">Rešitev je <strong>unija dveh intervalov</strong>.</p>
+              </div>
+              <div class="concept">
+                <h4>Intervali</h4>
+                <div class="concept-formula">\([a,b]\), \((a,b)\), \((-\infty, a]\), \((a, \infty)\)</div>
+                <p class="concept-desc">Zaprt interval vključuje meje, odprt ne.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <h3>Kompleksna števila</h3>
+            <div class="concept-list two-col">
+              <div class="concept">
+                <h4>Imaginarna enota</h4>
+                <div class="concept-formula">\(i^2 = -1\)</div>
+                <p class="concept-desc">Osnova kompleksnih števil.</p>
+              </div>
+              <div class="concept">
+                <h4>Splošna oblika</h4>
+                <div class="concept-formula">\(z = a + bi\)</div>
+                <p class="concept-desc">\(a = \operatorname{Re}(z)\), \(b = \operatorname{Im}(z)\).</p>
+              </div>
+              <div class="concept">
+                <h4>Konjugirano število</h4>
+                <div class="concept-formula">\(\overline{z} = a - bi\)</div>
+                <p class="concept-desc">Zrcaljenje čez realno os.</p>
+              </div>
+              <div class="concept">
+                <h4>Absolutna vrednost</h4>
+                <div class="concept-formula">\(|z| = \sqrt{a^2 + b^2}\)</div>
+                <p class="concept-desc">Razdalja od izhodišča v kompleksni ravnini.</p>
+              </div>
+              <div class="concept">
+                <h4>Seštevanje</h4>
+                <div class="concept-formula">\((a+bi) \pm (c+di) = (a \pm c) + (b \pm d)i\)</div>
+                <p class="concept-desc">Seštejemo realne in imaginarne dele posebej.</p>
+              </div>
+              <div class="concept">
+                <h4>Množenje</h4>
+                <div class="concept-formula">\((a+bi)(c+di) = (ac-bd) + (ad+bc)i\)</div>
+                <p class="concept-desc">Razporedimo in upoštevamo \(i^2 = -1\).</p>
+              </div>
+              <div class="concept">
+                <h4>Deljenje</h4>
+                <div class="concept-formula">\(\dfrac{a+bi}{c+di} \cdot \dfrac{c-di}{c-di}\)</div>
+                <p class="concept-desc">Razširimo s konjugiranim imenovalcem.</p>
+              </div>
+              <div class="concept">
+                <h4>Potence i</h4>
+                <div class="concept-formula">\(i^1 = i\), \(i^2 = -1\), \(i^3 = -i\), \(i^4 = 1\)</div>
+                <p class="concept-desc">Perioda 4: \(i^n = i^{n \bmod 4}\).</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ 2. TIPI NALOG ============ -->
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>2. Tipi nalog — postopki po korakih</h2>
+            <p>Za vsak tip: kako ga prepoznaš, kako ga rešiš, primer.</p>
+          </div>
+
+          <!-- TIP 1 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 1: Določitev, v katero množico sodi število</h3>
+              <div class="tip-formula">\(\mathbb{N} \subset \mathbb{Z} \subset \mathbb{Q} \subset \mathbb{R} \subset \mathbb{C}\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "v katero množico sodi …", "ali je število racionalno".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Preveri, ali je število naravno (\(\mathbb{N}\)), celo (\(\mathbb{Z}\)), racionalno (\(\mathbb{Q}\)), realno (\(\mathbb{R}\)), kompleksno (\(\mathbb{C}\)).</li>
+              <li>Zapiši najmanjšo množico, v katero sodi.</li>
+            </ol>
+            <p class="plain-example"><strong>Primeri:</strong></p>
+            <div class="plain-example">
+              <p>\(7 \in \mathbb{N}\) &nbsp; | &nbsp; \(-3 \in \mathbb{Z} \setminus \mathbb{N}\) &nbsp; | &nbsp; \(\dfrac{1}{2} \in \mathbb{Q} \setminus \mathbb{Z}\) &nbsp; | &nbsp; \(\sqrt{2} \in \mathbb{R} \setminus \mathbb{Q}\) &nbsp; | &nbsp; \(2+i \in \mathbb{C} \setminus \mathbb{R}\)</p>
+            </div>
+          </div>
+
+          <!-- TIP 2 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 2: Deljivost števila</h3>
+              <div class="tip-formula">Pravila za 2, 3, 4, 5, 6, 8, 9, 10</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "ali je število deljivo z …", "obkrožite DA/NE".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Preveri pravila za deljivost (glej teorijo).</li>
+              <li>Za sestavljena števila (npr. 6 = 2 · 3) preveri, ali je deljivo z <strong>vsemi</strong> prafaktorji.</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> \(102030405060\)</p>
+            <div class="plain-example">
+              <p><strong>z 2:</strong> zadnja števka 0 → DA.<br>
+              <strong>s 3:</strong> vsota števk = 21 → DA.<br>
+              <strong>s 4:</strong> zadnji dve 60 → DA.<br>
+              <strong>s 5:</strong> zadnja 0 → DA.<br>
+              <strong>s 6:</strong> deljivo z 2 in 3 → DA.<br>
+              <strong>z 8:</strong> zadnje tri 060 = 60, ni deljivo z 8 → NE.<br>
+              <strong>z 9:</strong> vsota 21, ni deljivo z 9 → NE.</p>
+            </div>
+          </div>
+
+          <!-- TIP 3 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 3: Prafaktorizacija</h3>
+              <div class="tip-formula">\(n = p_1^{a_1} \cdot p_2^{a_2} \cdots p_k^{a_k}\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "razcepíte na prafaktorje".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Deli z najmanjšim praštevilom, ki deli število (najprej z 2, 3, 5, 7, …).</li>
+              <li>Ponavljaj, dokler ne dobiš 1.</li>
+              <li>Zapiši kot produkt praštevil s potencami.</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> \(180 = 2^2 \cdot 3^2 \cdot 5\), &nbsp; \(360 = 2^3 \cdot 3^2 \cdot 5\).</p>
+          </div>
+
+          <!-- TIP 4 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 4: Največji skupni delitelj in najmanjši skupni večkratnik</h3>
+              <div class="tip-formula">\(D(a,b)\), \(v(a,b)\), \(D \cdot v = a \cdot b\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "izračunajte \(D(a,b)\) in \(v(a,b)\)".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Razcepí obe števili na prafaktorje.</li>
+              <li>\(D(a,b)\) = produkt <strong>skupnih</strong> prafaktorjev z <strong>najmanjšo</strong> potenco.</li>
+              <li>\(v(a,b)\) = produkt <strong>vseh</strong> prafaktorjev z <strong>največjo</strong> potenco.</li>
+              <li>Preveri: \(D(a,b) \cdot v(a,b) = a \cdot b\).</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> \(a = 45 = 3^2 \cdot 5\), \(b = 60 = 2^2 \cdot 3 \cdot 5\)</p>
+            <div class="plain-example">
+              <p>\(D(45,60) = 3 \cdot 5 = 15\).<br>
+              \(v(45,60) = 2^2 \cdot 3^2 \cdot 5 = 180\).<br>
+              Preveri: \(15 \cdot 180 = 2700 = 45 \cdot 60\). ✓</p>
+            </div>
+          </div>
+
+          <!-- TIP 5 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 5: Tuji števili</h3>
+              <div class="tip-formula">\(D(a,b) = 1\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "ali sta števili tuji".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Razcepí obe števili na prafaktorje.</li>
+              <li>Poišči skupne prafaktorje.</li>
+              <li>Če <strong>nimata skupnih prafaktorjev</strong>, sta tuji.</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> 8 = \(2^3\), 15 = \(3 \cdot 5\) → nimata skupnih prafaktorjev → <strong>tuji</strong>.</p>
+          </div>
+
+          <!-- TIP 6 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 6: Absolutna vrednost — enačbe</h3>
+              <div class="tip-formula">\(|x| = a \Rightarrow x = a \lor x = -a\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> \(|x - a| = b\) ali \(|f(x)| = g(x)\).</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Preveri, da je desna stran \(\geq 0\).</li>
+              <li>Reši <strong>dve enačbi</strong>:
+                <ul>
+                  <li>notranjost = desna stran</li>
+                  <li>notranjost = −desna stran</li>
+                </ul>
+              </li>
+              <li>Preveri rešitve v originalni enačbi.</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> \(|x + 7| = 9\)</p>
+            <div class="plain-example">
+              <p>\(x + 7 = 9 \Rightarrow x = 2\)<br>
+              \(x + 7 = -9 \Rightarrow x = -16\)<br>
+              Preveri: \(|2+7| = 9\) ✓, \(|-16+7| = 9\) ✓</p>
+            </div>
+          </div>
+
+          <!-- TIP 7 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 7: Absolutna vrednost — neenačbe</h3>
+              <div class="tip-formula">\(|x| < a \Rightarrow -a < x < a\), \(|x| > a \Rightarrow x < -a \lor x > a\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> \(|x - a| < b\), \(|x - a| > b\).</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Prepoznaj tip neenačbe (< ali >).</li>
+              <li><strong>\(|x| < a\):</strong> rešitev je interval \((-a, a)\).</li>
+              <li><strong>\(|x| > a\):</strong> rešitev je unija \((-\infty, -a) \cup (a, \infty)\).</li>
+              <li>Rezultat zapiši kot interval(e) ali na številski premici.</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> \(|x - 2| < 3\)</p>
+            <div class="plain-example">
+              <p>\(-3 < x - 2 < 3 \Rightarrow -1 < x < 5 \Rightarrow x \in (-1, 5)\).</p>
+            </div>
+          </div>
+
+          <!-- TIP 8 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 8: Intervali — zapis in operacije</h3>
+              <div class="tip-formula">\([a,b]\), \((a,b)\), \([a,b)\), \((-\infty, a]\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "zapišite kot interval", "ponazorite na številski premici".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Preveri, ali sta meji vključeni (zaprt \([\,]\)) ali ne (odprt \((\,)\)).</li>
+              <li>Zapiši kot interval.</li>
+              <li>Za operacije z intervali: nariši na premico in določi unijo/presek/razliko.</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> \(A = [-2, 3)\), \(B = [1, 5]\)</p>
+            <div class="plain-example">
+              <p>\(A \cup B = [-2, 5]\), \(A \cap B = [1, 3)\), \(A \setminus B = [-2, 1)\).</p>
+            </div>
+          </div>
+
+          <!-- TIP 9 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 9: Kompleksna števila — osnovne operacije</h3>
+              <div class="tip-formula">\(z = a + bi\), \(i^2 = -1\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "zapišite v obliki \(a + bi\)".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Razporedi člene (realni + imaginarni).</li>
+              <li>Za množenje uporabi distributivnost in \(i^2 = -1\).</li>
+              <li>Za deljenje razširi s konjugiranim imenovalcem.</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> \((2 - i)(1 + 3i)\)</p>
+            <div class="plain-example">
+              <p>\(= 2 + 6i - i - 3i^2 = 2 + 5i - 3(-1) = 2 + 5i + 3 = 5 + 5i\).</p>
+            </div>
+          </div>
+
+          <!-- TIP 10 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 10: Potence imaginarne enote</h3>
+              <div class="tip-formula">\(i^1 = i\), \(i^2 = -1\), \(i^3 = -i\), \(i^4 = 1\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> \(i^n\) za velik \(n\).</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Deli \(n\) s 4 in vzemi ostanek: \(n \bmod 4\).</li>
+              <li>Uporabi pravilo:
+                <ul>
+                  <li>ostanek 0 → \(i^4 = 1\)</li>
+                  <li>ostanek 1 → \(i^1 = i\)</li>
+                  <li>ostanek 2 → \(i^2 = -1\)</li>
+                  <li>ostanek 3 → \(i^3 = -i\)</li>
+                </ul>
+              </li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> \(i^{2026}\). 2026 ÷ 4 = 506, ostanek 2 → \(i^{2026} = i^2 = -1\).</p>
+          </div>
+
+          <!-- TIP 11 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 11: Absolutna vrednost in konjugirano kompleksno število</h3>
+              <div class="tip-formula">\(|z| = \sqrt{a^2 + b^2}\), \(\overline{z} = a - bi\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "izračunajte \(|z|\) in \(\overline{z}\)".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Iz \(z = a + bi\) preberi \(a\) in \(b\).</li>
+              <li>\(|z| = \sqrt{a^2 + b^2}\).</li>
+              <li>\(\overline{z} = a - bi\) (samo predznak imaginarnega dela se spremeni).</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> \(z = 3 - i\)</p>
+            <div class="plain-example">
+              <p>\(|z| = \sqrt{9 + 1} = \sqrt{10}\), \(\overline{z} = 3 + i\).</p>
+            </div>
+          </div>
+
+          <!-- TIP 12 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 12: Kvadratna enačba s kompleksnimi rešitvami</h3>
+              <div class="tip-formula">\(x_{1,2} = \dfrac{-b \pm i\sqrt{|D|}}{2a}\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> \(D < 0\), rešitve so kompleksne.</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Izračunaj \(D = b^2 - 4ac\).</li>
+              <li>Če \(D < 0\), rešitvi sta kompleksni: \(x_{1,2} = \dfrac{-b \pm i\sqrt{|D|}}{2a}\).</li>
+              <li>Zapiši kot \(a \pm bi\).</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> \(x^2 - 4x + 5 = 0\)</p>
+            <div class="plain-example">
+              <p>\(D = 16 - 20 = -4\), \(\sqrt{|D|} = 2\).<br>
+              \(x_{1,2} = \dfrac{4 \pm 2i}{2} = 2 \pm i\).</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ 3. POGOSTE NAPAKE ============ -->
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>3. Pogoste napake</h2>
+          </div>
+          <div class="info-card">
+            <ul>
+              <li>Zamenjaš \(\mathbb{Z}\) (cela) z \(\mathbb{Q}\) (racionalna) — racionalna so <strong>ulomki</strong>.</li>
+              <li>Pozabiš, da je <strong>iracionalno število</strong> tudi realno (\(e\), \(\pi\), \(\sqrt{2}\)).</li>
+              <li>Pri deljivosti s 6 pozabiš, da mora biti deljivo z <strong>2 in 3 hkrati</strong>.</li>
+              <li>Pri \(D(a,b)\) uporabiš največjo potenco namesto najmanjše.</li>
+              <li>Pri absolutni vrednosti pozabiš na <strong>drugo rešitev</strong> (\(x = -a\)).</li>
+              <li>Pri neenačbi \(|x| < a\) zapišeš \(x < a\) namesto \(-a < x < a\).</li>
+              <li>Pri kompleksnih številih pozabiš \(i^2 = -1\).</li>
+              <li>Pri potencah \(i\) ne deliš \(n\) s 4.</li>
+              <li>Pri konjugiranem številu zamenjaš predznak realnega dela (samo imaginarni se spremeni).</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ============ 4. ŠTUDIJSKI VODIČ ============ -->
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>4. Študijski vodič — hitri pregled</h2>
+          </div>
+          <div class="info-card">
+            <h3>📋 Kaj moraš znati na pamet</h3>
+            <ul>
+              <li><strong>Hierarhija:</strong> \(\mathbb{N} \subset \mathbb{Z} \subset \mathbb{Q} \subset \mathbb{R} \subset \mathbb{C}\).</li>
+              <li><strong>Deljivostna pravila</strong> za 2, 3, 4, 5, 6, 8, 9, 10.</li>
+              <li><strong>Prafaktorizacija</strong> in zapis \(n = p_1^{a_1} \cdots p_k^{a_k}\).</li>
+              <li><strong>\(D(a,b)\):</strong> skupni prafaktorji z najmanjšo potenco.</li>
+              <li><strong>\(v(a,b)\):</strong> vsi prafaktorji z največjo potenco.</li>
+              <li><strong>Absolutna vrednost:</strong> \(|x| = a \Rightarrow x = \pm a\), \(|x| < a \Rightarrow -a < x < a\), \(|x| > a \Rightarrow x < -a \lor x > a\).</li>
+              <li><strong>Kompleksna:</strong> \(i^2 = -1\), \(\overline{z} = a - bi\), \(|z| = \sqrt{a^2+b^2}\), perioda potenc i je 4.</li>
+            </ul>
+          </div>
+
+          <div class="info-card">
+            <h3>🎯 Kako pristopiti k nalogi</h3>
+            <ol>
+              <li><strong>Preberi nalogo in prepoznaj tip:</strong> deljivost, D/v, absolutna vrednost, intervali, kompleksna?</li>
+              <li><strong>Za deljivost:</strong> uporabi pravila (glej teorijo).</li>
+              <li><strong>Za D in v:</strong> najprej prafaktoriziraj.</li>
+              <li><strong>Za absolutno vrednost:</strong> razbij na dva primera.</li>
+              <li><strong>Za intervale:</strong> nariši na številsko premico.</li>
+              <li><strong>Za kompleksna:</strong> uporabi \(i^2 = -1\) pri množenju, konjugirano pri deljenju.</li>
+            </ol>
+          </div>
+
+          <div class="info-card">
+            <h3>⏱️ Časovni načrt za en večer</h3>
+            <ul>
+              <li><strong>25 min:</strong> Teorija — hierarhija, deljivost, D in v, absolutna vrednost, kompleksna.</li>
+              <li><strong>50 min:</strong> Tipi 1–6 (množice, deljivost, prafaktorizacija, D in v, tuji, absolutna vrednost).</li>
+              <li><strong>40 min:</strong> Tipi 7–12 (neenačbe, intervali, kompleksna, potence i, |z|, kvadratne enačbe).</li>
+              <li><strong>25 min:</strong> Ponovi pogoste napake in študijski vodič.</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ============ 5. POVEZAVE ============ -->
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>5. Vadi naprej</h2>
+            <p>Ko predelaš razlago, preveri znanje z nalogami.</p>
+          </div>
+          <div class="link-list">
+            <a class="link-item" href="/views/matematika/matura/osnovna_raven/naloge/resene/">
+              <span class="link-item-text">
+                <strong>Rešene naloge — osnovna raven</strong>
+                <small>Primeri z razlago</small>
+              </span>
+              <span class="arrow">→</span>
+            </a>
+            <a class="link-item" href="/views/matematika/matura/visja_raven/naloge/resene/">
+              <span class="link-item-text">
+                <strong>Rešene naloge — višja raven</strong>
+                <small>Zahtevnejši primeri</small>
+              </span>
+              <span class="arrow">→</span>
+            </a>
+          </div>
+        </section>
+
+      </div>
     </div>
-</div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>

@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Geometrijski liki in telesa — razlaga in postopki | Piflar.si</title>
+  <meta name="description" content="Celovita razlaga geometrijskih likov in teles za maturo: ploščine, Heronova formula, prizma, valj, piramida, stožec, krogla, površina in prostornina teles.">
+  <link rel="stylesheet" href="/style/style.css">
+  <link rel="stylesheet" href="/views/matematika/snov/geometrijski_liki_telesa/geometrijski_liki_telesa_style.css">
+</head>
+<body>
+  <div id="header"></div>
+
+  <div id="mainContent" class="main-content">
+    <div id="sidebar"></div>
+
+    <div class="view-container">
+      <div class="view">
+
+        <header class="page-header">
+          <span class="page-eyebrow">Matematika · Snov · 4.7</span>
+          <h1>Geometrijski liki in telesa</h1>
+          <p>Vse o geometrijskih likih in telesih za maturo: ploščine likov, Heronova formula, polmer včrtanega in očrtanega kroga, površina in prostornina prizme, valja, piramide, stožca in krogle.</p>
+          <div class="page-meta">
+            <div class="page-meta-item"><strong>12</strong><span>Tipov nalog</span></div>
+            <div class="page-meta-item"><strong>40+</strong><span>Primerov</span></div>
+            <div class="page-meta-item"><strong>~60 min</strong><span>Branja</span></div>
+          </div>
+        </header>
+
+        <!-- ============ MATURA FORMULE ============ -->
+        <div class="matura-formule">
+          <h3>📋 Formule na maturi — osnovna raven</h3>
+          <p>Na maturitetnem listu s formulami so za <strong>like in telesa</strong> relevantne naslednje formule:</p>
+          <div class="matura-grid">
+            <div class="matura-levo">
+              <ul>
+                <li><strong>Heronova formula:</strong> \(S = \sqrt{s(s-a)(s-b)(s-c)}\), \(s = \dfrac{a+b+c}{2}\)</li>
+                <li><strong>Polmera trikotniku včrtanega in očrtanega kroga:</strong> \(r = \dfrac{S}{s}\), \(R = \dfrac{abc}{4S}\)</li>
+                <li><strong>Krogla:</strong> \(P = 4\pi r^2\), \(V = \dfrac{4\pi r^3}{3}\)</li>
+                <li><strong>Krožni izsek:</strong> \(S = \dfrac{\pi r^2 \alpha}{360°}\), \(l = \dfrac{2\pi r \alpha}{360°}\)</li>
+                <li><strong>Ploščina trikotnika:</strong> \(S = \dfrac{1}{2}ab\sin\gamma\)</li>
+              </ul>
+            </div>
+            <div class="matura-slika">
+              <img src="/views/matematika/images/formule_osnovna_raven.png" alt="Formule na maturi — osnovna raven">
+            </div>
+          </div>
+        </div>
+
+        <!-- ============ 1. TEORIJA ============ -->
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>1. Teorija — formule in pravila</h2>
+            <p>Kar moraš znati na pamet, preden se lotiš nalog.</p>
+          </div>
+
+          <div class="info-card">
+            <h3>Ploščine ravninskih likov</h3>
+            <div class="concept-list two-col">
+              <div class="concept">
+                <h4>Kvadrat</h4>
+                <div class="concept-formula">\(o = 4a\), \(S = a^2\), \(d = a\sqrt{2}\)</div>
+              </div>
+              <div class="concept">
+                <h4>Pravokotnik</h4>
+                <div class="concept-formula">\(o = 2(a+b)\), \(S = ab\), \(d = \sqrt{a^2+b^2}\)</div>
+              </div>
+              <div class="concept">
+                <h4>Trikotnik</h4>
+                <div class="concept-formula">\(S = \dfrac{av_a}{2} = \dfrac{1}{2}ab\sin\gamma = \sqrt{s(s-a)(s-b)(s-c)}\)</div>
+              </div>
+              <div class="concept">
+                <h4>Paralelogram</h4>
+                <div class="concept-formula">\(S = a \cdot v_a = ab\sin\alpha\)</div>
+              </div>
+              <div class="concept">
+                <h4>Trapez</h4>
+                <div class="concept-formula">\(S = \dfrac{a+c}{2} \cdot v\)</div>
+              </div>
+              <div class="concept">
+                <h4>Romb</h4>
+                <div class="concept-formula">\(S = \dfrac{e \cdot f}{2} = a \cdot v\)</div>
+              </div>
+              <div class="concept">
+                <h4>Krog</h4>
+                <div class="concept-formula">\(o = 2\pi r\), \(S = \pi r^2\)</div>
+              </div>
+              <div class="concept">
+                <h4>Krožni izsek</h4>
+                <div class="concept-formula">\(S = \dfrac{\pi r^2 \alpha}{360°}\), \(l = \dfrac{2\pi r \alpha}{360°}\)</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <h3>Prizma in valj</h3>
+            <div class="concept-list two-col">
+              <div class="concept">
+                <h4>Pokončna prizma</h4>
+                <div class="concept-formula">\(P = 2S_o + pl\), \(V = S_o \cdot v\)</div>
+                <p class="concept-desc">\(S_o\) = ploščina osnovne ploskve, \(pl\) = plašč, \(v\) = višina.</p>
+              </div>
+              <div class="concept">
+                <h4>Kvader</h4>
+                <div class="concept-formula">\(P = 2(ab+ac+bc)\), \(V = abc\), \(d = \sqrt{a^2+b^2+c^2}\)</div>
+              </div>
+              <div class="concept">
+                <h4>Kocka</h4>
+                <div class="concept-formula">\(P = 6a^2\), \(V = a^3\), \(d = a\sqrt{3}\)</div>
+              </div>
+              <div class="concept">
+                <h4>Valj</h4>
+                <div class="concept-formula">\(P = 2\pi r^2 + 2\pi r v\), \(V = \pi r^2 v\)</div>
+                <p class="concept-desc">\(P\) = površina, \(V\) = prostornina.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <h3>Piramida in stožec</h3>
+            <div class="concept-list two-col">
+              <div class="concept">
+                <h4>Piramida</h4>
+                <div class="concept-formula">\(V = \dfrac{S_o \cdot v}{3}\), \(P = S_o + pl\)</div>
+              </div>
+              <div class="concept">
+                <h4>Pravilna štiristrana piramida</h4>
+                <div class="concept-formula">\(S_o = a^2\), \(v_1^2 = v^2 + \left(\dfrac{a}{2}\right)^2\)</div>
+                <p class="concept-desc">\(v_1\) = stranska višina (apotema).</p>
+              </div>
+              <div class="concept">
+                <h4>Stožec</h4>
+                <div class="concept-formula">\(V = \dfrac{\pi r^2 v}{3}\), \(P = \pi r^2 + \pi r s\)</div>
+                <p class="concept-desc">\(s\) = stranica (poševna višina), \(s = \sqrt{r^2 + v^2}\).</p>
+              </div>
+              <div class="concept">
+                <h4>Krogla</h4>
+                <div class="concept-formula">\(P = 4\pi r^2\), \(V = \dfrac{4\pi r^3}{3}\)</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <h3>Merske enote</h3>
+            <div class="concept-list two-col">
+              <div class="concept">
+                <h4>Dolžina</h4>
+                <div class="concept-formula">1 m = 10 dm = 100 cm = 1000 mm</div>
+              </div>
+              <div class="concept">
+                <h4>Ploščina</h4>
+                <div class="concept-formula">1 m² = 100 dm² = 10 000 cm²</div>
+              </div>
+              <div class="concept">
+                <h4>Prostornina</h4>
+                <div class="concept-formula">1 m³ = 1000 dm³, &nbsp; 1 dm³ = 1 L</div>
+              </div>
+              <div class="concept">
+                <h4>Pretvorbe</h4>
+                <div class="concept-formula">1 L = 1 dm³ = 1000 cm³</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ 2. TIPI NALOG ============ -->
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>2. Tipi nalog — postopki po korakih</h2>
+            <p>Za vsak tip: kako ga prepoznaš, kako ga rešiš, primer.</p>
+          </div>
+
+          <!-- TIP 1 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 1: Ploščina trikotnika</h3>
+              <div class="tip-formula">\(S = \dfrac{1}{2}ab\sin\gamma\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "izračunajte ploščino trikotnika".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Preveri, katere podatke imaš: osnovnica + višina, dve stranici + vmesni kot, ali tri stranice.</li>
+              <li>Uporabi ustrezno formulo.</li>
+              <li>Pazi na enote.</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> \(a = 6, b = 8, \gamma = 30°\)</p>
+            <div class="plain-example">
+              <p>\(S = \dfrac{1}{2} \cdot 6 \cdot 8 \cdot 0{,}5 = 12\).</p>
+            </div>
+          </div>
+
+          <!-- TIP 2 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 2: Heronova formula</h3>
+              <div class="tip-formula">\(S = \sqrt{s(s-a)(s-b)(s-c)}\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> podane so vse tri stranice, iščeš ploščino.</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Izračunaj polobseg \(s = \dfrac{a+b+c}{2}\).</li>
+              <li>Vstavi v formulo \(S = \sqrt{s(s-a)(s-b)(s-c)}\).</li>
+              <li>Izračunaj koren.</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> \(a = 4, b = 6, c = 8\)</p>
+            <div class="plain-example">
+              <p>\(s = 9\). \(S = \sqrt{9 \cdot 5 \cdot 3 \cdot 1} = \sqrt{135} \approx 11{,}62\).</p>
+            </div>
+          </div>
+
+          <!-- TIP 3 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 3: Polmer včrtanega in očrtanega kroga</h3>
+              <div class="tip-formula">\(r = \dfrac{S}{s}\), \(R = \dfrac{abc}{4S}\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "polmer trikotniku včrtanega/očrtanega kroga".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Izračunaj ploščino \(S\) (Heron ali druga formula).</li>
+              <li>Izračunaj polobseg \(s\).</li>
+              <li>\(r = \dfrac{S}{s}\), \(R = \dfrac{abc}{4S}\).</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> \(a = 3, b = 4, c = 5\)</p>
+            <div class="plain-example">
+              <p>\(S = 6\), \(s = 6\). \(r = \dfrac{6}{6} = 1\). \(R = \dfrac{3 \cdot 4 \cdot 5}{4 \cdot 6} = \dfrac{60}{24} = 2{,}5\).</p>
+            </div>
+          </div>
+
+          <!-- TIP 4 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 4: Kvader in kocka</h3>
+              <div class="tip-formula">\(V = abc\), \(P = 2(ab+ac+bc)\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "kvader", "kocka", "telesna diagonala".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Osnovna diagonala: \(d_o = \sqrt{a^2 + b^2}\).</li>
+              <li>Telesna diagonala: \(d_t = \sqrt{a^2 + b^2 + c^2}\).</li>
+              <li>Prostornina: \(V = abc\), površina: \(P = 2(ab + ac + bc)\).</li>
+              <li>Za kocko: \(d = a\sqrt{3}\), \(V = a^3\), \(P = 6a^2\).</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> \(a = 5, b = 12, c = 84\)</p>
+            <div class="plain-example">
+              <p>\(d_o = \sqrt{25+144} = 13\). \(d_t = \sqrt{25+144+7056} = 85\). \(V = 5 \cdot 12 \cdot 84 = 5040\).</p>
+            </div>
+          </div>
+
+          <!-- TIP 5 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 5: Valj</h3>
+              <div class="tip-formula">\(V = \pi r^2 v\), \(P = 2\pi r^2 + 2\pi r v\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "valj", podan polmer in višina (ali prostornina).</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Preveri, kaj je podano: \(r\), \(v\), \(V\) ali \(P\).</li>
+              <li>Uporabi ustrezno formulo.</li>
+              <li>Pazi na enote (npr. litre pretvori v dm³).</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> sod valja \(v = 50\) cm, \(V = 20\) L = 20 dm³</p>
+            <div class="plain-example">
+              <p>\(V = \pi r^2 v = \pi r^2 \cdot 5 = 20 \Rightarrow r^2 = \dfrac{4}{\pi} \Rightarrow r \approx 1{,}1\) dm.</p>
+            </div>
+          </div>
+
+          <!-- TIP 6 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 6: Stožec</h3>
+              <div class="tip-formula">\(V = \dfrac{\pi r^2 v}{3}\), \(P = \pi r^2 + \pi r s\), \(s = \sqrt{r^2 + v^2}\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "stožec", podani so polmer, višina ali stranica.</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Prepoznaj podatke: \(r\), \(v\), \(s\) ali \(V\).</li>
+              <li>Za iskanje \(s\) uporabi \(s = \sqrt{r^2 + v^2}\).</li>
+              <li>Uporabi ustrezno formulo za \(V\) ali \(P\).</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> stožec \(V = 64\), \(v = 4\)</p>
+            <div class="plain-example">
+              <p>\(\dfrac{\pi r^2 \cdot 4}{3} = 64 \Rightarrow r^2 = \dfrac{48}{\pi} \Rightarrow r \approx 3{,}91\).</p>
+            </div>
+          </div>
+
+          <!-- TIP 7 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 7: Krogla</h3>
+              <div class="tip-formula">\(P = 4\pi r^2\), \(V = \dfrac{4\pi r^3}{3}\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "krogla", podan polmer ali prostornina.</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Uporabi ustrezno formulo.</li>
+              <li>Pazi na enote.</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> \(r = 3\)</p>
+            <div class="plain-example">
+              <p>\(P = 4\pi \cdot 9 = 36\pi\). \(V = \dfrac{4\pi \cdot 27}{3} = 36\pi\).</p>
+            </div>
+          </div>
+
+          <!-- TIP 8 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 8: Piramida</h3>
+              <div class="tip-formula">\(V = \dfrac{S_o \cdot v}{3}\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "piramida", "stranska višina", "osnovni rob".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Izračunaj ploščino osnovne ploskve \(S_o\).</li>
+              <li>Uporabi \(V = \dfrac{S_o \cdot v}{3}\).</li>
+              <li>Za pravilno štiristrano piramido: \(v_1^2 = v^2 + (a/2)^2\).</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> \(V = 22\), \(v_1 = v + 4\)</p>
+            <div class="plain-example">
+              <p>\((v+4)^2 = v^2 + \dfrac{a^2}{4} \Rightarrow 8v + 16 = \dfrac{a^2}{4} \Rightarrow a^2 = 32v + 64\).</p>
+              <p>\(V = \dfrac{a^2 v}{3} = 22 \Rightarrow a^2 v = 66\). Reši sistem.</p>
+            </div>
+          </div>
+
+          <!-- TIP 9 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 9: Rotacijsko telo (vrtenina)</h3>
+              <div class="tip-formula">\(V = \pi \int_a^b [f(x)]^2\,dx\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "lik zavrtimo okoli osi".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Določi meje \(a\) in \(b\).</li>
+              <li>Kvadriraj funkcijo in integriraj.</li>
+              <li>Pomnoži s \(\pi\).</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> \(f(x) = \sqrt{x}\) na \([0,4]\)</p>
+            <div class="plain-example">
+              <p>\(V = \pi \int_0^4 x\,dx = \pi \cdot 8 = 8\pi\).</p>
+            </div>
+          </div>
+
+          <!-- TIP 10 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 10: Sestavljena telesa</h3>
+              <div class="tip-formula">Seštej/odštej prostornine preprostih teles</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> telo je sestavljeno iz več preprostih teles.</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Razdeli telo na preprosta telesa (kvader, valj, stožec, krogla).</li>
+              <li>Izračunaj prostornino vsakega dela.</li>
+              <li>Seštej ali odštej (odvisno od geometrije).</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> valj + krogla na vrhu</p>
+            <div class="plain-example">
+              <p>\(V = \pi r^2 v + \dfrac{4\pi r^3}{3}\).</p>
+            </div>
+          </div>
+
+          <!-- TIP 11 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 11: Besedilne naloge z enotami</h3>
+              <div class="tip-formula">Pazi na pretvorbe enot</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "akvarij", "cisterna", "sod".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Vse enote pretvori v <strong>isto enoto</strong>.</li>
+              <li>Uporabi formulo za prostornino/površino.</li>
+              <li>Rezultat pretvori v zahtevano enoto.</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> cisterna \(r = 3\) dm, \(V = 120\) L, do \(\dfrac{2}{3}\) višine</p>
+            <div class="plain-example">
+              <p>\(120 = \dfrac{2}{3}V_{skupaj} \Rightarrow V_{skupaj} = 180\) L = 180 dm³.</p>
+              <p>\(180 = \pi \cdot 9 \cdot v \Rightarrow v \approx 6{,}4\) dm.</p>
+            </div>
+          </div>
+
+          <!-- TIP 12 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 12: Krožni izsek (ploščina osenčenega dela)</h3>
+              <div class="tip-formula">\(S = \dfrac{\pi r^2 \alpha}{360°}\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "izračunajte ploščino osenčenega lika", "krožni izsek".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Prepoznaj, ali gre za cel krog, krožni izsek ali odsek.</li>
+              <li>Za krožni izsek uporabi \(S = \dfrac{\pi r^2 \alpha}{360°}\).</li>
+              <li>Za odsek: odštej ploščino trikotnika od izseka.</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> kvadrat \(a = 4\), krožni lok s središčem v B</p>
+            <div class="plain-example">
+              <p>Ploščina kvadrata: 16. Ploščina četrtine kroga: \(4\pi\). Osenčeni del: \(16 - 4\pi\).</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ 3. POGOSTE NAPAKE ============ -->
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>3. Pogoste napake</h2>
+          </div>
+          <div class="info-card">
+            <ul>
+              <li>Zamenjaš površino (\(P\), dvodimenzionalna) s prostornino (\(V\), tridimenzionalna).</li>
+              <li>Pri valju/stožcu pozabiš, da je višina <strong>pravokotna</strong> na osnovno ploskev.</li>
+              <li>Pri stožcu zamenjaš \(v\) (višina) s \(s\) (stranica).</li>
+              <li>Pri piramidi pozabiš deliti s 3 (prostornina piramide = \(\dfrac{1}{3}\) prostornine prizme).</li>
+              <li>Pri krogli zamenjaš formulo za površino (\(4\pi r^2\)) in prostornino (\(\dfrac{4}{3}\pi r^3\)).</li>
+              <li>Pri pretvorbah enot pozabiš, da \(1 \text{ L} = 1 \text{ dm}^3\) in \(1 \text{ m}^3 = 1000 \text{ L}\).</li>
+              <li>Pri sestavljenih likih pozabiš odšteti ploščino, ki ni del lika.</li>
+              <li>Pri enakostraničnem valju pozabiš, da je višina enaka premeru (\(v = 2r\)).</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ============ 4. ŠTUDIJSKI VODIČ ============ -->
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>4. Študijski vodič — hitri pregled</h2>
+          </div>
+          <div class="info-card">
+            <h3>📋 Kaj moraš znati na pamet</h3>
+            <ul>
+              <li><strong>Ploščine likov:</strong> trikotnik, kvadrat, pravokotnik, paralelogram, trapez, romb, krog.</li>
+              <li><strong>Heronova formula:</strong> \(S = \sqrt{s(s-a)(s-b)(s-c)}\).</li>
+              <li><strong>Polmera:</strong> \(r = \dfrac{S}{s}\), \(R = \dfrac{abc}{4S}\).</li>
+              <li><strong>Kvader:</strong> \(V = abc\), \(P = 2(ab+ac+bc)\), \(d = \sqrt{a^2+b^2+c^2}\).</li>
+              <li><strong>Kocka:</strong> \(V = a^3\), \(P = 6a^2\), \(d = a\sqrt{3}\).</li>
+              <li><strong>Valj:</strong> \(V = \pi r^2 v\), \(P = 2\pi r^2 + 2\pi r v\).</li>
+              <li><strong>Stožec:</strong> \(V = \dfrac{\pi r^2 v}{3}\), \(P = \pi r^2 + \pi r s\), \(s = \sqrt{r^2 + v^2}\).</li>
+              <li><strong>Piramida:</strong> \(V = \dfrac{S_o \cdot v}{3}\).</li>
+              <li><strong>Krogla:</strong> \(V = \dfrac{4\pi r^3}{3}\), \(P = 4\pi r^2\).</li>
+              <li><strong>Pretvorbe:</strong> \(1 \text{ L} = 1 \text{ dm}^3\), \(1 \text{ m}^3 = 1000 \text{ L}\).</li>
+            </ul>
+          </div>
+
+          <div class="info-card">
+            <h3>🎯 Kako pristopiti k nalogi</h3>
+            <ol>
+              <li><strong>Preberi nalogo in prepoznaj telo:</strong> kvader, kocka, valj, stožec, piramida, krogla?</li>
+              <li><strong>Nariši skico</strong> in označi podatke.</li>
+              <li><strong>Preveri enote</strong> — pretvori v isto enoto.</li>
+              <li><strong>Uporabi formulo</strong> za \(V\) ali \(P\).</li>
+              <li><strong>Preveri smiselnost</strong> rezultata (npr. prostornina mora biti pozitivna).</li>
+            </ol>
+          </div>
+
+          <div class="info-card">
+            <h3>⏱️ Časovni načrt za en večer</h3>
+            <ul>
+              <li><strong>30 min:</strong> Teorija — ploščine likov, telesa, pretvorbe enot.</li>
+              <li><strong>60 min:</strong> Tipi 1–7 (ploščina trikotnika, Heron, r in R, kvader, valj, stožec, krogla).</li>
+              <li><strong>45 min:</strong> Tipi 8–12 (piramida, vrtenina, sestavljena telesa, besedilne, krožni izsek).</li>
+              <li><strong>30 min:</strong> Ponovi pogoste napake in študijski vodič.</li>
+              <li><strong>30 min:</strong> Reši 2–3 izpitne pole za vajo.</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ============ 5. POVEZAVE ============ -->
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>5. Vadi naprej</h2>
+            <p>Ko predelaš razlago, preveri znanje z nalogami.</p>
+          </div>
+          <div class="link-list">
+            <a class="link-item" href="/views/matematika/matura/osnovna_raven/naloge/resene/">
+              <span class="link-item-text">
+                <strong>Rešene naloge — osnovna raven</strong>
+                <small>Primeri z razlago</small>
+              </span>
+              <span class="arrow">→</span>
+            </a>
+            <a class="link-item" href="/views/matematika/matura/visja_raven/naloge/resene/">
+              <span class="link-item-text">
+                <strong>Rešene naloge — višja raven</strong>
+                <small>Zahtevnejši primeri</small>
+              </span>
+              <span class="arrow">→</span>
+            </a>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>

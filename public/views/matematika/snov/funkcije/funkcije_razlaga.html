@@ -4,8 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Funkcije — razlaga in postopki | Piflar.si</title>
-  <meta name="description" content="Celovita razlaga funkcij za maturo: linearna, kvadratna, eksponentna, logaritemska, racionalna, trigonometrična. Definicijsko območje, zaloga vrednosti, ničle, asimptote.">
+  <meta name="description" content="Celovita razlaga funkcij za maturo: linearna, kvadratna, eksponentna, logaritemska, racionalna, trigonometrična in polinomska funkcija. Definicijsko območje, zaloga vrednosti, ničle, poli, asimptote, ekstremi.">
   <link rel="stylesheet" href="/style/style.css">
+  <link rel="stylesheet" href="/views/matematika/snov/funkcije/funkcije_style.css">
 </head>
 <body>
   <div id="header"></div>
@@ -16,116 +17,185 @@
     <div class="view-container">
       <div class="view">
 
-        <!-- ============ PAGE HEADER ============ -->
         <header class="page-header">
-          <span class="page-eyebrow">Matematika · Snov</span>
+          <span class="page-eyebrow">Matematika · Snov · 4.10</span>
           <h1>Funkcije</h1>
-          <p>
-            Vse o funkcijah za maturo: linearna, kvadratna, eksponentna, logaritemska,
-            racionalna in trigonometrična. Definicijsko območje, zaloga vrednosti,
-            ničle, poli, asimptote, ekstremi.
-          </p>
+          <p>Vse o funkcijah za maturo: linearna, kvadratna, potenčna, korenska, eksponentna, logaritemska, polinomska, racionalna in kotne funkcije. Definicijsko območje, zaloga vrednosti, ničle, poli, asimptote, inverzna funkcija in transformacije grafov.</p>
           <div class="page-meta">
-            <div class="page-meta-item">
-              <strong>12</strong>
-              <span>Tipov nalog</span>
-            </div>
-            <div class="page-meta-item">
-              <strong>40+</strong>
-              <span>Primerov</span>
-            </div>
-            <div class="page-meta-item">
-              <strong>~65 min</strong>
-              <span>Branja</span>
-            </div>
+            <div class="page-meta-item"><strong>14</strong><span>Tipov nalog</span></div>
+            <div class="page-meta-item"><strong>50+</strong><span>Primerov</span></div>
+            <div class="page-meta-item"><strong>~75 min</strong><span>Branja</span></div>
           </div>
         </header>
+
+        <!-- ============ MATURA FORMULE ============ -->
+        <div class="matura-formule">
+          <h3>📋 Formule na maturi — osnovna raven</h3>
+          <p>Na maturitetnem listu s formulami so za <strong>funkcije</strong> relevantne naslednje formule:</p>
+          <div class="matura-grid">
+            <div class="matura-levo">
+              <ul>
+                <li><strong>Logaritem:</strong> \(\log_a(xy) = \log_a x + \log_a y\), \(\log_a x^n = n \log_a x\)</li>
+                <li><strong>Prehod na novo osnovo:</strong> \(\log_a x = \dfrac{\log_b x}{\log_b a}\)</li>
+                <li><strong>Adicijski izreki:</strong> \(\sin(x \pm y) = \sin x \cos y \pm \cos x \sin y\), \(\cos(x \pm y) = \cos x \cos y \mp \sin x \sin y\)</li>
+                <li><strong>Kotne funkcije polovičnih kotov:</strong> \(\sin^2 \dfrac{x}{2} = \dfrac{1-\cos x}{2}\), \(\cos^2 \dfrac{x}{2} = \dfrac{1+\cos x}{2}\)</li>
+                <li><strong>Faktorizacija:</strong> \(\sin x \pm \sin y = 2\sin\dfrac{x\pm y}{2}\cos\dfrac{x\mp y}{2}\)</li>
+              </ul>
+            </div>
+            <div class="matura-slika">
+              <img src="/views/matematika/images/formule_osnovna_raven.png" alt="Formule na maturi — osnovna raven">
+            </div>
+          </div>
+        </div>
 
         <!-- ============ 1. TEORIJA ============ -->
         <section class="subsection">
           <div class="subsection-head">
-            <h2>1. Teorija — formule in pravila</h2>
+            <h2>1. Teorija — pojmi in osnovne funkcije</h2>
             <p>Kar moraš znati na pamet, preden se lotiš nalog.</p>
           </div>
 
           <div class="info-card">
             <h3>Osnovni pojmi</h3>
-            <ul>
-              <li><strong>Definicijsko območje</strong> \(D_f\): vse vrednosti \(x\), za katere je \(f(x)\) definirana.</li>
-              <li><strong>Zaloga vrednosti</strong> \(Z_f\): vse vrednosti \(f(x)\), ko \(x\) preteče \(D_f\).</li>
-              <li><strong>Ničla:</strong> \(x_0\), kjer \(f(x_0) = 0\) (presečišče z osjo \(x\)).</li>
-              <li><strong>Začetna vrednost:</strong> \(f(0)\) (presečišče z osjo \(y\)).</li>
-              <li><strong>Pol:</strong> \(x_0\), kjer \(f\) ni definirana (imenovalec = 0).</li>
-              <li><strong>Asimptota:</strong> premica, ki se ji graf približuje, a je ne doseže.</li>
-              <li><strong>Soda funkcija:</strong> \(f(-x) = f(x)\) (simetrična glede na os \(y\)).</li>
-              <li><strong>Liha funkcija:</strong> \(f(-x) = -f(x)\) (simetrična glede na izhodišče).</li>
-            </ul>
+            <div class="concept-list two-col">
+              <div class="concept">
+                <h4>Funkcija</h4>
+                <div class="concept-formula">\(f: A \to B\)</div>
+                <p class="concept-desc">Preslikava, ki vsakemu \(x \in A\) priredi natanko en \(y \in B\).</p>
+              </div>
+              <div class="concept">
+                <h4>Definicijsko območje \(D_f\)</h4>
+                <div class="concept-formula">\(D_f\)</div>
+                <p class="concept-desc">Množica vseh \(x\), za katere je \(f(x)\) definirana.</p>
+              </div>
+              <div class="concept">
+                <h4>Zaloga vrednosti \(Z_f\)</h4>
+                <div class="concept-formula">\(Z_f\)</div>
+                <p class="concept-desc">Množica vseh možnih \(f(x)\).</p>
+              </div>
+              <div class="concept">
+                <h4>Ničla</h4>
+                <div class="concept-formula">\(f(x_0) = 0\)</div>
+                <p class="concept-desc">Presečišče z osjo \(x\).</p>
+              </div>
+              <div class="concept">
+                <h4>Začetna vrednost</h4>
+                <div class="concept-formula">\(f(0)\)</div>
+                <p class="concept-desc">Presečišče z osjo \(y\).</p>
+              </div>
+              <div class="concept">
+                <h4>Pol</h4>
+                <div class="concept-formula">\(f(x_0)\) ni definirana</div>
+                <p class="concept-desc">Navadno pri racionalnih funkcijah (imenovalec \(= 0\)).</p>
+              </div>
+              <div class="concept">
+                <h4>Soda / liha funkcija</h4>
+                <div class="concept-formula">\(f(-x) = f(x)\) / \(f(-x) = -f(x)\)</div>
+                <p class="concept-desc">Soda: simetrična glede na os \(y\). Liha: glede na izhodišče.</p>
+              </div>
+              <div class="concept">
+                <h4>Inverzna funkcija</h4>
+                <div class="concept-formula">\(f^{-1}(x)\)</div>
+                <p class="concept-desc">Zamenjamo \(x\) in \(y\), nato izrazimo \(y\).</p>
+              </div>
+            </div>
           </div>
 
           <div class="info-card">
-            <h3>Linearna funkcija \(f(x) = kx + n\)</h3>
-            <ul>
-              <li><strong>Smerni koeficient:</strong> \(k\) (naklon premice)</li>
-              <li><strong>Začetna vrednost:</strong> \(n\) (presečišče z osjo \(y\))</li>
-              <li><strong>Ničla:</strong> \(x = -\dfrac{n}{k}\) (za \(k \neq 0\))</li>
-              <li>\(k > 0\) → naraščajoča; \(k < 0\) → padajoča; \(k = 0\) → konstantna</li>
-              <li>Vzporedni premici: enak \(k\)</li>
-              <li>Pravokotni premici: \(k_1 \cdot k_2 = -1\)</li>
-            </ul>
+            <h3>Linearna funkcija</h3>
+            <div class="concept-list two-col">
+              <div class="concept">
+                <h4>Predpis</h4>
+                <div class="concept-formula">\(f(x) = kx + n\)</div>
+                <p class="concept-desc">\(k\) = smerni koeficient (naklon), \(n\) = začetna vrednost.</p>
+              </div>
+              <div class="concept">
+                <h4>Ničla</h4>
+                <div class="concept-formula">\(x = -\dfrac{n}{k}\)</div>
+                <p class="concept-desc">Za \(k \neq 0\).</p>
+              </div>
+              <div class="concept">
+                <h4>Vzporedni premici</h4>
+                <div class="concept-formula">\(k_1 = k_2\)</div>
+              </div>
+              <div class="concept">
+                <h4>Pravokotni premici</h4>
+                <div class="concept-formula">\(k_1 \cdot k_2 = -1\)</div>
+              </div>
+            </div>
           </div>
 
           <div class="info-card">
-            <h3>Kvadratna funkcija \(f(x) = ax^2 + bx + c\)</h3>
-            <ul>
-              <li><strong>Teme:</strong> \(T\left(-\dfrac{b}{2a}, c - \dfrac{b^2}{4a}\right)\)</li>
-              <li><strong>Ničle:</strong> \(x_{1,2} = \dfrac{-b \pm \sqrt{D}}{2a}\), \(D = b^2 - 4ac\)</li>
-              <li>\(a > 0\) → odprta navzgor (minimum v temenu)</li>
-              <li>\(a < 0\) → odprta navzdol (maksimum v temenu)</li>
-              <li><strong>Presečišče z osjo y:</strong> \((0, c)\)</li>
-              <li><strong>Oblika temena:</strong> \(f(x) = a(x - p)^2 + q\), kjer je \(T(p, q)\)</li>
-            </ul>
+            <h3>Kvadratna funkcija</h3>
+            <div class="concept-list two-col">
+              <div class="concept">
+                <h4>Predpis</h4>
+                <div class="concept-formula">\(f(x) = ax^2 + bx + c\)</div>
+              </div>
+              <div class="concept">
+                <h4>Teme</h4>
+                <div class="concept-formula">\(T\left(-\dfrac{b}{2a}, c - \dfrac{b^2}{4a}\right)\)</div>
+                <p class="concept-desc">\(a > 0\): minimum, \(a < 0\): maksimum.</p>
+              </div>
+              <div class="concept">
+                <h4>Ničle</h4>
+                <div class="concept-formula">\(x_{1,2} = \dfrac{-b \pm \sqrt{D}}{2a}\), \(D = b^2 - 4ac\)</div>
+              </div>
+              <div class="concept">
+                <h4>Oblika temena</h4>
+                <div class="concept-formula">\(f(x) = a(x-p)^2 + q\), \(T(p,q)\)</div>
+              </div>
+            </div>
           </div>
 
           <div class="info-card">
-            <h3>Eksponentna funkcija \(f(x) = a^x\)</h3>
-            <ul>
-              <li>\(D_f = \mathbb{R}\), \(Z_f = (0, \infty)\)</li>
-              <li>\(a > 1\) → naraščajoča; \(0 < a < 1\) → padajoča</li>
-              <li>Vodoravna asimptota: \(y = 0\)</li>
-              <li>Vedno gre skozi \((0, 1)\)</li>
-            </ul>
+            <h3>Eksponentna in logaritemska funkcija</h3>
+            <div class="concept-list two-col">
+              <div class="concept">
+                <h4>Eksponentna: predpis</h4>
+                <div class="concept-formula">\(f(x) = a^x\), \(a > 0, a \neq 1\)</div>
+              </div>
+              <div class="concept">
+                <h4>Eksponentna: lastnosti</h4>
+                <div class="concept-formula">\(D_f = \mathbb{R}\), \(Z_f = (0, \infty)\)</div>
+                <p class="concept-desc">Asimptota \(y = 0\); gre skozi \((0, 1)\).</p>
+              </div>
+              <div class="concept">
+                <h4>Logaritemska: predpis</h4>
+                <div class="concept-formula">\(f(x) = \log_a x\), \(a > 0, a \neq 1\)</div>
+              </div>
+              <div class="concept">
+                <h4>Logaritemska: lastnosti</h4>
+                <div class="concept-formula">\(D_f = (0, \infty)\), \(Z_f = \mathbb{R}\)</div>
+                <p class="concept-desc">Asimptota \(x = 0\); gre skozi \((1, 0)\).</p>
+              </div>
+            </div>
           </div>
 
           <div class="info-card">
-            <h3>Logaritemska funkcija \(f(x) = \log_a x\)</h3>
-            <ul>
-              <li>\(D_f = (0, \infty)\), \(Z_f = \mathbb{R}\)</li>
-              <li>\(a > 1\) → naraščajoča; \(0 < a < 1\) → padajoča</li>
-              <li>Navpična asimptota: \(x = 0\)</li>
-              <li>Vedno gre skozi \((1, 0)\)</li>
-              <li>Ničla: \(x = 1\)</li>
-            </ul>
-          </div>
-
-          <div class="info-card">
-            <h3>Racionalna funkcija \(f(x) = \dfrac{p(x)}{q(x)}\)</h3>
-            <ul>
-              <li><strong>Definicijsko območje:</strong> \(q(x) \neq 0\)</li>
-              <li><strong>Ničle:</strong> \(p(x) = 0\) (in \(q(x) \neq 0\))</li>
-              <li><strong>Poli:</strong> \(q(x) = 0\)</li>
-              <li><strong>Navpična asimptota:</strong> pri polu</li>
-              <li><strong>Vodoravna asimptota:</strong> \(\lim_{x \to \pm\infty} f(x)\)</li>
-            </ul>
-          </div>
-
-          <div class="info-card">
-            <h3>Trigonometrične funkcije</h3>
-            <ul>
-              <li>\(\sin x\): \(D_f = \mathbb{R}\), \(Z_f = [-1, 1]\), perioda \(2\pi\)</li>
-              <li>\(\cos x\): \(D_f = \mathbb{R}\), \(Z_f = [-1, 1]\), perioda \(2\pi\)</li>
-              <li>\(\tan x\): \(D_f = \mathbb{R} \setminus \{\frac{\pi}{2} + k\pi\}\), \(Z_f = \mathbb{R}\), perioda \(\pi\)</li>
-              <li>\(\sin x = 0 \Rightarrow x = k\pi\); \(\cos x = 0 \Rightarrow x = \dfrac{\pi}{2} + k\pi\)</li>
-            </ul>
+            <h3>Potenčna, korenska in racionalna funkcija</h3>
+            <div class="concept-list two-col">
+              <div class="concept">
+                <h4>Potenčna funkcija</h4>
+                <div class="concept-formula">\(f(x) = x^n\)</div>
+                <p class="concept-desc">\(n\) naravno število, negativno celo število ali ulomek.</p>
+              </div>
+              <div class="concept">
+                <h4>Korenska funkcija</h4>
+                <div class="concept-formula">\(f(x) = \sqrt[n]{x}\)</div>
+                <p class="concept-desc">Inverz potenčne funkcije.</p>
+              </div>
+              <div class="concept">
+                <h4>Racionalna funkcija</h4>
+                <div class="concept-formula">\(f(x) = \dfrac{p(x)}{q(x)}\)</div>
+                <p class="concept-desc">Poli: \(q(x) = 0\). Ničle: \(p(x) = 0\) in \(q(x) \neq 0\).</p>
+              </div>
+              <div class="concept">
+                <h4>Asimptote</h4>
+                <div class="concept-formula">navpična: pri polu, vodoravna: limita</div>
+                <p class="concept-desc">Vodoravna asimptota: \(\lim_{x\to\pm\infty} f(x)\).</p>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -136,37 +206,39 @@
             <p>Za vsak tip: kako ga prepoznaš, kako ga rešiš, primer.</p>
           </div>
 
-          <!-- ====================== TIP 1 ====================== -->
+          <!-- TIP 1 -->
           <div class="info-card">
-            <h3>Tip 1: Definicijsko območje funkcije</h3>
-            <p><strong>Kako prepoznaš:</strong> "Zapišite definicijsko območje", "za katere \(x\) je funkcija definirana".</p>
+            <div class="tip-header">
+              <h3>Tip 1: Definicijsko območje funkcije</h3>
+              <div class="tip-formula">\(D_f\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "zapišite definicijsko območje", "za katere \(x\) je definirana".</p>
             <p><strong>Postopek:</strong></p>
             <ol>
               <li>Poišči omejitve:
                 <ul>
-                  <li>Ulomek: imenovalec \(\neq 0\)</li>
-                  <li>Koren sode stopnje: argument \(\geq 0\)</li>
-                  <li>Logaritem: argument \(> 0\)</li>
-                  <li>Tangens: argument \(\neq \dfrac{\pi}{2} + k\pi\)</li>
+                  <li>ulomek: imenovalec \(\neq 0\)</li>
+                  <li>koren sode stopnje: argument \(\geq 0\)</li>
+                  <li>logaritem: argument \(> 0\)</li>
+                  <li>tangens: argument \(\neq \dfrac{\pi}{2} + k\pi\)</li>
                 </ul>
               </li>
               <li>Reši omejitve.</li>
               <li>Zapiši \(D_f\) kot interval ali unijo intervalov.</li>
             </ol>
-            <div class="math-block">
-              $$\text{Primer: } f(x) = \log_2(x^2 + x - 6)$$
+            <p class="plain-example"><strong>Primer:</strong> \(f(x) = \log_2(x^2 + x - 6)\)</p>
+            <div class="plain-example">
+              <p>Pogoj: \(x^2 + x - 6 > 0\). Ničli: \(x_1 = 2, x_2 = -3\). \(D_f = (-\infty, -3) \cup (2, \infty)\).</p>
             </div>
-            <p>1. Pogoj: \(x^2 + x - 6 > 0\). 2. Ničli: \(x_1 = 2, x_2 = -3\). 3. Kvadratna funkcija je pozitivna zunaj intervala med ničlama. 4. \(D_f = (-\infty, -3) \cup (2, \infty)\).</p>
-            <div class="math-block">
-              $$\text{Primer: } f(x) = \sqrt{x - 1}$$
-            </div>
-            <p>1. Pogoj: \(x - 1 \geq 0\). 2. \(x \geq 1\). 3. \(D_f = [1, \infty)\).</p>
           </div>
 
-          <!-- ====================== TIP 2 ====================== -->
+          <!-- TIP 2 -->
           <div class="info-card">
-            <h3>Tip 2: Ničle funkcije</h3>
-            <p><strong>Kako prepoznaš:</strong> "Izračunajte ničle", "kje graf seka os \(x\)".</p>
+            <div class="tip-header">
+              <h3>Tip 2: Ničle funkcije</h3>
+              <div class="tip-formula">\(f(x) = 0\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "izračunajte ničle".</p>
             <p><strong>Postopek:</strong></p>
             <ol>
               <li>Nastavi \(f(x) = 0\).</li>
@@ -174,206 +246,254 @@
               <li>Preveri, ali so rešitve v \(D_f\).</li>
               <li>Zapiši ničle kot točke \((x_0, 0)\).</li>
             </ol>
-            <div class="math-block">
-              $$\text{Primer: } f(x) = 2\sin x - 1$$
+            <p class="plain-example"><strong>Primer:</strong> \(f(x) = 2\sin x - 1\)</p>
+            <div class="plain-example">
+              <p>\(\sin x = \dfrac{1}{2}\). \(x = \dfrac{\pi}{6} + 2k\pi\) ali \(x = \dfrac{5\pi}{6} + 2k\pi\).</p>
             </div>
-            <p>1. \(2\sin x - 1 = 0 \Rightarrow \sin x = \dfrac{1}{2}\). 2. \(x = \dfrac{\pi}{6} + 2k\pi\) ali \(x = \dfrac{5\pi}{6} + 2k\pi\), \(k \in \mathbb{Z}\).</p>
-            <div class="math-block">
-              $$\text{Primer: } f(x) = \log_3(x+1) - 1$$
-            </div>
-            <p>1. \(\log_3(x+1) = 1 \Rightarrow x + 1 = 3 \Rightarrow x = 2\). 2. Preveri: \(x = 2 > -1\). ✓ 3. Ničla: \((2, 0)\).</p>
           </div>
 
-          <!-- ====================== TIP 3 ====================== -->
+          <!-- TIP 3 -->
           <div class="info-card">
-            <h3>Tip 3: Teme kvadratne funkcije</h3>
-            <p><strong>Kako prepoznaš:</strong> "Zapišite teme", "največja/najmanjša vrednost".</p>
+            <div class="tip-header">
+              <h3>Tip 3: Teme kvadratne funkcije</h3>
+              <div class="tip-formula">\(T\left(-\dfrac{b}{2a}, c - \dfrac{b^2}{4a}\right)\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "zapišite teme", "največja/najmanjša vrednost".</p>
             <p><strong>Postopek:</strong></p>
             <ol>
               <li>Zapiši v obliki \(f(x) = ax^2 + bx + c\).</li>
               <li>Izračunaj \(x_T = -\dfrac{b}{2a}\).</li>
               <li>Izračunaj \(y_T = f(x_T) = c - \dfrac{b^2}{4a}\).</li>
-              <li>Teme: \(T(x_T, y_T)\).</li>
-              <li>Če \(a > 0\), je v temenu <strong>minimum</strong>; če \(a < 0\), <strong>maksimum</strong>.</li>
             </ol>
-            <div class="math-block">
-              $$\text{Primer: } f(x) = -2x^2 - 8x + 2$$
+            <p class="plain-example"><strong>Primer:</strong> \(f(x) = -2x^2 - 8x + 2\)</p>
+            <div class="plain-example">
+              <p>\(x_T = -\dfrac{-8}{2 \cdot (-2)} = -2\). \(y_T = -2(4) - 8(-2) + 2 = 10\). Teme: \(T(-2, 10)\).</p>
             </div>
-            <p>1. \(x_T = -\dfrac{-8}{2 \cdot (-2)} = -2\). 2. \(y_T = -2(4) - 8(-2) + 2 = -8 + 16 + 2 = 10\). 3. Teme: \(T(-2, 10)\). 4. \(a < 0\) → maksimum.</p>
           </div>
 
-          <!-- ====================== TIP 4 ====================== -->
+          <!-- TIP 4 -->
           <div class="info-card">
-            <h3>Tip 4: Asimptote racionalne funkcije</h3>
-            <p><strong>Kako prepoznaš:</strong> "Zapišite asimptote", "poli funkcije".</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li><strong>Navpična asimptota:</strong> reši \(q(x) = 0\) (imenovalec = 0).</li>
-              <li><strong>Vodoravna asimptota:</strong>
-                <ul>
-                  <li>Če je stopnja števca \(<\) stopnja imenovalca: \(y = 0\)</li>
-                  <li>Če sta stopnji enaki: \(y = \dfrac{a_n}{b_n}\) (razmerje vodilnih koeficientov)</li>
-                  <li>Če je stopnja števca \(>\) stopnja imenovalca: ni vodoravne (je poševna)</li>
-                </ul>
-              </li>
-              <li>Zapiši enačbe asimptot.</li>
-            </ol>
-            <div class="math-block">
-              $$\text{Primer: } f(x) = \frac{2x - 1}{3x + 4}$$
+            <div class="tip-header">
+              <h3>Tip 4: Asimptote racionalne funkcije</h3>
+              <div class="tip-formula">navpična: \(q(x)=0\), vodoravna: \(\lim f\)</div>
             </div>
-            <p>1. Navpična: \(3x + 4 = 0 \Rightarrow x = -\dfrac{4}{3}\). 2. Vodoravna: enaki stopnji → \(y = \dfrac{2}{3}\). 3. Ničla: \(2x - 1 = 0 \Rightarrow x = \dfrac{1}{2}\).</p>
-          </div>
-
-          <!-- ====================== TIP 5 ====================== -->
-          <div class="info-card">
-            <h3>Tip 5: Zaloga vrednosti funkcije</h3>
-            <p><strong>Kako prepoznaš:</strong> "Zapišite zalogo vrednosti \(Z_f\)".</p>
+            <p><strong>Kako prepoznaš:</strong> "zapišite asimptote", "poli funkcije".</p>
             <p><strong>Postopek:</strong></p>
             <ol>
-              <li>Določi tip funkcije (linearna, kvadratna, eksponentna, ...).</li>
-              <li>Uporabi znano zalogo:
+              <li><strong>Navpična:</strong> reši \(q(x) = 0\) (imenovalec).</li>
+              <li><strong>Vodoravna:</strong>
                 <ul>
-                  <li>Kvadratna \(a > 0\): \(Z_f = [y_T, \infty)\)</li>
-                  <li>Kvadratna \(a < 0\): \(Z_f = (-\infty, y_T]\)</li>
-                  <li>Eksponentna \(a^x\): \(Z_f = (0, \infty)\)</li>
-                  <li>Logaritemska: \(Z_f = \mathbb{R}\)</li>
-                  <li>Sinus/kosinus: \(Z_f = [-1, 1]\)</li>
+                  <li>stopnja števca < stopnja imenovalca: \(y = 0\)</li>
+                  <li>stopnji enaki: \(y = \dfrac{a_n}{b_n}\) (razmerje vodilnih koef.)</li>
+                  <li>stopnja števca > stopnja imenovalca: ni vodoravne</li>
                 </ul>
               </li>
             </ol>
-            <div class="math-block">
-              $$\text{Primer: } f(x) = x^2 + 3$$
+            <p class="plain-example"><strong>Primer:</strong> \(f(x) = \dfrac{2x-1}{3x+4}\)</p>
+            <div class="plain-example">
+              <p>Navpična: \(3x + 4 = 0 \Rightarrow x = -\dfrac{4}{3}\). Vodoravna: \(y = \dfrac{2}{3}\).</p>
             </div>
-            <p>1. Teme: \(T(0, 3)\). 2. \(a = 1 > 0\). 3. \(Z_f = [3, \infty)\).</p>
           </div>
 
-          <!-- ====================== TIP 6 ====================== -->
+          <!-- TIP 5 -->
           <div class="info-card">
-            <h3>Tip 6: Inverzna funkcija</h3>
-            <p><strong>Kako prepoznaš:</strong> "Poiščite inverzno funkcijo \(f^{-1}\)".</p>
+            <div class="tip-header">
+              <h3>Tip 5: Zaloga vrednosti funkcije</h3>
+              <div class="tip-formula">\(Z_f\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "zapišite \(Z_f\)".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Določi tip funkcije.</li>
+              <li>Uporabi znano \(Z_f\):
+                <ul>
+                  <li>kvadratna \(a > 0\): \([y_T, \infty)\)</li>
+                  <li>kvadratna \(a < 0\): \((-\infty, y_T]\)</li>
+                  <li>eksponentna: \((0, \infty)\)</li>
+                  <li>logaritemska: \(\mathbb{R}\)</li>
+                  <li>sin, cos: \([-1, 1]\)</li>
+                </ul>
+              </li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> \(f(x) = x^2 + 3\) → \(Z_f = [3, \infty)\).</p>
+          </div>
+
+          <!-- TIP 6 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 6: Inverzna funkcija</h3>
+              <div class="tip-formula">\(f^{-1}(x)\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "poiščite inverzno funkcijo".</p>
             <p><strong>Postopek:</strong></p>
             <ol>
               <li>Zapiši \(y = f(x)\).</li>
               <li>Zamenjaj \(x\) in \(y\): \(x = f(y)\).</li>
               <li>Izrazi \(y\) iz enačbe.</li>
-              <li>Zapiši \(f^{-1}(x) = ...\)</li>
+              <li>Zapiši \(f^{-1}(x)\).</li>
             </ol>
-            <div class="math-block">
-              $$\text{Primer: } f(x) = \frac{2-x}{x+2}$$
+            <p class="plain-example"><strong>Primer:</strong> \(f(x) = \dfrac{2-x}{x+2}\)</p>
+            <div class="plain-example">
+              <p>\(x = \dfrac{2-y}{y+2}\). \(x(y+2) = 2-y \Rightarrow y = \dfrac{2-2x}{x+1}\). \(f^{-1}(x) = \dfrac{2-2x}{x+1}\).</p>
             </div>
-            <p>1. \(y = \dfrac{2-x}{x+2}\). 2. \(x = \dfrac{2-y}{y+2}\). 3. \(x(y+2) = 2-y \Rightarrow xy + 2x = 2 - y \Rightarrow y(x+1) = 2 - 2x \Rightarrow y = \dfrac{2-2x}{x+1}\). 4. \(f^{-1}(x) = \dfrac{2-2x}{x+1}\).</p>
           </div>
 
-          <!-- ====================== TIP 7 ====================== -->
+          <!-- TIP 7 -->
           <div class="info-card">
-            <h3>Tip 7: Presečišča grafov</h3>
-            <p><strong>Kako prepoznaš:</strong> "Izračunajte presečišče grafov \(f\) in \(g\)".</p>
+            <div class="tip-header">
+              <h3>Tip 7: Presečišča grafov</h3>
+              <div class="tip-formula">\(f(x) = g(x)\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "izračunajte presečišče grafov \(f\) in \(g\)".</p>
             <p><strong>Postopek:</strong></p>
             <ol>
               <li>Nastavi \(f(x) = g(x)\).</li>
               <li>Reši enačbo.</li>
-              <li>Za vsak \(x\) izračunaj \(y = f(x)\).</li>
+              <li>Izračunaj \(y\) za vsak \(x\).</li>
               <li>Zapiši točke \((x, y)\).</li>
             </ol>
-            <div class="math-block">
-              $$\text{Primer: } f(x) = 2^x, \quad g(x) = 65 \cdot 2^x - 1$$
+            <p class="plain-example"><strong>Primer:</strong> \(f(x) = 2^x\), \(g(x) = 65 \cdot 2^x - 1\)</p>
+            <div class="plain-example">
+              <p>\(1 = 64 \cdot 2^x \Rightarrow 2^x = 2^{-6} \Rightarrow x = -6\). \(y = 2^{-6} = \dfrac{1}{64}\).</p>
             </div>
-            <p>1. \(2^x = 65 \cdot 2^x - 1\). 2. \(1 = 64 \cdot 2^x\). 3. \(2^x = \dfrac{1}{64} = 2^{-6} \Rightarrow x = -6\). 4. \(y = 2^{-6} = \dfrac{1}{64}\). 5. Presečišče: \(\left(-6, \dfrac{1}{64}\right)\).</p>
           </div>
 
-          <!-- ====================== TIP 8 ====================== -->
+          <!-- TIP 8 -->
           <div class="info-card">
-            <h3>Tip 8: Soda/liha funkcija</h3>
-            <p><strong>Kako prepoznaš:</strong> "Ali je funkcija soda/liha?", "utemeljite".</p>
+            <div class="tip-header">
+              <h3>Tip 8: Soda / liha funkcija</h3>
+              <div class="tip-formula">\(f(-x) = f(x)\) / \(f(-x) = -f(x)\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "ali je funkcija soda/liha".</p>
             <p><strong>Postopek:</strong></p>
             <ol>
               <li>Izračunaj \(f(-x)\).</li>
-              <li>Primerjaj s \(f(x)\) in \(-f(x)\):
-                <ul>
-                  <li>\(f(-x) = f(x)\) → soda</li>
-                  <li>\(f(-x) = -f(x)\) → liha</li>
-                  <li>Nič od tega → niti soda niti liha</li>
-                </ul>
-              </li>
+              <li>Primerjaj s \(f(x)\) in \(-f(x)\).</li>
             </ol>
-            <div class="math-block">
-              $$\text{Primer: } f(x) = x^3 - x$$
+            <p class="plain-example"><strong>Primer:</strong> \(f(x) = x^3 - x\)</p>
+            <div class="plain-example">
+              <p>\(f(-x) = -x^3 + x = -(x^3 - x) = -f(x)\). → liha.</p>
             </div>
-            <p>1. \(f(-x) = (-x)^3 - (-x) = -x^3 + x = -(x^3 - x) = -f(x)\). 2. Funkcija je <strong>liha</strong>.</p>
           </div>
 
-          <!-- ====================== TIP 9 ====================== -->
+          <!-- TIP 9 -->
           <div class="info-card">
-            <h3>Tip 9: Transformacije grafov</h3>
-            <p><strong>Kako prepoznaš:</strong> "Narišite graf funkcije \(g(x) = f(x - 2) + 1\)".</p>
+            <div class="tip-header">
+              <h3>Tip 9: Transformacije grafov</h3>
+              <div class="tip-formula">\(f(x-c)\), \(f(x)+c\), \(-f(x)\), \(a f(x)\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "narišite graf \(g(x) = f(x-2)+1\)".</p>
             <p><strong>Postopek:</strong></p>
             <ol>
               <li>Začni z osnovnim grafom \(f(x)\).</li>
               <li>Uporabi transformacije:
                 <ul>
-                  <li>\(f(x) + c\) → premik navzgor za \(c\)</li>
-                  <li>\(f(x - c)\) → premik v desno za \(c\)</li>
+                  <li>\(f(x)+c\) → premik navzgor za \(c\)</li>
+                  <li>\(f(x-c)\) → premik desno za \(c\)</li>
                   <li>\(-f(x)\) → zrcaljenje čez os \(x\)</li>
                   <li>\(f(-x)\) → zrcaljenje čez os \(y\)</li>
-                  <li>\(a \cdot f(x)\) → razteg v smeri \(y\)</li>
+                  <li>\(a f(x)\) → razteg v smeri \(y\)</li>
                 </ul>
               </li>
             </ol>
-            <div class="math-block">
-              $$\text{Primer: } g_1(x) = -f(x), \quad g_2(x) = f(x) + 1, \quad g_3(x) = f(x-2), \quad g_4(x) = 2f(x), \quad g_5(x) = f(-x)$$
-            </div>
-            <p>1. \(g_1\): zrcaljenje čez os \(x\). 2. \(g_2\): premik navzgor za 1. 3. \(g_3\): premik v desno za 2. 4. \(g_4\): razteg v smeri \(y\) za faktor 2. 5. \(g_5\): zrcaljenje čez os \(y\).</p>
+            <p class="plain-example"><strong>Primer:</strong> \(g(x) = -f(x)\) → zrcaljenje čez os \(x\).</p>
           </div>
 
-          <!-- ====================== TIP 10 ====================== -->
+          <!-- TIP 10 -->
           <div class="info-card">
-            <h3>Tip 10: Obravnava funkcije (brez odvoda)</h3>
-            <p><strong>Kako prepoznaš:</strong> "Narišite graf funkcije", "zapišite ničle, pole, asimptote".</p>
+            <div class="tip-header">
+              <h3>Tip 10: Obravnava funkcije brez odvoda</h3>
+              <div class="tip-formula">\(D_f, f(0), f(x)=0, q(x)=0, \lim\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "narišite graf", "zapišite ničle, pole, asimptote".</p>
             <p><strong>Postopek:</strong></p>
             <ol>
               <li>Določi \(D_f\).</li>
-              <li>Poišči ničle (\(f(x) = 0\)).</li>
-              <li>Poišči pole (\(q(x) = 0\)).</li>
-              <li>Poišči začetno vrednost \(f(0)\).</li>
-              <li>Določi asimptote.</li>
-              <li>Nariši graf (upoštevaj obnašanje pri polih in v neskončnosti).</li>
+              <li>Ničle: \(f(x) = 0\).</li>
+              <li>Poli: \(q(x) = 0\).</li>
+              <li>Začetna vrednost \(f(0)\).</li>
+              <li>Asimptote.</li>
+              <li>Nariši graf (obnašanje pri polih, v neskončnosti).</li>
             </ol>
-            <div class="math-block">
-              $$\text{Primer: } f(x) = \frac{x - 2}{x}$$
+            <p class="plain-example"><strong>Primer:</strong> \(f(x) = \dfrac{x-2}{x}\)</p>
+            <div class="plain-example">
+              <p>\(D_f = \mathbb{R}\setminus\{0\}\), ničla \(x = 2\), pol \(x = 0\), vodoravna \(y = 1\).</p>
             </div>
-            <p>1. \(D_f = \mathbb{R} \setminus \{0\}\). 2. Ničla: \(x = 2\). 3. Pol: \(x = 0\). 4. \(f(0)\) ni definirano. 5. Navpična asimptota: \(x = 0\); vodoravna: \(y = 1\). 6. Graf: hiperbola v I. in III. kvadrantu.</p>
           </div>
 
-          <!-- ====================== TIP 11 ====================== -->
+          <!-- TIP 11 -->
           <div class="info-card">
-            <h3>Tip 11: Eksponentna in logaritemska funkcija — iskanje parametra</h3>
-            <p><strong>Kako prepoznaš:</strong> "Določite \(a\) tako, da bo graf potekal skozi točko".</p>
+            <div class="tip-header">
+              <h3>Tip 11: Eksponentna in logaritemska funkcija — iskanje parametra</h3>
+              <div class="tip-formula">Vstavi koordinate točke</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "določite \(a\) tako, da gre graf skozi točko".</p>
             <p><strong>Postopek:</strong></p>
             <ol>
               <li>Vstavi koordinate točke v enačbo \(y = f(x)\).</li>
               <li>Reši enačbo za parameter.</li>
             </ol>
-            <div class="math-block">
-              $$\text{Primer: } f(x) = \log_a x \text{ poteka skozi } A\left(\frac{1}{8}, -\frac{3}{2}\right)$$
+            <p class="plain-example"><strong>Primer:</strong> \(f(x) = \log_a x\) poteka skozi \(A\left(\dfrac{1}{8}, -\dfrac{3}{2}\right)\)</p>
+            <div class="plain-example">
+              <p>\(a^{-3/2} = \dfrac{1}{8} = 2^{-3} \Rightarrow a^{1/2} = 2 \Rightarrow a = 4\).</p>
             </div>
-            <p>1. \(-\dfrac{3}{2} = \log_a \dfrac{1}{8}\). 2. \(a^{-3/2} = \dfrac{1}{8} = 2^{-3}\). 3. \(a^{1/2} = 2 \Rightarrow a = 4\).</p>
           </div>
 
-          <!-- ====================== TIP 12 ====================== -->
+          <!-- TIP 12 -->
           <div class="info-card">
-            <h3>Tip 12: Limita funkcije</h3>
-            <p><strong>Kako prepoznaš:</strong> "Izračunajte limito", \(\lim_{x \to a}\).</p>
+            <div class="tip-header">
+              <h3>Tip 12: Limita funkcije</h3>
+              <div class="tip-formula">\(\lim_{x \to a} f(x)\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "izračunajte limito".</p>
             <p><strong>Postopek:</strong></p>
             <ol>
-              <li>Poskusi vstaviti \(a\) neposredno.</li>
-              <li>Če dobiš \(\dfrac{0}{0}\) ali \(\dfrac{\infty}{\infty}\): poenostavi (razstavi, racionaliziraj) ali uporabi L'Hôpitalovo pravilo.</li>
-              <li>Če gre \(x \to \infty\): deli z najvišjo potenco v imenovalcu.</li>
-              <li>Uporabi znane limite: \(\lim_{x \to 0} \dfrac{\sin x}{x} = 1\), \(\lim_{x \to \infty} \left(1 + \dfrac{1}{x}\right)^x = e\).</li>
+              <li>Poskusi vstaviti \(a\).</li>
+              <li>Če dobiš \(0/0\): razstavi, racionaliziraj ali L'Hôpital.</li>
+              <li>Če \(x \to \infty\): deli z najvišjo potenco.</li>
+              <li>Znane limite: \(\lim_{x\to 0} \dfrac{\sin x}{x} = 1\), \(\lim_{x\to\infty}(1+\tfrac{1}{x})^x = e\).</li>
             </ol>
-            <div class="math-block">
-              $$\text{Primer: } \lim_{x \to 7} \frac{x^2 - 49}{x^2 - 2x - 35}$$
+            <p class="plain-example"><strong>Primer:</strong> \(\lim_{x \to 7} \dfrac{x^2-49}{x^2-2x-35} = \dfrac{14}{12} = \dfrac{7}{6}\).</p>
+          </div>
+
+          <!-- TIP 13 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 13: Kotne funkcije — ničle in presečišča</h3>
+              <div class="tip-formula">\(\sin x = 0 \Rightarrow x = k\pi\), \(\cos x = 0 \Rightarrow x = \dfrac{\pi}{2} + k\pi\)</div>
             </div>
-            <p>1. Vstavi \(x = 7\): \(\dfrac{0}{0}\). 2. Razstavi: \(\dfrac{(x-7)(x+7)}{(x-7)(x+5)}\). 3. Krajšaj: \(\dfrac{x+7}{x+5}\). 4. Limita: \(\dfrac{14}{12} = \dfrac{7}{6}\).</p>
+            <p><strong>Kako prepoznaš:</strong> "izračunajte ničle funkcije \(2\sin x - 1\)".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Nastavi \(f(x) = 0\).</li>
+              <li>Reši trigonometrijsko enačbo (uporabi znane vrednosti in periodo).</li>
+              <li>Zapiši splošno rešitev \(x = \ldots + 2k\pi\) ali \(+ k\pi\).</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> \(2\sin x - 1 = 0\)</p>
+            <div class="plain-example">
+              <p>\(\sin x = \dfrac{1}{2} \Rightarrow x = \dfrac{\pi}{6} + 2k\pi \lor x = \dfrac{5\pi}{6} + 2k\pi\).</p>
+            </div>
+          </div>
+
+          <!-- TIP 14 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 14: Risanje grafa kvadratne funkcije</h3>
+              <div class="tip-formula">Teme + ničle + začetna vrednost</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "narišite graf \(f(x) = ax^2 + bx + c\)".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Izračunaj teme \(T(x_T, y_T)\).</li>
+              <li>Izračunaj ničle (če obstajajo).</li>
+              <li>Izračunaj začetno vrednost \(f(0) = c\).</li>
+              <li>Nariši parabolo skozi te točke.</li>
+              <li>Preveri, ali je \(a > 0\) (odprta navzgor) ali \(a < 0\) (navzdol).</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> \(f(x) = x^2 - 2x - 3\)</p>
+            <div class="plain-example">
+              <p>Teme: \(T(1, -4)\). Ničle: \(x = 3, -1\). Začetna: \(f(0) = -3\).</p>
+            </div>
           </div>
         </section>
 
@@ -384,21 +504,67 @@
           </div>
           <div class="info-card">
             <ul>
-              <li>Pozabi preveriti, ali so ničle v \(D_f\).</li>
+              <li>Pozabiš preveriti, ali so ničle v \(D_f\).</li>
               <li>Pri racionalni funkciji zamenjaš ničle in pole.</li>
               <li>Pri vodoravni asimptoti pozabiš primerjati stopnji števca in imenovalca.</li>
               <li>Pri inverzni funkciji pozabiš zamenjati \(x\) in \(y\).</li>
               <li>Pri transformacijah zamenjaš \(f(x-2)\) (premik desno) s \(f(x+2)\) (premik levo).</li>
-              <li>Pri limiti \(\dfrac{0}{0}\) pozabiš razstaviti ali racionalizirati.</li>
+              <li>Pri limiti \(0/0\) pozabiš razstaviti ali racionalizirati.</li>
               <li>Pri eksponentni/logaritemski funkciji zamenjaš \(D_f\) in \(Z_f\).</li>
+              <li>Pri trigonometričnih enačbah pozabiš na <strong>periodo</strong> (\(+ 2k\pi\) ali \(+ k\pi\)).</li>
             </ul>
           </div>
         </section>
 
-        <!-- ============ 4. POVEZAVE ============ -->
+        <!-- ============ 4. ŠTUDIJSKI VODIČ ============ -->
         <section class="subsection">
           <div class="subsection-head">
-            <h2>4. Vadi naprej</h2>
+            <h2>4. Študijski vodič — hitri pregled</h2>
+          </div>
+          <div class="info-card">
+            <h3>📋 Kaj moraš znati na pamet</h3>
+            <ul>
+              <li><strong>Linearna:</strong> \(f(x) = kx+n\), ničla \(x = -\dfrac{n}{k}\).</li>
+              <li><strong>Kvadratna:</strong> \(f(x) = ax^2+bx+c\), teme \(T\left(-\dfrac{b}{2a}, c - \dfrac{b^2}{4a}\right)\).</li>
+              <li><strong>Eksponentna:</strong> \(a^x\), \(D_f = \mathbb{R}\), \(Z_f = (0, \infty)\), asimptota \(y = 0\).</li>
+              <li><strong>Logaritemska:</strong> \(\log_a x\), \(D_f = (0, \infty)\), \(Z_f = \mathbb{R}\), asimptota \(x = 0\).</li>
+              <li><strong>Racionalna:</strong> poli = ničle imenovalca, asimptote pri polih.</li>
+              <li><strong>Inverzna:</strong> zamenjaj \(x\) in \(y\).</li>
+              <li><strong>Kotne:</strong> \(D_f\) in \(Z_f\), perioda.</li>
+              <li><strong>Limite:</strong> \(\lim_{x\to 0}\dfrac{\sin x}{x} = 1\), \(\lim_{x\to\infty}(1+\tfrac{1}{x})^x = e\).</li>
+            </ul>
+          </div>
+
+          <div class="info-card">
+            <h3>🎯 Kako pristopiti k nalogi</h3>
+            <ol>
+              <li><strong>Preberi nalogo in prepoznaj tip:</strong> \(D_f\), ničle, teme, asimptote, \(Z_f\), inverz, presečišča, transformacije, limita?</li>
+              <li><strong>Za \(D_f\):</strong> preveri omejitve (ulomek, koren, logaritem).</li>
+              <li><strong>Za ničle:</strong> reši \(f(x) = 0\).</li>
+              <li><strong>Za teme:</strong> uporabi \(x_T = -\dfrac{b}{2a}\).</li>
+              <li><strong>Za asimptote:</strong> poli + limita.</li>
+              <li><strong>Za \(Z_f\):</strong> tip funkcije.</li>
+              <li><strong>Za limite:</strong> vstavi, nato razstavi/racionaliziraj/L'Hôpital.</li>
+              <li><strong>Za graf:</strong> teme, ničle, začetna vrednost, asimptote.</li>
+            </ol>
+          </div>
+
+          <div class="info-card">
+            <h3>⏱️ Časovni načrt za en večer</h3>
+            <ul>
+              <li><strong>30 min:</strong> Teorija — linearna, kvadratna, eksponentna, logaritemska, racionalna, kotne.</li>
+              <li><strong>70 min:</strong> Tipi 1–7 (D_f, ničle, teme, asimptote, Z_f, inverz, presečišča).</li>
+              <li><strong>55 min:</strong> Tipi 8–14 (soda/liha, transformacije, obravnava, parametri, limite, kotne, graf).</li>
+              <li><strong>30 min:</strong> Ponovi pogoste napake in študijski vodič.</li>
+              <li><strong>30 min:</strong> Reši 2–3 izpitne pole za vajo.</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ============ 5. POVEZAVE ============ -->
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>5. Vadi naprej</h2>
             <p>Ko predelaš razlago, preveri znanje z nalogami.</p>
           </div>
           <div class="link-list">
@@ -424,7 +590,6 @@
   </div>
 
   <div id="footer"></div>
-
   <script src="/components/components.js"></script>
 </body>
 </html>

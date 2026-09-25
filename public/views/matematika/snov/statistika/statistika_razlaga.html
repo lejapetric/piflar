@@ -1,96 +1,519 @@
-<div class="view">
-    <div class="view-header">
-        <h2>📉 16. Statistika</h2>
-        <p>Srednje vrednosti, razpršenost in normalna porazdelitev</p>
-    </div>
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Statistika — razlaga in postopki | Piflar.si</title>
+  <meta name="description" content="Celovita razlaga statistike za maturo: vrste podatkov, prikazovanje (stolpčni, tortni, histogram, škatla z brki), srednje vrednosti (aritmetična sredina, mediana, modus), razpršenost (variacijski razmik, standardni odklon, medčetrtinski razmik), regresija.">
+  <link rel="stylesheet" href="/style/style.css">
+  <link rel="stylesheet" href="/views/matematika/snov/statistika/statistika_style.css">
+</head>
+<body>
+  <div id="header"></div>
 
-    <div class="card">
-        <h3>📊 Srednje vrednosti</h3>
-        <div class="formula-grid">
-            <div class="formula-card">
-                <strong>Aritmetična sredina</strong><br>
-                <code>x̄ = (1/n)Σxᵢ</code>
+  <div id="mainContent" class="main-content">
+    <div id="sidebar"></div>
+
+    <div class="view-container">
+      <div class="view">
+
+        <header class="page-header">
+          <span class="page-eyebrow">Matematika · Snov · 4.17</span>
+          <h1>Statistika</h1>
+          <p>Vse o statistiki za maturo: osnovni pojmi, vrste podatkov, prikazovanje podatkov (stolpčni, tortni, histogram, škatla z brki), srednje vrednosti (aritmetična sredina, mediana, modus), mere razpršenosti (variacijski razmik, standardni odklon, medčetrtinski razmik), kvartili, normalna porazdelitev in linearna regresija.</p>
+          <div class="page-meta">
+            <div class="page-meta-item"><strong>10</strong><span>Tipov nalog</span></div>
+            <div class="page-meta-item"><strong>40+</strong><span>Primerov</span></div>
+            <div class="page-meta-item"><strong>~50 min</strong><span>Branja</span></div>
+          </div>
+        </header>
+
+        <!-- ============ MATURA FORMULE ============ -->
+        <div class="matura-formule">
+          <h3>📋 Formule na maturi — osnovna raven</h3>
+          <p>Na maturitetnem listu s formulami so za <strong>statistiko</strong> relevantne naslednje formule:</p>
+          <div class="matura-grid">
+            <div class="matura-levo">
+              <ul>
+                <li><strong>Aritmetična sredina:</strong> \(\bar{x} = \dfrac{1}{n}\sum_{i=1}^{n} x_i\)</li>
+                <li><strong>Standardni odklon:</strong> \(\sigma = \sqrt{\dfrac{(x_1-\bar{x})^2 + (x_2-\bar{x})^2 + \cdots + (x_n-\bar{x})^2}{n}}\)</li>
+                <li><strong>Mediana:</strong> srednja vrednost v urejenem nizu</li>
+                <li><strong>Modus:</strong> najpogostejša vrednost</li>
+                <li><strong>Variacijski razmik:</strong> \(R = x_{\max} - x_{\min}\)</li>
+                <li><strong>Medčetrtinski razmik:</strong> \(IQR = Q_3 - Q_1\)</li>
+              </ul>
             </div>
-            <div class="formula-card">
-                <strong>Mediana</strong><br>
-                <code>x̃ = srednja vrednost v urejenem nizu</code>
+            <div class="matura-slika">
+              <img src="/views/matematika/images/formule_osnovna_raven.png" alt="Formule na maturi — osnovna raven">
             </div>
-            <div class="formula-card">
-                <strong>Modus</strong><br>
-                <code>M₀ = najpogostejša vrednost</code>
-            </div>
+          </div>
         </div>
-    </div>
 
-    <div class="card">
-        <h3>📊 Meritve razpršenosti</h3>
-        <div class="formula-grid">
-            <div class="formula-card">
-                <strong>Varianca</strong><br>
-                <code>σ² = (1/n)Σ(xᵢ - x̄)²</code>
-            </div>
-            <div class="formula-card">
-                <strong>Standardni odklon</strong><br>
-                <code>σ = √σ²</code>
-            </div>
-            <div class="formula-card">
-                <strong>Koeficient variacije</strong><br>
-                <code>CV = (σ/x̄)·100%</code>
-            </div>
-            <div class="formula-card">
-                <strong>Rang</strong><br>
-                <code>R = x_max - x_min</code>
-            </div>
-        </div>
-    </div>
+        <!-- ============ 1. TEORIJA ============ -->
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>1. Teorija — pojmi in formule</h2>
+            <p>Kar moraš znati na pamet, preden se lotiš nalog.</p>
+          </div>
 
-    <div class="card">
-        <h3>📈 Normalna porazdelitev</h3>
-        <div class="formula-card">
-            <strong>Standardizacija</strong><br>
-            <code>z = (x - x̄)/σ</code>
-        </div>
-        <ul style="margin-top: 8px; padding-left: 20px; color: var(--text-secondary);">
-            <li>68% podatkov v x̄ ± σ</li>
-            <li>95% podatkov v x̄ ± 2σ</li>
-            <li>99.7% podatkov v x̄ ± 3σ</li>
-        </ul>
-    </div>
-
-    <div class="card">
-        <h3>📊 Kvartili in boks-plot</h3>
-        <ul style="padding-left: 20px; color: var(--text-secondary);">
-            <li><strong>Q₁</strong> - 25. percentil</li>
-            <li><strong>Q₂</strong> - 50. percentil (mediana)</li>
-            <li><strong>Q₃</strong> - 75. percentil</li>
-            <li><strong>IQR</strong> = Q₃ - Q₁</li>
-        </ul>
-    </div>
-
-    <div class="card">
-        <h3>📈 Regresija in korelacija</h3>
-        <div class="formula-grid">
-            <div class="formula-card">
-                <strong>Korelacijski koeficient</strong><br>
-                <code>r = Σ(xᵢ-x̄)(yᵢ-ȳ) / √(Σ(xᵢ-x̄)²·Σ(yᵢ-ȳ)²)</code>
+          <div class="info-card">
+            <h3>Osnovni pojmi</h3>
+            <div class="concept-list two-col">
+              <div class="concept">
+                <h4>Populacija</h4>
+                <div class="concept-formula">celotna množica enot</div>
+                <p class="concept-desc">Vse enote, ki jih preučujemo.</p>
+              </div>
+              <div class="concept">
+                <h4>Vzorec</h4>
+                <div class="concept-formula">podmnožica populacije</div>
+                <p class="concept-desc">Del populacije, na katerem izvajamo meritve.</p>
+              </div>
+              <div class="concept">
+                <h4>Spremenljivka (značilnost)</h4>
+                <div class="concept-formula">\(X\)</div>
+                <p class="concept-desc">Kar preučujemo (npr. višina, ocena).</p>
+              </div>
+              <div class="concept">
+                <h4>Enota</h4>
+                <div class="concept-formula">posamezen element</div>
+                <p class="concept-desc">Npr. posamezen dijak.</p>
+              </div>
+              <div class="concept">
+                <h4>Vrednost spremenljivke</h4>
+                <div class="concept-formula">\(x_i\)</div>
+                <p class="concept-desc">Izmerjena vrednost pri enoti.</p>
+              </div>
+              <div class="concept">
+                <h4>Frekvenca</h4>
+                <div class="concept-formula">\(f_i\)</div>
+                <p class="concept-desc">Kolikokrat se določena vrednost pojavi.</p>
+              </div>
             </div>
-            <div class="formula-card">
-                <strong>Regresijska premica</strong><br>
-                <code>y = kx + n</code><br>
-                <code>k = Σ(xᵢ-x̄)(yᵢ-ȳ) / Σ(xᵢ-x̄)²</code><br>
-                <code>n = ȳ - k·x̄</code>
-            </div>
-        </div>
-    </div>
+          </div>
 
-    <div class="card">
-        <h3>📝 Primer</h3>
-        <div style="background: var(--bg-primary); padding: 16px; border-radius: var(--radius-sm);">
-            <p><strong>Podatki:</strong> 3, 7, 5, 9, 7, 4, 7</p>
-            <p><strong>Aritmetična sredina:</strong> x̄ = 42/7 = 6</p>
-            <p><strong>Mediana:</strong> 3,4,5,7,7,7,9 → x̃ = 7</p>
-            <p><strong>Modus:</strong> M₀ = 7 (pojavi se 3-krat)</p>
-            <p><strong>Standardni odklon:</strong> σ ≈ 1.93</p>
-        </div>
+          <div class="info-card">
+            <h3>Vrste podatkov</h3>
+            <div class="concept-list two-col">
+              <div class="concept">
+                <h4>Kvalitativni (opisni)</h4>
+                <div class="concept-formula">npr. barva oči</div>
+                <p class="concept-desc">Ne moremo jih meriti s števili.</p>
+              </div>
+              <div class="concept">
+                <h4>Ordinalni (vrstni)</h4>
+                <div class="concept-formula">npr. ocene 1–5</div>
+                <p class="concept-desc">Lahko jih uredimo po velikosti.</p>
+              </div>
+              <div class="concept">
+                <h4>Kvantitativni (številski)</h4>
+                <div class="concept-formula">npr. višina v cm</div>
+                <p class="concept-desc">Zanje lahko računamo povprečja.</p>
+              </div>
+              <div class="concept">
+                <h4>Diskretni</h4>
+                <div class="concept-formula">npr. število otrok</div>
+                <p class="concept-desc">Končno mnogo vrednosti.</p>
+              </div>
+              <div class="concept">
+                <h4>Zvezni</h4>
+                <div class="concept-formula">npr. čas, masa</div>
+                <p class="concept-desc">Vrednosti v intervalu.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <h3>Srednje vrednosti</h3>
+            <div class="concept-list two-col">
+              <div class="concept">
+                <h4>Aritmetična sredina</h4>
+                <div class="concept-formula">\(\bar{x} = \dfrac{1}{n}\sum_{i=1}^{n} x_i\)</div>
+                <p class="concept-desc">Vsota vseh vrednosti, deljena s številom.</p>
+              </div>
+              <div class="concept">
+                <h4>Utežena aritmetična sredina</h4>
+                <div class="concept-formula">\(\bar{x} = \dfrac{\sum f_i x_i}{\sum f_i}\)</div>
+                <p class="concept-desc">Če imamo frekvence.</p>
+              </div>
+              <div class="concept">
+                <h4>Mediana</h4>
+                <div class="concept-formula">\(\tilde{x}\)</div>
+                <p class="concept-desc">Srednja vrednost v <strong>urejenem nizu</strong>. Če je \(n\) sodo: povprečje dveh srednjih.</p>
+              </div>
+              <div class="concept">
+                <h4>Modus</h4>
+                <div class="concept-formula">\(M_0\)</div>
+                <p class="concept-desc">Najpogostejša vrednost.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <h3>Mere razpršenosti</h3>
+            <div class="concept-list two-col">
+              <div class="concept">
+                <h4>Variacijski razmik</h4>
+                <div class="concept-formula">\(R = x_{\max} - x_{\min}\)</div>
+                <p class="concept-desc">Razlika med največjo in najmanjšo vrednostjo.</p>
+              </div>
+              <div class="concept">
+                <h4>Varianca</h4>
+                <div class="concept-formula">\(\sigma^2 = \dfrac{1}{n}\sum (x_i - \bar{x})^2\)</div>
+                <p class="concept-desc">Povprečje kvadratov odklonov od sredine.</p>
+              </div>
+              <div class="concept">
+                <h4>Standardni odklon</h4>
+                <div class="concept-formula">\(\sigma = \sqrt{\sigma^2}\)</div>
+                <p class="concept-desc">V isti enoti kot podatki.</p>
+              </div>
+              <div class="concept">
+                <h4>Koeficient variacije</h4>
+                <div class="concept-formula">\(CV = \dfrac{\sigma}{\bar{x}} \cdot 100\%\)</div>
+                <p class="concept-desc">Relativna mera razpršenosti.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <h3>Kvartili in škatla z brki</h3>
+            <div class="concept-list two-col">
+              <div class="concept">
+                <h4>Kvartili</h4>
+                <div class="concept-formula">\(Q_1, Q_2, Q_3\)</div>
+                <p class="concept-desc">\(Q_1\) = 25. percentil, \(Q_2\) = mediana, \(Q_3\) = 75. percentil.</p>
+              </div>
+              <div class="concept">
+                <h4>Medčetrtinski razmik</h4>
+                <div class="concept-formula">\(IQR = Q_3 - Q_1\)</div>
+              </div>
+              <div class="concept">
+                <h4>Škatla z brki</h4>
+                <div class="concept-formula">min — \(Q_1\) — \(Q_2\) — \(Q_3\) — max</div>
+                <p class="concept-desc">Grafični prikaz porazdelitve.</p>
+              </div>
+              <div class="concept">
+                <h4>Osamelci</h4>
+                <div class="concept-formula">pod \(Q_1 - 1{,}5 \cdot IQR\) ali nad \(Q_3 + 1{,}5 \cdot IQR\)</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <h3>Normalna porazdelitev in regresija</h3>
+            <div class="concept-list two-col">
+              <div class="concept">
+                <h4>Normalna porazdelitev</h4>
+                <div class="concept-formula">zvonasta krivulja, simetrična okoli \(\bar{x}\)</div>
+              </div>
+              <div class="concept">
+                <h4>Pravilo 68–95–99,7</h4>
+                <div class="concept-formula">68 % v \(\bar{x} \pm \sigma\), 95 % v \(\bar{x} \pm 2\sigma\), 99,7 % v \(\bar{x} \pm 3\sigma\)</div>
+              </div>
+              <div class="concept">
+                <h4>Standardizacija</h4>
+                <div class="concept-formula">\(z = \dfrac{x - \bar{x}}{\sigma}\)</div>
+                <p class="concept-desc">Pretvorba v standardno normalno porazdelitev.</p>
+              </div>
+              <div class="concept">
+                <h4>Korelacijski koeficient</h4>
+                <div class="concept-formula">\(r \in [-1, 1]\)</div>
+                <p class="concept-desc">Mera linearne povezanosti.</p>
+              </div>
+              <div class="concept">
+                <h4>Regresijska premica</h4>
+                <div class="concept-formula">\(y = kx + n\)</div>
+                <p class="concept-desc">\(k = \dfrac{\sum(x_i-\bar{x})(y_i-\bar{y})}{\sum(x_i-\bar{x})^2}\), \(n = \bar{y} - k\bar{x}\).</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ 2. TIPI NALOG ============ -->
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>2. Tipi nalog — postopki po korakih</h2>
+            <p>Za vsak tip: kako ga prepoznaš, kako ga rešiš, primer.</p>
+          </div>
+
+          <!-- TIP 1 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 1: Aritmetična sredina</h3>
+              <div class="tip-formula">\(\bar{x} = \dfrac{1}{n}\sum x_i\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "izračunajte povprečje".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Seštej vse vrednosti.</li>
+              <li>Deli s številom vrednosti.</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> Podatki: 3, 7, 5, 9, 7, 4, 7.</p>
+            <div class="plain-example">
+              <p>Vsota = 42, \(n = 7\). \(\bar{x} = 6\).</p>
+            </div>
+          </div>
+
+          <!-- TIP 2 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 2: Mediana</h3>
+              <div class="tip-formula">srednja vrednost urejenega niza</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "izračunajte mediano".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Uredi podatke po velikosti.</li>
+              <li>Če je \(n\) <strong>liho</strong>: mediana je srednji element.</li>
+              <li>Če je \(n\) <strong>sodo</strong>: mediana je povprečje dveh srednjih elementov.</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> 3, 4, 5, 7, 7, 7, 9 (\(n = 7\), liho).</p>
+            <div class="plain-example">
+              <p>Mediana = 7 (4. element).</p>
+            </div>
+          </div>
+
+          <!-- TIP 3 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 3: Modus</h3>
+              <div class="tip-formula">najpogostejša vrednost</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "najpogostejša vrednost".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Preštej, kolikokrat se pojavi vsaka vrednost.</li>
+              <li>Izberi najpogostejšo.</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> 3, 4, 5, 7, 7, 7, 9. Modus = 7 (pojavi se 3-krat).</p>
+          </div>
+
+          <!-- TIP 4 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 4: Standardni odklon</h3>
+              <div class="tip-formula">\(\sigma = \sqrt{\dfrac{1}{n}\sum (x_i - \bar{x})^2}\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "izračunajte standardni odklon".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Izračunaj \(\bar{x}\).</li>
+              <li>Za vsak \(x_i\) izračunaj \((x_i - \bar{x})^2\).</li>
+              <li>Seštej kvadrate in deli z \(n\).</li>
+              <li>Koreni.</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> Podatki: 3, 7, 5, 9, 7, 4, 7. \(\bar{x} = 6\).</p>
+            <div class="plain-example">
+              <p>\((3-6)^2 = 9\), \((7-6)^2 = 1\), \((5-6)^2 = 1\), \((9-6)^2 = 9\), \(1\), \((4-6)^2 = 4\), \(1\).</p>
+              <p>Vsota = 26. \(\sigma^2 = 26/7 \approx 3{,}71\), \(\sigma \approx 1{,}93\).</p>
+            </div>
+          </div>
+
+          <!-- TIP 5 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 5: Utežena aritmetična sredina</h3>
+              <div class="tip-formula">\(\bar{x} = \dfrac{\sum f_i x_i}{\sum f_i}\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> podana preglednica vrednosti + frekvence.</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Za vsako vrednost izračunaj \(f_i \cdot x_i\).</li>
+              <li>Seštej.</li>
+              <li>Deli z vsoto frekvenc.</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> Vrednosti: 16 (1×), 19 (6×), 20 (11×), 21 (8×), 23 (3×), 24 (1×).</p>
+            <div class="plain-example">
+              <p>\(\sum f_i x_i = 16 + 114 + 220 + 168 + 69 + 24 = 611\). \(\sum f_i = 30\). \(\bar{x} \approx 20{,}37\).</p>
+            </div>
+          </div>
+
+          <!-- TIP 6 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 6: Kvartili in medčetrtinski razmik</h3>
+              <div class="tip-formula">\(IQR = Q_3 - Q_1\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "izračunajte kvartile", "IQR".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Uredi podatke.</li>
+              <li>\(Q_1\) = mediana prve polovice, \(Q_3\) = mediana druge polovice.</li>
+              <li>\(IQR = Q_3 - Q_1\).</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> 3, 4, 5, 7, 7, 7, 9, 10.</p>
+            <div class="plain-example">
+              <p>\(n = 8\), mediana = \(\dfrac{7 + 7}{2} = 7\). \(Q_1 = \dfrac{4 + 5}{2} = 4{,}5\). \(Q_3 = \dfrac{9 + 10}{2} = 9{,}5\). \(IQR = 5\).</p>
+            </div>
+          </div>
+
+          <!-- TIP 7 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 7: Branje škatle z brki</h3>
+              <div class="tip-formula">min — Q₁ — Q₂ — Q₃ — max</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> podana škatla z brki, "kolikšen je …".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Preberi vrednosti iz grafa: minimum, \(Q_1\), mediana, \(Q_3\), maksimum.</li>
+              <li>Izračunaj razlike (npr. IQR).</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> ženske: 22–28–44–54–62, moški: 32–39–42,5–50–59.</p>
+            <div class="plain-example">
+              <p>Mediana žensk = 44, mediana moških = 42,5. IQR žensk = 26, IQR moških = 11.</p>
+            </div>
+          </div>
+
+          <!-- TIP 8 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 8: Normalna porazdelitev</h3>
+              <div class="tip-formula">68 % v \(\bar{x} \pm \sigma\), 95 % v \(\bar{x} \pm 2\sigma\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "podatki so normalno porazdeljeni".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Izračunaj \(\bar{x}\) in \(\sigma\).</li>
+              <li>Uporabi pravilo 68–95–99,7 za oceno deleža.</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> \(\bar{x} = 170\) cm, \(\sigma = 10\) cm.</p>
+            <div class="plain-example">
+              <p>68 % med 160 in 180 cm, 95 % med 150 in 190 cm.</p>
+            </div>
+          </div>
+
+          <!-- TIP 9 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 9: Linearna regresija</h3>
+              <div class="tip-formula">\(y = kx + n\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "zapišite enačbo regresijske premice", "napovejte vrednost".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Izračunaj \(k = \dfrac{\sum(x_i-\bar{x})(y_i-\bar{y})}{\sum(x_i-\bar{x})^2}\).</li>
+              <li>Izračunaj \(n = \bar{y} - k\bar{x}\).</li>
+              <li>Zapiši \(y = kx + n\).</li>
+              <li>Za napoved vstavi \(x\).</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> podatki \((x_i, y_i)\) s \(\bar{x} = 5\), \(\bar{y} = 10\), \(k = 2\).</p>
+            <div class="plain-example">
+              <p>\(n = 10 - 2 \cdot 5 = 0\). \(y = 2x\). Za \(x = 8\): \(y = 16\).</p>
+            </div>
+          </div>
+
+          <!-- TIP 10 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 10: Primerjava dveh skupin</h3>
+              <div class="tip-formula">primerjaj \(\bar{x}\), mediano, \(\sigma\), IQR</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "primerjajte skupini A in B".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Izračunaj srednje vrednosti obeh skupin.</li>
+              <li>Izračunaj razpršenost (IQR ali \(\sigma\)).</li>
+              <li>Primerjaj — katera je višja/nižja, katera bolj razpršena.</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> ženske (mediana 44, IQR 26) vs. moški (mediana 42,5, IQR 11).</p>
+            <div class="plain-example">
+              <p>Ženske so v povprečju starejše, a bolj razpršene po starosti.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ 3. POGOSTE NAPAKE ============ -->
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>3. Pogoste napake</h2>
+          </div>
+          <div class="info-card">
+            <ul>
+              <li>Pri mediani pozabiš <strong>urediti</strong> podatke po velikosti.</li>
+              <li>Pri sodem \(n\) pozabiš vzeti povprečja dveh srednjih vrednosti.</li>
+              <li>Zamenjaš <strong>varianco</strong> (\(\sigma^2\)) in <strong>standardni odklon</strong> (\(\sigma\)).</li>
+              <li>Pri standardnem odklonu pozabiš kvadrirati odklone ali koreniti na koncu.</li>
+              <li>Pri uteženi sredini pozabiš množiti z <strong>frekvencami</strong>.</li>
+              <li>Pri kvartilih zamešaš \(Q_1\) (25 %) s \(Q_3\) (75 %).</li>
+              <li>Pri regresiji zamenjaš \(k\) in \(n\).</li>
+              <li>Pri branju škatle z brki zamešaš mediano z aritmetično sredino.</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ============ 4. ŠTUDIJSKI VODIČ ============ -->
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>4. Študijski vodič — hitri pregled</h2>
+          </div>
+          <div class="info-card">
+            <h3>📋 Kaj moraš znati na pamet</h3>
+            <ul>
+              <li><strong>Aritmetična sredina:</strong> \(\bar{x} = \dfrac{1}{n}\sum x_i\).</li>
+              <li><strong>Mediana:</strong> srednja vrednost urejenega niza.</li>
+              <li><strong>Modus:</strong> najpogostejša vrednost.</li>
+              <li><strong>Variacijski razmik:</strong> \(R = x_{\max} - x_{\min}\).</li>
+              <li><strong>Varianca:</strong> \(\sigma^2 = \dfrac{1}{n}\sum (x_i - \bar{x})^2\).</li>
+              <li><strong>Standardni odklon:</strong> \(\sigma = \sqrt{\sigma^2}\).</li>
+              <li><strong>Kvartili:</strong> \(Q_1, Q_2, Q_3\), IQR = \(Q_3 - Q_1\).</li>
+              <li><strong>Normalna porazdelitev:</strong> 68–95–99,7.</li>
+              <li><strong>Regresija:</strong> \(y = kx + n\).</li>
+            </ul>
+          </div>
+
+          <div class="info-card">
+            <h3>🎯 Kako pristopiti k nalogi</h3>
+            <ol>
+              <li><strong>Preberi nalogo in prepoznaj tip:</strong> srednja vrednost, razpršenost, kvartili, normalna, regresija?</li>
+              <li><strong>Za srednjo vrednost:</strong> \(\bar{x}\), mediana ali modus — preveri, kaj naloga zahteva.</li>
+              <li><strong>Za razpršenost:</strong> preveri, ali gre za \(\sigma\) ali IQR.</li>
+              <li><strong>Za kvartile:</strong> uredi podatke, razdeli na polovice.</li>
+              <li><strong>Za normalno porazdelitev:</strong> uporabi 68–95–99,7.</li>
+              <li><strong>Za regresijo:</strong> izračunaj \(k\) in \(n\), zapiši premico.</li>
+            </ol>
+          </div>
+
+          <div class="info-card">
+            <h3>⏱️ Časovni načrt za en večer</h3>
+            <ul>
+              <li><strong>20 min:</strong> Teorija — pojmi, vrste podatkov, srednje vrednosti, mere razpršenosti.</li>
+              <li><strong>45 min:</strong> Tipi 1–5 (sredina, mediana, modus, \(\sigma\), utežena sredina).</li>
+              <li><strong>45 min:</strong> Tipi 6–10 (kvartili, škatla, normalna, regresija, primerjava).</li>
+              <li><strong>25 min:</strong> Ponovi pogoste napake in študijski vodič.</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ============ 5. POVEZAVE ============ -->
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>5. Vadi naprej</h2>
+            <p>Ko predelaš razlago, preveri znanje z nalogami.</p>
+          </div>
+          <div class="link-list">
+            <a class="link-item" href="/views/matematika/matura/osnovna_raven/naloge/resene/">
+              <span class="link-item-text">
+                <strong>Rešene naloge — osnovna raven</strong>
+                <small>Primeri z razlago</small>
+              </span>
+              <span class="arrow">→</span>
+            </a>
+            <a class="link-item" href="/views/matematika/matura/visja_raven/naloge/resene/">
+              <span class="link-item-text">
+                <strong>Rešene naloge — višja raven</strong>
+                <small>Zahtevnejši primeri</small>
+              </span>
+              <span class="arrow">→</span>
+            </a>
+          </div>
+        </section>
+
+      </div>
     </div>
-</div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>

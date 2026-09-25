@@ -1,61 +1,354 @@
-<div class="view">
-    <div class="view-header">
-        <h2>⬆️ 5. Potence in koreni</h2>
-        <p>Pravila za računanje s potencami in koreni</p>
-    </div>
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Potence in koreni — razlaga in postopki | Piflar.si</title>
+  <meta name="description" content="Celovita razlaga potenc in korenov za maturo: pravila za potence, n-ti koreni, racionalni eksponenti, racionalizacija, iracionalne enačbe.">
+  <link rel="stylesheet" href="/style/style.css">
+  <link rel="stylesheet" href="/views/matematika/snov/potence_koreni/potence_koreni_style.css">
+</head>
+<body>
+  <div id="header"></div>
 
-    <div class="card">
-        <h3>📖 Pravila za potence</h3>
-        <div class="formula-grid">
-            <div class="formula-card"><code>aᵐ · aⁿ = aᵐ⁺ⁿ</code></div>
-            <div class="formula-card"><code>aᵐ / aⁿ = aᵐ⁻ⁿ</code></div>
-            <div class="formula-card"><code>(aᵐ)ⁿ = aᵐ·ⁿ</code></div>
-            <div class="formula-card"><code>(a·b)ⁿ = aⁿ · bⁿ</code></div>
-            <div class="formula-card"><code>(a/b)ⁿ = aⁿ / bⁿ</code></div>
-            <div class="formula-card"><code>a⁻ⁿ = 1/aⁿ</code></div>
-            <div class="formula-card"><code>a⁰ = 1 (a ≠ 0)</code></div>
-            <div class="formula-card"><code>0ⁿ = 0 (n > 0)</code></div>
-        </div>
-    </div>
+  <div id="mainContent" class="main-content">
+    <div id="sidebar"></div>
 
-    <div class="card">
-        <h3>📖 Pravila za korene</h3>
-        <div class="formula-grid">
-            <div class="formula-card"><code>ⁿ√a = a¹/ⁿ</code></div>
-            <div class="formula-card"><code>ⁿ√a · ⁿ√b = ⁿ√(a·b)</code></div>
-            <div class="formula-card"><code>ⁿ√a / ⁿ√b = ⁿ√(a/b)</code></div>
-            <div class="formula-card"><code>ⁿ√(aᵐ) = aᵐ/ⁿ</code></div>
-            <div class="formula-card"><code>√a² = |a|</code></div>
-        </div>
-    </div>
+    <div class="view-container">
+      <div class="view">
 
-    <div class="card">
-        <h3>📝 Poenostavljanje korenov</h3>
-        <div style="background: var(--bg-primary); padding: 16px; border-radius: var(--radius-sm);">
-            <p><strong>Primer 1:</strong> √72 = √(36·2) = 6√2</p>
-            <p style="margin-top: 8px;"><strong>Primer 2 (racionalizacija):</strong> 2/√3 · √3/√3 = 2√3/3</p>
-            <p style="margin-top: 8px;"><strong>Primer 3 (vsota):</strong> 1/(√2+1) · (√2-1)/(√2-1) = √2-1</p>
-        </div>
-    </div>
+        <header class="page-header">
+          <span class="page-eyebrow">Matematika · Snov · 4.5</span>
+          <h1>Potence in koreni</h1>
+          <p>Vse o potencah in korenih za maturo: pravila za računanje, n-ti koreni, racionalni eksponenti, poenostavljanje korenov, racionalizacija imenovalca in iracionalne enačbe.</p>
+          <div class="page-meta">
+            <div class="page-meta-item"><strong>8</strong><span>Tipov nalog</span></div>
+            <div class="page-meta-item"><strong>35+</strong><span>Primerov</span></div>
+            <div class="page-meta-item"><strong>~40 min</strong><span>Branja</span></div>
+          </div>
+        </header>
 
-    <div class="card">
-        <h3>⚡ Pretvarjanje med potencami in koreni</h3>
-        <div class="formula-grid">
-            <div class="formula-card">
-                <code>³√x⁵ = x⁵/³</code>
+        <!-- ============ MATURA FORMULE ============ -->
+        <div class="matura-formule">
+          <h3>📋 Formule na maturi — osnovna raven</h3>
+          <p>Na maturitetnem listu s formulami so za <strong>potence in korene</strong> relevantne naslednje formule:</p>
+          <div class="matura-grid">
+            <div class="matura-levo">
+              <ul>
+                <li><strong>Vsota in razlika kubov:</strong> \(a^3 \pm b^3 = (a \pm b)(a^2 \mp ab + b^2)\)</li>
+                <li><strong>Razlika kvadratov:</strong> \(a^2 - b^2 = (a-b)(a+b)\)</li>
+                <li><strong>Kvadrat binoma:</strong> \((a \pm b)^2 = a^2 \pm 2ab + b^2\)</li>
+                <li><strong>Koreni kot potence:</strong> \(\sqrt[n]{a^m} = a^{m/n}\)</li>
+                <li><strong>Zveza:</strong> \(\sqrt{a^2} = |a|\)</li>
+              </ul>
             </div>
-            <div class="formula-card">
-                <code>x²/³ = ³√x²</code>
+            <div class="matura-slika">
+              <img src="/views/matematika/images/formule_osnovna_raven.png" alt="Formule na maturi — osnovna raven">
             </div>
+          </div>
         </div>
-    </div>
 
-    <div class="card">
-        <h3>💡 Nasvet za maturo</h3>
-        <ul style="padding-left: 20px; color: var(--text-secondary);">
-            <li>Pri korenih vedno preveri, ali je radikand nenegativen (za sode korene)</li>
-            <li>Pri enačbah s koreni vedno preveri rešitev - kvadriranje lahko doda tuje rešitve</li>
-            <li>Racionalizacija imenovalca se pogosto pojavi v prvem delu mature</li>
-        </ul>
+        <!-- ============ 1. TEORIJA ============ -->
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>1. Teorija — pravila in formule</h2>
+            <p>Kar moraš znati na pamet, preden se lotiš nalog.</p>
+          </div>
+
+          <div class="info-card">
+            <h3>Pravila za potence</h3>
+            <div class="formula-grid">
+              <div class="formula-card">\(a^m \cdot a^n = a^{m+n}\)</div>
+              <div class="formula-card">\(\dfrac{a^m}{a^n} = a^{m-n}\)</div>
+              <div class="formula-card">\((a^m)^n = a^{mn}\)</div>
+              <div class="formula-card">\((ab)^n = a^n b^n\)</div>
+              <div class="formula-card">\(\left(\dfrac{a}{b}\right)^n = \dfrac{a^n}{b^n}\)</div>
+              <div class="formula-card">\(a^{-n} = \dfrac{1}{a^n}\)</div>
+              <div class="formula-card">\(a^0 = 1 \quad (a \neq 0)\)</div>
+              <div class="formula-card">\(0^n = 0 \quad (n > 0)\)</div>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <h3>Pravila za korene</h3>
+            <div class="formula-grid">
+              <div class="formula-card">\(\sqrt[n]{a} = a^{1/n}\)</div>
+              <div class="formula-card">\(\sqrt[n]{a} \cdot \sqrt[n]{b} = \sqrt[n]{ab}\)</div>
+              <div class="formula-card">\(\dfrac{\sqrt[n]{a}}{\sqrt[n]{b}} = \sqrt[n]{\dfrac{a}{b}}\)</div>
+              <div class="formula-card">\(\sqrt[n]{a^m} = a^{m/n}\)</div>
+              <div class="formula-card">\(\sqrt{a^2} = |a|\)</div>
+              <div class="formula-card">\(\sqrt[n]{\sqrt[m]{a}} = \sqrt[nm]{a}\)</div>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <h3>Povezava potenc in korenov</h3>
+            <div class="concept-list two-col">
+              <div class="concept">
+                <h4>Koren kot potenca</h4>
+                <div class="concept-formula">\(\sqrt[n]{a} = a^{1/n}\)</div>
+                <p class="concept-desc">Vsak \(n\)-ti koren lahko zapišemo kot potenco z racionalnim eksponentom.</p>
+              </div>
+              <div class="concept">
+                <h4>Potenca pod korenom</h4>
+                <div class="concept-formula">\(\sqrt[n]{a^m} = a^{m/n}\)</div>
+                <p class="concept-desc">Pravilo uporabljamo za poenostavljanje izrazov s koreni.</p>
+              </div>
+              <div class="concept">
+                <h4>Racionalni eksponent</h4>
+                <div class="concept-formula">\(a^{m/n} = \sqrt[n]{a^m} = (\sqrt[n]{a})^m\)</div>
+                <p class="concept-desc">Vrstni red operacij ni pomemben.</p>
+              </div>
+              <div class="concept">
+                <h4>Negativni racionalni eksponent</h4>
+                <div class="concept-formula">\(a^{-m/n} = \dfrac{1}{\sqrt[n]{a^m}}\)</div>
+                <p class="concept-desc">Negativni eksponent pomeni obratno vrednost.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ 2. TIPI NALOG ============ -->
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>2. Tipi nalog — postopki po korakih</h2>
+            <p>Za vsak tip: kako ga prepoznaš, kako ga rešiš, primer.</p>
+          </div>
+
+          <!-- TIP 1 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 1: Poenostavljanje potenc</h3>
+              <div class="tip-formula">\(a^m \cdot a^n = a^{m+n}\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "poenostavite izraz", nastopajo potence z isto osnovo.</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Zapiši vse potence z isto osnovo.</li>
+              <li>Uporabi pravila za potence.</li>
+              <li>Negativne eksponente pretvori v ulomke.</li>
+              <li>Poenostavi eksponent.</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> \(\dfrac{a^5 \cdot a^{-3}}{a^2} = \dfrac{a^2}{a^2} = 1\).</p>
+          </div>
+
+          <!-- TIP 2 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 2: Pretvarjanje med potencami in koreni</h3>
+              <div class="tip-formula">\(\sqrt[n]{a^m} = a^{m/n}\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "zapišite v obliki potence" ali "zapišite s korenom".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Prepoznaj koren oz. potenco z racionalnim eksponentom.</li>
+              <li>Uporabi \(\sqrt[n]{a^m} = a^{m/n}\).</li>
+              <li>Poenostavi eksponent.</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> \(\sqrt[3]{x^5} = x^{5/3}\), \(\; x^{2/5} = \sqrt[5]{x^2}\).</p>
+          </div>
+
+          <!-- TIP 3 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 3: Delno korenjenje</h3>
+              <div class="tip-formula">\(\sqrt{a^2 b} = a\sqrt{b} \quad (a \geq 0)\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "delno korenite", "poenostavite koren".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Zapiši korenjenec kot produkt kvadrata in ostanka.</li>
+              <li>Kvadrat "izvleci" iz korena.</li>
+              <li>Poenostavi.</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> \(\sqrt{72} = \sqrt{36 \cdot 2} = 6\sqrt{2}\).</p>
+            <p class="plain-example"><strong>Primer:</strong> \(\sqrt{20} - \sqrt{80} + 3\sqrt{125} = 2\sqrt{5} - 4\sqrt{5} + 15\sqrt{5} = 13\sqrt{5}\).</p>
+          </div>
+
+          <!-- TIP 4 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 4: Racionalizacija imenovalca</h3>
+              <div class="tip-formula">\(\dfrac{1}{\sqrt{a}} = \dfrac{\sqrt{a}}{a}\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "racionalizirajte imenovalec".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li><strong>Enostavni koren:</strong> pomnoži števec in imenovalec s korenom.</li>
+              <li><strong>Vsota/diferenca korenov:</strong> pomnoži s <strong>konjugiranim</strong> izrazom (\(a - b\) z \(a + b\)).</li>
+              <li>Uporabi razliko kvadratov \((a-b)(a+b) = a^2 - b^2\).</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> \(\dfrac{2}{\sqrt{3}} = \dfrac{2\sqrt{3}}{3}\)</p>
+            <p class="plain-example"><strong>Primer:</strong> \(\dfrac{1}{\sqrt{2}+1} = \dfrac{\sqrt{2}-1}{(\sqrt{2}+1)(\sqrt{2}-1)} = \dfrac{\sqrt{2}-1}{2-1} = \sqrt{2}-1\).</p>
+          </div>
+
+          <!-- TIP 5 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 5: Računanje z racionalnimi eksponenti</h3>
+              <div class="tip-formula">\(a^{m/n} \cdot a^{p/q} = a^{m/n + p/q}\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> potence z ulomljenim eksponentom.</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Vse pretvori v potence z racionalnimi eksponenti.</li>
+              <li>Uporabi pravila za potence — seštevaj eksponente (skupni imenovalec).</li>
+              <li>Poenostavi.</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> \(a^{1/2} \cdot a^{1/3} = a^{1/2 + 1/3} = a^{5/6}\).</p>
+          </div>
+
+          <!-- TIP 6 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 6: Poenostavljanje izrazov s koreni</h3>
+              <div class="tip-formula">\(\sqrt{a} \cdot \sqrt{a} = a\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "poenostavite izraz", nastopajo koreni različnih stopenj.</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Vse korene zapiši kot potence z racionalnimi eksponenti.</li>
+              <li>Uporabi pravila za potence.</li>
+              <li>Rezultat zapiši nazaj v obliki korena ali potence.</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> \(\sqrt{a} \cdot \sqrt[3]{a} = a^{1/2} \cdot a^{1/3} = a^{5/6}\).</p>
+            <p class="plain-example"><strong>Primer:</strong> \(\dfrac{\sqrt{a}}{\sqrt[3]{a}} = a^{1/2 - 1/3} = a^{1/6} = \sqrt[6]{a}\).</p>
+          </div>
+
+          <!-- TIP 7 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 7: Iracionalne enačbe</h3>
+              <div class="tip-formula">\(\sqrt{f(x)} = g(x) \Rightarrow f(x) = g(x)^2\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> neznanka pod korenom.</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Osami koren na eni strani.</li>
+              <li>Kvadriraj obe strani enačbe.</li>
+              <li>Reši dobljeno enačbo.</li>
+              <li><strong>Preveri rešitve</strong> — kvadriranje lahko doda tuje rešitve!</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> \(\sqrt{x+3} = 2\)</p>
+            <div class="plain-example">
+              <p>\(x + 3 = 4 \Rightarrow x = 1\). Preveri: \(\sqrt{1+3} = 2\) ✓</p>
+            </div>
+            <p class="plain-example"><strong>Primer:</strong> \(2x + 3 = \sqrt{x+3}\)</p>
+            <div class="plain-example">
+              <p>\((2x+3)^2 = x + 3 \Rightarrow 4x^2 + 12x + 9 = x + 3 \Rightarrow 4x^2 + 11x + 6 = 0\).</p>
+              <p>\(x_{1,2} = \dfrac{-11 \pm 5}{8} \Rightarrow x_1 = -\dfrac{3}{4}\), \(x_2 = -2\).</p>
+              <p>Preveri: \(x = -\dfrac{3}{4}\) ✓; \(x = -2\): leva \(= -1 &lt; 0\), desna \(\geq 0\) ✗.</p>
+              <p>Rešitev: \(x = -\dfrac{3}{4}\).</p>
+            </div>
+          </div>
+
+          <!-- TIP 8 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 8: Računanje vrednosti izrazov s koreni</h3>
+              <div class="tip-formula">Vstavi številske vrednosti in poenostavi</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "izračunajte vrednost izraza", podane številske vrednosti.</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Vstavi vrednosti v izraz.</li>
+              <li>Poenostavi z delnim korenjenjem in racionalizacijo.</li>
+              <li>Rezultat zapiši točno (brez zaokroževanja).</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> \(A = \dfrac{\sqrt{50} + \sqrt{18}}{\sqrt{2}}\)</p>
+            <div class="plain-example">
+              <p>\(\sqrt{50} = 5\sqrt{2}, \sqrt{18} = 3\sqrt{2}\). \(A = \dfrac{5\sqrt{2} + 3\sqrt{2}}{\sqrt{2}} = \dfrac{8\sqrt{2}}{\sqrt{2}} = 8\).</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ 3. POGOSTE NAPAKE ============ -->
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>3. Pogoste napake</h2>
+          </div>
+          <div class="info-card">
+            <ul>
+              <li>Pri delnem korenjenju pozabiš, da mora biti pred korenom <strong>nenegativno</strong> število (npr. \(\sqrt{a^2} = |a|\)).</li>
+              <li>Pri iracionalnih enačbah <strong>ne preveriš</strong> rešitev (kvadriranje lahko doda tuje rešitve).</li>
+              <li>Pri racionalizaciji vsote/difference pozabiš na <strong>konjugirani izraz</strong>.</li>
+              <li>Pri potencah z racionalnimi eksponenti seštevaš eksponente <strong>brez skupnega imenovalca</strong>.</li>
+              <li>Zamenjaš \(a^{-n}\) z \(-a^n\) (pravilo: \(a^{-n} = \dfrac{1}{a^n}\)).</li>
+              <li>Pozabiš, da je \(a^0 = 1\) za vsak \(a \neq 0\).</li>
+              <li>Pri korenih sodih stopenj pozabiš, da mora biti korenjenec \(\geq 0\).</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ============ 4. ŠTUDIJSKI VODIČ ============ -->
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>4. Študijski vodič — hitri pregled</h2>
+          </div>
+          <div class="info-card">
+            <h3>📋 Kaj moraš znati na pamet</h3>
+            <ul>
+              <li><strong>Pravila za potence:</strong> \(a^m \cdot a^n = a^{m+n}\), \(\dfrac{a^m}{a^n} = a^{m-n}\), \((a^m)^n = a^{mn}\), \((ab)^n = a^n b^n\).</li>
+              <li><strong>Negativni eksponent:</strong> \(a^{-n} = \dfrac{1}{a^n}\).</li>
+              <li><strong>Koren kot potenca:</strong> \(\sqrt[n]{a^m} = a^{m/n}\).</li>
+              <li><strong>Zveza:</strong> \(\sqrt{a^2} = |a|\).</li>
+              <li><strong>Delno korenjenje:</strong> \(\sqrt{a^2 b} = a\sqrt{b}\).</li>
+              <li><strong>Racionalizacija:</strong> pomnoži s konjugiranim, uporabi razliko kvadratov.</li>
+              <li><strong>Iracionalne enačbe:</strong> kvadriraj in <strong>preveri</strong> rešitve.</li>
+            </ul>
+          </div>
+
+          <div class="info-card">
+            <h3>🎯 Kako pristopiti k nalogi</h3>
+            <ol>
+              <li><strong>Preberi nalogo in prepoznaj tip:</strong> poenostavljanje, pretvarjanje, delno korenjenje, racionalizacija, iracionalne enačbe?</li>
+              <li><strong>Za poenostavljanje:</strong> vse pretvori v potence z racionalnimi eksponenti.</li>
+              <li><strong>Za delno korenjenje:</strong> poišči kvadrat v korenjencu.</li>
+              <li><strong>Za racionalizacijo:</strong> pomnoži s konjugiranim, uporabi razliko kvadratov.</li>
+              <li><strong>Za iracionalne enačbe:</strong> kvadriraj in preveri.</li>
+            </ol>
+          </div>
+
+          <div class="info-card">
+            <h3>⏱️ Časovni načrt za en večer</h3>
+            <ul>
+              <li><strong>20 min:</strong> Teorija — pravila za potence in korene, povezava.</li>
+              <li><strong>45 min:</strong> Tipi 1–5 (poenostavljanje, pretvarjanje, delno korenjenje, racionalizacija, racionalni eksponenti).</li>
+              <li><strong>35 min:</strong> Tipi 6–8 (koreni, iracionalne enačbe, računanje vrednosti).</li>
+              <li><strong>20 min:</strong> Ponovi pogoste napake in študijski vodič.</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ============ 5. POVEZAVE ============ -->
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>5. Vadi naprej</h2>
+            <p>Ko predelaš razlago, preveri znanje z nalogami.</p>
+          </div>
+          <div class="link-list">
+            <a class="link-item" href="/views/matematika/matura/osnovna_raven/naloge/resene/">
+              <span class="link-item-text">
+                <strong>Rešene naloge — osnovna raven</strong>
+                <small>Primeri z razlago</small>
+              </span>
+              <span class="arrow">→</span>
+            </a>
+            <a class="link-item" href="/views/matematika/matura/visja_raven/naloge/resene/">
+              <span class="link-item-text">
+                <strong>Rešene naloge — višja raven</strong>
+                <small>Zahtevnejši primeri</small>
+              </span>
+              <span class="arrow">→</span>
+            </a>
+          </div>
+        </section>
+
+      </div>
     </div>
-</div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>

@@ -1,0 +1,542 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Termodinamika — razlaga in postopki | Piflar.si</title>
+  <meta name="description" content="Celovita razlaga termodinamike za maturo: temperatura, toplota, notranja energija, specifična toplota, taljenje, izparevanje, plinska enačba, prvi zakon termodinamike, toplotni stroji, izkoristek.">
+  <link rel="stylesheet" href="/style/style.css">
+  <link rel="stylesheet" href="/views/fizika/termodinamika/termodinamika_style.css">
+</head>
+<body>
+  <div id="header"></div>
+
+  <div id="mainContent" class="main-content">
+    <div id="sidebar"></div>
+
+    <div class="view-container">
+      <div class="view">
+
+        <header class="page-header">
+          <span class="page-eyebrow">Fizika · Snov · 3</span>
+          <h1>Termodinamika</h1>
+          <p>Vse o termodinamiki za maturo: temperatura in toplota, notranja energija, specifična toplota, taljenje in izparevanje, toplotna razteznost, plinska enačba, prvi zakon termodinamike, toplotni stroji in izkoristek.</p>
+          <div class="page-meta">
+            <div class="page-meta-item"><strong>12</strong><span>Tipov nalog</span></div>
+            <div class="page-meta-item"><strong>45+</strong><span>Primerov</span></div>
+            <div class="page-meta-item"><strong>~65 min</strong><span>Branja</span></div>
+          </div>
+        </header>
+
+        <!-- ============ 1. TEORIJA ============ -->
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>1. Teorija — pojmi in formule</h2>
+            <p>Kar moraš znati na pamet, preden se lotiš nalog.</p>
+          </div>
+
+          <div class="info-card">
+            <h3>Temperatura in toplota</h3>
+            <div class="concept-list two-col">
+              <div class="concept">
+                <h4>Temperatura</h4>
+                <div class="concept-formula">\(T\) [K] ali \(t\) [°C]</div>
+                <p class="concept-desc">\(T = t + 273{,}15\).</p>
+              </div>
+              <div class="concept">
+                <h4>Toplota</h4>
+                <div class="concept-formula">\(Q\) [J]</div>
+                <p class="concept-desc">Energija, ki se prenaša zaradi temperaturne razlike.</p>
+              </div>
+              <div class="concept">
+                <h4>Specifična toplota</h4>
+                <div class="concept-formula">\(c\) [J/(kg·K)]</div>
+                <p class="concept-desc">Toplota za segrevanje 1 kg snovi za 1 K.</p>
+              </div>
+              <div class="concept">
+                <h4>Toplotna kapaciteta</h4>
+                <div class="concept-formula">\(C = mc\) [J/K]</div>
+              </div>
+              <div class="concept">
+                <h4>Toplotni tok</h4>
+                <div class="concept-formula">\(P = \dfrac{Q}{t}\) [W]</div>
+              </div>
+              <div class="concept">
+                <h4>Toplotna prehodnost</h4>
+                <div class="concept-formula">\(\Phi = \dfrac{Q}{t} = \lambda \dfrac{S \Delta T}{d}\)</div>
+                <p class="concept-desc">\(\lambda\) = toplotna prevodnost, \(d\) = debelina.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <h3>Toplota pri segrevanju in faznih spremembah</h3>
+            <div class="concept-list two-col">
+              <div class="concept">
+                <h4>Segrevanje/ohlajanje</h4>
+                <div class="concept-formula">\(Q = mc\Delta T\)</div>
+              </div>
+              <div class="concept">
+                <h4>Taljenje</h4>
+                <div class="concept-formula">\(Q = m q_t\)</div>
+                <p class="concept-desc">\(q_t\) = specifična talilna toplota.</p>
+              </div>
+              <div class="concept">
+                <h4>Izparevanje</h4>
+                <div class="concept-formula">\(Q = m q_i\)</div>
+                <p class="concept-desc">\(q_i\) = specifična izparilna toplota.</p>
+              </div>
+              <div class="concept">
+                <h4>Toplotna bilanca</h4>
+                <div class="concept-formula">\(Q_{\text{oddana}} = Q_{\text{prejeta}}\)</div>
+                <p class="concept-desc">Zakon o ohranitvi energije pri mešanju.</p>
+              </div>
+              <div class="concept">
+                <h4>Toplotna razteznost (dolžina)</h4>
+                <div class="concept-formula">\(l = l_0(1 + \alpha \Delta T)\)</div>
+              </div>
+              <div class="concept">
+                <h4>Toplotna razteznost (prostornina)</h4>
+                <div class="concept-formula">\(V = V_0(1 + \beta \Delta T)\)</div>
+                <p class="concept-desc">Za trdnine \(\beta \approx 3\alpha\), za tekočine \(\beta\) podan.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <h3>Plini</h3>
+            <div class="concept-list two-col">
+              <div class="concept">
+                <h4>Plinska enačba</h4>
+                <div class="concept-formula">\(pV = nRT\)</div>
+                <p class="concept-desc">\(R = 8{,}31 \text{ J/(mol·K)}\).</p>
+              </div>
+              <div class="concept">
+                <h4>Plinska enačba (masa)</h4>
+                <div class="concept-formula">\(pV = \dfrac{m}{M}RT\)</div>
+                <p class="concept-desc">\(M\) = molska masa.</p>
+              </div>
+              <div class="concept">
+                <h4>Izotermna sprememba</h4>
+                <div class="concept-formula">\(p_1 V_1 = p_2 V_2\) (T konst.)</div>
+              </div>
+              <div class="concept">
+                <h4>Izobarna sprememba</h4>
+                <div class="concept-formula">\(\dfrac{V_1}{T_1} = \dfrac{V_2}{T_2}\) (p konst.)</div>
+              </div>
+              <div class="concept">
+                <h4>Izohorna sprememba</h4>
+                <div class="concept-formula">\(\dfrac{p_1}{T_1} = \dfrac{p_2}{T_2}\) (V konst.)</div>
+              </div>
+              <div class="concept">
+                <h4>Splošna plinska enačba</h4>
+                <div class="concept-formula">\(\dfrac{p_1 V_1}{T_1} = \dfrac{p_2 V_2}{T_2}\)</div>
+              </div>
+              <div class="concept">
+                <h4>Avogadrov zakon</h4>
+                <div class="concept-formula">\(N_A = 6{,}022 \cdot 10^{23}\) /mol</div>
+              </div>
+              <div class="concept">
+                <h4>Boltzmannova konstanta</h4>
+                <div class="concept-formula">\(k_B = \dfrac{R}{N_A} \approx 1{,}38 \cdot 10^{-23}\) J/K</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <h3>Zakoni termodinamike</h3>
+            <div class="concept-list two-col">
+              <div class="concept">
+                <h4>Notranja energija</h4>
+                <div class="concept-formula">\(W_n = \dfrac{3}{2}nRT\) (idealni plin)</div>
+              </div>
+              <div class="concept">
+                <h4>1. zakon termodinamike</h4>
+                <div class="concept-formula">\(\Delta W_n = A + Q\)</div>
+                <p class="concept-desc">Sprememba notranje energije = dovedeno delo + dovedena toplota.</p>
+              </div>
+              <div class="concept">
+                <h4>Delo plina</h4>
+                <div class="concept-formula">\(A = p \Delta V\) (pri konstantnem \(p\))</div>
+              </div>
+              <div class="concept">
+                <h4>Toplotni stroj — izkoristek</h4>
+                <div class="concept-formula">\(\eta = \dfrac{A}{Q_{\text{dovedena}}} = 1 - \dfrac{Q_{\text{oddana}}}{Q_{\text{dovedena}}}\)</div>
+              </div>
+              <div class="concept">
+                <h4>Carnotov izkoristek</h4>
+                <div class="concept-formula">\(\eta_C = 1 - \dfrac{T_{\text{hladno}}}{T_{\text{toplo}}}\)</div>
+                <p class="concept-desc">Maksimalni možni izkoristek.</p>
+              </div>
+              <div class="concept">
+                <h4>2. zakon termodinamike</h4>
+                <div class="concept-formula">Toplota spontano prehaja z vročega na hladno telo.</div>
+                <p class="concept-desc">Nemogoče je 100 % izkoristek.</p>
+              </div>
+              <div class="concept">
+                <h4>Entropija</h4>
+                <div class="concept-formula">\(\Delta S \geq 0\)</div>
+                <p class="concept-desc">V izoliranem sistemu entropija narašča.</p>
+              </div>
+              <div class="concept">
+                <h4>Toplotna črpalka</h4>
+                <div class="concept-formula">\(\text{COP} = \dfrac{Q_{\text{toplo}}}{A}\)</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <h3>Toplotne konstante (pogoste snovi)</h3>
+            <div class="formula-grid">
+              <div class="formula-card">Voda: \(c = 4200\) J/(kg·K)</div>
+              <div class="formula-card">Led: \(c = 2100\) J/(kg·K)</div>
+              <div class="formula-card">Aluminij: \(c = 900\) J/(kg·K)</div>
+              <div class="formula-card">Železo: \(c = 450\) J/(kg·K)</div>
+              <div class="formula-card">Bakar: \(c = 380\) J/(kg·K)</div>
+              <div class="formula-card">Taljenje ledu: \(q_t = 334\) kJ/kg</div>
+              <div class="formula-card">Izparevanje vode: \(q_i = 2260\) kJ/kg</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ 2. TIPI NALOG ============ -->
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>2. Tipi nalog — postopki po korakih</h2>
+            <p>Za vsak tip: kako ga prepoznaš, kako ga rešiš, primer.</p>
+          </div>
+
+          <!-- TIP 1 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 1: Segrevanje in ohlajanje</h3>
+              <div class="tip-formula">\(Q = mc\Delta T\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "koliko toplote potrebujemo za segrevanje".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Zapiši \(m\), \(c\), \(\Delta T\).</li>
+              <li>Uporabi \(Q = mc\Delta T\).</li>
+              <li>Upoštevaj, da je \(\Delta T\) v kelvinih enak \(\Delta t\) v °C.</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> 2 kg vode segrejemo z 20 °C na 80 °C.</p>
+            <div class="plain-example">
+              <p>\(Q = 2 \cdot 4200 \cdot 60 = 504\,000\) J = 504 kJ.</p>
+            </div>
+          </div>
+
+          <!-- TIP 2 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 2: Toplotna bilanca (mešanje)</h3>
+              <div class="tip-formula">\(Q_{\text{oddana}} = Q_{\text{prejeta}}\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "zmešamo vročo in hladno vodo".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Toplo telo odda toploto: \(Q_1 = m_1 c_1 (T_1 - T_m)\).</li>
+              <li>Hladno telo prejme: \(Q_2 = m_2 c_2 (T_m - T_2)\).</li>
+              <li>Izenači in reši za \(T_m\).</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> 1 kg vode pri 80 °C + 2 kg pri 20 °C.</p>
+            <div class="plain-example">
+              <p>\(1 \cdot 4200 \cdot (80 - T_m) = 2 \cdot 4200 \cdot (T_m - 20)\)</p>
+              <p>\(80 - T_m = 2T_m - 40 \Rightarrow T_m = 40\) °C.</p>
+            </div>
+          </div>
+
+          <!-- TIP 3 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 3: Taljenje in izparevanje</h3>
+              <div class="tip-formula">\(Q = m q_t\), \(Q = m q_i\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "stalimo led", "izpari voda".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Preveri, ali gre za taljenje (\(q_t\)) ali izparevanje (\(q_i\)).</li>
+              <li>Uporabi \(Q = m q\).</li>
+              <li>Pazi na enote (kJ → J).</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> Stalimo 0,5 kg ledu pri 0 °C.</p>
+            <div class="plain-example">
+              <p>\(Q = 0{,}5 \cdot 334\,000 = 167\,000\) J = 167 kJ.</p>
+            </div>
+          </div>
+
+          <!-- TIP 4 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 4: Skupna toplota (segrevanje + fazna sprememba)</h3>
+              <div class="tip-formula">\(Q_{\text{skupna}} = Q_1 + Q_2 + Q_3\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "led segrejemo, stalimo, segrejemo vodo".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Razdeli na faze:
+                <ul>
+                  <li>segrevanje ledu: \(Q_1 = m c_{\text{led}} \Delta T\)</li>
+                  <li>taljenje: \(Q_2 = m q_t\)</li>
+                  <li>segrevanje vode: \(Q_3 = m c_{\text{voda}} \Delta T\)</li>
+                </ul>
+              </li>
+              <li>Seštej.</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> 1 kg ledu pri \(-10\) °C do vode pri 20 °C.</p>
+            <div class="plain-example">
+              <p>\(Q_1 = 1 \cdot 2100 \cdot 10 = 21\,000\) J.<br>
+              \(Q_2 = 1 \cdot 334\,000 = 334\,000\) J.<br>
+              \(Q_3 = 1 \cdot 4200 \cdot 20 = 84\,000\) J.<br>
+              Skupaj = 439 kJ.</p>
+            </div>
+          </div>
+
+          <!-- TIP 5 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 5: Toplotna razteznost</h3>
+              <div class="tip-formula">\(l = l_0(1 + \alpha \Delta T)\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "koliko se podaljša ob segrevanju".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>\(\Delta l = l_0 \alpha \Delta T\).</li>
+              <li>Nova dolžina: \(l = l_0 + \Delta l\).</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> Aluminijast drog 1 m, \(\alpha = 2{,}3 \cdot 10^{-5}\) /K, segrejemo za 50 K.</p>
+            <div class="plain-example">
+              <p>\(\Delta l = 1 \cdot 2{,}3 \cdot 10^{-5} \cdot 50 = 1{,}15 \cdot 10^{-3}\) m = 1,15 mm.</p>
+            </div>
+          </div>
+
+          <!-- TIP 6 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 6: Plinska enačba</h3>
+              <div class="tip-formula">\(pV = nRT\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "kolikšen je tlak pri …", "koliko molov plina".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Pretvori \(T\) v kelvine.</li>
+              <li>Uporabi \(pV = nRT\).</li>
+              <li>Reši za neznanko.</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> 2 mola plina pri 300 K v posodi 0,05 m³. Tlak?</p>
+            <div class="plain-example">
+              <p>\(p = \dfrac{nRT}{V} = \dfrac{2 \cdot 8{,}31 \cdot 300}{0{,}05} \approx 99\,720\) Pa.</p>
+            </div>
+          </div>
+
+          <!-- TIP 7 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 7: Spremembe stanja plina</h3>
+              <div class="tip-formula">\(\dfrac{p_1 V_1}{T_1} = \dfrac{p_2 V_2}{T_2}\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "plin segrejemo in stisnemo".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Preveri, katera veličina je konstantna (T, p, V).</li>
+              <li>Uporabi ustrezno obliko:
+                <ul>
+                  <li>izotermno: \(p_1V_1 = p_2V_2\)</li>
+                  <li>izobarno: \(\dfrac{V_1}{T_1} = \dfrac{V_2}{T_2}\)</li>
+                  <li>izohorno: \(\dfrac{p_1}{T_1} = \dfrac{p_2}{T_2}\)</li>
+                </ul>
+              </li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> \(p_1 = 10^5\) Pa, \(T_1 = 300\) K, \(p_2 = 2 \cdot 10^5\) Pa, \(V = \text{konst}\).</p>
+            <div class="plain-example">
+              <p>\(T_2 = \dfrac{p_2 T_1}{p_1} = \dfrac{2 \cdot 10^5 \cdot 300}{10^5} = 600\) K.</p>
+            </div>
+          </div>
+
+          <!-- TIP 8 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 8: Notranja energija in 1. zakon</h3>
+              <div class="tip-formula">\(\Delta W_n = A + Q\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "koliko dela opravi plin", "sprememba notranje energije".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Izračunaj \(A = p \Delta V\) (pri konstantnem \(p\)).</li>
+              <li>Zapiši \(Q\).</li>
+              <li>\(\Delta W_n = A + Q\).</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> Plin opravi 200 J dela in prejme 500 J toplote.</p>
+            <div class="plain-example">
+              <p>\(\Delta W_n = 500 - 200 = 300\) J (dovedeno delo je negativno, če plin opravlja delo).</p>
+            </div>
+          </div>
+
+          <!-- TIP 9 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 9: Toplotni stroj in izkoristek</h3>
+              <div class="tip-formula">\(\eta = 1 - \dfrac{Q_{\text{oddana}}}{Q_{\text{dovedena}}}\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "izkoristek stroja", "toplotni stroj".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Preveri, kaj je \(Q_{\text{dovedena}}\) in \(Q_{\text{oddana}}\).</li>
+              <li>\(\eta = 1 - \dfrac{Q_{\text{oddana}}}{Q_{\text{dovedena}}}\).</li>
+              <li>\(\eta_{\max} = 1 - \dfrac{T_{\text{hladno}}}{T_{\text{toplo}}}\) (Carnot).</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> Stroj prejme 1000 J, odda 600 J.</p>
+            <div class="plain-example">
+              <p>\(\eta = 1 - \dfrac{600}{1000} = 0{,}4 = 40\%\).</p>
+            </div>
+          </div>
+
+          <!-- TIP 10 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 10: Carnotov izkoristek</h3>
+              <div class="tip-formula">\(\eta_C = 1 - \dfrac{T_{\text{hladno}}}{T_{\text{toplo}}}\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "maksimalni izkoristek", "idealni stroj".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Pretvori \(T\) v kelvine.</li>
+              <li>Uporabi \(\eta_C = 1 - \dfrac{T_{\text{hladno}}}{T_{\text{toplo}}}\).</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> \(T_{\text{toplo}} = 500\) K, \(T_{\text{hladno}} = 300\) K.</p>
+            <div class="plain-example">
+              <p>\(\eta_C = 1 - \dfrac{300}{500} = 0{,}4 = 40\%\).</p>
+            </div>
+          </div>
+
+          <!-- TIP 11 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 11: Toplotni tok in prevodnost</h3>
+              <div class="tip-formula">\(P = \lambda \dfrac{S \Delta T}{d}\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "koliko toplote se prenese skozi steno".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Zapiši \(\lambda\), \(S\), \(\Delta T\), \(d\).</li>
+              <li>Uporabi \(P = \lambda S \Delta T / d\).</li>
+              <li>Za \(Q\) v času \(t\): \(Q = P \cdot t\).</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> Stena \(S = 10\) m², \(d = 0{,}2\) m, \(\lambda = 0{,}8\), \(\Delta T = 20\) K.</p>
+            <div class="plain-example">
+              <p>\(P = 0{,}8 \cdot \dfrac{10 \cdot 20}{0{,}2} = 800\) W.</p>
+            </div>
+          </div>
+
+          <!-- TIP 12 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 12: Toplotna črpalka in hladilnik</h3>
+              <div class="tip-formula">\(\text{COP} = \dfrac{Q_{\text{toplo}}}{A}\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "toplotna črpalka", "hladilnik".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Toplotna črpalka: \(\text{COP} = \dfrac{Q_{\text{toplo}}}{A}\).</li>
+              <li>Hladilnik: \(\text{COP} = \dfrac{Q_{\text{hladno}}}{A}\).</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> Črpalka prenese 3000 J toplote, porabi 1000 J dela.</p>
+            <div class="plain-example">
+              <p>\(\text{COP} = 3\).</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ 3. POGOSTE NAPAKE ============ -->
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>3. Pogoste napake</h2>
+          </div>
+          <div class="info-card">
+            <ul>
+              <li>Pozabiš pretvoriti °C v K (pri plinski enačbi, Carnotu).</li>
+              <li>Pri toplotni bilanci zamenjaš oddano in prejeto toploto.</li>
+              <li>Pri faznih spremembah pozabiš, da se temperatura med fazno spremembo ne spremeni.</li>
+              <li>Pri \(\Delta T\) pozabiš, da je v kelvinih enak kot v °C.</li>
+              <li>Pri plinski enačbi uporabiš \(t\) v °C namesto \(T\) v K.</li>
+              <li>Pri 1. zakonu pozabiš predznak: \(\Delta W_n = A + Q\) (dovedeno \(+\), oddano \(-\)).</li>
+              <li>Pri izkoristku uporabiš razmerje \(A/Q\) namesto \(1 - Q_{\text{odd}}/Q_{\text{dov}}\).</li>
+              <li>Pri Carnotu uporabiš °C namesto K.</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ============ 4. ŠTUDIJSKI VODIČ ============ -->
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>4. Študijski vodič — hitri pregled</h2>
+          </div>
+          <div class="info-card">
+            <h3>📋 Kaj moraš znati na pamet</h3>
+            <ul>
+              <li><strong>Toplota:</strong> \(Q = mc\Delta T\).</li>
+              <li><strong>Taljenje:</strong> \(Q = m q_t\), <strong>izparevanje:</strong> \(Q = m q_i\).</li>
+              <li><strong>Toplotna bilanca:</strong> \(Q_{\text{odd}} = Q_{\text{prej}}\).</li>
+              <li><strong>Plinska enačba:</strong> \(pV = nRT\), \(R = 8{,}31\).</li>
+              <li><strong>Spremembe:</strong> izotermna \(pV\), izobarna \(V/T\), izohorna \(p/T\).</li>
+              <li><strong>1. zakon:</strong> \(\Delta W_n = A + Q\).</li>
+              <li><strong>Izkoristek:</strong> \(\eta = 1 - Q_{\text{odd}}/Q_{\text{dov}}\).</li>
+              <li><strong>Carnot:</strong> \(\eta_C = 1 - T_h/T_t\).</li>
+              <li><strong>Razteznost:</strong> \(l = l_0(1 + \alpha \Delta T)\).</li>
+            </ul>
+          </div>
+
+          <div class="info-card">
+            <h3>🎯 Kako pristopiti k nalogi</h3>
+            <ol>
+              <li><strong>Preberi nalogo in prepoznaj tip:</strong> segrevanje, fazna sprememba, plin, stroj?</li>
+              <li><strong>Za segrevanje:</strong> \(Q = mc\Delta T\).</li>
+              <li><strong>Za mešanje:</strong> toplotna bilanca.</li>
+              <li><strong>Za fazne:</strong> \(Q = mq\).</li>
+              <li><strong>Za plin:</strong> \(pV = nRT\), pretvori \(T\) v K.</li>
+              <li><strong>Za stroj:</strong> \(\eta = 1 - Q_{\text{odd}}/Q_{\text{dov}}\).</li>
+            </ol>
+          </div>
+
+          <div class="info-card">
+            <h3>⏱️ Časovni načrt za en večer</h3>
+            <ul>
+              <li><strong>25 min:</strong> Teorija — toplota, plini, zakoni.</li>
+              <li><strong>55 min:</strong> Tipi 1–6 (segrevanje, bilanca, fazne, razteznost, plinska enačba).</li>
+              <li><strong>45 min:</strong> Tipi 7–12 (spremembe, 1. zakon, izkoristek, Carnot, tok, črpalka).</li>
+              <li><strong>25 min:</strong> Ponovi pogoste napake in študijski vodič.</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ============ 5. POVEZAVE ============ -->
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>5. Vadi naprej</h2>
+            <p>Ko predelaš razlago, preveri znanje z nalogami.</p>
+          </div>
+          <div class="link-list">
+            <a class="link-item" href="/views/fizika/matura/osnovna_raven/naloge/resene/">
+              <span class="link-item-text">
+                <strong>Rešene naloge — osnovna raven</strong>
+                <small>Primeri z razlago</small>
+              </span>
+              <span class="arrow">→</span>
+            </a>
+            <a class="link-item" href="/views/fizika/matura/visja_raven/naloge/resene/">
+              <span class="link-item-text">
+                <strong>Rešene naloge — višja raven</strong>
+                <small>Zahtevnejši primeri</small>
+              </span>
+              <span class="arrow">→</span>
+            </a>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>

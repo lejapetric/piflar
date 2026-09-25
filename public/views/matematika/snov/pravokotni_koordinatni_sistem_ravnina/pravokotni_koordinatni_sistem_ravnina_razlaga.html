@@ -1,75 +1,445 @@
-<div class="view">
-    <div class="view-header">
-        <h2>📍 10. Pravokotni koordinatni sistem</h2>
-        <p>Točke, premice in ravnine v 2D in 3D</p>
-    </div>
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pravokotni koordinatni sistem v ravnini — razlaga in postopki | Piflar.si</title>
+  <meta name="description" content="Celovita razlaga koordinatnega sistema v ravnini za maturo: točke, razdalja med točkama, razpolovišče, težišče trikotnika, premica, vzporednost in pravokotnost premic, razdalja točke do premice.">
+  <link rel="stylesheet" href="/style/style.css">
+  <link rel="stylesheet" href="/views/matematika/snov/pravokotni_koordinatni_sistem_ravnina/pravokotni_koordinatni_sistem_ravnina_style.css">
+</head>
+<body>
+  <div id="header"></div>
 
-    <div class="card">
-        <h3>📖 2D - Ravnina</h3>
-        <div class="formula-grid">
-            <div class="formula-card">
-                <strong>Razdalja</strong><br>
-                <code>d(A,B) = √((x₂-x₁)² + (y₂-y₁)²)</code>
+  <div id="mainContent" class="main-content">
+    <div id="sidebar"></div>
+
+    <div class="view-container">
+      <div class="view">
+
+        <header class="page-header">
+          <span class="page-eyebrow">Matematika · Snov · 4.9</span>
+          <h1>Pravokotni koordinatni sistem v ravnini</h1>
+          <p>Vse o koordinatnem sistemu za maturo: točke v ravnini, razdalja med točkama, razpolovišče daljice, težišče trikotnika, enačbe premic, vzporednost in pravokotnost, razdalja točke do premice, ploščina trikotnika.</p>
+          <div class="page-meta">
+            <div class="page-meta-item"><strong>10</strong><span>Tipov nalog</span></div>
+            <div class="page-meta-item"><strong>40+</strong><span>Primerov</span></div>
+            <div class="page-meta-item"><strong>~50 min</strong><span>Branja</span></div>
+          </div>
+        </header>
+
+        <!-- ============ MATURA FORMULE ============ -->
+        <div class="matura-formule">
+          <h3>📋 Formule na maturi — osnovna raven</h3>
+          <p>Na maturi <strong>osnovne ravni</strong> list s formulami ne vsebuje koordinatnih formul, zato si jih moraš zapomniti. Spodaj so vse ključne:</p>
+          <div class="matura-grid">
+            <div class="matura-levo">
+              <ul>
+                <li><strong>Razdalja med točkama:</strong> \(d(A,B) = \sqrt{(x_2-x_1)^2 + (y_2-y_1)^2}\)</li>
+                <li><strong>Razpolovišče daljice:</strong> \(S\left(\dfrac{x_1+x_2}{2}, \dfrac{y_1+y_2}{2}\right)\)</li>
+                <li><strong>Težišče trikotnika:</strong> \(T\left(\dfrac{x_1+x_2+x_3}{3}, \dfrac{y_1+y_2+y_3}{3}\right)\)</li>
+                <li><strong>Enačba premice (eksplicitna):</strong> \(y = kx + n\)</li>
+                <li><strong>Smerni koeficient:</strong> \(k = \dfrac{y_2 - y_1}{x_2 - x_1}\)</li>
+                <li><strong>Razdalja točke do premice:</strong> \(d(T, p) = \dfrac{|ax_0 + by_0 + c|}{\sqrt{a^2 + b^2}}\)</li>
+              </ul>
             </div>
-            <div class="formula-card">
-                <strong>Razpolovišče</strong><br>
-                <code>S((x₁+x₂)/2, (y₁+y₂)/2)</code>
+            <div class="matura-slika">
+              <img src="/views/matematika/images/formule_osnovna_raven.png" alt="Formule na maturi — osnovna raven">
             </div>
-            <div class="formula-card">
-                <strong>Težišče trikotnika</strong><br>
-                <code>T((x₁+x₂+x₃)/3, (y₁+y₂+y₃)/3)</code>
-            </div>
-            <div class="formula-card">
-                <strong>Premica</strong><br>
-                <code>y = kx + n</code><br>
-                <code>k = (y₂-y₁)/(x₂-x₁)</code>
-            </div>
-            <div class="formula-card">
-                <strong>Razdalja točke do premice</strong><br>
-                <code>d(T,p) = |ax₀+by₀+c|/√(a²+b²)</code>
-            </div>
+          </div>
         </div>
-    </div>
 
-    <div class="card">
-        <h3>📖 3D - Prostor</h3>
-        <div class="formula-grid">
-            <div class="formula-card">
-                <strong>Razdalja</strong><br>
-                <code>d(A,B) = √((x₂-x₁)² + (y₂-y₁)² + (z₂-z₁)²)</code>
-            </div>
-            <div class="formula-card">
-                <strong>Premica (parametrično)</strong><br>
-                <code>(x,y,z) = (x₀,y₀,z₀) + t(a,b,c)</code>
-            </div>
-            <div class="formula-card">
-                <strong>Ravnina</strong><br>
-                <code>ax + by + cz + d = 0</code>
-            </div>
-            <div class="formula-card">
-                <strong>Razdalja točke do ravnine</strong><br>
-                <code>d(T,π) = |ax₀+by₀+cz₀+d|/√(a²+b²+c²)</code>
-            </div>
-        </div>
-    </div>
+        <!-- ============ 1. TEORIJA ============ -->
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>1. Teorija — formule in pravila</h2>
+            <p>Kar moraš znati na pamet, preden se lotiš nalog.</p>
+          </div>
 
-    <div class="card">
-        <h3>📝 Primeri</h3>
-        <div style="background: var(--bg-primary); padding: 16px; border-radius: var(--radius-sm);">
-            <p><strong>Primer 1 (2D):</strong> A(1,2), B(4,6)</p>
-            <p>d = √((4-1)² + (6-2)²) = 5</p>
-            <p>S = ((1+4)/2, (2+6)/2) = (2.5, 4)</p>
-            <p style="margin-top: 8px;"><strong>Primer 2 (3D):</strong> A(1,2,3), B(4,6,7)</p>
-            <p>d = √(9 + 16 + 16) = √41</p>
-        </div>
-    </div>
+          <div class="info-card">
+            <h3>Točke v ravnini</h3>
+            <div class="concept-list two-col">
+              <div class="concept">
+                <h4>Zapis točke</h4>
+                <div class="concept-formula">\(A(x_1, y_1)\)</div>
+                <p class="concept-desc">Prva koordinata je abscisa (vodoravna os \(x\)), druga ordinata (navpična os \(y\)).</p>
+              </div>
+              <div class="concept">
+                <h4>Razdalja med točkama</h4>
+                <div class="concept-formula">\(d(A, B) = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}\)</div>
+                <p class="concept-desc">Pitagorov izrek v koordinatah.</p>
+              </div>
+              <div class="concept">
+                <h4>Razpolovišče daljice</h4>
+                <div class="concept-formula">\(S\left(\dfrac{x_1 + x_2}{2}, \dfrac{y_1 + y_2}{2}\right)\)</div>
+                <p class="concept-desc">Aritmetična sredina koordinat.</p>
+              </div>
+              <div class="concept">
+                <h4>Težišče trikotnika</h4>
+                <div class="concept-formula">\(T\left(\dfrac{x_1+x_2+x_3}{3}, \dfrac{y_1+y_2+y_3}{3}\right)\)</div>
+                <p class="concept-desc">Presečišče težiščnic.</p>
+              </div>
+              <div class="concept">
+                <h4>Ploščina trikotnika</h4>
+                <div class="concept-formula">\(S = \dfrac{1}{2}|(x_2-x_1)(y_3-y_1) - (x_3-x_1)(y_2-y_1)|\)</div>
+                <p class="concept-desc">Uporabno pri točkah s koordinatami.</p>
+              </div>
+              <div class="concept">
+                <h4>Vzporednost vektorjev</h4>
+                <div class="concept-formula">\(\dfrac{x_2-x_1}{x_4-x_3} = \dfrac{y_2-y_1}{y_4-y_3}\)</div>
+                <p class="concept-desc">Vektorja \(\overrightarrow{AB}\) in \(\overrightarrow{CD}\) sta kolinearna.</p>
+              </div>
+            </div>
+          </div>
 
-    <div class="card">
-        <h3>📊 Medsebojne lege premic</h3>
-        <ul style="padding-left: 20px; color: var(--text-secondary);">
-            <li><strong>Vzporedni:</strong> k₁ = k₂</li>
-            <li><strong>Pravokotni:</strong> k₁ · k₂ = -1</li>
-            <li><strong>Presečišče:</strong> rešitev sistema dveh enačb</li>
-        </ul>
+          <div class="info-card">
+            <h3>Enačba premice</h3>
+            <div class="concept-list two-col">
+              <div class="concept">
+                <h4>Eksplicitna oblika</h4>
+                <div class="concept-formula">\(y = kx + n\)</div>
+                <p class="concept-desc">\(k\) = smerni koeficient (naklon), \(n\) = začetna vrednost (presečišče z osjo \(y\)).</p>
+              </div>
+              <div class="concept">
+                <h4>Implicitna oblika</h4>
+                <div class="concept-formula">\(ax + by + c = 0\)</div>
+                <p class="concept-desc">Splošna oblika premice.</p>
+              </div>
+              <div class="concept">
+                <h4>Smerni koeficient iz dveh točk</h4>
+                <div class="concept-formula">\(k = \dfrac{y_2 - y_1}{x_2 - x_1}\)</div>
+                <p class="concept-desc">Pazi: \(x_1 \neq x_2\) (sicer navpična premica).</p>
+              </div>
+              <div class="concept">
+                <h4>Enačba premice skozi točko</h4>
+                <div class="concept-formula">\(y - y_1 = k(x - x_1)\)</div>
+                <p class="concept-desc">Z danim \(k\) in točko \(T(x_1, y_1)\).</p>
+              </div>
+              <div class="concept">
+                <h4>Presečišče z osjo \(x\)</h4>
+                <div class="concept-formula">\(y = 0 \Rightarrow x = -\dfrac{n}{k}\)</div>
+                <p class="concept-desc">Ničla premice.</p>
+              </div>
+              <div class="concept">
+                <h4>Presečišče z osjo \(y\)</h4>
+                <div class="concept-formula">\(x = 0 \Rightarrow y = n\)</div>
+                <p class="concept-desc">Začetna vrednost.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <h3>Vzporednost in pravokotnost</h3>
+            <div class="concept-list two-col">
+              <div class="concept">
+                <h4>Vzporedni premici</h4>
+                <div class="concept-formula">\(k_1 = k_2\)</div>
+                <p class="concept-desc">Enak smerni koeficient.</p>
+              </div>
+              <div class="concept">
+                <h4>Pravokotni premici</h4>
+                <div class="concept-formula">\(k_1 \cdot k_2 = -1\)</div>
+                <p class="concept-desc">Smerna koeficienta sta nasprotna in obratna.</p>
+              </div>
+              <div class="concept">
+                <h4>Kot med premicama</h4>
+                <div class="concept-formula">\(\tan\varphi = \left|\dfrac{k_1 - k_2}{1 + k_1 k_2}\right|\)</div>
+                <p class="concept-desc">Kot med premicama z znanima smernicama.</p>
+              </div>
+              <div class="concept">
+                <h4>Razdalja točke do premice</h4>
+                <div class="concept-formula">\(d(T, p) = \dfrac{|a x_0 + b y_0 + c|}{\sqrt{a^2 + b^2}}\)</div>
+                <p class="concept-desc">Premica \(ax + by + c = 0\), točka \(T(x_0, y_0)\).</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ 2. TIPI NALOG ============ -->
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>2. Tipi nalog — postopki po korakih</h2>
+            <p>Za vsak tip: kako ga prepoznaš, kako ga rešiš, primer.</p>
+          </div>
+
+          <!-- TIP 1 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 1: Razdalja med točkama</h3>
+              <div class="tip-formula">\(d = \sqrt{(x_2-x_1)^2 + (y_2-y_1)^2}\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "izračunajte dolžino daljice", "razdalja med točkama".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Zapiši koordinate obeh točk.</li>
+              <li>Vstavi v formulo.</li>
+              <li>Izračunaj.</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> \(A(1, 2)\), \(B(4, 6)\)</p>
+            <div class="plain-example">
+              <p>\(d = \sqrt{(4-1)^2 + (6-2)^2} = \sqrt{9 + 16} = 5\).</p>
+            </div>
+          </div>
+
+          <!-- TIP 2 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 2: Razpolovišče daljice</h3>
+              <div class="tip-formula">\(S\left(\dfrac{x_1+x_2}{2}, \dfrac{y_1+y_2}{2}\right)\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "razpolovišče daljice AB".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Seštej abscisi in deli z 2.</li>
+              <li>Seštej ordinati in deli z 2.</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> \(A(1, 2)\), \(B(4, 6)\)</p>
+            <div class="plain-example">
+              <p>\(S\left(\dfrac{1+4}{2}, \dfrac{2+6}{2}\right) = (2{,}5, 4)\).</p>
+            </div>
+          </div>
+
+          <!-- TIP 3 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 3: Težišče trikotnika</h3>
+              <div class="tip-formula">\(T\left(\dfrac{x_1+x_2+x_3}{3}, \dfrac{y_1+y_2+y_3}{3}\right)\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "težišče trikotnika z oglišči A, B, C".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Seštej vse tri abscise in deli s 3.</li>
+              <li>Seštej vse tri ordinate in deli s 3.</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> \(A(0,0), B(6,0), C(0,3)\)</p>
+            <div class="plain-example">
+              <p>\(T\left(\dfrac{6}{3}, \dfrac{3}{3}\right) = (2, 1)\).</p>
+            </div>
+          </div>
+
+          <!-- TIP 4 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 4: Enačba premice skozi dve točki</h3>
+              <div class="tip-formula">\(k = \dfrac{y_2 - y_1}{x_2 - x_1}\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "zapišite enačbo premice skozi A in B".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Izračunaj smerni koeficient \(k = \dfrac{y_2 - y_1}{x_2 - x_1}\).</li>
+              <li>Vstavi v eksplicitno obliko \(y = kx + n\).</li>
+              <li>Vstavi koordinate ene od točk in izračunaj \(n\).</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> \(A(1, 1)\), \(B(3, 5)\)</p>
+            <div class="plain-example">
+              <p>\(k = \dfrac{5-1}{3-1} = 2\). \(1 = 2 \cdot 1 + n \Rightarrow n = -1\). Enačba: \(y = 2x - 1\).</p>
+            </div>
+          </div>
+
+          <!-- TIP 5 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 5: Vzporedna premica skozi točko</h3>
+              <div class="tip-formula">\(k_{\text{nova}} = k_{\text{dana}}\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "premica, ki je vzporedna dani in gre skozi točko".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Preberi \(k\) iz dane premice.</li>
+              <li>Vstavi v \(y = kx + n\) in koordinate točke.</li>
+              <li>Izračunaj \(n\).</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> vzporedna premici \(y = 3x + 1\), gre skozi \(A(1, -2)\)</p>
+            <div class="plain-example">
+              <p>\(k = 3\). \(-2 = 3 \cdot 1 + n \Rightarrow n = -5\). Enačba: \(y = 3x - 5\).</p>
+            </div>
+          </div>
+
+          <!-- TIP 6 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 6: Pravokotna premica skozi točko</h3>
+              <div class="tip-formula">\(k_1 \cdot k_2 = -1\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "premica, ki je pravokotna na dano".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Preberi \(k_1\) iz dane premice.</li>
+              <li>Izračunaj \(k_2 = -\dfrac{1}{k_1}\).</li>
+              <li>Vstavi \(k_2\) in točko v \(y = kx + n\).</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> pravokotna na \(y = 2x + 3\) skozi \(A(2, 1)\)</p>
+            <div class="plain-example">
+              <p>\(k_2 = -\dfrac{1}{2}\). \(1 = -\dfrac{1}{2} \cdot 2 + n \Rightarrow n = 2\). Enačba: \(y = -\dfrac{1}{2}x + 2\).</p>
+            </div>
+          </div>
+
+          <!-- TIP 7 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 7: Presečišče dveh premic</h3>
+              <div class="tip-formula">Reši sistem enačb</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "izračunajte presečišče premic".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Zapiši obe enačbi.</li>
+              <li>Reši sistem (substitucija ali izenačitev \(y\)).</li>
+              <li>Izračunaj \(x\), nato \(y\).</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> \(y = x + 5\), \(y = 2x - 3\)</p>
+            <div class="plain-example">
+              <p>\(x + 5 = 2x - 3 \Rightarrow x = 8\). \(y = 13\). Presečišče: \((8, 13)\).</p>
+            </div>
+          </div>
+
+          <!-- TIP 8 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 8: Razdalja točke do premice</h3>
+              <div class="tip-formula">\(d = \dfrac{|a x_0 + b y_0 + c|}{\sqrt{a^2 + b^2}}\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "izračunajte razdaljo točke do premice".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Premico zapiši v implicitni obliki \(ax + by + c = 0\).</li>
+              <li>Vstavi koordinate točke \((x_0, y_0)\).</li>
+              <li>Uporabi formulo.</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> \(T(0, 0)\), premica \(3x + 4y - 10 = 0\)</p>
+            <div class="plain-example">
+              <p>\(d = \dfrac{|0 + 0 - 10|}{\sqrt{9 + 16}} = \dfrac{10}{5} = 2\).</p>
+            </div>
+          </div>
+
+          <!-- TIP 9 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 9: Ploščina trikotnika s koordinatami</h3>
+              <div class="tip-formula">\(S = \dfrac{1}{2}|(x_2-x_1)(y_3-y_1) - (x_3-x_1)(y_2-y_1)|\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> tri točke \(A, B, C\) s koordinatami.</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Vstavi koordinate v formulo.</li>
+              <li>Izračunaj absolutno vrednost.</li>
+              <li>Deli z 2.</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> \(A(0, 0)\), \(B(4, 0)\), \(C(1, 3)\)</p>
+            <div class="plain-example">
+              <p>\(S = \dfrac{1}{2}|(4-0)(3-0) - (1-0)(0-0)| = \dfrac{1}{2}|12| = 6\).</p>
+            </div>
+          </div>
+
+          <!-- TIP 10 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 10: Kot med premicama</h3>
+              <div class="tip-formula">\(\tan\varphi = \left|\dfrac{k_1 - k_2}{1 + k_1 k_2}\right|\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "izračunajte kot med premicama".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Preberi \(k_1\) in \(k_2\) iz obeh premic.</li>
+              <li>Vstavi v formulo.</li>
+              <li>\(\varphi = \arctan(\tan\varphi)\).</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> \(y = 3x + 2\), \(y = -x + 2021\)</p>
+            <div class="plain-example">
+              <p>\(\tan\varphi = \left|\dfrac{3 - (-1)}{1 + 3 \cdot (-1)}\right| = \left|\dfrac{4}{-2}\right| = 2 \Rightarrow \varphi \approx 63{,}43°\).</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ 3. POGOSTE NAPAKE ============ -->
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>3. Pogoste napake</h2>
+          </div>
+          <div class="info-card">
+            <ul>
+              <li>Zamenjaš absciso in ordinato (vrstni red \((x, y)\)).</li>
+              <li>Pri razdalji pozabiš kvadrat pod korenom.</li>
+              <li>Pri razpolovišču pozabiš deliti z 2.</li>
+              <li>Pri smernem koeficientu zamenjaš \((y_2 - y_1)\) in \((x_2 - x_1)\).</li>
+              <li>Pri pravokotnosti pozabiš \(k_1 k_2 = -1\) namesto \(k_2 = -k_1\).</li>
+              <li>Pri razdalji točke do premice pozabiš <strong>absolutno vrednost</strong> in imenovalec \(\sqrt{a^2 + b^2}\).</li>
+              <li>Pri ploščini trikotnika pozabiš deliti z 2 ali absolutno vrednost.</li>
+              <li>Pri kotu med premicama pozabiš absolutno vrednost.</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ============ 4. ŠTUDIJSKI VODIČ ============ -->
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>4. Študijski vodič — hitri pregled</h2>
+          </div>
+          <div class="info-card">
+            <h3>📋 Kaj moraš znati na pamet</h3>
+            <ul>
+              <li><strong>Razdalja:</strong> \(d = \sqrt{(x_2-x_1)^2 + (y_2-y_1)^2}\).</li>
+              <li><strong>Razpolovišče:</strong> \(S\left(\dfrac{x_1+x_2}{2}, \dfrac{y_1+y_2}{2}\right)\).</li>
+              <li><strong>Težišče:</strong> \(T\left(\dfrac{x_1+x_2+x_3}{3}, \dfrac{y_1+y_2+y_3}{3}\right)\).</li>
+              <li><strong>Smerni koeficient:</strong> \(k = \dfrac{y_2-y_1}{x_2-x_1}\).</li>
+              <li><strong>Vzporednost:</strong> \(k_1 = k_2\), pravokotnost: \(k_1 k_2 = -1\).</li>
+              <li><strong>Razdalja točke do premice:</strong> \(d = \dfrac{|ax_0 + by_0 + c|}{\sqrt{a^2+b^2}}\).</li>
+              <li><strong>Ploščina trikotnika:</strong> \(\dfrac{1}{2}|(x_2-x_1)(y_3-y_1) - (x_3-x_1)(y_2-y_1)|\).</li>
+            </ul>
+          </div>
+
+          <div class="info-card">
+            <h3>🎯 Kako pristopiti k nalogi</h3>
+            <ol>
+              <li><strong>Preberi nalogo in prepoznaj tip:</strong> razdalja, razpolovišče, premica, presečišče, ploščina?</li>
+              <li><strong>Za razdaljo:</strong> vstavi v formulo.</li>
+              <li><strong>Za premico:</strong> izračunaj \(k\), nato \(n\).</li>
+              <li><strong>Za vzporednost/pravokotnost:</strong> uporabi \(k_1 = k_2\) oz. \(k_1 k_2 = -1\).</li>
+              <li><strong>Za presečišče:</strong> reši sistem dveh enačb.</li>
+              <li><strong>Za ploščino:</strong> uporabi formulo z determinantami.</li>
+            </ol>
+          </div>
+
+          <div class="info-card">
+            <h3>⏱️ Časovni načrt za en večer</h3>
+            <ul>
+              <li><strong>25 min:</strong> Teorija — točke, premica, vzporednost/pravokotnost.</li>
+              <li><strong>45 min:</strong> Tipi 1–5 (razdalja, razpolovišče, težišče, enačba premice, vzporednica).</li>
+              <li><strong>45 min:</strong> Tipi 6–10 (pravokotnica, presečišče, razdalja točke, ploščina, kot).</li>
+              <li><strong>25 min:</strong> Ponovi pogoste napake in študijski vodič.</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ============ 5. POVEZAVE ============ -->
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>5. Vadi naprej</h2>
+            <p>Ko predelaš razlago, preveri znanje z nalogami.</p>
+          </div>
+          <div class="link-list">
+            <a class="link-item" href="/views/matematika/matura/osnovna_raven/naloge/resene/">
+              <span class="link-item-text">
+                <strong>Rešene naloge — osnovna raven</strong>
+                <small>Primeri z razlago</small>
+              </span>
+              <span class="arrow">→</span>
+            </a>
+            <a class="link-item" href="/views/matematika/matura/visja_raven/naloge/resene/">
+              <span class="link-item-text">
+                <strong>Rešene naloge — višja raven</strong>
+                <small>Zahtevnejši primeri</small>
+              </span>
+              <span class="arrow">→</span>
+            </a>
+          </div>
+        </section>
+
+      </div>
     </div>
-</div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>

@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nihanje, valovanje in optika — razlaga in postopki | Piflar.si</title>
+  <meta name="description" content="Celovita razlaga nihanja, valovanja in optike za maturo: nihanje (nihalo, vzmetno nihalo, resonance), valovanje (valovna enačba, zvok, interferenca), geometrijska optika (lom, odboj, leče, zrcala).">
+  <link rel="stylesheet" href="/style/style.css">
+  <link rel="stylesheet" href="/views/fizika/nihanje_valovanje_optika/nihanje_valovanje_optika_style.css">
+</head>
+<body>
+  <div id="header"></div>
+
+  <div id="mainContent" class="main-content">
+    <div id="sidebar"></div>
+
+    <div class="view-container">
+      <div class="view">
+
+        <header class="page-header">
+          <span class="page-eyebrow">Fizika · Snov · 5</span>
+          <h1>Nihanje, valovanje in optika</h1>
+          <p>Vse o nihanju, valovanju in optiki za maturo: nihanje (harmonično nihanje, nitno in vzmetno nihalo, resonanca), valovanje (valovna enačba, zvok, interferenca, uklon), geometrijska optika (lom, odboj, leče, zrcala, optični instrumenti).</p>
+          <div class="page-meta">
+            <div class="page-meta-item"><strong>14</strong><span>Tipov nalog</span></div>
+            <div class="page-meta-item"><strong>50+</strong><span>Primerov</span></div>
+            <div class="page-meta-item"><strong>~75 min</strong><span>Branja</span></div>
+          </div>
+        </header>
+
+        <!-- ============ 1. TEORIJA ============ -->
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>1. Teorija — pojmi in formule</h2>
+            <p>Kar moraš znati na pamet, preden se lotiš nalog.</p>
+          </div>
+
+          <div class="info-card">
+            <h3>Nihanje</h3>
+            <div class="concept-list two-col">
+              <div class="concept">
+                <h4>Nihajni čas</h4>
+                <div class="concept-formula">\(T\) [s]</div>
+                <p class="concept-desc">Čas enega nihaja.</p>
+              </div>
+              <div class="concept">
+                <h4>Frekvenca</h4>
+                <div class="concept-formula">\(\nu = \dfrac{1}{T}\) [Hz]</div>
+              </div>
+              <div class="concept">
+                <h4>Krožna frekvenca</h4>
+                <div class="concept-formula">\(\omega = \dfrac{2\pi}{T} = 2\pi\nu\) [rad/s]</div>
+              </div>
+              <div class="concept">
+                <h4>Odmik</h4>
+                <div class="concept-formula">\(x(t) = x_0 \sin(\omega t + \varphi_0)\)</div>
+              </div>
+              <div class="concept">
+                <h4>Nitno nihalo</h4>
+                <div class="concept-formula">\(T = 2\pi \sqrt{\dfrac{l}{g}}\)</div>
+                <p class="concept-desc">Odvisno le od dolžine in \(g\), ne od mase.</p>
+              </div>
+              <div class="concept">
+                <h4>Vzmetno nihalo</h4>
+                <div class="concept-formula">\(T = 2\pi \sqrt{\dfrac{m}{k}}\)</div>
+                <p class="concept-desc">\(k\) = konstanta vzmeti.</p>
+              </div>
+              <div class="concept">
+                <h4>Resonanca</h4>
+                <div class="concept-formula">\(\nu_{\text{vsiljena}} = \nu_0\)</div>
+                <p class="concept-desc">Amplituda močno naraste.</p>
+              </div>
+              <div class="concept">
+                <h4>Dušeno nihanje</h4>
+                <div class="concept-formula">amplituda pojema eksponentno</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <h3>Valovanje</h3>
+            <div class="concept-list two-col">
+              <div class="concept">
+                <h4>Valovna enačba</h4>
+                <div class="concept-formula">\(c = \lambda \nu\)</div>
+                <p class="concept-desc">\(c\) = hitrost valovanja, \(\lambda\) = valovna dolžina, \(\nu\) = frekvenca.</p>
+              </div>
+              <div class="concept">
+                <h4>Hitrost valovanja na vrvi</h4>
+                <div class="concept-formula">\(c = \sqrt{\dfrac{F}{\mu}}\)</div>
+                <p class="concept-desc">\(F\) = napetost vrvi, \(\mu\) = masa na enoto dolžine.</p>
+              </div>
+              <div class="concept">
+                <h4>Zvok</h4>
+                <div class="concept-formula">\(c \approx 340\) m/s (v zraku)</div>
+              </div>
+              <div class="concept">
+                <h4>Glasnost</h4>
+                <div class="concept-formula">\(L = 10 \log\dfrac{I}{I_0}\) [dB]</div>
+                <p class="concept-desc">\(I_0 = 10^{-12}\) W/m².</p>
+              </div>
+              <div class="concept">
+                <h4>Interferenca</h4>
+                <div class="concept-formula">ojačitev: \(\Delta r = k\lambda\), oslabitev: \(\Delta r = (2k+1)\dfrac{\lambda}{2}\)</div>
+              </div>
+              <div class="concept">
+                <h4>Uklon</h4>
+                <div class="concept-formula">\(\sin\alpha = \dfrac{\lambda}{d}\)</div>
+                <p class="concept-desc">Na reži širine \(d\).</p>
+              </div>
+              <div class="concept">
+                <h4>Stoječe valovanje</h4>
+                <div class="concept-formula">\(l = k \dfrac{\lambda}{2}\) (oba konca vpeta)</div>
+              </div>
+              <div class="concept">
+                <h4>Dopplerjev pojav</h4>
+                <div class="concept-formula">\(\nu' = \nu \dfrac{c \pm v_p}{c \mp v_v}\)</div>
+                <p class="concept-desc">Sprememba frekvence zaradi gibanja vira/opazovalca.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <h3>Geometrijska optika</h3>
+            <div class="concept-list two-col">
+              <div class="concept">
+                <h4>Hitrost svetlobe</h4>
+                <div class="concept-formula">\(c_0 = 3 \cdot 10^8\) m/s</div>
+              </div>
+              <div class="concept">
+                <h4>Lomni količnik</h4>
+                <div class="concept-formula">\(n = \dfrac{c_0}{c}\)</div>
+                <p class="concept-desc">V vakuumu \(n = 1\).</p>
+              </div>
+              <div class="concept">
+                <h4>Lomni zakon (Snell)</h4>
+                <div class="concept-formula">\(\dfrac{\sin\alpha}{\sin\beta} = \dfrac{n_2}{n_1}\)</div>
+              </div>
+              <div class="concept">
+                <h4>Odbojni zakon</h4>
+                <div class="concept-formula">\(\alpha = \alpha'\)</div>
+              </div>
+              <div class="concept">
+                <h4>Popolni odboj</h4>
+                <div class="concept-formula">\(\sin\alpha_m = \dfrac{n_2}{n_1}\), \(n_1 > n_2\)</div>
+              </div>
+              <div class="concept">
+                <h4>Enačba leče</h4>
+                <div class="concept-formula">\(\dfrac{1}{f} = \dfrac{1}{a} + \dfrac{1}{b}\)</div>
+                <p class="concept-desc">\(a\) = razdalja predmeta, \(b\) = razdalja slike, \(f\) = goriščna razdalja.</p>
+              </div>
+              <div class="concept">
+                <h4>Povečava leče</h4>
+                <div class="concept-formula">\(m = -\dfrac{b}{a}\)</div>
+              </div>
+              <div class="concept">
+                <h4>Jakost leče</h4>
+                <div class="concept-formula">\(D = \dfrac{1}{f}\) [dioptrija]</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <h3>Valovna optika</h3>
+            <div class="concept-list two-col">
+              <div class="concept">
+                <h4>Interferenca svetlobe</h4>
+                <div class="concept-formula">ojačitev: \(\Delta = k\lambda\)</div>
+              </div>
+              <div class="concept">
+                <h4>Uklon na mrežici</h4>
+                <div class="concept-formula">\(d \sin\alpha = k\lambda\)</div>
+                <p class="concept-desc">\(d\) = razmik med režami, \(k\) = red uklona.</p>
+              </div>
+              <div class="concept">
+                <h4>Disperzija</h4>
+                <div class="concept-formula">\(n = n(\lambda)\)</div>
+                <p class="concept-desc">Lomni količnik je odvisen od valovne dolžine (barve).</p>
+              </div>
+              <div class="concept">
+                <h4>Barve svetlobe</h4>
+                <div class="concept-formula">400–700 nm</div>
+                <p class="concept-desc">Vijolična (400 nm) do rdeče (700 nm).</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ 2. TIPI NALOG ============ -->
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>2. Tipi nalog — postopki po korakih</h2>
+            <p>Za vsak tip: kako ga prepoznaš, kako ga rešiš, primer.</p>
+          </div>
+
+          <!-- TIP 1 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 1: Nitno nihalo</h3>
+              <div class="tip-formula">\(T = 2\pi\sqrt{\dfrac{l}{g}}\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "nitno nihalo dolžine …".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Zapiši \(l\) in \(g \approx 9{,}81\) m/s².</li>
+              <li>Uporabi \(T = 2\pi\sqrt{l/g}\).</li>
+              <li>Frekvenca: \(\nu = 1/T\).</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> \(l = 1\) m.</p>
+            <div class="plain-example">
+              <p>\(T = 2\pi\sqrt{1/9{,}81} \approx 2{,}01\) s.</p>
+            </div>
+          </div>
+
+          <!-- TIP 2 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 2: Vzmetno nihalo</h3>
+              <div class="tip-formula">\(T = 2\pi\sqrt{\dfrac{m}{k}}\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "utež na vzmeti".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Zapiši \(m\), \(k\).</li>
+              <li>Uporabi \(T = 2\pi\sqrt{m/k}\).</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> \(m = 0{,}5\) kg, \(k = 50\) N/m.</p>
+            <div class="plain-example">
+              <p>\(T = 2\pi\sqrt{0{,}01} = 0{,}2\pi \approx 0{,}63\) s.</p>
+            </div>
+          </div>
+
+          <!-- TIP 3 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 3: Valovna enačba</h3>
+              <div class="tip-formula">\(c = \lambda \nu\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "valovna dolžina in frekvenca".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Prepoznaj neznanko.</li>
+              <li>Uporabi \(c = \lambda\nu\).</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> \(\lambda = 2\) m, \(\nu = 5\) Hz.</p>
+            <div class="plain-example">
+              <p>\(c = 10\) m/s.</p>
+            </div>
+          </div>
+
+          <!-- TIP 4 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 4: Stoječe valovanje na vrvi</h3>
+              <div class="tip-formula">\(l = k\dfrac{\lambda}{2}\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "struna je vpeta na obeh koncih".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Za \(k\)-ti harmonski ton: \(l = k \lambda/2 \Rightarrow \lambda = 2l/k\).</li>
+              <li>Frekvenca: \(\nu = \dfrac{c}{\lambda} = \dfrac{kc}{2l}\).</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> \(l = 1\) m, \(c = 100\) m/s, \(k = 1\).</p>
+            <div class="plain-example">
+              <p>\(\lambda = 2\) m, \(\nu = 50\) Hz.</p>
+            </div>
+          </div>
+
+          <!-- TIP 5 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 5: Hitrost valovanja na vrvi</h3>
+              <div class="tip-formula">\(c = \sqrt{\dfrac{F}{\mu}}\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "napetost vrvi", "linearna gostota".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>\(\mu = m/l\).</li>
+              <li>\(c = \sqrt{F/\mu}\).</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> \(F = 100\) N, \(m = 0{,}5\) kg, \(l = 2\) m.</p>
+            <div class="plain-example">
+              <p>\(\mu = 0{,}25\) kg/m. \(c = \sqrt{400} = 20\) m/s.</p>
+            </div>
+          </div>
+
+          <!-- TIP 6 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 6: Glasnost in jakost zvoka</h3>
+              <div class="tip-formula">\(L = 10\log\dfrac{I}{I_0}\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "koliko dB".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>\(I_0 = 10^{-12}\) W/m².</li>
+              <li>\(L = 10\log(I/I_0)\).</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> \(I = 10^{-6}\) W/m².</p>
+            <div class="plain-example">
+              <p>\(L = 10\log 10^6 = 60\) dB.</p>
+            </div>
+          </div>
+
+          <!-- TIP 7 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 7: Interferenca</h3>
+              <div class="tip-formula">\(\Delta r = k\lambda\) ali \((2k+1)\lambda/2\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "dva vira", "razlika poti".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Izračunaj razliko poti \(\Delta r\).</li>
+              <li>Če \(\Delta r = k\lambda\): ojačitev.</li>
+              <li>Če \(\Delta r = (2k+1)\lambda/2\): oslabitev.</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> \(\Delta r = 3\) m, \(\lambda = 1{,}5\) m.</p>
+            <div class="plain-example">
+              <p>\(k = 2 \Rightarrow\) ojačitev.</p>
+            </div>
+          </div>
+
+          <!-- TIP 8 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 8: Uklon na reži in mrežici</h3>
+              <div class="tip-formula">\(d\sin\alpha = k\lambda\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "uklon na mrežici", "red uklona".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Zapiši \(d\) (razmik), \(\lambda\), \(k\).</li>
+              <li>Izračunaj \(\sin\alpha = k\lambda/d\).</li>
+              <li>\(\alpha = \arcsin(\ldots)\).</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> \(d = 2\) μm \(= 2 \cdot 10^{-6}\) m, \(\lambda = 600\) nm \(= 6 \cdot 10^{-7}\) m, \(k = 1\).</p>
+            <div class="plain-example">
+              <p>\(\sin\alpha = 0{,}3 \Rightarrow \alpha \approx 17{,}5°\).</p>
+            </div>
+          </div>
+
+          <!-- TIP 9 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 9: Dopplerjev pojav</h3>
+              <div class="tip-formula">\(\nu' = \nu \dfrac{c \pm v_o}{c \mp v_v}\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "približuje se", "oddaljuje se".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Določi predznake glede na smer gibanja.</li>
+              <li>Če se vir približuje opazovalcu: frekvenca se poveča.</li>
+              <li>Če se oddaljuje: frekvenca se zmanjša.</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> \(c = 340\) m/s, vir se približuje s \(v = 34\) m/s, \(\nu = 500\) Hz.</p>
+            <div class="plain-example">
+              <p>\(\nu' = 500 \cdot \dfrac{340}{340 - 34} \approx 556\) Hz.</p>
+            </div>
+          </div>
+
+          <!-- TIP 10 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 10: Odboj in lom svetlobe</h3>
+              <div class="tip-formula">\(\dfrac{\sin\alpha}{\sin\beta} = \dfrac{n_2}{n_1}\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "svetloba prehaja iz zraka v steklo".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Zapiši \(n_1\), \(n_2\), \(\alpha\).</li>
+              <li>\(\sin\beta = \dfrac{n_1}{n_2}\sin\alpha\).</li>
+              <li>Za popolni odboj: \(\sin\alpha_m = \dfrac{n_2}{n_1}\), \(n_1 > n_2\).</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> iz zraka (\(n_1 = 1\)) v steklo (\(n_2 = 1{,}5\)), \(\alpha = 30°\).</p>
+            <div class="plain-example">
+              <p>\(\sin\beta = \dfrac{\sin 30°}{1{,}5} = \dfrac{1}{3} \Rightarrow \beta \approx 19{,}5°\).</p>
+            </div>
+          </div>
+
+          <!-- TIP 11 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 11: Leče in zrcala</h3>
+              <div class="tip-formula">\(\dfrac{1}{f} = \dfrac{1}{a} + \dfrac{1}{b}\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "predmet je na razdalji …", "kolikšna je slika".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Za leče: \(\dfrac{1}{f} = \dfrac{1}{a} + \dfrac{1}{b}\) (velja tudi za tanke leče s predznaki).</li>
+              <li>Povečava: \(m = -\dfrac{b}{a}\).</li>
+              <li>Jakost: \(D = \dfrac{1}{f}\).</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> \(f = 10\) cm, \(a = 20\) cm.</p>
+            <div class="plain-example">
+              <p>\(\dfrac{1}{b} = \dfrac{1}{10} - \dfrac{1}{20} = \dfrac{1}{20} \Rightarrow b = 20\) cm. \(m = -1\).</p>
+            </div>
+          </div>
+
+          <!-- TIP 12 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 12: Jakost leče</h3>
+              <div class="tip-formula">\(D = \dfrac{1}{f}\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "koliko dioptrij".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>\(f\) v metrih.</li>
+              <li>\(D = \dfrac{1}{f}\) [D].</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> \(f = 25\) cm \(= 0{,}25\) m.</p>
+            <div class="plain-example">
+              <p>\(D = 4\) D.</p>
+            </div>
+          </div>
+
+          <!-- TIP 13 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 13: Optični instrumenti</h3>
+              <div class="tip-formula">povečava mikroskopa: \(M = M_1 M_2\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "mikroskop", "teleskop", "lupa".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Lupa: \(M \approx \dfrac{25 \text{ cm}}{f}\).</li>
+              <li>Mikroskop: \(M = M_1 M_2\).</li>
+              <li>Teleskop: \(M = \dfrac{f_1}{f_2}\).</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> lupa z \(f = 5\) cm.</p>
+            <div class="plain-example">
+              <p>\(M = 5\).</p>
+            </div>
+          </div>
+
+          <!-- TIP 14 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 14: Spekter in barve</h3>
+              <div class="tip-formula">\(\lambda_{\text{rdeča}} > \lambda_{\text{vijolična}}\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "barva svetlobe", "lom barv".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Vidni spekter: 400 nm (vijolična) – 700 nm (rdeča).</li>
+              <li>Višji \(n\) pri manjših \(\lambda\) (vijolična se bolj lomi).</li>
+              <li>Frekvenca in energija: \(E = h\nu = \dfrac{hc}{\lambda}\).</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> \(\lambda = 500\) nm \(= 5 \cdot 10^{-7}\) m.</p>
+            <div class="plain-example">
+              <p>\(\nu = \dfrac{c}{\lambda} = \dfrac{3 \cdot 10^8}{5 \cdot 10^{-7}} = 6 \cdot 10^{14}\) Hz.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ 3. POGOSTE NAPAKE ============ -->
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>3. Pogoste napake</h2>
+          </div>
+          <div class="info-card">
+            <ul>
+              <li>Pri nitnem nihalu misliš, da je nihajni čas odvisen od mase (ni!).</li>
+              <li>Pozabiš pretvoriti enote (nm → m, μm → m, cm → m).</li>
+              <li>Pri valovni enačbi zamešaš \(c\) (hitrost) s frekvenco \(\nu\).</li>
+              <li>Pri stoječem valovanju zamešaš vozle in hrbtišča.</li>
+              <li>Pri interferenci pozabiš, da je ojačitev pri \(k\lambda\), ne \((2k+1)\lambda/2\).</li>
+              <li>Pri lomu pozabiš, da \(n\) ni odvisen le od materiala, ampak tudi od \(\lambda\).</li>
+              <li>Pri popolnem odboju pozabiš, da je pogoj \(n_1 > n_2\).</li>
+              <li>Pri enačbi leče zamešaš predznake (predznak \(a\), \(b\), \(f\)).</li>
+              <li>Pri glasnosti pozabiš, da je logaritem z osnovo 10 in faktor 10.</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ============ 4. ŠTUDIJSKI VODIČ ============ -->
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>4. Študijski vodič — hitri pregled</h2>
+          </div>
+          <div class="info-card">
+            <h3>📋 Kaj moraš znati na pamet</h3>
+            <ul>
+              <li><strong>Nitno nihalo:</strong> \(T = 2\pi\sqrt{l/g}\).</li>
+              <li><strong>Vzmetno:</strong> \(T = 2\pi\sqrt{m/k}\).</li>
+              <li><strong>Valovanje:</strong> \(c = \lambda\nu\).</li>
+              <li><strong>Vrv:</strong> \(c = \sqrt{F/\mu}\), stoječe \(l = k\lambda/2\).</li>
+              <li><strong>Zvok:</strong> 340 m/s, glasnost \(L = 10\log(I/I_0)\).</li>
+              <li><strong>Interferenca:</strong> ojačitev \(\Delta r = k\lambda\), oslabitev \(\Delta r = (2k+1)\lambda/2\).</li>
+              <li><strong>Lom:</strong> \(\dfrac{\sin\alpha}{\sin\beta} = \dfrac{n_2}{n_1}\).</li>
+              <li><strong>Popolni odboj:</strong> \(\sin\alpha_m = n_2/n_1\).</li>
+              <li><strong>Leča:</strong> \(1/f = 1/a + 1/b\), \(D = 1/f\).</li>
+              <li><strong>Uklon:</strong> \(d\sin\alpha = k\lambda\).</li>
+              <li><strong>Doppler:</strong> \(\nu' = \nu \dfrac{c \pm v_o}{c \mp v_v}\).</li>
+            </ul>
+          </div>
+
+          <div class="info-card">
+            <h3>🎯 Kako pristopiti k nalogi</h3>
+            <ol>
+              <li><strong>Preberi nalogo in prepoznaj tip:</strong> nihanje, valovanje, zvok, lom, leča?</li>
+              <li><strong>Za nihanje:</strong> \(T\), \(\nu\), nitno/vzmetno.</li>
+              <li><strong>Za valovanje:</strong> \(c = \lambda\nu\), interferenca.</li>
+              <li><strong>Za zvok:</strong> glasnost, Doppler.</li>
+              <li><strong>Za optiko:</strong> lom, popolni odboj, leče, uklon.</li>
+              <li><strong>Za leče:</strong> \(1/f = 1/a + 1/b\), \(D = 1/f\).</li>
+            </ol>
+          </div>
+
+          <div class="info-card">
+            <h3>⏱️ Časovni načrt za en večer</h3>
+            <ul>
+              <li><strong>30 min:</strong> Teorija — nihanje, valovanje, optika.</li>
+              <li><strong>60 min:</strong> Tipi 1–7 (nihala, valovna enačba, zvok, interferenca).</li>
+              <li><strong>60 min:</strong> Tipi 8–14 (uklon, Doppler, lom, leče, instrumenti, spekter).</li>
+              <li><strong>30 min:</strong> Ponovi pogoste napake in študijski vodič.</li>
+              <li><strong>30 min:</strong> Reši 2–3 izpitne pole za vajo.</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ============ 5. POVEZAVE ============ -->
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>5. Vadi naprej</h2>
+            <p>Ko predelaš razlago, preveri znanje z nalogami.</p>
+          </div>
+          <div class="link-list">
+            <a class="link-item" href="/views/fizika/matura/osnovna_raven/naloge/resene/">
+              <span class="link-item-text">
+                <strong>Rešene naloge — osnovna raven</strong>
+                <small>Primeri z razlago</small>
+              </span>
+              <span class="arrow">→</span>
+            </a>
+            <a class="link-item" href="/views/fizika/matura/visja_raven/naloge/resene/">
+              <span class="link-item-text">
+                <strong>Rešene naloge — višja raven</strong>
+                <small>Zahtevnejši primeri</small>
+              </span>
+              <span class="arrow">→</span>
+            </a>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>

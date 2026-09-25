@@ -187,3 +187,40 @@ document.addEventListener("DOMContentLoaded", async () => {
 
   console.log("✅ components.js končan");
 });
+
+  // ============================================================
+  // 1.5 FIXED HEADER – hide on scroll down, show on scroll up
+  // ============================================================
+  const header = document.getElementById("siteHeader");
+  if (header) {
+    let lastScrollY = window.scrollY;
+    const HIDE_AFTER = 80; // px
+
+    const onScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      // Na vrhu: vedno pokaži, brez sence
+      if (currentScrollY <= 0) {
+        header.classList.remove("header--hidden", "header--scrolled");
+        lastScrollY = currentScrollY;
+        return;
+      }
+
+      // Ko nismo več čisto na vrhu, dodaj senco
+      header.classList.add("header--scrolled");
+
+      if (currentScrollY > lastScrollY && currentScrollY > HIDE_AFTER) {
+        // scroll navzdol → skrij
+        header.classList.add("header--hidden");
+      } else if (currentScrollY < lastScrollY) {
+        // scroll navzgor → pokaži
+        header.classList.remove("header--hidden");
+      }
+
+      lastScrollY = currentScrollY;
+    };
+
+    window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll(); // inicialno stanje
+    console.log("✅ Fixed header inicializiran");
+  }

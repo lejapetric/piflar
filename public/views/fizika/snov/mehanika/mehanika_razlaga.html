@@ -1,0 +1,600 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mehanika — razlaga in postopki | Piflar.si</title>
+  <meta name="description" content="Celovita razlaga mehanike za maturo: kinematika (enakomerno in pospešeno gibanje, prosti pad, poševni met), dinamika (Newtonovi zakoni, trenje, sila, masa, teža), delo, energija, moč, gibalna količina, kroženje, gravitacija.">
+  <link rel="stylesheet" href="/style/style.css">
+  <link rel="stylesheet" href="/views/fizika/mehanika/mehanika_style.css">
+</head>
+<body>
+  <div id="header"></div>
+
+  <div id="mainContent" class="main-content">
+    <div id="sidebar"></div>
+
+    <div class="view-container">
+      <div class="view">
+
+        <header class="page-header">
+          <span class="page-eyebrow">Fizika · Snov · 2</span>
+          <h1>Mehanika</h1>
+          <p>Vse o mehaniki za maturo: kinematika (enakomerno in enakomerno pospešeno gibanje, prosti pad, poševni met), dinamika (Newtonovi zakoni, trenje, sila, masa, teža), delo, energija, moč, gibalna količina, kroženje in gravitacija.</p>
+          <div class="page-meta">
+            <div class="page-meta-item"><strong>14</strong><span>Tipov nalog</span></div>
+            <div class="page-meta-item"><strong>50+</strong><span>Primerov</span></div>
+            <div class="page-meta-item"><strong>~75 min</strong><span>Branja</span></div>
+          </div>
+        </header>
+
+        <!-- ============ 1. TEORIJA ============ -->
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>1. Teorija — kinematika in dinamika</h2>
+            <p>Kar moraš znati na pamet, preden se lotiš nalog.</p>
+          </div>
+
+          <div class="info-card">
+            <h3>Osnovne količine pri gibanju</h3>
+            <div class="concept-list two-col">
+              <div class="concept">
+                <h4>Pot</h4>
+                <div class="concept-formula">\(s\) [m]</div>
+                <p class="concept-desc">Prehojena dolžina (skalar).</p>
+              </div>
+              <div class="concept">
+                <h4>Premik</h4>
+                <div class="concept-formula">\(\Delta \vec{r}\) [m]</div>
+                <p class="concept-desc">Vektor od začetne do končne točke.</p>
+              </div>
+              <div class="concept">
+                <h4>Hitrost</h4>
+                <div class="concept-formula">\(v = \dfrac{s}{t}\) [m/s]</div>
+                <p class="concept-desc">Pri enakomernem gibanju konstantna.</p>
+              </div>
+              <div class="concept">
+                <h4>Povprečna hitrost</h4>
+                <div class="concept-formula">\(\bar{v} = \dfrac{s_{\text{skupna}}}{t_{\text{skupni}}}\)</div>
+              </div>
+              <div class="concept">
+                <h4>Pospešek</h4>
+                <div class="concept-formula">\(a = \dfrac{\Delta v}{\Delta t}\) [m/s²]</div>
+              </div>
+              <div class="concept">
+                <h4>Enota km/h → m/s</h4>
+                <div class="concept-formula">\(1 \text{ km/h} = \dfrac{5}{18} \text{ m/s}\)</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <h3>Enakomerno pospešeno gibanje</h3>
+            <div class="concept-list two-col">
+              <div class="concept">
+                <h4>Hitrost</h4>
+                <div class="concept-formula">\(v = v_0 + at\)</div>
+              </div>
+              <div class="concept">
+                <h4>Pot</h4>
+                <div class="concept-formula">\(s = v_0 t + \dfrac{1}{2}at^2\)</div>
+              </div>
+              <div class="concept">
+                <h4>Brez časa</h4>
+                <div class="concept-formula">\(v^2 = v_0^2 + 2as\)</div>
+              </div>
+              <div class="concept">
+                <h4>Prosti pad</h4>
+                <div class="concept-formula">\(v = gt\), \(h = \dfrac{1}{2}gt^2\), \(v^2 = 2gh\)</div>
+                <p class="concept-desc">\(g \approx 9{,}81 \text{ m/s}^2\).</p>
+              </div>
+              <div class="concept">
+                <h4>Navpični met navzgor</h4>
+                <div class="concept-formula">\(v = v_0 - gt\), \(h = v_0 t - \dfrac{1}{2}gt^2\)</div>
+                <p class="concept-desc">Najvišja točka: \(h_{\max} = \dfrac{v_0^2}{2g}\).</p>
+              </div>
+              <div class="concept">
+                <h4>Poševni met</h4>
+                <div class="concept-formula">\(x = v_0 t \cos\alpha\), \(y = v_0 t \sin\alpha - \dfrac{1}{2}gt^2\)</div>
+                <p class="concept-desc">Doseg: \(D = \dfrac{v_0^2 \sin 2\alpha}{g}\).</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <h3>Newtonovi zakoni</h3>
+            <div class="concept-list two-col">
+              <div class="concept">
+                <h4>1. Newtonov zakon (vztrajnost)</h4>
+                <div class="concept-formula">\(\sum \vec{F} = 0 \Rightarrow \vec{v} = \text{konst.}\)</div>
+                <p class="concept-desc">Telo miruje ali se giblje enakomerno, če je vsota sil nič.</p>
+              </div>
+              <div class="concept">
+                <h4>2. Newtonov zakon</h4>
+                <div class="concept-formula">\(\vec{F} = m \vec{a}\)</div>
+                <p class="concept-desc">Rezultanta sil = masa × pospešek.</p>
+              </div>
+              <div class="concept">
+                <h4>3. Newtonov zakon (akcija-reakcija)</h4>
+                <div class="concept-formula">\(\vec{F}_{12} = -\vec{F}_{21}\)</div>
+                <p class="concept-desc">Sili sta enako veliki, nasprotno usmerjeni.</p>
+              </div>
+              <div class="concept">
+                <h4>Teža</h4>
+                <div class="concept-formula">\(F_g = mg\)</div>
+              </div>
+              <div class="concept">
+                <h4>Sila trenja</h4>
+                <div class="concept-formula">\(F_t = k_t \cdot F_n\)</div>
+                <p class="concept-desc">\(k_t\) = koeficient trenja, \(F_n\) = pravokotna sila na podlago.</p>
+              </div>
+              <div class="concept">
+                <h4>Vzgon (tekočine)</h4>
+                <div class="concept-formula">\(F_v = \rho g V\)</div>
+                <p class="concept-desc">Arhimedov zakon.</p>
+              </div>
+              <div class="concept">
+                <h4>Hookov zakon</h4>
+                <div class="concept-formula">\(F = k x\)</div>
+                <p class="concept-desc">Sila vzmeti je sorazmerna z raztezkom.</p>
+              </div>
+              <div class="concept">
+                <h4>Gravitacijska sila</h4>
+                <div class="concept-formula">\(F = G \dfrac{m_1 m_2}{r^2}\)</div>
+                <p class="concept-desc">\(G = 6{,}67 \cdot 10^{-11} \text{ N m}^2/\text{kg}^2\).</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <h3>Delo, energija, moč</h3>
+            <div class="concept-list two-col">
+              <div class="concept">
+                <h4>Delo</h4>
+                <div class="concept-formula">\(A = F s \cos\alpha\) [J]</div>
+                <p class="concept-desc">\(\alpha\) = kot med silo in smerjo premika.</p>
+              </div>
+              <div class="concept">
+                <h4>Kinetična energija</h4>
+                <div class="concept-formula">\(W_k = \dfrac{1}{2}mv^2\)</div>
+              </div>
+              <div class="concept">
+                <h4>Potencialna energija (težnost)</h4>
+                <div class="concept-formula">\(W_p = mgh\)</div>
+              </div>
+              <div class="concept">
+                <h4>Prožnostna energija</h4>
+                <div class="concept-formula">\(W_{pr} = \dfrac{1}{2}kx^2\)</div>
+              </div>
+              <div class="concept">
+                <h4>Izrek o kinetični energiji</h4>
+                <div class="concept-formula">\(A = \Delta W_k\)</div>
+              </div>
+              <div class="concept">
+                <h4>Zakon o ohranitvi energije</h4>
+                <div class="concept-formula">\(W_k + W_p = \text{konst.}\)</div>
+              </div>
+              <div class="concept">
+                <h4>Moč</h4>
+                <div class="concept-formula">\(P = \dfrac{A}{t} = Fv\) [W]</div>
+              </div>
+              <div class="concept">
+                <h4>Izkoristek</h4>
+                <div class="concept-formula">\(\eta = \dfrac{P_{\text{koristna}}}{P_{\text{dovedena}}} \cdot 100\%\)</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <h3>Gibalna količina in kroženje</h3>
+            <div class="concept-list two-col">
+              <div class="concept">
+                <h4>Gibalna količina</h4>
+                <div class="concept-formula">\(\vec{G} = m\vec{v}\) [kg m/s]</div>
+              </div>
+              <div class="concept">
+                <h4>Sunek sile</h4>
+                <div class="concept-formula">\(\vec{F} t = \Delta \vec{G}\)</div>
+              </div>
+              <div class="concept">
+                <h4>Zakon o ohranitvi gibalne količine</h4>
+                <div class="concept-formula">\(m_1 v_1 + m_2 v_2 = m_1 v_1' + m_2 v_2'\)</div>
+              </div>
+              <div class="concept">
+                <h4>Kroženje — obhodni čas</h4>
+                <div class="concept-formula">\(T = \dfrac{2\pi r}{v}\)</div>
+              </div>
+              <div class="concept">
+                <h4>Kroženje — frekvenca</h4>
+                <div class="concept-formula">\(\nu = \dfrac{1}{T}\) [Hz]</div>
+              </div>
+              <div class="concept">
+                <h4>Kotna hitrost</h4>
+                <div class="concept-formula">\(\omega = \dfrac{2\pi}{T}\) [rad/s]</div>
+              </div>
+              <div class="concept">
+                <h4>Centripetalni pospešek</h4>
+                <div class="concept-formula">\(a_c = \dfrac{v^2}{r} = \omega^2 r\)</div>
+              </div>
+              <div class="concept">
+                <h4>Centripetalna sila</h4>
+                <div class="concept-formula">\(F_c = \dfrac{mv^2}{r}\)</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ 2. TIPI NALOG ============ -->
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>2. Tipi nalog — postopki po korakih</h2>
+            <p>Za vsak tip: kako ga prepoznaš, kako ga rešiš, primer.</p>
+          </div>
+
+          <!-- TIP 1 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 1: Enakomerno gibanje</h3>
+              <div class="tip-formula">\(v = \dfrac{s}{t}\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "enakomerno gibanje", "konstantna hitrost".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Preveri, da je hitrost konstantna.</li>
+              <li>Uporabi \(s = vt\).</li>
+              <li>Pretvori enote (km/h → m/s).</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> Avto pelje 72 km/h 30 min. Kolikšna je pot?</p>
+            <div class="plain-example">
+              <p>\(v = 20\) m/s, \(t = 1800\) s. \(s = 20 \cdot 1800 = 36\,000\) m = 36 km.</p>
+            </div>
+          </div>
+
+          <!-- TIP 2 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 2: Enakomerno pospešeno gibanje</h3>
+              <div class="tip-formula">\(s = v_0 t + \dfrac{1}{2}at^2\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "pospešek je …", "začetna hitrost …".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Zapiši znane količine (\(v_0, a, t, s\)).</li>
+              <li>Uporabi ustrezno formulo glede na znane podatke.</li>
+              <li>Izračunaj neznanko.</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> Avto pospeši iz mirovanja z \(a = 2\) m/s² v 5 s.</p>
+            <div class="plain-example">
+              <p>\(v = at = 10\) m/s. \(s = \dfrac{1}{2} \cdot 2 \cdot 25 = 25\) m.</p>
+            </div>
+          </div>
+
+          <!-- TIP 3 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 3: Prosti pad</h3>
+              <div class="tip-formula">\(h = \dfrac{1}{2}gt^2\), \(v = gt\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "telo pade z višine …".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Začetna hitrost \(v_0 = 0\).</li>
+              <li>Uporabi \(h = \dfrac{1}{2}gt^2\) ali \(v^2 = 2gh\).</li>
+              <li>Izračunaj čas ali hitrost.</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> Kamen pade z višine 20 m. Kdaj pade?</p>
+            <div class="plain-example">
+              <p>\(20 = \dfrac{1}{2} \cdot 9{,}81 \cdot t^2 \Rightarrow t \approx 2{,}02\) s.</p>
+            </div>
+          </div>
+
+          <!-- TIP 4 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 4: Navpični met navzgor</h3>
+              <div class="tip-formula">\(h_{\max} = \dfrac{v_0^2}{2g}\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "vržemo navpično navzgor".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Začetna hitrost \(v_0\), pospešek \(-g\).</li>
+              <li>Najvišja točka: \(v = 0 \Rightarrow t = \dfrac{v_0}{g}\).</li>
+              <li>Višina: \(h_{\max} = \dfrac{v_0^2}{2g}\).</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> \(v_0 = 20\) m/s.</p>
+            <div class="plain-example">
+              <p>\(h_{\max} = \dfrac{400}{2 \cdot 9{,}81} \approx 20{,}4\) m.</p>
+            </div>
+          </div>
+
+          <!-- TIP 5 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 5: Poševni met</h3>
+              <div class="tip-formula">\(D = \dfrac{v_0^2 \sin 2\alpha}{g}\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "izstrelek pod kotom", "doseg".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Razstavi hitrost: \(v_x = v_0 \cos\alpha\), \(v_y = v_0 \sin\alpha\).</li>
+              <li>Vodoravno: \(x = v_x t\) (enakomerno).</li>
+              <li>Navpično: \(y = v_y t - \dfrac{1}{2}gt^2\) (pospešeno).</li>
+              <li>Doseg: \(D = \dfrac{v_0^2 \sin 2\alpha}{g}\) (če je \(y_0 = 0\)).</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> \(v_0 = 20\) m/s, \(\alpha = 30°\).</p>
+            <div class="plain-example">
+              <p>\(D = \dfrac{400 \cdot \sin 60°}{9{,}81} \approx 35{,}3\) m.</p>
+            </div>
+          </div>
+
+          <!-- TIP 6 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 6: Newtonovi zakoni — sila in pospešek</h3>
+              <div class="tip-formula">\(F = ma\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "sila \(F\) deluje na telo z maso \(m\)".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Nariši skico s silami.</li>
+              <li>Zapiši rezultanto sil v smeri gibanja.</li>
+              <li>Uporabi \(F = ma\).</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> Na 5 kg telo deluje sila 20 N. Pospešek?</p>
+            <div class="plain-example">
+              <p>\(a = \dfrac{F}{m} = 4\) m/s².</p>
+            </div>
+          </div>
+
+          <!-- TIP 7 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 7: Trenje</h3>
+              <div class="tip-formula">\(F_t = k_t F_n\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "koeficient trenja", "telo se giblje po podlagi".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Določi \(F_n\) (navadno \(F_g = mg\), če je podlaga vodoravna).</li>
+              <li>\(F_t = k_t F_n\).</li>
+              <li>Če je sila \(F > F_t\), se telo pospešuje: \(F - F_t = ma\).</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> \(m = 10\) kg, \(k_t = 0{,}2\), \(F = 30\) N.</p>
+            <div class="plain-example">
+              <p>\(F_t = 0{,}2 \cdot 10 \cdot 9{,}81 = 19{,}62\) N. \(a = \dfrac{30 - 19{,}62}{10} \approx 1{,}04\) m/s².</p>
+            </div>
+          </div>
+
+          <!-- TIP 8 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 8: Delo in energija</h3>
+              <div class="tip-formula">\(A = F s \cos\alpha\), \(W_k = \dfrac{1}{2}mv^2\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "izračunajte delo", "kinetična energija".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Za delo: \(A = F s \cos\alpha\).</li>
+              <li>Za kinetično energijo: \(W_k = \dfrac{1}{2}mv^2\).</li>
+              <li>Za potencialno: \(W_p = mgh\).</li>
+              <li>Za zakon o ohranitvi: \(W_k + W_p = \text{konst.}\)</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> Sila 50 N vleče telo 10 m. Delo?</p>
+            <div class="plain-example">
+              <p>\(A = 50 \cdot 10 = 500\) J.</p>
+            </div>
+          </div>
+
+          <!-- TIP 9 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 9: Moč in izkoristek</h3>
+              <div class="tip-formula">\(P = \dfrac{A}{t} = Fv\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "moč motorja", "izkoristek".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>\(P = \dfrac{A}{t}\) ali \(P = Fv\).</li>
+              <li>Izkoristek: \(\eta = \dfrac{P_{\text{koristna}}}{P_{\text{dovedena}}} \cdot 100\%\).</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> Motor opravi 6000 J dela v 30 s.</p>
+            <div class="plain-example">
+              <p>\(P = \dfrac{6000}{30} = 200\) W.</p>
+            </div>
+          </div>
+
+          <!-- TIP 10 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 10: Gibalna količina in trki</h3>
+              <div class="tip-formula">\(\vec{G} = m\vec{v}\), \(m_1 v_1 + m_2 v_2 = \text{konst.}\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "trk", "gibalna količina".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Zapiši gibalno količino pred trkom: \(m_1 v_1 + m_2 v_2\).</li>
+              <li>Zapiši po trku: \(m_1 v_1' + m_2 v_2'\).</li>
+              <li>Izenači (ohranitev).</li>
+              <li>Pri prožnem trku se ohrani tudi kinetična energija.</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> \(m_1 = 2\) kg, \(v_1 = 5\) m/s, \(m_2 = 3\) kg, \(v_2 = 0\). Po trku se spojita.</p>
+            <div class="plain-example">
+              <p>\(2 \cdot 5 = (2+3)v' \Rightarrow v' = 2\) m/s.</p>
+            </div>
+          </div>
+
+          <!-- TIP 11 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 11: Kroženje</h3>
+              <div class="tip-formula">\(a_c = \dfrac{v^2}{r}\), \(F_c = \dfrac{mv^2}{r}\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "kroži", "vrti se".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Določi \(r\), \(v\), \(T\) ali \(\omega\).</li>
+              <li>\(v = \dfrac{2\pi r}{T}\), \(\omega = \dfrac{2\pi}{T}\).</li>
+              <li>\(a_c = \dfrac{v^2}{r}\), \(F_c = ma_c\).</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> Telo kroži s \(r = 2\) m, \(T = 4\) s, \(m = 1\) kg.</p>
+            <div class="plain-example">
+              <p>\(v = \dfrac{2\pi \cdot 2}{4} = \pi\) m/s. \(a_c = \dfrac{\pi^2}{2} \approx 4{,}93\) m/s². \(F_c \approx 4{,}93\) N.</p>
+            </div>
+          </div>
+
+          <!-- TIP 12 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 12: Gravitacija</h3>
+              <div class="tip-formula">\(F = G \dfrac{m_1 m_2}{r^2}\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "privlačna sila med telesi", "planet".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Uporabi \(F = G \dfrac{m_1 m_2}{r^2}\).</li>
+              <li>Za težni pospešek na površju: \(g = \dfrac{GM}{R^2}\).</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> \(m_1 = m_2 = 1\) kg, \(r = 1\) m.</p>
+            <div class="plain-example">
+              <p>\(F = 6{,}67 \cdot 10^{-11}\) N.</p>
+            </div>
+          </div>
+
+          <!-- TIP 13 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 13: Tlak in vzgon</h3>
+              <div class="tip-formula">\(p = \dfrac{F}{S}\), \(F_v = \rho g V\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "tlak", "vzgon", "telo potopljeno v tekočino".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Tlak: \(p = \dfrac{F}{S}\) [Pa].</li>
+              <li>Hidrostatični tlak: \(p = \rho g h\).</li>
+              <li>Vzgon: \(F_v = \rho g V_{\text{potopljeni}}\).</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> Kocka \(a = 0{,}1\) m, \(\rho = 1000\) kg/m³.</p>
+            <div class="plain-example">
+              <p>\(V = 0{,}001\) m³. \(F_v = 1000 \cdot 9{,}81 \cdot 0{,}001 = 9{,}81\) N.</p>
+            </div>
+          </div>
+
+          <!-- TIP 14 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 14: Vzmet in Hookov zakon</h3>
+              <div class="tip-formula">\(F = kx\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "vzmet se raztegne", "prožnostna konstanta".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>\(F = kx\), kjer je \(x\) raztezek.</li>
+              <li>Prožnostna energija: \(W_{pr} = \dfrac{1}{2}kx^2\).</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> \(k = 100\) N/m, \(x = 0{,}05\) m.</p>
+            <div class="plain-example">
+              <p>\(F = 100 \cdot 0{,}05 = 5\) N. \(W_{pr} = \dfrac{1}{2} \cdot 100 \cdot 0{,}0025 = 0{,}125\) J.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ 3. POGOSTE NAPAKE ============ -->
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>3. Pogoste napake</h2>
+          </div>
+          <div class="info-card">
+            <ul>
+              <li>Pozabiš pretvoriti enote (km/h → m/s, g → kg, cm → m).</li>
+              <li>Pri poševnem metu zamešaš vodoravno in navpično komponento.</li>
+              <li>Pri prostem padu pozabiš, da je \(v_0 = 0\).</li>
+              <li>Pri navpičnem metu navzgor uporabiš \(+g\) namesto \(-g\).</li>
+              <li>Pri trenju pozabiš izračunati \(F_n\) (ni vedno enak \(mg\)).</li>
+              <li>Pri delu pozabiš \(\cos\alpha\) (kot med silo in premikom).</li>
+              <li>Pri gibalni količini ne upoštevaš smeri (vektor!).</li>
+              <li>Pri kroženju zamešaš \(T\) (obhodni čas) in \(\nu\) (frekvenco).</li>
+              <li>Pri gravitaciji uporabiš premer namesto razdalje med središči.</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ============ 4. ŠTUDIJSKI VODIČ ============ -->
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>4. Študijski vodič — hitri pregled</h2>
+          </div>
+          <div class="info-card">
+            <h3>📋 Kaj moraš znati na pamet</h3>
+            <ul>
+              <li><strong>Enakomerno gibanje:</strong> \(s = vt\).</li>
+              <li><strong>Pospešeno:</strong> \(v = v_0 + at\), \(s = v_0 t + \dfrac{1}{2}at^2\), \(v^2 = v_0^2 + 2as\).</li>
+              <li><strong>Prosti pad:</strong> \(v = gt\), \(h = \dfrac{1}{2}gt^2\).</li>
+              <li><strong>Poševni met:</strong> \(D = \dfrac{v_0^2 \sin 2\alpha}{g}\).</li>
+              <li><strong>Newton:</strong> \(F = ma\), \(F_g = mg\), \(F_t = k_t F_n\).</li>
+              <li><strong>Delo:</strong> \(A = Fs\cos\alpha\).</li>
+              <li><strong>Energija:</strong> \(W_k = \dfrac{1}{2}mv^2\), \(W_p = mgh\).</li>
+              <li><strong>Moč:</strong> \(P = \dfrac{A}{t} = Fv\).</li>
+              <li><strong>Gibalna količina:</strong> \(G = mv\), ohranitev pri trkih.</li>
+              <li><strong>Kroženje:</strong> \(v = \dfrac{2\pi r}{T}\), \(a_c = \dfrac{v^2}{r}\), \(F_c = \dfrac{mv^2}{r}\).</li>
+              <li><strong>Gravitacija:</strong> \(F = G\dfrac{m_1 m_2}{r^2}\).</li>
+              <li><strong>Vzgon:</strong> \(F_v = \rho g V\).</li>
+              <li><strong>Hookov zakon:</strong> \(F = kx\).</li>
+            </ul>
+          </div>
+
+          <div class="info-card">
+            <h3>🎯 Kako pristopiti k nalogi</h3>
+            <ol>
+              <li><strong>Preberi nalogo in prepoznaj tip:</strong> kinematika, dinamika, delo/energija, gibalna količina, kroženje?</li>
+              <li><strong>Za kinematiko:</strong> zapiši znane količine, izberi ustrezno formulo.</li>
+              <li><strong>Za dinamiko:</strong> nariši skico s silami, zapiši rezultanto.</li>
+              <li><strong>Za delo/energijo:</strong> preveri, ali gre za delo, kinetično, potencialno ali ohranitev.</li>
+              <li><strong>Za gibalno količino:</strong> uporabi ohranitev pri trkih.</li>
+              <li><strong>Za kroženje:</strong> \(v\), \(a_c\), \(F_c\).</li>
+            </ol>
+          </div>
+
+          <div class="info-card">
+            <h3>⏱️ Časovni načrt za en večer</h3>
+            <ul>
+              <li><strong>30 min:</strong> Teorija — kinematika, dinamika, delo/energija.</li>
+              <li><strong>60 min:</strong> Tipi 1–7 (gibanja, Newtonovi zakoni, trenje).</li>
+              <li><strong>60 min:</strong> Tipi 8–14 (delo, moč, gibalna količina, kroženje, gravitacija, tlak, vzmet).</li>
+              <li><strong>30 min:</strong> Ponovi pogoste napake in študijski vodič.</li>
+              <li><strong>30 min:</strong> Reši 2–3 izpitne pole za vajo.</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ============ 5. POVEZAVE ============ -->
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>5. Vadi naprej</h2>
+            <p>Ko predelaš razlago, preveri znanje z nalogami.</p>
+          </div>
+          <div class="link-list">
+            <a class="link-item" href="/views/fizika/matura/osnovna_raven/naloge/resene/">
+              <span class="link-item-text">
+                <strong>Rešene naloge — osnovna raven</strong>
+                <small>Primeri z razlago</small>
+              </span>
+              <span class="arrow">→</span>
+            </a>
+            <a class="link-item" href="/views/fizika/matura/visja_raven/naloge/resene/">
+              <span class="link-item-text">
+                <strong>Rešene naloge — višja raven</strong>
+                <small>Zahtevnejši primeri</small>
+              </span>
+              <span class="arrow">→</span>
+            </a>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>

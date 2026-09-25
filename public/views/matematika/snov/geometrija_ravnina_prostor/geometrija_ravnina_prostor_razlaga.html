@@ -3,9 +3,10 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Geometrija — razlaga in postopki | Piflar.si</title>
-  <meta name="description" content="Celovita razlaga geometrije za maturo: trikotniki, štirikotniki, krog, podobnost, kotne funkcije, telesa. Postopki po korakih.">
+  <title>Geometrija v ravnini in prostoru — razlaga in postopki | Piflar.si</title>
+  <meta name="description" content="Celovita razlaga geometrije v ravnini in prostoru za maturo: trikotniki, štirikotniki, krog in krožnica, sinusni in kosinusni izrek, podobnost, skladnost, prostorska geometrija.">
   <link rel="stylesheet" href="/style/style.css">
+  <link rel="stylesheet" href="/views/matematika/snov/geometrija_ravnina_prostor/geometrija_ravnina_prostor_style.css">
 </head>
 <body>
   <div id="header"></div>
@@ -16,30 +17,37 @@
     <div class="view-container">
       <div class="view">
 
-        <!-- ============ PAGE HEADER ============ -->
         <header class="page-header">
-          <span class="page-eyebrow">Matematika · Snov</span>
-          <h1>Geometrija</h1>
-          <p>
-            Vse o geometriji za maturo: trikotniki, štirikotniki, krog in krožnica,
-            podobnost, kotne funkcije v pravokotnem trikotniku, obseg, ploščina,
-            površina in prostornina teles.
-          </p>
+          <span class="page-eyebrow">Matematika · Snov · 4.6</span>
+          <h1>Geometrija v ravnini in prostoru</h1>
+          <p>Vse o geometriji za maturo: trikotniki (koti, ploščina, sinusni in kosinusni izrek), štirikotniki, krog in krožnica (obodni in središčni kot), podobnost, skladnost ter osnove prostorske geometrije.</p>
           <div class="page-meta">
-            <div class="page-meta-item">
-              <strong>14</strong>
-              <span>Tipov nalog</span>
-            </div>
-            <div class="page-meta-item">
-              <strong>45+</strong>
-              <span>Primerov</span>
-            </div>
-            <div class="page-meta-item">
-              <strong>~70 min</strong>
-              <span>Branja</span>
-            </div>
+            <div class="page-meta-item"><strong>14</strong><span>Tipov nalog</span></div>
+            <div class="page-meta-item"><strong>45+</strong><span>Primerov</span></div>
+            <div class="page-meta-item"><strong>~70 min</strong><span>Branja</span></div>
           </div>
         </header>
+
+        <!-- ============ MATURA FORMULE ============ -->
+        <div class="matura-formule">
+          <h3>📋 Formule na maturi — osnovna raven</h3>
+          <p>Na maturitetnem listu s formulami so za <strong>geometrijo</strong> relevantne naslednje formule:</p>
+          <div class="matura-grid">
+            <div class="matura-levo">
+              <ul>
+                <li><strong>Evklidov in višinski izrek:</strong> \(a^2 = ca_1\), \(b^2 = cb_1\), \(v_c^2 = a_1 b_1\)</li>
+                <li><strong>Polmera trikotniku včrtanega in očrtanega kroga:</strong> \(r = \dfrac{S}{s}\), \(R = \dfrac{abc}{4S}\)</li>
+                <li><strong>Heronova formula:</strong> \(S = \sqrt{s(s-a)(s-b)(s-c)}\)</li>
+                <li><strong>Ploščina trikotnika:</strong> \(S = \dfrac{1}{2}|(x_2-x_1)(y_3-y_1) - (x_3-x_1)(y_2-y_1)|\)</li>
+                <li><strong>Sinusni izrek:</strong> \(\dfrac{a}{\sin\alpha} = \dfrac{b}{\sin\beta} = \dfrac{c}{\sin\gamma} = 2R\)</li>
+                <li><strong>Kosinusni izrek:</strong> \(c^2 = a^2 + b^2 - 2ab\cos\gamma\)</li>
+              </ul>
+            </div>
+            <div class="matura-slika">
+              <img src="/views/matematika/images/formule_osnovna_raven.png" alt="Formule na maturi — osnovna raven">
+            </div>
+          </div>
+        </div>
 
         <!-- ============ 1. TEORIJA ============ -->
         <section class="subsection">
@@ -50,84 +58,164 @@
 
           <div class="info-card">
             <h3>Trikotnik — osnovno</h3>
-            <ul>
-              <li><strong>Vsota notranjih kotov:</strong> \(\alpha + \beta + \gamma = 180^\circ\)</li>
-              <li><strong>Zunanji kot:</strong> vsota nasprotnih notranjih kotov</li>
-              <li><strong>Obseg:</strong> \(o = a + b + c\)</li>
-              <li><strong>Ploščina:</strong> \(S = \dfrac{a \cdot v_a}{2} = \dfrac{1}{2}ab \sin\gamma\)</li>
-              <li><strong>Heronova formula:</strong> \(S = \sqrt{s(s-a)(s-b)(s-c)}\), \(s = \dfrac{a+b+c}{2}\)</li>
-            </ul>
+            <div class="concept-list two-col">
+              <div class="concept">
+                <h4>Vsota notranjih kotov</h4>
+                <div class="concept-formula">\(\alpha + \beta + \gamma = 180°\)</div>
+                <p class="concept-desc">Zunanji kot = vsota nasprotnih notranjih kotov.</p>
+              </div>
+              <div class="concept">
+                <h4>Obseg</h4>
+                <div class="concept-formula">\(o = a + b + c\)</div>
+              </div>
+              <div class="concept">
+                <h4>Ploščina (osnovnica × višina)</h4>
+                <div class="concept-formula">\(S = \dfrac{a \cdot v_a}{2}\)</div>
+              </div>
+              <div class="concept">
+                <h4>Ploščina (dve stranici in kot)</h4>
+                <div class="concept-formula">\(S = \dfrac{1}{2}ab\sin\gamma\)</div>
+              </div>
+              <div class="concept">
+                <h4>Heronova formula</h4>
+                <div class="concept-formula">\(S = \sqrt{s(s-a)(s-b)(s-c)}\)</div>
+                <p class="concept-desc">\(s = \dfrac{a+b+c}{2}\) (polobseg).</p>
+              </div>
+              <div class="concept">
+                <h4>Polmer včrtanega in očrtanega kroga</h4>
+                <div class="concept-formula">\(r = \dfrac{S}{s}\), \(R = \dfrac{abc}{4S}\)</div>
+              </div>
+            </div>
           </div>
 
           <div class="info-card">
             <h3>Pravokotni trikotnik</h3>
-            <ul>
-              <li><strong>Pitagorov izrek:</strong> \(a^2 + b^2 = c^2\)</li>
-              <li><strong>Kotne funkcije:</strong>
-                <ul>
-                  <li>\(\sin\alpha = \dfrac{a}{c}\) (nasprotna / hipotenuza)</li>
-                  <li>\(\cos\alpha = \dfrac{b}{c}\) (priležna / hipotenuza)</li>
-                  <li>\(\tan\alpha = \dfrac{a}{b}\) (nasprotna / priležna)</li>
-                </ul>
-              </li>
-              <li><strong>Višina na hipotenuzo:</strong> \(v_c = \dfrac{ab}{c}\)</li>
-              <li><strong>Enačba:</strong> \(v_c^2 = a' \cdot b'\) (projekciji katet)</li>
-            </ul>
+            <div class="concept-list two-col">
+              <div class="concept">
+                <h4>Pitagorov izrek</h4>
+                <div class="concept-formula">\(a^2 + b^2 = c^2\)</div>
+              </div>
+              <div class="concept">
+                <h4>Kotne funkcije</h4>
+                <div class="concept-formula">\(\sin\alpha = \dfrac{a}{c}\), \(\cos\alpha = \dfrac{b}{c}\), \(\tan\alpha = \dfrac{a}{b}\)</div>
+              </div>
+              <div class="concept">
+                <h4>Evklidov izrek</h4>
+                <div class="concept-formula">\(a^2 = c \cdot a_1\), \(b^2 = c \cdot b_1\)</div>
+              </div>
+              <div class="concept">
+                <h4>Višinski izrek</h4>
+                <div class="concept-formula">\(v_c^2 = a_1 \cdot b_1\)</div>
+              </div>
+            </div>
           </div>
 
           <div class="info-card">
-            <h3>Splošni trikotnik — sinusni in kosinusni izrek</h3>
-            <ul>
-              <li><strong>Sinusni izrek:</strong> \(\dfrac{a}{\sin\alpha} = \dfrac{b}{\sin\beta} = \dfrac{c}{\sin\gamma} = 2R\)</li>
-              <li><strong>Kosinusni izrek:</strong> \(c^2 = a^2 + b^2 - 2ab\cos\gamma\)</li>
-              <li>Uporaba sinusnega: ko poznaš par stranica–nasprotni kot in še eno stran/kot.</li>
-              <li>Uporaba kosinusnega: ko poznaš dve stranici in vmesni kot, ali vse tri stranice.</li>
-            </ul>
+            <h3>Poljubni trikotnik — sinusni in kosinusni izrek</h3>
+            <div class="concept-list two-col">
+              <div class="concept">
+                <h4>Sinusni izrek</h4>
+                <div class="concept-formula">\(\dfrac{a}{\sin\alpha} = \dfrac{b}{\sin\beta} = \dfrac{c}{\sin\gamma} = 2R\)</div>
+                <p class="concept-desc">Uporabimo, ko poznamo <strong>par stranica–nasprotni kot</strong> in še eno stran/kot.</p>
+              </div>
+              <div class="concept">
+                <h4>Kosinusni izrek</h4>
+                <div class="concept-formula">\(c^2 = a^2 + b^2 - 2ab\cos\gamma\)</div>
+                <p class="concept-desc">Uporabimo, ko poznamo <strong>dve stranici in vmesni kot</strong> ali <strong>vse tri stranice</strong>.</p>
+              </div>
+              <div class="concept">
+                <h4>Posledica</h4>
+                <div class="concept-formula">\(\cos\gamma = \dfrac{a^2+b^2-c^2}{2ab}\)</div>
+                <p class="concept-desc">Za iskanje kota, ko poznamo vse tri stranice.</p>
+              </div>
+              <div class="concept">
+                <h4>Ploščina</h4>
+                <div class="concept-formula">\(S = \dfrac{1}{2}ab\sin\gamma = \dfrac{abc}{4R} = rs\)</div>
+                <p class="concept-desc">Različne formule za ploščino trikotnika.</p>
+              </div>
+            </div>
           </div>
 
           <div class="info-card">
             <h3>Štirikotniki</h3>
-            <ul>
-              <li><strong>Kvadrat:</strong> \(o = 4a\), \(S = a^2\), diagonala \(d = a\sqrt{2}\)</li>
-              <li><strong>Pravokotnik:</strong> \(o = 2(a+b)\), \(S = ab\), diagonala \(d = \sqrt{a^2+b^2}\)</li>
-              <li><strong>Paralelogram:</strong> \(o = 2(a+b)\), \(S = a \cdot v_a = ab\sin\alpha\)</li>
-              <li><strong>Trapez:</strong> \(o = a + b + c + d\), \(S = \dfrac{a+c}{2} \cdot v\) (\(a, c\) osnovnici)</li>
-              <li><strong>Romb:</strong> \(o = 4a\), \(S = \dfrac{e \cdot f}{2}\) (\(e, f\) diagonali)</li>
-              <li><strong>Vsota notranjih kotov štirikotnika:</strong> \(360^\circ\)</li>
-            </ul>
+            <div class="concept-list two-col">
+              <div class="concept">
+                <h4>Vsota kotov</h4>
+                <div class="concept-formula">\(\alpha + \beta + \gamma + \delta = 360°\)</div>
+              </div>
+              <div class="concept">
+                <h4>Kvadrat</h4>
+                <div class="concept-formula">\(o = 4a\), \(S = a^2\), \(d = a\sqrt{2}\)</div>
+              </div>
+              <div class="concept">
+                <h4>Pravokotnik</h4>
+                <div class="concept-formula">\(o = 2(a+b)\), \(S = ab\), \(d = \sqrt{a^2+b^2}\)</div>
+              </div>
+              <div class="concept">
+                <h4>Paralelogram</h4>
+                <div class="concept-formula">\(o = 2(a+b)\), \(S = a \cdot v_a = ab\sin\alpha\)</div>
+              </div>
+              <div class="concept">
+                <h4>Trapez</h4>
+                <div class="concept-formula">\(o = a+b+c+d\), \(S = \dfrac{a+c}{2} \cdot v\)</div>
+              </div>
+              <div class="concept">
+                <h4>Romb</h4>
+                <div class="concept-formula">\(o = 4a\), \(S = \dfrac{e \cdot f}{2} = a \cdot v\)</div>
+              </div>
+            </div>
           </div>
 
           <div class="info-card">
             <h3>Krog in krožnica</h3>
-            <ul>
-              <li><strong>Obseg kroga:</strong> \(o = 2\pi r\)</li>
-              <li><strong>Ploščina kroga:</strong> \(S = \pi r^2\)</li>
-              <li><strong>Krožni izsek</strong> (kot \(\alpha\) v stopinjah): \(S = \dfrac{\pi r^2 \alpha}{360^\circ}\), \(l = \dfrac{2\pi r \alpha}{360^\circ}\)</li>
-              <li><strong>Središčni kot</strong> je dvakratnik obodnega kota nad istim lokom.</li>
-              <li><strong>Talesov izrek:</strong> kot nad premerom je \(90^\circ\).</li>
-            </ul>
+            <div class="concept-list two-col">
+              <div class="concept">
+                <h4>Obseg kroga</h4>
+                <div class="concept-formula">\(o = 2\pi r\)</div>
+              </div>
+              <div class="concept">
+                <h4>Ploščina kroga</h4>
+                <div class="concept-formula">\(S = \pi r^2\)</div>
+              </div>
+              <div class="concept">
+                <h4>Krožni izsek</h4>
+                <div class="concept-formula">\(S = \dfrac{\pi r^2 \alpha}{360°}\), \(l = \dfrac{2\pi r \alpha}{360°}\)</div>
+                <p class="concept-desc">α je središčni kot v stopinjah.</p>
+              </div>
+              <div class="concept">
+                <h4>Središčni kot</h4>
+                <div class="concept-formula">\(\alpha = 2\beta\)</div>
+                <p class="concept-desc">Središčni kot je dvakratnik obodnega kota nad istim lokom.</p>
+              </div>
+              <div class="concept">
+                <h4>Talesov izrek</h4>
+                <div class="concept-formula">kot nad premerom = \(90°\)</div>
+              </div>
+            </div>
           </div>
 
           <div class="info-card">
-            <h3>Podobnost</h3>
-            <ul>
-              <li>Podobna lika: enaki koti, stranice v razmerju \(k\) (koeficient podobnosti).</li>
-              <li><strong>Razmerje obsegov:</strong> \(o_2 : o_1 = k\)</li>
-              <li><strong>Razmerje ploščin:</strong> \(S_2 : S_1 = k^2\)</li>
-              <li><strong>Razmerje prostornin:</strong> \(V_2 : V_1 = k^3\)</li>
-            </ul>
-          </div>
-
-          <div class="info-card">
-            <h3>Telesa — površina in prostornina</h3>
-            <ul>
-              <li><strong>Kocka</strong> (rob \(a\)): \(P = 6a^2\), \(V = a^3\), telesna diagonala \(d = a\sqrt{3}\)</li>
-              <li><strong>Kvader</strong> (\(a, b, c\)): \(P = 2(ab + ac + bc)\), \(V = abc\), telesna diagonala \(d = \sqrt{a^2+b^2+c^2}\)</li>
-              <li><strong>Valj</strong> (polmer \(r\), višina \(v\)): \(P = 2\pi r^2 + 2\pi r v\), \(V = \pi r^2 v\)</li>
-              <li><strong>Stožec</strong> (polmer \(r\), višina \(v\), stranica \(s\)): \(P = \pi r^2 + \pi r s\), \(V = \dfrac{\pi r^2 v}{3}\), \(s = \sqrt{r^2 + v^2}\)</li>
-              <li><strong>Krogla</strong> (polmer \(r\)): \(P = 4\pi r^2\), \(V = \dfrac{4\pi r^3}{3}\)</li>
-              <li><strong>Piramida</strong> (osnovna ploskev \(S_o\), višina \(v\)): \(V = \dfrac{S_o \cdot v}{3}\)</li>
-            </ul>
+            <h3>Podobnost in skladnost</h3>
+            <div class="concept-list two-col">
+              <div class="concept">
+                <h4>Skladna trikotnika</h4>
+                <div class="concept-formula">enaki koti in stranice</div>
+                <p class="concept-desc">Skladnost pomeni, da sta trikotnika <strong>enaka</strong> (do premika/zrcaljenja).</p>
+              </div>
+              <div class="concept">
+                <h4>Podobna trikotnika</h4>
+                <div class="concept-formula">enaki koti, stranice v razmerju \(k\)</div>
+                <p class="concept-desc">Koeficient podobnosti \(k = \dfrac{a'}{a}\).</p>
+              </div>
+              <div class="concept">
+                <h4>Razmerje obsegov</h4>
+                <div class="concept-formula">\(o' : o = k\)</div>
+              </div>
+              <div class="concept">
+                <h4>Razmerje ploščin</h4>
+                <div class="concept-formula">\(S' : S = k^2\)</div>
+              </div>
+            </div>
           </div>
         </section>
 
@@ -138,58 +226,70 @@
             <p>Za vsak tip: kako ga prepoznaš, kako ga rešiš, primer.</p>
           </div>
 
-          <!-- ====================== TIP 1 ====================== -->
+          <!-- TIP 1 -->
           <div class="info-card">
-            <h3>Tip 1: Koti v trikotniku</h3>
-            <p><strong>Kako prepoznaš:</strong> "Izračunajte kote", podani so razmerja ali delni podatki.</p>
+            <div class="tip-header">
+              <h3>Tip 1: Koti v trikotniku</h3>
+              <div class="tip-formula">\(\alpha + \beta + \gamma = 180°\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "izračunajte kote", podana razmerja ali delni podatki.</p>
             <p><strong>Postopek:</strong></p>
             <ol>
-              <li>Zapiši: \(\alpha + \beta + \gamma = 180^\circ\).</li>
+              <li>Zapiši \(\alpha + \beta + \gamma = 180°\).</li>
               <li>Uporabi dane zveze (npr. \(\gamma = 2\beta\)).</li>
               <li>Reši sistem enačb.</li>
             </ol>
-            <div class="math-block">
-              $$\text{Primer: } \alpha = 48{,}6^\circ, \quad \gamma = 2\beta$$
+            <p class="plain-example"><strong>Primer:</strong> \(\alpha = 48{,}6°\), \(\gamma = 2\beta\)</p>
+            <div class="plain-example">
+              <p>\(48{,}6 + \beta + 2\beta = 180 \Rightarrow 3\beta = 131{,}4 \Rightarrow \beta = 43{,}8°\), \(\gamma = 87{,}6°\).</p>
             </div>
-            <p>1. \(48{,}6 + \beta + 2\beta = 180\). 2. \(3\beta = 131{,}4 \Rightarrow \beta = 43{,}8^\circ\). 3. \(\gamma = 87{,}6^\circ\).</p>
           </div>
 
-          <!-- ====================== TIP 2 ====================== -->
+          <!-- TIP 2 -->
           <div class="info-card">
-            <h3>Tip 2: Pravokotni trikotnik</h3>
-            <p><strong>Kako prepoznaš:</strong> "Pravokotni trikotnik", dane katete ali hipotenuza in kot.</p>
+            <div class="tip-header">
+              <h3>Tip 2: Pravokotni trikotnik</h3>
+              <div class="tip-formula">\(a^2 + b^2 = c^2\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "pravokotni trikotnik", dane katete ali hipotenuza in kot.</p>
             <p><strong>Postopek:</strong></p>
             <ol>
               <li>Nariši skico in označi pravi kot.</li>
               <li>Uporabi Pitagorov izrek: \(a^2 + b^2 = c^2\).</li>
-              <li>Za kote uporabi \(\sin, \cos, \tan\).</li>
-              <li>Za višino na hipotenuzo: \(v_c = \dfrac{ab}{c}\).</li>
+              <li>Za kote: \(\sin, \cos, \tan\).</li>
+              <li>Višina na hipotenuzo: \(v_c = \dfrac{ab}{c}\).</li>
             </ol>
-            <div class="math-block">
-              $$\text{Primer: } a = 3, c = 6$$
+            <p class="plain-example"><strong>Primer:</strong> \(a = 3\), \(c = 6\)</p>
+            <div class="plain-example">
+              <p>\(b^2 = 36 - 9 = 27 \Rightarrow b = 3\sqrt{3}\). \(\sin\alpha = \dfrac{3}{6} = \dfrac{1}{2} \Rightarrow \alpha = 30°\), \(\beta = 60°\).</p>
             </div>
-            <p>1. \(b^2 = 36 - 9 = 27 \Rightarrow b = 3\sqrt{3}\). 2. \(\sin\alpha = \dfrac{3}{6} = \dfrac{1}{2} \Rightarrow \alpha = 30^\circ\). 3. \(\beta = 60^\circ\).</p>
           </div>
 
-          <!-- ====================== TIP 3 ====================== -->
+          <!-- TIP 3 -->
           <div class="info-card">
-            <h3>Tip 3: Sinusni izrek</h3>
+            <div class="tip-header">
+              <h3>Tip 3: Sinusni izrek</h3>
+              <div class="tip-formula">\(\dfrac{a}{\sin\alpha} = \dfrac{b}{\sin\beta}\)</div>
+            </div>
             <p><strong>Kako prepoznaš:</strong> podan par stranica–nasprotni kot in še ena stranica/kot.</p>
             <p><strong>Postopek:</strong></p>
             <ol>
               <li>Zapiši \(\dfrac{a}{\sin\alpha} = \dfrac{b}{\sin\beta}\).</li>
               <li>Izrazi neznanko.</li>
-              <li>Pazi: pri iskanju kota ima \(\sin\) lahko dve rešitvi (\(\alpha\) in \(180^\circ - \alpha\)).</li>
+              <li>Pazi: pri iskanju kota ima \(\sin\) lahko dve rešitvi (\(\alpha\) in \(180° - \alpha\)).</li>
             </ol>
-            <div class="math-block">
-              $$\text{Primer: } \alpha = 30^\circ, \beta = 50^\circ, a = 7$$
+            <p class="plain-example"><strong>Primer:</strong> \(\alpha = 30°\), \(\beta = 50°\), \(a = 7\)</p>
+            <div class="plain-example">
+              <p>\(b = \dfrac{7 \cdot \sin 50°}{\sin 30°} = \dfrac{7 \cdot 0{,}766}{0{,}5} \approx 10{,}72\) cm.</p>
             </div>
-            <p>1. \(\dfrac{7}{\sin 30^\circ} = \dfrac{b}{\sin 50^\circ}\). 2. \(b = \dfrac{7 \cdot \sin 50^\circ}{\sin 30^\circ} = \dfrac{7 \cdot 0{,}766}{0{,}5} \approx 10{,}72\) cm.</p>
           </div>
 
-          <!-- ====================== TIP 4 ====================== -->
+          <!-- TIP 4 -->
           <div class="info-card">
-            <h3>Tip 4: Kosinusni izrek</h3>
+            <div class="tip-header">
+              <h3>Tip 4: Kosinusni izrek</h3>
+              <div class="tip-formula">\(c^2 = a^2 + b^2 - 2ab\cos\gamma\)</div>
+            </div>
             <p><strong>Kako prepoznaš:</strong> podani dve stranici in vmesni kot, ali vse tri stranice.</p>
             <p><strong>Postopek:</strong></p>
             <ol>
@@ -197,181 +297,204 @@
               <li>Vstavi podatke in izračunaj neznanko.</li>
               <li>Za iskanje kota: \(\cos\gamma = \dfrac{a^2+b^2-c^2}{2ab}\).</li>
             </ol>
-            <div class="math-block">
-              $$\text{Primer: } a = 8, b = 9, c = 10$$
+            <p class="plain-example"><strong>Primer:</strong> \(a = 8, b = 9, c = 10\)</p>
+            <div class="plain-example">
+              <p>\(\cos\beta = \dfrac{64+100-81}{2 \cdot 8 \cdot 10} = \dfrac{83}{160} \Rightarrow \beta \approx 58{,}75°\).</p>
             </div>
-            <p>1. \(\cos\beta = \dfrac{a^2 + c^2 - b^2}{2ac} = \dfrac{64+100-81}{2 \cdot 8 \cdot 10} = \dfrac{83}{160}\). 2. \(\beta \approx 58{,}75^\circ\).</p>
           </div>
 
-          <!-- ====================== TIP 5 ====================== -->
+          <!-- TIP 5 -->
           <div class="info-card">
-            <h3>Tip 5: Ploščina trikotnika</h3>
-            <p><strong>Kako prepoznaš:</strong> "Izračunajte ploščino trikotnika".</p>
+            <div class="tip-header">
+              <h3>Tip 5: Ploščina trikotnika</h3>
+              <div class="tip-formula">\(S = \dfrac{a v_a}{2} = \dfrac{1}{2}ab\sin\gamma = \sqrt{s(s-a)(s-b)(s-c)}\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "izračunajte ploščino trikotnika".</p>
             <p><strong>Postopek:</strong></p>
             <ol>
               <li>Če imaš osnovnico in višino: \(S = \dfrac{a \cdot v_a}{2}\).</li>
               <li>Če imaš dve stranici in vmesni kot: \(S = \dfrac{1}{2}ab\sin\gamma\).</li>
               <li>Če imaš vse tri stranice: Heronova formula.</li>
             </ol>
-            <div class="math-block">
-              $$\text{Primer: } a = 6, b = 8, \gamma = 30^\circ$$
+            <p class="plain-example"><strong>Primer:</strong> \(a = 6, b = 8, \gamma = 30°\)</p>
+            <div class="plain-example">
+              <p>\(S = \dfrac{1}{2} \cdot 6 \cdot 8 \cdot 0{,}5 = 12\).</p>
             </div>
-            <p>1. \(S = \dfrac{1}{2} \cdot 6 \cdot 8 \cdot \sin 30^\circ = 24 \cdot 0{,}5 = 12\).</p>
           </div>
 
-          <!-- ====================== TIP 6 ====================== -->
+          <!-- TIP 6 -->
           <div class="info-card">
-            <h3>Tip 6: Enakokraki trikotnik</h3>
-            <p><strong>Kako prepoznaš:</strong> "Enakokraki trikotnik", podana osnovnica in krak ali višina.</p>
+            <div class="tip-header">
+              <h3>Tip 6: Enakokraki trikotnik</h3>
+              <div class="tip-formula">\(a^2 = v^2 + \left(\dfrac{c}{2}\right)^2\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "enakokraki trikotnik", podana osnovnica in krak ali višina.</p>
             <p><strong>Postopek:</strong></p>
             <ol>
               <li>Višina na osnovnico razpolovi osnovnico.</li>
-              <li>Uporabi Pitagorov izrek: \(a^2 = v^2 + \left(\dfrac{c}{2}\right)^2\).</li>
+              <li>Uporabi Pitagorov izrek: \(a^2 = v^2 + (c/2)^2\).</li>
               <li>Kota ob osnovnici sta enaka.</li>
             </ol>
-            <div class="math-block">
-              $$\text{Primer: osnovnica } c = 10, \text{ krak } a = 7$$
+            <p class="plain-example"><strong>Primer:</strong> \(c = 10\), \(a = 7\)</p>
+            <div class="plain-example">
+              <p>\(v^2 = 49 - 25 = 24 \Rightarrow v = 2\sqrt{6}\). \(S = \dfrac{10 \cdot 2\sqrt{6}}{2} = 10\sqrt{6}\).</p>
+              <p>\(\cos\alpha = \dfrac{5}{7} \Rightarrow \alpha \approx 44{,}4°\). Kot ob vrhu: \(180 - 2 \cdot 44{,}4 = 91{,}2°\).</p>
             </div>
-            <p>1. \(v^2 = 49 - 25 = 24 \Rightarrow v = 2\sqrt{6}\). 2. \(S = \dfrac{10 \cdot 2\sqrt{6}}{2} = 10\sqrt{6}\). 3. \(\cos\alpha = \dfrac{5}{7} \Rightarrow \alpha \approx 44{,}4^\circ\). 4. Kot ob vrhu: \(180 - 2 \cdot 44{,}4 = 91{,}2^\circ\).</p>
           </div>
 
-          <!-- ====================== TIP 7 ====================== -->
+          <!-- TIP 7 -->
           <div class="info-card">
-            <h3>Tip 7: Štirikotniki — trapez, paralelogram, romb</h3>
-            <p><strong>Kako prepoznaš:</strong> "Trapez ABCD", "romb", "paralelogram".</p>
+            <div class="tip-header">
+              <h3>Tip 7: Štirikotniki — trapez, paralelogram, romb</h3>
+              <div class="tip-formula">\(S = \dfrac{a+c}{2} \cdot v\) (trapez)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "trapez ABCD", "romb", "paralelogram".</p>
             <p><strong>Postopek:</strong></p>
             <ol>
               <li>Nariši skico in označi znane količine.</li>
               <li>Uporabi ustrezno formulo za obseg/ploščino.</li>
               <li>Pri trapezu: \(S = \dfrac{a+c}{2} \cdot v\).</li>
               <li>Pri rombu: \(S = \dfrac{e \cdot f}{2}\) ali \(S = a \cdot v\).</li>
-              <li>Pri paralelogramu: \(S = a \cdot v_a\).</li>
             </ol>
-            <div class="math-block">
-              $$\text{Primer: romb, stranica } a = 10, \text{ višina } v = 7$$
+            <p class="plain-example"><strong>Primer:</strong> romb, \(a = 10\), \(v = 7\)</p>
+            <div class="plain-example">
+              <p>\(S = 10 \cdot 7 = 70\). \(\sin\alpha = 0{,}7 \Rightarrow \alpha \approx 44{,}4°\), drugi kot \(135{,}6°\).</p>
             </div>
-            <p>1. \(S = 10 \cdot 7 = 70\). 2. \(\sin\alpha = \dfrac{7}{10} = 0{,}7 \Rightarrow \alpha \approx 44{,}4^\circ\). 3. Kot ob osnovnici je \(44{,}4^\circ\), drugi je \(180 - 44{,}4 = 135{,}6^\circ\).</p>
           </div>
 
-          <!-- ====================== TIP 8 ====================== -->
+          <!-- TIP 8 -->
           <div class="info-card">
-            <h3>Tip 8: Krožni izsek in lok</h3>
-            <p><strong>Kako prepoznaš:</strong> "Krožni izsek", "dolžina loka".</p>
+            <div class="tip-header">
+              <h3>Tip 8: Krožni izsek in lok</h3>
+              <div class="tip-formula">\(l = r \cdot \alpha_{\text{rad}}\), \(S = \dfrac{\pi r^2 \alpha}{360°}\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "krožni izsek", "dolžina loka".</p>
             <p><strong>Postopek:</strong></p>
             <ol>
-              <li>Pretvori kot v radiane (če je v stopinjah): \(\alpha_{\text{rad}} = \dfrac{\pi \alpha}{180^\circ}\).</li>
+              <li>Pretvori kot v radiane (če je v stopinjah): \(\alpha_{\text{rad}} = \dfrac{\pi \alpha}{180°}\).</li>
               <li>Dolžina loka: \(l = r \cdot \alpha_{\text{rad}}\).</li>
-              <li>Ploščina izseka: \(S = \dfrac{1}{2} r^2 \alpha_{\text{rad}} = \dfrac{\pi r^2 \alpha}{360^\circ}\).</li>
-              <li>Obseg izseka: \(o = 2r + l\).</li>
+              <li>Ploščina izseka: \(S = \dfrac{1}{2} r^2 \alpha_{\text{rad}} = \dfrac{\pi r^2 \alpha}{360°}\).</li>
             </ol>
-            <div class="math-block">
-              $$\text{Primer: } r = 1, \alpha = \frac{\pi}{2} \text{ rad}$$
+            <p class="plain-example"><strong>Primer:</strong> \(r = 1\), \(\alpha = \dfrac{\pi}{2}\)</p>
+            <div class="plain-example">
+              <p>\(l = \dfrac{\pi}{2}\), \(S = \dfrac{1}{2} \cdot 1 \cdot \dfrac{\pi}{2} = \dfrac{\pi}{4}\), \(o = 2 + \dfrac{\pi}{2}\).</p>
             </div>
-            <p>1. \(l = 1 \cdot \dfrac{\pi}{2} = \dfrac{\pi}{2}\). 2. \(S = \dfrac{1}{2} \cdot 1 \cdot \dfrac{\pi}{2} = \dfrac{\pi}{4}\). 3. \(o = 2 + \dfrac{\pi}{2}\).</p>
           </div>
 
-          <!-- ====================== TIP 9 ====================== -->
+          <!-- TIP 9 -->
           <div class="info-card">
-            <h3>Tip 9: Podobnost likov</h3>
-            <p><strong>Kako prepoznaš:</strong> "Podobna trikotnika", "razmerje stranic".</p>
+            <div class="tip-header">
+              <h3>Tip 9: Podobnost likov</h3>
+              <div class="tip-formula">\(S' = k^2 \cdot S\), \(o' = k \cdot o\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "podobna trikotnika", "razmerje stranic".</p>
             <p><strong>Postopek:</strong></p>
             <ol>
               <li>Določi koeficient podobnosti \(k = \dfrac{a'}{a}\).</li>
               <li>Razmerje obsegov: \(o' = k \cdot o\).</li>
               <li>Razmerje ploščin: \(S' = k^2 \cdot S\).</li>
-              <li>Razmerje prostornin: \(V' = k^3 \cdot V\).</li>
             </ol>
-            <div class="math-block">
-              $$\text{Primer: trikotnik } 4, 6, 8, \text{ podoben z najkrajšo stranico } 8$$
+            <p class="plain-example"><strong>Primer:</strong> trikotnik 4, 6, 8, podoben z najkrajšo stranico 8</p>
+            <div class="plain-example">
+              <p>\(k = \dfrac{8}{4} = 2\). \(o = 18 \Rightarrow o' = 36\). \(S = \sqrt{9 \cdot 5 \cdot 3 \cdot 1} = \sqrt{135} \approx 11{,}62\).</p>
+              <p>\(S' = 4 \cdot 11{,}62 = 46{,}48\).</p>
             </div>
-            <p>1. \(k = \dfrac{8}{4} = 2\). 2. Obseg originala: \(4+6+8 = 18\). 3. Novi obseg: \(2 \cdot 18 = 36\). 4. Ploščina originala (Heron): \(s = 9\), \(S = \sqrt{9 \cdot 5 \cdot 3 \cdot 1} = \sqrt{135} \approx 11{,}62\). 5. Nova ploščina: \(4 \cdot 11{,}62 = 46{,}48\).</p>
           </div>
 
-          <!-- ====================== TIP 10 ====================== -->
+          <!-- TIP 10 -->
           <div class="info-card">
-            <h3>Tip 10: Kvader, kocka — diagonala in prostornina</h3>
-            <p><strong>Kako prepoznaš:</strong> "Kvader", "kocka", "telesna diagonala".</p>
+            <div class="tip-header">
+              <h3>Tip 10: Središčni in obodni kot</h3>
+              <div class="tip-formula">\(\alpha = 2\beta\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "središčni in obodni kot nad istim lokom".</p>
             <p><strong>Postopek:</strong></p>
             <ol>
-              <li>Osnovna diagonala: \(d_o = \sqrt{a^2 + b^2}\).</li>
-              <li>Telesna diagonala: \(d_t = \sqrt{a^2+b^2+c^2}\).</li>
-              <li>Prostornina: \(V = abc\).</li>
-              <li>Površina: \(P = 2(ab+ac+bc)\).</li>
+              <li>Središčni kot je <strong>dvakratnik</strong> obodnega kota nad istim lokom.</li>
+              <li>Vsota središčnega in obodnega kota nad istim lokom = \(3\beta\).</li>
             </ol>
-            <div class="math-block">
-              $$\text{Primer: } a = 5, b = 12, c = 84$$
+            <p class="plain-example"><strong>Primer:</strong> Središčni + obodni kot = 33°</p>
+            <div class="plain-example">
+              <p>\(\alpha = 2\beta\), \(\alpha + \beta = 33° \Rightarrow 3\beta = 33 \Rightarrow \beta = 11°\), \(\alpha = 22°\).</p>
             </div>
-            <p>1. \(d_o = \sqrt{25 + 144} = 13\). 2. \(d_t = \sqrt{25 + 144 + 7056} = \sqrt{7225} = 85\).</p>
           </div>
 
-          <!-- ====================== TIP 11 ====================== -->
+          <!-- TIP 11 -->
           <div class="info-card">
-            <h3>Tip 11: Valj, stožec, krogla</h3>
-            <p><strong>Kako prepoznaš:</strong> "Valj", "stožec", "krogla".</p>
+            <div class="tip-header">
+              <h3>Tip 11: Ploščina trikotnika s koordinatami</h3>
+              <div class="tip-formula">\(S = \dfrac{1}{2}|(x_2-x_1)(y_3-y_1) - (x_3-x_1)(y_2-y_1)|\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> tri točke \(A, B, C\) s koordinatami.</p>
             <p><strong>Postopek:</strong></p>
             <ol>
-              <li>Preberi, kaj je podano (polmer, višina, prostornina ...).</li>
-              <li>Uporabi ustrezno formulo.</li>
-              <li>Za stožec: \(s = \sqrt{r^2 + v^2}\).</li>
-              <li>Pazi na enote (npr. litre v dm³).</li>
+              <li>Vstavi koordinate v formulo.</li>
+              <li>Izračunaj vrednost absolutne vrednosti.</li>
+              <li>Rezultat deli z 2.</li>
             </ol>
-            <div class="math-block">
-              $$\text{Primer: stožec, } V = 64, v = 4$$
+            <p class="plain-example"><strong>Primer:</strong> \(A(0,0), B(4,0), C(1,3)\)</p>
+            <div class="plain-example">
+              <p>\(S = \dfrac{1}{2}|(4-0)(3-0) - (1-0)(0-0)| = \dfrac{1}{2}|12| = 6\).</p>
             </div>
-            <p>1. \(V = \dfrac{\pi r^2 v}{3} = 64\). 2. \(\pi r^2 \cdot 4 = 192\). 3. \(r^2 = \dfrac{48}{\pi} \Rightarrow r \approx 3{,}91\).</p>
-            <div class="math-block">
-              $$\text{Primer: valj, } h = 50 \text{ cm}, V = 20 \text{ L} = 20 \text{ dm}^3$$
-            </div>
-            <p>1. \(V = \pi r^2 h = \pi r^2 \cdot 5 = 20\). 2. \(r^2 = \dfrac{4}{\pi} \Rightarrow r \approx 1{,}1\) dm.</p>
           </div>
 
-          <!-- ====================== TIP 12 ====================== -->
+          <!-- TIP 12 -->
           <div class="info-card">
-            <h3>Tip 12: Piramida</h3>
-            <p><strong>Kako prepoznaš:</strong> "Piramida", "stranska višina", "osnovni rob".</p>
+            <div class="tip-header">
+              <h3>Tip 12: Pitagorov izrek v prostoru</h3>
+              <div class="tip-formula">\(d = \sqrt{a^2 + b^2 + c^2}\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "telesna diagonala kvadra".</p>
             <p><strong>Postopek:</strong></p>
             <ol>
-              <li>Prostornina: \(V = \dfrac{S_o \cdot v}{3}\).</li>
-              <li>Za pravilno štiristrano piramido: \(S_o = a^2\).</li>
-              <li>Stranska višina \(v_1\) in višina \(v\): \(v_1^2 = v^2 + \left(\dfrac{a}{2}\right)^2\).</li>
+              <li>Za diagonalo kvadra: \(d = \sqrt{a^2 + b^2 + c^2}\).</li>
+              <li>Za diagonalo kocke: \(d = a\sqrt{3}\).</li>
+              <li>Za diagonalo osnovne ploskve: \(d_o = \sqrt{a^2 + b^2}\).</li>
             </ol>
-            <div class="math-block">
-              $$\text{Primer: } V = 22, v_1 = v + 4$$
+            <p class="plain-example"><strong>Primer:</strong> \(a = 5, b = 12, c = 84\)</p>
+            <div class="plain-example">
+              <p>\(d_o = \sqrt{25+144} = 13\). \(d = \sqrt{25+144+7056} = 85\).</p>
             </div>
-            <p>1. \(v_1^2 = v^2 + \dfrac{a^2}{4}\). 2. \((v+4)^2 = v^2 + \dfrac{a^2}{4} \Rightarrow 8v + 16 = \dfrac{a^2}{4} \Rightarrow a^2 = 32v + 64\). 3. \(V = \dfrac{a^2 v}{3} = 22 \Rightarrow a^2 v = 66\). 4. Reši sistem: \((32v + 64)v = 66\).</p>
           </div>
 
-          <!-- ====================== TIP 13 ====================== -->
+          <!-- TIP 13 -->
           <div class="info-card">
-            <h3>Tip 13: Sestavljeni liki — ploščina osenčenega dela</h3>
-            <p><strong>Kako prepoznaš:</strong> "Izračunajte ploščino osenčenega lika".</p>
+            <div class="tip-header">
+              <h3>Tip 13: Sestavljeni liki</h3>
+              <div class="tip-formula">Seštej/odštej ploščine preprostih likov</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "izračunajte ploščino osenčenega lika".</p>
             <p><strong>Postopek:</strong></p>
             <ol>
-              <li>Razdeli lik na preproste like (trikotnike, kroge, kvadrate ...).</li>
+              <li>Razdeli lik na preproste like (trikotniki, krogi, kvadrati).</li>
               <li>Izračunaj ploščino vsakega dela.</li>
-              <li>Seštej ali odštej ploščine (odvisno od tega, ali je lik zunaj ali znotraj).</li>
+              <li>Seštej ali odštej (odvisno od tega, ali je lik zunaj ali znotraj).</li>
             </ol>
-            <div class="math-block">
-              $$\text{Primer: kvadrat } a = 4, \text{ krožni lok s središčem v B}$$
+            <p class="plain-example"><strong>Primer:</strong> kvadrat \(a = 4\), krožni lok s središčem v B</p>
+            <div class="plain-example">
+              <p>Ploščina kvadrata: 16. Ploščina četrtine kroga: \(\dfrac{\pi \cdot 16}{4} = 4\pi\). Osenčeni del: \(16 - 4\pi\).</p>
             </div>
-            <p>1. Ploščina kvadrata: \(16\). 2. Ploščina četrtine kroga: \(\dfrac{\pi \cdot 16}{4} = 4\pi\). 3. Osenčeni del: \(16 - 4\pi\).</p>
           </div>
 
-          <!-- ====================== TIP 14 ====================== -->
+          <!-- TIP 14 -->
           <div class="info-card">
-            <h3>Tip 14: Besedilne naloge (zemljišče, posoda, žoga)</h3>
-            <p><strong>Kako prepoznaš:</strong> "Zemljišče pravokotne oblike", "akvarij", "žoga".</p>
+            <div class="tip-header">
+              <h3>Tip 14: Besedilne naloge (zemljišče, posoda, žoga)</h3>
+              <div class="tip-formula">Zapiši enačbe iz besedila</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "zemljišče pravokotne oblike", "akvarij", "žoga".</p>
             <p><strong>Postopek:</strong></p>
             <ol>
               <li>Določi obliko (pravokotnik, kvader, krogla ...).</li>
               <li>Zapiši enačbe iz besedila.</li>
               <li>Reši sistem.</li>
-              <li>Preveri smiselnost (npr. dimenzije morajo biti pozitivne).</li>
+              <li>Preveri smiselnost.</li>
             </ol>
-            <div class="math-block">
-              $$\text{Primer: Zemljišče } S = 405 \text{ m}^2, \text{ obseg } o = 81 \text{ m}$$
+            <p class="plain-example"><strong>Primer:</strong> Zemljišče \(S = 405\) m², obseg \(o = 81\) m</p>
+            <div class="plain-example">
+              <p>\(ab = 405\), \(a + b = 40{,}5\). \(a(40{,}5-a) = 405 \Rightarrow a^2 - 40{,}5a + 405 = 0\).</p>
+              <p>\(a = 27, b = 13{,}5\) (ali obratno).</p>
             </div>
-            <p>1. \(ab = 405\). 2. \(2(a+b) = 81 \Rightarrow a + b = 40{,}5\). 3. Reši kvadratno enačbo: \(a(40{,}5 - a) = 405 \Rightarrow a^2 - 40{,}5a + 405 = 0\). 4. \(a = 27, b = 13{,}5\) (ali obratno).</p>
           </div>
         </section>
 
@@ -382,22 +505,66 @@
           </div>
           <div class="info-card">
             <ul>
-              <li>Pri sinusnem izreku pozabiš, da ima \(\sin\alpha = k\) lahko <strong>dve rešitvi</strong> (\(\alpha\) in \(180^\circ - \alpha\)).</li>
+              <li>Pri sinusnem izreku pozabiš, da ima \(\sin\alpha = k\) lahko <strong>dve rešitvi</strong> (\(\alpha\) in \(180°-\alpha\)).</li>
               <li>Pri kosinusnem izreku zamenjaš predznak \(-2ab\cos\gamma\).</li>
               <li>Pri ploščini trikotnika z dvema stranicama in kotom uporabiš \(\cos\) namesto \(\sin\).</li>
               <li>Pri podobnosti zamenjaš razmerje obsegov (\(k\)) in ploščin (\(k^2\)).</li>
               <li>Pri krožnem izseku pozabiš pretvoriti stopinje v radiane (ali obratno).</li>
-              <li>Pri telesih zamenjaš površino in prostornino.</li>
-              <li>Pri valju/stožcu pozabiš, da je višina <strong>pravokotna</strong> na osnovno ploskev.</li>
-              <li>Pri sestavljenih likih pozabiš odšteti ploščino, ki ni del lika.</li>
+              <li>Pri središčnem/obodnem kotu pozabiš, da je središčni \(2 \times\) obodni.</li>
+              <li>Pri ploščini trikotnika s koordinatami pozabiš <strong>absolutno vrednost</strong> in deljenje z 2.</li>
+              <li>Pri besedilnih nalogah ne preveriš smiselnosti (dolžine morajo biti pozitivne).</li>
             </ul>
           </div>
         </section>
 
-        <!-- ============ 4. POVEZAVE ============ -->
+        <!-- ============ 4. ŠTUDIJSKI VODIČ ============ -->
         <section class="subsection">
           <div class="subsection-head">
-            <h2>4. Vadi naprej</h2>
+            <h2>4. Študijski vodič — hitri pregled</h2>
+          </div>
+          <div class="info-card">
+            <h3>📋 Kaj moraš znati na pamet</h3>
+            <ul>
+              <li><strong>Vsota kotov v trikotniku:</strong> \(180°\), v štirikotniku: \(360°\).</li>
+              <li><strong>Pitagorov izrek:</strong> \(a^2 + b^2 = c^2\).</li>
+              <li><strong>Sinusni izrek:</strong> \(\dfrac{a}{\sin\alpha} = \dfrac{b}{\sin\beta} = \dfrac{c}{\sin\gamma} = 2R\).</li>
+              <li><strong>Kosinusni izrek:</strong> \(c^2 = a^2 + b^2 - 2ab\cos\gamma\).</li>
+              <li><strong>Ploščina trikotnika:</strong> \(\dfrac{av_a}{2}\), \(\dfrac{1}{2}ab\sin\gamma\), Heronova formula.</li>
+              <li><strong>Ploščine štirikotnikov:</strong> kvadrat, pravokotnik, paralelogram, trapez, romb.</li>
+              <li><strong>Krog:</strong> \(o = 2\pi r\), \(S = \pi r^2\), krožni izsek.</li>
+              <li><strong>Podobnost:</strong> \(S' = k^2 S\), \(o' = k \cdot o\).</li>
+              <li><strong>Središčni kot:</strong> \(2 \times\) obodni kot.</li>
+            </ul>
+          </div>
+
+          <div class="info-card">
+            <h3>🎯 Kako pristopiti k nalogi</h3>
+            <ol>
+              <li><strong>Preberi nalogo in prepoznaj tip:</strong> trikotnik (koti, stranice, ploščina), štirikotnik, krog, podobnost?</li>
+              <li><strong>Za trikotnik:</strong> nariši skico, označi podatke, izberi pravi izrek (Pitagorov, sinusni, kosinusni).</li>
+              <li><strong>Za ploščino:</strong> preveri, katere podatke imaš (osnovnica × višina, dve stranici in kot, tri stranice).</li>
+              <li><strong>Za krog:</strong> preveri, ali gre za cel krog, izsek, ali lok.</li>
+              <li><strong>Za podobnost:</strong> določi \(k\), nato obseg \(k\) in ploščina \(k^2\).</li>
+              <li><strong>Za koordinate:</strong> uporabi formulo za ploščino trikotnika.</li>
+            </ol>
+          </div>
+
+          <div class="info-card">
+            <h3>⏱️ Časovni načrt za en večer</h3>
+            <ul>
+              <li><strong>30 min:</strong> Teorija — trikotnik, štirikotniki, krog, podobnost.</li>
+              <li><strong>60 min:</strong> Tipi 1–6 (koti, pravokotni trikotnik, sinusni/kosinusni izrek, ploščina, enakokraki).</li>
+              <li><strong>45 min:</strong> Tipi 7–11 (štirikotniki, krožni izsek, podobnost, obodni kot, koordinate).</li>
+              <li><strong>45 min:</strong> Tipi 12–14 (prostor, sestavljeni liki, besedilne).</li>
+              <li><strong>30 min:</strong> Ponovi pogoste napake in študijski vodič.</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ============ 5. POVEZAVE ============ -->
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>5. Vadi naprej</h2>
             <p>Ko predelaš razlago, preveri znanje z nalogami.</p>
           </div>
           <div class="link-list">
@@ -423,7 +590,6 @@
   </div>
 
   <div id="footer"></div>
-
   <script src="/components/components.js"></script>
 </body>
 </html>

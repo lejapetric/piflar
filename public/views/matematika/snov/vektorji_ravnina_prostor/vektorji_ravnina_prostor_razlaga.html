@@ -1,71 +1,493 @@
-<div class="view">
-    <div class="view-header">
-        <h2>➡️ 9. Vektorji</h2>
-        <p>Operacije z vektorji, skalarni in vektorski produkt</p>
-    </div>
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vektorji v ravnini in prostoru — razlaga in postopki | Piflar.si</title>
+  <meta name="description" content="Celovita razlaga vektorjev za maturo: seštevanje, množenje s skalarjem, skalarni produkt, kot med vektorji, dolžina vektorja, linearna kombinacija, baza, kolinearnost, koplanarnost.">
+  <link rel="stylesheet" href="/style/style.css">
+  <link rel="stylesheet" href="/views/matematika/snov/vektorji_ravnina_prostor/vektorji_ravnina_prostor_style.css">
+</head>
+<body>
+  <div id="header"></div>
 
-    <div class="card">
-        <h3>📖 Osnovni pojmi</h3>
-        <ul style="padding-left: 20px; color: var(--text-secondary);">
-            <li><strong>Vektor:</strong> usmerjena daljica (velikost, smer, orientacija)</li>
-            <li><strong>Koordinate v ravnini:</strong> ā = (a₁, a₂)</li>
-            <li><strong>Koordinate v prostoru:</strong> ā = (a₁, a₂, a₃)</li>
-            <li><strong>AB = B - A</strong></li>
-            <li><strong>Dolžina (norma):</strong> |ā| = √(a₁² + a₂² + a₃²)</li>
-        </ul>
-    </div>
+  <div id="mainContent" class="main-content">
+    <div id="sidebar"></div>
 
-    <div class="card">
-        <h3>🔗 Operacije z vektorji</h3>
-        <div class="formula-grid">
-            <div class="formula-card">
-                <strong>Seštevanje</strong><br>
-                <code>ā ± b̄ = (a₁±b₁, a₂±b₂, a₃±b₃)</code>
+    <div class="view-container">
+      <div class="view">
+
+        <header class="page-header">
+          <span class="page-eyebrow">Matematika · Snov · 4.8</span>
+          <h1>Vektorji v ravnini in prostoru</h1>
+          <p>Vse o vektorjih za maturo: seštevanje, množenje s skalarjem, skalarni produkt, kot med vektorjema, dolžina vektorja, linearna kombinacija, kolinearnost, koplanarnost in baza.</p>
+          <div class="page-meta">
+            <div class="page-meta-item"><strong>12</strong><span>Tipov nalog</span></div>
+            <div class="page-meta-item"><strong>40+</strong><span>Primerov</span></div>
+            <div class="page-meta-item"><strong>~55 min</strong><span>Branja</span></div>
+          </div>
+        </header>
+
+        <!-- ============ MATURA FORMULE ============ -->
+        <div class="matura-formule">
+          <h3>📋 Formule na maturi — osnovna raven</h3>
+          <p>Na maturitetnem listu s formulami so za <strong>vektorje</strong> relevantne naslednje formule:</p>
+          <div class="matura-grid">
+            <div class="matura-levo">
+              <ul>
+                <li><strong>Seštevanje:</strong> \(\vec{a} + \vec{b} = (a_1 + b_1, a_2 + b_2)\)</li>
+                <li><strong>Skalarni produkt:</strong> \(\vec{a} \cdot \vec{b} = a_1 b_1 + a_2 b_2\) (v ravnini) oz. \(a_1 b_1 + a_2 b_2 + a_3 b_3\) (v prostoru)</li>
+                <li><strong>Dolžina vektorja:</strong> \(|\vec{a}| = \sqrt{a_1^2 + a_2^2}\) (v ravnini) oz. \(\sqrt{a_1^2 + a_2^2 + a_3^2}\) (v prostoru)</li>
+                <li><strong>Kot med vektorjema:</strong> \(\cos\varphi = \dfrac{\vec{a} \cdot \vec{b}}{|\vec{a}| \cdot |\vec{b}|}\)</li>
+                <li><strong>Pravokotnost:</strong> \(\vec{a} \cdot \vec{b} = 0\)</li>
+                <li><strong>Vzporednost:</strong> \(\vec{a} = k \vec{b}\) (kolinearna)</li>
+              </ul>
             </div>
-            <div class="formula-card">
-                <strong>Množenje s skalarjem</strong><br>
-                <code>k·ā = (k·a₁, k·a₂, k·a₃)</code>
+            <div class="matura-slika">
+              <img src="/views/matematika/images/formule_osnovna_raven.png" alt="Formule na maturi — osnovna raven">
             </div>
+          </div>
         </div>
-    </div>
 
-    <div class="card">
-        <h3>📐 Skalarni produkt</h3>
-        <div class="formula-card">
-            <code>ā · b̄ = |ā| · |b̄| · cos φ = a₁b₁ + a₂b₂ + a₃b₃</code>
-        </div>
-        <ul style="margin-top: 8px; padding-left: 20px; color: var(--text-secondary);">
-            <li><strong>Pravokotnost:</strong> ā · b̄ = 0 ⇔ ā ⊥ b̄</li>
-            <li><strong>Kot med vektorjema:</strong> cos φ = (ā·b̄)/(|ā|·|b̄|)</li>
-        </ul>
-    </div>
+        <!-- ============ 1. TEORIJA ============ -->
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>1. Teorija — pojmi in operacije</h2>
+            <p>Kar moraš znati na pamet, preden se lotiš nalog.</p>
+          </div>
 
-    <div class="card">
-        <h3>📐 Vektorski produkt (prostor)</h3>
-        <div class="formula-card">
-            <code>ā × b̄ = (a₂b₃ - a₃b₂, a₃b₁ - a₁b₃, a₁b₂ - a₂b₁)</code>
-        </div>
-        <ul style="margin-top: 8px; padding-left: 20px; color: var(--text-secondary);">
-            <li><strong>Ploščina paralelograma:</strong> |ā × b̄|</li>
-            <li><strong>Vzporednost:</strong> ā × b̄ = 0 ⇔ ā ∥ b̄</li>
-        </ul>
-    </div>
+          <div class="info-card">
+            <h3>Osnovni pojmi</h3>
+            <div class="concept-list two-col">
+              <div class="concept">
+                <h4>Vektor</h4>
+                <div class="concept-formula">\(\vec{a} = \overrightarrow{AB} = (a_1, a_2)\)</div>
+                <p class="concept-desc">Usmerjena daljica z velikostjo (dolžino), smerjo in orientacijo.</p>
+              </div>
+              <div class="concept">
+                <h4>Krajevni vektor točke</h4>
+                <div class="concept-formula">\(\overrightarrow{AB} = B - A\)</div>
+                <p class="concept-desc">Vektor od točke A do točke B. V koordinatah: \((x_B - x_A, y_B - y_A)\).</p>
+              </div>
+              <div class="concept">
+                <h4>Dolžina vektorja (norma)</h4>
+                <div class="concept-formula">\(|\vec{a}| = \sqrt{a_1^2 + a_2^2 + a_3^2}\)</div>
+                <p class="concept-desc">Vedno nenegativna.</p>
+              </div>
+              <div class="concept">
+                <h4>Enotski vektor</h4>
+                <div class="concept-formula">\(\vec{a}_0 = \dfrac{\vec{a}}{|\vec{a}|}\)</div>
+                <p class="concept-desc">Ima dolžino 1 in isto smer kot \(\vec{a}\).</p>
+              </div>
+              <div class="concept">
+                <h4>Ničelni vektor</h4>
+                <div class="concept-formula">\(\vec{0} = (0, 0)\)</div>
+                <p class="concept-desc">Nima smeri, dolžina 0.</p>
+              </div>
+              <div class="concept">
+                <h4>Nasprotni vektor</h4>
+                <div class="concept-formula">\(-\vec{a} = (-a_1, -a_2)\)</div>
+                <p class="concept-desc">Ista dolžina, nasprotna smer.</p>
+              </div>
+            </div>
+          </div>
 
-    <div class="card">
-        <h3>📦 Mešani produkt</h3>
-        <div class="formula-card">
-            <code>ā · (b̄ × c̄) = determinanta</code>
-        </div>
-        <p style="margin-top: 8px; color: var(--text-secondary);"><strong>Prostornina paralelepipeda:</strong> |ā · (b̄ × c̄)|</p>
-    </div>
+          <div class="info-card">
+            <h3>Operacije z vektorji</h3>
+            <div class="concept-list two-col">
+              <div class="concept">
+                <h4>Seštevanje</h4>
+                <div class="concept-formula">\(\vec{a} + \vec{b} = (a_1 + b_1, a_2 + b_2, a_3 + b_3)\)</div>
+                <p class="concept-desc">Grafično: paralelogramsko pravilo ali pravilo zaporednih vektorjev.</p>
+              </div>
+              <div class="concept">
+                <h4>Odštevanje</h4>
+                <div class="concept-formula">\(\vec{a} - \vec{b} = (a_1 - b_1, a_2 - b_2, a_3 - b_3)\)</div>
+                <p class="concept-desc">\(\vec{a} - \vec{b} = \vec{a} + (-\vec{b})\).</p>
+              </div>
+              <div class="concept">
+                <h4>Množenje s skalarjem</h4>
+                <div class="concept-formula">\(k \vec{a} = (k a_1, k a_2, k a_3)\)</div>
+                <p class="concept-desc">Rezultat je vektor z isto (ali nasprotno) smerjo in \(k\)-kratno dolžino.</p>
+              </div>
+              <div class="concept">
+                <h4>Skalarni produkt</h4>
+                <div class="concept-formula">\(\vec{a} \cdot \vec{b} = a_1 b_1 + a_2 b_2 + a_3 b_3\)</div>
+                <p class="concept-desc">Rezultat je <strong>število</strong> (skalar).</p>
+              </div>
+              <div class="concept">
+                <h4>Kot med vektorjema</h4>
+                <div class="concept-formula">\(\cos\varphi = \dfrac{\vec{a} \cdot \vec{b}}{|\vec{a}| \cdot |\vec{b}|}\)</div>
+                <p class="concept-desc">\(\varphi \in [0, \pi]\).</p>
+              </div>
+              <div class="concept">
+                <h4>Pravokotna projekcija</h4>
+                <div class="concept-formula">\(\text{proj}_{\vec{b}} \vec{a} = \dfrac{\vec{a} \cdot \vec{b}}{|\vec{b}|^2} \cdot \vec{b}\)</div>
+                <p class="concept-desc">Projekcija vektorja \(\vec{a}\) na vektor \(\vec{b}\).</p>
+              </div>
+            </div>
+          </div>
 
-    <div class="card">
-        <h3>📝 Primeri</h3>
-        <div style="background: var(--bg-primary); padding: 16px; border-radius: var(--radius-sm);">
-            <p><strong>Primer 1:</strong> ā = (1,2,3), b̄ = (4,5,6)</p>
-            <p>ā × b̄ = (-3, 6, -3)</p>
-            <p style="margin-top: 8px;"><strong>Primer 2:</strong> ā = (1,0,2), b̄ = (2,1,0)</p>
-            <p>|ā × b̄| = √21 (ploščina paralelograma)</p>
-        </div>
+          <div class="info-card">
+            <h3>Posebne lege</h3>
+            <div class="concept-list two-col">
+              <div class="concept">
+                <h4>Kolinearna (vzporedna)</h4>
+                <div class="concept-formula">\(\vec{a} = k \vec{b}\) za nek \(k \neq 0\)</div>
+                <p class="concept-desc">Ležita na isti ali vzporedni premici.</p>
+              </div>
+              <div class="concept">
+                <h4>Pravokotna</h4>
+                <div class="concept-formula">\(\vec{a} \cdot \vec{b} = 0\)</div>
+                <p class="concept-desc">Kot med njima je \(90°\).</p>
+              </div>
+              <div class="concept">
+                <h4>Koplanarna</h4>
+                <div class="concept-formula">ležijo v isti ravnini</div>
+                <p class="concept-desc">Linearno odvisni vektorji.</p>
+              </div>
+              <div class="concept">
+                <h4>Linearna kombinacija</h4>
+                <div class="concept-formula">\(\vec{c} = \alpha \vec{a} + \beta \vec{b}\)</div>
+                <p class="concept-desc">Vektor, zapisan kot vsota večkratnikov drugih vektorjev.</p>
+              </div>
+              <div class="concept">
+                <h4>Linearna neodvisnost</h4>
+                <div class="concept-formula">\(\alpha \vec{a} + \beta \vec{b} = 0 \Rightarrow \alpha = \beta = 0\)</div>
+                <p class="concept-desc">Vektorji niso linearno odvisni.</p>
+              </div>
+              <div class="concept">
+                <h4>Baza v ravnini / prostoru</h4>
+                <div class="concept-formula">\(\vec{i}, \vec{j}\) ali \(\vec{i}, \vec{j}, \vec{k}\)</div>
+                <p class="concept-desc">Linearno neodvisni vektorji, ki napenjajo ves prostor.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ 2. TIPI NALOG ============ -->
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>2. Tipi nalog — postopki po korakih</h2>
+            <p>Za vsak tip: kako ga prepoznaš, kako ga rešiš, primer.</p>
+          </div>
+
+          <!-- TIP 1 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 1: Računanje z vektorji v koordinatah</h3>
+              <div class="tip-formula">\(\vec{a} \pm \vec{b} = (a_1 \pm b_1, a_2 \pm b_2)\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "izračunajte \(\vec{a} + \vec{b}\)", "izračunajte \(2\vec{a} - \vec{b}\)".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Zapiši koordinate vektorjev.</li>
+              <li>Seštej/odštej po komponentah.</li>
+              <li>Pomnoži s skalarjem po komponentah.</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> \(\vec{a} = (2, -1)\), \(\vec{b} = (6, -3)\)</p>
+            <div class="plain-example">
+              <p>\(\vec{a} + \vec{b} = (8, -4)\), \(2\vec{a} - \vec{b} = (4,-2) - (6,-3) = (-2, 1)\).</p>
+            </div>
+          </div>
+
+          <!-- TIP 2 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 2: Dolžina vektorja</h3>
+              <div class="tip-formula">\(|\vec{a}| = \sqrt{a_1^2 + a_2^2 + a_3^2}\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "izračunajte dolžino vektorja".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Kvadriraj vse komponente.</li>
+              <li>Seštej.</li>
+              <li>Koreni.</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> \(\vec{a} = (1, 2, 3)\)</p>
+            <div class="plain-example">
+              <p>\(|\vec{a}| = \sqrt{1 + 4 + 9} = \sqrt{14}\).</p>
+            </div>
+          </div>
+
+          <!-- TIP 3 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 3: Skalarni produkt</h3>
+              <div class="tip-formula">\(\vec{a} \cdot \vec{b} = a_1 b_1 + a_2 b_2 + a_3 b_3\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "izračunajte skalarni produkt".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Pomnoži ustrezne komponente.</li>
+              <li>Seštej produkte.</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> \(\vec{a} = (4, -3, 1)\), \(\vec{b} = (-2, 5, 3)\)</p>
+            <div class="plain-example">
+              <p>\(\vec{a} \cdot \vec{b} = 4 \cdot (-2) + (-3) \cdot 5 + 1 \cdot 3 = -8 - 15 + 3 = -20\).</p>
+            </div>
+          </div>
+
+          <!-- TIP 4 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 4: Kot med vektorjema</h3>
+              <div class="tip-formula">\(\cos\varphi = \dfrac{\vec{a} \cdot \vec{b}}{|\vec{a}| \cdot |\vec{b}|}\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "izračunajte kot med vektorjema".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Izračunaj skalarni produkt.</li>
+              <li>Izračunaj dolžini obeh vektorjev.</li>
+              <li>Vstavi v formulo \(\cos\varphi\).</li>
+              <li>\(\varphi = \arccos(\cos\varphi)\).</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> \(\vec{a} = (1, 0, 2)\), \(\vec{b} = (2, 1, 0)\)</p>
+            <div class="plain-example">
+              <p>\(\vec{a} \cdot \vec{b} = 2\), \(|\vec{a}| = \sqrt{5}\), \(|\vec{b}| = \sqrt{5}\).</p>
+              <p>\(\cos\varphi = \dfrac{2}{5} \Rightarrow \varphi \approx 66{,}42°\).</p>
+            </div>
+          </div>
+
+          <!-- TIP 5 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 5: Preverjanje pravokotnosti</h3>
+              <div class="tip-formula">\(\vec{a} \cdot \vec{b} = 0\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "ali sta vektorja pravokotna".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Izračunaj skalarni produkt.</li>
+              <li>Če je enak 0, sta pravokotna.</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> \(\vec{a} = (1, 2, 3)\), \(\vec{b} = (2, -1, 0)\)</p>
+            <div class="plain-example">
+              <p>\(\vec{a} \cdot \vec{b} = 2 - 2 + 0 = 0\) → <strong>pravokotna</strong>.</p>
+            </div>
+          </div>
+
+          <!-- TIP 6 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 6: Iskanje neznane komponente za pravokotnost</h3>
+              <div class="tip-formula">\(\vec{a} \cdot \vec{b} = 0\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "določite \(x\) tako, da bosta vektorja pravokotna".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Zapiši skalarni produkt v odvisnosti od \(x\).</li>
+              <li>Nastavi enakost 0.</li>
+              <li>Reši enačbo za \(x\).</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> \(\vec{a} = (1, 2, x)\), \(\vec{b} = (-3, -x, 1)\)</p>
+            <div class="plain-example">
+              <p>\(-3 - 2x + x = 0 \Rightarrow -3 - x = 0 \Rightarrow x = -3\).</p>
+            </div>
+          </div>
+
+          <!-- TIP 7 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 7: Preverjanje kolinearnosti</h3>
+              <div class="tip-formula">\(\vec{a} = k\vec{b}\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "ali sta vektorja vzporedna".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Preveri, ali so razmerja komponent enaka: \(\dfrac{a_1}{b_1} = \dfrac{a_2}{b_2} = \dfrac{a_3}{b_3}\).</li>
+              <li>Če je razmerje konstantno, sta vektorja kolinearna.</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> \(\vec{a} = (2, 4)\), \(\vec{b} = (1, 2)\)</p>
+            <div class="plain-example">
+              <p>\(\dfrac{2}{1} = \dfrac{4}{2} = 2\) → kolinearna (\(\vec{a} = 2\vec{b}\)).</p>
+            </div>
+          </div>
+
+          <!-- TIP 8 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 8: Vektor med dvema točkama</h3>
+              <div class="tip-formula">\(\overrightarrow{AB} = B - A\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> podani sta točki A in B, iščeš vektor \(\overrightarrow{AB}\).</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Od koordinat končne točke odštej koordinate začetne.</li>
+              <li>\(\overrightarrow{AB} = (x_B - x_A, y_B - y_A)\) oz. \((x_B-x_A, y_B-y_A, z_B-z_A)\).</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> \(A(1, 2, 3)\), \(B(2, 3, 4)\)</p>
+            <div class="plain-example">
+              <p>\(\overrightarrow{AB} = (1, 1, 1)\). \(|\overrightarrow{AB}| = \sqrt{3}\).</p>
+            </div>
+          </div>
+
+          <!-- TIP 9 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 9: Linearna kombinacija in baza</h3>
+              <div class="tip-formula">\(\vec{c} = \alpha \vec{a} + \beta \vec{b}\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "izrazite vektor kot linearno kombinacijo".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Zapiši \(\vec{c} = \alpha \vec{a} + \beta \vec{b}\) po komponentah.</li>
+              <li>Dobiš sistem enačb za \(\alpha\) in \(\beta\).</li>
+              <li>Reši sistem.</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> \(\vec{a} = (1, 2)\), \(\vec{b} = (2, 1)\), \(\vec{c} = (4, 5)\)</p>
+            <div class="plain-example">
+              <p>\(\alpha + 2\beta = 4\), \(2\alpha + \beta = 5\). Rešitev: \(\alpha = 2, \beta = 1\).</p>
+              <p>\(\vec{c} = 2\vec{a} + \vec{b}\).</p>
+            </div>
+          </div>
+
+          <!-- TIP 10 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 10: Pravokotna projekcija</h3>
+              <div class="tip-formula">\(\text{proj}_{\vec{b}} \vec{a} = \dfrac{\vec{a} \cdot \vec{b}}{|\vec{b}|^2} \cdot \vec{b}\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "izračunajte projekcijo vektorja na vektor".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Izračunaj \(\vec{a} \cdot \vec{b}\) in \(|\vec{b}|^2\).</li>
+              <li>Pomnoži \(\vec{b}\) s količnikom \(\dfrac{\vec{a} \cdot \vec{b}}{|\vec{b}|^2}\).</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> \(\vec{a} = (3, 4)\), \(\vec{b} = (1, 0)\)</p>
+            <div class="plain-example">
+              <p>\(\text{proj} = \dfrac{3}{1}(1, 0) = (3, 0)\).</p>
+            </div>
+          </div>
+
+          <!-- TIP 11 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 11: Vektorji v trikotniku</h3>
+              <div class="tip-formula">\(\overrightarrow{AB} + \overrightarrow{BC} + \overrightarrow{CA} = \vec{0}\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> podan trikotnik ali paralelogram, iščeš vektorje.</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Uporabi lastnost zaporednih vektorjev.</li>
+              <li>V paralelogramu: \(\overrightarrow{AC} = \overrightarrow{AB} + \overrightarrow{AD}\).</li>
+              <li>V trikotniku: \(\overrightarrow{AB} + \overrightarrow{BC} = \overrightarrow{AC}\).</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> v paralelogramu \(ABCD\): \(\vec{a} = \overrightarrow{AB}, \vec{b} = \overrightarrow{AD}\)</p>
+            <div class="plain-example">
+              <p>\(\overrightarrow{AC} = \vec{a} + \vec{b}\). \(\overrightarrow{BD} = \vec{b} - \vec{a}\).</p>
+            </div>
+          </div>
+
+          <!-- TIP 12 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 12: Dokazovanje pravokotnosti v geometrijskih likih</h3>
+              <div class="tip-formula">\(\vec{a} \cdot \vec{b} = 0\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "dokažite, da sta vektorja pravokotna".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Izrazi oba vektorja z baznimi vektorji lika.</li>
+              <li>Izračunaj skalarni produkt.</li>
+              <li>Pokaži, da je enak 0.</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> v kvadratu ABCD s stranico \(a\): \(\overrightarrow{AB} \cdot \overrightarrow{AD} = 0\)</p>
+            <div class="plain-example">
+              <p>Ker sta stranici kvadrata pravokotni.</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ 3. POGOSTE NAPAKE ============ -->
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>3. Pogoste napake</h2>
+          </div>
+          <div class="info-card">
+            <ul>
+              <li>Zamenjaš <strong>skalarni produkt</strong> (število) z <strong>vektorskim produktom</strong> (vektor) — prvi vrne število, drugi vektor.</li>
+              <li>Pri kotu med vektorjema pozabiš deliti z \(|\vec{a}| \cdot |\vec{b}|\).</li>
+              <li>Pri računanju \(\overrightarrow{AB}\) obrneš vrstni red: \(\overrightarrow{AB} = B - A\), ne \(A - B\).</li>
+              <li>Pri kolinearnosti preverjaš le eno razmerje (preveri vsa).</li>
+              <li>Pri projekciji pozabiš na kvadrat \(|\vec{b}|^2\) v imenovalcu.</li>
+              <li>Pozabiš, da je \(|\vec{a}|\) vedno <strong>nenegativna</strong>.</li>
+              <li>Pri linearni kombinaciji ne zapišeš vseh komponent sistema enačb.</li>
+              <li>Pri vektorjih v prostoru pozabiš na tretjo komponento.</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ============ 4. ŠTUDIJSKI VODIČ ============ -->
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>4. Študijski vodič — hitri pregled</h2>
+          </div>
+          <div class="info-card">
+            <h3>📋 Kaj moraš znati na pamet</h3>
+            <ul>
+              <li><strong>Vektor:</strong> \(\vec{a} = (a_1, a_2)\) (ravnina) oz. \((a_1, a_2, a_3)\) (prostor).</li>
+              <li><strong>Dolžina:</strong> \(|\vec{a}| = \sqrt{a_1^2 + a_2^2 + a_3^2}\).</li>
+              <li><strong>Skalarni produkt:</strong> \(\vec{a} \cdot \vec{b} = a_1 b_1 + a_2 b_2 + a_3 b_3\).</li>
+              <li><strong>Kot:</strong> \(\cos\varphi = \dfrac{\vec{a} \cdot \vec{b}}{|\vec{a}| \cdot |\vec{b}|}\).</li>
+              <li><strong>Pravokotnost:</strong> \(\vec{a} \cdot \vec{b} = 0\).</li>
+              <li><strong>Kolinearnost:</strong> \(\vec{a} = k\vec{b}\).</li>
+              <li><strong>Projekcija:</strong> \(\text{proj}_{\vec{b}} \vec{a} = \dfrac{\vec{a} \cdot \vec{b}}{|\vec{b}|^2} \cdot \vec{b}\).</li>
+            </ul>
+          </div>
+
+          <div class="info-card">
+            <h3>🎯 Kako pristopiti k nalogi</h3>
+            <ol>
+              <li><strong>Preberi nalogo in prepoznaj tip:</strong> seštevanje, skalarni produkt, kot, pravokotnost, kolinearnost?</li>
+              <li><strong>Za skalarni produkt:</strong> zmnoži ustrezne komponente in seštej.</li>
+              <li><strong>Za kot:</strong> izračunaj skalarni produkt, dolžini, nato \(\cos\varphi\).</li>
+              <li><strong>Za pravokotnost:</strong> preveri \(\vec{a} \cdot \vec{b} = 0\).</li>
+              <li><strong>Za kolinearnost:</strong> preveri \(\vec{a} = k\vec{b}\) (razmerja komponent).</li>
+              <li><strong>Za linearno kombinacijo:</strong> zapiši sistem po komponentah.</li>
+            </ol>
+          </div>
+
+          <div class="info-card">
+            <h3>⏱️ Časovni načrt za en večer</h3>
+            <ul>
+              <li><strong>25 min:</strong> Teorija — osnovni pojmi, operacije, posebne lege.</li>
+              <li><strong>55 min:</strong> Tipi 1–6 (koordinate, dolžina, skalarni produkt, kot, pravokotnost, neznanka).</li>
+              <li><strong>40 min:</strong> Tipi 7–12 (kolinearnost, med dvema točkama, linearna kombinacija, projekcija, trikotnik, dokazovanje).</li>
+              <li><strong>25 min:</strong> Ponovi pogoste napake in študijski vodič.</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ============ 5. POVEZAVE ============ -->
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>5. Vadi naprej</h2>
+            <p>Ko predelaš razlago, preveri znanje z nalogami.</p>
+          </div>
+          <div class="link-list">
+            <a class="link-item" href="/views/matematika/matura/osnovna_raven/naloge/resene/">
+              <span class="link-item-text">
+                <strong>Rešene naloge — osnovna raven</strong>
+                <small>Primeri z razlago</small>
+              </span>
+              <span class="arrow">→</span>
+            </a>
+            <a class="link-item" href="/views/matematika/matura/visja_raven/naloge/resene/">
+              <span class="link-item-text">
+                <strong>Rešene naloge — višja raven</strong>
+                <small>Zahtevnejši primeri</small>
+              </span>
+              <span class="arrow">→</span>
+            </a>
+          </div>
+        </section>
+
+      </div>
     </div>
-</div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>

@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stožnice — razlaga in postopki | Piflar.si</title>
+  <meta name="description" content="Celovita razlaga stožnic za maturo: krožnica, elipsa, hiperbola in parabola. Središčna in premaknjena lega, gorišča, polosi, asimptote, tangente, presečišča s premico.">
+  <link rel="stylesheet" href="/style/style.css">
+  <link rel="stylesheet" href="/views/matematika/snov/stoznice/stoznice_style.css">
+</head>
+<body>
+  <div id="header"></div>
+
+  <div id="mainContent" class="main-content">
+    <div id="sidebar"></div>
+
+    <div class="view-container">
+      <div class="view">
+
+        <header class="page-header">
+          <span class="page-eyebrow">Matematika · Snov · 4.11</span>
+          <h1>Stožnice</h1>
+          <p>Vse o stožnicah za maturo: krožnica, elipsa, hiperbola in parabola. Središčna in premaknjena lega, gorišča, polosi, ekscentričnost, asimptote, tangente in presečišča s premico.</p>
+          <div class="page-meta">
+            <div class="page-meta-item"><strong>12</strong><span>Tipov nalog</span></div>
+            <div class="page-meta-item"><strong>40+</strong><span>Primerov</span></div>
+            <div class="page-meta-item"><strong>~60 min</strong><span>Branja</span></div>
+          </div>
+        </header>
+
+        <!-- ============ MATURA FORMULE ============ -->
+        <div class="matura-formule">
+          <h3>📋 Formule na maturi — osnovna raven</h3>
+          <p>Na maturitetnem listu s formulami so za <strong>stožnice</strong> relevantne naslednje formule:</p>
+          <div class="matura-grid">
+            <div class="matura-levo">
+              <ul>
+                <li><strong>Elipsa:</strong> \(e^2 = a^2 - b^2\), \(\varepsilon = \dfrac{e}{a}\)</li>
+                <li><strong>Hiperbola:</strong> \(e^2 = a^2 + b^2\), \(\varepsilon = \dfrac{e}{a}\)</li>
+                <li><strong>Parabola:</strong> \(y^2 = 2px\), gorišče \(G\left(\dfrac{p}{2}, 0\right)\), vodnica \(x = -\dfrac{p}{2}\)</li>
+              </ul>
+              <p style="margin-top: 12px; color: var(--text-secondary); font-size: 0.9rem;">💡 Krožnica je poseben primer elipse z \(a = b = r\).</p>
+            </div>
+            <div class="matura-slika">
+              <img src="/views/matematika/images/formule_osnovna_raven.png" alt="Formule na maturi — osnovna raven">
+            </div>
+          </div>
+        </div>
+
+        <!-- ============ 1. TEORIJA ============ -->
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>1. Teorija — enačbe stožnic</h2>
+            <p>Kar moraš znati na pamet, preden se lotiš nalog.</p>
+          </div>
+
+          <div class="info-card">
+            <h3>Krožnica</h3>
+            <div class="concept-list two-col">
+              <div class="concept">
+                <h4>Središčna lega</h4>
+                <div class="concept-formula">\(x^2 + y^2 = r^2\)</div>
+                <p class="concept-desc">Središče v izhodišču, polmer \(r\).</p>
+              </div>
+              <div class="concept">
+                <h4>Premaknjena lega</h4>
+                <div class="concept-formula">\((x-p)^2 + (y-q)^2 = r^2\)</div>
+                <p class="concept-desc">Središče \(S(p, q)\), polmer \(r\).</p>
+              </div>
+              <div class="concept">
+                <h4>Splošna oblika</h4>
+                <div class="concept-formula">\(x^2 + y^2 + Dx + Ey + F = 0\)</div>
+                <p class="concept-desc">Dopolnimo do popolnega kvadrata.</p>
+              </div>
+              <div class="concept">
+                <h4>Krožnica skozi točko</h4>
+                <div class="concept-formula">točka zadošča enačbi</div>
+                <p class="concept-desc">Če točka leži na krožnici, njene koordinate zadoščajo enačbi.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <h3>Elipsa</h3>
+            <div class="concept-list two-col">
+              <div class="concept">
+                <h4>Središčna lega</h4>
+                <div class="concept-formula">\(\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = 1\), \(a > b > 0\)</div>
+                <p class="concept-desc">Velika polos \(a\) (na \(x\)), mala polos \(b\) (na \(y\)).</p>
+              </div>
+              <div class="concept">
+                <h4>Premaknjena lega</h4>
+                <div class="concept-formula">\(\dfrac{(x-p)^2}{a^2} + \dfrac{(y-q)^2}{b^2} = 1\)</div>
+                <p class="concept-desc">Središče \(S(p, q)\).</p>
+              </div>
+              <div class="concept">
+                <h4>Gorišči</h4>
+                <div class="concept-formula">\(F_1(-e, 0)\), \(F_2(e, 0)\)</div>
+                <p class="concept-desc">\(e^2 = a^2 - b^2\).</p>
+              </div>
+              <div class="concept">
+                <h4>Ekscentričnost</h4>
+                <div class="concept-formula">\(\varepsilon = \dfrac{e}{a} < 1\)</div>
+              </div>
+              <div class="concept">
+                <h4>Temeni</h4>
+                <div class="concept-formula">\((\pm a, 0)\), \((0, \pm b)\)</div>
+              </div>
+              <div class="concept">
+                <h4>Enačba elipse iz temen</h4>
+                <div class="concept-formula">\(a, b\) sta polosi</div>
+                <p class="concept-desc">Temeni na \(x\): \(a = \) razdalja od središča. Temeni na \(y\): \(b\).</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <h3>Hiperbola</h3>
+            <div class="concept-list two-col">
+              <div class="concept">
+                <h4>Središčna lega</h4>
+                <div class="concept-formula">\(\dfrac{x^2}{a^2} - \dfrac{y^2}{b^2} = 1\)</div>
+                <p class="concept-desc">Realna polos \(a\) (na \(x\)), imaginarna \(b\) (na \(y\)).</p>
+              </div>
+              <div class="concept">
+                <h4>Gorišči</h4>
+                <div class="concept-formula">\(F_1(-e, 0)\), \(F_2(e, 0)\)</div>
+                <p class="concept-desc">\(e^2 = a^2 + b^2\).</p>
+              </div>
+              <div class="concept">
+                <h4>Ekscentričnost</h4>
+                <div class="concept-formula">\(\varepsilon = \dfrac{e}{a} > 1\)</div>
+              </div>
+              <div class="concept">
+                <h4>Asimptoti</h4>
+                <div class="concept-formula">\(y = \pm\dfrac{b}{a} x\)</div>
+                <p class="concept-desc">Premici, ki se jima hiperbola približuje v neskončnosti.</p>
+              </div>
+              <div class="concept">
+                <h4>Temeni</h4>
+                <div class="concept-formula">\((\pm a, 0)\)</div>
+              </div>
+              <div class="concept">
+                <h4>Določitev \(a, b\) iz asimptote</h4>
+                <div class="concept-formula">\(y = kx \Rightarrow \dfrac{b}{a} = |k|\)</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <h3>Parabola</h3>
+            <div class="concept-list two-col">
+              <div class="concept">
+                <h4>Temenska lega (os \(x\))</h4>
+                <div class="concept-formula">\(y^2 = 2px\)</div>
+                <p class="concept-desc">Teme v izhodišču, os je \(x\)-os.</p>
+              </div>
+              <div class="concept">
+                <h4>Gorišče</h4>
+                <div class="concept-formula">\(G\left(\dfrac{p}{2}, 0\right)\)</div>
+              </div>
+              <div class="concept">
+                <h4>Vodnica</h4>
+                <div class="concept-formula">\(x = -\dfrac{p}{2}\)</div>
+              </div>
+              <div class="concept">
+                <h4>Premaknjena lega</h4>
+                <div class="concept-formula">\((y-q)^2 = 2p(x-p)\)</div>
+                <p class="concept-desc">Teme \((p, q)\).</p>
+              </div>
+              <div class="concept">
+                <h4>Navpična os (ko je \(x\) odvisen od \(y^2\))</h4>
+                <div class="concept-formula">\(x^2 = 2py\), gorišče \(\left(0, \dfrac{p}{2}\right)\)</div>
+              </div>
+              <div class="concept">
+                <h4>Presečišče s premico</h4>
+                <div class="concept-formula">vstavi \(y = kx + n\) v parabolo</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <h3>Tangenta na stožnico</h3>
+            <div class="concept-list two-col">
+              <div class="concept">
+                <h4>Tangenta na krožnico</h4>
+                <div class="concept-formula">\((x_0 - p)(x - p) + (y_0 - q)(y - q) = r^2\)</div>
+                <p class="concept-desc">Tangenta v točki \(T(x_0, y_0)\) na krožnici.</p>
+              </div>
+              <div class="concept">
+                <h4>Tangenta na elipso</h4>
+                <div class="concept-formula">\(\dfrac{x_0 x}{a^2} + \dfrac{y_0 y}{b^2} = 1\)</div>
+                <p class="concept-desc">V točki \(T(x_0, y_0)\) na elipsi (središčna lega).</p>
+              </div>
+              <div class="concept">
+                <h4>Tangenta na hiperbolo</h4>
+                <div class="concept-formula">\(\dfrac{x_0 x}{a^2} - \dfrac{y_0 y}{b^2} = 1\)</div>
+                <p class="concept-desc">V točki \(T(x_0, y_0)\) na hiperboli.</p>
+              </div>
+              <div class="concept">
+                <h4>Tangenta na parabolo</h4>
+                <div class="concept-formula">\(y_0 y = p(x + x_0)\)</div>
+                <p class="concept-desc">Na parabolo \(y^2 = 2px\) v točki \(T(x_0, y_0)\).</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ 2. TIPI NALOG ============ -->
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>2. Tipi nalog — postopki po korakih</h2>
+            <p>Za vsak tip: kako ga prepoznaš, kako ga rešiš, primer.</p>
+          </div>
+
+          <!-- TIP 1 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 1: Krožnica — središče in polmer</h3>
+              <div class="tip-formula">\((x-p)^2 + (y-q)^2 = r^2\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "zapišite središče in polmer krožnice".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Enačbo zapiši v obliki \((x-p)^2 + (y-q)^2 = r^2\) (dopolni do popolnega kvadrata).</li>
+              <li>Središče je \(S(p, q)\), polmer \(r\).</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> \(x^2 + y^2 - 6x + 2y + 1 = 0\)</p>
+            <div class="plain-example">
+              <p>\((x-3)^2 + (y+1)^2 = 9 \Rightarrow S(3, -1)\), \(r = 3\).</p>
+            </div>
+          </div>
+
+          <!-- TIP 2 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 2: Krožnica skozi točke</h3>
+              <div class="tip-formula">Vstavi koordinate in reši sistem</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "zapišite enačbo krožnice skozi točke".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Splošna oblika: \(x^2 + y^2 + Dx + Ey + F = 0\).</li>
+              <li>Vstavi vsako točko in dobiš enačbo.</li>
+              <li>Reši sistem za \(D, E, F\).</li>
+              <li>Pretvori v središčno obliko.</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> skozi \(A(1, 0)\), \(B(3, 0)\), \(C(0, 3)\)</p>
+            <div class="plain-example">
+              <p>Sistem: \(1 + D + F = 0\), \(9 + 3D + F = 0\), \(9 + 3E + F = 0\). Rešitve: \(D = -4, E = -4, F = 3\).</p>
+            </div>
+          </div>
+
+          <!-- TIP 3 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 3: Krožnica — obseg in ploščina</h3>
+              <div class="tip-formula">\(o = 2\pi r\), \(S = \pi r^2\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "izračunajte obseg/ploščino kroga".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Določi polmer \(r\) iz enačbe.</li>
+              <li>Uporabi \(o = 2\pi r\), \(S = \pi r^2\).</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> \(x^2 + y^2 - 2x + 2y = 7\)</p>
+            <div class="plain-example">
+              <p>\((x-1)^2 + (y+1)^2 = 9 \Rightarrow r = 3\). \(o = 6\pi\), \(S = 9\pi\).</p>
+            </div>
+          </div>
+
+          <!-- TIP 4 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 4: Elipsa — polosi in temena</h3>
+              <div class="tip-formula">\(\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = 1\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "zapišite polosi/temena elipse".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Zapiši enačbo v obliki \(\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = 1\).</li>
+              <li>\(a\) je velika polos (na \(x\)), \(b\) mala (na \(y\)).</li>
+              <li>Temena: \((\pm a, 0)\), \((0, \pm b)\).</li>
+              <li>\(e^2 = a^2 - b^2\), \(\varepsilon = \dfrac{e}{a}\).</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> \(9x^2 + 4y^2 = 36\)</p>
+            <div class="plain-example">
+              <p>\(\dfrac{x^2}{4} + \dfrac{y^2}{9} = 1\). \(a = 3\) (na \(y\)), \(b = 2\). Temena: \((0, \pm 3)\), \((\pm 2, 0)\).</p>
+            </div>
+          </div>
+
+          <!-- TIP 5 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 5: Elipsa — gorišči</h3>
+              <div class="tip-formula">\(e^2 = a^2 - b^2\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "zapišite gorišči elipse".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Določi \(a\) in \(b\).</li>
+              <li>Izračunaj \(e = \sqrt{a^2 - b^2}\).</li>
+              <li>Gorišči: \(F_{1,2}(\pm e, 0)\) (velika polos na \(x\)) ali \(F_{1,2}(0, \pm e)\) (velika polos na \(y\)).</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> \(\dfrac{x^2}{25} + \dfrac{y^2}{9} = 1\)</p>
+            <div class="plain-example">
+              <p>\(a = 5, b = 3\). \(e = \sqrt{25-9} = 4\). \(F_{1,2}(\pm 4, 0)\).</p>
+            </div>
+          </div>
+
+          <!-- TIP 6 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 6: Hiperbola — asimptote in gorišča</h3>
+              <div class="tip-formula">\(y = \pm\dfrac{b}{a} x\), \(e^2 = a^2 + b^2\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "zapišite asimptote/gorišči hiperbole".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Določi \(a\) in \(b\) iz enačbe \(\dfrac{x^2}{a^2} - \dfrac{y^2}{b^2} = 1\).</li>
+              <li>Asimptoti: \(y = \pm\dfrac{b}{a} x\).</li>
+              <li>\(e = \sqrt{a^2 + b^2}\).</li>
+              <li>Gorišči: \(F_{1,2}(\pm e, 0)\).</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> \(\dfrac{x^2}{16} - \dfrac{y^2}{9} = 1\)</p>
+            <div class="plain-example">
+              <p>\(a = 4, b = 3\). Asimptoti: \(y = \pm\dfrac{3}{4} x\). \(e = 5\). Gorišči: \(F_{1,2}(\pm 5, 0)\).</p>
+            </div>
+          </div>
+
+          <!-- TIP 7 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 7: Hiperbola skozi točko z dano asimptoto</h3>
+              <div class="tip-formula">\(\dfrac{b}{a} = |k|\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> podana asimptota \(y = kx\) in točka na hiperboli.</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Iz asimptote: \(\dfrac{b}{a} = |k| \Rightarrow b = |k| a\).</li>
+              <li>Vstavi v enačbo \(\dfrac{x^2}{a^2} - \dfrac{y^2}{b^2} = 1\).</li>
+              <li>Vstavi koordinate točke in reši za \(a\).</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> asimptota \(y = 2x\), točka \(A(\sqrt{6}, 2\sqrt{3})\)</p>
+            <div class="plain-example">
+              <p>\(b = 2a\). \(\dfrac{6}{a^2} - \dfrac{12}{4a^2} = 1 \Rightarrow \dfrac{3}{a^2} = 1 \Rightarrow a^2 = 3\), \(b^2 = 12\). Enačba: \(\dfrac{x^2}{3} - \dfrac{y^2}{12} = 1\).</p>
+            </div>
+          </div>
+
+          <!-- TIP 8 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 8: Parabola — gorišče in vodnica</h3>
+              <div class="tip-formula">\(y^2 = 2px \Rightarrow G\left(\dfrac{p}{2}, 0\right)\), vodnica \(x = -\dfrac{p}{2}\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "zapišite gorišče/vodnico parabole".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Iz enačbe \(y^2 = 2px\) preberi \(p\).</li>
+              <li>Gorišče: \(G\left(\dfrac{p}{2}, 0\right)\).</li>
+              <li>Vodnica: \(x = -\dfrac{p}{2}\).</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> \(y^2 = 6x\)</p>
+            <div class="plain-example">
+              <p>\(2p = 6 \Rightarrow p = 3\). Gorišče \(G\left(\dfrac{3}{2}, 0\right)\), vodnica \(x = -\dfrac{3}{2}\).</p>
+            </div>
+          </div>
+
+          <!-- TIP 9 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 9: Presečišče stožnice in premice</h3>
+              <div class="tip-formula">Vstavi \(y = kx + n\) v enačbo</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "izračunajte presečišča stožnice in premice".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Vstavi enačbo premice v enačbo stožnice.</li>
+              <li>Reši dobljeno kvadratno enačbo.</li>
+              <li>Za vsak \(x\) izračunaj \(y\).</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> \(x^2 + y^2 = 5\), \(y = 2x\)</p>
+            <div class="plain-example">
+              <p>\(x^2 + 4x^2 = 5 \Rightarrow 5x^2 = 5 \Rightarrow x = \pm 1\). Točke: \((1, 2)\), \((-1, -2)\).</p>
+            </div>
+          </div>
+
+          <!-- TIP 10 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 10: Tangenta na stožnico v točki</h3>
+              <div class="tip-formula">Krožnica: \((x_0-p)(x-p) + (y_0-q)(y-q) = r^2\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "zapišite enačbo tangente v točki \(T\)".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Preveri, da točka leži na stožnici.</li>
+              <li>Uporabi formulo za tangento glede na tip stožnice.</li>
+              <li>Poenostavi enačbo.</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> \(x^2 + y^2 = 25\) v \(T(3, 4)\)</p>
+            <div class="plain-example">
+              <p>\(3x + 4y = 25\).</p>
+            </div>
+          </div>
+
+          <!-- TIP 11 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 11: Stožnica v premaknjeni legi</h3>
+              <div class="tip-formula">\(\dfrac{(x-p)^2}{a^2} + \dfrac{(y-q)^2}{b^2} = 1\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> enačba ima \((x - p)\) in \((y - q)\) namesto \(x, y\).</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Središče je \(S(p, q)\).</li>
+              <li>Polosi so \(a, b\) (nespremenjene).</li>
+              <li>Vse točke (temena, gorišča, vodnice) premakni za \((p, q)\).</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> \(\dfrac{(x-2)^2}{9} + \dfrac{(y+1)^2}{4} = 1\)</p>
+            <div class="plain-example">
+              <p>\(S(2, -1)\), \(a = 3, b = 2\). Temena: \((5, -1), (-1, -1), (2, 1), (2, -3)\).</p>
+            </div>
+          </div>
+
+          <!-- TIP 12 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 12: Določitev stožnice iz danih podatkov</h3>
+              <div class="tip-formula">Izračunaj \(a, b, p, q\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "zapišite enačbo elipse/hiperbole/parabole, ki …".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Zberi podatke: temena, gorišča, polosi, asimptote, točke.</li>
+              <li>Določi tip stožnice in ustrezno obliko enačbe.</li>
+              <li>Reši za neznane parametre.</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> elipsa s temeni \(A(-5, 0), B(5, 0), C(0, 2), D(0, -2)\)</p>
+            <div class="plain-example">
+              <p>\(a = 5\) (na \(x\)), \(b = 2\) (na \(y\)). Enačba: \(\dfrac{x^2}{25} + \dfrac{y^2}{4} = 1\). \(e = \sqrt{25-4} = \sqrt{21}\).</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ 3. POGOSTE NAPAKE ============ -->
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>3. Pogoste napake</h2>
+          </div>
+          <div class="info-card">
+            <ul>
+              <li>Zamenjaš \(a\) in \(b\) pri elipsi (\(a\) je <strong>vedno</strong> večja polos, na \(x\)).</li>
+              <li>Pri elipsi uporabiš \(e^2 = a^2 + b^2\) namesto \(e^2 = a^2 - b^2\).</li>
+              <li>Pri hiperboli zamenjaš \(e^2 = a^2 - b^2\) namesto \(e^2 = a^2 + b^2\).</li>
+              <li>Pri krožnici pozabiš dopolniti do popolnega kvadrata.</li>
+              <li>Pri premaknjeni legi pozabiš premakniti gorišča in temena.</li>
+              <li>Pri asimptoti hiperbole pozabiš \(\dfrac{b}{a} = |k|\) (predznak).</li>
+              <li>Pri paraboli zamenjaš \(p\) in \(\dfrac{p}{2}\).</li>
+              <li>Pri presečišču stožnice in premice vstaviš napačno spremenljivko.</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ============ 4. ŠTUDIJSKI VODIČ ============ -->
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>4. Študijski vodič — hitri pregled</h2>
+          </div>
+          <div class="info-card">
+            <h3>📋 Kaj moraš znati na pamet</h3>
+            <ul>
+              <li><strong>Krožnica:</strong> \((x-p)^2 + (y-q)^2 = r^2\), \(o = 2\pi r\), \(S = \pi r^2\).</li>
+              <li><strong>Elipsa:</strong> \(\dfrac{x^2}{a^2} + \dfrac{y^2}{b^2} = 1\) (\(a > b\)), \(e^2 = a^2 - b^2\), \(\varepsilon = \dfrac{e}{a} < 1\).</li>
+              <li><strong>Hiperbola:</strong> \(\dfrac{x^2}{a^2} - \dfrac{y^2}{b^2} = 1\), \(e^2 = a^2 + b^2\), \(\varepsilon > 1\), asimptoti \(y = \pm\dfrac{b}{a} x\).</li>
+              <li><strong>Parabola:</strong> \(y^2 = 2px\), gorišče \(G\left(\dfrac{p}{2}, 0\right)\), vodnica \(x = -\dfrac{p}{2}\).</li>
+              <li><strong>Premaknjena lega:</strong> zamenjaj \(x \to x-p\), \(y \to y-q\).</li>
+              <li><strong>Presečišče s premico:</strong> vstavi in reši kvadratno enačbo.</li>
+            </ul>
+          </div>
+
+          <div class="info-card">
+            <h3>🎯 Kako pristopiti k nalogi</h3>
+            <ol>
+              <li><strong>Preberi nalogo in prepoznaj tip stožnice:</strong> krožnica, elipsa, hiperbola, parabola.</li>
+              <li><strong>Zapiši ustrezno obliko enačbe.</strong></li>
+              <li><strong>Določi parametre</strong> (\(a, b, p, q, r\)).</li>
+              <li><strong>Za gorišča:</strong> \(e = \sqrt{a^2 \pm b^2}\).</li>
+              <li><strong>Za asimptote:</strong> \(y = \pm\dfrac{b}{a} x\).</li>
+              <li><strong>Za tangento:</strong> uporabi formulo \(x_0 x / a^2 \pm y_0 y / b^2 = 1\).</li>
+              <li><strong>Za premaknjeno lego:</strong> vse točke premakni za \((p, q)\).</li>
+            </ol>
+          </div>
+
+          <div class="info-card">
+            <h3>⏱️ Časovni načrt za en večer</h3>
+            <ul>
+              <li><strong>25 min:</strong> Teorija — 4 stožnice, formule.</li>
+              <li><strong>60 min:</strong> Tipi 1–8 (krožnica, elipsa, hiperbola, parabola).</li>
+              <li><strong>45 min:</strong> Tipi 9–12 (presečišča, tangente, premaknjena lega, sestavljanje).</li>
+              <li><strong>25 min:</strong> Ponovi pogoste napake in študijski vodič.</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ============ 5. POVEZAVE ============ -->
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>5. Vadi naprej</h2>
+            <p>Ko predelaš razlago, preveri znanje z nalogami.</p>
+          </div>
+          <div class="link-list">
+            <a class="link-item" href="/views/matematika/matura/osnovna_raven/naloge/resene/">
+              <span class="link-item-text">
+                <strong>Rešene naloge — osnovna raven</strong>
+                <small>Primeri z razlago</small>
+              </span>
+              <span class="arrow">→</span>
+            </a>
+            <a class="link-item" href="/views/matematika/matura/visja_raven/naloge/resene/">
+              <span class="link-item-text">
+                <strong>Rešene naloge — višja raven</strong>
+                <small>Zahtevnejši primeri</small>
+              </span>
+              <span class="arrow">→</span>
+            </a>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>

@@ -1,71 +1,457 @@
-<div class="view">
-    <div class="view-header">
-        <h2>🎲 14. Kombinatorika</h2>
-        <p>Permutacije, variacije, kombinacije in binomska formula</p>
-    </div>
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kombinatorika — razlaga in postopki | Piflar.si</title>
+  <meta name="description" content="Celovita razlaga kombinatorike za maturo: faktorial, permutacije, variacije, kombinacije, binomski izrek, Pascalov trikotnik, kombinatorično drevo.">
+  <link rel="stylesheet" href="/style/style.css">
+  <link rel="stylesheet" href="/views/matematika/snov/kombinatorika/kombinatorika_style.css">
+</head>
+<body>
+  <div id="header"></div>
 
-    <div class="card">
-        <h3>📖 Osnovne formule</h3>
-        <div class="formula-grid">
-            <div class="formula-card">
-                <strong>Fakulteta</strong><br>
-                <code>n! = n · (n-1) · ... · 2 · 1</code>
-                <p style="margin-top: 4px; font-size: 14px; color: var(--text-secondary);">0! = 1</p>
-            </div>
-            <div class="formula-card">
-                <strong>Permutacije</strong><br>
-                <code>Pₙ = n!</code>
-                <p style="margin-top: 4px; font-size: 14px; color: var(--text-secondary);">Razporeditev vseh n elementov</p>
-            </div>
-            <div class="formula-card">
-                <strong>Variacije</strong><br>
-                <code>Vₙᵏ = n! / (n-k)!</code>
-                <p style="margin-top: 4px; font-size: 14px; color: var(--text-secondary);">Vrstni red je pomemben</p>
-            </div>
-            <div class="formula-card">
-                <strong>Kombinacije</strong><br>
-                <code>Cₙᵏ = n! / (k! · (n-k)!)</code>
-                <p style="margin-top: 4px; font-size: 14px; color: var(--text-secondary);">Vrstni red ni pomemben</p>
-            </div>
-        </div>
-    </div>
+  <div id="mainContent" class="main-content">
+    <div id="sidebar"></div>
 
-    <div class="card interactive-section">
-        <h3>🧮 Faktorial</h3>
-        <div class="input-group">
-            <label>n =</label>
-            <input type="number" id="factN" value="5" min="0">
-            <button class="btn btn-primary" id="calcFactorial">Izračunaj</button>
-        </div>
-        <div id="factResult" class="result-box">Rezultat bo prikazan tukaj.</div>
-    </div>
+    <div class="view-container">
+      <div class="view">
 
-    <div class="card interactive-section">
-        <h3>🧮 Kombinacije C(n, k)</h3>
-        <div class="input-group">
-            <label>n =</label>
-            <input type="number" id="combN" value="5" min="0">
-            <label>k =</label>
-            <input type="number" id="combK" value="2" min="0">
-            <button class="btn btn-primary" id="calcCombination">Izračunaj</button>
-        </div>
-        <div id="combResult" class="result-box">Rezultat bo prikazan tukaj.</div>
-    </div>
+        <header class="page-header">
+          <span class="page-eyebrow">Matematika · Snov · 4.15</span>
+          <h1>Kombinatorika</h1>
+          <p>Vse o kombinatoriki za maturo: faktorial, permutacije (tudi s ponavljanjem), variacije, kombinacije, binomski izrek, Pascalov trikotnik, osnovni izrek kombinatorike in kombinatorično drevo.</p>
+          <div class="page-meta">
+            <div class="page-meta-item"><strong>10</strong><span>Tipov nalog</span></div>
+            <div class="page-meta-item"><strong>40+</strong><span>Primerov</span></div>
+            <div class="page-meta-item"><strong>~45 min</strong><span>Branja</span></div>
+          </div>
+        </header>
 
-    <div class="card">
-        <h3>📝 Binomska formula</h3>
-        <div class="formula-card">
-            <code>(a + b)ⁿ = Σ C(n, k) · aⁿ⁻ᵏ · bᵏ</code>
-        </div>
-        <div style="margin-top: 12px;">
-            <p><strong>Pascalov trikotnik:</strong></p>
-            <div style="font-family: monospace; line-height: 1.8; padding: 12px; background: var(--bg-primary); border-radius: var(--radius-sm);">
-                1<br>
-                1 1<br>
-                1 2 1<br>
-                1 3 3 1<br>
-                1 4 6 4 1
+        <!-- ============ MATURA FORMULE ============ -->
+        <div class="matura-formule">
+          <h3>📋 Formule na maturi — osnovna raven</h3>
+          <p>Na maturitetnem listu s formulami so za <strong>kombinatoriko</strong> relevantne naslednje formule:</p>
+          <div class="matura-grid">
+            <div class="matura-levo">
+              <ul>
+                <li><strong>Fakulteta:</strong> \(n! = n \cdot (n-1) \cdots 2 \cdot 1\), &nbsp; \(0! = 1\)</li>
+                <li><strong>Permutacije:</strong> \(P_n = n!\) (brez ponavljanja)</li>
+                <li><strong>Permutacije s ponavljanjem:</strong> \(P_n^{m_1, m_2, \ldots} = \dfrac{n!}{m_1! \cdot m_2! \cdots}\)</li>
+                <li><strong>Variacije:</strong> \(V_n^r = \dfrac{n!}{(n-r)!}\) (brez ponavljanja)</li>
+                <li><strong>Variacije s ponavljanjem:</strong> \(^{(p)}V_n^r = n^r\)</li>
+                <li><strong>Kombinacije:</strong> \(C_n^r = \dbinom{n}{r} = \dfrac{n!}{r! (n-r)!}\)</li>
+                <li><strong>Binomski izrek:</strong> \((a+b)^n = \sum_{k=0}^{n} \dbinom{n}{k} a^{n-k} b^k\)</li>
+              </ul>
             </div>
+            <div class="matura-slika">
+              <img src="/views/matematika/images/formule_osnovna_raven.png" alt="Formule na maturi — osnovna raven">
+            </div>
+          </div>
         </div>
+
+        <!-- ============ 1. TEORIJA ============ -->
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>1. Teorija — formule in pravila</h2>
+            <p>Kar moraš znati na pamet, preden se lotiš nalog.</p>
+          </div>
+
+          <div class="info-card">
+            <h3>Faktorial</h3>
+            <div class="concept-list two-col">
+              <div class="concept">
+                <h4>Definicija</h4>
+                <div class="concept-formula">\(n! = n \cdot (n-1) \cdots 2 \cdot 1\)</div>
+                <p class="concept-desc">Produkt vseh naravnih števil od \(n\) do 1.</p>
+              </div>
+              <div class="concept">
+                <h4>Dogovor</h4>
+                <div class="concept-formula">\(0! = 1\)</div>
+              </div>
+              <div class="concept">
+                <h4>Primeri</h4>
+                <div class="concept-formula">\(3! = 6\), \(4! = 24\), \(5! = 120\)</div>
+              </div>
+              <div class="concept">
+                <h4>Pravilo</h4>
+                <div class="concept-formula">\(n! = n \cdot (n-1)!\)</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <h3>Permutacije</h3>
+            <div class="concept-list two-col">
+              <div class="concept">
+                <h4>Permutacije brez ponavljanja</h4>
+                <div class="concept-formula">\(P_n = n!\)</div>
+                <p class="concept-desc">Razporeditev \(n\) različnih elementov v vrsto. Vrstni red je pomemben.</p>
+              </div>
+              <div class="concept">
+                <h4>Permutacije s ponavljanjem</h4>
+                <div class="concept-formula">\(P_n^{m_1, m_2, \ldots} = \dfrac{n!}{m_1! \cdot m_2! \cdots}\)</div>
+                <p class="concept-desc">Če se elementi ponavljajo (npr. črke v besedi "MAMA").</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <h3>Variacije</h3>
+            <div class="concept-list two-col">
+              <div class="concept">
+                <h4>Variacije brez ponavljanja</h4>
+                <div class="concept-formula">\(V_n^r = \dfrac{n!}{(n-r)!}\)</div>
+                <p class="concept-desc">Iz \(n\) elementov izberemo \(r\) in jih razporedimo. Vrstni red pomemben, brez ponavljanja.</p>
+              </div>
+              <div class="concept">
+                <h4>Variacije s ponavljanjem</h4>
+                <div class="concept-formula">\(^{(p)}V_n^r = n^r\)</div>
+                <p class="concept-desc">Vsak od \(r\) elementov je lahko katerikoli od \(n\) (ponavljanje dovoljeno).</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <h3>Kombinacije</h3>
+            <div class="concept-list two-col">
+              <div class="concept">
+                <h4>Kombinacije brez ponavljanja</h4>
+                <div class="concept-formula">\(C_n^r = \dbinom{n}{r} = \dfrac{n!}{r!(n-r)!}\)</div>
+                <p class="concept-desc">Iz \(n\) elementov izberemo \(r\), <strong>vrstni red ni pomemben</strong>.</p>
+              </div>
+              <div class="concept">
+                <h4>Binomski simbol</h4>
+                <div class="concept-formula">\(\dbinom{n}{r} = \dbinom{n}{n-r}\)</div>
+                <p class="concept-desc">Simetrija.</p>
+              </div>
+              <div class="concept">
+                <h4>Primeri</h4>
+                <div class="concept-formula">\(\dbinom{5}{2} = 10\), \(\dbinom{6}{3} = 20\)</div>
+              </div>
+              <div class="concept">
+                <h4>Vsota</h4>
+                <div class="concept-formula">\(\dbinom{n}{0} + \dbinom{n}{1} + \cdots + \dbinom{n}{n} = 2^n\)</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <h3>Binomski izrek in Pascalov trikotnik</h3>
+            <div class="concept-list two-col">
+              <div class="concept">
+                <h4>Binomski izrek</h4>
+                <div class="concept-formula">\((a+b)^n = \sum_{k=0}^{n} \dbinom{n}{k} a^{n-k} b^k\)</div>
+              </div>
+              <div class="concept">
+                <h4>Primer</h4>
+                <div class="concept-formula">\((a+b)^3 = a^3 + 3a^2b + 3ab^2 + b^3\)</div>
+              </div>
+              <div class="concept">
+                <h4>Pascalov trikotnik</h4>
+                <div class="concept-formula">1<br>1 1<br>1 2 1<br>1 3 3 1<br>1 4 6 4 1</div>
+                <p class="concept-desc">Koeficienti v \(n\)-ti vrstici so \(\binom{n}{0}, \binom{n}{1}, \ldots\).</p>
+              </div>
+              <div class="concept">
+                <h4>Pravilo</h4>
+                <div class="concept-formula">\(\dbinom{n}{k} = \dbinom{n-1}{k-1} + \dbinom{n-1}{k}\)</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <h3>Osnovni izrek kombinatorike</h3>
+            <div class="concept-list two-col">
+              <div class="concept">
+                <h4>Pravilo produkta</h4>
+                <div class="concept-formula">\(n_1 \cdot n_2 \cdots n_k\)</div>
+                <p class="concept-desc">Če imamo \(k\) korakov in \(n_i\) možnosti na \(i\)-tem koraku, je skupaj \(n_1 \cdots n_k\) možnosti.</p>
+              </div>
+              <div class="concept">
+                <h4>Pravilo vsote</h4>
+                <div class="concept-formula">\(n_1 + n_2 + \cdots + n_k\)</div>
+                <p class="concept-desc">Če imamo \(k\) medsebojno izključujočih se načinov, je skupaj \(n_1 + \cdots + n_k\) možnosti.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ 2. TIPI NALOG ============ -->
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>2. Tipi nalog — postopki po korakih</h2>
+            <p>Za vsak tip: kako ga prepoznaš, kako ga rešiš, primer.</p>
+          </div>
+
+          <!-- TIP 1 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 1: Izračun faktoriala in binomskega simbola</h3>
+              <div class="tip-formula">\(n! = n(n-1)!\), \(\dbinom{n}{k} = \dfrac{n!}{k!(n-k)!}\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "izračunajte \(5!\)", "izračunajte \(\binom{6}{3}\)".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Za faktorial zmnoži vsa števila od \(n\) do 1.</li>
+              <li>Za binomski simbol uporabi formulo.</li>
+              <li>Poenostavi.</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> \(5! = 120\), \(\dbinom{6}{3} = \dfrac{720}{6 \cdot 6} = 20\).</p>
+          </div>
+
+          <!-- TIP 2 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 2: Permutacije brez ponavljanja</h3>
+              <div class="tip-formula">\(P_n = n!\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "na koliko načinov se lahko razporedijo", "vsi elementi se uporabijo enkrat".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Preveri, da se vsi elementi med sabo razlikujejo.</li>
+              <li>Uporabi \(P_n = n!\).</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> 5 ljudi v vrsto → \(5! = 120\).</p>
+          </div>
+
+          <!-- TIP 3 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 3: Permutacije s ponavljanjem</h3>
+              <div class="tip-formula">\(P_n^{m_1, m_2, \ldots} = \dfrac{n!}{m_1! \cdot m_2! \cdots}\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "iz črk besede MAMA", "nekateri elementi se ponavljajo".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Preštej skupno število elementov \(n\).</li>
+              <li>Preštej, kolikokrat se ponovi vsak element (\(m_1, m_2, \ldots\)).</li>
+              <li>Uporabi formulo.</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> Beseda MAMA. \(n = 4\), \(m_A = 2, m_M = 2\).</p>
+            <div class="plain-example">
+              <p>\(P = \dfrac{4!}{2! \cdot 2!} = \dfrac{24}{4} = 6\).</p>
+            </div>
+          </div>
+
+          <!-- TIP 4 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 4: Variacije brez ponavljanja</h3>
+              <div class="tip-formula">\(V_n^r = \dfrac{n!}{(n-r)!}\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "izberemo \(r\) elementov iz \(n\) in jih razporedimo", <strong>vrstni red je pomemben</strong>.</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Preberi \(n\) (koliko elementov imamo) in \(r\) (koliko jih izberemo).</li>
+              <li>Uporabi \(V_n^r = \dfrac{n!}{(n-r)!}\).</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> Na voljo 5 barv, izberemo 3 in jih razporedimo.</p>
+            <div class="plain-example">
+              <p>\(V_5^3 = \dfrac{5!}{2!} = 60\).</p>
+            </div>
+          </div>
+
+          <!-- TIP 5 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 5: Variacije s ponavljanjem</h3>
+              <div class="tip-formula">\(^{(p)}V_n^r = n^r\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> elementi se <strong>lahko ponavljajo</strong>, vrstni red pomemben (npr. koda ključavnice, PIN).</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Preberi \(n\) (možnosti na vsakem mestu) in \(r\) (število mest).</li>
+              <li>Uporabi \(n^r\).</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> 4-mestni PIN (0-9) → \(10^4 = 10000\).</p>
+          </div>
+
+          <!-- TIP 6 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 6: Kombinacije</h3>
+              <div class="tip-formula">\(C_n^r = \dbinom{n}{r} = \dfrac{n!}{r!(n-r)!}\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "izberemo \(r\) elementov iz \(n\)", <strong>vrstni red ni pomemben</strong>.</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Preveri, da vrstni red ni pomemben (npr. izbira delegacije).</li>
+              <li>Uporabi formulo.</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> V razredu 24 dijakov, izberemo tričlansko delegacijo.</p>
+            <div class="plain-example">
+              <p>\(C_{24}^3 = \dbinom{24}{3} = \dfrac{24 \cdot 23 \cdot 22}{6} = 2024\).</p>
+            </div>
+          </div>
+
+          <!-- TIP 7 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 7: Razlika med variacijami in kombinacijami</h3>
+              <div class="tip-formula">V: vrstni red pomemben, &nbsp; C: ni pomemben</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> preberi, ali vrstni red vpliva.</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Vprašaj se: "ali zamenjava dveh izbranih elementov da drugačen rezultat?"</li>
+              <li>Če da → <strong>variacije</strong>.</li>
+              <li>Če ne → <strong>kombinacije</strong>.</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> izbira 2 od 5 za vodjo in pomočnika → \(V_5^2 = 20\).</p>
+            <p class="plain-example"><strong>Primer:</strong> izbira 2 od 5 za delegacijo → \(C_5^2 = 10\).</p>
+          </div>
+
+          <!-- TIP 8 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 8: Binomski izrek</h3>
+              <div class="tip-formula">\((a+b)^n = \sum_{k=0}^{n} \dbinom{n}{k} a^{n-k} b^k\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "razvijte \((a+b)^n\)", "koeficient pri \(a^{n-k} b^k\)".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Napiši vse člene od \(k=0\) do \(k=n\).</li>
+              <li>Koeficient pri \(a^{n-k} b^k\) je \(\dbinom{n}{k}\).</li>
+              <li>Poenostavi potence.</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> \((a+b)^4 = a^4 + 4a^3b + 6a^2b^2 + 4ab^3 + b^4\).</p>
+          </div>
+
+          <!-- TIP 9 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 9: Iskanje določenega člena v razvoju</h3>
+              <div class="tip-formula">Koeficient pri \(a^{n-k} b^k\) je \(\dbinom{n}{k}\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "izračunajte koeficient pri \(x^5 y^3\)".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Zapiši razvoj \((a+b)^n\).</li>
+              <li>Poišči \(k\), pri katerem dobimo želeno potenco.</li>
+              <li>Koeficient je \(\dbinom{n}{k}\).</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> \((x+y)^8\), koeficient pri \(x^5 y^3\)</p>
+            <div class="plain-example">
+              <p>\(k=3\), \(\dbinom{8}{3} = 56\).</p>
+            </div>
+          </div>
+
+          <!-- TIP 10 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 10: Kombinatorično drevo in pravilo produkta</h3>
+              <div class="tip-formula">\(n_1 \cdot n_2 \cdots n_k\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> večstopenjska izbira, "koliko različnih …".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Nariši drevo ali si zapiši korake.</li>
+              <li>Preštej možnosti na vsakem koraku.</li>
+              <li>Zmnoži.</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> Meni: 3 predjedi, 4 glavne jedi, 2 sladici.</p>
+            <div class="plain-example">
+              <p>Skupaj: \(3 \cdot 4 \cdot 2 = 24\).</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ 3. POGOSTE NAPAKE ============ -->
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>3. Pogoste napake</h2>
+          </div>
+          <div class="info-card">
+            <ul>
+              <li>Zamenjaš <strong>variacije</strong> (vrstni red pomemben) in <strong>kombinacije</strong> (ni pomemben).</li>
+              <li>Pri permutacijah s ponavljanjem pozabiš deliti s fakulteti ponavljajočih se elementov.</li>
+              <li>Pri binomskem izreku zamenjaš eksponenta (\(a^{n-k} b^k\) namesto \(a^k b^{n-k}\)).</li>
+              <li>Pozabiš, da je \(0! = 1\).</li>
+              <li>Pri \(n^r\) zamenjaš \(n\) in \(r\).</li>
+              <li>Pri kombinacijah ne preveriš, ali je \(r \leq n\).</li>
+              <li>Pri besedilnih nalogah ne prebereš, ali je vrstni red pomemben.</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ============ 4. ŠTUDIJSKI VODIČ ============ -->
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>4. Študijski vodič — hitri pregled</h2>
+          </div>
+          <div class="info-card">
+            <h3>📋 Kaj moraš znati na pamet</h3>
+            <ul>
+              <li><strong>Faktorial:</strong> \(n! = n(n-1) \cdots 2 \cdot 1\), \(0! = 1\).</li>
+              <li><strong>Permutacije:</strong> \(P_n = n!\), s ponavljanjem \(P_n^{m_1, m_2, \ldots} = \dfrac{n!}{m_1! m_2! \cdots}\).</li>
+              <li><strong>Variacije:</strong> \(V_n^r = \dfrac{n!}{(n-r)!}\), s ponavljanjem \(n^r\).</li>
+              <li><strong>Kombinacije:</strong> \(C_n^r = \dbinom{n}{r} = \dfrac{n!}{r!(n-r)!}\).</li>
+              <li><strong>Binomski izrek:</strong> \((a+b)^n = \sum \binom{n}{k} a^{n-k} b^k\).</li>
+              <li><strong>Pascalov trikotnik:</strong> koeficienti.</li>
+              <li><strong>Pravilo produkta:</strong> \(n_1 \cdot n_2 \cdots n_k\).</li>
+            </ul>
+          </div>
+
+          <div class="info-card">
+            <h3>🎯 Kako pristopiti k nalogi</h3>
+            <ol>
+              <li><strong>Preberi nalogo in ugotovi:</strong> se vsi elementi uporabijo (permutacije), ali le \(r\) od \(n\) (variacije/kombinacije)?</li>
+              <li><strong>Preveri, ali vrstni red pomemben:</strong>
+                <ul>
+                  <li>pomemben → variacije ali permutacije</li>
+                  <li>ni pomemben → kombinacije</li>
+                </ul>
+              </li>
+              <li><strong>Preveri, ali se elementi ponavljajo:</strong>
+                <ul>
+                  <li>ponavljanje dovoljeno → \(n^r\) ali permutacije s ponavljanjem</li>
+                  <li>brez ponavljanja → \(V_n^r\) ali \(P_n\) ali \(C_n^r\)</li>
+                </ul>
+              </li>
+              <li><strong>Uporabi formulo.</strong></li>
+            </ol>
+          </div>
+
+          <div class="info-card">
+            <h3>⏱️ Časovni načrt za en večer</h3>
+            <ul>
+              <li><strong>20 min:</strong> Teorija — faktorial, permutacije, variacije, kombinacije, binomski izrek.</li>
+              <li><strong>50 min:</strong> Tipi 1–6 (faktorial, permutacije, variacije, kombinacije).</li>
+              <li><strong>35 min:</strong> Tipi 7–10 (razlika, binomski izrek, koeficient, kombinatorično drevo).</li>
+              <li><strong>20 min:</strong> Ponovi pogoste napake in študijski vodič.</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ============ 5. POVEZAVE ============ -->
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>5. Vadi naprej</h2>
+            <p>Ko predelaš razlago, preveri znanje z nalogami.</p>
+          </div>
+          <div class="link-list">
+            <a class="link-item" href="/views/matematika/matura/osnovna_raven/naloge/resene/">
+              <span class="link-item-text">
+                <strong>Rešene naloge — osnovna raven</strong>
+                <small>Primeri z razlago</small>
+              </span>
+              <span class="arrow">→</span>
+            </a>
+            <a class="link-item" href="/views/matematika/matura/visja_raven/naloge/resene/">
+              <span class="link-item-text">
+                <strong>Rešene naloge — višja raven</strong>
+                <small>Zahtevnejši primeri</small>
+              </span>
+              <span class="arrow">→</span>
+            </a>
+          </div>
+        </section>
+
+      </div>
     </div>
-</div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>

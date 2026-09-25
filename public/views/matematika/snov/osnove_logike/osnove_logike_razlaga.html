@@ -1,93 +1,398 @@
-<div class="view">
-    <div class="view-header">
-        <h2>🧠 1. Osnove logike</h2>
-        <p>Osnove logike, logični vezniki in resničnostne tabele</p>
-    </div>
-    
-    <link rel="stylesheet" href="/style/style.css">
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Osnove logike — razlaga in postopki | Piflar.si</title>
+  <meta name="description" content="Celovita razlaga osnov logike za maturo: izjave, logični vezniki (negacija, konjunkcija, disjunkcija, implikacija, ekvivalenca), resničnostne tabele, tavtologije, De Morganova zakona.">
+  <link rel="stylesheet" href="/style/style.css">
+  <link rel="stylesheet" href="/views/matematika/snov/osnove_logike/osnove_logike_style.css">
+</head>
+<body>
+  <div id="header"></div>
 
-    <div class="card">
-        <h3>📖 Osnovni pojmi</h3>
-        <p><strong>Izjava</strong> je poved, za katero lahko rečemo, da je resnična (1, R) ali neresnična (0, N).</p>
-        <p style="margin-top: 8px;"><strong>Primer:</strong> "Danes sije sonce."</p>
-    </div>
+  <div id="mainContent" class="main-content">
+    <div id="sidebar"></div>
 
-    <div class="card">
-        <h3>🔗 Logični vezniki</h3>
-        <div class="formula-grid">
-            <div class="formula-card">
-                <strong>NEGACIJA (NE, ¬)</strong><br>
-                <code>¬A</code>
-                <p style="margin-top: 4px; font-size: 14px; color: var(--text-secondary);">Obrne resničnost izjave.</p>
-                <table style="margin-top: 8px; width: 100%; font-size: 14px; border-collapse: collapse;">
-                    <tr><th style="text-align: left; padding: 4px;">A</th><th style="text-align: left; padding: 4px;">¬A</th></tr>
-                    <tr><td style="padding: 4px;">R</td><td style="padding: 4px;">N</td></tr>
-                    <tr><td style="padding: 4px;">N</td><td style="padding: 4px;">R</td></tr>
-                </table>
+    <div class="view-container">
+      <div class="view">
+
+        <header class="page-header">
+          <span class="page-eyebrow">Matematika · Snov · 4.1</span>
+          <h1>Osnove logike</h1>
+          <p>Vse o logiki za maturo: izjave, logični vezniki (negacija, konjunkcija, disjunkcija, implikacija, ekvivalenca), resničnostne tabele, tavtologije, enakovrednost izjav in De Morganova zakona.</p>
+          <div class="page-meta">
+            <div class="page-meta-item"><strong>8</strong><span>Tipov nalog</span></div>
+            <div class="page-meta-item"><strong>30+</strong><span>Primerov</span></div>
+            <div class="page-meta-item"><strong>~35 min</strong><span>Branja</span></div>
+          </div>
+        </header>
+
+        <!-- ============ MATURA FORMULE ============ -->
+        <div class="matura-formule">
+          <h3>📋 Formule na maturi — osnovna raven</h3>
+          <p>Na maturitetnem listu s formulami so za <strong>osnove logike</strong> relevantni naslednji simboli:</p>
+          <div class="matura-grid">
+            <div class="matura-levo">
+              <ul>
+                <li><strong>Negacija:</strong> \(\neg A\) ali \(\overline{A}\)</li>
+                <li><strong>Konjunkcija:</strong> \(A \land B\) (in)</li>
+                <li><strong>Disjunkcija:</strong> \(A \lor B\) (ali)</li>
+                <li><strong>Implikacija:</strong> \(A \Rightarrow B\) (če A, potem B)</li>
+                <li><strong>Ekvivalenca:</strong> \(A \Leftrightarrow B\) (A natanko takrat, ko B)</li>
+                <li><strong>Kvantifikator:</strong> \(\forall\) (za vsak), \(\exists\) (obstaja)</li>
+              </ul>
             </div>
-
-            <div class="formula-card">
-                <strong>KONJUNKCIJA (IN, ∧)</strong><br>
-                <code>A ∧ B</code>
-                <p style="margin-top: 4px; font-size: 14px; color: var(--text-secondary);">Resnično le, ko sta obe izjavi resnični.</p>
-                <table style="margin-top: 8px; width: 100%; font-size: 14px; border-collapse: collapse;">
-                    <tr><th style="text-align: left; padding: 4px;">A</th><th style="text-align: left; padding: 4px;">B</th><th style="text-align: left; padding: 4px;">A∧B</th></tr>
-                    <tr><td style="padding: 4px;">R</td><td style="padding: 4px;">R</td><td style="padding: 4px;">R</td></tr>
-                    <tr><td style="padding: 4px;">R</td><td style="padding: 4px;">N</td><td style="padding: 4px;">N</td></tr>
-                    <tr><td style="padding: 4px;">N</td><td style="padding: 4px;">R</td><td style="padding: 4px;">N</td></tr>
-                    <tr><td style="padding: 4px;">N</td><td style="padding: 4px;">N</td><td style="padding: 4px;">N</td></tr>
-                </table>
+            <div class="matura-slika">
+              <img src="/views/matematika/images/formule_osnovna_raven.png" alt="Formule na maturi — osnovna raven">
             </div>
-
-            <div class="formula-card">
-                <strong>DISJUNKCIJA (ALI, ∨)</strong><br>
-                <code>A ∨ B</code>
-                <p style="margin-top: 4px; font-size: 14px; color: var(--text-secondary);">Neresnično le, ko sta obe izjavi neresnični.</p>
-                <table style="margin-top: 8px; width: 100%; font-size: 14px; border-collapse: collapse;">
-                    <tr><th style="text-align: left; padding: 4px;">A</th><th style="text-align: left; padding: 4px;">B</th><th style="text-align: left; padding: 4px;">A∨B</th></tr>
-                    <tr><td style="padding: 4px;">R</td><td style="padding: 4px;">R</td><td style="padding: 4px;">R</td></tr>
-                    <tr><td style="padding: 4px;">R</td><td style="padding: 4px;">N</td><td style="padding: 4px;">R</td></tr>
-                    <tr><td style="padding: 4px;">N</td><td style="padding: 4px;">R</td><td style="padding: 4px;">R</td></tr>
-                    <tr><td style="padding: 4px;">N</td><td style="padding: 4px;">N</td><td style="padding: 4px;">N</td></tr>
-                </table>
-            </div>
-
-            <div class="formula-card">
-                <strong>IMPLIKACIJA (ČE..., POTEM..., ⇒)</strong><br>
-                <code>A ⇒ B</code>
-                <p style="margin-top: 4px; font-size: 14px; color: var(--text-secondary);">Neresnična le, ko je A resnična in B neresnična.</p>
-                <table style="margin-top: 8px; width: 100%; font-size: 14px; border-collapse: collapse;">
-                    <tr><th style="text-align: left; padding: 4px;">A</th><th style="text-align: left; padding: 4px;">B</th><th style="text-align: left; padding: 4px;">A⇒B</th></tr>
-                    <tr><td style="padding: 4px;">R</td><td style="padding: 4px;">R</td><td style="padding: 4px;">R</td></tr>
-                    <tr><td style="padding: 4px;">R</td><td style="padding: 4px;">N</td><td style="padding: 4px;">N</td></tr>
-                    <tr><td style="padding: 4px;">N</td><td style="padding: 4px;">R</td><td style="padding: 4px;">R</td></tr>
-                    <tr><td style="padding: 4px;">N</td><td style="padding: 4px;">N</td><td style="padding: 4px;">R</td></tr>
-                </table>
-            </div>
-
-            <div class="formula-card">
-                <strong>EKIVALENCA (TAKRAT, KO..., ⇔)</strong><br>
-                <code>A ⇔ B</code>
-                <p style="margin-top: 4px; font-size: 14px; color: var(--text-secondary);">Resnična, kadar imata obe izjavi enako vrednost.</p>
-                <table style="margin-top: 8px; width: 100%; font-size: 14px; border-collapse: collapse;">
-                    <tr><th style="text-align: left; padding: 4px;">A</th><th style="text-align: left; padding: 4px;">B</th><th style="text-align: left; padding: 4px;">A⇔B</th></tr>
-                    <tr><td style="padding: 4px;">R</td><td style="padding: 4px;">R</td><td style="padding: 4px;">R</td></tr>
-                    <tr><td style="padding: 4px;">R</td><td style="padding: 4px;">N</td><td style="padding: 4px;">N</td></tr>
-                    <tr><td style="padding: 4px;">N</td><td style="padding: 4px;">R</td><td style="padding: 4px;">N</td></tr>
-                    <tr><td style="padding: 4px;">N</td><td style="padding: 4px;">N</td><td style="padding: 4px;">R</td></tr>
-                </table>
-            </div>
+          </div>
         </div>
-    </div>
 
-    <div class="card">
-        <h3>📝 De Morganova zakona</h3>
-        <div class="formula-card">
-            <code>¬(A ∧ B) = ¬A ∨ ¬B</code>
-        </div>
-        <div class="formula-card">
-            <code>¬(A ∨ B) = ¬A ∧ ¬B</code>
-        </div>
-        <p style="margin-top: 12px; color: var(--text-secondary);">💡 Negacija "IN" postane "ALI" in obratno.</p>
+        <!-- ============ 1. TEORIJA ============ -->
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>1. Teorija — logični vezniki in tabele</h2>
+            <p>Kar moraš znati na pamet, preden se lotiš nalog.</p>
+          </div>
+
+          <div class="info-card">
+            <h3>Osnovni pojmi</h3>
+            <div class="concept-list two-col">
+              <div class="concept">
+                <h4>Izjava</h4>
+                <div class="concept-formula">\(A \in \{R, N\}\) oz. \(\{1, 0\}\)</div>
+                <p class="concept-desc">Poved, za katero lahko rečemo, da je <strong>resnična (R, 1)</strong> ali <strong>neresnična (N, 0)</strong>. Primer: "Danes sije sonce."</p>
+              </div>
+              <div class="concept">
+                <h4>Negacija</h4>
+                <div class="concept-formula">\(\neg A\) ali \(\overline{A}\)</div>
+                <p class="concept-desc">Obrne resničnost izjave. Če je \(A\) resnična, je \(\neg A\) neresnična in obratno.</p>
+              </div>
+              <div class="concept">
+                <h4>Konjunkcija</h4>
+                <div class="concept-formula">\(A \land B\)</div>
+                <p class="concept-desc">Resnična <strong>le, ko sta obe</strong> izjavi resnični. Beremo "A in B".</p>
+              </div>
+              <div class="concept">
+                <h4>Disjunkcija</h4>
+                <div class="concept-formula">\(A \lor B\)</div>
+                <p class="concept-desc">Neresnična <strong>le, ko sta obe</strong> izjavi neresnični. Beremo "A ali B" (vključujoče).</p>
+              </div>
+              <div class="concept">
+                <h4>Implikacija</h4>
+                <div class="concept-formula">\(A \Rightarrow B\)</div>
+                <p class="concept-desc">Neresnična <strong>le</strong>, ko je \(A\) resnična in \(B\) neresnična. Beremo "če A, potem B".</p>
+              </div>
+              <div class="concept">
+                <h4>Ekvivalenca</h4>
+                <div class="concept-formula">\(A \Leftrightarrow B\)</div>
+                <p class="concept-desc">Resnična, kadar imata obe izjavi <strong>enako vrednost</strong>. Beremo "A natanko takrat, ko B".</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <h3>Resničnostne tabele</h3>
+            <div class="formula-grid">
+              <div class="formula-card">
+                <strong>Negacija</strong>
+                <table style="margin-top: 8px; width: 100%;">
+                  <tr><th>A</th><th>¬A</th></tr>
+                  <tr><td>R</td><td>N</td></tr>
+                  <tr><td>N</td><td>R</td></tr>
+                </table>
+              </div>
+              <div class="formula-card">
+                <strong>Konjunkcija</strong>
+                <table style="margin-top: 8px; width: 100%;">
+                  <tr><th>A</th><th>B</th><th>A∧B</th></tr>
+                  <tr><td>R</td><td>R</td><td>R</td></tr>
+                  <tr><td>R</td><td>N</td><td>N</td></tr>
+                  <tr><td>N</td><td>R</td><td>N</td></tr>
+                  <tr><td>N</td><td>N</td><td>N</td></tr>
+                </table>
+              </div>
+              <div class="formula-card">
+                <strong>Disjunkcija</strong>
+                <table style="margin-top: 8px; width: 100%;">
+                  <tr><th>A</th><th>B</th><th>A∨B</th></tr>
+                  <tr><td>R</td><td>R</td><td>R</td></tr>
+                  <tr><td>R</td><td>N</td><td>R</td></tr>
+                  <tr><td>N</td><td>R</td><td>R</td></tr>
+                  <tr><td>N</td><td>N</td><td>N</td></tr>
+                </table>
+              </div>
+              <div class="formula-card">
+                <strong>Implikacija</strong>
+                <table style="margin-top: 8px; width: 100%;">
+                  <tr><th>A</th><th>B</th><th>A⇒B</th></tr>
+                  <tr><td>R</td><td>R</td><td>R</td></tr>
+                  <tr><td>R</td><td>N</td><td>N</td></tr>
+                  <tr><td>N</td><td>R</td><td>R</td></tr>
+                  <tr><td>N</td><td>N</td><td>R</td></tr>
+                </table>
+              </div>
+              <div class="formula-card">
+                <strong>Ekvivalenca</strong>
+                <table style="margin-top: 8px; width: 100%;">
+                  <tr><th>A</th><th>B</th><th>A⇔B</th></tr>
+                  <tr><td>R</td><td>R</td><td>R</td></tr>
+                  <tr><td>R</td><td>N</td><td>N</td></tr>
+                  <tr><td>N</td><td>R</td><td>N</td></tr>
+                  <tr><td>N</td><td>N</td><td>R</td></tr>
+                </table>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <h3>De Morganova zakona</h3>
+            <div class="concept-list two-col">
+              <div class="concept">
+                <h4>Negacija konjunkcije</h4>
+                <div class="concept-formula">\(\neg(A \land B) = \neg A \lor \neg B\)</div>
+                <p class="concept-desc">Negacija "IN" postane "ALI".</p>
+              </div>
+              <div class="concept">
+                <h4>Negacija disjunkcije</h4>
+                <div class="concept-formula">\(\neg(A \lor B) = \neg A \land \neg B\)</div>
+                <p class="concept-desc">Negacija "ALI" postane "IN".</p>
+              </div>
+              <div class="concept">
+                <h4>Tavtologija</h4>
+                <div class="concept-formula">\(A \lor \neg A\)</div>
+                <p class="concept-desc">Vedno resnična izjava (za vsak \(A\)).</p>
+              </div>
+              <div class="concept">
+                <h4>Protislovje</h4>
+                <div class="concept-formula">\(A \land \neg A\)</div>
+                <p class="concept-desc">Vedno neresnična izjava.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ 2. TIPI NALOG ============ -->
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>2. Tipi nalog — postopki po korakih</h2>
+            <p>Za vsak tip: kako ga prepoznaš, kako ga rešiš, primer.</p>
+          </div>
+
+          <!-- TIP 1 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 1: Določitev logične vrednosti izjave</h3>
+              <div class="tip-formula">\(A \in \{1, 0\}\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "ali je izjava resnična/neresnična".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Preberi izjavo.</li>
+              <li>Preveri, ali velja <strong>za vse</strong> elemente (\(\forall\)) ali le <strong>za nekaj</strong> (\(\exists\)).</li>
+              <li>Če najdeš protiprimer, je izjava neresnična.</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> "Vsako praštevilo je liho število." → Neresnična, ker je 2 sodo praštevilo.</p>
+          </div>
+
+          <!-- TIP 2 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 2: Resničnostna tabela</h3>
+              <div class="tip-formula">A ∧ B, A ∨ B, A ⇒ B, A ⇔ B</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "izračunajte logično vrednost sestavljene izjave pri vseh vrednostih".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Naredi tabelo z vsemi možnimi kombinacijami \(A, B\) (2ⁿ vrstic).</li>
+              <li>Za vsako vrstico izračunaj vrednost sestavljene izjave.</li>
+              <li>Uporabi pravila veznikov.</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> \(A \Rightarrow B\). Neresnična le v vrstici, kjer je \(A = R\), \(B = N\).</p>
+          </div>
+
+          <!-- TIP 3 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 3: Enakovrednost izjav</h3>
+              <div class="tip-formula">\(A \Leftrightarrow B\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "pokažite, da sta izjavi enakovredni".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Naredi resničnostno tabelo za obe izjavi.</li>
+              <li>Primerjaj stolpca — če sta enaka, sta izjavi enakovredni.</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> \(\neg(A \land B) \Leftrightarrow \neg A \lor \neg B\) — De Morganov zakon.</p>
+          </div>
+
+          <!-- TIP 4 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 4: Tavtologija</h3>
+              <div class="tip-formula">\(A \lor \neg A \equiv R\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "ali je izjava tavtologija".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Naredi resničnostno tabelo.</li>
+              <li>Če je <strong>zadnji stolpec povsod R</strong>, je izjava tavtologija.</li>
+              <li>Če je povsod N, je protislovje.</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> \(A \lor \neg A\) — vedno resnična, tavtologija.</p>
+          </div>
+
+          <!-- TIP 5 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 5: Negacija sestavljene izjave</h3>
+              <div class="tip-formula">\(\neg(A \land B) = \neg A \lor \neg B\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "zapišite negacijo izjave \(A \land B\)".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Uporabi De Morganov zakon.</li>
+              <li>Zamenjaj \(\land \leftrightarrow \lor\).</li>
+              <li>Negiraj vsako izjavo posebej.</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> \(\neg(A \Rightarrow B) = A \land \neg B\).</p>
+          </div>
+
+          <!-- TIP 6 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 6: Kvantifikatorji</h3>
+              <div class="tip-formula">\(\forall, \exists\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "za vsak …", "obstaja …".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Preberi kvantifikator.</li>
+              <li>Preveri, ali izjava velja za vse elemente ali le za nekaj.</li>
+              <li>Negacija \(\forall\) je \(\exists \neg\), negacija \(\exists\) je \(\forall \neg\).</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> "Za vsak \(x \in \mathbb{R}\) velja \(x^2 \geq 0\)." → Resnična. Negacija: "Obstaja \(x \in \mathbb{R}\), da je \(x^2 < 0\)." → Neresnična.</p>
+          </div>
+
+          <!-- TIP 7 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 7: Logična vrednost v besedilu</h3>
+              <div class="tip-formula">Analiza povedi</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "obkrožite 1, če je izjava resnična".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Razčleni poved na enostavne izjave.</li>
+              <li>Določi resničnost vsake.</li>
+              <li>Uporabi veznike in izračunaj.</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> "Število 49 je praštevilo." → Neresnična (49 = 7 · 7).</p>
+          </div>
+
+          <!-- TIP 8 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 8: Enakovredne oblike implikacije</h3>
+              <div class="tip-formula">\(A \Rightarrow B \equiv \neg B \Rightarrow \neg A\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "zapišite kontrapozicijo".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Zamenjaj \(A\) in \(B\).</li>
+              <li>Negiraj oba.</li>
+              <li>Kontrapozicija \(A \Rightarrow B\) je \(\neg B \Rightarrow \neg A\) (enakovredna).</li>
+              <li>Konverzija \(B \Rightarrow A\) <strong>ni</strong> enakovredna.</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> \(A \Rightarrow B\) ≡ \(\neg B \Rightarrow \neg A\).</p>
+          </div>
+        </section>
+
+        <!-- ============ 3. POGOSTE NAPAKE ============ -->
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>3. Pogoste napake</h2>
+          </div>
+          <div class="info-card">
+            <ul>
+              <li>Zamenjaš implikacijo \(A \Rightarrow B\) z ekvivalenco \(A \Leftrightarrow B\).</li>
+              <li>Misliš, da je implikacija neresnična tudi, ko je \(A\) neresnična.</li>
+              <li>Pozabiš, da je \(A \lor B\) resnična tudi, če sta obe izjavi resnični (vključujoče "ali").</li>
+              <li>Napačno uporabiš De Morganova zakona.</li>
+              <li>Pri negaciji kvantifikatorja pozabiš zamenjati \(\forall \leftrightarrow \exists\).</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ============ 4. ŠTUDIJSKI VODIČ ============ -->
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>4. Študijski vodič — hitri pregled</h2>
+          </div>
+          <div class="info-card">
+            <h3>📋 Kaj moraš znati na pamet</h3>
+            <ul>
+              <li><strong>Resničnostne tabele</strong> za vse 5 veznikov.</li>
+              <li><strong>De Morganova zakona:</strong> \(\neg(A \land B) = \neg A \lor \neg B\), \(\neg(A \lor B) = \neg A \land \neg B\).</li>
+              <li><strong>Implikacija</strong> je neresnična le, ko je \(A\) resnična, \(B\) pa neresnična.</li>
+              <li><strong>Ekvivalenca</strong> je resnična, ko imata \(A\) in \(B\) enako vrednost.</li>
+              <li><strong>Kontrapozicija:</strong> \(A \Rightarrow B \equiv \neg B \Rightarrow \neg A\).</li>
+              <li><strong>Negacija kvantifikatorjev:</strong> \(\neg(\forall x) = \exists x \neg\), \(\neg(\exists x) = \forall x \neg\).</li>
+            </ul>
+          </div>
+
+          <div class="info-card">
+            <h3>🎯 Kako pristopiti k nalogi</h3>
+            <ol>
+              <li><strong>Preberi nalogo in prepoznaj tip:</strong> vrednost izjave, tabela, enakovrednost, negacija?</li>
+              <li><strong>Za vrednost:</strong> razčleni in uporabi tabelo.</li>
+              <li><strong>Za tabelo:</strong> vse kombinacije, uporabi pravila veznikov.</li>
+              <li><strong>Za negacijo:</strong> De Morgan, zamenjaj \(\land/\lor\).</li>
+              <li><strong>Za kvantifikatorje:</strong> zamenjaj \(\forall/\exists\) in negiraj izjavo.</li>
+            </ol>
+          </div>
+
+          <div class="info-card">
+            <h3>⏱️ Časovni načrt za en večer</h3>
+            <ul>
+              <li><strong>20 min:</strong> Teorija — vezniki, tabele, De Morgan.</li>
+              <li><strong>45 min:</strong> Tipi 1–4 (vrednost, tabela, enakovrednost, tavtologija).</li>
+              <li><strong>35 min:</strong> Tipi 5–8 (negacija, kvantifikatorji, besedilo, kontrapozicija).</li>
+              <li><strong>20 min:</strong> Ponovi pogoste napake in študijski vodič.</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ============ 5. POVEZAVE ============ -->
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>5. Vadi naprej</h2>
+            <p>Ko predelaš razlago, preveri znanje z nalogami.</p>
+          </div>
+          <div class="link-list">
+            <a class="link-item" href="/views/matematika/matura/osnovna_raven/naloge/resene/">
+              <span class="link-item-text">
+                <strong>Rešene naloge — osnovna raven</strong>
+                <small>Primeri z razlago</small>
+              </span>
+              <span class="arrow">→</span>
+            </a>
+            <a class="link-item" href="/views/matematika/matura/visja_raven/naloge/resene/">
+              <span class="link-item-text">
+                <strong>Rešene naloge — višja raven</strong>
+                <small>Zahtevnejši primeri</small>
+              </span>
+              <span class="arrow">→</span>
+            </a>
+          </div>
+        </section>
+
+      </div>
     </div>
-</div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>

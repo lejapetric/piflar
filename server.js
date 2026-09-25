@@ -57,7 +57,7 @@ app.use("/api", apiRouter);
 
 // Catch-all — pošlji index.html za vse ostale poti (SPA fallback)
 app.get(/.*/, (req, res) => {
-  res.sendFile(join(__dirname, "public", "views", "index.html"));
+  res.sendFile(join(__dirname, "public", "index.html"));  // ✅
 });
 
 app.listen(port, () => {

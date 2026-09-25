@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Merjenje — razlaga in postopki | Piflar.si</title>
+  <meta name="description" content="Celovita razlaga merjenja za maturo iz fizike: merske enote, pretvorbe, merska negotovost, absolutna in relativna napaka, znanstveni zapis, merilni instrumenti.">
+  <link rel="stylesheet" href="/style/style.css">
+  <link rel="stylesheet" href="/views/fizika/merjenje/merjenje_style.css">
+</head>
+<body>
+  <div id="header"></div>
+
+  <div id="mainContent" class="main-content">
+    <div id="sidebar"></div>
+
+    <div class="view-container">
+      <div class="view">
+
+        <header class="page-header">
+          <span class="page-eyebrow">Fizika · Snov · 1</span>
+          <h1>Merjenje</h1>
+          <p>Vse o merjenju za maturo iz fizike: merske enote in pretvorbe, znanstveni zapis, merska negotovost, absolutna in relativna napaka, merilni instrumenti, merjenje dolžine, mase in časa.</p>
+          <div class="page-meta">
+            <div class="page-meta-item"><strong>8</strong><span>Tipov nalog</span></div>
+            <div class="page-meta-item"><strong>30+</strong><span>Primerov</span></div>
+            <div class="page-meta-item"><strong>~35 min</strong><span>Branja</span></div>
+          </div>
+        </header>
+
+        <!-- ============ 1. TEORIJA ============ -->
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>1. Teorija — pojmi in formule</h2>
+            <p>Kar moraš znati na pamet, preden se lotiš nalog.</p>
+          </div>
+
+          <div class="info-card">
+            <h3>Osnovne fizikalne količine in enote</h3>
+            <div class="concept-list two-col">
+              <div class="concept">
+                <h4>Dolžina</h4>
+                <div class="concept-formula">\(l\), enota: meter (m)</div>
+                <p class="concept-desc">Osnovna enota SI. Izpeljane: km, dm, cm, mm, μm, nm.</p>
+              </div>
+              <div class="concept">
+                <h4>Masa</h4>
+                <div class="concept-formula">\(m\), enota: kilogram (kg)</div>
+                <p class="concept-desc">Izpeljane: g, mg, t.</p>
+              </div>
+              <div class="concept">
+                <h4>Čas</h4>
+                <div class="concept-formula">\(t\), enota: sekunda (s)</div>
+                <p class="concept-desc">Izpeljane: min, h, dan.</p>
+              </div>
+              <div class="concept">
+                <h4>Temperatura</h4>
+                <div class="concept-formula">\(T\), enota: kelvin (K)</div>
+                <p class="concept-desc">\(T(\text{K}) = t(°C) + 273{,}15\)</p>
+              </div>
+              <div class="concept">
+                <h4>Električni tok</h4>
+                <div class="concept-formula">\(I\), enota: amper (A)</div>
+              </div>
+              <div class="concept">
+                <h4>Svetilnost</h4>
+                <div class="concept-formula">\(I_v\), enota: kandela (cd)</div>
+              </div>
+              <div class="concept">
+                <h4>Množina snovi</h4>
+                <div class="concept-formula">\(n\), enota: mol (mol)</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <h3>Predpone SI</h3>
+            <div class="formula-grid">
+              <div class="formula-card">\(\text{G} = 10^9\) (giga)</div>
+              <div class="formula-card">\(\text{M} = 10^6\) (mega)</div>
+              <div class="formula-card">\(\text{k} = 10^3\) (kilo)</div>
+              <div class="formula-card">\(\text{h} = 10^2\) (hekto)</div>
+              <div class="formula-card">\(\text{da} = 10^1\) (deka)</div>
+              <div class="formula-card">\(\text{d} = 10^{-1}\) (deci)</div>
+              <div class="formula-card">\(\text{c} = 10^{-2}\) (centi)</div>
+              <div class="formula-card">\(\text{m} = 10^{-3}\) (mili)</div>
+              <div class="formula-card">\(\mu = 10^{-6}\) (mikro)</div>
+              <div class="formula-card">\(\text{n} = 10^{-9}\) (nano)</div>
+              <div class="formula-card">\(\text{p} = 10^{-12}\) (piko)</div>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <h3>Znanstveni zapis</h3>
+            <div class="concept-list two-col">
+              <div class="concept">
+                <h4>Oblika</h4>
+                <div class="concept-formula">\(a \cdot 10^n\), \(1 \leq a < 10\), \(n \in \mathbb{Z}\)</div>
+                <p class="concept-desc">Primer: \(384\,000\,000 = 3{,}84 \cdot 10^8\).</p>
+              </div>
+              <div class="concept">
+                <h4>Množenje</h4>
+                <div class="concept-formula">\((a \cdot 10^m)(b \cdot 10^n) = ab \cdot 10^{m+n}\)</div>
+              </div>
+              <div class="concept">
+                <h4>Deljenje</h4>
+                <div class="concept-formula">\(\dfrac{a \cdot 10^m}{b \cdot 10^n} = \dfrac{a}{b} \cdot 10^{m-n}\)</div>
+              </div>
+              <div class="concept">
+                <h4>Potenciranje</h4>
+                <div class="concept-formula">\((a \cdot 10^n)^k = a^k \cdot 10^{nk}\)</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <h3>Merska negotovost in napake</h3>
+            <div class="concept-list two-col">
+              <div class="concept">
+                <h4>Absolutna napaka</h4>
+                <div class="concept-formula">\(\Delta x = |x_{\text{izmerjena}} - x_{\text{prava}}|\)</div>
+                <p class="concept-desc">Razlika med izmerjeno in pravo vrednostjo.</p>
+              </div>
+              <div class="concept">
+                <h4>Relativna napaka</h4>
+                <div class="concept-formula">\(\delta_x = \dfrac{\Delta x}{x_{\text{prava}}} \cdot 100\%\)</div>
+                <p class="concept-desc">Napaka, izražena v odstotkih prave vrednosti.</p>
+              </div>
+              <div class="concept">
+                <h4>Zapis z negotovostjo</h4>
+                <div class="concept-formula">\(x = x_0 \pm \Delta x\)</div>
+                <p class="concept-desc">Rezultat merjenja je vedno podan z negotovostjo.</p>
+              </div>
+              <div class="concept">
+                <h4>Relativna negotovost meritve</h4>
+                <div class="concept-formula">\(\dfrac{\Delta x}{x_0}\)</div>
+              </div>
+              <div class="concept">
+                <h4>Seštevanje negotovosti</h4>
+                <div class="concept-formula">\(\Delta(a+b) = \Delta a + \Delta b\)</div>
+                <p class="concept-desc">Pri seštevanju/odštevanju se absolutne negotovosti seštevajo.</p>
+              </div>
+              <div class="concept">
+                <h4>Množenje/deljenje</h4>
+                <div class="concept-formula">\(\dfrac{\Delta(ab)}{ab} = \dfrac{\Delta a}{a} + \dfrac{\Delta b}{b}\)</div>
+                <p class="concept-desc">Pri produktu/kvocientu se relativne negotovosti seštevajo.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <h3>Merilni instrumenti</h3>
+            <div class="concept-list two-col">
+              <div class="concept">
+                <h4>Merilni trak / ravnilo</h4>
+                <div class="concept-formula">natančnost: mm</div>
+              </div>
+              <div class="concept">
+                <h4>Kljunasto merilo</h4>
+                <div class="concept-formula">natančnost: 0,1 mm</div>
+              </div>
+              <div class="concept">
+                <h4>Mikrometerski vijak</h4>
+                <div class="concept-formula">natančnost: 0,01 mm</div>
+              </div>
+              <div class="concept">
+                <h4>Tehtnica</h4>
+                <div class="concept-formula">odvisno od tipa (analitska: 0,1 mg)</div>
+              </div>
+              <div class="concept">
+                <h4>Štoparica</h4>
+                <div class="concept-formula">natančnost: 0,01 s ali bolje</div>
+              </div>
+              <div class="concept">
+                <h4>Termometer</h4>
+                <div class="concept-formula">natančnost: 0,1 °C</div>
+              </div>
+              <div class="concept">
+                <h4>Ampermeter / voltmeter</h4>
+                <div class="concept-formula">odvisno od obsega</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <h3>Merjenje in obdelava podatkov</h3>
+            <div class="concept-list two-col">
+              <div class="concept">
+                <h4>Aritmetična sredina</h4>
+                <div class="concept-formula">\(\bar{x} = \dfrac{x_1 + x_2 + \cdots + x_n}{n}\)</div>
+              </div>
+              <div class="concept">
+                <h4>Standardni odklon</h4>
+                <div class="concept-formula">\(\sigma = \sqrt{\dfrac{\sum(x_i - \bar{x})^2}{n-1}}\)</div>
+                <p class="concept-desc">Za večkratne meritve.</p>
+              </div>
+              <div class="concept">
+                <h4>Rezultat</h4>
+                <div class="concept-formula">\(x = \bar{x} \pm \sigma\)</div>
+              </div>
+              <div class="concept">
+                <h4>Grafi</h4>
+                <div class="concept-formula">\(y(x)\), \(y = kx + n\)</div>
+                <p class="concept-desc">Narišemo meritve in linearno regresijo.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ 2. TIPI NALOG ============ -->
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>2. Tipi nalog — postopki po korakih</h2>
+            <p>Za vsak tip: kako ga prepoznaš, kako ga rešiš, primer.</p>
+          </div>
+
+          <!-- TIP 1 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 1: Pretvarjanje merskih enot</h3>
+              <div class="tip-formula">1 km = 1000 m</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "pretvorite v …", "izrazite v …".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Zapiši pretvorbeni faktor.</li>
+              <li>Pomnoži/deli z ustreznim faktorjem.</li>
+              <li>Rezultat zapiši z ustrezno enoto.</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> \(72 \text{ km/h} = 72 \cdot \dfrac{1000 \text{ m}}{3600 \text{ s}} = 20 \text{ m/s}\).</p>
+          </div>
+
+          <!-- TIP 2 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 2: Znanstveni zapis</h3>
+              <div class="tip-formula">\(a \cdot 10^n\), \(1 \leq a < 10\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "zapišite v znanstvenem zapisu".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Premakni decimalno vejico, da dobiš število med 1 in 10.</li>
+              <li>Preštej, za koliko mest si premaknil.</li>
+              <li>Zapiši kot \(a \cdot 10^n\) (pozitiven \(n\) za velika, negativen za majhna števila).</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> \(0{,}000\,000\,384 = 3{,}84 \cdot 10^{-7}\).</p>
+          </div>
+
+          <!-- TIP 3 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 3: Računanje z znanstvenim zapisom</h3>
+              <div class="tip-formula">\((a \cdot 10^m)(b \cdot 10^n) = ab \cdot 10^{m+n}\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "izračunajte in zapišite v znanstvenem zapisu".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Zmnoži/deli koeficienta.</li>
+              <li>Seštej/odštej eksponenta.</li>
+              <li>Če koeficient ni med 1 in 10, ga pretvori.</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> \((2 \cdot 10^3)(4 \cdot 10^{-2}) = 8 \cdot 10^1 = 80\).</p>
+          </div>
+
+          <!-- TIP 4 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 4: Absolutna napaka</h3>
+              <div class="tip-formula">\(\Delta x = |x_i - x_p|\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "izračunajte absolutno napako".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Določi pravo vrednost \(x_p\).</li>
+              <li>Izmerjeno vrednost \(x_i\).</li>
+              <li>\(\Delta x = |x_i - x_p|\).</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> prava 100 g, izmerjena 98,5 g.</p>
+            <div class="plain-example">
+              <p>\(\Delta x = |98{,}5 - 100| = 1{,}5\) g.</p>
+            </div>
+          </div>
+
+          <!-- TIP 5 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 5: Relativna napaka</h3>
+              <div class="tip-formula">\(\delta = \dfrac{\Delta x}{x_p} \cdot 100\%\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "izračunajte relativno napako".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Izračunaj absolutno napako.</li>
+              <li>Deli s pravo vrednostjo.</li>
+              <li>Pomnoži s 100 %.</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> absolutna 1,5 g, prava 100 g.</p>
+            <div class="plain-example">
+              <p>\(\delta = \dfrac{1{,}5}{100} \cdot 100\% = 1{,}5\%\).</p>
+            </div>
+          </div>
+
+          <!-- TIP 6 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 6: Zapis rezultata z negotovostjo</h3>
+              <div class="tip-formula">\(x = x_0 \pm \Delta x\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "zapišite rezultat merjenja".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Izračunaj srednjo vrednost \(\bar{x}\).</li>
+              <li>Izračunaj negotovost (npr. \(\sigma\) ali \(\Delta x\)).</li>
+              <li>Zapiši \(x = \bar{x} \pm \sigma\) z enoto.</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> meritve 20,1; 20,2; 20,0.</p>
+            <div class="plain-example">
+              <p>\(\bar{x} = 20{,}1\). \(\sigma \approx 0{,}1\). Rezultat: \(x = (20{,}1 \pm 0{,}1)\) cm.</p>
+            </div>
+          </div>
+
+          <!-- TIP 7 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 7: Seštevanje negotovosti</h3>
+              <div class="tip-formula">\(\Delta(a+b) = \Delta a + \Delta b\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "izračunajte skupno negotovost".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Za vsako meritev zapiši negotovost.</li>
+              <li>Pri seštevanju/odštevanju seštej absolutne negotovosti.</li>
+              <li>Pri množenju/deljenju seštej relativne negotovosti.</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> \((5 \pm 0{,}1) + (3 \pm 0{,}2)\)</p>
+            <div class="plain-example">
+              <p>Vsota \(= (8 \pm 0{,}3)\).</p>
+            </div>
+          </div>
+
+          <!-- TIP 8 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 8: Grafični prikaz meritev</h3>
+              <div class="tip-formula">\(y = kx + n\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "narišite graf", "določite naklon".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Nariši meritve kot točke.</li>
+              <li>Nariši premico skozi točke (linearna regresija).</li>
+              <li>Določi \(k\) (naklon) in \(n\) (začetna vrednost).</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> \(s/t\) graf za enakomerno gibanje → \(s = vt\). Naklon \(k = v\).</p>
+          </div>
+        </section>
+
+        <!-- ============ 3. POGOSTE NAPAKE ============ -->
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>3. Pogoste napake</h2>
+          </div>
+          <div class="info-card">
+            <ul>
+              <li>Pozabiš pretvoriti enote pred računanjem (npr. km/h v m/s).</li>
+              <li>Pri znanstvenem zapisu koeficient ni med 1 in 10.</li>
+              <li>Pri seštevanju negotovosti sešteješ relativne namesto absolutnih.</li>
+              <li>Pri produktu/kvocientu sešteješ absolutne namesto relativnih negotovosti.</li>
+              <li>Rezultata ne zaokrožiš na ustrezno število mest (glede na negotovost).</li>
+              <li>Pozabiš enoto pri rezultatu.</li>
+              <li>Pri grafu zamešaš osi (neodvisna spremenljivka na \(x\), odvisna na \(y\)).</li>
+              <li>Pri linearni regresiji narišeš premico, ki ne gre skozi točke.</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ============ 4. ŠTUDIJSKI VODIČ ============ -->
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>4. Študijski vodič — hitri pregled</h2>
+          </div>
+          <div class="info-card">
+            <h3>📋 Kaj moraš znati na pamet</h3>
+            <ul>
+              <li><strong>Osnovne enote SI:</strong> m, kg, s, K, A, cd, mol.</li>
+              <li><strong>Predpone:</strong> G, M, k, d, c, m, μ, n, p.</li>
+              <li><strong>Pretvorbe:</strong> 1 km = 1000 m, 1 h = 3600 s, 1 km/h = 5/18 m/s.</li>
+              <li><strong>Znanstveni zapis:</strong> \(a \cdot 10^n\), \(1 \leq a < 10\).</li>
+              <li><strong>Absolutna napaka:</strong> \(\Delta x = |x_i - x_p|\).</li>
+              <li><strong>Relativna napaka:</strong> \(\delta = \dfrac{\Delta x}{x_p} \cdot 100\%\).</li>
+              <li><strong>Rezultat:</strong> \(x = \bar{x} \pm \sigma\).</li>
+            </ul>
+          </div>
+
+          <div class="info-card">
+            <h3>🎯 Kako pristopiti k nalogi</h3>
+            <ol>
+              <li><strong>Preberi nalogo in prepoznaj tip:</strong> pretvorba, znanstveni zapis, napake, negotovost, graf?</li>
+              <li><strong>Za pretvorbe:</strong> zapiši faktor in pomnoži.</li>
+              <li><strong>Za znanstveni zapis:</strong> premakni decimalno vejico.</li>
+              <li><strong>Za napake:</strong> najprej absolutna, nato relativna.</li>
+              <li><strong>Za negotovost:</strong> pri seštevanju seštej absolutne, pri produktu seštej relativne.</li>
+              <li><strong>Za graf:</strong> nariši točke, linearna regresija.</li>
+            </ol>
+          </div>
+
+          <div class="info-card">
+            <h3>⏱️ Časovni načrt za en večer</h3>
+            <ul>
+              <li><strong>20 min:</strong> Teorija — enote, predpone, znanstveni zapis, negotovost.</li>
+              <li><strong>45 min:</strong> Tipi 1–5 (pretvorbe, znanstveni zapis, napake).</li>
+              <li><strong>35 min:</strong> Tipi 6–8 (negotovost, seštevanje, graf).</li>
+              <li><strong>20 min:</strong> Ponovi pogoste napake in študijski vodič.</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ============ 5. POVEZAVE ============ -->
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>5. Vadi naprej</h2>
+            <p>Ko predelaš razlago, preveri znanje z nalogami.</p>
+          </div>
+          <div class="link-list">
+            <a class="link-item" href="/views/fizika/matura/osnovna_raven/naloge/resene/">
+              <span class="link-item-text">
+                <strong>Rešene naloge — osnovna raven</strong>
+                <small>Primeri z razlago</small>
+              </span>
+              <span class="arrow">→</span>
+            </a>
+            <a class="link-item" href="/views/fizika/matura/visja_raven/naloge/resene/">
+              <span class="link-item-text">
+                <strong>Rešene naloge — višja raven</strong>
+                <small>Zahtevnejši primeri</small>
+              </span>
+              <span class="arrow">→</span>
+            </a>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>

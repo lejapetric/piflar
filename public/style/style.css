@@ -1,6 +1,6 @@
 /* ============================================================
    public/style/style.css
-   Piflar.si — globalni stil (prečiščena minimalistična različica)
+   Piflar.si — globalni stil
    ============================================================ */
 
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap');
@@ -15,7 +15,7 @@
 }
 
 :root {
-    /* Barve — ostaja indigo paleta, malo poglobljena za več teže */
+    /* Barve */
     --primary: #4F46E5;
     --primary-dark: #3730A3;
     --primary-light: #818CF8;
@@ -34,7 +34,7 @@
     --bg-primary: #F7F8FB;
     --bg-card: #FFFFFF;
 
-    /* Obrobe in sence — poenostavljeno: privzeto brez sence, senca šele ob interakciji */
+    /* Obrobe in sence */
     --border-color: #E7E9F2;
     --shadow-sm: 0 1px 2px rgba(23, 26, 46, 0.05);
     --shadow: 0 12px 28px -14px rgba(23, 26, 46, 0.22);
@@ -46,7 +46,7 @@
     --radius-lg: 20px;
     --transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
 
-    /* Presledki — enotna lestvica, da je "zraka" več in bolj dosledno */
+    /* Presledki */
     --space-1: 4px;
     --space-2: 8px;
     --space-3: 12px;
@@ -56,7 +56,7 @@
     --space-7: 48px;
     --space-8: 64px;
 
-    /* Tipografska lestvica */
+    /* Tipografija */
     --font-display: 'Sora', 'Inter', -apple-system, sans-serif;
     --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
     --text-xs: 12.5px;
@@ -77,6 +77,9 @@
     --sb-active-bg: #EEF0FF;
     --sb-accent: #4F46E5;
     --sb-accent-dark: #3730A3;
+
+    /* Header */
+    --header-height: 60px;
 }
 
 body {
@@ -87,9 +90,10 @@ body {
     line-height: 1.65;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
+    padding-top: var(--header-height); /* prostor za fixed header */
 }
 
-/* Vidna, a nevpadljiva označba fokusa (tipkovnica) */
+/* Fokus (tipkovnica) */
 a:focus-visible,
 button:focus-visible,
 input:focus-visible {
@@ -104,7 +108,108 @@ input:focus-visible {
 }
 
 /* ============================================================
-   2. SIDEBAR — OSNOVNA POSTAVITEV
+   2. HEADER — enotna, fiksna definicija
+   ============================================================ */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: var(--header-height);
+
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    padding: 0 var(--space-5);
+
+    background: var(--bg-card);
+    border-bottom: 1px solid var(--border-color);
+    z-index: 1000;
+
+    transform: translateY(0);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    will-change: transform;
+}
+
+.header--scrolled {
+    box-shadow: var(--shadow-sm);
+}
+
+.header--hidden {
+    transform: translateY(-100%);
+}
+
+/* Hamburger gumb — modro ozadje z belimi črtami */
+.menu-btn {
+    background: var(--primary);          /* modra (#4F46E5) */
+    border: none;
+    cursor: pointer;
+    padding: var(--space-2);
+    border-radius: var(--radius-sm);
+    transition: background var(--transition), color var(--transition), box-shadow var(--transition);
+    color: #FFFFFF;                      /* bele črte */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    line-height: 0;
+    width: 36px;
+    height: 36px;
+}
+
+.menu-btn:hover {
+    background: var(--primary-dark);     /* temnejša modra ob hoveru */
+    color: #FFFFFF;
+    box-shadow: 0 2px 8px rgba(79, 70, 229, 0.35);
+}
+
+.menu-btn svg {
+    display: block;
+    stroke: currentColor;                /* črte = bela */
+    width: 20px;
+    height: 20px;
+}
+
+/* Brand */
+.header-brand {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: var(--text-primary);
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: var(--text-lg);
+    letter-spacing: -0.02em;
+    transition: opacity var(--transition);
+    flex-shrink: 0;
+    margin-right: auto;
+}
+
+.header-brand:hover {
+    opacity: 0.75;
+}
+
+.header-brand-dot {
+    color: var(--primary);
+}
+
+/* Actions (datum) */
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    color: var(--text-muted);
+    font-size: var(--text-xs);
+    flex-shrink: 0;
+}
+
+.header-date {
+    font-variant-numeric: tabular-nums;
+    text-transform: capitalize;
+}
+
+/* ============================================================
+   3. SIDEBAR — OSNOVNA POSTAVITEV
    ============================================================ */
 #sidebar {
     position: fixed;
@@ -114,7 +219,7 @@ input:focus-visible {
     height: 100vh;
     background: var(--sb-bg);
     color: var(--sb-text);
-    z-index: 1000;
+    z-index: 1100; /* nad headerjem */
     overflow-y: auto;
     display: none;
     transform: translateX(-100%);
@@ -145,10 +250,10 @@ input:focus-visible {
 }
 
 /* ============================================================
-   3. SIDEBAR — GLAVA (Piflar.si + zapri)
+   4. SIDEBAR — GLAVA
    ============================================================ */
 .sidebar-header {
-    padding: var(--space-5);
+    padding: var(--space-4) var(--space-5);
     background: var(--sb-bg);
     display: flex;
     justify-content: space-between;
@@ -168,17 +273,20 @@ input:focus-visible {
     letter-spacing: -0.01em;
 }
 
-/* Klikljiv logo (če je uporabljen v sidebar-header) */
 .sidebar-logo {
     text-decoration: none;
     color: inherit;
-    display: flex;
+    display: inline-flex;
     align-items: center;
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: var(--text-lg);
+    letter-spacing: -0.02em;
     transition: opacity 0.15s;
 }
 
 .sidebar-logo:hover {
-    opacity: 0.7;
+    opacity: 0.75;
 }
 
 .sidebar-logo h2 {
@@ -195,19 +303,22 @@ input:focus-visible {
     color: var(--sb-text-muted);
     font-size: 20px;
     cursor: pointer;
-    padding: var(--space-1) var(--space-2);
+    padding: var(--space-2);
     border-radius: var(--radius-sm);
     transition: background var(--transition), color var(--transition);
     line-height: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .close-btn:hover {
-    color: var(--sb-text);
+    color: var(--text-primary);
     background: var(--sb-hover-bg);
 }
 
 /* ============================================================
-   4. SIDEBAR — NAVIGACIJA (splošno)
+   5. SIDEBAR — NAVIGACIJA
    ============================================================ */
 .sidebar-nav {
     padding: var(--space-2) 0 var(--space-5) 0;
@@ -252,69 +363,150 @@ input:focus-visible {
 }
 
 /* ============================================================
-   5. SIDEBAR — NAV GROUP (Matematika / Fizika)
+   6. NAV GROUP (poglavje)
    ============================================================ */
-.nav-group {
+.sidebar-nav .nav-group {
     border-bottom: 1px solid #F1F2F8;
 }
 
-.nav-group:last-child {
+.sidebar-nav .nav-group:last-child {
     border-bottom: none;
 }
 
-.nav-group-header {
+.sidebar-nav .nav-group-header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: var(--space-3) var(--space-4) var(--space-3) var(--space-5);
+    gap: var(--space-2);
+    padding: var(--space-2) var(--space-3) var(--space-2) 20px;
+    transition: background 0.15s ease;
+    cursor: pointer;
+    position: relative;
 }
 
-.nav-group-title {
+.sidebar-nav .nav-group-header:hover {
+    background: var(--sb-hover-bg);
+}
+
+.sidebar-nav .nav-group-header:has(.dropdown-toggle:hover) {
+    background: transparent;
+}
+
+.sidebar-nav .nav-group-title {
     display: flex;
     align-items: center;
     gap: var(--space-3);
     color: var(--text-primary);
     text-decoration: none;
-    font-weight: 600;
+    font-weight: 700;
     font-size: var(--text-base);
     flex: 1;
-    padding: var(--space-1) 0;
+    padding: 0;
     transition: color 0.15s;
+    letter-spacing: -0.01em;
 }
 
-.nav-group-title:hover {
-    color: var(--sb-accent);
-}
-
-.nav-group-title .icon {
+.sidebar-nav .nav-group-title .icon {
     font-size: 19px;
     width: 26px;
     text-align: center;
 }
 
+.sidebar-nav .nav-group-header:hover .nav-group-title {
+    color: var(--sb-accent);
+}
+
 /* ============================================================
-   6. SIDEBAR — DROPDOWN TOGGLE (▸ / ▾)
+   7. NAV SUB GROUP (podpoglavje)
+   ============================================================ */
+.sidebar-nav .nav-sub-group {
+    border-top: 1px solid #F1F2F8;
+}
+
+.sidebar-nav .nav-sub-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-2);
+    padding: var(--space-2) var(--space-3) var(--space-2) 36px;
+    color: var(--text-primary);
+    font-size: var(--text-sm);
+    font-weight: 500;
+    transition: background 0.15s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+.sidebar-nav .nav-sub-header:hover {
+    background: var(--sb-hover-bg);
+}
+
+.sidebar-nav .nav-sub-header:has(.dropdown-toggle:hover) {
+    background: transparent;
+}
+
+.sidebar-nav .nav-sub-header .icon {
+    font-size: 16px;
+    width: 22px;
+    text-align: center;
+}
+
+.sidebar-nav .nav-sub-header .label {
+    flex: 1;
+    padding: 0;
+    transition: color 0.15s;
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.sidebar-nav .nav-sub-header .label:hover {
+    color: var(--sb-accent);
+}
+
+.sidebar-nav .nav-sub-header:hover .label {
+    color: var(--sb-accent);
+}
+
+/* ============================================================
+   8. DROPDOWN TOGGLE
    ============================================================ */
 .dropdown-toggle {
-    background: none;
+    background: transparent;
     border: none;
     color: var(--text-muted);
     font-size: 13px;
     cursor: pointer;
-    padding: var(--space-2);
-    border-radius: var(--radius-sm);
-    transition: transform 0.2s ease, color 0.15s, background 0.15s;
+    padding: 0;
+    border-radius: 50%;
+    transition: transform 0.2s ease, color 0.15s ease, background 0.2s ease, box-shadow 0.2s ease;
     line-height: 1;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     justify-content: center;
+    width: 32px;
+    height: 32px;
     min-width: 28px;
     min-height: 28px;
+    flex-shrink: 0;
+    position: relative;
+    z-index: 2;
 }
 
 .dropdown-toggle:hover {
+    background: #FFFFFF;
     color: var(--sb-accent);
-    background: var(--sb-hover-bg);
+    box-shadow: 0 2px 8px rgba(23, 26, 46, 0.12);
+    transform: scale(1.05);
+}
+
+.sidebar-nav .nav-group-header:hover .dropdown-toggle:hover,
+.sidebar-nav .nav-sub-header:hover .dropdown-toggle:hover {
+    background: #FFFFFF;
+    color: var(--sb-accent);
+    box-shadow: 0 2px 8px rgba(23, 26, 46, 0.12);
+    transform: scale(1.05);
 }
 
 .dropdown-toggle.open {
@@ -322,53 +514,27 @@ input:focus-visible {
     color: var(--sb-accent);
 }
 
+.dropdown-toggle.open:hover {
+    transform: rotate(90deg) scale(1.05);
+}
+
 /* ============================================================
-   7. SIDEBAR — DROPDOWN VSEBINA (skrita / odprta)
+   9. DROPDOWN VSEBINA
    ============================================================ */
 .nav-sub,
-.nav-sub-list {
+.nav-sub-list,
+.nav-sub-sub-list {
     display: none;
 }
 
 .nav-sub.open,
-.nav-sub-list.open {
+.nav-sub-list.open,
+.nav-sub-sub-list.open {
     display: block;
 }
 
 /* ============================================================
-   8. SIDEBAR — POD-SKUPINE (Snov / Matura)
-   ============================================================ */
-.nav-sub-group {
-    border-top: 1px solid #F1F2F8;
-}
-
-.nav-sub-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: var(--space-3) var(--space-4) var(--space-3) 34px;
-    color: var(--text-primary);
-    font-size: var(--text-sm);
-    font-weight: 500;
-    transition: background 0.15s;
-}
-
-.nav-sub-header:hover {
-    background: var(--sb-hover-bg);
-}
-
-.nav-sub-header .icon {
-    font-size: 16px;
-    width: 22px;
-    text-align: center;
-}
-
-.nav-sub-header .label {
-    flex: 1;
-}
-
-/* ============================================================
-   9. SIDEBAR — SEZNAM LINKOV ZNOTRAJ DROPDOWNA
+   10. NAV SUB LIST — linki (2. nivo)
    ============================================================ */
 .nav-sub-list a {
     display: block;
@@ -378,7 +544,7 @@ input:focus-visible {
     font-size: 13.5px;
     border-left: 3px solid transparent;
     transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
-    line-height: 1.4;
+    line-height: 1.5;
 }
 
 .nav-sub-list a:hover {
@@ -408,7 +574,79 @@ input:focus-visible {
 }
 
 /* ============================================================
-   10. OVERLAY (temna prosojna plast pod sidebar-om)
+   11. NAV SUB SUB (3. nivo)
+   ============================================================ */
+.sidebar-nav .nav-sub-sub-group {
+    border-top: 1px solid #F1F2F8;
+}
+
+.sidebar-nav .nav-sub-sub-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-2);
+    padding: var(--space-2) var(--space-3) var(--space-2) 56px;
+    color: var(--text-primary);
+    font-size: var(--text-sm);
+    font-weight: 500;
+    transition: background 0.15s ease;
+    cursor: pointer;
+    position: relative;
+}
+
+.sidebar-nav .nav-sub-sub-header:hover {
+    background: var(--sb-hover-bg);
+}
+
+.sidebar-nav .nav-sub-sub-header:has(.dropdown-toggle:hover) {
+    background: transparent;
+}
+
+.sidebar-nav .nav-sub-sub-header .label {
+    flex: 1;
+    padding: 0;
+    transition: color 0.15s;
+    color: var(--text-primary);
+    text-decoration: none;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+.sidebar-nav .nav-sub-sub-header:hover .label {
+    color: var(--sb-accent);
+}
+
+.sidebar-nav .nav-sub-sub-header .dropdown-toggle {
+    width: 28px;
+    height: 28px;
+}
+
+.nav-sub-sub-list a {
+    display: block;
+    padding: var(--space-2) var(--space-4) var(--space-2) 76px;
+    color: var(--sb-text-muted);
+    text-decoration: none;
+    font-size: 13px;
+    border-left: 3px solid transparent;
+    transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+    line-height: 1.5;
+}
+
+.nav-sub-sub-list a:hover {
+    background: var(--sb-hover-bg);
+    color: var(--sb-accent);
+    border-left-color: var(--sb-accent);
+}
+
+.nav-sub-sub-list a.active {
+    background: var(--sb-active-bg);
+    color: var(--sb-accent);
+    border-left-color: var(--sb-accent);
+    font-weight: 600;
+}
+
+/* ============================================================
+   12. OVERLAY
    ============================================================ */
 .overlay {
     position: fixed;
@@ -417,7 +655,7 @@ input:focus-visible {
     width: 100%;
     height: 100%;
     background: rgba(23, 26, 46, 0.35);
-    z-index: 900;
+    z-index: 1050; /* med headerjem in sidebarjem */
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
@@ -431,56 +669,7 @@ input:focus-visible {
 }
 
 /* ============================================================
-   11. HEADER (vrhnja vrstica z ☰ in naslovom)
-   ============================================================ */
-.header {
-    background: var(--bg-card);
-    border-bottom: 1px solid var(--border-color);
-    padding: var(--space-4) var(--space-6);
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: var(--shadow-sm);
-}
-
-.menu-btn {
-    background: none;
-    border: none;
-    font-size: 22px;
-    cursor: pointer;
-    padding: var(--space-2) var(--space-3);
-    border-radius: var(--radius-sm);
-    transition: background var(--transition);
-    color: var(--text-primary);
-}
-
-.menu-btn:hover {
-    background: var(--bg-primary);
-}
-
-.header h1 {
-    font-family: var(--font-display);
-    font-size: var(--text-lg);
-    font-weight: 700;
-    letter-spacing: -0.01em;
-    color: var(--text-primary);
-    flex: 1;
-    margin-left: var(--space-4);
-}
-
-.header-actions {
-    display: flex;
-    align-items: center;
-    gap: var(--space-4);
-    color: var(--text-secondary);
-    font-size: var(--text-sm);
-}
-
-/* ============================================================
-   12. MAIN CONTENT (premakne se, ko je sidebar odprt)
+   13. MAIN CONTENT
    ============================================================ */
 #mainContent {
     transition: margin-left 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -494,7 +683,7 @@ input:focus-visible {
 }
 
 /* ============================================================
-   13. VIEW CONTAINER (vsebina strani)
+   14. VIEW CONTAINER
    ============================================================ */
 .view-container {
     padding: var(--space-6);
@@ -505,7 +694,7 @@ input:focus-visible {
 }
 
 /* ============================================================
-   14. VIEW (mehak vstop ob prikazu — ena sama, namerna animacija)
+   15. VIEW
    ============================================================ */
 .view {
     animation: fadeIn 0.35s ease;
@@ -549,8 +738,7 @@ input:focus-visible {
 }
 
 /* ============================================================
-   15. CARDS — mirujejo brez sence, teža pride iz roba;
-       senca se pojavi šele, ko je kartica dejansko interaktivna
+   16. CARDS
    ============================================================ */
 .card {
     background: var(--bg-card);
@@ -581,7 +769,7 @@ input:focus-visible {
 }
 
 /* ============================================================
-   16. FORMULA GRID (mreža kartic)
+   17. FORMULA GRID
    ============================================================ */
 .formula-grid {
     display: grid;
@@ -590,8 +778,7 @@ input:focus-visible {
 }
 
 /* ============================================================
-   17. QUICK LINKS (hitre povezave) — edini "klikljivi" elementi
-        dobijo hover elevacijo, da senca nosi pomen (ne dekoracijo)
+   18. QUICK LINKS
    ============================================================ */
 .quick-link {
     display: block;
@@ -622,9 +809,7 @@ input:focus-visible {
 }
 
 /* ============================================================
-   18. FORMULA CARD (izpostavljena formula) — enobarvna podlaga
-        namesto ponavljajočega gradienta, da ostane mirno pri
-        več karticah zapored
+   19. FORMULA CARD
    ============================================================ */
 .formula-card {
     background: var(--primary-soft);
@@ -642,7 +827,7 @@ input:focus-visible {
 }
 
 /* ============================================================
-   19. INTERACTIVE SECTION (kalkulatorji)
+   20. INTERACTIVE SECTION
    ============================================================ */
 .interactive-section {
     background: var(--bg-card);
@@ -685,7 +870,7 @@ input:focus-visible {
 }
 
 /* ============================================================
-   20. GUMBI
+   21. GUMBI
    ============================================================ */
 .btn {
     padding: var(--space-3) var(--space-5);
@@ -729,7 +914,7 @@ input:focus-visible {
 }
 
 /* ============================================================
-   21. RESULT BOX (rezultat kalkulatorja)
+   22. RESULT BOX
    ============================================================ */
 .result-box {
     background: var(--bg-primary);
@@ -753,7 +938,7 @@ input:focus-visible {
 }
 
 /* ============================================================
-   22. FOOTER (noga)
+   23. FOOTER
    ============================================================ */
 .footer {
     background: var(--bg-card);
@@ -766,15 +951,17 @@ input:focus-visible {
     max-width: 1200px;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: 1.4fr 1fr 1fr 1fr;
     gap: var(--space-6);
 }
 
 .footer-section h4 {
-    font-size: var(--text-sm);
+    font-size: var(--text-xs);
     font-weight: 700;
     color: var(--text-primary);
     margin-bottom: var(--space-3);
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
 }
 
 .footer-section p {
@@ -786,6 +973,7 @@ input:focus-visible {
 .footer-section ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
 .footer-section ul li {
@@ -795,7 +983,7 @@ input:focus-visible {
 .footer-section ul li a {
     color: var(--text-secondary);
     text-decoration: none;
-    font-size: 13px;
+    font-size: 13.5px;
     transition: color var(--transition);
     cursor: pointer;
 }
@@ -804,83 +992,32 @@ input:focus-visible {
     color: var(--primary);
 }
 
-/* ============================================================
-   23. RESPONSIVE — TABLICA (max-width: 768px)
-   ============================================================ */
-@media (max-width: 768px) {
-    :root {
-        --sidebar-width: 280px;
-        --text-3xl: 26px;
-        --text-2xl: 22px;
-    }
+.footer-brand {
+    max-width: 320px;
+}
 
-    #sidebar {
-        width: 280px;
-    }
+.footer-logo {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--space-2);
+    text-decoration: none;
+    color: var(--text-primary);
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: var(--text-base);
+    letter-spacing: -0.01em;
+    margin-bottom: var(--space-3);
+}
 
-    #mainContent.shifted {
-        margin-left: 0;
-    }
-
-    .header {
-        padding: var(--space-3) var(--space-4);
-    }
-
-    .header h1 {
-        font-size: var(--text-base);
-        margin-left: var(--space-2);
-    }
-
-    .view-container {
-        padding: var(--space-4);
-    }
-
-    .formula-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .footer {
-        padding: var(--space-6) var(--space-4) var(--space-4);
-    }
-
-    .footer-content {
-        grid-template-columns: 1fr 1fr;
-        gap: var(--space-5);
-    }
-
-    .interactive-section .input-group {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .interactive-section input {
-        width: 100%;
-    }
+.footer-meta {
+    font-size: 12px !important;
+    color: var(--text-muted) !important;
+    margin-top: var(--space-3) !important;
 }
 
 /* ============================================================
-   24. RESPONSIVE — TELEFON (max-width: 480px)
+   24. HOMEPAGE — hero, sekcije, kartice
    ============================================================ */
-@media (max-width: 480px) {
-    #sidebar {
-        width: 100%;
-    }
-
-    .footer-content {
-        grid-template-columns: 1fr;
-        gap: var(--space-4);
-    }
-
-    .sidebar-header h2 {
-        font-size: var(--text-base);
-    }
-}
-
-/* ============================================================
-   25. HOMEPAGE — hero, sekcije, kartice poglavij
-   ============================================================ */
-
-/* --- HERO --- */
 .hero {
     position: relative;
     padding: var(--space-8) var(--space-6) var(--space-7);
@@ -964,7 +1101,6 @@ input:focus-visible {
     letter-spacing: 0.05em;
 }
 
-/* Desna stran hero-ja: preview kartica */
 .hero-preview {
     background: var(--bg-card);
     border: 1px solid var(--border-color);
@@ -1010,7 +1146,6 @@ input:focus-visible {
     margin-top: var(--space-3);
 }
 
-/* --- SEKCIJE --- */
 .section {
     padding: var(--space-7) var(--space-6);
 }
@@ -1039,7 +1174,6 @@ input:focus-visible {
     font-size: var(--text-lg);
 }
 
-/* --- KORAKI --- */
 .steps {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -1081,7 +1215,6 @@ input:focus-visible {
     line-height: 1.6;
 }
 
-/* --- MREŽA POGLAVIJ --- */
 .chapters {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -1153,7 +1286,6 @@ input:focus-visible {
     transform: translateX(4px);
 }
 
-/* --- FEATURES --- */
 .features {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
@@ -1180,7 +1312,6 @@ input:focus-visible {
     line-height: 1.6;
 }
 
-/* --- CTA BAND --- */
 .cta-band {
     background: linear-gradient(135deg, var(--primary) 0%, var(--primary-dark) 100%);
     border-radius: var(--radius-lg);
@@ -1218,547 +1349,9 @@ input:focus-visible {
     color: var(--primary-dark);
 }
 
-/* --- RESPONSIVE --- */
-@media (max-width: 900px) {
-    .hero-inner {
-        grid-template-columns: 1fr;
-        gap: var(--space-6);
-    }
-    .hero-preview {
-        order: -1;
-    }
-}
-
-@media (max-width: 768px) {
-    .hero {
-        padding: var(--space-6) var(--space-4);
-    }
-    .section {
-        padding: var(--space-6) var(--space-4);
-    }
-    .hero-stats {
-        gap: var(--space-4);
-    }
-}
-
 /* ============================================================
-   26. HEADER — prenovljen
+   25. PODSTRANI — generični razredi
    ============================================================ */
-.header {
-    background: var(--bg-card);
-    border-bottom: 1px solid var(--border-color);
-    padding: var(--space-3) var(--space-5);
-    display: flex;
-    align-items: center;
-    gap: var(--space-3);
-    position: sticky;
-    top: 0;
-    z-index: 100;
-    box-shadow: var(--shadow-sm);
-}
-
-.menu-btn {
-    background: none;
-    border: none;
-    cursor: pointer;
-    padding: var(--space-2);
-    border-radius: var(--radius-sm);
-    transition: background var(--transition), color var(--transition);
-    color: var(--text-secondary);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    flex-shrink: 0;
-}
-
-.menu-btn:hover {
-    background: var(--bg-primary);
-    color: var(--text-primary);
-}
-
-/* Brand / logo — na levi, takoj za hamburgerjem */
-.header-brand {
-    display: inline-flex;
-    align-items: center;
-    text-decoration: none;
-    color: var(--text-primary);
-    font-family: var(--font-display);
-    font-weight: 700;
-    font-size: var(--text-lg);
-    letter-spacing: -0.02em;
-    transition: opacity var(--transition);
-    flex-shrink: 0;
-    margin-right: auto; /* porine header-actions na desno */
-}
-
-.header-brand:hover {
-    opacity: 0.75;
-}
-
-.header-brand-dot {
-    color: var(--primary);
-}
-
-.header-actions {
-    display: flex;
-    align-items: center;
-    gap: var(--space-4);
-    color: var(--text-muted);
-    font-size: var(--text-xs);
-    flex-shrink: 0;
-}
-
-.header-date {
-    font-variant-numeric: tabular-nums;
-    text-transform: capitalize;
-}
-
-@media (max-width: 640px) {
-    .header {
-        padding: var(--space-3) var(--space-4);
-    }
-    .header-brand {
-        font-size: var(--text-base);
-    }
-}
-
-/* ============================================================
-   27. FOOTER — prenovljen
-   ============================================================ */
-.footer {
-    background: var(--bg-card);
-    border-top: 1px solid var(--border-color);
-    padding: var(--space-7) var(--space-6) var(--space-5);
-    margin-top: var(--space-7);
-}
-
-.footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 1.4fr 1fr 1fr 1fr;
-    gap: var(--space-6);
-}
-
-.footer-section h4 {
-    font-size: var(--text-xs);
-    font-weight: 700;
-    color: var(--text-primary);
-    margin-bottom: var(--space-3);
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-}
-
-.footer-section p {
-    font-size: 13px;
-    color: var(--text-secondary);
-    line-height: 1.6;
-}
-
-.footer-section ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-}
-
-.footer-section ul li {
-    margin-bottom: var(--space-2);
-}
-
-.footer-section ul li a {
-    color: var(--text-secondary);
-    text-decoration: none;
-    font-size: 13.5px;
-    transition: color var(--transition);
-    cursor: pointer;
-}
-
-.footer-section ul li a:hover {
-    color: var(--primary);
-}
-
-/* Brand v footerju */
-.footer-brand {
-    max-width: 320px;
-}
-
-.footer-logo {
-    display: inline-flex;
-    align-items: center;
-    gap: var(--space-2);
-    text-decoration: none;
-    color: var(--text-primary);
-    font-family: var(--font-display);
-    font-weight: 700;
-    font-size: var(--text-base);
-    letter-spacing: -0.01em;
-    margin-bottom: var(--space-3);
-}
-
-.footer-meta {
-    font-size: 12px !important;
-    color: var(--text-muted) !important;
-    margin-top: var(--space-3) !important;
-}
-
-@media (max-width: 900px) {
-    .footer-content {
-        grid-template-columns: 1fr 1fr;
-        gap: var(--space-5);
-    }
-    .footer-brand {
-        grid-column: 1 / -1;
-        max-width: none;
-    }
-}
-
-@media (max-width: 480px) {
-    .footer-content {
-        grid-template-columns: 1fr;
-    }
-    .footer {
-        padding: var(--space-6) var(--space-4) var(--space-4);
-    }
-}
-
-/* ============================================================
-   28. SIDEBAR — prenovljen (jasna hierarhija)
-   ============================================================ */
-
-/* Header sidebar */
-.sidebar-header {
-    padding: var(--space-4) var(--space-5);
-    background: var(--sb-bg);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid var(--sb-border);
-    position: sticky;
-    top: 0;
-    z-index: 10;
-}
-
-.sidebar-logo {
-    display: inline-flex;
-    align-items: center;
-    text-decoration: none;
-    color: inherit;
-    font-family: var(--font-display);
-    font-weight: 700;
-    font-size: var(--text-lg);
-    letter-spacing: -0.02em;
-    transition: opacity var(--transition);
-}
-
-.sidebar-logo:hover {
-    opacity: 0.75;
-}
-
-.close-btn {
-    background: none;
-    border: none;
-    color: var(--text-muted);
-    cursor: pointer;
-    padding: var(--space-2);
-    border-radius: var(--radius-sm);
-    transition: background var(--transition), color var(--transition);
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    line-height: 1;
-}
-
-.close-btn:hover {
-    color: var(--text-primary);
-    background: var(--sb-hover-bg);
-}
-
-/* ============================================================
-   NAV GROUP (poglavje: Matematika, Fizika)
-   ============================================================ */
-.sidebar-nav .nav-group {
-    border-bottom: 1px solid #F1F2F8;
-}
-
-.sidebar-nav .nav-group:last-child {
-    border-bottom: none;
-}
-
-/* Vrstica poglavja — čisto levo (20px) */
-.sidebar-nav .nav-group-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: var(--space-2);
-    padding: var(--space-2) var(--space-3) var(--space-2) 20px;
-    transition: background 0.15s ease;
-    cursor: pointer;
-    position: relative;
-}
-
-.sidebar-nav .nav-group-header:hover {
-    background: var(--sb-hover-bg);
-}
-
-/* Ko hoveraš na dropdown gumb, naj se vrstica NE obarva */
-.sidebar-nav .nav-group-header:has(.dropdown-toggle:hover) {
-    background: transparent;
-}
-
-/* Poglavje — BOLD, brez dodatnega paddinga */
-.sidebar-nav .nav-group-title {
-    display: flex;
-    align-items: center;
-    color: var(--text-primary);
-    text-decoration: none;
-    font-weight: 700;
-    font-size: var(--text-base);
-    flex: 1;
-    padding: 0;
-    transition: color 0.15s;
-    letter-spacing: -0.01em;
-}
-
-.sidebar-nav .nav-group-header:hover .nav-group-title {
-    color: var(--sb-accent);
-}
-
-/* ============================================================
-   NAV SUB GROUP (podpoglavje: Snov, Matura)
-   ============================================================ */
-.sidebar-nav .nav-sub-group {
-    border-top: 1px solid #F1F2F8;
-}
-
-/* Vrstica podpoglavja — malo bolj desno (36px) */
-.sidebar-nav .nav-sub-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: var(--space-2);
-    padding: var(--space-2) var(--space-3) var(--space-2) 36px;
-    color: var(--text-primary);
-    font-size: var(--text-sm);
-    font-weight: 500;
-    transition: background 0.15s ease;
-    cursor: pointer;
-    position: relative;
-}
-
-.sidebar-nav .nav-sub-header:hover {
-    background: var(--sb-hover-bg);
-}
-
-/* Ko hoveraš na dropdown gumb, naj se vrstica NE obarva */
-.sidebar-nav .nav-sub-header:has(.dropdown-toggle:hover) {
-    background: transparent;
-}
-
-/* Label (Snov / Matura) — klikljiv link */
-.sidebar-nav .nav-sub-header .label {
-    flex: 1;
-    padding: 0;
-    transition: color 0.15s;
-    color: var(--text-primary);
-    text-decoration: none;
-    font-weight: 500;
-    cursor: pointer;
-}
-
-.sidebar-nav .nav-sub-header .label:hover {
-    color: var(--sb-accent);
-}
-
-.sidebar-nav .nav-sub-header:hover .label {
-    color: var(--sb-accent);
-}
-
-/* ============================================================
-   DROPDOWN TOGGLE — večji gumb z belim krogom ob hoveru
-   ============================================================ */
-.sidebar-nav .dropdown-toggle {
-    background: transparent;
-    border: none;
-    color: var(--text-muted);
-    cursor: pointer;
-    padding: 0;
-    border-radius: 50%;
-    transition: transform 0.2s ease, color 0.15s ease, background 0.2s ease, box-shadow 0.2s ease;
-    line-height: 1;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 32px;
-    height: 32px;
-    flex-shrink: 0;
-    position: relative;
-    z-index: 2;
-}
-
-/* Hover na gumbu — bel krog + senca */
-.sidebar-nav .dropdown-toggle:hover {
-    background: #FFFFFF;
-    color: var(--sb-accent);
-    box-shadow: 0 2px 8px rgba(23, 26, 46, 0.12);
-    transform: scale(1.05);
-}
-
-/* Gumb ostane obarvan tudi, ko je vrstica hoverana */
-.sidebar-nav .nav-group-header:hover .dropdown-toggle:hover,
-.sidebar-nav .nav-sub-header:hover .dropdown-toggle:hover {
-    background: #FFFFFF;
-    color: var(--sb-accent);
-    box-shadow: 0 2px 8px rgba(23, 26, 46, 0.12);
-    transform: scale(1.05);
-}
-
-/* Ko je odprt — obrnjen chevron */
-.sidebar-nav .dropdown-toggle.open {
-    transform: rotate(90deg);
-    color: var(--sb-accent);
-}
-
-/* Ko je odprt IN hoveran — ohrani rotacijo + bel krog */
-.sidebar-nav .dropdown-toggle.open:hover {
-    transform: rotate(90deg) scale(1.05);
-}
-
-/* ============================================================
-   NAV SUB LIST — linki (poglavja znotraj Snov/Matura)
-   ============================================================ */
-/* Linki — še bolj desno (56px) */
-.sidebar-nav .nav-sub-list a {
-    display: block;
-    padding: var(--space-2) var(--space-4) var(--space-2) 56px;
-    color: var(--sb-text-muted);
-    text-decoration: none;
-    font-size: 13.5px;
-    border-left: 3px solid transparent;
-    transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
-    line-height: 1.5;
-}
-
-.sidebar-nav .nav-sub-list a:hover {
-    background: var(--sb-hover-bg);
-    color: var(--sb-accent);
-    border-left-color: var(--sb-accent);
-}
-
-.sidebar-nav .nav-sub-list a.active {
-    background: var(--sb-active-bg);
-    color: var(--sb-accent);
-    border-left-color: var(--sb-accent);
-    font-weight: 600;
-}
-
-/* Posebni link (npr. "Vse snovi (pregled)") */
-.sidebar-nav .nav-link-special {
-    font-weight: 600;
-    color: var(--sb-accent) !important;
-    border-top: 1px solid #F1F2F8;
-    margin-top: var(--space-1);
-    padding-top: var(--space-3) !important;
-}
-
-.sidebar-nav .nav-link-special:hover {
-    background: var(--sb-active-bg) !important;
-    color: var(--sb-accent-dark) !important;
-}
-
-/* ============================================================
-   29. SIDEBAR — tretji nivo (Matura → Osnovna/Višja raven)
-   ============================================================ */
-
-/* Pod-pod-skupina (Osnovna raven, Višja raven) */
-.sidebar-nav .nav-sub-sub-group {
-    border-top: 1px solid #F1F2F8;
-}
-
-/* Vrstica pod-podpoglavja — še bolj desno (56px) */
-.sidebar-nav .nav-sub-sub-header {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: var(--space-2);
-    padding: var(--space-2) var(--space-3) var(--space-2) 56px;
-    color: var(--text-primary);
-    font-size: var(--text-sm);
-    font-weight: 500;
-    transition: background 0.15s ease;
-    cursor: pointer;
-    position: relative;
-}
-
-.sidebar-nav .nav-sub-sub-header:hover {
-    background: var(--sb-hover-bg);
-}
-
-/* Ko hoveraš na dropdown gumb, naj se vrstica NE obarva */
-.sidebar-nav .nav-sub-sub-header:has(.dropdown-toggle:hover) {
-    background: transparent;
-}
-
-.sidebar-nav .nav-sub-sub-header .label {
-    flex: 1;
-    padding: 0;
-    transition: color 0.15s;
-    color: var(--text-primary);
-    text-decoration: none;
-    font-weight: 500;
-    cursor: pointer;
-}
-
-.sidebar-nav .nav-sub-sub-header:hover .label {
-    color: var(--sb-accent);
-}
-
-/* Gumb v tretjem nivoju je malo manjši */
-.sidebar-nav .nav-sub-sub-header .dropdown-toggle {
-    width: 28px;
-    height: 28px;
-}
-
-/* ============================================================
-   NAV SUB SUB LIST — linki (Rešene naloge, Nerešene naloge ...)
-   ============================================================ */
-/* Linki — še bolj desno (76px) */
-.sidebar-nav .nav-sub-sub-list {
-    display: none;
-}
-
-.sidebar-nav .nav-sub-sub-list.open {
-    display: block;
-}
-
-.sidebar-nav .nav-sub-sub-list a {
-    display: block;
-    padding: var(--space-2) var(--space-4) var(--space-2) 76px;
-    color: var(--sb-text-muted);
-    text-decoration: none;
-    font-size: 13px;
-    border-left: 3px solid transparent;
-    transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
-    line-height: 1.5;
-}
-
-.sidebar-nav .nav-sub-sub-list a:hover {
-    background: var(--sb-hover-bg);
-    color: var(--sb-accent);
-    border-left-color: var(--sb-accent);
-}
-
-.sidebar-nav .nav-sub-sub-list a.active {
-    background: var(--sb-active-bg);
-    color: var(--sb-accent);
-    border-left-color: var(--sb-accent);
-    font-weight: 600;
-}
-
-/* ============================================================
-   30. PODSTRANI — generični razredi
-   ============================================================ */
-
-/* Page header z eyebrow + naslov + lead */
 .page-header {
     margin-bottom: var(--space-6);
     max-width: 68ch;
@@ -1794,7 +1387,6 @@ input:focus-visible {
     line-height: 1.6;
 }
 
-/* Meta vrstica (npr. "16 poglavij · 180 minut") */
 .page-meta {
     display: flex;
     flex-wrap: wrap;
@@ -1825,7 +1417,6 @@ input:focus-visible {
     letter-spacing: 0.05em;
 }
 
-/* Intro card (uvodno besedilo) */
 .intro-card {
     background: var(--bg-card);
     border: 1px solid var(--border-color);
@@ -1853,7 +1444,6 @@ input:focus-visible {
     margin-top: var(--space-3);
 }
 
-/* Section (sklop na podstrani) */
 .subsection {
     margin-bottom: var(--space-7);
 }
@@ -1877,14 +1467,12 @@ input:focus-visible {
     font-size: var(--text-base);
 }
 
-/* Mreža kartic (2 stolpca) */
 .two-col {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: var(--space-4);
 }
 
-/* Info kartica (splošna) */
 .info-card {
     background: var(--bg-card);
     border: 1px solid var(--border-color);
@@ -1938,7 +1526,6 @@ input:focus-visible {
     color: var(--primary);
 }
 
-/* Seznam linkov s puščico */
 .link-list {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
@@ -1995,7 +1582,6 @@ input:focus-visible {
     transform: translateX(4px);
 }
 
-/* Opozorilni pas (npr. "Vse za maturo") */
 .note-band {
     display: flex;
     gap: var(--space-4);
@@ -2018,7 +1604,6 @@ input:focus-visible {
     margin: 0;
 }
 
-/* Razdelek zunanjih povezav */
 .external-links {
     background: var(--bg-card);
     border: 1px solid var(--border-color);
@@ -2066,31 +1651,13 @@ input:focus-visible {
     font-size: var(--text-xs);
 }
 
-/* Responsive */
-@media (max-width: 768px) {
-    .page-header h1,
-    .page-header h2 {
-        font-size: 28px;
-    }
-    .page-meta {
-        gap: var(--space-3);
-    }
-    .intro-card {
-        padding: var(--space-4);
-    }
-}
-
-
 /* ============================================================
-   31. RAZLAGA SNOVI — specifični razredi
+   26. RAZLAGA SNOVI
    ============================================================ */
-
-/* Formule v info-card */
 .info-card .formula-card {
     margin: var(--space-3) 0;
 }
 
-/* Olajšaj branje seznamov v info-card */
 .info-card ol,
 .info-card ul {
     padding-left: 22px;
@@ -2120,16 +1687,13 @@ input:focus-visible {
     color: var(--text-primary);
 }
 
-/* Barvanje formul v info-card */
 .info-card .formula-card code {
     font-size: var(--text-base);
 }
 
 /* ============================================================
-   32. MATEMATIČNI BLOKI (MathJax)
+   27. MATHJAX
    ============================================================ */
-
-/* Block formula (na sredini) */
 .math-block {
     background: var(--primary-soft);
     border-left: 3px solid var(--primary);
@@ -2141,7 +1705,6 @@ input:focus-visible {
     font-size: 1.05em;
 }
 
-/* MathJax inline naj ne bo prevelik */
 mjx-container {
     font-size: 1em !important;
 }
@@ -2150,32 +1713,144 @@ mjx-container[display="true"] {
     font-size: 1.05em !important;
 }
 
-/* Formule v seznamih */
 .info-card li mjx-container,
 .card li mjx-container {
     font-size: 1em !important;
 }
 
-/* Formule v tabelah */
 table mjx-container {
     font-size: 0.95em !important;
 }
 
-/* Prepreči, da bi MathJax pokvaril layout */
 mjx-container[jax="CHTML"][display="true"] {
     margin: var(--space-3) 0 !important;
     overflow-x: auto;
     overflow-y: hidden;
 }
 
-/* Responsive: na telefonu malo manjše formule */
+/* ============================================================
+   28. RESPONSIVE
+   ============================================================ */
+@media (max-width: 900px) {
+    .hero-inner {
+        grid-template-columns: 1fr;
+        gap: var(--space-6);
+    }
+    .hero-preview {
+        order: -1;
+    }
+    .footer-content {
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-5);
+    }
+    .footer-brand {
+        grid-column: 1 / -1;
+        max-width: none;
+    }
+}
+
 @media (max-width: 768px) {
+    :root {
+        --sidebar-width: 280px;
+        --text-3xl: 26px;
+        --text-2xl: 22px;
+    }
+
+    #sidebar {
+        width: 280px;
+    }
+
+    #mainContent.shifted {
+        margin-left: 0;
+    }
+
+    .view-container {
+        padding: var(--space-4);
+    }
+
+    .formula-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer {
+        padding: var(--space-6) var(--space-4) var(--space-4);
+    }
+
+    .interactive-section .input-group {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .interactive-section input {
+        width: 100%;
+    }
+
+    .page-header h1,
+    .page-header h2 {
+        font-size: 28px;
+    }
+
+    .page-meta {
+        gap: var(--space-3);
+    }
+
+    .intro-card {
+        padding: var(--space-4);
+    }
+
+    .hero {
+        padding: var(--space-6) var(--space-4);
+    }
+
+    .section {
+        padding: var(--space-6) var(--space-4);
+    }
+
+    .hero-stats {
+        gap: var(--space-4);
+    }
+
     mjx-container {
         font-size: 0.95em !important;
     }
+
     .math-block {
         padding: var(--space-3);
         font-size: 0.95em;
     }
 }
 
+@media (max-width: 640px) {
+    .header {
+        padding: 0 var(--space-4);
+    }
+    .header-brand {
+        font-size: var(--text-base);
+    }
+    .header-actions {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 480px) {
+    #sidebar {
+        width: 100%;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: var(--space-4);
+    }
+
+    .sidebar-header h2 {
+        font-size: var(--text-base);
+    }
+
+    .footer {
+        padding: var(--space-6) var(--space-4) var(--space-4);
+    }
+
+    .header-date {
+        display: none; /* na ozkih zaslonih skrij datum */
+    }
+}

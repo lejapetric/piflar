@@ -1,72 +1,476 @@
-<div class="view">
-    <div class="view-header">
-        <h2>📊 15. Verjetnostni račun</h2>
-        <p>Klasična verjetnost, pogojna verjetnost in Bernoullijevo zaporedje</p>
-    </div>
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verjetnostni račun — razlaga in postopki | Piflar.si</title>
+  <meta name="description" content="Celovita razlaga verjetnostnega računa za maturo: poskus, dogodek, klasična verjetnost, nasprotni dogodek, unija, pogojna verjetnost, neodvisni dogodki, Bernoullijevo zaporedje, Bayesova formula.">
+  <link rel="stylesheet" href="/style/style.css">
+  <link rel="stylesheet" href="/views/matematika/snov/verjetnostni_racun/verjetnostni_racun_style.css">
+</head>
+<body>
+  <div id="header"></div>
 
-    <div class="card">
-        <h3>📖 Osnovni pojmi</h3>
-        <ul style="padding-left: 20px; color: var(--text-secondary);">
-            <li><strong>Poskus:</strong> Postopek z več možnimi izidi (npr. met kocke)</li>
-            <li><strong>Izid:</strong> En sam rezultat poskusa</li>
-            <li><strong>Dogodek:</strong> Množica izidov, ki nas zanimajo</li>
-            <li><strong>Prostor izidov (Ω):</strong> Množica vseh možnih izidov</li>
-        </ul>
-    </div>
+  <div id="mainContent" class="main-content">
+    <div id="sidebar"></div>
 
-    <div class="card">
-        <h3>📝 Osnovne formule</h3>
-        <div class="formula-grid">
-            <div class="formula-card">
-                <strong>Klasična verjetnost</strong><br>
-                <code>P(A) = |A|/|Ω|</code>
+    <div class="view-container">
+      <div class="view">
+
+        <header class="page-header">
+          <span class="page-eyebrow">Matematika · Snov · 4.16</span>
+          <h1>Verjetnostni račun</h1>
+          <p>Vse o verjetnosti za maturo: osnovni pojmi (poskus, dogodek, vzorčni prostor), klasična verjetnost, nasprotni dogodek, unija, pogojna verjetnost, neodvisni dogodki, Bernoullijevo zaporedje in Bayesova formula.</p>
+          <div class="page-meta">
+            <div class="page-meta-item"><strong>10</strong><span>Tipov nalog</span></div>
+            <div class="page-meta-item"><strong>40+</strong><span>Primerov</span></div>
+            <div class="page-meta-item"><strong>~50 min</strong><span>Branja</span></div>
+          </div>
+        </header>
+
+        <!-- ============ MATURA FORMULE ============ -->
+        <div class="matura-formule">
+          <h3>📋 Formule na maturi — osnovna raven</h3>
+          <p>Na maturitetnem listu s formulami so za <strong>verjetnostni račun</strong> relevantne naslednje formule:</p>
+          <div class="matura-grid">
+            <div class="matura-levo">
+              <ul>
+                <li><strong>Klasična verjetnost:</strong> \(P(A) = \dfrac{|A|}{|\Omega|}\) (ugodni / vsi izidi)</li>
+                <li><strong>Nasprotni dogodek:</strong> \(P(A') = 1 - P(A)\)</li>
+                <li><strong>Unija:</strong> \(P(A \cup B) = P(A) + P(B) - P(A \cap B)\)</li>
+                <li><strong>Pogojna verjetnost:</strong> \(P(A|B) = \dfrac{P(A \cap B)}{P(B)}\)</li>
+                <li><strong>Neodvisni dogodki:</strong> \(P(A \cap B) = P(A) \cdot P(B)\)</li>
+                <li><strong>Bernoullijeva formula:</strong> \(P(n, p, k) = \dbinom{n}{k} p^k (1-p)^{n-k}\)</li>
+                <li><strong>Bayesova formula:</strong> \(P(B_k|A) = \dfrac{P(A|B_k) P(B_k)}{\sum P(A|B_i) P(B_i)}\)</li>
+              </ul>
             </div>
-            <div class="formula-card">
-                <strong>Nasprotni dogodek</strong><br>
-                <code>P(¬A) = 1 - P(A)</code>
+            <div class="matura-slika">
+              <img src="/views/matematika/images/formule_osnovna_raven.png" alt="Formule na maturi — osnovna raven">
             </div>
-            <div class="formula-card">
-                <strong>Unija</strong><br>
-                <code>P(A∪B) = P(A)+P(B)-P(A∩B)</code>
-            </div>
-            <div class="formula-card">
-                <strong>Pogojna verjetnost</strong><br>
-                <code>P(A|B) = P(A∩B)/P(B)</code>
-            </div>
-            <div class="formula-card">
-                <strong>Neodvisni dogodki</strong><br>
-                <code>P(A∩B) = P(A)·P(B)</code>
-            </div>
+          </div>
         </div>
-    </div>
 
-    <div class="card">
-        <h3>📊 Bernoullijevo zaporedje</h3>
-        <div class="formula-card">
-            <code>P(X = k) = C(n,k) · pᵏ · (1-p)ⁿ⁻ᵏ</code>
-        </div>
-        <ul style="margin-top: 8px; padding-left: 20px; color: var(--text-secondary);">
-            <li><strong>Pričakovana vrednost:</strong> E(X) = n·p</li>
-            <li><strong>Standardni odklon:</strong> σ = √(n·p·(1-p))</li>
-        </ul>
-    </div>
+        <!-- ============ 1. TEORIJA ============ -->
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>1. Teorija — pojmi in formule</h2>
+            <p>Kar moraš znati na pamet, preden se lotiš nalog.</p>
+          </div>
 
-    <div class="card">
-        <h3>📝 Primeri</h3>
-        <div style="background: var(--bg-primary); padding: 16px; border-radius: var(--radius-sm);">
-            <p><strong>Primer 1:</strong> Vržemo dve kocki. Verjetnost vsote 7?</p>
-            <p>|Ω| = 36, ugodnih = 6 → P = 6/36 = 1/6</p>
-            <p style="margin-top: 8px;"><strong>Primer 2:</strong> Kovanec vržemo 5-krat. Verjetnost grba natanko 3-krat?</p>
-            <p>P(X=3) = C(5,3)·(1/2)³·(1/2)² = 10/32 = 5/16</p>
-            <p style="margin-top: 8px;"><strong>Primer 3:</strong> Totalna verjetnost</p>
-            <p>P(A) = Σ P(A|Bᵢ)·P(Bᵢ)</p>
-        </div>
-    </div>
+          <div class="info-card">
+            <h3>Osnovni pojmi</h3>
+            <div class="concept-list two-col">
+              <div class="concept">
+                <h4>Poskus</h4>
+                <div class="concept-formula">postopek z več možnimi izidi</div>
+                <p class="concept-desc">Npr. met kocke, žrebanje kroglic.</p>
+              </div>
+              <div class="concept">
+                <h4>Izid</h4>
+                <div class="concept-formula">\(\omega\)</div>
+                <p class="concept-desc">En sam rezultat poskusa.</p>
+              </div>
+              <div class="concept">
+                <h4>Vzorčni prostor</h4>
+                <div class="concept-formula">\(\Omega\)</div>
+                <p class="concept-desc">Množica vseh možnih izidov.</p>
+              </div>
+              <div class="concept">
+                <h4>Dogodek</h4>
+                <div class="concept-formula">\(A \subseteq \Omega\)</div>
+                <p class="concept-desc">Množica izidov, ki nas zanimajo.</p>
+              </div>
+              <div class="concept">
+                <h4>Gotov dogodek</h4>
+                <div class="concept-formula">\(G = \Omega\), \(P(G) = 1\)</div>
+              </div>
+              <div class="concept">
+                <h4>Nemogoč dogodek</h4>
+                <div class="concept-formula">\(N = \emptyset\), \(P(N) = 0\)</div>
+              </div>
+              <div class="concept">
+                <h4>Nasprotni dogodek</h4>
+                <div class="concept-formula">\(A'\), \(\overline{A}\)</div>
+                <p class="concept-desc">Vsi izidi, ki niso v \(A\).</p>
+              </div>
+              <div class="concept">
+                <h4>Neodvisna dogodka</h4>
+                <div class="concept-formula">\(P(A \cap B) = P(A) P(B)\)</div>
+                <p class="concept-desc">Nastop enega ne vpliva na drugega.</p>
+              </div>
+            </div>
+          </div>
 
-    <div class="card">
-        <h3>📈 Bayesova formula</h3>
-        <div class="formula-card">
-            <code>P(Bₖ|A) = P(A|Bₖ)·P(Bₖ) / Σ P(A|Bᵢ)·P(Bᵢ)</code>
-        </div>
+          <div class="info-card">
+            <h3>Definicije verjetnosti</h3>
+            <div class="concept-list two-col">
+              <div class="concept">
+                <h4>Subjektivna verjetnost</h4>
+                <div class="concept-formula">osebna ocena</div>
+                <p class="concept-desc">Temelji na prepričanju posameznika.</p>
+              </div>
+              <div class="concept">
+                <h4>Empirična verjetnost</h4>
+                <div class="concept-formula">relativna frekvenca</div>
+                <p class="concept-desc">Iz opazovanj: \(\dfrac{\text{št. ugodnih}}{\text{št. poskusov}}\).</p>
+              </div>
+              <div class="concept">
+                <h4>Matematična verjetnost</h4>
+                <div class="concept-formula">\(P(A) = \dfrac{|A|}{|\Omega|}\)</div>
+                <p class="concept-desc">Klasična definicija, velja, ko so vsi izidi enako verjetni.</p>
+              </div>
+              <div class="concept">
+                <h4>Lastnosti verjetnosti</h4>
+                <div class="concept-formula">\(0 \leq P(A) \leq 1\)</div>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <h3>Računanje z dogodki</h3>
+            <div class="concept-list two-col">
+              <div class="concept">
+                <h4>Nasprotni dogodek</h4>
+                <div class="concept-formula">\(P(A') = 1 - P(A)\)</div>
+              </div>
+              <div class="concept">
+                <h4>Unija (vsota)</h4>
+                <div class="concept-formula">\(P(A \cup B) = P(A) + P(B) - P(A \cap B)\)</div>
+                <p class="concept-desc">Če sta dogodka nezdružljiva (\(A \cap B = \emptyset\)), je \(P(A \cup B) = P(A) + P(B)\).</p>
+              </div>
+              <div class="concept">
+                <h4>Presek (produkt)</h4>
+                <div class="concept-formula">\(P(A \cap B)\)</div>
+                <p class="concept-desc">Oba dogodka hkrati.</p>
+              </div>
+              <div class="concept">
+                <h4>Pogojna verjetnost</h4>
+                <div class="concept-formula">\(P(A|B) = \dfrac{P(A \cap B)}{P(B)}\)</div>
+                <p class="concept-desc">Verjetnost \(A\), če vemo, da se je zgodil \(B\).</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <h3>Bernoullijevo zaporedje in Bayesova formula</h3>
+            <div class="concept-list two-col">
+              <div class="concept">
+                <h4>Bernoullijevo zaporedje</h4>
+                <div class="concept-formula">\(P(X = k) = \dbinom{n}{k} p^k (1-p)^{n-k}\)</div>
+                <p class="concept-desc">\(n\) ponovitev poskusa, vsakič ista verjetnost \(p\) uspeha.</p>
+              </div>
+              <div class="concept">
+                <h4>Pričakovana vrednost</h4>
+                <div class="concept-formula">\(E(X) = np\)</div>
+              </div>
+              <div class="concept">
+                <h4>Standardni odklon</h4>
+                <div class="concept-formula">\(\sigma = \sqrt{np(1-p)}\)</div>
+              </div>
+              <div class="concept">
+                <h4>Bayesova formula</h4>
+                <div class="concept-formula">\(P(B_k|A) = \dfrac{P(A|B_k) P(B_k)}{\sum P(A|B_i) P(B_i)}\)</div>
+                <p class="concept-desc">Obrat pogojne verjetnosti.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="info-card">
+            <h3>Formula za totalno verjetnost</h3>
+            <div class="concept-list two-col">
+              <div class="concept">
+                <h4>Totalna verjetnost</h4>
+                <div class="concept-formula">\(P(A) = \sum_i P(A|B_i) P(B_i)\)</div>
+                <p class="concept-desc">Dogodki \(B_i\) tvorijo popoln sistem (razbitje \(\Omega\)).</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ 2. TIPI NALOG ============ -->
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>2. Tipi nalog — postopki po korakih</h2>
+            <p>Za vsak tip: kako ga prepoznaš, kako ga rešiš, primer.</p>
+          </div>
+
+          <!-- TIP 1 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 1: Klasična verjetnost</h3>
+              <div class="tip-formula">\(P(A) = \dfrac{|A|}{|\Omega|}\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "izračunajte verjetnost dogodka", vsi izidi enako verjetni.</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Preštej vse možne izide \(|\Omega|\).</li>
+              <li>Preštej ugodne izide \(|A|\).</li>
+              <li>Izračunaj \(P(A) = \dfrac{|A|}{|\Omega|}\).</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> Vržemo kocko. Verjetnost, da pade sodo število?</p>
+            <div class="plain-example">
+              <p>\(|\Omega| = 6\), \(|A| = 3\) (2, 4, 6). \(P(A) = \dfrac{3}{6} = \dfrac{1}{2}\).</p>
+            </div>
+          </div>
+
+          <!-- TIP 2 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 2: Nasprotni dogodek</h3>
+              <div class="tip-formula">\(P(A') = 1 - P(A)\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "vsaj eden", "niti en", "nasprotni dogodek".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Prepoznaj nasprotni dogodek \(A'\).</li>
+              <li>Izračunaj \(P(A')\), nato \(P(A) = 1 - P(A')\).</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> Kovanec vržemo 5-krat. Verjetnost, da vsaj enkrat pade grb?</p>
+            <div class="plain-example">
+              <p>Nasprotni dogodek: vsakič pade številka. \(P(A') = \left(\dfrac{1}{2}\right)^5 = \dfrac{1}{32}\).</p>
+              <p>\(P(A) = 1 - \dfrac{1}{32} = \dfrac{31}{32}\).</p>
+            </div>
+          </div>
+
+          <!-- TIP 3 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 3: Unija dogodkov</h3>
+              <div class="tip-formula">\(P(A \cup B) = P(A) + P(B) - P(A \cap B)\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "A ali B", "vsaj eden od dogodkov".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Preveri, ali sta dogodka nezdružljiva (potem \(P(A \cap B) = 0\)).</li>
+              <li>Uporabi formulo.</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> \(P(A) = 0{,}5\), \(P(B) = 0{,}4\), \(P(A \cap B) = 0{,}1\)</p>
+            <div class="plain-example">
+              <p>\(P(A \cup B) = 0{,}5 + 0{,}4 - 0{,}1 = 0{,}8\).</p>
+            </div>
+          </div>
+
+          <!-- TIP 4 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 4: Neodvisni dogodki</h3>
+              <div class="tip-formula">\(P(A \cap B) = P(A) \cdot P(B)\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "neodvisno", "dva ločena poskusa", "hkrati".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Preveri, ali dogodka vplivata eden na drugega.</li>
+              <li>Zmnoži verjetnosti.</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> Verjetnost, da obakrat pade šestica, pri dveh metih kocke?</p>
+            <div class="plain-example">
+              <p>\(P = \dfrac{1}{6} \cdot \dfrac{1}{6} = \dfrac{1}{36}\).</p>
+            </div>
+          </div>
+
+          <!-- TIP 5 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 5: Pogojna verjetnost</h3>
+              <div class="tip-formula">\(P(A|B) = \dfrac{P(A \cap B)}{P(B)}\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "če vemo, da …", "pod pogojem, da …".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Zapiši \(P(A \cap B)\) in \(P(B)\).</li>
+              <li>Uporabi formulo.</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> Vržemo kocko. Kolikšna je verjetnost, da pade 6, če vemo, da je padlo sodo število?</p>
+            <div class="plain-example">
+              <p>\(A\) = pade 6. \(B\) = pade sodo. \(P(A \cap B) = \dfrac{1}{6}\), \(P(B) = \dfrac{1}{2}\).</p>
+              <p>\(P(A|B) = \dfrac{1/6}{1/2} = \dfrac{1}{3}\).</p>
+            </div>
+          </div>
+
+          <!-- TIP 6 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 6: Totalna verjetnost</h3>
+              <div class="tip-formula">\(P(A) = \sum_i P(A|B_i) P(B_i)\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "iz dveh različnih virov", "v dveh fazah".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Prepoznaj razbitje \(B_1, B_2, \ldots\).</li>
+              <li>Zapiši \(P(A|B_i)\) in \(P(B_i)\).</li>
+              <li>Seštej produkte.</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> Tovarna A proizvede 60 %, tovarna B 40 % izdelkov. 2 % iz A in 3 % iz B je pokvarjenih.</p>
+            <div class="plain-example">
+              <p>\(P(\text{pokvarjen}) = 0{,}6 \cdot 0{,}02 + 0{,}4 \cdot 0{,}03 = 0{,}012 + 0{,}012 = 0{,}024\).</p>
+            </div>
+          </div>
+
+          <!-- TIP 7 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 7: Bernoullijevo zaporedje</h3>
+              <div class="tip-formula">\(P(X=k) = \dbinom{n}{k} p^k (1-p)^{n-k}\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "ponovimo poskus \(n\)-krat", "natanko \(k\)-krat".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Določi \(n\) (število poskusov), \(k\) (kolikokrat uspeh), \(p\) (verjetnost uspeha).</li>
+              <li>Uporabi formulo.</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> Kocko vržemo 5-krat. Verjetnost, da natanko 3-krat pade 6?</p>
+            <div class="plain-example">
+              <p>\(P = \dbinom{5}{3} \left(\dfrac{1}{6}\right)^3 \left(\dfrac{5}{6}\right)^2 = 10 \cdot \dfrac{25}{7776} \approx 0{,}0322\).</p>
+            </div>
+          </div>
+
+          <!-- TIP 8 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 8: Bayesova formula</h3>
+              <div class="tip-formula">\(P(B_k|A) = \dfrac{P(A|B_k) P(B_k)}{P(A)}\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "izračunajte verjetnost, da je izdelek iz tovarne A, če je pokvarjen".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Izračunaj \(P(A)\) z totalno verjetnostjo.</li>
+              <li>Uporabi Bayesovo formulo za \(B_k\).</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> nadaljevanje prejšnjega primera. \(P(A|\text{pokvarjen})\)?</p>
+            <div class="plain-example">
+              <p>\(P(A|\text{pokv.}) = \dfrac{0{,}6 \cdot 0{,}02}{0{,}024} = \dfrac{0{,}012}{0{,}024} = 0{,}5\).</p>
+            </div>
+          </div>
+
+          <!-- TIP 9 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 9: Kombinacije v verjetnosti</h3>
+              <div class="tip-formula">\(P(A) = \dfrac{\dbinom{\ldots}{\ldots}}{\dbinom{\ldots}{\ldots}}\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> izbiranje skupin (npr. žrebanje kroglic, izbira delegacije).</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Izračunaj \(|\Omega|\) s kombinacijami.</li>
+              <li>Izračunaj \(|A|\) s kombinacijami.</li>
+              <li>Uporabi \(P(A) = \dfrac{|A|}{|\Omega|}\).</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> V vreči je 5 belih in 3 črne kroglice. Izvlečemo 2. Verjetnost, da sta obe beli?</p>
+            <div class="plain-example">
+              <p>\(|\Omega| = \dbinom{8}{2} = 28\), \(|A| = \dbinom{5}{2} = 10\). \(P(A) = \dfrac{10}{28} = \dfrac{5}{14}\).</p>
+            </div>
+          </div>
+
+          <!-- TIP 10 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 10: Pričakovana vrednost in standardni odklon (Bernoulli)</h3>
+              <div class="tip-formula">\(E(X) = np\), \(\sigma = \sqrt{np(1-p)}\)</div>
+            </div>
+            <p><strong>Kako prepoznaš:</strong> "povprečno število uspehov", "pričakovano število".</p>
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Določi \(n\) in \(p\).</li>
+              <li>Izračunaj \(E(X) = np\).</li>
+              <li>Za \(\sigma\): \(\sqrt{np(1-p)}\).</li>
+            </ol>
+            <p class="plain-example"><strong>Primer:</strong> Kocko vržemo 60-krat. Pričakovano število šestic?</p>
+            <div class="plain-example">
+              <p>\(E(X) = 60 \cdot \dfrac{1}{6} = 10\). \(\sigma = \sqrt{60 \cdot \tfrac{1}{6} \cdot \tfrac{5}{6}} \approx 2{,}89\).</p>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ 3. POGOSTE NAPAKE ============ -->
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>3. Pogoste napake</h2>
+          </div>
+          <div class="info-card">
+            <ul>
+              <li>Zamenjaš <strong>nezdružljiva</strong> in <strong>neodvisna</strong> dogodka.</li>
+              <li>Pri uniji pozabiš odšteti \(P(A \cap B)\).</li>
+              <li>Pri pogojni verjetnosti zamenjaš \(P(A|B)\) in \(P(B|A)\).</li>
+              <li>Pri Bernoullijevem zaporedju zamenjaš \(p\) in \(1-p\).</li>
+              <li>Pri kombinacijah v verjetnosti uporabiš variacije (vrstni red ni pomemben).</li>
+              <li>Pri Bayesovi formuli pozabiš deliti s \(P(A)\) (totalno verjetnostjo).</li>
+              <li>Pri "vsaj eden" pozabiš uporabiti nasprotni dogodek.</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ============ 4. ŠTUDIJSKI VODIČ ============ -->
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>4. Študijski vodič — hitri pregled</h2>
+          </div>
+          <div class="info-card">
+            <h3>📋 Kaj moraš znati na pamet</h3>
+            <ul>
+              <li><strong>Klasična:</strong> \(P(A) = \dfrac{|A|}{|\Omega|}\).</li>
+              <li><strong>Nasprotni:</strong> \(P(A') = 1 - P(A)\).</li>
+              <li><strong>Unija:</strong> \(P(A \cup B) = P(A) + P(B) - P(A \cap B)\).</li>
+              <li><strong>Neodvisna:</strong> \(P(A \cap B) = P(A) P(B)\).</li>
+              <li><strong>Pogojna:</strong> \(P(A|B) = \dfrac{P(A \cap B)}{P(B)}\).</li>
+              <li><strong>Totalna:</strong> \(P(A) = \sum P(A|B_i) P(B_i)\).</li>
+              <li><strong>Bernoulli:</strong> \(P(X=k) = \dbinom{n}{k} p^k (1-p)^{n-k}\).</li>
+              <li><strong>Bayes:</strong> \(P(B_k|A) = \dfrac{P(A|B_k) P(B_k)}{P(A)}\).</li>
+              <li><strong>Pričakovana:</strong> \(E(X) = np\), \(\sigma = \sqrt{np(1-p)}\).</li>
+            </ul>
+          </div>
+
+          <div class="info-card">
+            <h3>🎯 Kako pristopiti k nalogi</h3>
+            <ol>
+              <li><strong>Preberi nalogo in prepoznaj tip:</strong> klasična, nasprotni, unija, pogojna, Bernoullijeva?</li>
+              <li><strong>Za klasično:</strong> preštej \(|\Omega|\) in \(|A|\).</li>
+              <li><strong>Za "vsaj eden":</strong> uporabi nasprotni dogodek.</li>
+              <li><strong>Za "natanko k-krat":</strong> Bernoullijeva formula.</li>
+              <li><strong>Za "če vemo, da":</strong> pogojna verjetnost.</li>
+              <li><strong>Za "iz katerega vira":</strong> Bayesova formula.</li>
+            </ol>
+          </div>
+
+          <div class="info-card">
+            <h3>⏱️ Časovni načrt za en večer</h3>
+            <ul>
+              <li><strong>20 min:</strong> Teorija — osnovni pojmi in formule.</li>
+              <li><strong>55 min:</strong> Tipi 1–6 (klasična, nasprotni, unija, neodvisni, pogojna, totalna).</li>
+              <li><strong>40 min:</strong> Tipi 7–10 (Bernoulli, Bayes, kombinacije, pričakovana vrednost).</li>
+              <li><strong>25 min:</strong> Ponovi pogoste napake in študijski vodič.</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ============ 5. POVEZAVE ============ -->
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>5. Vadi naprej</h2>
+            <p>Ko predelaš razlago, preveri znanje z nalogami.</p>
+          </div>
+          <div class="link-list">
+            <a class="link-item" href="/views/matematika/matura/osnovna_raven/naloge/resene/">
+              <span class="link-item-text">
+                <strong>Rešene naloge — osnovna raven</strong>
+                <small>Primeri z razlago</small>
+              </span>
+              <span class="arrow">→</span>
+            </a>
+            <a class="link-item" href="/views/matematika/matura/visja_raven/naloge/resene/">
+              <span class="link-item-text">
+                <strong>Rešene naloge — višja raven</strong>
+                <small>Zahtevnejši primeri</small>
+              </span>
+              <span class="arrow">→</span>
+            </a>
+          </div>
+        </section>
+
+      </div>
     </div>
-</div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>
