@@ -609,3 +609,19 @@ mjx-container[display="true"] {
     white-space: nowrap;
     text-align: left;
 }
+
+.complex-plane-wrap {
+  margin: var(--space-4) 0;
+  padding: var(--space-3);
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  display: flex;
+  justify-content: center;
+}
+
+.complex-plane-svg {
+  width: 100%;
+  max-width: 480px;
+  height: auto;
+}

@@ -22,9 +22,9 @@
           <h1>Številske množice</h1>
           <p>Vse o številskih množicah za maturo: hierarhija ℕ ⊂ ℤ ⊂ ℚ ⊂ ℝ ⊂ ℂ, deljivost, praštevila in prafaktorizacija, največji skupni delitelj in najmanjši skupni večkratnik, absolutna vrednost, intervali, kompleksna števila.</p>
           <div class="page-meta">
-            <div class="page-meta-item"><strong>12</strong><span>Tipov nalog</span></div>
-            <div class="page-meta-item"><strong>40+</strong><span>Primerov</span></div>
-            <div class="page-meta-item"><strong>~55 min</strong><span>Branja</span></div>
+            <div class="page-meta-item"><strong>14</strong><span>Tipov nalog</span></div>
+            <div class="page-meta-item"><strong>45+</strong><span>Primerov</span></div>
+            <div class="page-meta-item"><strong>~60 min</strong><span>Branja</span></div>
           </div>
         </header>
 
@@ -164,6 +164,43 @@
                 <h4>Zveza med D in v</h4>
                 <div class="concept-formula">\(D(a, b) \cdot v(a, b) = a \cdot b\)</div>
                 <p class="concept-desc">Uporabno za preverjanje.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- NOVO: DELITELJI IN VEČKRATNIKI -->
+          <div class="info-card">
+            <h3>Delitelji, večkratniki in zapis množic</h3>
+            <div class="concept-list two-col">
+              <div class="concept">
+                <h4>Delitelji števila \(n\)</h4>
+                <div class="concept-formula">\(D(n) = \{d \in \mathbb{N}; n : d \in \mathbb{N}\}\)</div>
+                <p class="concept-desc">Vsa naravna števila, s katerimi je \(n\) deljivo <strong>brez ostanka</strong>. Primer: \(D(12) = \{1, 2, 3, 4, 6, 12\}\).</p>
+              </div>
+              <div class="concept">
+                <h4>Kako poiščemo delitelje</h4>
+                <div class="concept-formula">preverjamo pare \(d \cdot d' = n\)</div>
+                <p class="concept-desc">Preverimo števila od 1 do \(\sqrt{n}\). Za vsak delitelj \(d\) je tudi \(n/d\) delitelj. Primer za 12: \(1 \cdot 12\), \(2 \cdot 6\), \(3 \cdot 4\) → \(1, 2, 3, 4, 6, 12\).</p>
+              </div>
+              <div class="concept">
+                <h4>Večkratniki števila \(n\)</h4>
+                <div class="concept-formula">\(n, 2n, 3n, 4n, \ldots\)</div>
+                <p class="concept-desc">Primer: večkratniki števila 3 so \(3, 6, 9, 12, 15, 18, \ldots\)</p>
+              </div>
+              <div class="concept">
+                <h4>Zapis množice z naštevanjem</h4>
+                <div class="concept-formula">\(A = \{2, 3, 5, 7\}\)</div>
+                <p class="concept-desc">Elemente zapišemo med zavite oklepaje, ločene z vejico. Vsak element <strong>samo enkrat</strong>, vrstni red ni pomemben.</p>
+              </div>
+              <div class="concept">
+                <h4>Zapis množice z opisom</h4>
+                <div class="concept-formula">\(A = \{x; x \in \mathbb{N} \land x < 5\}\)</div>
+                <p class="concept-desc">Povemo pravilo, po katerem element pripada množici. Nato lahko zapišemo še z naštevanjem: \(\{1, 2, 3, 4\}\).</p>
+              </div>
+              <div class="concept">
+                <h4>Operacije z množicami</h4>
+                <div class="concept-formula">\(A \cup B\), \(A \cap B\), \(A \setminus B\)</div>
+                <p class="concept-desc"><strong>Unija</strong> = vsi elementi iz obeh; <strong>presek</strong> = samo skupni; <strong>razlika</strong> = elementi prve, ki jih v drugi ni.</p>
               </div>
             </div>
           </div>
@@ -498,6 +535,194 @@
               \(x_{1,2} = \dfrac{4 \pm 2i}{2} = 2 \pm i\).</p>
             </div>
           </div>
+
+          <!-- TIP 13 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 13: Prikaz kompleksnega števila v kompleksni ravnini</h3>
+              <div class="tip-formula">\(z = a + bi \;\rightarrow\; (a, b)\)</div>
+            </div>
+
+            <p><strong>Kako prepoznaš:</strong> "prikaži število \(z\) v kompleksni ravnini", "nariši \(z\)", "predstavi \(z\) s točko ali vektorjem".</p>
+
+            <p><strong>Pomembno pravilo:</strong> Kompleksno število v kompleksni ravnini lahko prikažemo <strong>na dva načina</strong>:</p>
+
+            <ol>
+              <li><strong>Kot puščico (vektor)</strong> — iz izhodišča \((0,0)\) do točke \((a, b)\).</li>
+              <li><strong>Kot točko</strong> — samo točko \((a, b)\), brez puščice.</li>
+            </ol>
+
+            <p><strong>⚠️ Nikoli ne rišemo obojega hkrati!</strong> Če narišemo puščico <em>in</em> točko istočasno, je to <strong>narobe</strong>. Izberemo <strong>en način</strong> — bodisi samo puščico bodisi samo točko — in se tega držimo.</p>
+
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Zapiši kompleksno število v obliki \(z = a + bi\).</li>
+              <li>Preberi <strong>realni del</strong> \(a = \operatorname{Re}(z)\) in <strong>imaginarni del</strong> \(b = \operatorname{Im}(z)\).</li>
+              <li>V kompleksni ravnini:
+                <ul>
+                  <li>na vodoravno os (<strong>realna os</strong>) narišeš \(a\),</li>
+                  <li>na navpično os (<strong>imaginarna os</strong>) narišeš \(b\).</li>
+                </ul>
+              </li>
+              <li>Odloči se:
+                <ul>
+                  <li><strong>način A:</strong> narišeš puščico iz \((0,0)\) do \((a, b)\), <strong>brez</strong> dodatne točke;</li>
+                  <li><strong>način B:</strong> narišeš samo točko \((a, b)\), <strong>brez</strong> puščice.</li>
+                </ul>
+              </li>
+              <li>Po potrebi izračunaj še \(|z| = \sqrt{a^2 + b^2}\) in \(\overline{z} = a - bi\).</li>
+            </ol>
+
+            <p class="plain-example"><strong>Primer:</strong> Prikaži število \(z = 3 + 2i\) v kompleksni ravnini.</p>
+
+            <div class="plain-example">
+              <p><strong>1. korak:</strong> Preberemo \(a = 3\) in \(b = 2\).</p>
+              <p><strong>2. korak:</strong> Na realni osi označimo \(3\), na imaginarni osi \(2\).</p>
+              <p><strong>3. korak:</strong> Odločimo se za <strong>en način</strong> prikaza (puščica ali točka).</p>
+              <p><strong>4. korak:</strong> \(|z| = \sqrt{3^2 + 2^2} = \sqrt{13}\).</p>
+              <p><strong>5. korak:</strong> \(\overline{z} = 3 - 2i\) leži zrcalno čez realno os.</p>
+            </div>
+
+            <p><strong>Grafični prikaz:</strong> <strong>Na levi</strong> je prikaz s <strong>puščico (vektorjem)</strong>, <strong>na desni</strong> pa prikaz s <strong>točko</strong>. Nikoli ne rišemo obojega hkrati.</p>
+
+            <div class="complex-plane-wrap">
+              <svg viewBox="0 0 720 280" role="img" aria-label="Dva načina prikaza kompleksnega števila 3 + 2i" class="complex-plane-svg">
+                <!-- LEVO: PUŠČICA -->
+                <g transform="translate(0,0)">
+                  <text x="160" y="20" font-size="13" fill="#111827" font-weight="bold" text-anchor="middle">Način A: puščica (vektor)</text>
+                  <g stroke="#e5e7eb" stroke-width="1">
+                    <line x1="40" y1="50" x2="40" y2="230" />
+                    <line x1="80" y1="50" x2="80" y2="230" />
+                    <line x1="120" y1="50" x2="120" y2="230" />
+                    <line x1="160" y1="50" x2="160" y2="230" />
+                    <line x1="200" y1="50" x2="200" y2="230" />
+                    <line x1="240" y1="50" x2="240" y2="230" />
+                    <line x1="280" y1="50" x2="280" y2="230" />
+                    <line x1="40" y1="50" x2="280" y2="50" />
+                    <line x1="40" y1="90" x2="280" y2="90" />
+                    <line x1="40" y1="130" x2="280" y2="130" />
+                    <line x1="40" y1="170" x2="280" y2="170" />
+                    <line x1="40" y1="210" x2="280" y2="210" />
+                  </g>
+                  <line x1="40" y1="150" x2="290" y2="150" stroke="#111827" stroke-width="1.5" />
+                  <line x1="160" y1="40" x2="160" y2="240" stroke="#111827" stroke-width="1.5" />
+                  <text x="295" y="155" font-size="12" fill="#111827">Re</text>
+                  <text x="165" y="35" font-size="12" fill="#111827">Im</text>
+                  <text x="196" y="166" font-size="11" fill="#374151">1</text>
+                  <text x="236" y="166" font-size="11" fill="#374151">2</text>
+                  <text x="276" y="166" font-size="11" fill="#374151">3</text>
+                  <text x="146" y="114" font-size="11" fill="#374151">1</text>
+                  <text x="146" y="74" font-size="11" fill="#374151">2</text>
+                  <defs>
+                    <marker id="arrowA" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+                      <path d="M0,0 L9,3 L0,6 Z" fill="#2563eb" />
+                    </marker>
+                  </defs>
+                  <line x1="160" y1="150" x2="276" y2="74" stroke="#2563eb" stroke-width="2.5" marker-end="url(#arrowA)" />
+                  <text x="284" y="70" font-size="13" fill="#2563eb" font-weight="bold">z = 3 + 2i</text>
+                  <circle cx="276" cy="226" r="4" fill="#9ca3af" />
+                  <text x="284" y="238" font-size="12" fill="#6b7280">z̄ = 3 − 2i</text>
+                  <line x1="276" y1="74" x2="276" y2="226" stroke="#9ca3af" stroke-width="1" stroke-dasharray="4 4" />
+                </g>
+
+                <!-- DESNO: TOČKA -->
+                <g transform="translate(360,0)">
+                  <text x="160" y="20" font-size="13" fill="#111827" font-weight="bold" text-anchor="middle">Način B: točka</text>
+                  <g stroke="#e5e7eb" stroke-width="1">
+                    <line x1="40" y1="50" x2="40" y2="230" />
+                    <line x1="80" y1="50" x2="80" y2="230" />
+                    <line x1="120" y1="50" x2="120" y2="230" />
+                    <line x1="160" y1="50" x2="160" y2="230" />
+                    <line x1="200" y1="50" x2="200" y2="230" />
+                    <line x1="240" y1="50" x2="240" y2="230" />
+                    <line x1="280" y1="50" x2="280" y2="230" />
+                    <line x1="40" y1="50" x2="280" y2="50" />
+                    <line x1="40" y1="90" x2="280" y2="90" />
+                    <line x1="40" y1="130" x2="280" y2="130" />
+                    <line x1="40" y1="170" x2="280" y2="170" />
+                    <line x1="40" y1="210" x2="280" y2="210" />
+                  </g>
+                  <line x1="40" y1="150" x2="290" y2="150" stroke="#111827" stroke-width="1.5" />
+                  <line x1="160" y1="40" x2="160" y2="240" stroke="#111827" stroke-width="1.5" />
+                  <text x="295" y="155" font-size="12" fill="#111827">Re</text>
+                  <text x="165" y="35" font-size="12" fill="#111827">Im</text>
+                  <text x="196" y="166" font-size="11" fill="#374151">1</text>
+                  <text x="236" y="166" font-size="11" fill="#374151">2</text>
+                  <text x="276" y="166" font-size="11" fill="#374151">3</text>
+                  <text x="146" y="114" font-size="11" fill="#374151">1</text>
+                  <text x="146" y="74" font-size="11" fill="#374151">2</text>
+                  <circle cx="276" cy="74" r="5" fill="#2563eb" />
+                  <text x="284" y="70" font-size="13" fill="#2563eb" font-weight="bold">z = 3 + 2i</text>
+                  <circle cx="276" cy="226" r="4" fill="#9ca3af" />
+                  <text x="284" y="238" font-size="12" fill="#6b7280">z̄ = 3 − 2i</text>
+                  <line x1="276" y1="74" x2="276" y2="226" stroke="#9ca3af" stroke-width="1" stroke-dasharray="4 4" />
+                </g>
+              </svg>
+            </div>
+          </div>
+
+          <!-- TIP 14 -->
+          <div class="info-card">
+            <div class="tip-header">
+              <h3>Tip 14: Množice iz besedila — praštevila, delitelji, večkratniki</h3>
+              <div class="tip-formula">\(A \cup B\), \(A \cap B\), \(B \cap C\)</div>
+            </div>
+
+            <p><strong>Kako prepoznaš:</strong> v nalogi so množice opisane z besedami (npr. "praštevila, manjša od 20", "delitelji števila 12", "večkratniki števila 3, manjši od 20"), nato pa moraš izvesti operacije z njimi.</p>
+
+            <p><strong>Postopek:</strong></p>
+            <ol>
+              <li>Preberi opis vsake množice in zapiši njene elemente z naštevanjem.</li>
+              <li>Preveri, da vsi elementi ustrezajo definiciji.</li>
+              <li>Izvedi zahtevano operacijo (unija \(\cup\), presek \(\cap\), razlika \(\setminus\)).</li>
+              <li>Preveri, ali so rezultati smiselni in brez ponavljanj.</li>
+            </ol>
+
+            <hr>
+
+            <p class="plain-example"><strong>Primer:</strong> Naj bo \(A\) množica vseh praštevil, manjših od 20, \(B\) množica vseh deliteljev števila 12 in \(C\) množica vseh večkratnikov števila 3, manjših od 20. Zapišite množice \(A\), \(B\), \(C\) ter \(A \cup B\), \(A \cap B\), \(B \cap C\).</p>
+
+            <div class="plain-example">
+              <p><strong>1. korak — praštevila, manjša od 20:</strong></p>
+              <p>Praštevilo je naravno število, večje od 1, ki je deljivo samo z 1 in s samim seboj.</p>
+              <p>\[
+                A = \{2, 3, 5, 7, 11, 13, 17, 19\}
+              \]</p>
+
+              <p><strong>2. korak — delitelji števila 12:</strong></p>
+              <p>Delitelji so vsa naravna števila, s katerimi je 12 deljivo <strong>brez ostanka</strong>. Poiščemo jih s pari:</p>
+              <p>\(1 \cdot 12\), &nbsp; \(2 \cdot 6\), &nbsp; \(3 \cdot 4\).</p>
+              <p>\[
+                B = \{1, 2, 3, 4, 6, 12\}
+              \]</p>
+
+              <p><strong>3. korak — večkratniki števila 3, manjši od 20:</strong></p>
+              <p>Večkratniki so \(3, 6, 9, 12, 15, 18, 21, \ldots\) Vzamemo tiste, ki so manjši od 20:</p>
+              <p>\[
+                C = \{3, 6, 9, 12, 15, 18\}
+              \]</p>
+
+              <p><strong>4. korak — unija \(A \cup B\):</strong></p>
+              <p>Zapišemo vse elemente iz \(A\) in \(B\), brez ponavljanja:</p>
+              <p>\[
+                A \cup B = \{1, 2, 3, 4, 5, 6, 7, 11, 12, 13, 17, 19\}
+              \]</p>
+
+              <p><strong>5. korak — presek \(A \cap B\):</strong></p>
+              <p>Elementi, ki so v obeh množicah hkrati:</p>
+              <p>\[
+                A \cap B = \{2, 3\}
+              \]</p>
+
+              <p><strong>6. korak — presek \(B \cap C\):</strong></p>
+              <p>Elementi, ki so v \(B\) in hkrati v \(C\):</p>
+              <p>\[
+                B \cap C = \{3, 6, 12\}
+              \]</p>
+            </div>
+
+            <p class="plain-example"><strong>Opomba:</strong> Delitelje števila \(n\) poiščemo tako, da preverimo vsa naravna števila od 1 do \(\sqrt{n}\) in zapišemo pare. Za \(n = 12\): \(1 \cdot 12\), \(2 \cdot 6\), \(3 \cdot 4\) → delitelji so \(1, 2, 3, 4, 6, 12\).</p>
+          </div>
         </section>
 
         <!-- ============ 3. POGOSTE NAPAKE ============ -->
@@ -516,6 +741,8 @@
               <li>Pri kompleksnih številih pozabiš \(i^2 = -1\).</li>
               <li>Pri potencah \(i\) ne deliš \(n\) s 4.</li>
               <li>Pri konjugiranem številu zamenjaš predznak realnega dela (samo imaginarni se spremeni).</li>
+              <li>Pri uniji <strong>ponavljaš</strong> elemente (npr. \(\{1, 2, 2, 3\}\) namesto \(\{1, 2, 3\}\)).</li>
+              <li>Pri preseku zapišeš vse elemente obeh množic namesto le skupnih.</li>
             </ul>
           </div>
         </section>
@@ -533,6 +760,9 @@
               <li><strong>Prafaktorizacija</strong> in zapis \(n = p_1^{a_1} \cdots p_k^{a_k}\).</li>
               <li><strong>\(D(a,b)\):</strong> skupni prafaktorji z najmanjšo potenco.</li>
               <li><strong>\(v(a,b)\):</strong> vsi prafaktorji z največjo potenco.</li>
+              <li><strong>Delitelji števila \(n\):</strong> preverjamo pare do \(\sqrt{n}\), npr. \(D(12) = \{1, 2, 3, 4, 6, 12\}\).</li>
+              <li><strong>Večkratniki števila \(n\):</strong> \(n, 2n, 3n, \ldots\)</li>
+              <li><strong>Množice:</strong> unija \(\cup\), presek \(\cap\), razlika \(\setminus\).</li>
               <li><strong>Absolutna vrednost:</strong> \(|x| = a \Rightarrow x = \pm a\), \(|x| < a \Rightarrow -a < x < a\), \(|x| > a \Rightarrow x < -a \lor x > a\).</li>
               <li><strong>Kompleksna:</strong> \(i^2 = -1\), \(\overline{z} = a - bi\), \(|z| = \sqrt{a^2+b^2}\), perioda potenc i je 4.</li>
             </ul>
@@ -541,21 +771,24 @@
           <div class="info-card">
             <h3>🎯 Kako pristopiti k nalogi</h3>
             <ol>
-              <li><strong>Preberi nalogo in prepoznaj tip:</strong> deljivost, D/v, absolutna vrednost, intervali, kompleksna?</li>
+              <li><strong>Preberi nalogo in prepoznaj tip:</strong> deljivost, D/v, absolutna vrednost, intervali, kompleksna, množice iz besedila?</li>
               <li><strong>Za deljivost:</strong> uporabi pravila (glej teorijo).</li>
               <li><strong>Za D in v:</strong> najprej prafaktoriziraj.</li>
+              <li><strong>Za delitelje:</strong> preveri pare do \(\sqrt{n}\).</li>
               <li><strong>Za absolutno vrednost:</strong> razbij na dva primera.</li>
               <li><strong>Za intervale:</strong> nariši na številsko premico.</li>
               <li><strong>Za kompleksna:</strong> uporabi \(i^2 = -1\) pri množenju, konjugirano pri deljenju.</li>
+              <li><strong>Za množice iz besedila:</strong> najprej zapiši elemente vsake množice, nato izvedi operacijo.</li>
             </ol>
           </div>
 
           <div class="info-card">
             <h3>⏱️ Časovni načrt za en večer</h3>
             <ul>
-              <li><strong>25 min:</strong> Teorija — hierarhija, deljivost, D in v, absolutna vrednost, kompleksna.</li>
+              <li><strong>25 min:</strong> Teorija — hierarhija, deljivost, D in v, delitelji/večkratniki, absolutna vrednost, kompleksna.</li>
               <li><strong>50 min:</strong> Tipi 1–6 (množice, deljivost, prafaktorizacija, D in v, tuji, absolutna vrednost).</li>
               <li><strong>40 min:</strong> Tipi 7–12 (neenačbe, intervali, kompleksna, potence i, |z|, kvadratne enačbe).</li>
+              <li><strong>20 min:</strong> Tip 13–14 (kompleksna ravnina, množice iz besedila).</li>
               <li><strong>25 min:</strong> Ponovi pogoste napake in študijski vodič.</li>
             </ul>
           </div>

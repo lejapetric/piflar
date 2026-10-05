@@ -49,121 +49,151 @@
           </div>
         </div>
 
-        <!-- ============ 1. TEORIJA ============ -->
-        <section class="subsection">
-          <div class="subsection-head">
-            <h2>1. Teorija — pojmi in operacije</h2>
-            <p>Kar moraš znati na pamet, preden se lotiš nalog.</p>
-          </div>
+ <!-- ============ 1. TEORIJA ============ -->
+<section class="subsection">
+  <div class="subsection-head">
+    <h2>1. Teorija — pojmi in operacije</h2>
+    <p>Kar moraš znati na pamet, preden se lotiš nalog.</p>
+  </div>
 
-          <div class="info-card">
-            <h3>Osnovni pojmi</h3>
-            <div class="concept-list two-col">
-              <div class="concept">
-                <h4>Vektor</h4>
-                <div class="concept-formula">\(\vec{a} = \overrightarrow{AB} = (a_1, a_2)\)</div>
-                <p class="concept-desc">Usmerjena daljica z velikostjo (dolžino), smerjo in orientacijo.</p>
-              </div>
-              <div class="concept">
-                <h4>Krajevni vektor točke</h4>
-                <div class="concept-formula">\(\overrightarrow{AB} = B - A\)</div>
-                <p class="concept-desc">Vektor od točke A do točke B. V koordinatah: \((x_B - x_A, y_B - y_A)\).</p>
-              </div>
-              <div class="concept">
-                <h4>Dolžina vektorja (norma)</h4>
-                <div class="concept-formula">\(|\vec{a}| = \sqrt{a_1^2 + a_2^2 + a_3^2}\)</div>
-                <p class="concept-desc">Vedno nenegativna.</p>
-              </div>
-              <div class="concept">
-                <h4>Enotski vektor</h4>
-                <div class="concept-formula">\(\vec{a}_0 = \dfrac{\vec{a}}{|\vec{a}|}\)</div>
-                <p class="concept-desc">Ima dolžino 1 in isto smer kot \(\vec{a}\).</p>
-              </div>
-              <div class="concept">
-                <h4>Ničelni vektor</h4>
-                <div class="concept-formula">\(\vec{0} = (0, 0)\)</div>
-                <p class="concept-desc">Nima smeri, dolžina 0.</p>
-              </div>
-              <div class="concept">
-                <h4>Nasprotni vektor</h4>
-                <div class="concept-formula">\(-\vec{a} = (-a_1, -a_2)\)</div>
-                <p class="concept-desc">Ista dolžina, nasprotna smer.</p>
-              </div>
-            </div>
-          </div>
+  <!-- ========== OSNOVNI POJMI ========== -->
+  <div class="info-card">
+    <h3>Kaj sploh je vektor?</h3>
+    <p><strong>Vektor</strong> je <strong>usmerjena daljica</strong>. To pomeni, da ima:</p>
+    <ul>
+      <li><strong>dolžino</strong> (kako dolga je daljica),</li>
+      <li><strong>smer</strong> (na katero premico leži),</li>
+      <li><strong>orientacijo</strong> (v katero smer po tej premici kaže).</li>
+    </ul>
+    <p>Vektor označimo s puščico nad črko, npr. \(\vec{a}\), ali z začetno in končno točko, npr. \(\overrightarrow{AB}\).</p>
+    <p><strong>Primer iz vsakdanjega življenja:</strong> če rečeš "premakni se 5 metrov", to ni vektor — manjka smer. Če rečeš "premakni se 5 metrov proti severu", je to vektor: dolžina 5 m, smer sever, orientacija naprej.</p>
 
-          <div class="info-card">
-            <h3>Operacije z vektorji</h3>
-            <div class="concept-list two-col">
-              <div class="concept">
-                <h4>Seštevanje</h4>
-                <div class="concept-formula">\(\vec{a} + \vec{b} = (a_1 + b_1, a_2 + b_2, a_3 + b_3)\)</div>
-                <p class="concept-desc">Grafično: paralelogramsko pravilo ali pravilo zaporednih vektorjev.</p>
-              </div>
-              <div class="concept">
-                <h4>Odštevanje</h4>
-                <div class="concept-formula">\(\vec{a} - \vec{b} = (a_1 - b_1, a_2 - b_2, a_3 - b_3)\)</div>
-                <p class="concept-desc">\(\vec{a} - \vec{b} = \vec{a} + (-\vec{b})\).</p>
-              </div>
-              <div class="concept">
-                <h4>Množenje s skalarjem</h4>
-                <div class="concept-formula">\(k \vec{a} = (k a_1, k a_2, k a_3)\)</div>
-                <p class="concept-desc">Rezultat je vektor z isto (ali nasprotno) smerjo in \(k\)-kratno dolžino.</p>
-              </div>
-              <div class="concept">
-                <h4>Skalarni produkt</h4>
-                <div class="concept-formula">\(\vec{a} \cdot \vec{b} = a_1 b_1 + a_2 b_2 + a_3 b_3\)</div>
-                <p class="concept-desc">Rezultat je <strong>število</strong> (skalar).</p>
-              </div>
-              <div class="concept">
-                <h4>Kot med vektorjema</h4>
-                <div class="concept-formula">\(\cos\varphi = \dfrac{\vec{a} \cdot \vec{b}}{|\vec{a}| \cdot |\vec{b}|}\)</div>
-                <p class="concept-desc">\(\varphi \in [0, \pi]\).</p>
-              </div>
-              <div class="concept">
-                <h4>Pravokotna projekcija</h4>
-                <div class="concept-formula">\(\text{proj}_{\vec{b}} \vec{a} = \dfrac{\vec{a} \cdot \vec{b}}{|\vec{b}|^2} \cdot \vec{b}\)</div>
-                <p class="concept-desc">Projekcija vektorja \(\vec{a}\) na vektor \(\vec{b}\).</p>
-              </div>
-            </div>
-          </div>
+    <div class="concept-list two-col" style="margin-top: var(--space-4);">
+      <div class="concept">
+        <h4>Zapis vektorja v koordinatah</h4>
+        <div class="concept-formula">\(\vec{a} = (a_1, a_2)\) ali \((a_1, a_2, a_3)\)</div>
+        <p class="concept-desc">V ravnini ima dve komponenti, v prostoru tri. Komponente povedo, za koliko se premaknemo v vsaki osi.</p>
+      </div>
+      <div class="concept">
+        <h4>Krajevni vektor točke</h4>
+        <div class="concept-formula">\(\overrightarrow{AB} = B - A\)</div>
+        <p class="concept-desc">Vektor od točke \(A\) do točke \(B\). V koordinatah: \((x_B - x_A, y_B - y_A)\). <strong>Vedno končna minus začetna!</strong></p>
+      </div>
+      <div class="concept">
+        <h4>Dolžina vektorja (norma)</h4>
+        <div class="concept-formula">\(|\vec{a}| = \sqrt{a_1^2 + a_2^2 + a_3^2}\)</div>
+        <p class="concept-desc">Pove, kako dolg je vektor. Vedno je <strong>nenegativna</strong>. Izračunamo jo s Pitagorovim izrekom.</p>
+      </div>
+      <div class="concept">
+        <h4>Enotski vektor</h4>
+        <div class="concept-formula">\(\vec{a}_0 = \dfrac{\vec{a}}{|\vec{a}|}\)</div>
+        <p class="concept-desc">Vektor z <strong>dolžino 1</strong>, ki kaže v isto smer kot \(\vec{a}\). Uporabljamo ga, ko nas zanima samo smer, ne pa dolžina.</p>
+      </div>
+      <div class="concept">
+        <h4>Ničelni vektor</h4>
+        <div class="concept-formula">\(\vec{0} = (0, 0)\) ali \((0, 0, 0)\)</div>
+        <p class="concept-desc">Vektor z dolžino 0. Nima smeri. Vsak vektor plus ničelni vektor je isti vektor.</p>
+      </div>
+      <div class="concept">
+        <h4>Nasprotni vektor</h4>
+        <div class="concept-formula">\(-\vec{a} = (-a_1, -a_2, -a_3)\)</div>
+        <p class="concept-desc">Ista dolžina in smer, a <strong>nasprotna orientacija</strong>. Velja \(\vec{a} + (-\vec{a}) = \vec{0}\).</p>
+      </div>
+    </div>
+  </div>
 
-          <div class="info-card">
-            <h3>Posebne lege</h3>
-            <div class="concept-list two-col">
-              <div class="concept">
-                <h4>Kolinearna (vzporedna)</h4>
-                <div class="concept-formula">\(\vec{a} = k \vec{b}\) za nek \(k \neq 0\)</div>
-                <p class="concept-desc">Ležita na isti ali vzporedni premici.</p>
-              </div>
-              <div class="concept">
-                <h4>Pravokotna</h4>
-                <div class="concept-formula">\(\vec{a} \cdot \vec{b} = 0\)</div>
-                <p class="concept-desc">Kot med njima je \(90°\).</p>
-              </div>
-              <div class="concept">
-                <h4>Koplanarna</h4>
-                <div class="concept-formula">ležijo v isti ravnini</div>
-                <p class="concept-desc">Linearno odvisni vektorji.</p>
-              </div>
-              <div class="concept">
-                <h4>Linearna kombinacija</h4>
-                <div class="concept-formula">\(\vec{c} = \alpha \vec{a} + \beta \vec{b}\)</div>
-                <p class="concept-desc">Vektor, zapisan kot vsota večkratnikov drugih vektorjev.</p>
-              </div>
-              <div class="concept">
-                <h4>Linearna neodvisnost</h4>
-                <div class="concept-formula">\(\alpha \vec{a} + \beta \vec{b} = 0 \Rightarrow \alpha = \beta = 0\)</div>
-                <p class="concept-desc">Vektorji niso linearno odvisni.</p>
-              </div>
-              <div class="concept">
-                <h4>Baza v ravnini / prostoru</h4>
-                <div class="concept-formula">\(\vec{i}, \vec{j}\) ali \(\vec{i}, \vec{j}, \vec{k}\)</div>
-                <p class="concept-desc">Linearno neodvisni vektorji, ki napenjajo ves prostor.</p>
-              </div>
-            </div>
-          </div>
-        </section>
+  <!-- ========== OPERACIJE ========== -->
+  <div class="info-card">
+    <h3>Kaj lahko z vektorji počnemo?</h3>
+    <p>Z vektorji lahko seštevamo, odštevamo, množimo s številom in računamo skalarni produkt. Vsaka operacija ima svoj pomen — tako algebrajski kot geometrijski.</p>
+
+    <div class="concept-list two-col" style="margin-top: var(--space-4);">
+      <div class="concept">
+        <h4>Seštevanje</h4>
+        <div class="concept-formula">\(\vec{a} + \vec{b} = (a_1 + b_1, a_2 + b_2, a_3 + b_3)\)</div>
+        <p class="concept-desc"><strong>Kaj naredi?</strong> Rezultat je vektor, ki ga dobimo, če najprej naredimo korak \(\vec{a}\) in nato še korak \(\vec{b}\). Grafično: vektorje postavimo enega za drugim (pravilo zaporednih vektorjev) ali uporabimo paralelogramsko pravilo.</p>
+      </div>
+      <div class="concept">
+        <h4>Odštevanje</h4>
+        <div class="concept-formula">\(\vec{a} - \vec{b} = \vec{a} + (-\vec{b})\)</div>
+        <p class="concept-desc">Odštevanje ni nič drugega kot prištevanje nasprotnega vektorja. Rezultat kaže od konca \(\vec{b}\) do konca \(\vec{a}\).</p>
+      </div>
+      <div class="concept">
+        <h4>Množenje s skalarjem</h4>
+        <div class="concept-formula">\(k \vec{a} = (k a_1, k a_2, k a_3)\)</div>
+        <p class="concept-desc"><strong>Kaj naredi?</strong> Vektor raztegne ali skrči. Če je \(k > 0\), ostane ista smer. Če je \(k < 0\), se obrne. Če je \(k = 0\), dobimo ničelni vektor. Dolžina se pomnoži z \(|k|\).</p>
+      </div>
+      <div class="concept">
+        <h4>Skalarni produkt</h4>
+        <div class="concept-formula">\(\vec{a} \cdot \vec{b} = a_1 b_1 + a_2 b_2 + a_3 b_3\)</div>
+        <p class="concept-desc"><strong>Pozor:</strong> rezultat je <strong>število</strong>, ne vektor! Pove, koliko vektorja kažeta v isto smer. Če je rezultat pozitiven, kažeta v podobno smer; če je negativen, v nasprotno; če je 0, sta pravokotna.</p>
+      </div>
+      <div class="concept">
+        <h4>Kot med vektorjema</h4>
+        <div class="concept-formula">\(\cos\varphi = \dfrac{\vec{a} \cdot \vec{b}}{|\vec{a}| \cdot |\vec{b}|}\)</div>
+        <p class="concept-desc">Pove, pod kakšnim kotom kažeta vektorja. Kot je vedno med \(0°\) in \(180°\). Izračunamo ga z \(\varphi = \arccos(\cos\varphi)\).</p>
+      </div>
+      <div class="concept">
+        <h4>Pravokotna projekcija</h4>
+        <div class="concept-formula">\(\text{proj}_{\vec{b}} \vec{a} = \dfrac{\vec{a} \cdot \vec{b}}{|\vec{b}|^2} \cdot \vec{b}\)</div>
+        <p class="concept-desc"><strong>Kaj sploh je?</strong> To je <strong>vektor</strong>, ki leži na isti premici kot \(\vec{b}\) in je "senca" vektorja \(\vec{a}\), če nanj posvetimo pravokotno na \(\vec{b}\). Iz konca vektorja \(\vec{a}\) spustimo pravokotnico na premico \(\vec{b}\) — tam, kjer pade, je končna točka projekcije. Rezultat je torej vektor, ki je vzporeden z \(\vec{b}\).</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== POSEBNE LEGE ========== -->
+  <div class="info-card">
+    <h3>Kdaj sta vektorja v posebni legi?</h3>
+    <p>Vektorja sta lahko vzporedna, pravokotna ali pa ležita v isti ravnini (koplanarna). To preverimo s preprostimi pogoji.</p>
+
+    <div class="concept-list two-col" style="margin-top: var(--space-4);">
+      <div class="concept">
+        <h4>Kolinearna (vzporedna)</h4>
+        <div class="concept-formula">\(\vec{a} = k \vec{b}\) za nek \(k \neq 0\)</div>
+        <p class="concept-desc">Vektorja ležita na <strong>isti ali vzporedni premici</strong>. Preverimo tako, da so razmerja vseh komponent enaka: \(\dfrac{a_1}{b_1} = \dfrac{a_2}{b_2} = \dfrac{a_3}{b_3}\).</p>
+      </div>
+      <div class="concept">
+        <h4>Pravokotna</h4>
+        <div class="concept-formula">\(\vec{a} \cdot \vec{b} = 0\)</div>
+        <p class="concept-desc">Kot med njima je \(90°\). Skalarni produkt je nič, ker je \(\cos 90° = 0\).</p>
+      </div>
+      <div class="concept">
+        <h4>Koplanarna</h4>
+        <div class="concept-formula">ležijo v isti ravnini</div>
+        <p class="concept-desc">Trije ali več vektorjev leži v isti ravnini. So <strong>linearno odvisni</strong> — eden se da zapisati kot kombinacija drugih.</p>
+      </div>
+      <div class="concept">
+        <h4>Linearna kombinacija</h4>
+        <div class="concept-formula">\(\vec{c} = \alpha \vec{a} + \beta \vec{b}\)</div>
+        <p class="concept-desc">Vektor \(\vec{c}\) izrazimo kot vsoto večkratnikov drugih vektorjev. Koeficienta \(\alpha, \beta\) poiščemo z reševanjem sistema enačb.</p>
+      </div>
+      <div class="concept">
+        <h4>Linearna neodvisnost</h4>
+        <div class="concept-formula">\(\alpha \vec{a} + \beta \vec{b} = 0 \Rightarrow \alpha = \beta = 0\)</div>
+        <p class="concept-desc">Vektorji so res različni in noben ni kombinacija drugih. To je pogoj, da tvorijo <strong>bazo</strong>.</p>
+      </div>
+      <div class="concept">
+        <h4>Baza</h4>
+        <div class="concept-formula">\(\vec{i}, \vec{j}\) (ravnina) ali \(\vec{i}, \vec{j}, \vec{k}\) (prostor)</div>
+        <p class="concept-desc">Linearno neodvisni vektorji, s katerimi lahko zapišemo <strong>vsak drug vektor</strong> v prostoru. Standardna baza so enotski vektorji vzdolž osi \(x, y, z\).</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== POVZETEK ========== -->
+  <div class="info-card">
+    <h3>Povzetek — kaj moraš ločiti</h3>
+    <ul>
+      <li><strong>Vektor</strong> ima dolžino, smer in orientacijo. <strong>Skalar</strong> je samo število.</li>
+      <li><strong>Skalarni produkt</strong> \(\vec{a} \cdot \vec{b}\) vrne <strong>število</strong>.</li>
+      <li><strong>Množenje s skalarjem</strong> \(k\vec{a}\) vrne <strong>vektor</strong>.</li>
+      <li><strong>Pravokotna projekcija</strong> vrne <strong>vektor</strong>, ki leži na premici \(\vec{b}\).</li>
+      <li><strong>Kolinearna</strong> pomeni vzporedna: \(\vec{a} = k\vec{b}\).</li>
+      <li><strong>Pravokotna</strong> pomeni \(\vec{a} \cdot \vec{b} = 0\).</li>
+      <li><strong>Baza</strong> so vektorji, s katerimi lahko zapišemo vse ostale.</li>
+    </ul>
+  </div>
+</section>
 
         <!-- ============ 2. TIPI NALOG ============ -->
         <section class="subsection">

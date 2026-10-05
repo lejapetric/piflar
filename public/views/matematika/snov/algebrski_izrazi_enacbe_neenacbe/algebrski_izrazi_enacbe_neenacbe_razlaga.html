@@ -501,6 +501,143 @@
               <p>\(p(-1) = -1 + 3 - 3 + 1 = 0\). Torej je ničla. \(p(x) = (x+1)^3\) → trojna ničla.</p>
             </div>
           </div>
+
+            <!-- TIP 13 -->
+            <div class="info-card">
+              <div class="tip-header">
+                <h3>Tip 13: Reševanje potenčne enačbe z logaritmiranjem</h3>
+                <div class="tip-formula">\(a \cdot b^x = c \Rightarrow x = \dfrac{\log(c/a)}{\log b}\)</div>
+              </div>
+
+              <p><strong>Kako prepoznaš:</strong> neznanka je v eksponentu (v potenci), osnove pa ne moreš zlahka pretvoriti v isto osnovo kot desno stran.</p>
+
+              <p><strong>Postopek:</strong></p>
+              <ol>
+                <li>Enačbo preoblikuj tako, da bo potenca sama na eni strani (osami potenco).</li>
+                <li>Logaritmiraj obe strani enačbe.</li>
+                <li>Uporabi pravilo \(\log(b^x) = x \log b\).</li>
+                <li>Izrazi \(x\) in po potrebi vstavi v kalkulator.</li>
+                <li>Rešitev preveri v prvotni enačbi.</li>
+              </ol>
+
+              <hr>
+
+              <p class="plain-example"><strong>Primer:</strong> Reši enačbo \(2 \cdot \left(\dfrac{1}{3}\right)^x = 54\).</p>
+
+              <!-- 1. KORAK -->
+              <div class="plain-example">
+                <p><strong>1. korak:</strong> Najprej se znebimo števila \(2\), ki stoji pred potenco. Enačba je:</p>
+
+                <p>\[
+                  2 \cdot \left(\frac{1}{3}\right)^x = 54
+                \]</p>
+
+                <p>Ker želimo na levi strani imeti samo potenco \(\left(\frac{1}{3}\right)^x\), obe strani enačbe <strong>delimo z \(2\)</strong>.</p>
+
+
+                <p>\[
+                  \left(\frac{1}{3}\right)^x = 27
+                \]</p>
+
+                <p><strong>Zakaj to naredimo?</strong> Zato, ker nam oblika \(b^x = c\) omogoča, da enačbo rešimo z logaritmiranjem. Če bi pustili \(2\) spredaj, bi bil postopek nekoliko daljši, zato je bolje, da potenco najprej osamimo.</p>
+              </div>
+
+              <!-- 2. KORAK -->
+              <div class="plain-example">
+                <p><strong>2. korak:</strong> Zdaj imamo enačbo:</p>
+
+                <p>\[
+                  \left(\frac{1}{3}\right)^x = 27
+                \]</p>
+
+                <p>Neznanka \(x\) je v eksponentu. Da jo spravimo "dol", bomo uporabili <strong>logaritem</strong>.</p>
+
+                <p>Zato <strong>logaritmirajmo obe strani enačbe</strong>. Uporabimo desetiški logaritem (oznaka \(\log\)), lahko pa bi uporabili tudi naravni logaritem \(\ln\).</p>
+
+                <p>\[
+                  \log\left(\left(\frac{1}{3}\right)^x\right) = \log 27
+                \]</p>
+
+                <p><strong>Pomembno:</strong> Obe strani moramo logaritmirati enako — ne smemo logaritmirati samo ene strani, sicer enačba ne velja več.</p>
+              </div>
+
+              <!-- 3. KORAK -->
+              <div class="plain-example">
+                <p><strong>3. korak:</strong> Uporabimo pravilo za logaritem potence:</p>
+
+                <p>\[
+                  \log(a^x) = x \cdot \log a
+                \]</p>
+
+                <p>To pomeni, da eksponent \(x\) "pade" pred logaritem. Na levi strani torej dobimo:</p>
+
+                <p>\[
+                  x \cdot \log\left(\frac{1}{3}\right) = \log 27
+                \]</p>
+
+                <p><strong>Zakaj je to dobro?</strong> Ker zdaj \(x\) ni več v eksponentu, ampak je navadno število, s katerim lahko računamo naprej.</p>
+              </div>
+
+              <!-- 4. KORAK -->
+              <div class="plain-example">
+                <p><strong>4. korak:</strong> Zdaj izrazimo \(x\). Enačbo imamo:</p>
+
+                <p>\[
+                  x \cdot \log\left(\frac{1}{3}\right) = \log 27
+                \]</p>
+
+                <p>Da dobimo \(x\) sam, obe strani <strong>delimo</strong> z \(\log\left(\frac{1}{3}\right)\):</p>
+
+                <p>\[
+                  x = \frac{\log 27}{\log\left(\frac{1}{3}\right)}
+                \]</p>
+
+                <p>Zdaj lahko vstavimo v kalkulator in dobimo približno vrednost. Ampak v tem primeru lahko števili poenostavimo, zato bomo dobili točno vrednost.</p>
+              </div>
+
+              <!-- 5. KORAK -->
+              <div class="plain-example">
+                <p><strong>5. korak:</strong> Poenostavimo izraz. Opazimo dvoje:</p>
+
+                <ul>
+                  <li>\(\dfrac{1}{3} = 3^{-1}\), zato je \(\log\left(\dfrac{1}{3}\right) = \log(3^{-1}) = -\log 3\).</li>
+                  <li>\(27 = 3^3\), zato je \(\log 27 = \log(3^3) = 3\log 3\).</li>
+                </ul>
+
+                <p>Vstavimo to v izraz za \(x\):</p>
+
+                <p>\[
+                  x = \frac{3\log 3}{-\log 3}
+                \]</p>
+
+                <p>\(\log 3\) se okrajša (ker je v števcu in imenovalcu), ostane:</p>
+
+                <p>\[
+                  x = \frac{3}{-1} = -3
+                \]</p>
+              </div>
+
+              <!-- PREVERJANJE -->
+              <div class="plain-example">
+                <p><strong>Preverjanje:</strong> Vedno preverimo, ali naša rešitev zares deluje. Vstavimo \(x = -3\) v prvotno enačbo:</p>
+
+                <p>\[
+                  2 \cdot \left(\frac{1}{3}\right)^{-3}
+                \]</p>
+
+                <p>Negativni eksponent pomeni obratno vrednost: \(\left(\frac{1}{3}\right)^{-3} = 3^3 = 27\). Torej:</p>
+
+                <p>\[
+                  2 \cdot 27 = 54
+                \]</p>
+
+                <p>Dobimo \(54\), kar je enako desni strani prvotne enačbe ✓</p>
+              </div>
+
+              <p class="plain-example"><strong>Rešitev:</strong> \(x = -3\).</p>
+
+              <p class="plain-example"><strong>Opomba:</strong> Če logaritmiraš z osnovo \(\frac{1}{3}\), dobiš neposredno \(x = \log_{1/3} 27 = -3\). Ker pa kalkulatorji običajno nimajo te osnove, uporabimo zvezo \(\log_{1/3} 27 = \dfrac{\log 27}{\log(1/3)}\).</p>
+            </div>
         </section>
 
         <!-- ============ 3. POGOSTE NAPAKE ============ -->

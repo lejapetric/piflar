@@ -274,24 +274,62 @@
             </div>
           </div>
 
-          <!-- TIP 7 -->
-          <div class="info-card">
-            <div class="tip-header">
-              <h3>Tip 7: Presečišče dveh premic</h3>
-              <div class="tip-formula">Reši sistem enačb</div>
-            </div>
-            <p><strong>Kako prepoznaš:</strong> "izračunajte presečišče premic".</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Zapiši obe enačbi.</li>
-              <li>Reši sistem (substitucija ali izenačitev \(y\)).</li>
-              <li>Izračunaj \(x\), nato \(y\).</li>
-            </ol>
-            <p class="plain-example"><strong>Primer:</strong> \(y = x + 5\), \(y = 2x - 3\)</p>
-            <div class="plain-example">
-              <p>\(x + 5 = 2x - 3 \Rightarrow x = 8\). \(y = 13\). Presečišče: \((8, 13)\).</p>
-            </div>
-          </div>
+<!-- TIP 7 -->
+<div class="info-card">
+  <div class="tip-header">
+    <h3>Tip 7: Presečišče dveh premic</h3>
+    <div class="tip-formula">\(y_1 = y_2 \Rightarrow x\), nato \(x\) vstavi v eno od premic</div>
+  </div>
+
+  <p><strong>Kako prepoznaš:</strong> v nalogi nastopata <strong>dve premici</strong> (npr. \(y = kx + n\) ali \(ax + by + c = 0\)), iščejo pa <strong>presečišče</strong> — točko, kjer se premici sekata. Pogosto je to zapisano kot "izračunajte presečišče premic", "določite točko, v kateri se premici sekata", "izračunajte točko \(T(x, y)\), ki leži na obeh premicah".</p>
+
+  <p><strong>Postopek:</strong></p>
+  <ol>
+    <li>Zapiši enačbi obeh premic v obliki \(y = kx + n\) (če še nista).</li>
+    <li><strong>Izenači \(y = y\) in reši enačbo za \(x\)</strong>.</li>
+    <li><strong>Dobljeni \(x\) vstavi v katerokoli</strong> od obeh premic (lahko v prvo ali v drugo — rezultat je isti) in izračunaj \(y\).</li>
+    <li>Zapiši presečišče kot urejeni par \((x, y)\).</li>
+    <li>Preveri: vstavi \(x\) in \(y\) v <strong>obe</strong> enačbi — morata veljati obe.</li>
+  </ol>
+
+  <p class="plain-example"><strong>Primer:</strong> Poišči presečišče premic \(y = x + 5\) in \(y = 2x - 3\).</p>
+
+  <div class="plain-example">
+    <p><strong>1. korak:</strong> Enačbi sta že v obliki \(y = kx + n\):</p>
+    <p>\[
+      y = x + 5
+    \]
+    \[
+      y = 2x - 3
+    \]</p>
+
+    <p><strong>2. korak:</strong> Izenačimo \(y = y\) (desni strani):</p>
+    <p>\[
+      x + 5 = 2x - 3
+    \]</p>
+
+    <p><strong>3. korak:</strong> Rešimo za \(x\):</p>
+    <p>\[
+      x + 5 = 2x - 3 \Rightarrow 5 + 3 = 2x - x \Rightarrow x = 8
+    \]</p>
+
+    <p><strong>4. korak:</strong> Dobljeni \(x = 8\) vstavimo v <strong>katerokoli</strong> od obeh premic. Vzemimo prvo:</p>
+    <p>\[
+      y = x + 5 = 8 + 5 = 13
+    \]</p>
+    <p>(Če bi vstavili v drugo: \(y = 2 \cdot 8 - 3 = 16 - 3 = 13\) — isti rezultat.)</p>
+
+    <p><strong>5. korak:</strong> Presečišče je točka:</p>
+    <p>\[
+      T(8, 13)
+    \]</p>
+
+    <p><strong>Preverjanje:</strong> Vstavimo \(x = 8\), \(y = 13\) v obe premici:</p>
+    <p>Prva: \(13 = 8 + 5\) ✓ &nbsp; Druga: \(13 = 2 \cdot 8 - 3 = 13\) ✓</p>
+  </div>
+
+  <p class="plain-example"><strong>Opomba:</strong> Če se premici ne sekata (sta vzporedni), pri izenačitvi \(y = y\) dobimo enačbo, ki nima rešitve (npr. \(0 = 5\)). Takrat presečišča ni.</p>
+</div>
 
           <!-- TIP 8 -->
           <div class="info-card">
