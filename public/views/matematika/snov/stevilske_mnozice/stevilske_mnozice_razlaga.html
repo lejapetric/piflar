@@ -22,7 +22,7 @@
           <h1>Številske množice</h1>
           <p>Vse o številskih množicah za maturo: hierarhija ℕ ⊂ ℤ ⊂ ℚ ⊂ ℝ ⊂ ℂ, deljivost, praštevila in prafaktorizacija, največji skupni delitelj in najmanjši skupni večkratnik, absolutna vrednost, intervali, kompleksna števila.</p>
           <div class="page-meta">
-            <div class="page-meta-item"><strong>14</strong><span>Tipov nalog</span></div>
+            <div class="page-meta-item"><strong>12</strong><span>Tipov nalog</span></div>
             <div class="page-meta-item"><strong>45+</strong><span>Primerov</span></div>
             <div class="page-meta-item"><strong>~60 min</strong><span>Branja</span></div>
           </div>
@@ -168,7 +168,6 @@
             </div>
           </div>
 
-          <!-- NOVO: DELITELJI IN VEČKRATNIKI -->
           <div class="info-card">
             <h3>Delitelji, večkratniki in zapis množic</h3>
             <div class="concept-list two-col">
@@ -280,10 +279,81 @@
                 <p class="concept-desc">Razširimo s konjugiranim imenovalcem.</p>
               </div>
               <div class="concept">
-                <h4>Potence i</h4>
+                <h4>Potence imaginarne enote</h4>
                 <div class="concept-formula">\(i^1 = i\), \(i^2 = -1\), \(i^3 = -i\), \(i^4 = 1\)</div>
-                <p class="concept-desc">Perioda 4: \(i^n = i^{n \bmod 4}\).</p>
+                <p class="concept-desc">Perioda 4: \(i^n = i^{n \bmod 4}\). To je <strong>pravilo</strong>, ki ga uporabljamo pri računanju — ni samostojna naloga.</p>
               </div>
+            </div>
+          </div>
+
+          <!-- NOVO: POTENCE KOMPLEKSNEGA ŠTEVILA z^n -->
+          <div class="info-card">
+            <h3>Potence kompleksnega števila \(z^n\) — kako rešujemo</h3>
+            <p>Potenciranje kompleksnega števila \(z = a + bi\) pomeni <strong>večkratno množenje samega s seboj</strong>. Pri tem si pomagamo s pravilom \(i^2 = -1\) in periodičnostjo potenc \(i\) (perioda 4).</p>
+
+            <div class="concept-list two-col">
+              <div class="concept">
+                <h4>\(z^1\)</h4>
+                <div class="concept-formula">\(z^1 = z = a + bi\)</div>
+                <p class="concept-desc">Osnovna oblika — ničesar ne računamo.</p>
+              </div>
+              <div class="concept">
+                <h4>\(z^2\)</h4>
+                <div class="concept-formula">\(z^2 = (a+bi)^2 = a^2 + 2abi + b^2 i^2\)</div>
+                <p class="concept-desc">Uporabimo kvadrat binoma in \(i^2 = -1\):<br>
+                \(z^2 = (a^2 - b^2) + 2ab\,i\).</p>
+              </div>
+              <div class="concept">
+                <h4>\(z^3\)</h4>
+                <div class="concept-formula">\(z^3 = z^2 \cdot z\)</div>
+                <p class="concept-desc">Najprej izračunamo \(z^2\), nato pomnožimo še z \(z = a + bi\). Rezultat uredimo v obliko \(a + bi\).</p>
+              </div>
+              <div class="concept">
+                <h4>\(z^4\)</h4>
+                <div class="concept-formula">\(z^4 = (z^2)^2\)</div>
+                <p class="concept-desc">Izračunamo \(z^2\), nato ga še enkrat kvadriramo. Uporabimo \(i^2 = -1\).</p>
+              </div>
+              <div class="concept">
+                <h4>Višje potence \(z^n\)</h4>
+                <div class="concept-formula">\(z^n = z^{n-1} \cdot z\)</div>
+                <p class="concept-desc">Postopoma množimo. Pri velikih \(n\) si pomagamo s predstavitvijo v polarni obliki (matura višja raven), na osnovni ravni pa z ponavljanjem množenja in periodičnostjo \(i\).</p>
+              </div>
+              <div class="concept">
+                <h4>Periodičnost potenc \(i\)</h4>
+                <div class="concept-formula">\(i^n = i^{n \bmod 4}\)</div>
+                <p class="concept-desc">Ostanek pri deljenju s 4 določi vrednost: 0 → \(1\), 1 → \(i\), 2 → \(-1\), 3 → \(-i\). To uporabimo, ko se v izrazu pojavi velika potenca \(i\).</p>
+              </div>
+            </div>
+
+            <hr>
+
+            <p class="plain-example"><strong>Primer 1: izračunaj \(z^2\) za \(z = 3 + 2i\).</strong></p>
+            <div class="plain-example">
+              <p>\(z^2 = (3 + 2i)^2 = 3^2 + 2 \cdot 3 \cdot 2i + (2i)^2\)</p>
+              <p>\(= 9 + 12i + 4i^2\)</p>
+              <p>Upoštevamo \(i^2 = -1\): \(= 9 + 12i - 4 = 5 + 12i\).</p>
+              <p><strong>Rezultat:</strong> \(z^2 = 5 + 12i\).</p>
+            </div>
+
+            <p class="plain-example"><strong>Primer 2: izračunaj \(z^3\) za \(z = 1 + i\).</strong></p>
+            <div class="plain-example">
+              <p><strong>1. korak — \(z^2\):</strong> \((1+i)^2 = 1 + 2i + i^2 = 1 + 2i - 1 = 2i\).</p>
+              <p><strong>2. korak — \(z^3 = z^2 \cdot z\):</strong> \(2i \cdot (1+i) = 2i + 2i^2 = 2i - 2 = -2 + 2i\).</p>
+              <p><strong>Rezultat:</strong> \(z^3 = -2 + 2i\).</p>
+            </div>
+
+            <p class="plain-example"><strong>Primer 3: izračunaj \(z^4\) za \(z = 1 + i\).</strong></p>
+            <div class="plain-example">
+              <p><strong>1. korak — \(z^2 = 2i\)</strong> (kot zgoraj).</p>
+              <p><strong>2. korak — \(z^4 = (z^2)^2 = (2i)^2 = 4i^2 = -4\).</strong></p>
+              <p><strong>Rezultat:</strong> \(z^4 = -4\) (realno število).</p>
+            </div>
+
+            <p class="plain-example"><strong>Primer 4: potenca \(i\) z velikim eksponentom — \(i^{2026}\).</strong></p>
+            <div class="plain-example">
+              <p>\(2026 \div 4 = 506\), ostanek \(2\).</p>
+              <p>\(i^{2026} = i^2 = -1\).</p>
+              <p><em>Opomba:</em> to je uporaba pravila periodičnosti, ne samostojna naloga.</p>
             </div>
           </div>
         </section>
@@ -293,6 +363,12 @@
           <div class="subsection-head">
             <h2>2. Tipi nalog — postopki po korakih</h2>
             <p>Za vsak tip: kako ga prepoznaš, kako ga rešiš, primer.</p>
+          </div>
+
+          <!-- OPOMBA: osnovne operacije in potence i so razlaga, ne naloga -->
+          <div class="info-card">
+            <h3>ℹ️ Opomba: osnovne operacije s kompleksnimi števili in potence \(i\) niso samostojna tipa nalog</h3>
+            <p>Pravila za seštevanje, množenje, deljenje kompleksnih števil ter potence imaginarne enote \(i\) (\(i^1=i\), \(i^2=-1\), \(i^3=-i\), \(i^4=1\), perioda 4) so <strong>razlaga in orodje</strong>, ki ju uporabiš znotraj nalog (npr. pri Tipu 9 — \(|z|\) in \(\overline{z}\), pri Tipu 10 — kvadratna enačba s kompleksnimi rešitvami, pri Tipu 11 — prikaz v ravnini). Zato sta v celoti razložena v razdelku <strong>1. Teorija → Kompleksna števila</strong> (vključno s potencami \(z^2, z^3, z^4, z^n\)).</p>
           </div>
 
           <!-- TIP 1 -->
@@ -459,48 +535,7 @@
           <!-- TIP 9 -->
           <div class="info-card">
             <div class="tip-header">
-              <h3>Tip 9: Kompleksna števila — osnovne operacije</h3>
-              <div class="tip-formula">\(z = a + bi\), \(i^2 = -1\)</div>
-            </div>
-            <p><strong>Kako prepoznaš:</strong> "zapišite v obliki \(a + bi\)".</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Razporedi člene (realni + imaginarni).</li>
-              <li>Za množenje uporabi distributivnost in \(i^2 = -1\).</li>
-              <li>Za deljenje razširi s konjugiranim imenovalcem.</li>
-            </ol>
-            <p class="plain-example"><strong>Primer:</strong> \((2 - i)(1 + 3i)\)</p>
-            <div class="plain-example">
-              <p>\(= 2 + 6i - i - 3i^2 = 2 + 5i - 3(-1) = 2 + 5i + 3 = 5 + 5i\).</p>
-            </div>
-          </div>
-
-          <!-- TIP 10 -->
-          <div class="info-card">
-            <div class="tip-header">
-              <h3>Tip 10: Potence imaginarne enote</h3>
-              <div class="tip-formula">\(i^1 = i\), \(i^2 = -1\), \(i^3 = -i\), \(i^4 = 1\)</div>
-            </div>
-            <p><strong>Kako prepoznaš:</strong> \(i^n\) za velik \(n\).</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Deli \(n\) s 4 in vzemi ostanek: \(n \bmod 4\).</li>
-              <li>Uporabi pravilo:
-                <ul>
-                  <li>ostanek 0 → \(i^4 = 1\)</li>
-                  <li>ostanek 1 → \(i^1 = i\)</li>
-                  <li>ostanek 2 → \(i^2 = -1\)</li>
-                  <li>ostanek 3 → \(i^3 = -i\)</li>
-                </ul>
-              </li>
-            </ol>
-            <p class="plain-example"><strong>Primer:</strong> \(i^{2026}\). 2026 ÷ 4 = 506, ostanek 2 → \(i^{2026} = i^2 = -1\).</p>
-          </div>
-
-          <!-- TIP 11 -->
-          <div class="info-card">
-            <div class="tip-header">
-              <h3>Tip 11: Absolutna vrednost in konjugirano kompleksno število</h3>
+              <h3>Tip 9: Absolutna vrednost in konjugirano kompleksno število</h3>
               <div class="tip-formula">\(|z| = \sqrt{a^2 + b^2}\), \(\overline{z} = a - bi\)</div>
             </div>
             <p><strong>Kako prepoznaš:</strong> "izračunajte \(|z|\) in \(\overline{z}\)".</p>
@@ -516,10 +551,10 @@
             </div>
           </div>
 
-          <!-- TIP 12 -->
+          <!-- TIP 10 -->
           <div class="info-card">
             <div class="tip-header">
-              <h3>Tip 12: Kvadratna enačba s kompleksnimi rešitvami</h3>
+              <h3>Tip 10: Kvadratna enačba s kompleksnimi rešitvami</h3>
               <div class="tip-formula">\(x_{1,2} = \dfrac{-b \pm i\sqrt{|D|}}{2a}\)</div>
             </div>
             <p><strong>Kako prepoznaš:</strong> \(D < 0\), rešitve so kompleksne.</p>
@@ -536,10 +571,10 @@
             </div>
           </div>
 
-          <!-- TIP 13 -->
+          <!-- TIP 11 -->
           <div class="info-card">
             <div class="tip-header">
-              <h3>Tip 13: Prikaz kompleksnega števila v kompleksni ravnini</h3>
+              <h3>Tip 11: Prikaz kompleksnega števila v kompleksni ravnini</h3>
               <div class="tip-formula">\(z = a + bi \;\rightarrow\; (a, b)\)</div>
             </div>
 
@@ -661,10 +696,10 @@
             </div>
           </div>
 
-          <!-- TIP 14 -->
+          <!-- TIP 12 -->
           <div class="info-card">
             <div class="tip-header">
-              <h3>Tip 14: Množice iz besedila — praštevila, delitelji, večkratniki</h3>
+              <h3>Tip 12: Množice iz besedila — praštevila, delitelji, večkratniki</h3>
               <div class="tip-formula">\(A \cup B\), \(A \cap B\), \(B \cap C\)</div>
             </div>
 
@@ -741,6 +776,7 @@
               <li>Pri kompleksnih številih pozabiš \(i^2 = -1\).</li>
               <li>Pri potencah \(i\) ne deliš \(n\) s 4.</li>
               <li>Pri konjugiranem številu zamenjaš predznak realnega dela (samo imaginarni se spremeni).</li>
+              <li>Pri \(z^2\) pozabiš, da je \((bi)^2 = b^2 i^2 = -b^2\) (ne \(+b^2\)).</li>
               <li>Pri uniji <strong>ponavljaš</strong> elemente (npr. \(\{1, 2, 2, 3\}\) namesto \(\{1, 2, 3\}\)).</li>
               <li>Pri preseku zapišeš vse elemente obeh množic namesto le skupnih.</li>
             </ul>
@@ -765,6 +801,7 @@
               <li><strong>Množice:</strong> unija \(\cup\), presek \(\cap\), razlika \(\setminus\).</li>
               <li><strong>Absolutna vrednost:</strong> \(|x| = a \Rightarrow x = \pm a\), \(|x| < a \Rightarrow -a < x < a\), \(|x| > a \Rightarrow x < -a \lor x > a\).</li>
               <li><strong>Kompleksna:</strong> \(i^2 = -1\), \(\overline{z} = a - bi\), \(|z| = \sqrt{a^2+b^2}\), perioda potenc i je 4.</li>
+              <li><strong>Potence \(z\):</strong> \(z^2 = (a^2-b^2) + 2ab\,i\), \(z^3 = z^2 \cdot z\), \(z^4 = (z^2)^2\); pri višjih potencah množimo postopoma in upoštevamo \(i^2 = -1\).</li>
             </ul>
           </div>
 
@@ -778,6 +815,7 @@
               <li><strong>Za absolutno vrednost:</strong> razbij na dva primera.</li>
               <li><strong>Za intervale:</strong> nariši na številsko premico.</li>
               <li><strong>Za kompleksna:</strong> uporabi \(i^2 = -1\) pri množenju, konjugirano pri deljenju.</li>
+              <li><strong>Za potence \(z^n\):</strong> najprej izračunaj \(z^2\), nato postopoma množi z \(z\); pri velikih potencah \(i\) uporabi ostanek pri deljenju s 4.</li>
               <li><strong>Za množice iz besedila:</strong> najprej zapiši elemente vsake množice, nato izvedi operacijo.</li>
             </ol>
           </div>
@@ -785,10 +823,10 @@
           <div class="info-card">
             <h3>⏱️ Časovni načrt za en večer</h3>
             <ul>
-              <li><strong>25 min:</strong> Teorija — hierarhija, deljivost, D in v, delitelji/večkratniki, absolutna vrednost, kompleksna.</li>
+              <li><strong>25 min:</strong> Teorija — hierarhija, deljivost, D in v, delitelji/večkratniki, absolutna vrednost, kompleksna (vključno s potencami \(z^n\)).</li>
               <li><strong>50 min:</strong> Tipi 1–6 (množice, deljivost, prafaktorizacija, D in v, tuji, absolutna vrednost).</li>
-              <li><strong>40 min:</strong> Tipi 7–12 (neenačbe, intervali, kompleksna, potence i, |z|, kvadratne enačbe).</li>
-              <li><strong>20 min:</strong> Tip 13–14 (kompleksna ravnina, množice iz besedila).</li>
+              <li><strong>40 min:</strong> Tipi 7–10 (neenačbe, intervali, \(|z|\) in \(\overline{z}\), kvadratne enačbe).</li>
+              <li><strong>20 min:</strong> Tip 11–12 (kompleksna ravnina, množice iz besedila).</li>
               <li><strong>25 min:</strong> Ponovi pogoste napake in študijski vodič.</li>
             </ul>
           </div>
