@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Geometrija v ravnini in prostoru — razlaga in postopki | Piflar.si</title>
-  <meta name="description" content="Celovita razlaga geometrije v ravnini in prostoru za maturo: trikotniki, štirikotniki, krog in krožnica, sinusni in kosinusni izrek, podobnost, skladnost, prostorska geometrija.">
+  <meta name="description" content="Geometrija v ravnini in prostoru za maturo po podpoglavjih kataloga: osnovni pojmi, koti, trikotnik, znamenite točke, togi premiki, obodni in središčni kot, podobnost, Pitagorov, Evklidov in višinski izrek, štirikotniki, načrtovanje, sinusni in kosinusni izrek, premice in ravnine v prostoru.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
@@ -23,27 +23,26 @@
         <header class="page-header">
           <span class="page-eyebrow">Matematika · Snov · 4.6</span>
           <h1>Geometrija v ravnini in prostoru</h1>
-          <p>Vse o geometriji za maturo: trikotniki (koti, ploščina, sinusni in kosinusni izrek), štirikotniki, krog in krožnica (obodni in središčni kot), podobnost, skladnost ter osnove prostorske geometrije.</p>
+          <p>Od točk, premic in kotov do trikotnika, krožnice, preslikav, podobnosti, izrekov v pravokotnem in poljubnem trikotniku ter premic in ravnin v prostoru. Pod razlago vsakega podpoglavja so vsi tipi nalog, ki se pojavijo pri tem sklopu.</p>
           <div class="page-meta">
-            <div class="page-meta-item"><strong>16</strong><span>Tipov nalog</span></div>
-            <div class="page-meta-item"><strong>50+</strong><span>Primerov</span></div>
-            <div class="page-meta-item"><strong>~75 min</strong><span>Branja</span></div>
+            <div class="page-meta-item"><strong>18</strong><span>Podpoglavij</span></div>
+            <div class="page-meta-item"><strong>25</strong><span>Tipov nalog</span></div>
+            <div class="page-meta-item"><strong>~90 min</strong><span>Branja</span></div>
           </div>
         </header>
 
-        <!-- ============ MATURA FORMULE ============ -->
         <div class="matura-formule">
-          <h3>📋 Formule na maturi — osnovna raven</h3>
-          <p>Na maturitetnem listu s formulami so za <strong>geometrijo</strong> relevantne naslednje formule:</p>
+          <h3>📋 Formule na maturi</h3>
+          <p>Na listu s formulami sta <strong>Evklidov in višinski izrek</strong>. <strong>Ni</strong> pa Pitagorovega izreka, sinusnega in kosinusnega izreka ter vsote kotov. Na pamet:</p>
           <div class="matura-grid">
             <div class="matura-levo">
               <ul>
-                <li><strong>Evklidov in višinski izrek:</strong> \(a^2 = ca_1\), \(b^2 = cb_1\), \(v_c^2 = a_1 b_1\)</li>
-                <li><strong>Polmera trikotniku včrtanega in očrtanega kroga:</strong> \(r = \dfrac{S}{s}\), \(R = \dfrac{abc}{4S}\)</li>
-                <li><strong>Heronova formula:</strong> \(S = \sqrt{s(s-a)(s-b)(s-c)}\)</li>
-                <li><strong>Ploščina trikotnika:</strong> \(S = \dfrac{1}{2}|(x_2-x_1)(y_3-y_1) - (x_3-x_1)(y_2-y_1)|\)</li>
-                <li><strong>Sinusni izrek:</strong> \(\dfrac{a}{\sin\alpha} = \dfrac{b}{\sin\beta} = \dfrac{c}{\sin\gamma} = 2R\)</li>
-                <li><strong>Kosinusni izrek:</strong> \(c^2 = a^2 + b^2 - 2ab\cos\gamma\)</li>
+                <li>\(\alpha + \beta + \gamma = 180°\), vsota kotov \(n\)-kotnika \((n - 2) \cdot 180°\)</li>
+                <li>Pitagorov izrek: \(a^2 + b^2 = c^2\)</li>
+                <li>Evklidov in višinski izrek: \(a^2 = c\,a_1\), \(b^2 = c\,b_1\), \(v_c^2 = a_1 b_1\) <em>(na listu)</em></li>
+                <li>Sinusni izrek: \(\dfrac{a}{\sin\alpha} = \dfrac{b}{\sin\beta} = \dfrac{c}{\sin\gamma} = 2R\)</li>
+                <li>Kosinusni izrek: \(c^2 = a^2 + b^2 - 2ab\cos\gamma\)</li>
+                <li>Obodni kot je polovica središčnega nad istim lokom.</li>
               </ul>
             </div>
             <div class="matura-slika">
@@ -52,672 +51,1761 @@
           </div>
         </div>
 
-        <!-- ============ 1. TEORIJA ============ -->
-        <section class="subsection">
-          <div class="subsection-head">
-            <h2>1. Teorija — formule in pravila</h2>
-            <p>Kar moraš znati na pamet, preden se lotiš nalog.</p>
-          </div>
+        <nav class="kazalo" aria-label="Podpoglavja">
+          <h2>Podpoglavja</h2>
+          <ol>
+            <li class="kazalo-skupina">Osnovni pojmi</li>
+            <li><a href="#sklop-1"><span class="kazalo-st">4.6.1</span> Točke, premice in krožnice v ravnini</a></li>
+            <li><a href="#sklop-2"><span class="kazalo-st">4.6.2</span> Razdalja, daljica, nosilka, simetrala, poltrak, kot</a></li>
+            <li><a href="#sklop-3"><span class="kazalo-st">4.6.3</span> Vrste kotov in odnosi med koti</a></li>
+            <li class="kazalo-skupina">Trikotnik in preslikave</li>
+            <li><a href="#sklop-4"><span class="kazalo-st">4.6.4</span> Trikotnik, večkotnik</a></li>
+            <li><a href="#sklop-5"><span class="kazalo-st">4.6.5</span> Znamenite točke trikotnika</a></li>
+            <li><a href="#sklop-6"><span class="kazalo-st">4.6.6</span> Togi premiki in skladnost</a></li>
+            <li><a href="#sklop-7"><span class="kazalo-st">4.6.7</span> Vzporedni premik, zrcaljenje, vrtež, orientacija</a></li>
+            <li><a href="#sklop-8"><span class="kazalo-st">4.6.8</span> Pravokotna projekcija</a></li>
+            <li class="kazalo-skupina">Krog, podobnost in izreki</li>
+            <li><a href="#sklop-9"><span class="kazalo-st">4.6.9</span> Središčni in obodni koti</a></li>
+            <li><a href="#sklop-10"><span class="kazalo-st">4.6.10</span> Kot v polkrogu</a></li>
+            <li><a href="#sklop-11"><span class="kazalo-st">4.6.11</span> Središčni razteg, podobnost</a></li>
+            <li><a href="#sklop-12"><span class="kazalo-st">4.6.12</span> Izreki v pravokotnem trikotniku</a></li>
+            <li><a href="#sklop-13"><span class="kazalo-st">4.6.13</span> Paralelogram, romb, trapez</a></li>
+            <li><a href="#sklop-14"><span class="kazalo-st">4.6.14</span> Načrtovalne naloge</a></li>
+            <li><a href="#sklop-15"><span class="kazalo-st">4.6.15</span> Kosinusni in sinusni izrek</a></li>
+            <li class="kazalo-skupina">Prostor</li>
+            <li><a href="#sklop-16"><span class="kazalo-st">4.6.16</span> Množice točk v prostoru <span class="badge-vr">VR</span></a></li>
+            <li><a href="#sklop-17"><span class="kazalo-st">4.6.17</span> Vzporednost in pravokotnost premic in ravnin v prostoru</a></li>
+            <li><a href="#sklop-18"><span class="kazalo-st">4.6.18</span> Pravokotna projekcija premice na ravnino</a></li>
+            <li><a href="#kljuc"><span class="kazalo-st">🔎</span> Ključ: kateri tip naloge je to?</a></li>
+          </ol>
+        </nav>
 
-          <div class="info-card">
-            <h3>Trikotnik — osnovno</h3>
-            <div class="concept-list two-col">
-              <div class="concept">
-                <h4>Vsota notranjih kotov</h4>
-                <div class="concept-formula">\(\alpha + \beta + \gamma = 180°\)</div>
-                <p class="concept-desc">Zunanji kot = vsota nasprotnih notranjih kotov.</p>
-              </div>
-              <div class="concept">
-                <h4>Obseg</h4>
-                <div class="concept-formula">\(o = a + b + c\)</div>
-              </div>
-              <div class="concept">
-                <h4>Ploščina (osnovnica × višina)</h4>
-                <div class="concept-formula">\(S = \dfrac{a \cdot v_a}{2}\)</div>
-              </div>
-              <div class="concept">
-                <h4>Ploščina (dve stranici in kot)</h4>
-                <div class="concept-formula">\(S = \dfrac{1}{2}ab\sin\gamma\)</div>
-              </div>
-              <div class="concept">
-                <h4>Heronova formula</h4>
-                <div class="concept-formula">\(S = \sqrt{s(s-a)(s-b)(s-c)}\)</div>
-                <p class="concept-desc">\(s = \dfrac{a+b+c}{2}\) (polobseg).</p>
-              </div>
-              <div class="concept">
-                <h4>Polmer včrtanega in očrtanega kroga</h4>
-                <div class="concept-formula">\(r = \dfrac{S}{s}\), \(R = \dfrac{abc}{4S}\)</div>
-              </div>
-            </div>
+        <!-- SKLOP 1 -->
+        <section class="sklop" id="sklop-1">
+          <header class="sklop-header">
+            <span class="sklop-num">4.6.1</span>
+            <h2>Točke, premice in krožnice v ravnini</h2>
+            <p>Osnovni gradniki geometrije in njihove medsebojne lege.</p>
+          </header>
+          <div class="sklop-cilji">
+            <h3>🎯 Cilji iz kataloga</h3>
+            <ul>
+              <li>Usvoji pojme elementarne evklidske geometrije.</li>
+              <li>Razvije geometrijsko predstavo in skozi prakso spozna temeljne standarde matematične teorije.</li>
+            </ul>
           </div>
-
-          <div class="info-card">
-            <h3>Pravokotni trikotnik</h3>
-            <div class="concept-list two-col">
-              <div class="concept">
-                <h4>Pitagorov izrek</h4>
-                <div class="concept-formula">\(a^2 + b^2 = c^2\)</div>
-              </div>
-              <div class="concept">
-                <h4>Kotne funkcije</h4>
-                <div class="concept-formula">\(\sin\alpha = \dfrac{a}{c}\), \(\cos\alpha = \dfrac{b}{c}\), \(\tan\alpha = \dfrac{a}{b}\)</div>
-              </div>
-              <div class="concept">
-                <h4>Evklidov izrek</h4>
-                <div class="concept-formula">\(a^2 = c \cdot a_1\), \(b^2 = c \cdot b_1\)</div>
-              </div>
-              <div class="concept">
-                <h4>Višinski izrek</h4>
-                <div class="concept-formula">\(v_c^2 = a_1 \cdot b_1\)</div>
-              </div>
-            </div>
+          <div class="sklop-teorija">
+            <h3>📖 Razlaga</h3>
+            <p><strong>Točka</strong>, <strong>premica</strong> in <strong>ravnina</strong> so osnovni pojmi, ki jih ne definiramo. Točke označujemo z velikimi črkami (\(A, B, T\)), premice z malimi (\(p, q\)). Skozi dve različni točki poteka natanko ena premica.</p>
+            <h4>Lega dveh premic v ravnini</h4>
+            <ul>
+              <li><strong>Sekajoči</strong> premici imata eno skupno točko (presečišče). Če se sekata pod pravim kotom, sta <strong>pravokotni</strong> (\(p \perp q\)).</li>
+              <li><strong>Vzporedni</strong> premici (\(p \parallel q\)) nimata skupne točke ali pa sovpadata.</li>
+            </ul>
+            <h4>Krožnica in krog</h4>
+            <p><strong>Krožnica</strong> s središčem \(S\) in polmerom \(r\) je množica vseh točk ravnine, ki so od \(S\) oddaljene natanko \(r\). <strong>Krog</strong> je krožnica skupaj z notranjostjo. Daljica med dvema točkama krožnice je <strong>tetiva</strong>; najdaljša tetiva je <strong>premer</strong> \(2r\) (poteka skozi središče).</p>
+            <h4>Lega premice in krožnice</h4>
+            <p>Odločilna je razdalja \(d\) od središča do premice (dolžina pravokotnice iz \(S\) na premico):</p>
+            <figure class="slika slika--siroka">
+<svg viewBox="0 0 560 218" role="img" aria-label="Lega premice in krožnice" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g1-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g1-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g1-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g1-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g1-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g1-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<line class="s-k3" x1="27.6" y1="30.8" x2="181" y2="30.8"/>
+<line class="s-pom" x1="104.3" y1="101" x2="104.3" y2="30.8"/>
+<line class="s-k3" x1="203.3" y1="46.7" x2="356.7" y2="46.7"/>
+<line class="s-pom" x1="280" y1="101" x2="280" y2="46.7"/>
+<line class="s-k3" x1="379" y1="75.5" x2="532.4" y2="75.5"/>
+<line class="s-pom" x1="455.7" y1="101" x2="455.7" y2="75.5"/>
+<line class="s-k2" x1="407.8" y1="75.5" x2="503.7" y2="75.5"/>
+<circle class="s-tocka" cx="104.3" cy="101" r="3.5"/>
+<text class="s-txt-b" x="90.3" y="115" text-anchor="start">S</text>
+<circle class="s-tocka" cx="280" cy="101" r="3.5"/>
+<text class="s-txt-b" x="266" y="115" text-anchor="start">S</text>
+<circle class="s-tocka-2" cx="280" cy="46.7" r="4.5"/>
+<text class="s-txt-k2" x="286" y="38.7" text-anchor="start">T</text>
+<circle class="s-tocka" cx="455.7" cy="101" r="3.5"/>
+<text class="s-txt-b" x="441.7" y="115" text-anchor="start">S</text>
+<circle class="s-tocka-2" cx="407.8" cy="75.5" r="4.5"/>
+<text class="s-txt-k2" x="399.8" y="67.5" text-anchor="end">A</text>
+<circle class="s-tocka-2" cx="503.7" cy="75.5" r="4.5"/>
+<text class="s-txt-k2" x="511.7" y="67.5" text-anchor="start">B</text>
+<text class="s-txt-k4" x="109.9" y="71.9" text-anchor="start">d</text>
+<text class="s-txt-b" x="104.3" y="174.5" text-anchor="middle">mimobežnica</text>
+<text class="s-txt-muted" x="104.3" y="190.4" text-anchor="middle">d > r</text>
+<text class="s-txt-k4" x="285.6" y="79.9" text-anchor="start">d</text>
+<text class="s-txt-b" x="280" y="174.5" text-anchor="middle">tangenta</text>
+<text class="s-txt-muted" x="280" y="190.4" text-anchor="middle">d = r</text>
+<text class="s-txt-k4" x="461.3" y="94.2" text-anchor="start">d</text>
+<text class="s-txt-b" x="455.7" y="174.5" text-anchor="middle">sekanta</text>
+<text class="s-txt-muted" x="455.7" y="190.4" text-anchor="middle">d < r</text>
+<circle class="s-k1" cx="104.3" cy="101" r="54.3"/>
+<circle class="s-k1" cx="280" cy="101" r="54.3"/>
+<circle class="s-k1" cx="455.7" cy="101" r="54.3"/>
+</svg>
+<figcaption>Lega premice in krožnice je odvisna od razdalje \(d\) središča do premice: mimobežnica nima skupnih točk, tangenta ima eno (\(ST \perp\) tangenta), sekanta dve; daljica \(AB\) je tetiva.</figcaption>
+</figure>
+            <ul>
+              <li>\(d &gt; r\): <strong>mimobežnica</strong>, nobene skupne točke.</li>
+              <li>\(d = r\): <strong>tangenta</strong>, ena skupna točka (dotikališče \(T\)); tangenta je <strong>pravokotna na polmer</strong> \(ST\).</li>
+              <li>\(d &lt; r\): <strong>sekanta</strong>, dve skupni točki; daljica med njima je tetiva. Simetrala tetive gre skozi središče, zato velja \(\left(\frac{t}{2}\right)^2 + d^2 = r^2\).</li>
+            </ul>
+            <h4>Lega dveh krožnic</h4>
+            <p>Za krožnici s polmeroma \(r_1 \ge r_2\) in razdaljo središč \(s\): \(s &gt; r_1 + r_2\) ležita narazen, \(s = r_1 + r_2\) se dotikata od zunaj, \(r_1 - r_2 &lt; s &lt; r_1 + r_2\) se sekata v dveh točkah, \(s = r_1 - r_2\) se dotikata od znotraj, \(s &lt; r_1 - r_2\) je manjša v večji.</p>
           </div>
-
-          <div class="info-card">
-            <h3>Poljubni trikotnik — sinusni in kosinusni izrek</h3>
-            <div class="concept-list two-col">
-              <div class="concept">
-                <h4>Sinusni izrek</h4>
-                <div class="concept-formula">\(\dfrac{a}{\sin\alpha} = \dfrac{b}{\sin\beta} = \dfrac{c}{\sin\gamma} = 2R\)</div>
-                <p class="concept-desc">Uporabimo, ko poznamo <strong>par stranica–nasprotni kot</strong> in še eno stran/kot.</p>
+          <div class="sklop-naloge">
+            <h3>✏️ Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-1">
+              <h4>Tip 1: Tetiva, tangenta in razdalja do središča</h4>
+              <div class="prepoznaj">
+                <p><strong>Kako prepoznaš:</strong> krožnica in premica (tetiva, tangenta), sprašujejo po dolžini ali razdalji.</p>
+                <ul class="kljucne"><li>„tetiva“</li><li>„tangenta“</li><li>„oddaljena od središča“</li><li>„dotikališče“</li></ul>
               </div>
-              <div class="concept">
-                <h4>Kosinusni izrek</h4>
-                <div class="concept-formula">\(c^2 = a^2 + b^2 - 2ab\cos\gamma\)</div>
-                <p class="concept-desc">Uporabimo, ko poznamo <strong>dve stranici in vmesni kot</strong> ali <strong>vse tri stranice</strong>.</p>
+              <h5>Univerzalni postopek</h5>
+              <ol>
+                <li>Nariši skico: središče, polmer do krajišča tetive (ali do dotikališča) in pravokotnico iz središča.</li>
+                <li>Poišči pravokotni trikotnik: pri tetivi so stranice \(r\), \(d\), \(\frac{t}{2}\); pri tangenti iz zunanje točke \(T_0\) so stranice \(r\), dolžina tangente \(x\) in \(|ST_0|\).</li>
+                <li>Uporabi Pitagorov izrek in izrazi neznanko.</li>
+              </ol>
+              <div class="primer">
+                <p><strong>Primer:</strong> Krožnica ima polmer 5 cm, tetiva je od središča oddaljena 3 cm. Kako dolga je tetiva?</p>
+                <p>\(\left(\frac{t}{2}\right)^2 = r^2 - d^2 = 25 - 9 = 16\), \(\frac{t}{2} = 4\), \(t = 8\) cm.</p>
               </div>
-              <div class="concept">
-                <h4>Posledica</h4>
-                <div class="concept-formula">\(\cos\gamma = \dfrac{a^2+b^2-c^2}{2ab}\)</div>
-                <p class="concept-desc">Za iskanje kota, ko poznamo vse tri stranice.</p>
-              </div>
-              <div class="concept">
-                <h4>Ploščina</h4>
-                <div class="concept-formula">\(S = \dfrac{1}{2}ab\sin\gamma = \dfrac{abc}{4R} = rs\)</div>
-                <p class="concept-desc">Različne formule za ploščino trikotnika.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="info-card">
-            <h3>Štirikotniki</h3>
-            <div class="concept-list two-col">
-              <div class="concept">
-                <h4>Vsota kotov</h4>
-                <div class="concept-formula">\(\alpha + \beta + \gamma + \delta = 360°\)</div>
-              </div>
-              <div class="concept">
-                <h4>Kvadrat</h4>
-                <div class="concept-formula">\(o = 4a\), \(S = a^2\), \(d = a\sqrt{2}\)</div>
-              </div>
-              <div class="concept">
-                <h4>Pravokotnik</h4>
-                <div class="concept-formula">\(o = 2(a+b)\), \(S = ab\), \(d = \sqrt{a^2+b^2}\)</div>
-              </div>
-              <div class="concept">
-                <h4>Paralelogram</h4>
-                <div class="concept-formula">\(o = 2(a+b)\), \(S = a \cdot v_a = ab\sin\alpha\)</div>
-              </div>
-              <div class="concept">
-                <h4>Trapez</h4>
-                <div class="concept-formula">\(o = a+b+c+d\), \(S = \dfrac{a+c}{2} \cdot v\)</div>
-              </div>
-              <div class="concept">
-                <h4>Romb</h4>
-                <div class="concept-formula">\(o = 4a\), \(S = \dfrac{e \cdot f}{2} = a \cdot v\)</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="concept">
-            <h4>Vsota kotov v n-kotniku</h4>
-            <div class="concept-formula">\((n-2) \cdot 180^\circ\)</div>
-            <p class="concept-desc">Velja za vsak konveksni mnogokotnik z \(n\) stranicami.</p>
-          </div>
-
-          <div class="info-card">
-            <h3>Krog in krožnica</h3>
-            <div class="concept-list two-col">
-              <div class="concept">
-                <h4>Obseg kroga</h4>
-                <div class="concept-formula">\(o = 2\pi r\)</div>
-              </div>
-              <div class="concept">
-                <h4>Ploščina kroga</h4>
-                <div class="concept-formula">\(S = \pi r^2\)</div>
-              </div>
-              <div class="concept">
-                <h4>Krožni izsek</h4>
-                <div class="concept-formula">\(S = \dfrac{\pi r^2 \alpha}{360°}\), \(l = \dfrac{2\pi r \alpha}{360°}\)</div>
-                <p class="concept-desc">α je središčni kot v stopinjah.</p>
-              </div>
-              <div class="concept">
-                <h4>Središčni kot</h4>
-                <div class="concept-formula">\(\alpha = 2\beta\)</div>
-                <p class="concept-desc">Središčni kot je dvakratnik obodnega kota nad istim lokom.</p>
-              </div>
-              <div class="concept">
-                <h4>Talesov izrek</h4>
-                <div class="concept-formula">kot nad premerom = \(90°\)</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="info-card">
-            <h3>Podobnost in skladnost</h3>
-            <div class="concept-list two-col">
-              <div class="concept">
-                <h4>Skladna trikotnika</h4>
-                <div class="concept-formula">enaki koti in stranice</div>
-                <p class="concept-desc">Skladnost pomeni, da sta trikotnika <strong>enaka</strong> (do premika/zrcaljenja).</p>
-              </div>
-              <div class="concept">
-                <h4>Podobna trikotnika</h4>
-                <div class="concept-formula">enaki koti, stranice v razmerju \(k\)</div>
-                <p class="concept-desc">Koeficient podobnosti \(k = \dfrac{a'}{a}\).</p>
-              </div>
-              <div class="concept">
-                <h4>Razmerje obsegov</h4>
-                <div class="concept-formula">\(o' : o = k\)</div>
-              </div>
-              <div class="concept">
-                <h4>Razmerje ploščin</h4>
-                <div class="concept-formula">\(S' : S = k^2\)</div>
+              <div class="primer">
+                <p><strong>Primer:</strong> Iz točke, ki je 13 cm od središča krožnice s polmerom 5 cm, potegnemo tangento. Kolikšna je razdalja do dotikališča?</p>
+                <p>Polmer je pravokoten na tangento: \(x^2 + 5^2 = 13^2\), \(x = 12\) cm.</p>
               </div>
             </div>
           </div>
         </section>
 
-        <!-- ============ 2. TIPI NALOG ============ -->
-        <section class="subsection">
-          <div class="subsection-head">
-            <h2>2. Tipi nalog — postopki po korakih</h2>
-            <p>Za vsak tip: kako ga prepoznaš, kako ga rešiš, primer.</p>
+        <!-- SKLOP 2 -->
+        <section class="sklop" id="sklop-2">
+          <header class="sklop-header">
+            <span class="sklop-num">4.6.2</span>
+            <h2>Razdalja, daljica, nosilka daljice, simetrala, poltrak, kot</h2>
+            <p>Natančne definicije pojmov, ki jih uporabljamo v vseh nadaljnjih nalogah.</p>
+          </header>
+          <div class="sklop-cilji">
+            <h3>🎯 Cilji iz kataloga</h3>
+            <ul><li>Usvoji pojme elementarne evklidske geometrije in pozna njihove definicije.</li></ul>
           </div>
-
-          <!-- TIP 1 -->
-          <div class="info-card" id="tip-1">
-            <div class="tip-header">
-              <h3>Tip 1: Koti v trikotniku</h3>
-              <div class="tip-formula">\(\alpha + \beta + \gamma = 180°\)</div>
-            </div>
-            <p><strong>Kako prepoznaš:</strong> "izračunajte kote", podana razmerja ali delni podatki.</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Zapiši \(\alpha + \beta + \gamma = 180°\).</li>
-              <li>Uporabi dane zveze (npr. \(\gamma = 2\beta\)).</li>
-              <li>Reši sistem enačb.</li>
-            </ol>
-            <p class="plain-example"><strong>Primer:</strong> \(\alpha = 48{,}6°\), \(\gamma = 2\beta\)</p>
-            <div class="plain-example">
-              <p>\(48{,}6 + \beta + 2\beta = 180 \Rightarrow 3\beta = 131{,}4 \Rightarrow \beta = 43{,}8°\), \(\gamma = 87{,}6°\).</p>
-            </div>
-          </div>
-
-          <!-- TIP 2 -->
-          <div class="info-card" id="tip-2">
-            <div class="tip-header">
-              <h3>Tip 2: Pravokotni trikotnik</h3>
-              <div class="tip-formula">\(a^2 + b^2 = c^2\)</div>
-            </div>
-            <p><strong>Kako prepoznaš:</strong> "pravokotni trikotnik", dane katete ali hipotenuza in kot.</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Nariši skico in označi pravi kot.</li>
-              <li>Uporabi Pitagorov izrek: \(a^2 + b^2 = c^2\).</li>
-              <li>Za kote: \(\sin, \cos, \tan\).</li>
-              <li>Višina na hipotenuzo: \(v_c = \dfrac{ab}{c}\).</li>
-            </ol>
-            <p class="plain-example"><strong>Primer:</strong> \(a = 3\), \(c = 6\)</p>
-            <div class="plain-example">
-              <p>\(b^2 = 36 - 9 = 27 \Rightarrow b = 3\sqrt{3}\). \(\sin\alpha = \dfrac{3}{6} = \dfrac{1}{2} \Rightarrow \alpha = 30°\), \(\beta = 60°\).</p>
-            </div>
-          </div>
-
-          <!-- TIP 3 -->
-          <div class="info-card" id="tip-3">
-            <div class="tip-header">
-              <h3>Tip 3: Sinusni izrek</h3>
-              <div class="tip-formula">\(\dfrac{a}{\sin\alpha} = \dfrac{b}{\sin\beta}\)</div>
-            </div>
-            <p><strong>Kako prepoznaš:</strong> podan par stranica–nasprotni kot in še ena stranica/kot.</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Zapiši \(\dfrac{a}{\sin\alpha} = \dfrac{b}{\sin\beta}\).</li>
-              <li>Izrazi neznanko.</li>
-              <li>Pazi: pri iskanju kota ima \(\sin\) lahko dve rešitvi (\(\alpha\) in \(180° - \alpha\)).</li>
-            </ol>
-            <p class="plain-example"><strong>Primer:</strong> \(\alpha = 30°\), \(\beta = 50°\), \(a = 7\)</p>
-            <div class="plain-example">
-              <p>\(b = \dfrac{7 \cdot \sin 50°}{\sin 30°} = \dfrac{7 \cdot 0{,}766}{0{,}5} \approx 10{,}72\) cm.</p>
-            </div>
-          </div>
-
-          <!-- TIP 4 -->
-          <div class="info-card" id="tip-4">
-            <div class="tip-header">
-              <h3>Tip 4: Kosinusni izrek</h3>
-              <div class="tip-formula">\(c^2 = a^2 + b^2 - 2ab\cos\gamma\)</div>
-            </div>
-            <p><strong>Kako prepoznaš:</strong> podani dve stranici in vmesni kot, ali vse tri stranice.</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Zapiši \(c^2 = a^2 + b^2 - 2ab\cos\gamma\).</li>
-              <li>Vstavi podatke in izračunaj neznanko.</li>
-              <li>Za iskanje kota: \(\cos\gamma = \dfrac{a^2+b^2-c^2}{2ab}\).</li>
-            </ol>
-            <p class="plain-example"><strong>Primer:</strong> \(a = 8, b = 9, c = 10\)</p>
-            <div class="plain-example">
-              <p>\(\cos\beta = \dfrac{64+100-81}{2 \cdot 8 \cdot 10} = \dfrac{83}{160} \Rightarrow \beta \approx 58{,}75°\).</p>
-            </div>
-          </div>
-
-          <!-- TIP 5 -->
-          <div class="info-card" id="tip-5">
-            <div class="tip-header">
-              <h3>Tip 5: Ploščina trikotnika</h3>
-              <div class="tip-formula">\(S = \dfrac{a v_a}{2} = \dfrac{1}{2}ab\sin\gamma = \sqrt{s(s-a)(s-b)(s-c)}\)</div>
-            </div>
-            <p><strong>Kako prepoznaš:</strong> "izračunajte ploščino trikotnika".</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Če imaš osnovnico in višino: \(S = \dfrac{a \cdot v_a}{2}\).</li>
-              <li>Če imaš dve stranici in vmesni kot: \(S = \dfrac{1}{2}ab\sin\gamma\).</li>
-              <li>Če imaš vse tri stranice: Heronova formula.</li>
-            </ol>
-            <p class="plain-example"><strong>Primer:</strong> \(a = 6, b = 8, \gamma = 30°\)</p>
-            <div class="plain-example">
-              <p>\(S = \dfrac{1}{2} \cdot 6 \cdot 8 \cdot 0{,}5 = 12\).</p>
-            </div>
-          </div>
-
-          <!-- TIP 6 -->
-          <div class="info-card" id="tip-6">
-            <div class="tip-header">
-              <h3>Tip 6: Enakokraki trikotnik</h3>
-              <div class="tip-formula">\(a^2 = v^2 + \left(\dfrac{c}{2}\right)^2\)</div>
-            </div>
-            <p><strong>Kako prepoznaš:</strong> "enakokraki trikotnik", podana osnovnica in krak ali višina.</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Višina na osnovnico razpolovi osnovnico.</li>
-              <li>Uporabi Pitagorov izrek: \(a^2 = v^2 + (c/2)^2\).</li>
-              <li>Kota ob osnovnici sta enaka.</li>
-            </ol>
-            <p class="plain-example"><strong>Primer:</strong> \(c = 10\), \(a = 7\)</p>
-            <div class="plain-example">
-              <p>\(v^2 = 49 - 25 = 24 \Rightarrow v = 2\sqrt{6}\). \(S = \dfrac{10 \cdot 2\sqrt{6}}{2} = 10\sqrt{6}\).</p>
-              <p>\(\cos\alpha = \dfrac{5}{7} \Rightarrow \alpha \approx 44{,}4°\). Kot ob vrhu: \(180 - 2 \cdot 44{,}4 = 91{,}2°\).</p>
-            </div>
-          </div>
-
-          <!-- TIP 7 -->
-          <div class="info-card" id="tip-7">
-            <div class="tip-header">
-              <h3>Tip 7: Štirikotniki — trapez, paralelogram, romb</h3>
-              <div class="tip-formula">\(S = \dfrac{a+c}{2} \cdot v\) (trapez)</div>
-            </div>
-            <p><strong>Kako prepoznaš:</strong> "trapez ABCD", "romb", "paralelogram".</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Nariši skico in označi znane količine.</li>
-              <li>Uporabi ustrezno formulo za obseg/ploščino.</li>
-              <li>Pri trapezu: \(S = \dfrac{a+c}{2} \cdot v\).</li>
-              <li>Pri rombu: \(S = \dfrac{e \cdot f}{2}\) ali \(S = a \cdot v\).</li>
-            </ol>
-            <p class="plain-example"><strong>Primer:</strong> romb, \(a = 10\), \(v = 7\)</p>
-            <div class="plain-example">
-              <p>\(S = 10 \cdot 7 = 70\). \(\sin\alpha = 0{,}7 \Rightarrow \alpha \approx 44{,}4°\), drugi kot \(135{,}6°\).</p>
-            </div>
-          </div>
-
-          <!-- TIP 8 -->
-          <div class="info-card" id="tip-8">
-            <div class="tip-header">
-              <h3>Tip 8: Krožni izsek in lok</h3>
-              <div class="tip-formula">\(l = r \cdot \alpha_{\text{rad}}\), \(S = \dfrac{\pi r^2 \alpha}{360°}\)</div>
-            </div>
-            <p><strong>Kako prepoznaš:</strong> "krožni izsek", "dolžina loka".</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Pretvori kot v radiane (če je v stopinjah): \(\alpha_{\text{rad}} = \dfrac{\pi \alpha}{180°}\).</li>
-              <li>Dolžina loka: \(l = r \cdot \alpha_{\text{rad}}\).</li>
-              <li>Ploščina izseka: \(S = \dfrac{1}{2} r^2 \alpha_{\text{rad}} = \dfrac{\pi r^2 \alpha}{360°}\).</li>
-            </ol>
-            <p class="plain-example"><strong>Primer:</strong> \(r = 1\), \(\alpha = \dfrac{\pi}{2}\)</p>
-            <div class="plain-example">
-              <p>\(l = \dfrac{\pi}{2}\), \(S = \dfrac{1}{2} \cdot 1 \cdot \dfrac{\pi}{2} = \dfrac{\pi}{4}\), \(o = 2 + \dfrac{\pi}{2}\).</p>
-            </div>
-          </div>
-
-          <!-- TIP 9 -->
-          <div class="info-card" id="tip-9">
-            <div class="tip-header">
-              <h3>Tip 9: Podobnost likov</h3>
-              <div class="tip-formula">\(S' = k^2 \cdot S\), \(o' = k \cdot o\)</div>
-            </div>
-            <p><strong>Kako prepoznaš:</strong> "podobna trikotnika", "razmerje stranic".</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Določi koeficient podobnosti \(k = \dfrac{a'}{a}\).</li>
-              <li>Razmerje obsegov: \(o' = k \cdot o\).</li>
-              <li>Razmerje ploščin: \(S' = k^2 \cdot S\).</li>
-            </ol>
-            <p class="plain-example"><strong>Primer:</strong> trikotnik 4, 6, 8, podoben z najkrajšo stranico 8</p>
-            <div class="plain-example">
-              <p>\(k = \dfrac{8}{4} = 2\). \(o = 18 \Rightarrow o' = 36\). \(S = \sqrt{9 \cdot 5 \cdot 3 \cdot 1} = \sqrt{135} \approx 11{,}62\).</p>
-              <p>\(S' = 4 \cdot 11{,}62 = 46{,}48\).</p>
-            </div>
-          </div>
-
-          <!-- TIP 10 -->
-          <div class="info-card" id="tip-10">
-            <div class="tip-header">
-              <h3>Tip 10: Središčni in obodni kot</h3>
-              <div class="tip-formula">\(\alpha = 2\beta\)</div>
-            </div>
-            <p><strong>Kako prepoznaš:</strong> "središčni in obodni kot nad istim lokom".</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Središčni kot je <strong>dvakratnik</strong> obodnega kota nad istim lokom.</li>
-              <li>Vsota središčnega in obodnega kota nad istim lokom = \(3\beta\).</li>
-            </ol>
-            <p class="plain-example"><strong>Primer:</strong> Središčni + obodni kot = 33°</p>
-            <div class="plain-example">
-              <p>\(\alpha = 2\beta\), \(\alpha + \beta = 33° \Rightarrow 3\beta = 33 \Rightarrow \beta = 11°\), \(\alpha = 22°\).</p>
-            </div>
-          </div>
-
-          <!-- TIP 11 -->
-          <div class="info-card" id="tip-11">
-            <div class="tip-header">
-              <h3>Tip 11: Ploščina trikotnika s koordinatami</h3>
-              <div class="tip-formula">\(S = \dfrac{1}{2}|(x_2-x_1)(y_3-y_1) - (x_3-x_1)(y_2-y_1)|\)</div>
-            </div>
-            <p><strong>Kako prepoznaš:</strong> tri točke \(A, B, C\) s koordinatami.</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Vstavi koordinate v formulo.</li>
-              <li>Izračunaj vrednost absolutne vrednosti.</li>
-              <li>Rezultat deli z 2.</li>
-            </ol>
-            <p class="plain-example"><strong>Primer:</strong> \(A(0,0), B(4,0), C(1,3)\)</p>
-            <div class="plain-example">
-              <p>\(S = \dfrac{1}{2}|(4-0)(3-0) - (1-0)(0-0)| = \dfrac{1}{2}|12| = 6\).</p>
-            </div>
-          </div>
-
-          <!-- TIP 12 -->
-          <div class="info-card" id="tip-12">
-            <div class="tip-header">
-              <h3>Tip 12: Pitagorov izrek v prostoru</h3>
-              <div class="tip-formula">\(d = \sqrt{a^2 + b^2 + c^2}\)</div>
-            </div>
-            <p><strong>Kako prepoznaš:</strong> "telesna diagonala kvadra".</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Za diagonalo kvadra: \(d = \sqrt{a^2 + b^2 + c^2}\).</li>
-              <li>Za diagonalo kocke: \(d = a\sqrt{3}\).</li>
-              <li>Za diagonalo osnovne ploskve: \(d_o = \sqrt{a^2 + b^2}\).</li>
-            </ol>
-            <p class="plain-example"><strong>Primer:</strong> \(a = 5, b = 12, c = 84\)</p>
-            <div class="plain-example">
-              <p>\(d_o = \sqrt{25+144} = 13\). \(d = \sqrt{25+144+7056} = 85\).</p>
-            </div>
-          </div>
-
-          <!-- TIP 13 -->
-          <div class="info-card" id="tip-13">
-            <div class="tip-header">
-              <h3>Tip 13: Sestavljeni liki</h3>
-              <div class="tip-formula">Seštej/odštej ploščine preprostih likov</div>
-            </div>
-            <p><strong>Kako prepoznaš:</strong> "izračunajte ploščino osenčenega lika".</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Razdeli lik na preproste like (trikotniki, krogi, kvadrati).</li>
-              <li>Izračunaj ploščino vsakega dela.</li>
-              <li>Seštej ali odštej (odvisno od tega, ali je lik zunaj ali znotraj).</li>
-            </ol>
-            <p class="plain-example"><strong>Primer:</strong> kvadrat \(a = 4\), krožni lok s središčem v B</p>
-            <div class="plain-example">
-              <p>Ploščina kvadrata: 16. Ploščina četrtine kroga: \(\dfrac{\pi \cdot 16}{4} = 4\pi\). Osenčeni del: \(16 - 4\pi\).</p>
-            </div>
-          </div>
-
-          <!-- TIP 14 -->
-          <div class="info-card" id="tip-14">
-            <div class="tip-header">
-              <h3>Tip 14: Besedilne naloge (zemljišče, posoda, žoga)</h3>
-              <div class="tip-formula">Zapiši enačbe iz besedila</div>
-            </div>
-            <p><strong>Kako prepoznaš:</strong> "zemljišče pravokotne oblike", "akvarij", "žoga".</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Določi obliko (pravokotnik, kvader, krogla ...).</li>
-              <li>Zapiši enačbe iz besedila.</li>
-              <li>Reši sistem.</li>
-              <li>Preveri smiselnost.</li>
-            </ol>
-            <p class="plain-example"><strong>Primer:</strong> Zemljišče \(S = 405\) m², obseg \(o = 81\) m</p>
-            <div class="plain-example">
-              <p>\(ab = 405\), \(a + b = 40{,}5\). \(a(40{,}5-a) = 405 \Rightarrow a^2 - 40{,}5a + 405 = 0\).</p>
-              <p>\(a = 27, b = 13{,}5\) (ali obratno).</p>
-            </div>
-          </div>
-
-          <!-- TIP 15 -->
-          <div class="info-card" id="tip-15">
-            <div class="tip-header">
-              <h3>Tip 15: Vsota notranjih kotov n-kotnika</h3>
-              <div class="tip-formula">\((n - 2) \cdot 180^\circ\)</div>
-            </div>
-            <p><strong>Kako prepoznaš:</strong> "izračunajte kote v mnogokotniku", "koliko je vsota notranjih kotov", podan je lik z \(n\) stranicami in nekaj koti.</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Preštej, koliko stranic ima lik — to je \(n\).</li>
-              <li>Izračunaj vsoto vseh notranjih kotov: \((n - 2) \cdot 180^\circ\).</li>
-              <li>Zapiši enačbo: vsota vseh znanih in neznanih kotov = izračunana vsota.</li>
-              <li>Reši enačbo za neznanke.</li>
-              <li>Preveri, ali vsota vseh kotov ustreza formuli.</li>
-            </ol>
-
-            <p class="plain-example"><strong>Primer:</strong> Na skici je štirikotnik \(ABCD\). Izračunaj kota \(\beta\) in \(\gamma\), če je \(\gamma = 2\beta\).</p>
-
-            <div class="plain-example">
-              <p><strong>1. korak:</strong> Lik je štirikotnik, torej \(n = 4\).</p>
-              <p><strong>2. korak:</strong> Vsota notranjih kotov:</p>
-              <p>\[
-                (4 - 2) \cdot 180^\circ = 2 \cdot 180^\circ = 360^\circ
-              \]</p>
-              <p><strong>3. korak:</strong> Znani koti: \(\angle A = 70^\circ\), \(\angle C = 101^\circ\), \(\angle B = \beta\), \(\angle D = \gamma\).</p>
-              <p>\[
-                70^\circ + 101^\circ + \beta + \gamma = 360^\circ
-              \]</p>
-              <p><strong>4. korak:</strong> Uporabimo \(\gamma = 2\beta\):</p>
-              <p>\[
-                171 + 3\beta = 360 \Rightarrow 3\beta = 189 \Rightarrow \beta = 63^\circ
-              \]</p>
-              <p><strong>5. korak:</strong> \(\gamma = 2\beta = 126^\circ\).</p>
-              <p><strong>Preverjanje:</strong> \(70 + 101 + 63 + 126 = 360^\circ\) ✓</p>
-              <p><strong>Rešitev:</strong> \(\beta = 63^\circ\), \(\gamma = 126^\circ\).</p>
-            </div>
-
-            <p class="plain-example"><strong>Opomba:</strong> Enako formulo uporabiš za vsak \(n\)-kotnik:</p>
+          <div class="sklop-teorija">
+            <h3>📖 Razlaga</h3>
+            <figure class="slika slika--siroka">
+<svg viewBox="0 0 560 215" role="img" aria-label="Daljica, nosilka, simetrala, poltrak in kot" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g2-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g2-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g2-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g2-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g2-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g2-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<line class="s-pom" x1="18" y1="154.4" x2="262.5" y2="93.3"/>
+<line class="s-k1" x1="39.8" y1="149" x2="214.5" y2="105.3"/>
+<line class="s-k3" x1="143.1" y1="190.7" x2="100.7" y2="21.3"/>
+<line class="s-pom" x1="111.3" y1="63.6" x2="39.8" y2="149"/>
+<line class="s-pom" x1="111.3" y1="63.6" x2="214.5" y2="105.3"/>
+<line class="s-crta" x1="323.7" y1="170.8" x2="520.2" y2="170.8" marker-end="url(#g2-crn)"/>
+<line class="s-crta" x1="323.7" y1="170.8" x2="454.7" y2="39.8" marker-end="url(#g2-crn)"/>
+<circle class="s-tocka" cx="39.8" cy="149" r="4.5"/>
+<text class="s-txt-b" x="35.8" y="167" text-anchor="start">A</text>
+<circle class="s-tocka" cx="214.5" cy="105.3" r="4.5"/>
+<text class="s-txt-b" x="220.5" y="123.3" text-anchor="start">B</text>
+<circle class="s-tocka-2" cx="127.2" cy="127.1" r="4.5"/>
+<text class="s-txt-k2" x="133.2" y="143.1" text-anchor="start">M</text>
+<circle class="s-tocka" cx="111.3" cy="63.6" r="3.5"/>
+<text class="s-txt-b" x="119.3" y="59.6" text-anchor="start">T</text>
+<circle class="s-tocka" cx="323.7" cy="170.8" r="4.5"/>
+<text class="s-txt-b" x="309.7" y="176.8" text-anchor="start">V</text>
+<text class="s-txt-muted" x="253.8" y="84.6" text-anchor="end">nosilka</text>
+<text class="s-txt-k3" x="90.1" y="31.1" text-anchor="middle">s</text>
+<text class="s-txt-k3" x="140.3" y="31.1" text-anchor="start">simetrala daljice AB</text>
+<text class="s-txt-muted" x="432.8" y="188.3" text-anchor="middle">krak (poltrak)</text>
+<text class="s-txt-muted" x="467.8" y="35.5" text-anchor="start">krak</text>
+<text class="s-txt-muted" x="98.8" y="98.8" text-anchor="end">|TA| = |TB|</text>
+<path class="s-kot" d="M127.2,127.1 L136.5,124.8 L134.2,115.5 L124.9,117.8 Z"/>
+<circle cx="130.4" cy="121.9" r="1.6" fill="#B45309"/>
+<path class="s-kot" d="M323.7,170.8 L357.7,170.8 A34,34 0 0 0 347.7,146.8 Z"/>
+<text class="s-txt-k4" x="365.3" y="157.6" text-anchor="middle">α</text>
+</svg>
+<figcaption>Levo: daljica \(AB\) na svoji nosilki, razpolovišče \(M\) in simetrala \(s\). Vsaka točka simetrale je enako oddaljena od \(A\) in \(B\). Desno: kot sestavljata dva poltraka s skupnim vrhom.</figcaption>
+</figure>
             <ul>
-              <li>Trikotnik (\(n = 3\)): \((3-2)\cdot 180^\circ = 180^\circ\)</li>
-              <li>Štirikotnik (\(n = 4\)): \((4-2)\cdot 180^\circ = 360^\circ\)</li>
-              <li>Petkotnik (\(n = 5\)): \((5-2)\cdot 180^\circ = 540^\circ\)</li>
-              <li>Šestkotnik (\(n = 6\)): \((6-2)\cdot 180^\circ = 720^\circ\)</li>
+              <li><strong>Razdalja</strong> \(|AB|\) med točkama je dolžina najkrajše poti med njima. <strong>Razdalja točke od premice</strong> je dolžina pravokotnice iz točke na premico (najkrajša možna).</li>
+              <li><strong>Daljica</strong> \(AB\) so točke \(A\), \(B\) in vse točke med njima. Premica skozi \(A\) in \(B\) je <strong>nosilka</strong> daljice.</li>
+              <li><strong>Razpolovišče</strong> \(M\) je točka daljice, za katero je \(|AM| = |MB|\).</li>
+              <li><strong>Simetrala daljice</strong> je premica skozi razpolovišče, pravokotna na daljico. Ključna lastnost: <strong>točka leži na simetrali natanko takrat, ko je enako oddaljena od \(A\) in \(B\)</strong>.</li>
+              <li><strong>Poltrak</strong> je del premice od izhodiščne točke naprej v eno smer.</li>
+              <li><strong>Kot</strong> je del ravnine med dvema poltrakoma (krakoma) s skupnim izhodiščem (vrhom). Merimo ga v stopinjah: \(1° = 60'\), \(1' = 60''\).</li>
+              <li><strong>Simetrala kota</strong> razpolavlja kot; njene točke so enako oddaljene od obeh krakov.</li>
             </ul>
           </div>
-
-          <!-- TIP 16 -->
-          <div class="info-card" id="tip-16">
-            <div class="tip-header">
-              <h3>Tip 16: Ploščina lika v koordinatnem sistemu</h3>
-              <div class="tip-formula">\(S = \dfrac{1}{2}\left|(x_2-x_1)(y_3-y_1) - (x_3-x_1)(y_2-y_1)\right|\)</div>
+          <div class="sklop-naloge">
+            <h3>✏️ Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-2">
+              <h4>Tip 2: Točke, enako oddaljene od dveh točk ali dveh premic</h4>
+              <div class="prepoznaj">
+                <p><strong>Kako prepoznaš:</strong> iščejo vse točke ali točko z dano lastnostjo razdalje.</p>
+                <ul class="kljucne"><li>„enako oddaljena od \(A\) in \(B\)“</li><li>„enako oddaljena od krakov“</li><li>„množica točk“</li></ul>
+              </div>
+              <h5>Univerzalni postopek</h5>
+              <ol>
+                <li>Enako oddaljena od dveh točk → leži na <strong>simetrali daljice</strong>.</li>
+                <li>Enako oddaljena od krakov kota (dveh sekajočih premic) → leži na <strong>simetrali kota</strong>.</li>
+                <li>Oddaljena za \(r\) od točke → leži na krožnici s polmerom \(r\).</li>
+                <li>Če mora točka izpolniti dva pogoja, je <strong>presečišče</strong> obeh množic.</li>
+              </ol>
+              <div class="primer">
+                <p><strong>Primer:</strong> Kje leži točka, ki je enako oddaljena od vseh treh oglišč trikotnika?</p>
+                <p>Enako oddaljena od \(A\) in \(B\) → simetrala \(AB\); od \(B\) in \(C\) → simetrala \(BC\). Presečišče je središče trikotniku očrtanega kroga.</p>
+              </div>
             </div>
-
-            <p><strong>Kako prepoznaš:</strong> "izračunajte ploščino osenčenega lika na sliki", lik je narisan v koordinatnem sistemu, podana so oglišča ali pa jih razbereš iz slike.</p>
-
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Razberi koordinate vseh oglišč lika iz slike.</li>
-              <li>Lik razdeli na trikotnike <strong>ali</strong> kavdrate <strong>ali</strong> pravokotnike <strong>ali</strong> uporabi vektorsko formulo za ploščino mnogokotnika.</li>
-              <li>Izračunaj ploščino vsakega dela in jih seštej (oz. odštej, če lik vpišeš v večji lik).</li>
-              <li>Rezultat zapiši v ustreznih enotah (kvadratne enote).</li>
-            </ol>
-
-            <hr>
-
-            <p class="plain-example"><strong>Primer:</strong> Izračunajte ploščino osenčenega lika na sliki.</p>
-
-            <div class="plain-example" style="text-align:center;">
-              <img src="slika1.png" alt="Osenčen štirikotnik v koordinatnem sistemu" style="max-width:100%; height:auto; border-radius:8px;">
-            </div>
-
-            <div class="plain-example">
-              <p><strong>1. korak:</strong> Iz slike razberemo oglišča štirikotnika \(ABCD\):</p>
-              <ul>
-                <li>\(A(0, 3)\)</li>
-                <li>\(B(2, 0)\)</li>
-                <li>\(C(5, 2)\)</li>
-                <li>\(D(4, 4)\)</li>
-              </ul>
-
-              <p><strong>2. korak:</strong> Lik razdelimo na dva trikotnika: \(ABC\) in \(ACD\).</p>
-
-              <p><strong>3. korak:</strong> Za trikotnik s koordinatami \(A(x_1,y_1)\), \(B(x_2,y_2)\), \(C(x_3,y_3)\) uporabimo formulo:</p>
-              <p>\[
-                S = \frac{1}{2}\left|(x_2-x_1)(y_3-y_1) - (x_3-x_1)(y_2-y_1)\right|
-              \]</p>
-
-              <p><strong>4. korak:</strong> Izračunamo ploščino trikotnika \(ABC\):</p>
-              <p>\[
-                S_1 = \frac{1}{2}\left|(2-0)(2-3) - (5-0)(0-3)\right|
-              \]</p>
-              <p>\[
-                S_1 = \frac{1}{2}\left|2 \cdot (-1) - 5 \cdot (-3)\right|
-              \]</p>
-              <p>\[
-                S_1 = \frac{1}{2}\left|-2 + 15\right| = \frac{13}{2} = 6{,}5
-              \]</p>
-
-              <p><strong>5. korak:</strong> Izračunamo ploščino trikotnika \(ACD\):</p>
-              <p>\[
-                S_2 = \frac{1}{2}\left|(5-0)(4-3) - (4-0)(2-3)\right|
-              \]</p>
-              <p>\[
-                S_2 = \frac{1}{2}\left|5 \cdot 1 - 4 \cdot (-1)\right|
-              \]</p>
-              <p>\[
-                S_2 = \frac{1}{2}\left|5 + 4\right| = \frac{9}{2} = 4{,}5
-              \]</p>
-
-              <p><strong>6. korak:</strong> Seštejemo ploščini obeh trikotnikov:</p>
-              <p>\[
-                S = S_1 + S_2 = 6{,}5 + 4{,}5 = 11
-              \]</p>
-
-              <p><strong>Rešitev:</strong> Ploščina osenčenega lika je \(S = 11\) enot².</p>
-            </div>
-
-            <p class="plain-example"><strong>Alternativa:</strong> Ploščino lahko izračunaš tudi z vektorsko formulo za štirikotnik:</p>
-            <p>\[
-              S = \frac{1}{2}\left|x_A(y_B-y_D) + x_B(y_C-y_A) + x_C(y_D-y_B) + x_D(y_A-y_C)\right|
-            \]</p>
-            <p>\[
-              S = \frac{1}{2}\left|0(0-4) + 2(2-3) + 5(4-0) + 4(3-2)\right|
-            \]</p>
-            <p>\[
-              S = \frac{1}{2}\left|0 - 2 + 20 + 4\right| = \frac{1}{2} \cdot 22 = 11
-            \]</p>
-            <p>Rezultat je enak: \(S = 11\).</p>
           </div>
         </section>
 
-        <!-- ============ 3. POGOSTE NAPAKE ============ -->
-        <section class="subsection">
-          <div class="subsection-head">
-            <h2>3. Pogoste napake</h2>
+        <!-- SKLOP 3 -->
+        <section class="sklop" id="sklop-3">
+          <header class="sklop-header">
+            <span class="sklop-num">4.6.3</span>
+            <h2>Vrste kotov in odnosi med koti</h2>
+            <p>Ostri, pravi, topi kot; sokota, sovršna kota in koti ob vzporednicah.</p>
+          </header>
+          <div class="sklop-cilji">
+            <h3>🎯 Cilji iz kataloga</h3>
+            <ul><li>Pozna definicije in uporablja lastnosti kotov in odnose med koti.</li></ul>
           </div>
-          <div class="info-card">
+          <div class="sklop-teorija">
+            <h3>📖 Razlaga</h3>
+            <h4>Vrste kotov</h4>
+            <div class="tabela-wrap">
+              <table class="tabela">
+                <thead><tr><th>Kot</th><th>Velikost</th></tr></thead>
+                <tbody>
+                  <tr><td>ničelni</td><td>\(0°\)</td></tr>
+                  <tr><td>ostri</td><td>\(0° &lt; \alpha &lt; 90°\)</td></tr>
+                  <tr><td>pravi</td><td>\(90°\)</td></tr>
+                  <tr><td>topi</td><td>\(90° &lt; \alpha &lt; 180°\)</td></tr>
+                  <tr><td>iztegnjeni</td><td>\(180°\)</td></tr>
+                  <tr><td>izbočeni (konkavni)</td><td>\(180° &lt; \alpha &lt; 360°\)</td></tr>
+                  <tr><td>polni</td><td>\(360°\)</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <h4>Odnosi med koti</h4>
             <ul>
-              <li>Pri sinusnem izreku pozabiš, da ima \(\sin\alpha = k\) lahko <strong>dve rešitvi</strong> (\(\alpha\) in \(180°-\alpha\)).</li>
-              <li>Pri kosinusnem izreku zamenjaš predznak \(-2ab\cos\gamma\).</li>
-              <li>Pri ploščini trikotnika z dvema stranicama in kotom uporabiš \(\cos\) namesto \(\sin\).</li>
-              <li>Pri podobnosti zamenjaš razmerje obsegov (\(k\)) in ploščin (\(k^2\)).</li>
-              <li>Pri krožnem izseku pozabiš pretvoriti stopinje v radiane (ali obratno).</li>
-              <li>Pri središčnem/obodnem kotu pozabiš, da je središčni \(2 \times\) obodni.</li>
-              <li>Pri ploščini trikotnika s koordinatami pozabiš <strong>absolutno vrednost</strong> in deljenje z 2.</li>
-              <li>Pri besedilnih nalogah ne preveriš smiselnosti (dolžine morajo biti pozitivne).</li>
+              <li><strong>Sokota</strong> imata skupen vrh in en krak, druga kraka pa tvorita premico: \(\alpha + \beta = 180°\) (suplementarna).</li>
+              <li><strong>Komplementarna</strong> kota se dopolnjujeta do \(90°\).</li>
+              <li><strong>Sovršna kota</strong> (nasprotna kota pri presečišču dveh premic) sta <strong>enaka</strong>.</li>
+              <li>Kota z <strong>vzporednimi kraki</strong> sta enaka ali suplementarna; enako velja za kota s <strong>pravokotnimi kraki</strong>.</li>
             </ul>
+            <figure class="slika">
+<svg viewBox="0 0 440 255" role="img" aria-label="Koti ob vzporednicah in prečnici" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g3-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g3-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g3-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g3-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g3-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g3-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<line class="s-crta" x1="26.3" y1="92.8" x2="413.7" y2="92.8"/>
+<line class="s-crta" x1="26.3" y1="176" x2="413.7" y2="176"/>
+<line class="s-k1" x1="137" y1="231.5" x2="303" y2="23.5"/>
+<text class="s-txt-b" x="408.2" y="84.5" text-anchor="end">p</text>
+<text class="s-txt-b" x="408.2" y="167.7" text-anchor="end">q</text>
+<text class="s-txt-k1" x="305.8" y="29.1" text-anchor="start">t</text>
+<text class="s-txt-muted" x="31.8" y="40.2" text-anchor="start">p ∥ q</text>
+<text class="s-txt-k3" x="31.8" y="62.4" text-anchor="start">α + β = 180°</text>
+<path class="s-kot" d="M247.7,92.8 L271.7,92.8 A24,24 0 0 0 262.7,74.1 Z"/>
+<text class="s-txt-k4" x="279.2" y="81.6" text-anchor="middle">α</text>
+<path class="s-kot" d="M247.7,92.8 L223.7,92.8 A24,24 0 0 0 232.7,111.5 Z"/>
+<text class="s-txt-k4" x="216.2" y="112" text-anchor="middle">α</text>
+<path class="s-kot-2" d="M247.7,92.8 L258.9,78.7 A18,18 0 0 0 229.7,92.8 Z"/>
+<text class="s-txt-k3" x="234.7" y="69.8" text-anchor="middle">β</text>
+<path class="s-kot" d="M181.3,176 L205.3,176 A24,24 0 0 0 196.3,157.3 Z"/>
+<text class="s-txt-k4" x="212.8" y="164.8" text-anchor="middle">α</text>
+</svg>
+<figcaption>Prečnica \(t\) seka vzporednici \(p\) in \(q\). Vsi oranžni koti so enaki (sovršna kota, kota z vzporednimi kraki), zeleni \(\beta\) je njihov sokot: \(\alpha + \beta = 180°\).</figcaption>
+</figure>
+            <p>Ko prečnica seka dve vzporednici, nastane osem kotov, a le dve različni velikosti: \(\alpha\) in \(180° - \alpha\). Istoležna in izmenična kota sta enaka, kota na isti strani prečnice med vzporednicama sta suplementarna.</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>✏️ Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-3">
+              <h4>Tip 3: Izračunaj kot iz odnosov med koti</h4>
+              <div class="prepoznaj">
+                <p><strong>Kako prepoznaš:</strong> skica s premicami, vzporednicami ali prečnico in označenimi koti; en kot je dan, drugega iščeš.</p>
+                <ul class="kljucne"><li>„\(p \parallel q\)“</li><li>„izračunajte kot \(\varphi\)“</li><li>„sovršni“</li><li>„sokot“</li></ul>
+              </div>
+              <h5>Univerzalni postopek</h5>
+              <ol>
+                <li>Ugotovi, katere premice so vzporedne in katere sekajoče.</li>
+                <li>Pri vsakem presečišču zapiši: sovršna kota sta enaka, sokota imata vsoto \(180°\).</li>
+                <li>Kote prenesi z ene vzporednice na drugo (istoležni koti so enaki).</li>
+                <li>Če nastane trikotnik, uporabi \(\alpha + \beta + \gamma = 180°\).</li>
+                <li>Če je kot izražen z neznanko (\(2x + 10°\)), zapiši enačbo in jo reši.</li>
+              </ol>
+              <div class="primer">
+                <p><strong>Primer:</strong> Prečnica seka vzporednici. En kot meri \(3x + 20°\), njegov sokot ob drugi vzporednici pa \(2x - 15°\). Izračunajte \(x\).</p>
+                <p>Kota sta suplementarna: \(3x + 20° + 2x - 15° = 180°\), \(5x = 175°\), \(x = 35°\). Kota merita \(125°\) in \(55°\).</p>
+              </div>
+            </div>
+            <div class="tip-naloge" id="tip-4">
+              <h4>Tip 4: Računanje s stopinjami in minutami</h4>
+              <div class="prepoznaj">
+                <p><strong>Kako prepoznaš:</strong> koti so podani v stopinjah in minutah ali kot decimalno število stopinj.</p>
+                <ul class="kljucne"><li>\(47°35'\)</li><li>„na minuto natančno“</li><li>„v stopinjah in minutah“</li></ul>
+              </div>
+              <h5>Univerzalni postopek</h5>
+              <ol>
+                <li>Seštevaj in odštevaj ločeno stopinje in minute; vsakih \(60'\) je \(1°\).</li>
+                <li>Pri odštevanju si po potrebi „sposodi“ \(1° = 60'\).</li>
+                <li>Decimalni del stopinj pretvoriš v minute: \(0{,}4° = 0{,}4 \cdot 60' = 24'\).</li>
+              </ol>
+              <div class="primer">
+                <p><strong>Primer:</strong> Izračunajte tretji kot trikotnika, če je \(\alpha = 47°35'\) in \(\beta = 68°50'\).</p>
+                <p>\(\alpha + \beta = 115°85' = 116°25'\). \(\gamma = 180° - 116°25' = 179°60' - 116°25' = 63°35'\).</p>
+              </div>
+            </div>
           </div>
         </section>
 
-        <!-- ============ 4. ŠTUDIJSKI VODIČ ============ -->
-        <section class="subsection">
-          <div class="subsection-head">
-            <h2>4. Študijski vodič — hitri pregled</h2>
-          </div>
-          <div class="info-card">
-            <h3>📋 Kaj moraš znati na pamet</h3>
+        <!-- SKLOP 4 -->
+        <section class="sklop" id="sklop-4">
+          <header class="sklop-header">
+            <span class="sklop-num">4.6.4</span>
+            <h2>Trikotnik, večkotnik</h2>
+            <p>Koti in stranice v trikotniku, vrste trikotnikov, večkotniki.</p>
+          </header>
+          <div class="sklop-cilji">
+            <h3>🎯 Cilji iz kataloga</h3>
             <ul>
-              <li><strong>Vsota kotov v trikotniku:</strong> \(180°\), v štirikotniku: \(360°\).</li>
-              <li><strong>Pitagorov izrek:</strong> \(a^2 + b^2 = c^2\).</li>
-              <li><strong>Sinusni izrek:</strong> \(\dfrac{a}{\sin\alpha} = \dfrac{b}{\sin\beta} = \dfrac{c}{\sin\gamma} = 2R\).</li>
-              <li><strong>Kosinusni izrek:</strong> \(c^2 = a^2 + b^2 - 2ab\cos\gamma\).</li>
-              <li><strong>Ploščina trikotnika:</strong> \(\dfrac{av_a}{2}\), \(\dfrac{1}{2}ab\sin\gamma\), Heronova formula.</li>
-              <li><strong>Ploščine štirikotnikov:</strong> kvadrat, pravokotnik, paralelogram, trapez, romb.</li>
-              <li><strong>Krog:</strong> \(o = 2\pi r\), \(S = \pi r^2\), krožni izsek.</li>
-              <li><strong>Podobnost:</strong> \(S' = k^2 S\), \(o' = k \cdot o\).</li>
-              <li><strong>Središčni kot:</strong> \(2 \times\) obodni kot.</li>
+              <li>Pozna definicije in uporablja lastnosti geometrijskih likov.</li>
+              <li>Uporablja zveze med notranjimi in zunanjimi koti trikotnika ter odnose med stranicami in koti trikotnika.</li>
             </ul>
           </div>
+          <div class="sklop-teorija">
+            <h3>📖 Razlaga</h3>
+            <h4>Koti v trikotniku</h4>
+            <figure class="slika">
+<svg viewBox="0 0 420 256" role="img" aria-label="Notranji in zunanji koti trikotnika" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g4-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g4-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g4-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g4-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g4-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g4-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<polygon class="s-lik" points="42.8,203.9 290.5,203.9 135.7,49"/>
+<line class="s-pom" x1="290.5" y1="203.9" x2="395.8" y2="203.9"/>
+<circle class="s-tocka" cx="42.8" cy="203.9" r="4.5"/>
+<text class="s-txt-b" x="36.8" y="219.9" text-anchor="end">A</text>
+<circle class="s-tocka" cx="290.5" cy="203.9" r="4.5"/>
+<text class="s-txt-b" x="290.5" y="221.9" text-anchor="middle">B</text>
+<circle class="s-tocka" cx="135.7" cy="49" r="4.5"/>
+<text class="s-txt-b" x="135.7" y="39" text-anchor="middle">C</text>
+<text class="s-txt-muted" x="166.6" y="225" text-anchor="middle">c</text>
+<text class="s-txt-muted" x="225.1" y="118.4" text-anchor="middle">a</text>
+<text class="s-txt-muted" x="74.6" y="121.7" text-anchor="middle">b</text>
+<text class="s-txt-k2" x="358.6" y="92.4" text-anchor="middle">β′ = α + γ</text>
+<text class="s-txt-muted" x="358.6" y="120.3" text-anchor="middle">β + β′ = 180°</text>
+<path class="s-kot" d="M42.8,203.9 L68.8,203.9 A26,26 0 0 0 56.2,181.6 Z"/>
+<text class="s-txt-k4" x="75" y="189.7" text-anchor="middle">α</text>
+<path class="s-kot-2" d="M290.5,203.9 L274.9,188.3 A22,22 0 0 0 268.5,203.9 Z"/>
+<text class="s-txt-k3" x="260" y="195.3" text-anchor="middle">β</text>
+<path class="s-kot" d="M135.7,49 L124.4,67.9 A22,22 0 0 0 151.3,64.6 Z"/>
+<text class="s-txt-k4" x="139.7" y="85.8" text-anchor="middle">γ</text>
+<path class="s-kot-4" d="M290.5,203.9 L320.5,203.9 A30,30 0 0 0 269.3,182.7 Z"/>
+<text class="s-txt-k2" x="306.2" y="170" text-anchor="middle">β′</text>
+</svg>
+<figcaption>Notranji koti \(\alpha + \beta + \gamma = 180°\). Zunanji kot \(\beta'\) je sokot notranjega \(\beta\) in je enak vsoti nesosednjih notranjih kotov.</figcaption>
+</figure>
+            <ul>
+              <li>Vsota notranjih kotov: \(\alpha + \beta + \gamma = 180°\).</li>
+              <li><strong>Zunanji kot</strong> je sokot notranjega: \(\alpha' = 180° - \alpha\). Enak je <strong>vsoti obeh nesosednjih notranjih kotov</strong>: \(\beta' = \alpha + \gamma\). Vsota zunanjih kotov je \(360°\).</li>
+            </ul>
+            <h4>Odnosi med stranicami in koti</h4>
+            <ul>
+              <li><strong>Trikotniška neenakost:</strong> vsaka stranica je krajša od vsote drugih dveh: \(a &lt; b + c\), \(b &lt; a + c\), \(c &lt; a + b\). Dovolj je preveriti, da je najdaljša stranica krajša od vsote drugih dveh.</li>
+              <li>Nasproti daljše stranice leži večji kot (in obratno). Nasproti enakih stranic ležita enaka kota.</li>
+            </ul>
+            <h4>Vrste trikotnikov</h4>
+            <div class="tabela-wrap">
+              <table class="tabela">
+                <thead><tr><th>Po stranicah</th><th>Po kotih</th></tr></thead>
+                <tbody>
+                  <tr><td><strong>raznostranični</strong>: vse stranice različne</td><td><strong>ostrokotni</strong>: vsi koti ostri</td></tr>
+                  <tr><td><strong>enakokraki</strong>: dva enaka kraka \(b\), osnovnica \(a\); kota ob osnovnici sta enaka</td><td><strong>pravokotni</strong>: en kot \(90°\); kateti in hipotenuza</td></tr>
+                  <tr><td><strong>enakostranični</strong>: vse stranice enake, vsi koti \(60°\)</td><td><strong>topokotni</strong>: en kot top</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p>Ali je trikotnik ostro-, pravo- ali topokoten, ugotoviš iz stranic: če je \(c\) najdaljša, je \(\gamma\) top, ko je \(c^2 &gt; a^2 + b^2\), pravi pri \(c^2 = a^2 + b^2\) in ostri pri \(c^2 &lt; a^2 + b^2\).</p>
+            <h4>Večkotnik</h4>
+            <ul>
+              <li>Vsota notranjih kotov \(n\)-kotnika: \((n - 2) \cdot 180°\) (razrežemo ga na \(n - 2\) trikotnikov iz enega oglišča).</li>
+              <li>Vsota zunanjih kotov je vedno \(360°\).</li>
+              <li>Število diagonal: \(\dfrac{n(n - 3)}{2}\) (iz vsakega oglišča \(n - 3\), vsako štejemo dvakrat).</li>
+              <li><strong>Pravilni</strong> \(n\)-kotnik ima vse stranice in vse kote enake: notranji kot \(\dfrac{(n - 2) \cdot 180°}{n}\), zunanji kot \(\dfrac{360°}{n}\), središčni kot \(\dfrac{360°}{n}\).</li>
+            </ul>
+          </div>
+          <div class="sklop-naloge">
+            <h3>✏️ Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-5">
+              <h4>Tip 5: Notranji in zunanji koti trikotnika</h4>
+              <div class="prepoznaj">
+                <p><strong>Kako prepoznaš:</strong> dana sta dva kota (ali razmerje kotov) in iščejo tretjega ali zunanji kot.</p>
+                <ul class="kljucne"><li>„zunanji kot“</li><li>„koti so v razmerju“</li><li>„enakokraki trikotnik“</li><li>„za koliko je večji“</li></ul>
+              </div>
+              <h5>Univerzalni postopek</h5>
+              <ol>
+                <li>Zapiši vse kote z eno neznanko (npr. razmerje \(2 : 3 : 4\) → \(2x, 3x, 4x\)).</li>
+                <li>Postavi enačbo \(\alpha + \beta + \gamma = 180°\) in jo reši.</li>
+                <li>Zunanji kot = \(180°\) − notranji = vsota nesosednjih notranjih.</li>
+                <li>Pri enakokrakem trikotniku: kota ob osnovnici sta enaka, \(\beta = \frac{180° - \gamma}{2}\).</li>
+              </ol>
+              <div class="primer">
+                <p><strong>Primer:</strong> Koti trikotnika so v razmerju \(2 : 3 : 7\). Koliko meri največji zunanji kot?</p>
+                <p>\(2x + 3x + 7x = 180°\), \(x = 15°\): koti so \(30°, 45°, 105°\). Največji zunanji kot je pri najmanjšem notranjem: \(180° - 30° = 150°\).</p>
+              </div>
+            </div>
+            <div class="tip-naloge" id="tip-6">
+              <h4>Tip 6: Koti in diagonale večkotnika</h4>
+              <div class="prepoznaj">
+                <p><strong>Kako prepoznaš:</strong> \(n\)-kotnik, pravilni večkotnik, število diagonal ali oglišč.</p>
+                <ul class="kljucne"><li>„pravilni \(n\)-kotnik“</li><li>„vsota notranjih kotov“</li><li>„koliko diagonal“</li><li>„koliko oglišč ima“</li></ul>
+              </div>
+              <h5>Univerzalni postopek</h5>
+              <ol>
+                <li>Ugotovi, kaj je dano: \(n\), vsota kotov, en kot pravilnega večkotnika ali število diagonal.</li>
+                <li>Uporabi ustrezno formulo; če iščeš \(n\), reši enačbo (pri diagonalah kvadratno: \(n(n - 3) = 2D\)).</li>
+                <li>Preveri, da je \(n\) naravno število, \(n \ge 3\).</li>
+              </ol>
+              <div class="primer">
+                <p><strong>Primer:</strong> Notranji kot pravilnega večkotnika meri \(144°\). Koliko diagonal ima?</p>
+                <p>Zunanji kot \(180° - 144° = 36° = \frac{360°}{n}\) → \(n = 10\). Diagonal: \(\frac{10 \cdot 7}{2} = 35\).</p>
+              </div>
+            </div>
+            <div class="tip-naloge" id="tip-7">
+              <h4>Tip 7: Ali trikotnik obstaja in kakšen je</h4>
+              <div class="prepoznaj">
+                <p><strong>Kako prepoznaš:</strong> dane so tri dolžine, sprašujejo, ali tvorijo trikotnik, ali je pravokoten, top ...</p>
+                <ul class="kljucne"><li>„ali obstaja trikotnik“</li><li>„ali je trikotnik pravokoten“</li><li>„za katere \(x\)“</li></ul>
+              </div>
+              <h5>Univerzalni postopek</h5>
+              <ol>
+                <li>Uredi stranice po velikosti; najdaljša naj bo \(c\).</li>
+                <li>Obstoj: \(c &lt; a + b\).</li>
+                <li>Vrsta: primerjaj \(c^2\) z \(a^2 + b^2\) (večji → topokoten, enak → pravokoten, manjši → ostrokoten).</li>
+                <li>Pri neznani stranici \(x\) zapiši vse tri neenakosti: \(|a - b| &lt; x &lt; a + b\).</li>
+              </ol>
+              <div class="primer">
+                <p><strong>Primer:</strong> Ali stranice \(5\), \(7\), \(9\) tvorijo trikotnik? Kakšen je?</p>
+                <p>\(9 &lt; 5 + 7\) ✓. \(9^2 = 81 &gt; 25 + 49 = 74\), zato je trikotnik topokoten.</p>
+              </div>
+            </div>
+          </div>
+        </section>
 
-          <div class="info-card">
-            <h3>🎯 Kako pristopiti k nalogi</h3>
+        <!-- SKLOP 5 -->
+        <section class="sklop" id="sklop-5">
+          <header class="sklop-header">
+            <span class="sklop-num">4.6.5</span>
+            <h2>Znamenite točke trikotnika</h2>
+            <p>Težišče, višinska točka ter središči očrtanega in včrtanega kroga.</p>
+          </header>
+          <div class="sklop-cilji">
+            <h3>🎯 Cilji iz kataloga</h3>
+            <ul><li>Pozna definicije in uporablja lastnosti geometrijskih likov (znamenite točke trikotnika).</li></ul>
+          </div>
+          <div class="sklop-teorija">
+            <h3>📖 Razlaga</h3>
+            <figure class="slika slika--siroka">
+<svg viewBox="0 0 560 595" role="img" aria-label="Štiri znamenite točke trikotnika" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g5-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g5-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g5-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g5-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g5-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g5-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<polygon class="s-lik" points="52.9,194.9 249.4,194.9 118.4,42"/>
+<polygon class="s-lik" points="325.8,194.9 522.4,194.9 391.4,42"/>
+<polygon class="s-lik" points="52.9,489.7 249.4,489.7 118.4,336.8"/>
+<polygon class="s-lik" points="325.8,489.7 522.4,489.7 391.4,336.8"/>
+<line class="s-k3" x1="52.9" y1="194.9" x2="183.9" y2="118.4"/>
+<line class="s-k3" x1="249.4" y1="194.9" x2="85.7" y2="118.4"/>
+<line class="s-k3" x1="118.4" y1="42" x2="151.2" y2="194.9"/>
+<line class="s-k4" x1="325.8" y1="194.9" x2="439.1" y2="97.8"/>
+<line class="s-k4" x1="522.4" y1="194.9" x2="356.3" y2="123.7"/>
+<line class="s-k4" x1="391.4" y1="42" x2="391.4" y2="194.9"/>
+<line class="s-pom" x1="151.2" y1="515.9" x2="151.2" y2="406.4"/>
+<line class="s-pom" x1="203.8" y1="396.2" x2="124.7" y2="464"/>
+<line class="s-pom" x1="61.6" y1="402.9" x2="183.3" y2="455.1"/>
+<line class="s-pom" x1="325.8" y1="489.7" x2="447" y2="409.8"/>
+<line class="s-pom" x1="522.4" y1="489.7" x2="348.7" y2="409.8"/>
+<line class="s-pom" x1="391.4" y1="336.8" x2="414.2" y2="486.2"/>
+<line class="s-k2" x1="406.6" y1="436.4" x2="406.6" y2="489.7"/>
+<circle class="s-tocka" cx="52.9" cy="194.9" r="3"/>
+<text class="s-txt-b" x="46.9" y="208.9" text-anchor="end">A</text>
+<circle class="s-tocka" cx="249.4" cy="194.9" r="3"/>
+<text class="s-txt-b" x="255.4" y="208.9" text-anchor="start">B</text>
+<circle class="s-tocka" cx="118.4" cy="42" r="3"/>
+<text class="s-txt-b" x="118.4" y="33" text-anchor="middle">C</text>
+<circle class="s-tocka" cx="183.9" cy="118.4" r="2.6"/>
+<circle class="s-tocka" cx="85.7" cy="118.4" r="2.6"/>
+<circle class="s-tocka" cx="151.2" cy="194.9" r="2.6"/>
+<circle class="s-tocka-2" cx="140.3" cy="143.9" r="4.5"/>
+<text class="s-txt-k2" x="148.3" y="137.9" text-anchor="start">T</text>
+<circle class="s-tocka" cx="325.8" cy="194.9" r="3"/>
+<text class="s-txt-b" x="319.8" y="208.9" text-anchor="end">A</text>
+<circle class="s-tocka" cx="522.4" cy="194.9" r="3"/>
+<text class="s-txt-b" x="528.4" y="208.9" text-anchor="start">B</text>
+<circle class="s-tocka" cx="391.4" cy="42" r="3"/>
+<text class="s-txt-b" x="391.4" y="33" text-anchor="middle">C</text>
+<circle class="s-tocka-2" cx="391.4" cy="138.7" r="4.5"/>
+<text class="s-txt-k2" x="399.4" y="134.7" text-anchor="start">V</text>
+<circle class="s-tocka" cx="52.9" cy="489.7" r="3"/>
+<text class="s-txt-b" x="46.9" y="503.7" text-anchor="end">A</text>
+<circle class="s-tocka" cx="249.4" cy="489.7" r="3"/>
+<text class="s-txt-b" x="255.4" y="503.7" text-anchor="start">B</text>
+<circle class="s-tocka" cx="118.4" cy="336.8" r="3"/>
+<text class="s-txt-b" x="118.4" y="327.8" text-anchor="middle">C</text>
+<circle class="s-tocka-2" cx="151.2" cy="441.3" r="4.5"/>
+<text class="s-txt-k2" x="159.2" y="437.3" text-anchor="start">O</text>
+<circle class="s-tocka" cx="325.8" cy="489.7" r="3"/>
+<text class="s-txt-b" x="319.8" y="503.7" text-anchor="end">A</text>
+<circle class="s-tocka" cx="522.4" cy="489.7" r="3"/>
+<text class="s-txt-b" x="528.4" y="503.7" text-anchor="start">B</text>
+<circle class="s-tocka" cx="391.4" cy="336.8" r="3"/>
+<text class="s-txt-b" x="391.4" y="327.8" text-anchor="middle">C</text>
+<circle class="s-tocka-2" cx="406.6" cy="436.4" r="4.5"/>
+<text class="s-txt-k2" x="414.6" y="430.4" text-anchor="start">S</text>
+<text class="s-txt-k3" x="151.2" y="247.3" text-anchor="middle">težišče T — težiščnice</text>
+<text class="s-txt-k4" x="424.1" y="247.3" text-anchor="middle">višinska točka V — višine</text>
+<text class="s-txt-k1" x="151.2" y="559.5" text-anchor="middle">očrtani krog — simetrale stranic</text>
+<text class="s-txt-k2" x="412.1" y="467" text-anchor="start">r</text>
+<text class="s-txt-k1" x="424.1" y="559.5" text-anchor="middle">včrtani krog — simetrale kotov</text>
+<circle class="s-k1" cx="151.2" cy="441.3" r="109.5"/>
+<circle class="s-k1" cx="406.6" cy="436.4" r="53.2"/>
+<path class="s-kot" d="M439.1,97.8 L434.4,92.3 L428.9,97 L433.6,102.5 Z"/>
+<circle cx="434.5" cy="97.4" r="1.6" fill="#B45309"/>
+<path class="s-kot" d="M356.3,123.7 L362.9,126.5 L365.7,119.9 L359.1,117.1 Z"/>
+<circle cx="360.5" cy="122" r="1.6" fill="#B45309"/>
+<path class="s-kot" d="M391.4,194.9 L398.6,194.9 L398.6,187.7 L391.4,187.7 Z"/>
+<circle cx="394.6" cy="191.7" r="1.6" fill="#B45309"/>
+<path class="s-kot" d="M151.2,489.7 L157.8,489.7 L157.8,483.1 L151.2,483.1 Z"/>
+<circle cx="154.2" cy="486.7" r="1.6" fill="#B45309"/>
+<path class="s-kot" d="M183.9,413.2 L179.6,408.2 L174.6,412.5 L178.9,417.5 Z"/>
+<circle cx="179.7" cy="412.9" r="1.6" fill="#B45309"/>
+<path class="s-kot" d="M85.7,413.2 L91.8,415.8 L94.4,409.7 L88.3,407.1 Z"/>
+<circle cx="89.6" cy="411.6" r="1.6" fill="#B45309"/>
+</svg>
+<figcaption>Štiri znamenite točke istega ostrokotnega trikotnika. Težišče leži na težiščnicah (iz oglišča v razpolovišče nasprotne stranice), višinska točka na višinah, središče očrtanega kroga na simetralah stranic, središče včrtanega kroga na simetralah kotov.</figcaption>
+</figure>
+            <div class="tabela-wrap">
+              <table class="tabela">
+                <thead><tr><th>Točka</th><th>Presečišče</th><th>Lastnost</th></tr></thead>
+                <tbody>
+                  <tr><td><strong>Težišče</strong> \(T\)</td><td>težiščnic (oglišče → razpolovišče nasprotne stranice)</td><td>deli vsako težiščnico v razmerju \(2 : 1\) (daljši del ob oglišču); \(T\left(\frac{x_1 + x_2 + x_3}{3}, \frac{y_1 + y_2 + y_3}{3}\right)\)</td></tr>
+                  <tr><td><strong>Višinska točka</strong> \(V\)</td><td>nosilk višin (pravokotnica iz oglišča na nasprotno stranico)</td><td>pri topokotnem trikotniku leži zunaj, pri pravokotnem v oglišču pravega kota</td></tr>
+                  <tr><td><strong>Središče očrtanega kroga</strong> \(O\)</td><td>simetral stranic</td><td>enako oddaljeno od oglišč (\(R\)); pri pravokotnem trikotniku v razpolovišču hipotenuze, pri topokotnem zunaj</td></tr>
+                  <tr><td><strong>Središče včrtanega kroga</strong> \(S\)</td><td>simetral notranjih kotov</td><td>enako oddaljeno od stranic (\(r\)); vedno znotraj trikotnika</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p>Pri <strong>enakostraničnem</strong> trikotniku vse štiri točke sovpadajo; težiščnica je hkrati višina, zato \(R = \frac{2}{3}v\) in \(r = \frac{1}{3}v\), kjer je \(v = \frac{a\sqrt{3}}{2}\).</p>
+            <div class="pazi"><strong>Pazi:</strong> težiščnica in višina sta različni daljici (razen pri enakokrakem trikotniku na osnovnico). Težiščnica gre v razpolovišče, višina je pravokotna na stranico.</div>
+          </div>
+          <div class="sklop-naloge">
+            <h3>✏️ Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-8">
+              <h4>Tip 8: Znamenite točke in njihove razdalje</h4>
+              <div class="prepoznaj">
+                <p><strong>Kako prepoznaš:</strong> omenjajo težišče, težiščnico, višinsko točko ali središče očrtanega/včrtanega kroga.</p>
+                <ul class="kljucne"><li>„težišče“</li><li>„težiščnica“</li><li>„središče očrtanega kroga“</li><li>„polmer včrtanega kroga“</li></ul>
+              </div>
+              <h5>Univerzalni postopek</h5>
+              <ol>
+                <li>Prepoznaj, katera točka je to in iz katerih črt nastane (tabela zgoraj).</li>
+                <li>Uporabi njeno lastnost: razmerje \(2 : 1\), enake razdalje do oglišč ali stranic.</li>
+                <li>Če potrebuješ dolžino, poišči pravokotni trikotnik in uporabi Pitagorov izrek.</li>
+                <li>Pri splošnem trikotniku sta polmera na listu s formulami: \(r = \frac{S}{s}\), \(R = \frac{abc}{4S}\) (glej 4.7).</li>
+              </ol>
+              <div class="primer">
+                <p><strong>Primer:</strong> Težiščnica \(t_a\) meri 12 cm. Kako daleč je težišče od oglišča \(A\) in od stranice \(a\) (merjeno po težiščnici)?</p>
+                <p>Težišče deli težiščnico \(2 : 1\): od oglišča \(\frac{2}{3} \cdot 12 = 8\) cm, do razpolovišča stranice \(a\) pa 4 cm.</p>
+              </div>
+              <div class="primer">
+                <p><strong>Primer:</strong> Kateti pravokotnega trikotnika merita 6 cm in 8 cm. Kolikšen je polmer očrtanega kroga?</p>
+                <p>Središče je razpolovišče hipotenuze: \(c = 10\) cm, \(R = \frac{c}{2} = 5\) cm.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 6 -->
+        <section class="sklop" id="sklop-6">
+          <header class="sklop-header">
+            <span class="sklop-num">4.6.6</span>
+            <h2>Togi premiki in skladnost</h2>
+            <p>Kdaj sta dva lika enaka, samo drugače postavljena.</p>
+          </header>
+          <div class="sklop-cilji">
+            <h3>🎯 Cilji iz kataloga</h3>
+            <ul><li>Zna ločiti med skladnima in podobnima trikotnikoma.</li></ul>
+          </div>
+          <div class="sklop-teorija">
+            <h3>📖 Razlaga</h3>
+            <p><strong>Togi premik</strong> (izometrija) je preslikava ravnine, ki ohranja razdalje: vzporedni premik, zrcaljenje čez premico, zrcaljenje čez točko in vrtež. Ohranja tudi kote, vzporednost in ploščine.</p>
+            <p>Lika sta <strong>skladna</strong> (\(\cong\)), če enega s togim premikom prenesemo na drugega. Skladna trikotnika imata enake vse istoležne stranice in kote.</p>
+            <h4>Izreki o skladnosti trikotnikov</h4>
+            <p>Ni treba preveriti vseh šestih podatkov. Trikotnika sta skladna, če se ujemata v:</p>
+            <div class="tabela-wrap">
+              <table class="tabela">
+                <thead><tr><th>Izrek</th><th>Ujemanje</th></tr></thead>
+                <tbody>
+                  <tr><td><strong>SSS</strong></td><td>vseh treh stranicah</td></tr>
+                  <tr><td><strong>SKS</strong></td><td>dveh stranicah in kotu <strong>med njima</strong></td></tr>
+                  <tr><td><strong>KSK</strong></td><td>stranici in obeh kotih ob njej (zaradi vsote kotov tudi v stranici in poljubnih dveh kotih)</td></tr>
+                  <tr><td><strong>SSK</strong></td><td>dveh stranicah in kotu <strong>nasproti daljše</strong> od njiju</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="pazi"><strong>Pazi:</strong> enaki trije koti (KKK) <strong>ne</strong> pomenijo skladnosti, le podobnost. SSK s kotom nasproti krajše stranice lahko da dva različna trikotnika.</div>
+          </div>
+          <div class="sklop-naloge">
+            <h3>✏️ Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-9">
+              <h4>Tip 9: Utemelji skladnost trikotnikov</h4>
+              <div class="prepoznaj">
+                <p><strong>Kako prepoznaš:</strong> treba je dokazati ali utemeljiti, da sta dva trikotnika (ali dve daljici, dva kota) enaka.</p>
+                <ul class="kljucne"><li>„utemeljite, da sta skladna“</li><li>„dokažite, da je \(|AD| = |BC|\)“</li><li>„po katerem izreku“</li></ul>
+              </div>
+              <h5>Univerzalni postopek</h5>
+              <ol>
+                <li>Na skici poišči trikotnika, ki vsebujeta iskani daljici ali kota.</li>
+                <li>Za vsak par istoležnih podatkov zapiši, <strong>zakaj</strong> sta enaka (dano, skupna stranica, sovršna kota, kota ob vzporednicah, lastnost lika).</li>
+                <li>Ko imaš tri podatke, ki ustrezajo enemu izreku, ga navedi (npr. „po izreku SKS“).</li>
+                <li>Zaključi: istoležni elementi skladnih trikotnikov so enaki.</li>
+              </ol>
+              <div class="primer">
+                <p><strong>Primer:</strong> Diagonala \(AC\) razdeli paralelogram \(ABCD\). Utemeljite, da sta trikotnika \(ABC\) in \(CDA\) skladna.</p>
+                <p>\(|AB| = |CD|\) in \(|BC| = |DA|\) (nasprotni stranici paralelograma), \(AC\) je skupna. Po izreku SSS sta skladna.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 7 -->
+        <section class="sklop" id="sklop-7">
+          <header class="sklop-header">
+            <span class="sklop-num">4.6.7</span>
+            <h2>Vzporedni premik, zrcaljenje, vrtež, orientacija trikotnika</h2>
+            <p>Kako posamezen togi premik preslika točko in kaj se zgodi z orientacijo.</p>
+          </header>
+          <div class="sklop-cilji">
+            <h3>🎯 Cilji iz kataloga</h3>
+            <ul><li>Pozna in uporablja toge premike ter njihove lastnosti.</li></ul>
+          </div>
+          <div class="sklop-teorija">
+            <h3>📖 Razlaga</h3>
+            <div class="slike-vrsta"><figure class="slika">
+<svg viewBox="0 0 230 186" role="img" aria-label="Vzporedni premik" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g6-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g6-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g6-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g6-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g6-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g6-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<polygon class="s-lik" points="35.6,116.8 85,116.8 49.7,81.5"/>
+<polygon class="s-lik-2" points="109.7,78 159.1,78 123.8,42.7"/>
+<line class="s-pom" x1="35.6" y1="116.8" x2="109.7" y2="78"/>
+<line class="s-pom" x1="85" y1="116.8" x2="159.1" y2="78"/>
+<line class="s-pom" x1="49.7" y1="81.5" x2="123.8" y2="42.7"/>
+<line class="s-k4" x1="35.6" y1="130.9" x2="109.7" y2="92.1" marker-end="url(#g6-k4)"/>
+<text class="s-txt-k4" x="112.7" y="109.5" text-anchor="start">v</text>
+<circle class="s-tocka" cx="35.6" cy="116.8" r="3"/>
+<text class="s-txt-b" x="29.6" y="131.8" text-anchor="end">A</text>
+<circle class="s-tocka" cx="85" cy="116.8" r="3"/>
+<text class="s-txt-b" x="91" y="131.8" text-anchor="start">B</text>
+<circle class="s-tocka" cx="49.7" cy="81.5" r="3"/>
+<text class="s-txt-b" x="49.7" y="72.5" text-anchor="middle">C</text>
+<circle class="s-tocka-2" cx="109.7" cy="78" r="3"/>
+<text class="s-txt-k2" x="103.7" y="93" text-anchor="end">A′</text>
+<circle class="s-tocka-2" cx="159.1" cy="78" r="3"/>
+<text class="s-txt-k2" x="165.1" y="93" text-anchor="start">B′</text>
+<circle class="s-tocka-2" cx="123.8" cy="42.7" r="3"/>
+<text class="s-txt-k2" x="123.8" y="33.7" text-anchor="middle">C′</text>
+<text class="s-txt-b" x="99.1" y="157.4" text-anchor="middle">vzporedni premik za vektor v</text>
+
+</svg>
+<figcaption>Premik za vektor: vse točke se premaknejo enako.</figcaption>
+</figure><figure class="slika">
+<svg viewBox="0 0 230 186" role="img" aria-label="Zrcaljenje čez premico" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g7-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g7-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g7-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g7-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g7-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g7-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<polygon class="s-lik" points="44.5,116.8 93.8,102.7 55,63.9"/>
+<polygon class="s-lik-2" points="182,116.8 132.6,102.7 171.4,63.9"/>
+<line class="s-k1" x1="113.2" y1="141.5" x2="113.2" y2="35.6"/>
+<line class="s-pom" x1="44.5" y1="116.8" x2="182" y2="116.8"/>
+<line class="s-pom" x1="93.8" y1="102.7" x2="132.6" y2="102.7"/>
+<line class="s-pom" x1="55" y1="63.9" x2="171.4" y2="63.9"/>
+<circle class="s-tocka" cx="44.5" cy="116.8" r="3"/>
+<text class="s-txt-b" x="38.5" y="131.8" text-anchor="end">A</text>
+<circle class="s-tocka" cx="93.8" cy="102.7" r="3"/>
+<text class="s-txt-b" x="99.8" y="117.7" text-anchor="start">B</text>
+<circle class="s-tocka" cx="55" cy="63.9" r="3"/>
+<text class="s-txt-b" x="55" y="54.9" text-anchor="middle">C</text>
+<circle class="s-tocka-2" cx="182" cy="116.8" r="3"/>
+<text class="s-txt-k2" x="176" y="131.8" text-anchor="end">A′</text>
+<circle class="s-tocka-2" cx="132.6" cy="102.7" r="3"/>
+<text class="s-txt-k2" x="138.6" y="117.7" text-anchor="start">B′</text>
+<circle class="s-tocka-2" cx="171.4" cy="63.9" r="3"/>
+<text class="s-txt-k2" x="171.4" y="54.9" text-anchor="middle">C′</text>
+<text class="s-txt-k1" x="116.8" y="40.9" text-anchor="start">o</text>
+<text class="s-txt-b" x="113.2" y="157.4" text-anchor="middle">zrcaljenje čez premico o</text>
+
+</svg>
+<figcaption>Zrcaljenje: \(AA' \perp o\), orientacija se obrne.</figcaption>
+</figure><figure class="slika">
+<svg viewBox="0 0 230 183" role="img" aria-label="Vrtež" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g8-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g8-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g8-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g8-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g8-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g8-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<polygon class="s-lik" points="146.2,111.4 191.2,111.4 163.5,80.3"/>
+<polygon class="s-lik-2" points="90.8,83.7 90.8,38.8 59.6,66.4"/>
+<line class="s-pom" x1="104.6" y1="125.2" x2="146.2" y2="111.4"/>
+<line class="s-pom" x1="104.6" y1="125.2" x2="90.8" y2="83.7"/>
+<circle class="s-tocka" cx="104.6" cy="125.2" r="3.5"/>
+<text class="s-txt-b" x="110.6" y="139.2" text-anchor="start">S</text>
+<circle class="s-tocka" cx="146.2" cy="111.4" r="3"/>
+<text class="s-txt-b" x="140.2" y="126.4" text-anchor="end">A</text>
+<circle class="s-tocka" cx="191.2" cy="111.4" r="3"/>
+<text class="s-txt-b" x="197.2" y="126.4" text-anchor="start">B</text>
+<circle class="s-tocka" cx="163.5" cy="80.3" r="3"/>
+<text class="s-txt-b" x="163.5" y="71.3" text-anchor="middle">C</text>
+<circle class="s-tocka-2" cx="90.8" cy="83.7" r="3"/>
+<text class="s-txt-k2" x="84.8" y="98.7" text-anchor="end">A′</text>
+<circle class="s-tocka-2" cx="90.8" cy="38.8" r="3"/>
+<text class="s-txt-k2" x="96.8" y="53.8" text-anchor="start">B′</text>
+<circle class="s-tocka-2" cx="59.6" cy="66.4" r="3"/>
+<text class="s-txt-k2" x="59.6" y="57.4" text-anchor="middle">C′</text>
+<text class="s-txt-b" x="121.9" y="154.6" text-anchor="middle">vrtež okoli S za 90°</text>
+<path class="s-kot" d="M104.6,125.2 L129.3,117 A26,26 0 0 0 96.4,100.5 Z"/>
+<text class="s-txt-k4" x="122.5" y="93.4" text-anchor="middle">90°</text>
+</svg>
+<figcaption>Vrtež okoli \(S\) za \(90°\): orientacija se ohrani.</figcaption>
+</figure></div>
+            <ul>
+              <li><strong>Vzporedni premik</strong> za vektor \(\vec{v}\): vse točke se premaknejo v isti smeri za isto razdaljo. Premice se preslikajo v vzporedne premice.</li>
+              <li><strong>Zrcaljenje čez premico</strong> \(o\): zveznica točke in njene slike je pravokotna na \(o\), razpolovišče pa leži na \(o\). Točke na \(o\) so negibne.</li>
+              <li><strong>Zrcaljenje čez točko</strong> \(S\): \(S\) je razpolovišče daljice \(AA'\). Je enako vrtežu za \(180°\).</li>
+              <li><strong>Vrtež</strong> okoli \(S\) za kot \(\varphi\): \(|SA'| = |SA|\) in \(\angle ASA' = \varphi\). Pozitivna smer je nasprotna smeri urinega kazalca.</li>
+            </ul>
+            <h4>Orientacija</h4>
+            <p>Trikotnik je <strong>pozitivno orientiran</strong>, če si oglišča \(A \to B \to C\) sledijo v nasprotni smeri urinega kazalca. Premik in vrtež orientacijo <strong>ohranita</strong>, zrcaljenje čez premico jo <strong>obrne</strong>.</p>
+            <h4>V koordinatnem sistemu</h4>
+            <div class="tabela-wrap">
+              <table class="tabela">
+                <thead><tr><th>Preslikava</th><th>\(T(x, y) \mapsto T'\)</th></tr></thead>
+                <tbody>
+                  <tr><td>premik za \(\vec{v} = (p, q)\)</td><td>\((x + p,\ y + q)\)</td></tr>
+                  <tr><td>zrcaljenje čez os \(x\)</td><td>\((x,\ -y)\)</td></tr>
+                  <tr><td>zrcaljenje čez os \(y\)</td><td>\((-x,\ y)\)</td></tr>
+                  <tr><td>zrcaljenje čez izhodišče</td><td>\((-x,\ -y)\)</td></tr>
+                  <tr><td>zrcaljenje čez \(y = x\)</td><td>\((y,\ x)\)</td></tr>
+                  <tr><td>vrtež okoli izhodišča za \(90°\)</td><td>\((-y,\ x)\)</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="sklop-naloge">
+            <h3>✏️ Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-10">
+              <h4>Tip 10: Preslikaj točko ali lik</h4>
+              <div class="prepoznaj">
+                <p><strong>Kako prepoznaš:</strong> iščejo sliko točke ali lika pri premiku, zrcaljenju ali vrtežu.</p>
+                <ul class="kljucne"><li>„prezrcalite“</li><li>„zavrtite za“</li><li>„premaknite za vektor“</li><li>„slika točke“</li><li>„orientacija“</li></ul>
+              </div>
+              <h5>Univerzalni postopek</h5>
+              <ol>
+                <li>Preslikaj vsako oglišče posebej (tabela zgoraj ali konstrukcija).</li>
+                <li>Pri zrcaljenju čez premico, ki ni os: pravokotnica iz točke na premico, nato enaka razdalja na drugo stran.</li>
+                <li>Poveži slike oglišč v istem vrstnem redu in označi \(A', B', C'\).</li>
+                <li>Če sprašujejo po orientaciji: premik in vrtež jo ohranita, zrcaljenje jo obrne.</li>
+              </ol>
+              <div class="primer">
+                <p><strong>Primer:</strong> Točko \(A(3, -1)\) prezrcalite čez os \(y\) in nato zavrtite okoli izhodišča za \(90°\).</p>
+                <p>Zrcaljenje: \((-3, -1)\). Vrtež \((x, y) \mapsto (-y, x)\): \((1, -3)\).</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 8 -->
+        <section class="sklop" id="sklop-8">
+          <header class="sklop-header">
+            <span class="sklop-num">4.6.8</span>
+            <h2>Pravokotna projekcija</h2>
+            <p>„Senca“ točke ali daljice na premici pri pravokotni svetlobi.</p>
+          </header>
+          <div class="sklop-cilji">
+            <h3>🎯 Cilji iz kataloga</h3>
+            <ul><li>Pozna in uporablja pravokotno projekcijo točke in daljice na premico.</li></ul>
+          </div>
+          <div class="sklop-teorija">
+            <h3>📖 Razlaga</h3>
+            <figure class="slika">
+<svg viewBox="0 0 440 267" role="img" aria-label="Pravokotna projekcija točke in daljice na premico" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g9-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g9-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g9-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g9-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g9-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g9-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<line class="s-crta" x1="27.6" y1="204.1" x2="412.4" y2="204.1"/>
+<line class="s-pom" x1="91.7" y1="75.7" x2="91.7" y2="204.1"/>
+<line class="s-pom" x1="187.9" y1="139.9" x2="187.9" y2="204.1"/>
+<line class="s-pom" x1="348.3" y1="43.7" x2="348.3" y2="204.1"/>
+<line class="s-pom" x1="187.9" y1="139.9" x2="364.3" y2="139.9"/>
+<line class="s-k1" x1="187.9" y1="139.9" x2="348.3" y2="43.7"/>
+<line class="s-k2" x1="187.9" y1="204.1" x2="348.3" y2="204.1"/>
+<circle class="s-tocka" cx="91.7" cy="75.7" r="4.5"/>
+<text class="s-txt-b" x="99.7" y="71.7" text-anchor="start">T</text>
+<circle class="s-tocka-2" cx="91.7" cy="204.1" r="4.5"/>
+<text class="s-txt-k2" x="91.7" y="222.1" text-anchor="middle">T′</text>
+<circle class="s-tocka" cx="187.9" cy="139.9" r="4.5"/>
+<text class="s-txt-b" x="179.9" y="135.9" text-anchor="end">A</text>
+<circle class="s-tocka" cx="348.3" cy="43.7" r="4.5"/>
+<text class="s-txt-b" x="356.3" y="39.7" text-anchor="start">B</text>
+<circle class="s-tocka-2" cx="187.9" cy="204.1" r="4.5"/>
+<text class="s-txt-k2" x="187.9" y="222.1" text-anchor="middle">A′</text>
+<circle class="s-tocka-2" cx="348.3" cy="204.1" r="4.5"/>
+<text class="s-txt-k2" x="348.3" y="222.1" text-anchor="middle">B′</text>
+<text class="s-txt-b" x="409.2" y="194.5" text-anchor="end">p</text>
+<text class="s-txt-k2" x="268.1" y="229.8" text-anchor="middle">|A′B′| = |AB| · cos φ</text>
+<path class="s-kot" d="M91.7,204.1 L100.1,204.1 L100.1,195.7 L91.7,195.7 Z"/>
+<circle cx="95.5" cy="200.3" r="1.6" fill="#B45309"/>
+<path class="s-kot" d="M348.3,204.1 L348.3,195.7 L339.9,195.7 L339.9,204.1 Z"/>
+<circle cx="344.5" cy="200.3" r="1.6" fill="#B45309"/>
+<path class="s-kot" d="M187.9,139.9 L217.9,139.9 A30,30 0 0 0 213.6,124.5 Z"/>
+<text class="s-txt-k4" x="227.4" y="133" text-anchor="middle">φ</text>
+</svg>
+<figcaption>Pravokotna projekcija točke \(T\) na premico \(p\) je nožišče pravokotnice \(T'\). Projekcija daljice \(AB\) je daljica \(A'B'\), dolga \(|AB| \cos\varphi\).</figcaption>
+</figure>
+            <p><strong>Pravokotna projekcija</strong> točke \(T\) na premico \(p\) je nožišče \(T'\) pravokotnice iz \(T\) na \(p\). Razdalja \(|TT'|\) je razdalja točke od premice.</p>
+            <p>Projekcija daljice \(AB\) je daljica \(A'B'\). Če daljica s premico oklepa kot \(\varphi\), velja \(|A'B'| = |AB| \cos\varphi\): daljica, vzporedna s premico, se ne skrajša, pravokotna se skrči v točko.</p>
+            <p>Najpomembnejša uporaba: v pravokotnem trikotniku sta \(a_1\) in \(b_1\) projekciji katet na hipotenuzo (glej 4.6.12).</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>✏️ Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-11">
+              <h4>Tip 11: Dolžina pravokotne projekcije</h4>
+              <div class="prepoznaj">
+                <p><strong>Kako prepoznaš:</strong> beseda „projekcija“ ali vprašanje, koliko je točka/daljica oddaljena oziroma „dolga v smeri“ premice.</p>
+                <ul class="kljucne"><li>„pravokotna projekcija“</li><li>„nožišče“</li><li>„razdalja točke od premice“</li></ul>
+              </div>
+              <h5>Univerzalni postopek</h5>
+              <ol>
+                <li>Nariši pravokotnici iz krajišč na premico; nastane pravokotni trikotnik (ali trapez).</li>
+                <li>Če je dan kot \(\varphi\): projekcija \(= |AB| \cos\varphi\), višinska razlika \(= |AB| \sin\varphi\).</li>
+                <li>Če sta dani daljica in razdalji krajišč od premice: projekcija iz Pitagorovega izreka.</li>
+              </ol>
+              <div class="primer">
+                <p><strong>Primer:</strong> Daljica dolžine 10 cm oklepa s premico kot \(30°\). Kako dolga je njena projekcija?</p>
+                <p>\(|A'B'| = 10 \cos 30° = 10 \cdot \frac{\sqrt{3}}{2} = 5\sqrt{3} \approx 8{,}66\) cm.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 9 -->
+        <section class="sklop" id="sklop-9">
+          <header class="sklop-header">
+            <span class="sklop-num">4.6.9</span>
+            <h2>Središčni in obodni koti</h2>
+            <p>Koti, ki slonijo na istem loku krožnice.</p>
+          </header>
+          <div class="sklop-cilji">
+            <h3>🎯 Cilji iz kataloga</h3>
+            <ul><li>Uporablja zvezo med obodnim in središčnim kotom nad istim lokom.</li></ul>
+          </div>
+          <div class="sklop-teorija">
+            <h3>📖 Razlaga</h3>
+            <figure class="slika slika--ozka">
+<svg viewBox="0 0 360 366" role="img" aria-label="Središčni in obodna kota nad istim lokom" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g10-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g10-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g10-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g10-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g10-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g10-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<line class="s-k1" x1="180" y1="179.8" x2="73.8" y2="254"/>
+<line class="s-k1" x1="180" y1="179.8" x2="286.2" y2="254"/>
+<line class="s-crta" x1="146.5" y1="54.8" x2="73.8" y2="254"/>
+<line class="s-crta" x1="146.5" y1="54.8" x2="286.2" y2="254"/>
+<line class="s-k3" x1="279.3" y1="96.6" x2="73.8" y2="254"/>
+<line class="s-k3" x1="279.3" y1="96.6" x2="286.2" y2="254"/>
+<circle class="s-tocka" cx="180" cy="179.8" r="3.5"/>
+<text class="s-txt-b" x="188" y="177.8" text-anchor="start">S</text>
+<circle class="s-tocka" cx="73.8" cy="254" r="4.5"/>
+<text class="s-txt-b" x="65.8" y="264" text-anchor="end">A</text>
+<circle class="s-tocka" cx="286.2" cy="254" r="4.5"/>
+<text class="s-txt-b" x="294.2" y="264" text-anchor="start">B</text>
+<circle class="s-tocka" cx="146.5" cy="54.8" r="4.5"/>
+<text class="s-txt-b" x="142.5" y="46.8" text-anchor="end">C</text>
+<circle class="s-tocka" cx="279.3" cy="96.6" r="4.5"/>
+<text class="s-txt-b" x="287.3" y="90.6" text-anchor="start">D</text>
+<text class="s-txt-k2" x="180" y="333.4" text-anchor="middle">lok AB</text>
+<circle class="s-k1" cx="180" cy="179.8" r="129.6"/>
+<path class="s-k2" d="M73.8,254 A129.6,129.6 0 0 0 286.2,254"/>
+<path class="s-kot-3" d="M180,179.8 L163.6,191.3 A20,20 0 0 0 196.4,191.3 Z"/>
+<text class="s-txt-k1" x="180" y="214.8" text-anchor="middle">2α</text>
+<path class="s-kot" d="M146.5,54.8 L136.2,83 A30,30 0 0 0 163.7,79.4 Z"/>
+<text class="s-txt-k4" x="151.9" y="99.4" text-anchor="middle">α</text>
+<path class="s-kot-2" d="M279.3,96.6 L255.5,114.9 A30,30 0 0 0 280.6,126.6 Z"/>
+<text class="s-txt-k3" x="262" y="137.8" text-anchor="middle">α</text>
+</svg>
+<figcaption>Središčni kot nad lokom \(AB\) je dvakrat večji od obodnega. Vsi obodni koti nad istim lokom (pri \(C\) in \(D\)) so enaki.</figcaption>
+</figure>
+            <ul>
+              <li><strong>Središčni kot</strong> ima vrh v središču krožnice, kraka gresta skozi krajišči loka.</li>
+              <li><strong>Obodni kot</strong> ima vrh na krožnici, kraka gresta skozi krajišči loka.</li>
+              <li><strong>Izrek:</strong> obodni kot je <strong>polovica</strong> središčnega kota nad istim lokom: \(\alpha = \frac{1}{2}\,\omega\).</li>
+              <li>Vsi obodni koti nad istim lokom so <strong>enaki</strong>.</li>
+              <li>Obodna kota nad komplementarnima lokoma (vrha na nasprotnih straneh tetive) se dopolnjujeta do \(180°\). Zato imata <strong>tetivni štirikotnik</strong> (oglišča na krožnici) nasprotna kota z vsoto \(180°\).</li>
+              <li>Kot med tetivo in tangento je enak obodnemu kotu nad to tetivo.</li>
+            </ul>
+            <p>Dolžina loka je sorazmerna s središčnim kotom: \(l = \frac{\pi r \omega}{180°}\) (več v 4.7).</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>✏️ Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-12">
+              <h4>Tip 12: Središčni in obodni kot</h4>
+              <div class="prepoznaj">
+                <p><strong>Kako prepoznaš:</strong> točke na krožnici, središče, iščejo kot z vrhom na krožnici ali v središču.</p>
+                <ul class="kljucne"><li>„na krožnici ležijo točke“</li><li>„središčni kot“</li><li>„obodni kot“</li><li>„tetivni štirikotnik“</li></ul>
+              </div>
+              <h5>Univerzalni postopek</h5>
+              <ol>
+                <li>Ugotovi, nad katerim lokom (katero tetivo) leži iskani kot.</li>
+                <li>Poišči središčni kot nad istim lokom ali drug obodni kot nad njim.</li>
+                <li>Uporabi \(\alpha = \frac{\omega}{2}\) ali enakost obodnih kotov.</li>
+                <li>Pogosto pomaga: trikotnik \(SAB\) je enakokrak (\(|SA| = |SB| = r\)), zato sta kota ob \(AB\) enaka \(\frac{180° - \omega}{2}\).</li>
+              </ol>
+              <div class="primer">
+                <p><strong>Primer:</strong> Točke \(A\), \(B\), \(C\) ležijo na krožnici s središčem \(S\). \(\angle ACB = 35°\). Koliko merita \(\angle ASB\) in \(\angle SAB\)?</p>
+                <p>\(\angle ASB = 2 \cdot 35° = 70°\). Trikotnik \(SAB\) je enakokrak: \(\angle SAB = \frac{180° - 70°}{2} = 55°\).</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 10 -->
+        <section class="sklop" id="sklop-10">
+          <header class="sklop-header">
+            <span class="sklop-num">4.6.10</span>
+            <h2>Kot v polkrogu</h2>
+            <p>Talesov izrek: obodni kot nad premerom je pravi.</p>
+          </header>
+          <div class="sklop-cilji">
+            <h3>🎯 Cilji iz kataloga</h3>
+            <ul><li>Uporablja zvezo med obodnim in središčnim kotom v posebnem primeru, ko je lok polkrog.</li></ul>
+          </div>
+          <div class="sklop-teorija">
+            <h3>📖 Razlaga</h3>
+            <figure class="slika slika--ozka">
+<svg viewBox="0 0 340 325" role="img" aria-label="Kot v polkrogu je pravi" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g11-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g11-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g11-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g11-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g11-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g11-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<line class="s-k2" x1="48.4" y1="167.1" x2="291.6" y2="167.1"/>
+<line class="s-crta" x1="48.4" y1="167.1" x2="230.8" y2="61.7"/>
+<line class="s-crta" x1="230.8" y1="61.7" x2="291.6" y2="167.1"/>
+<line class="s-k3" x1="48.4" y1="167.1" x2="80.3" y2="84.9"/>
+<line class="s-k3" x1="80.3" y1="84.9" x2="291.6" y2="167.1"/>
+<circle class="s-tocka" cx="48.4" cy="167.1" r="4.5"/>
+<text class="s-txt-b" x="40.4" y="171.1" text-anchor="end">A</text>
+<circle class="s-tocka" cx="291.6" cy="167.1" r="4.5"/>
+<text class="s-txt-b" x="299.6" y="171.1" text-anchor="start">B</text>
+<circle class="s-tocka" cx="230.8" cy="61.7" r="4.5"/>
+<text class="s-txt-b" x="236.8" y="53.7" text-anchor="start">C</text>
+<circle class="s-tocka" cx="80.3" cy="84.9" r="4.5"/>
+<text class="s-txt-b" x="74.3" y="76.9" text-anchor="end">C₂</text>
+<circle class="s-tocka" cx="170" cy="167.1" r="3.5"/>
+<text class="s-txt-b" x="170" y="185.1" text-anchor="middle">S</text>
+<text class="s-txt-k2" x="170" y="234" text-anchor="middle">premer = hipotenuza</text>
+<text class="s-txt-k2" x="170" y="258.3" text-anchor="middle">R = c/2</text>
+<circle class="s-k1" cx="170" cy="167.1" r="121.6"/>
+<path class="s-kot" d="M230.8,61.7 L221.4,67.1 L226.8,76.5 L236.2,71.1 Z"/>
+<circle cx="229" cy="68.4" r="1.6" fill="#B45309"/>
+<path class="s-kot-2" d="M80.3,84.9 L76.4,95 L86.5,98.9 L90.4,88.8 Z"/>
+<circle cx="83.1" cy="91.2" r="1.6" fill="#B45309"/>
+</svg>
+<figcaption>Talesov izrek: vsak obodni kot nad premerom je pravi. Središče očrtanega kroga pravokotnega trikotnika je razpolovišče hipotenuze.</figcaption>
+</figure>
+            <p>Premer je tetiva, nad katero je središčni kot \(180°\). Obodni kot je polovica: \(90°\). To je <strong>Talesov izrek</strong>: če je \(AB\) premer in \(C\) poljubna druga točka krožnice, je \(\angle ACB = 90°\).</p>
+            <p>Velja tudi obrat: če je \(\angle ACB = 90°\), leži \(C\) na krožnici s premerom \(AB\). Posledice:</p>
+            <ul>
+              <li>Središče očrtanega kroga pravokotnega trikotnika je razpolovišče hipotenuze, \(R = \frac{c}{2}\).</li>
+              <li>Težiščnica na hipotenuzo je dolga \(\frac{c}{2}\).</li>
+              <li>Talesova krožnica služi pri načrtovanju pravokotnega trikotnika in tangente iz zunanje točke.</li>
+            </ul>
+          </div>
+          <div class="sklop-naloge">
+            <h3>✏️ Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-13">
+              <h4>Tip 13: Talesov izrek</h4>
+              <div class="prepoznaj">
+                <p><strong>Kako prepoznaš:</strong> v nalogi se pojavita premer in točka na krožnici ali pravokotni trikotnik in njegov očrtani krog.</p>
+                <ul class="kljucne"><li>„premer“</li><li>„polkrog“</li><li>„pravokotnemu trikotniku očrtan krog“</li><li>„nad premerom“</li></ul>
+              </div>
+              <h5>Univerzalni postopek</h5>
+              <ol>
+                <li>Če sta krajišči premera oglišči trikotnika, je kot pri tretjem oglišču (na krožnici) pravi.</li>
+                <li>Uporabi pravokotni trikotnik: Pitagorov izrek, kotne funkcije.</li>
+                <li>Če je dan pravokotni trikotnik: \(R = \frac{c}{2}\), središče v razpolovišču hipotenuze.</li>
+              </ol>
+              <div class="primer">
+                <p><strong>Primer:</strong> \(AB\) je premer krožnice s polmerom 6,5 cm, točka \(C\) leži na krožnici in \(|AC| = 5\) cm. Izračunajte \(|BC|\).</p>
+                <p>\(\angle ACB = 90°\), \(|AB| = 13\) cm: \(|BC| = \sqrt{13^2 - 5^2} = 12\) cm.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 11 -->
+        <section class="sklop" id="sklop-11">
+          <header class="sklop-header">
+            <span class="sklop-num">4.6.11</span>
+            <h2>Središčni razteg, podobnost</h2>
+            <p>Liki enake oblike, a različne velikosti.</p>
+          </header>
+          <div class="sklop-cilji">
+            <h3>🎯 Cilji iz kataloga</h3>
+            <ul><li>Zna ločiti med skladnima in podobnima trikotnikoma ter uporablja podobnost.</li></ul>
+          </div>
+          <div class="sklop-teorija">
+            <h3>📖 Razlaga</h3>
+            <figure class="slika">
+<svg viewBox="0 0 420 269" role="img" aria-label="Središčni razteg s faktorjem 2" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g12-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g12-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g12-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g12-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g12-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g12-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<polygon class="s-lik" points="121.4,191.8 195.2,191.8 158.3,136.3"/>
+<polygon class="s-lik-2" points="195.2,154.8 342.9,154.8 269.1,43.9"/>
+<line class="s-pom" x1="47.5" y1="228.8" x2="195.2" y2="154.8"/>
+<line class="s-pom" x1="47.5" y1="228.8" x2="342.9" y2="154.8"/>
+<line class="s-pom" x1="47.5" y1="228.8" x2="269.1" y2="43.9"/>
+<circle class="s-tocka" cx="47.5" cy="228.8" r="3.5"/>
+<text class="s-txt-b" x="39.5" y="232.8" text-anchor="end">S</text>
+<circle class="s-tocka" cx="121.4" cy="191.8" r="3"/>
+<text class="s-txt-b" x="117.4" y="207.8" text-anchor="end">A</text>
+<circle class="s-tocka" cx="195.2" cy="191.8" r="3"/>
+<text class="s-txt-b" x="201.2" y="207.8" text-anchor="start">B</text>
+<circle class="s-tocka" cx="158.3" cy="136.3" r="3"/>
+<text class="s-txt-b" x="154.3" y="128.3" text-anchor="start">C</text>
+<circle class="s-tocka-2" cx="195.2" cy="154.8" r="3"/>
+<text class="s-txt-k2" x="189.2" y="170.8" text-anchor="end">A′</text>
+<circle class="s-tocka-2" cx="342.9" cy="154.8" r="3"/>
+<text class="s-txt-k2" x="348.9" y="170.8" text-anchor="start">B′</text>
+<circle class="s-tocka-2" cx="269.1" cy="43.9" r="3"/>
+<text class="s-txt-k2" x="275.1" y="35.9" text-anchor="start">C′</text>
+<text class="s-txt-muted" x="394.6" y="191.8" text-anchor="end">|SA′| = 2·|SA|</text>
+<text class="s-txt-k3" x="394.6" y="217.7" text-anchor="end">k = 2: ploščina × 4</text>
+
+</svg>
+<figcaption>Središčni razteg s središčem \(S\) in faktorjem \(k = 2\): vsaka točka se oddalji od \(S\) na dvojno razdaljo. Slika je podobna originalu, stranice so 2-krat daljše, ploščina 4-krat večja.</figcaption>
+</figure>
+            <p><strong>Središčni razteg</strong> s središčem \(S\) in faktorjem \(k &gt; 0\) preslika točko \(A\) v točko \(A'\) na poltraku \(SA\), za katero je \(|SA'| = k\,|SA|\). Pri \(k &gt; 1\) lik poveča, pri \(0 &lt; k &lt; 1\) pomanjša. Ohranja kote in vzporednost.</p>
+            <h4>Podobnost</h4>
+            <p>Lika sta <strong>podobna</strong> (\(\sim\)), če ju lahko prevedemo enega v drugega z raztegom in togim premikom. Istoležni koti so enaki, istoležne stranice pa so v istem razmerju \(k\) (<strong>koeficient podobnosti</strong>).</p>
+            <ul>
+              <li>Trikotnika sta podobna, če se ujemata v <strong>dveh kotih</strong> (KK) ali če so vse tri stranice v istem razmerju.</li>
+              <li>Obsegi, višine, težiščnice … so v razmerju \(k\), <strong>ploščine v razmerju \(k^2\)</strong>, prostornine teles v razmerju \(k^3\).</li>
+            </ul>
+            <h4>Izrek o vzporednicah (Talesov izrek o sorazmerjih)</h4>
+            <p>Če dva kraka kota sekata vzporednici, so odseki na enem kraku sorazmerni z odseki na drugem. Če vzporednica s stranico odreže trikotnik, je ta podoben prvotnemu.</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>✏️ Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-14">
+              <h4>Tip 14: Podobna trikotnika — manjkajoča stranica</h4>
+              <div class="prepoznaj">
+                <p><strong>Kako prepoznaš:</strong> vzporednica s stranico, senca, drevo in palica, dva trikotnika z enakimi koti.</p>
+                <ul class="kljucne"><li>„vzporedno s stranico“</li><li>„senca“</li><li>„podobna“</li><li>„na razdalji … od“</li></ul>
+              </div>
+              <h5>Univerzalni postopek</h5>
+              <ol>
+                <li>Poišči dva trikotnika z dvema enakima kotoma (skupni kot, pravi kot, kota ob vzporednicah).</li>
+                <li>Poveži istoležne stranice (nasproti enakih kotov) in zapiši sorazmerje.</li>
+                <li>Reši sorazmerje (navzkrižno množenje).</li>
+              </ol>
+              <div class="primer">
+                <p><strong>Primer:</strong> 1,8 m visoka oseba meče 2,4 m dolgo senco, drevo pa 16 m dolgo. Kako visoko je drevo?</p>
+                <p>Sončni žarki so vzporedni, trikotnika sta podobna: \(\frac{h}{16} = \frac{1{,}8}{2{,}4}\), \(h = 12\) m.</p>
+              </div>
+            </div>
+            <div class="tip-naloge" id="tip-15">
+              <h4>Tip 15: Razmerje ploščin in prostornin podobnih likov, merilo</h4>
+              <div class="prepoznaj">
+                <p><strong>Kako prepoznaš:</strong> povečamo/pomanjšamo lik, merilo načrta, „kolikokrat se poveča ploščina“.</p>
+                <ul class="kljucne"><li>„merilo“</li><li>„povečamo za“</li><li>„kolikokrat se spremeni ploščina“</li></ul>
+              </div>
+              <h5>Univerzalni postopek</h5>
+              <ol>
+                <li>Določi koeficient podobnosti \(k\) iz razmerja dolžin (merilo \(1 : 500\) → \(k = 500\)).</li>
+                <li>Dolžine pomnoži s \(k\), ploščine s \(k^2\), prostornine s \(k^3\).</li>
+                <li>„Povečamo za 20 %“ pomeni \(k = 1{,}2\), ploščina se poveča \(1{,}44\)-krat (za 44 %).</li>
+              </ol>
+              <div class="primer">
+                <p><strong>Primer:</strong> Na načrtu v merilu \(1 : 200\) ima soba ploščino \(4\ \text{cm}^2\). Kolikšna je dejanska ploščina?</p>
+                <p>\(4 \cdot 200^2 = 160\,000\ \text{cm}^2 = 16\ \text{m}^2\).</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 12 -->
+        <section class="sklop" id="sklop-12">
+          <header class="sklop-header">
+            <span class="sklop-num">4.6.12</span>
+            <h2>Izreki v pravokotnem trikotniku</h2>
+            <p>Pitagorov, Evklidov in višinski izrek ter kotne funkcije ostrega kota.</p>
+          </header>
+          <div class="sklop-cilji">
+            <h3>🎯 Cilji iz kataloga</h3>
+            <ul><li>Uporabi izreke v pravokotnem trikotniku.</li></ul>
+          </div>
+          <div class="sklop-teorija">
+            <h3>📖 Razlaga</h3>
+            <figure class="slika">
+<svg viewBox="0 0 460 315" role="img" aria-label="Pravokotni trikotnik z višino na hipotenuzo" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g13-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g13-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g13-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g13-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g13-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g13-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<polygon class="s-lik" points="53.3,226.4 406.7,226.4 279.5,56.8"/>
+<line class="s-k4" x1="279.5" y1="56.8" x2="279.5" y2="226.4"/>
+<line class="s-k3" x1="53.3" y1="258.2" x2="279.5" y2="258.2"/>
+<line class="s-k2" x1="279.5" y1="258.2" x2="406.7" y2="258.2"/>
+<line class="s-k3" x1="53.3" y1="251.1" x2="53.3" y2="265.2"/>
+<line class="s-crta" x1="279.5" y1="251.1" x2="279.5" y2="265.2"/>
+<line class="s-k2" x1="406.7" y1="251.1" x2="406.7" y2="265.2"/>
+<circle class="s-tocka" cx="53.3" cy="226.4" r="4.5"/>
+<text class="s-txt-b" x="47.3" y="232.4" text-anchor="end">A</text>
+<circle class="s-tocka" cx="406.7" cy="226.4" r="4.5"/>
+<text class="s-txt-b" x="412.7" y="232.4" text-anchor="start">B</text>
+<circle class="s-tocka" cx="279.5" cy="56.8" r="4.5"/>
+<text class="s-txt-b" x="279.5" y="46.8" text-anchor="middle">C</text>
+<circle class="s-tocka" cx="279.5" cy="226.4" r="3"/>
+<text class="s-txt-b" x="275.5" y="242.4" text-anchor="end">D</text>
+<text class="s-txt-muted" x="154.7" y="130.1" text-anchor="middle">b</text>
+<text class="s-txt-muted" x="358.6" y="134" text-anchor="middle">a</text>
+<text class="s-txt-muted" x="230" y="214" text-anchor="middle">c</text>
+<text class="s-txt-k4" x="286.5" y="148.7" text-anchor="start">v<tspan dy="4" style="font-size:10px">c</tspan></text>
+<text class="s-txt-k3" x="166.4" y="286.4" text-anchor="middle">b₁</text>
+<text class="s-txt-k2" x="343.1" y="286.4" text-anchor="middle">a₁</text>
+<path class="s-kot" d="M279.5,56.8 L270.9,63.3 L277.4,71.9 L286,65.4 Z"/>
+<circle cx="278.6" cy="63.6" r="1.6" fill="#B45309"/>
+<path class="s-kot-2" d="M279.5,226.4 L286.7,226.4 L286.7,219.2 L279.5,219.2 Z"/>
+<circle cx="282.7" cy="223.2" r="1.6" fill="#B45309"/>
+<path class="s-kot" d="M53.3,226.4 L83.3,226.4 A30,30 0 0 0 77.3,208.4 Z"/>
+<text class="s-txt-k4" x="92.2" y="217.4" text-anchor="middle">α</text>
+<path class="s-kot" d="M406.7,226.4 L391.1,205.6 A26,26 0 0 0 380.7,226.4 Z"/>
+<text class="s-txt-k4" x="373.6" y="213.9" text-anchor="middle">β</text>
+</svg>
+<figcaption>Pravokotni trikotnik s hipotenuzo \(c\) in višino \(v_c\). Višina razdeli hipotenuzo na pravokotni projekciji katet: \(a_1\) (projekcija \(a\)) in \(b_1\) (projekcija \(b\)).</figcaption>
+</figure>
+            <p>Stranici ob pravem kotu sta <strong>kateti</strong> \(a\), \(b\); nasproti pravega kota je <strong>hipotenuza</strong> \(c\) (najdaljša stranica). Višina \(v_c\) razdeli trikotnik na dva manjša, ki sta podobna prvotnemu. Iz te podobnosti sledijo izreki:</p>
+            <div class="tabela-wrap">
+              <table class="tabela">
+                <thead><tr><th>Izrek</th><th>Formula</th><th>Kdaj ga uporabiš</th></tr></thead>
+                <tbody>
+                  <tr><td><strong>Pitagorov</strong></td><td>\(a^2 + b^2 = c^2\)</td><td>znani sta dve stranici, iščeš tretjo</td></tr>
+                  <tr><td><strong>Evklidov</strong></td><td>\(a^2 = c\,a_1\), \(b^2 = c\,b_1\)</td><td>v nalogi nastopata projekciji katet</td></tr>
+                  <tr><td><strong>Višinski</strong></td><td>\(v_c^2 = a_1\,b_1\)</td><td>višina na hipotenuzo in odseka</td></tr>
+                  <tr><td>ploščina</td><td>\(S = \frac{ab}{2} = \frac{c\,v_c}{2}\)</td><td>od tod \(v_c = \frac{ab}{c}\)</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p>Pri tem je \(a_1 + b_1 = c\). Pitagorove trojice, ki jih je dobro prepoznati: \(3, 4, 5\); \(5, 12, 13\); \(8, 15, 17\); \(7, 24, 25\) in njihovi večkratniki.</p>
+            <h4>Kotne funkcije ostrega kota</h4>
+            <p>\(\sin\alpha = \frac{a}{c}\) (nasprotna kateta / hipotenuza), \(\cos\alpha = \frac{b}{c}\) (priležna / hipotenuza), \(\tan\alpha = \frac{a}{b}\) (nasprotna / priležna). Podrobneje v poglavju Kotne funkcije (4.10.9).</p>
+            <h4>Pogosti posebni primeri</h4>
+            <ul>
+              <li>Diagonala kvadrata: \(d = a\sqrt{2}\).</li>
+              <li>Višina enakostraničnega trikotnika: \(v = \frac{a\sqrt{3}}{2}\).</li>
+              <li>Višina enakokrakega trikotnika na osnovnico: \(v^2 = b^2 - \left(\frac{a}{2}\right)^2\).</li>
+            </ul>
+          </div>
+          <div class="sklop-naloge">
+            <h3>✏️ Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-16">
+              <h4>Tip 16: Pitagorov izrek (tudi v drugih likih)</h4>
+              <div class="prepoznaj">
+                <p><strong>Kako prepoznaš:</strong> pravi kot (lahko skrit: višina, diagonala pravokotnika, lestev ob zidu) in dve znani dolžini.</p>
+                <ul class="kljucne"><li>„pravokotni trikotnik“</li><li>„diagonala“</li><li>„višina enakokrakega“</li><li>„lestev“</li></ul>
+              </div>
+              <h5>Univerzalni postopek</h5>
+              <ol>
+                <li>Poišči pravokotni trikotnik; v likih ga ustvari višina ali diagonala.</li>
+                <li>Določi, katera stranica je hipotenuza (nasproti pravega kota).</li>
+                <li>\(c = \sqrt{a^2 + b^2}\) ali \(a = \sqrt{c^2 - b^2}\).</li>
+              </ol>
+              <div class="primer">
+                <p><strong>Primer:</strong> Enakokraki trikotnik ima osnovnico 10 cm in krak 13 cm. Kolikšna je višina na osnovnico?</p>
+                <p>Višina razpolovi osnovnico: \(v = \sqrt{13^2 - 5^2} = 12\) cm.</p>
+              </div>
+            </div>
+            <div class="tip-naloge" id="tip-17">
+              <h4>Tip 17: Evklidov in višinski izrek</h4>
+              <div class="prepoznaj">
+                <p><strong>Kako prepoznaš:</strong> višina na hipotenuzo in odseka (projekciji), na katera razdeli hipotenuzo.</p>
+                <ul class="kljucne"><li>„višina na hipotenuzo“</li><li>„razdeli hipotenuzo na odseka“</li><li>„pravokotna projekcija katete“</li></ul>
+              </div>
+              <h5>Univerzalni postopek</h5>
+              <ol>
+                <li>Označi \(a_1\) (ob kateti \(a\)) in \(b_1\) (ob kateti \(b\)); \(c = a_1 + b_1\).</li>
+                <li>Višina iz odsekov: \(v_c = \sqrt{a_1 b_1}\). Kateta iz odseka: \(a = \sqrt{c\,a_1}\).</li>
+                <li>Preostale stranice izračunaj s Pitagorovim izrekom ali s \(S = \frac{ab}{2} = \frac{c v_c}{2}\).</li>
+              </ol>
+              <div class="primer">
+                <p><strong>Primer:</strong> Višina na hipotenuzo razdeli hipotenuzo na odseka 3,6 cm in 6,4 cm. Izračunajte višino in kateti.</p>
+                <p>\(v_c = \sqrt{3{,}6 \cdot 6{,}4} = 4{,}8\) cm, \(c = 10\) cm, \(a = \sqrt{10 \cdot 3{,}6} = 6\) cm, \(b = \sqrt{10 \cdot 6{,}4} = 8\) cm.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 13 -->
+        <section class="sklop" id="sklop-13">
+          <header class="sklop-header">
+            <span class="sklop-num">4.6.13</span>
+            <h2>Paralelogram, romb, trapez</h2>
+            <p>Lastnosti štirikotnikov, ki jih uporabljaš pri računanju.</p>
+          </header>
+          <div class="sklop-cilji">
+            <h3>🎯 Cilji iz kataloga</h3>
+            <ul><li>Pozna definicije in uporablja lastnosti geometrijskih likov.</li></ul>
+          </div>
+          <div class="sklop-teorija">
+            <h3>📖 Razlaga</h3>
+            <figure class="slika slika--siroka">
+<svg viewBox="0 0 600 196" role="img" aria-label="Paralelogram, romb in trapez" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g14-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g14-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g14-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g14-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g14-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g14-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<polygon class="s-lik" points="26.4,129.6 152.7,129.6 194.8,62.2 68.5,62.2"/>
+<polygon class="s-lik" points="300,129.6 363.1,76.9 300,24.3 236.9,76.9"/>
+<polygon class="s-lik" points="415.7,129.6 573.6,129.6 531.5,53.8 457.8,53.8"/>
+<line class="s-pom" x1="26.4" y1="129.6" x2="194.8" y2="62.2"/>
+<line class="s-pom" x1="152.7" y1="129.6" x2="68.5" y2="62.2"/>
+<line class="s-k3" x1="300" y1="129.6" x2="300" y2="24.3"/>
+<line class="s-k2" x1="363.1" y1="76.9" x2="236.9" y2="76.9"/>
+<line class="s-k4" x1="457.8" y1="53.8" x2="457.8" y2="129.6"/>
+<line class="s-k3" x1="436.8" y1="91.7" x2="552.5" y2="91.7"/>
+<circle class="s-tocka" cx="110.6" cy="95.9" r="3"/>
+<text class="s-txt-muted" x="89.6" y="144.3" text-anchor="middle">a</text>
+<text class="s-txt-muted" x="184.3" y="100.1" text-anchor="middle">b</text>
+<text class="s-txt-b" x="110.6" y="165.4" text-anchor="middle">paralelogram</text>
+<text class="s-txt-k3" x="304.2" y="106.4" text-anchor="start">f</text>
+<text class="s-txt-k2" x="333.7" y="71.7" text-anchor="middle">e</text>
+<text class="s-txt-muted" x="342.1" y="110.6" text-anchor="start">a</text>
+<text class="s-txt-b" x="300" y="165.4" text-anchor="middle">romb</text>
+<text class="s-txt-muted" x="494.7" y="144.3" text-anchor="middle">a</text>
+<text class="s-txt-muted" x="494.7" y="45.4" text-anchor="middle">c</text>
+<text class="s-txt-k4" x="453.6" y="98" text-anchor="end">v</text>
+<text class="s-txt-k3" x="521" y="102.2" text-anchor="middle">s</text>
+<text class="s-txt-b" x="494.7" y="165.4" text-anchor="middle">trapez</text>
+<path class="s-kot" d="M26.4,129.6 L46.4,129.6 A20,20 0 0 0 37,112.6 Z"/>
+<text class="s-txt-k4" x="53.5" y="118.6" text-anchor="middle">α</text>
+<path class="s-kot-2" d="M152.7,129.6 L162.2,114.3 A18,18 0 0 0 134.7,129.6 Z"/>
+<text class="s-txt-k3" x="138.6" y="108.2" text-anchor="middle">β</text>
+<path class="s-kot" d="M300,76.9 L307.2,76.9 L307.2,69.7 L300,69.7 Z"/>
+<circle cx="303.2" cy="73.7" r="1.6" fill="#B45309"/>
+<path class="s-kot" d="M457.8,129.6 L465,129.6 L465,122.4 L457.8,122.4 Z"/>
+<circle cx="461" cy="126.4" r="1.6" fill="#B45309"/>
+</svg>
+<figcaption>Paralelogram: nasprotni stranici sta vzporedni in enako dolgi, diagonali se razpolavljata, \(\alpha + \beta = 180°\). Romb: vse stranice enake, diagonali pravokotni. Trapez: osnovnici \(a \parallel c\), srednjica \(s = \frac{a + c}{2}\).</figcaption>
+</figure>
+            <div class="tabela-wrap">
+              <table class="tabela">
+                <thead><tr><th>Lik</th><th>Definicija</th><th>Lastnosti</th></tr></thead>
+                <tbody>
+                  <tr><td><strong>Paralelogram</strong></td><td>dva para vzporednih stranic</td><td>nasprotni stranici in nasprotna kota enaka; sosednja kota \(\alpha + \beta = 180°\); diagonali se razpolavljata</td></tr>
+                  <tr><td><strong>Pravokotnik</strong></td><td>paralelogram s pravim kotom</td><td>diagonali enako dolgi: \(d = \sqrt{a^2 + b^2}\)</td></tr>
+                  <tr><td><strong>Romb</strong></td><td>paralelogram z enakimi stranicami</td><td>diagonali pravokotni in razpolavljata kote; \(a^2 = \left(\frac{e}{2}\right)^2 + \left(\frac{f}{2}\right)^2\)</td></tr>
+                  <tr><td><strong>Kvadrat</strong></td><td>pravokotnik in romb hkrati</td><td>\(d = a\sqrt{2}\)</td></tr>
+                  <tr><td><strong>Trapez</strong></td><td>en par vzporednih stranic (osnovnici \(a\), \(c\))</td><td>kota ob kraku se dopolnjujeta do \(180°\); srednjica \(s = \frac{a + c}{2}\)</td></tr>
+                  <tr><td><strong>Enakokraki trapez</strong></td><td>trapez z enakima krakoma</td><td>kota ob osnovnici enaka, diagonali enaki; nožišče višine odreže \(\frac{a - c}{2}\)</td></tr>
+                  <tr><td><strong>Deltoid</strong></td><td>dva para enakih sosednjih stranic</td><td>diagonali pravokotni, ena je simetrala druge</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p>Vsota notranjih kotov vsakega štirikotnika je \(360°\).</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>✏️ Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-18">
+              <h4>Tip 18: Stranice, koti, diagonale in višine štirikotnikov</h4>
+              <div class="prepoznaj">
+                <p><strong>Kako prepoznaš:</strong> paralelogram, romb, trapez; manjka stranica, kot, višina ali diagonala.</p>
+                <ul class="kljucne"><li>„enakokraki trapez“</li><li>„romb z diagonalama“</li><li>„paralelogram s stranicama in kotom“</li></ul>
+              </div>
+              <h5>Univerzalni postopek</h5>
+              <ol>
+                <li>Nariši lik, vriši višino ali diagonalo, ki ustvari pravokotni trikotnik.</li>
+                <li>Pri enakokrakem trapezu: višina iz krajišča \(c\) odreže na \(a\) daljico \(\frac{a - c}{2}\); trikotnik s krakom \(b\) je pravokoten.</li>
+                <li>Pri rombu: polovici diagonal in stranica tvorijo pravokotni trikotnik.</li>
+                <li>Pri paralelogramu z danim kotom: \(v_a = b \sin\alpha\); za diagonalo kosinusni izrek.</li>
+              </ol>
+              <div class="primer">
+                <p><strong>Primer:</strong> Enakokraki trapez ima osnovnici 14 cm in 6 cm ter krak 5 cm. Izračunajte višino in diagonalo.</p>
+                <p>\(\frac{a - c}{2} = 4\), \(v = \sqrt{25 - 16} = 3\) cm. Diagonala: pravokotni trikotnik s katetama \(v = 3\) in \(a - 4 = 10\): \(d = \sqrt{109} \approx 10{,}4\) cm.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 14 -->
+        <section class="sklop" id="sklop-14">
+          <header class="sklop-header">
+            <span class="sklop-num">4.6.14</span>
+            <h2>Načrtovalne naloge</h2>
+            <p>Konstrukcije z ravnilom in šestilom.</p>
+          </header>
+          <div class="sklop-cilji">
+            <h3>🎯 Cilji iz kataloga</h3>
+            <ul>
+              <li>Načrta geometrijske like z geometrijskim orodjem <span class="badge-vr">VR</span> in s programi za dinamično geometrijo.</li>
+              <li>Preiskuje geometrijske probleme z uporabo IKT.</li>
+            </ul>
+          </div>
+          <div class="sklop-teorija">
+            <h3>📖 Razlaga</h3>
+            <h4>Osnovne konstrukcije</h4>
+            <ul>
+              <li><strong>Simetrala daljice:</strong> loka z istim polmerom (večjim od polovice daljice) okoli obeh krajišč; premica skozi presečišči lokov.</li>
+              <li><strong>Simetrala kota:</strong> lok okoli vrha seka kraka v \(P\) in \(Q\); enaka loka okoli \(P\) in \(Q\); premica od vrha skozi presečišče.</li>
+              <li><strong>Pravokotnica</strong> skozi točko na premico: lok okoli točke seka premico v dveh točkah, nato simetrala nastale daljice.</li>
+              <li><strong>Prenos kota</strong> in <strong>vzporednica</strong> skozi točko (prenos kota ob prečnici).</li>
+              <li><strong>Koti \(60°, 30°, 45°, 90°, 120°\)</strong>: \(60°\) iz enakostraničnega trikotnika, ostali z razpolavljanjem in seštevanjem.</li>
+            </ul>
+            <h4>Načrtovanje trikotnika</h4>
+            <figure class="slika">
+<svg viewBox="0 0 400 255" role="img" aria-label="Načrtovanje trikotnika iz treh stranic" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g15-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g15-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g15-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g15-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g15-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g15-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<polygon class="s-lik" points="53.2,190.1 327.2,190.1 215.4,80.6"/>
+<circle class="s-tocka" cx="53.2" cy="190.1" r="4.5"/>
+<text class="s-txt-b" x="47.2" y="196.1" text-anchor="end">A</text>
+<circle class="s-tocka" cx="327.2" cy="190.1" r="4.5"/>
+<text class="s-txt-b" x="333.2" y="196.1" text-anchor="start">B</text>
+<circle class="s-tocka-2" cx="215.4" cy="80.6" r="4.5"/>
+<text class="s-txt-k2" x="215.4" y="70.6" text-anchor="middle">C</text>
+<text class="s-txt-muted" x="190.2" y="219.4" text-anchor="middle">c = 7 cm (1. korak)</text>
+<text class="s-txt-k3" x="256.8" y="29.7" text-anchor="end">lok (A, 5 cm)</text>
+<text class="s-txt-b" x="194.1" y="29.7" text-anchor="middle"></text>
+<text class="s-txt-k2" x="310.7" y="76.7" text-anchor="start">lok (B, 4 cm)</text>
+<text class="s-txt-muted" x="122.2" y="121.5" text-anchor="middle">b</text>
+<text class="s-txt-muted" x="286.4" y="124" text-anchor="middle">a</text>
+<path class="s-k3" d="M239.3,129.6 A195.7,195.7 0 0 0 173.7,36"/>
+<path class="s-k2" d="M253.7,52 A156.6,156.6 0 0 0 189,116.6"/>
+</svg>
+<figcaption>Načrtovanje trikotnika s stranicami \(c = 7\) cm, \(b = 5\) cm, \(a = 4\) cm: najprej daljica \(AB\), nato loka s polmeroma \(b\) okoli \(A\) in \(a\) okoli \(B\). Presečišče lokov je oglišče \(C\).</figcaption>
+</figure>
+            <p>Trikotnik je enolično določen s podatki iz izrekov o skladnosti (SSS, SKS, KSK, SSK). Uporabni so tudi podatki, kot so višina, težiščnica ali polmer očrtanega kroga: višina \(v_c\) pomeni, da \(C\) leži na vzporednici z \(AB\) na razdalji \(v_c\); težiščnica \(t_c\) pomeni krožnico s polmerom \(t_c\) okoli razpolovišča \(AB\).</p>
+            <h4>Potek reševanja načrtovalne naloge</h4>
             <ol>
-              <li><strong>Preberi nalogo in prepoznaj tip:</strong> trikotnik (koti, stranice, ploščina), štirikotnik, krog, podobnost?</li>
-              <li><strong>Za trikotnik:</strong> nariši skico, označi podatke, izberi pravi izrek (Pitagorov, sinusni, kosinusni).</li>
-              <li><strong>Za ploščino:</strong> preveri, katere podatke imaš (osnovnica × višina, dve stranici in kot, tri stranice).</li>
-              <li><strong>Za krog:</strong> preveri, ali gre za cel krog, izsek, ali lok.</li>
-              <li><strong>Za podobnost:</strong> določi \(k\), nato obseg \(k\) in ploščina \(k^2\).</li>
-              <li><strong>Za koordinate:</strong> uporabi formulo za ploščino trikotnika.</li>
+              <li><strong>Skica in analiza:</strong> skiciraj rešen lik in označi dane podatke; poišči trikotnik, ki ga lahko narišeš takoj.</li>
+              <li><strong>Načrt:</strong> nariši z ravnilom in šestilom; pomožnih črt ne briši.</li>
+              <li><strong>Opis:</strong> po korakih, npr. „1. daljica \(AB = c\); 2. lok \((A, b)\); 3. lok \((B, a)\); 4. presečišče je \(C\)“.</li>
+              <li><strong>Diskusija:</strong> koliko rešitev je (0, 1, 2) in zakaj.</li>
             </ol>
           </div>
+          <div class="sklop-naloge">
+            <h3>✏️ Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-19">
+              <h4>Tip 19: Načrtaj lik iz danih podatkov</h4>
+              <div class="prepoznaj">
+                <p><strong>Kako prepoznaš:</strong> glagol „načrtajte“ in seznam podatkov (stranice, koti, višine, težiščnice).</p>
+                <ul class="kljucne"><li>„načrtajte“</li><li>„z ravnilom in šestilom“</li><li>„opišite postopek“</li><li>„koliko rešitev“</li></ul>
+              </div>
+              <h5>Univerzalni postopek</h5>
+              <ol>
+                <li>Skiciraj lik in označi dane podatke z barvo.</li>
+                <li>Začni z daljico, ki ima ob sebi največ danih podatkov.</li>
+                <li>Vsak podatek prevedi v množico točk (lok, premica, vzporednica, poltrak pod danim kotom).</li>
+                <li>Iskano oglišče je presečišče dveh takih množic.</li>
+                <li>Napiši opis in diskusijo (število presečišč = število rešitev).</li>
+              </ol>
+              <div class="primer">
+                <p><strong>Primer:</strong> Načrtajte trikotnik s \(c = 6\) cm, \(\alpha = 60°\) in \(v_c = 3\) cm.</p>
+                <p>1. \(AB = 6\) cm. 2. V \(A\) načrtaj kot \(60°\) (poltrak). 3. Vzporednica z \(AB\) na razdalji 3 cm. 4. Presečišče poltraka in vzporednice je \(C\). Rešitev je ena.</p>
+              </div>
+            </div>
+          </div>
+        </section>
 
-          <div class="info-card">
-            <h3>⏱️ Časovni načrt za en večer</h3>
+        <!-- SKLOP 15 -->
+        <section class="sklop" id="sklop-15">
+          <header class="sklop-header">
+            <span class="sklop-num">4.6.15</span>
+            <h2>Kosinusni in sinusni izrek</h2>
+            <p>Reševanje poljubnega (ne nujno pravokotnega) trikotnika.</p>
+          </header>
+          <div class="sklop-cilji">
+            <h3>🎯 Cilji iz kataloga</h3>
+            <ul><li>Usvoji in uporablja zveze med stranicami in koti v poljubnem trikotniku, pri tem uporablja kosinusni in sinusni izrek.</li></ul>
+          </div>
+          <div class="sklop-teorija">
+            <h3>📖 Razlaga</h3>
+            <figure class="slika slika--ozka">
+<svg viewBox="0 0 400 373" role="img" aria-label="Poljubni trikotnik z očrtanim krogom" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g16-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g16-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g16-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g16-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g16-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g16-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<polygon class="s-lik" points="48.3,213.5 351.7,213.5 250.6,45"/>
+<line class="s-k4" x1="200" y1="189.9" x2="351.7" y2="213.5"/>
+<circle class="s-tocka" cx="48.3" cy="213.5" r="4.5"/>
+<text class="s-txt-b" x="42.3" y="219.5" text-anchor="end">A</text>
+<circle class="s-tocka" cx="351.7" cy="213.5" r="4.5"/>
+<text class="s-txt-b" x="357.7" y="219.5" text-anchor="start">B</text>
+<circle class="s-tocka" cx="250.6" cy="45" r="4.5"/>
+<text class="s-txt-b" x="250.6" y="35" text-anchor="middle">C</text>
+<circle class="s-tocka" cx="200" cy="189.9" r="3.5"/>
+<text class="s-txt-b" x="194" y="203.9" text-anchor="end">O</text>
+<text class="s-txt-muted" x="200" y="242.7" text-anchor="middle">c</text>
+<text class="s-txt-muted" x="317" y="123.7" text-anchor="middle">a</text>
+<text class="s-txt-muted" x="137.6" y="119" text-anchor="middle">b</text>
+<text class="s-txt-k4" x="275.8" y="195.7" text-anchor="middle">R</text>
+<circle class="s-pom" cx="200" cy="189.9" r="153.5"/>
+<path class="s-kot" d="M48.3,213.5 L74.3,213.5 A26,26 0 0 0 68.3,196.9 Z"/>
+<text class="s-txt-k4" x="83.1" y="204.9" text-anchor="middle">α</text>
+<path class="s-kot" d="M351.7,213.5 L340.4,194.6 A22,22 0 0 0 329.7,213.5 Z"/>
+<text class="s-txt-k4" x="323" y="201.2" text-anchor="middle">β</text>
+<path class="s-kot" d="M250.6,45 L235.2,57.8 A20,20 0 0 0 260.9,62.1 Z"/>
+<text class="s-txt-k4" x="245.4" y="79.6" text-anchor="middle">γ</text>
+</svg>
+<figcaption>Označevanje v trikotniku: stranica \(a\) leži nasproti kota \(\alpha\) (oglišča \(A\)), \(b\) nasproti \(\beta\), \(c\) nasproti \(\gamma\). \(R\) je polmer očrtanega kroga iz sinusnega izreka.</figcaption>
+</figure>
+            <h4>Sinusni izrek</h4>
+            <p>\[\frac{a}{\sin\alpha} = \frac{b}{\sin\beta} = \frac{c}{\sin\gamma} = 2R\]</p>
+            <p>Razmerje med stranico in sinusom nasprotnega kota je v trikotniku stalno. Uporabiš ga, ko poznaš <strong>par</strong> „stranica + nasprotni kot“ in še en podatek.</p>
+            <h4>Kosinusni izrek</h4>
+            <p>\[c^2 = a^2 + b^2 - 2ab\cos\gamma \qquad (\text{in ciklično za } a^2, b^2)\]</p>
+            <p>Je posplošitev Pitagorovega izreka (pri \(\gamma = 90°\) je \(\cos\gamma = 0\)). Uporabiš ga, ko sta dani dve stranici in kot <strong>med njima</strong> (SKS) ali vse tri stranice (SSS) — takrat \(\cos\gamma = \dfrac{a^2 + b^2 - c^2}{2ab}\).</p>
+            <h4>Kateri izrek izbrati?</h4>
+            <div class="tabela-wrap">
+              <table class="tabela">
+                <thead><tr><th>Dano</th><th>Izrek</th></tr></thead>
+                <tbody>
+                  <tr><td>SSS (tri stranice)</td><td class="poudarek">kosinusni → kot</td></tr>
+                  <tr><td>SKS (dve stranici, kot med njima)</td><td class="poudarek">kosinusni → tretja stranica</td></tr>
+                  <tr><td>KSK ali KKS (dva kota in stranica)</td><td>tretji kot iz vsote, nato sinusni</td></tr>
+                  <tr><td>SSK (dve stranici, kot nasproti ene)</td><td>sinusni (pazi na dve rešitvi)</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="pazi"><strong>Pazi:</strong> enačba \(\sin\beta = 0{,}6\) ima v trikotniku dve rešitvi: \(\beta_1 \approx 36{,}87°\) in \(\beta_2 = 180° - \beta_1 \approx 143{,}13°\). Druga velja le, če je vsota z znanim kotom manjša od \(180°\) in če je \(\beta\) nasproti daljše stranice. Pri kosinusnem izreku te dvoumnosti ni. Računalo naj bo nastavljeno na stopinje (DEG).</div>
+          </div>
+          <div class="sklop-naloge">
+            <h3>✏️ Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-20">
+              <h4>Tip 20: Sinusni izrek</h4>
+              <div class="prepoznaj">
+                <p><strong>Kako prepoznaš:</strong> poznaš stranico in njej nasprotni kot (ali dva kota in stranico).</p>
+                <ul class="kljucne"><li>„\(a = …\), \(\alpha = …\), \(\beta = …\)“</li><li>„polmer očrtanega kroga“</li><li>„izračunajte stranico \(b\)“</li></ul>
+              </div>
+              <h5>Univerzalni postopek</h5>
+              <ol>
+                <li>Če manjka tretji kot, ga izračunaj iz \(180°\).</li>
+                <li>Zapiši sorazmerje s parom, ki ga poznaš: \(\frac{b}{\sin\beta} = \frac{a}{\sin\alpha}\).</li>
+                <li>Izrazi neznanko: \(b = \frac{a \sin\beta}{\sin\alpha}\) ali \(\sin\beta = \frac{b \sin\alpha}{a}\).</li>
+                <li>Pri iskanju kota preveri, ali obstaja še druga rešitev \(180° - \beta\).</li>
+              </ol>
+              <div class="primer">
+                <p><strong>Primer:</strong> V trikotniku je \(a = 8\) cm, \(\alpha = 50°\), \(\beta = 70°\). Izračunajte \(b\) in \(R\).</p>
+                <p>\(b = \frac{8 \sin 70°}{\sin 50°} \approx 9{,}81\) cm. \(2R = \frac{8}{\sin 50°} \approx 10{,}44\), \(R \approx 5{,}22\) cm.</p>
+              </div>
+            </div>
+            <div class="tip-naloge" id="tip-21">
+              <h4>Tip 21: Kosinusni izrek</h4>
+              <div class="prepoznaj">
+                <p><strong>Kako prepoznaš:</strong> dve stranici in kot med njima ali vse tri stranice.</p>
+                <ul class="kljucne"><li>„stranici … oklepata kot“</li><li>„dane so stranice“</li><li>„največji kot“</li><li>„diagonala paralelograma“</li></ul>
+              </div>
+              <h5>Univerzalni postopek</h5>
+              <ol>
+                <li>SKS: neznana stranica je nasproti danega kota: \(c^2 = a^2 + b^2 - 2ab\cos\gamma\), nato koren.</li>
+                <li>SSS: \(\cos\gamma = \frac{a^2 + b^2 - c^2}{2ab}\), nato \(\gamma = \arccos(\ldots)\).</li>
+                <li>Največji kot je nasproti najdaljše stranice (negativen kosinus pomeni topi kot).</li>
+                <li>Preostale kote lahko nato izračunaš s sinusnim izrekom ali iz vsote.</li>
+              </ol>
+              <div class="primer">
+                <p><strong>Primer:</strong> Trikotnik ima stranice 5, 7 in 8 cm. Izračunajte kot nasproti stranice 7 cm.</p>
+                <p>\(\cos\beta = \frac{5^2 + 8^2 - 7^2}{2 \cdot 5 \cdot 8} = \frac{40}{80} = \frac{1}{2}\), \(\beta = 60°\).</p>
+              </div>
+            </div>
+            <div class="tip-naloge" id="tip-22">
+              <h4>Tip 22: Besedilna naloga s poljubnim trikotnikom</h4>
+              <div class="prepoznaj">
+                <p><strong>Kako prepoznaš:</strong> razdalje med kraji, ladjami, drevesi na nasprotnih bregovih; smeri pod danimi koti.</p>
+                <ul class="kljucne"><li>„razdalja med krajema“</li><li>„pod kotom“</li><li>„z obeh koncev vidimo“</li><li>„ladji odplujeta“</li></ul>
+              </div>
+              <h5>Univerzalni postopek</h5>
+              <ol>
+                <li>Nariši skico in označi oglišča (kraje, opazovalce).</li>
+                <li>Vnesi dane podatke kot stranice in kote trikotnika; poišči kot, ki ga besedilo ne pove neposredno (npr. iz \(180°\) ali iz smeri).</li>
+                <li>Izberi izrek po tabeli zgoraj.</li>
+                <li>Odgovori z enoto in na zahtevano natančnost.</li>
+              </ol>
+              <div class="primer">
+                <p><strong>Primer:</strong> Ladji odplujeta iz pristanišča v smereh, ki oklepata \(65°\). Prva prepluje 12 km, druga 18 km. Kako daleč sta narazen?</p>
+                <p>\(d^2 = 12^2 + 18^2 - 2 \cdot 12 \cdot 18 \cos 65° \approx 285{,}4\), \(d \approx 16{,}9\) km.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 16 (VR) -->
+        <section class="sklop sklop--visja" id="sklop-16">
+          <header class="sklop-header">
+            <span class="sklop-num">4.6.16</span><span class="badge-vr">Višja raven</span>
+            <h2>Množice točk v prostoru</h2>
+            <p>Točke, premice in ravnine v prostoru ter njihove medsebojne lege.</p>
+          </header>
+          <div class="sklop-cilji">
+            <h3>🎯 Cilji iz kataloga</h3>
+            <ul><li>Razvije predstave o odnosih med točkami, premicami in ravninami v prostoru.</li></ul>
+          </div>
+          <div class="sklop-teorija">
+            <h3>📖 Razlaga</h3>
+            <h4>Kako je določena ravnina</h4>
+            <p>Ravnino enolično določajo: tri nekolinearne točke; premica in točka, ki ne leži na njej; dve sekajoči premici; dve različni vzporedni premici.</p>
+            <h4>Lege v prostoru</h4>
+            <figure class="slika">
+<svg viewBox="0 0 480 265" role="img" aria-label="Lege robov kocke" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g17-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g17-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g17-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g17-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g17-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g17-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<line class="s-pom" x1="44.5" y1="220.4" x2="104.1" y2="174"/>
+<line class="s-pom" x1="104.1" y1="174" x2="236.7" y2="174"/>
+<line class="s-pom" x1="104.1" y1="174" x2="104.1" y2="41.2"/>
+<line class="s-crta" x1="177" y1="220.4" x2="236.7" y2="174"/>
+<line class="s-crta" x1="44.5" y1="87.7" x2="177" y2="87.7"/>
+<line class="s-crta" x1="177" y1="87.7" x2="236.7" y2="41.2"/>
+<line class="s-crta" x1="236.7" y1="41.2" x2="104.1" y2="41.2"/>
+<line class="s-crta" x1="104.1" y1="41.2" x2="44.5" y2="87.7"/>
+<line class="s-crta" x1="44.5" y1="220.4" x2="44.5" y2="87.7"/>
+<line class="s-crta" x1="177" y1="220.4" x2="177" y2="87.7"/>
+<line class="s-k1" x1="44.5" y1="220.4" x2="177" y2="220.4"/>
+<line class="s-k3" x1="104.1" y1="41.2" x2="236.7" y2="41.2"/>
+<line class="s-k4" x1="177" y1="220.4" x2="177" y2="87.7"/>
+<line class="s-k2" x1="236.7" y1="174" x2="236.7" y2="41.2"/>
+<circle class="s-tocka" cx="44.5" cy="220.4" r="2.6"/>
+<text class="s-txt-b" x="38.5" y="236.4" text-anchor="end">A</text>
+<circle class="s-tocka" cx="177" cy="220.4" r="2.6"/>
+<text class="s-txt-b" x="183" y="236.4" text-anchor="start">B</text>
+<circle class="s-tocka" cx="236.7" cy="174" r="2.6"/>
+<text class="s-txt-b" x="242.7" y="168" text-anchor="start">C</text>
+<circle class="s-tocka" cx="104.1" cy="174" r="2.6"/>
+<text class="s-txt-b" x="110.1" y="188" text-anchor="start">D</text>
+<circle class="s-tocka" cx="44.5" cy="87.7" r="2.6"/>
+<text class="s-txt-b" x="38.5" y="81.7" text-anchor="end">E</text>
+<circle class="s-tocka" cx="177" cy="87.7" r="2.6"/>
+<text class="s-txt-b" x="183" y="81.7" text-anchor="start">F</text>
+<circle class="s-tocka" cx="236.7" cy="41.2" r="2.6"/>
+<text class="s-txt-b" x="242.7" y="35.2" text-anchor="start">G</text>
+<circle class="s-tocka" cx="104.1" cy="41.2" r="2.6"/>
+<text class="s-txt-b" x="110.1" y="35.2" text-anchor="start">H</text>
+<text class="s-txt-k3" x="283.1" y="61.1" text-anchor="start">AB ∥ HG — vzporedni</text>
+<text class="s-txt-k4" x="283.1" y="94.3" text-anchor="start">AB, BF — sekajoči</text>
+<text class="s-txt-k2" x="283.1" y="127.5" text-anchor="start">AB, CG — mimobežni</text>
+<text class="s-txt-muted" x="283.1" y="160.7" text-anchor="start">(ne sekata se, nista ∥)</text>
+
+</svg>
+<figcaption>Lege premic v prostoru na robovih kocke: vzporedni premici ležita v isti ravnini in se ne sekata, sekajoči imata skupno točko, mimobežni ne ležita v isti ravnini.</figcaption>
+</figure>
+            <div class="tabela-wrap">
+              <table class="tabela">
+                <thead><tr><th>Objekta</th><th>Možne lege</th></tr></thead>
+                <tbody>
+                  <tr><td>dve premici</td><td>sekajoči (ena skupna točka), vzporedni (v isti ravnini, brez skupne točke), <strong>mimobežni</strong> (ne ležita v isti ravnini), sovpadajoči</td></tr>
+                  <tr><td>premica in ravnina</td><td>premica leži v ravnini, premica seka ravnino (ena točka; posebej: je pravokotna nanjo), premica je vzporedna z ravnino</td></tr>
+                  <tr><td>dve ravnini</td><td>sekata se v premici (posebej: pravokotni), vzporedni, sovpadata</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p>Mimobežnosti v ravnini ni, zato je to tipičen „prostorski“ pojem. Kot med mimobežnicama je kot med vzporednico ene, ki seka drugo.</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>✏️ Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-23">
+              <h4>Tip 23: Lega premic in ravnin na telesu</h4>
+              <div class="prepoznaj">
+                <p><strong>Kako prepoznaš:</strong> kocka ali kvader z označenimi oglišči; sprašujejo, ali so robovi/diagonale vzporedni, sekajoči ali mimobežni.</p>
+                <ul class="kljucne"><li>„mimobežni“</li><li>„v kakšni legi sta“</li><li>„ali ležijo v isti ravnini“</li><li>„določajo ravnino“</li></ul>
+              </div>
+              <h5>Univerzalni postopek</h5>
+              <ol>
+                <li>Nariši telo in označi oglišča v dogovorjenem vrstnem redu (spodaj \(ABCD\), zgoraj \(EFGH\)).</li>
+                <li>Imata premici skupno točko? → sekajoči.</li>
+                <li>Če ne: ali obstaja ravnina (ploskev ali diagonalni prerez), v kateri ležita obe? → vzporedni; sicer → mimobežni.</li>
+                <li>Za premico in ravnino preveri, ali je premica vzporedna kateri premici v ravnini.</li>
+              </ol>
+              <div class="primer">
+                <p><strong>Primer:</strong> V kocki \(ABCDEFGH\) določite lego premic \(AB\) in \(CG\) ter premic \(AE\) in \(CG\).</p>
+                <p>\(AB\) in \(CG\) nimata skupne točke in nista vzporedni → mimobežni. \(AE \parallel CG\) (oba navpična roba; ležita v diagonalnem prerezu \(ACGE\)).</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 17 -->
+        <section class="sklop" id="sklop-17">
+          <header class="sklop-header">
+            <span class="sklop-num">4.6.17</span>
+            <h2>Vzporednost in pravokotnost premic in ravnin v prostoru</h2>
+            <p>Kdaj je premica pravokotna na ravnino in kako to uporabimo pri telesih.</p>
+          </header>
+          <div class="sklop-cilji">
+            <h3>🎯 Cilji iz kataloga</h3>
+            <ul><li>Razvije predstave o odnosih med točkami, premicami in ravninami v prostoru.</li></ul>
+          </div>
+          <div class="sklop-teorija">
+            <h3>📖 Razlaga</h3>
             <ul>
-              <li><strong>30 min:</strong> Teorija — trikotnik, štirikotniki, krog, podobnost.</li>
-              <li><strong>60 min:</strong> Tipi 1–6 (koti, pravokotni trikotnik, sinusni/kosinusni izrek, ploščina, enakokraki).</li>
-              <li><strong>45 min:</strong> Tipi 7–11 (štirikotniki, krožni izsek, podobnost, obodni kot, koordinate).</li>
-              <li><strong>45 min:</strong> Tipi 12–16 (prostor, sestavljeni liki, besedilne, n-kotnik, koordinatni sistem).</li>
-              <li><strong>30 min:</strong> Ponovi pogoste napake in študijski vodič.</li>
+              <li>Premica je <strong>pravokotna na ravnino</strong>, če je pravokotna na vsako premico v ravnini. Za preverjanje zadošča, da je pravokotna na <strong>dve sekajoči</strong> premici v ravnini.</li>
+              <li>Če je premica pravokotna na ravnino, je pravokotna tudi na vsako premico v tej ravnini, ki je ne seka (mimobežno). Zato je pravokotnost v prostoru možna tudi pri premicah brez skupne točke.</li>
+              <li>Dve premici, pravokotni na isto ravnino, sta vzporedni. Dve ravnini, pravokotni na isto premico, sta vzporedni.</li>
+              <li>Premica je vzporedna z ravnino, če je vzporedna s kakšno premico v tej ravnini.</li>
+            </ul>
+            <h4>Uporaba pri telesih</h4>
+            <p>Navpični rob kvadra (višina) je pravokoten na osnovno ploskev, zato je pravokoten na <strong>vsako</strong> daljico v njej, tudi na diagonalo osnovne ploskve. Tako nastanejo pravokotni trikotniki, s katerimi računamo prostorske diagonale:</p>
+            <ul>
+              <li>kvader: \(D = \sqrt{a^2 + b^2 + c^2}\) (najprej \(d^2 = a^2 + b^2\), nato \(D^2 = d^2 + c^2\)),</li>
+              <li>kocka: \(D = a\sqrt{3}\).</li>
+            </ul>
+          </div>
+          <div class="sklop-naloge">
+            <h3>✏️ Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-24">
+              <h4>Tip 24: Prostorska diagonala in razdalje v telesu</h4>
+              <div class="prepoznaj">
+                <p><strong>Kako prepoznaš:</strong> razdalja med dvema ogliščema, ki ne ležita na isti ploskvi; najdaljša palica, ki gre v škatlo.</p>
+                <ul class="kljucne"><li>„prostorska diagonala“</li><li>„najdaljša palica v škatli“</li><li>„razdalja med ogliščema“</li></ul>
+              </div>
+              <h5>Univerzalni postopek</h5>
+              <ol>
+                <li>Poišči rob, ki je pravokoten na ravnino ploskve.</li>
+                <li>V ploskvi izračunaj diagonalo (Pitagora).</li>
+                <li>Diagonala ploskve in pravokotni rob sta kateti; prostorska diagonala je hipotenuza.</li>
+              </ol>
+              <div class="primer">
+                <p><strong>Primer:</strong> Ali gre 50 cm dolga palica v škatlo \(30 \times 40 \times 20\) cm?</p>
+                <p>\(D = \sqrt{30^2 + 40^2 + 20^2} = \sqrt{2900} \approx 53{,}9\) cm \(&gt; 50\) cm, zato gre (po prostorski diagonali).</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 18 -->
+        <section class="sklop" id="sklop-18">
+          <header class="sklop-header">
+            <span class="sklop-num">4.6.18</span>
+            <h2>Pravokotna projekcija premice na ravnino</h2>
+            <p>Kot med premico in ravnino.</p>
+          </header>
+          <div class="sklop-cilji">
+            <h3>🎯 Cilji iz kataloga</h3>
+            <ul><li>Razvije predstave o odnosih med točkami, premicami in ravninami v prostoru (projekcija, kot med premico in ravnino).</li></ul>
+          </div>
+          <div class="sklop-teorija">
+            <h3>📖 Razlaga</h3>
+            <figure class="slika">
+<svg viewBox="0 0 420 222" role="img" aria-label="Kot med prostorsko diagonalo in osnovno ploskvijo" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g18-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g18-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g18-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g18-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g18-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g18-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<polygon class="s-ploskev" points="40.9,181.1 184.2,181.1 241.5,135.3 98.2,135.3"/>
+<line class="s-pom" x1="40.9" y1="181.1" x2="98.2" y2="135.3"/>
+<line class="s-pom" x1="98.2" y1="135.3" x2="241.5" y2="135.3"/>
+<line class="s-pom" x1="98.2" y1="135.3" x2="98.2" y2="35.2"/>
+<line class="s-crta" x1="40.9" y1="181.1" x2="184.2" y2="181.1"/>
+<line class="s-crta" x1="184.2" y1="181.1" x2="241.5" y2="135.3"/>
+<line class="s-crta" x1="40.9" y1="81" x2="184.2" y2="81"/>
+<line class="s-crta" x1="184.2" y1="81" x2="241.5" y2="35.2"/>
+<line class="s-crta" x1="241.5" y1="35.2" x2="98.2" y2="35.2"/>
+<line class="s-crta" x1="98.2" y1="35.2" x2="40.9" y2="81"/>
+<line class="s-crta" x1="40.9" y1="181.1" x2="40.9" y2="81"/>
+<line class="s-crta" x1="184.2" y1="181.1" x2="184.2" y2="81"/>
+<line class="s-k4" x1="241.5" y1="135.3" x2="241.5" y2="35.2"/>
+<line class="s-k1" x1="40.9" y1="181.1" x2="241.5" y2="135.3"/>
+<line class="s-k2" x1="40.9" y1="181.1" x2="241.5" y2="35.2"/>
+<circle class="s-tocka" cx="40.9" cy="181.1" r="3"/>
+<text class="s-txt-b" x="34.9" y="195.1" text-anchor="end">A</text>
+<circle class="s-tocka" cx="184.2" cy="181.1" r="3"/>
+<text class="s-txt-b" x="190.2" y="195.1" text-anchor="start">B</text>
+<circle class="s-tocka" cx="241.5" cy="135.3" r="3"/>
+<text class="s-txt-b" x="249.5" y="145.3" text-anchor="start">C</text>
+<circle class="s-tocka" cx="241.5" cy="35.2" r="3"/>
+<text class="s-txt-b" x="249.5" y="31.2" text-anchor="start">G</text>
+<circle class="s-tocka" cx="98.2" cy="135.3" r="2.4"/>
+<text class="s-txt-b" x="94.2" y="129.3" text-anchor="end">D</text>
+<circle class="s-tocka" cx="40.9" cy="81" r="2.4"/>
+<text class="s-txt-b" x="34.9" y="77" text-anchor="end">E</text>
+<circle class="s-tocka" cx="184.2" cy="81" r="2.4"/>
+<text class="s-txt-b" x="190.2" y="95" text-anchor="start">F</text>
+<circle class="s-tocka" cx="98.2" cy="35.2" r="2.4"/>
+<text class="s-txt-b" x="94.2" y="27.2" text-anchor="end">H</text>
+<text class="s-txt-k4" x="247.3" y="86.7" text-anchor="start">c</text>
+<text class="s-txt-k1" x="261.6" y="155.4" text-anchor="start">AC — projekcija AG</text>
+<text class="s-txt-muted" x="253" y="192.6" text-anchor="end">osnovna ploskev</text>
+<path class="s-kot" d="M40.9,181.1 L77.9,172.6 A38,38 0 0 0 71.6,158.7 Z"/>
+<text class="s-txt-k4" x="84.6" y="165.2" text-anchor="middle">φ</text>
+<path class="s-kot-2" d="M241.5,135.3 L241.5,126.9 L233.3,128.8 L233.3,137.2 Z"/>
+<circle cx="237.8" cy="132.4" r="1.6" fill="#B45309"/>
+</svg>
+<figcaption>Prostorska diagonala \(AG\) in njena pravokotna projekcija \(AC\) na osnovno ploskev. Kot med premico in ravnino je kot \(\varphi\) med premico in njeno projekcijo. Rob \(CG\) je pravokoten na ravnino, zato je trikotnik \(ACG\) pravokoten.</figcaption>
+</figure>
+            <p>Pravokotna projekcija točke na ravnino je nožišče pravokotnice iz točke na ravnino. Projekcija premice, ki seka ravnino, je premica skozi presečišče in projekcijo katerekoli druge točke premice.</p>
+            <p><strong>Kot med premico in ravnino</strong> je kot med premico in njeno pravokotno projekcijo na ravnino (vedno med \(0°\) in \(90°\)). Premica, pravokotna na ravnino, oklepa z njo \(90°\).</p>
+            <p>Pri telesih je projekcija prostorske diagonale ali stranskega roba na osnovno ploskev ustrezna diagonala oziroma polovica diagonale, trikotnik pa je pravokoten. Zato \(\tan\varphi = \dfrac{\text{višina}}{\text{projekcija}}\).</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>✏️ Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-25">
+              <h4>Tip 25: Kot med premico in ravnino</h4>
+              <div class="prepoznaj">
+                <p><strong>Kako prepoznaš:</strong> sprašujejo, pod kakšnim kotom je diagonala, stranski rob ali višina stranske ploskve nagnjena proti osnovni ploskvi.</p>
+                <ul class="kljucne"><li>„naklonski kot“</li><li>„kot med diagonalo in osnovno ploskvijo“</li><li>„kot med stranskim robom in osnovno ploskvijo“</li></ul>
+              </div>
+              <h5>Univerzalni postopek</h5>
+              <ol>
+                <li>Poišči točko premice, ki ni v ravnini, in spusti pravokotnico na ravnino (to je običajno višina telesa).</li>
+                <li>Projekcija je zveznica nožišča in presečišča premice z ravnino.</li>
+                <li>V nastalem pravokotnem trikotniku: \(\tan\varphi = \frac{v}{\text{projekcija}}\) ali \(\sin\varphi = \frac{v}{\text{dolžina}}\).</li>
+              </ol>
+              <div class="primer">
+                <p><strong>Primer:</strong> Kolikšen kot oklepa prostorska diagonala kocke z osnovno ploskvijo?</p>
+                <p>Projekcija je diagonala osnovne ploskve \(a\sqrt{2}\), višina \(a\): \(\tan\varphi = \frac{a}{a\sqrt{2}} = \frac{\sqrt{2}}{2}\), \(\varphi \approx 35{,}26°\).</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="subsection" id="kljuc">
+          <div class="subsection-head">
+            <h2>🔎 Ključ: kateri tip naloge je to?</h2>
+            <p>Poišči besedo iz navodila naloge in skoči na pravi postopek.</p>
+          </div>
+          <div class="info-card">
+            <div class="tabela-wrap">
+              <table class="tabela">
+                <thead><tr><th>V besedilu naloge piše …</th><th>Tip</th></tr></thead>
+                <tbody>
+                  <tr><td>„tetiva“, „tangenta“, „oddaljena od središča“</td><td><a href="#tip-1">Tip 1</a></td></tr>
+                  <tr><td>„enako oddaljena od“, „množica točk“</td><td><a href="#tip-2">Tip 2</a></td></tr>
+                  <tr><td>vzporednici in prečnica, sovršni kot, sokot</td><td><a href="#tip-3">Tip 3</a></td></tr>
+                  <tr><td>koti v stopinjah in minutah</td><td><a href="#tip-4">Tip 4</a></td></tr>
+                  <tr><td>„zunanji kot“, „koti so v razmerju“</td><td><a href="#tip-5">Tip 5</a></td></tr>
+                  <tr><td>„\(n\)-kotnik“, „koliko diagonal“</td><td><a href="#tip-6">Tip 6</a></td></tr>
+                  <tr><td>„ali obstaja trikotnik“, „ali je topokoten“</td><td><a href="#tip-7">Tip 7</a></td></tr>
+                  <tr><td>„težišče“, „težiščnica“, „središče očrtanega kroga“</td><td><a href="#tip-8">Tip 8</a></td></tr>
+                  <tr><td>„utemeljite, da sta skladna“</td><td><a href="#tip-9">Tip 9</a></td></tr>
+                  <tr><td>„prezrcalite“, „zavrtite“, „premaknite za vektor“</td><td><a href="#tip-10">Tip 10</a></td></tr>
+                  <tr><td>„pravokotna projekcija“ v ravnini</td><td><a href="#tip-11">Tip 11</a></td></tr>
+                  <tr><td>točke na krožnici, „središčni“, „obodni kot“</td><td><a href="#tip-12">Tip 12</a></td></tr>
+                  <tr><td>„premer“ in točka na krožnici, „polkrog“</td><td><a href="#tip-13">Tip 13</a></td></tr>
+                  <tr><td>„senca“, „vzporedno s stranico“, „podobna“</td><td><a href="#tip-14">Tip 14</a></td></tr>
+                  <tr><td>„merilo“, „kolikokrat se poveča ploščina“</td><td><a href="#tip-15">Tip 15</a></td></tr>
+                  <tr><td>pravi kot in dve znani stranici</td><td><a href="#tip-16">Tip 16</a></td></tr>
+                  <tr><td>„višina na hipotenuzo“, „odseka hipotenuze“</td><td><a href="#tip-17">Tip 17</a></td></tr>
+                  <tr><td>paralelogram, romb, trapez</td><td><a href="#tip-18">Tip 18</a></td></tr>
+                  <tr><td>„načrtajte“</td><td><a href="#tip-19">Tip 19</a></td></tr>
+                  <tr><td>stranica in nasprotni kot, „polmer očrtanega kroga“</td><td><a href="#tip-20">Tip 20</a></td></tr>
+                  <tr><td>dve stranici in kot med njima; tri stranice</td><td><a href="#tip-21">Tip 21</a></td></tr>
+                  <tr><td>razdalja med kraji/ladjami, „pod kotom“</td><td><a href="#tip-22">Tip 22</a></td></tr>
+                  <tr><td>„mimobežni“, „v kakšni legi sta“ (kocka)</td><td><a href="#tip-23">Tip 23</a></td></tr>
+                  <tr><td>„prostorska diagonala“, „palica v škatli“</td><td><a href="#tip-24">Tip 24</a></td></tr>
+                  <tr><td>„kot med diagonalo in osnovno ploskvijo“</td><td><a href="#tip-25">Tip 25</a></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>⚠️ Pogoste napake</h2>
+          </div>
+          <div class="info-card">
+            <ul>
+              <li>Pitagorov izrek uporabiš v trikotniku, ki ni pravokoten (takrat potrebuješ kosinusni izrek).</li>
+              <li>Hipotenuza ni najdaljša stranica v tvojem računu: \(c^2 = a^2 + b^2\) zapišeš z napačno stranico na levi.</li>
+              <li>Zamenjaš težiščnico (v razpolovišče) in višino (pravokotno na stranico).</li>
+              <li>Obodni kot vzameš enak središčnemu namesto polovice.</li>
+              <li>Pri sinusnem izreku spregledaš drugo rešitev \(180° - \beta\) ali pa jo vzameš, čeprav je vsota kotov nad \(180°\).</li>
+              <li>Računalo je nastavljeno na radiane (RAD) namesto na stopinje (DEG).</li>
+              <li>Pri podobnih likih ploščino pomnožiš s \(k\) namesto s \(k^2\).</li>
+              <li>Pri minutah računaš kot pri desetiških številih: \(0{,}5° \ne 50'\), ampak \(30'\).</li>
             </ul>
           </div>
         </section>
 
-        <!-- ============ 5. POVEZAVE ============ -->
         <section class="subsection">
           <div class="subsection-head">
-            <h2>5. Vadi naprej</h2>
+            <h2>Vadi naprej</h2>
             <p>Ko predelaš razlago, preveri znanje z nalogami.</p>
           </div>
           <div class="link-list">
-            <a class="link-item" href="/views/matematika/matura/osnovna_raven/naloge/resene/">
+            <a class="link-item" href="/views/matematika/matura/matura.html">
               <span class="link-item-text">
-                <strong>Rešene naloge — osnovna raven</strong>
-                <small>Primeri z razlago</small>
-              </span>
-              <span class="arrow">→</span>
-            </a>
-            <a class="link-item" href="/views/matematika/matura/visja_raven/naloge/resene/">
-              <span class="link-item-text">
-                <strong>Rešene naloge — višja raven</strong>
-                <small>Zahtevnejši primeri</small>
+                <strong>Maturitetne pole</strong>
+                <small>Rešuj prave izpitne pole</small>
               </span>
               <span class="arrow">→</span>
             </a>
