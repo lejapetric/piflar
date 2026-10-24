@@ -81,6 +81,7 @@ function renderNaloga(naloga, i) {
         body: JSON.stringify({ odgovor }),
       });
       status.classList.add(pravilno ? "pravilno" : "napacno");
+      if (pravilno) card.classList.add("naloga--resena");
       status.textContent = pravilno
         ? "Pravilno! 🎉"
         : "Žal ni pravilno. Poskusi znova ali si oglej postopek.";
@@ -114,6 +115,15 @@ function renderNaloga(naloga, i) {
   return card;
 }
 
+// Prijavljenemu uporabniku označi že rešene naloge (gost dobi 401 in ne vidi ničesar)
+async function oznaciNapredek(poglavje) {
+  const res = await fetch(`/api/napredek?poglavje=${encodeURIComponent(poglavje)}`).catch(() => null);
+  if (!res?.ok) return;
+  for (const zapis of await res.json()) {
+    if (zapis.reseno) document.getElementById(zapis.naloga)?.classList.add("naloga--resena");
+  }
+}
+
 async function init() {
   if (!container) return;
   const { poglavje } = container.dataset;
@@ -122,6 +132,7 @@ async function init() {
     container.replaceChildren(...naloge.map(renderNaloga));
     if (!naloge.length) container.textContent = "Naloge za to poglavje so še v pripravi.";
     typeset(container);
+    oznaciNapredek(poglavje);
   } catch (err) {
     container.textContent = `Nalog ni bilo mogoče naložiti: ${err.message}`;
   }

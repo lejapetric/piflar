@@ -25,6 +25,7 @@ router.get("/naloge", ctrlNaloge.nalogeList);
 router.get("/naloge/:id", ctrlNaloge.nalogaReadOne);
 router.post("/naloge/:id/odgovor", ctrlNaloge.nalogaPreveri);
 router.get("/naloge/:id/postopek", ctrlNaloge.nalogaPostopek);
+router.get("/napredek", zahtevajPrijavo, ctrlNaloge.napredekList);
 
 // MATURITETNE POLE
 router.get("/matura", ctrlMatura.maturaList);

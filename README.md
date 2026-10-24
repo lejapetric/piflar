@@ -25,6 +25,7 @@ api/
   routes/api.js            seznam API poti
   controllers/             snovi, naloge, matura, avtentikacija
   models/uporabnik.js      uporabnik v MongoDB (paket, geslo kot bcrypt hash)
+  models/napredek.js       napredek pri nalogah (en zapis na uporabnika in nalogo)
   data/                    snovi.json, naloge.json, matura.json (+ index.js, ki jih prebere ob zagonu)
   middleware/              prijavljen uporabnik, obravnava napak
   utils/dostop.js          pravila, kdo sme videti kaj
@@ -94,6 +95,7 @@ Prijava se hrani v piškotku `httpOnly` (7 dni), zato je JavaScript na strani ne
 | `GET /api/naloge?poglavje=mnozice` | naloge brez odgovorov |
 | `POST /api/naloge/:id/odgovor` | preveri odgovor `{ "odgovor": "7" }` → `{ "pravilno": true }` |
 | `GET /api/naloge/:id/postopek` | postopek in rezultat |
+| `GET /api/napredek?poglavje=mnozice` | napredek prijavljenega (poskusi, rešeno, ogledan postopek) |
 | `GET /api/matura?predmet=matematika&raven=osnovna` | seznam pol (`resena`, `odklenjena`) |
 | `GET /api/matura/:id` | pola z nalogami; rešitve samo, če je `odklenjena` |
 | `POST /api/registracija` | `{ ime, email, geslo }` |

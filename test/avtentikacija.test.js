@@ -7,6 +7,7 @@ import mongoose from "mongoose";
 process.env.JWT_SECRET = "testna-skrivnost";
 const { default: app } = await import("../app.js");
 const { default: Uporabnik } = await import("../api/models/uporabnik.js");
+const { default: Napredek } = await import("../api/models/napredek.js");
 
 const baza = [];
 const zSelect = (v) => ({ select: () => v, then: (ok, err) => Promise.resolve(v).then(ok, err) });
@@ -16,6 +17,18 @@ Uporabnik.prototype.save = async function () {
   if (baza.some((u) => u.email === this.email)) throw Object.assign(new Error("dup"), { code: 11000 });
   baza.push(this);
   return this;
+};
+const napredek = [];
+Napredek.updateOne = async (filter, posodobitev) => {
+  let z = napredek.find((n) => String(n.uporabnik) === String(filter.uporabnik) && n.naloga === filter.naloga);
+  if (!z) napredek.push((z = { ...filter, ...posodobitev.$setOnInsert, poskusi: 0, reseno: false }));
+  z.poskusi += posodobitev.$inc?.poskusi ?? 0;
+  Object.assign(z, posodobitev.$set);
+  if (posodobitev.$min && !z.resenoOb) Object.assign(z, posodobitev.$min);
+};
+Napredek.find = (filter) => {
+  const v = napredek.filter((n) => String(n.uporabnik) === String(filter.uporabnik) && (!filter.poglavje || n.poglavje === filter.poglavje));
+  return { select: () => ({ lean: async () => v }) };
 };
 Object.defineProperty(mongoose.connection, "readyState", { get: () => 1, configurable: true });
 
@@ -62,6 +75,17 @@ test("registracija, prijava, dostop glede na paket, odjava", async () => {
   assert.equal((await (await get(zaklenjena, piskotek)).json()).odklenjena, true);
 
   assert.equal((await get("/jaz", "piflar_zeton=ponarejen")).status, 401);
+
+  // Napredek: gost ga nima, prijavljenemu se shranijo poskusi in rešene naloge
+  assert.equal((await get("/napredek")).status, 401);
+  await post("/naloge/mnozice-2/odgovor", { odgovor: "6" }, piskotek);
+  await post("/naloge/mnozice-2/odgovor", { odgovor: "7" }, piskotek);
+  await post("/naloge/mnozice-3/odgovor", { odgovor: "8" }); // gost: se ne shrani
+  const zapisi = await (await get("/napredek?poglavje=mnozice", piskotek)).json();
+  assert.equal(zapisi.length, 1);
+  assert.equal(zapisi[0].naloga, "mnozice-2");
+  assert.equal(zapisi[0].poskusi, 2);
+  assert.equal(zapisi[0].reseno, true);
 
   const odjava = await post("/odjava", {}, piskotek);
   assert.equal(odjava.status, 204);
