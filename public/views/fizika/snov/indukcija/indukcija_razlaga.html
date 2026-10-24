@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Indukcija — razlaga in postopki | Piflar.si</title>
+  <meta name="description" content="Elektromagnetna indukcija za maturo iz fizike: inducirana napetost, indukcijski zakon, Lenzovo pravilo, generator, transformator, induktivnost, energija tuljave in električni nihajni krog.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
+  <link rel="stylesheet" href="/style/snov.css">
+</head>
+<body>
+  <div id="header"></div>
+
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view">
+
+<header class="page-header">
+          <span class="page-eyebrow">Fizika · Snov · 4.13</span>
+          <h1>Indukcija</h1>
+          <p>Spremenljivo magnetno polje inducira napetost. Na tem temeljijo generatorji v elektrarnah, transformatorji, indukcijske kuhalne plošče in brezžično polnjenje. Tu so indukcijski zakon, Lenzovo pravilo, transformator, induktivnost tuljave in nihajni krog. Pod razlago so vsi tipi nalog, ki se pojavijo pri tem sklopu. Vsebine, označene s <span class="badge-vr">PZ</span>, so posebna znanja iz kataloga.</p>
+          <div class="page-meta">
+            <div class="page-meta-item"><strong>5</strong><span>Podpoglavij</span></div>
+            <div class="page-meta-item"><strong>8</strong><span>Tipov nalog</span></div>
+            <div class="page-meta-item"><strong>~40 min</strong><span>Branja</span></div>
+          </div>
+        </header>
+
+        <div class="matura-formule">
+          <h3>Formule na maturi</h3>
+          <p>Enačbe, ki jih potrebuješ (večina je na listu s konstantami in enačbami, ki je del izpitne pole):</p>
+          <div class="matura-levo">
+            <ul>
+              <li>premikajoči se vodnik: \(U_i = lvB\)</li>
+              <li>indukcijski zakon: \(U_i = -N\dfrac{\Delta\Phi}{\Delta t}\), \(\Phi = BS\cos\varphi\)</li>
+              <li>vrteča se tuljava <span class="badge-vr">PZ</span>: \(U_i = NSB\omega\sin(\omega t)\), \(U_0 = NSB\omega\)</li>
+              <li>transformator: \(\dfrac{U_1}{U_2} = \dfrac{N_1}{N_2}\), idealni: \(U_1 I_1 = U_2 I_2\)</li>
+              <li>samoindukcija <span class="badge-vr">PZ</span>: \(U_i = -L\dfrac{\Delta I}{\Delta t}\), dolga tuljava \(L = \dfrac{\mu_0 N^2 S}{l}\)</li>
+              <li>energija tuljave <span class="badge-vr">PZ</span>: \(W_m = \dfrac{LI^2}{2}\)</li>
+              <li>nihajni krog: \(t_0 = 2\pi\sqrt{LC}\)</li>
+            </ul>
+          </div>
+        </div>
+
+        <nav class="kazalo" aria-label="Podpoglavja">
+          <h2>Podpoglavja</h2>
+          <ol>
+            <li><a href="#sklop-1"><span class="kazalo-st">1</span> Indukcijski zakon</a></li>
+            <li><a href="#sklop-2"><span class="kazalo-st">2</span> Transformator</a></li>
+            <li><a href="#sklop-3"><span class="kazalo-st">3</span> Induktivnost</a></li>
+            <li><a href="#sklop-4"><span class="kazalo-st">4</span> Energija magnetnega polja tuljave</a></li>
+            <li><a href="#sklop-5"><span class="kazalo-st">5</span> Električni nihajni krog</a></li>
+            <li><a href="#kljuc"><span class="kazalo-st">?</span> Ključ: kateri tip naloge je to?</a></li>
+          </ol>
+        </nav>
+
+        <!-- SKLOP 1 -->
+        <section class="sklop" id="sklop-1">
+          <header class="sklop-header">
+            <span class="sklop-num">4.13 · 1</span>
+            <h2>Indukcijski zakon</h2>
+            <p>Inducirana napetost na premikajočem se vodniku, sprememba pretoka, Lenzovo pravilo, generator.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <h4>Premikajoči se vodnik</h4>
+            <p>Ko se vodnik giblje skozi magnetno polje, deluje na proste elektrone v njem magnetna sila \(evB\). Elektroni se premaknejo na en konec vodnika in med koncema nastane <strong>inducirana napetost</strong>. Za ravni vodnik dolžine \(l\), ki se giblje s hitrostjo \(v\) pravokotno na polje \(B\) in na samega sebe, je</p>
+            <p>\[U_i = lvB.\]</p>
+            <figure class="slika">
+<svg viewBox="0 0 380 232" role="img" aria-label="Palica na tračnicah v magnetnem polju" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g1-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g1-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g1-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g1-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g1-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g1-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<polygon class="s-lik-2" points="34.6,130.8 48.8,130.8 48.8,95.2 34.6,95.2"/>
+<line class="s-crta" x1="41.7" y1="172.4" x2="338.3" y2="172.4"/>
+<line class="s-crta" x1="41.7" y1="53.6" x2="338.3" y2="53.6"/>
+<line class="s-crta" x1="41.7" y1="172.4" x2="41.7" y2="53.6"/>
+<line class="s-k2" x1="219.7" y1="184.3" x2="219.7" y2="41.8"/>
+<line class="s-k3" x1="219.7" y1="113" x2="290.8" y2="113" marker-end="url(#g1-k3)"/>
+<text class="s-txt-k3" x="255.3" y="105" text-anchor="start">v</text>
+<line class="s-k2" x1="231.5" y1="142.7" x2="231.5" y2="71.5" marker-end="url(#g1-k2)"/>
+<text class="s-txt-k2" x="245.5" y="93.1" text-anchor="start">I</text>
+<text class="s-txt-b" x="59.5" y="117" text-anchor="start">R</text>
+<text class="s-txt-k2" x="210.8" y="32.8" text-anchor="end">palica, dolžina l</text>
+<text class="s-txt-k1" x="332.3" y="32.8" text-anchor="end">B (v list)</text>
+<path class="s-k1" d="M79.2,138.7L87.2,146.7M79.2,146.7L87.2,138.7"/><path class="s-k1" d="M79.2,79.3L87.2,87.3M79.2,87.3L87.2,79.3"/><path class="s-k1" d="M126.69999999999999,138.7L134.7,146.7M126.69999999999999,146.7L134.7,138.7"/><path class="s-k1" d="M126.69999999999999,79.3L134.7,87.3M126.69999999999999,87.3L134.7,79.3"/><path class="s-k1" d="M174.1,138.7L182.1,146.7M174.1,146.7L182.1,138.7"/><path class="s-k1" d="M174.1,79.3L182.1,87.3M174.1,87.3L182.1,79.3"/><path class="s-k1" d="M275,138.7L283,146.7M275,146.7L283,138.7"/><path class="s-k1" d="M275,79.3L283,87.3M275,87.3L283,79.3"/><path class="s-k1" d="M316.5,138.7L324.5,146.7M316.5,146.7L324.5,138.7"/><path class="s-k1" d="M316.5,79.3L324.5,87.3M316.5,87.3L324.5,79.3"/>
+</svg>
+<figcaption>Palica dolžine \(l\) drsi s hitrostjo \(v\) po tračnicah, pravokotno na polje. Ploščina zanke in s tem pretok se večata, inducira se napetost \(U_i = lvB\). Inducirani tok ima tako smer, da sila \(IlB\) na palico zavira gibanje (Lenzovo pravilo).</figcaption>
+</figure>
+            <h4>Splošni indukcijski zakon</h4>
+            <p>Napetost se inducira vedno, kadar se spreminja magnetni pretok skozi zanko, ne glede na to, ali se spreminja polje, ploščina ali kot. Za tuljavo z \(N\) ovoji je</p>
+            <p>\[U_i = -N\frac{\Delta\Phi}{\Delta t}.\]</p>
+            <p>Inducirana napetost je tem večja, čim hitreje se pretok spreminja. Če pretok ostaja stalen (tudi če je velik), napetosti ni. Pri palici na tračnicah se ploščina zanke v času \(\Delta t\) poveča za \(lv\Delta t\), zato \(\Delta\Phi/\Delta t = lvB\), kar je ista enačba kot zgoraj.</p>
+            <h4>Lenzovo pravilo</h4>
+            <p>Predznak minus v zakonu pove smer: <strong>inducirani tok ima tako smer, da s svojim magnetnim poljem nasprotuje spremembi, ki ga je povzročila</strong>. Če pretok narašča, inducirani tok ustvari polje v nasprotni smeri; če pada, ga podpira. To je posledica ohranitve energije: za inducirani tok moramo opraviti delo, zato nas sila vedno zavira.</p>
+            <figure class="slika">
+<svg viewBox="0 0 380 185" role="img" aria-label="Lenzovo pravilo z magnetom in obročem" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g2-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g2-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g2-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g2-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g2-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g2-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<polygon class="s-lik" points="29.5,106.8 81.1,106.8 81.1,78.2 29.5,78.2"/>
+<polygon class="s-lik-2" points="81.1,106.8 132.7,106.8 132.7,78.2 81.1,78.2"/>
+<line class="s-k2" x1="224.4" y1="144.1" x2="224.4" y2="40.9"/>
+<line class="s-k3" x1="81.1" y1="58.1" x2="138.4" y2="58.1" marker-end="url(#g2-k3)"/>
+<text class="s-txt-k3" x="69.8" y="48.1" text-anchor="start">magnet se približuje</text>
+<line class="s-k1" x1="218.7" y1="92.5" x2="155.6" y2="92.5" marker-end="url(#g2-k1)"/>
+<text class="s-txt-k1" x="187.1" y="82.5" text-anchor="middle">B<tspan dy="4" style="font-size:10px">ind</tspan></text>
+<line class="s-k2" x1="235.9" y1="126.9" x2="304.7" y2="126.9" marker-end="url(#g2-k2)"/>
+<text class="s-txt-k2" x="270.3" y="144.9" text-anchor="middle">sila na obroč</text>
+<text class="s-txt-b" x="55.3" y="97.5" text-anchor="middle">S</text>
+<text class="s-txt-b" x="106.9" y="97.5" text-anchor="middle">N</text>
+<text class="s-txt-muted" x="224.4" y="28.3" text-anchor="middle">obroč</text>
+
+</svg>
+<figcaption>Ko severni pol približujemo obroču, pretok skozi obroč narašča. Inducirani tok ustvari polje, ki tej spremembi nasprotuje: na strani magneta nastane severni pol, zato obroč magnet odbija.</figcaption>
+</figure>
+            <h4>Generator <span class="badge-vr">PZ</span></h4>
+            <p>Tuljava z \(N\) ovoji in ploščino \(S\) se vrti s kotno hitrostjo \(\omega\) v homogenem polju. Pretok je \(\Phi = BS\cos(\omega t)\), inducirana napetost pa</p>
+            <p>\[U_i = NSB\omega\sin(\omega t), \qquad U_0 = NSB\omega.\]</p>
+            <figure class="slika">
+<svg viewBox="0 0 420 230" role="img" aria-label="Pretok in inducirana napetost pri vrtenju zanke" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g3-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g3-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g3-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g3-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g3-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g3-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<path class="s-mreza" d="M26,204V26M111.6,204V26M197.2,204V26M282.7,204V26M368.3,204V26M26,183.5H394M26,149.2H394M26,115H394M26,80.8H394M26,46.5H394"/>
+<line class="s-os" x1="26" y1="115" x2="402" y2="115" marker-end="url(#g3-p)"/>
+<line class="s-os" x1="26" y1="204" x2="26" y2="18" marker-end="url(#g3-p)"/>
+<text class="s-os-txt" x="396" y="107" text-anchor="end">t</text>
+<text class="s-os-txt" x="34" y="30">y</text>
+<path class="s-k1" d="M26,46.5L26.9,46.6L27.7,46.7L28.6,46.8L29.4,47.1L30.3,47.4L31.1,47.8L32,48.2L32.8,48.7L33.7,49.3L34.6,49.9L35.4,50.6L36.3,51.3L37.1,52.2L38,53.1L38.8,54L39.7,55L40.5,56.1L41.4,57.2L42.3,58.4L43.1,59.6L44,60.9L44.8,62.2L45.7,63.6L46.5,65.1L47.4,66.6L48.3,68.1L49.1,69.7L50,71.4L50.8,73L51.7,74.8L52.5,76.5L53.4,78.3L54.2,80.2L55.1,82L56,83.9L56.8,85.9L57.7,87.8L58.5,89.8L59.4,91.8L60.2,93.8L61.1,95.9L61.9,98L62.8,100.1L63.7,102.2L64.5,104.3L65.4,106.4L66.2,108.6L67.1,110.7L67.9,112.8L68.8,115L69.6,117.2L70.5,119.3L71.4,121.4L72.2,123.6L73.1,125.7L73.9,127.8L74.8,129.9L75.6,132L76.5,134.1L77.3,136.2L78.2,138.2L79.1,140.2L79.9,142.2L80.8,144.1L81.6,146.1L82.5,148L83.3,149.8L84.2,151.7L85.1,153.5L85.9,155.2L86.8,157L87.6,158.6L88.5,160.3L89.3,161.9L90.2,163.4L91,164.9L91.9,166.4L92.8,167.8L93.6,169.1L94.5,170.4L95.3,171.6L96.2,172.8L97,173.9L97.9,175L98.7,176L99.6,176.9L100.5,177.8L101.3,178.7L102.2,179.4L103,180.1L103.9,180.7L104.7,181.3L105.6,181.8L106.4,182.2L107.3,182.6L108.2,182.9L109,183.2L109.9,183.3L110.7,183.4L111.6,183.5L112.4,183.4L113.3,183.3L114.1,183.2L115,182.9L115.9,182.6L116.7,182.2L117.6,181.8L118.4,181.3L119.3,180.7L120.1,180.1L121,179.4L121.9,178.7L122.7,177.8L123.6,176.9L124.4,176L125.3,175L126.1,173.9L127,172.8L127.8,171.6L128.7,170.4L129.6,169.1L130.4,167.8L131.3,166.4L132.1,164.9L133,163.4L133.8,161.9L134.7,160.3L135.5,158.6L136.4,157L137.3,155.2L138.1,153.5L139,151.7L139.8,149.8L140.7,148L141.5,146.1L142.4,144.1L143.2,142.2L144.1,140.2L145,138.2L145.8,136.2L146.7,134.1L147.5,132L148.4,129.9L149.2,127.8L150.1,125.7L150.9,123.6L151.8,121.4L152.7,119.3L153.5,117.2L154.4,115L155.2,112.8L156.1,110.7L156.9,108.6L157.8,106.4L158.7,104.3L159.5,102.2L160.4,100.1L161.2,98L162.1,95.9L162.9,93.8L163.8,91.8L164.6,89.8L165.5,87.8L166.4,85.9L167.2,83.9L168.1,82L168.9,80.2L169.8,78.3L170.6,76.5L171.5,74.8L172.3,73L173.2,71.4L174.1,69.7L174.9,68.1L175.8,66.6L176.6,65.1L177.5,63.6L178.3,62.2L179.2,60.9L180,59.6L180.9,58.4L181.8,57.2L182.6,56.1L183.5,55L184.3,54L185.2,53.1L186,52.2L186.9,51.3L187.7,50.6L188.6,49.9L189.5,49.3L190.3,48.7L191.2,48.2L192,47.8L192.9,47.4L193.7,47.1L194.6,46.8L195.5,46.7L196.3,46.6L197.2,46.5L198,46.6L198.9,46.7L199.7,46.8L200.6,47.1L201.4,47.4L202.3,47.8L203.2,48.2L204,48.7L204.9,49.3L205.7,49.9L206.6,50.6L207.4,51.3L208.3,52.2L209.1,53.1L210,54L210.9,55L211.7,56.1L212.6,57.2L213.4,58.4L214.3,59.6L215.1,60.9L216,62.2L216.8,63.6L217.7,65.1L218.6,66.6L219.4,68.1L220.3,69.7L221.1,71.4L222,73L222.8,74.8L223.7,76.5L224.5,78.3L225.4,80.2L226.3,82L227.1,83.9L228,85.9L228.8,87.8L229.7,89.8L230.5,91.8L231.4,93.8L232.3,95.9L233.1,98L234,100.1L234.8,102.2L235.7,104.3L236.5,106.4L237.4,108.6L238.2,110.7L239.1,112.8L240,115L240.8,117.2L241.7,119.3L242.5,121.4L243.4,123.6L244.2,125.7L245.1,127.8L245.9,129.9L246.8,132L247.7,134.1L248.5,136.2L249.4,138.2L250.2,140.2L251.1,142.2L251.9,144.1L252.8,146.1L253.6,148L254.5,149.8L255.4,151.7L256.2,153.5L257.1,155.2L257.9,157L258.8,158.6L259.6,160.3L260.5,161.9L261.3,163.4L262.2,164.9L263.1,166.4L263.9,167.8L264.8,169.1L265.6,170.4L266.5,171.6L267.3,172.8L268.2,173.9L269.1,175L269.9,176L270.8,176.9L271.6,177.8L272.5,178.7L273.3,179.4L274.2,180.1L275,180.7L275.9,181.3L276.8,181.8L277.6,182.2L278.5,182.6L279.3,182.9L280.2,183.2L281,183.3L281.9,183.4L282.7,183.5L283.6,183.4L284.5,183.3L285.3,183.2L286.2,182.9L287,182.6L287.9,182.2L288.7,181.8L289.6,181.3L290.4,180.7L291.3,180.1L292.2,179.4L293,178.7L293.9,177.8L294.7,176.9L295.6,176L296.4,175L297.3,173.9L298.1,172.8L299,171.6L299.9,170.4L300.7,169.1L301.6,167.8L302.4,166.4L303.3,164.9L304.1,163.4L305,161.9L305.9,160.3L306.7,158.6L307.6,157L308.4,155.2L309.3,153.5L310.1,151.7L311,149.8L311.8,148L312.7,146.1L313.6,144.1L314.4,142.2L315.3,140.2L316.1,138.2L317,136.2L317.8,134.1L318.7,132L319.5,129.9L320.4,127.8L321.3,125.7L322.1,123.6L323,121.4L323.8,119.3L324.7,117.2L325.5,115L326.4,112.8L327.2,110.7L328.1,108.6L329,106.4L329.8,104.3L330.7,102.2L331.5,100.1L332.4,98L333.2,95.9L334.1,93.8L334.9,91.8L335.8,89.8L336.7,87.8L337.5,85.9L338.4,83.9L339.2,82L340.1,80.2L340.9,78.3L341.8,76.5L342.7,74.8L343.5,73L344.4,71.4L345.2,69.7L346.1,68.1L346.9,66.6L347.8,65.1L348.6,63.6L349.5,62.2L350.4,60.9L351.2,59.6L352.1,58.4L352.9,57.2L353.8,56.1L354.6,55L355.5,54L356.3,53.1L357.2,52.2L358.1,51.3L358.9,50.6L359.8,49.9L360.6,49.3L361.5,48.7L362.3,48.2L363.2,47.8L364,47.4L364.9,47.1L365.8,46.8L366.6,46.7L367.5,46.6L368.3,46.5"/>
+<path class="s-k2" d="M26,115L26.9,112.8L27.7,110.7L28.6,108.6L29.4,106.4L30.3,104.3L31.1,102.2L32,100.1L32.8,98L33.7,95.9L34.6,93.8L35.4,91.8L36.3,89.8L37.1,87.8L38,85.9L38.8,83.9L39.7,82L40.5,80.2L41.4,78.3L42.3,76.5L43.1,74.8L44,73L44.8,71.4L45.7,69.7L46.5,68.1L47.4,66.6L48.3,65.1L49.1,63.6L50,62.2L50.8,60.9L51.7,59.6L52.5,58.4L53.4,57.2L54.2,56.1L55.1,55L56,54L56.8,53.1L57.7,52.2L58.5,51.3L59.4,50.6L60.2,49.9L61.1,49.3L61.9,48.7L62.8,48.2L63.7,47.8L64.5,47.4L65.4,47.1L66.2,46.8L67.1,46.7L67.9,46.6L68.8,46.5L69.6,46.6L70.5,46.7L71.4,46.8L72.2,47.1L73.1,47.4L73.9,47.8L74.8,48.2L75.6,48.7L76.5,49.3L77.3,49.9L78.2,50.6L79.1,51.3L79.9,52.2L80.8,53.1L81.6,54L82.5,55L83.3,56.1L84.2,57.2L85.1,58.4L85.9,59.6L86.8,60.9L87.6,62.2L88.5,63.6L89.3,65.1L90.2,66.6L91,68.1L91.9,69.7L92.8,71.4L93.6,73L94.5,74.8L95.3,76.5L96.2,78.3L97,80.2L97.9,82L98.7,83.9L99.6,85.9L100.5,87.8L101.3,89.8L102.2,91.8L103,93.8L103.9,95.9L104.7,98L105.6,100.1L106.4,102.2L107.3,104.3L108.2,106.4L109,108.6L109.9,110.7L110.7,112.8L111.6,115L112.4,117.2L113.3,119.3L114.1,121.4L115,123.6L115.9,125.7L116.7,127.8L117.6,129.9L118.4,132L119.3,134.1L120.1,136.2L121,138.2L121.9,140.2L122.7,142.2L123.6,144.1L124.4,146.1L125.3,148L126.1,149.8L127,151.7L127.8,153.5L128.7,155.2L129.6,157L130.4,158.6L131.3,160.3L132.1,161.9L133,163.4L133.8,164.9L134.7,166.4L135.5,167.8L136.4,169.1L137.3,170.4L138.1,171.6L139,172.8L139.8,173.9L140.7,175L141.5,176L142.4,176.9L143.2,177.8L144.1,178.7L145,179.4L145.8,180.1L146.7,180.7L147.5,181.3L148.4,181.8L149.2,182.2L150.1,182.6L150.9,182.9L151.8,183.2L152.7,183.3L153.5,183.4L154.4,183.5L155.2,183.4L156.1,183.3L156.9,183.2L157.8,182.9L158.7,182.6L159.5,182.2L160.4,181.8L161.2,181.3L162.1,180.7L162.9,180.1L163.8,179.4L164.6,178.7L165.5,177.8L166.4,176.9L167.2,176L168.1,175L168.9,173.9L169.8,172.8L170.6,171.6L171.5,170.4L172.3,169.1L173.2,167.8L174.1,166.4L174.9,164.9L175.8,163.4L176.6,161.9L177.5,160.3L178.3,158.6L179.2,157L180,155.2L180.9,153.5L181.8,151.7L182.6,149.8L183.5,148L184.3,146.1L185.2,144.1L186,142.2L186.9,140.2L187.7,138.2L188.6,136.2L189.5,134.1L190.3,132L191.2,129.9L192,127.8L192.9,125.7L193.7,123.6L194.6,121.4L195.5,119.3L196.3,117.2L197.2,115L198,112.8L198.9,110.7L199.7,108.6L200.6,106.4L201.4,104.3L202.3,102.2L203.2,100.1L204,98L204.9,95.9L205.7,93.8L206.6,91.8L207.4,89.8L208.3,87.8L209.1,85.9L210,83.9L210.9,82L211.7,80.2L212.6,78.3L213.4,76.5L214.3,74.8L215.1,73L216,71.4L216.8,69.7L217.7,68.1L218.6,66.6L219.4,65.1L220.3,63.6L221.1,62.2L222,60.9L222.8,59.6L223.7,58.4L224.5,57.2L225.4,56.1L226.3,55L227.1,54L228,53.1L228.8,52.2L229.7,51.3L230.5,50.6L231.4,49.9L232.3,49.3L233.1,48.7L234,48.2L234.8,47.8L235.7,47.4L236.5,47.1L237.4,46.8L238.2,46.7L239.1,46.6L240,46.5L240.8,46.6L241.7,46.7L242.5,46.8L243.4,47.1L244.2,47.4L245.1,47.8L245.9,48.2L246.8,48.7L247.7,49.3L248.5,49.9L249.4,50.6L250.2,51.3L251.1,52.2L251.9,53.1L252.8,54L253.6,55L254.5,56.1L255.4,57.2L256.2,58.4L257.1,59.6L257.9,60.9L258.8,62.2L259.6,63.6L260.5,65.1L261.3,66.6L262.2,68.1L263.1,69.7L263.9,71.4L264.8,73L265.6,74.8L266.5,76.5L267.3,78.3L268.2,80.2L269.1,82L269.9,83.9L270.8,85.9L271.6,87.8L272.5,89.8L273.3,91.8L274.2,93.8L275,95.9L275.9,98L276.8,100.1L277.6,102.2L278.5,104.3L279.3,106.4L280.2,108.6L281,110.7L281.9,112.8L282.7,115L283.6,117.2L284.5,119.3L285.3,121.4L286.2,123.6L287,125.7L287.9,127.8L288.7,129.9L289.6,132L290.4,134.1L291.3,136.2L292.2,138.2L293,140.2L293.9,142.2L294.7,144.1L295.6,146.1L296.4,148L297.3,149.8L298.1,151.7L299,153.5L299.9,155.2L300.7,157L301.6,158.6L302.4,160.3L303.3,161.9L304.1,163.4L305,164.9L305.9,166.4L306.7,167.8L307.6,169.1L308.4,170.4L309.3,171.6L310.1,172.8L311,173.9L311.8,175L312.7,176L313.6,176.9L314.4,177.8L315.3,178.7L316.1,179.4L317,180.1L317.8,180.7L318.7,181.3L319.5,181.8L320.4,182.2L321.3,182.6L322.1,182.9L323,183.2L323.8,183.3L324.7,183.4L325.5,183.5L326.4,183.4L327.2,183.3L328.1,183.2L329,182.9L329.8,182.6L330.7,182.2L331.5,181.8L332.4,181.3L333.2,180.7L334.1,180.1L334.9,179.4L335.8,178.7L336.7,177.8L337.5,176.9L338.4,176L339.2,175L340.1,173.9L340.9,172.8L341.8,171.6L342.7,170.4L343.5,169.1L344.4,167.8L345.2,166.4L346.1,164.9L346.9,163.4L347.8,161.9L348.6,160.3L349.5,158.6L350.4,157L351.2,155.2L352.1,153.5L352.9,151.7L353.8,149.8L354.6,148L355.5,146.1L356.3,144.1L357.2,142.2L358.1,140.2L358.9,138.2L359.8,136.2L360.6,134.1L361.5,132L362.3,129.9L363.2,127.8L364,125.7L364.9,123.6L365.8,121.4L366.6,119.3L367.5,117.2L368.3,115"/>
+<text class="s-txt-k1" x="36.3" y="36.3" text-anchor="start">Φ</text>
+<text class="s-txt-k2" x="77.3" y="36.3" text-anchor="start">U<tspan dy="4" style="font-size:10px">i</tspan></text>
+<text class="s-txt-b" x="197.2" y="128.7" text-anchor="middle">t<tspan dy="4" style="font-size:10px">0</tspan></text>
+<text class="s-txt-b" x="368.3" y="128.7" text-anchor="middle">2t<tspan dy="4" style="font-size:10px">0</tspan></text>
+</svg>
+<figcaption>Pri enakomernem vrtenju zanke se pretok spreminja kosinusno, inducirana napetost pa sinusno. Napetost je največja, ko je pretok nič (takrat se najhitreje spreminja), in nič, ko je pretok največji.</figcaption>
+</figure>
+            <p>Tako dobimo izmenično napetost. Hitrejše vrtenje da večjo amplitudo in večjo frekvenco.</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-1">
+              <h4>Tip 1: Inducirana napetost na premikajočem se vodniku</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Kovinska palica dolžine \(0{,}50\ \text{m}\) drsi s hitrostjo \(4{,}0\ \text{m/s}\) po vodoravnih tračnicah, ki so na eni strani povezane z upornikom \(2{,}0\ \Omega\). Navpično magnetno polje ima gostoto \(0{,}30\ \text{T}\). Kolikšna napetost se inducira, kolikšen tok teče in s kolikšno silo moramo vleči palico, da se giblje enakomerno?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> vodnik (palica, krilo letala, žica) se giblje skozi magnetno polje, sprašujejo po napetosti med konci, toku ali zavorni sili.</p><ul class="kljucne"><li>„palica drsi po tračnicah“</li><li>„med koncema krila“</li><li>„vodnik se giblje v polju“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Preveri, da so \(l\), \(v\) in \(B\) med seboj pravokotni (sicer vzemi le pravokotno komponento) in izračunaj \(U_i = lvB\).</p><div class="na-nalogi"><p>\(U_i = 0{,}50 \cdot 4{,}0 \cdot 0{,}30\ \text{V} = 0{,}60\ \text{V}\).</p></div></li>
+              <li><p class="korak">Če je krog sklenjen, izračunaj tok z Ohmovim zakonom.</p><div class="na-nalogi"><p>\(I = 0{,}60/2{,}0 = 0{,}30\ \text{A}\).</p></div></li>
+              <li><p class="korak">Na palico s tokom deluje magnetna sila \(IlB\), ki po Lenzovem pravilu zavira gibanje; pri enakomernem gibanju jo uravnovesi vlečna sila.</p><div class="na-nalogi"><p>\(F = 0{,}30 \cdot 0{,}50 \cdot 0{,}30\ \text{N} = 0{,}045\ \text{N}\). Moč vlečenja \(Fv = 0{,}18\ \text{W}\) je enaka moči na uporniku \(UI\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Letalo z razponom kril 40 m leti vodoravno s 250 m/s, navpična komponenta Zemljinega polja je \(4 \cdot 10^{-5}\ \text{T}\). Napetost med konicama kril?</p><p>\(0{,}40\ \text{V}\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Ali se inducira napetost, če se palica giblje vzporedno s silnicami?</p><p>Ne.</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Kaj se zgodi s palico, ki jo spustimo s hitrostjo \(v\) in nanjo ne deluje nobena druga sila?</p><p>Magnetna sila jo zavira, dokler se ne ustavi; kinetična energija se pretvori v toploto v uporniku.</p></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-2">
+              <h4>Tip 2: Indukcijski zakon pri spremembi pretoka</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Tuljava z \(200\) ovoji in ploščino preseka \(10\ \text{cm}^2\) je v polju, vzporednem z njeno osjo. Gostota polja se v \(0{,}050\ \text{s}\) enakomerno poveča z \(0{,}10\ \text{T}\) na \(0{,}35\ \text{T}\). Kolikšna napetost se inducira v tuljavi?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> spreminja se polje, ploščina zanke ali kot med zanko in poljem (tudi graf \(B(t)\) ali \(\Phi(t)\)), sprašujejo po inducirani napetosti ali toku.</p><ul class="kljucne"><li>„gostota polja se poveča v času“</li><li>„zanko izvlečemo iz polja“</li><li>„graf B(t)“</li><li>„zasučemo tuljavo“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Izračunaj pretok skozi en ovoj na začetku in na koncu (\(\Phi = BS\cos\varphi\)).</p><div class="na-nalogi"><p>\(S = 1{,}0 \cdot 10^{-3}\ \text{m}^2\): \(\Phi_1 = 1{,}0 \cdot 10^{-4}\ \text{Wb}\), \(\Phi_2 = 3{,}5 \cdot 10^{-4}\ \text{Wb}\).</p></div></li>
+              <li><p class="korak">Izračunaj spremembo pretoka.</p><div class="na-nalogi"><p>\(\Delta\Phi = 2{,}5 \cdot 10^{-4}\ \text{Wb}\).</p></div></li>
+              <li><p class="korak">Vstavi v \(U_i = N\Delta\Phi/\Delta t\) (velikost). Pri grafu \(\Phi(t)\) je to strmina grafa.</p><div class="na-nalogi"><p>\(U_i = 200 \cdot \dfrac{2{,}5 \cdot 10^{-4}}{0{,}050}\ \text{V} = 1{,}0\ \text{V}\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Polje je stalno \(0{,}5\ \text{T}\). Kolikšna je inducirana napetost?</p><p>Nič, pretok se ne spreminja.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Kvadratno zanko s stranico 10 cm v 0,20 s izvlečemo iz polja 0,60 T. Napetost?</p><p>\(0{,}60 \cdot 0{,}010 / 0{,}20 = 30\ \text{mV}\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Zanko v polju zasučemo za \(90^\circ\) iz lege, ko je pravokotna na polje. Kolikšna je sprememba pretoka?</p><p>Od \(BS\) do 0, \(\Delta\Phi = BS\).</p></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-3">
+              <h4>Tip 3: Smer induciranega toka (Lenzovo pravilo)</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Severni pol paličastega magneta približujemo kovinskemu obroču, ki ga gledamo s strani magneta. V kateri smeri teče inducirani tok? Ali obroč magnet privlači ali odbija? Kaj se zgodi, ko magnet odmikamo?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> kvalitativno vprašanje o smeri toka ali sile pri približevanju, oddaljevanju, vklopu ali izklopu toka v bližnji tuljavi.</p><ul class="kljucne"><li>„v kateri smeri teče inducirani tok“</li><li>„približujemo magnet“</li><li>„vklopimo stikalo“</li><li>„obroč odskoči“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Ugotovi smer zunanjega polja skozi zanko in ali pretok narašča ali pada.</p><div class="na-nalogi"><p>Polje magneta kaže od N proti obroču, pretok narašča.</p></div></li>
+              <li><p class="korak">Inducirano polje nasprotuje spremembi: ob naraščanju je nasprotno zunanjemu, ob padanju v isti smeri.</p><div class="na-nalogi"><p>Inducirano polje v obroču kaže proti magnetu; obroč ima severni pol na strani magneta.</p></div></li>
+              <li><p class="korak">S pravilom desne roke (palec v smeri induciranega polja) določi smer toka; sila vedno nasprotuje gibanju.</p><div class="na-nalogi"><p>Gledano s strani magneta teče tok v nasprotni smeri urnega kazalca; obroč magnet odbija. Pri odmikanju je vse obratno: tok v smeri urnega kazalca, obroč magnet privlači.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Zakaj magnet pada skozi bakreno cev počasneje kot skozi plastično?</p><p>V bakru se inducirajo vrtinčni tokovi, ki zavirajo padanje.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Magnet miruje v tuljavi. Teče tok?</p><p>Ne.</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Obroč je nataknjen na jedro tuljave. Ob vklopu toka obroč odskoči. Zakaj?</p><p>Pretok naraste, inducirani tok v obroču ustvari nasprotno polje in se tuljava ter obroč odbijata.</p></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-4">
+              <h4>Tip 4: Generator (vrteča se tuljava) <span class="badge-vr">PZ</span></h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Tuljava s \(100\) ovoji in ploščino \(0{,}020\ \text{m}^2\) se vrti s frekvenco \(50\ \text{Hz}\) v homogenem polju \(0{,}10\ \text{T}\). Kolikšna je amplituda inducirane napetosti in kolikšna je efektivna napetost?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> tuljava ali zanka se vrti v magnetnem polju, sprašujejo po amplitudi, frekvenci ali obliki inducirane napetosti.</p><ul class="kljucne"><li>„se vrti v polju“</li><li>„generator“</li><li>„dinamo“</li><li>„obratov na minuto“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Izračunaj kotno hitrost \(\omega = 2\pi\nu\) (obrate na minuto deli s 60).</p><div class="na-nalogi"><p>\(\omega = 2\pi \cdot 50 = 314\ \text{s}^{-1}\).</p></div></li>
+              <li><p class="korak">Amplituda je \(U_0 = NSB\omega\).</p><div class="na-nalogi"><p>\(U_0 = 100 \cdot 0{,}020 \cdot 0{,}10 \cdot 314\ \text{V} = 63\ \text{V}\).</p></div></li>
+              <li><p class="korak">Če sprašujejo po efektivni vrednosti, deli s \(\sqrt2\).</p><div class="na-nalogi"><p>\(U_{ef} = 63/\sqrt2 = 44\ \text{V}\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Kako se spremeni amplituda, če tuljavo vrtimo dvakrat hitreje?</p><p>Podvoji se (in podvoji se frekvenca).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> V kateri legi tuljave je inducirana napetost največja?</p><p>Ko je ravnina tuljave vzporedna s silnicami (pretok je nič).</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 2 -->
+        <section class="sklop" id="sklop-2">
+          <header class="sklop-header">
+            <span class="sklop-num">4.13 · 2</span>
+            <h2>Transformator</h2>
+            <p>Zgradba, razmerje napetosti in tokov, prenos električne energije.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <p>Transformator ima dve tuljavi na skupnem železnem jedru. Izmenični tok v primarni tuljavi (\(N_1\) ovojev) ustvari spremenljiv pretok, ki ga jedro vodi skozi sekundarno tuljavo (\(N_2\) ovojev). Ker je pretok skozi en ovoj v obeh tuljavah enak, je inducirana napetost sorazmerna s številom ovojev:</p>
+            <p>\[\frac{U_1}{U_2} = \frac{N_1}{N_2}.\]</p>
+            <figure class="slika">
+<svg viewBox="0 0 380 230" role="img" aria-label="Transformator" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g4-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g4-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g4-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g4-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g4-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g4-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<polygon class="s-ploskev" points="104,190.4 276,190.4 276,39.6 104,39.6 104,190.4 136.3,158.1 136.3,71.9 243.8,71.9 243.8,158.1 136.3,158.1"/>
+<line class="s-k2" x1="95.9" y1="166.9" x2="144.3" y2="161.5"/>
+<line class="s-k2" x1="95.9" y1="152" x2="144.3" y2="146.7"/>
+<line class="s-k2" x1="95.9" y1="137.2" x2="144.3" y2="131.8"/>
+<line class="s-k2" x1="95.9" y1="122.4" x2="144.3" y2="117"/>
+<line class="s-k2" x1="95.9" y1="107.6" x2="144.3" y2="102.2"/>
+<line class="s-k2" x1="95.9" y1="92.8" x2="144.3" y2="87.4"/>
+<line class="s-k2" x1="95.9" y1="78" x2="144.3" y2="72.6"/>
+<line class="s-k2" x1="95.9" y1="63.1" x2="144.3" y2="57.7"/>
+<line class="s-k2" x1="235.7" y1="159.5" x2="284.1" y2="154.1"/>
+<line class="s-k2" x1="235.7" y1="129.8" x2="284.1" y2="124.4"/>
+<line class="s-k2" x1="235.7" y1="100.2" x2="284.1" y2="94.8"/>
+<line class="s-k2" x1="235.7" y1="70.5" x2="284.1" y2="65.2"/>
+<line class="s-k2" x1="95.9" y1="61.1" x2="50.3" y2="61.1"/>
+<line class="s-k2" x1="95.9" y1="168.9" x2="50.3" y2="168.9"/>
+<line class="s-k2" x1="284.1" y1="61.1" x2="329.8" y2="61.1"/>
+<line class="s-k2" x1="284.1" y1="168.9" x2="329.8" y2="168.9"/>
+<text class="s-txt-b" x="42.2" y="120" text-anchor="middle">U<tspan dy="4" style="font-size:10px">1</tspan></text>
+<text class="s-txt-b" x="340.5" y="120" text-anchor="middle">U<tspan dy="4" style="font-size:10px">2</tspan></text>
+<text class="s-txt-k2" x="120.1" y="27.7" text-anchor="middle">N<tspan dy="4" style="font-size:10px">1</tspan></text>
+<text class="s-txt-k2" x="259.9" y="27.7" text-anchor="middle">N<tspan dy="4" style="font-size:10px">2</tspan></text>
+<text class="s-txt-muted" x="190" y="120" text-anchor="middle">železno jedro</text>
+
+</svg>
+<figcaption>Primarna in sekundarna tuljava sta navita na skupno železno jedro, ki vodi spremenljivi pretok iz ene tuljave v drugo. Tu ima sekundarna tuljava pol manj ovojev, zato je \(U_2 = U_1/2\).</figcaption>
+</figure>
+            <p>Idealni transformator nima izgub, zato je moč na obeh straneh enaka: \(U_1 I_1 = U_2 I_2\), torej \(\dfrac{I_1}{I_2} = \dfrac{N_2}{N_1}\). Kjer je napetost večja, je tok manjši. Pri realnem transformatorju je izkoristek \(\eta = P_2/P_1\) malo manjši od 1.</p>
+            <p>Transformator deluje le z <strong>izmenično</strong> napetostjo; pri enosmerni se pretok ne spreminja in na sekundarni strani ni napetosti. Elektrarne napetost za prenos zvišajo na stotine kilovoltov: pri isti moči je tok manjši, zato so izgube \(RI^2\) v daljnovodih mnogo manjše.</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-5">
+              <h4>Tip 5: Napetosti in tokovi transformatorja</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Polnilnik ima transformator s \(1150\) ovoji na primarni in \(60\) ovoji na sekundarni strani; priključen je na \(230\ \text{V}\). Kolikšna je sekundarna napetost? Na sekundarni strani teče tok \(2{,}0\ \text{A}\). Kolikšen je primarni tok, če je transformator idealen?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> dve tuljavi na skupnem jedru, sprašujejo po napetosti, toku, številu ovojev ali izgubah pri prenosu energije.</p><ul class="kljucne"><li>„primarna in sekundarna tuljava“</li><li>„število ovojev“</li><li>„daljnovod“</li><li>„izkoristek transformatorja“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Napetosti se razmerjata kot števili ovojev.</p><div class="na-nalogi"><p>\(U_2 = 230 \cdot \dfrac{60}{1150} = 12\ \text{V}\).</p></div></li>
+              <li><p class="korak">Pri idealnem transformatorju izenači moči (pri realnem upoštevaj izkoristek \(P_2 = \eta P_1\)).</p><div class="na-nalogi"><p>\(P_2 = 12 \cdot 2{,}0 = 24\ \text{W} = P_1\).</p></div></li>
+              <li><p class="korak">Izračunaj manjkajoči tok.</p><div class="na-nalogi"><p>\(I_1 = 24/230 = 0{,}10\ \text{A}\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Daljnovod z uporom \(10\ \Omega\) prenaša 1 MW pri 10 kV in pri 100 kV. Izgube?</p><p>Tok 100 A oziroma 10 A, izgube 100 kW oziroma 1 kW.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Transformator priključimo na baterijo 12 V. Kaj pokaže voltmeter na sekundarni strani?</p><p>Nič (razen kratkega sunka ob vklopu).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Koliko ovojev potrebuje sekundarna tuljava, da iz 230 V dobimo 5,0 V, če ima primarna 920 ovojev?</p><p>20.</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 3 -->
+        <section class="sklop sklop--visja" id="sklop-3">
+          <header class="sklop-header">
+            <span class="sklop-num">4.13 · 3</span>
+            <h2>Induktivnost <span class="badge-vr">PZ</span></h2>
+            <p>Samoindukcija, induktivnost dolge tuljave.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <p>Tok v tuljavi ustvarja pretok skozi njene lastne ovoje. Če se tok spreminja, se spreminja tudi ta pretok in v tuljavi se inducira napetost, ki po Lenzovem pravilu nasprotuje spremembi toka. To je <strong>samoindukcija</strong>:</p>
+            <p>\[U_i = -L\frac{\Delta I}{\Delta t}.\]</p>
+            <p>Sorazmernostni koeficient \(L\) je <strong>induktivnost</strong>, enota je henry (\(1\ \text{H} = 1\ \text{Vs/A}\)). Za dolgo tuljavo z \(N\) ovoji, presekom \(S\) in dolžino \(l\) je</p>
+            <p>\[L = \frac{\mu_0 N^2 S}{l}.\]</p>
+            <p>Induktivnost raste s kvadratom števila ovojev; železno jedro jo močno poveča. Tuljava zato upočasni naraščanje toka ob vklopu, ob hitrem izklopu pa lahko nastane zelo velika napetost (iskra na stikalu, vžigalna tuljava v avtu).</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-6">
+              <h4>Tip 6: Induktivnost in samoinducirana napetost <span class="badge-vr">PZ</span></h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Tuljava brez jedra je dolga \(20\ \text{cm}\), ima \(1000\) ovojev in presek \(4{,}0\ \text{cm}^2\). Kolikšna je njena induktivnost? Kolikšna napetost se inducira, ko tok v \(2{,}0\ \text{ms}\) enakomerno pade s \(3{,}0\ \text{A}\) na nič?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> sprašujejo po induktivnosti tuljave ali po napetosti, ki se inducira v tuljavi sami zaradi spremembe toka.</p><ul class="kljucne"><li>„induktivnost“</li><li>„henry“</li><li>„tok pade v času“</li><li>„samoindukcija“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Vse dimenzije pretvori v osnovne enote in izračunaj \(L = \mu_0 N^2 S / l\).</p><div class="na-nalogi"><p>\(L = \dfrac{4\pi \cdot 10^{-7} \cdot 1000^2 \cdot 4{,}0 \cdot 10^{-4}}{0{,}20}\ \text{H} = 2{,}5 \cdot 10^{-3}\ \text{H}\).</p></div></li>
+              <li><p class="korak">Izračunaj hitrost spreminjanja toka \(\Delta I/\Delta t\).</p><div class="na-nalogi"><p>\(\Delta I/\Delta t = 3{,}0/0{,}0020 = 1500\ \text{A/s}\).</p></div></li>
+              <li><p class="korak">Napetost je \(U_i = L\,\Delta I/\Delta t\); smer nasprotuje spremembi toka.</p><div class="na-nalogi"><p>\(U_i = 2{,}5 \cdot 10^{-3} \cdot 1500 = 3{,}8\ \text{V}\), usmerjena tako, da poskuša tok ohraniti.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Število ovojev podvojimo pri isti dolžini. Induktivnost?</p><p>Štirikrat večja.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> V tuljavi z \(L = 0{,}50\ \text{H}\) se inducira 10 V. Kako hitro se spreminja tok?</p><p>\(20\ \text{A/s}\).</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 4 -->
+        <section class="sklop sklop--visja" id="sklop-4">
+          <header class="sklop-header">
+            <span class="sklop-num">4.13 · 4</span>
+            <h2>Energija magnetnega polja tuljave <span class="badge-vr">PZ</span></h2>
+            <p>Energija, shranjena v tuljavi s tokom.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <p>Ko tok v tuljavi narašča od 0 do \(I\), moramo premagovati samoinducirano napetost. Opravljeno delo se shrani v magnetnem polju tuljave:</p>
+            <p>\[W_m = \frac{LI^2}{2}.\]</p>
+            <p>Enačba je podobna energiji kondenzatorja \(CU^2/2\) in kinetični energiji \(mv^2/2\): induktivnost ima vlogo vztrajnosti. Ob izklopu se energija sprosti, na primer kot iskra na stikalu ali toplota v uporniku.</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-7">
+              <h4>Tip 7: Energija tuljave <span class="badge-vr">PZ</span></h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Skozi tuljavo z induktivnostjo \(0{,}20\ \text{H}\) teče tok \(5{,}0\ \text{A}\). Koliko energije je shranjene v njenem magnetnem polju? Kolikšen tok bi moral teči, da bi bila energija \(10\ \text{J}\)?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> sprašujejo po energiji v tuljavi, po energiji, ki se sprosti ob izklopu, ali primerjajo energijo pri različnih tokovih.</p><ul class="kljucne"><li>„energija magnetnega polja“</li><li>„shranjena v tuljavi“</li><li>„ob izklopu se sprosti“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Vstavi v \(W = \tfrac12 LI^2\).</p><div class="na-nalogi"><p>\(W = \tfrac12 \cdot 0{,}20 \cdot 5{,}0^2\ \text{J} = 2{,}5\ \text{J}\).</p></div></li>
+              <li><p class="korak">Za obratno vprašanje izrazi neznanko.</p><div class="na-nalogi"><p>\(I = \sqrt{2W/L} = \sqrt{2 \cdot 10/0{,}20}\ \text{A} = 10\ \text{A}\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Tok podvojimo. Energija?</p><p>Štirikrat večja.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Kam gre energija tuljave, ko tok izklopimo prek upornika?</p><p>V toploto v uporniku.</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 5 -->
+        <section class="sklop" id="sklop-5">
+          <header class="sklop-header">
+            <span class="sklop-num">4.13 · 5</span>
+            <h2>Električni nihajni krog</h2>
+            <p>Kondenzator in tuljava, nihanje naboja in toka, lastna frekvenca.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <p>Nabit kondenzator povežemo s tuljavo. Kondenzator se začne prazniti skozi tuljavo, tok pa zaradi samoindukcije narašča postopoma. Ko je kondenzator prazen, tok ne preneha takoj: tuljava ga poganja naprej in kondenzator se nabije z nasprotnim predznakom. Nato se proces ponovi v nasprotni smeri. Naboj in tok nihata.</p>
+            <figure class="slika">
+<svg viewBox="0 0 420 230" role="img" aria-label="Napetost in tok v nihajnem krogu" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g5-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g5-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g5-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g5-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g5-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g5-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<path class="s-mreza" d="M26,204V26M68.8,204V26M111.6,204V26M154.4,204V26M197.2,204V26M240,204V26M282.7,204V26M325.5,204V26M368.3,204V26M26,183.5H394M26,149.2H394M26,115H394M26,80.8H394M26,46.5H394"/>
+<line class="s-os" x1="26" y1="115" x2="402" y2="115" marker-end="url(#g5-p)"/>
+<line class="s-os" x1="26" y1="204" x2="26" y2="18" marker-end="url(#g5-p)"/>
+<text class="s-os-txt" x="396" y="107" text-anchor="end">t</text>
+<text class="s-os-txt" x="34" y="30">y</text>
+<path class="s-k1" d="M26,46.5L26.9,46.6L27.7,46.7L28.6,46.8L29.4,47.1L30.3,47.4L31.1,47.8L32,48.2L32.8,48.7L33.7,49.3L34.6,49.9L35.4,50.6L36.3,51.3L37.1,52.2L38,53.1L38.8,54L39.7,55L40.5,56.1L41.4,57.2L42.3,58.4L43.1,59.6L44,60.9L44.8,62.2L45.7,63.6L46.5,65.1L47.4,66.6L48.3,68.1L49.1,69.7L50,71.4L50.8,73L51.7,74.8L52.5,76.5L53.4,78.3L54.2,80.2L55.1,82L56,83.9L56.8,85.9L57.7,87.8L58.5,89.8L59.4,91.8L60.2,93.8L61.1,95.9L61.9,98L62.8,100.1L63.7,102.2L64.5,104.3L65.4,106.4L66.2,108.6L67.1,110.7L67.9,112.8L68.8,115L69.6,117.2L70.5,119.3L71.4,121.4L72.2,123.6L73.1,125.7L73.9,127.8L74.8,129.9L75.6,132L76.5,134.1L77.3,136.2L78.2,138.2L79.1,140.2L79.9,142.2L80.8,144.1L81.6,146.1L82.5,148L83.3,149.8L84.2,151.7L85.1,153.5L85.9,155.2L86.8,157L87.6,158.6L88.5,160.3L89.3,161.9L90.2,163.4L91,164.9L91.9,166.4L92.8,167.8L93.6,169.1L94.5,170.4L95.3,171.6L96.2,172.8L97,173.9L97.9,175L98.7,176L99.6,176.9L100.5,177.8L101.3,178.7L102.2,179.4L103,180.1L103.9,180.7L104.7,181.3L105.6,181.8L106.4,182.2L107.3,182.6L108.2,182.9L109,183.2L109.9,183.3L110.7,183.4L111.6,183.5L112.4,183.4L113.3,183.3L114.1,183.2L115,182.9L115.9,182.6L116.7,182.2L117.6,181.8L118.4,181.3L119.3,180.7L120.1,180.1L121,179.4L121.9,178.7L122.7,177.8L123.6,176.9L124.4,176L125.3,175L126.1,173.9L127,172.8L127.8,171.6L128.7,170.4L129.6,169.1L130.4,167.8L131.3,166.4L132.1,164.9L133,163.4L133.8,161.9L134.7,160.3L135.5,158.6L136.4,157L137.3,155.2L138.1,153.5L139,151.7L139.8,149.8L140.7,148L141.5,146.1L142.4,144.1L143.2,142.2L144.1,140.2L145,138.2L145.8,136.2L146.7,134.1L147.5,132L148.4,129.9L149.2,127.8L150.1,125.7L150.9,123.6L151.8,121.4L152.7,119.3L153.5,117.2L154.4,115L155.2,112.8L156.1,110.7L156.9,108.6L157.8,106.4L158.7,104.3L159.5,102.2L160.4,100.1L161.2,98L162.1,95.9L162.9,93.8L163.8,91.8L164.6,89.8L165.5,87.8L166.4,85.9L167.2,83.9L168.1,82L168.9,80.2L169.8,78.3L170.6,76.5L171.5,74.8L172.3,73L173.2,71.4L174.1,69.7L174.9,68.1L175.8,66.6L176.6,65.1L177.5,63.6L178.3,62.2L179.2,60.9L180,59.6L180.9,58.4L181.8,57.2L182.6,56.1L183.5,55L184.3,54L185.2,53.1L186,52.2L186.9,51.3L187.7,50.6L188.6,49.9L189.5,49.3L190.3,48.7L191.2,48.2L192,47.8L192.9,47.4L193.7,47.1L194.6,46.8L195.5,46.7L196.3,46.6L197.2,46.5L198,46.6L198.9,46.7L199.7,46.8L200.6,47.1L201.4,47.4L202.3,47.8L203.2,48.2L204,48.7L204.9,49.3L205.7,49.9L206.6,50.6L207.4,51.3L208.3,52.2L209.1,53.1L210,54L210.9,55L211.7,56.1L212.6,57.2L213.4,58.4L214.3,59.6L215.1,60.9L216,62.2L216.8,63.6L217.7,65.1L218.6,66.6L219.4,68.1L220.3,69.7L221.1,71.4L222,73L222.8,74.8L223.7,76.5L224.5,78.3L225.4,80.2L226.3,82L227.1,83.9L228,85.9L228.8,87.8L229.7,89.8L230.5,91.8L231.4,93.8L232.3,95.9L233.1,98L234,100.1L234.8,102.2L235.7,104.3L236.5,106.4L237.4,108.6L238.2,110.7L239.1,112.8L240,115L240.8,117.2L241.7,119.3L242.5,121.4L243.4,123.6L244.2,125.7L245.1,127.8L245.9,129.9L246.8,132L247.7,134.1L248.5,136.2L249.4,138.2L250.2,140.2L251.1,142.2L251.9,144.1L252.8,146.1L253.6,148L254.5,149.8L255.4,151.7L256.2,153.5L257.1,155.2L257.9,157L258.8,158.6L259.6,160.3L260.5,161.9L261.3,163.4L262.2,164.9L263.1,166.4L263.9,167.8L264.8,169.1L265.6,170.4L266.5,171.6L267.3,172.8L268.2,173.9L269.1,175L269.9,176L270.8,176.9L271.6,177.8L272.5,178.7L273.3,179.4L274.2,180.1L275,180.7L275.9,181.3L276.8,181.8L277.6,182.2L278.5,182.6L279.3,182.9L280.2,183.2L281,183.3L281.9,183.4L282.7,183.5L283.6,183.4L284.5,183.3L285.3,183.2L286.2,182.9L287,182.6L287.9,182.2L288.7,181.8L289.6,181.3L290.4,180.7L291.3,180.1L292.2,179.4L293,178.7L293.9,177.8L294.7,176.9L295.6,176L296.4,175L297.3,173.9L298.1,172.8L299,171.6L299.9,170.4L300.7,169.1L301.6,167.8L302.4,166.4L303.3,164.9L304.1,163.4L305,161.9L305.9,160.3L306.7,158.6L307.6,157L308.4,155.2L309.3,153.5L310.1,151.7L311,149.8L311.8,148L312.7,146.1L313.6,144.1L314.4,142.2L315.3,140.2L316.1,138.2L317,136.2L317.8,134.1L318.7,132L319.5,129.9L320.4,127.8L321.3,125.7L322.1,123.6L323,121.4L323.8,119.3L324.7,117.2L325.5,115L326.4,112.8L327.2,110.7L328.1,108.6L329,106.4L329.8,104.3L330.7,102.2L331.5,100.1L332.4,98L333.2,95.9L334.1,93.8L334.9,91.8L335.8,89.8L336.7,87.8L337.5,85.9L338.4,83.9L339.2,82L340.1,80.2L340.9,78.3L341.8,76.5L342.7,74.8L343.5,73L344.4,71.4L345.2,69.7L346.1,68.1L346.9,66.6L347.8,65.1L348.6,63.6L349.5,62.2L350.4,60.9L351.2,59.6L352.1,58.4L352.9,57.2L353.8,56.1L354.6,55L355.5,54L356.3,53.1L357.2,52.2L358.1,51.3L358.9,50.6L359.8,49.9L360.6,49.3L361.5,48.7L362.3,48.2L363.2,47.8L364,47.4L364.9,47.1L365.8,46.8L366.6,46.7L367.5,46.6L368.3,46.5"/>
+<path class="s-k2" d="M26,115L26.9,117.2L27.7,119.3L28.6,121.4L29.4,123.6L30.3,125.7L31.1,127.8L32,129.9L32.8,132L33.7,134.1L34.6,136.2L35.4,138.2L36.3,140.2L37.1,142.2L38,144.1L38.8,146.1L39.7,148L40.5,149.8L41.4,151.7L42.3,153.5L43.1,155.2L44,157L44.8,158.6L45.7,160.3L46.5,161.9L47.4,163.4L48.3,164.9L49.1,166.4L50,167.8L50.8,169.1L51.7,170.4L52.5,171.6L53.4,172.8L54.2,173.9L55.1,175L56,176L56.8,176.9L57.7,177.8L58.5,178.7L59.4,179.4L60.2,180.1L61.1,180.7L61.9,181.3L62.8,181.8L63.7,182.2L64.5,182.6L65.4,182.9L66.2,183.2L67.1,183.3L67.9,183.4L68.8,183.5L69.6,183.4L70.5,183.3L71.4,183.2L72.2,182.9L73.1,182.6L73.9,182.2L74.8,181.8L75.6,181.3L76.5,180.7L77.3,180.1L78.2,179.4L79.1,178.7L79.9,177.8L80.8,176.9L81.6,176L82.5,175L83.3,173.9L84.2,172.8L85.1,171.6L85.9,170.4L86.8,169.1L87.6,167.8L88.5,166.4L89.3,164.9L90.2,163.4L91,161.9L91.9,160.3L92.8,158.6L93.6,157L94.5,155.2L95.3,153.5L96.2,151.7L97,149.8L97.9,148L98.7,146.1L99.6,144.1L100.5,142.2L101.3,140.2L102.2,138.2L103,136.2L103.9,134.1L104.7,132L105.6,129.9L106.4,127.8L107.3,125.7L108.2,123.6L109,121.4L109.9,119.3L110.7,117.2L111.6,115L112.4,112.8L113.3,110.7L114.1,108.6L115,106.4L115.9,104.3L116.7,102.2L117.6,100.1L118.4,98L119.3,95.9L120.1,93.8L121,91.8L121.9,89.8L122.7,87.8L123.6,85.9L124.4,83.9L125.3,82L126.1,80.2L127,78.3L127.8,76.5L128.7,74.8L129.6,73L130.4,71.4L131.3,69.7L132.1,68.1L133,66.6L133.8,65.1L134.7,63.6L135.5,62.2L136.4,60.9L137.3,59.6L138.1,58.4L139,57.2L139.8,56.1L140.7,55L141.5,54L142.4,53.1L143.2,52.2L144.1,51.3L145,50.6L145.8,49.9L146.7,49.3L147.5,48.7L148.4,48.2L149.2,47.8L150.1,47.4L150.9,47.1L151.8,46.8L152.7,46.7L153.5,46.6L154.4,46.5L155.2,46.6L156.1,46.7L156.9,46.8L157.8,47.1L158.7,47.4L159.5,47.8L160.4,48.2L161.2,48.7L162.1,49.3L162.9,49.9L163.8,50.6L164.6,51.3L165.5,52.2L166.4,53.1L167.2,54L168.1,55L168.9,56.1L169.8,57.2L170.6,58.4L171.5,59.6L172.3,60.9L173.2,62.2L174.1,63.6L174.9,65.1L175.8,66.6L176.6,68.1L177.5,69.7L178.3,71.4L179.2,73L180,74.8L180.9,76.5L181.8,78.3L182.6,80.2L183.5,82L184.3,83.9L185.2,85.9L186,87.8L186.9,89.8L187.7,91.8L188.6,93.8L189.5,95.9L190.3,98L191.2,100.1L192,102.2L192.9,104.3L193.7,106.4L194.6,108.6L195.5,110.7L196.3,112.8L197.2,115L198,117.2L198.9,119.3L199.7,121.4L200.6,123.6L201.4,125.7L202.3,127.8L203.2,129.9L204,132L204.9,134.1L205.7,136.2L206.6,138.2L207.4,140.2L208.3,142.2L209.1,144.1L210,146.1L210.9,148L211.7,149.8L212.6,151.7L213.4,153.5L214.3,155.2L215.1,157L216,158.6L216.8,160.3L217.7,161.9L218.6,163.4L219.4,164.9L220.3,166.4L221.1,167.8L222,169.1L222.8,170.4L223.7,171.6L224.5,172.8L225.4,173.9L226.3,175L227.1,176L228,176.9L228.8,177.8L229.7,178.7L230.5,179.4L231.4,180.1L232.3,180.7L233.1,181.3L234,181.8L234.8,182.2L235.7,182.6L236.5,182.9L237.4,183.2L238.2,183.3L239.1,183.4L240,183.5L240.8,183.4L241.7,183.3L242.5,183.2L243.4,182.9L244.2,182.6L245.1,182.2L245.9,181.8L246.8,181.3L247.7,180.7L248.5,180.1L249.4,179.4L250.2,178.7L251.1,177.8L251.9,176.9L252.8,176L253.6,175L254.5,173.9L255.4,172.8L256.2,171.6L257.1,170.4L257.9,169.1L258.8,167.8L259.6,166.4L260.5,164.9L261.3,163.4L262.2,161.9L263.1,160.3L263.9,158.6L264.8,157L265.6,155.2L266.5,153.5L267.3,151.7L268.2,149.8L269.1,148L269.9,146.1L270.8,144.1L271.6,142.2L272.5,140.2L273.3,138.2L274.2,136.2L275,134.1L275.9,132L276.8,129.9L277.6,127.8L278.5,125.7L279.3,123.6L280.2,121.4L281,119.3L281.9,117.2L282.7,115L283.6,112.8L284.5,110.7L285.3,108.6L286.2,106.4L287,104.3L287.9,102.2L288.7,100.1L289.6,98L290.4,95.9L291.3,93.8L292.2,91.8L293,89.8L293.9,87.8L294.7,85.9L295.6,83.9L296.4,82L297.3,80.2L298.1,78.3L299,76.5L299.9,74.8L300.7,73L301.6,71.4L302.4,69.7L303.3,68.1L304.1,66.6L305,65.1L305.9,63.6L306.7,62.2L307.6,60.9L308.4,59.6L309.3,58.4L310.1,57.2L311,56.1L311.8,55L312.7,54L313.6,53.1L314.4,52.2L315.3,51.3L316.1,50.6L317,49.9L317.8,49.3L318.7,48.7L319.5,48.2L320.4,47.8L321.3,47.4L322.1,47.1L323,46.8L323.8,46.7L324.7,46.6L325.5,46.5L326.4,46.6L327.2,46.7L328.1,46.8L329,47.1L329.8,47.4L330.7,47.8L331.5,48.2L332.4,48.7L333.2,49.3L334.1,49.9L334.9,50.6L335.8,51.3L336.7,52.2L337.5,53.1L338.4,54L339.2,55L340.1,56.1L340.9,57.2L341.8,58.4L342.7,59.6L343.5,60.9L344.4,62.2L345.2,63.6L346.1,65.1L346.9,66.6L347.8,68.1L348.6,69.7L349.5,71.4L350.4,73L351.2,74.8L352.1,76.5L352.9,78.3L353.8,80.2L354.6,82L355.5,83.9L356.3,85.9L357.2,87.8L358.1,89.8L358.9,91.8L359.8,93.8L360.6,95.9L361.5,98L362.3,100.1L363.2,102.2L364,104.3L364.9,106.4L365.8,108.6L366.6,110.7L367.5,112.8L368.3,115"/>
+<text class="s-txt-k1" x="36.3" y="36.3" text-anchor="start">U<tspan dy="4" style="font-size:10px">C</tspan></text>
+<text class="s-txt-k2" x="77.3" y="193.7" text-anchor="start">I</text>
+<text class="s-txt-b" x="197.2" y="128.7" text-anchor="middle">t<tspan dy="4" style="font-size:10px">0</tspan></text>
+<text class="s-txt-b" x="68.8" y="101.3" text-anchor="middle">t<tspan dy="4" style="font-size:10px">0</tspan><tspan dy="-4">/4</tspan></text>
+</svg>
+<figcaption>V nihajnem krogu niha naboj na kondenzatorju (in napetost \(U_C\)) ter tok skozi tuljavo, zamaknjen za četrt nihaja. Ko je kondenzator poln, je tok nič (vsa energija je v električnem polju); četrt nihaja pozneje je kondenzator prazen in tok največji (vsa energija je v magnetnem polju tuljave).</figcaption>
+</figure>
+            <p>Energija prehaja med električnim poljem kondenzatorja in magnetnim poljem tuljave, podobno kot pri nihalu med potencialno in kinetično energijo. Brez upora velja</p>
+            <p>\[\frac{CU_0^2}{2} = \frac{LI_0^2}{2}.\]</p>
+            <p>Nihajni čas in lastna frekvenca nihajnega kroga sta (Thomsonova enačba)</p>
+            <p>\[t_0 = 2\pi\sqrt{LC}, \qquad \nu_0 = \frac{1}{2\pi\sqrt{LC}}.\]</p>
+            <p>Zaradi upora vodnikov se energija pretvarja v toploto in nihanje je dušeno. Nihajni krogi so v radijskih sprejemnikih: z vrtljivim kondenzatorjem nastavimo lastno frekvenco na frekvenco želene postaje (resonanca).</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-8">
+              <h4>Tip 8: Lastna frekvenca in energija nihajnega kroga</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Nihajni krog ima kondenzator \(20\ \text{nF}\) in tuljavo \(5{,}0\ \text{mH}\). Kolikšna je lastna frekvenca? Kondenzator na začetku nabijemo na \(10\ \text{V}\). Kolikšen je največji tok v krogu?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> kondenzator in tuljava v istem krogu, sprašujejo po frekvenci, nihajnem času, največjem toku ali kapaciteti za izbrano frekvenco.</p><ul class="kljucne"><li>„nihajni krog“</li><li>„lastna frekvenca“</li><li>„radijski sprejemnik“</li><li>„LC“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Pretvori \(L\) in \(C\) v osnovne enote in izračunaj \(t_0 = 2\pi\sqrt{LC}\).</p><div class="na-nalogi"><p>\(t_0 = 2\pi\sqrt{5{,}0 \cdot 10^{-3} \cdot 2{,}0 \cdot 10^{-8}}\ \text{s} = 6{,}3 \cdot 10^{-5}\ \text{s}\).</p></div></li>
+              <li><p class="korak">Frekvenca je \(\nu_0 = 1/t_0\).</p><div class="na-nalogi"><p>\(\nu_0 = 16\ \text{kHz}\).</p></div></li>
+              <li><p class="korak">Za največji tok izenači največjo energijo kondenzatorja in tuljave.</p><div class="na-nalogi"><p>\(I_0 = U_0\sqrt{C/L} = 10\sqrt{\dfrac{2{,}0 \cdot 10^{-8}}{5{,}0 \cdot 10^{-3}}}\ \text{A} = 20\ \text{mA}\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Kapaciteto povečamo štirikrat. Frekvenca?</p><p>Razpolovi se.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Kolikšna mora biti kapaciteta, da ima krog s tuljavo 1,0 mH frekvenco 1,0 MHz?</p><p>\(C = 1/(4\pi^2\nu^2 L) = 25\ \text{pF}\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Kje je energija četrt nihaja po tem, ko je kondenzator poln?</p><p>Vsa v magnetnem polju tuljave.</p></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="subsection" id="kljuc">
+          <div class="subsection-head">
+            <h2>Ključ: kateri tip naloge je to?</h2>
+            <p>Poišči besedo iz navodila naloge in skoči na pravi postopek.</p>
+          </div>
+          <div class="info-card">
+            <div class="tabela-wrap">
+              <table class="tabela">
+                <thead><tr><th>V besedilu naloge piše …</th><th>Tip</th></tr></thead>
+                <tbody>
+                  <tr><td>„palica drsi po tračnicah“, „med koncema krila“</td><td><a href="#tip-1">Tip 1</a></td></tr>
+                  <tr><td>„gostota polja se spremeni v času“, „izvlečemo zanko“</td><td><a href="#tip-2">Tip 2</a></td></tr>
+                  <tr><td>„v kateri smeri teče inducirani tok“, „približujemo magnet“</td><td><a href="#tip-3">Tip 3</a></td></tr>
+                  <tr><td>„tuljava se vrti v polju“, „generator“</td><td><a href="#tip-4">Tip 4</a></td></tr>
+                  <tr><td>„primarna in sekundarna tuljava“, „daljnovod“</td><td><a href="#tip-5">Tip 5</a></td></tr>
+                  <tr><td>„induktivnost“, „samoindukcija“</td><td><a href="#tip-6">Tip 6</a></td></tr>
+                  <tr><td>„energija magnetnega polja tuljave“</td><td><a href="#tip-7">Tip 7</a></td></tr>
+                  <tr><td>„nihajni krog“, „lastna frekvenca“, „LC“</td><td><a href="#tip-8">Tip 8</a></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>Pogoste napake</h2>
+          </div>
+          <div class="info-card">
+            <ul>
+              <li>Misliš, da napetost povzroča velik pretok; povzroča jo le sprememba pretoka.</li>
+              <li>Pozabiš pomnožiti s številom ovojev \(N\).</li>
+              <li>Pri Lenzovem pravilu narišeš inducirano polje vedno nasprotno zunanjemu, tudi ko pretok pada.</li>
+              <li>Pri transformatorju razmerje tokov obrneš napačno (tok je večji na strani z manj ovoji).</li>
+              <li>Pri nihajnem krogu vstaviš \(\text{nF}\) ali \(\text{mH}\) brez pretvorbe.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>Naslednje poglavje</h2>
+          </div>
+          <div class="link-list">
+            <a class="link-item" href="/views/fizika/snov/nihanje/nihanje_razlaga.html">
+              <span class="link-item-text"><strong>4.14 Nihanje</strong><small>Nihala, nihajni čas, energija, dušeno in vsiljeno nihanje</small></span>
+              <span class="arrow">→</span>
+            </a>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>
