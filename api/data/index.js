@@ -11,3 +11,5 @@ export const snovi = readJSON("./snovi.json").map((snov) => ({
 }));
 
 export const matura = readJSON("./matura.json");
+
+export const naloge = readJSON("./naloge.json");
