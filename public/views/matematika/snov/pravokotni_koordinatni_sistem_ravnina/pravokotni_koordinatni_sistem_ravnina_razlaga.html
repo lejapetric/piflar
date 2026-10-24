@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Pravokotni koordinatni sistem v ravnini — razlaga in postopki | Piflar.si</title>
-  <meta name="description" content="Celovita razlaga koordinatnega sistema v ravnini za maturo: točke, razdalja med točkama, razpolovišče, težišče trikotnika, premica, vzporednost in pravokotnost premic, razdalja točke do premice.">
+  <meta name="description" content="Pravokotni koordinatni sistem v ravnini za maturo po podpoglavjih kataloga: množice točk v ravnini, razdalja med točkama, razpolovišče, težišče in ploščina trikotnika s koordinatami.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
@@ -23,27 +23,24 @@
         <header class="page-header">
           <span class="page-eyebrow">Matematika · Snov · 4.9</span>
           <h1>Pravokotni koordinatni sistem v ravnini</h1>
-          <p>Vse o koordinatnem sistemu za maturo: točke v ravnini, razdalja med točkama, razpolovišče daljice, težišče trikotnika, enačbe premic, vzporednost in pravokotnost, razdalja točke do premice, ploščina trikotnika.</p>
+          <p>Točke kot urejeni pari števil: množice točk, razdalja, razpolovišče, težišče in ploščina trikotnika. Enačbe premice so v poglavju Linearna funkcija (4.10.1). Pod razlago vsakega podpoglavja so vsi tipi nalog, ki se pojavijo pri tem sklopu.</p>
           <div class="page-meta">
-            <div class="page-meta-item"><strong>10</strong><span>Tipov nalog</span></div>
-            <div class="page-meta-item"><strong>40+</strong><span>Primerov</span></div>
-            <div class="page-meta-item"><strong>~50 min</strong><span>Branja</span></div>
+            <div class="page-meta-item"><strong>3</strong><span>Podpoglavja</span></div>
+            <div class="page-meta-item"><strong>9</strong><span>Tipov nalog</span></div>
+            <div class="page-meta-item"><strong>~30 min</strong><span>Branja</span></div>
           </div>
         </header>
 
-        <!-- ============ MATURA FORMULE ============ -->
         <div class="matura-formule">
-          <h3>📋 Formule na maturi — osnovna raven</h3>
-          <p>Na maturi <strong>osnovne ravni</strong> list s formulami ne vsebuje koordinatnih formul, zato si jih moraš zapomniti. Spodaj so vse ključne:</p>
+          <h3>📋 Formule na maturi</h3>
+          <p>Na listu s formulami je <strong>ploščina trikotnika s koordinatami oglišč</strong>. Razdaljo in razpolovišče znaj na pamet:</p>
           <div class="matura-grid">
             <div class="matura-levo">
               <ul>
-                <li><strong>Razdalja med točkama:</strong> \(d(A,B) = \sqrt{(x_2-x_1)^2 + (y_2-y_1)^2}\)</li>
-                <li><strong>Razpolovišče daljice:</strong> \(S\left(\dfrac{x_1+x_2}{2}, \dfrac{y_1+y_2}{2}\right)\)</li>
-                <li><strong>Težišče trikotnika:</strong> \(T\left(\dfrac{x_1+x_2+x_3}{3}, \dfrac{y_1+y_2+y_3}{3}\right)\)</li>
-                <li><strong>Enačba premice (eksplicitna):</strong> \(y = kx + n\)</li>
-                <li><strong>Smerni koeficient:</strong> \(k = \dfrac{y_2 - y_1}{x_2 - x_1}\)</li>
-                <li><strong>Razdalja točke do premice:</strong> \(d(T, p) = \dfrac{|ax_0 + by_0 + c|}{\sqrt{a^2 + b^2}}\)</li>
+                <li>\(d(A, B) = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}\)</li>
+                <li>razpolovišče \(M\left(\frac{x_1 + x_2}{2}, \frac{y_1 + y_2}{2}\right)\)</li>
+                <li>težišče \(T\left(\frac{x_1 + x_2 + x_3}{3}, \frac{y_1 + y_2 + y_3}{3}\right)\)</li>
+                <li>\(S = \frac{1}{2}\left|(x_2 - x_1)(y_3 - y_1) - (x_3 - x_1)(y_2 - y_1)\right|\) <em>(na listu)</em></li>
               </ul>
             </div>
             <div class="matura-slika">
@@ -52,424 +49,457 @@
           </div>
         </div>
 
-        <!-- ============ 1. TEORIJA ============ -->
-        <section class="subsection">
-          <div class="subsection-head">
-            <h2>1. Teorija — formule in pravila</h2>
-            <p>Kar moraš znati na pamet, preden se lotiš nalog.</p>
-          </div>
+        <nav class="kazalo" aria-label="Podpoglavja">
+          <h2>Podpoglavja</h2>
+          <ol>
+            <li><a href="#sklop-1"><span class="kazalo-st">4.9.1</span> Množice točk v ravnini</a></li>
+            <li><a href="#sklop-2"><span class="kazalo-st">4.9.2</span> Razdalja med točkama v koordinatni ravnini</a></li>
+            <li><a href="#sklop-3"><span class="kazalo-st">4.9.3</span> Ploščina trikotnika</a></li>
+            <li><a href="#kljuc"><span class="kazalo-st">🔎</span> Ključ: kateri tip naloge je to?</a></li>
+          </ol>
+        </nav>
 
-          <div class="info-card">
-            <h3>Točke v ravnini</h3>
-            <div class="concept-list two-col">
-              <div class="concept">
-                <h4>Zapis točke</h4>
-                <div class="concept-formula">\(A(x_1, y_1)\)</div>
-                <p class="concept-desc">Prva koordinata je abscisa (vodoravna os \(x\)), druga ordinata (navpična os \(y\)).</p>
+        <!-- SKLOP 1 -->
+        <section class="sklop" id="sklop-1">
+          <header class="sklop-header">
+            <span class="sklop-num">4.9.1</span>
+            <h2>Množice točk v ravnini</h2>
+            <p>Od pogoja na koordinate do območja na sliki in nazaj.</p>
+          </header>
+          <div class="sklop-cilji">
+            <h3>🎯 Cilji iz kataloga</h3>
+            <ul>
+              <li>Uporablja pravokotni koordinatni sistem v ravnini.</li>
+              <li>Odčita in nariše množico točk v koordinatni ravnini ob danih pogojih.</li>
+              <li>Uporablja zvezo med urejenimi pari števil in točkami na ravnini.</li>
+            </ul>
+          </div>
+          <div class="sklop-teorija">
+            <h3>📖 Razlaga</h3>
+            <p>Dve pravokotni številski premici (abscisna os \(x\) in ordinatna os \(y\)) s skupnim izhodiščem \(O(0, 0)\) tvorita <strong>pravokotni koordinatni sistem</strong>. Vsaki točki pripada natanko en urejen par \((x, y)\): najprej abscisa, nato ordinata. \((2, 3) \ne (3, 2)\).</p>
+            <figure class="slika slika--ozka">
+<svg viewBox="0 0 320 280" role="img" aria-label="Kvadranti in zrcalne točke" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g1-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g1-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g1-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g1-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g1-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g1-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<path class="s-mreza" d="M26,254V26M59.5,254V26M93,254V26M126.5,254V26M160,254V26M193.5,254V26M227,254V26M260.5,254V26M294,254V26M26,237.7H294M26,205.1H294M26,172.6H294M26,140H294M26,107.4H294M26,74.9H294M26,42.3H294"/>
+<line class="s-os" x1="26" y1="140" x2="302" y2="140" marker-end="url(#g1-p)"/>
+<line class="s-os" x1="160" y1="254" x2="160" y2="18" marker-end="url(#g1-p)"/>
+<text class="s-os-txt" x="296" y="132" text-anchor="end">x</text>
+<text class="s-os-txt" x="168" y="30">y</text>
+<line class="s-os" x1="26" y1="137" x2="26" y2="143"/><text class="s-os-txt" x="26" y="155" text-anchor="middle">-4</text><line class="s-os" x1="59.5" y1="137" x2="59.5" y2="143"/><text class="s-os-txt" x="59.5" y="155" text-anchor="middle">-3</text><line class="s-os" x1="93" y1="137" x2="93" y2="143"/><text class="s-os-txt" x="93" y="155" text-anchor="middle">-2</text><line class="s-os" x1="126.5" y1="137" x2="126.5" y2="143"/><text class="s-os-txt" x="126.5" y="155" text-anchor="middle">-1</text><line class="s-os" x1="193.5" y1="137" x2="193.5" y2="143"/><text class="s-os-txt" x="193.5" y="155" text-anchor="middle">1</text><line class="s-os" x1="227" y1="137" x2="227" y2="143"/><text class="s-os-txt" x="227" y="155" text-anchor="middle">2</text><line class="s-os" x1="260.5" y1="137" x2="260.5" y2="143"/><text class="s-os-txt" x="260.5" y="155" text-anchor="middle">3</text><line class="s-os" x1="157" y1="237.7" x2="163" y2="237.7"/><text class="s-os-txt" x="154" y="241.7" text-anchor="end">-3</text><line class="s-os" x1="157" y1="205.1" x2="163" y2="205.1"/><text class="s-os-txt" x="154" y="209.1" text-anchor="end">-2</text><line class="s-os" x1="157" y1="172.6" x2="163" y2="172.6"/><text class="s-os-txt" x="154" y="176.6" text-anchor="end">-1</text><line class="s-os" x1="157" y1="107.4" x2="163" y2="107.4"/><text class="s-os-txt" x="154" y="111.4" text-anchor="end">1</text><line class="s-os" x1="157" y1="74.9" x2="163" y2="74.9"/><text class="s-os-txt" x="154" y="78.9" text-anchor="end">2</text><line class="s-os" x1="157" y1="42.3" x2="163" y2="42.3"/><text class="s-os-txt" x="154" y="46.3" text-anchor="end">3</text><text class="s-os-txt" x="154" y="155" text-anchor="end">0</text>
+<line class="s-pom" x1="260.5" y1="74.9" x2="59.5" y2="74.9"/>
+<line class="s-pom" x1="260.5" y1="74.9" x2="260.5" y2="205.1"/>
+<line class="s-pom" x1="260.5" y1="74.9" x2="59.5" y2="205.1"/>
+<circle class="s-tocka" cx="260.5" cy="74.9" r="4.5"/>
+<text class="s-txt-b" x="266.5" y="66.9" text-anchor="start">T(3, 2)</text>
+<circle class="s-tocka-2" cx="59.5" cy="74.9" r="4.5"/>
+<text class="s-txt-k2" x="53.5" y="66.9" text-anchor="end">(−3, 2)</text>
+<circle class="s-tocka-2" cx="260.5" cy="205.1" r="4.5"/>
+<text class="s-txt-k2" x="266.5" y="221.1" text-anchor="start">(3, −2)</text>
+<circle class="s-tocka-2" cx="59.5" cy="205.1" r="4.5"/>
+<text class="s-txt-k2" x="53.5" y="221.1" text-anchor="end">(−3, −2)</text>
+<text class="s-txt-muted" x="210.3" y="42.3" text-anchor="middle">I.</text>
+<text class="s-txt-muted" x="109.8" y="42.3" text-anchor="middle">II.</text>
+<text class="s-txt-muted" x="109.8" y="241" text-anchor="middle">III.</text>
+<text class="s-txt-muted" x="210.3" y="241" text-anchor="middle">IV.</text>
+</svg>
+<figcaption>Osi delita ravnino na štiri kvadrante. Zrcaljenje čez os \(y\) spremeni predznak \(x\), čez os \(x\) predznak \(y\), čez izhodišče oba.</figcaption>
+</figure>
+            <h4>Kvadranti in posebne lege</h4>
+            <div class="tabela-wrap">
+              <table class="tabela">
+                <thead><tr><th>Lega</th><th>Pogoj</th></tr></thead>
+                <tbody>
+                  <tr><td>I. / II. / III. / IV. kvadrant</td><td>\((+, +)\) / \((-, +)\) / \((-, -)\) / \((+, -)\)</td></tr>
+                  <tr><td>na osi \(x\)</td><td>\(y = 0\)</td></tr>
+                  <tr><td>na osi \(y\)</td><td>\(x = 0\)</td></tr>
+                  <tr><td>simetrala lihih kvadrantov</td><td>\(y = x\)</td></tr>
+                  <tr><td>simetrala sodih kvadrantov</td><td>\(y = -x\)</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <h4>Množice točk, podane s pogoji</h4>
+            <div class="slike-vrsta"><figure class="slika">
+<svg viewBox="0 0 230 210" role="img" aria-label="x ≥ 1 in y &lt; 2" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g2-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g2-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g2-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g2-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g2-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g2-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<path class="s-mreza" d="M38.7,184V26M64.1,184V26M89.6,184V26M115,184V26M140.4,184V26M165.9,184V26M191.3,184V26M26,184H204M26,157.7H204M26,131.3H204M26,105H204M26,78.7H204M26,52.3H204M26,26H204"/>
+<polygon class="s-ploskev" points="140.4,184 204,184 204,52.3 140.4,52.3"/>
+<line class="s-os" x1="26" y1="105" x2="212" y2="105" marker-end="url(#g2-p)"/>
+<line class="s-os" x1="115" y1="184" x2="115" y2="18" marker-end="url(#g2-p)"/>
+<text class="s-os-txt" x="206" y="97" text-anchor="end">x</text>
+<text class="s-os-txt" x="123" y="30">y</text>
+<line class="s-os" x1="38.7" y1="102" x2="38.7" y2="108"/><text class="s-os-txt" x="38.7" y="120" text-anchor="middle">-3</text><line class="s-os" x1="64.1" y1="102" x2="64.1" y2="108"/><text class="s-os-txt" x="64.1" y="120" text-anchor="middle">-2</text><line class="s-os" x1="89.6" y1="102" x2="89.6" y2="108"/><text class="s-os-txt" x="89.6" y="120" text-anchor="middle">-1</text><line class="s-os" x1="140.4" y1="102" x2="140.4" y2="108"/><text class="s-os-txt" x="140.4" y="120" text-anchor="middle">1</text><line class="s-os" x1="165.9" y1="102" x2="165.9" y2="108"/><text class="s-os-txt" x="165.9" y="120" text-anchor="middle">2</text><line class="s-os" x1="191.3" y1="102" x2="191.3" y2="108"/><text class="s-os-txt" x="191.3" y="120" text-anchor="middle">3</text><line class="s-os" x1="112" y1="184" x2="118" y2="184"/><text class="s-os-txt" x="109" y="188" text-anchor="end">-3</text><line class="s-os" x1="112" y1="157.7" x2="118" y2="157.7"/><text class="s-os-txt" x="109" y="161.7" text-anchor="end">-2</text><line class="s-os" x1="112" y1="131.3" x2="118" y2="131.3"/><text class="s-os-txt" x="109" y="135.3" text-anchor="end">-1</text><line class="s-os" x1="112" y1="78.7" x2="118" y2="78.7"/><text class="s-os-txt" x="109" y="82.7" text-anchor="end">1</text><line class="s-os" x1="112" y1="52.3" x2="118" y2="52.3"/><text class="s-os-txt" x="109" y="56.3" text-anchor="end">2</text><text class="s-os-txt" x="109" y="120" text-anchor="end">0</text>
+<line class="s-k1" x1="140.4" y1="184" x2="140.4" y2="52.3"/>
+<line class="s-k1 s-crtkano" x1="140.4" y1="52.3" x2="204" y2="52.3"/>
+<text class="s-txt-k1" x="66.7" y="168.2" text-anchor="middle">x ≥ 1 in y < 2</text>
+</svg>
+<figcaption>Polna črta: meja spada zraven; črtkana: ne spada.</figcaption>
+</figure><figure class="slika">
+<svg viewBox="0 0 230 210" role="img" aria-label="|x| ≤ 2" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g3-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g3-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g3-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g3-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g3-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g3-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<path class="s-mreza" d="M38.7,184V26M64.1,184V26M89.6,184V26M115,184V26M140.4,184V26M165.9,184V26M191.3,184V26M26,184H204M26,157.7H204M26,131.3H204M26,105H204M26,78.7H204M26,52.3H204M26,26H204"/>
+<polygon class="s-ploskev" points="64.1,184 165.9,184 165.9,26 64.1,26"/>
+<line class="s-os" x1="26" y1="105" x2="212" y2="105" marker-end="url(#g3-p)"/>
+<line class="s-os" x1="115" y1="184" x2="115" y2="18" marker-end="url(#g3-p)"/>
+<text class="s-os-txt" x="206" y="97" text-anchor="end">x</text>
+<text class="s-os-txt" x="123" y="30">y</text>
+<line class="s-os" x1="38.7" y1="102" x2="38.7" y2="108"/><text class="s-os-txt" x="38.7" y="120" text-anchor="middle">-3</text><line class="s-os" x1="64.1" y1="102" x2="64.1" y2="108"/><text class="s-os-txt" x="64.1" y="120" text-anchor="middle">-2</text><line class="s-os" x1="89.6" y1="102" x2="89.6" y2="108"/><text class="s-os-txt" x="89.6" y="120" text-anchor="middle">-1</text><line class="s-os" x1="140.4" y1="102" x2="140.4" y2="108"/><text class="s-os-txt" x="140.4" y="120" text-anchor="middle">1</text><line class="s-os" x1="165.9" y1="102" x2="165.9" y2="108"/><text class="s-os-txt" x="165.9" y="120" text-anchor="middle">2</text><line class="s-os" x1="191.3" y1="102" x2="191.3" y2="108"/><text class="s-os-txt" x="191.3" y="120" text-anchor="middle">3</text><line class="s-os" x1="112" y1="184" x2="118" y2="184"/><text class="s-os-txt" x="109" y="188" text-anchor="end">-3</text><line class="s-os" x1="112" y1="157.7" x2="118" y2="157.7"/><text class="s-os-txt" x="109" y="161.7" text-anchor="end">-2</text><line class="s-os" x1="112" y1="131.3" x2="118" y2="131.3"/><text class="s-os-txt" x="109" y="135.3" text-anchor="end">-1</text><line class="s-os" x1="112" y1="78.7" x2="118" y2="78.7"/><text class="s-os-txt" x="109" y="82.7" text-anchor="end">1</text><line class="s-os" x1="112" y1="52.3" x2="118" y2="52.3"/><text class="s-os-txt" x="109" y="56.3" text-anchor="end">2</text><text class="s-os-txt" x="109" y="120" text-anchor="end">0</text>
+<line class="s-k1" x1="64.1" y1="184" x2="64.1" y2="26"/>
+<line class="s-k1" x1="165.9" y1="184" x2="165.9" y2="26"/>
+<text class="s-txt-k1" x="140.4" y="41.8" text-anchor="middle">|x| ≤ 2</text>
+</svg>
+<figcaption>Navpični pas \(-2 \le x \le 2\).</figcaption>
+</figure><figure class="slika">
+<svg viewBox="0 0 230 210" role="img" aria-label="y &gt; x" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g4-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g4-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g4-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g4-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g4-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g4-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<path class="s-mreza" d="M38.7,184V26M64.1,184V26M89.6,184V26M115,184V26M140.4,184V26M165.9,184V26M191.3,184V26M26,184H204M26,157.7H204M26,131.3H204M26,105H204M26,78.7H204M26,52.3H204M26,26H204"/>
+<polygon class="s-ploskev" points="26,197.2 26.8,196.3 27.7,195.5 28.5,194.6 29.3,193.7 30.1,192.9 31,192 31.8,191.2 32.6,190.3 33.4,189.5 34.3,188.6 35.1,187.8 35.9,186.9 36.7,186 37.6,185.2 38.4,184.3 39.2,183.5 40,182.6 40.9,181.8 41.7,180.9 42.5,180.1 43.4,179.2 44.2,178.3 45,177.5 45.8,176.6 46.7,175.8 47.5,174.9 48.3,174.1 49.1,173.2 50,172.3 50.8,171.5 51.6,170.6 52.4,169.8 53.3,168.9 54.1,168.1 54.9,167.2 55.8,166.4 56.6,165.5 57.4,164.6 58.2,163.8 59.1,162.9 59.9,162.1 60.7,161.2 61.5,160.4 62.4,159.5 63.2,158.7 64,157.8 64.8,156.9 65.7,156.1 66.5,155.2 67.3,154.4 68.1,153.5 69,152.7 69.8,151.8 70.6,151 71.5,150.1 72.3,149.2 73.1,148.4 73.9,147.5 74.8,146.7 75.6,145.8 76.4,145 77.2,144.1 78.1,143.2 78.9,142.4 79.7,141.5 80.5,140.7 81.4,139.8 82.2,139 83,138.1 83.9,137.3 84.7,136.4 85.5,135.5 86.3,134.7 87.2,133.8 88,133 88.8,132.1 89.6,131.3 90.5,130.4 91.3,129.6 92.1,128.7 92.9,127.8 93.8,127 94.6,126.1 95.4,125.3 96.2,124.4 97.1,123.6 97.9,122.7 98.7,121.9 99.6,121 100.4,120.1 101.2,119.3 102,118.4 102.9,117.6 103.7,116.7 104.5,115.9 105.3,115 106.2,114.2 107,113.3 107.8,112.4 108.6,111.6 109.5,110.7 110.3,109.9 111.1,109 111.9,108.2 112.8,107.3 113.6,106.4 114.4,105.6 115.3,104.7 116.1,103.9 116.9,103 117.7,102.2 118.6,101.3 119.4,100.5 120.2,99.6 121,98.7 121.9,97.9 122.7,97 123.5,96.2 124.3,95.3 125.2,94.5 126,93.6 126.8,92.8 127.7,91.9 128.5,91 129.3,90.2 130.1,89.3 131,88.5 131.8,87.6 132.6,86.8 133.4,85.9 134.3,85.1 135.1,84.2 135.9,83.3 136.7,82.5 137.6,81.6 138.4,80.8 139.2,79.9 140,79.1 140.9,78.2 141.7,77.4 142.5,76.5 143.4,75.6 144.2,74.8 145,73.9 145.8,73.1 146.7,72.2 147.5,71.4 148.3,70.5 149.1,69.6 150,68.8 150.8,67.9 151.6,67.1 152.4,66.2 153.3,65.4 154.1,64.5 154.9,63.7 155.7,62.8 156.6,61.9 157.4,61.1 158.2,60.2 159.1,59.4 159.9,58.5 160.7,57.7 161.5,56.8 162.4,56 163.2,55.1 164,54.2 164.8,53.4 165.7,52.5 166.5,51.7 167.3,50.8 168.1,50 169,49.1 169.8,48.3 170.6,47.4 171.5,46.5 172.3,45.7 173.1,44.8 173.9,44 174.8,43.1 175.6,42.3 176.4,41.4 177.2,40.5 178.1,39.7 178.9,38.8 179.7,38 180.5,37.1 181.4,36.3 182.2,35.4 183,34.6 183.8,33.7 184.7,32.8 185.5,32 186.3,31.1 187.2,30.3 188,29.4 188.8,28.6 189.6,27.7 190.5,26.9 191.3,26 191.3,26 190.5,26 189.6,26 188.8,26 188,26 187.2,26 186.3,26 185.5,26 184.7,26 183.8,26 183,26 182.2,26 181.4,26 180.5,26 179.7,26 178.9,26 178.1,26 177.2,26 176.4,26 175.6,26 174.8,26 173.9,26 173.1,26 172.3,26 171.5,26 170.6,26 169.8,26 169,26 168.1,26 167.3,26 166.5,26 165.7,26 164.8,26 164,26 163.2,26 162.4,26 161.5,26 160.7,26 159.9,26 159.1,26 158.2,26 157.4,26 156.6,26 155.7,26 154.9,26 154.1,26 153.3,26 152.4,26 151.6,26 150.8,26 150,26 149.1,26 148.3,26 147.5,26 146.7,26 145.8,26 145,26 144.2,26 143.4,26 142.5,26 141.7,26 140.9,26 140,26 139.2,26 138.4,26 137.6,26 136.7,26 135.9,26 135.1,26 134.3,26 133.4,26 132.6,26 131.8,26 131,26 130.1,26 129.3,26 128.5,26 127.7,26 126.8,26 126,26 125.2,26 124.3,26 123.5,26 122.7,26 121.9,26 121,26 120.2,26 119.4,26 118.6,26 117.7,26 116.9,26 116.1,26 115.3,26 114.4,26 113.6,26 112.8,26 111.9,26 111.1,26 110.3,26 109.5,26 108.6,26 107.8,26 107,26 106.2,26 105.3,26 104.5,26 103.7,26 102.9,26 102,26 101.2,26 100.4,26 99.6,26 98.7,26 97.9,26 97.1,26 96.2,26 95.4,26 94.6,26 93.8,26 92.9,26 92.1,26 91.3,26 90.5,26 89.6,26 88.8,26 88,26 87.2,26 86.3,26 85.5,26 84.7,26 83.9,26 83,26 82.2,26 81.4,26 80.5,26 79.7,26 78.9,26 78.1,26 77.2,26 76.4,26 75.6,26 74.8,26 73.9,26 73.1,26 72.3,26 71.5,26 70.6,26 69.8,26 69,26 68.1,26 67.3,26 66.5,26 65.7,26 64.8,26 64,26 63.2,26 62.4,26 61.5,26 60.7,26 59.9,26 59.1,26 58.2,26 57.4,26 56.6,26 55.8,26 54.9,26 54.1,26 53.3,26 52.4,26 51.6,26 50.8,26 50,26 49.1,26 48.3,26 47.5,26 46.7,26 45.8,26 45,26 44.2,26 43.4,26 42.5,26 41.7,26 40.9,26 40,26 39.2,26 38.4,26 37.6,26 36.7,26 35.9,26 35.1,26 34.3,26 33.4,26 32.6,26 31.8,26 31,26 30.1,26 29.3,26 28.5,26 27.7,26 26.8,26 26,26"/>
+<line class="s-os" x1="26" y1="105" x2="212" y2="105" marker-end="url(#g4-p)"/>
+<line class="s-os" x1="115" y1="184" x2="115" y2="18" marker-end="url(#g4-p)"/>
+<text class="s-os-txt" x="206" y="97" text-anchor="end">x</text>
+<text class="s-os-txt" x="123" y="30">y</text>
+<line class="s-os" x1="38.7" y1="102" x2="38.7" y2="108"/><text class="s-os-txt" x="38.7" y="120" text-anchor="middle">-3</text><line class="s-os" x1="64.1" y1="102" x2="64.1" y2="108"/><text class="s-os-txt" x="64.1" y="120" text-anchor="middle">-2</text><line class="s-os" x1="89.6" y1="102" x2="89.6" y2="108"/><text class="s-os-txt" x="89.6" y="120" text-anchor="middle">-1</text><line class="s-os" x1="140.4" y1="102" x2="140.4" y2="108"/><text class="s-os-txt" x="140.4" y="120" text-anchor="middle">1</text><line class="s-os" x1="165.9" y1="102" x2="165.9" y2="108"/><text class="s-os-txt" x="165.9" y="120" text-anchor="middle">2</text><line class="s-os" x1="191.3" y1="102" x2="191.3" y2="108"/><text class="s-os-txt" x="191.3" y="120" text-anchor="middle">3</text><line class="s-os" x1="112" y1="184" x2="118" y2="184"/><text class="s-os-txt" x="109" y="188" text-anchor="end">-3</text><line class="s-os" x1="112" y1="157.7" x2="118" y2="157.7"/><text class="s-os-txt" x="109" y="161.7" text-anchor="end">-2</text><line class="s-os" x1="112" y1="131.3" x2="118" y2="131.3"/><text class="s-os-txt" x="109" y="135.3" text-anchor="end">-1</text><line class="s-os" x1="112" y1="78.7" x2="118" y2="78.7"/><text class="s-os-txt" x="109" y="82.7" text-anchor="end">1</text><line class="s-os" x1="112" y1="52.3" x2="118" y2="52.3"/><text class="s-os-txt" x="109" y="56.3" text-anchor="end">2</text><text class="s-os-txt" x="109" y="120" text-anchor="end">0</text>
+<path class="s-k1 s-crtkano" d="M26,197.2L26.4,196.7L26.9,196.2L27.3,195.8L27.8,195.3L28.2,194.9L28.7,194.4L29.1,193.9L29.6,193.5L30,193L30.4,192.6L30.9,192.1L31.3,191.6L31.8,191.2L32.2,190.7L32.7,190.3L33.1,189.8L33.6,189.3L34,188.9L34.5,188.4L34.9,188L35.3,187.5L35.8,187L36.2,186.6L36.7,186.1L37.1,185.6L37.6,185.2L38,184.7L38.5,184.3L38.9,183.8L39.3,183.3L39.8,182.9L40.2,182.4L40.7,182L41.1,181.5L41.6,181L42,180.6L42.5,180.1L42.9,179.7L43.4,179.2L43.8,178.7L44.2,178.3L44.7,177.8L45.1,177.4L45.6,176.9L46,176.4L46.5,176L46.9,175.5L47.4,175L47.8,174.6L48.3,174.1L48.7,173.7L49.1,173.2L49.6,172.7L50,172.3L50.5,171.8L50.9,171.4L51.4,170.9L51.8,170.4L52.3,170L52.7,169.5L53.1,169.1L53.6,168.6L54,168.1L54.5,167.7L54.9,167.2L55.4,166.8L55.8,166.3L56.3,165.8L56.7,165.4L57.2,164.9L57.6,164.4L58,164L58.5,163.5L58.9,163.1L59.4,162.6L59.8,162.1L60.3,161.7L60.7,161.2L61.2,160.8L61.6,160.3L62,159.8L62.5,159.4L62.9,158.9L63.4,158.5L63.8,158L64.3,157.5L64.7,157.1L65.2,156.6L65.6,156.2L66.1,155.7L66.5,155.2L66.9,154.8L67.4,154.3L67.8,153.8L68.3,153.4L68.7,152.9L69.2,152.5L69.6,152L70.1,151.5L70.5,151.1L70.9,150.6L71.4,150.2L71.8,149.7L72.3,149.2L72.7,148.8L73.2,148.3L73.6,147.9L74.1,147.4L74.5,146.9L74.9,146.5L75.4,146L75.8,145.6L76.3,145.1L76.7,144.6L77.2,144.2L77.6,143.7L78.1,143.2L78.5,142.8L79,142.3L79.4,141.9L79.8,141.4L80.3,140.9L80.7,140.5L81.2,140L81.6,139.6L82.1,139.1L82.5,138.6L83,138.2L83.4,137.7L83.9,137.3L84.3,136.8L84.7,136.3L85.2,135.9L85.6,135.4L86.1,135L86.5,134.5L87,134L87.4,133.6L87.9,133.1L88.3,132.7L88.7,132.2L89.2,131.7L89.6,131.3L90.1,130.8L90.5,130.3L91,129.9L91.4,129.4L91.9,129L92.3,128.5L92.8,128L93.2,127.6L93.6,127.1L94.1,126.7L94.5,126.2L95,125.7L95.4,125.3L95.9,124.8L96.3,124.4L96.8,123.9L97.2,123.4L97.6,123L98.1,122.5L98.5,122.1L99,121.6L99.4,121.1L99.9,120.7L100.3,120.2L100.8,119.7L101.2,119.3L101.6,118.8L102.1,118.4L102.5,117.9L103,117.4L103.4,117L103.9,116.5L104.3,116.1L104.8,115.6L105.2,115.1L105.7,114.7L106.1,114.2L106.5,113.8L107,113.3L107.4,112.8L107.9,112.4L108.3,111.9L108.8,111.5L109.2,111L109.7,110.5L110.1,110.1L110.6,109.6L111,109.1L111.4,108.7L111.9,108.2L112.3,107.8L112.8,107.3L113.2,106.8L113.7,106.4L114.1,105.9L114.6,105.5L115,105L115.4,104.5L115.9,104.1L116.3,103.6L116.8,103.2L117.2,102.7L117.7,102.2L118.1,101.8L118.6,101.3L119,100.9L119.5,100.4L119.9,99.9L120.3,99.5L120.8,99L121.2,98.5L121.7,98.1L122.1,97.6L122.6,97.2L123,96.7L123.5,96.2L123.9,95.8L124.3,95.3L124.8,94.9L125.2,94.4L125.7,93.9L126.1,93.5L126.6,93L127,92.6L127.5,92.1L127.9,91.6L128.4,91.2L128.8,90.7L129.2,90.3L129.7,89.8L130.1,89.3L130.6,88.9L131,88.4L131.5,87.9L131.9,87.5L132.4,87L132.8,86.6L133.2,86.1L133.7,85.6L134.1,85.2L134.6,84.7L135,84.3L135.5,83.8L135.9,83.3L136.4,82.9L136.8,82.4L137.3,82L137.7,81.5L138.1,81L138.6,80.6L139,80.1L139.5,79.7L139.9,79.2L140.4,78.7L140.8,78.3L141.3,77.8L141.7,77.4L142.1,76.9L142.6,76.4L143,76L143.5,75.5L143.9,75L144.4,74.6L144.8,74.1L145.3,73.7L145.7,73.2L146.1,72.7L146.6,72.3L147,71.8L147.5,71.4L147.9,70.9L148.4,70.4L148.8,70L149.3,69.5L149.7,69.1L150.2,68.6L150.6,68.1L151,67.7L151.5,67.2L151.9,66.8L152.4,66.3L152.8,65.8L153.3,65.4L153.7,64.9L154.2,64.4L154.6,64L155,63.5L155.5,63.1L155.9,62.6L156.4,62.1L156.8,61.7L157.3,61.2L157.7,60.8L158.2,60.3L158.6,59.8L159.1,59.4L159.5,58.9L159.9,58.5L160.4,58L160.8,57.5L161.3,57.1L161.7,56.6L162.2,56.2L162.6,55.7L163.1,55.2L163.5,54.8L164,54.3L164.4,53.8L164.8,53.4L165.3,52.9L165.7,52.5L166.2,52L166.6,51.5L167.1,51.1L167.5,50.6L168,50.2L168.4,49.7L168.8,49.2L169.3,48.8L169.7,48.3L170.2,47.9L170.6,47.4L171.1,46.9L171.5,46.5L172,46L172.4,45.6L172.9,45.1L173.3,44.6L173.7,44.2L174.2,43.7L174.6,43.2L175.1,42.8L175.5,42.3L176,41.9L176.4,41.4L176.9,40.9L177.3,40.5L177.7,40L178.2,39.6L178.6,39.1L179.1,38.6L179.5,38.2L180,37.7L180.4,37.3L180.9,36.8L181.3,36.3L181.8,35.9L182.2,35.4L182.6,35L183.1,34.5L183.5,34L184,33.6L184.4,33.1L184.9,32.6L185.3,32.2L185.8,31.7L186.2,31.3L186.6,30.8L187.1,30.3L187.5,29.9L188,29.4L188.4,29L188.9,28.5L189.3,28L189.8,27.6L190.2,27.1L190.6,26.7L191.1,26.2L191.5,25.7L192,25.3L192.4,24.8L192.9,24.4L193.3,23.9L193.8,23.4L194.2,23L194.7,22.5L195.1,22.1L195.5,21.6L196,21.1L196.4,20.7L196.9,20.2L197.3,19.7L197.8,19.3L198.2,18.8L198.7,18.4L199.1,17.9L199.5,17.4L200,17L200.4,16.5L200.9,16.1L201.3,15.6L201.8,15.1L202.2,14.7L202.7,14.2L203.1,13.8L203.6,13.3L204,12.8"/>
+<text class="s-txt-k1" x="69.2" y="41.8" text-anchor="middle">y > x</text>
+</svg>
+<figcaption>Polravnina nad premico \(y = x\) (meja ne spada zraven).</figcaption>
+</figure></div>
+            <ul>
+              <li>\(x = a\) je navpična premica, \(y = b\) vodoravna premica.</li>
+              <li>\(x &gt; a\) je polravnina desno od premice \(x = a\) (brez nje), \(x \ge a\) z njo.</li>
+              <li>\(|x| \le a\) pomeni \(-a \le x \le a\) (navpični pas), \(|y| &gt; b\) pomeni \(y &lt; -b\) ali \(y &gt; b\) (zunaj vodoravnega pasu).</li>
+              <li>Pogoji, povezani z „in“, dajo <strong>presek</strong> območij, povezani z „ali“ <strong>unijo</strong>.</li>
+              <li>\(xy &gt; 0\): \(x\) in \(y\) imata enak predznak, to sta I. in III. kvadrant.</li>
+            </ul>
+            <div class="pazi"><strong>Pazi:</strong> mejo, ki spada zraven (\(\le\), \(\ge\)), rišemo s polno črto, mejo, ki ne spada (\(&lt;\), \(&gt;\)), s črtkano. Krajišča: poln krogec je vključen, prazen ni.</div>
+          </div>
+          <div class="sklop-naloge">
+            <h3>✏️ Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-1">
+              <h4>Tip 1: Nariši množico točk, podano s pogoji</h4>
+              <div class="prepoznaj">
+                <p><strong>Kako prepoznaš:</strong> množica je zapisana kot \(\{(x, y);\ \ldots\}\) z neenačbami, absolutno vrednostjo ali predznaki.</p>
+                <ul class="kljucne"><li>„v koordinatnem sistemu označite množico“</li><li>\(\{(x, y);\ |x| \le 2,\ y &gt; 1\}\)</li></ul>
               </div>
-              <div class="concept">
-                <h4>Razdalja med točkama</h4>
-                <div class="concept-formula">\(d(A, B) = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}\)</div>
-                <p class="concept-desc">Pitagorov izrek v koordinatah.</p>
+              <h5>Univerzalni postopek</h5>
+              <ol>
+                <li>Vsak pogoj spremeni v enačbo meje (\(x = 2\), \(y = 1\), \(y = x\)) in nariši mejno črto (polno ali črtkano).</li>
+                <li>Za vsak pogoj določi pravo stran (preveri s poskusno točko, npr. \(O(0, 0)\)).</li>
+                <li>Pri „in“ osenči le del, ki ustreza vsem pogojem; pri „ali“ vse.</li>
+              </ol>
+              <div class="primer">
+                <p><strong>Primer:</strong> Narišite \(\{(x, y);\ x \ge 1,\ y &lt; 2\}\).</p>
+                <p>Navpična meja \(x = 1\) (polna), desno od nje. Vodoravna meja \(y = 2\) (črtkana), pod njo. Presek je neomejen „kot“ desno spodaj (prva slika zgoraj).</p>
               </div>
-              <div class="concept">
-                <h4>Razpolovišče daljice</h4>
-                <div class="concept-formula">\(S\left(\dfrac{x_1 + x_2}{2}, \dfrac{y_1 + y_2}{2}\right)\)</div>
-                <p class="concept-desc">Aritmetična sredina koordinat.</p>
+            </div>
+            <div class="tip-naloge" id="tip-2">
+              <h4>Tip 2: Zapiši pogoje za narisano množico</h4>
+              <div class="prepoznaj">
+                <p><strong>Kako prepoznaš:</strong> na sliki je osenčeno območje, zapisati moraš množico.</p>
+                <ul class="kljucne"><li>„zapišite množico točk na sliki“</li><li>„s pogoji opišite“</li></ul>
               </div>
-              <div class="concept">
-                <h4>Težišče trikotnika</h4>
-                <div class="concept-formula">\(T\left(\dfrac{x_1+x_2+x_3}{3}, \dfrac{y_1+y_2+y_3}{3}\right)\)</div>
-                <p class="concept-desc">Presečišče težiščnic.</p>
+              <h5>Univerzalni postopek</h5>
+              <ol>
+                <li>Za vsako mejno črto zapiši njeno enačbo.</li>
+                <li>Določi, na kateri strani je območje (večje/manjše).</li>
+                <li>Iz vrste črte določi, ali je neenakost stroga.</li>
+                <li>Pogoje poveži z vejico („in“).</li>
+              </ol>
+              <div class="primer">
+                <p><strong>Primer:</strong> Osenčen je navpični pas med \(x = -2\) in \(x = 2\), obe meji polni.</p>
+                <p>\(\{(x, y);\ -2 \le x \le 2\} = \{(x, y);\ |x| \le 2\}\).</p>
               </div>
-              <div class="concept">
-                <h4>Ploščina trikotnika</h4>
-                <div class="concept-formula">\(S = \dfrac{1}{2}|(x_2-x_1)(y_3-y_1) - (x_3-x_1)(y_2-y_1)|\)</div>
-                <p class="concept-desc">Uporabno pri točkah s koordinatami.</p>
+            </div>
+            <div class="tip-naloge" id="tip-3">
+              <h4>Tip 3: Simetrične točke in kvadranti</h4>
+              <div class="prepoznaj">
+                <p><strong>Kako prepoznaš:</strong> zrcaljenje točke čez os ali izhodišče, v katerem kvadrantu leži točka s parametrom.</p>
+                <ul class="kljucne"><li>„prezrcalite čez os“</li><li>„simetrična glede na izhodišče“</li><li>„v katerem kvadrantu“</li></ul>
               </div>
-              <div class="concept">
-                <h4>Vzporednost vektorjev</h4>
-                <div class="concept-formula">\(\dfrac{x_2-x_1}{x_4-x_3} = \dfrac{y_2-y_1}{y_4-y_3}\)</div>
-                <p class="concept-desc">Vektorja \(\overrightarrow{AB}\) in \(\overrightarrow{CD}\) sta kolinearna.</p>
+              <h5>Univerzalni postopek</h5>
+              <ol>
+                <li>Čez os \(x\): \((x, -y)\). Čez os \(y\): \((-x, y)\). Čez \(O\): \((-x, -y)\). Čez \(y = x\): \((y, x)\).</li>
+                <li>Za kvadrant poglej predznaka obeh koordinat (pri parametru reši neenačbi).</li>
+              </ol>
+              <div class="primer">
+                <p><strong>Primer:</strong> Za katere \(a\) leži \(T(a - 2,\ 3 - a)\) v I. kvadrantu?</p>
+                <p>\(a - 2 &gt; 0\) in \(3 - a &gt; 0\) → \(2 &lt; a &lt; 3\).</p>
               </div>
             </div>
           </div>
+        </section>
 
-          <div class="info-card">
-            <h3>Enačba premice</h3>
-            <div class="concept-list two-col">
-              <div class="concept">
-                <h4>Eksplicitna oblika</h4>
-                <div class="concept-formula">\(y = kx + n\)</div>
-                <p class="concept-desc">\(k\) = smerni koeficient (naklon), \(n\) = začetna vrednost (presečišče z osjo \(y\)).</p>
+        <!-- SKLOP 2 -->
+        <section class="sklop" id="sklop-2">
+          <header class="sklop-header">
+            <span class="sklop-num">4.9.2</span>
+            <h2>Razdalja med točkama v koordinatni ravnini</h2>
+            <p>Pitagorov izrek v koordinatah, razpolovišče in težišče.</p>
+          </header>
+          <div class="sklop-cilji">
+            <h3>🎯 Cilji iz kataloga</h3>
+            <ul><li>Izračuna razdaljo med točkama ter uporabi formulo v matematičnih problemih.</li></ul>
+          </div>
+          <div class="sklop-teorija">
+            <h3>📖 Razlaga</h3>
+            <figure class="slika slika--ozka">
+<svg viewBox="0 0 360 290" role="img" aria-label="Razdalja med točkama" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g5-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g5-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g5-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g5-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g5-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g5-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<path class="s-mreza" d="M52.4,264V26M96.4,264V26M140.4,264V26M184.4,264V26M228.4,264V26M272.4,264V26M316.4,264V26M26,238.5H334M26,196H334M26,153.5H334M26,111H334M26,68.5H334M26,26H334"/>
+<line class="s-os" x1="26" y1="238.5" x2="342" y2="238.5" marker-end="url(#g5-p)"/>
+<line class="s-os" x1="52.4" y1="264" x2="52.4" y2="18" marker-end="url(#g5-p)"/>
+<text class="s-os-txt" x="336" y="230.5" text-anchor="end">x</text>
+<text class="s-os-txt" x="60.4" y="30">y</text>
+<line class="s-os" x1="96.4" y1="235.5" x2="96.4" y2="241.5"/><text class="s-os-txt" x="96.4" y="253.5" text-anchor="middle">1</text><line class="s-os" x1="140.4" y1="235.5" x2="140.4" y2="241.5"/><text class="s-os-txt" x="140.4" y="253.5" text-anchor="middle">2</text><line class="s-os" x1="184.4" y1="235.5" x2="184.4" y2="241.5"/><text class="s-os-txt" x="184.4" y="253.5" text-anchor="middle">3</text><line class="s-os" x1="228.4" y1="235.5" x2="228.4" y2="241.5"/><text class="s-os-txt" x="228.4" y="253.5" text-anchor="middle">4</text><line class="s-os" x1="272.4" y1="235.5" x2="272.4" y2="241.5"/><text class="s-os-txt" x="272.4" y="253.5" text-anchor="middle">5</text><line class="s-os" x1="316.4" y1="235.5" x2="316.4" y2="241.5"/><text class="s-os-txt" x="316.4" y="253.5" text-anchor="middle">6</text><line class="s-os" x1="49.4" y1="196" x2="55.4" y2="196"/><text class="s-os-txt" x="46.4" y="200" text-anchor="end">1</text><line class="s-os" x1="49.4" y1="153.5" x2="55.4" y2="153.5"/><text class="s-os-txt" x="46.4" y="157.5" text-anchor="end">2</text><line class="s-os" x1="49.4" y1="111" x2="55.4" y2="111"/><text class="s-os-txt" x="46.4" y="115" text-anchor="end">3</text><line class="s-os" x1="49.4" y1="68.5" x2="55.4" y2="68.5"/><text class="s-os-txt" x="46.4" y="72.5" text-anchor="end">4</text><text class="s-os-txt" x="46.4" y="253.5" text-anchor="end">0</text>
+<line class="s-k3" x1="96.4" y1="196" x2="272.4" y2="196"/>
+<line class="s-k4" x1="272.4" y1="196" x2="272.4" y2="68.5"/>
+<line class="s-k1" x1="96.4" y1="196" x2="272.4" y2="68.5"/>
+<circle class="s-tocka" cx="96.4" cy="196" r="4.5"/>
+<text class="s-txt-b" x="90.4" y="212" text-anchor="end">A(1, 1)</text>
+<circle class="s-tocka" cx="272.4" cy="68.5" r="4.5"/>
+<text class="s-txt-b" x="278.4" y="60.5" text-anchor="start">B(5, 4)</text>
+<circle class="s-tocka-2" cx="184.4" cy="132.3" r="4.5"/>
+<text class="s-txt-k2" x="178.4" y="124.3" text-anchor="end">M(3; 2,5)</text>
+<text class="s-txt-k3" x="184.4" y="215.1" text-anchor="middle">x<tspan dy="4" style="font-size:10px">2</tspan> − x<tspan dy="4" style="font-size:10px">1</tspan> = 4</text>
+<text class="s-txt-k4" x="279" y="132.3" text-anchor="start">3</text>
+<text class="s-txt-k1" x="200.8" y="106.8" text-anchor="end">d = 5</text>
+</svg>
+<figcaption>Razdalja je hipotenuza pravokotnega trikotnika s katetama \(|x_2 - x_1|\) in \(|y_2 - y_1|\): \(d = \sqrt{4^2 + 3^2} = 5\). Razpolovišče \(M\) ima povprečni koordinati.</figcaption>
+</figure>
+            <p>Razliki koordinat sta kateti pravokotnega trikotnika, razdalja je hipotenuza:</p>
+            <p>\[d(A, B) = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}\]</p>
+            <p>Vrstni red točk ni pomemben (kvadrat odpravi predznak). Če imata točki enako \(x\) ali \(y\), je razdalja kar absolutna razlika drugih koordinat.</p>
+            <h4>Razpolovišče in težišče</h4>
+            <p>Razpolovišče \(M\) daljice \(AB\) ima koordinati enaki povprečju koordinat krajišč: \(M\left(\frac{x_1 + x_2}{2}, \frac{y_1 + y_2}{2}\right)\). Težišče trikotnika je povprečje vseh treh oglišč.</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>✏️ Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-4">
+              <h4>Tip 4: Razdalja, obseg in vrsta trikotnika</h4>
+              <div class="prepoznaj">
+                <p><strong>Kako prepoznaš:</strong> dane so koordinate točk, iščejo dolžino daljice, obseg ali ali je trikotnik enakokrak/pravokoten.</p>
+                <ul class="kljucne"><li>„razdalja med točkama“</li><li>„obseg trikotnika“</li><li>„ali je trikotnik enakokrak / pravokoten“</li></ul>
               </div>
-              <div class="concept">
-                <h4>Implicitna oblika</h4>
-                <div class="concept-formula">\(ax + by + c = 0\)</div>
-                <p class="concept-desc">Splošna oblika premice.</p>
-              </div>
-              <div class="concept">
-                <h4>Smerni koeficient iz dveh točk</h4>
-                <div class="concept-formula">\(k = \dfrac{y_2 - y_1}{x_2 - x_1}\)</div>
-                <p class="concept-desc">Pazi: \(x_1 \neq x_2\) (sicer navpična premica).</p>
-              </div>
-              <div class="concept">
-                <h4>Enačba premice skozi točko</h4>
-                <div class="concept-formula">\(y - y_1 = k(x - x_1)\)</div>
-                <p class="concept-desc">Z danim \(k\) in točko \(T(x_1, y_1)\).</p>
-              </div>
-              <div class="concept">
-                <h4>Presečišče z osjo \(x\)</h4>
-                <div class="concept-formula">\(y = 0 \Rightarrow x = -\dfrac{n}{k}\)</div>
-                <p class="concept-desc">Ničla premice.</p>
-              </div>
-              <div class="concept">
-                <h4>Presečišče z osjo \(y\)</h4>
-                <div class="concept-formula">\(x = 0 \Rightarrow y = n\)</div>
-                <p class="concept-desc">Začetna vrednost.</p>
+              <h5>Univerzalni postopek</h5>
+              <ol>
+                <li>Izračunaj dolžine vseh potrebnih daljic s formulo za razdaljo.</li>
+                <li>Obseg: seštej. Enakokrak: dve dolžini enaki. Pravokoten: velja \(c^2 = a^2 + b^2\) za najdaljšo \(c\) (računaj s kvadrati, brez korenov).</li>
+              </ol>
+              <div class="primer">
+                <p><strong>Primer:</strong> Ali je trikotnik \(A(0, 0)\), \(B(4, 2)\), \(C(1, 3)\) pravokoten?</p>
+                <p>\(|AB|^2 = 20\), \(|AC|^2 = 10\), \(|BC|^2 = 9 + 1 = 10\). \(10 + 10 = 20\) ✓ — pravi kot je pri \(C\) (trikotnik je tudi enakokrak).</p>
               </div>
             </div>
-          </div>
-
-          <div class="info-card">
-            <h3>Vzporednost in pravokotnost</h3>
-            <div class="concept-list two-col">
-              <div class="concept">
-                <h4>Vzporedni premici</h4>
-                <div class="concept-formula">\(k_1 = k_2\)</div>
-                <p class="concept-desc">Enak smerni koeficient.</p>
+            <div class="tip-naloge" id="tip-5">
+              <h4>Tip 5: Neznana koordinata pri dani razdalji</h4>
+              <div class="prepoznaj">
+                <p><strong>Kako prepoznaš:</strong> točka ima eno neznano koordinato in je od druge točke oddaljena za dano razdaljo ali enako oddaljena od dveh točk.</p>
+                <ul class="kljucne"><li>„na osi \(x\) poiščite točko“</li><li>„enako oddaljena od \(A\) in \(B\)“</li><li>„oddaljena 5 enot“</li></ul>
               </div>
-              <div class="concept">
-                <h4>Pravokotni premici</h4>
-                <div class="concept-formula">\(k_1 \cdot k_2 = -1\)</div>
-                <p class="concept-desc">Smerna koeficienta sta nasprotna in obratna.</p>
+              <h5>Univerzalni postopek</h5>
+              <ol>
+                <li>Neznano točko zapiši s parametrom (na osi \(x\): \(T(x, 0)\)).</li>
+                <li>Zapiši pogoj z razdaljami in obe strani kvadriraj (koreni izginejo).</li>
+                <li>Reši enačbo; pri dani razdalji sta pogosto dve rešitvi.</li>
+              </ol>
+              <div class="primer">
+                <p><strong>Primer:</strong> Na osi \(x\) poiščite točko, ki je enako oddaljena od \(A(1, 3)\) in \(B(5, 1)\).</p>
+                <p>\((x - 1)^2 + 9 = (x - 5)^2 + 1\) → \(-2x + 10 = -10x + 26\) → \(x = 2\). \(T(2, 0)\).</p>
               </div>
-              <div class="concept">
-                <h4>Kot med premicama</h4>
-                <div class="concept-formula">\(\tan\varphi = \left|\dfrac{k_1 - k_2}{1 + k_1 k_2}\right|\)</div>
-                <p class="concept-desc">Kot med premicama z znanima smernicama.</p>
+            </div>
+            <div class="tip-naloge" id="tip-6">
+              <h4>Tip 6: Razpolovišče, krajišče in težišče</h4>
+              <div class="prepoznaj">
+                <p><strong>Kako prepoznaš:</strong> iščejo razpolovišče, manjkajoče krajišče daljice pri znanem razpolovišču ali težišče.</p>
+                <ul class="kljucne"><li>„razpolovišče“</li><li>„središče daljice“</li><li>„težišče trikotnika“</li></ul>
               </div>
-              <div class="concept">
-                <h4>Razdalja točke do premice</h4>
-                <div class="concept-formula">\(d(T, p) = \dfrac{|a x_0 + b y_0 + c|}{\sqrt{a^2 + b^2}}\)</div>
-                <p class="concept-desc">Premica \(ax + by + c = 0\), točka \(T(x_0, y_0)\).</p>
+              <h5>Univerzalni postopek</h5>
+              <ol>
+                <li>Razpolovišče: povprečje koordinat.</li>
+                <li>Manjkajoče krajišče: \(x_2 = 2x_M - x_1\), \(y_2 = 2y_M - y_1\).</li>
+                <li>Težišče: vsoto koordinat deli s 3.</li>
+              </ol>
+              <div class="primer">
+                <p><strong>Primer:</strong> Razpolovišče daljice \(AB\) je \(M(2, -1)\), \(A(5, 3)\). Določite \(B\).</p>
+                <p>\(B(2 \cdot 2 - 5,\ 2 \cdot (-1) - 3) = B(-1, -5)\).</p>
               </div>
             </div>
           </div>
         </section>
 
-        <!-- ============ 2. TIPI NALOG ============ -->
-        <section class="subsection">
-          <div class="subsection-head">
-            <h2>2. Tipi nalog — postopki po korakih</h2>
-            <p>Za vsak tip: kako ga prepoznaš, kako ga rešiš, primer.</p>
+        <!-- SKLOP 3 -->
+        <section class="sklop" id="sklop-3">
+          <header class="sklop-header">
+            <span class="sklop-num">4.9.3</span>
+            <h2>Ploščina trikotnika</h2>
+            <p>Ploščina iz koordinat oglišč, brez višine.</p>
+          </header>
+          <div class="sklop-cilji">
+            <h3>🎯 Cilji iz kataloga</h3>
+            <ul><li>Izračuna ploščino trikotnika ter uporabi formulo v matematičnih problemih.</li></ul>
           </div>
-
-          <!-- TIP 1 -->
-          <div class="info-card" id="tip-1">
-            <div class="tip-header">
-              <h3>Tip 1: Razdalja med točkama</h3>
-              <div class="tip-formula">\(d = \sqrt{(x_2-x_1)^2 + (y_2-y_1)^2}\)</div>
-            </div>
-            <p><strong>Kako prepoznaš:</strong> "izračunajte dolžino daljice", "razdalja med točkama".</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Zapiši koordinate obeh točk.</li>
-              <li>Vstavi v formulo.</li>
-              <li>Izračunaj.</li>
-            </ol>
-            <p class="plain-example"><strong>Primer:</strong> \(A(1, 2)\), \(B(4, 6)\)</p>
-            <div class="plain-example">
-              <p>\(d = \sqrt{(4-1)^2 + (6-2)^2} = \sqrt{9 + 16} = 5\).</p>
-            </div>
+          <div class="sklop-teorija">
+            <h3>📖 Razlaga</h3>
+            <p>\[S = \frac{1}{2}\left|(x_2 - x_1)(y_3 - y_1) - (x_3 - x_1)(y_2 - y_1)\right|\]</p>
+            <p>Formula izhaja iz vektorjev \(\vec{AB} = (x_2 - x_1, y_2 - y_1)\) in \(\vec{AC} = (x_3 - x_1, y_3 - y_1)\): ploščina je polovica absolutne vrednosti „navzkrižnega“ produkta njunih komponent. Ni pomembno, katero oglišče je \(A\).</p>
+            <figure class="slika slika--ozka">
+<svg viewBox="0 0 360 300" role="img" aria-label="Ploščina trikotnika s koordinatami" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g6-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g6-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g6-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g6-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g6-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g6-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<path class="s-mreza" d="M51,274V26M92.6,274V26M134.2,274V26M175.8,274V26M217.5,274V26M259.1,274V26M300.7,274V26M26,250H334M26,210H334M26,170H334M26,130H334M26,90H334M26,50H334"/>
+<polygon class="s-lik-2" points="92.6,210 300.7,210 300.7,50 92.6,50"/>
+<polygon class="s-lik" points="92.6,210 300.7,170 175.8,50"/>
+<line class="s-os" x1="26" y1="250" x2="342" y2="250" marker-end="url(#g6-p)"/>
+<line class="s-os" x1="51" y1="274" x2="51" y2="18" marker-end="url(#g6-p)"/>
+<text class="s-os-txt" x="336" y="242" text-anchor="end">x</text>
+<text class="s-os-txt" x="59" y="30">y</text>
+<line class="s-os" x1="92.6" y1="247" x2="92.6" y2="253"/><text class="s-os-txt" x="92.6" y="265" text-anchor="middle">1</text><line class="s-os" x1="134.2" y1="247" x2="134.2" y2="253"/><text class="s-os-txt" x="134.2" y="265" text-anchor="middle">2</text><line class="s-os" x1="175.8" y1="247" x2="175.8" y2="253"/><text class="s-os-txt" x="175.8" y="265" text-anchor="middle">3</text><line class="s-os" x1="217.5" y1="247" x2="217.5" y2="253"/><text class="s-os-txt" x="217.5" y="265" text-anchor="middle">4</text><line class="s-os" x1="259.1" y1="247" x2="259.1" y2="253"/><text class="s-os-txt" x="259.1" y="265" text-anchor="middle">5</text><line class="s-os" x1="300.7" y1="247" x2="300.7" y2="253"/><text class="s-os-txt" x="300.7" y="265" text-anchor="middle">6</text><line class="s-os" x1="48" y1="210" x2="54" y2="210"/><text class="s-os-txt" x="45" y="214" text-anchor="end">1</text><line class="s-os" x1="48" y1="170" x2="54" y2="170"/><text class="s-os-txt" x="45" y="174" text-anchor="end">2</text><line class="s-os" x1="48" y1="130" x2="54" y2="130"/><text class="s-os-txt" x="45" y="134" text-anchor="end">3</text><line class="s-os" x1="48" y1="90" x2="54" y2="90"/><text class="s-os-txt" x="45" y="94" text-anchor="end">4</text><line class="s-os" x1="48" y1="50" x2="54" y2="50"/><text class="s-os-txt" x="45" y="54" text-anchor="end">5</text><text class="s-os-txt" x="45" y="265" text-anchor="end">0</text>
+<circle class="s-tocka" cx="92.6" cy="210" r="4.5"/>
+<text class="s-txt-b" x="86.6" y="226" text-anchor="end">A(1, 1)</text>
+<circle class="s-tocka" cx="300.7" cy="170" r="4.5"/>
+<text class="s-txt-b" x="306.7" y="174" text-anchor="start">B(6, 2)</text>
+<circle class="s-tocka" cx="175.8" cy="50" r="4.5"/>
+<text class="s-txt-b" x="175.8" y="40" text-anchor="middle">C(3, 5)</text>
+<text class="s-txt-k3" x="125.9" y="106" text-anchor="middle">S<tspan dy="4" style="font-size:10px">1</tspan></text>
+<text class="s-txt-k3" x="263.2" y="90" text-anchor="middle">S<tspan dy="4" style="font-size:10px">2</tspan></text>
+<text class="s-txt-k3" x="242.4" y="198" text-anchor="middle">S<tspan dy="4" style="font-size:10px">3</tspan></text>
+</svg>
+<figcaption>Ploščino lahko dobiš tudi tako, da od očrtanega pravokotnika (\(5 \times 4 = 20\)) odšteješ tri pravokotne trikotnike: \(20 - 4 - 4{,}5 - 2{,}5 = 9\).</figcaption>
+</figure>
+            <p>Primer s slike: \(\vec{AB} = (5, 1)\), \(\vec{AC} = (2, 4)\), \(S = \frac{1}{2}|5 \cdot 4 - 2 \cdot 1| = 9\).</p>
+            <ul>
+              <li>Če je izraz v absolutni vrednosti 0, točke <strong>ležijo na isti premici</strong> (trikotnik ne obstaja).</li>
+              <li>Predznak izraza pove orientacijo: pozitiven, če si \(A \to B \to C\) sledijo v nasprotni smeri urinega kazalca.</li>
+              <li>Mnogokotnik razrežemo z diagonalami na trikotnike.</li>
+            </ul>
+            <figure class="slika slika--ozka">
+<svg viewBox="0 0 320 270" role="img" aria-label="Ploščina štirikotnika na mreži" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g7-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g7-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g7-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g7-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g7-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g7-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<path class="s-mreza" d="M43.9,244V26M88.5,244V26M133.2,244V26M177.9,244V26M222.5,244V26M267.2,244V26M26,226.9H294M26,184.2H294M26,141.4H294M26,98.7H294M26,55.9H294"/>
+<polygon class="s-lik" points="43.9,98.7 222.5,55.9 267.2,141.4 133.2,226.9"/>
+<line class="s-os" x1="26" y1="226.9" x2="302" y2="226.9" marker-end="url(#g7-p)"/>
+<line class="s-os" x1="43.9" y1="244" x2="43.9" y2="18" marker-end="url(#g7-p)"/>
+<text class="s-os-txt" x="296" y="218.9" text-anchor="end">x</text>
+<text class="s-os-txt" x="51.9" y="30">y</text>
+<line class="s-os" x1="88.5" y1="223.9" x2="88.5" y2="229.9"/><text class="s-os-txt" x="88.5" y="241.9" text-anchor="middle">1</text><line class="s-os" x1="133.2" y1="223.9" x2="133.2" y2="229.9"/><text class="s-os-txt" x="133.2" y="241.9" text-anchor="middle">2</text><line class="s-os" x1="177.9" y1="223.9" x2="177.9" y2="229.9"/><text class="s-os-txt" x="177.9" y="241.9" text-anchor="middle">3</text><line class="s-os" x1="222.5" y1="223.9" x2="222.5" y2="229.9"/><text class="s-os-txt" x="222.5" y="241.9" text-anchor="middle">4</text><line class="s-os" x1="267.2" y1="223.9" x2="267.2" y2="229.9"/><text class="s-os-txt" x="267.2" y="241.9" text-anchor="middle">5</text><line class="s-os" x1="40.9" y1="184.2" x2="46.9" y2="184.2"/><text class="s-os-txt" x="37.9" y="188.2" text-anchor="end">1</text><line class="s-os" x1="40.9" y1="141.4" x2="46.9" y2="141.4"/><text class="s-os-txt" x="37.9" y="145.4" text-anchor="end">2</text><line class="s-os" x1="40.9" y1="98.7" x2="46.9" y2="98.7"/><text class="s-os-txt" x="37.9" y="102.7" text-anchor="end">3</text><line class="s-os" x1="40.9" y1="55.9" x2="46.9" y2="55.9"/><text class="s-os-txt" x="37.9" y="59.9" text-anchor="end">4</text><text class="s-os-txt" x="37.9" y="241.9" text-anchor="end">0</text>
+<line class="s-pom" x1="43.9" y1="98.7" x2="267.2" y2="141.4"/>
+<circle class="s-tocka" cx="43.9" cy="98.7" r="4.5"/>
+<text class="s-txt-b" x="35.9" y="92.7" text-anchor="end">A</text>
+<circle class="s-tocka" cx="222.5" cy="55.9" r="4.5"/>
+<text class="s-txt-b" x="222.5" y="45.9" text-anchor="middle">B</text>
+<circle class="s-tocka" cx="267.2" cy="141.4" r="4.5"/>
+<text class="s-txt-b" x="275.2" y="145.4" text-anchor="start">C</text>
+<circle class="s-tocka" cx="133.2" cy="226.9" r="4.5"/>
+<text class="s-txt-b" x="141.2" y="240.9" text-anchor="start">D</text>
+</svg>
+<figcaption>Štirikotnik razdeli z diagonalo \(AC\) na dva trikotnika in seštej njuni ploščini.</figcaption>
+</figure>
           </div>
-
-          <!-- TIP 2 -->
-          <div class="info-card" id="tip-2">
-            <div class="tip-header">
-              <h3>Tip 2: Razpolovišče daljice</h3>
-              <div class="tip-formula">\(S\left(\dfrac{x_1+x_2}{2}, \dfrac{y_1+y_2}{2}\right)\)</div>
+          <div class="sklop-naloge">
+            <h3>✏️ Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-7">
+              <h4>Tip 7: Ploščina trikotnika iz koordinat</h4>
+              <div class="prepoznaj">
+                <p><strong>Kako prepoznaš:</strong> dana so tri oglišča s koordinatami.</p>
+                <ul class="kljucne"><li>„ploščina trikotnika z oglišči“</li><li>„izračunajte ploščino“</li></ul>
+              </div>
+              <h5>Univerzalni postopek</h5>
+              <ol>
+                <li>Izberi \(A\) in izračunaj razlike \(x_2 - x_1\), \(y_2 - y_1\), \(x_3 - x_1\), \(y_3 - y_1\).</li>
+                <li>Vstavi v formulo, izračunaj in vzemi absolutno vrednost.</li>
+                <li>Če iščeš višino: \(v_a = \frac{2S}{a}\), kjer je \(a\) dolžina stranice (razdalja).</li>
+              </ol>
+              <div class="primer">
+                <p><strong>Primer:</strong> \(A(-1, 2)\), \(B(3, -1)\), \(C(4, 5)\).</p>
+                <p>\(S = \frac{1}{2}|4 \cdot 3 - 5 \cdot (-3)| = \frac{1}{2}|12 + 15| = 13{,}5\).</p>
+              </div>
             </div>
-            <p><strong>Kako prepoznaš:</strong> "razpolovišče daljice AB".</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Seštej abscisi in deli z 2.</li>
-              <li>Seštej ordinati in deli z 2.</li>
-            </ol>
-            <p class="plain-example"><strong>Primer:</strong> \(A(1, 2)\), \(B(4, 6)\)</p>
-            <div class="plain-example">
-              <p>\(S\left(\dfrac{1+4}{2}, \dfrac{2+6}{2}\right) = (2{,}5, 4)\).</p>
+            <div class="tip-naloge" id="tip-8">
+              <h4>Tip 8: Ploščina mnogokotnika na mreži</h4>
+              <div class="prepoznaj">
+                <p><strong>Kako prepoznaš:</strong> štirikotnik ali petkotnik na koordinatni mreži (slika).</p>
+                <ul class="kljucne"><li>„ploščina osenčenega lika“</li><li>„štirikotnik z oglišči“</li></ul>
+              </div>
+              <h5>Univerzalni postopek</h5>
+              <ol>
+                <li>Odčitaj koordinate oglišč.</li>
+                <li>Razdeli lik z diagonalo na trikotnike (ali ga vpiši v pravokotnik in odštej robne trikotnike).</li>
+                <li>Seštej ploščine trikotnikov.</li>
+              </ol>
+              <div class="primer">
+                <p><strong>Primer:</strong> Štirikotnik \(A(0, 3)\), \(B(4, 4)\), \(C(5, 2)\), \(D(2, 0)\) s slike.</p>
+                <p>\(S_{ABC} = \frac{1}{2}|4 \cdot (-1) - 5 \cdot 1| = 4{,}5\), \(S_{ACD} = \frac{1}{2}|5 \cdot (-3) - 2 \cdot (-1)| = 6{,}5\). \(S = 11\).</p>
+              </div>
             </div>
-          </div>
-
-          <!-- TIP 3 -->
-          <div class="info-card" id="tip-3">
-            <div class="tip-header">
-              <h3>Tip 3: Težišče trikotnika</h3>
-              <div class="tip-formula">\(T\left(\dfrac{x_1+x_2+x_3}{3}, \dfrac{y_1+y_2+y_3}{3}\right)\)</div>
-            </div>
-            <p><strong>Kako prepoznaš:</strong> "težišče trikotnika z oglišči A, B, C".</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Seštej vse tri abscise in deli s 3.</li>
-              <li>Seštej vse tri ordinate in deli s 3.</li>
-            </ol>
-            <p class="plain-example"><strong>Primer:</strong> \(A(0,0), B(6,0), C(0,3)\)</p>
-            <div class="plain-example">
-              <p>\(T\left(\dfrac{6}{3}, \dfrac{3}{3}\right) = (2, 1)\).</p>
-            </div>
-          </div>
-
-          <!-- TIP 4 -->
-          <div class="info-card" id="tip-4">
-            <div class="tip-header">
-              <h3>Tip 4: Enačba premice skozi dve točki</h3>
-              <div class="tip-formula">\(k = \dfrac{y_2 - y_1}{x_2 - x_1}\)</div>
-            </div>
-            <p><strong>Kako prepoznaš:</strong> "zapišite enačbo premice skozi A in B".</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Izračunaj smerni koeficient \(k = \dfrac{y_2 - y_1}{x_2 - x_1}\).</li>
-              <li>Vstavi v eksplicitno obliko \(y = kx + n\).</li>
-              <li>Vstavi koordinate ene od točk in izračunaj \(n\).</li>
-            </ol>
-            <p class="plain-example"><strong>Primer:</strong> \(A(1, 1)\), \(B(3, 5)\)</p>
-            <div class="plain-example">
-              <p>\(k = \dfrac{5-1}{3-1} = 2\). \(1 = 2 \cdot 1 + n \Rightarrow n = -1\). Enačba: \(y = 2x - 1\).</p>
-            </div>
-          </div>
-
-          <!-- TIP 5 -->
-          <div class="info-card" id="tip-5">
-            <div class="tip-header">
-              <h3>Tip 5: Vzporedna premica skozi točko</h3>
-              <div class="tip-formula">\(k_{\text{nova}} = k_{\text{dana}}\)</div>
-            </div>
-            <p><strong>Kako prepoznaš:</strong> "premica, ki je vzporedna dani in gre skozi točko".</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Preberi \(k\) iz dane premice.</li>
-              <li>Vstavi v \(y = kx + n\) in koordinate točke.</li>
-              <li>Izračunaj \(n\).</li>
-            </ol>
-            <p class="plain-example"><strong>Primer:</strong> vzporedna premici \(y = 3x + 1\), gre skozi \(A(1, -2)\)</p>
-            <div class="plain-example">
-              <p>\(k = 3\). \(-2 = 3 \cdot 1 + n \Rightarrow n = -5\). Enačba: \(y = 3x - 5\).</p>
-            </div>
-          </div>
-
-          <!-- TIP 6 -->
-          <div class="info-card" id="tip-6">
-            <div class="tip-header">
-              <h3>Tip 6: Pravokotna premica skozi točko</h3>
-              <div class="tip-formula">\(k_1 \cdot k_2 = -1\)</div>
-            </div>
-            <p><strong>Kako prepoznaš:</strong> "premica, ki je pravokotna na dano".</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Preberi \(k_1\) iz dane premice.</li>
-              <li>Izračunaj \(k_2 = -\dfrac{1}{k_1}\).</li>
-              <li>Vstavi \(k_2\) in točko v \(y = kx + n\).</li>
-            </ol>
-            <p class="plain-example"><strong>Primer:</strong> pravokotna na \(y = 2x + 3\) skozi \(A(2, 1)\)</p>
-            <div class="plain-example">
-              <p>\(k_2 = -\dfrac{1}{2}\). \(1 = -\dfrac{1}{2} \cdot 2 + n \Rightarrow n = 2\). Enačba: \(y = -\dfrac{1}{2}x + 2\).</p>
-            </div>
-          </div>
-
-<!-- TIP 7 -->
-<div class="info-card" id="tip-7">
-  <div class="tip-header">
-    <h3>Tip 7: Presečišče dveh premic</h3>
-    <div class="tip-formula">\(y_1 = y_2 \Rightarrow x\), nato \(x\) vstavi v eno od premic</div>
-  </div>
-
-  <p><strong>Kako prepoznaš:</strong> v nalogi nastopata <strong>dve premici</strong> (npr. \(y = kx + n\) ali \(ax + by + c = 0\)), iščejo pa <strong>presečišče</strong> — točko, kjer se premici sekata. Pogosto je to zapisano kot "izračunajte presečišče premic", "določite točko, v kateri se premici sekata", "izračunajte točko \(T(x, y)\), ki leži na obeh premicah".</p>
-
-  <p><strong>Postopek:</strong></p>
-  <ol>
-    <li>Zapiši enačbi obeh premic v obliki \(y = kx + n\) (če še nista).</li>
-    <li><strong>Izenači \(y = y\) in reši enačbo za \(x\)</strong>.</li>
-    <li><strong>Dobljeni \(x\) vstavi v katerokoli</strong> od obeh premic (lahko v prvo ali v drugo — rezultat je isti) in izračunaj \(y\).</li>
-    <li>Zapiši presečišče kot urejeni par \((x, y)\).</li>
-    <li>Preveri: vstavi \(x\) in \(y\) v <strong>obe</strong> enačbi — morata veljati obe.</li>
-  </ol>
-
-  <p class="plain-example"><strong>Primer:</strong> Poišči presečišče premic \(y = x + 5\) in \(y = 2x - 3\).</p>
-
-  <div class="plain-example">
-    <p><strong>1. korak:</strong> Enačbi sta že v obliki \(y = kx + n\):</p>
-    <p>\[
-      y = x + 5
-    \]
-    \[
-      y = 2x - 3
-    \]</p>
-
-    <p><strong>2. korak:</strong> Izenačimo \(y = y\) (desni strani):</p>
-    <p>\[
-      x + 5 = 2x - 3
-    \]</p>
-
-    <p><strong>3. korak:</strong> Rešimo za \(x\):</p>
-    <p>\[
-      x + 5 = 2x - 3 \Rightarrow 5 + 3 = 2x - x \Rightarrow x = 8
-    \]</p>
-
-    <p><strong>4. korak:</strong> Dobljeni \(x = 8\) vstavimo v <strong>katerokoli</strong> od obeh premic. Vzemimo prvo:</p>
-    <p>\[
-      y = x + 5 = 8 + 5 = 13
-    \]</p>
-    <p>(Če bi vstavili v drugo: \(y = 2 \cdot 8 - 3 = 16 - 3 = 13\) — isti rezultat.)</p>
-
-    <p><strong>5. korak:</strong> Presečišče je točka:</p>
-    <p>\[
-      T(8, 13)
-    \]</p>
-
-    <p><strong>Preverjanje:</strong> Vstavimo \(x = 8\), \(y = 13\) v obe premici:</p>
-    <p>Prva: \(13 = 8 + 5\) ✓ &nbsp; Druga: \(13 = 2 \cdot 8 - 3 = 13\) ✓</p>
-  </div>
-
-  <p class="plain-example"><strong>Opomba:</strong> Če se premici ne sekata (sta vzporedni), pri izenačitvi \(y = y\) dobimo enačbo, ki nima rešitve (npr. \(0 = 5\)). Takrat presečišča ni.</p>
-</div>
-
-          <!-- TIP 8 -->
-          <div class="info-card" id="tip-8">
-            <div class="tip-header">
-              <h3>Tip 8: Razdalja točke do premice</h3>
-              <div class="tip-formula">\(d = \dfrac{|a x_0 + b y_0 + c|}{\sqrt{a^2 + b^2}}\)</div>
-            </div>
-            <p><strong>Kako prepoznaš:</strong> "izračunajte razdaljo točke do premice".</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Premico zapiši v implicitni obliki \(ax + by + c = 0\).</li>
-              <li>Vstavi koordinate točke \((x_0, y_0)\).</li>
-              <li>Uporabi formulo.</li>
-            </ol>
-            <p class="plain-example"><strong>Primer:</strong> \(T(0, 0)\), premica \(3x + 4y - 10 = 0\)</p>
-            <div class="plain-example">
-              <p>\(d = \dfrac{|0 + 0 - 10|}{\sqrt{9 + 16}} = \dfrac{10}{5} = 2\).</p>
-            </div>
-          </div>
-
-          <!-- TIP 9 -->
-          <div class="info-card" id="tip-9">
-            <div class="tip-header">
-              <h3>Tip 9: Ploščina trikotnika s koordinatami</h3>
-              <div class="tip-formula">\(S = \dfrac{1}{2}|(x_2-x_1)(y_3-y_1) - (x_3-x_1)(y_2-y_1)|\)</div>
-            </div>
-            <p><strong>Kako prepoznaš:</strong> tri točke \(A, B, C\) s koordinatami.</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Vstavi koordinate v formulo.</li>
-              <li>Izračunaj absolutno vrednost.</li>
-              <li>Deli z 2.</li>
-            </ol>
-            <p class="plain-example"><strong>Primer:</strong> \(A(0, 0)\), \(B(4, 0)\), \(C(1, 3)\)</p>
-            <div class="plain-example">
-              <p>\(S = \dfrac{1}{2}|(4-0)(3-0) - (1-0)(0-0)| = \dfrac{1}{2}|12| = 6\).</p>
-            </div>
-          </div>
-
-          <!-- TIP 10 -->
-          <div class="info-card" id="tip-10">
-            <div class="tip-header">
-              <h3>Tip 10: Kot med premicama</h3>
-              <div class="tip-formula">\(\tan\varphi = \left|\dfrac{k_1 - k_2}{1 + k_1 k_2}\right|\)</div>
-            </div>
-            <p><strong>Kako prepoznaš:</strong> "izračunajte kot med premicama".</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Preberi \(k_1\) in \(k_2\) iz obeh premic.</li>
-              <li>Vstavi v formulo.</li>
-              <li>\(\varphi = \arctan(\tan\varphi)\).</li>
-            </ol>
-            <p class="plain-example"><strong>Primer:</strong> \(y = 3x + 2\), \(y = -x + 2021\)</p>
-            <div class="plain-example">
-              <p>\(\tan\varphi = \left|\dfrac{3 - (-1)}{1 + 3 \cdot (-1)}\right| = \left|\dfrac{4}{-2}\right| = 2 \Rightarrow \varphi \approx 63{,}43°\).</p>
+            <div class="tip-naloge" id="tip-9">
+              <h4>Tip 9: Neznana koordinata pri dani ploščini, kolinearnost</h4>
+              <div class="prepoznaj">
+                <p><strong>Kako prepoznaš:</strong> eno oglišče ima parameter, dana je ploščina; ali sprašujejo, ali so točke na isti premici.</p>
+                <ul class="kljucne"><li>„ploščina je 10, določite \(m\)“</li><li>„ali ležijo na isti premici“</li></ul>
+              </div>
+              <h5>Univerzalni postopek</h5>
+              <ol>
+                <li>Formulo zapiši s parametrom.</li>
+                <li>Absolutna vrednost: \(|izraz| = 2S\) → \(izraz = 2S\) ali \(izraz = -2S\) (dve rešitvi).</li>
+                <li>Kolinearnost: izraz \(= 0\).</li>
+              </ol>
+              <div class="primer">
+                <p><strong>Primer:</strong> \(A(0, 0)\), \(B(4, 2)\), \(C(m, 3)\). Za katere \(m\) je ploščina 6? Ali so \(P(1, 1)\), \(Q(3, 5)\), \(R(4, 7)\) kolinearne?</p>
+                <p>\(\frac{1}{2}|4 \cdot 3 - m \cdot 2| = 6\) → \(12 - 2m = 12\) ali \(12 - 2m = -12\) → \(m = 0\) ali \(m = 12\). Za \(P, Q, R\): \(2 \cdot 6 - 3 \cdot 4 = 0\), torej da.</p>
+              </div>
             </div>
           </div>
         </section>
 
-        <!-- ============ 3. POGOSTE NAPAKE ============ -->
+        <section class="subsection" id="kljuc">
+          <div class="subsection-head">
+            <h2>🔎 Ključ: kateri tip naloge je to?</h2>
+            <p>Poišči besedo iz navodila naloge in skoči na pravi postopek.</p>
+          </div>
+          <div class="info-card">
+            <div class="tabela-wrap">
+              <table class="tabela">
+                <thead><tr><th>V besedilu naloge piše …</th><th>Tip</th></tr></thead>
+                <tbody>
+                  <tr><td>„označite množico točk“, \(\{(x, y);\ \ldots\}\)</td><td><a href="#tip-1">Tip 1</a></td></tr>
+                  <tr><td>„zapišite množico na sliki“</td><td><a href="#tip-2">Tip 2</a></td></tr>
+                  <tr><td>„prezrcalite“, „v katerem kvadrantu“</td><td><a href="#tip-3">Tip 3</a></td></tr>
+                  <tr><td>„razdalja“, „obseg“, „ali je pravokoten“</td><td><a href="#tip-4">Tip 4</a></td></tr>
+                  <tr><td>„enako oddaljena“, „na osi \(x\) poiščite“</td><td><a href="#tip-5">Tip 5</a></td></tr>
+                  <tr><td>„razpolovišče“, „težišče“</td><td><a href="#tip-6">Tip 6</a></td></tr>
+                  <tr><td>„ploščina trikotnika z oglišči“</td><td><a href="#tip-7">Tip 7</a></td></tr>
+                  <tr><td>štirikotnik/petkotnik na mreži</td><td><a href="#tip-8">Tip 8</a></td></tr>
+                  <tr><td>ploščina s parametrom, „na isti premici“</td><td><a href="#tip-9">Tip 9</a></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
         <section class="subsection">
           <div class="subsection-head">
-            <h2>3. Pogoste napake</h2>
+            <h2>⚠️ Pogoste napake</h2>
           </div>
           <div class="info-card">
             <ul>
-              <li>Zamenjaš absciso in ordinato (vrstni red \((x, y)\)).</li>
-              <li>Pri razdalji pozabiš kvadrat pod korenom.</li>
-              <li>Pri razpolovišču pozabiš deliti z 2.</li>
-              <li>Pri smernem koeficientu zamenjaš \((y_2 - y_1)\) in \((x_2 - x_1)\).</li>
-              <li>Pri pravokotnosti pozabiš \(k_1 k_2 = -1\) namesto \(k_2 = -k_1\).</li>
-              <li>Pri razdalji točke do premice pozabiš <strong>absolutno vrednost</strong> in imenovalec \(\sqrt{a^2 + b^2}\).</li>
-              <li>Pri ploščini trikotnika pozabiš deliti z 2 ali absolutno vrednost.</li>
-              <li>Pri kotu med premicama pozabiš absolutno vrednost.</li>
+              <li>Zamenjaš vrstni red koordinat: \((x, y)\), najprej vodoravna.</li>
+              <li>Pri razdalji pozabiš korenje ali kvadriraš le eno razliko.</li>
+              <li>\((-3)^2\) izračunaš kot \(-9\).</li>
+              <li>Pri ploščini pozabiš absolutno vrednost (ploščina je pozitivna) ali faktor \(\frac{1}{2}\).</li>
+              <li>Pri parametru in ploščini upoštevaš samo eno od dveh rešitev.</li>
+              <li>Mejo območja narišeš s polno črto, čeprav je neenakost stroga.</li>
             </ul>
           </div>
         </section>
 
-        <!-- ============ 4. ŠTUDIJSKI VODIČ ============ -->
         <section class="subsection">
           <div class="subsection-head">
-            <h2>4. Študijski vodič — hitri pregled</h2>
-          </div>
-          <div class="info-card">
-            <h3>📋 Kaj moraš znati na pamet</h3>
-            <ul>
-              <li><strong>Razdalja:</strong> \(d = \sqrt{(x_2-x_1)^2 + (y_2-y_1)^2}\).</li>
-              <li><strong>Razpolovišče:</strong> \(S\left(\dfrac{x_1+x_2}{2}, \dfrac{y_1+y_2}{2}\right)\).</li>
-              <li><strong>Težišče:</strong> \(T\left(\dfrac{x_1+x_2+x_3}{3}, \dfrac{y_1+y_2+y_3}{3}\right)\).</li>
-              <li><strong>Smerni koeficient:</strong> \(k = \dfrac{y_2-y_1}{x_2-x_1}\).</li>
-              <li><strong>Vzporednost:</strong> \(k_1 = k_2\), pravokotnost: \(k_1 k_2 = -1\).</li>
-              <li><strong>Razdalja točke do premice:</strong> \(d = \dfrac{|ax_0 + by_0 + c|}{\sqrt{a^2+b^2}}\).</li>
-              <li><strong>Ploščina trikotnika:</strong> \(\dfrac{1}{2}|(x_2-x_1)(y_3-y_1) - (x_3-x_1)(y_2-y_1)|\).</li>
-            </ul>
-          </div>
-
-          <div class="info-card">
-            <h3>🎯 Kako pristopiti k nalogi</h3>
-            <ol>
-              <li><strong>Preberi nalogo in prepoznaj tip:</strong> razdalja, razpolovišče, premica, presečišče, ploščina?</li>
-              <li><strong>Za razdaljo:</strong> vstavi v formulo.</li>
-              <li><strong>Za premico:</strong> izračunaj \(k\), nato \(n\).</li>
-              <li><strong>Za vzporednost/pravokotnost:</strong> uporabi \(k_1 = k_2\) oz. \(k_1 k_2 = -1\).</li>
-              <li><strong>Za presečišče:</strong> reši sistem dveh enačb.</li>
-              <li><strong>Za ploščino:</strong> uporabi formulo z determinantami.</li>
-            </ol>
-          </div>
-
-          <div class="info-card">
-            <h3>⏱️ Časovni načrt za en večer</h3>
-            <ul>
-              <li><strong>25 min:</strong> Teorija — točke, premica, vzporednost/pravokotnost.</li>
-              <li><strong>45 min:</strong> Tipi 1–5 (razdalja, razpolovišče, težišče, enačba premice, vzporednica).</li>
-              <li><strong>45 min:</strong> Tipi 6–10 (pravokotnica, presečišče, razdalja točke, ploščina, kot).</li>
-              <li><strong>25 min:</strong> Ponovi pogoste napake in študijski vodič.</li>
-            </ul>
-          </div>
-        </section>
-
-        <!-- ============ 5. POVEZAVE ============ -->
-        <section class="subsection">
-          <div class="subsection-head">
-            <h2>5. Vadi naprej</h2>
+            <h2>Vadi naprej</h2>
             <p>Ko predelaš razlago, preveri znanje z nalogami.</p>
           </div>
           <div class="link-list">
-            <a class="link-item" href="/views/matematika/matura/osnovna_raven/naloge/resene/">
+            <a class="link-item" href="/views/matematika/matura/matura.html">
               <span class="link-item-text">
-                <strong>Rešene naloge — osnovna raven</strong>
-                <small>Primeri z razlago</small>
-              </span>
-              <span class="arrow">→</span>
-            </a>
-            <a class="link-item" href="/views/matematika/matura/visja_raven/naloge/resene/">
-              <span class="link-item-text">
-                <strong>Rešene naloge — višja raven</strong>
-                <small>Zahtevnejši primeri</small>
+                <strong>Maturitetne pole</strong>
+                <small>Rešuj prave izpitne pole</small>
               </span>
               <span class="arrow">→</span>
             </a>

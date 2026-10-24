@@ -46,6 +46,12 @@ public/
 2. V `<head>` naj bosta `/style/style.css` in `/style/snov.css`; dodaten CSS samo, če ga stran res potrebuje.
 3. Dodaj poglavje v `api/data/snovi.json` in povezavo v `public/components/sidebar.html`.
 
+Strani matematike so razdeljene po podpoglavjih maturitetnega kataloga (`<section class="sklop" id="sklop-N">`).
+Vsak sklop ima glavo, cilje iz kataloga (`sklop-cilji`), razlago (`sklop-teorija`) in tipe nalog
+(`sklop-naloge` z `tip-naloge`: kako prepoznaš, univerzalni postopek, primer). Vsebine višje ravni
+imajo `sklop--visja` in oznako `badge-vr`. Grafi, vektorji in liki so inline SVG v `<figure class="slika">`
+(razredi `s-os`, `s-k1` … so v `snov.css`). Na vrhu strani je kazalo, na dnu ključ za prepoznavanje tipov.
+
 Formule pišeš v LaTeX-u med `\( … \)` (v vrstici) ali `\[ … \]` (samostojno). MathJax se naloži samo na straneh s formulami.
 
 ## Interaktivne naloge

@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Geometrijski liki in telesa — razlaga in postopki | Piflar.si</title>
-  <meta name="description" content="Celovita razlaga geometrijskih likov in teles za maturo: ploščine, Heronova formula, prizma, valj, piramida, stožec, krogla, površina in prostornina teles.">
+  <meta name="description" content="Geometrijski liki in telesa za maturo po podpoglavjih kataloga: ploščine likov, Heronova formula, polmera včrtanega in očrtanega kroga, prizma, valj, piramida, stožec, krogla, Cavalierijevo pravilo, poševna telesa in vrtenine.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
@@ -23,26 +23,25 @@
         <header class="page-header">
           <span class="page-eyebrow">Matematika · Snov · 4.7</span>
           <h1>Geometrijski liki in telesa</h1>
-          <p>Vse o geometrijskih likih in telesih za maturo: ploščine likov, Heronova formula, polmer včrtanega in očrtanega kroga, površina in prostornina prizme, valja, piramide, stožca in krogle.</p>
+          <p>Ploščine likov, polmera včrtanega in očrtanega kroga, površine in prostornine teles, Cavalierijevo pravilo, poševna telesa in vrtenine. Pod razlago vsakega podpoglavja so vsi tipi nalog, ki se pojavijo pri tem sklopu.</p>
           <div class="page-meta">
-            <div class="page-meta-item"><strong>12</strong><span>Tipov nalog</span></div>
-            <div class="page-meta-item"><strong>40+</strong><span>Primerov</span></div>
-            <div class="page-meta-item"><strong>~60 min</strong><span>Branja</span></div>
+            <div class="page-meta-item"><strong>8</strong><span>Podpoglavij</span></div>
+            <div class="page-meta-item"><strong>17</strong><span>Tipov nalog</span></div>
+            <div class="page-meta-item"><strong>~70 min</strong><span>Branja</span></div>
           </div>
         </header>
 
-        <!-- ============ MATURA FORMULE ============ -->
         <div class="matura-formule">
-          <h3>📋 Formule na maturi — osnovna raven</h3>
-          <p>Na maturitetnem listu s formulami so za <strong>like in telesa</strong> relevantne naslednje formule:</p>
+          <h3>📋 Formule na maturi</h3>
+          <p>Na listu s formulami so <strong>Heronova formula</strong>, <strong>polmera \(r = \frac{S}{s}\) in \(R = \frac{abc}{4S}\)</strong>, <strong>ploščina trikotnika s koordinatami</strong> ter <strong>površina in prostornina krogle</strong>. Vse ostalo znaj na pamet:</p>
           <div class="matura-grid">
             <div class="matura-levo">
               <ul>
-                <li><strong>Heronova formula:</strong> \(S = \sqrt{s(s-a)(s-b)(s-c)}\), \(s = \dfrac{a+b+c}{2}\)</li>
-                <li><strong>Polmera trikotniku včrtanega in očrtanega kroga:</strong> \(r = \dfrac{S}{s}\), \(R = \dfrac{abc}{4S}\)</li>
-                <li><strong>Krogla:</strong> \(P = 4\pi r^2\), \(V = \dfrac{4\pi r^3}{3}\)</li>
-                <li><strong>Krožni izsek:</strong> \(S = \dfrac{\pi r^2 \alpha}{360°}\), \(l = \dfrac{2\pi r \alpha}{360°}\)</li>
-                <li><strong>Ploščina trikotnika:</strong> \(S = \dfrac{1}{2}ab\sin\gamma\)</li>
+                <li>trikotnik \(S = \frac{a v_a}{2} = \frac{ab\sin\gamma}{2}\); krog \(S = \pi r^2\), \(o = 2\pi r\)</li>
+                <li>prizma in valj: \(V = O \cdot v\); piramida in stožec: \(V = \frac{O \cdot v}{3}\)</li>
+                <li>površina: \(P = 2O + pl\) (prizma, valj), \(P = O + pl\) (piramida, stožec)</li>
+                <li>plašč valja \(2\pi r v\), plašč stožca \(\pi r s\)</li>
+                <li>krogla: \(P = 4\pi r^2\), \(V = \frac{4\pi r^3}{3}\) <em>(na listu)</em></li>
               </ul>
             </div>
             <div class="matura-slika">
@@ -51,547 +50,989 @@
           </div>
         </div>
 
-        <!-- ============ 1. TEORIJA ============ -->
-        <section class="subsection">
-          <div class="subsection-head">
-            <h2>1. Teorija — formule in pravila</h2>
-            <p>Kar moraš znati na pamet, preden se lotiš nalog.</p>
+        <nav class="kazalo" aria-label="Podpoglavja">
+          <h2>Podpoglavja</h2>
+          <ol>
+            <li><a href="#sklop-1"><span class="kazalo-st">4.7.1</span> Ploščine geometrijskih likov, Heronova formula</a></li>
+            <li><a href="#sklop-2"><span class="kazalo-st">4.7.2</span> Polmer trikotniku včrtanega in očrtanega kroga</a></li>
+            <li><a href="#sklop-3"><span class="kazalo-st">4.7.3</span> Geometrijska telesa: prizma, valj, piramida, stožec, krogla</a></li>
+            <li><a href="#sklop-4"><span class="kazalo-st">4.7.4</span> Površina in prostornina pokončnih teles in krogle</a></li>
+            <li><a href="#sklop-5"><span class="kazalo-st">4.7.5</span> Cavalierijevo pravilo <span class="badge-vr">VR</span></a></li>
+            <li><a href="#sklop-6"><span class="kazalo-st">4.7.6</span> Poševna telesa <span class="badge-vr">VR</span></a></li>
+            <li><a href="#sklop-7"><span class="kazalo-st">4.7.7</span> Vrtenine <span class="badge-vr">VR</span></a></li>
+            <li><a href="#sklop-8"><span class="kazalo-st">4.7.8</span> Geometrijski matematični problemi</a></li>
+            <li><a href="#kljuc"><span class="kazalo-st">🔎</span> Ključ: kateri tip naloge je to?</a></li>
+          </ol>
+        </nav>
+
+        <!-- SKLOP 1 -->
+        <section class="sklop" id="sklop-1">
+          <header class="sklop-header">
+            <span class="sklop-num">4.7.1</span>
+            <h2>Ploščine geometrijskih likov, Heronova formula</h2>
+            <p>Ploščine trikotnikov, štirikotnikov, kroga in njegovih delov.</p>
+          </header>
+          <div class="sklop-cilji">
+            <h3>🎯 Cilji iz kataloga</h3>
+            <ul>
+              <li>Razvije in izboljša geometrijsko predstavo.</li>
+              <li>Uporablja obrazce za izražanje posameznih količin.</li>
+              <li>Kritično oceni in presodi dobljene vrednosti ter pazi na merske enote.</li>
+            </ul>
           </div>
-
-          <!-- NOVO: VRSTE TRIKOTNIKOV -->
-          <div class="info-card">
-            <h3>Vrste trikotnikov — kaj pomenijo izrazi</h3>
-            <p>Pri geometrijskih nalogah se pogosto pojavijo izrazi, kot so <em>enakostranični</em>, <em>enakokraki</em>, <em>pravokotni</em>, <em>ostrokotni</em> in <em>topokotni</em> trikotnik. Vsak izmed njih opisuje <strong>določeno lastnost</strong> trikotnika — bodisi dolžine stranic bodisi velikosti kotov. Spodaj so razloženi po vrsti.</p>
-
-            <div class="concept-list two-col" style="margin-top: var(--space-4);">
-
-              <div class="concept">
-                <h4>Enakostranični trikotnik</h4>
-                <div class="concept-formula">\(a = b = c\)</div>
-                <p class="concept-desc">Vse <strong>tri stranice so enako dolge</strong>. Posledično so tudi vsi trije koti enaki in znašajo \(60^\circ\).</p>
-              </div>
-
-              <div class="concept">
-                <h4>Enakokraki trikotnik</h4>
-                <div class="concept-formula">\(a = b \neq c\)</div>
-                <p class="concept-desc">Dve stranici (kraka) sta <strong>enako dolgi</strong>, tretja stranica (osnovnica) je različno dolga. Kota ob osnovnici sta enaka.</p>
-              </div>
-
-              <div class="concept">
-                <h4>Raznostranični trikotnik</h4>
-                <div class="concept-formula">\(a \neq b \neq c\)</div>
-                <p class="concept-desc">Vse tri stranice so <strong>različno dolge</strong>. Tudi koti so med seboj različni.</p>
-              </div>
-
-              <div class="concept">
-                <h4>Pravokotni trikotnik</h4>
-                <div class="concept-formula">en kot = \(90^\circ\)</div>
-                <p class="concept-desc">Ima en pravi kot. Stranici, ki oklepata pravi kot, sta <strong>kateti</strong>, najdaljša stranica nasproti pravega kota pa je <strong>hipotenuza</strong>. Velja Pitagorov izrek: \(a^2 + b^2 = c^2\).</p>
-              </div>
-
-              <div class="concept">
-                <h4>Ostrokotni trikotnik</h4>
-                <div class="concept-formula">vsi koti &lt; \(90^\circ\)</div>
-                <p class="concept-desc">Vsi trije notranji koti so <strong>manjši od \(90^\circ\)</strong>.</p>
-              </div>
-
-              <div class="concept">
-                <h4>Topokotni trikotnik</h4>
-                <div class="concept-formula">en kot &gt; \(90^\circ\)</div>
-                <p class="concept-desc">Ima en top kot (večji od \(90^\circ\)). Druga dva kota sta ostrokotna.</p>
-              </div>
-
+          <div class="sklop-teorija">
+            <h3>📖 Razlaga</h3>
+            <p><strong>Ploščina</strong> pove, koliko enotskih kvadratov pokrije lik. Vse formule izhajajo iz pravokotnika \(S = ab\): paralelogram preoblikujemo v pravokotnik, trikotnik je polovica paralelograma, trapez sta dva trikotnika.</p>
+            <div class="slike-vrsta"><figure class="slika">
+<svg viewBox="0 0 230 208" role="img" aria-label="Trikotnik z višino" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g1-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g1-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g1-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g1-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g1-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g1-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<polygon class="s-lik" points="31.9,145.6 198.1,145.6 87.3,45.7"/>
+<line class="s-k4" x1="87.3" y1="45.7" x2="87.3" y2="145.6"/>
+<text class="s-txt-muted" x="115" y="165" text-anchor="middle">a</text>
+<text class="s-txt-k4" x="92.8" y="101.2" text-anchor="start">v<tspan dy="4" style="font-size:10px">a</tspan></text>
+<text class="s-txt-b" x="115" y="185.8" text-anchor="middle">S = a·vₐ / 2</text>
+<path class="s-kot" d="M87.3,145.6 L94.5,145.6 L94.5,138.4 L87.3,138.4 Z"/>
+<circle cx="90.5" cy="142.4" r="1.6" fill="#B45309"/>
+</svg>
+<figcaption>Trikotnik: polovica produkta stranice in višine nanjo.</figcaption>
+</figure><figure class="slika">
+<svg viewBox="0 0 230 186" role="img" aria-label="Paralelogram z višino" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g2-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g2-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g2-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g2-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g2-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g2-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<polygon class="s-lik" points="30.1,129.3 163.5,129.3 199.9,47 66.5,47"/>
+<line class="s-k4" x1="66.5" y1="47" x2="66.5" y2="129.3"/>
+<text class="s-txt-muted" x="96.8" y="146.2" text-anchor="middle">a</text>
+<text class="s-txt-muted" x="190.2" y="93" text-anchor="middle">b</text>
+<text class="s-txt-k4" x="71.4" y="90.6" text-anchor="start">v<tspan dy="4" style="font-size:10px">a</tspan></text>
+<text class="s-txt-b" x="115" y="164.4" text-anchor="middle">S = a·vₐ = ab·sin α</text>
+<path class="s-kot" d="M66.5,129.3 L73.7,129.3 L73.7,122.1 L66.5,122.1 Z"/>
+<circle cx="69.7" cy="126.1" r="1.6" fill="#B45309"/>
+<path class="s-kot" d="M30.1,129.3 L48.1,129.3 A18,18 0 0 0 37.4,112.8 Z"/>
+<text class="s-txt-k4" x="54.4" y="117.5" text-anchor="middle">α</text>
+</svg>
+<figcaption>Paralelogram: stranica krat višina nanjo.</figcaption>
+</figure><figure class="slika">
+<svg viewBox="0 0 230 186" role="img" aria-label="Trapez z višino" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g3-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g3-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g3-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g3-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g3-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g3-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<polygon class="s-lik" points="30.1,129.3 199.9,129.3 151.4,47 68.9,47"/>
+<line class="s-k4" x1="68.9" y1="47" x2="68.9" y2="129.3"/>
+<text class="s-txt-muted" x="115" y="146.2" text-anchor="middle">a</text>
+<text class="s-txt-muted" x="110.2" y="38.6" text-anchor="middle">c</text>
+<text class="s-txt-k4" x="73.8" y="90.6" text-anchor="start">v</text>
+<text class="s-txt-b" x="115" y="164.4" text-anchor="middle">S = (a + c)·v / 2</text>
+<path class="s-kot" d="M68.9,129.3 L76.1,129.3 L76.1,122.1 L68.9,122.1 Z"/>
+<circle cx="72.1" cy="126.1" r="1.6" fill="#B45309"/>
+</svg>
+<figcaption>Trapez: srednjica \(\frac{a + c}{2}\) krat višina.</figcaption>
+</figure><figure class="slika">
+<svg viewBox="0 0 230 208" role="img" aria-label="Romb z diagonalama" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g4-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g4-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g4-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g4-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g4-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g4-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<polygon class="s-lik" points="115,151.2 198.1,98.5 115,45.7 31.9,98.5"/>
+<line class="s-k3" x1="115" y1="151.2" x2="115" y2="45.7"/>
+<line class="s-k2" x1="31.9" y1="98.5" x2="198.1" y2="98.5"/>
+<text class="s-txt-k2" x="159.3" y="91.5" text-anchor="middle">e</text>
+<text class="s-txt-k3" x="120.5" y="70.7" text-anchor="start">f</text>
+<text class="s-txt-b" x="115" y="185.8" text-anchor="middle">S = e·f / 2 (romb, deltoid)</text>
+<path class="s-kot" d="M115,98.5 L121.6,98.5 L121.6,91.9 L115,91.9 Z"/>
+<circle cx="118" cy="95.5" r="1.6" fill="#B45309"/>
+</svg>
+<figcaption>Romb in deltoid: diagonali sta pravokotni.</figcaption>
+</figure></div>
+            <h4>Trikotnik — katero formulo izbrati</h4>
+            <div class="tabela-wrap">
+              <table class="tabela">
+                <thead><tr><th>Poznaš</th><th>Formula</th></tr></thead>
+                <tbody>
+                  <tr><td>stranico in višino nanjo</td><td>\(S = \dfrac{a\,v_a}{2}\)</td></tr>
+                  <tr><td>dve stranici in kot med njima</td><td>\(S = \dfrac{ab\sin\gamma}{2}\)</td></tr>
+                  <tr><td>vse tri stranice</td><td class="poudarek">Heronova formula \(S = \sqrt{s(s - a)(s - b)(s - c)}\), \(s = \frac{a + b + c}{2}\)</td></tr>
+                  <tr><td>koordinate oglišč</td><td>\(S = \frac{1}{2}\left|(x_2 - x_1)(y_3 - y_1) - (x_3 - x_1)(y_2 - y_1)\right|\) (4.9)</td></tr>
+                  <tr><td>pravokotni trikotnik</td><td>\(S = \dfrac{ab}{2}\) (kateti)</td></tr>
+                  <tr><td>enakostranični trikotnik</td><td>\(S = \dfrac{a^2\sqrt{3}}{4}\)</td></tr>
+                </tbody>
+              </table>
             </div>
-
-            <p style="margin-top: var(--space-4);"><strong>Pomembno:</strong> Trikotnik je lahko hkrati na primer <em>enakokrak</em> in <em>pravokotni</em> — to pomeni, da ima dve enako dolgi stranici <strong>in</strong> en pravi kot. Izrazi opisujejo različne lastnosti, zato se med seboj ne izključujejo nujno.</p>
+            <h4>Krog in njegovi deli</h4>
+            <div class="slike-vrsta"><figure class="slika">
+<svg viewBox="0 0 230 233" role="img" aria-label="Krožni izsek" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g5-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g5-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g5-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g5-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g5-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g5-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<polygon class="s-ploskev" points="111.9,118.1 188.3,90.3 187.6,88.3 186.8,86.3 185.9,84.3 185,82.4 184,80.5 183,78.6 182,76.8 180.9,75 179.7,73.2 178.5,71.4 177.3,69.7 176,68 174.6,66.3 173.3,64.7 171.9,63.1 170.4,61.6 168.9,60.1 167.4,58.6 165.8,57.2 164.2,55.8 162.5,54.4 160.8,53.1 159.1,51.9 157.4,50.7 155.6,49.5 153.8,48.4 151.9,47.3 150.1,46.3 148.2,45.3 146.3,44.4 144.3,43.5 142.3,42.7 140.4,41.9 138.4,41.2 136.3,40.5 134.3,39.9 132.2,39.4 130.2,38.8 128.1,38.4 126,38 123.9,37.7 121.8,37.4 119.7,37.1 117.5,37 115.4,36.8 113.3,36.8 111.2,36.8 109,36.8 106.9,36.9 104.8,37.1 102.7,37.3 100.5,37.6 98.4,37.9 96.3,38.3 94.3,38.7 92.2,39.2 90.1,39.7 88.1,40.3 86.1,41 84,41.7"/>
+<line class="s-k1" x1="111.9" y1="118.1" x2="188.3" y2="90.3"/>
+<line class="s-k1" x1="111.9" y1="118.1" x2="84" y2="41.7"/>
+<text class="s-txt-k1" x="158.8" y="111.8" text-anchor="middle">r</text>
+<text class="s-txt-k2" x="158.8" y="35.2" text-anchor="middle">l</text>
+<circle class="s-pom" cx="111.9" cy="118.1" r="81.4"/>
+<path class="s-k2" d="M188.3,90.3 A81.4,81.4 0 0 0 84,41.7"/>
+<path class="s-kot" d="M111.9,118.1 L130.7,111.3 A20,20 0 0 0 105.1,99.3 Z"/>
+<text class="s-txt-k4" x="125" y="94" text-anchor="middle">α</text>
+</svg>
+<figcaption>Izsek: \(S = \frac{\pi r^2 \alpha}{360°}\), lok \(l = \frac{\pi r \alpha}{180°}\).</figcaption>
+</figure><figure class="slika">
+<svg viewBox="0 0 230 233" role="img" aria-label="Krožni odsek" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g6-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g6-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g6-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g6-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g6-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g6-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<polygon class="s-ploskev" points="41.4,158.7 42.9,161.1 44.4,163.5 46.1,165.9 47.8,168.1 49.5,170.3 51.4,172.5 53.3,174.5 55.4,176.5 57.4,178.5 59.6,180.3 61.8,182.1 64.1,183.8 66.4,185.5 68.8,187 71.2,188.5 73.7,189.8 76.2,191.1 78.8,192.3 81.4,193.4 84,194.5 86.7,195.4 89.4,196.2 92.2,197 95,197.6 97.7,198.1 100.5,198.6 103.4,198.9 106.2,199.2 109,199.3 111.9,199.4 114.7,199.3 117.5,199.2 120.4,198.9 123.2,198.6 126,198.1 128.8,197.6 131.6,197 134.3,196.2 137,195.4 139.7,194.5 142.3,193.4 145,192.3 147.5,191.1 150.1,189.8 152.5,188.5 155,187 157.4,185.5 159.7,183.8 162,182.1 164.2,180.3 166.3,178.5 168.4,176.5 170.4,174.5 172.3,172.5 174.2,170.3 176,168.1 177.7,165.9 179.3,163.5 180.9,161.1 182.3,158.7"/>
+<line class="s-k1" x1="41.4" y1="158.7" x2="182.3" y2="158.7"/>
+<line class="s-pom" x1="111.9" y1="118.1" x2="41.4" y2="158.7"/>
+<line class="s-pom" x1="111.9" y1="118.1" x2="182.3" y2="158.7"/>
+<text class="s-txt-b" x="111.9" y="180.6" text-anchor="middle">odsek</text>
+<circle class="s-pom" cx="111.9" cy="118.1" r="81.4"/>
+<path class="s-kot" d="M111.9,118.1 L99.8,125.1 A14,14 0 0 0 124,125.1 Z"/>
+<text class="s-txt-k4" x="111.9" y="144.1" text-anchor="middle">α</text>
+</svg>
+<figcaption>Odsek med tetivo in lokom = izsek − trikotnik: \(S = \frac{\pi r^2 \alpha}{360°} - \frac{r^2 \sin\alpha}{2}\).</figcaption>
+</figure><figure class="slika">
+<svg viewBox="0 0 230 233" role="img" aria-label="Krožni kolobar" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g7-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g7-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g7-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g7-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g7-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g7-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<line class="s-k2" x1="111.9" y1="118.1" x2="193.2" y2="118.1"/>
+<line class="s-k3" x1="111.9" y1="118.1" x2="80.9" y2="87.1"/>
+<text class="s-txt-k2" x="174.5" y="110.2" text-anchor="middle">R</text>
+<text class="s-txt-k3" x="88.4" y="110.2" text-anchor="middle">r</text>
+<circle class="s-k1" cx="111.9" cy="118.1" r="81.4"/>
+<circle class="s-k1" cx="111.9" cy="118.1" r="43.8"/><path d="M30.5,118.1 a81.35483870967742,81.35483870967742 0 1,0 162.70967741935485,0 a81.35483870967742,81.35483870967742 0 1,0 -162.70967741935485,0 Z M68.1,118.1 a43.806451612903224,43.806451612903224 0 1,0 87.61290322580645,0 a43.806451612903224,43.806451612903224 0 1,0 -87.61290322580645,0 Z" fill="rgba(79,70,229,0.16)" fill-rule="evenodd"/>
+</svg>
+<figcaption>Kolobar: \(S = \pi (R^2 - r^2)\).</figcaption>
+</figure></div>
+            <p>Obseg kroga \(o = 2\pi r\), ploščina \(S = \pi r^2\). Krožni izsek s središčnim kotom \(\alpha\) je \(\frac{\alpha}{360°}\) celega kroga, zato \(S_i = \frac{\pi r^2 \alpha}{360°}\) in dolžina loka \(l = \frac{2\pi r \alpha}{360°}\). Izsek lahko zapišemo tudi kot \(S_i = \frac{l r}{2}\).</p>
+            <div class="pazi"><strong>Pazi:</strong> enote za ploščino so kvadratne: \(1\ \text{m}^2 = 100\ \text{dm}^2 = 10\,000\ \text{cm}^2\), \(1\ \text{a} = 100\ \text{m}^2\), \(1\ \text{ha} = 10\,000\ \text{m}^2\).</div>
           </div>
-
-          <!-- NOVO: VRSTE ŠTIRIKOTNIKOV -->
-          <div class="info-card">
-            <h3>Vrste štirikotnikov — kaj pomenijo izrazi</h3>
-            <p>Tudi pri štirikotnikih poznamo več vrst, ki jih ločimo po dolžinah stranic, kotih in vzporednosti stranic.</p>
-
-            <div class="concept-list two-col" style="margin-top: var(--space-4);">
-
-              <div class="concept">
-                <h4>Kvadrat</h4>
-                <div class="concept-formula">vse stranice enake, vsi koti \(90^\circ\)</div>
-                <p class="concept-desc">Poseben primer pravokotnika in romba hkrati.</p>
+          <div class="sklop-naloge">
+            <h3>✏️ Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-1">
+              <h4>Tip 1: Ploščina trikotnika</h4>
+              <div class="prepoznaj">
+                <p><strong>Kako prepoznaš:</strong> iščejo ploščino (ali iz ploščine stranico/višino) trikotnika.</p>
+                <ul class="kljucne"><li>„ploščina trikotnika“</li><li>„stranice merijo“</li><li>„oklepata kot“</li><li>„višina na stranico“</li></ul>
               </div>
-
-              <div class="concept">
-                <h4>Pravokotnik</h4>
-                <div class="concept-formula">vsi koti \(90^\circ\)</div>
-                <p class="concept-desc">Nasprotni stranici sta enako dolgi in vzporedni.</p>
-              </div>
-
-              <div class="concept">
-                <h4>Paralelogram</h4>
-                <div class="concept-formula">nasprotni stranici vzporedni in enako dolgi</div>
-                <p class="concept-desc">Nasprotna kota sta enaka. Kvadrat, pravokotnik in romb so posebni primeri paralelograma.</p>
-              </div>
-
-              <div class="concept">
-                <h4>Romb</h4>
-                <div class="concept-formula">vse štiri stranice enake</div>
-                <p class="concept-desc">Nasprotni stranici sta vzporedni. Koti niso nujno \(90^\circ\).</p>
-              </div>
-
-              <div class="concept">
-                <h4>Trapez</h4>
-                <div class="concept-formula">vsaj en par vzporednih stranic</div>
-                <p class="concept-desc">Vzporedni stranici imenujemo <strong>osnovnici</strong> (\(a\) in \(c\)), drugi dve pa <strong>kraka</strong>.</p>
-              </div>
-
-              <div class="concept">
-                <h4>Enakokraki trapez</h4>
-                <div class="concept-formula">kraka enako dolga</div>
-                <p class="concept-desc">Kota ob vsaki osnovnici sta enaka.</p>
-              </div>
-
-              <div class="concept">
-                <h4>Deltoid</h4>
-                <div class="concept-formula">dva para enako dolgih sosednjih stranic</div>
-                <p class="concept-desc">Diagonali sta pravokotni. Znan primer je zmaj.</p>
-              </div>
-
-              <div class="concept">
-                <h4>Tangentni štirikotnik</h4>
-                <div class="concept-formula">\(a + c = b + d\)</div>
-                <p class="concept-desc">Vsota nasprotnih stranic je enaka — štirikotniku se da včrtati krog.</p>
-              </div>
-
-            </div>
-          </div>
-
-          <div class="info-card">
-            <h3>Ploščine ravninskih likov</h3>
-            <div class="concept-list two-col">
-              <div class="concept">
-                <h4>Kvadrat</h4>
-                <div class="concept-formula">\(o = 4a\), \(S = a^2\), \(d = a\sqrt{2}\)</div>
-              </div>
-              <div class="concept">
-                <h4>Pravokotnik</h4>
-                <div class="concept-formula">\(o = 2(a+b)\), \(S = ab\), \(d = \sqrt{a^2+b^2}\)</div>
-              </div>
-              <div class="concept">
-                <h4>Trikotnik</h4>
-                <div class="concept-formula">\(S = \dfrac{av_a}{2} = \dfrac{1}{2}ab\sin\gamma = \sqrt{s(s-a)(s-b)(s-c)}\)</div>
-              </div>
-              <div class="concept">
-                <h4>Paralelogram</h4>
-                <div class="concept-formula">\(S = a \cdot v_a = ab\sin\alpha\)</div>
-              </div>
-              <div class="concept">
-                <h4>Trapez</h4>
-                <div class="concept-formula">\(S = \dfrac{a+c}{2} \cdot v\)</div>
-              </div>
-              <div class="concept">
-                <h4>Romb</h4>
-                <div class="concept-formula">\(S = \dfrac{e \cdot f}{2} = a \cdot v\)</div>
-              </div>
-              <div class="concept">
-                <h4>Krog</h4>
-                <div class="concept-formula">\(o = 2\pi r\), \(S = \pi r^2\)</div>
-              </div>
-              <div class="concept">
-                <h4>Krožni izsek</h4>
-                <div class="concept-formula">\(S = \dfrac{\pi r^2 \alpha}{360°}\), \(l = \dfrac{2\pi r \alpha}{360°}\)</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="info-card">
-            <h3>Prizma in valj</h3>
-            <div class="concept-list two-col">
-              <div class="concept">
-                <h4>Pokončna prizma</h4>
-                <div class="concept-formula">\(P = 2S_o + pl\), \(V = S_o \cdot v\)</div>
-                <p class="concept-desc">\(S_o\) = ploščina osnovne ploskve, \(pl\) = plašč, \(v\) = višina.</p>
-              </div>
-              <div class="concept">
-                <h4>Kvader</h4>
-                <div class="concept-formula">\(P = 2(ab+ac+bc)\), \(V = abc\), \(d = \sqrt{a^2+b^2+c^2}\)</div>
-              </div>
-              <div class="concept">
-                <h4>Kocka</h4>
-                <div class="concept-formula">\(P = 6a^2\), \(V = a^3\), \(d = a\sqrt{3}\)</div>
-              </div>
-              <div class="concept">
-                <h4>Valj</h4>
-                <div class="concept-formula">\(P = 2\pi r^2 + 2\pi r v\), \(V = \pi r^2 v\)</div>
-                <p class="concept-desc">\(P\) = površina, \(V\) = prostornina.</p>
+              <h5>Univerzalni postopek</h5>
+              <ol>
+                <li>Preglej podatke in izberi formulo po tabeli zgoraj.</li>
+                <li>Pri Heronovi formuli najprej izračunaj \(s\), nato \(s - a\), \(s - b\), \(s - c\).</li>
+                <li>Če iščeš višino: \(v_a = \frac{2S}{a}\).</li>
+                <li>Rezultat zapiši s kvadratno enoto.</li>
+              </ol>
+              <div class="primer">
+                <p><strong>Primer:</strong> Trikotnik ima stranice 13, 14 in 15 cm. Izračunajte ploščino in višino na najdaljšo stranico.</p>
+                <p>\(s = 21\), \(S = \sqrt{21 \cdot 8 \cdot 7 \cdot 6} = \sqrt{7056} = 84\ \text{cm}^2\). \(v_{15} = \frac{2 \cdot 84}{15} = 11{,}2\) cm.</p>
               </div>
             </div>
-          </div>
-
-          <div class="info-card">
-            <h3>Piramida in stožec</h3>
-            <div class="concept-list two-col">
-              <div class="concept">
-                <h4>Piramida</h4>
-                <div class="concept-formula">\(V = \dfrac{S_o \cdot v}{3}\), \(P = S_o + pl\)</div>
+            <div class="tip-naloge" id="tip-2">
+              <h4>Tip 2: Ploščina štirikotnika ali sestavljenega lika</h4>
+              <div class="prepoznaj">
+                <p><strong>Kako prepoznaš:</strong> paralelogram, trapez, romb ali lik na sliki, sestavljen iz več delov.</p>
+                <ul class="kljucne"><li>„ploščina trapeza“</li><li>„osenčeni lik“</li><li>„zemljišče oblike“</li></ul>
               </div>
-              <div class="concept">
-                <h4>Pravilna štiristrana piramida</h4>
-                <div class="concept-formula">\(S_o = a^2\), \(v_1^2 = v^2 + \left(\dfrac{a}{2}\right)^2\)</div>
-                <p class="concept-desc">\(v_1\) = stranska višina (apotema).</p>
-              </div>
-              <div class="concept">
-                <h4>Stožec</h4>
-                <div class="concept-formula">\(V = \dfrac{\pi r^2 v}{3}\), \(P = \pi r^2 + \pi r s\)</div>
-                <p class="concept-desc">\(s\) = stranica (poševna višina), \(s = \sqrt{r^2 + v^2}\).</p>
-              </div>
-              <div class="concept">
-                <h4>Krogla</h4>
-                <div class="concept-formula">\(P = 4\pi r^2\), \(V = \dfrac{4\pi r^3}{3}\)</div>
+              <h5>Univerzalni postopek</h5>
+              <ol>
+                <li>Prepoznaj lik in zapiši formulo; manjkajočo višino ali diagonalo izračunaj s Pitagorovim izrekom ali kotnimi funkcijami (4.6).</li>
+                <li>Sestavljen lik razreži na znane like (seštevaj) ali ga dopolni do večjega lika (odštevaj).</li>
+              </ol>
+              <div class="primer">
+                <p><strong>Primer:</strong> Romb ima stranico 10 cm in diagonalo 12 cm. Kolikšna je ploščina?</p>
+                <p>Polovici diagonal in stranica tvorijo pravokotni trikotnik: \(\frac{f}{2} = \sqrt{100 - 36} = 8\), \(f = 16\). \(S = \frac{12 \cdot 16}{2} = 96\ \text{cm}^2\).</p>
               </div>
             </div>
-          </div>
-
-          <div class="info-card">
-            <h3>Merske enote</h3>
-            <div class="concept-list two-col">
-              <div class="concept">
-                <h4>Dolžina</h4>
-                <div class="concept-formula">1 m = 10 dm = 100 cm = 1000 mm</div>
+            <div class="tip-naloge" id="tip-3">
+              <h4>Tip 3: Krog, krožni izsek, odsek in kolobar</h4>
+              <div class="prepoznaj">
+                <p><strong>Kako prepoznaš:</strong> kos pice, vrtni sektor, osenčen del kroga, ura, lok.</p>
+                <ul class="kljucne"><li>„izsek“</li><li>„lok“</li><li>„osenčeni del“</li><li>„kolobar“</li><li>„središčni kot“</li></ul>
               </div>
-              <div class="concept">
-                <h4>Ploščina</h4>
-                <div class="concept-formula">1 m² = 100 dm² = 10 000 cm²</div>
-              </div>
-              <div class="concept">
-                <h4>Prostornina</h4>
-                <div class="concept-formula">1 m³ = 1000 dm³, &nbsp; 1 dm³ = 1 L</div>
-              </div>
-              <div class="concept">
-                <h4>Pretvorbe</h4>
-                <div class="concept-formula">1 L = 1 dm³ = 1000 cm³</div>
+              <h5>Univerzalni postopek</h5>
+              <ol>
+                <li>Ugotovi polmer in središčni kot \(\alpha\) (pri uri: 1 ura = \(30°\)).</li>
+                <li>Izsek \(\frac{\pi r^2 \alpha}{360°}\), lok \(\frac{\pi r \alpha}{180°}\).</li>
+                <li>Odsek = izsek − enakokraki trikotnik \(\frac{r^2 \sin\alpha}{2}\).</li>
+                <li>Osenčene dele dobiš kot razliko ploščin (npr. kvadrat − četrtina kroga).</li>
+              </ol>
+              <div class="primer">
+                <p><strong>Primer:</strong> Izračunajte ploščino krožnega odseka s polmerom 6 cm in središčnim kotom \(60°\).</p>
+                <p>Izsek \(\frac{36\pi \cdot 60°}{360°} = 6\pi\), trikotnik \(\frac{36 \sin 60°}{2} = 9\sqrt{3}\). Odsek \(6\pi - 9\sqrt{3} \approx 3{,}26\ \text{cm}^2\).</p>
               </div>
             </div>
           </div>
         </section>
 
-        <!-- ============ 2. TIPI NALOG ============ -->
-        <section class="subsection">
-          <div class="subsection-head">
-            <h2>2. Tipi nalog — postopki po korakih</h2>
-            <p>Za vsak tip: kako ga prepoznaš, kako ga rešiš, primer.</p>
+        <!-- SKLOP 2 -->
+        <section class="sklop" id="sklop-2">
+          <header class="sklop-header">
+            <span class="sklop-num">4.7.2</span>
+            <h2>Polmer trikotniku včrtanega in očrtanega kroga</h2>
+            <p>Povezava med ploščino, obsegom in polmeroma.</p>
+          </header>
+          <div class="sklop-cilji">
+            <h3>🎯 Cilji iz kataloga</h3>
+            <ul><li>Uporabi usvojeno znanje ravninske geometrije ter rešuje probleme v povezavi s polmerom trikotniku včrtanega in očrtanega kroga.</li></ul>
           </div>
-
-          <!-- TIP 1 -->
-          <div class="info-card" id="tip-1">
-            <div class="tip-header">
-              <h3>Tip 1: Ploščina trikotnika</h3>
-              <div class="tip-formula">\(S = \dfrac{1}{2}ab\sin\gamma\)</div>
-            </div>
-            <p><strong>Kako prepoznaš:</strong> "izračunajte ploščino trikotnika".</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Preveri, katere podatke imaš: osnovnica + višina, dve stranici + vmesni kot, ali tri stranice.</li>
-              <li>Uporabi ustrezno formulo.</li>
-              <li>Pazi na enote.</li>
-            </ol>
-            <p class="plain-example"><strong>Primer:</strong> \(a = 6, b = 8, \gamma = 30°\)</p>
-            <div class="plain-example">
-              <p>\(S = \dfrac{1}{2} \cdot 6 \cdot 8 \cdot 0{,}5 = 12\).</p>
-            </div>
-          </div>
-
-          <!-- TIP 2 -->
-          <div class="info-card" id="tip-2">
-            <div class="tip-header">
-              <h3>Tip 2: Heronova formula</h3>
-              <div class="tip-formula">\(S = \sqrt{s(s-a)(s-b)(s-c)}\)</div>
-            </div>
-            <p><strong>Kako prepoznaš:</strong> podane so vse tri stranice, iščeš ploščino.</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Izračunaj polobseg \(s = \dfrac{a+b+c}{2}\).</li>
-              <li>Vstavi v formulo \(S = \sqrt{s(s-a)(s-b)(s-c)}\).</li>
-              <li>Izračunaj koren.</li>
-            </ol>
-            <p class="plain-example"><strong>Primer:</strong> \(a = 4, b = 6, c = 8\)</p>
-            <div class="plain-example">
-              <p>\(s = 9\). \(S = \sqrt{9 \cdot 5 \cdot 3 \cdot 1} = \sqrt{135} \approx 11{,}62\).</p>
-            </div>
-          </div>
-
-          <!-- TIP 3 -->
-          <div class="info-card" id="tip-3">
-            <div class="tip-header">
-              <h3>Tip 3: Polmer včrtanega in očrtanega kroga</h3>
-              <div class="tip-formula">\(r = \dfrac{S}{s}\), \(R = \dfrac{abc}{4S}\)</div>
-            </div>
-            <p><strong>Kako prepoznaš:</strong> "polmer trikotniku včrtanega/očrtanega kroga".</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Izračunaj ploščino \(S\) (Heron ali druga formula).</li>
-              <li>Izračunaj polobseg \(s\).</li>
-              <li>\(r = \dfrac{S}{s}\), \(R = \dfrac{abc}{4S}\).</li>
-            </ol>
-            <p class="plain-example"><strong>Primer:</strong> \(a = 3, b = 4, c = 5\)</p>
-            <div class="plain-example">
-              <p>\(S = 6\), \(s = 6\). \(r = \dfrac{6}{6} = 1\). \(R = \dfrac{3 \cdot 4 \cdot 5}{4 \cdot 6} = \dfrac{60}{24} = 2{,}5\).</p>
+          <div class="sklop-teorija">
+            <h3>📖 Razlaga</h3>
+            <figure class="slika slika--ozka">
+<svg viewBox="0 0 400 400" role="img" aria-label="Včrtani in očrtani krog trikotnika" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g8-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g8-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g8-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g8-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g8-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g8-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<polygon class="s-lik" points="40.2,244.9 359.8,244.9 140.1,45.2"/>
+<line class="s-k3" x1="163.2" y1="168.9" x2="163.2" y2="244.9"/>
+<line class="s-k1" x1="200" y1="200" x2="140.1" y2="45.2"/>
+<circle class="s-tocka" cx="40.2" cy="244.9" r="4.5"/>
+<text class="s-txt-b" x="34.2" y="258.9" text-anchor="end">A</text>
+<circle class="s-tocka" cx="359.8" cy="244.9" r="4.5"/>
+<text class="s-txt-b" x="365.8" y="258.9" text-anchor="start">B</text>
+<circle class="s-tocka" cx="140.1" cy="45.2" r="4.5"/>
+<text class="s-txt-b" x="140.1" y="35.2" text-anchor="middle">C</text>
+<circle class="s-tocka" cx="163.2" cy="168.9" r="3.5"/>
+<text class="s-txt-k3" x="170.2" y="164.9" text-anchor="start">S</text>
+<circle class="s-tocka-2" cx="200" cy="200" r="3.5"/>
+<text class="s-txt-k2" x="208" y="212" text-anchor="start">O</text>
+<text class="s-txt-k3" x="171.2" y="210.9" text-anchor="start">r</text>
+<text class="s-txt-k1" x="180" y="122.6" text-anchor="middle">R</text>
+<circle class="s-k1" cx="200" cy="200" r="166"/>
+<circle class="s-k3" cx="163.2" cy="168.9" r="76"/>
+<path class="s-kot-2" d="M163.2,244.9 L169.2,244.9 L169.2,238.9 L163.2,238.9 Z"/>
+<circle cx="165.9" cy="242.2" r="1.6" fill="#B45309"/>
+</svg>
+<figcaption>Središče \(S\) včrtanega kroga je enako oddaljeno od stranic (\(r\)), središče \(O\) očrtanega kroga od oglišč (\(R\)).</figcaption>
+</figure>
+            <ul>
+              <li><strong>Včrtani krog</strong> se dotika vseh treh stranic; središče je presečišče simetral kotov. Če trikotnik razrežemo na tri trikotnike z vrhom v \(S\), ima vsak višino \(r\): \(S = \frac{ar}{2} + \frac{br}{2} + \frac{cr}{2} = r s\), zato \(r = \dfrac{S}{s}\).</li>
+              <li><strong>Očrtani krog</strong> gre skozi vsa oglišča; središče je presečišče simetral stranic. Velja \(R = \dfrac{abc}{4S}\) in iz sinusnega izreka \(R = \dfrac{a}{2\sin\alpha}\).</li>
+            </ul>
+            <div class="tabela-wrap">
+              <table class="tabela">
+                <thead><tr><th>Trikotnik</th><th>\(r\)</th><th>\(R\)</th></tr></thead>
+                <tbody>
+                  <tr><td>pravokotni (kateti \(a, b\), hipotenuza \(c\))</td><td>\(\frac{a + b - c}{2}\)</td><td>\(\frac{c}{2}\)</td></tr>
+                  <tr><td>enakostranični (\(a\))</td><td>\(\frac{a\sqrt{3}}{6}\)</td><td>\(\frac{a\sqrt{3}}{3}\)</td></tr>
+                </tbody>
+              </table>
             </div>
           </div>
-
-          <!-- TIP 4 -->
-          <div class="info-card" id="tip-4">
-            <div class="tip-header">
-              <h3>Tip 4: Kvader in kocka</h3>
-              <div class="tip-formula">\(V = abc\), \(P = 2(ab+ac+bc)\)</div>
-            </div>
-            <p><strong>Kako prepoznaš:</strong> "kvader", "kocka", "telesna diagonala".</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Osnovna diagonala: \(d_o = \sqrt{a^2 + b^2}\).</li>
-              <li>Telesna diagonala: \(d_t = \sqrt{a^2 + b^2 + c^2}\).</li>
-              <li>Prostornina: \(V = abc\), površina: \(P = 2(ab + ac + bc)\).</li>
-              <li>Za kocko: \(d = a\sqrt{3}\), \(V = a^3\), \(P = 6a^2\).</li>
-            </ol>
-            <p class="plain-example"><strong>Primer:</strong> \(a = 5, b = 12, c = 84\)</p>
-            <div class="plain-example">
-              <p>\(d_o = \sqrt{25+144} = 13\). \(d_t = \sqrt{25+144+7056} = 85\). \(V = 5 \cdot 12 \cdot 84 = 5040\).</p>
-            </div>
-          </div>
-
-          <!-- TIP 5 -->
-          <div class="info-card" id="tip-5">
-            <div class="tip-header">
-              <h3>Tip 5: Valj</h3>
-              <div class="tip-formula">\(V = \pi r^2 v\), \(P = 2\pi r^2 + 2\pi r v\)</div>
-            </div>
-            <p><strong>Kako prepoznaš:</strong> "valj", podan polmer in višina (ali prostornina).</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Preveri, kaj je podano: \(r\), \(v\), \(V\) ali \(P\).</li>
-              <li>Uporabi ustrezno formulo.</li>
-              <li>Pazi na enote (npr. litre pretvori v dm³).</li>
-            </ol>
-            <p class="plain-example"><strong>Primer:</strong> sod valja \(v = 50\) cm, \(V = 20\) L = 20 dm³</p>
-            <div class="plain-example">
-              <p>\(V = \pi r^2 v = \pi r^2 \cdot 5 = 20 \Rightarrow r^2 = \dfrac{4}{\pi} \Rightarrow r \approx 1{,}1\) dm.</p>
-            </div>
-          </div>
-
-          <!-- TIP 6 -->
-          <div class="info-card" id="tip-6">
-            <div class="tip-header">
-              <h3>Tip 6: Stožec</h3>
-              <div class="tip-formula">\(V = \dfrac{\pi r^2 v}{3}\), \(P = \pi r^2 + \pi r s\), \(s = \sqrt{r^2 + v^2}\)</div>
-            </div>
-            <p><strong>Kako prepoznaš:</strong> "stožec", podani so polmer, višina ali stranica.</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Prepoznaj podatke: \(r\), \(v\), \(s\) ali \(V\).</li>
-              <li>Za iskanje \(s\) uporabi \(s = \sqrt{r^2 + v^2}\).</li>
-              <li>Uporabi ustrezno formulo za \(V\) ali \(P\).</li>
-            </ol>
-            <p class="plain-example"><strong>Primer:</strong> stožec \(V = 64\), \(v = 4\)</p>
-            <div class="plain-example">
-              <p>\(\dfrac{\pi r^2 \cdot 4}{3} = 64 \Rightarrow r^2 = \dfrac{48}{\pi} \Rightarrow r \approx 3{,}91\).</p>
-            </div>
-          </div>
-
-          <!-- TIP 7 -->
-          <div class="info-card" id="tip-7">
-            <div class="tip-header">
-              <h3>Tip 7: Krogla</h3>
-              <div class="tip-formula">\(P = 4\pi r^2\), \(V = \dfrac{4\pi r^3}{3}\)</div>
-            </div>
-            <p><strong>Kako prepoznaš:</strong> "krogla", podan polmer ali prostornina.</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Uporabi ustrezno formulo.</li>
-              <li>Pazi na enote.</li>
-            </ol>
-            <p class="plain-example"><strong>Primer:</strong> \(r = 3\)</p>
-            <div class="plain-example">
-              <p>\(P = 4\pi \cdot 9 = 36\pi\). \(V = \dfrac{4\pi \cdot 27}{3} = 36\pi\).</p>
-            </div>
-          </div>
-
-          <!-- TIP 8 -->
-          <div class="info-card" id="tip-8">
-            <div class="tip-header">
-              <h3>Tip 8: Piramida</h3>
-              <div class="tip-formula">\(V = \dfrac{S_o \cdot v}{3}\)</div>
-            </div>
-            <p><strong>Kako prepoznaš:</strong> "piramida", "stranska višina", "osnovni rob".</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Izračunaj ploščino osnovne ploskve \(S_o\).</li>
-              <li>Uporabi \(V = \dfrac{S_o \cdot v}{3}\).</li>
-              <li>Za pravilno štiristrano piramido: \(v_1^2 = v^2 + (a/2)^2\).</li>
-            </ol>
-            <p class="plain-example"><strong>Primer:</strong> \(V = 22\), \(v_1 = v + 4\)</p>
-            <div class="plain-example">
-              <p>\((v+4)^2 = v^2 + \dfrac{a^2}{4} \Rightarrow 8v + 16 = \dfrac{a^2}{4} \Rightarrow a^2 = 32v + 64\).</p>
-              <p>\(V = \dfrac{a^2 v}{3} = 22 \Rightarrow a^2 v = 66\). Reši sistem.</p>
-            </div>
-          </div>
-
-          <!-- TIP 9 -->
-          <div class="info-card" id="tip-9">
-            <div class="tip-header">
-              <h3>Tip 9: Rotacijsko telo (vrtenina)</h3>
-              <div class="tip-formula">\(V = \pi \int_a^b [f(x)]^2\,dx\)</div>
-            </div>
-            <p><strong>Kako prepoznaš:</strong> "lik zavrtimo okoli osi".</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Določi meje \(a\) in \(b\).</li>
-              <li>Kvadriraj funkcijo in integriraj.</li>
-              <li>Pomnoži s \(\pi\).</li>
-            </ol>
-            <p class="plain-example"><strong>Primer:</strong> \(f(x) = \sqrt{x}\) na \([0,4]\)</p>
-            <div class="plain-example">
-              <p>\(V = \pi \int_0^4 x\,dx = \pi \cdot 8 = 8\pi\).</p>
-            </div>
-          </div>
-
-          <!-- TIP 10 -->
-          <div class="info-card" id="tip-10">
-            <div class="tip-header">
-              <h3>Tip 10: Sestavljena telesa</h3>
-              <div class="tip-formula">Seštej/odštej prostornine preprostih teles</div>
-            </div>
-            <p><strong>Kako prepoznaš:</strong> telo je sestavljeno iz več preprostih teles.</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Razdeli telo na preprosta telesa (kvader, valj, stožec, krogla).</li>
-              <li>Izračunaj prostornino vsakega dela.</li>
-              <li>Seštej ali odštej (odvisno od geometrije).</li>
-            </ol>
-            <p class="plain-example"><strong>Primer:</strong> valj + krogla na vrhu</p>
-            <div class="plain-example">
-              <p>\(V = \pi r^2 v + \dfrac{4\pi r^3}{3}\).</p>
-            </div>
-          </div>
-
-          <!-- TIP 11 -->
-          <div class="info-card" id="tip-11">
-            <div class="tip-header">
-              <h3>Tip 11: Besedilne naloge z enotami</h3>
-              <div class="tip-formula">Pazi na pretvorbe enot</div>
-            </div>
-            <p><strong>Kako prepoznaš:</strong> "akvarij", "cisterna", "sod".</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Vse enote pretvori v <strong>isto enoto</strong>.</li>
-              <li>Uporabi formulo za prostornino/površino.</li>
-              <li>Rezultat pretvori v zahtevano enoto.</li>
-            </ol>
-            <p class="plain-example"><strong>Primer:</strong> cisterna \(r = 3\) dm, \(V = 120\) L, do \(\dfrac{2}{3}\) višine</p>
-            <div class="plain-example">
-              <p>\(120 = \dfrac{2}{3}V_{skupaj} \Rightarrow V_{skupaj} = 180\) L = 180 dm³.</p>
-              <p>\(180 = \pi \cdot 9 \cdot v \Rightarrow v \approx 6{,}4\) dm.</p>
-            </div>
-          </div>
-
-          <!-- TIP 12 -->
-          <div class="info-card" id="tip-12">
-            <div class="tip-header">
-              <h3>Tip 12: Krožni izsek (ploščina osenčenega dela)</h3>
-              <div class="tip-formula">\(S = \dfrac{\pi r^2 \alpha}{360°}\)</div>
-            </div>
-            <p><strong>Kako prepoznaš:</strong> "izračunajte ploščino osenčenega lika", "krožni izsek".</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Prepoznaj, ali gre za cel krog, krožni izsek ali odsek.</li>
-              <li>Za krožni izsek uporabi \(S = \dfrac{\pi r^2 \alpha}{360°}\).</li>
-              <li>Za odsek: odštej ploščino trikotnika od izseka.</li>
-            </ol>
-            <p class="plain-example"><strong>Primer:</strong> kvadrat \(a = 4\), krožni lok s središčem v B</p>
-            <div class="plain-example">
-              <p>Ploščina kvadrata: 16. Ploščina četrtine kroga: \(4\pi\). Osenčeni del: \(16 - 4\pi\).</p>
+          <div class="sklop-naloge">
+            <h3>✏️ Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-4">
+              <h4>Tip 4: Polmer včrtanega ali očrtanega kroga</h4>
+              <div class="prepoznaj">
+                <p><strong>Kako prepoznaš:</strong> „včrtan“, „očrtan“ krog trikotnika; dane so stranice.</p>
+                <ul class="kljucne"><li>„trikotniku včrtan krog“</li><li>„očrtan krog“</li><li>„polmer“</li></ul>
+              </div>
+              <h5>Univerzalni postopek</h5>
+              <ol>
+                <li>Izračunaj ploščino \(S\) (najpogosteje Heron) in polobseg \(s\).</li>
+                <li>\(r = \frac{S}{s}\), \(R = \frac{abc}{4S}\).</li>
+                <li>Če je trikotnik pravokoten, je hitreje \(R = \frac{c}{2}\).</li>
+              </ol>
+              <div class="primer">
+                <p><strong>Primer:</strong> Trikotnik ima stranice 13, 14, 15 cm. Izračunajte \(r\) in \(R\).</p>
+                <p>\(S = 84\), \(s = 21\): \(r = 4\) cm. \(R = \frac{13 \cdot 14 \cdot 15}{4 \cdot 84} = \frac{2730}{336} = 8{,}125\) cm.</p>
+              </div>
             </div>
           </div>
         </section>
 
-        <!-- ============ 3. POGOSTE NAPAKE ============ -->
+        <!-- SKLOP 3 -->
+        <section class="sklop" id="sklop-3">
+          <header class="sklop-header">
+            <span class="sklop-num">4.7.3</span>
+            <h2>Geometrijska telesa: prizma, valj, piramida, stožec, krogla</h2>
+            <p>Kako so telesa sestavljena in kako jih rišemo.</p>
+          </header>
+          <div class="sklop-cilji">
+            <h3>🎯 Cilji iz kataloga</h3>
+            <ul><li>Opiše geometrijsko telo.</li></ul>
+          </div>
+          <div class="sklop-teorija">
+            <h3>📖 Razlaga</h3>
+            <div class="slike-vrsta"><figure class="slika">
+<svg viewBox="0 0 200 188" role="img" aria-label="Kvader" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g9-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g9-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g9-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g9-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g9-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g9-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<polygon class="s-ploskev" points="36.7,149 130.5,149 163.3,118.6 69.5,118.6"/>
+<line class="s-pom" x1="36.7" y1="149" x2="69.5" y2="118.6"/>
+<line class="s-pom" x1="69.5" y1="118.6" x2="163.3" y2="118.6"/>
+<line class="s-pom" x1="69.5" y1="118.6" x2="69.5" y2="34.4"/>
+<line class="s-crta" x1="36.7" y1="149" x2="130.5" y2="149"/>
+<line class="s-crta" x1="130.5" y1="149" x2="163.3" y2="118.6"/>
+<line class="s-crta" x1="36.7" y1="64.8" x2="130.5" y2="64.8"/>
+<line class="s-crta" x1="130.5" y1="64.8" x2="163.3" y2="34.4"/>
+<line class="s-crta" x1="163.3" y1="34.4" x2="69.5" y2="34.4"/>
+<line class="s-crta" x1="69.5" y1="34.4" x2="36.7" y2="64.8"/>
+<line class="s-crta" x1="36.7" y1="149" x2="36.7" y2="64.8"/>
+<line class="s-crta" x1="130.5" y1="149" x2="130.5" y2="64.8"/>
+<line class="s-crta" x1="163.3" y1="118.6" x2="163.3" y2="34.4"/>
+<text class="s-txt-muted" x="83.6" y="163" text-anchor="middle">a</text>
+<text class="s-txt-muted" x="156.2" y="138.4" text-anchor="middle">b</text>
+<text class="s-txt-muted" x="169.1" y="78.8" text-anchor="start">c</text>
+
+</svg>
+<figcaption>Prizma (kvader): \(V = O \cdot v\), \(P = 2O + pl\).</figcaption>
+</figure><figure class="slika">
+<svg viewBox="0 0 200 188" role="img" aria-label="Valj" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g10-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g10-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g10-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g10-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g10-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g10-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<line class="s-crta" x1="43.8" y1="134.9" x2="43.8" y2="46.1"/>
+<line class="s-crta" x1="156.2" y1="134.9" x2="156.2" y2="46.1"/>
+<line class="s-pom" x1="100" y1="134.9" x2="100" y2="46.1"/>
+<line class="s-k1" x1="100" y1="134.9" x2="156.2" y2="134.9"/>
+<path class="s-crta" d="M43.8,134.9L43.8,135L43.8,135.1L43.8,135.3L43.8,135.4L43.8,135.5L43.8,135.6L43.9,135.7L43.9,135.8L43.9,135.9L43.9,136L44,136.1L44,136.2L44.1,136.4L44.1,136.5L44.2,136.6L44.2,136.7L44.3,136.8L44.3,136.9L44.4,137L44.5,137.1L44.5,137.2L44.6,137.3L44.7,137.4L44.8,137.6L44.9,137.7L44.9,137.8L45,137.9L45.1,138L45.2,138.1L45.3,138.2L45.4,138.3L45.5,138.4L45.6,138.5L45.8,138.6L45.9,138.7L46,138.8L46.1,138.9L46.3,139L46.4,139.2L46.5,139.3L46.7,139.4L46.8,139.5L46.9,139.6L47.1,139.7L47.2,139.8L47.4,139.9L47.6,140L47.7,140.1L47.9,140.2L48.1,140.3L48.2,140.4L48.4,140.5L48.6,140.6L48.8,140.7L48.9,140.8L49.1,140.9L49.3,141L49.5,141.1L49.7,141.2L49.9,141.3L50.1,141.4L50.3,141.5L50.5,141.6L50.7,141.7L50.9,141.8L51.2,141.9L51.4,142L51.6,142.1L51.8,142.2L52.1,142.3L52.3,142.3L52.5,142.4L52.8,142.5L53,142.6L53.2,142.7L53.5,142.8L53.7,142.9L54,143L54.3,143.1L54.5,143.2L54.8,143.3L55,143.3L55.3,143.4L55.6,143.5L55.8,143.6L56.1,143.7L56.4,143.8L56.7,143.9L57,144L57.2,144L57.5,144.1L57.8,144.2L58.1,144.3L58.4,144.4L58.7,144.4L59,144.5L59.3,144.6L59.6,144.7L59.9,144.8L60.2,144.8L60.6,144.9L60.9,145L61.2,145.1L61.5,145.2L61.8,145.2L62.2,145.3L62.5,145.4L62.8,145.4L63.1,145.5L63.5,145.6L63.8,145.7L64.2,145.7L64.5,145.8L64.8,145.9L65.2,145.9L65.5,146L65.9,146.1L66.2,146.1L66.6,146.2L66.9,146.3L67.3,146.3L67.7,146.4L68,146.5L68.4,146.5L68.8,146.6L69.1,146.7L69.5,146.7L69.9,146.8L70.2,146.8L70.6,146.9L71,146.9L71.4,147L71.8,147.1L72.1,147.1L72.5,147.2L72.9,147.2L73.3,147.3L73.7,147.3L74.1,147.4L74.5,147.4L74.9,147.5L75.3,147.5L75.7,147.6L76.1,147.6L76.5,147.7L76.9,147.7L77.3,147.8L77.7,147.8L78.1,147.8L78.5,147.9L78.9,147.9L79.3,148L79.7,148L80.1,148L80.5,148.1L81,148.1L81.4,148.2L81.8,148.2L82.2,148.2L82.6,148.3L83,148.3L83.5,148.3L83.9,148.4L84.3,148.4L84.7,148.4L85.2,148.5L85.6,148.5L86,148.5L86.4,148.5L86.9,148.6L87.3,148.6L87.7,148.6L88.2,148.6L88.6,148.7L89,148.7L89.5,148.7L89.9,148.7L90.3,148.7L90.8,148.8L91.2,148.8L91.6,148.8L92.1,148.8L92.5,148.8L93,148.8L93.4,148.9L93.8,148.9L94.3,148.9L94.7,148.9L95.1,148.9L95.6,148.9L96,148.9L96.5,148.9L96.9,148.9L97.4,148.9L97.8,148.9L98.2,148.9L98.7,148.9L99.1,149L99.6,149L100,149L100.4,149L100.9,149L101.3,148.9L101.8,148.9L102.2,148.9L102.6,148.9L103.1,148.9L103.5,148.9L104,148.9L104.4,148.9L104.9,148.9L105.3,148.9L105.7,148.9L106.2,148.9L106.6,148.9L107,148.8L107.5,148.8L107.9,148.8L108.4,148.8L108.8,148.8L109.2,148.8L109.7,148.7L110.1,148.7L110.5,148.7L111,148.7L111.4,148.7L111.8,148.6L112.3,148.6L112.7,148.6L113.1,148.6L113.6,148.5L114,148.5L114.4,148.5L114.8,148.5L115.3,148.4L115.7,148.4L116.1,148.4L116.5,148.3L117,148.3L117.4,148.3L117.8,148.2L118.2,148.2L118.6,148.2L119,148.1L119.5,148.1L119.9,148L120.3,148L120.7,148L121.1,147.9L121.5,147.9L121.9,147.8L122.3,147.8L122.7,147.8L123.1,147.7L123.5,147.7L123.9,147.6L124.3,147.6L124.7,147.5L125.1,147.5L125.5,147.4L125.9,147.4L126.3,147.3L126.7,147.3L127.1,147.2L127.5,147.2L127.9,147.1L128.2,147.1L128.6,147L129,146.9L129.4,146.9L129.8,146.8L130.1,146.8L130.5,146.7L130.9,146.7L131.2,146.6L131.6,146.5L132,146.5L132.3,146.4L132.7,146.3L133.1,146.3L133.4,146.2L133.8,146.1L134.1,146.1L134.5,146L134.8,145.9L135.2,145.9L135.5,145.8L135.8,145.7L136.2,145.7L136.5,145.6L136.9,145.5L137.2,145.4L137.5,145.4L137.8,145.3L138.2,145.2L138.5,145.2L138.8,145.1L139.1,145L139.4,144.9L139.8,144.8L140.1,144.8L140.4,144.7L140.7,144.6L141,144.5L141.3,144.4L141.6,144.4L141.9,144.3L142.2,144.2L142.5,144.1L142.8,144L143,144L143.3,143.9L143.6,143.8L143.9,143.7L144.2,143.6L144.4,143.5L144.7,143.4L145,143.3L145.2,143.3L145.5,143.2L145.7,143.1L146,143L146.3,142.9L146.5,142.8L146.8,142.7L147,142.6L147.2,142.5L147.5,142.4L147.7,142.3L147.9,142.3L148.2,142.2L148.4,142.1L148.6,142L148.8,141.9L149.1,141.8L149.3,141.7L149.5,141.6L149.7,141.5L149.9,141.4L150.1,141.3L150.3,141.2L150.5,141.1L150.7,141L150.9,140.9L151.1,140.8L151.2,140.7L151.4,140.6L151.6,140.5L151.8,140.4L151.9,140.3L152.1,140.2L152.3,140.1L152.4,140L152.6,139.9L152.8,139.8L152.9,139.7L153.1,139.6L153.2,139.5L153.3,139.4L153.5,139.3L153.6,139.2L153.7,139L153.9,138.9L154,138.8L154.1,138.7L154.2,138.6L154.4,138.5L154.5,138.4L154.6,138.3L154.7,138.2L154.8,138.1L154.9,138L155,137.9L155.1,137.8L155.1,137.7L155.2,137.6L155.3,137.4L155.4,137.3L155.5,137.2L155.5,137.1L155.6,137L155.7,136.9L155.7,136.8L155.8,136.7L155.8,136.6L155.9,136.5L155.9,136.4L156,136.2L156,136.1L156.1,136L156.1,135.9L156.1,135.8L156.1,135.7L156.2,135.6L156.2,135.5L156.2,135.4L156.2,135.3L156.2,135.1L156.2,135L156.2,134.9"/>
+<path class="s-pom" d="M156.2,134.9L156.2,134.8L156.2,134.7L156.2,134.6L156.2,134.5L156.2,134.4L156.2,134.3L156.1,134.2L156.1,134L156.1,133.9L156.1,133.8L156,133.7L156,133.6L155.9,133.5L155.9,133.4L155.8,133.3L155.8,133.2L155.7,133.1L155.7,132.9L155.6,132.8L155.5,132.7L155.5,132.6L155.4,132.5L155.3,132.4L155.2,132.3L155.1,132.2L155.1,132.1L155,132L154.9,131.9L154.8,131.8L154.7,131.6L154.6,131.5L154.5,131.4L154.4,131.3L154.2,131.2L154.1,131.1L154,131L153.9,130.9L153.7,130.8L153.6,130.7L153.5,130.6L153.3,130.5L153.2,130.4L153.1,130.3L152.9,130.2L152.8,130.1L152.6,130L152.4,129.9L152.3,129.8L152.1,129.7L151.9,129.6L151.8,129.5L151.6,129.4L151.4,129.2L151.2,129.1L151.1,129L150.9,128.9L150.7,128.8L150.5,128.8L150.3,128.7L150.1,128.6L149.9,128.5L149.7,128.4L149.5,128.3L149.3,128.2L149.1,128.1L148.8,128L148.6,127.9L148.4,127.8L148.2,127.7L147.9,127.6L147.7,127.5L147.5,127.4L147.2,127.3L147,127.2L146.8,127.1L146.5,127L146.3,126.9L146,126.9L145.7,126.8L145.5,126.7L145.2,126.6L145,126.5L144.7,126.4L144.4,126.3L144.2,126.2L143.9,126.2L143.6,126.1L143.3,126L143,125.9L142.8,125.8L142.5,125.7L142.2,125.6L141.9,125.6L141.6,125.5L141.3,125.4L141,125.3L140.7,125.2L140.4,125.2L140.1,125.1L139.8,125L139.4,124.9L139.1,124.8L138.8,124.8L138.5,124.7L138.2,124.6L137.8,124.5L137.5,124.5L137.2,124.4L136.9,124.3L136.5,124.3L136.2,124.2L135.8,124.1L135.5,124L135.2,124L134.8,123.9L134.5,123.8L134.1,123.8L133.8,123.7L133.4,123.6L133.1,123.6L132.7,123.5L132.3,123.4L132,123.4L131.6,123.3L131.2,123.3L130.9,123.2L130.5,123.1L130.1,123.1L129.8,123L129.4,123L129,122.9L128.6,122.8L128.2,122.8L127.9,122.7L127.5,122.7L127.1,122.6L126.7,122.6L126.3,122.5L125.9,122.5L125.5,122.4L125.1,122.4L124.7,122.3L124.3,122.3L123.9,122.2L123.5,122.2L123.1,122.1L122.7,122.1L122.3,122L121.9,122L121.5,122L121.1,121.9L120.7,121.9L120.3,121.8L119.9,121.8L119.5,121.8L119,121.7L118.6,121.7L118.2,121.6L117.8,121.6L117.4,121.6L117,121.5L116.5,121.5L116.1,121.5L115.7,121.4L115.3,121.4L114.8,121.4L114.4,121.4L114,121.3L113.6,121.3L113.1,121.3L112.7,121.3L112.3,121.2L111.8,121.2L111.4,121.2L111,121.2L110.5,121.1L110.1,121.1L109.7,121.1L109.2,121.1L108.8,121.1L108.4,121L107.9,121L107.5,121L107,121L106.6,121L106.2,121L105.7,121L105.3,121L104.9,120.9L104.4,120.9L104,120.9L103.5,120.9L103.1,120.9L102.6,120.9L102.2,120.9L101.8,120.9L101.3,120.9L100.9,120.9L100.4,120.9L100,120.9L99.6,120.9L99.1,120.9L98.7,120.9L98.2,120.9L97.8,120.9L97.4,120.9L96.9,120.9L96.5,120.9L96,120.9L95.6,120.9L95.1,120.9L94.7,121L94.3,121L93.8,121L93.4,121L93,121L92.5,121L92.1,121L91.6,121L91.2,121.1L90.8,121.1L90.3,121.1L89.9,121.1L89.5,121.1L89,121.2L88.6,121.2L88.2,121.2L87.7,121.2L87.3,121.3L86.9,121.3L86.4,121.3L86,121.3L85.6,121.4L85.2,121.4L84.7,121.4L84.3,121.4L83.9,121.5L83.5,121.5L83,121.5L82.6,121.6L82.2,121.6L81.8,121.6L81.4,121.7L81,121.7L80.5,121.8L80.1,121.8L79.7,121.8L79.3,121.9L78.9,121.9L78.5,122L78.1,122L77.7,122L77.3,122.1L76.9,122.1L76.5,122.2L76.1,122.2L75.7,122.3L75.3,122.3L74.9,122.4L74.5,122.4L74.1,122.5L73.7,122.5L73.3,122.6L72.9,122.6L72.5,122.7L72.1,122.7L71.8,122.8L71.4,122.8L71,122.9L70.6,123L70.2,123L69.9,123.1L69.5,123.1L69.1,123.2L68.8,123.3L68.4,123.3L68,123.4L67.7,123.4L67.3,123.5L66.9,123.6L66.6,123.6L66.2,123.7L65.9,123.8L65.5,123.8L65.2,123.9L64.8,124L64.5,124L64.2,124.1L63.8,124.2L63.5,124.3L63.1,124.3L62.8,124.4L62.5,124.5L62.2,124.5L61.8,124.6L61.5,124.7L61.2,124.8L60.9,124.8L60.6,124.9L60.2,125L59.9,125.1L59.6,125.2L59.3,125.2L59,125.3L58.7,125.4L58.4,125.5L58.1,125.6L57.8,125.6L57.5,125.7L57.2,125.8L57,125.9L56.7,126L56.4,126.1L56.1,126.2L55.8,126.2L55.6,126.3L55.3,126.4L55,126.5L54.8,126.6L54.5,126.7L54.3,126.8L54,126.9L53.7,126.9L53.5,127L53.2,127.1L53,127.2L52.8,127.3L52.5,127.4L52.3,127.5L52.1,127.6L51.8,127.7L51.6,127.8L51.4,127.9L51.2,128L50.9,128.1L50.7,128.2L50.5,128.3L50.3,128.4L50.1,128.5L49.9,128.6L49.7,128.7L49.5,128.8L49.3,128.8L49.1,128.9L48.9,129L48.8,129.1L48.6,129.2L48.4,129.4L48.2,129.5L48.1,129.6L47.9,129.7L47.7,129.8L47.6,129.9L47.4,130L47.2,130.1L47.1,130.2L46.9,130.3L46.8,130.4L46.7,130.5L46.5,130.6L46.4,130.7L46.3,130.8L46.1,130.9L46,131L45.9,131.1L45.8,131.2L45.6,131.3L45.5,131.4L45.4,131.5L45.3,131.6L45.2,131.8L45.1,131.9L45,132L44.9,132.1L44.9,132.2L44.8,132.3L44.7,132.4L44.6,132.5L44.5,132.6L44.5,132.7L44.4,132.8L44.3,132.9L44.3,133.1L44.2,133.2L44.2,133.3L44.1,133.4L44.1,133.5L44,133.6L44,133.7L43.9,133.8L43.9,133.9L43.9,134L43.9,134.2L43.8,134.3L43.8,134.4L43.8,134.5L43.8,134.6L43.8,134.7L43.8,134.8L43.8,134.9"/>
+<path class="s-crta" d="M156.2,46.1L156.2,45.8L156.2,45.6L156.2,45.4L156.1,45.2L156.1,45L156,44.7L155.9,44.5L155.8,44.3L155.7,44.1L155.5,43.9L155.4,43.6L155.2,43.4L155.1,43.2L154.9,43L154.7,42.8L154.5,42.6L154.2,42.4L154,42.1L153.7,41.9L153.5,41.7L153.2,41.5L152.9,41.3L152.6,41.1L152.3,40.9L151.9,40.7L151.6,40.5L151.2,40.3L150.9,40.1L150.5,39.9L150.1,39.7L149.7,39.5L149.3,39.3L148.8,39.1L148.4,38.9L147.9,38.7L147.5,38.5L147,38.4L146.5,38.2L146,38L145.5,37.8L145,37.6L144.4,37.5L143.9,37.3L143.3,37.1L142.8,36.9L142.2,36.8L141.6,36.6L141,36.5L140.4,36.3L139.8,36.1L139.1,36L138.5,35.8L137.8,35.7L137.2,35.5L136.5,35.4L135.8,35.3L135.2,35.1L134.5,35L133.8,34.8L133.1,34.7L132.3,34.6L131.6,34.5L130.9,34.3L130.1,34.2L129.4,34.1L128.6,34L127.9,33.9L127.1,33.8L126.3,33.7L125.5,33.6L124.7,33.5L123.9,33.4L123.1,33.3L122.3,33.2L121.5,33.1L120.7,33L119.9,32.9L119,32.9L118.2,32.8L117.4,32.7L116.5,32.7L115.7,32.6L114.8,32.5L114,32.5L113.1,32.4L112.3,32.4L111.4,32.3L110.5,32.3L109.7,32.2L108.8,32.2L107.9,32.2L107,32.1L106.2,32.1L105.3,32.1L104.4,32.1L103.5,32.1L102.6,32L101.8,32L100.9,32L100,32L99.1,32L98.2,32L97.4,32L96.5,32.1L95.6,32.1L94.7,32.1L93.8,32.1L93,32.1L92.1,32.2L91.2,32.2L90.3,32.2L89.5,32.3L88.6,32.3L87.7,32.4L86.9,32.4L86,32.5L85.2,32.5L84.3,32.6L83.5,32.7L82.6,32.7L81.8,32.8L81,32.9L80.1,32.9L79.3,33L78.5,33.1L77.7,33.2L76.9,33.3L76.1,33.4L75.3,33.5L74.5,33.6L73.7,33.7L72.9,33.8L72.1,33.9L71.4,34L70.6,34.1L69.9,34.2L69.1,34.3L68.4,34.5L67.7,34.6L66.9,34.7L66.2,34.8L65.5,35L64.8,35.1L64.2,35.3L63.5,35.4L62.8,35.5L62.2,35.7L61.5,35.8L60.9,36L60.2,36.1L59.6,36.3L59,36.5L58.4,36.6L57.8,36.8L57.2,36.9L56.7,37.1L56.1,37.3L55.6,37.5L55,37.6L54.5,37.8L54,38L53.5,38.2L53,38.4L52.5,38.5L52.1,38.7L51.6,38.9L51.2,39.1L50.7,39.3L50.3,39.5L49.9,39.7L49.5,39.9L49.1,40.1L48.8,40.3L48.4,40.5L48.1,40.7L47.7,40.9L47.4,41.1L47.1,41.3L46.8,41.5L46.5,41.7L46.3,41.9L46,42.1L45.8,42.4L45.5,42.6L45.3,42.8L45.1,43L44.9,43.2L44.8,43.4L44.6,43.6L44.5,43.9L44.3,44.1L44.2,44.3L44.1,44.5L44,44.7L43.9,45L43.9,45.2L43.8,45.4L43.8,45.6L43.8,45.8L43.8,46.1L43.8,46.3L43.8,46.5L43.8,46.7L43.9,46.9L43.9,47.2L44,47.4L44.1,47.6L44.2,47.8L44.3,48L44.5,48.3L44.6,48.5L44.8,48.7L44.9,48.9L45.1,49.1L45.3,49.3L45.5,49.6L45.8,49.8L46,50L46.3,50.2L46.5,50.4L46.8,50.6L47.1,50.8L47.4,51L47.7,51.2L48.1,51.4L48.4,51.6L48.8,51.8L49.1,52L49.5,52.2L49.9,52.4L50.3,52.6L50.7,52.8L51.2,53L51.6,53.2L52.1,53.4L52.5,53.6L53,53.8L53.5,53.9L54,54.1L54.5,54.3L55,54.5L55.6,54.7L56.1,54.8L56.7,55L57.2,55.2L57.8,55.3L58.4,55.5L59,55.7L59.6,55.8L60.2,56L60.9,56.1L61.5,56.3L62.2,56.4L62.8,56.6L63.5,56.7L64.2,56.9L64.8,57L65.5,57.1L66.2,57.3L66.9,57.4L67.7,57.5L68.4,57.7L69.1,57.8L69.9,57.9L70.6,58L71.4,58.1L72.1,58.2L72.9,58.4L73.7,58.5L74.5,58.6L75.3,58.7L76.1,58.8L76.9,58.8L77.7,58.9L78.5,59L79.3,59.1L80.1,59.2L81,59.3L81.8,59.3L82.6,59.4L83.5,59.5L84.3,59.5L85.2,59.6L86,59.7L86.9,59.7L87.7,59.8L88.6,59.8L89.5,59.8L90.3,59.9L91.2,59.9L92.1,60L93,60L93.8,60L94.7,60L95.6,60L96.5,60.1L97.4,60.1L98.2,60.1L99.1,60.1L100,60.1L100.9,60.1L101.8,60.1L102.6,60.1L103.5,60.1L104.4,60L105.3,60L106.2,60L107,60L107.9,60L108.8,59.9L109.7,59.9L110.5,59.8L111.4,59.8L112.3,59.8L113.1,59.7L114,59.7L114.8,59.6L115.7,59.5L116.5,59.5L117.4,59.4L118.2,59.3L119,59.3L119.9,59.2L120.7,59.1L121.5,59L122.3,58.9L123.1,58.8L123.9,58.8L124.7,58.7L125.5,58.6L126.3,58.5L127.1,58.4L127.9,58.2L128.6,58.1L129.4,58L130.1,57.9L130.9,57.8L131.6,57.7L132.3,57.5L133.1,57.4L133.8,57.3L134.5,57.1L135.2,57L135.8,56.9L136.5,56.7L137.2,56.6L137.8,56.4L138.5,56.3L139.1,56.1L139.8,56L140.4,55.8L141,55.7L141.6,55.5L142.2,55.3L142.8,55.2L143.3,55L143.9,54.8L144.4,54.7L145,54.5L145.5,54.3L146,54.1L146.5,53.9L147,53.8L147.5,53.6L147.9,53.4L148.4,53.2L148.8,53L149.3,52.8L149.7,52.6L150.1,52.4L150.5,52.2L150.9,52L151.2,51.8L151.6,51.6L151.9,51.4L152.3,51.2L152.6,51L152.9,50.8L153.2,50.6L153.5,50.4L153.7,50.2L154,50L154.2,49.8L154.5,49.6L154.7,49.3L154.9,49.1L155.1,48.9L155.2,48.7L155.4,48.5L155.5,48.3L155.7,48L155.8,47.8L155.9,47.6L156,47.4L156.1,47.2L156.1,46.9L156.2,46.7L156.2,46.5L156.2,46.3L156.2,46.1"/>
+<text class="s-txt-k1" x="128.1" y="129.1" text-anchor="middle">r</text>
+<text class="s-txt-k4" x="104.7" y="90.5" text-anchor="start">v</text>
+
+</svg>
+<figcaption>Valj: \(V = \pi r^2 v\), \(P = 2\pi r^2 + 2\pi r v\).</figcaption>
+</figure><figure class="slika">
+<svg viewBox="0 0 200 188" role="img" aria-label="Piramida" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g11-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g11-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g11-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g11-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g11-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g11-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<polygon class="s-ploskev" points="36.7,149 130.5,149 163.3,118.6 69.5,118.6"/>
+<line class="s-pom" x1="36.7" y1="149" x2="69.5" y2="118.6"/>
+<line class="s-pom" x1="69.5" y1="118.6" x2="163.3" y2="118.6"/>
+<line class="s-pom" x1="69.5" y1="118.6" x2="100" y2="29.7"/>
+<line class="s-crta" x1="36.7" y1="149" x2="130.5" y2="149"/>
+<line class="s-crta" x1="130.5" y1="149" x2="163.3" y2="118.6"/>
+<line class="s-crta" x1="36.7" y1="149" x2="100" y2="29.7"/>
+<line class="s-crta" x1="130.5" y1="149" x2="100" y2="29.7"/>
+<line class="s-crta" x1="163.3" y1="118.6" x2="100" y2="29.7"/>
+<line class="s-k4" x1="100" y1="133.8" x2="100" y2="29.7"/>
+<line class="s-k2" x1="83.6" y1="149" x2="100" y2="29.7"/>
+<text class="s-txt-k4" x="103.5" y="92.8" text-anchor="start">v</text>
+<text class="s-txt-k2" x="83.6" y="95.2" text-anchor="end">vₛ</text>
+<text class="s-txt-muted" x="83.6" y="163" text-anchor="middle">a</text>
+
+</svg>
+<figcaption>Piramida: \(V = \frac{O \cdot v}{3}\), \(P = O + pl\).</figcaption>
+</figure><figure class="slika">
+<svg viewBox="0 0 200 188" role="img" aria-label="Stožec" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g12-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g12-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g12-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g12-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g12-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g12-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<line class="s-crta" x1="43.8" y1="134.9" x2="100" y2="29.7"/>
+<line class="s-k2" x1="156.2" y1="134.9" x2="100" y2="29.7"/>
+<line class="s-pom" x1="100" y1="134.9" x2="100" y2="29.7"/>
+<line class="s-k1" x1="100" y1="134.9" x2="156.2" y2="134.9"/>
+<path class="s-crta" d="M43.8,134.9L43.8,135L43.8,135.1L43.8,135.3L43.8,135.4L43.8,135.5L43.8,135.6L43.9,135.7L43.9,135.8L43.9,135.9L43.9,136L44,136.1L44,136.2L44.1,136.4L44.1,136.5L44.2,136.6L44.2,136.7L44.3,136.8L44.3,136.9L44.4,137L44.5,137.1L44.5,137.2L44.6,137.3L44.7,137.4L44.8,137.6L44.9,137.7L44.9,137.8L45,137.9L45.1,138L45.2,138.1L45.3,138.2L45.4,138.3L45.5,138.4L45.6,138.5L45.8,138.6L45.9,138.7L46,138.8L46.1,138.9L46.3,139L46.4,139.2L46.5,139.3L46.7,139.4L46.8,139.5L46.9,139.6L47.1,139.7L47.2,139.8L47.4,139.9L47.6,140L47.7,140.1L47.9,140.2L48.1,140.3L48.2,140.4L48.4,140.5L48.6,140.6L48.8,140.7L48.9,140.8L49.1,140.9L49.3,141L49.5,141.1L49.7,141.2L49.9,141.3L50.1,141.4L50.3,141.5L50.5,141.6L50.7,141.7L50.9,141.8L51.2,141.9L51.4,142L51.6,142.1L51.8,142.2L52.1,142.3L52.3,142.3L52.5,142.4L52.8,142.5L53,142.6L53.2,142.7L53.5,142.8L53.7,142.9L54,143L54.3,143.1L54.5,143.2L54.8,143.3L55,143.3L55.3,143.4L55.6,143.5L55.8,143.6L56.1,143.7L56.4,143.8L56.7,143.9L57,144L57.2,144L57.5,144.1L57.8,144.2L58.1,144.3L58.4,144.4L58.7,144.4L59,144.5L59.3,144.6L59.6,144.7L59.9,144.8L60.2,144.8L60.6,144.9L60.9,145L61.2,145.1L61.5,145.2L61.8,145.2L62.2,145.3L62.5,145.4L62.8,145.4L63.1,145.5L63.5,145.6L63.8,145.7L64.2,145.7L64.5,145.8L64.8,145.9L65.2,145.9L65.5,146L65.9,146.1L66.2,146.1L66.6,146.2L66.9,146.3L67.3,146.3L67.7,146.4L68,146.5L68.4,146.5L68.8,146.6L69.1,146.7L69.5,146.7L69.9,146.8L70.2,146.8L70.6,146.9L71,146.9L71.4,147L71.8,147.1L72.1,147.1L72.5,147.2L72.9,147.2L73.3,147.3L73.7,147.3L74.1,147.4L74.5,147.4L74.9,147.5L75.3,147.5L75.7,147.6L76.1,147.6L76.5,147.7L76.9,147.7L77.3,147.8L77.7,147.8L78.1,147.8L78.5,147.9L78.9,147.9L79.3,148L79.7,148L80.1,148L80.5,148.1L81,148.1L81.4,148.2L81.8,148.2L82.2,148.2L82.6,148.3L83,148.3L83.5,148.3L83.9,148.4L84.3,148.4L84.7,148.4L85.2,148.5L85.6,148.5L86,148.5L86.4,148.5L86.9,148.6L87.3,148.6L87.7,148.6L88.2,148.6L88.6,148.7L89,148.7L89.5,148.7L89.9,148.7L90.3,148.7L90.8,148.8L91.2,148.8L91.6,148.8L92.1,148.8L92.5,148.8L93,148.8L93.4,148.9L93.8,148.9L94.3,148.9L94.7,148.9L95.1,148.9L95.6,148.9L96,148.9L96.5,148.9L96.9,148.9L97.4,148.9L97.8,148.9L98.2,148.9L98.7,148.9L99.1,149L99.6,149L100,149L100.4,149L100.9,149L101.3,148.9L101.8,148.9L102.2,148.9L102.6,148.9L103.1,148.9L103.5,148.9L104,148.9L104.4,148.9L104.9,148.9L105.3,148.9L105.7,148.9L106.2,148.9L106.6,148.9L107,148.8L107.5,148.8L107.9,148.8L108.4,148.8L108.8,148.8L109.2,148.8L109.7,148.7L110.1,148.7L110.5,148.7L111,148.7L111.4,148.7L111.8,148.6L112.3,148.6L112.7,148.6L113.1,148.6L113.6,148.5L114,148.5L114.4,148.5L114.8,148.5L115.3,148.4L115.7,148.4L116.1,148.4L116.5,148.3L117,148.3L117.4,148.3L117.8,148.2L118.2,148.2L118.6,148.2L119,148.1L119.5,148.1L119.9,148L120.3,148L120.7,148L121.1,147.9L121.5,147.9L121.9,147.8L122.3,147.8L122.7,147.8L123.1,147.7L123.5,147.7L123.9,147.6L124.3,147.6L124.7,147.5L125.1,147.5L125.5,147.4L125.9,147.4L126.3,147.3L126.7,147.3L127.1,147.2L127.5,147.2L127.9,147.1L128.2,147.1L128.6,147L129,146.9L129.4,146.9L129.8,146.8L130.1,146.8L130.5,146.7L130.9,146.7L131.2,146.6L131.6,146.5L132,146.5L132.3,146.4L132.7,146.3L133.1,146.3L133.4,146.2L133.8,146.1L134.1,146.1L134.5,146L134.8,145.9L135.2,145.9L135.5,145.8L135.8,145.7L136.2,145.7L136.5,145.6L136.9,145.5L137.2,145.4L137.5,145.4L137.8,145.3L138.2,145.2L138.5,145.2L138.8,145.1L139.1,145L139.4,144.9L139.8,144.8L140.1,144.8L140.4,144.7L140.7,144.6L141,144.5L141.3,144.4L141.6,144.4L141.9,144.3L142.2,144.2L142.5,144.1L142.8,144L143,144L143.3,143.9L143.6,143.8L143.9,143.7L144.2,143.6L144.4,143.5L144.7,143.4L145,143.3L145.2,143.3L145.5,143.2L145.7,143.1L146,143L146.3,142.9L146.5,142.8L146.8,142.7L147,142.6L147.2,142.5L147.5,142.4L147.7,142.3L147.9,142.3L148.2,142.2L148.4,142.1L148.6,142L148.8,141.9L149.1,141.8L149.3,141.7L149.5,141.6L149.7,141.5L149.9,141.4L150.1,141.3L150.3,141.2L150.5,141.1L150.7,141L150.9,140.9L151.1,140.8L151.2,140.7L151.4,140.6L151.6,140.5L151.8,140.4L151.9,140.3L152.1,140.2L152.3,140.1L152.4,140L152.6,139.9L152.8,139.8L152.9,139.7L153.1,139.6L153.2,139.5L153.3,139.4L153.5,139.3L153.6,139.2L153.7,139L153.9,138.9L154,138.8L154.1,138.7L154.2,138.6L154.4,138.5L154.5,138.4L154.6,138.3L154.7,138.2L154.8,138.1L154.9,138L155,137.9L155.1,137.8L155.1,137.7L155.2,137.6L155.3,137.4L155.4,137.3L155.5,137.2L155.5,137.1L155.6,137L155.7,136.9L155.7,136.8L155.8,136.7L155.8,136.6L155.9,136.5L155.9,136.4L156,136.2L156,136.1L156.1,136L156.1,135.9L156.1,135.8L156.1,135.7L156.2,135.6L156.2,135.5L156.2,135.4L156.2,135.3L156.2,135.1L156.2,135L156.2,134.9"/>
+<path class="s-pom" d="M156.2,134.9L156.2,134.8L156.2,134.7L156.2,134.6L156.2,134.5L156.2,134.4L156.2,134.3L156.1,134.2L156.1,134L156.1,133.9L156.1,133.8L156,133.7L156,133.6L155.9,133.5L155.9,133.4L155.8,133.3L155.8,133.2L155.7,133.1L155.7,132.9L155.6,132.8L155.5,132.7L155.5,132.6L155.4,132.5L155.3,132.4L155.2,132.3L155.1,132.2L155.1,132.1L155,132L154.9,131.9L154.8,131.8L154.7,131.6L154.6,131.5L154.5,131.4L154.4,131.3L154.2,131.2L154.1,131.1L154,131L153.9,130.9L153.7,130.8L153.6,130.7L153.5,130.6L153.3,130.5L153.2,130.4L153.1,130.3L152.9,130.2L152.8,130.1L152.6,130L152.4,129.9L152.3,129.8L152.1,129.7L151.9,129.6L151.8,129.5L151.6,129.4L151.4,129.2L151.2,129.1L151.1,129L150.9,128.9L150.7,128.8L150.5,128.8L150.3,128.7L150.1,128.6L149.9,128.5L149.7,128.4L149.5,128.3L149.3,128.2L149.1,128.1L148.8,128L148.6,127.9L148.4,127.8L148.2,127.7L147.9,127.6L147.7,127.5L147.5,127.4L147.2,127.3L147,127.2L146.8,127.1L146.5,127L146.3,126.9L146,126.9L145.7,126.8L145.5,126.7L145.2,126.6L145,126.5L144.7,126.4L144.4,126.3L144.2,126.2L143.9,126.2L143.6,126.1L143.3,126L143,125.9L142.8,125.8L142.5,125.7L142.2,125.6L141.9,125.6L141.6,125.5L141.3,125.4L141,125.3L140.7,125.2L140.4,125.2L140.1,125.1L139.8,125L139.4,124.9L139.1,124.8L138.8,124.8L138.5,124.7L138.2,124.6L137.8,124.5L137.5,124.5L137.2,124.4L136.9,124.3L136.5,124.3L136.2,124.2L135.8,124.1L135.5,124L135.2,124L134.8,123.9L134.5,123.8L134.1,123.8L133.8,123.7L133.4,123.6L133.1,123.6L132.7,123.5L132.3,123.4L132,123.4L131.6,123.3L131.2,123.3L130.9,123.2L130.5,123.1L130.1,123.1L129.8,123L129.4,123L129,122.9L128.6,122.8L128.2,122.8L127.9,122.7L127.5,122.7L127.1,122.6L126.7,122.6L126.3,122.5L125.9,122.5L125.5,122.4L125.1,122.4L124.7,122.3L124.3,122.3L123.9,122.2L123.5,122.2L123.1,122.1L122.7,122.1L122.3,122L121.9,122L121.5,122L121.1,121.9L120.7,121.9L120.3,121.8L119.9,121.8L119.5,121.8L119,121.7L118.6,121.7L118.2,121.6L117.8,121.6L117.4,121.6L117,121.5L116.5,121.5L116.1,121.5L115.7,121.4L115.3,121.4L114.8,121.4L114.4,121.4L114,121.3L113.6,121.3L113.1,121.3L112.7,121.3L112.3,121.2L111.8,121.2L111.4,121.2L111,121.2L110.5,121.1L110.1,121.1L109.7,121.1L109.2,121.1L108.8,121.1L108.4,121L107.9,121L107.5,121L107,121L106.6,121L106.2,121L105.7,121L105.3,121L104.9,120.9L104.4,120.9L104,120.9L103.5,120.9L103.1,120.9L102.6,120.9L102.2,120.9L101.8,120.9L101.3,120.9L100.9,120.9L100.4,120.9L100,120.9L99.6,120.9L99.1,120.9L98.7,120.9L98.2,120.9L97.8,120.9L97.4,120.9L96.9,120.9L96.5,120.9L96,120.9L95.6,120.9L95.1,120.9L94.7,121L94.3,121L93.8,121L93.4,121L93,121L92.5,121L92.1,121L91.6,121L91.2,121.1L90.8,121.1L90.3,121.1L89.9,121.1L89.5,121.1L89,121.2L88.6,121.2L88.2,121.2L87.7,121.2L87.3,121.3L86.9,121.3L86.4,121.3L86,121.3L85.6,121.4L85.2,121.4L84.7,121.4L84.3,121.4L83.9,121.5L83.5,121.5L83,121.5L82.6,121.6L82.2,121.6L81.8,121.6L81.4,121.7L81,121.7L80.5,121.8L80.1,121.8L79.7,121.8L79.3,121.9L78.9,121.9L78.5,122L78.1,122L77.7,122L77.3,122.1L76.9,122.1L76.5,122.2L76.1,122.2L75.7,122.3L75.3,122.3L74.9,122.4L74.5,122.4L74.1,122.5L73.7,122.5L73.3,122.6L72.9,122.6L72.5,122.7L72.1,122.7L71.8,122.8L71.4,122.8L71,122.9L70.6,123L70.2,123L69.9,123.1L69.5,123.1L69.1,123.2L68.8,123.3L68.4,123.3L68,123.4L67.7,123.4L67.3,123.5L66.9,123.6L66.6,123.6L66.2,123.7L65.9,123.8L65.5,123.8L65.2,123.9L64.8,124L64.5,124L64.2,124.1L63.8,124.2L63.5,124.3L63.1,124.3L62.8,124.4L62.5,124.5L62.2,124.5L61.8,124.6L61.5,124.7L61.2,124.8L60.9,124.8L60.6,124.9L60.2,125L59.9,125.1L59.6,125.2L59.3,125.2L59,125.3L58.7,125.4L58.4,125.5L58.1,125.6L57.8,125.6L57.5,125.7L57.2,125.8L57,125.9L56.7,126L56.4,126.1L56.1,126.2L55.8,126.2L55.6,126.3L55.3,126.4L55,126.5L54.8,126.6L54.5,126.7L54.3,126.8L54,126.9L53.7,126.9L53.5,127L53.2,127.1L53,127.2L52.8,127.3L52.5,127.4L52.3,127.5L52.1,127.6L51.8,127.7L51.6,127.8L51.4,127.9L51.2,128L50.9,128.1L50.7,128.2L50.5,128.3L50.3,128.4L50.1,128.5L49.9,128.6L49.7,128.7L49.5,128.8L49.3,128.8L49.1,128.9L48.9,129L48.8,129.1L48.6,129.2L48.4,129.4L48.2,129.5L48.1,129.6L47.9,129.7L47.7,129.8L47.6,129.9L47.4,130L47.2,130.1L47.1,130.2L46.9,130.3L46.8,130.4L46.7,130.5L46.5,130.6L46.4,130.7L46.3,130.8L46.1,130.9L46,131L45.9,131.1L45.8,131.2L45.6,131.3L45.5,131.4L45.4,131.5L45.3,131.6L45.2,131.8L45.1,131.9L45,132L44.9,132.1L44.9,132.2L44.8,132.3L44.7,132.4L44.6,132.5L44.5,132.6L44.5,132.7L44.4,132.8L44.3,132.9L44.3,133.1L44.2,133.2L44.2,133.3L44.1,133.4L44.1,133.5L44,133.6L44,133.7L43.9,133.8L43.9,133.9L43.9,134L43.9,134.2L43.8,134.3L43.8,134.4L43.8,134.5L43.8,134.6L43.8,134.7L43.8,134.8L43.8,134.9"/>
+<text class="s-txt-k1" x="128.1" y="129.1" text-anchor="middle">r</text>
+<text class="s-txt-k4" x="95.3" y="83.5" text-anchor="end">v</text>
+<text class="s-txt-k2" x="134" y="78.8" text-anchor="start">s</text>
+<path class="s-kot" d="M100,134.9 L106,134.9 L106,128.9 L100,128.9 Z"/>
+<circle cx="102.7" cy="132.2" r="1.6" fill="#B45309"/>
+</svg>
+<figcaption>Stožec: \(V = \frac{\pi r^2 v}{3}\), \(P = \pi r^2 + \pi r s\).</figcaption>
+</figure><figure class="slika">
+<svg viewBox="0 0 200 188" role="img" aria-label="Krogla" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g13-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g13-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g13-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g13-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g13-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g13-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<line class="s-k1" x1="100" y1="92.8" x2="156.2" y2="92.8"/>
+<path class="s-crta" d="M43.8,92.8L43.8,92.9L43.8,93L43.8,93.1L43.8,93.2L43.8,93.3L43.8,93.4L43.9,93.5L43.9,93.6L43.9,93.7L43.9,93.8L44,93.9L44,94L44.1,94.1L44.1,94.2L44.2,94.3L44.2,94.4L44.3,94.5L44.3,94.6L44.4,94.7L44.5,94.8L44.5,94.9L44.6,95L44.7,95.1L44.8,95.2L44.9,95.3L44.9,95.4L45,95.5L45.1,95.6L45.2,95.7L45.3,95.8L45.4,95.9L45.5,96L45.6,96.1L45.8,96.2L45.9,96.3L46,96.4L46.1,96.5L46.3,96.6L46.4,96.7L46.5,96.8L46.7,96.9L46.8,97L46.9,97.1L47.1,97.2L47.2,97.3L47.4,97.4L47.6,97.5L47.7,97.6L47.9,97.7L48.1,97.8L48.2,97.8L48.4,97.9L48.6,98L48.8,98.1L48.9,98.2L49.1,98.3L49.3,98.4L49.5,98.5L49.7,98.6L49.9,98.7L50.1,98.8L50.3,98.8L50.5,98.9L50.7,99L50.9,99.1L51.2,99.2L51.4,99.3L51.6,99.4L51.8,99.5L52.1,99.6L52.3,99.6L52.5,99.7L52.8,99.8L53,99.9L53.2,100L53.5,100.1L53.7,100.1L54,100.2L54.3,100.3L54.5,100.4L54.8,100.5L55,100.6L55.3,100.6L55.6,100.7L55.8,100.8L56.1,100.9L56.4,101L56.7,101L57,101.1L57.2,101.2L57.5,101.3L57.8,101.3L58.1,101.4L58.4,101.5L58.7,101.6L59,101.6L59.3,101.7L59.6,101.8L59.9,101.9L60.2,101.9L60.6,102L60.9,102.1L61.2,102.1L61.5,102.2L61.8,102.3L62.2,102.3L62.5,102.4L62.8,102.5L63.1,102.5L63.5,102.6L63.8,102.7L64.2,102.7L64.5,102.8L64.8,102.9L65.2,102.9L65.5,103L65.9,103.1L66.2,103.1L66.6,103.2L66.9,103.2L67.3,103.3L67.7,103.4L68,103.4L68.4,103.5L68.8,103.5L69.1,103.6L69.5,103.6L69.9,103.7L70.2,103.7L70.6,103.8L71,103.8L71.4,103.9L71.8,104L72.1,104L72.5,104.1L72.9,104.1L73.3,104.1L73.7,104.2L74.1,104.2L74.5,104.3L74.9,104.3L75.3,104.4L75.7,104.4L76.1,104.5L76.5,104.5L76.9,104.6L77.3,104.6L77.7,104.6L78.1,104.7L78.5,104.7L78.9,104.8L79.3,104.8L79.7,104.8L80.1,104.9L80.5,104.9L81,104.9L81.4,105L81.8,105L82.2,105L82.6,105.1L83,105.1L83.5,105.1L83.9,105.2L84.3,105.2L84.7,105.2L85.2,105.2L85.6,105.3L86,105.3L86.4,105.3L86.9,105.3L87.3,105.4L87.7,105.4L88.2,105.4L88.6,105.4L89,105.4L89.5,105.5L89.9,105.5L90.3,105.5L90.8,105.5L91.2,105.5L91.6,105.5L92.1,105.6L92.5,105.6L93,105.6L93.4,105.6L93.8,105.6L94.3,105.6L94.7,105.6L95.1,105.6L95.6,105.7L96,105.7L96.5,105.7L96.9,105.7L97.4,105.7L97.8,105.7L98.2,105.7L98.7,105.7L99.1,105.7L99.6,105.7L100,105.7L100.4,105.7L100.9,105.7L101.3,105.7L101.8,105.7L102.2,105.7L102.6,105.7L103.1,105.7L103.5,105.7L104,105.7L104.4,105.7L104.9,105.6L105.3,105.6L105.7,105.6L106.2,105.6L106.6,105.6L107,105.6L107.5,105.6L107.9,105.6L108.4,105.5L108.8,105.5L109.2,105.5L109.7,105.5L110.1,105.5L110.5,105.5L111,105.4L111.4,105.4L111.8,105.4L112.3,105.4L112.7,105.4L113.1,105.3L113.6,105.3L114,105.3L114.4,105.3L114.8,105.2L115.3,105.2L115.7,105.2L116.1,105.2L116.5,105.1L117,105.1L117.4,105.1L117.8,105L118.2,105L118.6,105L119,104.9L119.5,104.9L119.9,104.9L120.3,104.8L120.7,104.8L121.1,104.8L121.5,104.7L121.9,104.7L122.3,104.6L122.7,104.6L123.1,104.6L123.5,104.5L123.9,104.5L124.3,104.4L124.7,104.4L125.1,104.3L125.5,104.3L125.9,104.2L126.3,104.2L126.7,104.1L127.1,104.1L127.5,104.1L127.9,104L128.2,104L128.6,103.9L129,103.8L129.4,103.8L129.8,103.7L130.1,103.7L130.5,103.6L130.9,103.6L131.2,103.5L131.6,103.5L132,103.4L132.3,103.4L132.7,103.3L133.1,103.2L133.4,103.2L133.8,103.1L134.1,103.1L134.5,103L134.8,102.9L135.2,102.9L135.5,102.8L135.8,102.7L136.2,102.7L136.5,102.6L136.9,102.5L137.2,102.5L137.5,102.4L137.8,102.3L138.2,102.3L138.5,102.2L138.8,102.1L139.1,102.1L139.4,102L139.8,101.9L140.1,101.9L140.4,101.8L140.7,101.7L141,101.6L141.3,101.6L141.6,101.5L141.9,101.4L142.2,101.3L142.5,101.3L142.8,101.2L143,101.1L143.3,101L143.6,101L143.9,100.9L144.2,100.8L144.4,100.7L144.7,100.6L145,100.6L145.2,100.5L145.5,100.4L145.7,100.3L146,100.2L146.3,100.1L146.5,100.1L146.8,100L147,99.9L147.2,99.8L147.5,99.7L147.7,99.6L147.9,99.6L148.2,99.5L148.4,99.4L148.6,99.3L148.8,99.2L149.1,99.1L149.3,99L149.5,98.9L149.7,98.8L149.9,98.8L150.1,98.7L150.3,98.6L150.5,98.5L150.7,98.4L150.9,98.3L151.1,98.2L151.2,98.1L151.4,98L151.6,97.9L151.8,97.8L151.9,97.8L152.1,97.7L152.3,97.6L152.4,97.5L152.6,97.4L152.8,97.3L152.9,97.2L153.1,97.1L153.2,97L153.3,96.9L153.5,96.8L153.6,96.7L153.7,96.6L153.9,96.5L154,96.4L154.1,96.3L154.2,96.2L154.4,96.1L154.5,96L154.6,95.9L154.7,95.8L154.8,95.7L154.9,95.6L155,95.5L155.1,95.4L155.1,95.3L155.2,95.2L155.3,95.1L155.4,95L155.5,94.9L155.5,94.8L155.6,94.7L155.7,94.6L155.7,94.5L155.8,94.4L155.8,94.3L155.9,94.2L155.9,94.1L156,94L156,93.9L156.1,93.8L156.1,93.7L156.1,93.6L156.1,93.5L156.2,93.4L156.2,93.3L156.2,93.2L156.2,93.1L156.2,93L156.2,92.9L156.2,92.8"/>
+<path class="s-pom" d="M156.2,92.8L156.2,92.7L156.2,92.6L156.2,92.5L156.2,92.4L156.2,92.3L156.2,92.2L156.1,92.1L156.1,92L156.1,91.9L156.1,91.8L156,91.7L156,91.6L155.9,91.5L155.9,91.4L155.8,91.3L155.8,91.2L155.7,91.1L155.7,91L155.6,90.9L155.5,90.8L155.5,90.7L155.4,90.6L155.3,90.5L155.2,90.4L155.1,90.3L155.1,90.2L155,90.1L154.9,90L154.8,89.9L154.7,89.8L154.6,89.7L154.5,89.6L154.4,89.5L154.2,89.4L154.1,89.3L154,89.2L153.9,89.1L153.7,89L153.6,89L153.5,88.9L153.3,88.8L153.2,88.7L153.1,88.6L152.9,88.5L152.8,88.4L152.6,88.3L152.4,88.2L152.3,88.1L152.1,88L151.9,87.9L151.8,87.8L151.6,87.7L151.4,87.6L151.2,87.5L151.1,87.4L150.9,87.4L150.7,87.3L150.5,87.2L150.3,87.1L150.1,87L149.9,86.9L149.7,86.8L149.5,86.7L149.3,86.6L149.1,86.5L148.8,86.5L148.6,86.4L148.4,86.3L148.2,86.2L147.9,86.1L147.7,86L147.5,85.9L147.2,85.9L147,85.8L146.8,85.7L146.5,85.6L146.3,85.5L146,85.4L145.7,85.4L145.5,85.3L145.2,85.2L145,85.1L144.7,85L144.4,84.9L144.2,84.9L143.9,84.8L143.6,84.7L143.3,84.6L143,84.6L142.8,84.5L142.5,84.4L142.2,84.3L141.9,84.2L141.6,84.2L141.3,84.1L141,84L140.7,84L140.4,83.9L140.1,83.8L139.8,83.7L139.4,83.7L139.1,83.6L138.8,83.5L138.5,83.5L138.2,83.4L137.8,83.3L137.5,83.3L137.2,83.2L136.9,83.1L136.5,83.1L136.2,83L135.8,82.9L135.5,82.9L135.2,82.8L134.8,82.7L134.5,82.7L134.1,82.6L133.8,82.5L133.4,82.5L133.1,82.4L132.7,82.4L132.3,82.3L132,82.3L131.6,82.2L131.2,82.1L130.9,82.1L130.5,82L130.1,82L129.8,81.9L129.4,81.9L129,81.8L128.6,81.8L128.2,81.7L127.9,81.7L127.5,81.6L127.1,81.6L126.7,81.5L126.3,81.5L125.9,81.4L125.5,81.4L125.1,81.3L124.7,81.3L124.3,81.2L123.9,81.2L123.5,81.2L123.1,81.1L122.7,81.1L122.3,81L121.9,81L121.5,80.9L121.1,80.9L120.7,80.9L120.3,80.8L119.9,80.8L119.5,80.8L119,80.7L118.6,80.7L118.2,80.7L117.8,80.6L117.4,80.6L117,80.6L116.5,80.5L116.1,80.5L115.7,80.5L115.3,80.5L114.8,80.4L114.4,80.4L114,80.4L113.6,80.3L113.1,80.3L112.7,80.3L112.3,80.3L111.8,80.3L111.4,80.2L111,80.2L110.5,80.2L110.1,80.2L109.7,80.2L109.2,80.1L108.8,80.1L108.4,80.1L107.9,80.1L107.5,80.1L107,80.1L106.6,80.1L106.2,80L105.7,80L105.3,80L104.9,80L104.4,80L104,80L103.5,80L103.1,80L102.6,80L102.2,80L101.8,80L101.3,80L100.9,80L100.4,80L100,80L99.6,80L99.1,80L98.7,80L98.2,80L97.8,80L97.4,80L96.9,80L96.5,80L96,80L95.6,80L95.1,80L94.7,80L94.3,80L93.8,80L93.4,80.1L93,80.1L92.5,80.1L92.1,80.1L91.6,80.1L91.2,80.1L90.8,80.1L90.3,80.2L89.9,80.2L89.5,80.2L89,80.2L88.6,80.2L88.2,80.3L87.7,80.3L87.3,80.3L86.9,80.3L86.4,80.3L86,80.4L85.6,80.4L85.2,80.4L84.7,80.5L84.3,80.5L83.9,80.5L83.5,80.5L83,80.6L82.6,80.6L82.2,80.6L81.8,80.7L81.4,80.7L81,80.7L80.5,80.8L80.1,80.8L79.7,80.8L79.3,80.9L78.9,80.9L78.5,80.9L78.1,81L77.7,81L77.3,81.1L76.9,81.1L76.5,81.2L76.1,81.2L75.7,81.2L75.3,81.3L74.9,81.3L74.5,81.4L74.1,81.4L73.7,81.5L73.3,81.5L72.9,81.6L72.5,81.6L72.1,81.7L71.8,81.7L71.4,81.8L71,81.8L70.6,81.9L70.2,81.9L69.9,82L69.5,82L69.1,82.1L68.8,82.1L68.4,82.2L68,82.3L67.7,82.3L67.3,82.4L66.9,82.4L66.6,82.5L66.2,82.5L65.9,82.6L65.5,82.7L65.2,82.7L64.8,82.8L64.5,82.9L64.2,82.9L63.8,83L63.5,83.1L63.1,83.1L62.8,83.2L62.5,83.3L62.2,83.3L61.8,83.4L61.5,83.5L61.2,83.5L60.9,83.6L60.6,83.7L60.2,83.7L59.9,83.8L59.6,83.9L59.3,84L59,84L58.7,84.1L58.4,84.2L58.1,84.2L57.8,84.3L57.5,84.4L57.2,84.5L57,84.6L56.7,84.6L56.4,84.7L56.1,84.8L55.8,84.9L55.6,84.9L55.3,85L55,85.1L54.8,85.2L54.5,85.3L54.3,85.4L54,85.4L53.7,85.5L53.5,85.6L53.2,85.7L53,85.8L52.8,85.9L52.5,85.9L52.3,86L52.1,86.1L51.8,86.2L51.6,86.3L51.4,86.4L51.2,86.5L50.9,86.5L50.7,86.6L50.5,86.7L50.3,86.8L50.1,86.9L49.9,87L49.7,87.1L49.5,87.2L49.3,87.3L49.1,87.4L48.9,87.4L48.8,87.5L48.6,87.6L48.4,87.7L48.2,87.8L48.1,87.9L47.9,88L47.7,88.1L47.6,88.2L47.4,88.3L47.2,88.4L47.1,88.5L46.9,88.6L46.8,88.7L46.7,88.8L46.5,88.9L46.4,89L46.3,89L46.1,89.1L46,89.2L45.9,89.3L45.8,89.4L45.6,89.5L45.5,89.6L45.4,89.7L45.3,89.8L45.2,89.9L45.1,90L45,90.1L44.9,90.2L44.9,90.3L44.8,90.4L44.7,90.5L44.6,90.6L44.5,90.7L44.5,90.8L44.4,90.9L44.3,91L44.3,91.1L44.2,91.2L44.2,91.3L44.1,91.4L44.1,91.5L44,91.6L44,91.7L43.9,91.8L43.9,91.9L43.9,92L43.9,92.1L43.8,92.2L43.8,92.3L43.8,92.4L43.8,92.5L43.8,92.6L43.8,92.7L43.8,92.8"/>
+<circle class="s-tocka" cx="100" cy="92.8" r="3"/>
+<text class="s-txt-k1" x="128.1" y="88.2" text-anchor="middle">r</text>
+<circle class="s-crta" cx="100" cy="92.8" r="56.2"/>
+</svg>
+<figcaption>Krogla: \(V = \frac{4\pi r^3}{3}\), \(P = 4\pi r^2\).</figcaption>
+</figure></div>
+            <ul>
+              <li><strong>Prizma</strong> ima dve skladni vzporedni osnovni ploskvi (\(n\)-kotnika) in \(n\) stranskih ploskev (paralelogramov; pri pokončni prizmi pravokotnikov). <strong>Pravilna</strong> prizma je pokončna in ima za osnovno ploskev pravilni večkotnik. Kvader in kocka sta prizmi.</li>
+              <li><strong>Valj</strong> ima za osnovni ploskvi kroga; plašč je ukrivljen.</li>
+              <li><strong>Piramida</strong> ima eno osnovno ploskev in vrh; stranske ploskve so trikotniki. Pri <strong>pravilni</strong> piramidi je osnovna ploskev pravilni večkotnik, višina pa pade v njegovo središče. Višina stranske ploskve je \(v_s\), stranski rob \(s\).</li>
+              <li><strong>Stožec</strong> ima krog za osnovno ploskev in vrh; daljice od vrha do roba osnovne ploskve so <strong>stranice</strong> \(s\).</li>
+              <li><strong>Krogla</strong> je množica točk, ki so od središča oddaljene največ \(r\).</li>
+            </ul>
+            <h4>Risanje teles (poševna projekcija)</h4>
+            <ul>
+              <li>Sprednja ploskev v pravi velikosti, robovi „v globino“ pod kotom (\(45°\)) in skrajšani.</li>
+              <li><strong>Nevidni robovi so črtkani.</strong> Krog osnovne ploskve rišemo kot elipso; zadnja polovica spodnje elipse je črtkana.</li>
+            </ul>
+            <h4>Osni presek</h4>
+            <p>Presek z ravnino skozi os telesa: pri valju je pravokotnik \(2r \times v\), pri stožcu enakokraki trikotnik z osnovnico \(2r\) in krakoma \(s\), pri krogli krog s polmerom \(r\). <strong>Enakostranični valj</strong> ima \(v = 2r\) (osni presek je kvadrat), <strong>enakostranični stožec</strong> \(s = 2r\) (osni presek je enakostranični trikotnik).</p>
+            <p>Za oglišča (\(o\)), robove (\(r\)) in ploskve (\(p\)) vsakega poliedra brez lukenj velja <strong>Eulerjeva formula</strong> \(o - r + p = 2\).</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>✏️ Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-5">
+              <h4>Tip 5: Opis telesa in osni presek</h4>
+              <div class="prepoznaj">
+                <p><strong>Kako prepoznaš:</strong> sprašujejo po številu robov/oglišč/ploskev ali po osnem preseku in njegovi ploščini.</p>
+                <ul class="kljucne"><li>„koliko robov ima“</li><li>„osni presek“</li><li>„enakostranični valj/stožec“</li></ul>
+              </div>
+              <h5>Univerzalni postopek</h5>
+              <ol>
+                <li>\(n\)-strana prizma: \(2n\) oglišč, \(3n\) robov, \(n + 2\) ploskev. \(n\)-strana piramida: \(n + 1\) oglišč, \(2n\) robov, \(n + 1\) ploskev.</li>
+                <li>Osni presek nariši posebej v ravnini in v njem uporabi geometrijo trikotnika ali pravokotnika.</li>
+              </ol>
+              <div class="primer">
+                <p><strong>Primer:</strong> Osni presek stožca je enakostranični trikotnik s ploščino \(16\sqrt{3}\ \text{cm}^2\). Kolikšen je polmer osnovne ploskve?</p>
+                <p>\(\frac{a^2\sqrt{3}}{4} = 16\sqrt{3}\) → \(a = 8\) cm \(= 2r\), zato \(r = 4\) cm.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 4 -->
+        <section class="sklop" id="sklop-4">
+          <header class="sklop-header">
+            <span class="sklop-num">4.7.4</span>
+            <h2>Površina in prostornina pokončne prizme, valja, piramide, stožca in krogle</h2>
+            <p>Mreže teles in skrite pravokotne trikotnike.</p>
+          </header>
+          <div class="sklop-cilji">
+            <h3>🎯 Cilji iz kataloga</h3>
+            <ul>
+              <li>Uporabi usvojeno znanje kotnih funkcij in geometrije na modelih geometrijskih teles.</li>
+              <li>Rešuje geometrijske probleme v povezavi s površino in prostornino teles ter kritično oceni in presodi dobljene rezultate ter merske enote.</li>
+            </ul>
+          </div>
+          <div class="sklop-teorija">
+            <h3>📖 Razlaga</h3>
+            <p><strong>Površina</strong> je vsota ploščin vseh ploskev (ploščina mreže). <strong>Prostornina</strong> pove, koliko enotskih kock gre v telo.</p>
+            <div class="tabela-wrap">
+              <table class="tabela">
+                <thead><tr><th>Telo</th><th>Površina \(P\)</th><th>Prostornina \(V\)</th></tr></thead>
+                <tbody>
+                  <tr><td>kocka</td><td>\(6a^2\)</td><td>\(a^3\)</td></tr>
+                  <tr><td>kvader</td><td>\(2(ab + bc + ac)\)</td><td>\(abc\)</td></tr>
+                  <tr><td>prizma</td><td>\(2O + pl\)</td><td>\(O \cdot v\)</td></tr>
+                  <tr><td>valj</td><td>\(2\pi r^2 + 2\pi r v = 2\pi r(r + v)\)</td><td>\(\pi r^2 v\)</td></tr>
+                  <tr><td>piramida</td><td>\(O + pl\)</td><td>\(\frac{O \cdot v}{3}\)</td></tr>
+                  <tr><td>stožec</td><td>\(\pi r^2 + \pi r s = \pi r(r + s)\)</td><td>\(\frac{\pi r^2 v}{3}\)</td></tr>
+                  <tr><td>krogla</td><td>\(4\pi r^2\)</td><td>\(\frac{4\pi r^3}{3}\)</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <h4>Mreže</h4>
+            <figure class="slika slika--siroka">
+<svg viewBox="0 0 560 283" role="img" aria-label="Mreži valja in stožca" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g14-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g14-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g14-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g14-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g14-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g14-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<polygon class="s-lik" points="33.1,184.3 254.7,184.3 254.7,108.7 33.1,108.7"/>
+<polygon class="s-lik-2" points="416,93.6 328.4,132.1 329.9,135.4 331.6,138.7 333.4,142 335.3,145.1 337.4,148.2 339.5,151.2 341.8,154.1 344.2,156.9 346.7,159.6 349.3,162.3 352,164.8 354.8,167.2 357.7,169.5 360.6,171.7 363.7,173.8 366.8,175.8 370,177.6 373.3,179.3 376.6,180.9 380,182.3 383.5,183.7 387,184.9 390.5,185.9 394.1,186.8 397.7,187.6 401.3,188.2 405,188.7 408.7,189.1 412.3,189.3 416,189.4 419.7,189.3 423.4,189.1 427.1,188.7 430.8,188.2 434.4,187.6 438,186.8 441.6,185.9 445.1,184.9 448.6,183.7 452.1,182.3 455.5,180.9 458.8,179.3 462.1,177.6 465.3,175.8 468.4,173.8 471.5,171.7 474.4,169.5 477.3,167.2 480.1,164.8 482.8,162.3 485.4,159.6 487.9,156.9 490.3,154.1 492.5,151.2 494.7,148.2 496.8,145.1 498.7,142 500.5,138.7 502.2,135.4 503.7,132.1"/>
+<line class="s-k2" x1="143.9" y1="219.6" x2="179.2" y2="219.6"/>
+<line class="s-k2" x1="416" y1="93.6" x2="503.7" y2="132.1"/>
+<text class="s-txt-k1" x="143.9" y="150.5" text-anchor="middle">plašč 2πr × v</text>
+<text class="s-txt-muted" x="261" y="150.5" text-anchor="start">v</text>
+<text class="s-txt-muted" x="143.9" y="175.5" text-anchor="middle">2πr</text>
+<text class="s-txt-k2" x="161.6" y="214.6" text-anchor="middle">r</text>
+<text class="s-txt-k2" x="463.9" y="123.9" text-anchor="start">s</text>
+<text class="s-txt-k3" x="416" y="161.7" text-anchor="middle">plašč πrs</text>
+<text class="s-txt-muted" x="471.5" y="224.7" text-anchor="start">lok = 2πr</text>
+<circle class="s-k1" cx="143.9" cy="73.4" r="35.3"/>
+<circle class="s-k1" cx="143.9" cy="219.6" r="35.3"/>
+<circle class="s-k3" cx="416" cy="224.7" r="35.3"/>
+<path class="s-kot" d="M416,93.6 L395.9,102.4 A22,22 0 0 0 436.1,102.4 Z"/>
+<text class="s-txt-k4" x="416" y="130.6" text-anchor="middle">φ</text>
+</svg>
+<figcaption>Mreža valja: plašč je pravokotnik s stranicama \(2\pi r\) in \(v\). Mreža stožca: plašč je krožni izsek s polmerom \(s\), njegov lok je obseg osnovne ploskve \(2\pi r\), zato \(\varphi = \frac{r}{s} \cdot 360°\).</figcaption>
+</figure>
+            <h4>Skriti pravokotni trikotniki</h4>
+            <figure class="slika slika--ozka">
+<svg viewBox="0 0 380 324" role="img" aria-label="Pravokotna trikotnika v pravilni štiristrani piramidi" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g15-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g15-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g15-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g15-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g15-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g15-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<polygon class="s-ploskev-2" points="186.5,239.3 151.4,274.4 186.5,42.6"/>
+<polygon class="s-ploskev" points="186.5,239.3 326.9,204.1 186.5,42.6"/>
+<line class="s-pom" x1="46.1" y1="274.4" x2="116.3" y2="204.1"/>
+<line class="s-pom" x1="116.3" y1="204.1" x2="326.9" y2="204.1"/>
+<line class="s-pom" x1="116.3" y1="204.1" x2="186.5" y2="42.6"/>
+<line class="s-crta" x1="46.1" y1="274.4" x2="256.7" y2="274.4"/>
+<line class="s-crta" x1="256.7" y1="274.4" x2="326.9" y2="204.1"/>
+<line class="s-crta" x1="46.1" y1="274.4" x2="186.5" y2="42.6"/>
+<line class="s-crta" x1="256.7" y1="274.4" x2="186.5" y2="42.6"/>
+<line class="s-k1" x1="326.9" y1="204.1" x2="186.5" y2="42.6"/>
+<line class="s-k4" x1="186.5" y1="239.3" x2="186.5" y2="42.6"/>
+<line class="s-k2" x1="151.4" y1="274.4" x2="186.5" y2="42.6"/>
+<line class="s-k2" x1="186.5" y1="239.3" x2="151.4" y2="274.4"/>
+<line class="s-k1" x1="186.5" y1="239.3" x2="326.9" y2="204.1"/>
+<line class="s-pom" x1="46.1" y1="274.4" x2="326.9" y2="204.1"/>
+<text class="s-txt-k4" x="191.8" y="148" text-anchor="start">v</text>
+<text class="s-txt-k2" x="158.4" y="158.5" text-anchor="end">vₛ</text>
+<text class="s-txt-k2" x="181.7" y="263.9" text-anchor="start">a/2</text>
+<text class="s-txt-k1" x="270.7" y="232.2" text-anchor="start">d/2</text>
+<text class="s-txt-k1" x="270.7" y="119.9" text-anchor="start">s</text>
+<text class="s-txt-muted" x="151.4" y="295.5" text-anchor="middle">a</text>
+<path class="s-kot-4" d="M186.5,239.3 L186.5,232.7 L181.8,237.4 L181.8,244 Z"/>
+<circle cx="184.4" cy="238.4" r="1.6" fill="#B45309"/>
+<path class="s-kot-3" d="M186.5,239.3 L192.9,237.7 L192.9,231.1 L186.5,232.7 Z"/>
+<circle cx="189.4" cy="235.6" r="1.6" fill="#B45309"/>
+</svg>
+<figcaption>Ključna pravokotna trikotnika v pravilni štiristrani piramidi: rdeči (\(v\), \(\frac{a}{2}\), \(v_s\)) in modri (\(v\), \(\frac{d}{2}\), \(s\)).</figcaption>
+</figure>
+            <ul>
+              <li>Piramida: \(v^2 + \left(\frac{a}{2}\right)^2 = v_s^2\) (višina, polovica stranice, višina stranske ploskve) in \(v^2 + \left(\frac{d}{2}\right)^2 = s^2\) (višina, polovica diagonale, stranski rob).</li>
+              <li>Pri pravilni tristrani piramidi namesto \(\frac{a}{2}\) in \(\frac{d}{2}\) vzamemo \(r\) in \(R\) osnovnega trikotnika.</li>
+              <li>Stožec: \(v^2 + r^2 = s^2\).</li>
+              <li>Kvader: \(D^2 = a^2 + b^2 + c^2\).</li>
+            </ul>
+            <h4>Merske enote</h4>
+            <p>\(1\ \text{dm}^3 = 1\ \text{L}\), \(1\ \text{m}^3 = 1000\ \text{L}\), \(1\ \text{cm}^3 = 1\ \text{mL}\). Pri prostornini se pretvornik kubira: \(1\ \text{m}^3 = 10^3\ \text{dm}^3 = 10^6\ \text{cm}^3\).</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>✏️ Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-6">
+              <h4>Tip 6: Prizma (kocka, kvader, pravilna prizma)</h4>
+              <div class="prepoznaj">
+                <p><strong>Kako prepoznaš:</strong> škatla, bazen, akvarij, pravilna tristrana/šeststrana prizma.</p>
+                <ul class="kljucne"><li>„kvader“</li><li>„pravilna šeststrana prizma“</li><li>„bazen“</li><li>„koliko litrov“</li></ul>
+              </div>
+              <h5>Univerzalni postopek</h5>
+              <ol>
+                <li>Izračunaj osnovno ploskev \(O\) (pravilni šestkotnik = 6 enakostraničnih trikotnikov: \(O = \frac{3a^2\sqrt{3}}{2}\)).</li>
+                <li>Plašč: obseg osnovne ploskve × višina (pri pokončni prizmi).</li>
+                <li>\(P = 2O + pl\), \(V = O \cdot v\); pretvori v zahtevane enote.</li>
+              </ol>
+              <div class="primer">
+                <p><strong>Primer:</strong> Pravilna tristrana prizma ima osnovni rob 4 cm in višino 10 cm. Izračunajte \(P\) in \(V\).</p>
+                <p>\(O = \frac{16\sqrt{3}}{4} = 4\sqrt{3}\), \(pl = 3 \cdot 4 \cdot 10 = 120\). \(P = 8\sqrt{3} + 120 \approx 133{,}9\ \text{cm}^2\), \(V = 40\sqrt{3} \approx 69{,}3\ \text{cm}^3\).</p>
+              </div>
+            </div>
+            <div class="tip-naloge" id="tip-7">
+              <h4>Tip 7: Valj</h4>
+              <div class="prepoznaj">
+                <p><strong>Kako prepoznaš:</strong> pločevinka, cev, kozarec, sod, steber.</p>
+                <ul class="kljucne"><li>„valj“</li><li>„pločevinka“</li><li>„plašč valja“</li><li>„enakostranični valj“</li></ul>
+              </div>
+              <h5>Univerzalni postopek</h5>
+              <ol>
+                <li>Iz podatkov določi \(r\) in \(v\) (pazi: premer \(= 2r\)).</li>
+                <li>\(V = \pi r^2 v\), \(P = 2\pi r^2 + 2\pi r v\); odprta posoda nima zgornje osnovne ploskve.</li>
+                <li>Če je dana prostornina, izrazi neznanko: \(v = \frac{V}{\pi r^2}\).</li>
+              </ol>
+              <div class="primer">
+                <p><strong>Primer:</strong> Pločevinka s premerom 6 cm ima prostornino 0,33 L. Kako visoka je?</p>
+                <p>\(V = 330\ \text{cm}^3\), \(r = 3\): \(v = \frac{330}{9\pi} \approx 11{,}7\) cm.</p>
+              </div>
+            </div>
+            <div class="tip-naloge" id="tip-8">
+              <h4>Tip 8: Piramida</h4>
+              <div class="prepoznaj">
+                <p><strong>Kako prepoznaš:</strong> pravilna štiristrana (tristrana, šeststrana) piramida, streha, šotor.</p>
+                <ul class="kljucne"><li>„pravilna štiristrana piramida“</li><li>„stranski rob“</li><li>„višina stranske ploskve“</li><li>„naklonski kot“</li></ul>
+              </div>
+              <h5>Univerzalni postopek</h5>
+              <ol>
+                <li>Nariši piramido in vriši pravokotna trikotnika (\(v, \frac{a}{2}, v_s\)) in (\(v, \frac{d}{2}, s\)).</li>
+                <li>Manjkajočo dolžino izračunaj s Pitagorovim izrekom ali s kotno funkcijo, če je dan kot.</li>
+                <li>\(pl = n \cdot \frac{a\,v_s}{2}\), \(P = O + pl\), \(V = \frac{O v}{3}\).</li>
+              </ol>
+              <div class="primer">
+                <p><strong>Primer:</strong> Pravilna štiristrana piramida ima osnovni rob 6 cm in višino 4 cm. Izračunajte površino.</p>
+                <p>\(v_s = \sqrt{4^2 + 3^2} = 5\). \(pl = 4 \cdot \frac{6 \cdot 5}{2} = 60\), \(P = 36 + 60 = 96\ \text{cm}^2\). (\(V = \frac{36 \cdot 4}{3} = 48\ \text{cm}^3\).)</p>
+              </div>
+            </div>
+            <div class="tip-naloge" id="tip-9">
+              <h4>Tip 9: Stožec</h4>
+              <div class="prepoznaj">
+                <p><strong>Kako prepoznaš:</strong> kornet, lijak, kup peska, plašč stožca iz krožnega izseka.</p>
+                <ul class="kljucne"><li>„stožec“</li><li>„stranica stožca“</li><li>„plašč je krožni izsek“</li><li>„kornet“</li></ul>
+              </div>
+              <h5>Univerzalni postopek</h5>
+              <ol>
+                <li>Poveži \(r\), \(v\), \(s\) s Pitagorovim izrekom: \(s^2 = r^2 + v^2\).</li>
+                <li>\(pl = \pi r s\), \(P = \pi r^2 + \pi r s\), \(V = \frac{\pi r^2 v}{3}\).</li>
+                <li>Če je plašč izsek s kotom \(\varphi\) in polmerom \(s\): lok \(= 2\pi r\), zato \(r = \frac{s \varphi}{360°}\).</li>
+              </ol>
+              <div class="primer">
+                <p><strong>Primer:</strong> Iz polkroga s polmerom 10 cm zvijemo plašč stožca. Kolikšna sta \(r\) in \(v\)?</p>
+                <p>\(s = 10\), \(\varphi = 180°\): \(r = \frac{10 \cdot 180°}{360°} = 5\) cm, \(v = \sqrt{100 - 25} = 5\sqrt{3} \approx 8{,}66\) cm.</p>
+              </div>
+            </div>
+            <div class="tip-naloge" id="tip-10">
+              <h4>Tip 10: Krogla</h4>
+              <div class="prepoznaj">
+                <p><strong>Kako prepoznaš:</strong> žoga, kroglica, Zemlja, polkrogla (kupola).</p>
+                <ul class="kljucne"><li>„krogla“</li><li>„polkrogla“</li><li>„žoga“</li><li>„premer“</li></ul>
+              </div>
+              <h5>Univerzalni postopek</h5>
+              <ol>
+                <li>Iz premera izračunaj \(r\).</li>
+                <li>\(P = 4\pi r^2\), \(V = \frac{4\pi r^3}{3}\) (na listu s formulami).</li>
+                <li>Polkrogla: \(V\) polovica; površina \(2\pi r^2\) (ukrivljen del) \(+ \pi r^2\) (krog), če je zaprta.</li>
+                <li>Iz prostornine: \(r = \sqrt[3]{\frac{3V}{4\pi}}\).</li>
+              </ol>
+              <div class="primer">
+                <p><strong>Primer:</strong> Kolikšen je polmer krogle s prostornino \(36\pi\ \text{cm}^3\)?</p>
+                <p>\(\frac{4\pi r^3}{3} = 36\pi\) → \(r^3 = 27\) → \(r = 3\) cm.</p>
+              </div>
+            </div>
+            <div class="tip-naloge" id="tip-11">
+              <h4>Tip 11: Pretvarjanje enot in sprememba velikosti</h4>
+              <div class="prepoznaj">
+                <p><strong>Kako prepoznaš:</strong> podatki v različnih enotah, litri, „kolikokrat se poveča prostornina“.</p>
+                <ul class="kljucne"><li>„v litrih“</li><li>„v \(\text{m}^3\)“</li><li>„podvojimo polmer“</li></ul>
+              </div>
+              <h5>Univerzalni postopek</h5>
+              <ol>
+                <li>Pred računanjem vse dolžine pretvori v isto enoto.</li>
+                <li>Prostornino pretvori v litre: \(\text{dm}^3 = \text{L}\).</li>
+                <li>Če vse dolžine pomnožimo s \(k\): površina \(\cdot k^2\), prostornina \(\cdot k^3\). Če spremenimo le eno dolžino, poglej formulo (npr. \(V\) valja je sorazmerna z \(r^2\)).</li>
+              </ol>
+              <div class="primer">
+                <p><strong>Primer:</strong> Kolikokrat se poveča prostornina valja, če polmer podvojimo, višino pa razpolovimo?</p>
+                <p>\(\pi (2r)^2 \cdot \frac{v}{2} = 2\pi r^2 v\): dvakrat.</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 5 (VR) -->
+        <section class="sklop sklop--visja" id="sklop-5">
+          <header class="sklop-header">
+            <span class="sklop-num">4.7.5</span><span class="badge-vr">Višja raven</span>
+            <h2>Cavalierijevo pravilo</h2>
+            <p>Zakaj imajo poševna in pokončna telesa enako prostornino.</p>
+          </header>
+          <div class="sklop-cilji">
+            <h3>🎯 Cilji iz kataloga</h3>
+            <ul><li>Rešuje geometrijske probleme v povezavi s prostornino teles in utemelji formule s Cavalierijevim pravilom.</li></ul>
+          </div>
+          <div class="sklop-teorija">
+            <h3>📖 Razlaga</h3>
+            <figure class="slika">
+<svg viewBox="0 0 460 238" role="img" aria-label="Cavalierijevo pravilo s kovanci" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g16-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g16-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g16-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g16-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g16-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g16-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<polygon class="s-lik" points="37.6,187.4 135.4,187.4 135.4,164.6 37.6,164.6"/>
+<polygon class="s-lik-2" points="233.3,187.4 331.1,187.4 331.1,164.6 233.3,164.6"/>
+<polygon class="s-lik" points="37.6,164.6 135.4,164.6 135.4,141.8 37.6,141.8"/>
+<polygon class="s-lik-2" points="249.6,164.6 347.4,164.6 347.4,141.8 249.6,141.8"/>
+<polygon class="s-lik" points="37.6,141.8 135.4,141.8 135.4,119 37.6,119"/>
+<polygon class="s-lik-2" points="272.4,141.8 370.2,141.8 370.2,119 272.4,119"/>
+<polygon class="s-lik" points="37.6,119 135.4,119 135.4,96.2 37.6,96.2"/>
+<polygon class="s-lik-2" points="285.4,119 383.3,119 383.3,96.2 285.4,96.2"/>
+<polygon class="s-lik" points="37.6,96.2 135.4,96.2 135.4,73.4 37.6,73.4"/>
+<polygon class="s-lik-2" points="295.2,96.2 393.1,96.2 393.1,73.4 295.2,73.4"/>
+<polygon class="s-lik" points="37.6,73.4 135.4,73.4 135.4,50.6 37.6,50.6"/>
+<polygon class="s-lik-2" points="318.1,73.4 415.9,73.4 415.9,50.6 318.1,50.6"/>
+<line class="s-k2" x1="24.5" y1="107.6" x2="429" y2="107.6"/>
+<line class="s-crta" x1="37.6" y1="187.4" x2="429" y2="187.4"/>
+<text class="s-txt-muted" x="86.5" y="210.2" text-anchor="middle">pokončen stolp</text>
+<text class="s-txt-muted" x="331.1" y="210.2" text-anchor="middle">poševen stolp</text>
+<text class="s-txt-k2" x="435.5" y="97.8" text-anchor="end">enaka prereza</text>
+<text class="s-txt-b" x="200.6" y="34.3" text-anchor="middle">enaka višina → enaka prostornina</text>
+
+</svg>
+<figcaption>Kup kovancev ima enako prostornino, ne glede na to, ali so zloženi navpično ali zamaknjeno: na vsaki višini sta prereza enaka.</figcaption>
+</figure>
+            <p><strong>Cavalierijevo pravilo:</strong> če imata telesi enako višino in imata njuna preseka z vsako vzporedno ravnino (na isti višini) enako ploščino, imata telesi enako prostornino.</p>
+            <p>Posledice:</p>
+            <ul>
+              <li>Poševna prizma in poševni valj imata prostornino \(V = O \cdot v\), kot pokončna (z enako osnovno ploskvijo in višino).</li>
+              <li>Vse piramide in stožci z enako ploščino osnovne ploskve in enako višino imajo enako prostornino \(\frac{O v}{3}\), ne glede na obliko osnovne ploskve ali lego vrha.</li>
+              <li>Formulo za prostornino krogle dobimo s primerjavo polkrogle z valjem, iz katerega izrežemo stožec.</li>
+            </ul>
+          </div>
+          <div class="sklop-naloge">
+            <h3>✏️ Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-12">
+              <h4>Tip 12: Primerjava prostornin s Cavalierijevim pravilom</h4>
+              <div class="prepoznaj">
+                <p><strong>Kako prepoznaš:</strong> primerjaj prostornini dveh teles z enako višino; utemelji, zakaj sta enaki.</p>
+                <ul class="kljucne"><li>„utemeljite, da imata enako prostornino“</li><li>„Cavalierijevo pravilo“</li><li>„poševni in pokončni“</li></ul>
+              </div>
+              <h5>Univerzalni postopek</h5>
+              <ol>
+                <li>Preveri, da imata telesi enako višino.</li>
+                <li>Opiši presek na poljubni višini \(x\) in pokaži, da sta ploščini presekov enaki (kot funkciji \(x\)).</li>
+                <li>Sklepaj: prostornini sta enaki.</li>
+              </ol>
+              <div class="primer">
+                <p><strong>Primer:</strong> Pokončna in poševna prizma imata isto osnovno ploskev s ploščino \(12\ \text{cm}^2\) in višino 5 cm. Primerjajte prostornini.</p>
+                <p>Vsak vzporedni presek obeh prizem je skladen z osnovno ploskvijo (\(12\ \text{cm}^2\)), višini sta enaki → \(V_1 = V_2 = 60\ \text{cm}^3\).</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 6 (VR) -->
+        <section class="sklop sklop--visja" id="sklop-6">
+          <header class="sklop-header">
+            <span class="sklop-num">4.7.6</span><span class="badge-vr">Višja raven</span>
+            <h2>Poševna telesa</h2>
+            <p>Prizma, valj, piramida in stožec, katerih višina ni stranski rob.</p>
+          </header>
+          <div class="sklop-cilji">
+            <h3>🎯 Cilji iz kataloga</h3>
+            <ul><li>Rešuje geometrijske probleme s poševnimi telesi.</li></ul>
+          </div>
+          <div class="sklop-teorija">
+            <h3>📖 Razlaga</h3>
+            <figure class="slika slika--ozka">
+<svg viewBox="0 0 380 267" role="img" aria-label="Poševna prizma z višino" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g17-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g17-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g17-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g17-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g17-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g17-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<polygon class="s-ploskev" points="47.3,216 193.7,216 237.6,172 91.2,172"/>
+<line class="s-pom" x1="47.3" y1="216" x2="91.2" y2="172"/>
+<line class="s-pom" x1="91.2" y1="172" x2="237.6" y2="172"/>
+<line class="s-pom" x1="91.2" y1="172" x2="186.3" y2="32.7"/>
+<line class="s-crta" x1="47.3" y1="216" x2="193.7" y2="216"/>
+<line class="s-crta" x1="193.7" y1="216" x2="237.6" y2="172"/>
+<line class="s-crta" x1="142.4" y1="76.7" x2="288.8" y2="76.7"/>
+<line class="s-crta" x1="288.8" y1="76.7" x2="332.7" y2="32.7"/>
+<line class="s-crta" x1="332.7" y1="32.7" x2="186.3" y2="32.7"/>
+<line class="s-crta" x1="186.3" y1="32.7" x2="142.4" y2="76.7"/>
+<line class="s-crta" x1="193.7" y1="216" x2="288.8" y2="76.7"/>
+<line class="s-crta" x1="237.6" y1="172" x2="332.7" y2="32.7"/>
+<line class="s-k2" x1="47.3" y1="216" x2="142.4" y2="76.7"/>
+<line class="s-k4" x1="142.4" y1="76.7" x2="142.4" y2="194"/>
+<line class="s-pom" x1="47.3" y1="216" x2="142.4" y2="194"/>
+<text class="s-txt-k2" x="85.7" y="139" text-anchor="end">s</text>
+<text class="s-txt-k4" x="149.7" y="128" text-anchor="start">v</text>
+<text class="s-txt-b" x="354.7" y="208.7" text-anchor="end">v = s · sin φ</text>
+<path class="s-kot" d="M142.4,194 L142.4,188 L136.6,189.3 L136.6,195.3 Z"/>
+<circle cx="139.8" cy="191.9" r="1.6" fill="#B45309"/>
+<path class="s-kot" d="M47.3,216 L72.6,210.2 A26,26 0 0 0 62,194.5 Z"/>
+<text class="s-txt-k4" x="77.9" y="199.1" text-anchor="middle">φ</text>
+</svg>
+<figcaption>Pri poševnem telesu stranski rob \(s\) ni višina. Višina \(v\) je pravokotna na osnovno ploskev: \(v = s \sin\varphi\).</figcaption>
+</figure>
+            <p>Pri <strong>poševni</strong> prizmi ali valju stranski robovi (stranice) niso pravokotni na osnovno ploskev. Pri poševni piramidi ali stožcu nožišče višine ne leži v središču osnovne ploskve.</p>
+            <ul>
+              <li>Prostornina je enaka kot pri pokončnih telesih (Cavalieri): \(V = O v\) oz. \(V = \frac{O v}{3}\), kjer je \(v\) <strong>višina</strong>, ne stranski rob.</li>
+              <li>Višino dobiš iz pravokotnega trikotnika: \(v = s \sin\varphi\), kjer je \(\varphi\) kot med stranskim robom in osnovno ploskvijo.</li>
+              <li>Stranske ploskve poševne prizme so paralelogrami; plašč računamo ploskev za ploskvijo.</li>
+            </ul>
+          </div>
+          <div class="sklop-naloge">
+            <h3>✏️ Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-13">
+              <h4>Tip 13: Poševno telo</h4>
+              <div class="prepoznaj">
+                <p><strong>Kako prepoznaš:</strong> „poševna prizma“, „poševni valj“, stranski rob oklepa z osnovno ploskvijo kot \(\varphi\).</p>
+                <ul class="kljucne"><li>„poševna“</li><li>„stranski rob je nagnjen“</li><li>„oklepa z osnovno ploskvijo“</li></ul>
+              </div>
+              <h5>Univerzalni postopek</h5>
+              <ol>
+                <li>Nariši pravokotni trikotnik: stranski rob \(s\) (hipotenuza), višina \(v\) in projekcija roba na osnovno ploskev.</li>
+                <li>\(v = s \sin\varphi\).</li>
+                <li>Izračunaj \(O\) in \(V\); za površino računaj vsako stransko ploskev posebej.</li>
+              </ol>
+              <div class="primer">
+                <p><strong>Primer:</strong> Poševni valj ima polmer 3 cm, stranica meri 10 cm in oklepa z osnovno ploskvijo kot \(60°\). Izračunajte prostornino.</p>
+                <p>\(v = 10 \sin 60° = 5\sqrt{3}\). \(V = 9\pi \cdot 5\sqrt{3} = 45\sqrt{3}\,\pi \approx 244{,}9\ \text{cm}^3\).</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 7 (VR) -->
+        <section class="sklop sklop--visja" id="sklop-7">
+          <header class="sklop-header">
+            <span class="sklop-num">4.7.7</span><span class="badge-vr">Višja raven</span>
+            <h2>Vrtenine</h2>
+            <p>Telesa, ki nastanejo z vrtenjem lika okoli osi.</p>
+          </header>
+          <div class="sklop-cilji">
+            <h3>🎯 Cilji iz kataloga</h3>
+            <ul>
+              <li>Določi os vrtenja in analizira nastalo vrtenino glede na izbiro osi.</li>
+              <li>Rešuje probleme v povezavi s prostornino rotacijskih teles.</li>
+            </ul>
+          </div>
+          <div class="sklop-teorija">
+            <h3>📖 Razlaga</h3>
+            <div class="slike-vrsta"><figure class="slika">
+<svg viewBox="0 0 200 200" role="img" aria-label="Vrtenje pravokotnika okoli stranice" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g18-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g18-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g18-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g18-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g18-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g18-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<polygon class="s-lik" points="97.5,157.2 152.2,157.2 152.2,57.8 97.5,57.8"/>
+<line class="s-asim" x1="97.5" y1="177" x2="97.5" y2="23"/>
+<line class="s-pom" x1="42.8" y1="157.2" x2="42.8" y2="57.8"/>
+<path class="s-pom" d="M42.8,157.2L42.9,157.2L42.9,157.3L42.9,157.4L42.9,157.5L42.9,157.6L42.9,157.7L42.9,157.8L43,157.9L43,158L43,158.1L43.1,158.2L43.1,158.3L43.1,158.4L43.2,158.5L43.2,158.6L43.3,158.7L43.3,158.8L43.4,158.9L43.5,159L43.5,159.1L43.6,159.2L43.7,159.3L43.7,159.4L43.8,159.5L43.9,159.6L44,159.7L44.1,159.8L44.2,159.9L44.3,160L44.4,160.1L44.5,160.1L44.6,160.2L44.7,160.3L44.8,160.4L44.9,160.5L45,160.6L45.1,160.7L45.3,160.8L45.4,160.9L45.5,161L45.7,161.1L45.8,161.2L45.9,161.3L46.1,161.4L46.2,161.5L46.4,161.5L46.5,161.6L46.7,161.7L46.8,161.8L47,161.9L47.2,162L47.3,162.1L47.5,162.2L47.7,162.3L47.9,162.4L48.1,162.4L48.2,162.5L48.4,162.6L48.6,162.7L48.8,162.8L49,162.9L49.2,163L49.4,163.1L49.6,163.1L49.8,163.2L50,163.3L50.2,163.4L50.5,163.5L50.7,163.6L50.9,163.6L51.1,163.7L51.4,163.8L51.6,163.9L51.8,164L52.1,164.1L52.3,164.1L52.5,164.2L52.8,164.3L53,164.4L53.3,164.5L53.5,164.5L53.8,164.6L54.1,164.7L54.3,164.8L54.6,164.8L54.9,164.9L55.1,165L55.4,165.1L55.7,165.1L55.9,165.2L56.2,165.3L56.5,165.4L56.8,165.4L57.1,165.5L57.4,165.6L57.7,165.7L58,165.7L58.3,165.8L58.6,165.9L58.9,165.9L59.2,166L59.5,166.1L59.8,166.1L60.1,166.2L60.4,166.3L60.7,166.3L61,166.4L61.4,166.5L61.7,166.5L62,166.6L62.3,166.7L62.7,166.7L63,166.8L63.3,166.8L63.7,166.9L64,167L64.3,167L64.7,167.1L65,167.1L65.4,167.2L65.7,167.3L66.1,167.3L66.4,167.4L66.8,167.4L67.1,167.5L67.5,167.5L67.9,167.6L68.2,167.6L68.6,167.7L69,167.7L69.3,167.8L69.7,167.8L70.1,167.9L70.4,167.9L70.8,168L71.2,168L71.6,168.1L71.9,168.1L72.3,168.2L72.7,168.2L73.1,168.3L73.5,168.3L73.9,168.4L74.2,168.4L74.6,168.4L75,168.5L75.4,168.5L75.8,168.6L76.2,168.6L76.6,168.6L77,168.7L77.4,168.7L77.8,168.7L78.2,168.8L78.6,168.8L79,168.8L79.4,168.9L79.8,168.9L80.2,168.9L80.6,169L81,169L81.4,169L81.9,169.1L82.3,169.1L82.7,169.1L83.1,169.1L83.5,169.2L83.9,169.2L84.3,169.2L84.8,169.2L85.2,169.3L85.6,169.3L86,169.3L86.4,169.3L86.9,169.3L87.3,169.4L87.7,169.4L88.1,169.4L88.5,169.4L89,169.4L89.4,169.4L89.8,169.5L90.2,169.5L90.7,169.5L91.1,169.5L91.5,169.5L91.9,169.5L92.4,169.5L92.8,169.5L93.2,169.5L93.7,169.5L94.1,169.6L94.5,169.6L94.9,169.6L95.4,169.6L95.8,169.6L96.2,169.6L96.7,169.6L97.1,169.6L97.5,169.6L97.9,169.6L98.4,169.6L98.8,169.6L99.2,169.6L99.7,169.6L100.1,169.6L100.5,169.6L100.9,169.6L101.4,169.5L101.8,169.5L102.2,169.5L102.7,169.5L103.1,169.5L103.5,169.5L103.9,169.5L104.4,169.5L104.8,169.5L105.2,169.5L105.6,169.4L106.1,169.4L106.5,169.4L106.9,169.4L107.3,169.4L107.8,169.4L108.2,169.3L108.6,169.3L109,169.3L109.4,169.3L109.9,169.3L110.3,169.2L110.7,169.2L111.1,169.2L111.5,169.2L111.9,169.1L112.4,169.1L112.8,169.1L113.2,169.1L113.6,169L114,169L114.4,169L114.8,168.9L115.2,168.9L115.6,168.9L116,168.8L116.4,168.8L116.8,168.8L117.2,168.7L117.6,168.7L118,168.7L118.4,168.6L118.8,168.6L119.2,168.6L119.6,168.5L120,168.5L120.4,168.4L120.8,168.4L121.2,168.4L121.6,168.3L121.9,168.3L122.3,168.2L122.7,168.2L123.1,168.1L123.5,168.1L123.9,168L124.2,168L124.6,167.9L125,167.9L125.3,167.8L125.7,167.8L126.1,167.7L126.4,167.7L126.8,167.6L127.2,167.6L127.5,167.5L127.9,167.5L128.2,167.4L128.6,167.4L128.9,167.3L129.3,167.3L129.6,167.2L130,167.1L130.3,167.1L130.7,167L131,167L131.4,166.9L131.7,166.8L132,166.8L132.4,166.7L132.7,166.7L133,166.6L133.3,166.5L133.7,166.5L134,166.4L134.3,166.3L134.6,166.3L134.9,166.2L135.2,166.1L135.6,166.1L135.9,166L136.2,165.9L136.5,165.9L136.8,165.8L137.1,165.7L137.4,165.7L137.7,165.6L137.9,165.5L138.2,165.4L138.5,165.4L138.8,165.3L139.1,165.2L139.4,165.1L139.6,165.1L139.9,165L140.2,164.9L140.4,164.8L140.7,164.8L141,164.7L141.2,164.6L141.5,164.5L141.7,164.5L142,164.4L142.2,164.3L142.5,164.2L142.7,164.1L143,164.1L143.2,164L143.4,163.9L143.7,163.8L143.9,163.7L144.1,163.6L144.3,163.6L144.6,163.5L144.8,163.4L145,163.3L145.2,163.2L145.4,163.1L145.6,163.1L145.8,163L146,162.9L146.2,162.8L146.4,162.7L146.6,162.6L146.8,162.5L147,162.4L147.2,162.4L147.3,162.3L147.5,162.2L147.7,162.1L147.9,162L148,161.9L148.2,161.8L148.3,161.7L148.5,161.6L148.7,161.5L148.8,161.5L148.9,161.4L149.1,161.3L149.2,161.2L149.4,161.1L149.5,161L149.6,160.9L149.8,160.8L149.9,160.7L150,160.6L150.1,160.5L150.2,160.4L150.4,160.3L150.5,160.2L150.6,160.1L150.7,160.1L150.8,160L150.9,159.9L151,159.8L151,159.7L151.1,159.6L151.2,159.5L151.3,159.4L151.4,159.3L151.4,159.2L151.5,159.1L151.6,159L151.6,158.9L151.7,158.8L151.8,158.7L151.8,158.6L151.9,158.5L151.9,158.4L151.9,158.3L152,158.2L152,158.1L152,158L152.1,157.9L152.1,157.8L152.1,157.7L152.1,157.6L152.2,157.5L152.2,157.4L152.2,157.3L152.2,157.2L152.2,157.2"/>
+<path class="s-pom" d="M152.2,57.8L152.2,57.6L152.2,57.4L152.1,57.2L152.1,57L152,56.8L151.9,56.6L151.9,56.4L151.8,56.2L151.6,56L151.5,55.8L151.4,55.6L151.2,55.4L151,55.2L150.9,55L150.7,54.9L150.5,54.7L150.2,54.5L150,54.3L149.8,54.1L149.5,53.9L149.2,53.7L148.9,53.5L148.7,53.4L148.3,53.2L148,53L147.7,52.8L147.3,52.6L147,52.5L146.6,52.3L146.2,52.1L145.8,51.9L145.4,51.8L145,51.6L144.6,51.4L144.1,51.3L143.7,51.1L143.2,50.9L142.7,50.8L142.2,50.6L141.7,50.5L141.2,50.3L140.7,50.1L140.2,50L139.6,49.8L139.1,49.7L138.5,49.5L137.9,49.4L137.4,49.3L136.8,49.1L136.2,49L135.6,48.8L134.9,48.7L134.3,48.6L133.7,48.4L133,48.3L132.4,48.2L131.7,48.1L131,47.9L130.3,47.8L129.6,47.7L128.9,47.6L128.2,47.5L127.5,47.4L126.8,47.3L126.1,47.2L125.3,47.1L124.6,47L123.9,46.9L123.1,46.8L122.3,46.7L121.6,46.6L120.8,46.5L120,46.4L119.2,46.4L118.4,46.3L117.6,46.2L116.8,46.1L116,46.1L115.2,46L114.4,45.9L113.6,45.9L112.8,45.8L111.9,45.8L111.1,45.7L110.3,45.7L109.4,45.6L108.6,45.6L107.8,45.6L106.9,45.5L106.1,45.5L105.2,45.5L104.4,45.4L103.5,45.4L102.7,45.4L101.8,45.4L100.9,45.4L100.1,45.3L99.2,45.3L98.4,45.3L97.5,45.3L96.7,45.3L95.8,45.3L94.9,45.3L94.1,45.4L93.2,45.4L92.4,45.4L91.5,45.4L90.7,45.4L89.8,45.5L89,45.5L88.1,45.5L87.3,45.6L86.4,45.6L85.6,45.6L84.8,45.7L83.9,45.7L83.1,45.8L82.3,45.8L81.4,45.9L80.6,45.9L79.8,46L79,46.1L78.2,46.1L77.4,46.2L76.6,46.3L75.8,46.4L75,46.4L74.2,46.5L73.5,46.6L72.7,46.7L71.9,46.8L71.2,46.9L70.4,47L69.7,47.1L69,47.2L68.2,47.3L67.5,47.4L66.8,47.5L66.1,47.6L65.4,47.7L64.7,47.8L64,47.9L63.3,48.1L62.7,48.2L62,48.3L61.4,48.4L60.7,48.6L60.1,48.7L59.5,48.8L58.9,49L58.3,49.1L57.7,49.3L57.1,49.4L56.5,49.5L55.9,49.7L55.4,49.8L54.9,50L54.3,50.1L53.8,50.3L53.3,50.5L52.8,50.6L52.3,50.8L51.8,50.9L51.4,51.1L50.9,51.3L50.5,51.4L50,51.6L49.6,51.8L49.2,51.9L48.8,52.1L48.4,52.3L48.1,52.5L47.7,52.6L47.3,52.8L47,53L46.7,53.2L46.4,53.4L46.1,53.5L45.8,53.7L45.5,53.9L45.3,54.1L45,54.3L44.8,54.5L44.6,54.7L44.4,54.9L44.2,55L44,55.2L43.8,55.4L43.7,55.6L43.5,55.8L43.4,56L43.3,56.2L43.2,56.4L43.1,56.6L43,56.8L43,57L42.9,57.2L42.9,57.4L42.9,57.6L42.8,57.8L42.9,58L42.9,58.1L42.9,58.3L43,58.5L43,58.7L43.1,58.9L43.2,59.1L43.3,59.3L43.4,59.5L43.5,59.7L43.7,59.9L43.8,60.1L44,60.3L44.2,60.5L44.4,60.7L44.6,60.8L44.8,61L45,61.2L45.3,61.4L45.5,61.6L45.8,61.8L46.1,62L46.4,62.1L46.7,62.3L47,62.5L47.3,62.7L47.7,62.9L48.1,63L48.4,63.2L48.8,63.4L49.2,63.6L49.6,63.7L50,63.9L50.5,64.1L50.9,64.2L51.4,64.4L51.8,64.6L52.3,64.7L52.8,64.9L53.3,65.1L53.8,65.2L54.3,65.4L54.9,65.5L55.4,65.7L55.9,65.8L56.5,66L57.1,66.1L57.7,66.3L58.3,66.4L58.9,66.5L59.5,66.7L60.1,66.8L60.7,66.9L61.4,67.1L62,67.2L62.7,67.3L63.3,67.5L64,67.6L64.7,67.7L65.4,67.8L66.1,67.9L66.8,68L67.5,68.1L68.2,68.2L69,68.4L69.7,68.5L70.4,68.5L71.2,68.6L71.9,68.7L72.7,68.8L73.5,68.9L74.2,69L75,69.1L75.8,69.2L76.6,69.2L77.4,69.3L78.2,69.4L79,69.4L79.8,69.5L80.6,69.6L81.4,69.6L82.3,69.7L83.1,69.7L83.9,69.8L84.8,69.8L85.6,69.9L86.4,69.9L87.3,70L88.1,70L89,70L89.8,70.1L90.7,70.1L91.5,70.1L92.4,70.1L93.2,70.1L94.1,70.2L94.9,70.2L95.8,70.2L96.7,70.2L97.5,70.2L98.4,70.2L99.2,70.2L100.1,70.2L100.9,70.2L101.8,70.1L102.7,70.1L103.5,70.1L104.4,70.1L105.2,70.1L106.1,70L106.9,70L107.8,70L108.6,69.9L109.4,69.9L110.3,69.8L111.1,69.8L111.9,69.7L112.8,69.7L113.6,69.6L114.4,69.6L115.2,69.5L116,69.4L116.8,69.4L117.6,69.3L118.4,69.2L119.2,69.2L120,69.1L120.8,69L121.6,68.9L122.3,68.8L123.1,68.7L123.9,68.6L124.6,68.5L125.3,68.5L126.1,68.4L126.8,68.2L127.5,68.1L128.2,68L128.9,67.9L129.6,67.8L130.3,67.7L131,67.6L131.7,67.5L132.4,67.3L133,67.2L133.7,67.1L134.3,66.9L134.9,66.8L135.6,66.7L136.2,66.5L136.8,66.4L137.4,66.3L137.9,66.1L138.5,66L139.1,65.8L139.6,65.7L140.2,65.5L140.7,65.4L141.2,65.2L141.7,65.1L142.2,64.9L142.7,64.7L143.2,64.6L143.7,64.4L144.1,64.2L144.6,64.1L145,63.9L145.4,63.7L145.8,63.6L146.2,63.4L146.6,63.2L147,63L147.3,62.9L147.7,62.7L148,62.5L148.3,62.3L148.7,62.1L148.9,62L149.2,61.8L149.5,61.6L149.8,61.4L150,61.2L150.2,61L150.5,60.8L150.7,60.7L150.9,60.5L151,60.3L151.2,60.1L151.4,59.9L151.5,59.7L151.6,59.5L151.8,59.3L151.9,59.1L151.9,58.9L152,58.7L152.1,58.5L152.1,58.3L152.2,58.1L152.2,58L152.2,57.8"/>
+<text class="s-txt-b" x="124.8" y="178.3" text-anchor="middle">valj</text>
+<text class="s-txt-k2" x="105" y="27.9" text-anchor="start">os</text>
+
+</svg>
+<figcaption>Pravokotnik okoli stranice → valj.</figcaption>
+</figure><figure class="slika">
+<svg viewBox="0 0 200 200" role="img" aria-label="Vrtenje pravokotnega trikotnika okoli katete" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g19-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g19-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g19-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g19-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g19-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g19-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<polygon class="s-lik" points="97.5,157.2 152.2,157.2 97.5,52.8"/>
+<line class="s-asim" x1="97.5" y1="177" x2="97.5" y2="23"/>
+<line class="s-pom" x1="42.8" y1="157.2" x2="97.5" y2="52.8"/>
+<path class="s-pom" d="M42.8,157.2L42.9,157.2L42.9,157.3L42.9,157.4L42.9,157.5L42.9,157.6L42.9,157.7L42.9,157.8L43,157.9L43,158L43,158.1L43.1,158.2L43.1,158.3L43.1,158.4L43.2,158.5L43.2,158.6L43.3,158.7L43.3,158.8L43.4,158.9L43.5,159L43.5,159.1L43.6,159.2L43.7,159.3L43.7,159.4L43.8,159.5L43.9,159.6L44,159.7L44.1,159.8L44.2,159.9L44.3,160L44.4,160.1L44.5,160.1L44.6,160.2L44.7,160.3L44.8,160.4L44.9,160.5L45,160.6L45.1,160.7L45.3,160.8L45.4,160.9L45.5,161L45.7,161.1L45.8,161.2L45.9,161.3L46.1,161.4L46.2,161.5L46.4,161.5L46.5,161.6L46.7,161.7L46.8,161.8L47,161.9L47.2,162L47.3,162.1L47.5,162.2L47.7,162.3L47.9,162.4L48.1,162.4L48.2,162.5L48.4,162.6L48.6,162.7L48.8,162.8L49,162.9L49.2,163L49.4,163.1L49.6,163.1L49.8,163.2L50,163.3L50.2,163.4L50.5,163.5L50.7,163.6L50.9,163.6L51.1,163.7L51.4,163.8L51.6,163.9L51.8,164L52.1,164.1L52.3,164.1L52.5,164.2L52.8,164.3L53,164.4L53.3,164.5L53.5,164.5L53.8,164.6L54.1,164.7L54.3,164.8L54.6,164.8L54.9,164.9L55.1,165L55.4,165.1L55.7,165.1L55.9,165.2L56.2,165.3L56.5,165.4L56.8,165.4L57.1,165.5L57.4,165.6L57.7,165.7L58,165.7L58.3,165.8L58.6,165.9L58.9,165.9L59.2,166L59.5,166.1L59.8,166.1L60.1,166.2L60.4,166.3L60.7,166.3L61,166.4L61.4,166.5L61.7,166.5L62,166.6L62.3,166.7L62.7,166.7L63,166.8L63.3,166.8L63.7,166.9L64,167L64.3,167L64.7,167.1L65,167.1L65.4,167.2L65.7,167.3L66.1,167.3L66.4,167.4L66.8,167.4L67.1,167.5L67.5,167.5L67.9,167.6L68.2,167.6L68.6,167.7L69,167.7L69.3,167.8L69.7,167.8L70.1,167.9L70.4,167.9L70.8,168L71.2,168L71.6,168.1L71.9,168.1L72.3,168.2L72.7,168.2L73.1,168.3L73.5,168.3L73.9,168.4L74.2,168.4L74.6,168.4L75,168.5L75.4,168.5L75.8,168.6L76.2,168.6L76.6,168.6L77,168.7L77.4,168.7L77.8,168.7L78.2,168.8L78.6,168.8L79,168.8L79.4,168.9L79.8,168.9L80.2,168.9L80.6,169L81,169L81.4,169L81.9,169.1L82.3,169.1L82.7,169.1L83.1,169.1L83.5,169.2L83.9,169.2L84.3,169.2L84.8,169.2L85.2,169.3L85.6,169.3L86,169.3L86.4,169.3L86.9,169.3L87.3,169.4L87.7,169.4L88.1,169.4L88.5,169.4L89,169.4L89.4,169.4L89.8,169.5L90.2,169.5L90.7,169.5L91.1,169.5L91.5,169.5L91.9,169.5L92.4,169.5L92.8,169.5L93.2,169.5L93.7,169.5L94.1,169.6L94.5,169.6L94.9,169.6L95.4,169.6L95.8,169.6L96.2,169.6L96.7,169.6L97.1,169.6L97.5,169.6L97.9,169.6L98.4,169.6L98.8,169.6L99.2,169.6L99.7,169.6L100.1,169.6L100.5,169.6L100.9,169.6L101.4,169.5L101.8,169.5L102.2,169.5L102.7,169.5L103.1,169.5L103.5,169.5L103.9,169.5L104.4,169.5L104.8,169.5L105.2,169.5L105.6,169.4L106.1,169.4L106.5,169.4L106.9,169.4L107.3,169.4L107.8,169.4L108.2,169.3L108.6,169.3L109,169.3L109.4,169.3L109.9,169.3L110.3,169.2L110.7,169.2L111.1,169.2L111.5,169.2L111.9,169.1L112.4,169.1L112.8,169.1L113.2,169.1L113.6,169L114,169L114.4,169L114.8,168.9L115.2,168.9L115.6,168.9L116,168.8L116.4,168.8L116.8,168.8L117.2,168.7L117.6,168.7L118,168.7L118.4,168.6L118.8,168.6L119.2,168.6L119.6,168.5L120,168.5L120.4,168.4L120.8,168.4L121.2,168.4L121.6,168.3L121.9,168.3L122.3,168.2L122.7,168.2L123.1,168.1L123.5,168.1L123.9,168L124.2,168L124.6,167.9L125,167.9L125.3,167.8L125.7,167.8L126.1,167.7L126.4,167.7L126.8,167.6L127.2,167.6L127.5,167.5L127.9,167.5L128.2,167.4L128.6,167.4L128.9,167.3L129.3,167.3L129.6,167.2L130,167.1L130.3,167.1L130.7,167L131,167L131.4,166.9L131.7,166.8L132,166.8L132.4,166.7L132.7,166.7L133,166.6L133.3,166.5L133.7,166.5L134,166.4L134.3,166.3L134.6,166.3L134.9,166.2L135.2,166.1L135.6,166.1L135.9,166L136.2,165.9L136.5,165.9L136.8,165.8L137.1,165.7L137.4,165.7L137.7,165.6L137.9,165.5L138.2,165.4L138.5,165.4L138.8,165.3L139.1,165.2L139.4,165.1L139.6,165.1L139.9,165L140.2,164.9L140.4,164.8L140.7,164.8L141,164.7L141.2,164.6L141.5,164.5L141.7,164.5L142,164.4L142.2,164.3L142.5,164.2L142.7,164.1L143,164.1L143.2,164L143.4,163.9L143.7,163.8L143.9,163.7L144.1,163.6L144.3,163.6L144.6,163.5L144.8,163.4L145,163.3L145.2,163.2L145.4,163.1L145.6,163.1L145.8,163L146,162.9L146.2,162.8L146.4,162.7L146.6,162.6L146.8,162.5L147,162.4L147.2,162.4L147.3,162.3L147.5,162.2L147.7,162.1L147.9,162L148,161.9L148.2,161.8L148.3,161.7L148.5,161.6L148.7,161.5L148.8,161.5L148.9,161.4L149.1,161.3L149.2,161.2L149.4,161.1L149.5,161L149.6,160.9L149.8,160.8L149.9,160.7L150,160.6L150.1,160.5L150.2,160.4L150.4,160.3L150.5,160.2L150.6,160.1L150.7,160.1L150.8,160L150.9,159.9L151,159.8L151,159.7L151.1,159.6L151.2,159.5L151.3,159.4L151.4,159.3L151.4,159.2L151.5,159.1L151.6,159L151.6,158.9L151.7,158.8L151.8,158.7L151.8,158.6L151.9,158.5L151.9,158.4L151.9,158.3L152,158.2L152,158.1L152,158L152.1,157.9L152.1,157.8L152.1,157.7L152.1,157.6L152.2,157.5L152.2,157.4L152.2,157.3L152.2,157.2L152.2,157.2"/>
+<path class="s-pom" d="M152.2,157.2L152.2,157.1L152.2,157L152.2,156.9L152.2,156.8L152.1,156.7L152.1,156.6L152.1,156.5L152.1,156.4L152,156.3L152,156.2L152,156.1L151.9,156L151.9,155.9L151.9,155.8L151.8,155.7L151.8,155.6L151.7,155.5L151.6,155.4L151.6,155.3L151.5,155.2L151.4,155.1L151.4,155L151.3,154.9L151.2,154.8L151.1,154.7L151,154.6L151,154.5L150.9,154.4L150.8,154.3L150.7,154.3L150.6,154.2L150.5,154.1L150.4,154L150.2,153.9L150.1,153.8L150,153.7L149.9,153.6L149.8,153.5L149.6,153.4L149.5,153.3L149.4,153.2L149.2,153.1L149.1,153L148.9,152.9L148.8,152.9L148.7,152.8L148.5,152.7L148.3,152.6L148.2,152.5L148,152.4L147.9,152.3L147.7,152.2L147.5,152.1L147.3,152L147.2,151.9L147,151.9L146.8,151.8L146.6,151.7L146.4,151.6L146.2,151.5L146,151.4L145.8,151.3L145.6,151.3L145.4,151.2L145.2,151.1L145,151L144.8,150.9L144.6,150.8L144.3,150.7L144.1,150.7L143.9,150.6L143.7,150.5L143.4,150.4L143.2,150.3L143,150.2L142.7,150.2L142.5,150.1L142.2,150L142,149.9L141.7,149.8L141.5,149.8L141.2,149.7L141,149.6L140.7,149.5L140.4,149.5L140.2,149.4L139.9,149.3L139.6,149.2L139.4,149.2L139.1,149.1L138.8,149L138.5,148.9L138.2,148.9L137.9,148.8L137.7,148.7L137.4,148.6L137.1,148.6L136.8,148.5L136.5,148.4L136.2,148.4L135.9,148.3L135.6,148.2L135.2,148.2L134.9,148.1L134.6,148L134.3,148L134,147.9L133.7,147.8L133.3,147.8L133,147.7L132.7,147.6L132.4,147.6L132,147.5L131.7,147.5L131.4,147.4L131,147.3L130.7,147.3L130.3,147.2L130,147.2L129.6,147.1L129.3,147L128.9,147L128.6,146.9L128.2,146.9L127.9,146.8L127.5,146.8L127.2,146.7L126.8,146.7L126.4,146.6L126.1,146.6L125.7,146.5L125.3,146.5L125,146.4L124.6,146.4L124.2,146.3L123.9,146.3L123.5,146.2L123.1,146.2L122.7,146.1L122.3,146.1L121.9,146L121.6,146L121.2,146L120.8,145.9L120.4,145.9L120,145.8L119.6,145.8L119.2,145.7L118.8,145.7L118.4,145.7L118,145.6L117.6,145.6L117.2,145.6L116.8,145.5L116.4,145.5L116,145.5L115.6,145.4L115.2,145.4L114.8,145.4L114.4,145.3L114,145.3L113.6,145.3L113.2,145.2L112.8,145.2L112.4,145.2L111.9,145.2L111.5,145.1L111.1,145.1L110.7,145.1L110.3,145.1L109.9,145L109.4,145L109,145L108.6,145L108.2,145L107.8,144.9L107.3,144.9L106.9,144.9L106.5,144.9L106.1,144.9L105.6,144.9L105.2,144.9L104.8,144.8L104.4,144.8L103.9,144.8L103.5,144.8L103.1,144.8L102.7,144.8L102.2,144.8L101.8,144.8L101.4,144.8L100.9,144.8L100.5,144.7L100.1,144.7L99.7,144.7L99.2,144.7L98.8,144.7L98.4,144.7L97.9,144.7L97.5,144.7L97.1,144.7L96.7,144.7L96.2,144.7L95.8,144.7L95.4,144.7L94.9,144.7L94.5,144.7L94.1,144.8L93.7,144.8L93.2,144.8L92.8,144.8L92.4,144.8L91.9,144.8L91.5,144.8L91.1,144.8L90.7,144.8L90.2,144.8L89.8,144.9L89.4,144.9L89,144.9L88.5,144.9L88.1,144.9L87.7,144.9L87.3,144.9L86.9,145L86.4,145L86,145L85.6,145L85.2,145L84.8,145.1L84.3,145.1L83.9,145.1L83.5,145.1L83.1,145.2L82.7,145.2L82.3,145.2L81.9,145.2L81.4,145.3L81,145.3L80.6,145.3L80.2,145.4L79.8,145.4L79.4,145.4L79,145.5L78.6,145.5L78.2,145.5L77.8,145.6L77.4,145.6L77,145.6L76.6,145.7L76.2,145.7L75.8,145.7L75.4,145.8L75,145.8L74.6,145.9L74.2,145.9L73.9,146L73.5,146L73.1,146L72.7,146.1L72.3,146.1L71.9,146.2L71.6,146.2L71.2,146.3L70.8,146.3L70.4,146.4L70.1,146.4L69.7,146.5L69.3,146.5L69,146.6L68.6,146.6L68.2,146.7L67.9,146.7L67.5,146.8L67.1,146.8L66.8,146.9L66.4,146.9L66.1,147L65.7,147L65.4,147.1L65,147.2L64.7,147.2L64.3,147.3L64,147.3L63.7,147.4L63.3,147.5L63,147.5L62.7,147.6L62.3,147.6L62,147.7L61.7,147.8L61.4,147.8L61,147.9L60.7,148L60.4,148L60.1,148.1L59.8,148.2L59.5,148.2L59.2,148.3L58.9,148.4L58.6,148.4L58.3,148.5L58,148.6L57.7,148.6L57.4,148.7L57.1,148.8L56.8,148.9L56.5,148.9L56.2,149L55.9,149.1L55.7,149.2L55.4,149.2L55.1,149.3L54.9,149.4L54.6,149.5L54.3,149.5L54.1,149.6L53.8,149.7L53.5,149.8L53.3,149.8L53,149.9L52.8,150L52.5,150.1L52.3,150.2L52.1,150.2L51.8,150.3L51.6,150.4L51.4,150.5L51.1,150.6L50.9,150.7L50.7,150.7L50.5,150.8L50.2,150.9L50,151L49.8,151.1L49.6,151.2L49.4,151.3L49.2,151.3L49,151.4L48.8,151.5L48.6,151.6L48.4,151.7L48.2,151.8L48.1,151.9L47.9,151.9L47.7,152L47.5,152.1L47.3,152.2L47.2,152.3L47,152.4L46.8,152.5L46.7,152.6L46.5,152.7L46.4,152.8L46.2,152.9L46.1,152.9L45.9,153L45.8,153.1L45.7,153.2L45.5,153.3L45.4,153.4L45.3,153.5L45.1,153.6L45,153.7L44.9,153.8L44.8,153.9L44.7,154L44.6,154.1L44.5,154.2L44.4,154.3L44.3,154.3L44.2,154.4L44.1,154.5L44,154.6L43.9,154.7L43.8,154.8L43.7,154.9L43.7,155L43.6,155.1L43.5,155.2L43.5,155.3L43.4,155.4L43.3,155.5L43.3,155.6L43.2,155.7L43.2,155.8L43.1,155.9L43.1,156L43.1,156.1L43,156.2L43,156.3L43,156.4L42.9,156.5L42.9,156.6L42.9,156.7L42.9,156.8L42.9,156.9L42.9,157L42.9,157.1L42.8,157.2"/>
+<text class="s-txt-b" x="124.8" y="178.3" text-anchor="middle">stožec</text>
+
+</svg>
+<figcaption>Pravokotni trikotnik okoli katete → stožec.</figcaption>
+</figure><figure class="slika">
+<svg viewBox="0 0 200 200" role="img" aria-label="Vrtenje trikotnika okoli hipotenuze" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g20-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g20-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g20-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g20-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g20-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g20-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<polygon class="s-lik" points="97.5,157.2 157.2,112.4 97.5,32.9"/>
+<line class="s-asim" x1="97.5" y1="177" x2="97.5" y2="23"/>
+<line class="s-pom" x1="97.5" y1="157.2" x2="37.9" y2="112.4"/>
+<line class="s-pom" x1="37.9" y1="112.4" x2="97.5" y2="32.9"/>
+<line class="s-k4" x1="97.5" y1="112.4" x2="157.2" y2="112.4"/>
+<path class="s-pom" d="M157.2,112.4L157.1,112.2L157.1,112L157.1,111.8L157,111.6L157,111.4L156.9,111.3L156.8,111.1L156.7,110.9L156.6,110.7L156.4,110.5L156.3,110.3L156.1,110.1L155.9,109.9L155.7,109.7L155.5,109.5L155.3,109.3L155,109.1L154.8,109L154.5,108.8L154.2,108.6L153.9,108.4L153.6,108.2L153.3,108L153,107.9L152.6,107.7L152.2,107.5L151.9,107.3L151.5,107.1L151.1,107L150.7,106.8L150.2,106.6L149.8,106.4L149.3,106.3L148.8,106.1L148.4,105.9L147.9,105.8L147.4,105.6L146.8,105.4L146.3,105.3L145.8,105.1L145.2,105L144.6,104.8L144.1,104.7L143.5,104.5L142.9,104.4L142.2,104.2L141.6,104.1L141,103.9L140.3,103.8L139.7,103.6L139,103.5L138.3,103.4L137.7,103.2L137,103.1L136.2,103L135.5,102.9L134.8,102.7L134.1,102.6L133.3,102.5L132.6,102.4L131.8,102.3L131,102.1L130.3,102L129.5,101.9L128.7,101.8L127.9,101.7L127.1,101.6L126.2,101.5L125.4,101.4L124.6,101.4L123.8,101.3L122.9,101.2L122.1,101.1L121.2,101L120.3,100.9L119.5,100.9L118.6,100.8L117.7,100.7L116.8,100.7L115.9,100.6L115.1,100.5L114.2,100.5L113.3,100.4L112.3,100.4L111.4,100.3L110.5,100.3L109.6,100.3L108.7,100.2L107.8,100.2L106.8,100.2L105.9,100.1L105,100.1L104.1,100.1L103.1,100.1L102.2,100L101.3,100L100.3,100L99.4,100L98.5,100L97.5,100L96.6,100L95.6,100L94.7,100L93.8,100L92.8,100L91.9,100.1L91,100.1L90,100.1L89.1,100.1L88.2,100.2L87.3,100.2L86.3,100.2L85.4,100.3L84.5,100.3L83.6,100.3L82.7,100.4L81.8,100.4L80.9,100.5L80,100.5L79.1,100.6L78.2,100.7L77.3,100.7L76.4,100.8L75.6,100.9L74.7,100.9L73.8,101L73,101.1L72.1,101.2L71.3,101.3L70.4,101.4L69.6,101.4L68.8,101.5L68,101.6L67.2,101.7L66.4,101.8L65.6,101.9L64.8,102L64,102.1L63.2,102.3L62.5,102.4L61.7,102.5L61,102.6L60.2,102.7L59.5,102.9L58.8,103L58.1,103.1L57.4,103.2L56.7,103.4L56,103.5L55.3,103.6L54.7,103.8L54,103.9L53.4,104.1L52.8,104.2L52.2,104.4L51.6,104.5L51,104.7L50.4,104.8L49.8,105L49.3,105.1L48.7,105.3L48.2,105.4L47.7,105.6L47.2,105.8L46.7,105.9L46.2,106.1L45.7,106.3L45.3,106.4L44.8,106.6L44.4,106.8L44,107L43.6,107.1L43.2,107.3L42.8,107.5L42.4,107.7L42.1,107.9L41.7,108L41.4,108.2L41.1,108.4L40.8,108.6L40.5,108.8L40.2,109L40,109.1L39.8,109.3L39.5,109.5L39.3,109.7L39.1,109.9L38.9,110.1L38.8,110.3L38.6,110.5L38.5,110.7L38.3,110.9L38.2,111.1L38.1,111.3L38.1,111.4L38,111.6L37.9,111.8L37.9,112L37.9,112.2L37.9,112.4L37.9,112.6L37.9,112.8L37.9,113L38,113.2L38.1,113.4L38.1,113.6L38.2,113.8L38.3,114L38.5,114.2L38.6,114.4L38.8,114.6L38.9,114.8L39.1,114.9L39.3,115.1L39.5,115.3L39.8,115.5L40,115.7L40.2,115.9L40.5,116.1L40.8,116.3L41.1,116.4L41.4,116.6L41.7,116.8L42.1,117L42.4,117.2L42.8,117.4L43.2,117.5L43.6,117.7L44,117.9L44.4,118.1L44.8,118.2L45.3,118.4L45.7,118.6L46.2,118.7L46.7,118.9L47.2,119.1L47.7,119.2L48.2,119.4L48.7,119.6L49.3,119.7L49.8,119.9L50.4,120L51,120.2L51.6,120.3L52.2,120.5L52.8,120.6L53.4,120.8L54,120.9L54.7,121.1L55.3,121.2L56,121.3L56.7,121.5L57.4,121.6L58.1,121.7L58.8,121.9L59.5,122L60.2,122.1L61,122.2L61.7,122.4L62.5,122.5L63.2,122.6L64,122.7L64.8,122.8L65.6,122.9L66.4,123L67.2,123.1L68,123.2L68.8,123.3L69.6,123.4L70.4,123.5L71.3,123.6L72.1,123.7L73,123.7L73.8,123.8L74.7,123.9L75.6,124L76.4,124L77.3,124.1L78.2,124.2L79.1,124.2L80,124.3L80.9,124.4L81.8,124.4L82.7,124.5L83.6,124.5L84.5,124.5L85.4,124.6L86.3,124.6L87.3,124.7L88.2,124.7L89.1,124.7L90,124.8L91,124.8L91.9,124.8L92.8,124.8L93.8,124.8L94.7,124.8L95.6,124.8L96.6,124.8L97.5,124.8L98.5,124.8L99.4,124.8L100.3,124.8L101.3,124.8L102.2,124.8L103.1,124.8L104.1,124.8L105,124.8L105.9,124.7L106.8,124.7L107.8,124.7L108.7,124.6L109.6,124.6L110.5,124.5L111.4,124.5L112.3,124.5L113.3,124.4L114.2,124.4L115.1,124.3L115.9,124.2L116.8,124.2L117.7,124.1L118.6,124L119.5,124L120.3,123.9L121.2,123.8L122.1,123.7L122.9,123.7L123.8,123.6L124.6,123.5L125.4,123.4L126.2,123.3L127.1,123.2L127.9,123.1L128.7,123L129.5,122.9L130.3,122.8L131,122.7L131.8,122.6L132.6,122.5L133.3,122.4L134.1,122.2L134.8,122.1L135.5,122L136.2,121.9L137,121.7L137.7,121.6L138.3,121.5L139,121.3L139.7,121.2L140.3,121.1L141,120.9L141.6,120.8L142.2,120.6L142.9,120.5L143.5,120.3L144.1,120.2L144.6,120L145.2,119.9L145.8,119.7L146.3,119.6L146.8,119.4L147.4,119.2L147.9,119.1L148.4,118.9L148.8,118.7L149.3,118.6L149.8,118.4L150.2,118.2L150.7,118.1L151.1,117.9L151.5,117.7L151.9,117.5L152.2,117.4L152.6,117.2L153,117L153.3,116.8L153.6,116.6L153.9,116.4L154.2,116.3L154.5,116.1L154.8,115.9L155,115.7L155.3,115.5L155.5,115.3L155.7,115.1L155.9,114.9L156.1,114.8L156.3,114.6L156.4,114.4L156.6,114.2L156.7,114L156.8,113.8L156.9,113.6L157,113.4L157,113.2L157.1,113L157.1,112.8L157.1,112.6L157.2,112.4"/>
+<text class="s-txt-k4" x="127.3" y="102.7" text-anchor="middle">v<tspan dy="4" style="font-size:10px">c</tspan></text>
+<text class="s-txt-b" x="97.5" y="178.3" text-anchor="middle">dvojni stožec</text>
+<path class="s-kot" d="M157.2,112.4 L152.9,106.6 L147.1,110.9 L151.4,116.7 Z"/>
+<circle cx="152.7" cy="111.7" r="1.6" fill="#B45309"/>
+</svg>
+<figcaption>Pravokotni trikotnik okoli hipotenuze → dva stožca s skupno osnovno ploskvijo (polmer \(v_c\)).</figcaption>
+</figure></div>
+            <p>Ko lik zavrtimo za \(360°\) okoli premice (osi), vsaka točka opiše krožnico s polmerom, enakim njeni razdalji do osi. Nastane <strong>vrtenina</strong>.</p>
+            <ul>
+              <li>Pravokotnik okoli stranice → <strong>valj</strong> (polmer je druga stranica).</li>
+              <li>Pravokotni trikotnik okoli katete → <strong>stožec</strong> (višina je kateta na osi, polmer druga kateta).</li>
+              <li>Pravokotni trikotnik okoli hipotenuze → <strong>dva stožca</strong> s skupno osnovno ploskvijo, polmer \(v_c\), višini \(a_1\) in \(b_1\) (vsota višin je \(c\)): \(V = \frac{\pi v_c^2 c}{3}\).</li>
+              <li>Pravokotni trapez okoli pravokotnega kraka → <strong>prisekani stožec</strong>; okoli daljše osnovnice → valj s stožcem.</li>
+              <li>Lik, ki ne seka osi, a je od nje oddaljen, da telo z luknjo (npr. pravokotnik → cev).</li>
+            </ul>
+            <p>Vedno najprej nariši lik, os in zrcalno sliko lika čez os. Nastala slika je osni presek vrtenine, iz nje razbereš polmere in višine.</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>✏️ Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-14">
+              <h4>Tip 14: Prostornina in površina vrtenine</h4>
+              <div class="prepoznaj">
+                <p><strong>Kako prepoznaš:</strong> lik se vrti okoli stranice, osi, premice.</p>
+                <ul class="kljucne"><li>„zavrtimo okoli“</li><li>„vrtenina“</li><li>„rotacijsko telo“</li><li>„okoli hipotenuze“</li></ul>
+              </div>
+              <h5>Univerzalni postopek</h5>
+              <ol>
+                <li>Nariši lik, os in zrcalni lik (osni presek vrtenine).</li>
+                <li>Razdeli vrtenino na znana telesa (valj, stožec, prisekani stožec) in za vsako odčitaj \(r\) in \(v\).</li>
+                <li>Prostornine seštej (ali odštej, če je del izdolben).</li>
+                <li>Površina: seštej plašče in osnovne ploskve, ki so <strong>na zunanji strani</strong> (skupne ploskve ne štejemo).</li>
+              </ol>
+              <div class="primer">
+                <p><strong>Primer:</strong> Pravokotni trikotnik s katetama 3 cm in 4 cm zavrtimo okoli hipotenuze. Izračunajte prostornino nastalega telesa.</p>
+                <p>\(c = 5\), \(v_c = \frac{3 \cdot 4}{5} = 2{,}4\). \(V = \frac{\pi \cdot 2{,}4^2 \cdot 5}{3} = 9{,}6\pi \approx 30{,}2\ \text{cm}^3\).</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 8 -->
+        <section class="sklop" id="sklop-8">
+          <header class="sklop-header">
+            <span class="sklop-num">4.7.8</span>
+            <h2>Geometrijski matematični problemi</h2>
+            <p>Sestavljena telesa, pretakanje, taljenje in uporaba trigonometrije.</p>
+          </header>
+          <div class="sklop-cilji">
+            <h3>🎯 Cilji iz kataloga</h3>
+            <ul>
+              <li>Prepozna geometrijski problem, ga predstavi, ugotovi, s katerimi pojmi, spremenljivkami in zvezami med njimi ga lahko rešuje, problem reši, rešitve predstavi in razmisli o njihovi smiselnosti.</li>
+              <li>Pri reševanju geometrijskih problemov samostojno izbere in uporablja ustrezne strategije in povezuje vsebine iz ravninske in prostorske geometrije.</li>
+              <li>Rešuje geometrijske probleme z uporabo trigonometrije.</li>
+            </ul>
+          </div>
+          <div class="sklop-teorija">
+            <h3>📖 Razlaga</h3>
+            <p>Problemske naloge združujejo več sklopov. Strategije, ki skoraj vedno pomagajo:</p>
+            <ul>
+              <li><strong>Skica in osni presek:</strong> prostorsko nalogo prevedi na ravninski lik.</li>
+              <li><strong>Razstavi ali dopolni:</strong> sestavljeno telo razdeli na znana telesa ali ga dopolni do večjega in odštej.</li>
+              <li><strong>Ohranitev prostornine:</strong> pri taljenju, prelivanju in preoblikovanju se prostornina ne spremeni: \(V_{\text{prej}} = V_{\text{potem}}\).</li>
+              <li><strong>Trigonometrija:</strong> kot med stransko ploskvijo in osnovno ploskvijo leži v trikotniku \((v, \frac{a}{2}, v_s)\); kot med stranskim robom in osnovno ploskvijo v trikotniku \((v, \frac{d}{2}, s)\).</li>
+              <li><strong>Smiselnost:</strong> preveri enote, red velikosti in ali je rezultat pozitiven ter manjši od zgornje meje.</li>
+            </ul>
+          </div>
+          <div class="sklop-naloge">
+            <h3>✏️ Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-15">
+              <h4>Tip 15: Sestavljeno telo</h4>
+              <div class="prepoznaj">
+                <p><strong>Kako prepoznaš:</strong> telo je opisano kot več teles skupaj (silos = valj + stožec, hiša = kvader + prizma) ali z izvrtino.</p>
+                <ul class="kljucne"><li>„na valj je postavljen“</li><li>„izvrtina“</li><li>„iz kocke izrežemo“</li></ul>
+              </div>
+              <h5>Univerzalni postopek</h5>
+              <ol>
+                <li>Nariši telo in loči dele.</li>
+                <li>\(V\) = vsota (ali razlika) prostornin delov.</li>
+                <li>\(P\): seštej samo zunanje ploskve; stične ploskve odpadejo, pri izvrtini se doda notranji plašč.</li>
+              </ol>
+              <div class="primer">
+                <p><strong>Primer:</strong> Silos je valj s polmerom 2 m in višino 6 m, na vrhu ima stožec z višino 1,5 m. Kolikšna je prostornina?</p>
+                <p>\(V = \pi \cdot 4 \cdot 6 + \frac{\pi \cdot 4 \cdot 1{,}5}{3} = 24\pi + 2\pi = 26\pi \approx 81{,}7\ \text{m}^3\).</p>
+              </div>
+            </div>
+            <div class="tip-naloge" id="tip-16">
+              <h4>Tip 16: Prelivanje, taljenje, preoblikovanje</h4>
+              <div class="prepoznaj">
+                <p><strong>Kako prepoznaš:</strong> snov iz enega telesa preoblikujejo v drugo; voda se dvigne, ko potopimo telo.</p>
+                <ul class="kljucne"><li>„pretopimo“</li><li>„prelijemo“</li><li>„za koliko se dvigne gladina“</li><li>„koliko kroglic“</li></ul>
+              </div>
+              <h5>Univerzalni postopek</h5>
+              <ol>
+                <li>Izračunaj prostornino snovi pred preoblikovanjem.</li>
+                <li>Zapiši prostornino novega telesa z neznanko in ju izenači.</li>
+                <li>Pri dvigu gladine: prostornina potopljenega telesa = osnovna ploskev posode × dvig.</li>
+              </ol>
+              <div class="primer">
+                <p><strong>Primer:</strong> V valjasto posodo s polmerom 5 cm potopimo kroglo s polmerom 3 cm. Za koliko se dvigne gladina?</p>
+                <p>\(V_k = 36\pi\), \(25\pi \cdot h = 36\pi\), \(h = 1{,}44\) cm.</p>
+              </div>
+            </div>
+            <div class="tip-naloge" id="tip-17">
+              <h4>Tip 17: Koti v telesih (trigonometrija)</h4>
+              <div class="prepoznaj">
+                <p><strong>Kako prepoznaš:</strong> dan ali iskan je kot med stransko ploskvijo/robom/stranico in osnovno ploskvijo ali kot ob vrhu.</p>
+                <ul class="kljucne"><li>„naklonski kot“</li><li>„kot med stransko in osnovno ploskvijo“</li><li>„kot ob vrhu osnega preseka“</li></ul>
+              </div>
+              <h5>Univerzalni postopek</h5>
+              <ol>
+                <li>Poišči pravokotni trikotnik, v katerem leži kot (glej strategije zgoraj).</li>
+                <li>Zapiši ustrezno kotno funkcijo z znanima stranicama.</li>
+                <li>Izračunaj kot ali manjkajočo stranico; nadaljuj s formulami za \(P\) in \(V\).</li>
+              </ol>
+              <div class="primer">
+                <p><strong>Primer:</strong> Pravilna štiristrana piramida ima osnovni rob 8 cm, stranska ploskev oklepa z osnovno ploskvijo kot \(60°\). Izračunajte prostornino.</p>
+                <p>V trikotniku \((v, \frac{a}{2}, v_s)\): \(v = 4 \tan 60° = 4\sqrt{3}\). \(V = \frac{64 \cdot 4\sqrt{3}}{3} \approx 147{,}8\ \text{cm}^3\).</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section class="subsection" id="kljuc">
+          <div class="subsection-head">
+            <h2>🔎 Ključ: kateri tip naloge je to?</h2>
+            <p>Poišči besedo iz navodila naloge in skoči na pravi postopek.</p>
+          </div>
+          <div class="info-card">
+            <div class="tabela-wrap">
+              <table class="tabela">
+                <thead><tr><th>V besedilu naloge piše …</th><th>Tip</th></tr></thead>
+                <tbody>
+                  <tr><td>„ploščina trikotnika“, tri stranice, „oklepata kot“</td><td><a href="#tip-1">Tip 1</a></td></tr>
+                  <tr><td>trapez, romb, paralelogram, sestavljen lik</td><td><a href="#tip-2">Tip 2</a></td></tr>
+                  <tr><td>„izsek“, „lok“, „osenčeni del kroga“, „kolobar“</td><td><a href="#tip-3">Tip 3</a></td></tr>
+                  <tr><td>„včrtan“, „očrtan krog“</td><td><a href="#tip-4">Tip 4</a></td></tr>
+                  <tr><td>„koliko robov“, „osni presek“</td><td><a href="#tip-5">Tip 5</a></td></tr>
+                  <tr><td>kvader, kocka, pravilna prizma, bazen</td><td><a href="#tip-6">Tip 6</a></td></tr>
+                  <tr><td>valj, pločevinka, cev</td><td><a href="#tip-7">Tip 7</a></td></tr>
+                  <tr><td>piramida, „stranski rob“, „višina stranske ploskve“</td><td><a href="#tip-8">Tip 8</a></td></tr>
+                  <tr><td>stožec, „plašč je krožni izsek“</td><td><a href="#tip-9">Tip 9</a></td></tr>
+                  <tr><td>krogla, polkrogla, žoga</td><td><a href="#tip-10">Tip 10</a></td></tr>
+                  <tr><td>„v litrih“, „podvojimo polmer“</td><td><a href="#tip-11">Tip 11</a></td></tr>
+                  <tr><td>„Cavalierijevo pravilo“, „enaka prostornina“</td><td><a href="#tip-12">Tip 12</a></td></tr>
+                  <tr><td>„poševna prizma/valj“</td><td><a href="#tip-13">Tip 13</a></td></tr>
+                  <tr><td>„zavrtimo okoli“, „vrtenina“</td><td><a href="#tip-14">Tip 14</a></td></tr>
+                  <tr><td>„na valj je postavljen“, „izvrtina“</td><td><a href="#tip-15">Tip 15</a></td></tr>
+                  <tr><td>„pretopimo“, „prelijemo“, „dvig gladine“</td><td><a href="#tip-16">Tip 16</a></td></tr>
+                  <tr><td>„naklonski kot“, „kot med ploskvama“</td><td><a href="#tip-17">Tip 17</a></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
         <section class="subsection">
           <div class="subsection-head">
-            <h2>3. Pogoste napake</h2>
+            <h2>⚠️ Pogoste napake</h2>
           </div>
           <div class="info-card">
             <ul>
-              <li>Zamenjaš površino (\(P\), dvodimenzionalna) s prostornino (\(V\), tridimenzionalna).</li>
-              <li>Pri valju/stožcu pozabiš, da je višina <strong>pravokotna</strong> na osnovno ploskev.</li>
-              <li>Pri stožcu zamenjaš \(v\) (višina) s \(s\) (stranica).</li>
-              <li>Pri piramidi pozabiš deliti s 3 (prostornina piramide = \(\dfrac{1}{3}\) prostornine prizme).</li>
-              <li>Pri krogli zamenjaš formulo za površino (\(4\pi r^2\)) in prostornino (\(\dfrac{4}{3}\pi r^3\)).</li>
-              <li>Pri pretvorbah enot pozabiš, da \(1 \text{ L} = 1 \text{ dm}^3\) in \(1 \text{ m}^3 = 1000 \text{ L}\).</li>
-              <li>Pri sestavljenih likih pozabiš odšteti ploščino, ki ni del lika.</li>
-              <li>Pri enakostraničnem valju pozabiš, da je višina enaka premeru (\(v = 2r\)).</li>
+              <li>Premer vstaviš namesto polmera.</li>
+              <li>Pri piramidi zamenjaš višino telesa \(v\), višino stranske ploskve \(v_s\) in stranski rob \(s\).</li>
+              <li>Pri piramidi ali stožcu pozabiš deliti s 3.</li>
+              <li>Pri odprti posodi (kozarec, bazen) šteješ tudi pokrov.</li>
+              <li>Enote pretvoriš linearno: \(1\ \text{m}^3 \ne 100\ \text{dm}^3\), pravilno \(1000\ \text{dm}^3\).</li>
+              <li>Pri poševnem telesu vzameš stranski rob za višino.</li>
+              <li>Pri sestavljenem telesu šteješ stično ploskev v površino.</li>
             </ul>
           </div>
         </section>
 
-        <!-- ============ 4. ŠTUDIJSKI VODIČ ============ -->
         <section class="subsection">
           <div class="subsection-head">
-            <h2>4. Študijski vodič — hitri pregled</h2>
-          </div>
-          <div class="info-card">
-            <h3>📋 Kaj moraš znati na pamet</h3>
-            <ul>
-              <li><strong>Ploščine likov:</strong> trikotnik, kvadrat, pravokotnik, paralelogram, trapez, romb, krog.</li>
-              <li><strong>Heronova formula:</strong> \(S = \sqrt{s(s-a)(s-b)(s-c)}\).</li>
-              <li><strong>Polmera:</strong> \(r = \dfrac{S}{s}\), \(R = \dfrac{abc}{4S}\).</li>
-              <li><strong>Kvader:</strong> \(V = abc\), \(P = 2(ab+ac+bc)\), \(d = \sqrt{a^2+b^2+c^2}\).</li>
-              <li><strong>Kocka:</strong> \(V = a^3\), \(P = 6a^2\), \(d = a\sqrt{3}\).</li>
-              <li><strong>Valj:</strong> \(V = \pi r^2 v\), \(P = 2\pi r^2 + 2\pi r v\).</li>
-              <li><strong>Stožec:</strong> \(V = \dfrac{\pi r^2 v}{3}\), \(P = \pi r^2 + \pi r s\), \(s = \sqrt{r^2 + v^2}\).</li>
-              <li><strong>Piramida:</strong> \(V = \dfrac{S_o \cdot v}{3}\).</li>
-              <li><strong>Krogla:</strong> \(V = \dfrac{4\pi r^3}{3}\), \(P = 4\pi r^2\).</li>
-              <li><strong>Pretvorbe:</strong> \(1 \text{ L} = 1 \text{ dm}^3\), \(1 \text{ m}^3 = 1000 \text{ L}\).</li>
-            </ul>
-          </div>
-
-          <div class="info-card">
-            <h3>🎯 Kako pristopiti k nalogi</h3>
-            <ol>
-              <li><strong>Preberi nalogo in prepoznaj telo:</strong> kvader, kocka, valj, stožec, piramida, krogla?</li>
-              <li><strong>Nariši skico</strong> in označi podatke.</li>
-              <li><strong>Preveri enote</strong> — pretvori v isto enoto.</li>
-              <li><strong>Uporabi formulo</strong> za \(V\) ali \(P\).</li>
-              <li><strong>Preveri smiselnost</strong> rezultata (npr. prostornina mora biti pozitivna).</li>
-            </ol>
-          </div>
-
-          <div class="info-card">
-            <h3>⏱️ Časovni načrt za en večer</h3>
-            <ul>
-              <li><strong>30 min:</strong> Teorija — ploščine likov, telesa, pretvorbe enot.</li>
-              <li><strong>60 min:</strong> Tipi 1–7 (ploščina trikotnika, Heron, r in R, kvader, valj, stožec, krogla).</li>
-              <li><strong>45 min:</strong> Tipi 8–12 (piramida, vrtenina, sestavljena telesa, besedilne, krožni izsek).</li>
-              <li><strong>30 min:</strong> Ponovi pogoste napake in študijski vodič.</li>
-              <li><strong>30 min:</strong> Reši 2–3 izpitne pole za vajo.</li>
-            </ul>
-          </div>
-        </section>
-
-        <!-- ============ 5. POVEZAVE ============ -->
-        <section class="subsection">
-          <div class="subsection-head">
-            <h2>5. Vadi naprej</h2>
+            <h2>Vadi naprej</h2>
             <p>Ko predelaš razlago, preveri znanje z nalogami.</p>
           </div>
           <div class="link-list">
-            <a class="link-item" href="/views/matematika/matura/osnovna_raven/naloge/resene/">
+            <a class="link-item" href="/views/matematika/matura/matura.html">
               <span class="link-item-text">
-                <strong>Rešene naloge — osnovna raven</strong>
-                <small>Primeri z razlago</small>
-              </span>
-              <span class="arrow">→</span>
-            </a>
-            <a class="link-item" href="/views/matematika/matura/visja_raven/naloge/resene/">
-              <span class="link-item-text">
-                <strong>Rešene naloge — višja raven</strong>
-                <small>Zahtevnejši primeri</small>
+                <strong>Maturitetne pole</strong>
+                <small>Rešuj prave izpitne pole</small>
               </span>
               <span class="arrow">→</span>
             </a>

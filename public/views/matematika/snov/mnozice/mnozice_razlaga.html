@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Množice — razlaga in postopki | Piflar.si</title>
-  <meta name="description" content="Celovita razlaga množic za maturo: unija, presek, razlika, komplement, podmnožice, potenčna množica, kartezični produkt, Vennovi diagrami, moč množice.">
+  <meta name="description" content="Množice za maturo po podpoglavjih kataloga: osnovni pojmi, simbolni zapisi, Vennov diagram, unija, presek, razlika, komplement, lastnosti operacij, potenčna množica, kartezični produkt in moč množice. Razlaga s slikami in vsi tipi nalog.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
@@ -23,32 +23,29 @@
         <header class="page-header">
           <span class="page-eyebrow">Matematika · Snov · 4.2</span>
           <h1>Množice</h1>
-          <p>Vse o množicah za maturo: osnovni pojmi, operacije (unija, presek, razlika, komplement), Vennovi diagrami, moč množice, potenčna množica in kartezični produkt.</p>
+          <p>Osnovni pojmi, simbolni zapisi, Vennov diagram, računske operacije z množicami in njihove lastnosti, potenčna množica, kartezični produkt in moč množice. Pod razlago vsakega podpoglavja so vsi tipi nalog, ki se pojavijo pri tem sklopu.</p>
           <div class="page-meta">
-            <div class="page-meta-item"><strong>10</strong><span>Tipov nalog</span></div>
-            <div class="page-meta-item"><strong>35+</strong><span>Primerov</span></div>
-            <div class="page-meta-item"><strong>~45 min</strong><span>Branja</span></div>
+            <div class="page-meta-item"><strong>9</strong><span>Podpoglavij</span></div>
+            <div class="page-meta-item"><strong>12</strong><span>Tipov nalog</span></div>
+            <div class="page-meta-item"><strong>~60 min</strong><span>Branja</span></div>
           </div>
         </header>
 
         <!-- ============ MATURA FORMULE ============ -->
         <div class="matura-formule">
-          <h3>📋 Formule na maturi — osnovna raven</h3>
-          <p>Na maturitetnem listu s formulami so za <strong>množice</strong> relevantni naslednji simboli in zveze:</p>
+          <h3>📋 Oznake na maturi</h3>
+          <p>V dodatku kataloga so za <strong>množice</strong> navedene te oznake. Formul za moč unije na listu s formulami ni, zato si jih zapomni.</p>
           <div class="matura-grid">
             <div class="matura-levo">
               <ul>
                 <li><strong>Pripadnost:</strong> \(x \in A\), \(x \notin A\)</li>
-                <li><strong>Podmnožica:</strong> \(A \subseteq B\), \(A \subset B\)</li>
-                <li><strong>Unija:</strong> \(A \cup B\)</li>
-                <li><strong>Presek:</strong> \(A \cap B\)</li>
-                <li><strong>Razlika:</strong> \(A \setminus B\)</li>
-                <li><strong>Komplement:</strong> \(A^C\), \(A'\)</li>
-                <li><strong>Moč množice:</strong> \(m(A)\), \(|A|\)</li>
+                <li><strong>Podmnožica:</strong> \(A \subseteq B\), prava podmnožica \(A \subset B\)</li>
+                <li><strong>Unija, presek, razlika:</strong> \(A \cup B\), \(A \cap B\), \(A \setminus B\)</li>
+                <li><strong>Komplement:</strong> \(A^C\) (tudi \(A'\))</li>
+                <li><strong>Moč množice:</strong> \(m(A)\)</li>
                 <li><strong>Potenčna množica:</strong> \(\mathcal{P}(A)\)</li>
                 <li><strong>Kartezični produkt:</strong> \(A \times B\)</li>
-                <li><strong>Prazna množica:</strong> \(\emptyset\), \(\{\}\)</li>
-                <li><strong>Univerzalna množica:</strong> \(U\)</li>
+                <li><strong>Prazna množica:</strong> \(\emptyset\) ali \(\{\}\); <strong>univerzalna:</strong> \(U\)</li>
               </ul>
             </div>
             <div class="matura-slika">
@@ -57,399 +54,848 @@
           </div>
         </div>
 
-        <!-- ============ 1. TEORIJA ============ -->
-        <section class="subsection">
-          <div class="subsection-head">
-            <h2>1. Teorija — pojmi in operacije</h2>
-            <p>Kar moraš znati na pamet, preden se lotiš nalog.</p>
+        <!-- ============ KAZALO ============ -->
+        <nav class="kazalo" aria-label="Podpoglavja">
+          <h2>Podpoglavja</h2>
+          <ol>
+            <li><a href="#sklop-1"><span class="kazalo-st">4.2.1</span> Osnovni pojmi</a></li>
+            <li><a href="#sklop-2"><span class="kazalo-st">4.2.2</span> Simbolni zapisi</a></li>
+            <li><a href="#sklop-3"><span class="kazalo-st">4.2.3</span> Vennov diagram</a></li>
+            <li><a href="#sklop-4"><span class="kazalo-st">4.2.4</span> Presek, unija, razlika, komplement</a></li>
+            <li><a href="#sklop-5"><span class="kazalo-st">4.2.5</span> Lastnosti operacij <span class="badge-vr">VR</span></a></li>
+            <li><a href="#sklop-6"><span class="kazalo-st">4.2.6</span> Potenčna množica</a></li>
+            <li><a href="#sklop-7"><span class="kazalo-st">4.2.7</span> Kartezični produkt množic</a></li>
+            <li><a href="#sklop-8"><span class="kazalo-st">4.2.8</span> Moč množice</a></li>
+            <li><a href="#sklop-9"><span class="kazalo-st">4.2.9</span> Moč potenčne množice <span class="badge-vr">VR</span></a></li>
+            <li><a href="#kljuc"><span class="kazalo-st">🔎</span> Ključ: kateri tip naloge je to?</a></li>
+          </ol>
+        </nav>
+
+        <!-- ============ SKLOP 1 ============ -->
+        <section class="sklop" id="sklop-1">
+          <header class="sklop-header">
+            <span class="sklop-num">4.2.1</span>
+            <h2>Osnovni pojmi</h2>
+            <p>Element, množica, pripadnost elementa množici, podmnožica, prazna in univerzalna množica.</p>
+          </header>
+
+          <div class="sklop-cilji">
+            <h3>🎯 Cilji iz kataloga</h3>
+            <ul>
+              <li>Pozna osnovne pojme in s simboli označuje odnose med elementi in množicami.</li>
+            </ul>
           </div>
 
-          <div class="info-card">
-            <h3>Osnovni pojmi</h3>
+          <div class="sklop-teorija">
+            <h3>📖 Razlaga</h3>
+
+            <h4>Množica in element</h4>
+            <p><strong>Množica</strong> je skupina (zbirka) dobro določenih, med seboj različnih objektov. Te objekte imenujemo <strong>elementi</strong>. Množice označujemo z velikimi črkami (\(A, B, M\)), elemente z malimi (\(a, x\)).</p>
+            <ul>
+              <li>Vsak element v množici štejemo <strong>enkrat</strong>: \(\{1, 1, 2\} = \{1, 2\}\).</li>
+              <li><strong>Vrstni red ni pomemben</strong>: \(\{1, 2, 3\} = \{3, 1, 2\}\).</li>
+              <li>Element je lahko tudi sama množica: \(\{1, \{2, 3\}\}\) ima <strong>dva</strong> elementa, število \(1\) in množico \(\{2, 3\}\).</li>
+            </ul>
+
+            <h4>Pripadnost: \(\in\) in \(\notin\)</h4>
+            <p>Zapis \(a \in A\) pomeni „\(a\) je element množice \(A\)“, zapis \(a \notin A\) pa „\(a\) ni element množice \(A\)“. Simbol \(\in\) vedno stoji med <strong>elementom</strong> (levo) in <strong>množico</strong> (desno).</p>
+
+            <h4>Podmnožica: \(\subseteq\) in \(\subset\)</h4>
+            <p>Množica \(A\) je <strong>podmnožica</strong> množice \(B\) (\(A \subseteq B\)), če je vsak element \(A\) tudi element \(B\). Simbol \(\subseteq\) stoji med <strong>dvema množicama</strong>.</p>
+            <ul>
+              <li>\(A \subset B\) (prava podmnožica): \(A \subseteq B\) in \(A \ne B\), torej ima \(B\) vsaj en element več.</li>
+              <li>Vsaka množica je podmnožica same sebe: \(A \subseteq A\).</li>
+              <li>Prazna množica je podmnožica vsake množice: \(\emptyset \subseteq A\).</li>
+              <li><strong>Enakost:</strong> \(A = B\) natanko tedaj, ko \(A \subseteq B\) in \(B \subseteq A\).</li>
+            </ul>
+            <figure class="slika slika--ozka">
+<svg viewBox="0 0 300 170" role="img" aria-label="Vennov diagram" xmlns="http://www.w3.org/2000/svg"><defs><clipPath id="vn1c0"><circle cx="150" cy="88" r="70"/></clipPath><mask id="vn1m0"><rect x="0" y="0" width="300" height="170" fill="white"/><circle cx="150" cy="88" r="70" fill="black"/></mask><clipPath id="vn1c1"><circle cx="130" cy="95" r="36"/></clipPath><mask id="vn1m1"><rect x="0" y="0" width="300" height="170" fill="white"/><circle cx="130" cy="95" r="36" fill="black"/></mask></defs>
+<rect x="6" y="6" width="288" height="158" rx="8" fill="#FFFFFF" stroke="#94A0B8" stroke-width="1.5"/>
+<g clip-path="url(#vn1c1)"><g clip-path="url(#vn1c0)"><rect x="6" y="6" width="288" height="158" fill="rgba(79,70,229,0.28)"/></g></g>
+<circle cx="150" cy="88" r="70" fill="none" stroke="#4F46E5" stroke-width="2"/><circle cx="130" cy="95" r="36" fill="none" stroke="#4F46E5" stroke-width="2"/>
+<text x="210" y="30" class="s-txt-k1" text-anchor="middle">B</text><text x="130" y="100" class="s-txt-k1" text-anchor="middle">A</text>
+<text x="16" y="24" class="s-txt-muted">U</text>
+
+
+</svg>
+<figcaption>\(A \subseteq B\): ves krog \(A\) leži v krogu \(B\).</figcaption>
+</figure>
+
+            <h4>Prazna in univerzalna množica</h4>
             <div class="concept-list two-col">
               <div class="concept">
-                <h4>Množica</h4>
-                <div class="concept-formula">\(A = \{1, 2, 3\}\)</div>
-                <p class="concept-desc">Skupina elementov, ki jih obravnavamo kot celoto. Elementi so lahko števila, črke, predmeti … Vsak element se v množici pojavi <strong>samo enkrat</strong>.</p>
-              </div>
-              <div class="concept">
-                <h4>Pripadnost</h4>
-                <div class="concept-formula">\(x \in A\), \(x \notin A\)</div>
-                <p class="concept-desc">\(x\) je element množice \(A\) (\(x \in A\)) ali pa ni (\(x \notin A\)).</p>
-              </div>
-              <div class="concept">
                 <h4>Prazna množica</h4>
-                <div class="concept-formula">\(\emptyset = \{\}\)</div>
-                <p class="concept-desc">Množica brez elementov. Vsaka množica vsebuje prazno množico kot podmnožico.</p>
+                <div class="concept-formula">\(\emptyset = \{\}\), \(m(\emptyset) = 0\)</div>
+                <p class="concept-desc">Nima nobenega elementa. Pazi: \(\{\emptyset\}\) ni prazna, ima en element.</p>
               </div>
               <div class="concept">
                 <h4>Univerzalna množica</h4>
                 <div class="concept-formula">\(U\)</div>
-                <p class="concept-desc">Množica vseh elementov, ki jih v danem problemu obravnavamo. Vsi ostali elementi so njene podmnožice.</p>
-              </div>
-              <div class="concept">
-                <h4>Podmnožica</h4>
-                <div class="concept-formula">\(A \subseteq B\)</div>
-                <p class="concept-desc">Vsak element \(A\) je tudi v \(B\). Če je \(A \subseteq B\) in \(A \neq B\), pišemo \(A \subset B\) (prava podmnožica).</p>
-              </div>
-              <div class="concept">
-                <h4>Enakost množic</h4>
-                <div class="concept-formula">\(A = B \Leftrightarrow (A \subseteq B \land B \subseteq A)\)</div>
-                <p class="concept-desc">Dve množici sta enaki, če imata <strong>iste elemente</strong>. Vrstni red elementov ni pomemben, ponavljanja pa izpustimo.</p>
-              </div>
-              <div class="concept">
-                <h4>Moč množice</h4>
-                <div class="concept-formula">\(m(A)\) ali \(|A|\)</div>
-                <p class="concept-desc">Število elementov v množici \(A\).</p>
-              </div>
-              <div class="concept">
-                <h4>Potenčna množica</h4>
-                <div class="concept-formula">\(\mathcal{P}(A)\), \(m(\mathcal{P}(A)) = 2^{m(A)}\)</div>
-                <p class="concept-desc">Množica <strong>vseh podmnožic</strong> množice \(A\). Ima \(2^n\) elementov, kjer je \(n = m(A)\).</p>
+                <p class="concept-desc">Množica vseh elementov, ki jih v nalogi obravnavamo (npr. vsi dijaki razreda, vsa naravna števila do 20). Na Vennovem diagramu je pravokotnik.</p>
               </div>
             </div>
           </div>
 
-          <div class="info-card">
-            <h3>Operacije z množicami</h3>
+          <div class="sklop-naloge">
+            <h3>✏️ Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-1">
+              <h4>Tip 1: Pravilno ali nepravilno — \(\in\), \(\notin\), \(\subseteq\)</h4>
+              <div class="prepoznaj">
+                <p><strong>Kako prepoznaš:</strong> dana je množica in več zapisov s simboli, za vsakega povej, ali drži, ali pa vstavi pravi simbol.</p>
+                <ul class="kljucne"><li>„vstavite ustrezen znak“</li><li>„obkrožite pravilne zapise“</li><li>„\(\in\) ali \(\subseteq\)“</li></ul>
+              </div>
+              <h5>Univerzalni postopek</h5>
+              <ol>
+                <li>Prepiši vse elemente množice in jih preštej (posebej pazi na elemente, ki so sami množice).</li>
+                <li>Pri vsakem zapisu ugotovi, kaj je na levi: <strong>element</strong> → uporabimo \(\in\); <strong>množica</strong> (v zavitih oklepajih) → uporabimo \(\subseteq\).</li>
+                <li>Za \(x \in A\): ali je \(x\) natanko eden od naštetih elementov? Za \(X \subseteq A\): ali je <strong>vsak</strong> element \(X\) med elementi \(A\)?</li>
+              </ol>
+              <div class="primer">
+                <p><strong>Primer:</strong> \(A = \{1, 2, \{3\}\}\). Ali drži: (a) \(3 \in A\), (b) \(\{3\} \in A\), (c) \(\{1, 2\} \subseteq A\), (d) \(\{3\} \subseteq A\)?</p>
+                <p>Elementi so: \(1\), \(2\) in \(\{3\}\).</p>
+                <p>(a) ne (\(3\) ni element, element je \(\{3\}\)); (b) da; (c) da; (d) ne (za to bi moralo veljati \(3 \in A\)).</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ SKLOP 2 ============ -->
+        <section class="sklop" id="sklop-2">
+          <header class="sklop-header">
+            <span class="sklop-num">4.2.2</span>
+            <h2>Simbolni zapisi</h2>
+            <p>Načini predstavitve množice: naštevanje, opis z lastnostjo, interval, slika.</p>
+          </header>
+
+          <div class="sklop-cilji">
+            <h3>🎯 Cilji iz kataloga</h3>
+            <ul>
+              <li>Uporablja različne načine predstavitev množic.</li>
+            </ul>
+          </div>
+
+          <div class="sklop-teorija">
+            <h3>📖 Razlaga</h3>
+            <p>Isto množico lahko zapišemo na več načinov. Na maturi pogosto zahtevajo, da zapis iz enega načina prevedeš v drugega.</p>
+            <div class="tabela-wrap">
+              <table class="tabela">
+                <thead><tr><th>Način</th><th>Primer</th><th>Kdaj ga uporabimo</th></tr></thead>
+                <tbody>
+                  <tr><td>naštevanje elementov</td><td>\(A = \{2, 4, 6, 8\}\)</td><td>končna, majhna množica</td></tr>
+                  <tr><td>naštevanje z vzorcem</td><td>\(L = \{1, 3, 5, 7, \dots\}\)</td><td>neskončna množica z jasnim vzorcem</td></tr>
+                  <tr><td>opis z lastnostjo</td><td>\(A = \{x;\ x \in \mathbb{N} \land x &lt; 10 \land 2 \mid x\}\)</td><td>splošen zapis</td></tr>
+                  <tr><td>interval</td><td>\([-1, 3) = \{x \in \mathbb{R};\ -1 \le x &lt; 3\}\)</td><td>strnjena množica realnih števil</td></tr>
+                  <tr><td>Vennov diagram</td><td>krogi v pravokotniku</td><td>odnosi med več množicami</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p>Zapis \(\{x;\ \text{pogoj}\}\) (ali \(\{x \mid \text{pogoj}\}\)) beremo: „množica vseh \(x\), za katere velja pogoj“. Podpičje ali navpična črta pomeni „za katere velja“.</p>
+            <p>Pogosto uporabljeni zapisi števil: soda števila \(2k\), liha števila \(2k - 1\) (\(k \in \mathbb{N}\)), večkratniki števila 5: \(5k\), kvadrati: \(k^2\). Zapis \(a \mid b\) pomeni „\(a\) deli \(b\)“.</p>
+          </div>
+
+          <div class="sklop-naloge">
+            <h3>✏️ Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-2">
+              <h4>Tip 2: Zapiši množico z naštevanjem ali z opisom</h4>
+              <div class="prepoznaj">
+                <p><strong>Kako prepoznaš:</strong> množica je podana z opisom (pogojem), ti jo naštej. Ali obratno: naštete elemente opiši s pogojem.</p>
+                <ul class="kljucne"><li>„zapišite z naštevanjem elementov“</li><li>„zapišite z opisom“</li><li>\(\{x;\ \dots\}\)</li></ul>
+              </div>
+              <h5>Univerzalni postopek</h5>
+              <ol>
+                <li><strong>Opis → naštevanje:</strong> razberi, iz katere množice so elementi (\(\mathbb{N}\), \(\mathbb{Z}\), \(\mathbb{R}\)). Pogoje preveri po vrsti za vsa kandidatna števila in zapiši tista, ki ustrezajo vsem pogojem hkrati.</li>
+                <li><strong>Naštevanje → opis:</strong> poišči skupno lastnost (vsi sodi? vsi kvadrati? vsi manjši od 20?) in jo zapiši kot pogoj. Preveri, da pogoj ne dopušča še kakšnega elementa.</li>
+                <li>Pazi na meje: „manjši od“ (\(&lt;\)) ali „največ“ (\(\le\)).</li>
+              </ol>
+              <div class="primer">
+                <p><strong>Primer:</strong> Zapišite z naštevanjem \(A = \{x;\ x \in \mathbb{Z} \land x^2 &lt; 10\}\) in z opisom \(B = \{3, 6, 9, 12, 15\}\).</p>
+                <p>\(x^2 &lt; 10\) velja za \(-3, -2, -1, 0, 1, 2, 3\), zato \(A = \{-3, -2, -1, 0, 1, 2, 3\}\).</p>
+                <p>\(B = \{3k;\ k \in \mathbb{N} \land k \le 5\}\).</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ SKLOP 3 ============ -->
+        <section class="sklop" id="sklop-3">
+          <header class="sklop-header">
+            <span class="sklop-num">4.2.3</span>
+            <h2>Vennov diagram</h2>
+            <p>Kako narišemo diagram, kako vpisujemo elemente in kako ga beremo.</p>
+          </header>
+
+          <div class="sklop-cilji">
+            <h3>🎯 Cilji iz kataloga</h3>
+            <ul>
+              <li>Uporablja različne načine predstavitev množic.</li>
+              <li>Računa z množicami.</li>
+            </ul>
+          </div>
+
+          <div class="sklop-teorija">
+            <h3>📖 Razlaga</h3>
+            <p><strong>Vennov diagram</strong> je slika, na kateri univerzalno množico \(U\) narišemo kot pravokotnik, množice pa kot sklenjene krivulje (kroge ali elipse) v njem. Element vpišemo v tisto območje, kateremu pripada.</p>
+
+            <h4>Kako narišeš Vennov diagram — koraki</h4>
+            <ol>
+              <li>Nariši pravokotnik in v kot napiši \(U\).</li>
+              <li>Nariši toliko krogov, kolikor je množic. Krogi naj se <strong>vedno prekrivajo</strong> (vsak par in pri treh tudi vsi trije skupaj), tudi če je kakšen presek prazen; prazno območje pustiš prazno.</li>
+              <li>Elemente vpisuj <strong>od znotraj navzven</strong>: najprej tiste, ki so v vseh množicah, nato v dveh, nato samo v eni, na koncu tiste zunaj vseh krogov.</li>
+              <li>Vsak element vpiši <strong>samo enkrat</strong>.</li>
+            </ol>
+            <figure class="slika">
+<svg viewBox="0 0 380 260" role="img" aria-label="Vennov diagram" xmlns="http://www.w3.org/2000/svg"><defs><clipPath id="vn2c0"><circle cx="150" cy="105" r="70"/></clipPath><mask id="vn2m0"><rect x="0" y="0" width="380" height="260" fill="white"/><circle cx="150" cy="105" r="70" fill="black"/></mask><clipPath id="vn2c1"><circle cx="230" cy="105" r="70"/></clipPath><mask id="vn2m1"><rect x="0" y="0" width="380" height="260" fill="white"/><circle cx="230" cy="105" r="70" fill="black"/></mask><clipPath id="vn2c2"><circle cx="190" cy="170" r="70"/></clipPath><mask id="vn2m2"><rect x="0" y="0" width="380" height="260" fill="white"/><circle cx="190" cy="170" r="70" fill="black"/></mask></defs>
+<rect x="6" y="6" width="368" height="248" rx="8" fill="#FFFFFF" stroke="#94A0B8" stroke-width="1.5"/>
+
+<circle cx="150" cy="105" r="70" fill="none" stroke="#4F46E5" stroke-width="2"/><circle cx="230" cy="105" r="70" fill="none" stroke="#4F46E5" stroke-width="2"/><circle cx="190" cy="170" r="70" fill="none" stroke="#4F46E5" stroke-width="2"/>
+<text x="92" y="40" class="s-txt-k1" text-anchor="middle">A</text><text x="290" y="40" class="s-txt-k1" text-anchor="middle">B</text><text x="270" y="240" class="s-txt-k1" text-anchor="middle">C</text>
+<text x="16" y="24" class="s-txt-muted">U</text>
+<text x="115" y="95" text-anchor="middle" class="s-txt-b">1</text><text x="190" y="80" text-anchor="middle" class="s-txt-b">2</text><text x="265" y="95" text-anchor="middle" class="s-txt-b">3</text><text x="155" y="150" text-anchor="middle" class="s-txt-b">4</text><text x="190" y="128" text-anchor="middle" class="s-txt-b">5</text><text x="225" y="150" text-anchor="middle" class="s-txt-b">6</text><text x="190" y="205" text-anchor="middle" class="s-txt-b">7</text><text x="345" y="240" text-anchor="middle" class="s-txt-b">8</text>
+
+</svg>
+<figcaption>Trije krogi razdelijo \(U\) na 8 območij. Območje 5 je \(A \cap B \cap C\), območje 2 je \((A \cap B) \setminus C\), območje 1 je „samo \(A\)“, območje 8 je \((A \cup B \cup C)^C\). Vpisuješ od 5 navzven.</figcaption>
+</figure>
+            <p>Dva kroga razdelita pravokotnik na <strong>4 območja</strong>, trije krogi na <strong>8 območij</strong>. Vsako območje lahko opišemo z izrazom; to je ključ za branje diagrama.</p>
+            <div class="tabela-wrap">
+              <table class="tabela">
+                <thead><tr><th>Območje (dve množici)</th><th>Izraz</th></tr></thead>
+                <tbody>
+                  <tr><td>samo v \(A\)</td><td>\(A \setminus B = A \cap B^C\)</td></tr>
+                  <tr><td>v obeh</td><td>\(A \cap B\)</td></tr>
+                  <tr><td>samo v \(B\)</td><td>\(B \setminus A\)</td></tr>
+                  <tr><td>zunaj obeh</td><td>\((A \cup B)^C = A^C \cap B^C\)</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+
+          <div class="sklop-naloge">
+            <h3>✏️ Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-3">
+              <h4>Tip 3: Vpiši elemente v Vennov diagram in ga preberi</h4>
+              <div class="prepoznaj">
+                <p><strong>Kako prepoznaš:</strong> dane so množice z naštetimi elementi (ali opisom), narisati moraš diagram; ali pa je diagram narisan in iz njega zapišeš množice.</p>
+                <ul class="kljucne"><li>„predstavite z Vennovim diagramom“</li><li>„iz diagrama zapišite“</li><li>„vpišite elemente“</li></ul>
+              </div>
+              <h5>Univerzalni postopek</h5>
+              <ol>
+                <li>Zapiši \(U\) z naštevanjem.</li>
+                <li>Poišči presek vseh množic in ga vpiši v sredino.</li>
+                <li>Poišči elemente, ki so v natanko dveh množicah, nato v natanko eni.</li>
+                <li>Preostale elemente \(U\) vpiši zunaj krogov. Preveri: vsak element \(U\) je vpisan natanko enkrat.</li>
+                <li>Pri branju: množica \(A\) so <strong>vsi</strong> elementi znotraj kroga \(A\), tudi tisti v presekih.</li>
+              </ol>
+              <div class="primer">
+                <p><strong>Primer:</strong> \(U = \{1, 2, \dots, 10\}\), \(A\) so soda števila, \(B\) večkratniki števila 3. Narišite diagram.</p>
+                <p>\(A = \{2, 4, 6, 8, 10\}\), \(B = \{3, 6, 9\}\). Presek: \(\{6\}\). Samo \(A\): \(2, 4, 8, 10\). Samo \(B\): \(3, 9\). Zunaj: \(1, 5, 7\).</p>
+              </div>
+            </div>
+
+            <div class="tip-naloge" id="tip-4">
+              <h4>Tip 4: Osenči območje ali zapiši izraz za osenčeno območje</h4>
+              <div class="prepoznaj">
+                <p><strong>Kako prepoznaš:</strong> na diagramu je osenčen del, zapisati moraš izraz z \(\cup, \cap, \setminus, ^C\); ali obratno, osenčiti moraš del, ki ustreza izrazu.</p>
+                <ul class="kljucne"><li>„osenčite“</li><li>„z množicami zapišite osenčeni del“</li><li>„katera množica je osenčena“</li></ul>
+              </div>
+              <h5>Univerzalni postopek</h5>
+              <ol>
+                <li><strong>Izraz → senčenje:</strong> računaj od notranjih oklepajev navzven. Vsak vmesni rezultat osenči s svetlim svinčnikom ali s črtkanjem v drugo smer; končni rezultat obrobi.</li>
+                <li><strong>Senčenje → izraz:</strong> oštevilči območja (1–4 ali 1–8). Za osenčena območja zapiši, v katerih množicah so in v katerih ne. Nato jih poveži: „v \(A\) in ne v \(B\)“ → \(A \cap B^C\); več območij poveži z \(\cup\).</li>
+                <li>Preveri: izraz mora zajeti <strong>vsa</strong> osenčena in <strong>nobenega</strong> neosenčenega območja.</li>
+              </ol>
+              <div class="primer">
+                <p><strong>Primer:</strong> Osenčeni sta območji „samo v \(A\)“ in „samo v \(B\)“. Zapišite izraz.</p>
+                <p>\((A \setminus B) \cup (B \setminus A)\), kar je enako \((A \cup B) \setminus (A \cap B)\).</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ SKLOP 4 ============ -->
+        <section class="sklop" id="sklop-4">
+          <header class="sklop-header">
+            <span class="sklop-num">4.2.4</span>
+            <h2>Presek, unija, razlika, komplement množic</h2>
+            <p>Štiri osnovne operacije, na končnih množicah in na intervalih.</p>
+          </header>
+
+          <div class="sklop-cilji">
+            <h3>🎯 Cilji iz kataloga</h3>
+            <ul>
+              <li>Računa z množicami.</li>
+            </ul>
+          </div>
+
+          <div class="sklop-teorija">
+            <h3>📖 Razlaga</h3>
             <div class="concept-list two-col">
               <div class="concept">
-                <h4>Unija</h4>
-                <div class="concept-formula">\(A \cup B = \{x; x \in A \lor x \in B\}\)</div>
-                <p class="concept-desc">Vsi elementi, ki so v \(A\) <strong>ali</strong> v \(B\) (ali v obeh). Ponavljanja izpustimo.</p>
+                <h4>Unija — „ali“</h4>
+                <div class="concept-formula">\(A \cup B = \{x;\ x \in A \lor x \in B\}\)</div>
+                <p class="concept-desc">Elementi, ki so v \(A\) <strong>ali</strong> v \(B\) (ali v obeh). Skupne elemente zapišemo enkrat.</p>
               </div>
               <div class="concept">
-                <h4>Presek</h4>
-                <div class="concept-formula">\(A \cap B = \{x; x \in A \land x \in B\}\)</div>
-                <p class="concept-desc">Elementi, ki so v \(A\) <strong>in</strong> v \(B\) hkrati.</p>
+                <h4>Presek — „in“</h4>
+                <div class="concept-formula">\(A \cap B = \{x;\ x \in A \land x \in B\}\)</div>
+                <p class="concept-desc">Elementi, ki so v \(A\) <strong>in</strong> v \(B\) hkrati. Če je \(A \cap B = \emptyset\), sta množici <strong>disjunktni</strong>.</p>
               </div>
               <div class="concept">
-                <h4>Razlika</h4>
-                <div class="concept-formula">\(A \setminus B = \{x; x \in A \land x \notin B\}\)</div>
-                <p class="concept-desc">Elementi, ki so v \(A\), <strong>a niso</strong> v \(B\). Vrstni red je pomemben: \(A \setminus B \neq B \setminus A\).</p>
+                <h4>Razlika — „brez“</h4>
+                <div class="concept-formula">\(A \setminus B = \{x;\ x \in A \land x \notin B\}\)</div>
+                <p class="concept-desc">Iz \(A\) odstranimo vse, kar je v \(B\). Vrstni red je pomemben: \(A \setminus B \ne B \setminus A\).</p>
               </div>
               <div class="concept">
-                <h4>Komplement</h4>
+                <h4>Komplement — „vse ostalo“</h4>
                 <div class="concept-formula">\(A^C = U \setminus A\)</div>
-                <p class="concept-desc">Elementi univerzalne množice \(U\), ki <strong>niso</strong> v \(A\).</p>
+                <p class="concept-desc">Vsi elementi univerzalne množice, ki niso v \(A\). Brez \(U\) komplementa ne moremo določiti.</p>
               </div>
-              <div class="concept">
-                <h4>Kartezični produkt</h4>
-                <div class="concept-formula">\(A \times B = \{(a, b); a \in A, b \in B\}\)</div>
-                <p class="concept-desc">Množica <strong>urejenih parov</strong>, kjer je prvi element iz \(A\), drugi pa iz \(B\).</p>
+            </div>
+            <div class="slike-vrsta">
+<figure class="slika">
+<svg viewBox="0 0 260 180" role="img" aria-label="Vennov diagram" xmlns="http://www.w3.org/2000/svg"><defs><clipPath id="vn3c0"><circle cx="98" cy="89" r="58"/></clipPath><mask id="vn3m0"><rect x="0" y="0" width="260" height="180" fill="white"/><circle cx="98" cy="89" r="58" fill="black"/></mask><clipPath id="vn3c1"><circle cx="162" cy="89" r="58"/></clipPath><mask id="vn3m1"><rect x="0" y="0" width="260" height="180" fill="white"/><circle cx="162" cy="89" r="58" fill="black"/></mask></defs>
+<rect x="6" y="6" width="248" height="168" rx="8" fill="#FFFFFF" stroke="#94A0B8" stroke-width="1.5"/>
+<g clip-path="url(#vn3c0)"><g mask="url(#vn3m1)"><rect x="6" y="6" width="248" height="168" fill="rgba(79,70,229,0.28)"/></g></g><g clip-path="url(#vn3c1)"><g clip-path="url(#vn3c0)"><rect x="6" y="6" width="248" height="168" fill="rgba(79,70,229,0.28)"/></g></g><g clip-path="url(#vn3c1)"><g mask="url(#vn3m0)"><rect x="6" y="6" width="248" height="168" fill="rgba(79,70,229,0.28)"/></g></g>
+<circle cx="98" cy="89" r="58" fill="none" stroke="#4F46E5" stroke-width="2"/><circle cx="162" cy="89" r="58" fill="none" stroke="#4F46E5" stroke-width="2"/>
+<text x="52" y="35" class="s-txt-k1" text-anchor="middle">A</text><text x="208" y="35" class="s-txt-k1" text-anchor="middle">B</text>
+<text x="16" y="24" class="s-txt-muted">U</text>
+
+
+</svg>
+<figcaption>\(A \cup B\)</figcaption>
+</figure>
+<figure class="slika">
+<svg viewBox="0 0 260 180" role="img" aria-label="Vennov diagram" xmlns="http://www.w3.org/2000/svg"><defs><clipPath id="vn4c0"><circle cx="98" cy="89" r="58"/></clipPath><mask id="vn4m0"><rect x="0" y="0" width="260" height="180" fill="white"/><circle cx="98" cy="89" r="58" fill="black"/></mask><clipPath id="vn4c1"><circle cx="162" cy="89" r="58"/></clipPath><mask id="vn4m1"><rect x="0" y="0" width="260" height="180" fill="white"/><circle cx="162" cy="89" r="58" fill="black"/></mask></defs>
+<rect x="6" y="6" width="248" height="168" rx="8" fill="#FFFFFF" stroke="#94A0B8" stroke-width="1.5"/>
+<g clip-path="url(#vn4c1)"><g clip-path="url(#vn4c0)"><rect x="6" y="6" width="248" height="168" fill="rgba(79,70,229,0.28)"/></g></g>
+<circle cx="98" cy="89" r="58" fill="none" stroke="#4F46E5" stroke-width="2"/><circle cx="162" cy="89" r="58" fill="none" stroke="#4F46E5" stroke-width="2"/>
+<text x="52" y="35" class="s-txt-k1" text-anchor="middle">A</text><text x="208" y="35" class="s-txt-k1" text-anchor="middle">B</text>
+<text x="16" y="24" class="s-txt-muted">U</text>
+
+
+</svg>
+<figcaption>\(A \cap B\)</figcaption>
+</figure>
+<figure class="slika">
+<svg viewBox="0 0 260 180" role="img" aria-label="Vennov diagram" xmlns="http://www.w3.org/2000/svg"><defs><clipPath id="vn5c0"><circle cx="98" cy="89" r="58"/></clipPath><mask id="vn5m0"><rect x="0" y="0" width="260" height="180" fill="white"/><circle cx="98" cy="89" r="58" fill="black"/></mask><clipPath id="vn5c1"><circle cx="162" cy="89" r="58"/></clipPath><mask id="vn5m1"><rect x="0" y="0" width="260" height="180" fill="white"/><circle cx="162" cy="89" r="58" fill="black"/></mask></defs>
+<rect x="6" y="6" width="248" height="168" rx="8" fill="#FFFFFF" stroke="#94A0B8" stroke-width="1.5"/>
+<g clip-path="url(#vn5c0)"><g mask="url(#vn5m1)"><rect x="6" y="6" width="248" height="168" fill="rgba(79,70,229,0.28)"/></g></g>
+<circle cx="98" cy="89" r="58" fill="none" stroke="#4F46E5" stroke-width="2"/><circle cx="162" cy="89" r="58" fill="none" stroke="#4F46E5" stroke-width="2"/>
+<text x="52" y="35" class="s-txt-k1" text-anchor="middle">A</text><text x="208" y="35" class="s-txt-k1" text-anchor="middle">B</text>
+<text x="16" y="24" class="s-txt-muted">U</text>
+
+
+</svg>
+<figcaption>\(A \setminus B\)</figcaption>
+</figure>
+<figure class="slika">
+<svg viewBox="0 0 260 180" role="img" aria-label="Vennov diagram" xmlns="http://www.w3.org/2000/svg"><defs><clipPath id="vn6c0"><circle cx="98" cy="89" r="58"/></clipPath><mask id="vn6m0"><rect x="0" y="0" width="260" height="180" fill="white"/><circle cx="98" cy="89" r="58" fill="black"/></mask><clipPath id="vn6c1"><circle cx="162" cy="89" r="58"/></clipPath><mask id="vn6m1"><rect x="0" y="0" width="260" height="180" fill="white"/><circle cx="162" cy="89" r="58" fill="black"/></mask></defs>
+<rect x="6" y="6" width="248" height="168" rx="8" fill="#FFFFFF" stroke="#94A0B8" stroke-width="1.5"/>
+<g clip-path="url(#vn6c1)"><g mask="url(#vn6m0)"><rect x="6" y="6" width="248" height="168" fill="rgba(79,70,229,0.28)"/></g></g><g mask="url(#vn6m1)"><g mask="url(#vn6m0)"><rect x="6" y="6" width="248" height="168" fill="rgba(79,70,229,0.28)"/></g></g>
+<circle cx="98" cy="89" r="58" fill="none" stroke="#4F46E5" stroke-width="2"/><circle cx="162" cy="89" r="58" fill="none" stroke="#4F46E5" stroke-width="2"/>
+<text x="52" y="35" class="s-txt-k1" text-anchor="middle">A</text><text x="208" y="35" class="s-txt-k1" text-anchor="middle">B</text>
+<text x="16" y="24" class="s-txt-muted">U</text>
+
+
+</svg>
+<figcaption>\(A^C\)</figcaption>
+</figure>
+</div>
+
+            <h4>Operacije z intervali</h4>
+            <p>Kadar so množice intervali realnih števil, jih <strong>vedno najprej nariši na številsko premico</strong>, eno nad drugo. Polni krožec pomeni, da krajišče pripada intervalu (oglati oklepaj), prazen krožec, da ne pripada (okrogli oklepaj).</p>
+            <figure class="slika slika--siroka">
+<svg viewBox="0 0 560 170" role="img" aria-label="Intervala A in B na številski premici" xmlns="http://www.w3.org/2000/svg"><defs><marker id="ip1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker></defs><line class="s-os" x1="20" y1="140" x2="545" y2="140" marker-end="url(#ip1)"/><line class="s-os" x1="90" y1="135" x2="90" y2="145"/><text class="s-os-txt" x="90" y="160" text-anchor="middle">-2</text><line class="s-os" x1="140" y1="135" x2="140" y2="145"/><text class="s-os-txt" x="140" y="160" text-anchor="middle">-1</text><line class="s-os" x1="190" y1="135" x2="190" y2="145"/><text class="s-os-txt" x="190" y="160" text-anchor="middle">0</text><line class="s-os" x1="240" y1="135" x2="240" y2="145"/><text class="s-os-txt" x="240" y="160" text-anchor="middle">1</text><line class="s-os" x1="290" y1="135" x2="290" y2="145"/><text class="s-os-txt" x="290" y="160" text-anchor="middle">2</text><line class="s-os" x1="340" y1="135" x2="340" y2="145"/><text class="s-os-txt" x="340" y="160" text-anchor="middle">3</text><line class="s-os" x1="390" y1="135" x2="390" y2="145"/><text class="s-os-txt" x="390" y="160" text-anchor="middle">4</text><line class="s-os" x1="440" y1="135" x2="440" y2="145"/><text class="s-os-txt" x="440" y="160" text-anchor="middle">5</text><line class="s-os" x1="490" y1="135" x2="490" y2="145"/><text class="s-os-txt" x="490" y="160" text-anchor="middle">6</text><line class="s-pom" x1="90" y1="30" x2="90" y2="140"/><line class="s-pom" x1="240" y1="30" x2="240" y2="140"/><line class="s-pom" x1="340" y1="30" x2="340" y2="140"/><line class="s-pom" x1="440" y1="30" x2="440" y2="140"/><line class="s-k1" x1="90" y1="50" x2="340" y2="50"/><circle cx="90" cy="50" r="6" class="s-tocka"/><circle cx="340" cy="50" r="6" class="s-prazna"/><text x="76" y="55" text-anchor="end" class="s-txt-k1">A</text><text x="215" y="38" text-anchor="middle" class="s-txt-k1">[−2, 3)</text><line class="s-k2" x1="240" y1="95" x2="440" y2="95"/><circle cx="240" cy="95" r="6" class="s-tocka-2"/><circle cx="440" cy="95" r="6" class="s-tocka-2"/><text x="454" y="100" class="s-txt-k2">B</text><text x="390" y="83" text-anchor="middle" class="s-txt-k2">[1, 5]</text><rect x="240" y="115" width="100" height="14" fill="rgba(79,70,229,0.25)"/><text x="290" y="126" text-anchor="middle" style="font-size:11px" class="s-txt-k1">A ∩ B</text></svg>
+<figcaption>Vsak interval narišemo v svoji vrstici. Polni krožec: krajišče pripada intervalu. Prazen krožec: ne pripada. Presek je del premice pod obema črtama.</figcaption>
+</figure>
+            <p>Za \(A = [-2, 3)\) in \(B = [1, 5]\) s slike preberemo:</p>
+            <ul>
+              <li>\(A \cup B = [-2, 5]\) (vse, kar pokriva vsaj ena črta),</li>
+              <li>\(A \cap B = [1, 3)\) (kjer sta obe črti),</li>
+              <li>\(A \setminus B = [-2, 1)\) (krajišče \(1\) je v \(B\), zato ga iz \(A\) odstranimo: okrogel oklepaj),</li>
+              <li>\(B \setminus A = [3, 5]\) (\(3 \notin A\), zato \(3\) ostane).</li>
+            </ul>
+          </div>
+
+          <div class="sklop-naloge">
+            <h3>✏️ Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-5">
+              <h4>Tip 5: Unija, presek, razlika in komplement končnih množic</h4>
+              <div class="prepoznaj">
+                <p><strong>Kako prepoznaš:</strong> množice so podane z naštevanjem ali opisom, izračunati moraš izraz z \(\cup, \cap, \setminus, ^C\).</p>
+                <ul class="kljucne"><li>„zapišite \(A \cap B\)“</li><li>„določite \((A \cup B)^C\)“</li><li>„izračunajte“</li></ul>
               </div>
-              <div class="concept">
-                <h4>Moč unije</h4>
-                <div class="concept-formula">\(m(A \cup B) = m(A) + m(B) - m(A \cap B)\)</div>
-                <p class="concept-desc">Elemente v preseku štejemo <strong>dvakrat</strong>, zato jih enkrat odštejemo.</p>
+              <h5>Univerzalni postopek</h5>
+              <ol>
+                <li>Vse množice (tudi \(U\)) zapiši z naštevanjem.</li>
+                <li>Računaj od notranjih oklepajev navzven; vsak vmesni rezultat zapiši.</li>
+                <li>Pri komplementu vedno izhajaj iz \(U\).</li>
+                <li>Pri sestavljenem izrazu si pomagaj z Vennovim diagramom, rezultat preveri na sliki.</li>
+              </ol>
+              <div class="primer">
+                <p><strong>Primer:</strong> \(U = \{1, \dots, 8\}\), \(A = \{1, 2, 3, 4\}\), \(B = \{3, 4, 5, 6\}\). Izračunajte \((A \cup B)^C\) in \(A \cap B^C\).</p>
+                <p>\(A \cup B = \{1, \dots, 6\}\), zato \((A \cup B)^C = \{7, 8\}\).</p>
+                <p>\(B^C = \{1, 2, 7, 8\}\), zato \(A \cap B^C = \{1, 2\}\) (to je \(A \setminus B\)).</p>
+              </div>
+            </div>
+
+            <div class="tip-naloge" id="tip-6">
+              <h4>Tip 6: Operacije z intervali</h4>
+              <div class="prepoznaj">
+                <p><strong>Kako prepoznaš:</strong> množici sta intervala ali neenačbi z realnimi števili.</p>
+                <ul class="kljucne"><li>\(A = [a, b)\)</li><li>„\(A = \{x \in \mathbb{R};\ \dots\}\)“</li><li>„zapišite z intervalom“</li></ul>
+              </div>
+              <h5>Univerzalni postopek</h5>
+              <ol>
+                <li>Če je množica podana z neenačbo, jo najprej reši in zapiši kot interval.</li>
+                <li>Nariši številsko premico, nad njo vsak interval v svoji vrstici. Polni krožec \([\,]\), prazen krožec \((\,)\).</li>
+                <li>Unija: vse, kar je pokrito vsaj enkrat. Presek: kjer se črti prekrivata. Razlika: del prve črte, ki ga druga ne pokriva.</li>
+                <li>Krajišča preveri posebej: ali število res pripada rezultatu? Pri razliki se „zaprtost“ krajišča obrne.</li>
+                <li>Neskončnost \(\infty\) ima vedno okrogel oklepaj.</li>
+              </ol>
+              <div class="primer">
+                <p><strong>Primer:</strong> \(A = \{x \in \mathbb{R};\ x &gt; -1\}\), \(B = (-\infty, 2]\). Določite \(A \cap B\) in \(A^C\).</p>
+                <p>\(A = (-1, \infty)\). \(A \cap B = (-1, 2]\). \(A^C = (-\infty, -1]\) (\(-1 \notin A\), zato \(-1 \in A^C\)).</p>
               </div>
             </div>
           </div>
+        </section>
 
+        <!-- ============ SKLOP 5 (VR) ============ -->
+        <section class="sklop sklop--visja" id="sklop-5">
+          <header class="sklop-header">
+            <span class="sklop-num">4.2.5</span><span class="badge-vr">Višja raven</span>
+            <h2>Lastnosti operacij z množicami</h2>
+            <p>Zakoni, po katerih poenostavljamo izraze z množicami.</p>
+          </header>
+
+          <div class="sklop-cilji">
+            <h3>🎯 Cilji iz kataloga</h3>
+            <ul>
+              <li>Računa z množicami in uporablja lastnosti operacij.</li>
+            </ul>
+          </div>
+
+          <div class="sklop-teorija">
+            <h3>📖 Razlaga</h3>
+            <p>Operacije z množicami se obnašajo enako kot logične povezave: \(\cup\) ustreza \(\lor\), \(\cap\) ustreza \(\land\), komplement ustreza \(\neg\). Zato veljajo isti zakoni kot v <a href="/views/matematika/snov/osnove_logike/osnove_logike_razlaga.html#sklop-5">logiki</a>.</p>
+            <div class="tabela-wrap">
+              <table class="tabela">
+                <thead><tr><th>Zakon</th><th>Zapis</th></tr></thead>
+                <tbody>
+                  <tr><td>komutativnost</td><td>\(A \cup B = B \cup A\), \(\;A \cap B = B \cap A\)</td></tr>
+                  <tr><td>asociativnost</td><td>\((A \cup B) \cup C = A \cup (B \cup C)\), enako za \(\cap\)</td></tr>
+                  <tr><td>distributivnost</td><td>\(A \cap (B \cup C) = (A \cap B) \cup (A \cap C)\)<br>\(A \cup (B \cap C) = (A \cup B) \cap (A \cup C)\)</td></tr>
+                  <tr><td>De Morganova zakona</td><td>\((A \cup B)^C = A^C \cap B^C\), \(\;(A \cap B)^C = A^C \cup B^C\)</td></tr>
+                  <tr><td>razlika s komplementom</td><td>\(A \setminus B = A \cap B^C\)</td></tr>
+                  <tr><td>dvojni komplement</td><td>\((A^C)^C = A\)</td></tr>
+                  <tr><td>z \(U\) in \(\emptyset\)</td><td>\(A \cup A^C = U\), \(\;A \cap A^C = \emptyset\), \(\;A \cap U = A\), \(\;A \cup \emptyset = A\)</td></tr>
+                  <tr><td>absorpcija</td><td>\(A \cup (A \cap B) = A\), \(\;A \cap (A \cup B) = A\)</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p>Vsak zakon lahko <strong>preveriš z Vennovim diagramom</strong>: osenči levo stran, osenči desno stran, in če dobiš isto območje, enakost velja. Pri pisnem dokazu pa uporabimo definicije (\(x \in A \cup B \Leftrightarrow x \in A \lor x \in B\)) in logične zakone.</p>
+          </div>
+
+          <div class="sklop-naloge">
+            <h3>✏️ Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-7">
+              <h4>Tip 7: Poenostavi izraz z množicami ali preveri enakost</h4>
+              <div class="prepoznaj">
+                <p><strong>Kako prepoznaš:</strong> dan je daljši izraz s komplementi in oklepaji, zapisati ga moraš krajše; ali pa preveriti, ali dve strani predstavljata isto množico.</p>
+                <ul class="kljucne"><li>„poenostavite izraz“</li><li>„ali velja enakost“</li><li>„dokažite z Vennovim diagramom“</li></ul>
+              </div>
+              <h5>Univerzalni postopek</h5>
+              <ol>
+                <li>Razlike zapiši s presekom in komplementom: \(A \setminus B = A \cap B^C\).</li>
+                <li>Komplemente oklepajev odpravi z De Morganom.</li>
+                <li>Uporabi distributivnost, nato \(A \cap A^C = \emptyset\), \(A \cup A^C = U\), absorpcijo.</li>
+                <li>Za preverjanje enakosti nariši dva diagrama, enega za levo in enega za desno stran.</li>
+              </ol>
+              <div class="primer">
+                <p><strong>Primer:</strong> Poenostavite \((A \cup B) \cap (A \cup B^C)\).</p>
+                <p>Distributivnost: \(= A \cup (B \cap B^C) = A \cup \emptyset = A\).</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ SKLOP 6 ============ -->
+        <section class="sklop" id="sklop-6">
+          <header class="sklop-header">
+            <span class="sklop-num">4.2.6</span>
+            <h2>Potenčna množica</h2>
+            <p>Množica vseh podmnožic dane množice.</p>
+          </header>
+
+          <div class="sklop-cilji">
+            <h3>🎯 Cilji iz kataloga</h3>
+            <ul>
+              <li>Poišče potenčno množico končne množice.</li>
+            </ul>
+          </div>
+
+          <div class="sklop-teorija">
+            <h3>📖 Razlaga</h3>
+            <p><strong>Potenčna množica</strong> \(\mathcal{P}(A)\) je množica, katere elementi so <strong>vse podmnožice</strong> množice \(A\), vključno s prazno množico \(\emptyset\) in s samo množico \(A\).</p>
+            <p>Podmnožice naštevamo <strong>sistematično po velikosti</strong>, tako ne pozabimo nobene. Za \(A = \{a, b, c\}\):</p>
+            <div class="tabela-wrap">
+              <table class="tabela">
+                <thead><tr><th>Število elementov</th><th>Podmnožice</th><th>Koliko</th></tr></thead>
+                <tbody>
+                  <tr><td>0</td><td>\(\emptyset\)</td><td>1</td></tr>
+                  <tr><td>1</td><td>\(\{a\}, \{b\}, \{c\}\)</td><td>3</td></tr>
+                  <tr><td>2</td><td>\(\{a, b\}, \{a, c\}, \{b, c\}\)</td><td>3</td></tr>
+                  <tr><td>3</td><td>\(\{a, b, c\}\)</td><td>1</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p>\(\mathcal{P}(A) = \{\emptyset, \{a\}, \{b\}, \{c\}, \{a, b\}, \{a, c\}, \{b, c\}, \{a, b, c\}\}\), skupaj \(8 = 2^3\) elementov.</p>
+            <p>Elementi potenčne množice so <strong>množice</strong>. Zato velja \(\{a\} \in \mathcal{P}(A)\) in \(\emptyset \in \mathcal{P}(A)\), ne pa \(a \in \mathcal{P}(A)\).</p>
+          </div>
+
+          <div class="sklop-naloge">
+            <h3>✏️ Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-8">
+              <h4>Tip 8: Zapiši potenčno množico</h4>
+              <div class="prepoznaj">
+                <p><strong>Kako prepoznaš:</strong> zahtevajo vse podmnožice dane množice ali \(\mathcal{P}(A)\).</p>
+                <ul class="kljucne"><li>„zapišite potenčno množico“</li><li>„zapišite vse podmnožice“</li><li>\(\mathcal{P}(A)\)</li></ul>
+              </div>
+              <h5>Univerzalni postopek</h5>
+              <ol>
+                <li>Preštej elemente \(n = m(A)\). Vedel boš, da mora biti podmnožic \(2^n\).</li>
+                <li>Naštej po velikosti: \(\emptyset\), vse enoelementne, vse dvoelementne, …, \(A\).</li>
+                <li>Preštej zapisane in primerjaj z \(2^n\).</li>
+                <li>Celoten rezultat zapiši v zavitih oklepajih: \(\mathcal{P}(A) = \{\dots\}\).</li>
+              </ol>
+              <div class="primer">
+                <p><strong>Primer:</strong> \(A = \{0, \{1\}\}\). Zapišite \(\mathcal{P}(A)\).</p>
+                <p>\(n = 2\), podmnožic je 4: \(\mathcal{P}(A) = \{\emptyset, \{0\}, \{\{1\}\}, \{0, \{1\}\}\}\).</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ SKLOP 7 ============ -->
+        <section class="sklop" id="sklop-7">
+          <header class="sklop-header">
+            <span class="sklop-num">4.2.7</span>
+            <h2>Kartezični produkt množic</h2>
+            <p>Urejeni pari in njihov graf v koordinatnem sistemu.</p>
+          </header>
+
+          <div class="sklop-cilji">
+            <h3>🎯 Cilji iz kataloga</h3>
+            <ul>
+              <li>Nariše graf kartezičnega produkta dveh množic.</li>
+            </ul>
+          </div>
+
+          <div class="sklop-teorija">
+            <h3>📖 Razlaga</h3>
+            <p><strong>Kartezični produkt</strong> množic \(A\) in \(B\) je množica vseh <strong>urejenih parov</strong>, v katerih je prvi element iz \(A\), drugi pa iz \(B\):</p>
+            <div class="formula-card">\(A \times B = \{(a, b);\ a \in A \land b \in B\}\)</div>
+            <ul>
+              <li>V urejenem paru je vrstni red pomemben: \((1, 2) \ne (2, 1)\). Zato je v splošnem \(A \times B \ne B \times A\).</li>
+              <li>\(A \times A\) pišemo tudi \(A^2\); \(\mathbb{R} \times \mathbb{R} = \mathbb{R}^2\) je cela koordinatna ravnina.</li>
+            </ul>
+
+            <h4>Graf kartezičnega produkta — kako ga narišeš</h4>
+            <ol>
+              <li>Nariši koordinatni sistem. Elemente <strong>prve</strong> množice nanašaj na os \(x\), elemente <strong>druge</strong> na os \(y\).</li>
+              <li>Če sta množici končni, je graf <strong>množica točk</strong>: nad vsakim \(a\) narišeš točko pri vsakem \(b\) (mreža točk).</li>
+              <li>Če sta množici intervala, je graf <strong>pravokotnik</strong>. Stranice, ki ustrezajo zaprtim krajiščem, nariši polno, odprtim krajiščem pa črtkano.</li>
+              <li>Če je ena množica končna, druga interval, so to <strong>daljice</strong> (navpične ali vodoravne).</li>
+            </ol>
+            <div class="slike-vrsta">
+<figure class="slika">
+<svg viewBox="0 0 240 220" role="img" aria-label="Kartezični produkt končnih množic" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g1-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g1-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g1-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g1-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g1-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g1-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<path class="s-mreza" d="M44.8,194V26M82.4,194V26M120,194V26M157.6,194V26M195.2,194V26M26,173H214M26,131H214M26,89H214M26,47H214"/>
+<line class="s-os" x1="26" y1="173" x2="222" y2="173" marker-end="url(#g1-p)"/>
+<line class="s-os" x1="44.8" y1="194" x2="44.8" y2="18" marker-end="url(#g1-p)"/>
+<text class="s-os-txt" x="216" y="165" text-anchor="end">x</text>
+<text class="s-os-txt" x="52.8" y="30">y</text>
+<line class="s-os" x1="82.4" y1="170" x2="82.4" y2="176"/><text class="s-os-txt" x="82.4" y="188" text-anchor="middle">1</text><line class="s-os" x1="120" y1="170" x2="120" y2="176"/><text class="s-os-txt" x="120" y="188" text-anchor="middle">2</text><line class="s-os" x1="157.6" y1="170" x2="157.6" y2="176"/><text class="s-os-txt" x="157.6" y="188" text-anchor="middle">3</text><line class="s-os" x1="195.2" y1="170" x2="195.2" y2="176"/><text class="s-os-txt" x="195.2" y="188" text-anchor="middle">4</text><line class="s-os" x1="41.8" y1="131" x2="47.8" y2="131"/><text class="s-os-txt" x="38.8" y="135" text-anchor="end">1</text><line class="s-os" x1="41.8" y1="89" x2="47.8" y2="89"/><text class="s-os-txt" x="38.8" y="93" text-anchor="end">2</text><line class="s-os" x1="41.8" y1="47" x2="47.8" y2="47"/><text class="s-os-txt" x="38.8" y="51" text-anchor="end">3</text><text class="s-os-txt" x="38.8" y="188" text-anchor="end">0</text>
+<circle class="s-tocka" cx="82.4" cy="131" r="5"/>
+<circle class="s-tocka" cx="82.4" cy="47" r="5"/>
+<circle class="s-tocka" cx="120" cy="131" r="5"/>
+<circle class="s-tocka" cx="120" cy="47" r="5"/>
+<circle class="s-tocka" cx="195.2" cy="131" r="5"/>
+<circle class="s-tocka" cx="195.2" cy="47" r="5"/>
+</svg>
+<figcaption>\(\{1, 2, 4\} \times \{1, 3\}\): 6 točk</figcaption>
+</figure>
+<figure class="slika">
+<svg viewBox="0 0 240 220" role="img" aria-label="Kartezični produkt intervalov" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g2-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g2-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g2-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g2-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g2-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g2-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<path class="s-mreza" d="M44.8,194V26M82.4,194V26M120,194V26M157.6,194V26M195.2,194V26M26,173H214M26,131H214M26,89H214M26,47H214"/>
+<polygon class="s-ploskev" points="82.4,131 157.6,131 157.6,47 82.4,47"/>
+<line class="s-os" x1="26" y1="173" x2="222" y2="173" marker-end="url(#g2-p)"/>
+<line class="s-os" x1="44.8" y1="194" x2="44.8" y2="18" marker-end="url(#g2-p)"/>
+<text class="s-os-txt" x="216" y="165" text-anchor="end">x</text>
+<text class="s-os-txt" x="52.8" y="30">y</text>
+<line class="s-os" x1="82.4" y1="170" x2="82.4" y2="176"/><text class="s-os-txt" x="82.4" y="188" text-anchor="middle">1</text><line class="s-os" x1="120" y1="170" x2="120" y2="176"/><text class="s-os-txt" x="120" y="188" text-anchor="middle">2</text><line class="s-os" x1="157.6" y1="170" x2="157.6" y2="176"/><text class="s-os-txt" x="157.6" y="188" text-anchor="middle">3</text><line class="s-os" x1="195.2" y1="170" x2="195.2" y2="176"/><text class="s-os-txt" x="195.2" y="188" text-anchor="middle">4</text><line class="s-os" x1="41.8" y1="131" x2="47.8" y2="131"/><text class="s-os-txt" x="38.8" y="135" text-anchor="end">1</text><line class="s-os" x1="41.8" y1="89" x2="47.8" y2="89"/><text class="s-os-txt" x="38.8" y="93" text-anchor="end">2</text><line class="s-os" x1="41.8" y1="47" x2="47.8" y2="47"/><text class="s-os-txt" x="38.8" y="51" text-anchor="end">3</text><text class="s-os-txt" x="38.8" y="188" text-anchor="end">0</text>
+<line class="s-k1" x1="82.4" y1="131" x2="157.6" y2="131"/>
+<line class="s-k1" x1="82.4" y1="131" x2="82.4" y2="47"/>
+<line class="s-k1" x1="157.6" y1="131" x2="157.6" y2="47"/>
+<line class="s-pom" x1="82.4" y1="47" x2="157.6" y2="47"/>
+</svg>
+<figcaption>\([1, 3] \times [1, 3)\): pravokotnik, zgornja stranica črtkana</figcaption>
+</figure>
+<figure class="slika">
+<svg viewBox="0 0 240 220" role="img" aria-label="Kartezični produkt množice in intervala" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g3-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g3-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g3-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g3-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g3-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g3-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<path class="s-mreza" d="M44.8,194V26M82.4,194V26M120,194V26M157.6,194V26M195.2,194V26M26,173H214M26,131H214M26,89H214M26,47H214"/>
+<line class="s-os" x1="26" y1="173" x2="222" y2="173" marker-end="url(#g3-p)"/>
+<line class="s-os" x1="44.8" y1="194" x2="44.8" y2="18" marker-end="url(#g3-p)"/>
+<text class="s-os-txt" x="216" y="165" text-anchor="end">x</text>
+<text class="s-os-txt" x="52.8" y="30">y</text>
+<line class="s-os" x1="82.4" y1="170" x2="82.4" y2="176"/><text class="s-os-txt" x="82.4" y="188" text-anchor="middle">1</text><line class="s-os" x1="120" y1="170" x2="120" y2="176"/><text class="s-os-txt" x="120" y="188" text-anchor="middle">2</text><line class="s-os" x1="157.6" y1="170" x2="157.6" y2="176"/><text class="s-os-txt" x="157.6" y="188" text-anchor="middle">3</text><line class="s-os" x1="195.2" y1="170" x2="195.2" y2="176"/><text class="s-os-txt" x="195.2" y="188" text-anchor="middle">4</text><line class="s-os" x1="41.8" y1="131" x2="47.8" y2="131"/><text class="s-os-txt" x="38.8" y="135" text-anchor="end">1</text><line class="s-os" x1="41.8" y1="89" x2="47.8" y2="89"/><text class="s-os-txt" x="38.8" y="93" text-anchor="end">2</text><line class="s-os" x1="41.8" y1="47" x2="47.8" y2="47"/><text class="s-os-txt" x="38.8" y="51" text-anchor="end">3</text><text class="s-os-txt" x="38.8" y="188" text-anchor="end">0</text>
+<line class="s-k1" x1="82.4" y1="131" x2="82.4" y2="47"/>
+<line class="s-k1" x1="120" y1="131" x2="120" y2="47"/>
+<line class="s-k1" x1="195.2" y1="131" x2="195.2" y2="47"/>
+<circle class="s-tocka" cx="82.4" cy="131" r="4.5"/>
+<circle class="s-tocka" cx="82.4" cy="47" r="4.5"/>
+<circle class="s-tocka" cx="120" cy="131" r="4.5"/>
+<circle class="s-tocka" cx="120" cy="47" r="4.5"/>
+<circle class="s-tocka" cx="195.2" cy="131" r="4.5"/>
+<circle class="s-tocka" cx="195.2" cy="47" r="4.5"/>
+</svg>
+<figcaption>\(\{1, 2, 4\} \times [1, 3]\): tri navpične daljice</figcaption>
+</figure>
+</div>
+          </div>
+
+          <div class="sklop-naloge">
+            <h3>✏️ Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-9">
+              <h4>Tip 9: Zapiši in nariši kartezični produkt</h4>
+              <div class="prepoznaj">
+                <p><strong>Kako prepoznaš:</strong> nastopa znak \(\times\) med množicama ali besedi „urejeni pari“.</p>
+                <ul class="kljucne"><li>„zapišite \(A \times B\)“</li><li>„narišite graf kartezičnega produkta“</li><li>„koliko elementov ima \(A \times B\)“</li></ul>
+              </div>
+              <h5>Univerzalni postopek</h5>
+              <ol>
+                <li>Število elementov: \(m(A \times B) = m(A) \cdot m(B)\).</li>
+                <li>Zapis: vzemi prvi element \(A\) in ga poveži z vsemi iz \(B\), nato drugi element \(A\) itd. (tabela ali drevo).</li>
+                <li>Graf: prva komponenta na os \(x\), druga na os \(y\); točke, daljice ali pravokotnik (glej sliko zgoraj).</li>
+                <li>Če je dan graf, iz projekcije na os \(x\) prebereš \(A\), iz projekcije na os \(y\) pa \(B\).</li>
+              </ol>
+              <div class="primer">
+                <p><strong>Primer:</strong> \(A = \{1, 2\}\), \(B = \{x, y, z\}\). Zapišite \(A \times B\).</p>
+                <p>\(A \times B = \{(1, x), (1, y), (1, z), (2, x), (2, y), (2, z)\}\), \(m(A \times B) = 2 \cdot 3 = 6\).</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ SKLOP 8 ============ -->
+        <section class="sklop" id="sklop-8">
+          <header class="sklop-header">
+            <span class="sklop-num">4.2.8</span>
+            <h2>Moč množice</h2>
+            <p>Število elementov, moč unije dveh in treh množic, moč kartezičnega produkta.</p>
+          </header>
+
+          <div class="sklop-cilji">
+            <h3>🎯 Cilji iz kataloga</h3>
+            <ul>
+              <li>Uporablja formule za moč unije dveh ali treh množic ter moč kartezičnega produkta končnih množic.</li>
+            </ul>
+          </div>
+
+          <div class="sklop-teorija">
+            <h3>📖 Razlaga</h3>
+            <p><strong>Moč</strong> končne množice \(m(A)\) je število njenih elementov. \(m(\{a, b, c\}) = 3\), \(m(\emptyset) = 0\).</p>
+
+            <h4>Moč unije dveh množic</h4>
+            <div class="formula-card">\(m(A \cup B) = m(A) + m(B) - m(A \cap B)\)</div>
+            <p>Zakaj odštejemo presek? Ko seštejemo \(m(A)\) in \(m(B)\), so elementi preseka šteti <strong>dvakrat</strong> (enkrat v \(A\), enkrat v \(B\)), zato jih enkrat odštejemo. Če sta množici disjunktni, je \(m(A \cup B) = m(A) + m(B)\).</p>
+
+            <h4>Moč unije treh množic</h4>
+            <div class="formula-card">\(m(A \cup B \cup C) = m(A) + m(B) + m(C) - m(A \cap B) - m(A \cap C) - m(B \cap C) + m(A \cap B \cap C)\)</div>
+            <p>Seštejemo posamezne, odštejemo preseke po dve, prištejemo presek vseh treh (ki smo ga pri odštevanju odšteli preveč).</p>
+
+            <h4>Druge uporabne zveze</h4>
+            <ul>
+              <li>\(m(A^C) = m(U) - m(A)\)</li>
+              <li>\(m(A \setminus B) = m(A) - m(A \cap B)\)</li>
+              <li>\(m(A \times B) = m(A) \cdot m(B)\)</li>
+            </ul>
+            <figure class="slika">
+<svg viewBox="0 0 300 180" role="img" aria-label="Vennov diagram" xmlns="http://www.w3.org/2000/svg"><defs><clipPath id="vn7c0"><circle cx="120" cy="95" r="62"/></clipPath><mask id="vn7m0"><rect x="0" y="0" width="300" height="180" fill="white"/><circle cx="120" cy="95" r="62" fill="black"/></mask><clipPath id="vn7c1"><circle cx="185" cy="95" r="62"/></clipPath><mask id="vn7m1"><rect x="0" y="0" width="300" height="180" fill="white"/><circle cx="185" cy="95" r="62" fill="black"/></mask></defs>
+<rect x="6" y="6" width="288" height="168" rx="8" fill="#FFFFFF" stroke="#94A0B8" stroke-width="1.5"/>
+<g clip-path="url(#vn7c1)"><g clip-path="url(#vn7c0)"><rect x="6" y="6" width="288" height="168" fill="rgba(79,70,229,0.28)"/></g></g>
+<circle cx="120" cy="95" r="62" fill="none" stroke="#4F46E5" stroke-width="2"/><circle cx="185" cy="95" r="62" fill="none" stroke="#4F46E5" stroke-width="2"/>
+<text x="70" y="38" class="s-txt-k1" text-anchor="middle">A</text><text x="235" y="38" class="s-txt-k1" text-anchor="middle">B</text>
+<text x="16" y="24" class="s-txt-muted">U</text>
+<text x="92" y="100" text-anchor="middle" class="">m(A) − x</text><text x="152" y="100" text-anchor="middle" class="s-txt-b">x</text><text x="214" y="100" text-anchor="middle" class="">m(B) − x</text>
+
+</svg>
+<figcaption>Če presek označimo z \(x = m(A \cap B)\), so v območju „samo \(A\)“ \(m(A) - x\) elementi. Skupaj v obeh krogih: \(m(A) + m(B) - x\).</figcaption>
+</figure>
+          </div>
+
+          <div class="sklop-naloge">
+            <h3>✏️ Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-10">
+              <h4>Tip 10: Moč unije, preseka ali razlike iz danih moči</h4>
+              <div class="prepoznaj">
+                <p><strong>Kako prepoznaš:</strong> dane so moči (števila), ne elementi. Ena od moči manjka.</p>
+                <ul class="kljucne"><li>„\(m(A) = \dots\), \(m(B) = \dots\)“</li><li>„izračunajte \(m(A \cup B)\)“</li><li>„koliko elementov ima“</li></ul>
+              </div>
+              <h5>Univerzalni postopek</h5>
+              <ol>
+                <li>Zapiši formulo za moč unije (dveh ali treh množic).</li>
+                <li>Vstavi znane vrednosti in iz enačbe izrazi neznanko (lahko je tudi presek!).</li>
+                <li>Preveri smiselnost: \(m(A \cap B) \le \min(m(A), m(B))\) in \(m(A \cup B) \le m(U)\).</li>
+              </ol>
+              <div class="primer">
+                <p><strong>Primer:</strong> \(m(A \cup B) = 20\), \(m(A) = 12\), \(m(B) = 15\). Koliko je \(m(A \cap B)\)?</p>
+                <p>\(20 = 12 + 15 - m(A \cap B)\) → \(m(A \cap B) = 7\).</p>
+              </div>
+            </div>
+
+            <div class="tip-naloge" id="tip-11">
+              <h4>Tip 11: Besedilna naloga z Vennovim diagramom (anketa)</h4>
+              <div class="prepoznaj">
+                <p><strong>Kako prepoznaš:</strong> zgodba o skupini ljudi z dvema ali tremi lastnostmi, sprašujejo, koliko jih ima „samo eno“, „nobene“, „vsaj eno“.</p>
+                <ul class="kljucne"><li>„v razredu je … dijakov“</li><li>„… jih trenira oboje“</li><li>„koliko jih ne …“</li><li>„samo“, „vsaj“, „nobenega“</li></ul>
+              </div>
+              <h5>Univerzalni postopek</h5>
+              <ol>
+                <li>Določi \(U\) (vsi anketirani) in množice (lastnosti). Nariši Vennov diagram s 4 ali 8 območji.</li>
+                <li>Vpisuj <strong>od sredine navzven</strong>: najprej presek vseh, nato preseke po dve (od njih odštej sredino), nato „samo“ območja (od celotne množice odštej vse, kar je že v njenem krogu).</li>
+                <li>Zunanje območje: \(m(U)\) minus vsota vseh območij v krogih.</li>
+                <li>Če kakšno število ni znano, ga označi z \(x\) in zapiši enačbo: vsota vseh območij \(= m(U)\).</li>
+                <li>Odgovori točno na vprašanje: „samo košarka“ ni isto kot „košarka“.</li>
+              </ol>
+              <div class="primer">
+                <p><strong>Primer:</strong> V razredu je 28 dijakov. Košarko jih trenira 15, nogomet 12, oboje 6. Koliko dijakov ne trenira ničesar?</p>
+                <p>Sredina: 6. Samo košarka: \(15 - 6 = 9\). Samo nogomet: \(12 - 6 = 6\).</p>
+                <p>V krogih: \(9 + 6 + 6 = 21\) (ali \(m(K \cup N) = 15 + 12 - 6 = 21\)). Ničesar: \(28 - 21 = 7\).</p>
+              </div>
+              <div class="pazi"><strong>Pazi:</strong> podatek „15 jih trenira košarko“ vključuje tudi tiste, ki trenirajo oboje. V območje „samo košarka“ ne vpišeš 15!</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ SKLOP 9 (VR) ============ -->
+        <section class="sklop sklop--visja" id="sklop-9">
+          <header class="sklop-header">
+            <span class="sklop-num">4.2.9</span><span class="badge-vr">Višja raven</span>
+            <h2>Moč potenčne množice</h2>
+            <p>Zakaj ima množica z \(n\) elementi natanko \(2^n\) podmnožic.</p>
+          </header>
+
+          <div class="sklop-cilji">
+            <h3>🎯 Cilji iz kataloga</h3>
+            <ul>
+              <li>Uporablja formulo za moč potenčne množice.</li>
+            </ul>
+          </div>
+
+          <div class="sklop-teorija">
+            <h3>📖 Razlaga</h3>
+            <div class="formula-card">\(m(A) = n \;\Rightarrow\; m(\mathcal{P}(A)) = 2^n\)</div>
+            <p><strong>Utemeljitev:</strong> ko sestavljamo podmnožico, se za vsak element posebej odločimo: ga vzamemo ali ne. Pri vsakem od \(n\) elementov imamo 2 možnosti, skupaj (po osnovnem izreku kombinatorike) \(2 \cdot 2 \cdots 2 = 2^n\) različnih podmnožic.</p>
+            <figure class="slika slika--siroka">
+<svg viewBox="0 0 520 240" role="img" aria-label="Drevo izbire podmnožic" xmlns="http://www.w3.org/2000/svg"><line x1="260" y1="25" x2="130" y2="85" class="s-k3" style="stroke-width:1.6"/><text x="187" y="55" text-anchor="end" style="font-size:11px" class="s-txt-k3">a</text><line x1="260" y1="25" x2="390" y2="85" class="s-pom" style="stroke-width:1.6"/><text x="333" y="55" text-anchor="start" style="font-size:11px" class="s-txt-muted">brez a</text><line x1="130" y1="85" x2="65" y2="145" class="s-k3" style="stroke-width:1.6"/><text x="89.5" y="115" text-anchor="end" style="font-size:11px" class="s-txt-k3">b</text><line x1="130" y1="85" x2="195" y2="145" class="s-pom" style="stroke-width:1.6"/><text x="170.5" y="115" text-anchor="start" style="font-size:11px" class="s-txt-muted">brez b</text><line x1="390" y1="85" x2="325" y2="145" class="s-k3" style="stroke-width:1.6"/><text x="349.5" y="115" text-anchor="end" style="font-size:11px" class="s-txt-k3">b</text><line x1="390" y1="85" x2="455" y2="145" class="s-pom" style="stroke-width:1.6"/><text x="430.5" y="115" text-anchor="start" style="font-size:11px" class="s-txt-muted">brez b</text><line x1="65" y1="145" x2="32" y2="200" class="s-k3" style="stroke-width:1.6"/><text x="40.5" y="172.5" text-anchor="end" style="font-size:11px" class="s-txt-k3">c</text><line x1="65" y1="145" x2="98" y2="200" class="s-pom" style="stroke-width:1.6"/><text x="89.5" y="172.5" text-anchor="start" style="font-size:11px" class="s-txt-muted">brez c</text><line x1="195" y1="145" x2="162" y2="200" class="s-k3" style="stroke-width:1.6"/><text x="170.5" y="172.5" text-anchor="end" style="font-size:11px" class="s-txt-k3">c</text><line x1="195" y1="145" x2="228" y2="200" class="s-pom" style="stroke-width:1.6"/><text x="219.5" y="172.5" text-anchor="start" style="font-size:11px" class="s-txt-muted">brez c</text><line x1="325" y1="145" x2="292" y2="200" class="s-k3" style="stroke-width:1.6"/><text x="300.5" y="172.5" text-anchor="end" style="font-size:11px" class="s-txt-k3">c</text><line x1="325" y1="145" x2="358" y2="200" class="s-pom" style="stroke-width:1.6"/><text x="349.5" y="172.5" text-anchor="start" style="font-size:11px" class="s-txt-muted">brez c</text><line x1="455" y1="145" x2="422" y2="200" class="s-k3" style="stroke-width:1.6"/><text x="430.5" y="172.5" text-anchor="end" style="font-size:11px" class="s-txt-k3">c</text><line x1="455" y1="145" x2="488" y2="200" class="s-pom" style="stroke-width:1.6"/><text x="479.5" y="172.5" text-anchor="start" style="font-size:11px" class="s-txt-muted">brez c</text><circle cx="260" cy="25" r="5" class="s-tocka"/><circle cx="130" cy="85" r="3.5" class="s-tocka"/><circle cx="390" cy="85" r="3.5" class="s-tocka"/><circle cx="65" cy="145" r="3.5" class="s-tocka"/><circle cx="195" cy="145" r="3.5" class="s-tocka"/><circle cx="325" cy="145" r="3.5" class="s-tocka"/><circle cx="455" cy="145" r="3.5" class="s-tocka"/><circle cx="32" cy="200" r="3.5" class="s-tocka"/><circle cx="98" cy="200" r="3.5" class="s-tocka"/><circle cx="162" cy="200" r="3.5" class="s-tocka"/><circle cx="228" cy="200" r="3.5" class="s-tocka"/><circle cx="292" cy="200" r="3.5" class="s-tocka"/><circle cx="358" cy="200" r="3.5" class="s-tocka"/><circle cx="422" cy="200" r="3.5" class="s-tocka"/><circle cx="488" cy="200" r="3.5" class="s-tocka"/><text x="32" y="218" text-anchor="middle" style="font-size:12px" class="s-txt-b">{a,b,c}</text><text x="98" y="218" text-anchor="middle" style="font-size:12px" class="s-txt-b">{a,b}</text><text x="162" y="218" text-anchor="middle" style="font-size:12px" class="s-txt-b">{a,c}</text><text x="228" y="218" text-anchor="middle" style="font-size:12px" class="s-txt-b">{a}</text><text x="292" y="218" text-anchor="middle" style="font-size:12px" class="s-txt-b">{b,c}</text><text x="358" y="218" text-anchor="middle" style="font-size:12px" class="s-txt-b">{b}</text><text x="422" y="218" text-anchor="middle" style="font-size:12px" class="s-txt-b">{c}</text><text x="488" y="218" text-anchor="middle" style="font-size:12px" class="s-txt-b">∅</text></svg>
+<figcaption>Za vsak element izberemo „vzamem“ ali „ne vzamem“. Pri treh elementih dobimo \(2 \cdot 2 \cdot 2 = 8\) poti, torej 8 podmnožic.</figcaption>
+</figure>
+            <p>Iz enake ideje dobimo odgovore na pogosta dodatna vprašanja:</p>
+            <ul>
+              <li>Podmnožic, ki <strong>vsebujejo</strong> določen element: \(2^{n-1}\) (o tem elementu smo že odločili).</li>
+              <li>Podmnožic, ki vsebujejo \(k\) določenih elementov: \(2^{n-k}\).</li>
+              <li>Pravih podmnožic: \(2^n - 1\); nepraznih: \(2^n - 1\); nepraznih pravih: \(2^n - 2\).</li>
+              <li>Podmnožic s točno \(k\) elementi: \(\binom{n}{k}\) (glej <a href="/views/matematika/snov/kombinatorika/kombinatorika_razlaga.html">kombinatoriko</a>).</li>
+            </ul>
+          </div>
+
+          <div class="sklop-naloge">
+            <h3>✏️ Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-12">
+              <h4>Tip 12: Koliko podmnožic (z dodatnim pogojem)?</h4>
+              <div class="prepoznaj">
+                <p><strong>Kako prepoznaš:</strong> sprašujejo po številu podmnožic ali po moči \(\mathcal{P}(A)\), pogosto z obratnim vprašanjem (koliko elementov ima \(A\)).</p>
+                <ul class="kljucne"><li>„koliko podmnožic“</li><li>„\(m(\mathcal{P}(A)) = 64\)“</li><li>„ki vsebujejo element“</li></ul>
+              </div>
+              <h5>Univerzalni postopek</h5>
+              <ol>
+                <li>Določi \(n = m(A)\) (pri obratni nalogi reši \(2^n = \) dano število).</li>
+                <li>Elemente, ki <strong>morajo</strong> biti v podmnožici, in tiste, ki <strong>ne smejo</strong>, odštej od \(n\): ostane \(k\) „prostih“ elementov.</li>
+                <li>Odgovor je \(2^k\); po potrebi odštej \(\emptyset\) ali \(A\), če ju naloga izključi.</li>
+              </ol>
+              <div class="primer">
+                <p><strong>Primer:</strong> Potenčna množica množice \(A\) ima 64 elementov. Koliko elementov ima \(A\) in koliko podmnožic \(A\) vsebuje dani element \(a\)?</p>
+                <p>\(2^n = 64\) → \(n = 6\). Podmnožic z \(a\): \(2^{5} = 32\).</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ KLJUČ ============ -->
+        <section class="subsection" id="kljuc">
+          <div class="subsection-head">
+            <h2>🔎 Ključ: kateri tip naloge je to?</h2>
+            <p>Poišči besedo iz navodila naloge in skoči na pravi postopek.</p>
+          </div>
           <div class="info-card">
-            <h3>Lastnosti operacij</h3>
-            <div class="two-col-props">
-              <div class="prop-column">
-                <h4 class="prop-title">Zakoni</h4>
-                <div class="prop">
-                  <div class="prop-formula">\(A \cup B = B \cup A\), \(A \cap B = B \cap A\)</div>
-                  <p class="prop-desc">Komutativnost — vrstni red ne vpliva.</p>
-                </div>
-                <div class="prop">
-                  <div class="prop-formula">\((A \cup B) \cup C = A \cup (B \cup C)\)</div>
-                  <p class="prop-desc">Asociativnost — združevanje ne vpliva.</p>
-                </div>
-                <div class="prop">
-                  <div class="prop-formula">\(A \cap (B \cup C) = (A \cap B) \cup (A \cap C)\)</div>
-                  <p class="prop-desc">Distributivnost preseka čez unijo.</p>
-                </div>
-              </div>
-              <div class="prop-column">
-                <h4 class="prop-title">De Morganova zakona</h4>
-                <div class="prop">
-                  <div class="prop-formula">\((A \cup B)^C = A^C \cap B^C\)</div>
-                  <p class="prop-desc">Komplement unije je presek komplementov.</p>
-                </div>
-                <div class="prop">
-                  <div class="prop-formula">\((A \cap B)^C = A^C \cup B^C\)</div>
-                  <p class="prop-desc">Komplement preseka je unija komplementov.</p>
-                </div>
-              </div>
+            <div class="tabela-wrap">
+              <table class="tabela">
+                <thead><tr><th>V besedilu naloge piše …</th><th>Tip</th></tr></thead>
+                <tbody>
+                  <tr><td>„vstavite \(\in\), \(\subseteq\)“, „ali je element“</td><td><a href="#tip-1">Tip 1</a></td></tr>
+                  <tr><td>„zapišite z naštevanjem / z opisom“</td><td><a href="#tip-2">Tip 2</a></td></tr>
+                  <tr><td>„predstavite z Vennovim diagramom“, „iz diagrama preberite“</td><td><a href="#tip-3">Tip 3</a></td></tr>
+                  <tr><td>„osenčite“, „zapišite osenčeni del“</td><td><a href="#tip-4">Tip 4</a></td></tr>
+                  <tr><td>\(\cup, \cap, \setminus, ^C\) s končnimi množicami</td><td><a href="#tip-5">Tip 5</a></td></tr>
+                  <tr><td>\(\cup, \cap, \setminus\) z intervali ali neenačbami</td><td><a href="#tip-6">Tip 6</a></td></tr>
+                  <tr><td>„poenostavite“, „ali velja enakost“</td><td><a href="#tip-7">Tip 7</a></td></tr>
+                  <tr><td>„potenčna množica“, „vse podmnožice“</td><td><a href="#tip-8">Tip 8</a></td></tr>
+                  <tr><td>\(A \times B\), „urejeni pari“, „graf kartezičnega produkta“</td><td><a href="#tip-9">Tip 9</a></td></tr>
+                  <tr><td>dane moči \(m(A)\), \(m(B)\), …</td><td><a href="#tip-10">Tip 10</a></td></tr>
+                  <tr><td>anketa, „koliko jih … oboje / nič / samo“</td><td><a href="#tip-11">Tip 11</a></td></tr>
+                  <tr><td>„koliko podmnožic“, \(m(\mathcal{P}(A))\)</td><td><a href="#tip-12">Tip 12</a></td></tr>
+                </tbody>
+              </table>
             </div>
           </div>
         </section>
 
-        <!-- ============ 2. TIPI NALOG ============ -->
+        <!-- ============ POGOSTE NAPAKE ============ -->
         <section class="subsection">
           <div class="subsection-head">
-            <h2>2. Tipi nalog — postopki po korakih</h2>
-            <p>Za vsak tip: kako ga prepoznaš, kako ga rešiš, primer.</p>
-          </div>
-
-          <!-- TIP 1 -->
-          <div class="info-card" id="tip-1">
-            <div class="tip-header">
-              <h3>Tip 1: Unija, presek in razlika</h3>
-              <div class="tip-formula">\(A \cup B\), \(A \cap B\), \(A \setminus B\)</div>
-            </div>
-            <p><strong>Kako prepoznaš:</strong> podani sta množici \(A\) in \(B\), iščeš unijo/presek/razliko.</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Zapiši elemente vsake množice posebej.</li>
-              <li><strong>Unija:</strong> prepiši vse elemente iz \(A\) in \(B\) <strong>brez ponavljanja</strong>.</li>
-              <li><strong>Presek:</strong> prepiši elemente, ki so v <strong>obeh</strong> množicah.</li>
-              <li><strong>Razlika \(A \setminus B\):</strong> prepiši elemente iz \(A\), ki <strong>niso</strong> v \(B\).</li>
-            </ol>
-            <p class="plain-example"><strong>Primer:</strong> \(A = \{1,2,3\}\), \(B = \{3,4,6\}\)</p>
-            <div class="plain-example">
-              <p><strong>Unija:</strong> \(A \cup B = \{1, 2, 3, 4, 6\}\)</p>
-              <p><strong>Presek:</strong> \(A \cap B = \{3\}\)</p>
-              <p><strong>Razlika:</strong> \(A \setminus B = \{1, 2\}\), \(B \setminus A = \{4, 6\}\)</p>
-            </div>
-          </div>
-
-          <!-- TIP 2 -->
-          <div class="info-card" id="tip-2">
-            <div class="tip-header">
-              <h3>Tip 2: Vennovi diagrami</h3>
-              <div class="tip-formula">Vennov diagram za \(A \cap B\), \(A \cup B\), \(A \setminus B\)</div>
-            </div>
-            <p><strong>Kako prepoznaš:</strong> na sliki so krogi (množice), v njih pa števila/elementi.</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Preberi, katero operacijo iščeš (npr. \(A \cap B\)).</li>
-              <li>Na diagramu poišči območje, ki ustreza operaciji:
-                <ul>
-                  <li>\(A \cap B\) → presek krogov</li>
-                  <li>\(A \cup B\) → oba kroga skupaj</li>
-                  <li>\(A \setminus B\) → del kroga \(A\), ki ni v \(B\)</li>
-                </ul>
-              </li>
-              <li>Preberi elemente iz tega območja.</li>
-            </ol>
-            <p class="plain-example"><strong>Primer:</strong> \(A = \{1, 2, 5\}\), \(B = \{5, 4, 6\}\), \(C = \{3, 4, 7\}\)</p>
-            <div class="plain-example">
-              <p>\(A \cap B = \{5\}\) (v obeh krogih), \(A \cup B = \{1, 2, 5, 4, 6\}\), \(A \setminus C = \{1, 2, 5\}\).</p>
-            </div>
-          </div>
-
-          <!-- TIP 3 -->
-          <div class="info-card" id="tip-3">
-            <div class="tip-header">
-              <h3>Tip 3: Moč množice in podmnožice</h3>
-              <div class="tip-formula">\(m(\mathcal{P}(A)) = 2^{m(A)}\)</div>
-            </div>
-            <p><strong>Kako prepoznaš:</strong> "koliko podmnožic ima množica", "zapišite vse podmnožice".</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Preštej elemente: \(m(A) = n\).</li>
-              <li>Število vseh podmnožic: \(2^n\).</li>
-              <li>Naštej jih sistematično:
-                <ul>
-                  <li>prazna množica \(\emptyset\),</li>
-                  <li>enočlenske,</li>
-                  <li>dvočlenske,</li>
-                  <li>… ,</li>
-                  <li>cela množica \(A\).</li>
-                </ul>
-              </li>
-            </ol>
-            <p class="plain-example"><strong>Primer:</strong> \(A = \{1, 2, 3\}\), \(m(A) = 3\), \(2^3 = 8\) podmnožic:</p>
-            <div class="plain-example">
-              <p>\(\emptyset\), \(\{1\}\), \(\{2\}\), \(\{3\}\), \(\{1,2\}\), \(\{1,3\}\), \(\{2,3\}\), \(\{1,2,3\}\).</p>
-            </div>
-          </div>
-
-          <!-- TIP 4 -->
-          <div class="info-card" id="tip-4">
-            <div class="tip-header">
-              <h3>Tip 4: Kartezični produkt</h3>
-              <div class="tip-formula">\(A \times B = \{(a, b); a \in A, b \in B\}\)</div>
-            </div>
-            <p><strong>Kako prepoznaš:</strong> \(A \times B\), "vsi urejeni pari".</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Vsak element iz \(A\) združi z vsakim elementom iz \(B\).</li>
-              <li>Zapiši kot <strong>urejene pare</strong> \((a, b)\) — vrstni red je pomemben!</li>
-              <li>Število parov: \(m(A \times B) = m(A) \cdot m(B)\).</li>
-            </ol>
-            <p class="plain-example"><strong>Primer:</strong> \(A = \{1, 2\}\), \(B = \{x, y\}\)</p>
-            <div class="plain-example">
-              <p>\(A \times B = \{(1, x), (1, y), (2, x), (2, y)\}\), \(m(A \times B) = 4\).</p>
-            </div>
-          </div>
-
-          <!-- TIP 5 -->
-          <div class="info-card" id="tip-5">
-            <div class="tip-header">
-              <h3>Tip 5: Moč unije (dveh ali treh množic)</h3>
-              <div class="tip-formula">\(m(A \cup B) = m(A) + m(B) - m(A \cap B)\)</div>
-            </div>
-            <p><strong>Kako prepoznaš:</strong> "izračunajte, koliko elementov ima unija".</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Preberi \(m(A)\), \(m(B)\) in \(m(A \cap B)\).</li>
-              <li>Vstavi v formulo \(m(A \cup B) = m(A) + m(B) - m(A \cap B)\).</li>
-              <li>Za tri množice: \(m(A \cup B \cup C) = m(A) + m(B) + m(C) - m(A \cap B) - m(A \cap C) - m(B \cap C) + m(A \cap B \cap C)\).</li>
-            </ol>
-            <p class="plain-example"><strong>Primer:</strong> \(m(A) = 10\), \(m(B) = 15\), \(m(A \cap B) = 4\).</p>
-            <div class="plain-example">
-              <p>\(m(A \cup B) = 10 + 15 - 4 = 21\).</p>
-            </div>
-          </div>
-
-          <!-- TIP 6 -->
-          <div class="info-card" id="tip-6">
-            <div class="tip-header">
-              <h3>Tip 6: Operacije z intervali</h3>
-              <div class="tip-formula">\(A = [a, b]\), \(B = (c, d)\)</div>
-            </div>
-            <p><strong>Kako prepoznaš:</strong> \(A \cup B\), \(A \cap B\), \(A \setminus B\) z intervali.</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Nariši oba intervala na številski premici.</li>
-              <li><strong>Unija:</strong> vse, kar pokriva vsaj en interval.</li>
-              <li><strong>Presek:</strong> vse, kar pokrivata oba.</li>
-              <li><strong>Razlika:</strong> kar je v \(A\), a ne v \(B\).</li>
-              <li>Zapiši kot interval(e) — pazi na odprte/zaprte meje!</li>
-            </ol>
-            <p class="plain-example"><strong>Primer:</strong> \(A = [-2, 3)\), \(B = [1, 5]\)</p>
-            <div class="plain-example">
-              <p>\(A \cup B = [-2, 5]\), \(A \cap B = [1, 3)\), \(A \setminus B = [-2, 1)\).</p>
-            </div>
-          </div>
-
-          <!-- TIP 7 -->
-          <div class="info-card" id="tip-7">
-            <div class="tip-header">
-              <h3>Tip 7: De Morganova zakona</h3>
-              <div class="tip-formula">\((A \cup B)^C = A^C \cap B^C\), \((A \cap B)^C = A^C \cup B^C\)</div>
-            </div>
-            <p><strong>Kako prepoznaš:</strong> "poenostavite izraz s komplementi".</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Prepoznaj zunanji komplement.</li>
-              <li>Uporabi ustrezen De Morganov zakon.</li>
-              <li>Zamenjaj \(\cup \leftrightarrow \cap\) in komplementiraj vsako množico.</li>
-            </ol>
-            <p class="plain-example"><strong>Primer:</strong> \((A \cup B)^C = A^C \cap B^C\), \((A \cap B^C)^C = A^C \cup B\).</p>
-          </div>
-
-          <!-- TIP 8 -->
-          <div class="info-card" id="tip-8">
-            <div class="tip-header">
-              <h3>Tip 8: Besedilne naloge z Vennovim diagramom</h3>
-              <div class="tip-formula">\(m(A \cup B) = m(A) + m(B) - m(A \cap B)\)</div>
-            </div>
-            <p><strong>Kako prepoznaš:</strong> "anketa med 100 ljudmi", "koliko jih bere …", "koliko jih govori …".</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Nariši Vennov diagram (2 ali 3 krogi).</li>
-              <li>V sredino (presek) vpiši znano vrednost.</li>
-              <li>Izračunaj preostale dele z odštevanjem.</li>
-              <li>Preberi iskano vrednost.</li>
-            </ol>
-            <p class="plain-example"><strong>Primer:</strong> Od 100 dijakov jih 60 bere knjige, 50 gleda filme, 30 pa oboje.</p>
-            <div class="plain-example">
-              <p>Samo knjige: \(60 - 30 = 30\). Samo filmi: \(50 - 30 = 20\). Oboje: 30. Nič od tega: \(100 - 30 - 20 - 30 = 20\).</p>
-            </div>
-          </div>
-
-          <!-- TIP 9 -->
-          <div class="info-card" id="tip-9">
-            <div class="tip-header">
-              <h3>Tip 9: Preverjanje enakosti množic</h3>
-              <div class="tip-formula">\(A = B \Leftrightarrow (A \subseteq B \land B \subseteq A)\)</div>
-            </div>
-            <p><strong>Kako prepoznaš:</strong> "pokažite, da velja \(A = B\)" ali "ali sta množici enaki".</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Preveri \(A \subseteq B\): vsak element \(A\) mora biti v \(B\).</li>
-              <li>Preveri \(B \subseteq A\): vsak element \(B\) mora biti v \(A\).</li>
-              <li>Če velja oboje, sta množici enaki.</li>
-            </ol>
-            <p class="plain-example"><strong>Primer:</strong> \(A = \{1, 2, 3\}\), \(B = \{3, 2, 1\}\). \(A \subseteq B\) in \(B \subseteq A\) → \(A = B\).</p>
-          </div>
-
-          <!-- TIP 10 -->
-          <div class="info-card" id="tip-10">
-            <div class="tip-header">
-              <h3>Tip 10: Zapis množice z opisom</h3>
-              <div class="tip-formula">\(A = \{x; x \in \mathbb{N} \land x < 5\}\)</div>
-            </div>
-            <p><strong>Kako prepoznaš:</strong> "zapišite množico z naštevanjem" ali "z opisom".</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Preberi pogoj (npr. "soda naravna števila, manjša od 10").</li>
-              <li>Naštej vse elemente, ki ustrezajo pogoju.</li>
-              <li>Zapiši z naštevanjem: \(A = \{2, 4, 6, 8\}\).</li>
-            </ol>
-            <p class="plain-example"><strong>Primer:</strong> \(A = \{x; x \in \mathbb{N} \land x < 5\} = \{1, 2, 3, 4\}\).</p>
-          </div>
-        </section>
-
-        <!-- ============ 3. POGOSTE NAPAKE ============ -->
-        <section class="subsection">
-          <div class="subsection-head">
-            <h2>3. Pogoste napake</h2>
+            <h2>⚠️ Pogoste napake</h2>
           </div>
           <div class="info-card">
             <ul>
-              <li>Pri uniji <strong>ponavljaš</strong> elemente (npr. \(\{1, 2, 2, 3\}\) namesto \(\{1, 2, 3\}\)).</li>
-              <li>Pri preseku zapišeš <strong>vse elemente obeh množic</strong> namesto le skupnih.</li>
-              <li>Pri \(A \setminus B\) zamenjaš vrstni red (\(B \setminus A \neq A \setminus B\)).</li>
-              <li>Pri potenčni množici pozabiš <strong>prazno množico</strong> ali <strong>celo množico</strong>.</li>
-              <li>Pri intervalih zamenjaš <strong>odprt/zaprt</strong> konec.</li>
-              <li>Pri kartezičnem produktu pozabiš, da so elementi <strong>urejeni pari</strong>.</li>
-              <li>Pri moči unije pozabiš <strong>odšteti presek</strong>.</li>
+              <li>Zamenjaš \(\in\) (element) in \(\subseteq\) (podmnožica).</li>
+              <li>Pri uniji elemente ponoviš, pri preseku zapišeš vse elemente obeh množic.</li>
+              <li>\(A \setminus B\) zamenjaš z \(B \setminus A\).</li>
+              <li>Pri komplementu pozabiš, da ga računaš glede na \(U\).</li>
+              <li>Pri potenčni množici pozabiš \(\emptyset\) ali celo množico \(A\).</li>
+              <li>Pri intervalih zamenjaš odprto in zaprto krajišče, posebno pri razliki in komplementu.</li>
+              <li>Pri moči unije pozabiš odšteti presek; v Vennov diagram vpišeš celotno moč namesto „samo“ dela.</li>
+              <li>Pri kartezičnem produktu zamenjaš vrstni red komponent.</li>
             </ul>
           </div>
         </section>
 
-        <!-- ============ 4. ŠTUDIJSKI VODIČ ============ -->
+        <!-- ============ VADI NAPREJ ============ -->
         <section class="subsection">
           <div class="subsection-head">
-            <h2>4. Študijski vodič — hitri pregled</h2>
-          </div>
-          <div class="info-card">
-            <h3>📋 Kaj moraš znati na pamet</h3>
-            <ul>
-              <li><strong>Simboli:</strong> \(\in, \notin, \subseteq, \subset, \cup, \cap, \setminus, \emptyset, \mathcal{P}(A)\)</li>
-              <li><strong>Operacije:</strong> unija (ali), presek (in), razlika, komplement.</li>
-              <li><strong>Moč unije:</strong> \(m(A \cup B) = m(A) + m(B) - m(A \cap B)\).</li>
-              <li><strong>Potenčna množica:</strong> \(m(\mathcal{P}(A)) = 2^n\).</li>
-              <li><strong>Kartezični produkt:</strong> \(m(A \times B) = m(A) \cdot m(B)\).</li>
-              <li><strong>De Morgan:</strong> \((A \cup B)^C = A^C \cap B^C\) in \((A \cap B)^C = A^C \cup B^C\).</li>
-            </ul>
-          </div>
-
-          <div class="info-card">
-            <h3>🎯 Kako pristopiti k nalogi</h3>
-            <ol>
-              <li><strong>Preberi nalogo in prepoznaj tip:</strong> operacije, Vennov diagram, moč, kartezični produkt?</li>
-              <li><strong>Za operacije:</strong> zapiši elemente obeh množic in uporabi pravila.</li>
-              <li><strong>Za Vennov diagram:</strong> nariši kroge in vpiši podatke.</li>
-              <li><strong>Za moč:</strong> uporabi formulo \(m(A \cup B) = m(A) + m(B) - m(A \cap B)\).</li>
-              <li><strong>Za potenčno množico:</strong> \(2^n\) in sistematično naštej.</li>
-              <li><strong>Za kartezični produkt:</strong> vsak z vsakim, urejeni pari.</li>
-            </ol>
-          </div>
-
-          <div class="info-card">
-            <h3>⏱️ Časovni načrt za en večer</h3>
-            <ul>
-              <li><strong>20 min:</strong> Teorija — osnovni pojmi in operacije.</li>
-              <li><strong>40 min:</strong> Tipi 1–5 (unija, presek, razlika, moč, kartezični produkt).</li>
-              <li><strong>30 min:</strong> Tipi 6–10 (intervali, De Morgan, besedilne naloge, enakost, zapis).</li>
-              <li><strong>20 min:</strong> Ponovi pogoste napake in študijski vodič.</li>
-            </ul>
-          </div>
-        </section>
-
-        <!-- ============ 5. POVEZAVE ============ -->
-        <section class="subsection">
-          <div class="subsection-head">
-            <h2>5. Vadi naprej</h2>
+            <h2>Vadi naprej</h2>
             <p>Ko predelaš razlago, preveri znanje z nalogami.</p>
           </div>
           <div class="link-list">
@@ -460,17 +906,10 @@
               </span>
               <span class="arrow">→</span>
             </a>
-            <a class="link-item" href="/views/matematika/matura/osnovna_raven/naloge/resene/">
+            <a class="link-item" href="/views/matematika/matura/matura.html">
               <span class="link-item-text">
-                <strong>Rešene naloge — osnovna raven</strong>
-                <small>Primeri z razlago</small>
-              </span>
-              <span class="arrow">→</span>
-            </a>
-            <a class="link-item" href="/views/matematika/matura/visja_raven/naloge/resene/">
-              <span class="link-item-text">
-                <strong>Rešene naloge — višja raven</strong>
-                <small>Zahtevnejši primeri</small>
+                <strong>Maturitetne pole</strong>
+                <small>Rešuj prave izpitne pole</small>
               </span>
               <span class="arrow">→</span>
             </a>

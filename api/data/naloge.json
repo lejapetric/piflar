@@ -8,7 +8,7 @@
     "odgovor": { "tip": "mnozica", "elementi": ["4", "5"] },
     "rezultat": "\\(A \\cap B = \\{4, 5\\}\\)",
     "postopek": "<p>Presek vsebuje elemente, ki so v <strong>obeh</strong> množicah.</p><p>Gremo po elementih množice \\(A\\): 1, 2 in 3 niso v \\(B\\), 4 in 5 pa sta.</p><p>Torej \\(A \\cap B = \\{4, 5\\}\\).</p>",
-    "povezave": [{ "naslov": "Tip 1: Unija, presek in razlika", "url": "/views/matematika/snov/mnozice/mnozice_razlaga.html#tip-1" }]
+    "povezave": [{ "naslov": "Tip 5: Unija, presek, razlika in komplement", "url": "/views/matematika/snov/mnozice/mnozice_razlaga.html#tip-5" }]
   },
   {
     "id": "mnozice-2",
@@ -18,7 +18,7 @@
     "odgovor": { "tip": "stevilo", "vrednost": 7 },
     "rezultat": "\\(m(A \\cup B) = 7\\)",
     "postopek": "<p>Uporabimo formulo \\(m(A \\cup B) = m(A) + m(B) - m(A \\cap B)\\).</p><p>\\(m(A) = 5\\), \\(m(B) = 4\\), \\(A \\cap B = \\{4, 5\\}\\), zato \\(m(A \\cap B) = 2\\).</p><p>\\(m(A \\cup B) = 5 + 4 - 2 = 7\\).</p><p>Preverimo: \\(A \\cup B = \\{1, 2, 3, 4, 5, 6, 7\\}\\) ima res 7 elementov.</p>",
-    "povezave": [{ "naslov": "Tip 5: Moč unije", "url": "/views/matematika/snov/mnozice/mnozice_razlaga.html#tip-5" }]
+    "povezave": [{ "naslov": "Tip 10: Moč unije", "url": "/views/matematika/snov/mnozice/mnozice_razlaga.html#tip-10" }]
   },
   {
     "id": "mnozice-3",
@@ -28,7 +28,7 @@
     "odgovor": { "tip": "stevilo", "vrednost": 8 },
     "rezultat": "\\(m(\\mathcal{P}(A)) = 8\\)",
     "postopek": "<p>Če ima množica \\(n\\) elementov, ima njena potenčna množica \\(2^n\\) elementov (vse podmnožice, tudi \\(\\emptyset\\) in \\(A\\)).</p><p>\\(m(A) = 3\\), zato \\(m(\\mathcal{P}(A)) = 2^3 = 8\\).</p><p>To so: \\(\\emptyset, \\{a\\}, \\{b\\}, \\{c\\}, \\{a, b\\}, \\{a, c\\}, \\{b, c\\}, \\{a, b, c\\}\\).</p>",
-    "povezave": [{ "naslov": "Tip 3: Moč množice in podmnožice", "url": "/views/matematika/snov/mnozice/mnozice_razlaga.html#tip-3" }]
+    "povezave": [{ "naslov": "Tip 12: Koliko podmnožic", "url": "/views/matematika/snov/mnozice/mnozice_razlaga.html#tip-12" }, { "naslov": "Tip 8: Potenčna množica", "url": "/views/matematika/snov/mnozice/mnozice_razlaga.html#tip-8" }]
   },
   {
     "id": "mnozice-4",
@@ -38,7 +38,7 @@
     "odgovor": { "tip": "stevilo", "vrednost": 6 },
     "rezultat": "\\(m(A \\times B) = 6\\)",
     "postopek": "<p>Kartezični produkt vsebuje vse urejene pare \\((a, b)\\), kjer je \\(a \\in A\\) in \\(b \\in B\\).</p><p>\\(m(A \\times B) = m(A) \\cdot m(B) = 2 \\cdot 3 = 6\\).</p><p>\\(A \\times B = \\{(1, x), (1, y), (1, z), (2, x), (2, y), (2, z)\\}\\).</p>",
-    "povezave": [{ "naslov": "Tip 4: Kartezični produkt", "url": "/views/matematika/snov/mnozice/mnozice_razlaga.html#tip-4" }]
+    "povezave": [{ "naslov": "Tip 9: Kartezični produkt", "url": "/views/matematika/snov/mnozice/mnozice_razlaga.html#tip-9" }]
   },
   {
     "id": "mnozice-5",
@@ -48,9 +48,6 @@
     "odgovor": { "tip": "stevilo", "vrednost": 7 },
     "rezultat": "7 dijakov",
     "postopek": "<p>Naj bo \\(K\\) množica dijakov, ki trenirajo košarko, in \\(N\\) tistih, ki trenirajo nogomet.</p><p>Število dijakov, ki trenirajo vsaj eno: \\(m(K \\cup N) = 15 + 12 - 6 = 21\\).</p><p>Ostali ne trenirajo ničesar: \\(28 - 21 = 7\\).</p>",
-    "povezave": [
-      { "naslov": "Tip 8: Besedilne naloge z Vennovim diagramom", "url": "/views/matematika/snov/mnozice/mnozice_razlaga.html#tip-8" },
-      { "naslov": "Tip 5: Moč unije", "url": "/views/matematika/snov/mnozice/mnozice_razlaga.html#tip-5" }
-    ]
+    "povezave": [{ "naslov": "Tip 11: Besedilna naloga z Vennovim diagramom", "url": "/views/matematika/snov/mnozice/mnozice_razlaga.html#tip-11" }, { "naslov": "Tip 10: Moč unije", "url": "/views/matematika/snov/mnozice/mnozice_razlaga.html#tip-10" }]
   }
 ]
