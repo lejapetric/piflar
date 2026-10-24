@@ -1,29 +1,48 @@
 [
   {
-    "id": "osnovna-naloge-2023",
-    "naslov": "Osnovna raven – naloge 2023",
+    "id": "primer-matematika-osnovna-2025-spomladanski",
+    "predmet": "matematika",
     "raven": "osnovna",
-    "tip": "naloge",
-    "leto": 2023,
-    "opis": "Maturitetne naloge osnovne ravni 2023 z razlagami.",
+    "leto": 2025,
+    "rok": "spomladanski",
+    "naslov": "Primer pole (testni podatki) — matematika, osnovna raven 2025",
+    "pdf": null,
     "naloge": [
       {
-        "id": "nal1",
-        "naslov": "Naloga 1",
-        "besedilo": "Reši enačbo 2x + 5 = 13.",
-        "status": "resene",
-        "razlaga": "2x = 8, torej x = 4.",
-        "rezultat": "x = 4"
+        "id": "1",
+        "besedilo": "Reši enačbo \\(2x + 5 = 13\\).",
+        "rezultat": "\\(x = 4\\)",
+        "razlaga": "<p>Od obeh strani odštejemo 5: \\(2x = 8\\). Delimo z 2: \\(x = 4\\).</p>",
+        "povezave": [{ "naslov": "Linearne enačbe", "url": "/views/matematika/snov/algebrski_izrazi_enacbe_neenacbe/algebrski_izrazi_enacbe_neenacbe_razlaga.html" }]
       }
     ]
   },
   {
-    "id": "visja-pole-2023",
-    "naslov": "Višja raven – pole 2023",
+    "id": "primer-matematika-osnovna-2024-spomladanski",
+    "predmet": "matematika",
+    "raven": "osnovna",
+    "leto": 2024,
+    "rok": "spomladanski",
+    "naslov": "Primer pole (testni podatki) — matematika, osnovna raven 2024",
+    "pdf": null,
+    "naloge": [
+      {
+        "id": "1",
+        "besedilo": "Izračunaj \\(3^2 + 4^2\\).",
+        "rezultat": "\\(25\\)",
+        "razlaga": "<p>\\(3^2 = 9\\), \\(4^2 = 16\\), zato \\(9 + 16 = 25\\).</p>",
+        "povezave": [{ "naslov": "Potence", "url": "/views/matematika/snov/potence_koreni/potence_koreni_razlaga.html" }]
+      }
+    ]
+  },
+  {
+    "id": "primer-matematika-visja-2025-spomladanski",
+    "predmet": "matematika",
     "raven": "visja",
-    "tip": "pole",
-    "leto": 2023,
-    "opis": "Maturitetne pole višje ravni 2023 z razlagami.",
+    "leto": 2025,
+    "rok": "spomladanski",
+    "naslov": "Primer pole (testni podatki) — matematika, višja raven 2025 (še nerešena)",
+    "pdf": null,
     "naloge": []
   }
 ]

@@ -640,6 +640,19 @@ mjx-container[display="true"] {
     margin-bottom: var(--space-3);
 }
 
+.naloga--resena {
+    border-color: var(--success);
+}
+
+.naloga--resena .naloga-naslov::after {
+    content: "✓ Rešeno";
+    margin-left: var(--space-3);
+    font-family: var(--font-body);
+    font-size: var(--text-xs);
+    font-weight: 700;
+    color: var(--success);
+}
+
 .naloga-besedilo {
     margin-bottom: var(--space-4);
 }
