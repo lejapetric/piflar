@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Osnove logike — razlaga in postopki | Piflar.si</title>
-  <meta name="description" content="Celovita razlaga osnov logike za maturo: izjave, logični vezniki (negacija, konjunkcija, disjunkcija, implikacija, ekvivalenca), resničnostne tabele, tavtologije, De Morganova zakona.">
+  <meta name="description" content="Osnove logike za maturo po podpoglavjih kataloga: izjave in povezave med njimi, sestavljene izjave, vrstni red operacij, tavtologija in enakovredne izjave. Razlaga, resničnostne tabele in vsi tipi nalog.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
@@ -23,27 +23,27 @@
         <header class="page-header">
           <span class="page-eyebrow">Matematika · Snov · 4.1</span>
           <h1>Osnove logike</h1>
-          <p>Vse o logiki za maturo: izjave, logični vezniki (negacija, konjunkcija, disjunkcija, implikacija, ekvivalenca), resničnostne tabele, tavtologije, enakovrednost izjav in De Morganova zakona.</p>
+          <p>Izjave, logične povezave (negacija, konjunkcija, disjunkcija, implikacija, ekvivalenca), sestavljene izjave, vrstni red operacij, tavtologije in enakovredne izjave. Stran je razdeljena po podpoglavjih maturitetnega kataloga; pod razlago vsakega podpoglavja so vsi tipi nalog, ki se pojavijo pri tem sklopu.</p>
           <div class="page-meta">
-            <div class="page-meta-item"><strong>8</strong><span>Tipov nalog</span></div>
-            <div class="page-meta-item"><strong>30+</strong><span>Primerov</span></div>
-            <div class="page-meta-item"><strong>~35 min</strong><span>Branja</span></div>
+            <div class="page-meta-item"><strong>5</strong><span>Podpoglavij</span></div>
+            <div class="page-meta-item"><strong>12</strong><span>Tipov nalog</span></div>
+            <div class="page-meta-item"><strong>~50 min</strong><span>Branja</span></div>
           </div>
         </header>
 
         <!-- ============ MATURA FORMULE ============ -->
         <div class="matura-formule">
-          <h3>📋 Formule na maturi — osnovna raven</h3>
-          <p>Na maturitetnem listu s formulami so za <strong>osnove logike</strong> relevantni naslednji simboli:</p>
+          <h3>📋 Oznake na maturi</h3>
+          <p>V dodatku kataloga (matematične oznake) so za <strong>logiko</strong> navedeni ti simboli. Formul za logiko na listu s formulami ni, zato morajo biti resničnostne tabele v glavi.</p>
           <div class="matura-grid">
             <div class="matura-levo">
               <ul>
-                <li><strong>Negacija:</strong> \(\neg A\) ali \(\overline{A}\)</li>
-                <li><strong>Konjunkcija:</strong> \(A \land B\) (in)</li>
-                <li><strong>Disjunkcija:</strong> \(A \lor B\) (ali)</li>
-                <li><strong>Implikacija:</strong> \(A \Rightarrow B\) (če A, potem B)</li>
-                <li><strong>Ekvivalenca:</strong> \(A \Leftrightarrow B\) (A natanko takrat, ko B)</li>
-                <li><strong>Kvantifikator:</strong> \(\forall\) (za vsak), \(\exists\) (obstaja)</li>
+                <li><strong>Negacija:</strong> \(\neg A\) (ne \(A\))</li>
+                <li><strong>Konjunkcija:</strong> \(A \land B\) (\(A\) in \(B\))</li>
+                <li><strong>Disjunkcija:</strong> \(A \lor B\) (\(A\) ali \(B\))</li>
+                <li><strong>Implikacija:</strong> \(A \Rightarrow B\) (če \(A\), potem \(B\))</li>
+                <li><strong>Ekvivalenca:</strong> \(A \Leftrightarrow B\) (\(A\) natanko tedaj, ko \(B\))</li>
+                <li><strong>Kvantifikatorja:</strong> \(\forall\) (za vsak), \(\exists\) (obstaja)</li>
               </ul>
             </div>
             <div class="matura-slika">
@@ -52,339 +52,669 @@
           </div>
         </div>
 
-        <!-- ============ 1. TEORIJA ============ -->
-        <section class="subsection">
-          <div class="subsection-head">
-            <h2>1. Teorija — logični vezniki in tabele</h2>
-            <p>Kar moraš znati na pamet, preden se lotiš nalog.</p>
+        <!-- ============ KAZALO ============ -->
+        <nav class="kazalo" aria-label="Podpoglavja">
+          <h2>Podpoglavja</h2>
+          <ol>
+            <li><a href="#sklop-1"><span class="kazalo-st">4.1.1</span> Izjave in povezave med njimi</a></li>
+            <li><a href="#sklop-2"><span class="kazalo-st">4.1.2</span> Sestavljene izjave</a></li>
+            <li><a href="#sklop-3"><span class="kazalo-st">4.1.3</span> Vrstni red operacij</a></li>
+            <li><a href="#sklop-4"><span class="kazalo-st">4.1.4</span> Tavtologija</a></li>
+            <li><a href="#sklop-5"><span class="kazalo-st">4.1.5</span> Enakovredne izjave</a></li>
+            <li><a href="#kljuc"><span class="kazalo-st">🔎</span> Ključ: kateri tip naloge je to?</a></li>
+          </ol>
+        </nav>
+
+        <!-- ============================================================
+             SKLOP 1: IZJAVE IN POVEZAVE MED NJIMI
+             ============================================================ -->
+        <section class="sklop" id="sklop-1">
+          <header class="sklop-header">
+            <span class="sklop-num">4.1.1</span>
+            <h2>Izjave in povezave med njimi</h2>
+            <p>Kaj je izjava, logična vrednost in pet logičnih povezav (veznikov).</p>
+          </header>
+
+          <div class="sklop-cilji">
+            <h3>🎯 Cilji iz kataloga</h3>
+            <ul>
+              <li>Zapiše izjavo.</li>
+              <li>Določi logično vrednost izjave.</li>
+            </ul>
           </div>
 
-          <div class="info-card">
-            <h3>Osnovni pojmi</h3>
+          <div class="sklop-teorija">
+            <h3>📖 Razlaga</h3>
+
+            <h4>Kaj je izjava</h4>
+            <p><strong>Izjava</strong> je poved, za katero lahko nedvoumno povemo, ali je <strong>pravilna</strong> ali <strong>nepravilna</strong>. Izjave označujemo z velikimi tiskanimi črkami \(A, B, C, \dots\)</p>
+            <p>Vsaka izjava ima natanko eno <strong>logično vrednost</strong>: pravilna izjava ima vrednost \(1\) (pravilno, resnično), nepravilna pa vrednost \(0\) (nepravilno, neresnično). Tretje možnosti ni.</p>
+
             <div class="concept-list two-col">
               <div class="concept">
-                <h4>Izjava</h4>
-                <div class="concept-formula">\(A \in \{R, N\}\) oz. \(\{1, 0\}\)</div>
-                <p class="concept-desc">Poved, za katero lahko rečemo, da je <strong>resnična (R, 1)</strong> ali <strong>neresnična (N, 0)</strong>. Primer: "Danes sije sonce."</p>
+                <h4>To so izjave</h4>
+                <p class="concept-desc">„Število 7 je praštevilo.“ (\(1\))<br>„\(2 + 2 = 5\).“ (\(0\))<br>„Ljubljana je glavno mesto Slovenije.“ (\(1\))</p>
               </div>
               <div class="concept">
-                <h4>Negacija</h4>
-                <div class="concept-formula">\(\neg A\) ali \(\overline{A}\)</div>
-                <p class="concept-desc">Obrne resničnost izjave. Če je \(A\) resnična, je \(\neg A\) neresnična in obratno.</p>
+                <h4>To niso izjave</h4>
+                <p class="concept-desc">„Koliko je ura?“ (vprašanje)<br>„Zapri okno!“ (ukaz)<br>„\(x + 3 = 5\)“ (vrednost je odvisna od \(x\))<br>„Ta film je dober.“ (mnenje)</p>
+              </div>
+            </div>
+
+            <p>Poved s spremenljivko, kot je \(x + 3 = 5\), imenujemo <strong>izjavna forma</strong>. Izjava postane šele, ko spremenljivko zamenjamo s konkretnim številom (\(x = 2\): \(2 + 3 = 5\) je pravilna izjava) ali ko pred formo postavimo <strong>kvantifikator</strong>:</p>
+            <ul>
+              <li>\(\forall x\): „za vsak \(x\)“ (univerzalni kvantifikator). Izjava „\(\forall x \in \mathbb{R}: x^2 \ge 0\)“ je pravilna.</li>
+              <li>\(\exists x\): „obstaja (vsaj en) \(x\)“ (eksistenčni kvantifikator). Izjava „\(\exists x \in \mathbb{N}: x + 3 = 5\)“ je pravilna (\(x = 2\)).</li>
+            </ul>
+            <p>Za izjavo z \(\forall\) zadošča <strong>en protiprimer</strong>, da je nepravilna. Za izjavo z \(\exists\) zadošča <strong>en primer</strong>, da je pravilna.</p>
+
+            <h4>Pet logičnih povezav</h4>
+            <p>Iz enostavnih izjav sestavljamo nove izjave z logičnimi povezavami. Vsaka povezava je natančno določena s <strong>pravilnostno (resničnostno) tabelo</strong>: tabela pove, kakšna je vrednost sestavljene izjave pri vsaki kombinaciji vrednosti enostavnih izjav.</p>
+
+            <div class="tabela-wrap">
+              <table class="tabela">
+                <thead>
+                  <tr><th>\(A\)</th><th>\(B\)</th><th>\(\neg A\)</th><th>\(A \land B\)</th><th>\(A \lor B\)</th><th>\(A \Rightarrow B\)</th><th>\(A \Leftrightarrow B\)</th></tr>
+                </thead>
+                <tbody>
+                  <tr><td>1</td><td>1</td><td>0</td><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+                  <tr><td>1</td><td>0</td><td>0</td><td>0</td><td>1</td><td class="poudarek">0</td><td>0</td></tr>
+                  <tr><td>0</td><td>1</td><td>1</td><td>0</td><td>1</td><td>1</td><td>0</td></tr>
+                  <tr><td>0</td><td>0</td><td>1</td><td>0</td><td class="poudarek">0</td><td>1</td><td>1</td></tr>
+                </tbody>
+              </table>
+            </div>
+
+            <p>Tabele si najlažje zapomniš z <strong>enim stavkom za vsako povezavo</strong>:</p>
+            <div class="concept-list two-col">
+              <div class="concept">
+                <h4>Negacija \(\neg A\) — „ni res, da \(A\)“</h4>
+                <p class="concept-desc">Obrne vrednost: \(1 \to 0\), \(0 \to 1\).</p>
               </div>
               <div class="concept">
-                <h4>Konjunkcija</h4>
-                <div class="concept-formula">\(A \land B\)</div>
-                <p class="concept-desc">Resnična <strong>le, ko sta obe</strong> izjavi resnični. Beremo "A in B".</p>
+                <h4>Konjunkcija \(A \land B\) — „\(A\) in \(B\)“</h4>
+                <p class="concept-desc">Pravilna <strong>samo</strong>, ko sta pravilni <strong>obe</strong> izjavi.</p>
               </div>
               <div class="concept">
-                <h4>Disjunkcija</h4>
-                <div class="concept-formula">\(A \lor B\)</div>
-                <p class="concept-desc">Neresnična <strong>le, ko sta obe</strong> izjavi neresnični. Beremo "A ali B" (vključujoče).</p>
+                <h4>Disjunkcija \(A \lor B\) — „\(A\) ali \(B\)“</h4>
+                <p class="concept-desc">Nepravilna <strong>samo</strong>, ko sta nepravilni <strong>obe</strong>. „Ali“ je vključujoči: pravilna je tudi, ko sta pravilni obe.</p>
               </div>
               <div class="concept">
-                <h4>Implikacija</h4>
-                <div class="concept-formula">\(A \Rightarrow B\)</div>
-                <p class="concept-desc">Neresnična <strong>le</strong>, ko je \(A\) resnična in \(B\) neresnična. Beremo "če A, potem B".</p>
+                <h4>Implikacija \(A \Rightarrow B\) — „če \(A\), potem \(B\)“</h4>
+                <p class="concept-desc">Nepravilna <strong>samo</strong> v primeru \(1 \Rightarrow 0\). \(A\) je <em>predpostavka</em>, \(B\) <em>sklep</em>.</p>
               </div>
               <div class="concept">
-                <h4>Ekvivalenca</h4>
-                <div class="concept-formula">\(A \Leftrightarrow B\)</div>
-                <p class="concept-desc">Resnična, kadar imata obe izjavi <strong>enako vrednost</strong>. Beremo "A natanko takrat, ko B".</p>
+                <h4>Ekvivalenca \(A \Leftrightarrow B\) — „\(A\) natanko tedaj, ko \(B\)“</h4>
+                <p class="concept-desc">Pravilna, ko imata izjavi <strong>enako</strong> vrednost.</p>
+              </div>
+            </div>
+
+            <h4>Zakaj je implikacija pravilna, ko je predpostavka nepravilna?</h4>
+            <p>Implikacija je obljuba: „Če bo jutri sončno, gremo na izlet.“ Obljubo prelomimo <strong>samo</strong>, če je sončno (\(A = 1\)) in ne gremo na izlet (\(B = 0\)). Če ni sončno (\(A = 0\)), obljube ne moremo prelomiti, ne glede na to, ali gremo ali ne, zato je implikacija pravilna.</p>
+            <p>Implikacijo si lahko predstaviš tudi z množicami: \(A \Rightarrow B\) je kot „množica \(A\) leži v množici \(B\)“. Kdor je v \(A\), je zagotovo tudi v \(B\); kdor ni v \(A\), je lahko kjer koli.</p>
+            <figure class="slika">
+<svg viewBox="0 0 420 220" role="img" aria-label="Množica A leži v množici B" xmlns="http://www.w3.org/2000/svg">
+<rect x="10" y="10" width="400" height="200" rx="10" fill="none" stroke="#C9CDE0"/>
+<text x="22" y="32" class="s-txt-muted">U</text>
+<ellipse cx="220" cy="112" rx="150" ry="85" class="s-lik-2"/>
+<ellipse cx="185" cy="118" rx="70" ry="45" class="s-lik"/>
+<text x="185" y="123" text-anchor="middle" class="s-txt-k1">A</text>
+<text x="325" y="70" text-anchor="middle" class="s-txt-k3">B</text>
+<circle cx="160" cy="135" r="4" class="s-tocka"/><text x="170" y="140" class="s-txt-muted">(1, 1)</text>
+<circle cx="300" cy="125" r="4" class="s-tocka"/><text x="310" y="130" class="s-txt-muted">(0, 1)</text>
+<circle cx="392" cy="196" r="4" class="s-tocka"/><text x="384" y="200" class="s-txt-muted" text-anchor="end">(0, 0)</text>
+<text x="398" y="32" class="s-txt-muted" text-anchor="end">točke: (A, B)</text>
+</svg>
+<figcaption>Implikacija \(A \Rightarrow B\) kot množici: \(A\) leži v \(B\). Točka v \(A\), ki bi bila zunaj \(B\) (\(A = 1\), \(B = 0\)), ne obstaja, zato je to edina vrstica, kjer je implikacija nepravilna.</figcaption>
+</figure>
+
+            <p>Različni jezikovni zapisi iste implikacije \(A \Rightarrow B\):</p>
+            <ul>
+              <li>„Če \(A\), potem \(B\).“ / „Iz \(A\) sledi \(B\).“</li>
+              <li>„\(A\) je <strong>zadosten</strong> pogoj za \(B\).“ / „\(B\) je <strong>potreben</strong> pogoj za \(A\).“</li>
+              <li>„\(B\), če \(A\).“ / „\(A\) samo, če \(B\).“</li>
+            </ul>
+          </div>
+
+          <div class="sklop-naloge">
+            <h3>✏️ Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-1">
+              <h4>Tip 1: Ali je poved izjava?</h4>
+              <div class="prepoznaj">
+                <p><strong>Kako prepoznaš:</strong> naštetih je več povedi, ti pa izbereš tiste, ki so izjave.</p>
+                <ul class="kljucne"><li>„katere povedi so izjave“</li><li>„obkrožite izjave“</li><li>„ali je poved izjava“</li></ul>
+              </div>
+              <h5>Univerzalni postopek</h5>
+              <ol>
+                <li>Za vsako poved se vprašaj: <strong>ali lahko odgovorim samo z „pravilno“ ali „nepravilno“?</strong></li>
+                <li>Vprašanja, ukazi, želje, vzkliki in mnenja (lep, dober, zanimiv) <strong>niso</strong> izjave.</li>
+                <li>Poved s prosto spremenljivko (\(x &gt; 3\)) ni izjava, je izjavna forma. S kvantifikatorjem (\(\forall x\), \(\exists x\)) pa je izjava.</li>
+                <li>Matematična trditev je izjava tudi, če je nepravilna (\(3 &lt; 1\) je izjava z vrednostjo \(0\)).</li>
+              </ol>
+              <div class="primer">
+                <p><strong>Primer:</strong> Katere povedi so izjave? (a) \(5\) je sodo število. (b) Reši enačbo! (c) \(x^2 = 4\). (d) Za vsako realno število \(x\) velja \(x^2 = 4\).</p>
+                <p>(a) izjava, vrednost \(0\). (b) ukaz, ni izjava. (c) izjavna forma, ni izjava. (d) izjava s kvantifikatorjem, vrednost \(0\) (protiprimer \(x = 0\)).</p>
+              </div>
+            </div>
+
+            <div class="tip-naloge" id="tip-2">
+              <h4>Tip 2: Določi logično vrednost izjave</h4>
+              <div class="prepoznaj">
+                <p><strong>Kako prepoznaš:</strong> dana je izjava (pogosto o številih), ti pa napišeš 1 ali 0.</p>
+                <ul class="kljucne"><li>„določite logično vrednost“</li><li>„ali je izjava pravilna“</li><li>„obkrožite P ali N“</li></ul>
+              </div>
+              <h5>Univerzalni postopek</h5>
+              <ol>
+                <li>Če je izjava sestavljena, jo razstavi na enostavne izjave in vsaki določi vrednost.</li>
+                <li>Pri „za vsak“ išči <strong>protiprimer</strong>. Če ga najdeš, je vrednost \(0\).</li>
+                <li>Pri „obstaja“ išči <strong>en primer</strong>. Če ga najdeš, je vrednost \(1\).</li>
+                <li>Vrednosti združi s pravilnostno tabelo povezave.</li>
+              </ol>
+              <div class="primer">
+                <p><strong>Primer:</strong> Določite vrednost izjave „Število 91 je praštevilo ali pa je 91 deljivo s 7.“</p>
+                <p>\(A\): 91 je praštevilo → \(0\) (\(91 = 7 \cdot 13\)). \(B\): 91 je deljivo s 7 → \(1\).</p>
+                <p>\(A \lor B = 0 \lor 1 = 1\). Izjava je pravilna.</p>
+              </div>
+            </div>
+
+            <div class="tip-naloge" id="tip-3">
+              <h4>Tip 3: Izjave s kvantifikatorji in njihove negacije</h4>
+              <div class="prepoznaj">
+                <p><strong>Kako prepoznaš:</strong> v izjavi nastopa „za vsak“, „vsi“, „obstaja“, „nekateri“, „noben“ ali simbola \(\forall\), \(\exists\).</p>
+                <ul class="kljucne"><li>„zapišite negacijo izjave“</li><li>„za vsako naravno število“</li><li>„obstaja realno število“</li></ul>
+              </div>
+              <h5>Univerzalni postopek</h5>
+              <ol>
+                <li>Vrednost: pri \(\forall\) išči protiprimer, pri \(\exists\) primer.</li>
+                <li>Negacija: zamenjaj kvantifikator (\(\forall \leftrightarrow \exists\)) in negiraj izjavno formo za njim:
+                  <div class="formula-card">\(\neg(\forall x: P(x)) \equiv \exists x: \neg P(x) \qquad \neg(\exists x: P(x)) \equiv \forall x: \neg P(x)\)</div>
+                </li>
+                <li>Preveri: negacija mora imeti nasprotno vrednost kot prvotna izjava.</li>
+              </ol>
+              <div class="pazi"><strong>Pazi:</strong> negacija od „vsi dijaki so pisali 5“ ni „noben dijak ni pisal 5“, ampak „vsaj en dijak ni pisal 5“.</div>
+              <div class="primer">
+                <p><strong>Primer:</strong> Zapišite negacijo izjave \(\forall n \in \mathbb{N}: n^2 &gt; n\) in določite vrednost obeh.</p>
+                <p>Negacija: \(\exists n \in \mathbb{N}: n^2 \le n\).</p>
+                <p>Za \(n = 1\) velja \(1^2 = 1 \le 1\), zato je negacija pravilna (\(1\)), prvotna izjava pa nepravilna (\(0\)).</p>
               </div>
             </div>
           </div>
+        </section>
 
-          <div class="info-card">
-            <h3>Resničnostne tabele</h3>
+        <!-- ============================================================
+             SKLOP 2: SESTAVLJENE IZJAVE
+             ============================================================ -->
+        <section class="sklop" id="sklop-2">
+          <header class="sklop-header">
+            <span class="sklop-num">4.1.2</span>
+            <h2>Sestavljene izjave</h2>
+            <p>Zapis s simboli, računanje vrednosti in negiranje sestavljenih izjav.</p>
+          </header>
+
+          <div class="sklop-cilji">
+            <h3>🎯 Cilji iz kataloga</h3>
+            <ul>
+              <li>Zapiše sestavljeno izjavo s simboli.</li>
+              <li>Določi logično vrednost sestavljene izjave.</li>
+            </ul>
+          </div>
+
+          <div class="sklop-teorija">
+            <h3>📖 Razlaga</h3>
+
+            <h4>Iz besedila v simbole</h4>
+            <p><strong>Sestavljena izjava</strong> nastane, ko enostavne izjave povežemo z logičnimi povezavami. Pri prevajanju iz slovenščine v simbole najprej poimenuj enostavne izjave (brez besed „ne“, „in“, „ali“, „če“), nato poišči povezave:</p>
+            <div class="tabela-wrap">
+              <table class="tabela">
+                <thead><tr><th>V besedilu</th><th>Simbol</th></tr></thead>
+                <tbody>
+                  <tr><td>ne …, ni res, da …</td><td>\(\neg\)</td></tr>
+                  <tr><td>in, ter, pa, vendar, a, hkrati</td><td>\(\land\)</td></tr>
+                  <tr><td>ali, ali pa</td><td>\(\lor\)</td></tr>
+                  <tr><td>če …, potem …; iz … sledi …; … samo, če …</td><td>\(\Rightarrow\)</td></tr>
+                  <tr><td>natanko tedaj, ko; če in samo če</td><td>\(\Leftrightarrow\)</td></tr>
+                  <tr><td>niti … niti …</td><td>\(\neg A \land \neg B\)</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p>Primer: \(A\): „Sonce sije.“, \(B\): „Grem na kopanje.“ Poved „Če sonce ne sije, ne grem na kopanje.“ zapišemo kot \(\neg A \Rightarrow \neg B\).</p>
+
+            <h4>Vrednost sestavljene izjave</h4>
+            <p>Če poznaš vrednosti enostavnih izjav, vrednost sestavljene izračunaš <strong>od znotraj navzven</strong>, natanko tako kot račun s števili: najprej oklepaji, nato po vrstnem redu operacij (glej <a href="#sklop-3">4.1.3</a>).</p>
+            <p>Za \(A = 1\), \(B = 0\), \(C = 1\): \(\;(A \lor B) \Rightarrow (\neg C \land B) = (1 \lor 0) \Rightarrow (0 \land 0) = 1 \Rightarrow 0 = 0\).</p>
+
+            <h4>Sklepanje nazaj: iz vrednosti sestavljene na vrednosti enostavnih</h4>
+            <p>Nekatere povezave imajo eno samo „izjemno“ vrstico. Če poznaš vrednost sestavljene izjave, lahko iz te vrstice takoj sklepaš:</p>
+            <ul>
+              <li>\(A \land B = 1\) → \(A = 1\) in \(B = 1\).</li>
+              <li>\(A \lor B = 0\) → \(A = 0\) in \(B = 0\).</li>
+              <li>\(A \Rightarrow B = 0\) → \(A = 1\) in \(B = 0\).</li>
+            </ul>
+
+            <h4>Negacija sestavljene izjave</h4>
+            <p>Pri negiranju uporabljamo <strong>De Morganova zakona</strong> in pravilo za negacijo implikacije:</p>
             <div class="formula-grid">
-              <div class="formula-card">
-                <strong>Negacija</strong>
-                <table style="margin-top: 8px; width: 100%;">
-                  <tr><th>A</th><th>¬A</th></tr>
-                  <tr><td>R</td><td>N</td></tr>
-                  <tr><td>N</td><td>R</td></tr>
-                </table>
+              <div class="formula-card">\(\neg(A \land B) \equiv \neg A \lor \neg B\)</div>
+              <div class="formula-card">\(\neg(A \lor B) \equiv \neg A \land \neg B\)</div>
+              <div class="formula-card">\(\neg(A \Rightarrow B) \equiv A \land \neg B\)</div>
+              <div class="formula-card">\(\neg(\neg A) \equiv A\)</div>
+              <div class="formula-card">\(\neg(A \Leftrightarrow B) \equiv (A \land \neg B) \lor (\neg A \land B)\)</div>
+            </div>
+            <p>Pomnilo za De Morgana: negacija „gre v oklepaj“, pri tem pa se \(\land\) in \(\lor\) zamenjata.</p>
+          </div>
+
+          <div class="sklop-naloge">
+            <h3>✏️ Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-4">
+              <h4>Tip 4: Zapiši sestavljeno izjavo s simboli (ali z besedami)</h4>
+              <div class="prepoznaj">
+                <p><strong>Kako prepoznaš:</strong> dana je poved v slovenščini in izjave \(A, B, \dots\), zapisati jo moraš s simboli. Ali obratno: dan je simbolni zapis, prevesti ga moraš v poved.</p>
+                <ul class="kljucne"><li>„zapišite s simboli“</li><li>„z logičnimi povezavami“</li><li>„zapišite z besedami“</li></ul>
               </div>
-              <div class="formula-card">
-                <strong>Konjunkcija</strong>
-                <table style="margin-top: 8px; width: 100%;">
-                  <tr><th>A</th><th>B</th><th>A∧B</th></tr>
-                  <tr><td>R</td><td>R</td><td>R</td></tr>
-                  <tr><td>R</td><td>N</td><td>N</td></tr>
-                  <tr><td>N</td><td>R</td><td>N</td></tr>
-                  <tr><td>N</td><td>N</td><td>N</td></tr>
-                </table>
+              <h5>Univerzalni postopek</h5>
+              <ol>
+                <li>Določi enostavne izjave (pozitivno oblikovane, brez „ne“).</li>
+                <li>Poišči glavno povezavo, tisto, ki deli celo poved na dva dela (pogosto „če … potem“ ali vejica pred „ali“).</li>
+                <li>Vsak del zapiši posebej in ga daj v oklepaj, če je sestavljen.</li>
+                <li>Preberi rezultat nazaj v slovenščino in preveri, ali pomeni isto.</li>
+              </ol>
+              <div class="primer">
+                <p><strong>Primer:</strong> \(A\): „Število je deljivo z 2.“, \(B\): „Število je deljivo s 3.“, \(C\): „Število je deljivo s 6.“ Zapišite: „Število je deljivo s 6 natanko tedaj, ko je deljivo z 2 in s 3.“</p>
+                <p>Glavna povezava je „natanko tedaj, ko“: \(C \Leftrightarrow (A \land B)\).</p>
               </div>
-              <div class="formula-card">
-                <strong>Disjunkcija</strong>
-                <table style="margin-top: 8px; width: 100%;">
-                  <tr><th>A</th><th>B</th><th>A∨B</th></tr>
-                  <tr><td>R</td><td>R</td><td>R</td></tr>
-                  <tr><td>R</td><td>N</td><td>R</td></tr>
-                  <tr><td>N</td><td>R</td><td>R</td></tr>
-                  <tr><td>N</td><td>N</td><td>N</td></tr>
-                </table>
+            </div>
+
+            <div class="tip-naloge" id="tip-5">
+              <h4>Tip 5: Vrednost sestavljene izjave pri danih vrednostih</h4>
+              <div class="prepoznaj">
+                <p><strong>Kako prepoznaš:</strong> podane so vrednosti enostavnih izjav (ali jih določiš sam) in sestavljena izjava.</p>
+                <ul class="kljucne"><li>„izjava \(A\) je pravilna, \(B\) nepravilna“</li><li>„določite vrednost izjave“</li></ul>
               </div>
-              <div class="formula-card">
-                <strong>Implikacija</strong>
-                <table style="margin-top: 8px; width: 100%;">
-                  <tr><th>A</th><th>B</th><th>A⇒B</th></tr>
-                  <tr><td>R</td><td>R</td><td>R</td></tr>
-                  <tr><td>R</td><td>N</td><td>N</td></tr>
-                  <tr><td>N</td><td>R</td><td>R</td></tr>
-                  <tr><td>N</td><td>N</td><td>R</td></tr>
-                </table>
+              <h5>Univerzalni postopek</h5>
+              <ol>
+                <li>Prepiši izjavo in nad vsako črko napiši njeno vrednost.</li>
+                <li>Izračunaj negacije, nato oklepaje, nato po vrstnem redu \(\land\), \(\lor\), \(\Rightarrow\), \(\Leftrightarrow\).</li>
+                <li>Vsak vmesni rezultat zapiši (za točke na maturi je pomemben zapis postopka).</li>
+              </ol>
+              <div class="primer">
+                <p><strong>Primer:</strong> \(A = 0\), \(B = 1\). Določite vrednost \((\neg A \land B) \Leftrightarrow (A \lor \neg B)\).</p>
+                <p>\(\neg A \land B = 1 \land 1 = 1\); \(\;A \lor \neg B = 0 \lor 0 = 0\); \(\;1 \Leftrightarrow 0 = 0\).</p>
               </div>
-              <div class="formula-card">
-                <strong>Ekvivalenca</strong>
-                <table style="margin-top: 8px; width: 100%;">
-                  <tr><th>A</th><th>B</th><th>A⇔B</th></tr>
-                  <tr><td>R</td><td>R</td><td>R</td></tr>
-                  <tr><td>R</td><td>N</td><td>N</td></tr>
-                  <tr><td>N</td><td>R</td><td>N</td></tr>
-                  <tr><td>N</td><td>N</td><td>R</td></tr>
-                </table>
+            </div>
+
+            <div class="tip-naloge" id="tip-6">
+              <h4>Tip 6: Sklepanje nazaj — kakšni sta enostavni izjavi?</h4>
+              <div class="prepoznaj">
+                <p><strong>Kako prepoznaš:</strong> znana je vrednost sestavljene izjave, iščeš vrednosti enostavnih.</p>
+                <ul class="kljucne"><li>„izjava je nepravilna, kakšna je \(A\)“</li><li>„določite vrednosti \(A\) in \(B\), da bo …“</li></ul>
+              </div>
+              <h5>Univerzalni postopek</h5>
+              <ol>
+                <li>Poišči glavno povezavo in njeno „izjemno“ vrstico (\(\land = 1\), \(\lor = 0\), \(\Rightarrow = 0\)).</li>
+                <li>Iz nje preberi vrednosti obeh delov, nato nadaljuj v notranjost.</li>
+                <li>Če glavna povezava ni v izjemni vrstici, je možnosti več: zapiši vse ali naredi tabelo.</li>
+              </ol>
+              <div class="primer">
+                <p><strong>Primer:</strong> Izjava \((A \land B) \Rightarrow \neg C\) je nepravilna. Določite \(A\), \(B\), \(C\).</p>
+                <p>Implikacija je \(0\) samo kot \(1 \Rightarrow 0\): \(A \land B = 1\) in \(\neg C = 0\).</p>
+                <p>Torej \(A = 1\), \(B = 1\), \(C = 1\).</p>
+              </div>
+            </div>
+
+            <div class="tip-naloge" id="tip-7">
+              <h4>Tip 7: Negacija sestavljene izjave</h4>
+              <div class="prepoznaj">
+                <p><strong>Kako prepoznaš:</strong> zapisati moraš izjavo, ki je nasprotna dani, pogosto brez znaka \(\neg\) pred oklepajem.</p>
+                <ul class="kljucne"><li>„zapišite negacijo“</li><li>„zanikajte izjavo“</li><li>„ni res, da …“</li></ul>
+              </div>
+              <h5>Univerzalni postopek</h5>
+              <ol>
+                <li>Celotno izjavo daj v oklepaj in pred njo napiši \(\neg\).</li>
+                <li>Uporabi pravilo za glavno povezavo (De Morgan ali \(\neg(A \Rightarrow B) \equiv A \land \neg B\)).</li>
+                <li>Ponavljaj, dokler negacije ne stojijo samo pred enostavnimi izjavami. \(\neg\neg A\) zamenjaj z \(A\).</li>
+              </ol>
+              <div class="primer">
+                <p><strong>Primer:</strong> Zanikajte izjavo „Če je število sodo, je deljivo s 4.“</p>
+                <p>\(\neg(S \Rightarrow D) \equiv S \land \neg D\): „Število je sodo in ni deljivo s 4.“</p>
+              </div>
+              <div class="pazi"><strong>Pazi:</strong> negacija implikacije <strong>ni</strong> implikacija \(\neg A \Rightarrow \neg B\). Je konjunkcija.</div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============================================================
+             SKLOP 3: VRSTNI RED OPERACIJ
+             ============================================================ -->
+        <section class="sklop" id="sklop-3">
+          <header class="sklop-header">
+            <span class="sklop-num">4.1.3</span>
+            <h2>Vrstni red operacij</h2>
+            <p>Kako preberemo izjavo brez oklepajev in kje jih postavimo.</p>
+          </header>
+
+          <div class="sklop-cilji">
+            <h3>🎯 Cilji iz kataloga</h3>
+            <ul>
+              <li>Zapiše sestavljeno izjavo s simboli in pravilno upošteva vrstni red operacij.</li>
+            </ul>
+          </div>
+
+          <div class="sklop-teorija">
+            <h3>📖 Razlaga</h3>
+            <p>Tako kot pri računanju s števili (najprej potence, nato množenje, nato seštevanje) imajo tudi logične povezave določeno <strong>prednost</strong>. Od najmočnejše do najšibkejše:</p>
+            <div class="formula-card">\(1.\ \neg \qquad 2.\ \land \qquad 3.\ \lor \qquad 4.\ \Rightarrow \qquad 5.\ \Leftrightarrow\)</div>
+            <p>Oklepaji imajo vedno prednost pred vsem. Negacija se nanaša samo na izjavo (ali oklepaj), ki stoji <strong>neposredno</strong> za njo.</p>
+            <ul>
+              <li>\(\neg A \land B\) pomeni \((\neg A) \land B\), ne \(\neg(A \land B)\).</li>
+              <li>\(A \lor B \land C\) pomeni \(A \lor (B \land C)\), podobno kot \(a + b \cdot c = a + (b \cdot c)\).</li>
+              <li>\(A \land B \Rightarrow C\) pomeni \((A \land B) \Rightarrow C\).</li>
+              <li>\(A \Rightarrow B \Leftrightarrow \neg B \Rightarrow \neg A\) pomeni \((A \Rightarrow B) \Leftrightarrow (\neg B \Rightarrow \neg A)\).</li>
+            </ul>
+            <p>Pomnilo: \(\land\) je „logično množenje“ (\(1 \cdot 1 = 1\), sicer \(0\)), \(\lor\) pa „logično seštevanje“ (\(0 + 0 = 0\), sicer \(1\)). Zato \(\land\) veže močneje kot \(\lor\).</p>
+            <div class="pazi"><strong>Nasvet za maturo:</strong> tudi kadar oklepaji niso nujni, jih piši. Napačno prebrana izjava pomeni napačno tabelo, pa čeprav je postopek pravilen.</div>
+          </div>
+
+          <div class="sklop-naloge">
+            <h3>✏️ Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-8">
+              <h4>Tip 8: Postavi oklepaje in izračunaj vrednost izjave brez oklepajev</h4>
+              <div class="prepoznaj">
+                <p><strong>Kako prepoznaš:</strong> izjava je zapisana brez (ali z malo) oklepajev in vsebuje več različnih povezav.</p>
+                <ul class="kljucne"><li>„postavite oklepaje“</li><li>„upoštevajte vrstni red“</li><li>dolga izjava kot \(\neg A \lor B \land C \Rightarrow A\)</li></ul>
+              </div>
+              <h5>Univerzalni postopek</h5>
+              <ol>
+                <li>Najprej obkroži vse negacije skupaj z izjavo za njimi.</li>
+                <li>Nato v oklepaje zapri vse \(\land\), nato vse \(\lor\).</li>
+                <li>Kar ostane, povezujejo \(\Rightarrow\) in \(\Leftrightarrow\) (te so „najšibkejše“ in delijo izjavo na glavna dela).</li>
+                <li>Izračunaj vrednost od znotraj navzven.</li>
+              </ol>
+              <div class="primer">
+                <p><strong>Primer:</strong> \(A = 1\), \(B = 0\), \(C = 0\). Izračunajte \(\neg A \lor B \land C \Rightarrow A\).</p>
+                <p>Z oklepaji: \(\big((\neg A) \lor (B \land C)\big) \Rightarrow A\).</p>
+                <p>\(\neg A = 0\), \(B \land C = 0\), \(0 \lor 0 = 0\), \(0 \Rightarrow 1 = 1\).</p>
               </div>
             </div>
           </div>
+        </section>
 
-          <div class="info-card">
-            <h3>De Morganova zakona</h3>
+        <!-- ============================================================
+             SKLOP 4: TAVTOLOGIJA
+             ============================================================ -->
+        <section class="sklop" id="sklop-4">
+          <header class="sklop-header">
+            <span class="sklop-num">4.1.4</span>
+            <h2>Tavtologija</h2>
+            <p>Izjave, ki so vedno pravilne, in kako to preverimo s pravilnostno tabelo.</p>
+          </header>
+
+          <div class="sklop-cilji">
+            <h3>🎯 Cilji iz kataloga</h3>
+            <ul>
+              <li>Izračuna logično vrednost sestavljene izjave pri vseh vrednostih enostavnih izjav.</li>
+            </ul>
+          </div>
+
+          <div class="sklop-teorija">
+            <h3>📖 Razlaga</h3>
+            <p><strong>Tavtologija</strong> je sestavljena izjava, ki je pravilna pri <strong>vseh</strong> možnih vrednostih enostavnih izjav. <strong>Protislovje</strong> (kontradikcija) je izjava, ki je vedno nepravilna.</p>
             <div class="concept-list two-col">
               <div class="concept">
-                <h4>Negacija konjunkcije</h4>
-                <div class="concept-formula">\(\neg(A \land B) = \neg A \lor \neg B\)</div>
-                <p class="concept-desc">Negacija "IN" postane "ALI".</p>
-              </div>
-              <div class="concept">
-                <h4>Negacija disjunkcije</h4>
-                <div class="concept-formula">\(\neg(A \lor B) = \neg A \land \neg B\)</div>
-                <p class="concept-desc">Negacija "ALI" postane "IN".</p>
-              </div>
-              <div class="concept">
-                <h4>Tavtologija</h4>
-                <div class="concept-formula">\(A \lor \neg A\)</div>
-                <p class="concept-desc">Vedno resnična izjava (za vsak \(A\)).</p>
+                <h4>Tavtologiji</h4>
+                <div class="concept-formula">\(A \lor \neg A\), \(\;(A \land B) \Rightarrow A\)</div>
+                <p class="concept-desc">Zadnji stolpec tabele so same enice.</p>
               </div>
               <div class="concept">
                 <h4>Protislovje</h4>
                 <div class="concept-formula">\(A \land \neg A\)</div>
-                <p class="concept-desc">Vedno neresnična izjava.</p>
+                <p class="concept-desc">Zadnji stolpec tabele so same ničle.</p>
+              </div>
+            </div>
+
+            <h4>Kako sestavimo pravilnostno tabelo</h4>
+            <ol>
+              <li><strong>Število vrstic:</strong> pri \(n\) enostavnih izjavah je vrstic \(2^n\) (2 izjavi: 4 vrstice, 3 izjave: 8 vrstic).</li>
+              <li><strong>Vrednosti vpiši sistematično:</strong> v prvi stolpec pol enic, pol ničel; v drugega izmenično po dve; v tretjega izmenično po eno. Tako ne izpustiš nobene kombinacije.</li>
+              <li><strong>Vmesni stolpci:</strong> za vsak del izjave (od najmanjšega navzven) svoj stolpec.</li>
+              <li><strong>Zadnji stolpec</strong> je celotna izjava.</li>
+            </ol>
+            <p>Primer: ali je \((A \Rightarrow B) \land A \Rightarrow B\) tavtologija? (To je znano sklepanje <em>modus ponens</em>.)</p>
+            <div class="tabela-wrap">
+              <table class="tabela">
+                <thead><tr><th>\(A\)</th><th>\(B\)</th><th>\(A \Rightarrow B\)</th><th>\((A \Rightarrow B) \land A\)</th><th>\((A \Rightarrow B) \land A \Rightarrow B\)</th></tr></thead>
+                <tbody>
+                  <tr><td>1</td><td>1</td><td>1</td><td>1</td><td class="poudarek">1</td></tr>
+                  <tr><td>1</td><td>0</td><td>0</td><td>0</td><td class="poudarek">1</td></tr>
+                  <tr><td>0</td><td>1</td><td>1</td><td>0</td><td class="poudarek">1</td></tr>
+                  <tr><td>0</td><td>0</td><td>1</td><td>0</td><td class="poudarek">1</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p>Zadnji stolpec so same enice, zato je izjava tavtologija.</p>
+
+            <h4>Hitrejša pot: iskanje protiprimera</h4>
+            <p>Če je glavna povezava implikacija, ne rabiš cele tabele. Predpostavi, da je izjava <strong>nepravilna</strong> (\(1 \Rightarrow 0\)) in poskusi najti vrednosti, ki to omogočijo. Če pridiš v protislovje (npr. \(B\) bi moral biti hkrati \(1\) in \(0\)), takšne vrstice ni in izjava je tavtologija. Če vrednosti najdeš, si našel protiprimer in izjava ni tavtologija.</p>
+          </div>
+
+          <div class="sklop-naloge">
+            <h3>✏️ Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-9">
+              <h4>Tip 9: Ali je izjava tavtologija? (pravilnostna tabela)</h4>
+              <div class="prepoznaj">
+                <p><strong>Kako prepoznaš:</strong> dana je sestavljena izjava, preveriti moraš vrednosti pri <strong>vseh</strong> kombinacijah.</p>
+                <ul class="kljucne"><li>„ali je izjava tavtologija“</li><li>„s pravilnostno tabelo“</li><li>„pri vseh vrednostih“</li><li>„dopolnite tabelo“</li></ul>
+              </div>
+              <h5>Univerzalni postopek</h5>
+              <ol>
+                <li>Preštej enostavne izjave \(n\), tabela ima \(2^n\) vrstic.</li>
+                <li>Sistematično vpiši vse kombinacije.</li>
+                <li>Dodaj stolpec za vsak del izjave (upoštevaj vrstni red operacij).</li>
+                <li>Preglej zadnji stolpec: same \(1\) → tavtologija; same \(0\) → protislovje; mešano → ni ne eno ne drugo. Odgovor zapiši z besedami.</li>
+              </ol>
+              <div class="primer">
+                <p><strong>Primer:</strong> Ali je \(\neg(A \land B) \Rightarrow \neg A\) tavtologija?</p>
+                <p>Iščemo protiprimer: implikacija je \(0\), ko \(\neg(A \land B) = 1\) in \(\neg A = 0\). Torej \(A = 1\) in \(A \land B = 0\), zato \(B = 0\).</p>
+                <p>Pri \(A = 1\), \(B = 0\) je izjava nepravilna, zato <strong>ni</strong> tavtologija.</p>
               </div>
             </div>
           </div>
         </section>
 
-        <!-- ============ 2. TIPI NALOG ============ -->
-        <section class="subsection">
-          <div class="subsection-head">
-            <h2>2. Tipi nalog — postopki po korakih</h2>
-            <p>Za vsak tip: kako ga prepoznaš, kako ga rešiš, primer.</p>
+        <!-- ============================================================
+             SKLOP 5: ENAKOVREDNE IZJAVE
+             ============================================================ -->
+        <section class="sklop" id="sklop-5">
+          <header class="sklop-header">
+            <span class="sklop-num">4.1.5</span>
+            <h2>Enakovredne izjave</h2>
+            <p>Kdaj imata dve izjavi isti pomen, zakoni logike in obrat ter kontrapozicija implikacije.</p>
+          </header>
+
+          <div class="sklop-cilji">
+            <h3>🎯 Cilji iz kataloga</h3>
+            <ul>
+              <li>Ugotovi enakovrednost dveh izjav.</li>
+            </ul>
           </div>
 
-          <!-- TIP 1 -->
-          <div class="info-card" id="tip-1">
-            <div class="tip-header">
-              <h3>Tip 1: Določitev logične vrednosti izjave</h3>
-              <div class="tip-formula">\(A \in \{1, 0\}\)</div>
+          <div class="sklop-teorija">
+            <h3>📖 Razlaga</h3>
+            <p>Izjavi \(X\) in \(Y\) sta <strong>enakovredni</strong> (\(X \equiv Y\)), če imata pri vseh vrednostih enostavnih izjav <strong>enako vrednost</strong>, torej enaka zadnja stolpca v tabeli. Enakovredno: izjava \(X \Leftrightarrow Y\) je tavtologija.</p>
+
+            <h4>Najpomembnejše enakovrednosti (zakoni logike)</h4>
+            <div class="tabela-wrap">
+              <table class="tabela">
+                <thead><tr><th>Ime</th><th>Enakovrednost</th></tr></thead>
+                <tbody>
+                  <tr><td>dvojna negacija</td><td>\(\neg\neg A \equiv A\)</td></tr>
+                  <tr><td>komutativnost</td><td>\(A \land B \equiv B \land A\), \(\;A \lor B \equiv B \lor A\)</td></tr>
+                  <tr><td>asociativnost</td><td>\((A \land B) \land C \equiv A \land (B \land C)\)</td></tr>
+                  <tr><td>distributivnost</td><td>\(A \land (B \lor C) \equiv (A \land B) \lor (A \land C)\)<br>\(A \lor (B \land C) \equiv (A \lor B) \land (A \lor C)\)</td></tr>
+                  <tr><td>De Morganova zakona</td><td>\(\neg(A \land B) \equiv \neg A \lor \neg B\), \(\;\neg(A \lor B) \equiv \neg A \land \neg B\)</td></tr>
+                  <tr><td>implikacija z \(\lor\)</td><td>\(A \Rightarrow B \equiv \neg A \lor B\)</td></tr>
+                  <tr><td>kontrapozicija</td><td>\(A \Rightarrow B \equiv \neg B \Rightarrow \neg A\)</td></tr>
+                  <tr><td>ekvivalenca</td><td>\(A \Leftrightarrow B \equiv (A \Rightarrow B) \land (B \Rightarrow A)\)</td></tr>
+                  <tr><td>absorpcija</td><td>\(A \land (A \lor B) \equiv A\), \(\;A \lor (A \land B) \equiv A\)</td></tr>
+                </tbody>
+              </table>
             </div>
-            <p><strong>Kako prepoznaš:</strong> "ali je izjava resnična/neresnična".</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Preberi izjavo.</li>
-              <li>Preveri, ali velja <strong>za vse</strong> elemente (\(\forall\)) ali le <strong>za nekaj</strong> (\(\exists\)).</li>
-              <li>Če najdeš protiprimer, je izjava neresnična.</li>
-            </ol>
-            <p class="plain-example"><strong>Primer:</strong> "Vsako praštevilo je liho število." → Neresnična, ker je 2 sodo praštevilo.</p>
+
+            <h4>Obrat, nasprotna in kontrapozicija implikacije</h4>
+            <p>Iz implikacije \(A \Rightarrow B\) lahko naredimo tri nove implikacije. Samo ena je enakovredna prvotni:</p>
+            <div class="concept-list two-col">
+              <div class="concept">
+                <h4>Kontrapozicija ✓</h4>
+                <div class="concept-formula">\(\neg B \Rightarrow \neg A\)</div>
+                <p class="concept-desc"><strong>Enakovredna</strong> \(A \Rightarrow B\). „Če dežuje, so ceste mokre“ ≡ „Če ceste niso mokre, ne dežuje.“</p>
+              </div>
+              <div class="concept">
+                <h4>Obrat ✗</h4>
+                <div class="concept-formula">\(B \Rightarrow A\)</div>
+                <p class="concept-desc">Ni enakovredna. „Če so ceste mokre, dežuje“ ne drži (cesto lahko pere cisterna).</p>
+              </div>
+              <div class="concept">
+                <h4>Nasprotna ✗</h4>
+                <div class="concept-formula">\(\neg A \Rightarrow \neg B\)</div>
+                <p class="concept-desc">Ni enakovredna prvotni, je pa enakovredna obratu.</p>
+              </div>
+            </div>
           </div>
 
-          <!-- TIP 2 -->
-          <div class="info-card" id="tip-2">
-            <div class="tip-header">
-              <h3>Tip 2: Resničnostna tabela</h3>
-              <div class="tip-formula">A ∧ B, A ∨ B, A ⇒ B, A ⇔ B</div>
-            </div>
-            <p><strong>Kako prepoznaš:</strong> "izračunajte logično vrednost sestavljene izjave pri vseh vrednostih".</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Naredi tabelo z vsemi možnimi kombinacijami \(A, B\) (2ⁿ vrstic).</li>
-              <li>Za vsako vrstico izračunaj vrednost sestavljene izjave.</li>
-              <li>Uporabi pravila veznikov.</li>
-            </ol>
-            <p class="plain-example"><strong>Primer:</strong> \(A \Rightarrow B\). Neresnična le v vrstici, kjer je \(A = R\), \(B = N\).</p>
-          </div>
+          <div class="sklop-naloge">
+            <h3>✏️ Tipi nalog v tem sklopu</h3>
 
-          <!-- TIP 3 -->
-          <div class="info-card" id="tip-3">
-            <div class="tip-header">
-              <h3>Tip 3: Enakovrednost izjav</h3>
-              <div class="tip-formula">\(A \Leftrightarrow B\)</div>
+            <div class="tip-naloge" id="tip-10">
+              <h4>Tip 10: Ali sta izjavi enakovredni?</h4>
+              <div class="prepoznaj">
+                <p><strong>Kako prepoznaš:</strong> dani sta dve izjavi, preveriti moraš, ali imata vedno enako vrednost.</p>
+                <ul class="kljucne"><li>„ali sta izjavi enakovredni“</li><li>„dokažite, da je \(X \equiv Y\)“</li><li>„s tabelo pokažite“</li></ul>
+              </div>
+              <h5>Univerzalni postopek</h5>
+              <ol>
+                <li>Naredi <strong>eno</strong> tabelo z \(2^n\) vrsticami za obe izjavi.</li>
+                <li>Izračunaj zadnji stolpec za \(X\) in zadnji stolpec za \(Y\).</li>
+                <li>Primerjaj stolpca po vrsticah. Povsod enaka → enakovredni. Vsaj ena razlika → nista (to vrstico navedi kot protiprimer).</li>
+              </ol>
+              <div class="primer">
+                <p><strong>Primer:</strong> Ali sta \(A \Rightarrow B\) in \(\neg A \lor B\) enakovredni?</p>
+                <div class="tabela-wrap">
+                  <table class="tabela">
+                    <thead><tr><th>\(A\)</th><th>\(B\)</th><th>\(A \Rightarrow B\)</th><th>\(\neg A\)</th><th>\(\neg A \lor B\)</th></tr></thead>
+                    <tbody>
+                      <tr><td>1</td><td>1</td><td>1</td><td>0</td><td>1</td></tr>
+                      <tr><td>1</td><td>0</td><td>0</td><td>0</td><td>0</td></tr>
+                      <tr><td>0</td><td>1</td><td>1</td><td>1</td><td>1</td></tr>
+                      <tr><td>0</td><td>0</td><td>1</td><td>1</td><td>1</td></tr>
+                    </tbody>
+                  </table>
+                </div>
+                <p>Tretji in peti stolpec sta enaka, zato sta izjavi enakovredni.</p>
+              </div>
             </div>
-            <p><strong>Kako prepoznaš:</strong> "pokažite, da sta izjavi enakovredni".</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Naredi resničnostno tabelo za obe izjavi.</li>
-              <li>Primerjaj stolpca — če sta enaka, sta izjavi enakovredni.</li>
-            </ol>
-            <p class="plain-example"><strong>Primer:</strong> \(\neg(A \land B) \Leftrightarrow \neg A \lor \neg B\) — De Morganov zakon.</p>
-          </div>
 
-          <!-- TIP 4 -->
-          <div class="info-card" id="tip-4">
-            <div class="tip-header">
-              <h3>Tip 4: Tavtologija</h3>
-              <div class="tip-formula">\(A \lor \neg A \equiv R\)</div>
+            <div class="tip-naloge" id="tip-11">
+              <h4>Tip 11: Obrat in kontrapozicija implikacije</h4>
+              <div class="prepoznaj">
+                <p><strong>Kako prepoznaš:</strong> dana je implikacija (pogosto matematični izrek), zapisati moraš njen obrat ali kontrapozicijo in določiti vrednosti.</p>
+                <ul class="kljucne"><li>„zapišite obrat izreka“</li><li>„zapišite kontrapozicijo“</li><li>„ali velja tudi obratno“</li></ul>
+              </div>
+              <h5>Univerzalni postopek</h5>
+              <ol>
+                <li>Določi predpostavko \(A\) (del za „če“) in sklep \(B\) (del za „potem“).</li>
+                <li>Obrat: zamenjaj vlogi, \(B \Rightarrow A\). Kontrapozicija: zamenjaj in negiraj oba, \(\neg B \Rightarrow \neg A\).</li>
+                <li>Kontrapozicija ima vedno isto vrednost kot prvotna izjava. Vrednost obrata preveri posebej (išči protiprimer).</li>
+              </ol>
+              <div class="primer">
+                <p><strong>Primer:</strong> „Če je število deljivo s 4, je sodo.“ Zapišite obrat in kontrapozicijo ter določite vrednosti.</p>
+                <p>Prvotna: pravilna. Kontrapozicija: „Če število ni sodo, ni deljivo s 4.“ → pravilna.</p>
+                <p>Obrat: „Če je število sodo, je deljivo s 4.“ → nepravilna (protiprimer: 6).</p>
+              </div>
             </div>
-            <p><strong>Kako prepoznaš:</strong> "ali je izjava tavtologija".</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Naredi resničnostno tabelo.</li>
-              <li>Če je <strong>zadnji stolpec povsod R</strong>, je izjava tavtologija.</li>
-              <li>Če je povsod N, je protislovje.</li>
-            </ol>
-            <p class="plain-example"><strong>Primer:</strong> \(A \lor \neg A\) — vedno resnična, tavtologija.</p>
-          </div>
 
-          <!-- TIP 5 -->
-          <div class="info-card" id="tip-5">
-            <div class="tip-header">
-              <h3>Tip 5: Negacija sestavljene izjave</h3>
-              <div class="tip-formula">\(\neg(A \land B) = \neg A \lor \neg B\)</div>
+            <div class="tip-naloge" id="tip-12">
+              <h4>Tip 12: Poenostavi izjavo z zakoni logike</h4>
+              <div class="prepoznaj">
+                <p><strong>Kako prepoznaš:</strong> izjavo moraš zapisati krajše ali brez določene povezave.</p>
+                <ul class="kljucne"><li>„poenostavite“</li><li>„zapišite brez implikacije“</li><li>„zapišite enakovredno izjavo“</li></ul>
+              </div>
+              <h5>Univerzalni postopek</h5>
+              <ol>
+                <li>Implikacije zamenjaj z \(\neg A \lor B\), ekvivalence z \((A \Rightarrow B) \land (B \Rightarrow A)\).</li>
+                <li>Negacije potisni do enostavnih izjav z De Morganom.</li>
+                <li>Uporabi \(A \lor \neg A = 1\), \(A \land \neg A = 0\), \(A \land 1 = A\), \(A \lor 0 = A\), absorpcijo.</li>
+                <li>Rezultat lahko preveriš s tabelo (Tip 10).</li>
+              </ol>
+              <div class="primer">
+                <p><strong>Primer:</strong> Poenostavite \(\neg(A \Rightarrow \neg B) \lor A\).</p>
+                <p>\(\neg(A \Rightarrow \neg B) \equiv A \land \neg\neg B \equiv A \land B\).</p>
+                <p>\((A \land B) \lor A \equiv A\) (absorpcija).</p>
+              </div>
             </div>
-            <p><strong>Kako prepoznaš:</strong> "zapišite negacijo izjave \(A \land B\)".</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Uporabi De Morganov zakon.</li>
-              <li>Zamenjaj \(\land \leftrightarrow \lor\).</li>
-              <li>Negiraj vsako izjavo posebej.</li>
-            </ol>
-            <p class="plain-example"><strong>Primer:</strong> \(\neg(A \Rightarrow B) = A \land \neg B\).</p>
-          </div>
-
-          <!-- TIP 6 -->
-          <div class="info-card" id="tip-6">
-            <div class="tip-header">
-              <h3>Tip 6: Kvantifikatorji</h3>
-              <div class="tip-formula">\(\forall, \exists\)</div>
-            </div>
-            <p><strong>Kako prepoznaš:</strong> "za vsak …", "obstaja …".</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Preberi kvantifikator.</li>
-              <li>Preveri, ali izjava velja za vse elemente ali le za nekaj.</li>
-              <li>Negacija \(\forall\) je \(\exists \neg\), negacija \(\exists\) je \(\forall \neg\).</li>
-            </ol>
-            <p class="plain-example"><strong>Primer:</strong> "Za vsak \(x \in \mathbb{R}\) velja \(x^2 \geq 0\)." → Resnična. Negacija: "Obstaja \(x \in \mathbb{R}\), da je \(x^2 < 0\)." → Neresnična.</p>
-          </div>
-
-          <!-- TIP 7 -->
-          <div class="info-card" id="tip-7">
-            <div class="tip-header">
-              <h3>Tip 7: Logična vrednost v besedilu</h3>
-              <div class="tip-formula">Analiza povedi</div>
-            </div>
-            <p><strong>Kako prepoznaš:</strong> "obkrožite 1, če je izjava resnična".</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Razčleni poved na enostavne izjave.</li>
-              <li>Določi resničnost vsake.</li>
-              <li>Uporabi veznike in izračunaj.</li>
-            </ol>
-            <p class="plain-example"><strong>Primer:</strong> "Število 49 je praštevilo." → Neresnična (49 = 7 · 7).</p>
-          </div>
-
-          <!-- TIP 8 -->
-          <div class="info-card" id="tip-8">
-            <div class="tip-header">
-              <h3>Tip 8: Enakovredne oblike implikacije</h3>
-              <div class="tip-formula">\(A \Rightarrow B \equiv \neg B \Rightarrow \neg A\)</div>
-            </div>
-            <p><strong>Kako prepoznaš:</strong> "zapišite kontrapozicijo".</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Zamenjaj \(A\) in \(B\).</li>
-              <li>Negiraj oba.</li>
-              <li>Kontrapozicija \(A \Rightarrow B\) je \(\neg B \Rightarrow \neg A\) (enakovredna).</li>
-              <li>Konverzija \(B \Rightarrow A\) <strong>ni</strong> enakovredna.</li>
-            </ol>
-            <p class="plain-example"><strong>Primer:</strong> \(A \Rightarrow B\) ≡ \(\neg B \Rightarrow \neg A\).</p>
           </div>
         </section>
 
-        <!-- ============ 3. POGOSTE NAPAKE ============ -->
+        <!-- ============ KLJUČ ZA PREPOZNAVANJE ============ -->
+        <section class="subsection" id="kljuc">
+          <div class="subsection-head">
+            <h2>🔎 Ključ: kateri tip naloge je to?</h2>
+            <p>Poišči besedo iz navodila naloge in skoči na pravi postopek.</p>
+          </div>
+          <div class="info-card">
+            <div class="tabela-wrap">
+              <table class="tabela">
+                <thead><tr><th>V besedilu naloge piše …</th><th>Tip</th></tr></thead>
+                <tbody>
+                  <tr><td>„katere povedi so izjave“</td><td><a href="#tip-1">Tip 1</a></td></tr>
+                  <tr><td>„določite logično vrednost“, „ali je pravilna“</td><td><a href="#tip-2">Tip 2</a>, <a href="#tip-5">Tip 5</a></td></tr>
+                  <tr><td>„za vsak“, „obstaja“, \(\forall\), \(\exists\)</td><td><a href="#tip-3">Tip 3</a></td></tr>
+                  <tr><td>„zapišite s simboli“, „zapišite z besedami“</td><td><a href="#tip-4">Tip 4</a></td></tr>
+                  <tr><td>„izjava je nepravilna, določite \(A\), \(B\)“</td><td><a href="#tip-6">Tip 6</a></td></tr>
+                  <tr><td>„zapišite negacijo“, „zanikajte“</td><td><a href="#tip-7">Tip 7</a> (kvantifikatorji: <a href="#tip-3">Tip 3</a>)</td></tr>
+                  <tr><td>izjava brez oklepajev, „vrstni red“</td><td><a href="#tip-8">Tip 8</a></td></tr>
+                  <tr><td>„tavtologija“, „pravilnostna tabela“, „pri vseh vrednostih“</td><td><a href="#tip-9">Tip 9</a></td></tr>
+                  <tr><td>„enakovredni“, „pokažite, da je \(\equiv\)“</td><td><a href="#tip-10">Tip 10</a></td></tr>
+                  <tr><td>„obrat“, „kontrapozicija“, „ali velja obratno“</td><td><a href="#tip-11">Tip 11</a></td></tr>
+                  <tr><td>„poenostavite“, „brez implikacije“</td><td><a href="#tip-12">Tip 12</a></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ POGOSTE NAPAKE ============ -->
         <section class="subsection">
           <div class="subsection-head">
-            <h2>3. Pogoste napake</h2>
+            <h2>⚠️ Pogoste napake</h2>
           </div>
           <div class="info-card">
             <ul>
-              <li>Zamenjaš implikacijo \(A \Rightarrow B\) z ekvivalenco \(A \Leftrightarrow B\).</li>
-              <li>Misliš, da je implikacija neresnična tudi, ko je \(A\) neresnična.</li>
-              <li>Pozabiš, da je \(A \lor B\) resnična tudi, če sta obe izjavi resnični (vključujoče "ali").</li>
-              <li>Napačno uporabiš De Morganova zakona.</li>
-              <li>Pri negaciji kvantifikatorja pozabiš zamenjati \(\forall \leftrightarrow \exists\).</li>
+              <li>Implikacija \(0 \Rightarrow 0\) ali \(0 \Rightarrow 1\) je <strong>pravilna</strong>, ne nepravilna.</li>
+              <li>„Ali“ v logiki je vključujoči: \(1 \lor 1 = 1\).</li>
+              <li>Negacija \(A \Rightarrow B\) je \(A \land \neg B\), ne \(\neg A \Rightarrow \neg B\).</li>
+              <li>Pri De Morganu pozabiš zamenjati \(\land\) in \(\lor\).</li>
+              <li>Pri negaciji kvantifikatorja pozabiš zamenjati \(\forall\) in \(\exists\).</li>
+              <li>Tabela za 3 izjave ima 8 vrstic, ne 6.</li>
+              <li>\(\neg A \land B\) prebereš kot \(\neg(A \land B)\).</li>
+              <li>Obrat implikacije zamenjaš s kontrapozicijo.</li>
             </ul>
           </div>
         </section>
 
-        <!-- ============ 4. ŠTUDIJSKI VODIČ ============ -->
+        <!-- ============ VADI NAPREJ ============ -->
         <section class="subsection">
           <div class="subsection-head">
-            <h2>4. Študijski vodič — hitri pregled</h2>
-          </div>
-          <div class="info-card">
-            <h3>📋 Kaj moraš znati na pamet</h3>
-            <ul>
-              <li><strong>Resničnostne tabele</strong> za vse 5 veznikov.</li>
-              <li><strong>De Morganova zakona:</strong> \(\neg(A \land B) = \neg A \lor \neg B\), \(\neg(A \lor B) = \neg A \land \neg B\).</li>
-              <li><strong>Implikacija</strong> je neresnična le, ko je \(A\) resnična, \(B\) pa neresnična.</li>
-              <li><strong>Ekvivalenca</strong> je resnična, ko imata \(A\) in \(B\) enako vrednost.</li>
-              <li><strong>Kontrapozicija:</strong> \(A \Rightarrow B \equiv \neg B \Rightarrow \neg A\).</li>
-              <li><strong>Negacija kvantifikatorjev:</strong> \(\neg(\forall x) = \exists x \neg\), \(\neg(\exists x) = \forall x \neg\).</li>
-            </ul>
-          </div>
-
-          <div class="info-card">
-            <h3>🎯 Kako pristopiti k nalogi</h3>
-            <ol>
-              <li><strong>Preberi nalogo in prepoznaj tip:</strong> vrednost izjave, tabela, enakovrednost, negacija?</li>
-              <li><strong>Za vrednost:</strong> razčleni in uporabi tabelo.</li>
-              <li><strong>Za tabelo:</strong> vse kombinacije, uporabi pravila veznikov.</li>
-              <li><strong>Za negacijo:</strong> De Morgan, zamenjaj \(\land/\lor\).</li>
-              <li><strong>Za kvantifikatorje:</strong> zamenjaj \(\forall/\exists\) in negiraj izjavo.</li>
-            </ol>
-          </div>
-
-          <div class="info-card">
-            <h3>⏱️ Časovni načrt za en večer</h3>
-            <ul>
-              <li><strong>20 min:</strong> Teorija — vezniki, tabele, De Morgan.</li>
-              <li><strong>45 min:</strong> Tipi 1–4 (vrednost, tabela, enakovrednost, tavtologija).</li>
-              <li><strong>35 min:</strong> Tipi 5–8 (negacija, kvantifikatorji, besedilo, kontrapozicija).</li>
-              <li><strong>20 min:</strong> Ponovi pogoste napake in študijski vodič.</li>
-            </ul>
-          </div>
-        </section>
-
-        <!-- ============ 5. POVEZAVE ============ -->
-        <section class="subsection">
-          <div class="subsection-head">
-            <h2>5. Vadi naprej</h2>
+            <h2>Vadi naprej</h2>
             <p>Ko predelaš razlago, preveri znanje z nalogami.</p>
           </div>
           <div class="link-list">
-            <a class="link-item" href="/views/matematika/matura/osnovna_raven/naloge/resene/">
+            <a class="link-item" href="/views/matematika/matura/matura.html">
               <span class="link-item-text">
-                <strong>Rešene naloge — osnovna raven</strong>
-                <small>Primeri z razlago</small>
-              </span>
-              <span class="arrow">→</span>
-            </a>
-            <a class="link-item" href="/views/matematika/matura/visja_raven/naloge/resene/">
-              <span class="link-item-text">
-                <strong>Rešene naloge — višja raven</strong>
-                <small>Zahtevnejši primeri</small>
+                <strong>Maturitetne pole</strong>
+                <small>Rešuj prave izpitne pole</small>
               </span>
               <span class="arrow">→</span>
             </a>
