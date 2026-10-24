@@ -135,21 +135,16 @@
 
             <div class="tip-naloge" id="tip-1">
               <h4>Tip 1: Pravilno ali nepravilno — \(\in\), \(\notin\), \(\subseteq\)</h4>
-              <div class="prepoznaj">
-                <p><strong>Kako prepoznaš:</strong> dana je množica in več zapisov s simboli, za vsakega povej, ali drži, ali pa vstavi pravi simbol.</p>
-                <ul class="kljucne"><li>„vstavite ustrezen znak“</li><li>„obkrožite pravilne zapise“</li><li>„\(\in\) ali \(\subseteq\)“</li></ul>
-              </div>
-              <h5>Univerzalni postopek</h5>
-              <ol>
-                <li>Prepiši vse elemente množice in jih preštej (posebej pazi na elemente, ki so sami množice).</li>
-                <li>Pri vsakem zapisu ugotovi, kaj je na levi: <strong>element</strong> → uporabimo \(\in\); <strong>množica</strong> (v zavitih oklepajih) → uporabimo \(\subseteq\).</li>
-                <li>Za \(x \in A\): ali je \(x\) natanko eden od naštetih elementov? Za \(X \subseteq A\): ali je <strong>vsak</strong> element \(X\) med elementi \(A\)?</li>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>\(A = \{1, 2, \{3\}\}\). Ali drži: (a) \(3 \in A\), (b) \(\{3\} \in A\), (c) \(\{1, 2\} \subseteq A\), (d) \(\{3\} \subseteq A\)?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> dana je množica in več zapisov s simboli, za vsakega povej, ali drži, ali pa vstavi pravi simbol.</p><ul class="kljucne"><li>„vstavite ustrezen znak“</li><li>„obkrožite pravilne zapise“</li><li>„\(\in\) ali \(\subseteq\)“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Prepiši vse elemente množice in jih preštej. Posebej pazi na elemente, ki so sami množice.</p><div class="na-nalogi"><p>\(A\) ima tri elemente: \(1\), \(2\) in \(\{3\}\). Število \(3\) samo po sebi ni element \(A\).</p></div></li>
+              <li><p class="korak">Pri vsakem zapisu ugotovi, kaj je na levi: element (uporabimo \(\in\)) ali množica, katere elemente primerjamo (uporabimo \(\subseteq\)).</p><div class="na-nalogi"><p>(a) in (b) sprašujeta po elementu, (c) in (d) po podmnožici.</p></div></li>
+              <li><p class="korak">Za \(x \in A\): ali je \(x\) natanko eden od naštetih elementov? Za \(X \subseteq A\): ali je <strong>vsak</strong> element \(X\) med elementi \(A\)?</p><div class="na-nalogi"><p>(a) Ne, \(3\) ni med naštetimi. (b) Da, \(\{3\}\) je tretji element. (c) Da, \(1 \in A\) in \(2 \in A\). (d) Ne, za to bi moralo veljati \(3 \in A\).</p></div></li>
               </ol>
-              <div class="primer">
-                <p><strong>Primer:</strong> \(A = \{1, 2, \{3\}\}\). Ali drži: (a) \(3 \in A\), (b) \(\{3\} \in A\), (c) \(\{1, 2\} \subseteq A\), (d) \(\{3\} \subseteq A\)?</p>
-                <p>Elementi so: \(1\), \(2\) in \(\{3\}\).</p>
-                <p>(a) ne (\(3\) ni element, element je \(\{3\}\)); (b) da; (c) da; (d) ne (za to bi moralo veljati \(3 \in A\)).</p>
-              </div>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> \(B = \{a, b, c\}\). Vstavite \(\in\) ali \(\subseteq\): \(a \;\square\; B\), \(\{a\} \;\square\; B\), \(\emptyset \;\square\; B\).</p><p>\(a \in B\), \(\{a\} \subseteq B\), \(\emptyset \subseteq B\) (prazna množica je podmnožica vsake množice).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> \(C = \{\emptyset, 1\}\). Ali drži \(\emptyset \in C\) in \(\emptyset \subseteq C\)?</p><p>Oboje drži: \(\emptyset\) je naštet kot element, hkrati pa je podmnožica vsake množice.</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Ali drži \(\{1, 2\} \subseteq \{1, \{2\}\}\)?</p><p>Ne. \(2\) ni element desne množice, element je \(\{2\}\).</p></div>
             </div>
           </div>
         </section>
@@ -187,21 +182,17 @@
 
             <div class="tip-naloge" id="tip-2">
               <h4>Tip 2: Zapiši množico z naštevanjem ali z opisom</h4>
-              <div class="prepoznaj">
-                <p><strong>Kako prepoznaš:</strong> množica je podana z opisom (pogojem), ti jo naštej. Ali obratno: naštete elemente opiši s pogojem.</p>
-                <ul class="kljucne"><li>„zapišite z naštevanjem elementov“</li><li>„zapišite z opisom“</li><li>\(\{x;\ \dots\}\)</li></ul>
-              </div>
-              <h5>Univerzalni postopek</h5>
-              <ol>
-                <li><strong>Opis → naštevanje:</strong> razberi, iz katere množice so elementi (\(\mathbb{N}\), \(\mathbb{Z}\), \(\mathbb{R}\)). Pogoje preveri po vrsti za vsa kandidatna števila in zapiši tista, ki ustrezajo vsem pogojem hkrati.</li>
-                <li><strong>Naštevanje → opis:</strong> poišči skupno lastnost (vsi sodi? vsi kvadrati? vsi manjši od 20?) in jo zapiši kot pogoj. Preveri, da pogoj ne dopušča še kakšnega elementa.</li>
-                <li>Pazi na meje: „manjši od“ (\(&lt;\)) ali „največ“ (\(\le\)).</li>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Zapišite z naštevanjem \(A = \{x;\ x \in \mathbb{Z} \land x^2 &lt; 10\}\) in z opisom \(B = \{3, 6, 9, 12, 15\}\).</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> množica je podana z opisom (pogojem), ti jo naštej. Ali obratno: naštete elemente opiši s pogojem.</p><ul class="kljucne"><li>„zapišite z naštevanjem elementov“</li><li>„zapišite z opisom“</li><li>\(\{x;\ \dots\}\)</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Opis v naštevanje: razberi, iz katere množice so elementi (\(\mathbb{N}\), \(\mathbb{Z}\), \(\mathbb{R}\)).</p><div class="na-nalogi"><p>\(x\) je celo število, torej so možni tudi negativni in \(0\).</p></div></li>
+              <li><p class="korak">Pogoje preveri po vrsti za vsa kandidatna števila in zapiši tista, ki ustrezajo vsem pogojem hkrati. Pazi na meje (\(&lt;\) ali \(\le\)).</p><div class="na-nalogi"><p>\(3^2 = 9 &lt; 10\), \(4^2 = 16 &gt; 10\). Ustrezajo \(-3, \dots, 3\): \(A = \{-3, -2, -1, 0, 1, 2, 3\}\).</p></div></li>
+              <li><p class="korak">Naštevanje v opis: poišči skupno lastnost (sodi? kvadrati? večkratniki?) in jo zapiši kot pogoj.</p><div class="na-nalogi"><p>Vsi elementi \(B\) so večkratniki števila 3, od \(3 \cdot 1\) do \(3 \cdot 5\).</p></div></li>
+              <li><p class="korak">Preveri, da pogoj ne dopušča še kakšnega elementa.</p><div class="na-nalogi"><p>\(B = \{3k;\ k \in \mathbb{N} \land k \le 5\}\). Brez pogoja \(k \le 5\) bi dobili tudi \(18, 21, \dots\)</p></div></li>
               </ol>
-              <div class="primer">
-                <p><strong>Primer:</strong> Zapišite z naštevanjem \(A = \{x;\ x \in \mathbb{Z} \land x^2 &lt; 10\}\) in z opisom \(B = \{3, 6, 9, 12, 15\}\).</p>
-                <p>\(x^2 &lt; 10\) velja za \(-3, -2, -1, 0, 1, 2, 3\), zato \(A = \{-3, -2, -1, 0, 1, 2, 3\}\).</p>
-                <p>\(B = \{3k;\ k \in \mathbb{N} \land k \le 5\}\).</p>
-              </div>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Zapišite z naštevanjem \(C = \{x;\ x \in \mathbb{N} \land x \mid 12\}\).</p><p>Delitelji števila 12: \(C = \{1, 2, 3, 4, 6, 12\}\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Zapišite z opisom \(D = \{1, 4, 9, 16, 25\}\).</p><p>\(D = \{n^2;\ n \in \mathbb{N} \land n \le 5\}\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Zapišite z naštevanjem \(E = \{x;\ x \in \mathbb{N} \land 2x - 1 &lt; 9\}\).</p><p>\(2x &lt; 10\), \(x &lt; 5\): \(E = \{1, 2, 3, 4\}\).</p></div>
             </div>
           </div>
         </section>
@@ -257,40 +248,34 @@
 
             <div class="tip-naloge" id="tip-3">
               <h4>Tip 3: Vpiši elemente v Vennov diagram in ga preberi</h4>
-              <div class="prepoznaj">
-                <p><strong>Kako prepoznaš:</strong> dane so množice z naštetimi elementi (ali opisom), narisati moraš diagram; ali pa je diagram narisan in iz njega zapišeš množice.</p>
-                <ul class="kljucne"><li>„predstavite z Vennovim diagramom“</li><li>„iz diagrama zapišite“</li><li>„vpišite elemente“</li></ul>
-              </div>
-              <h5>Univerzalni postopek</h5>
-              <ol>
-                <li>Zapiši \(U\) z naštevanjem.</li>
-                <li>Poišči presek vseh množic in ga vpiši v sredino.</li>
-                <li>Poišči elemente, ki so v natanko dveh množicah, nato v natanko eni.</li>
-                <li>Preostale elemente \(U\) vpiši zunaj krogov. Preveri: vsak element \(U\) je vpisan natanko enkrat.</li>
-                <li>Pri branju: množica \(A\) so <strong>vsi</strong> elementi znotraj kroga \(A\), tudi tisti v presekih.</li>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>\(U = \{1, 2, \dots, 10\}\), \(A\) so soda števila iz \(U\), \(B\) so večkratniki števila 3 iz \(U\). Elemente vpišite v Vennov diagram.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> dane so množice z naštetimi elementi (ali opisom), narisati moraš diagram; ali pa je diagram narisan in iz njega zapišeš množice.</p><ul class="kljucne"><li>„predstavite z Vennovim diagramom“</li><li>„iz diagrama zapišite“</li><li>„vpišite elemente“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Vse množice zapiši z naštevanjem.</p><div class="na-nalogi"><p>\(U = \{1, \dots, 10\}\), \(A = \{2, 4, 6, 8, 10\}\), \(B = \{3, 6, 9\}\).</p></div></li>
+              <li><p class="korak">Poišči presek vseh množic in ga vpiši v sredino.</p><div class="na-nalogi"><p>\(A \cap B = \{6\}\). Število 6 gre v skupni del krogov.</p></div></li>
+              <li><p class="korak">Poišči elemente, ki so v natanko eni množici.</p><div class="na-nalogi"><p>Samo v \(A\): \(2, 4, 8, 10\). Samo v \(B\): \(3, 9\).</p></div></li>
+              <li><p class="korak">Preostale elemente \(U\) vpiši zunaj krogov. Preveri, da je vsak element vpisan natanko enkrat.</p><div class="na-nalogi"><p>Zunaj: \(1, 5, 7\). Skupaj \(1 + 4 + 2 + 3 = 10\) elementov, kolikor jih ima \(U\).</p></div></li>
               </ol>
-              <div class="primer">
-                <p><strong>Primer:</strong> \(U = \{1, 2, \dots, 10\}\), \(A\) so soda števila, \(B\) večkratniki števila 3. Narišite diagram.</p>
-                <p>\(A = \{2, 4, 6, 8, 10\}\), \(B = \{3, 6, 9\}\). Presek: \(\{6\}\). Samo \(A\): \(2, 4, 8, 10\). Samo \(B\): \(3, 9\). Zunaj: \(1, 5, 7\).</p>
-              </div>
+              <div class="pazi"><strong>Pri branju diagrama:</strong> množica \(A\) so <strong>vsi</strong> elementi znotraj kroga \(A\), tudi tisti v presekih.</div>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> \(U = \{1, \dots, 8\}\), \(A = \{1, 2, 3, 4\}\), \(B = \{3, 4, 5\}\). Kaj vpišemo v posamezna območja?</p><p>Sredina: \(3, 4\). Samo \(A\): \(1, 2\). Samo \(B\): \(5\). Zunaj: \(6, 7, 8\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> V diagramu so v samo \(A\) števila \(1, 7\), v preseku \(3\), v samo \(B\) število \(5\), zunaj \(2, 4\). Zapišite \(A\), \(B\) in \(U\).</p><p>\(A = \{1, 3, 7\}\), \(B = \{3, 5\}\), \(U = \{1, 2, 3, 4, 5, 7\}\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> \(U\) so števke \(0\)–\(9\), \(A\) praštevila, \(B\) liha števila. Kaj je v sredini?</p><p>\(A = \{2, 3, 5, 7\}\), \(B = \{1, 3, 5, 7, 9\}\). Sredina: \(3, 5, 7\).</p></div>
             </div>
 
             <div class="tip-naloge" id="tip-4">
               <h4>Tip 4: Osenči območje ali zapiši izraz za osenčeno območje</h4>
-              <div class="prepoznaj">
-                <p><strong>Kako prepoznaš:</strong> na diagramu je osenčen del, zapisati moraš izraz z \(\cup, \cap, \setminus, ^C\); ali obratno, osenčiti moraš del, ki ustreza izrazu.</p>
-                <ul class="kljucne"><li>„osenčite“</li><li>„z množicami zapišite osenčeni del“</li><li>„katera množica je osenčena“</li></ul>
-              </div>
-              <h5>Univerzalni postopek</h5>
-              <ol>
-                <li><strong>Izraz → senčenje:</strong> računaj od notranjih oklepajev navzven. Vsak vmesni rezultat osenči s svetlim svinčnikom ali s črtkanjem v drugo smer; končni rezultat obrobi.</li>
-                <li><strong>Senčenje → izraz:</strong> oštevilči območja (1–4 ali 1–8). Za osenčena območja zapiši, v katerih množicah so in v katerih ne. Nato jih poveži: „v \(A\) in ne v \(B\)“ → \(A \cap B^C\); več območij poveži z \(\cup\).</li>
-                <li>Preveri: izraz mora zajeti <strong>vsa</strong> osenčena in <strong>nobenega</strong> neosenčenega območja.</li>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>V Vennovem diagramu množic \(A\) in \(B\) sta osenčeni območji „samo v \(A\)“ in „samo v \(B\)“. Zapišite izraz za osenčeni del.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> na diagramu je osenčen del, zapisati moraš izraz z \(\cup, \cap, \setminus, ^C\); ali obratno, osenčiti moraš del, ki ustreza izrazu.</p><ul class="kljucne"><li>„osenčite“</li><li>„z množicami zapišite osenčeni del“</li><li>„katera množica je osenčena“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Oštevilči območja diagrama (pri dveh množicah 1–4, pri treh 1–8).</p><div class="na-nalogi"><p>1: samo \(A\), 2: \(A \cap B\), 3: samo \(B\), 4: zunaj. Osenčeni sta 1 in 3.</p></div></li>
+              <li><p class="korak">Za vsako osenčeno območje zapiši, v katerih množicah je in v katerih ne, in to prevedi v izraz.</p><div class="na-nalogi"><p>Območje 1: „v \(A\) in ne v \(B\)“ \(= A \setminus B\). Območje 3: „v \(B\) in ne v \(A\)“ \(= B \setminus A\).</p></div></li>
+              <li><p class="korak">Več območij poveži z \(\cup\).</p><div class="na-nalogi"><p>\((A \setminus B) \cup (B \setminus A)\), kar lahko zapišemo tudi kot \((A \cup B) \setminus (A \cap B)\).</p></div></li>
+              <li><p class="korak">Preveri: izraz mora zajeti vsa osenčena in nobenega neosenčenega območja.</p><div class="na-nalogi"><p>Območje 2 je v obeh, zato ga razlika izloči; območje 4 ni v nobeni, zato ga ni. Izraz se ujema.</p></div></li>
               </ol>
-              <div class="primer">
-                <p><strong>Primer:</strong> Osenčeni sta območji „samo v \(A\)“ in „samo v \(B\)“. Zapišite izraz.</p>
-                <p>\((A \setminus B) \cup (B \setminus A)\), kar je enako \((A \cup B) \setminus (A \cap B)\).</p>
-              </div>
+              <div class="pazi"><strong>Obratna smer (izraz v senčenje):</strong> računaj od notranjih oklepajev navzven. Vsak vmesni rezultat osenči na rahlo, končni rezultat izrazito.</div>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Osenčeno je vse zunaj obeh krogov. Zapišite izraz.</p><p>Ne v \(A\) in ne v \(B\): \(A^C \cap B^C = (A \cup B)^C\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Osenčite \(A \cap B^C\).</p><p>To je del kroga \(A\), ki ni v \(B\): območje „samo \(A\)“.</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Pri treh množicah je osenčen samo skupni del \(A\) in \(B\), ki ni v \(C\). Zapišite izraz.</p><p>\((A \cap B) \setminus C\).</p></div>
             </div>
           </div>
         </section>
@@ -399,42 +384,32 @@
 
             <div class="tip-naloge" id="tip-5">
               <h4>Tip 5: Unija, presek, razlika in komplement končnih množic</h4>
-              <div class="prepoznaj">
-                <p><strong>Kako prepoznaš:</strong> množice so podane z naštevanjem ali opisom, izračunati moraš izraz z \(\cup, \cap, \setminus, ^C\).</p>
-                <ul class="kljucne"><li>„zapišite \(A \cap B\)“</li><li>„določite \((A \cup B)^C\)“</li><li>„izračunajte“</li></ul>
-              </div>
-              <h5>Univerzalni postopek</h5>
-              <ol>
-                <li>Vse množice (tudi \(U\)) zapiši z naštevanjem.</li>
-                <li>Računaj od notranjih oklepajev navzven; vsak vmesni rezultat zapiši.</li>
-                <li>Pri komplementu vedno izhajaj iz \(U\).</li>
-                <li>Pri sestavljenem izrazu si pomagaj z Vennovim diagramom, rezultat preveri na sliki.</li>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>\(U = \{1, \dots, 8\}\), \(A = \{1, 2, 3, 4\}\), \(B = \{3, 4, 5, 6\}\). Izračunajte \((A \cup B)^C\) in \(A \cap B^C\).</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> množice so podane z naštevanjem ali opisom, izračunati moraš izraz z \(\cup, \cap, \setminus, ^C\).</p><ul class="kljucne"><li>„zapišite \(A \cap B\)“</li><li>„določite \((A \cup B)^C\)“</li><li>„izračunajte“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Vse množice (tudi \(U\)) zapiši z naštevanjem.</p><div class="na-nalogi"><p>Množice so že naštete.</p></div></li>
+              <li><p class="korak">Računaj od notranjih oklepajev navzven, vsak vmesni rezultat zapiši.</p><div class="na-nalogi"><p>\(A \cup B = \{1, 2, 3, 4, 5, 6\}\).</p></div></li>
+              <li><p class="korak">Pri komplementu vedno izhajaj iz \(U\).</p><div class="na-nalogi"><p>\((A \cup B)^C = U \setminus \{1, \dots, 6\} = \{7, 8\}\). \(B^C = \{1, 2, 7, 8\}\).</p></div></li>
+              <li><p class="korak">Dokončaj izraz in rezultat preveri z Vennovim diagramom.</p><div class="na-nalogi"><p>\(A \cap B^C = \{1, 2\}\). To je ravno \(A \setminus B\), kar se ujema s sliko.</p></div></li>
               </ol>
-              <div class="primer">
-                <p><strong>Primer:</strong> \(U = \{1, \dots, 8\}\), \(A = \{1, 2, 3, 4\}\), \(B = \{3, 4, 5, 6\}\). Izračunajte \((A \cup B)^C\) in \(A \cap B^C\).</p>
-                <p>\(A \cup B = \{1, \dots, 6\}\), zato \((A \cup B)^C = \{7, 8\}\).</p>
-                <p>\(B^C = \{1, 2, 7, 8\}\), zato \(A \cap B^C = \{1, 2\}\) (to je \(A \setminus B\)).</p>
-              </div>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> \(A = \{a, b, c\}\), \(B = \{b, d\}\). Izračunajte \(A \cup B\), \(A \cap B\), \(B \setminus A\).</p><p>\(\{a, b, c, d\}\), \(\{b\}\), \(\{d\}\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> \(U = \{1, \dots, 6\}\), \(A = \{2, 4, 6\}\). Določite \(A^C\) in \(A \cap A^C\).</p><p>\(A^C = \{1, 3, 5\}\), \(A \cap A^C = \emptyset\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> \(U = \{1, \dots, 10\}\), \(A\) praštevila, \(B\) liha števila. Določite \(A \setminus B\) in \((A \cap B)^C\).</p><p>\(A = \{2, 3, 5, 7\}\), \(B = \{1, 3, 5, 7, 9\}\). \(A \setminus B = \{2\}\). \(A \cap B = \{3, 5, 7\}\), komplement \(\{1, 2, 4, 6, 8, 9, 10\}\).</p></div>
             </div>
 
             <div class="tip-naloge" id="tip-6">
               <h4>Tip 6: Operacije z intervali</h4>
-              <div class="prepoznaj">
-                <p><strong>Kako prepoznaš:</strong> množici sta intervala ali neenačbi z realnimi števili.</p>
-                <ul class="kljucne"><li>\(A = [a, b)\)</li><li>„\(A = \{x \in \mathbb{R};\ \dots\}\)“</li><li>„zapišite z intervalom“</li></ul>
-              </div>
-              <h5>Univerzalni postopek</h5>
-              <ol>
-                <li>Če je množica podana z neenačbo, jo najprej reši in zapiši kot interval.</li>
-                <li>Nariši številsko premico, nad njo vsak interval v svoji vrstici. Polni krožec \([\,]\), prazen krožec \((\,)\).</li>
-                <li>Unija: vse, kar je pokrito vsaj enkrat. Presek: kjer se črti prekrivata. Razlika: del prve črte, ki ga druga ne pokriva.</li>
-                <li>Krajišča preveri posebej: ali število res pripada rezultatu? Pri razliki se „zaprtost“ krajišča obrne.</li>
-                <li>Neskončnost \(\infty\) ima vedno okrogel oklepaj.</li>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>\(A = \{x \in \mathbb{R};\ x &gt; -1\}\), \(B = (-\infty, 2]\). Določite \(A \cap B\) in \(A^C\).</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> množici sta intervala ali neenačbi z realnimi števili.</p><ul class="kljucne"><li>\(A = [a, b)\)</li><li>„\(A = \{x \in \mathbb{R};\ \dots\}\)“</li><li>„zapišite z intervalom“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Če je množica podana z neenačbo, jo reši in zapiši kot interval.</p><div class="na-nalogi"><p>\(x &gt; -1\) je \(A = (-1, \infty)\).</p></div></li>
+              <li><p class="korak">Nariši številsko premico, nad njo vsak interval v svoji vrstici. Polni krožec pomeni \([\,]\), prazen krožec \((\,)\).</p><div class="na-nalogi"><p>\(A\): prazen krožec v \(-1\), črta v desno. \(B\): črta od leve do polnega krožca v \(2\).</p></div></li>
+              <li><p class="korak">Unija je vse, kar je pokrito vsaj enkrat. Presek je del, kjer se črti prekrivata. Razlika je del prve črte, ki ga druga ne pokriva.</p><div class="na-nalogi"><p>Črti se prekrivata med \(-1\) in \(2\): \(A \cap B = (-1, 2]\).</p></div></li>
+              <li><p class="korak">Krajišča preveri posebej. Pri komplementu in razliki se „zaprtost“ krajišča obrne. \(\infty\) ima vedno okrogel oklepaj.</p><div class="na-nalogi"><p>\(-1 \notin A\), zato \(-1 \in A^C\): \(A^C = (-\infty, -1]\).</p></div></li>
               </ol>
-              <div class="primer">
-                <p><strong>Primer:</strong> \(A = \{x \in \mathbb{R};\ x &gt; -1\}\), \(B = (-\infty, 2]\). Določite \(A \cap B\) in \(A^C\).</p>
-                <p>\(A = (-1, \infty)\). \(A \cap B = (-1, 2]\). \(A^C = (-\infty, -1]\) (\(-1 \notin A\), zato \(-1 \in A^C\)).</p>
-              </div>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> \(A = [0, 5)\), \(B = (3, 8]\). Določite \(A \cup B\) in \(A \setminus B\).</p><p>\(A \cup B = [0, 8]\). \(A \setminus B = [0, 3]\) (\(3 \notin B\), zato ostane v razliki).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> \(A = (-\infty, 1)\), \(B = [1, 4)\). Določite \(A \cap B\).</p><p>Ne prekrivata se (\(1 \notin A\)): \(A \cap B = \emptyset\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> \(A = \{x \in \mathbb{R};\ 2x - 4 \le 0\}\). Zapišite \(A\) in \(A^C\) z intervalom.</p><p>\(x \le 2\): \(A = (-\infty, 2]\), \(A^C = (2, \infty)\).</p></div>
             </div>
           </div>
         </section>
@@ -474,21 +449,17 @@
 
             <div class="tip-naloge" id="tip-7">
               <h4>Tip 7: Poenostavi izraz z množicami ali preveri enakost</h4>
-              <div class="prepoznaj">
-                <p><strong>Kako prepoznaš:</strong> dan je daljši izraz s komplementi in oklepaji, zapisati ga moraš krajše; ali pa preveriti, ali dve strani predstavljata isto množico.</p>
-                <ul class="kljucne"><li>„poenostavite izraz“</li><li>„ali velja enakost“</li><li>„dokažite z Vennovim diagramom“</li></ul>
-              </div>
-              <h5>Univerzalni postopek</h5>
-              <ol>
-                <li>Razlike zapiši s presekom in komplementom: \(A \setminus B = A \cap B^C\).</li>
-                <li>Komplemente oklepajev odpravi z De Morganom.</li>
-                <li>Uporabi distributivnost, nato \(A \cap A^C = \emptyset\), \(A \cup A^C = U\), absorpcijo.</li>
-                <li>Za preverjanje enakosti nariši dva diagrama, enega za levo in enega za desno stran.</li>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Poenostavite izraz \((A \cup B) \cap (A \cup B^C)\).</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> dan je daljši izraz s komplementi in oklepaji, zapisati ga moraš krajše; ali pa preveriti, ali dve strani predstavljata isto množico.</p><ul class="kljucne"><li>„poenostavite izraz“</li><li>„ali velja enakost“</li><li>„dokažite z Vennovim diagramom“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Razlike zapiši s presekom in komplementom: \(A \setminus B = A \cap B^C\).</p><div class="na-nalogi"><p>Razlik ni, ta korak odpade.</p></div></li>
+              <li><p class="korak">Komplemente oklepajev odpravi z De Morganom.</p><div class="na-nalogi"><p>Komplementov oklepajev ni.</p></div></li>
+              <li><p class="korak">Uporabi distributivnost, nato \(A \cap A^C = \emptyset\), \(A \cup A^C = U\) in absorpcijo.</p><div class="na-nalogi"><p>V obeh oklepajih je \(A \cup \dots\), zato ga izpostavimo: \(A \cup (B \cap B^C) = A \cup \emptyset = A\).</p></div></li>
+              <li><p class="korak">Rezultat preveri z Vennovim diagramom.</p><div class="na-nalogi"><p>\(A \cup B\) in \(A \cup B^C\) se prekrivata natanko v krogu \(A\). Rezultat je \(A\).</p></div></li>
               </ol>
-              <div class="primer">
-                <p><strong>Primer:</strong> Poenostavite \((A \cup B) \cap (A \cup B^C)\).</p>
-                <p>Distributivnost: \(= A \cup (B \cap B^C) = A \cup \emptyset = A\).</p>
-              </div>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Poenostavite \((A \setminus B) \cup (A \cap B)\).</p><p>\((A \cap B^C) \cup (A \cap B) = A \cap (B^C \cup B) = A \cap U = A\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Ali velja \((A \cup B)^C = A^C \cup B^C\)?</p><p>Ne. Po De Morganu je \((A \cup B)^C = A^C \cap B^C\). Protiprimer: element samo v \(A\) je v desni strani, v levi pa ne.</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Poenostavite \(A \cap (A^C \cup B)\).</p><p>\((A \cap A^C) \cup (A \cap B) = \emptyset \cup (A \cap B) = A \cap B\).</p></div>
             </div>
           </div>
         </section>
@@ -526,21 +497,17 @@
 
             <div class="tip-naloge" id="tip-8">
               <h4>Tip 8: Zapiši potenčno množico</h4>
-              <div class="prepoznaj">
-                <p><strong>Kako prepoznaš:</strong> zahtevajo vse podmnožice dane množice ali \(\mathcal{P}(A)\).</p>
-                <ul class="kljucne"><li>„zapišite potenčno množico“</li><li>„zapišite vse podmnožice“</li><li>\(\mathcal{P}(A)\)</li></ul>
-              </div>
-              <h5>Univerzalni postopek</h5>
-              <ol>
-                <li>Preštej elemente \(n = m(A)\). Vedel boš, da mora biti podmnožic \(2^n\).</li>
-                <li>Naštej po velikosti: \(\emptyset\), vse enoelementne, vse dvoelementne, …, \(A\).</li>
-                <li>Preštej zapisane in primerjaj z \(2^n\).</li>
-                <li>Celoten rezultat zapiši v zavitih oklepajih: \(\mathcal{P}(A) = \{\dots\}\).</li>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>\(A = \{0, \{1\}\}\). Zapišite potenčno množico \(\mathcal{P}(A)\).</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> zahtevajo vse podmnožice dane množice ali \(\mathcal{P}(A)\).</p><ul class="kljucne"><li>„zapišite potenčno množico“</li><li>„zapišite vse podmnožice“</li><li>\(\mathcal{P}(A)\)</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Preštej elemente \(n = m(A)\). Podmnožic bo \(2^n\).</p><div class="na-nalogi"><p>Elementa sta \(0\) in \(\{1\}\), torej \(n = 2\) in podmnožic je \(2^2 = 4\).</p></div></li>
+              <li><p class="korak">Naštej po velikosti: \(\emptyset\), vse enoelementne, vse dvoelementne, …, \(A\).</p><div class="na-nalogi"><p>\(\emptyset\); \(\{0\}\), \(\{\{1\}\}\); \(\{0, \{1\}\}\).</p></div></li>
+              <li><p class="korak">Preštej zapisane in primerjaj z \(2^n\).</p><div class="na-nalogi"><p>Zapisane so 4 podmnožice, kar se ujema.</p></div></li>
+              <li><p class="korak">Celoten rezultat zapiši v zavitih oklepajih.</p><div class="na-nalogi"><p>\(\mathcal{P}(A) = \{\emptyset, \{0\}, \{\{1\}\}, \{0, \{1\}\}\}\).</p></div></li>
               </ol>
-              <div class="primer">
-                <p><strong>Primer:</strong> \(A = \{0, \{1\}\}\). Zapišite \(\mathcal{P}(A)\).</p>
-                <p>\(n = 2\), podmnožic je 4: \(\mathcal{P}(A) = \{\emptyset, \{0\}, \{\{1\}\}, \{0, \{1\}\}\}\).</p>
-              </div>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Zapišite \(\mathcal{P}(\{a, b\})\).</p><p>\(\{\emptyset, \{a\}, \{b\}, \{a, b\}\}\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Zapišite \(\mathcal{P}(\{1, 2, 3\})\).</p><p>\(\{\emptyset, \{1\}, \{2\}, \{3\}, \{1, 2\}, \{1, 3\}, \{2, 3\}, \{1, 2, 3\}\}\), skupaj \(2^3 = 8\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Zapišite \(\mathcal{P}(\emptyset)\).</p><p>\(\{\emptyset\}\). Ima en element, saj je \(2^0 = 1\).</p></div>
             </div>
           </div>
         </section>
@@ -635,21 +602,17 @@
 
             <div class="tip-naloge" id="tip-9">
               <h4>Tip 9: Zapiši in nariši kartezični produkt</h4>
-              <div class="prepoznaj">
-                <p><strong>Kako prepoznaš:</strong> nastopa znak \(\times\) med množicama ali besedi „urejeni pari“.</p>
-                <ul class="kljucne"><li>„zapišite \(A \times B\)“</li><li>„narišite graf kartezičnega produkta“</li><li>„koliko elementov ima \(A \times B\)“</li></ul>
-              </div>
-              <h5>Univerzalni postopek</h5>
-              <ol>
-                <li>Število elementov: \(m(A \times B) = m(A) \cdot m(B)\).</li>
-                <li>Zapis: vzemi prvi element \(A\) in ga poveži z vsemi iz \(B\), nato drugi element \(A\) itd. (tabela ali drevo).</li>
-                <li>Graf: prva komponenta na os \(x\), druga na os \(y\); točke, daljice ali pravokotnik (glej sliko zgoraj).</li>
-                <li>Če je dan graf, iz projekcije na os \(x\) prebereš \(A\), iz projekcije na os \(y\) pa \(B\).</li>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>\(A = \{1, 2\}\), \(B = \{x, y, z\}\). Zapišite \(A \times B\) in določite število njegovih elementov.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> nastopa znak \(\times\) med množicama ali besedi „urejeni pari“.</p><ul class="kljucne"><li>„zapišite \(A \times B\)“</li><li>„narišite graf kartezičnega produkta“</li><li>„koliko elementov ima \(A \times B\)“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Število elementov: \(m(A \times B) = m(A) \cdot m(B)\).</p><div class="na-nalogi"><p>\(m(A \times B) = 2 \cdot 3 = 6\).</p></div></li>
+              <li><p class="korak">Vzemi prvi element \(A\) in ga poveži z vsemi iz \(B\), nato drugi element \(A\) itd. Prva komponenta je vedno iz \(A\).</p><div class="na-nalogi"><p>\(A \times B = \{(1, x), (1, y), (1, z), (2, x), (2, y), (2, z)\}\).</p></div></li>
+              <li><p class="korak">Graf: prva komponenta na os \(x\), druga na os \(y\). Za končni množici dobiš točke, za intervale daljice ali pravokotnik.</p><div class="na-nalogi"><p>Šest točk v dveh stolpcih (nad 1 in nad 2), v vsakem po tri (pri \(x\), \(y\), \(z\)).</p></div></li>
               </ol>
-              <div class="primer">
-                <p><strong>Primer:</strong> \(A = \{1, 2\}\), \(B = \{x, y, z\}\). Zapišite \(A \times B\).</p>
-                <p>\(A \times B = \{(1, x), (1, y), (1, z), (2, x), (2, y), (2, z)\}\), \(m(A \times B) = 2 \cdot 3 = 6\).</p>
-              </div>
+              <div class="pazi"><strong>Pazi:</strong> \(A \times B \ne B \times A\), ker so pari urejeni: \((1, x) \ne (x, 1)\). Iz danega grafa prebereš \(A\) s projekcijo na os \(x\), \(B\) pa s projekcijo na os \(y\).</div>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> \(A = \{a\}\), \(B = \{1, 2, 3\}\). Zapišite \(B \times A\).</p><p>\(\{(1, a), (2, a), (3, a)\}\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> \(m(A) = 4\), \(m(A \times B) = 20\). Koliko elementov ima \(B\)?</p><p>\(4 \cdot m(B) = 20\), \(m(B) = 5\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Kaj je graf \([1, 3] \times [0, 2]\)?</p><p>Zaprt pravokotnik z oglišči \((1, 0)\), \((3, 0)\), \((3, 2)\), \((1, 2)\).</p></div>
             </div>
           </div>
         </section>
@@ -700,42 +663,33 @@
 
             <div class="tip-naloge" id="tip-10">
               <h4>Tip 10: Moč unije, preseka ali razlike iz danih moči</h4>
-              <div class="prepoznaj">
-                <p><strong>Kako prepoznaš:</strong> dane so moči (števila), ne elementi. Ena od moči manjka.</p>
-                <ul class="kljucne"><li>„\(m(A) = \dots\), \(m(B) = \dots\)“</li><li>„izračunajte \(m(A \cup B)\)“</li><li>„koliko elementov ima“</li></ul>
-              </div>
-              <h5>Univerzalni postopek</h5>
-              <ol>
-                <li>Zapiši formulo za moč unije (dveh ali treh množic).</li>
-                <li>Vstavi znane vrednosti in iz enačbe izrazi neznanko (lahko je tudi presek!).</li>
-                <li>Preveri smiselnost: \(m(A \cap B) \le \min(m(A), m(B))\) in \(m(A \cup B) \le m(U)\).</li>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>\(m(A \cup B) = 20\), \(m(A) = 12\), \(m(B) = 15\). Koliko je \(m(A \cap B)\)?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> dane so moči (števila), ne elementi. Ena od moči manjka.</p><ul class="kljucne"><li>„\(m(A) = \dots\), \(m(B) = \dots\)“</li><li>„izračunajte \(m(A \cup B)\)“</li><li>„koliko elementov ima“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Zapiši formulo za moč unije.</p><div class="na-nalogi"><p>\(m(A \cup B) = m(A) + m(B) - m(A \cap B)\).</p></div></li>
+              <li><p class="korak">Vstavi znane vrednosti in iz enačbe izrazi neznanko.</p><div class="na-nalogi"><p>\(20 = 12 + 15 - m(A \cap B)\), torej \(m(A \cap B) = 27 - 20 = 7\).</p></div></li>
+              <li><p class="korak">Preveri smiselnost: \(m(A \cap B) \le \min(m(A), m(B))\) in \(m(A \cup B) \le m(U)\).</p><div class="na-nalogi"><p>\(7 \le 12\). Rezultat je smiseln.</p></div></li>
               </ol>
-              <div class="primer">
-                <p><strong>Primer:</strong> \(m(A \cup B) = 20\), \(m(A) = 12\), \(m(B) = 15\). Koliko je \(m(A \cap B)\)?</p>
-                <p>\(20 = 12 + 15 - m(A \cap B)\) → \(m(A \cap B) = 7\).</p>
-              </div>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> \(m(A) = 8\), \(m(B) = 5\), \(m(A \cap B) = 3\). Izračunajte \(m(A \cup B)\) in \(m(A \setminus B)\).</p><p>\(m(A \cup B) = 8 + 5 - 3 = 10\). \(m(A \setminus B) = 8 - 3 = 5\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> \(m(U) = 30\), \(m(A) = 18\), \(m(A^C \cap B^C) = 4\), \(m(A \cap B) = 6\). Koliko je \(m(B)\)?</p><p>\(m(A \cup B) = 30 - 4 = 26\). \(26 = 18 + m(B) - 6\), \(m(B) = 14\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Za tri množice: \(m(A) = m(B) = m(C) = 10\), vsi preseki po dve imajo 4 elemente, presek vseh treh 2. Koliko je \(m(A \cup B \cup C)\)?</p><p>\(30 - 12 + 2 = 20\).</p></div>
             </div>
 
             <div class="tip-naloge" id="tip-11">
               <h4>Tip 11: Besedilna naloga z Vennovim diagramom (anketa)</h4>
-              <div class="prepoznaj">
-                <p><strong>Kako prepoznaš:</strong> zgodba o skupini ljudi z dvema ali tremi lastnostmi, sprašujejo, koliko jih ima „samo eno“, „nobene“, „vsaj eno“.</p>
-                <ul class="kljucne"><li>„v razredu je … dijakov“</li><li>„… jih trenira oboje“</li><li>„koliko jih ne …“</li><li>„samo“, „vsaj“, „nobenega“</li></ul>
-              </div>
-              <h5>Univerzalni postopek</h5>
-              <ol>
-                <li>Določi \(U\) (vsi anketirani) in množice (lastnosti). Nariši Vennov diagram s 4 ali 8 območji.</li>
-                <li>Vpisuj <strong>od sredine navzven</strong>: najprej presek vseh, nato preseke po dve (od njih odštej sredino), nato „samo“ območja (od celotne množice odštej vse, kar je že v njenem krogu).</li>
-                <li>Zunanje območje: \(m(U)\) minus vsota vseh območij v krogih.</li>
-                <li>Če kakšno število ni znano, ga označi z \(x\) in zapiši enačbo: vsota vseh območij \(= m(U)\).</li>
-                <li>Odgovori točno na vprašanje: „samo košarka“ ni isto kot „košarka“.</li>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>V razredu je 28 dijakov. Košarko jih trenira 15, nogomet 12, oboje 6. Koliko dijakov ne trenira ničesar?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> zgodba o skupini ljudi z dvema ali tremi lastnostmi, sprašujejo, koliko jih ima „samo eno“, „nobene“, „vsaj eno“.</p><ul class="kljucne"><li>„v razredu je … dijakov“</li><li>„… jih trenira oboje“</li><li>„koliko jih ne …“</li><li>„samo“, „vsaj“, „nobenega“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Določi \(U\) (vsi anketirani) in množice (lastnosti). Nariši Vennov diagram.</p><div class="na-nalogi"><p>\(m(U) = 28\), \(K\): košarka, \(N\): nogomet. Diagram ima 4 območja.</p></div></li>
+              <li><p class="korak">Vpisuj od sredine navzven: najprej presek vseh.</p><div class="na-nalogi"><p>V sredino vpišemo \(6\).</p></div></li>
+              <li><p class="korak">Nato „samo“ območja: od celotne množice odštej vse, kar je že v njenem krogu.</p><div class="na-nalogi"><p>Samo košarka: \(15 - 6 = 9\). Samo nogomet: \(12 - 6 = 6\).</p></div></li>
+              <li><p class="korak">Zunanje območje je \(m(U)\) minus vsota vseh območij v krogih. Če kakšno število ni znano, ga označi z \(x\) in zapiši enačbo.</p><div class="na-nalogi"><p>V krogih je \(9 + 6 + 6 = 21\). Zunaj: \(28 - 21 = 7\).</p></div></li>
+              <li><p class="korak">Odgovori točno na vprašanje.</p><div class="na-nalogi"><p>Ničesar ne trenira 7 dijakov.</p></div></li>
               </ol>
-              <div class="primer">
-                <p><strong>Primer:</strong> V razredu je 28 dijakov. Košarko jih trenira 15, nogomet 12, oboje 6. Koliko dijakov ne trenira ničesar?</p>
-                <p>Sredina: 6. Samo košarka: \(15 - 6 = 9\). Samo nogomet: \(12 - 6 = 6\).</p>
-                <p>V krogih: \(9 + 6 + 6 = 21\) (ali \(m(K \cup N) = 15 + 12 - 6 = 21\)). Ničesar: \(28 - 21 = 7\).</p>
-              </div>
               <div class="pazi"><strong>Pazi:</strong> podatek „15 jih trenira košarko“ vključuje tudi tiste, ki trenirajo oboje. V območje „samo košarka“ ne vpišeš 15!</div>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Od 40 anketiranih jih 25 bere knjige, 20 posluša podkaste, 5 ne počne nič od tega. Koliko jih počne oboje?</p><p>V krogih je \(40 - 5 = 35\). \(35 = 25 + 20 - x\), \(x = 10\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> V skupini 30 ljudi jih 18 govori angleško, 12 nemško, 4 oba jezika. Koliko jih govori samo en jezik?</p><p>Samo angleško \(14\), samo nemško \(8\), skupaj \(22\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Od 50 dijakov jih 20 igra kitaro, 15 klavir, 10 bobne. Kitaro in klavir 5, kitaro in bobne 4, klavir in bobne 3, vse tri 2. Koliko ne igra nobenega?</p><p>\(m(\text{unija}) = 45 - 12 + 2 = 35\), nobenega: \(50 - 35 = 15\).</p></div>
             </div>
           </div>
         </section>
@@ -771,20 +725,16 @@
 
             <div class="tip-naloge" id="tip-12">
               <h4>Tip 12: Koliko podmnožic (z dodatnim pogojem)?</h4>
-              <div class="prepoznaj">
-                <p><strong>Kako prepoznaš:</strong> sprašujejo po številu podmnožic ali po moči \(\mathcal{P}(A)\), pogosto z obratnim vprašanjem (koliko elementov ima \(A\)).</p>
-                <ul class="kljucne"><li>„koliko podmnožic“</li><li>„\(m(\mathcal{P}(A)) = 64\)“</li><li>„ki vsebujejo element“</li></ul>
-              </div>
-              <h5>Univerzalni postopek</h5>
-              <ol>
-                <li>Določi \(n = m(A)\) (pri obratni nalogi reši \(2^n = \) dano število).</li>
-                <li>Elemente, ki <strong>morajo</strong> biti v podmnožici, in tiste, ki <strong>ne smejo</strong>, odštej od \(n\): ostane \(k\) „prostih“ elementov.</li>
-                <li>Odgovor je \(2^k\); po potrebi odštej \(\emptyset\) ali \(A\), če ju naloga izključi.</li>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Potenčna množica množice \(A\) ima 64 elementov. Koliko elementov ima \(A\) in koliko podmnožic \(A\) vsebuje dani element \(a \in A\)?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> sprašujejo po številu podmnožic ali po moči \(\mathcal{P}(A)\), pogosto z obratnim vprašanjem (koliko elementov ima \(A\)).</p><ul class="kljucne"><li>„koliko podmnožic“</li><li>„\(m(\mathcal{P}(A)) = 64\)“</li><li>„ki vsebujejo element“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Določi \(n = m(A)\). Pri obratni nalogi reši \(2^n =\) dano število.</p><div class="na-nalogi"><p>\(2^n = 64 = 2^6\), zato \(n = 6\).</p></div></li>
+              <li><p class="korak">Elemente, ki <strong>morajo</strong> biti v podmnožici, in tiste, ki <strong>ne smejo</strong>, odštej od \(n\). Ostane \(k\) „prostih“ elementov.</p><div class="na-nalogi"><p>Element \(a\) mora biti v podmnožici, prostih je \(k = 6 - 1 = 5\).</p></div></li>
+              <li><p class="korak">Odgovor je \(2^k\). Po potrebi odštej \(\emptyset\) ali \(A\), če ju naloga izključi.</p><div class="na-nalogi"><p>\(2^5 = 32\) podmnožic vsebuje \(a\).</p></div></li>
               </ol>
-              <div class="primer">
-                <p><strong>Primer:</strong> Potenčna množica množice \(A\) ima 64 elementov. Koliko elementov ima \(A\) in koliko podmnožic \(A\) vsebuje dani element \(a\)?</p>
-                <p>\(2^n = 64\) → \(n = 6\). Podmnožic z \(a\): \(2^{5} = 32\).</p>
-              </div>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Koliko podmnožic ima \(\{1, 2, 3, 4, 5\}\), ki ne vsebujejo števila 5?</p><p>Prosti so 4 elementi: \(2^4 = 16\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Koliko pravih nepraznih podmnožic ima množica s 4 elementi?</p><p>\(2^4 - 2 = 14\) (brez \(\emptyset\) in brez cele množice).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Koliko podmnožic množice \(\{a, b, c, d, e\}\) vsebuje \(a\) in ne vsebuje \(b\)?</p><p>Prosti so \(c, d, e\): \(2^3 = 8\).</p></div>
             </div>
           </div>
         </section>
