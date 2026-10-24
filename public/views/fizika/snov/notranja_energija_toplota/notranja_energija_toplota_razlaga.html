@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notranja energija in toplota — razlaga in postopki | Piflar.si</title>
+  <meta name="description" content="Notranja energija in toplota za maturo iz fizike: energijski zakon, specifična toplota, mešanje, fazni prehodi in latentna toplota, energijski zakon pri idealnem plinu, prevajanje toplote, sevanje črnega telesa in Stefanov zakon, kinetična teorija plinov, toplotni stroji in izkoristek.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
+  <link rel="stylesheet" href="/style/snov.css">
+</head>
+<body>
+  <div id="header"></div>
+
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view">
+
+<header class="page-header">
+          <span class="page-eyebrow">Fizika · Snov · 4.9</span>
+          <h1>Notranja energija in toplota</h1>
+          <p>Notranja energija je energija gibanja in medsebojnih vplivov delcev snovi. Spremenimo jo lahko z delom ali s toploto, kar pove energijski zakon. To poglavje zajema segrevanje, taljenje, prevajanje in sevanje toplote ter toplotne stroje. Pod razlago vsakega podpoglavja so vsi tipi nalog, ki se pojavijo pri tem sklopu. Vsebine, označene s <span class="badge-vr">PZ</span>, so posebna znanja iz kataloga.</p>
+          <div class="page-meta">
+            <div class="page-meta-item"><strong>5</strong><span>Podpoglavij</span></div>
+            <div class="page-meta-item"><strong>9</strong><span>Tipov nalog</span></div>
+            <div class="page-meta-item"><strong>~60 min</strong><span>Branja</span></div>
+          </div>
+        </header>
+
+        <div class="matura-formule">
+          <h3>Formule na maturi</h3>
+          <p>Enačbe, ki jih potrebuješ (večina je na listu s konstantami in enačbami, ki je del izpitne pole):</p>
+          <div class="matura-levo">
+            <ul>
+              <li>energijski zakon: \(\Delta W_n = A + Q\) (\(A\) in \(Q\) prejeta)</li>
+              <li>\(Q = cm\Delta T\), \(Q = qm\) (talilna, izparilna, sežigna toplota)</li>
+              <li>pri idealnem plinu: \(Q = mc_p\Delta T\) (stalen tlak), \(\Delta W_n = mc_v\Delta T\), \(A = -p\Delta V\)</li>
+              <li>toplotni tok: \(P = \dfrac{\lambda S \Delta T}{d}\)</li>
+              <li>\(j = \dfrac{P}{S}\), točkasto svetilo \(j = \dfrac{P}{4\pi r^2}\), Stefanov zakon \(j = \sigma T^4\), \(\sigma = 5{,}67 \cdot 10^{-8}\ \text{W/(m}^2\text{K}^4)\)</li>
+              <li>\(\bar{W}_k = \tfrac{3}{2}kT\), \(k = 1{,}38 \cdot 10^{-23}\ \text{J/K}\); izkoristek \(\eta = \dfrac{A}{Q_{dov}}\)</li>
+            </ul>
+          </div>
+        </div>
+
+        <nav class="kazalo" aria-label="Podpoglavja">
+          <h2>Podpoglavja</h2>
+          <ol>
+            <li><a href="#sklop-1"><span class="kazalo-st">1</span> Energijski zakon</a></li>
+            <li><a href="#sklop-2"><span class="kazalo-st">2</span> Prevajanje toplote</a></li>
+            <li><a href="#sklop-3"><span class="kazalo-st">3</span> Sevanje črnega telesa <span class="badge-vr">PZ</span></a></li>
+            <li><a href="#sklop-4"><span class="kazalo-st">4</span> Mikroskopska slika plinov <span class="badge-vr">PZ</span></a></li>
+            <li><a href="#sklop-5"><span class="kazalo-st">5</span> Toplotni stroji</a></li>
+            <li><a href="#kljuc"><span class="kazalo-st">?</span> Ključ: kateri tip naloge je to?</a></li>
+          </ol>
+        </nav>
+
+        <!-- SKLOP 1 -->
+        <section class="sklop" id="sklop-1">
+          <header class="sklop-header">
+            <span class="sklop-num">4.9 · 1</span>
+            <h2>Energijski zakon</h2>
+            <p>Toplota, notranja energija, specifična toplota, energijski zakon pri plinih, fazni prehodi, latentna toplota.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <h4>Notranja energija in toplota</h4>
+            <p><strong>Notranja energija</strong> \(W_n\) je vsota kinetičnih energij delcev (gibanje, nihanje) in potencialnih energij njihovih medsebojnih vezi. Večja temperatura pomeni hitrejše gibanje delcev in večjo notranjo energijo.</p>
+            <p><strong>Toplota</strong> \(Q\) je energija, ki preide s toplejšega na hladnejše telo zaradi razlike temperatur. Ni lastnost telesa, ampak način izmenjave energije, tako kot delo. Notranjo energijo lahko povečamo s toploto (segrevanje na štedilniku) ali z delom (trenje, stiskanje plina, mešanje).</p>
+            <h4>Energijski zakon</h4>
+            <p>\[\Delta W_n = A + Q,\]</p>
+            <p>kjer sta \(A\) prejeto delo in \(Q\) prejeta toplota (oddani sta negativni). Energija se ne ustvari in ne izgine. V izoliranem sistemu (\(A = 0\), \(Q = 0\)) je notranja energija stalna.</p>
+            <h4>Specifična toplota</h4>
+            <p>Toplota, potrebna za segretje telesa za \(\Delta T\) brez faznega prehoda, je</p>
+            <p>\[Q = cm\Delta T,\]</p>
+            <p>kjer je \(c\) <strong>specifična toplota</strong> snovi (J/(kg K)). Voda ima zelo veliko: \(4200\ \text{J/(kg K)}\), zato se morje počasi segreva in ohlaja. Pri <strong>mešanju</strong> v izoliranem kalorimetru je toplota, ki jo odda toplejše telo, enaka toploti, ki jo prejme hladnejše; končna temperatura je skupna.</p>
+            <h4>Agregatna stanja in fazni prehodi</h4>
+            <p>Snov je lahko trdna, kapljevinska ali plinasta. Pri <strong>taljenju</strong> in <strong>izparevanju</strong> snov prejema toploto, temperatura pa ostane stalna, dokler prehod ne poteče do konca: energija gre v trganje vezi. Pri strjevanju in kondenzaciji snov enako toploto odda.</p>
+            <p><strong>Latentna toplota</strong> <span class="badge-vr">PZ</span>: \(Q = q_t m\) (talilna, za led \(q_t = 336\ \text{kJ/kg}\)), \(Q = q_i m\) (izparilna, za vodo \(q_i = 2{,}26\ \text{MJ/kg}\)). <strong>Sežigna toplota</strong> \(q_s\) pove, koliko toplote dobimo pri sežigu 1 kg goriva.</p>
+            <figure class="slika">
+<svg viewBox="0 0 520 280" role="img" aria-label="Segrevanje ledu do pare" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g1-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g1-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g1-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g1-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g1-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g1-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<path class="s-mreza" d="M26,254V26M84.5,254V26M143,254V26M201.5,254V26M260,254V26M318.5,254V26M377,254V26M435.5,254V26M494,254V26M26,254H494M26,222.3H494M26,190.7H494M26,159H494M26,127.3H494M26,95.7H494M26,64H494M26,32.3H494"/>
+<line class="s-os" x1="26" y1="254" x2="502" y2="254" marker-end="url(#g1-p)"/>
+<line class="s-os" x1="26" y1="254" x2="26" y2="18" marker-end="url(#g1-p)"/>
+<text class="s-os-txt" x="496" y="246" text-anchor="end">Q</text>
+<text class="s-os-txt" x="34" y="30">t [°C]</text>
+<line class="s-k1" x1="26" y1="216" x2="38.3" y2="190.7"/>
+<line class="s-k1" x1="38.3" y1="190.7" x2="136.6" y2="190.7"/>
+<line class="s-k1" x1="136.6" y1="190.7" x2="259.4" y2="64"/>
+<line class="s-k1" x1="259.4" y1="64" x2="464.8" y2="64"/>
+<line class="s-k1" x1="464.8" y1="64" x2="482.3" y2="38.7"/>
+<line class="s-pom" x1="26" y1="190.7" x2="136.6" y2="190.7"/>
+<line class="s-pom" x1="26" y1="64" x2="259.4" y2="64"/>
+<text class="s-txt-k2" x="87.4" y="182.7" text-anchor="middle">taljenje</text>
+<text class="s-txt-k2" x="362.4" y="56" text-anchor="middle">izparevanje</text>
+<text class="s-os-txt" x="20" y="194.7" text-anchor="end">0</text>
+<text class="s-os-txt" x="20" y="68" text-anchor="end">100</text>
+<text class="s-os-txt" x="20" y="220" text-anchor="end">−20</text>
+<text class="s-txt-muted" x="44.8" y="216" text-anchor="start">led</text>
+<text class="s-txt-muted" x="209.5" y="133.7" text-anchor="start">voda</text>
+<text class="s-txt-muted" x="476.5" y="33.7" text-anchor="end">para</text>
+</svg>
+<figcaption>Med faznim prehodom se temperatura ne spreminja, čeprav dovajamo toploto: \(Q = q_t m\) za taljenje, \(Q = q_i m\) za izparevanje. Strmina poševnih delov je obratno sorazmerna s specifično toploto snovi v tej fazi.</figcaption>
+</figure>
+            <h4>Energijski zakon pri idealnem plinu <span class="badge-vr">PZ</span></h4>
+            <p>Pri plinu je prejeto delo delo tlaka, \(A = -p\Delta V\). Notranja energija idealnega plina je odvisna le od temperature: \(\Delta W_n = mc_v\Delta T\), kjer je \(c_v\) specifična toplota pri stalni prostornini.</p>
+            <ul>
+              <li><strong>izohorno</strong> (\(V\) stalna): \(A = 0\), \(Q = \Delta W_n = mc_v\Delta T\);</li>
+              <li><strong>izobarno</strong> (\(p\) stalen): \(Q = mc_p\Delta T\), \(A = -p\Delta V\), \(\Delta W_n = mc_v\Delta T\); ker plin pri raztezanju opravlja delo, je \(c_p &gt; c_v\) (\(c_p - c_v = R/M\));</li>
+              <li><strong>izotermno</strong> (\(T\) stalna): \(\Delta W_n = 0\), zato \(Q = -A\): vsa prejeta toplota gre v delo plina.</li>
+            </ul>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-1">
+              <h4>Tip 1: Segrevanje s specifično toploto</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>V grelniku z močjo \(2{,}0\ \text{kW}\) je \(2{,}0\ \text{kg}\) vode pri \(20\ ^\circ\text{C}\). Koliko toplote potrebujemo, da voda zavre, in koliko časa traja segrevanje, če se vsa toplota porabi za vodo?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> telo se segreje ali ohladi brez faznega prehoda, podana je specifična toplota ali moč grelca.</p><ul class="kljucne"><li>„segrejemo za“</li><li>„specifična toplota“</li><li>„grelnik z močjo“</li><li>„koliko časa“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Izpiši \(m\), \(c\) in \(\Delta T\).</p><div class="na-nalogi"><p>\(m = 2{,}0\ \text{kg}\), \(c = 4200\ \text{J/(kg K)}\), \(\Delta T = 80\ \text{K}\).</p></div></li>
+              <li><p class="korak">Izračunaj toploto \(Q = cm\Delta T\).</p><div class="na-nalogi"><p>\(Q = 4200 \cdot 2{,}0 \cdot 80\ \text{J} = 672\ \text{kJ}\).</p></div></li>
+              <li><p class="korak">Pri grelcu toplota \(= Pt\) (pomnoženo z izkoristkom, če je podan).</p><div class="na-nalogi"><p>\(t = \dfrac{672\,000}{2000}\ \text{s} = 336\ \text{s} = 5{,}6\ \text{min}\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Za koliko se segreje 500 g aluminija (\(c = 900\ \text{J/(kg K)}\)), ki prejme 9,0 kJ?</p><p>\(\Delta T = 20\ \text{K}\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Svinčena krogla pade z 50 m in se ustavi. Za koliko se segreje, če vsa energija ostane v njej (\(c = 130\ \text{J/(kg K)}\))?</p><p>\(gh = c\Delta T\): \(\Delta T = 3{,}8\ \text{K}\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Zakaj je ob morju podnebje milejše?</p><p>Voda ima veliko specifično toploto in počasi spreminja temperaturo.</p></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-2">
+              <h4>Tip 2: Mešanje (kalorimeter)</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>V izoliran kozarec zmešamo \(0{,}20\ \text{kg}\) vode s temperaturo \(80\ ^\circ\text{C}\) in \(0{,}30\ \text{kg}\) vode s temperaturo \(20\ ^\circ\text{C}\). Kolikšna je končna temperatura?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> dve telesi z različnima temperaturama v stiku, toplotnih izgub ni.</p><ul class="kljucne"><li>„zmešamo“</li><li>„kalorimeter“</li><li>„vržemo segreto kovino v vodo“</li><li>„končna temperatura“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Označi končno temperaturo s \(T\); ugotovi, katero telo odda in katero prejme toploto.</p><div class="na-nalogi"><p>Topla voda odda, hladna prejme.</p></div></li>
+              <li><p class="korak">Zapiši oddano toploto = prejeta toplota (vsaka razlika je pozitivna).</p><div class="na-nalogi"><p>\(0{,}20 \cdot c \cdot (80 - T) = 0{,}30 \cdot c \cdot (T - 20)\).</p></div></li>
+              <li><p class="korak">Reši enačbo.</p><div class="na-nalogi"><p>\(16 - 0{,}2T = 0{,}3T - 6\), \(T = 44\ ^\circ\text{C}\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Železno kocko 0,10 kg s 300 °C vržemo v 1,0 kg vode z 20 °C (\(c_{Fe} = 450\)). Končna temperatura?</p><p>\(45(300 - T) = 4200(T - 20)\), \(T = 23\ ^\circ\text{C}\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Kovina 0,2 kg s 100 °C v 0,5 kg vode z 20 °C, končna 25 °C. \(c\) kovine?</p><p>\(c = \dfrac{0{,}5 \cdot 4200 \cdot 5}{0{,}2 \cdot 75} = 700\ \text{J/(kg K)}\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Zmešamo enaki masi vode z 10 °C in 50 °C.</p><p>30 °C.</p></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-3">
+              <h4>Tip 3: Energijski zakon (delo in toplota)</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Plin v valju stisnemo in pri tem opravimo \(300\ \text{J}\) dela. Plin pri tem odda okolici \(100\ \text{J}\) toplote. Za koliko se spremeni njegova notranja energija? Se plin segreje ali ohladi?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> sistem hkrati izmenjuje delo in toploto, sprašujejo po spremembi notranje energije ali temperature.</p><ul class="kljucne"><li>„notranja energija“</li><li>„prejme / odda toploto“</li><li>„opravimo delo“</li><li>„trenje segreje“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Določi predznaka: prejeto delo in prejeta toplota sta pozitivna, oddana negativna.</p><div class="na-nalogi"><p>\(A = +300\ \text{J}\) (stiskanje), \(Q = -100\ \text{J}\) (oddana).</p></div></li>
+              <li><p class="korak">Vstavi v \(\Delta W_n = A + Q\).</p><div class="na-nalogi"><p>\(\Delta W_n = 300 - 100 = +200\ \text{J}\).</p></div></li>
+              <li><p class="korak">Pozitivna sprememba pri plinu pomeni višjo temperaturo.</p><div class="na-nalogi"><p>Notranja energija se poveča za 200 J, plin se segreje.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Plin prejme 500 J toplote in opravi 200 J dela.</p><p>\(\Delta W_n = 500 - 200 = 300\ \text{J}\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Zakaj se tlačilka pri napihovanju segreje?</p><p>Pri stiskanju plin prejme delo, notranja energija se poveča.</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Plin se razširi hitro, brez izmenjave toplote. Kaj se zgodi s temperaturo?</p><p>\(Q = 0\), \(A &lt; 0\): plin se ohladi.</p></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-4">
+              <h4>Tip 4: Fazni prehodi in latentna toplota <span class="badge-vr">PZ</span></h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Koliko toplote potrebujemo, da \(0{,}50\ \text{kg}\) ledu s temperaturo \(-10\ ^\circ\text{C}\) spremenimo v vodo s temperaturo \(20\ ^\circ\text{C}\)? (\(c_{led} = 2100\ \text{J/(kg K)}\), \(q_t = 336\ \text{kJ/kg}\))</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> snov se tali, strjuje, izpareva ali kondenzira, ali pa gorivo zgoreva.</p><ul class="kljucne"><li>„led se stali“</li><li>„voda izpari“</li><li>„talilna, izparilna, sežigna toplota“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Proces razdeli na korake: segrevanje do tališča, taljenje, segrevanje kapljevine (in morebiti izparevanje).</p><div class="na-nalogi"><p>Led \(-10 \to 0\ ^\circ\text{C}\), taljenje, voda \(0 \to 20\ ^\circ\text{C}\).</p></div></li>
+              <li><p class="korak">Za segrevanje uporabi \(cm\Delta T\) z \(c\) prave faze, za prehod \(qm\).</p><div class="na-nalogi"><p>\(Q_1 = 2100 \cdot 0{,}5 \cdot 10 = 10{,}5\ \text{kJ}\), \(Q_2 = 336 \cdot 0{,}5 = 168\ \text{kJ}\), \(Q_3 = 4200 \cdot 0{,}5 \cdot 20 = 42\ \text{kJ}\).</p></div></li>
+              <li><p class="korak">Seštej.</p><div class="na-nalogi"><p>\(Q = 10{,}5 + 168 + 42 = 221\ \text{kJ}\). Največ toplote gre za taljenje.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Koliko ledu z 0 °C stalimo z 1,0 kg vode z 50 °C?</p><p>\(4200 \cdot 50 = 336\,000\,m\): \(m = 0{,}63\ \text{kg}\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Koliko toplote da sežig 2 kg drv (\(q_s = 15\ \text{MJ/kg}\))?</p><p>30 MJ.</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Zakaj opari para s 100 °C bolj kot voda s 100 °C?</p><p>Para pri kondenzaciji odda še izparilno toploto.</p></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-5">
+              <h4>Tip 5: Energijski zakon pri idealnem plinu <span class="badge-vr">PZ</span></h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>\(1{,}0\ \text{kg}\) zraka pri stalnem tlaku segrejemo za \(50\ \text{K}\). Koliko toplote prejme, za koliko se mu poveča notranja energija in koliko dela opravi? (\(c_p = 1000\ \text{J/(kg K)}\), \(c_v = 720\ \text{J/(kg K)}\))</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> plin se segreje ali razširi pri stalnem tlaku, prostornini ali temperaturi, sprašujejo po \(Q\), \(A\) ali \(\Delta W_n\).</p><ul class="kljucne"><li>„pri stalnem tlaku segrejemo“</li><li>\(c_p\), \(c_v\)</li><li>„koliko dela opravi plin“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Ugotovi vrsto spremembe in katera enačba za \(Q\) velja.</p><div class="na-nalogi"><p>Izobarno: \(Q = mc_p\Delta T = 1{,}0 \cdot 1000 \cdot 50 = 50\ \text{kJ}\).</p></div></li>
+              <li><p class="korak">Sprememba notranje energije je vedno \(mc_v\Delta T\).</p><div class="na-nalogi"><p>\(\Delta W_n = 1{,}0 \cdot 720 \cdot 50 = 36\ \text{kJ}\).</p></div></li>
+              <li><p class="korak">Delo iz energijskega zakona \(A = \Delta W_n - Q\).</p><div class="na-nalogi"><p>\(A = 36 - 50 = -14\ \text{kJ}\): plin opravi \(14\ \text{kJ}\) dela.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Isti zrak segrejemo za 50 K pri stalni prostornini. Toplota?</p><p>\(Q = mc_v\Delta T = 36\ \text{kJ}\), \(A = 0\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Plin se izotermno razširi in opravi 800 J dela. Toplota?</p><p>Prejme \(Q = 800\ \text{J}\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Zakaj je \(c_p &gt; c_v\)?</p><p>Pri stalnem tlaku gre del toplote v delo raztezanja.</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 2 -->
+        <section class="sklop" id="sklop-2">
+          <header class="sklop-header">
+            <span class="sklop-num">4.9 · 2</span>
+            <h2>Prevajanje toplote</h2>
+            <p>Toplotni tok, koeficient toplotne prevodnosti, stacionarne razmere.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <p>Toplota prehaja s prevajanjem (skozi snov, delci si predajajo energijo ob trkih), s konvekcijo (tok tekočine) in s sevanjem. <strong>Toplotni tok</strong> \(P = Q/t\) (enota W) pove, koliko toplote preteče v sekundi.</p>
+            <p>V <strong>stacionarnih razmerah</strong> (temperaturi na obeh straneh sta stalni) je toplotni tok skozi plast debeline \(d\) in ploščine \(S\)</p>
+            <p>\[P = \frac{\lambda S \Delta T}{d},\]</p>
+            <p>kjer je \(\lambda\) <strong>koeficient toplotne prevodnosti</strong> (W/(m K)). Kovine dobro prevajajo (baker približno 400 W/(m K)), zrak, stiropor in volna slabo (pod 0,05 W/(m K)), zato toplotno izolirajo.</p>
+            <figure class="slika slika--ozka">
+<svg viewBox="0 0 360 209" role="img" aria-label="Prevajanje toplote skozi steno" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g2-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g2-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g2-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g2-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g2-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g2-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<polygon class="s-lik-2" points="144,162.2 216,162.2 216,32.4 144,32.4"/>
+<line class="s-k1" x1="144" y1="176.6" x2="216" y2="176.6"/>
+<line class="s-k2" x1="61.2" y1="97.3" x2="313.2" y2="97.3" marker-end="url(#g2-k2)"/>
+<text class="s-txt-k2" x="247.2" y="89.3" text-anchor="middle">P</text>
+<text class="s-txt-k2" x="75.6" y="54" text-anchor="middle">T<tspan dy="4" style="font-size:10px">1</tspan><tspan dy="-4"> (topleje)</tspan></text>
+<text class="s-txt-k1" x="280.8" y="54" text-anchor="middle">T<tspan dy="4" style="font-size:10px">2</tspan><tspan dy="-4"> (hladneje)</tspan></text>
+<text class="s-txt-k1" x="180" y="192.6" text-anchor="middle">d</text>
+<text class="s-txt-b" x="180" y="126.1" text-anchor="middle">S, λ</text>
+
+</svg>
+<figcaption>Skozi steno debeline \(d\) in ploščine \(S\) teče toplotni tok \(P = \lambda S \Delta T/d\) od toplejše k hladnejši strani.</figcaption>
+</figure>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-6">
+              <h4>Tip 6: Toplotni tok skozi steno</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Zid s ploščino \(10\ \text{m}^2\) in debelino \(30\ \text{cm}\) ima \(\lambda = 0{,}60\ \text{W/(m K)}\). Notri je \(20\ ^\circ\text{C}\), zunaj \(-5\ ^\circ\text{C}\). Kolikšen je toplotni tok skozi zid in koliko toplote uide v enem dnevu?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> toplota prehaja skozi plast (steno, okno, dno lonca), podani so debelina, ploščina in prevodnost.</p><ul class="kljucne"><li>„toplotni tok“</li><li>„toplotna prevodnost“</li><li>„skozi steno, okno“</li><li>„izolacija“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Izpiši \(\lambda\), \(S\), \(d\) (v metrih) in \(\Delta T\).</p><div class="na-nalogi"><p>\(\lambda = 0{,}60\), \(S = 10\ \text{m}^2\), \(d = 0{,}30\ \text{m}\), \(\Delta T = 25\ \text{K}\).</p></div></li>
+              <li><p class="korak">Izračunaj \(P = \lambda S\Delta T/d\).</p><div class="na-nalogi"><p>\(P = \dfrac{0{,}60 \cdot 10 \cdot 25}{0{,}30}\ \text{W} = 500\ \text{W}\).</p></div></li>
+              <li><p class="korak">Toplota v času \(t\): \(Q = Pt\).</p><div class="na-nalogi"><p>\(Q = 500 \cdot 86\,400\ \text{J} = 43\ \text{MJ}\) (12 kWh).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Kako se spremeni toplotni tok, če zid podvojimo v debelino?</p><p>Pade na polovico.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Kolikšna mora biti debelina stiropora (\(\lambda = 0{,}04\)), da prepušča enako kot 30 cm zidu (\(\lambda = 0{,}60\))?</p><p>\(d = 0{,}30 \cdot 0{,}04/0{,}60 = 2\ \text{cm}\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Zakaj se kovinska ograja pozimi zdi hladnejša od lesene, čeprav imata enako temperaturo?</p><p>Kovina bolje prevaja in hitreje odvaja toploto iz roke.</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 3 -->
+        <section class="sklop sklop--visja" id="sklop-3">
+          <header class="sklop-header">
+            <span class="sklop-num">4.9 · 3</span>
+            <h2>Sevanje črnega telesa <span class="badge-vr">PZ</span></h2>
+            <p>Moč in gostota svetlobnega toka točkastega svetila, Stefanov zakon.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <p>Vsako telo seva elektromagnetno valovanje, tem več, čim višjo temperaturo ima. <strong>Črno telo</strong> vso vpadno svetlobo vpije in je hkrati najboljši sevalec. Gostota svetlobnega toka \(j = P/S\) je izsevana moč na enoto ploščine (W/m²).</p>
+            <ul>
+              <li><strong>Stefanov zakon:</strong> \(j = \sigma T^4\). Dvakrat višja absolutna temperatura pomeni 16-krat večje sevanje. Telo s površino \(S\) izseva \(P = \sigma S T^4\), hkrati pa iz okolice s temperaturo \(T_0\) prejema \(\sigma S T_0^4\).</li>
+              <li><strong>Točkasto svetilo</strong> z močjo \(P\) seva enakomerno v vse smeri; na razdalji \(r\) se moč porazdeli po krogli s ploščino \(4\pi r^2\): \(j = \dfrac{P}{4\pi r^2}\). Dvakrat dlje je gostota toka štirikrat manjša.</li>
+            </ul>
+            <p>Na teh dveh enačbah temelji tudi izračun temperature površja Sonca (poglavje 4.19).</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-7">
+              <h4>Tip 7: Stefanov zakon in točkasto svetilo <span class="badge-vr">PZ</span></h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Človek s površino kože \(1{,}8\ \text{m}^2\) in temperaturo kože \(33\ ^\circ\text{C}\) je v sobi s \(20\ ^\circ\text{C}\). Koliko moči izseva in kolikšna je neto izguba s sevanjem? Kožo obravnavaj kot črno telo.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> telo seva zaradi svoje temperature, ali svetilo seva v vse smeri in sprašujejo po gostoti toka na razdalji.</p><ul class="kljucne"><li>„izseva“</li><li>„črno telo“</li><li>„gostota svetlobnega toka“</li><li>„na razdalji od žarnice“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Temperature pretvori v kelvine.</p><div class="na-nalogi"><p>\(T = 306\ \text{K}\), \(T_0 = 293\ \text{K}\).</p></div></li>
+              <li><p class="korak">Izračunaj \(j = \sigma T^4\) in \(P = jS\).</p><div class="na-nalogi"><p>\(j = 5{,}67 \cdot 10^{-8} \cdot 306^4 = 497\ \text{W/m}^2\), \(P = 895\ \text{W}\).</p></div></li>
+              <li><p class="korak">Za neto izgubo odštej moč, prejeto iz okolice.</p><div class="na-nalogi"><p>\(P_{neto} = \sigma S(T^4 - T_0^4) = 5{,}67 \cdot 10^{-8} \cdot 1{,}8 \cdot (306^4 - 293^4) = 140\ \text{W}\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Žarnica s 100 W seva enakomerno. Gostota toka 2,0 m stran?</p><p>\(j = 100/(4\pi \cdot 4) = 2{,}0\ \text{W/m}^2\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Kolikokrat več seva telo pri 600 K kot pri 300 K?</p><p>\(2^4 = 16\)-krat.</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Pri kateri temperaturi črno telo seva 1000 W/m²?</p><p>\(T = (1000/\sigma)^{1/4} = 364\ \text{K}\).</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 4 -->
+        <section class="sklop sklop--visja" id="sklop-4">
+          <header class="sklop-header">
+            <span class="sklop-num">4.9 · 4</span>
+            <h2>Mikroskopska slika plinov <span class="badge-vr">PZ</span></h2>
+            <p>Povprečna kinetična energija molekul, notranja energija idealnega plina.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <p>Idealni plin si predstavljamo kot množico majhnih molekul, ki se gibljejo naključno, med seboj se ne privlačijo in se prožno odbijajo od sten. Tlak plina je posledica trkov molekul ob stene.</p>
+            <p>Temperatura je merilo za <strong>povprečno kinetično energijo</strong> molekul:</p>
+            <p>\[\bar{W}_k = \tfrac{3}{2}kT, \qquad k = \frac{R}{N_A} = 1{,}38 \cdot 10^{-23}\ \text{J/K}.\]</p>
+            <p>Povprečna energija ni odvisna od vrste plina; lažje molekule se zato gibljejo hitreje: \(\tfrac{1}{2}m_0\overline{v^2} = \tfrac{3}{2}kT\), \(\sqrt{\overline{v^2}} = \sqrt{3kT/m_0}\), kjer je \(m_0 = M/N_A\) masa ene molekule.</p>
+            <p><strong>Notranja energija</strong> idealnega (enoatomnega) plina z \(N\) molekulami je vsota njihovih kinetičnih energij: \(W_n = N \cdot \tfrac{3}{2}kT = \tfrac{3}{2}nRT\). Odvisna je le od temperature in množine.</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-8">
+              <h4>Tip 8: Kinetična energija in hitrost molekul <span class="badge-vr">PZ</span></h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Kolikšna je povprečna kinetična energija molekule dušika (\(M = 28\ \text{kg/kmol}\)) pri \(27\ ^\circ\text{C}\) in kolikšna je njena povprečna (korenska) hitrost?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> sprašujejo po energiji ali hitrosti posamezne molekule ali po notranji energiji plina iz števila molekul.</p><ul class="kljucne"><li>„povprečna kinetična energija molekul“</li><li>„hitrost molekul“</li><li>„Boltzmannova konstanta“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Temperaturo pretvori v kelvine in izračunaj \(\tfrac{3}{2}kT\).</p><div class="na-nalogi"><p>\(\bar{W}_k = 1{,}5 \cdot 1{,}38 \cdot 10^{-23} \cdot 300\ \text{J} = 6{,}2 \cdot 10^{-21}\ \text{J}\).</p></div></li>
+              <li><p class="korak">Izračunaj maso molekule \(m_0 = M/N_A\).</p><div class="na-nalogi"><p>\(m_0 = 28/6{,}02 \cdot 10^{26}\ \text{kg} = 4{,}65 \cdot 10^{-26}\ \text{kg}\).</p></div></li>
+              <li><p class="korak">Iz \(\tfrac{1}{2}m_0v^2 = \bar{W}_k\) izračunaj hitrost.</p><div class="na-nalogi"><p>\(v = \sqrt{2 \cdot 6{,}2 \cdot 10^{-21}/4{,}65 \cdot 10^{-26}} = 520\ \text{m/s}\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Kolikokrat se poveča povprečna hitrost molekul, ko se temperatura poveča s 300 K na 1200 K?</p><p>\(\sqrt{4} = 2\)-krat.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Notranja energija 0,10 kmol helija pri 300 K?</p><p>\(\tfrac{3}{2} \cdot 0{,}10 \cdot 8310 \cdot 300 = 374\ \text{kJ}\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Kateri molekuli imata pri isti temperaturi enako povprečno kinetično energijo: \(\text{H}_2\) ali \(\text{O}_2\)?</p><p>Obe; vodik je hitrejši.</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 5 -->
+        <section class="sklop" id="sklop-5">
+          <header class="sklop-header">
+            <span class="sklop-num">4.9 · 5</span>
+            <h2>Toplotni stroji</h2>
+            <p>Krožna sprememba, toplotni stroji, izkoristek.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <p><strong>Toplotni stroj</strong> (motor z notranjim zgorevanjem, parna turbina) pretvarja toploto v delo. Delovna snov (plin) opravlja <strong>krožno spremembo</strong>: po vsakem ciklu se vrne v začetno stanje, zato je \(\Delta W_n = 0\) in velja \(A_{stroja} = Q_{dov} - Q_{odd}\).</p>
+            <figure class="slika slika--ozka">
+<svg viewBox="0 0 420 260" role="img" aria-label="Shema toplotnega stroja" xmlns="http://www.w3.org/2000/svg"><defs><marker id="ts-p" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="ts-m" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="ts-z" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker></defs><rect x="110" y="14" width="200" height="40" rx="6" class="s-ploskev-2"/><rect x="110" y="14" width="200" height="40" rx="6" fill="none" class="s-k2"/><text class="s-txt-k2" x="210" y="39" text-anchor="middle">topli vir T₁</text><circle cx="210" cy="130" r="32" class="s-lik"/><text class="s-txt-b" x="210" y="135" text-anchor="middle">stroj</text><rect x="110" y="206" width="200" height="40" rx="6" class="s-ploskev"/><rect x="110" y="206" width="200" height="40" rx="6" fill="none" class="s-k1"/><text class="s-txt-k1" x="210" y="231" text-anchor="middle">hladni ponor T₂</text><line class="s-k2" x1="210" y1="56" x2="210" y2="94" marker-end="url(#ts-p)"/><text class="s-txt-k2" x="218" y="80">Q<tspan dy="4" style="font-size:10px">dov</tspan></text><line class="s-k1" x1="210" y1="164" x2="210" y2="202" marker-end="url(#ts-m)"/><text class="s-txt-k1" x="218" y="188">Q<tspan dy="4" style="font-size:10px">odd</tspan></text><line class="s-k3" x1="244" y1="130" x2="330" y2="130" marker-end="url(#ts-z)"/><text class="s-txt-k3" x="336" y="134">A</text></svg>
+<figcaption>Toplotni stroj prejme toploto \(Q_{dov}\) iz toplega vira, del je pretvori v delo \(A\), ostanek \(Q_{odd}\) odda hladnemu ponoru. Izkoristek \(\eta = A/Q_{dov}\).</figcaption>
+</figure>
+            <p>V diagramu \(p\)–\(V\) je krožna sprememba zaprta zanka. Delo, ki ga plin opravi v enem ciklu, je enako <strong>ploščini znotraj zanke</strong>.</p>
+            <figure class="slika slika--ozka">
+<svg viewBox="0 0 380 260" role="img" aria-label="Krožna sprememba v diagramu p-V" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g3-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g3-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g3-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g3-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g3-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g3-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<path class="s-mreza" d="M26,234V26M91.6,234V26M157.2,234V26M222.8,234V26M288.4,234V26M354,234V26M26,234H354M26,182H354M26,130H354M26,78H354M26,26H354"/>
+<polygon class="s-ploskev" points="91.6,182 288.4,182 288.4,78 91.6,78"/>
+<line class="s-os" x1="26" y1="234" x2="362" y2="234" marker-end="url(#g3-p)"/>
+<line class="s-os" x1="26" y1="234" x2="26" y2="18" marker-end="url(#g3-p)"/>
+<text class="s-os-txt" x="356" y="226" text-anchor="end">V [l]</text>
+<text class="s-os-txt" x="34" y="30">p [bar]</text>
+<line class="s-os" x1="91.6" y1="231" x2="91.6" y2="237"/><text class="s-os-txt" x="91.6" y="249" text-anchor="middle">1</text><line class="s-os" x1="157.2" y1="231" x2="157.2" y2="237"/><text class="s-os-txt" x="157.2" y="249" text-anchor="middle">2</text><line class="s-os" x1="222.8" y1="231" x2="222.8" y2="237"/><text class="s-os-txt" x="222.8" y="249" text-anchor="middle">3</text><line class="s-os" x1="288.4" y1="231" x2="288.4" y2="237"/><text class="s-os-txt" x="288.4" y="249" text-anchor="middle">4</text><line class="s-os" x1="23" y1="182" x2="29" y2="182"/><text class="s-os-txt" x="20" y="186" text-anchor="end">1</text><line class="s-os" x1="23" y1="130" x2="29" y2="130"/><text class="s-os-txt" x="20" y="134" text-anchor="end">2</text><line class="s-os" x1="23" y1="78" x2="29" y2="78"/><text class="s-os-txt" x="20" y="82" text-anchor="end">3</text><text class="s-os-txt" x="20" y="249" text-anchor="end">0</text>
+<line class="s-k1" x1="91.6" y1="78" x2="288.4" y2="78"/>
+<line class="s-k1" x1="288.4" y1="78" x2="288.4" y2="182"/>
+<line class="s-k1" x1="288.4" y1="182" x2="91.6" y2="182"/>
+<line class="s-k1" x1="91.6" y1="182" x2="91.6" y2="78"/>
+<line class="s-k1" x1="157.2" y1="78" x2="222.8" y2="78" marker-end="url(#g3-k1)"/>
+<line class="s-k1" x1="222.8" y1="182" x2="157.2" y2="182" marker-end="url(#g3-k1)"/>
+<line class="s-k1" x1="288.4" y1="114.4" x2="288.4" y2="145.6" marker-end="url(#g3-k1)"/>
+<line class="s-k1" x1="91.6" y1="145.6" x2="91.6" y2="114.4" marker-end="url(#g3-k1)"/>
+<circle class="s-tocka" cx="91.6" cy="78" r="4.5"/>
+<text class="s-txt-b" x="77.6" y="74" text-anchor="start">A</text>
+<circle class="s-tocka" cx="288.4" cy="78" r="4.5"/>
+<text class="s-txt-b" x="294.4" y="72" text-anchor="start">B</text>
+<circle class="s-tocka" cx="288.4" cy="182" r="4.5"/>
+<text class="s-txt-b" x="294.4" y="196" text-anchor="start">C</text>
+<circle class="s-tocka" cx="91.6" cy="182" r="4.5"/>
+<text class="s-txt-b" x="77.6" y="196" text-anchor="start">D</text>
+<text class="s-txt-k1" x="190" y="130" text-anchor="middle">|A| = 600 J</text>
+</svg>
+<figcaption>Pri krožni spremembi v smeri urnega kazalca plin opravi delo, enako ploščini znotraj zanke: \(2 \cdot 10^{5}\ \text{Pa} \cdot 3 \cdot 10^{-3}\ \text{m}^3 = 600\ \text{J}\).</figcaption>
+</figure>
+            <p><strong>Izkoristek</strong> je razmerje med opravljenim delom in dovedeno toploto:</p>
+            <p>\[\eta = \frac{A}{Q_{dov}} = 1 - \frac{Q_{odd}}{Q_{dov}}.\]</p>
+            <p>Izkoristek toplotnega stroja je vedno manjši od 1: del toplote je treba oddati hladnejšemu ponoru. Največji možni izkoristek je \(1 - T_2/T_1\), zato so učinkovitejši stroji z višjo temperaturo vira.</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-9">
+              <h4>Tip 9: Izkoristek toplotnega stroja</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Motor v vsakem ciklu prejme \(1000\ \text{J}\) toplote in opravi \(300\ \text{J}\) dela. Kolikšen je izkoristek in koliko toplote odda? Kolikšna je moč, če naredi 50 ciklov v sekundi?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> naprava pretvarja toploto (ali gorivo) v delo, sprašujejo po izkoristku, oddani toploti ali porabi goriva.</p><ul class="kljucne"><li>„izkoristek“</li><li>„toplotni stroj, motor, elektrarna“</li><li>„krožna sprememba“</li><li>„odda hladilni vodi“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Izpiši dovedeno toploto, opravljeno delo in oddano toploto (ena od njih je neznana).</p><div class="na-nalogi"><p>\(Q_{dov} = 1000\ \text{J}\), \(A = 300\ \text{J}\).</p></div></li>
+              <li><p class="korak">Uporabi \(A = Q_{dov} - Q_{odd}\).</p><div class="na-nalogi"><p>\(Q_{odd} = 700\ \text{J}\).</p></div></li>
+              <li><p class="korak">Izkoristek je \(A/Q_{dov}\); moč je delo na cikel krat število ciklov na sekundo.</p><div class="na-nalogi"><p>\(\eta = 0{,}30 = 30\ \%\), \(P = 300 \cdot 50 = 15\ \text{kW}\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Elektrarna z močjo 600 MW ima izkoristek 40 %. Koliko toplote na sekundo odda reki?</p><p>\(Q_{dov} = 1500\ \text{MJ}\) na sekundo, odda 900 MJ.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Koliko dela opravi plin v ciklu na sliki zgoraj?</p><p>Ploščina pravokotnika: 600 J.</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Avto porabi 6 l bencina (\(q_s = 32\ \text{MJ/l}\)) na 100 km, izkoristek 25 %. Povprečna sila upora?</p><p>\(A = 0{,}25 \cdot 192\ \text{MJ} = 48\ \text{MJ}\), \(F = A/s = 480\ \text{N}\).</p></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="subsection" id="kljuc">
+          <div class="subsection-head">
+            <h2>Ključ: kateri tip naloge je to?</h2>
+            <p>Poišči besedo iz navodila naloge in skoči na pravi postopek.</p>
+          </div>
+          <div class="info-card">
+            <div class="tabela-wrap">
+              <table class="tabela">
+                <thead><tr><th>V besedilu naloge piše …</th><th>Tip</th></tr></thead>
+                <tbody>
+                  <tr><td>„segrejemo“, „grelnik z močjo“, „specifična toplota“</td><td><a href="#tip-1">Tip 1</a></td></tr>
+                  <tr><td>„zmešamo“, „kalorimeter“, „končna temperatura“</td><td><a href="#tip-2">Tip 2</a></td></tr>
+                  <tr><td>„notranja energija“, „opravimo delo“, „odda toploto“</td><td><a href="#tip-3">Tip 3</a></td></tr>
+                  <tr><td>„stali“, „izpari“, „talilna toplota“</td><td><a href="#tip-4">Tip 4</a></td></tr>
+                  <tr><td>\(c_p\), \(c_v\), „pri stalnem tlaku segrejemo plin“</td><td><a href="#tip-5">Tip 5</a></td></tr>
+                  <tr><td>„toplotni tok“, „skozi steno“, \(\lambda\)</td><td><a href="#tip-6">Tip 6</a></td></tr>
+                  <tr><td>„izseva“, „črno telo“, „gostota svetlobnega toka“</td><td><a href="#tip-7">Tip 7</a></td></tr>
+                  <tr><td>„kinetična energija molekul“, „hitrost molekul“</td><td><a href="#tip-8">Tip 8</a></td></tr>
+                  <tr><td>„izkoristek“, „toplotni stroj“, „cikel“</td><td><a href="#tip-9">Tip 9</a></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>Pogoste napake</h2>
+          </div>
+          <div class="info-card">
+            <ul>
+              <li>Zamenjaš toploto in temperaturo: pri taljenju telo prejema toploto, temperatura pa se ne spremeni.</li>
+              <li>Pri energijskem zakonu napačno določiš predznak dela ali toplote.</li>
+              <li>Pri mešanju pozabiš na fazni prehod (led se mora najprej staliti).</li>
+              <li>V Stefanov zakon vstaviš temperaturo v °C.</li>
+              <li>Izkoristek računaš z oddano toploto namesto z dovedeno.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>Naslednje poglavje</h2>
+          </div>
+          <div class="link-list">
+            <a class="link-item" href="/views/fizika/snov/elektricni_naboj_polje/elektricni_naboj_polje_razlaga.html">
+              <span class="link-item-text"><strong>4.10 Električni naboj in električno polje</strong><small>Naboj, Coulombov zakon, električno polje, kondenzator</small></span>
+              <span class="arrow">→</span>
+            </a>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>
