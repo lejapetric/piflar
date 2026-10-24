@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Integralski račun — razlaga in postopki | Piflar.si</title>
-  <meta name="description" content="Celovita razlaga integralskega računa za maturo: nedoločeni integral, določeni integral, substitucija, per partes, parcialni ulomki, ploščine in prostornine vrtenin.">
+  <meta name="description" content="Integralski račun za maturo: nedoločeni integral in njegove lastnosti, uvedba nove spremenljivke, integracija po delih, racionalne funkcije, določeni integral, Newton-Leibnizova formula, ploščine likov in prostornine vrtenin.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
@@ -20,747 +20,557 @@
     <div class="view-container">
       <div class="view">
 
-        <!-- ============ PAGE HEADER ============ -->
         <header class="page-header">
           <span class="page-eyebrow">Matematika · Snov · 4.14</span>
           <h1>Integralski račun</h1>
-          <p>Vse o integralih za maturo: nedoločeni in določeni integral, primitivna funkcija, uvedba nove spremenljivke, integracija per partes, parcialni ulomki, ploščine in prostornine vrtenin. Vsak tip naloge ima postopek po korakih.</p>
+          <p>Integriranje je obratna operacija odvajanja. Z določenim integralom izračunamo ploščine likov z ukrivljenimi robovi, prostornine vrtenin in skupno spremembo količine, ko poznamo njeno hitrost. Pod razlago vsakega podpoglavja so vsi tipi nalog, ki se pojavijo pri tem sklopu.</p>
           <div class="page-meta">
-            <div class="page-meta-item"><strong>14</strong><span>Tipov nalog</span></div>
-            <div class="page-meta-item"><strong>50+</strong><span>Primerov</span></div>
+            <div class="page-meta-item"><strong>9</strong><span>Podpoglavij</span></div>
+            <div class="page-meta-item"><strong>12</strong><span>Tipov nalog</span></div>
             <div class="page-meta-item"><strong>~60 min</strong><span>Branja</span></div>
           </div>
         </header>
 
-<!-- ============ MATURA FORMULE ============ -->
-<div class="matura-formule">
-  <h3>Formule na maturi — osnovna raven</h3>
-  <p>Na maturitetnem listu s formulami (osnovna raven, stran 3) so za <strong>integralski račun</strong> relevantne naslednje formule:</p>
-
-  <div class="matura-grid">
-    <div class="matura-levo">
-      <ul>
-        <li><strong>Limiti</strong> — \(\lim_{n\to\infty}\left(1+\dfrac{1}{n}\right)^n = e\) in \(\lim_{x\to 0}\dfrac{\sin x}{x} = 1\) </li>
-        <li><strong>Adicijski izreki</strong> — \(\sin(x \pm y) = \sin x\cos y \pm \cos x\sin y\), \(\cos(x \pm y) = \cos x\cos y \mp \sin x\sin y\)</li>
-        <li><strong>Kotne funkcije polovičnih kotov</strong> — \(\sin^2\dfrac{x}{2} = \dfrac{1-\cos x}{2}\), \(\cos^2\dfrac{x}{2} = \dfrac{1+\cos x}{2}\)</li>
-        <li><strong>Faktorizacija vsote in razlike kotnih funkcij</strong> — \(\sin x \pm \sin y = 2\sin\dfrac{x\pm y}{2}\cos\dfrac{x\mp y}{2}\)</li>
-        <li><strong>Razčlenitev produkta kotnih funkcij</strong> — \(\sin x \cos y = \dfrac{1}{2}(\sin(x+y) + \sin(x-y))\)</li>
-      </ul>
-    </div>
-
-    <div class="matura-slika">
-<img src="/views/matematika/images/formule_osnovna_raven.png" alt="Formule na maturi — osnovna raven, stran 3">
-    </div>
-  </div>
-</div>
-
-        <!-- ============ 1. TEORIJA ============ -->
-        <section class="subsection">
-          <div class="subsection-head">
-            <h2>1. Teorija — formule in pravila</h2>
-            <p>Kar moraš znati na pamet, preden se lotiš nalog.</p>
-          </div>
-
-          <div class="info-card">
-            <h3>Osnovni pojmi</h3>
-            <div class="concept-list">
-              <div class="concept">
-                <h4>Primitivna funkcija</h4>
-                <div class="concept-formula">\(F'(x) = f(x)\)</div>
-                <p class="concept-desc">To je funkcija \(F\), ki jo moraš <strong>odvajati</strong>, da dobiš nazaj \(f\). Iščeš torej tisto funkcijo, katere odvod je enak dani funkciji. Postopku iskanja rečemo <strong>integriranje</strong>.</p>
-              </div>
-              <div class="concept">
-                <h4>Nedoločeni integral</h4>
-                <div class="concept-formula">\(\int f(x)\,dx = F(x) + C\)</div>
-                <p class="concept-desc">Z njim zapišemo <strong>vse</strong> primitivne funkcije hkrati. Zakaj \(+ C\)? Ker ima vsaka funkcija neskončno mnogo primitivnih — npr. odvod \(x^2\), \(x^2 + 5\) in \(x^2 - 7\) je enak (\(2x\)), saj je odvod konstante 0. Rezultat je torej <strong>družina funkcij</strong>, ne eno samo število.</p>
-              </div>
-              <div class="concept">
-                <h4>Določeni integral</h4>
-                <div class="concept-formula">\(\int_a^b f(x)\,dx = F(b) - F(a)\)</div>
-                <p class="concept-desc">Rezultat je <strong>število</strong>. Vstaviš zgornjo mejo \(b\), odšteješ spodnjo mejo \(a\). \(C\) izgine, ker se pri odštevanju pokrajša.</p>
-              </div>
-              <div class="concept">
-                <h4>Zveza med odvodom in integralom</h4>
-                <div class="concept-formula">\(\left(\int f(x)\,dx\right)' = f(x)\)</div>
-                <p class="concept-desc">Odvajanje in integriranje sta <strong>nasprotni operaciji</strong>. Če integriraš, nato pa odvajaš, dobiš nazaj isto funkcijo.</p>
-              </div>
-              <div class="concept">
-                <h4>Geometrijski pomen določenega integrala</h4>
-                <div class="concept-formula">\(S = \int_a^b f(x)\,dx\) &nbsp; (če je \(f(x) \geq 0\))</div>
-                <p class="concept-desc">Pove <strong>ploščino lika</strong> med grafom in abscisno osjo. Če je graf pod osjo, je integral negativen — ploščina je pa vedno pozitivna.</p>
-              </div>
-              <div class="concept">
-                <h4>Razlika: nedoločeni vs. določeni integral</h4>
-                <div class="concept-formula">\(\int f(x)\,dx\) &nbsp;vs.&nbsp; \(\int_a^b f(x)\,dx\)</div>
-                <p class="concept-desc">Prvi vrne <strong>funkcijo</strong>, drugi <strong>število</strong>. Prvi je "družina funkcij", drugi pa "ploščina pod krivuljo".</p>
-              </div>
+        <div class="matura-formule">
+          <h3>Formule na maturi</h3>
+          <p>Na listu za višjo raven so integracija po delih, dva integrala in prostornina vrtenine. Na pamet:</p>
+          <div class="matura-grid">
+            <div class="matura-levo">
+              <ul>
+                <li>\(\int x^n\,dx = \frac{x^{n + 1}}{n + 1} + C\) (\(n \ne -1\)), \(\int \frac{dx}{x} = \ln|x| + C\), \(\int e^x\,dx = e^x + C\)</li>
+                <li>\(\int \sin x\,dx = -\cos x + C\), \(\int \cos x\,dx = \sin x + C\), \(\int \frac{dx}{\cos^2 x} = \tan x + C\)</li>
+                <li>\(\int_a^b f(x)\,dx = F(b) - F(a)\)</li>
+                <li>\(\int u\,dv = uv - \int v\,du\), \(\int \frac{dx}{x^2 + a^2} = \frac{1}{a}\arctan\frac{x}{a} + C\) <em>(na listu VR)</em></li>
+                <li>\(V = \pi\int_a^b f(x)^2\,dx\) <em>(na listu VR)</em></li>
+              </ul>
+            </div>
+            <div class="matura-slika">
+              <img src="/views/matematika/images/formule_osnovna_raven.png" alt="Formule na maturi — osnovna raven">
             </div>
           </div>
+        </div>
 
-          <div class="info-card">
-            <h3>Tabela osnovnih integralov</h3>
-            <div class="formula-grid">
-              <div class="formula-card">\(\displaystyle\int x^{\alpha}\,dx = \dfrac{x^{\alpha+1}}{\alpha+1} + C \quad (\alpha \neq -1)\)</div>
-              <div class="formula-card">\(\displaystyle\int \dfrac{dx}{x} = \ln|x| + C\)</div>
-              <div class="formula-card">\(\displaystyle\int a^x\,dx = \dfrac{a^x}{\ln a} + C \quad (a > 0)\)</div>
-              <div class="formula-card">\(\displaystyle\int \sin x\,dx = -\cos x + C\)</div>
-              <div class="formula-card">\(\displaystyle\int \cos x\,dx = \sin x + C\)</div>
-              <div class="formula-card">\(\displaystyle\int \dfrac{dx}{\cos^2 x} = \operatorname{tg} x + C\)</div>
-              <div class="formula-card">\(\displaystyle\int \dfrac{dx}{\sin^2 x} = -\operatorname{ctg} x + C\)</div>
-              <div class="formula-card">\(\displaystyle\int \operatorname{sh} x\,dx = \operatorname{ch} x + C\)</div>
-              <div class="formula-card">\(\displaystyle\int \operatorname{ch} x\,dx = \operatorname{sh} x + C\)</div>
-              <div class="formula-card">\(\displaystyle\int \dfrac{dx}{1+x^2} = \operatorname{arc\,tg} x + C\)</div>
-              <div class="formula-card">\(\displaystyle\int \dfrac{dx}{1-x^2} = \dfrac{1}{2}\ln\left|\dfrac{1+x}{1-x}\right| + C\)</div>
-              <div class="formula-card">\(\displaystyle\int \dfrac{dx}{\sqrt{1-x^2}} = \operatorname{arc\,sin} x + C\)</div>
-              <div class="formula-card last-three">\(\displaystyle\int \dfrac{dx}{\sqrt{x^2 \pm 1}} = \ln\left|x + \sqrt{x^2 \pm 1}\right| + C\)</div>
-              <div class="formula-card last-three">\(\displaystyle\int \sqrt{x^2+1}\,dx = \dfrac{1}{2}\left(\ln\left(x+\sqrt{x^2+1}\right) + x\sqrt{x^2+1}\right) + C\)</div>
-              <div class="formula-card last-three">\(\displaystyle\int \sqrt{x^2-1}\,dx = \dfrac{x}{2}\sqrt{x^2-1} - \dfrac{1}{2}\ln\left|x + \operatorname{sgn}(x)\sqrt{x^2-1}\right| + C\)</div>
-            </div>
-            <p style="margin-top: 12px; color: var(--text-secondary);">Tabelo integralov se nauči <strong>skupaj s tabelo odvodov</strong> — vsak integral je "obratni" odvod.</p>
+        <nav class="kazalo" aria-label="Podpoglavja">
+          <h2>Podpoglavja</h2>
+          <ol>
+            <li><a href="#sklop-1"><span class="kazalo-st">1</span> Nedoločeni integral (primitivna funkcija)</a></li>
+            <li><a href="#sklop-2"><span class="kazalo-st">2</span> Lastnosti nedoločenega integrala</a></li>
+            <li><a href="#sklop-3"><span class="kazalo-st">3</span> Uvedba nove spremenljivke <span class="badge-vr">VR</span></a></li>
+            <li><a href="#sklop-4"><span class="kazalo-st">4</span> Integracija per partes <span class="badge-vr">VR</span></a></li>
+            <li><a href="#sklop-5"><span class="kazalo-st">5</span> Integracija racionalnih funkcij <span class="badge-vr">VR</span></a></li>
+            <li><a href="#sklop-6"><span class="kazalo-st">6</span> Določeni integral</a></li>
+            <li><a href="#sklop-7"><span class="kazalo-st">7</span> Lastnosti določenega integrala</a></li>
+            <li><a href="#sklop-8"><span class="kazalo-st">8</span> Zveza med določenim in nedoločenim integralom</a></li>
+            <li><a href="#sklop-9"><span class="kazalo-st">9</span> Uporaba določenega integrala</a></li>
+            <li><a href="#kljuc"><span class="kazalo-st">?</span> Ključ: kateri tip naloge je to?</a></li>
+          </ol>
+        </nav>
+
+        <!-- SKLOP 1 -->
+        <section class="sklop" id="sklop-1">
+          <header class="sklop-header">
+            <span class="sklop-num">4.14 · 1</span>
+            <h2>Nedoločeni integral (primitivna funkcija)</h2>
+            <p>Funkcija, katere odvod poznamo.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <p>Funkcija \(F\) je <strong>primitivna funkcija</strong> funkcije \(f\), če je \(F'(x) = f(x)\). Če je \(F\) primitivna, je primitivna tudi \(F + C\) za vsako konstanto \(C\). Množico vseh primitivnih funkcij imenujemo <strong>nedoločeni integral</strong>:</p>
+            <p>\[\int f(x)\,dx = F(x) + C.\]</p>
+            <p>Rezultat vedno preverimo z odvajanjem. Konstanto \(C\) določimo, če poznamo eno točko grafa \(F\) (začetni pogoj).</p>
+            <figure class="slika slika--ozka">
+<svg viewBox="0 0 380 300" role="img" aria-label="Družina primitivnih funkcij" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g1-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g1-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g1-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g1-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g1-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g1-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<path class="s-mreza" d="M58.8,274V26M124.4,274V26M190,274V26M255.6,274V26M321.2,274V26M26,274H354M26,243H354M26,212H354M26,181H354M26,150H354M26,119H354M26,88H354M26,57H354M26,26H354"/>
+<line class="s-os" x1="26" y1="181" x2="362" y2="181" marker-end="url(#g1-p)"/>
+<line class="s-os" x1="190" y1="274" x2="190" y2="18" marker-end="url(#g1-p)"/>
+<text class="s-os-txt" x="356" y="173" text-anchor="end">x</text>
+<text class="s-os-txt" x="198" y="30">y</text>
+<line class="s-os" x1="58.8" y1="178" x2="58.8" y2="184"/><text class="s-os-txt" x="58.8" y="196" text-anchor="middle">-2</text><line class="s-os" x1="124.4" y1="178" x2="124.4" y2="184"/><text class="s-os-txt" x="124.4" y="196" text-anchor="middle">-1</text><line class="s-os" x1="255.6" y1="178" x2="255.6" y2="184"/><text class="s-os-txt" x="255.6" y="196" text-anchor="middle">1</text><line class="s-os" x1="321.2" y1="178" x2="321.2" y2="184"/><text class="s-os-txt" x="321.2" y="196" text-anchor="middle">2</text><line class="s-os" x1="187" y1="274" x2="193" y2="274"/><text class="s-os-txt" x="184" y="278" text-anchor="end">-3</text><line class="s-os" x1="187" y1="243" x2="193" y2="243"/><text class="s-os-txt" x="184" y="247" text-anchor="end">-2</text><line class="s-os" x1="187" y1="212" x2="193" y2="212"/><text class="s-os-txt" x="184" y="216" text-anchor="end">-1</text><line class="s-os" x1="187" y1="150" x2="193" y2="150"/><text class="s-os-txt" x="184" y="154" text-anchor="end">1</text><line class="s-os" x1="187" y1="119" x2="193" y2="119"/><text class="s-os-txt" x="184" y="123" text-anchor="end">2</text><line class="s-os" x1="187" y1="88" x2="193" y2="88"/><text class="s-os-txt" x="184" y="92" text-anchor="end">3</text><line class="s-os" x1="187" y1="57" x2="193" y2="57"/><text class="s-os-txt" x="184" y="61" text-anchor="end">4</text><text class="s-os-txt" x="184" y="196" text-anchor="end">0</text>
+<path class="s-k3" d="M26,49.3L26.8,51.2L27.6,53.1L28.5,55L29.3,56.9L30.1,58.8L30.9,60.7L31.7,62.6L32.6,64.4L33.4,66.3L34.2,68.1L35,70L35.8,71.8L36.7,73.6L37.5,75.4L38.3,77.2L39.1,79L39.9,80.8L40.8,82.6L41.6,84.3L42.4,86.1L43.2,87.8L44,89.5L44.9,91.3L45.7,93L46.5,94.7L47.3,96.4L48.1,98L49,99.7L49.8,101.4L50.6,103L51.4,104.7L52.2,106.3L53.1,107.9L53.9,109.5L54.7,111.1L55.5,112.7L56.3,114.3L57.2,115.9L58,117.4L58.8,119L59.6,120.5L60.4,122.1L61.3,123.6L62.1,125.1L62.9,126.6L63.7,128.1L64.5,129.6L65.4,131.1L66.2,132.6L67,134L67.8,135.5L68.6,136.9L69.5,138.3L70.3,139.8L71.1,141.2L71.9,142.6L72.7,144L73.6,145.3L74.4,146.7L75.2,148.1L76,149.4L76.8,150.8L77.7,152.1L78.5,153.4L79.3,154.7L80.1,156L80.9,157.3L81.8,158.6L82.6,159.9L83.4,161.1L84.2,162.4L85,163.6L85.9,164.9L86.7,166.1L87.5,167.3L88.3,168.5L89.1,169.7L90,170.9L90.8,172.1L91.6,173.3L92.4,174.4L93.2,175.6L94.1,176.7L94.9,177.8L95.7,178.9L96.5,180.1L97.3,181.2L98.2,182.2L99,183.3L99.8,184.4L100.6,185.5L101.4,186.5L102.3,187.5L103.1,188.6L103.9,189.6L104.7,190.6L105.5,191.6L106.4,192.6L107.2,193.6L108,194.6L108.8,195.5L109.6,196.5L110.5,197.4L111.3,198.4L112.1,199.3L112.9,200.2L113.7,201.1L114.6,202L115.4,202.9L116.2,203.8L117,204.6L117.8,205.5L118.7,206.3L119.5,207.2L120.3,208L121.1,208.8L121.9,209.6L122.8,210.4L123.6,211.2L124.4,212L125.2,212.8L126,213.5L126.9,214.3L127.7,215L128.5,215.8L129.3,216.5L130.1,217.2L131,217.9L131.8,218.6L132.6,219.3L133.4,219.9L134.2,220.6L135.1,221.3L135.9,221.9L136.7,222.5L137.5,223.2L138.3,223.8L139.2,224.4L140,225L140.8,225.6L141.6,226.1L142.4,226.7L143.3,227.3L144.1,227.8L144.9,228.3L145.7,228.9L146.5,229.4L147.4,229.9L148.2,230.4L149,230.9L149.8,231.4L150.6,231.8L151.5,232.3L152.3,232.8L153.1,233.2L153.9,233.6L154.7,234L155.6,234.5L156.4,234.9L157.2,235.3L158,235.6L158.8,236L159.7,236.4L160.5,236.7L161.3,237.1L162.1,237.4L162.9,237.7L163.8,238L164.6,238.3L165.4,238.6L166.2,238.9L167,239.2L167.9,239.5L168.7,239.7L169.5,240L170.3,240.2L171.1,240.4L172,240.7L172.8,240.9L173.6,241.1L174.4,241.3L175.2,241.4L176.1,241.6L176.9,241.8L177.7,241.9L178.5,242.1L179.3,242.2L180.2,242.3L181,242.4L181.8,242.5L182.6,242.6L183.4,242.7L184.3,242.8L185.1,242.8L185.9,242.9L186.7,242.9L187.5,243L188.4,243L189.2,243L190,243L190.8,243L191.6,243L192.5,243L193.3,242.9L194.1,242.9L194.9,242.8L195.7,242.8L196.6,242.7L197.4,242.6L198.2,242.5L199,242.4L199.8,242.3L200.7,242.2L201.5,242.1L202.3,241.9L203.1,241.8L203.9,241.6L204.8,241.4L205.6,241.3L206.4,241.1L207.2,240.9L208,240.7L208.9,240.4L209.7,240.2L210.5,240L211.3,239.7L212.1,239.5L213,239.2L213.8,238.9L214.6,238.6L215.4,238.3L216.2,238L217.1,237.7L217.9,237.4L218.7,237.1L219.5,236.7L220.3,236.4L221.2,236L222,235.6L222.8,235.3L223.6,234.9L224.4,234.5L225.3,234L226.1,233.6L226.9,233.2L227.7,232.8L228.5,232.3L229.4,231.8L230.2,231.4L231,230.9L231.8,230.4L232.6,229.9L233.5,229.4L234.3,228.9L235.1,228.3L235.9,227.8L236.7,227.3L237.6,226.7L238.4,226.1L239.2,225.6L240,225L240.8,224.4L241.7,223.8L242.5,223.2L243.3,222.5L244.1,221.9L244.9,221.3L245.8,220.6L246.6,219.9L247.4,219.3L248.2,218.6L249,217.9L249.9,217.2L250.7,216.5L251.5,215.8L252.3,215L253.1,214.3L254,213.5L254.8,212.8L255.6,212L256.4,211.2L257.2,210.4L258.1,209.6L258.9,208.8L259.7,208L260.5,207.2L261.3,206.3L262.2,205.5L263,204.6L263.8,203.8L264.6,202.9L265.4,202L266.3,201.1L267.1,200.2L267.9,199.3L268.7,198.4L269.5,197.4L270.4,196.5L271.2,195.5L272,194.6L272.8,193.6L273.6,192.6L274.5,191.6L275.3,190.6L276.1,189.6L276.9,188.6L277.7,187.5L278.6,186.5L279.4,185.5L280.2,184.4L281,183.3L281.8,182.2L282.7,181.2L283.5,180.1L284.3,178.9L285.1,177.8L285.9,176.7L286.8,175.6L287.6,174.4L288.4,173.3L289.2,172.1L290,170.9L290.9,169.7L291.7,168.5L292.5,167.3L293.3,166.1L294.1,164.9L295,163.6L295.8,162.4L296.6,161.1L297.4,159.9L298.2,158.6L299.1,157.3L299.9,156L300.7,154.7L301.5,153.4L302.3,152.1L303.2,150.8L304,149.4L304.8,148.1L305.6,146.7L306.4,145.3L307.3,144L308.1,142.6L308.9,141.2L309.7,139.8L310.5,138.3L311.4,136.9L312.2,135.5L313,134L313.8,132.6L314.6,131.1L315.5,129.6L316.3,128.1L317.1,126.6L317.9,125.1L318.7,123.6L319.6,122.1L320.4,120.5L321.2,119L322,117.4L322.8,115.9L323.7,114.3L324.5,112.7L325.3,111.1L326.1,109.5L326.9,107.9L327.8,106.3L328.6,104.7L329.4,103L330.2,101.4L331,99.7L331.9,98L332.7,96.4L333.5,94.7L334.3,93L335.1,91.3L336,89.5L336.8,87.8L337.6,86.1L338.4,84.3L339.2,82.6L340.1,80.8L340.9,79L341.7,77.2L342.5,75.4L343.3,73.6L344.2,71.8L345,70L345.8,68.1L346.6,66.3L347.4,64.4L348.3,62.6L349.1,60.7L349.9,58.8L350.7,56.9L351.5,55L352.4,53.1L353.2,51.2L354,49.3"/>
+<path class="s-k1" d="M26,-12.7L26.8,-10.8L27.6,-8.9L28.5,-7L29.3,-5.1L30.1,-3.2L30.9,-1.3L31.7,0.6L32.6,2.4L33.4,4.3L34.2,6.1L35,8L35.8,9.8L36.7,11.6L37.5,13.4L38.3,15.2L39.1,17L39.9,18.8L40.8,20.6L41.6,22.3L42.4,24.1L43.2,25.8L44,27.5L44.9,29.3L45.7,31L46.5,32.7L47.3,34.4L48.1,36L49,37.7L49.8,39.4L50.6,41L51.4,42.7L52.2,44.3L53.1,45.9L53.9,47.5L54.7,49.1L55.5,50.7L56.3,52.3L57.2,53.9L58,55.4L58.8,57L59.6,58.5L60.4,60.1L61.3,61.6L62.1,63.1L62.9,64.6L63.7,66.1L64.5,67.6L65.4,69.1L66.2,70.6L67,72L67.8,73.5L68.6,74.9L69.5,76.3L70.3,77.8L71.1,79.2L71.9,80.6L72.7,82L73.6,83.3L74.4,84.7L75.2,86.1L76,87.4L76.8,88.8L77.7,90.1L78.5,91.4L79.3,92.7L80.1,94L80.9,95.3L81.8,96.6L82.6,97.9L83.4,99.1L84.2,100.4L85,101.6L85.9,102.9L86.7,104.1L87.5,105.3L88.3,106.5L89.1,107.7L90,108.9L90.8,110.1L91.6,111.3L92.4,112.4L93.2,113.6L94.1,114.7L94.9,115.8L95.7,116.9L96.5,118.1L97.3,119.2L98.2,120.2L99,121.3L99.8,122.4L100.6,123.5L101.4,124.5L102.3,125.5L103.1,126.6L103.9,127.6L104.7,128.6L105.5,129.6L106.4,130.6L107.2,131.6L108,132.6L108.8,133.5L109.6,134.5L110.5,135.4L111.3,136.4L112.1,137.3L112.9,138.2L113.7,139.1L114.6,140L115.4,140.9L116.2,141.8L117,142.6L117.8,143.5L118.7,144.3L119.5,145.2L120.3,146L121.1,146.8L121.9,147.6L122.8,148.4L123.6,149.2L124.4,150L125.2,150.8L126,151.5L126.9,152.3L127.7,153L128.5,153.8L129.3,154.5L130.1,155.2L131,155.9L131.8,156.6L132.6,157.3L133.4,157.9L134.2,158.6L135.1,159.3L135.9,159.9L136.7,160.5L137.5,161.2L138.3,161.8L139.2,162.4L140,163L140.8,163.6L141.6,164.1L142.4,164.7L143.3,165.3L144.1,165.8L144.9,166.3L145.7,166.9L146.5,167.4L147.4,167.9L148.2,168.4L149,168.9L149.8,169.4L150.6,169.8L151.5,170.3L152.3,170.8L153.1,171.2L153.9,171.6L154.7,172L155.6,172.5L156.4,172.9L157.2,173.3L158,173.6L158.8,174L159.7,174.4L160.5,174.7L161.3,175.1L162.1,175.4L162.9,175.7L163.8,176L164.6,176.3L165.4,176.6L166.2,176.9L167,177.2L167.9,177.5L168.7,177.7L169.5,178L170.3,178.2L171.1,178.4L172,178.7L172.8,178.9L173.6,179.1L174.4,179.3L175.2,179.4L176.1,179.6L176.9,179.8L177.7,179.9L178.5,180.1L179.3,180.2L180.2,180.3L181,180.4L181.8,180.5L182.6,180.6L183.4,180.7L184.3,180.8L185.1,180.8L185.9,180.9L186.7,180.9L187.5,181L188.4,181L189.2,181L190,181L190.8,181L191.6,181L192.5,181L193.3,180.9L194.1,180.9L194.9,180.8L195.7,180.8L196.6,180.7L197.4,180.6L198.2,180.5L199,180.4L199.8,180.3L200.7,180.2L201.5,180.1L202.3,179.9L203.1,179.8L203.9,179.6L204.8,179.4L205.6,179.3L206.4,179.1L207.2,178.9L208,178.7L208.9,178.4L209.7,178.2L210.5,178L211.3,177.7L212.1,177.5L213,177.2L213.8,176.9L214.6,176.6L215.4,176.3L216.2,176L217.1,175.7L217.9,175.4L218.7,175.1L219.5,174.7L220.3,174.4L221.2,174L222,173.6L222.8,173.3L223.6,172.9L224.4,172.5L225.3,172L226.1,171.6L226.9,171.2L227.7,170.8L228.5,170.3L229.4,169.8L230.2,169.4L231,168.9L231.8,168.4L232.6,167.9L233.5,167.4L234.3,166.9L235.1,166.3L235.9,165.8L236.7,165.3L237.6,164.7L238.4,164.1L239.2,163.6L240,163L240.8,162.4L241.7,161.8L242.5,161.2L243.3,160.5L244.1,159.9L244.9,159.3L245.8,158.6L246.6,157.9L247.4,157.3L248.2,156.6L249,155.9L249.9,155.2L250.7,154.5L251.5,153.8L252.3,153L253.1,152.3L254,151.5L254.8,150.8L255.6,150L256.4,149.2L257.2,148.4L258.1,147.6L258.9,146.8L259.7,146L260.5,145.2L261.3,144.3L262.2,143.5L263,142.6L263.8,141.8L264.6,140.9L265.4,140L266.3,139.1L267.1,138.2L267.9,137.3L268.7,136.4L269.5,135.4L270.4,134.5L271.2,133.5L272,132.6L272.8,131.6L273.6,130.6L274.5,129.6L275.3,128.6L276.1,127.6L276.9,126.6L277.7,125.5L278.6,124.5L279.4,123.5L280.2,122.4L281,121.3L281.8,120.2L282.7,119.2L283.5,118.1L284.3,116.9L285.1,115.8L285.9,114.7L286.8,113.6L287.6,112.4L288.4,111.3L289.2,110.1L290,108.9L290.9,107.7L291.7,106.5L292.5,105.3L293.3,104.1L294.1,102.9L295,101.6L295.8,100.4L296.6,99.1L297.4,97.9L298.2,96.6L299.1,95.3L299.9,94L300.7,92.7L301.5,91.4L302.3,90.1L303.2,88.8L304,87.4L304.8,86.1L305.6,84.7L306.4,83.3L307.3,82L308.1,80.6L308.9,79.2L309.7,77.8L310.5,76.3L311.4,74.9L312.2,73.5L313,72L313.8,70.6L314.6,69.1L315.5,67.6L316.3,66.1L317.1,64.6L317.9,63.1L318.7,61.6L319.6,60.1L320.4,58.5L321.2,57L322,55.4L322.8,53.9L323.7,52.3L324.5,50.7L325.3,49.1L326.1,47.5L326.9,45.9L327.8,44.3L328.6,42.7L329.4,41L330.2,39.4L331,37.7L331.9,36L332.7,34.4L333.5,32.7L334.3,31L335.1,29.3L336,27.5L336.8,25.8L337.6,24.1L338.4,22.3L339.2,20.6L340.1,18.8L340.9,17L341.7,15.2L342.5,13.4L343.3,11.6L344.2,9.8L345,8L345.8,6.1L346.6,4.3L347.4,2.4L348.3,0.6L349.1,-1.3L349.9,-3.2L350.7,-5.1L351.5,-7L352.4,-8.9L353.2,-10.8L354,-12.7"/>
+<path class="s-k4" d="M26,-74.7L26.8,-72.8L27.6,-70.9L28.5,-69L29.3,-67.1L30.1,-65.2L30.9,-63.3L31.7,-61.4L32.6,-59.6L33.4,-57.7L34.2,-55.9L35,-54L35.8,-52.2L36.7,-50.4L37.5,-48.6L38.3,-46.8L39.1,-45L39.9,-43.2L40.8,-41.4L41.6,-39.7L42.4,-37.9L43.2,-36.2L44,-34.5L44.9,-32.7L45.7,-31L46.5,-29.3L47.3,-27.6L48.1,-26L49,-24.3L49.8,-22.6L50.6,-21L51.4,-19.3L52.2,-17.7L53.1,-16.1L53.9,-14.5L54.7,-12.9L55.5,-11.3L56.3,-9.7L57.2,-8.1L58,-6.6L58.8,-5L59.6,-3.5L60.4,-1.9L61.3,-0.4L62.1,1.1L62.9,2.6L63.7,4.1L64.5,5.6L65.4,7.1L66.2,8.6L67,10L67.8,11.5L68.6,12.9L69.5,14.3L70.3,15.8L71.1,17.2L71.9,18.6L72.7,20L73.6,21.3L74.4,22.7L75.2,24.1L76,25.4L76.8,26.8L77.7,28.1L78.5,29.4L79.3,30.7L80.1,32L80.9,33.3L81.8,34.6L82.6,35.9L83.4,37.1L84.2,38.4L85,39.6L85.9,40.9L86.7,42.1L87.5,43.3L88.3,44.5L89.1,45.7L90,46.9L90.8,48.1L91.6,49.3L92.4,50.4L93.2,51.6L94.1,52.7L94.9,53.8L95.7,54.9L96.5,56.1L97.3,57.2L98.2,58.2L99,59.3L99.8,60.4L100.6,61.5L101.4,62.5L102.3,63.5L103.1,64.6L103.9,65.6L104.7,66.6L105.5,67.6L106.4,68.6L107.2,69.6L108,70.6L108.8,71.5L109.6,72.5L110.5,73.4L111.3,74.4L112.1,75.3L112.9,76.2L113.7,77.1L114.6,78L115.4,78.9L116.2,79.8L117,80.6L117.8,81.5L118.7,82.3L119.5,83.2L120.3,84L121.1,84.8L121.9,85.6L122.8,86.4L123.6,87.2L124.4,88L125.2,88.8L126,89.5L126.9,90.3L127.7,91L128.5,91.8L129.3,92.5L130.1,93.2L131,93.9L131.8,94.6L132.6,95.3L133.4,95.9L134.2,96.6L135.1,97.3L135.9,97.9L136.7,98.5L137.5,99.2L138.3,99.8L139.2,100.4L140,101L140.8,101.6L141.6,102.1L142.4,102.7L143.3,103.3L144.1,103.8L144.9,104.3L145.7,104.9L146.5,105.4L147.4,105.9L148.2,106.4L149,106.9L149.8,107.4L150.6,107.8L151.5,108.3L152.3,108.8L153.1,109.2L153.9,109.6L154.7,110L155.6,110.5L156.4,110.9L157.2,111.3L158,111.6L158.8,112L159.7,112.4L160.5,112.7L161.3,113.1L162.1,113.4L162.9,113.7L163.8,114L164.6,114.3L165.4,114.6L166.2,114.9L167,115.2L167.9,115.5L168.7,115.7L169.5,116L170.3,116.2L171.1,116.4L172,116.7L172.8,116.9L173.6,117.1L174.4,117.3L175.2,117.4L176.1,117.6L176.9,117.8L177.7,117.9L178.5,118.1L179.3,118.2L180.2,118.3L181,118.4L181.8,118.5L182.6,118.6L183.4,118.7L184.3,118.8L185.1,118.8L185.9,118.9L186.7,118.9L187.5,119L188.4,119L189.2,119L190,119L190.8,119L191.6,119L192.5,119L193.3,118.9L194.1,118.9L194.9,118.8L195.7,118.8L196.6,118.7L197.4,118.6L198.2,118.5L199,118.4L199.8,118.3L200.7,118.2L201.5,118.1L202.3,117.9L203.1,117.8L203.9,117.6L204.8,117.4L205.6,117.3L206.4,117.1L207.2,116.9L208,116.7L208.9,116.4L209.7,116.2L210.5,116L211.3,115.7L212.1,115.5L213,115.2L213.8,114.9L214.6,114.6L215.4,114.3L216.2,114L217.1,113.7L217.9,113.4L218.7,113.1L219.5,112.7L220.3,112.4L221.2,112L222,111.6L222.8,111.3L223.6,110.9L224.4,110.5L225.3,110L226.1,109.6L226.9,109.2L227.7,108.8L228.5,108.3L229.4,107.8L230.2,107.4L231,106.9L231.8,106.4L232.6,105.9L233.5,105.4L234.3,104.9L235.1,104.3L235.9,103.8L236.7,103.3L237.6,102.7L238.4,102.1L239.2,101.6L240,101L240.8,100.4L241.7,99.8L242.5,99.2L243.3,98.5L244.1,97.9L244.9,97.3L245.8,96.6L246.6,95.9L247.4,95.3L248.2,94.6L249,93.9L249.9,93.2L250.7,92.5L251.5,91.8L252.3,91L253.1,90.3L254,89.5L254.8,88.8L255.6,88L256.4,87.2L257.2,86.4L258.1,85.6L258.9,84.8L259.7,84L260.5,83.2L261.3,82.3L262.2,81.5L263,80.6L263.8,79.8L264.6,78.9L265.4,78L266.3,77.1L267.1,76.2L267.9,75.3L268.7,74.4L269.5,73.4L270.4,72.5L271.2,71.5L272,70.6L272.8,69.6L273.6,68.6L274.5,67.6L275.3,66.6L276.1,65.6L276.9,64.6L277.7,63.5L278.6,62.5L279.4,61.5L280.2,60.4L281,59.3L281.8,58.2L282.7,57.2L283.5,56.1L284.3,54.9L285.1,53.8L285.9,52.7L286.8,51.6L287.6,50.4L288.4,49.3L289.2,48.1L290,46.9L290.9,45.7L291.7,44.5L292.5,43.3L293.3,42.1L294.1,40.9L295,39.6L295.8,38.4L296.6,37.1L297.4,35.9L298.2,34.6L299.1,33.3L299.9,32L300.7,30.7L301.5,29.4L302.3,28.1L303.2,26.8L304,25.4L304.8,24.1L305.6,22.7L306.4,21.3L307.3,20L308.1,18.6L308.9,17.2L309.7,15.8L310.5,14.3L311.4,12.9L312.2,11.5L313,10L313.8,8.6L314.6,7.1L315.5,5.6L316.3,4.1L317.1,2.6L317.9,1.1L318.7,-0.4L319.6,-1.9L320.4,-3.5L321.2,-5L322,-6.6L322.8,-8.1L323.7,-9.7L324.5,-11.3L325.3,-12.9L326.1,-14.5L326.9,-16.1L327.8,-17.7L328.6,-19.3L329.4,-21L330.2,-22.6L331,-24.3L331.9,-26L332.7,-27.6L333.5,-29.3L334.3,-31L335.1,-32.7L336,-34.5L336.8,-36.2L337.6,-37.9L338.4,-39.7L339.2,-41.4L340.1,-43.2L340.9,-45L341.7,-46.8L342.5,-48.6L343.3,-50.4L344.2,-52.2L345,-54L345.8,-55.9L346.6,-57.7L347.4,-59.6L348.3,-61.4L349.1,-63.3L349.9,-65.2L350.7,-67.1L351.5,-69L352.4,-70.9L353.2,-72.8L354,-74.7"/>
+<text class="s-txt-k4" x="350.7" y="44.6" text-anchor="end">x² + 2</text>
+<text class="s-txt-k1" x="272" y="81.8" text-anchor="end">x²</text>
+<text class="s-txt-k3" x="317.9" y="162.4" text-anchor="start">x² − 2</text>
+</svg>
+<figcaption>Funkcija \(f(x) = 2x\) ima neskončno primitivnih funkcij \(x^2 + C\): grafi so med seboj premaknjeni navpično.</figcaption>
+</figure>
           </div>
-
-          <div class="info-card">
-            <h3>Lastnosti integralov</h3>
-            <div class="two-col-props">
-              <div class="prop-column">
-                <h4 class="prop-title">Nedoločeni integral</h4>
-                <div class="prop">
-                  <div class="prop-formula">\(\int (f \pm g)\,dx = \int f\,dx \pm \int g\,dx\)</div>
-                  <p class="prop-desc">Vsoto ali razliko funkcij integriraš po delih — vsak člen posebej.</p>
-                </div>
-                <div class="prop">
-                  <div class="prop-formula">\(\int c \cdot f(x)\,dx = c \cdot \int f(x)\,dx\)</div>
-                  <p class="prop-desc">Konstanto lahko izpostaviš pred integral.</p>
-                </div>
-                <div class="prop">
-                  <div class="prop-formula">\(\int f'(x)\,dx = f(x) + C\)</div>
-                  <p class="prop-desc">Integral odvoda vrne prvotno funkcijo (integracija je obrat odvajanja).</p>
-                </div>
-                <div class="prop">
-                  <div class="prop-formula">\(\left(\int f(x)\,dx\right)' = f(x)\)</div>
-                  <p class="prop-desc">Če integral odvajaš, dobiš nazaj prvotno funkcijo \(f\).</p>
-                </div>
-              </div>
-              <div class="prop-column">
-                <h4 class="prop-title">Določeni integral</h4>
-                <div class="prop">
-                  <div class="prop-formula">\(\int_a^a f(x)\,dx = 0\)</div>
-                  <p class="prop-desc">Če sta meji enaki, je ploščina nič (ni širine).</p>
-                </div>
-                <div class="prop">
-                  <div class="prop-formula">\(\int_a^b f(x)\,dx = -\int_b^a f(x)\,dx\)</div>
-                  <p class="prop-desc">Zamenjava mej obrne predznak integrala.</p>
-                </div>
-                <div class="prop">
-                  <div class="prop-formula">\(\int_a^b c\,dx = c(b-a)\)</div>
-                  <p class="prop-desc">Integral konstante = konstanta × dolžina intervala (ploščina pravokotnika).</p>
-                </div>
-                <div class="prop">
-                  <div class="prop-formula">\(\int_a^b (f \pm g)\,dx = \int_a^b f\,dx \pm \int_a^b g\,dx\)</div>
-                  <p class="prop-desc">Tudi pri določenem integralu velja linearnost (po členih).</p>
-                </div>
-                <div class="prop">
-                  <div class="prop-formula">\(\int_a^b c\,f(x)\,dx = c \int_a^b f(x)\,dx\)</div>
-                  <p class="prop-desc">Konstanto lahko izpostaviš tudi pri določenem integralu.</p>
-                </div>
-                <div class="prop">
-                  <div class="prop-formula">\(\int_a^b f\,dx = \int_a^c f\,dx + \int_c^b f\,dx\)</div>
-                  <p class="prop-desc">Aditivnost — integral lahko razdeliš na dva dela (razbiješ interval).</p>
-                </div>
-                <div class="prop">
-                  <div class="prop-formula">\(f(x) \geq 0 \Rightarrow \int_a^b f(x)\,dx \geq 0\)</div>
-                  <p class="prop-desc">Če je funkcija nenegativna, je integral (ploščina) tudi nenegativen.</p>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="info-card">
-            <h3>Uporaba določenega integrala</h3>
-            <div class="concept-list">
-              <div class="concept">
-                <h4>Ploščina lika med grafom in osjo \(x\)</h4>
-                <div class="concept-formula">\(S = \int_a^b |f(x)|\,dx\)</div>
-                <p class="concept-desc">Ploščina lika, ki ga omejujeta <strong>graf funkcije</strong> in <strong>abscisna os</strong> med \(a\) in \(b\). Absolutna vrednost poskrbi, da je ploščina vedno pozitivna.</p>
-              </div>
-              <div class="concept">
-                <h4>Ploščina med dvema grafoma</h4>
-                <div class="concept-formula">\(S = \int_a^b (f(x) - g(x))\,dx, \quad f \geq g\)</div>
-                <p class="concept-desc">Ploščina lika med <strong>dvema krivuljama</strong>. Odšteješ spodnjo funkcijo od zgornje in integriraš med presečišči.</p>
-              </div>
-              <div class="concept">
-                <h4>Prostornina vrtenine okoli osi \(x\)</h4>
-                <div class="concept-formula">\(V = \pi \int_a^b [f(x)]^2\,dx\)</div>
-                <p class="concept-desc">Prostornina telesa, ki nastane, ko lik <strong>zavrtimo okoli abscisne osi</strong>. Funkcijo kvadriraš, integriraš in pomnožiš s \(\pi\).</p>
-              </div>
-              <div class="concept">
-                <h4>Povprečna vrednost funkcije</h4>
-                <div class="concept-formula">\(\bar{f} = \dfrac{1}{b-a}\int_a^b f(x)\,dx\)</div>
-                <p class="concept-desc">Pove <strong>povprečno vrednost</strong> funkcije na intervalu \([a,b]\). Integral deliš z dolžino intervala.</p>
-              </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-1">
+              <h4>Tip 1: Primitivna funkcija skozi dano točko</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Poiščite primitivno funkcijo funkcije \(f(x) = 6x^2 - 4x + 3\), katere graf gre skozi točko \(T(1, 5)\).</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> iščemo \(F\) z \(F' = f\), pogosto z začetnim pogojem.</p><ul class="kljucne"><li>„primitivna funkcija“</li><li>„graf gre skozi točko“</li><li>„ali je \(F\) primitivna funkcija od \(f\)“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Integriraj vsak člen posebej.</p><div class="na-nalogi"><p>\(F(x) = 2x^3 - 2x^2 + 3x + C\).</p></div></li>
+              <li><p class="korak">Vstavi koordinati dane točke.</p><div class="na-nalogi"><p>\(2 - 2 + 3 + C = 5\).</p></div></li>
+              <li><p class="korak">Izračunaj \(C\) in zapiši \(F\).</p><div class="na-nalogi"><p>\(C = 2\): \(F(x) = 2x^3 - 2x^2 + 3x + 2\).</p></div></li>
+              <li><p class="korak">Preveri z odvajanjem.</p><div class="na-nalogi"><p>\(F'(x) = 6x^2 - 4x + 3 = f(x)\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Ali je \(F(x) = x\ln x - x\) primitivna funkcija od \(\ln x\)?</p><p>\(F'(x) = \ln x + 1 - 1 = \ln x\): je.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> \(f(x) = \cos x\), \(F(0) = 3\)</p><p>\(F(x) = \sin x + 3\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Hitrost \(v(t) = 3t^2\), \(s(0) = 2\). Pot \(s(t)\)?</p><p>\(s(t) = t^3 + 2\).</p></div>
             </div>
           </div>
         </section>
 
-        <!-- ============ 2. TIPI NALOG ============ -->
-        <section class="subsection">
-          <div class="subsection-head">
-            <h2>2. Tipi nalog — postopki po korakih</h2>
-            <p>Za vsak tip: kako ga prepoznaš, kako ga rešiš, primer.</p>
+        <!-- SKLOP 2 -->
+        <section class="sklop" id="sklop-2">
+          <header class="sklop-header">
+            <span class="sklop-num">4.14 · 2</span>
+            <h2>Lastnosti nedoločenega integrala</h2>
+            <p>Tabela integralov in linearnost.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <ul>
+              <li>\(\int (f(x) \pm g(x))\,dx = \int f(x)\,dx \pm \int g(x)\,dx\),</li>
+              <li>\(\int c f(x)\,dx = c\int f(x)\,dx\),</li>
+              <li>\(\int f(ax + b)\,dx = \frac{1}{a}F(ax + b) + C\), na primer \(\int e^{3x}\,dx = \frac{1}{3}e^{3x} + C\).</li>
+            </ul>
+            <div class="tabela-wrap">
+              <table class="tabela">
+                <thead><tr><th>\(f(x)\)</th><th>\(\int f(x)\,dx\)</th><th>\(f(x)\)</th><th>\(\int f(x)\,dx\)</th></tr></thead>
+                <tbody>
+                  <tr><td>\(x^n\), \(n \ne -1\)</td><td>\(\frac{x^{n + 1}}{n + 1}\)</td><td>\(\sin x\)</td><td>\(-\cos x\)</td></tr>
+                  <tr><td>\(\frac{1}{x}\)</td><td>\(\ln|x|\)</td><td>\(\cos x\)</td><td>\(\sin x\)</td></tr>
+                  <tr><td>\(e^x\)</td><td>\(e^x\)</td><td>\(\frac{1}{\cos^2 x}\)</td><td>\(\tan x\)</td></tr>
+                  <tr><td>\(a^x\)</td><td>\(\frac{a^x}{\ln a}\)</td><td>\(\frac{1}{1 + x^2}\)</td><td>\(\arctan x\)</td></tr>
+                  <tr><td>\(\sqrt{x}\)</td><td>\(\frac{2}{3}x\sqrt{x}\)</td><td>\(\frac{1}{\sqrt{1 - x^2}}\)</td><td>\(\arcsin x\)</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p>Tabela je tabela odvodov, prebrana v obratni smeri. Integrala produkta ali kvocienta ne dobimo kot produkt ali kvocient integralov.</p>
           </div>
-
-          <!-- TIP 1 -->
-          <div class="info-card" id="tip-1">
-            <div class="tip-header">
-              <h3>Tip 1: Osnovni nedoločeni integral (polinom)</h3>
-              <div class="tip-formula">\(\displaystyle\int x^n\,dx = \dfrac{x^{n+1}}{n+1} + C\)</div>
-            </div>
-            <p><strong>Kako prepoznaš:</strong> integral polinoma ali vsote členov oblike \(x^n\) (npr. \(3x^2\), \(-4x\), \(5\)).</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li><strong>Razbij vsoto na posamezne člene.</strong> Vsak člen integriraš posebej. Npr. \(\int (3x^2 - 4x + 5)\,dx = \int 3x^2\,dx - \int 4x\,dx + \int 5\,dx\).</li>
-              <li><strong>Izpostavi konstanto</strong> pred integral: \(\int 3x^2\,dx = 3\int x^2\,dx\).</li>
-              <li><strong>Uporabi formulo</strong> \(\int x^n\,dx = \dfrac{x^{n+1}}{n+1}\) za vsak člen posebej. Pri konstanti velja \(\int c\,dx = cx\) (ker je \(x^0\), sledi \(\dfrac{x^1}{1} = x\)).</li>
-              <li><strong>Na koncu prištej \(C\)</strong> — integracijsko konstanto. Brez nje je rezultat napačen, ker ima funkcija neskončno mnogo primitivnih.</li>
-              <li><strong>Preveri z odvajanjem:</strong> odvajaj dobljeni rezultat in preveri, da dobiš nazaj prvotno funkcijo.</li>
-            </ol>
-            <p><strong>Primer 1:</strong> Izračunaj \(\displaystyle\int (3x^2 - 4x + 5)\,dx\).</p>
-            <div class="plain-example">
-              <p><strong>Korak 1:</strong> Razbijemo vsoto na tri člene in izpostavimo konstante:<br>
-              \(\displaystyle\int (3x^2 - 4x + 5)\,dx = 3\int x^2\,dx - 4\int x\,dx + 5\int 1\,dx\)</p>
-              <p><strong>Korak 2:</strong> Uporabimo formulo \(\int x^n\,dx = \dfrac{x^{n+1}}{n+1}\) na vsakem členu posebej:</p>
-              <ul>
-                <li>\(3\int x^2\,dx = 3 \cdot \dfrac{x^3}{3} = x^3\)</li>
-                <li>\(-4\int x\,dx = -4 \cdot \dfrac{x^2}{2} = -2x^2\)</li>
-                <li>\(5\int 1\,dx = 5x\)</li>
-              </ul>
-              <p><strong>Korak 3:</strong> Sestavimo rezultat in prištejemo \(C\):<br>
-              \(\displaystyle\int (3x^2 - 4x + 5)\,dx = x^3 - 2x^2 + 5x + C\)</p>
-              <p><strong>Korak 4 (preverjanje):</strong> Odvajaj rezultat:<br>
-              \((x^3 - 2x^2 + 5x + C)' = 3x^2 - 4x + 5\) (drži)</p>
-            </div>
-            <p><strong>Primer 2:</strong> Izračunaj \(\displaystyle\int (x^2 - 2x)\,dx\).</p>
-            <div class="plain-example">
-              <p><strong>Korak 1:</strong> Razbijemo vsoto in izpostavimo konstanto:<br>
-              \(\displaystyle\int (x^2 - 2x)\,dx = \int x^2\,dx - 2\int x\,dx\)</p>
-              <p><strong>Korak 2:</strong> Integriramo vsak člen:<br>
-              \(\displaystyle\int x^2\,dx = \dfrac{x^3}{3}, \quad -2\int x\,dx = -2 \cdot \dfrac{x^2}{2} = -x^2\)</p>
-              <p><strong>Korak 3:</strong> Sestavimo in prištejemo \(C\):<br>
-              \(\displaystyle\int (x^2 - 2x)\,dx = \dfrac{x^3}{3} - x^2 + C\)</p>
-              <p><strong>Korak 4 (preverjanje):</strong> \(\left(\dfrac{x^3}{3} - x^2 + C\right)' = x^2 - 2x\) (drži)</p>
-            </div>
-            <p><strong>Primer 3:</strong> Izračunaj \(\displaystyle\int (4 + x^2 + \sin x)\,dx\).</p>
-            <div class="plain-example">
-              <p><strong>Korak 1:</strong> Razbijemo na tri člene:<br>
-              \(\displaystyle\int (4 + x^2 + \sin x)\,dx = \int 4\,dx + \int x^2\,dx + \int \sin x\,dx\)</p>
-              <p><strong>Korak 2:</strong> Integriramo vsak člen posebej:<br>
-              \(\displaystyle\int 4\,dx = 4x, \quad \int x^2\,dx = \dfrac{x^3}{3}, \quad \int \sin x\,dx = -\cos x\)</p>
-              <p><strong>Korak 3:</strong> Sestavimo in prištejemo \(C\):<br>
-              \(\displaystyle\int (4 + x^2 + \sin x)\,dx = 4x + \dfrac{x^3}{3} - \cos x + C\)</p>
-              <p><strong>Korak 4 (preverjanje):</strong> \(\left(4x + \dfrac{x^3}{3} - \cos x + C\right)' = 4 + x^2 + \sin x\) (drži)</p>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-2">
+              <h4>Tip 2: Integriranje s tabelo in lastnostmi</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Izračunajte \(\displaystyle\int \left(3x^2 - \frac{2}{x} + \sqrt{x} + e^x\right)dx\).</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> vsota osnovnih funkcij ali izraz, ki ga lahko preoblikujemo v vsoto.</p><ul class="kljucne"><li>„izračunajte nedoločeni integral“</li><li>\(\int\) brez mej</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Integral razdeli na člene, konstante izpostavi.</p><div class="na-nalogi"><p>\(3\int x^2\,dx - 2\int \frac{dx}{x} + \int x^{1/2}\,dx + \int e^x\,dx\).</p></div></li>
+              <li><p class="korak">Korene in ulomke s potencami zapiši kot potence (produkte najprej zmnoži).</p><div class="na-nalogi"><p>\(\sqrt{x} = x^{1/2}\).</p></div></li>
+              <li><p class="korak">Uporabi tabelo.</p><div class="na-nalogi"><p>\(x^3 - 2\ln|x| + \frac{2}{3}x^{3/2} + e^x\).</p></div></li>
+              <li><p class="korak">Dodaj konstanto.</p><div class="na-nalogi"><p>\(x^3 - 2\ln|x| + \frac{2}{3}x\sqrt{x} + e^x + C\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> \(\int (x + 1)^2\,dx\)</p><p>\(\int (x^2 + 2x + 1)\,dx = \frac{x^3}{3} + x^2 + x + C\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> \(\int \frac{x^2 - 1}{x}\,dx\)</p><p>\(\frac{x^2}{2} - \ln|x| + C\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> \(\int (2\sin x - 3\cos x)\,dx\)</p><p>\(-2\cos x - 3\sin x + C\).</p></div>
+              <div class="primer"><p><strong>Primer 4:</strong> \(\int \frac{dx}{x^3}\)</p><p>\(-\frac{1}{2x^2} + C\).</p></div>
             </div>
           </div>
-
-          <!-- TIP 2 -->
-          <div class="info-card" id="tip-2">
-            <div class="tip-header">
-              <h3>Tip 2: Integral z eksponentno, logaritemsko in kotno funkcijo</h3>
-              <div class="tip-formula">\(\displaystyle\int e^x\,dx = e^x + C\)</div>
-            </div>
-            <p><strong>Kako prepoznaš:</strong> v integralu nastopajo \(e^x\), \(a^x\), \(\sin x\), \(\cos x\) ali \(\ln x\).</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li><strong>Prepoznaj obliko</strong> posamezne funkcije in poišči ustrezno formulo v tabeli integralov.</li>
-              <li><strong>Vsoto integriraj po členih</strong> — vsak člen posebej.</li>
-              <li><strong>Konstanto izpostavi</strong> pred integral.</li>
-              <li><strong>Prištej \(C\)</strong> na koncu.</li>
-              <li><strong>Preveri z odvajanjem</strong> — odvajaj rezultat in primerjaj s prvotno funkcijo.</li>
-            </ol>
-            <p><strong>Primer 1:</strong> Izračunaj \(\displaystyle\int (2\sin x - e^x + \tfrac{1}{x})\,dx\).</p>
-            <div class="plain-example">
-              <p><strong>Korak 1:</strong> Razbijemo na tri člene:<br>
-              \(\displaystyle\int (2\sin x - e^x + \tfrac{1}{x})\,dx = 2\int \sin x\,dx - \int e^x\,dx + \int \dfrac{1}{x}\,dx\)</p>
-              <p><strong>Korak 2:</strong> Uporabimo tabelo integralov:</p>
-              <ul>
-                <li>\(2\int \sin x\,dx = 2 \cdot (-\cos x) = -2\cos x\)</li>
-                <li>\(\int e^x\,dx = e^x\)</li>
-                <li>\(\int \dfrac{1}{x}\,dx = \ln|x|\)</li>
-              </ul>
-              <p><strong>Korak 3:</strong> Sestavimo in prištejemo \(C\):<br>
-              \(\displaystyle\int (2\sin x - e^x + \tfrac{1}{x})\,dx = -2\cos x - e^x + \ln|x| + C\)</p>
-              <p><strong>Korak 4 (preverjanje):</strong> \((-2\cos x - e^x + \ln|x| + C)' = 2\sin x - e^x + \dfrac{1}{x}\) (drži)</p>
-            </div>
-            <p><strong>Primer 2:</strong> Izračunaj \(\displaystyle\int \left(2x^2 - 3x + 3\sqrt{x} - e + x + 5\right)dx\).</p>
-            <div class="plain-example">
-              <p><strong>Korak 1:</strong> Razbijemo na člene:<br>
-              \(\displaystyle\int 2x^2\,dx - \int 3x\,dx + \int 3\sqrt{x}\,dx - \int e\,dx + \int x\,dx + \int 5\,dx\)</p>
-              <p><strong>Korak 2:</strong> Integriramo vsak člen posebej:</p>
-              <ul>
-                <li>\(\int 2x^2\,dx = \dfrac{2x^3}{3}\)</li>
-                <li>\(-\int 3x\,dx = -\dfrac{3x^2}{2}\)</li>
-                <li>\(\int 3\sqrt{x}\,dx = 2x^{3/2}\)</li>
-                <li>\(-\int e\,dx = -ex\)</li>
-                <li>\(\int x\,dx = \dfrac{x^2}{2}\)</li>
-                <li>\(\int 5\,dx = 5x\)</li>
-              </ul>
-              <p><strong>Korak 3:</strong> Sestavimo in prištejemo \(C\):<br>
-              \(\displaystyle\int (\ldots)\,dx = \dfrac{2}{3}x^3 - x^2 + 2x^{3/2} - ex + 5x + C\)</p>
-              <p><strong>Korak 4 (preverjanje):</strong> Odvajaj rezultat in primerjaj s prvotno funkcijo (drži)</p>
-            </div>
-          </div>
-
-          <!-- TIP 3 -->
-          <div class="info-card" id="tip-3">
-            <div class="tip-header">
-              <h3>Tip 3: Integral z ulomkom</h3>
-              <div class="tip-formula">\(\displaystyle\int \dfrac{1}{x}\,dx = \ln|x| + C\)</div>
-            </div>
-            <p><strong>Kako prepoznaš:</strong> v imenovalcu je \(x\), \(1+x^2\), \(\sqrt{1-x^2}\) ali \(x^2 + a^2\).</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li><strong>Prepoznaj obliko</strong> ulomka in izberi ustrezno formulo iz tabele.</li>
-              <li>\(\int \tfrac{1}{x}\,dx = \ln|x| + C\).</li>
-              <li>\(\int \tfrac{1}{1+x^2}\,dx = \arctan x + C\).</li>
-              <li>\(\int \tfrac{1}{\sqrt{1-x^2}}\,dx = \arcsin x + C\).</li>
-              <li>\(\int \tfrac{dx}{x^2+a^2} = \tfrac{1}{a}\arctan\tfrac{x}{a} + C\).</li>
-              <li>Prištej \(C\) in preveri z odvajanjem.</li>
-            </ol>
-            <p><strong>Primer:</strong> Izračunaj \(\displaystyle\int \left(\dfrac{1}{x^2} - 2\cos x + e^{3x}\right)dx\).</p>
-            <div class="plain-example">
-              <p><strong>Korak 1:</strong> Razbijemo na tri člene:<br>
-              \(\displaystyle\int \dfrac{1}{x^2}\,dx - 2\int \cos x\,dx + \int e^{3x}\,dx\)</p>
-              <p><strong>Korak 2:</strong> Integriramo vsak člen:</p>
-              <ul>
-                <li>\(\int x^{-2}\,dx = -\dfrac{1}{x}\)</li>
-                <li>\(-2\int \cos x\,dx = -2\sin x\)</li>
-                <li>\(\int e^{3x}\,dx = \dfrac{e^{3x}}{3}\)</li>
-              </ul>
-              <p><strong>Korak 3:</strong> Sestavimo in prištejemo \(C\):<br>
-              \(\displaystyle\int \left(\dfrac{1}{x^2} - 2\cos x + e^{3x}\right)dx = -\dfrac{1}{x} - 2\sin x + \dfrac{e^{3x}}{3} + C\)</p>
-              <p><strong>Korak 4 (preverjanje):</strong> Odvajaj in primerjaj (drži)</p>
-            </div>
-          </div>
-
-          <!-- TIP 4 -->
-          <div class="info-card" id="tip-4">
-            <div class="tip-header">
-              <h3>Tip 4: Uvedba nove spremenljivke (substitucija)</h3>
-              <div class="tip-formula">\(\displaystyle\int f(g(x))g'(x)\,dx = \int f(u)\,du, \quad u = g(x)\)</div>
-            </div>
-            <p><strong>Kako prepoznaš:</strong> v integralu nastopa <strong>sestavljena funkcija</strong> in njen odvod, npr. \(\sin(2x+1)\), \(e^{x^2}\), \((2x+5)^7\).</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li><strong>Izberi \(u = g(x)\)</strong> — notranja funkcija.</li>
-              <li><strong>Izračunaj \(du = g'(x)\,dx\)</strong> — odvajaj \(u\) in zapiši diferencial.</li>
-              <li><strong>Zamenjaj v integralu:</strong> \(\int f(g(x))g'(x)\,dx = \int f(u)\,du\). Vsi \(x\)-i morajo izginiti!</li>
-              <li><strong>Integriraj po \(u\)</strong> — uporabi tabelo.</li>
-              <li><strong>Vrni \(u = g(x)\)</strong> — zamenjaj nazaj.</li>
-              <li><strong>Preveri z odvajanjem</strong> rezultat.</li>
-            </ol>
-            <p><strong>Primer 1:</strong> Izračunaj \(\displaystyle\int 2x \cdot e^{x^2}\,dx\).</p>
-            <div class="plain-example">
-              <p><strong>Korak 1:</strong> Izberemo \(u = x^2\).</p>
-              <p><strong>Korak 2:</strong> \(du = 2x\,dx\).</p>
-              <p><strong>Korak 3:</strong> \(\displaystyle\int 2x \cdot e^{x^2}\,dx = \int e^u\,du\).</p>
-              <p><strong>Korak 4:</strong> \(\displaystyle\int e^u\,du = e^u + C\).</p>
-              <p><strong>Korak 5:</strong> Vrnemo \(u = x^2\): \(e^{x^2} + C\).</p>
-              <p><strong>Korak 6 (preverjanje):</strong> \(\left(e^{x^2}\right)' = 2x e^{x^2}\) (drži)</p>
-            </div>
-            <p><strong>Primer 2:</strong> Izračunaj \(\displaystyle\int \sin(3x)\,dx\).</p>
-            <div class="plain-example">
-              <p><strong>Korak 1:</strong> \(u = 3x\).</p>
-              <p><strong>Korak 2:</strong> \(du = 3\,dx \Rightarrow dx = \dfrac{du}{3}\).</p>
-              <p><strong>Korak 3:</strong> \(\displaystyle\int \sin(3x)\,dx = \dfrac{1}{3}\int \sin u\,du\).</p>
-              <p><strong>Korak 4:</strong> \(-\dfrac{1}{3}\cos u + C\).</p>
-              <p><strong>Korak 5:</strong> Vrnemo \(u = 3x\): \(-\dfrac{1}{3}\cos(3x) + C\).</p>
-            </div>
-          </div>
-
-          <!-- TIP 5 -->
-          <div class="info-card" id="tip-5">
-            <div class="tip-header">
-              <h3>Tip 5: Integracija per partes</h3>
-              <div class="tip-formula">\(\displaystyle\int u\,dv = uv - \int v\,du\)</div>
-            </div>
-            <p><strong>Kako prepoznaš:</strong> v integralu je <strong>produkt dveh različnih funkcij</strong>, npr. \(x e^x\), \(x \sin x\), \(\ln x\), \(x \cos x\), \(x^2 \ln x\).</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li><strong>Izberi \(u\) in \(dv\)</strong> po pravilu <strong>LIATE</strong>: <em>L</em>ogaritemska &gt; <em>I</em>nverzna &gt; <em>A</em>lgebrajska &gt; <em>T</em>rigonometrična &gt; <em>E</em>ksponentna.</li>
-              <li><strong>Izračunaj \(du\)</strong> (odvajaj \(u\)) in <strong>\(v\)</strong> (integriraj \(dv\)).</li>
-              <li><strong>Vstavi v formulo:</strong> \(\int u\,dv = uv - \int v\,du\).</li>
-              <li><strong>Reši preostali integral</strong> \(\int v\,du\) — običajno je lažji.</li>
-              <li><strong>Prištej \(C\)</strong> na koncu.</li>
-            </ol>
-            <p><strong>Primer 1:</strong> Izračunaj \(\displaystyle\int x e^x\,dx\).</p>
-            <div class="plain-example">
-              <p><strong>Korak 1:</strong> \(u = x\), \(dv = e^x\,dx\).</p>
-              <p><strong>Korak 2:</strong> \(du = dx\), \(v = e^x\).</p>
-              <p><strong>Korak 3:</strong> \(\displaystyle\int x e^x\,dx = x e^x - \int e^x\,dx\).</p>
-              <p><strong>Korak 4:</strong> \(= e^x(x - 1) + C\).</p>
-              <p><strong>Korak 5 (preverjanje):</strong> \(\left(e^x(x-1)\right)' = e^x \cdot x\) (drži)</p>
-            </div>
-            <p><strong>Primer 2:</strong> Izračunaj \(\displaystyle\int \ln x\,dx\).</p>
-            <div class="plain-example">
-              <p><strong>Korak 1:</strong> \(u = \ln x\), \(dv = dx\).</p>
-              <p><strong>Korak 2:</strong> \(du = \dfrac{1}{x}\,dx\), \(v = x\).</p>
-              <p><strong>Korak 3:</strong> \(\displaystyle\int \ln x\,dx = x \ln x - \int 1\,dx\).</p>
-              <p><strong>Korak 4:</strong> \(= x \ln x - x + C\).</p>
-              <p><strong>Korak 5 (preverjanje):</strong> \((x \ln x - x)' = \ln x\) (drži)</p>
-            </div>
-          </div>
-
-          <!-- TIP 6 -->
-          <div class="info-card" id="tip-6">
-            <div class="tip-header">
-              <h3>Tip 6: Integracija racionalnih funkcij (parcialni ulomki)</h3>
-              <div class="tip-formula">\(\displaystyle\int \dfrac{p(x)}{q(x)}\,dx \to\) razcep na parcialne ulomke</div>
-            </div>
-            <p><strong>Kako prepoznaš:</strong> ulomek \(\dfrac{p(x)}{q(x)}\), kjer je \(q(x)\) razcepljiv na linearne faktorje.</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li><strong>Preveri stopnji:</strong> če je stopnja števca \(\geq\) stopnja imenovalca, najprej deli.</li>
-              <li><strong>Razstavi imenovalec</strong> na linearne faktorje.</li>
-              <li><strong>Zapiši razcep</strong> na parcialne ulomke.</li>
-              <li><strong>Reši koeficiente</strong> \(A, B\).</li>
-              <li><strong>Integriraj vsak del posebej</strong> — oblika \(\dfrac{A}{x-a}\) da \(A \ln|x-a|\).</li>
-            </ol>
-            <p><strong>Primer:</strong> Izračunaj \(\displaystyle\int \dfrac{dx}{x^2 - 1}\).</p>
-            <div class="plain-example">
-              <p><strong>Korak 1:</strong> \(x^2 - 1 = (x-1)(x+1)\).</p>
-              <p><strong>Korak 2:</strong> \(\dfrac{1}{(x-1)(x+1)} = \dfrac{A}{x-1} + \dfrac{B}{x+1}\).</p>
-              <p><strong>Korak 3:</strong> \(1 = A(x+1) + B(x-1)\).</p>
-              <p><strong>Korak 4:</strong> \(x = 1 \Rightarrow A = \tfrac{1}{2}\); \(x = -1 \Rightarrow B = -\tfrac{1}{2}\).</p>
-              <p><strong>Korak 5:</strong> \(\dfrac{1}{2}\ln\left|\dfrac{x-1}{x+1}\right| + C\).</p>
-            </div>
-          </div>
-
-          <!-- TIP 7 -->
-          <div class="info-card" id="tip-7">
-            <div class="tip-header">
-              <h3>Tip 7: Določeni integral (osnovni)</h3>
-              <div class="tip-formula">\(\displaystyle\int_a^b f(x)\,dx = F(b) - F(a)\)</div>
-            </div>
-            <p><strong>Kako prepoznaš:</strong> integral ima <strong>meji</strong> \(a\) in \(b\).</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li><strong>Izračunaj nedoločeni integral</strong> \(F(x)\) — brez \(C\).</li>
-              <li><strong>Uporabi Newton–Leibnizovo formulo:</strong> \(F(b) - F(a)\).</li>
-              <li><strong>Vstavi zgornjo mejo \(b\)</strong> in odštej \(F(a)\).</li>
-              <li><strong>Izračunaj razliko</strong> — dobiš število.</li>
-            </ol>
-            <p><strong>Primer 1:</strong> Izračunaj \(\displaystyle\int_0^2 (x^2 + 1)\,dx\).</p>
-            <div class="plain-example">
-              <p><strong>Korak 1:</strong> \(F(x) = \dfrac{x^3}{3} + x\).</p>
-              <p><strong>Korak 2:</strong> \(\left[\dfrac{x^3}{3} + x\right]_0^2\).</p>
-              <p><strong>Korak 3:</strong> \(= \left(\dfrac{8}{3} + 2\right) - 0 = \dfrac{14}{3}\).</p>
-            </div>
-            <p><strong>Primer 2:</strong> Izračunaj \(\displaystyle\int_0^{\pi/6} (6\cos x + 1)\,dx\).</p>
-            <div class="plain-example">
-              <p><strong>Korak 1:</strong> \(F(x) = 6\sin x + x\).</p>
-              <p><strong>Korak 2:</strong> \(\left[6\sin x + x\right]_0^{\pi/6}\).</p>
-              <p><strong>Korak 3:</strong> \(= 6 \cdot \dfrac{1}{2} + \dfrac{\pi}{6} = 3 + \dfrac{\pi}{6}\).</p>
-            </div>
-            <p><strong>Primer 3:</strong> Izračunaj \(\displaystyle\int_0^2 (\sin x + 3\cos x - x)\,dx\).</p>
-            <div class="plain-example">
-              <p><strong>Korak 1:</strong> \(F(x) = -\cos x + 3\sin x - \dfrac{x^2}{2}\).</p>
-              <p><strong>Korak 2:</strong> \(\left[-\cos x + 3\sin x - \dfrac{x^2}{2}\right]_0^2\).</p>
-              <p><strong>Korak 3:</strong> \(= -\cos 2 + 3\sin 2 - 1\).</p>
-            </div>
-          </div>
-
-          <!-- TIP 8 -->
-          <div class="info-card" id="tip-8">
-            <div class="tip-header">
-              <h3>Tip 8: Ploščina lika med grafom in osjo \(x\)</h3>
-              <div class="tip-formula">\(\displaystyle S = \int_a^b |f(x)|\,dx\)</div>
-            </div>
-            <p><strong>Kako prepoznaš:</strong> "Izračunajte ploščino lika, ki ga omejujeta graf funkcije in abscisna os."</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li><strong>Poišči ničle funkcije</strong> — reši \(f(x) = 0\).</li>
-              <li><strong>Razdeli interval</strong> \([a,b]\) na podintervale glede na ničle.</li>
-              <li><strong>Na vsakem podintervalu</strong> uporabi \(S = \int |f(x)|\,dx\).</li>
-              <li><strong>Seštej ploščine</strong> vseh podintervalov.</li>
-            </ol>
-            <p><strong>Primer:</strong> Izračunaj ploščino lika med grafom \(f(x) = x^2 - 4\) in abscisno osjo na intervalu \([-3, 3]\).</p>
-            <div class="plain-example">
-              <p><strong>Korak 1:</strong> Ničle: \(x = \pm 2\). Interval razdelimo na \([-3, -2]\), \([-2, 2]\), \([2, 3]\).</p>
-              <p><strong>Korak 2:</strong> Predznak: na \([-3,-2]\) pozitivna, na \([-2,2]\) negativna, na \([2,3]\) pozitivna.</p>
-              <p><strong>Korak 3:</strong> \(S_1 = \dfrac{7}{3}\), \(S_2 = \dfrac{32}{3}\), \(S_3 = \dfrac{7}{3}\).</p>
-              <p><strong>Korak 4:</strong> Skupna ploščina: \(S = \dfrac{46}{3}\).</p>
-            </div>
-          </div>
-
-          <!-- TIP 9 -->
-          <div class="info-card" id="tip-9">
-            <div class="tip-header">
-              <h3>Tip 9: Ploščina med dvema grafoma</h3>
-              <div class="tip-formula">\(\displaystyle S = \int_a^b (f(x) - g(x))\,dx\)</div>
-            </div>
-            <p><strong>Kako prepoznaš:</strong> "ploščina lika med krivuljama \(f\) in \(g\)".</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li><strong>Poišči presečišča</strong> obeh funkcij: \(f(x) = g(x)\).</li>
-              <li><strong>Preveri, katera funkcija je zgoraj</strong> na intervalu \([a,b]\).</li>
-              <li><strong>Uporabi formulo:</strong> \(S = \int_a^b (\text{zgornja} - \text{spodnja})\,dx\).</li>
-              <li><strong>Integriraj in izračunaj</strong> — dobiš ploščino.</li>
-            </ol>
-            <p><strong>Primer:</strong> Izračunaj ploščino lika med \(y = 1 - x^2\) in \(y = 4 - 4x^2\).</p>
-            <div class="plain-example">
-              <p><strong>Korak 1:</strong> Presečišča: \(x = \pm 1\).</p>
-              <p><strong>Korak 2:</strong> Testna točka \(x = 0\): \(g(0) = 4 > f(0) = 1\), torej je \(g\) zgornja.</p>
-              <p><strong>Korak 3:</strong> \(S = \int_{-1}^{1} (3 - 3x^2)\,dx\).</p>
-              <p><strong>Korak 4:</strong> \(S = \left[3x - x^3\right]_{-1}^{1} = 4\).</p>
-            </div>
-          </div>
-
-          <!-- TIP 10 -->
-          <div class="info-card" id="tip-10">
-            <div class="tip-header">
-              <h3>Tip 10: Prostornina vrtenine okoli osi \(x\)</h3>
-              <div class="tip-formula">\(\displaystyle V = \pi \int_a^b [f(x)]^2\,dx\)</div>
-            </div>
-            <p><strong>Kako prepoznaš:</strong> "lik zavrtimo okoli abscisne osi", "prostornina rotacijskega telesa".</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li><strong>Določi meje \(a, b\)</strong>.</li>
-              <li><strong>Kvadriraj funkcijo:</strong> \([f(x)]^2\).</li>
-              <li><strong>Integriraj:</strong> \(\int_a^b [f(x)]^2\,dx\).</li>
-              <li><strong>Pomnoži s \(\pi\)</strong>.</li>
-            </ol>
-            <p><strong>Primer:</strong> Prostornina telesa, ki nastane, ko lik med \(f(x) = \sqrt{x}\) in osjo \(x\) na \([0,4]\) zavrtimo okoli osi \(x\).</p>
-            <div class="plain-example">
-              <p><strong>Korak 1:</strong> Meje: \(a = 0, b = 4\).</p>
-              <p><strong>Korak 2:</strong> \([f(x)]^2 = x\).</p>
-              <p><strong>Korak 3:</strong> \(\int_0^4 x\,dx = 8\).</p>
-              <p><strong>Korak 4:</strong> \(V = 8\pi\).</p>
-            </div>
-          </div>
-
-          <!-- TIP 11 -->
-          <div class="info-card" id="tip-11">
-            <div class="tip-header">
-              <h3>Tip 11: Limite (povezane z integrali in odvodi)</h3>
-              <div class="tip-formula">
-                <span class="badge-matura-tip"><u>NA LISTU S FORMULAMI</u></span>
-                \(\displaystyle\lim_{x \to 0} \dfrac{\sin x}{x} = 1\)
-              </div>
-            </div>
-            <p><strong>Kako prepoznaš:</strong> \(\lim_{x\to a} \dfrac{f(x)}{g(x)}\), kjer vstavljanje \(x = a\) da obliko \(0/0\) ali \(\infty/\infty\).</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li><strong>Poskusi vstaviti \(x = a\).</strong></li>
-              <li><strong>Če dobiš \(0/0\):</strong> razstavi, racionaliziraj ali uporabi L'Hôpitalovo pravilo.</li>
-              <li><strong>Za \(\lim_{x\to 0} \dfrac{\sin(kx)}{x} = k\)</strong> — uporabi znano limito.</li>
-              <li><strong>Za \(\infty/\infty\):</strong> deli z najvišjo potenco \(x\).</li>
-            </ol>
-            <p><strong>Primer 1:</strong> Izračunaj \(\displaystyle\lim_{x\to 7} \dfrac{x^2 - 49}{x^2 - 2x - 35}\).</p>
-            <div class="plain-example">
-              <p><strong>Korak 1:</strong> Vstavimo \(x = 7\): \(\dfrac{0}{0}\).</p>
-              <p><strong>Korak 2:</strong> Razstavimo: \(\dfrac{(x-7)(x+7)}{(x-7)(x+5)}\).</p>
-              <p><strong>Korak 3:</strong> Krajšamo \((x-7)\): \(\dfrac{x+7}{x+5}\).</p>
-              <p><strong>Korak 4:</strong> Vstavimo \(x = 7\): \(\dfrac{14}{12} = \dfrac{7}{6}\).</p>
-            </div>
-            <p><strong>Primer 2:</strong> Izračunaj \(\displaystyle\lim_{x\to 0} \dfrac{\sin 3x}{5x}\).</p>
-            <div class="plain-example">
-              <p><strong>Korak 1:</strong> Vstavimo \(x = 0\): \(\dfrac{0}{0}\).</p>
-              <p><strong>Korak 2:</strong> Preoblikujemo: \(\dfrac{\sin 3x}{3x} \cdot \dfrac{3}{5}\).</p>
-              <p><strong>Korak 3:</strong> Rezultat: \(\dfrac{3}{5}\).</p>
-            </div>
-            <p><strong>Primer 3:</strong> Izračunaj \(\displaystyle\lim_{x\to 2} \dfrac{\sqrt{x} - \sqrt{2}}{x - 2}\).</p>
-            <div class="plain-example">
-              <p><strong>Korak 1:</strong> Vstavimo \(x = 2\): \(\dfrac{0}{0}\).</p>
-              <p><strong>Korak 2:</strong> Racionaliziramo: \(\dfrac{x - 2}{(x-2)(\sqrt{x} + \sqrt{2})} = \dfrac{1}{\sqrt{x} + \sqrt{2}}\).</p>
-              <p><strong>Korak 3:</strong> Vstavimo \(x = 2\): \(\dfrac{1}{2\sqrt{2}}\).</p>
-            </div>
-          </div>
-
-          <!-- TIP 12 -->
-          <div class="info-card" id="tip-12">
-            <div class="tip-header">
-              <h3>Tip 12: Odvodi</h3>
-              <div class="tip-formula">\(\displaystyle (x^n)' = n x^{n-1}\)</div>
-            </div>
-            <p><strong>Kako prepoznaš:</strong> "izračunajte odvod funkcije \(f'(x)\)".</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li><strong>Prepoznaj strukturo:</strong> vsota, produkt, kvocient ali sestavljena funkcija?</li>
-              <li><strong>Uporabi ustrezno pravilo:</strong>
-                <ul>
-                  <li><strong>Vsota:</strong> \((f + g)' = f' + g'\)</li>
-                  <li><strong>Produkt:</strong> \((uv)' = u'v + uv'\)</li>
-                  <li><strong>Kvocient:</strong> \(\left(\dfrac{u}{v}\right)' = \dfrac{u'v - uv'}{v^2}\)</li>
-                  <li><strong>Verižno pravilo:</strong> \((f(g(x)))' = f'(g(x)) \cdot g'(x)\)</li>
-                </ul>
-              </li>
-              <li><strong>Uporabi tabelo odvodov.</strong></li>
-              <li><strong>Poenostavi rezultat.</strong></li>
-            </ol>
-            <p><strong>Primer 1:</strong> Odvajaj \(f(x) = 2x^3 - 3x + 4\).</p>
-            <div class="plain-example">
-              <p><strong>Korak 1:</strong> Vsota treh členov.</p>
-              <p><strong>Korak 2:</strong> \((2x^3)' = 6x^2\), \((-3x)' = -3\), \((4)' = 0\).</p>
-              <p><strong>Korak 3:</strong> \(f'(x) = 6x^2 - 3\).</p>
-            </div>
-            <p><strong>Primer 2:</strong> Odvajaj \(f(x) = x^2 \sin x\).</p>
-            <div class="plain-example">
-              <p><strong>Korak 1:</strong> \(u = x^2\), \(v = \sin x\).</p>
-              <p><strong>Korak 2:</strong> \(u' = 2x\), \(v' = \cos x\).</p>
-              <p><strong>Korak 3:</strong> \(f'(x) = 2x\sin x + x^2\cos x\).</p>
-            </div>
-            <p><strong>Primer 3:</strong> Odvajaj \(f(x) = \ln(2x + 5)\).</p>
-            <div class="plain-example">
-              <p><strong>Korak 1:</strong> Sestavljena funkcija.</p>
-              <p><strong>Korak 2:</strong> Verižno: \(f'(x) = \dfrac{1}{2x+5} \cdot 2\).</p>
-              <p><strong>Korak 3:</strong> \(f'(x) = \dfrac{2}{2x+5}\).</p>
-            </div>
-          </div>
-
-          <!-- TIP 13 -->
-          <div class="info-card" id="tip-13">
-            <div class="tip-header">
-              <h3>Tip 13: Tangenta in normala na graf</h3>
-              <div class="tip-formula">\(\displaystyle y - y_0 = k(x - x_0), \quad k = f'(x_0)\)</div>
-            </div>
-            <p><strong>Kako prepoznaš:</strong> "zapišite enačbo tangente/normale v točki".</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li><strong>Izračunaj \(y_0 = f(x_0)\)</strong>.</li>
-              <li><strong>Izračunaj odvod \(f'(x)\)</strong> in vstavi \(x_0\): \(k = f'(x_0)\).</li>
-              <li><strong>Tangenta:</strong> \(y - y_0 = k(x - x_0)\).</li>
-              <li><strong>Normala:</strong> \(y - y_0 = -\dfrac{1}{k}(x - x_0)\).</li>
-            </ol>
-            <p><strong>Primer 1:</strong> Zapiši tangento na \(f(x) = x^3 - x\), ki je vzporedna premici \(2x - y - 3 = 0\).</p>
-            <div class="plain-example">
-              <p><strong>Korak 1:</strong> Premica: \(k_1 = 2\).</p>
-              <p><strong>Korak 2:</strong> \(f'(x) = 3x^2 - 1 = 2 \Rightarrow x_0 = \pm 1\).</p>
-              <p><strong>Korak 3:</strong> Za \(x_0 = 1\): \(y = 2x - 2\). Za \(x_0 = -1\): \(y = 2x + 2\).</p>
-            </div>
-            <p><strong>Primer 2:</strong> Tangenta in normala na \(f(x) = x^3 - 3x\) v točki \(A(-2, y_0)\).</p>
-            <div class="plain-example">
-              <p><strong>Korak 1:</strong> \(y_0 = -2\).</p>
-              <p><strong>Korak 2:</strong> \(k = f'(-2) = 9\).</p>
-              <p><strong>Korak 3:</strong> Tangenta: \(y = 9x + 16\). Normala: \(y + 2 = -\dfrac{1}{9}(x + 2)\).</p>
-            </div>
-          </div>
-
-          <!-- TIP 14 -->
-          <div class="info-card" id="tip-14">
-            <div class="tip-header">
-              <h3>Tip 14: Stacionarne točke in ekstremi</h3>
-              <div class="tip-formula">\(\displaystyle f'(x_0) = 0 \Rightarrow x_0\) je stacionarna točka</div>
-            </div>
-            <p><strong>Kako prepoznaš:</strong> "izračunajte stacionarne točke", "lokalni minimum/maksimum".</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li><strong>Reši \(f'(x) = 0\)</strong> — kandidati za ekstreme.</li>
-              <li><strong>Preveri tip</strong> z drugim odvodom: \(f'' > 0\) → minimum, \(f'' < 0\) → maksimum.</li>
-              <li><strong>Izračunaj \(y_0 = f(x_0)\).</strong></li>
-              <li><strong>Zapiši ekstrem</strong> kot točko.</li>
-            </ol>
-            <p><strong>Primer 1:</strong> Poišči stacionarne točke \(f(x) = 2x^3 - x^2 - x + 5\).</p>
-            <div class="plain-example">
-              <p><strong>Korak 1:</strong> \(f'(x) = 6x^2 - 2x - 1 = 0\).</p>
-              <p><strong>Korak 2:</strong> \(x_{1,2} = \dfrac{1 \pm \sqrt{7}}{6}\).</p>
-              <p><strong>Korak 3:</strong> \(x_1 \approx 0{,}61\), \(x_2 \approx -0{,}27\).</p>
-            </div>
-            <p><strong>Primer 2:</strong> Polinom \(p(x) = x^3 + 4x^2 + ax + 20\) ima minimum v \(A(-1, y_1)\).</p>
-            <div class="plain-example">
-              <p><strong>Korak 1:</strong> \(p'(x) = 3x^2 + 8x + a\).</p>
-              <p><strong>Korak 2:</strong> \(p'(-1) = 0 \Rightarrow a = 5\).</p>
-              <p><strong>Korak 3:</strong> \(y_1 = p(-1) = 18\).</p>
-              <p><strong>Korak 4:</strong> \(p''(-1) = 2 > 0\) (drži)</p>
-            </div>
-          </div>
-
         </section>
 
-        <!-- ============ 3. POGOSTE NAPAKE ============ -->
+        <!-- SKLOP 3 -->
+        <section class="sklop" id="sklop-3">
+          <header class="sklop-header">
+            <span class="sklop-num">4.14 · 3</span>
+            <h2>Uvedba nove spremenljivke <span class="badge-vr">VR</span></h2>
+            <p>Integral kompozituma.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <p>Če integral vsebuje funkcijo \(g(x)\) in njen odvod \(g'(x)\), uvedemo \(t = g(x)\), \(dt = g'(x)\,dx\):</p>
+            <p>\[\int f(g(x))\,g'(x)\,dx = \int f(t)\,dt.\]</p>
+            <p>To je verižno pravilo za odvajanje, prebrano v obratni smeri. Na koncu \(t\) vrnemo v \(x\). Pri določenem integralu lahko namesto tega preračunamo meje.</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-3">
+              <h4>Tip 3: Integracija z uvedbo nove spremenljivke <span class="badge-vr">VR</span></h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Izračunajte \(\displaystyle\int x(x^2 + 1)^4\,dx\).</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> v integralu je notranja funkcija in (do konstante) njen odvod.</p><ul class="kljucne"><li>\(\int g'(x) f(g(x))\,dx\)</li><li>„z ustrezno substitucijo“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Izberi \(t\) kot notranjo funkcijo, katere odvod je v integralu.</p><div class="na-nalogi"><p>\(t = x^2 + 1\).</p></div></li>
+              <li><p class="korak">Izračunaj \(dt\) in izrazi \(dx\) ali del integranda.</p><div class="na-nalogi"><p>\(dt = 2x\,dx\), \(x\,dx = \frac{dt}{2}\).</p></div></li>
+              <li><p class="korak">Integriraj po \(t\).</p><div class="na-nalogi"><p>\(\int t^4\frac{dt}{2} = \frac{t^5}{10} + C\).</p></div></li>
+              <li><p class="korak">Vrni se k \(x\).</p><div class="na-nalogi"><p>\(\frac{(x^2 + 1)^5}{10} + C\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> \(\int \cos x\, e^{\sin x}\,dx\)</p><p>\(t = \sin x\): \(e^{\sin x} + C\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> \(\int \frac{2x}{x^2 + 5}\,dx\)</p><p>\(\ln(x^2 + 5) + C\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> \(\int \tan x\,dx\)</p><p>\(t = \cos x\): \(-\ln|\cos x| + C\).</p></div>
+              <div class="primer"><p><strong>Primer 4:</strong> \(\int \frac{\ln x}{x}\,dx\)</p><p>\(t = \ln x\): \(\frac{(\ln x)^2}{2} + C\).</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 4 -->
+        <section class="sklop" id="sklop-4">
+          <header class="sklop-header">
+            <span class="sklop-num">4.14 · 4</span>
+            <h2>Integracija per partes <span class="badge-vr">VR</span></h2>
+            <p>Integral produkta.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <p>Iz pravila za odvod produkta dobimo <strong>integracijo po delih</strong>:</p>
+            <p>\[\int u\,dv = uv - \int v\,du.\]</p>
+            <p>Za \(u\) izberemo tisti del, ki se z odvajanjem poenostavi (polinom, \(\ln x\)), za \(dv\) del, ki ga znamo integrirati (\(e^x\), \(\sin x\), \(\cos x\)). Pri \(\ln x\) vzamemo \(u = \ln x\), \(dv = dx\).</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-4">
+              <h4>Tip 4: Integracija po delih <span class="badge-vr">VR</span></h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Izračunajte \(\displaystyle\int x e^x\,dx\).</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> produkt polinoma in \(e^x\), \(\sin x\), \(\cos x\), ali integral z \(\ln x\).</p><ul class="kljucne"><li>„per partes“</li><li>\(\int x\cos x\,dx\), \(\int \ln x\,dx\)</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Izberi \(u\) in \(dv\).</p><div class="na-nalogi"><p>\(u = x\), \(dv = e^x\,dx\).</p></div></li>
+              <li><p class="korak">Izračunaj \(du\) in \(v\).</p><div class="na-nalogi"><p>\(du = dx\), \(v = e^x\).</p></div></li>
+              <li><p class="korak">Vstavi v \(uv - \int v\,du\).</p><div class="na-nalogi"><p>\(xe^x - \int e^x\,dx\).</p></div></li>
+              <li><p class="korak">Izračunaj preostali integral in uredi.</p><div class="na-nalogi"><p>\(xe^x - e^x + C = (x - 1)e^x + C\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> \(\int x\cos x\,dx\)</p><p>\(x\sin x + \cos x + C\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> \(\int \ln x\,dx\)</p><p>\(x\ln x - x + C\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> \(\int x^2 e^x\,dx\)</p><p>Dvakrat po delih: \((x^2 - 2x + 2)e^x + C\).</p></div>
+              <div class="primer"><p><strong>Primer 4:</strong> \(\int x\ln x\,dx\)</p><p>\(\frac{x^2}{2}\ln x - \frac{x^2}{4} + C\).</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 5 -->
+        <section class="sklop" id="sklop-5">
+          <header class="sklop-header">
+            <span class="sklop-num">4.14 · 5</span>
+            <h2>Integracija racionalnih funkcij <span class="badge-vr">VR</span></h2>
+            <p>Razcep na parcialne ulomke.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <ol>
+              <li>Če stopnja števca ni manjša od stopnje imenovalca, najprej delimo polinoma.</li>
+              <li>Imenovalec razcepimo na linearne faktorje.</li>
+              <li>Ulomek zapišemo kot vsoto <strong>parcialnih ulomkov</strong> \(\frac{A}{x - a} + \frac{B}{x - b}\) in določimo \(A\), \(B\).</li>
+              <li>Integriramo: \(\int \frac{A}{x - a}\,dx = A\ln|x - a| + C\). Nerazcepni imenovalec \(x^2 + a^2\) da \(\arctan\).</li>
+            </ol>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-5">
+              <h4>Tip 5: Integracija racionalne funkcije <span class="badge-vr">VR</span></h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Izračunajte \(\displaystyle\int \frac{x + 5}{x^2 + x - 2}\,dx\).</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> integrand je ulomek dveh polinomov.</p><ul class="kljucne"><li>„parcialni ulomki“</li><li>\(\int \frac{p(x)}{q(x)}\,dx\)</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Preveri stopnji in razcepi imenovalec.</p><div class="na-nalogi"><p>Stopnja števca je manjša. \(x^2 + x - 2 = (x + 2)(x - 1)\).</p></div></li>
+              <li><p class="korak">Zapiši nastavek s parcialnimi ulomki.</p><div class="na-nalogi"><p>\(\frac{x + 5}{(x + 2)(x - 1)} = \frac{A}{x + 2} + \frac{B}{x - 1}\), \(x + 5 = A(x - 1) + B(x + 2)\).</p></div></li>
+              <li><p class="korak">Določi konstante (vstavi ničle imenovalca).</p><div class="na-nalogi"><p>\(x = 1\): \(6 = 3B\), \(B = 2\); \(x = -2\): \(3 = -3A\), \(A = -1\).</p></div></li>
+              <li><p class="korak">Integriraj.</p><div class="na-nalogi"><p>\(-\ln|x + 2| + 2\ln|x - 1| + C\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> \(\int \frac{dx}{x^2 - 1}\)</p><p>\(\frac{1}{2}\ln\left|\frac{x - 1}{x + 1}\right| + C\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> \(\int \frac{x^2}{x + 1}\,dx\)</p><p>Deljenje: \(x - 1 + \frac{1}{x + 1}\), integral \(\frac{x^2}{2} - x + \ln|x + 1| + C\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> \(\int \frac{dx}{x^2 + 4}\)</p><p>\(\frac{1}{2}\arctan\frac{x}{2} + C\).</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 6 -->
+        <section class="sklop" id="sklop-6">
+          <header class="sklop-header">
+            <span class="sklop-num">4.14 · 6</span>
+            <h2>Določeni integral</h2>
+            <p>Ploščina pod grafom kot limita vsot.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <p>Interval \([a, b]\) razdelimo na majhne dele in nad vsakim narišemo pravokotnik do grafa. Vsota ploščin pravokotnikov (Riemannova vsota) se ob vse finejši delitvi približa številu, ki ga imenujemo <strong>določeni integral</strong> \(\int_a^b f(x)\,dx\).</p>
+            <figure class="slika slika--ozka">
+<svg viewBox="0 0 400 280" role="img" aria-label="Riemannova vsota" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g2-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g2-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g2-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g2-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g2-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g2-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<path class="s-mreza" d="M26,254V26M69.5,254V26M113,254V26M156.5,254V26M200,254V26M243.5,254V26M287,254V26M330.5,254V26M374,254V26M26,233.9H374M26,200.4H374M26,166.8H374M26,133.3H374M26,99.8H374M26,66.2H374M26,32.7H374"/>
+<polygon class="s-lik" points="69.5,233.9 113,233.9 113,200.4 69.5,200.4"/>
+<polygon class="s-lik" points="113,233.9 156.5,233.9 156.5,196.2 113,196.2"/>
+<polygon class="s-lik" points="156.5,233.9 200,233.9 200,183.6 156.5,183.6"/>
+<polygon class="s-lik" points="200,233.9 243.5,233.9 243.5,162.6 200,162.6"/>
+<polygon class="s-lik" points="243.5,233.9 287,233.9 287,133.3 243.5,133.3"/>
+<polygon class="s-lik" points="287,233.9 330.5,233.9 330.5,95.6 287,95.6"/>
+<line class="s-os" x1="26" y1="233.9" x2="382" y2="233.9" marker-end="url(#g2-p)"/>
+<line class="s-os" x1="69.5" y1="254" x2="69.5" y2="18" marker-end="url(#g2-p)"/>
+<text class="s-os-txt" x="376" y="225.9" text-anchor="end">x</text>
+<text class="s-os-txt" x="77.5" y="30">y</text>
+<line class="s-os" x1="156.5" y1="230.9" x2="156.5" y2="236.9"/><text class="s-os-txt" x="156.5" y="248.9" text-anchor="middle">1</text><line class="s-os" x1="243.5" y1="230.9" x2="243.5" y2="236.9"/><text class="s-os-txt" x="243.5" y="248.9" text-anchor="middle">2</text><line class="s-os" x1="330.5" y1="230.9" x2="330.5" y2="236.9"/><text class="s-os-txt" x="330.5" y="248.9" text-anchor="middle">3</text><line class="s-os" x1="66.5" y1="200.4" x2="72.5" y2="200.4"/><text class="s-os-txt" x="63.5" y="204.4" text-anchor="end">1</text><line class="s-os" x1="66.5" y1="166.8" x2="72.5" y2="166.8"/><text class="s-os-txt" x="63.5" y="170.8" text-anchor="end">2</text><line class="s-os" x1="66.5" y1="133.3" x2="72.5" y2="133.3"/><text class="s-os-txt" x="63.5" y="137.3" text-anchor="end">3</text><line class="s-os" x1="66.5" y1="99.8" x2="72.5" y2="99.8"/><text class="s-os-txt" x="63.5" y="103.8" text-anchor="end">4</text><line class="s-os" x1="66.5" y1="66.2" x2="72.5" y2="66.2"/><text class="s-os-txt" x="63.5" y="70.2" text-anchor="end">5</text><line class="s-os" x1="66.5" y1="32.7" x2="72.5" y2="32.7"/><text class="s-os-txt" x="63.5" y="36.7" text-anchor="end">6</text><text class="s-os-txt" x="63.5" y="248.9" text-anchor="end">0</text>
+<path class="s-k1" d="M26,196.2L26.9,196.3L27.7,196.5L28.6,196.6L29.5,196.8L30.4,197L31.2,197.1L32.1,197.3L33,197.4L33.8,197.5L34.7,197.7L35.6,197.8L36.4,197.9L37.3,198.1L38.2,198.2L39.1,198.3L39.9,198.4L40.8,198.5L41.7,198.6L42.5,198.7L43.4,198.8L44.3,198.9L45.1,199L46,199.1L46.9,199.2L47.8,199.3L48.6,199.4L49.5,199.5L50.4,199.5L51.2,199.6L52.1,199.7L53,199.7L53.8,199.8L54.7,199.9L55.6,199.9L56.5,200L57.3,200L58.2,200.1L59.1,200.1L59.9,200.2L60.8,200.2L61.7,200.2L62.5,200.2L63.4,200.3L64.3,200.3L65.2,200.3L66,200.3L66.9,200.3L67.8,200.3L68.6,200.4L69.5,200.4L70.4,200.4L71.2,200.3L72.1,200.3L73,200.3L73.9,200.3L74.7,200.3L75.6,200.3L76.5,200.2L77.3,200.2L78.2,200.2L79.1,200.2L79.9,200.1L80.8,200.1L81.7,200L82.6,200L83.4,199.9L84.3,199.9L85.2,199.8L86,199.7L86.9,199.7L87.8,199.6L88.6,199.5L89.5,199.5L90.4,199.4L91.3,199.3L92.1,199.2L93,199.1L93.9,199L94.7,198.9L95.6,198.8L96.5,198.7L97.3,198.6L98.2,198.5L99.1,198.4L100,198.3L100.8,198.2L101.7,198.1L102.6,197.9L103.4,197.8L104.3,197.7L105.2,197.5L106,197.4L106.9,197.3L107.8,197.1L108.7,197L109.5,196.8L110.4,196.6L111.3,196.5L112.1,196.3L113,196.2L113.9,196L114.7,195.8L115.6,195.6L116.5,195.5L117.4,195.3L118.2,195.1L119.1,194.9L120,194.7L120.8,194.5L121.7,194.3L122.6,194.1L123.4,193.9L124.3,193.7L125.2,193.5L126.1,193.3L126.9,193.1L127.8,192.8L128.7,192.6L129.5,192.4L130.4,192.1L131.3,191.9L132.1,191.7L133,191.4L133.9,191.2L134.8,190.9L135.6,190.7L136.5,190.4L137.4,190.2L138.2,189.9L139.1,189.6L140,189.4L140.8,189.1L141.7,188.8L142.6,188.5L143.5,188.2L144.3,188L145.2,187.7L146.1,187.4L146.9,187.1L147.8,186.8L148.7,186.5L149.5,186.2L150.4,185.9L151.3,185.5L152.1,185.2L153,184.9L153.9,184.6L154.8,184.3L155.6,183.9L156.5,183.6L157.4,183.3L158.2,182.9L159.1,182.6L160,182.2L160.9,181.9L161.7,181.5L162.6,181.2L163.5,180.8L164.3,180.4L165.2,180.1L166.1,179.7L166.9,179.3L167.8,178.9L168.7,178.6L169.5,178.2L170.4,177.8L171.3,177.4L172.2,177L173,176.6L173.9,176.2L174.8,175.8L175.6,175.4L176.5,175L177.4,174.6L178.3,174.2L179.1,173.7L180,173.3L180.9,172.9L181.7,172.5L182.6,172L183.5,171.6L184.3,171.1L185.2,170.7L186.1,170.3L187,169.8L187.8,169.3L188.7,168.9L189.6,168.4L190.4,168L191.3,167.5L192.2,167L193,166.5L193.9,166.1L194.8,165.6L195.7,165.1L196.5,164.6L197.4,164.1L198.3,163.6L199.1,163.1L200,162.6L200.9,162.1L201.7,161.6L202.6,161.1L203.5,160.6L204.4,160.1L205.2,159.6L206.1,159L207,158.5L207.8,158L208.7,157.4L209.6,156.9L210.4,156.4L211.3,155.8L212.2,155.3L213.1,154.7L213.9,154.2L214.8,153.6L215.7,153L216.5,152.5L217.4,151.9L218.3,151.3L219.1,150.8L220,150.2L220.9,149.6L221.8,149L222.6,148.4L223.5,147.8L224.4,147.2L225.2,146.6L226.1,146L227,145.4L227.8,144.8L228.7,144.2L229.6,143.6L230.5,143L231.3,142.4L232.2,141.7L233.1,141.1L233.9,140.5L234.8,139.8L235.7,139.2L236.5,138.6L237.4,137.9L238.3,137.3L239.2,136.6L240,135.9L240.9,135.3L241.8,134.6L242.6,134L243.5,133.3L244.4,132.6L245.2,131.9L246.1,131.3L247,130.6L247.9,129.9L248.7,129.2L249.6,128.5L250.5,127.8L251.3,127.1L252.2,126.4L253.1,125.7L253.9,125L254.8,124.3L255.7,123.6L256.5,122.9L257.4,122.1L258.3,121.4L259.2,120.7L260,119.9L260.9,119.2L261.8,118.5L262.6,117.7L263.5,117L264.4,116.2L265.3,115.5L266.1,114.7L267,114L267.9,113.2L268.7,112.4L269.6,111.7L270.5,110.9L271.3,110.1L272.2,109.3L273.1,108.6L274,107.8L274.8,107L275.7,106.2L276.6,105.4L277.4,104.6L278.3,103.8L279.2,103L280,102.2L280.9,101.4L281.8,100.5L282.7,99.7L283.5,98.9L284.4,98.1L285.3,97.2L286.1,96.4L287,95.6L287.9,94.7L288.7,93.9L289.6,93L290.5,92.2L291.3,91.3L292.2,90.5L293.1,89.6L294,88.8L294.8,87.9L295.7,87L296.6,86.2L297.4,85.3L298.3,84.4L299.2,83.5L300.1,82.6L300.9,81.7L301.8,80.8L302.7,79.9L303.5,79L304.4,78.1L305.3,77.2L306.1,76.3L307,75.4L307.9,74.5L308.8,73.6L309.6,72.6L310.5,71.7L311.4,70.8L312.2,69.9L313.1,68.9L314,68L314.8,67L315.7,66.1L316.6,65.1L317.5,64.2L318.3,63.2L319.2,62.3L320.1,61.3L320.9,60.3L321.8,59.4L322.7,58.4L323.5,57.4L324.4,56.4L325.3,55.4L326.2,54.5L327,53.5L327.9,52.5L328.8,51.5L329.6,50.5L330.5,49.5L331.4,48.5L332.2,47.5L333.1,46.4L334,45.4L334.8,44.4L335.7,43.4L336.6,42.3L337.5,41.3L338.3,40.3L339.2,39.2L340.1,38.2L340.9,37.2L341.8,36.1L342.7,35.1L343.6,34L344.4,32.9L345.3,31.9L346.2,30.8L347,29.8L347.9,28.7L348.8,27.6L349.6,26.5L350.5,25.4L351.4,24.4L352.3,23.3L353.1,22.2L354,21.1L354.9,20L355.7,18.9L356.6,17.8L357.5,16.7L358.3,15.6L359.2,14.5L360.1,13.3L361,12.2L361.8,11.1L362.7,10L363.6,8.8L364.4,7.7L365.3,6.6L366.2,5.4L367,4.3L367.9,3.1L368.8,2L369.7,0.8L370.5,-0.3L371.4,-1.5L372.3,-2.7L373.1,-3.8L374,-5"/>
+<text class="s-txt-k1" x="356.6" y="36.1" text-anchor="end">y = f(x)</text>
+</svg>
+<figcaption>Ploščino pod grafom približamo z vsoto ploščin pravokotnikov. Ko so pravokotniki vse ožji, gre vsota proti določenemu integralu.</figcaption>
+</figure>
+            <p><strong>Geometrijski pomen</strong>: če je \(f \ge 0\), je \(\int_a^b f(x)\,dx\) ploščina lika med grafom, osjo \(x\) in premicama \(x = a\), \(x = b\). Deli pod osjo \(x\) prispevajo negativno.</p>
+            <figure class="slika slika--siroka">
+<svg viewBox="0 0 440 220" role="img" aria-label="Predznak določenega integrala" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g3-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g3-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g3-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g3-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g3-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g3-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<path class="s-mreza" d="M47.6,194V26M132.5,194V26M217.3,194V26M302.1,194V26M387,194V26M26,166H414M26,110H414M26,54H414"/>
+<polygon class="s-ploskev" points="47.6,110 48.5,109.1 49.3,108.2 50.2,107.4 51,106.5 51.8,105.6 52.7,104.7 53.5,103.9 54.4,103 55.2,102.1 56.1,101.2 56.9,100.4 57.8,99.5 58.6,98.6 59.5,97.8 60.3,96.9 61.2,96.1 62,95.2 62.9,94.4 63.7,93.5 64.6,92.7 65.4,91.9 66.3,91 67.1,90.2 68,89.4 68.8,88.6 69.7,87.8 70.5,87 71.4,86.2 72.2,85.4 73.1,84.6 73.9,83.8 74.8,83 75.6,82.3 76.5,81.5 77.3,80.7 78.2,80 79,79.3 79.8,78.5 80.7,77.8 81.5,77.1 82.4,76.4 83.2,75.7 84.1,75 84.9,74.3 85.8,73.6 86.6,73 87.5,72.3 88.3,71.7 89.2,71 90,70.4 90.9,69.8 91.7,69.2 92.6,68.6 93.4,68 94.3,67.4 95.1,66.9 96,66.3 96.8,65.8 97.7,65.2 98.5,64.7 99.4,64.2 100.2,63.7 101.1,63.2 101.9,62.7 102.8,62.3 103.6,61.8 104.5,61.4 105.3,60.9 106.2,60.5 107,60.1 107.8,59.7 108.7,59.3 109.5,59 110.4,58.6 111.2,58.3 112.1,57.9 112.9,57.6 113.8,57.3 114.6,57 115.5,56.7 116.3,56.5 117.2,56.2 118,56 118.9,55.8 119.7,55.5 120.6,55.3 121.4,55.2 122.3,55 123.1,54.8 124,54.7 124.8,54.6 125.7,54.4 126.5,54.3 127.4,54.2 128.2,54.2 129.1,54.1 129.9,54.1 130.8,54 131.6,54 132.5,54 133.3,54 134.1,54 135,54.1 135.8,54.1 136.7,54.2 137.5,54.2 138.4,54.3 139.2,54.4 140.1,54.6 140.9,54.7 141.8,54.8 142.6,55 143.5,55.2 144.3,55.3 145.2,55.5 146,55.8 146.9,56 147.7,56.2 148.6,56.5 149.4,56.7 150.3,57 151.1,57.3 152,57.6 152.8,57.9 153.7,58.3 154.5,58.6 155.4,59 156.2,59.3 157.1,59.7 157.9,60.1 158.8,60.5 159.6,60.9 160.5,61.4 161.3,61.8 162.1,62.3 163,62.7 163.8,63.2 164.7,63.7 165.5,64.2 166.4,64.7 167.2,65.2 168.1,65.8 168.9,66.3 169.8,66.9 170.6,67.4 171.5,68 172.3,68.6 173.2,69.2 174,69.8 174.9,70.4 175.7,71 176.6,71.7 177.4,72.3 178.3,73 179.1,73.6 180,74.3 180.8,75 181.7,75.7 182.5,76.4 183.4,77.1 184.2,77.8 185.1,78.5 185.9,79.3 186.8,80 187.6,80.7 188.5,81.5 189.3,82.3 190.1,83 191,83.8 191.8,84.6 192.7,85.4 193.5,86.2 194.4,87 195.2,87.8 196.1,88.6 196.9,89.4 197.8,90.2 198.6,91 199.5,91.9 200.3,92.7 201.2,93.5 202,94.4 202.9,95.2 203.7,96.1 204.6,96.9 205.4,97.8 206.3,98.6 207.1,99.5 208,100.4 208.8,101.2 209.7,102.1 210.5,103 211.4,103.9 212.2,104.7 213.1,105.6 213.9,106.5 214.8,107.4 215.6,108.2 216.5,109.1 217.3,110 217.3,110 216.5,110 215.6,110 214.8,110 213.9,110 213.1,110 212.2,110 211.4,110 210.5,110 209.7,110 208.8,110 208,110 207.1,110 206.3,110 205.4,110 204.6,110 203.7,110 202.9,110 202,110 201.2,110 200.3,110 199.5,110 198.6,110 197.8,110 196.9,110 196.1,110 195.2,110 194.4,110 193.5,110 192.7,110 191.8,110 191,110 190.1,110 189.3,110 188.5,110 187.6,110 186.8,110 185.9,110 185.1,110 184.2,110 183.4,110 182.5,110 181.7,110 180.8,110 180,110 179.1,110 178.3,110 177.4,110 176.6,110 175.7,110 174.9,110 174,110 173.2,110 172.3,110 171.5,110 170.6,110 169.8,110 168.9,110 168.1,110 167.2,110 166.4,110 165.5,110 164.7,110 163.8,110 163,110 162.1,110 161.3,110 160.5,110 159.6,110 158.8,110 157.9,110 157.1,110 156.2,110 155.4,110 154.5,110 153.7,110 152.8,110 152,110 151.1,110 150.3,110 149.4,110 148.6,110 147.7,110 146.9,110 146,110 145.2,110 144.3,110 143.5,110 142.6,110 141.8,110 140.9,110 140.1,110 139.2,110 138.4,110 137.5,110 136.7,110 135.8,110 135,110 134.1,110 133.3,110 132.5,110 131.6,110 130.8,110 129.9,110 129.1,110 128.2,110 127.4,110 126.5,110 125.7,110 124.8,110 124,110 123.1,110 122.3,110 121.4,110 120.6,110 119.7,110 118.9,110 118,110 117.2,110 116.3,110 115.5,110 114.6,110 113.8,110 112.9,110 112.1,110 111.2,110 110.4,110 109.5,110 108.7,110 107.8,110 107,110 106.2,110 105.3,110 104.5,110 103.6,110 102.8,110 101.9,110 101.1,110 100.2,110 99.4,110 98.5,110 97.7,110 96.8,110 96,110 95.1,110 94.3,110 93.4,110 92.6,110 91.7,110 90.9,110 90,110 89.2,110 88.3,110 87.5,110 86.6,110 85.8,110 84.9,110 84.1,110 83.2,110 82.4,110 81.5,110 80.7,110 79.8,110 79,110 78.2,110 77.3,110 76.5,110 75.6,110 74.8,110 73.9,110 73.1,110 72.2,110 71.4,110 70.5,110 69.7,110 68.8,110 68,110 67.1,110 66.3,110 65.4,110 64.6,110 63.7,110 62.9,110 62,110 61.2,110 60.3,110 59.5,110 58.6,110 57.8,110 56.9,110 56.1,110 55.2,110 54.4,110 53.5,110 52.7,110 51.8,110 51,110 50.2,110 49.3,110 48.5,110 47.6,110"/>
+<polygon class="s-ploskev-2" points="217.3,110 218.1,110.9 219,111.8 219.8,112.6 220.7,113.5 221.5,114.4 222.4,115.3 223.2,116.1 224.1,117 224.9,117.9 225.8,118.8 226.6,119.6 227.5,120.5 228.3,121.4 229.2,122.2 230,123.1 230.9,123.9 231.7,124.8 232.6,125.6 233.4,126.5 234.3,127.3 235.1,128.1 236,129 236.8,129.8 237.7,130.6 238.5,131.4 239.4,132.2 240.2,133 241.1,133.8 241.9,134.6 242.8,135.4 243.6,136.2 244.5,137 245.3,137.7 246.1,138.5 247,139.3 247.8,140 248.7,140.7 249.5,141.5 250.4,142.2 251.2,142.9 252.1,143.6 252.9,144.3 253.8,145 254.6,145.7 255.5,146.4 256.3,147 257.2,147.7 258,148.3 258.9,149 259.7,149.6 260.6,150.2 261.4,150.8 262.3,151.4 263.1,152 264,152.6 264.8,153.1 265.7,153.7 266.5,154.2 267.4,154.8 268.2,155.3 269.1,155.8 269.9,156.3 270.8,156.8 271.6,157.3 272.4,157.7 273.3,158.2 274.1,158.6 275,159.1 275.8,159.5 276.7,159.9 277.5,160.3 278.4,160.7 279.2,161 280.1,161.4 280.9,161.7 281.8,162.1 282.6,162.4 283.5,162.7 284.3,163 285.2,163.3 286,163.5 286.9,163.8 287.7,164 288.6,164.2 289.4,164.5 290.3,164.7 291.1,164.8 292,165 292.8,165.2 293.7,165.3 294.5,165.4 295.4,165.6 296.2,165.7 297.1,165.8 297.9,165.8 298.8,165.9 299.6,165.9 300.4,166 301.3,166 302.1,166 303,166 303.8,166 304.7,165.9 305.5,165.9 306.4,165.8 307.2,165.8 308.1,165.7 308.9,165.6 309.8,165.4 310.6,165.3 311.5,165.2 312.3,165 313.2,164.8 314,164.7 314.9,164.5 315.7,164.2 316.6,164 317.4,163.8 318.3,163.5 319.1,163.3 320,163 320.8,162.7 321.7,162.4 322.5,162.1 323.4,161.7 324.2,161.4 325.1,161 325.9,160.7 326.8,160.3 327.6,159.9 328.4,159.5 329.3,159.1 330.1,158.6 331,158.2 331.8,157.7 332.7,157.3 333.5,156.8 334.4,156.3 335.2,155.8 336.1,155.3 336.9,154.8 337.8,154.2 338.6,153.7 339.5,153.1 340.3,152.6 341.2,152 342,151.4 342.9,150.8 343.7,150.2 344.6,149.6 345.4,149 346.3,148.3 347.1,147.7 348,147 348.8,146.4 349.7,145.7 350.5,145 351.4,144.3 352.2,143.6 353.1,142.9 353.9,142.2 354.8,141.5 355.6,140.7 356.4,140 357.3,139.3 358.1,138.5 359,137.7 359.8,137 360.7,136.2 361.5,135.4 362.4,134.6 363.2,133.8 364.1,133 364.9,132.2 365.8,131.4 366.6,130.6 367.5,129.8 368.3,129 369.2,128.1 370,127.3 370.9,126.5 371.7,125.6 372.6,124.8 373.4,123.9 374.3,123.1 375.1,122.2 376,121.4 376.8,120.5 377.7,119.6 378.5,118.8 379.4,117.9 380.2,117 381.1,116.1 381.9,115.3 382.8,114.4 383.6,113.5 384.4,112.6 385.3,111.8 386.1,110.9 387,110 387,110 386.1,110 385.3,110 384.4,110 383.6,110 382.8,110 381.9,110 381.1,110 380.2,110 379.4,110 378.5,110 377.7,110 376.8,110 376,110 375.1,110 374.3,110 373.4,110 372.6,110 371.7,110 370.9,110 370,110 369.2,110 368.3,110 367.5,110 366.6,110 365.8,110 364.9,110 364.1,110 363.2,110 362.4,110 361.5,110 360.7,110 359.8,110 359,110 358.1,110 357.3,110 356.4,110 355.6,110 354.8,110 353.9,110 353.1,110 352.2,110 351.4,110 350.5,110 349.7,110 348.8,110 348,110 347.1,110 346.3,110 345.4,110 344.6,110 343.7,110 342.9,110 342,110 341.2,110 340.3,110 339.5,110 338.6,110 337.8,110 336.9,110 336.1,110 335.2,110 334.4,110 333.5,110 332.7,110 331.8,110 331,110 330.1,110 329.3,110 328.4,110 327.6,110 326.8,110 325.9,110 325.1,110 324.2,110 323.4,110 322.5,110 321.7,110 320.8,110 320,110 319.1,110 318.3,110 317.4,110 316.6,110 315.7,110 314.9,110 314,110 313.2,110 312.3,110 311.5,110 310.6,110 309.8,110 308.9,110 308.1,110 307.2,110 306.4,110 305.5,110 304.7,110 303.8,110 303,110 302.1,110 301.3,110 300.4,110 299.6,110 298.8,110 297.9,110 297.1,110 296.2,110 295.4,110 294.5,110 293.7,110 292.8,110 292,110 291.1,110 290.3,110 289.4,110 288.6,110 287.7,110 286.9,110 286,110 285.2,110 284.3,110 283.5,110 282.6,110 281.8,110 280.9,110 280.1,110 279.2,110 278.4,110 277.5,110 276.7,110 275.8,110 275,110 274.1,110 273.3,110 272.4,110 271.6,110 270.8,110 269.9,110 269.1,110 268.2,110 267.4,110 266.5,110 265.7,110 264.8,110 264,110 263.1,110 262.3,110 261.4,110 260.6,110 259.7,110 258.9,110 258,110 257.2,110 256.3,110 255.5,110 254.6,110 253.8,110 252.9,110 252.1,110 251.2,110 250.4,110 249.5,110 248.7,110 247.8,110 247,110 246.1,110 245.3,110 244.5,110 243.6,110 242.8,110 241.9,110 241.1,110 240.2,110 239.4,110 238.5,110 237.7,110 236.8,110 236,110 235.1,110 234.3,110 233.4,110 232.6,110 231.7,110 230.9,110 230,110 229.2,110 228.3,110 227.5,110 226.6,110 225.8,110 224.9,110 224.1,110 223.2,110 222.4,110 221.5,110 220.7,110 219.8,110 219,110 218.1,110 217.3,110"/>
+<line class="s-os" x1="26" y1="110" x2="422" y2="110" marker-end="url(#g3-p)"/>
+<line class="s-os" x1="47.6" y1="194" x2="47.6" y2="18" marker-end="url(#g3-p)"/>
+<text class="s-os-txt" x="416" y="102" text-anchor="end">x</text>
+<text class="s-os-txt" x="55.6" y="30">y</text>
+<line class="s-os" x1="132.5" y1="107" x2="132.5" y2="113"/><text class="s-os-txt" x="132.5" y="125" text-anchor="middle">π/2</text><line class="s-os" x1="217.3" y1="107" x2="217.3" y2="113"/><text class="s-os-txt" x="217.3" y="125" text-anchor="middle">π</text><line class="s-os" x1="302.1" y1="107" x2="302.1" y2="113"/><text class="s-os-txt" x="302.1" y="125" text-anchor="middle">3π/2</text><line class="s-os" x1="387" y1="107" x2="387" y2="113"/><text class="s-os-txt" x="387" y="125" text-anchor="middle">2π</text><line class="s-os" x1="44.6" y1="166" x2="50.6" y2="166"/><text class="s-os-txt" x="41.6" y="170" text-anchor="end">-1</text><line class="s-os" x1="44.6" y1="54" x2="50.6" y2="54"/><text class="s-os-txt" x="41.6" y="58" text-anchor="end">1</text><text class="s-os-txt" x="41.6" y="125" text-anchor="end">0</text>
+<path class="s-k1" d="M26,131.8L27,130.9L27.9,129.9L28.9,129L29.9,128L30.9,127.1L31.8,126.1L32.8,125.2L33.8,124.2L34.7,123.2L35.7,122.2L36.7,121.3L37.6,120.3L38.6,119.3L39.6,118.3L40.6,117.3L41.5,116.3L42.5,115.3L43.5,114.3L44.4,113.3L45.4,112.3L46.4,111.3L47.3,110.3L48.3,109.3L49.3,108.3L50.3,107.3L51.2,106.3L52.2,105.3L53.2,104.3L54.1,103.3L55.1,102.3L56.1,101.3L57,100.3L58,99.3L59,98.3L60,97.3L60.9,96.3L61.9,95.4L62.9,94.4L63.8,93.4L64.8,92.5L65.8,91.5L66.7,90.6L67.7,89.6L68.7,88.7L69.7,87.8L70.6,86.9L71.6,85.9L72.6,85L73.5,84.1L74.5,83.3L75.5,82.4L76.4,81.5L77.4,80.6L78.4,79.8L79.4,79L80.3,78.1L81.3,77.3L82.3,76.5L83.2,75.7L84.2,74.9L85.2,74.1L86.1,73.4L87.1,72.6L88.1,71.9L89.1,71.1L90,70.4L91,69.7L92,69L92.9,68.3L93.9,67.7L94.9,67L95.8,66.4L96.8,65.8L97.8,65.1L98.8,64.6L99.7,64L100.7,63.4L101.7,62.9L102.6,62.3L103.6,61.8L104.6,61.3L105.5,60.8L106.5,60.3L107.5,59.9L108.4,59.4L109.4,59L110.4,58.6L111.4,58.2L112.3,57.8L113.3,57.5L114.3,57.1L115.2,56.8L116.2,56.5L117.2,56.2L118.2,56L119.1,55.7L120.1,55.5L121.1,55.2L122,55L123,54.9L124,54.7L124.9,54.5L125.9,54.4L126.9,54.3L127.9,54.2L128.8,54.1L129.8,54.1L130.8,54L131.7,54L132.7,54L133.7,54L134.6,54L135.6,54.1L136.6,54.2L137.6,54.2L138.5,54.4L139.5,54.5L140.5,54.6L141.4,54.8L142.4,54.9L143.4,55.1L144.3,55.4L145.3,55.6L146.3,55.8L147.3,56.1L148.2,56.4L149.2,56.7L150.2,57L151.1,57.3L152.1,57.7L153.1,58L154,58.4L155,58.8L156,59.2L157,59.7L157.9,60.1L158.9,60.6L159.9,61.1L160.8,61.6L161.8,62.1L162.8,62.6L163.7,63.1L164.7,63.7L165.7,64.3L166.7,64.9L167.6,65.5L168.6,66.1L169.6,66.7L170.5,67.3L171.5,68L172.5,68.7L173.4,69.4L174.4,70.1L175.4,70.8L176.4,71.5L177.3,72.2L178.3,73L179.3,73.7L180.2,74.5L181.2,75.3L182.2,76.1L183.1,76.9L184.1,77.7L185.1,78.5L186.1,79.4L187,80.2L188,81.1L189,81.9L189.9,82.8L190.9,83.7L191.9,84.6L192.8,85.5L193.8,86.4L194.8,87.3L195.8,88.2L196.7,89.2L197.7,90.1L198.7,91.1L199.6,92L200.6,93L201.6,93.9L202.5,94.9L203.5,95.9L204.5,96.8L205.5,97.8L206.4,98.8L207.4,99.8L208.4,100.8L209.3,101.8L210.3,102.8L211.3,103.8L212.2,104.8L213.2,105.8L214.2,106.8L215.2,107.8L216.1,108.8L217.1,109.8L218.1,110.8L219,111.8L220,112.8L221,113.8L221.9,114.8L222.9,115.8L223.9,116.8L224.9,117.8L225.8,118.8L226.8,119.8L227.8,120.8L228.7,121.8L229.7,122.7L230.7,123.7L231.6,124.7L232.6,125.7L233.6,126.6L234.6,127.6L235.5,128.5L236.5,129.5L237.5,130.4L238.4,131.4L239.4,132.3L240.4,133.2L241.3,134.1L242.3,135L243.3,135.9L244.3,136.8L245.2,137.7L246.2,138.5L247.2,139.4L248.1,140.3L249.1,141.1L250.1,141.9L251,142.7L252,143.6L253,144.4L254,145.1L254.9,145.9L255.9,146.7L256.9,147.4L257.8,148.2L258.8,148.9L259.8,149.6L260.7,150.3L261.7,151L262.7,151.7L263.7,152.4L264.6,153L265.6,153.7L266.6,154.3L267.5,154.9L268.5,155.5L269.5,156.1L270.4,156.6L271.4,157.2L272.4,157.7L273.4,158.2L274.3,158.7L275.3,159.2L276.3,159.7L277.2,160.1L278.2,160.6L279.2,161L280.1,161.4L281.1,161.8L282.1,162.2L283.1,162.5L284,162.9L285,163.2L286,163.5L286.9,163.8L287.9,164.1L288.9,164.3L289.8,164.6L290.8,164.8L291.8,165L292.8,165.2L293.7,165.3L294.7,165.5L295.7,165.6L296.6,165.7L297.6,165.8L298.6,165.9L299.5,165.9L300.5,166L301.5,166L302.5,166L303.4,166L304.4,166L305.4,165.9L306.3,165.8L307.3,165.7L308.3,165.6L309.2,165.5L310.2,165.4L311.2,165.2L312.2,165L313.1,164.8L314.1,164.6L315.1,164.4L316,164.2L317,163.9L318,163.6L318.9,163.3L319.9,163L320.9,162.7L321.8,162.3L322.8,161.9L323.8,161.6L324.8,161.2L325.7,160.7L326.7,160.3L327.7,159.9L328.6,159.4L329.6,158.9L330.6,158.4L331.6,157.9L332.5,157.4L333.5,156.8L334.5,156.3L335.4,155.7L336.4,155.1L337.4,154.5L338.3,153.9L339.3,153.3L340.3,152.6L341.3,152L342.2,151.3L343.2,150.6L344.2,149.9L345.1,149.2L346.1,148.5L347.1,147.7L348,147L349,146.2L350,145.4L351,144.7L351.9,143.9L352.9,143.1L353.9,142.2L354.8,141.4L355.8,140.6L356.8,139.7L357.7,138.9L358.7,138L359.7,137.1L360.7,136.2L361.6,135.3L362.6,134.4L363.6,133.5L364.5,132.6L365.5,131.7L366.5,130.8L367.4,129.8L368.4,128.9L369.4,127.9L370.3,127L371.3,126L372.3,125.1L373.3,124.1L374.2,123.1L375.2,122.1L376.2,121.1L377.1,120.2L378.1,119.2L379.1,118.2L380.1,117.2L381,116.2L382,115.2L383,114.2L383.9,113.2L384.9,112.2L385.9,111.2L386.8,110.2L387.8,109.2L388.8,108.1L389.7,107.1L390.7,106.1L391.7,105.1L392.7,104.1L393.6,103.1L394.6,102.1L395.6,101.1L396.5,100.2L397.5,99.2L398.5,98.2L399.5,97.2L400.4,96.2L401.4,95.2L402.4,94.3L403.3,93.3L404.3,92.4L405.3,91.4L406.2,90.5L407.2,89.5L408.2,88.6L409.2,87.7L410.1,86.7L411.1,85.8L412.1,84.9L413,84L414,83.2"/>
+<text class="s-txt-k1" x="132.5" y="87.6" text-anchor="middle">+2</text>
+<text class="s-txt-k2" x="302.1" y="140.8" text-anchor="middle">−2</text>
+</svg>
+<figcaption>Kjer je graf pod osjo \(x\), integral šteje ploščino negativno: \(\int_0^{2\pi} \sin x\,dx = 2 - 2 = 0\), ploščina pa je 4.</figcaption>
+</figure>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-6">
+              <h4>Tip 6: Določeni integral iz geometrijskega pomena</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Brez računanja primitivne funkcije izračunajte \(\displaystyle\int_{-2}^{2} \sqrt{4 - x^2}\,dx\).</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> graf integranda je znan lik (premica, krožnica) ali je dan narisan.</p><ul class="kljucne"><li>„s pomočjo geometrijskega pomena“</li><li>„iz grafa izračunajte integral“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Nariši graf integranda na intervalu.</p><div class="na-nalogi"><p>\(y = \sqrt{4 - x^2}\) je zgornja polovica krožnice s polmerom 2.</p></div></li>
+              <li><p class="korak">Prepoznaj like med grafom in osjo \(x\).</p><div class="na-nalogi"><p>Polkrog s polmerom 2.</p></div></li>
+              <li><p class="korak">Izračunaj ploščine.</p><div class="na-nalogi"><p>\(\frac{1}{2}\pi \cdot 2^2 = 2\pi\).</p></div></li>
+              <li><p class="korak">Upoštevaj predznak (deli pod osjo štejejo negativno).</p><div class="na-nalogi"><p>Lik je nad osjo: \(\int_{-2}^{2}\sqrt{4 - x^2}\,dx = 2\pi\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> \(\int_0^4 (x - 1)\,dx\)</p><p>Trikotnika: \(-\frac{1}{2} + \frac{9}{2} = 4\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> \(\int_{-\pi}^{\pi} \sin x\,dx\)</p><p>0 (liha funkcija, ploskvi se izničita).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> \(\int_0^3 2\,dx\)</p><p>Pravokotnik: 6.</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 7 -->
+        <section class="sklop" id="sklop-7">
+          <header class="sklop-header">
+            <span class="sklop-num">4.14 · 7</span>
+            <h2>Lastnosti določenega integrala</h2>
+            <p>Linearnost, aditivnost, simetrija.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <ul>
+              <li>\(\int_a^b (\alpha f + \beta g)\,dx = \alpha\int_a^b f\,dx + \beta\int_a^b g\,dx\),</li>
+              <li>\(\int_a^a f\,dx = 0\), \(\int_b^a f\,dx = -\int_a^b f\,dx\),</li>
+              <li>\(\int_a^c f\,dx = \int_a^b f\,dx + \int_b^c f\,dx\) (aditivnost),</li>
+              <li>liha funkcija: \(\int_{-a}^{a} f\,dx = 0\); soda: \(\int_{-a}^{a} f\,dx = 2\int_0^a f\,dx\).</li>
+            </ul>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-7">
+              <h4>Tip 7: Računanje z lastnostmi določenega integrala</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Znano je \(\int_0^3 f(x)\,dx = 5\), \(\int_0^1 f(x)\,dx = 2\) in \(\int_0^3 g(x)\,dx = -1\). Izračunajte \(\int_1^3 f(x)\,dx\), \(\int_0^3 (2f(x) - 3g(x))\,dx\) in \(\int_3^0 f(x)\,dx\).</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> dane so vrednosti integralov, predpis funkcije pa ne.</p><ul class="kljucne"><li>„znano je, da je \(\int\)“</li><li>„izračunajte brez predpisa“</li><li>soda, liha funkcija na simetričnem intervalu</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Z aditivnostjo razdeli interval.</p><div class="na-nalogi"><p>\(\int_1^3 f = \int_0^3 f - \int_0^1 f = 5 - 2 = 3\).</p></div></li>
+              <li><p class="korak">Z linearnostjo razbij vsoto.</p><div class="na-nalogi"><p>\(2 \cdot 5 - 3 \cdot (-1) = 13\).</p></div></li>
+              <li><p class="korak">Zamenjava mej spremeni predznak.</p><div class="na-nalogi"><p>\(\int_3^0 f = -5\).</p></div></li>
+              <li><p class="korak">Zapiši rezultate.</p><div class="na-nalogi"><p>3, 13 in \(-5\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> \(\int_{-2}^{2} x^3\,dx\)</p><p>0, ker je liha.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> \(\int_{-1}^{1} x^2\,dx\)</p><p>\(2\int_0^1 x^2\,dx = \frac{2}{3}\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> \(\int_2^2 e^x\,dx\)</p><p>0.</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 8 -->
+        <section class="sklop" id="sklop-8">
+          <header class="sklop-header">
+            <span class="sklop-num">4.14 · 8</span>
+            <h2>Zveza med določenim in nedoločenim integralom</h2>
+            <p>Newton-Leibnizova formula.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <p>Če je \(F\) primitivna funkcija zvezne funkcije \(f\), je</p>
+            <p>\[\int_a^b f(x)\,dx = F(x)\Big|_a^b = F(b) - F(a).\]</p>
+            <p>Konstanta \(C\) se pri tem odšteje, zato je ne pišemo. Določeni integral je število, nedoločeni pa družina funkcij.</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-8">
+              <h4>Tip 8: Izračun določenega integrala</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Izračunajte \(\displaystyle\int_1^2 (3x^2 - 2x)\,dx\).</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> integral z mejami.</p><ul class="kljucne"><li>„izračunajte določeni integral“</li><li>\(\int_a^b\)</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Poišči primitivno funkcijo.</p><div class="na-nalogi"><p>\(F(x) = x^3 - x^2\).</p></div></li>
+              <li><p class="korak">Izračunaj \(F(b)\).</p><div class="na-nalogi"><p>\(F(2) = 8 - 4 = 4\).</p></div></li>
+              <li><p class="korak">Izračunaj \(F(a)\).</p><div class="na-nalogi"><p>\(F(1) = 1 - 1 = 0\).</p></div></li>
+              <li><p class="korak">Odštej.</p><div class="na-nalogi"><p>\(4 - 0 = 4\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> \(\int_0^{\pi} \sin x\,dx\)</p><p>\(-\cos\pi + \cos 0 = 2\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> \(\int_1^e \frac{dx}{x}\)</p><p>\(\ln e - \ln 1 = 1\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> \(\int_0^1 e^{2x}\,dx\)</p><p>\(\frac{e^2 - 1}{2}\).</p></div>
+              <div class="primer"><p><strong>Primer 4:</strong> \(\int_0^4 \sqrt{x}\,dx\)</p><p>\(\frac{2}{3} \cdot 8 = \frac{16}{3}\).</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 9 -->
+        <section class="sklop" id="sklop-9">
+          <header class="sklop-header">
+            <span class="sklop-num">4.14 · 9</span>
+            <h2>Uporaba določenega integrala</h2>
+            <p>Ploščine, prostornine vrtenin in realni problemi.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <ul>
+              <li><strong>Ploščina med grafom in osjo \(x\)</strong>: interval razdelimo pri ničlah in seštejemo absolutne vrednosti integralov.</li>
+              <li><strong>Ploščina med krivuljama</strong>: \(S = \int_a^b (f(x) - g(x))\,dx\), kjer je \(f\) zgornja in \(g\) spodnja krivulja, \(a\) in \(b\) pa abscisi presečišč.</li>
+              <li><strong>Prostornina vrtenine</strong> (VR) okoli osi \(x\): \(V = \pi\int_a^b f(x)^2\,dx\).</li>
+              <li><strong>Sprememba količine</strong>: iz hitrosti \(v(t)\) dobimo pot \(\int_{t_1}^{t_2} v(t)\,dt\), iz pretoka količino tekočine. Povprečna vrednost funkcije je \(\frac{1}{b - a}\int_a^b f(x)\,dx\).</li>
+            </ul>
+            <figure class="slika slika--ozka">
+<svg viewBox="0 0 380 300" role="img" aria-label="Ploščina med krivuljama" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g4-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g4-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g4-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g4-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g4-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g4-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<path class="s-mreza" d="M26,274V26M91.6,274V26M157.2,274V26M222.8,274V26M288.4,274V26M354,274V26M26,242.5H354M26,203.1H354M26,163.8H354M26,124.4H354M26,85H354M26,45.7H354"/>
+<polygon class="s-ploskev" points="91.6,203.1 92.6,202.6 93.6,202 94.6,201.4 95.5,200.8 96.5,200.2 97.5,199.6 98.5,199 99.5,198.4 100.5,197.8 101.4,197.2 102.4,196.6 103.4,196.1 104.4,195.5 105.4,194.9 106.4,194.3 107.3,193.7 108.3,193.1 109.3,192.5 110.3,191.9 111.3,191.3 112.3,190.7 113.2,190.2 114.2,189.6 115.2,189 116.2,188.4 117.2,187.8 118.2,187.2 119.2,186.6 120.1,186 121.1,185.4 122.1,184.8 123.1,184.2 124.1,183.7 125.1,183.1 126,182.5 127,181.9 128,181.3 129,180.7 130,180.1 131,179.5 131.9,178.9 132.9,178.3 133.9,177.8 134.9,177.2 135.9,176.6 136.9,176 137.8,175.4 138.8,174.8 139.8,174.2 140.8,173.6 141.8,173 142.8,172.4 143.8,171.8 144.7,171.3 145.7,170.7 146.7,170.1 147.7,169.5 148.7,168.9 149.7,168.3 150.6,167.7 151.6,167.1 152.6,166.5 153.6,165.9 154.6,165.4 155.6,164.8 156.5,164.2 157.5,163.6 158.5,163 159.5,162.4 160.5,161.8 161.5,161.2 162.4,160.6 163.4,160 164.4,159.4 165.4,158.9 166.4,158.3 167.4,157.7 168.4,157.1 169.3,156.5 170.3,155.9 171.3,155.3 172.3,154.7 173.3,154.1 174.3,153.5 175.2,153 176.2,152.4 177.2,151.8 178.2,151.2 179.2,150.6 180.2,150 181.1,149.4 182.1,148.8 183.1,148.2 184.1,147.6 185.1,147 186.1,146.5 187,145.9 188,145.3 189,144.7 190,144.1 191,143.5 192,142.9 193,142.3 193.9,141.7 194.9,141.1 195.9,140.6 196.9,140 197.9,139.4 198.9,138.8 199.8,138.2 200.8,137.6 201.8,137 202.8,136.4 203.8,135.8 204.8,135.2 205.7,134.6 206.7,134.1 207.7,133.5 208.7,132.9 209.7,132.3 210.7,131.7 211.6,131.1 212.6,130.5 213.6,129.9 214.6,129.3 215.6,128.7 216.6,128.2 217.6,127.6 218.5,127 219.5,126.4 220.5,125.8 221.5,125.2 222.5,124.6 223.5,124 224.4,123.4 225.4,122.8 226.4,122.2 227.4,121.7 228.4,121.1 229.4,120.5 230.3,119.9 231.3,119.3 232.3,118.7 233.3,118.1 234.3,117.5 235.3,116.9 236.2,116.3 237.2,115.8 238.2,115.2 239.2,114.6 240.2,114 241.2,113.4 242.2,112.8 243.1,112.2 244.1,111.6 245.1,111 246.1,110.4 247.1,109.8 248.1,109.3 249,108.7 250,108.1 251,107.5 252,106.9 253,106.3 254,105.7 254.9,105.1 255.9,104.5 256.9,103.9 257.9,103.4 258.9,102.8 259.9,102.2 260.8,101.6 261.8,101 262.8,100.4 263.8,99.8 264.8,99.2 265.8,98.6 266.8,98 267.7,97.4 268.7,96.9 269.7,96.3 270.7,95.7 271.7,95.1 272.7,94.5 273.6,93.9 274.6,93.3 275.6,92.7 276.6,92.1 277.6,91.5 278.6,91 279.5,90.4 280.5,89.8 281.5,89.2 282.5,88.6 283.5,88 284.5,87.4 285.4,86.8 286.4,86.2 287.4,85.6 288.4,85 288.4,85 287.4,87.4 286.4,89.7 285.4,92.1 284.5,94.4 283.5,96.6 282.5,98.9 281.5,101.1 280.5,103.4 279.5,105.6 278.6,107.8 277.6,110 276.6,112.1 275.6,114.3 274.6,116.4 273.6,118.5 272.7,120.6 271.7,122.6 270.7,124.7 269.7,126.7 268.7,128.7 267.7,130.7 266.8,132.7 265.8,134.7 264.8,136.6 263.8,138.6 262.8,140.5 261.8,142.4 260.8,144.2 259.9,146.1 258.9,147.9 257.9,149.8 256.9,151.6 255.9,153.3 254.9,155.1 254,156.9 253,158.6 252,160.3 251,162 250,163.7 249,165.4 248.1,167 247.1,168.6 246.1,170.2 245.1,171.8 244.1,173.4 243.1,175 242.2,176.5 241.2,178 240.2,179.5 239.2,181 238.2,182.5 237.2,183.9 236.2,185.3 235.3,186.8 234.3,188.2 233.3,189.5 232.3,190.9 231.3,192.2 230.3,193.6 229.4,194.9 228.4,196.2 227.4,197.4 226.4,198.7 225.4,199.9 224.4,201.1 223.5,202.4 222.5,203.5 221.5,204.7 220.5,205.9 219.5,207 218.5,208.1 217.6,209.2 216.6,210.3 215.6,211.3 214.6,212.4 213.6,213.4 212.6,214.4 211.6,215.4 210.7,216.4 209.7,217.3 208.7,218.3 207.7,219.2 206.7,220.1 205.7,221 204.8,221.8 203.8,222.7 202.8,223.5 201.8,224.3 200.8,225.1 199.8,225.9 198.9,226.6 197.9,227.4 196.9,228.1 195.9,228.8 194.9,229.5 193.9,230.2 193,230.8 192,231.5 191,232.1 190,232.7 189,233.2 188,233.8 187,234.4 186.1,234.9 185.1,235.4 184.1,235.9 183.1,236.4 182.1,236.8 181.1,237.3 180.2,237.7 179.2,238.1 178.2,238.5 177.2,238.8 176.2,239.2 175.2,239.5 174.3,239.8 173.3,240.1 172.3,240.4 171.3,240.7 170.3,240.9 169.3,241.2 168.4,241.4 167.4,241.6 166.4,241.7 165.4,241.9 164.4,242 163.4,242.2 162.4,242.3 161.5,242.3 160.5,242.4 159.5,242.5 158.5,242.5 157.5,242.5 156.5,242.5 155.6,242.5 154.6,242.4 153.6,242.4 152.6,242.3 151.6,242.2 150.6,242.1 149.7,242 148.7,241.8 147.7,241.7 146.7,241.5 145.7,241.3 144.7,241.1 143.8,240.9 142.8,240.6 141.8,240.3 140.8,240 139.8,239.7 138.8,239.4 137.8,239.1 136.9,238.7 135.9,238.4 134.9,238 133.9,237.5 132.9,237.1 131.9,236.7 131,236.2 130,235.7 129,235.2 128,234.7 127,234.2 126,233.6 125.1,233.1 124.1,232.5 123.1,231.9 122.1,231.2 121.1,230.6 120.1,229.9 119.2,229.3 118.2,228.6 117.2,227.9 116.2,227.1 115.2,226.4 114.2,225.6 113.2,224.8 112.3,224 111.3,223.2 110.3,222.4 109.3,221.5 108.3,220.7 107.3,219.8 106.4,218.9 105.4,217.9 104.4,217 103.4,216 102.4,215.1 101.4,214.1 100.5,213.1 99.5,212 98.5,211 97.5,209.9 96.5,208.8 95.5,207.7 94.6,206.6 93.6,205.5 92.6,204.3 91.6,203.1"/>
+<line class="s-os" x1="26" y1="242.5" x2="362" y2="242.5" marker-end="url(#g4-p)"/>
+<line class="s-os" x1="157.2" y1="274" x2="157.2" y2="18" marker-end="url(#g4-p)"/>
+<text class="s-os-txt" x="356" y="234.5" text-anchor="end">x</text>
+<text class="s-os-txt" x="165.2" y="30">y</text>
+<line class="s-os" x1="26" y1="239.5" x2="26" y2="245.5"/><text class="s-os-txt" x="26" y="257.5" text-anchor="middle">-2</text><line class="s-os" x1="91.6" y1="239.5" x2="91.6" y2="245.5"/><text class="s-os-txt" x="91.6" y="257.5" text-anchor="middle">-1</text><line class="s-os" x1="222.8" y1="239.5" x2="222.8" y2="245.5"/><text class="s-os-txt" x="222.8" y="257.5" text-anchor="middle">1</text><line class="s-os" x1="288.4" y1="239.5" x2="288.4" y2="245.5"/><text class="s-os-txt" x="288.4" y="257.5" text-anchor="middle">2</text><line class="s-os" x1="154.2" y1="203.1" x2="160.2" y2="203.1"/><text class="s-os-txt" x="151.2" y="207.1" text-anchor="end">1</text><line class="s-os" x1="154.2" y1="163.8" x2="160.2" y2="163.8"/><text class="s-os-txt" x="151.2" y="167.8" text-anchor="end">2</text><line class="s-os" x1="154.2" y1="124.4" x2="160.2" y2="124.4"/><text class="s-os-txt" x="151.2" y="128.4" text-anchor="end">3</text><line class="s-os" x1="154.2" y1="85" x2="160.2" y2="85"/><text class="s-os-txt" x="151.2" y="89" text-anchor="end">4</text><line class="s-os" x1="154.2" y1="45.7" x2="160.2" y2="45.7"/><text class="s-os-txt" x="151.2" y="49.7" text-anchor="end">5</text><text class="s-os-txt" x="151.2" y="257.5" text-anchor="end">0</text>
+<path class="s-k1" d="M26,85L26.8,87L27.6,89L28.5,90.9L29.3,92.8L30.1,94.7L30.9,96.6L31.7,98.5L32.6,100.4L33.4,102.3L34.2,104.1L35,106L35.8,107.8L36.7,109.6L37.5,111.4L38.3,113.2L39.1,115L39.9,116.7L40.8,118.5L41.6,120.2L42.4,122L43.2,123.7L44,125.4L44.9,127.1L45.7,128.7L46.5,130.4L47.3,132.1L48.1,133.7L49,135.3L49.8,137L50.6,138.6L51.4,140.2L52.2,141.7L53.1,143.3L53.9,144.9L54.7,146.4L55.5,147.9L56.3,149.5L57.2,151L58,152.5L58.8,153.9L59.6,155.4L60.4,156.9L61.3,158.3L62.1,159.7L62.9,161.2L63.7,162.6L64.5,164L65.4,165.4L66.2,166.7L67,168.1L67.8,169.4L68.6,170.8L69.5,172.1L70.3,173.4L71.1,174.7L71.9,176L72.7,177.3L73.6,178.5L74.4,179.8L75.2,181L76,182.2L76.8,183.4L77.7,184.6L78.5,185.8L79.3,187L80.1,188.2L80.9,189.3L81.8,190.4L82.6,191.6L83.4,192.7L84.2,193.8L85,194.9L85.9,196L86.7,197L87.5,198.1L88.3,199.1L89.1,200.1L90,201.1L90.8,202.2L91.6,203.1L92.4,204.1L93.2,205.1L94.1,206L94.9,207L95.7,207.9L96.5,208.8L97.3,209.7L98.2,210.6L99,211.5L99.8,212.4L100.6,213.2L101.4,214.1L102.3,214.9L103.1,215.7L103.9,216.5L104.7,217.3L105.5,218.1L106.4,218.9L107.2,219.6L108,220.4L108.8,221.1L109.6,221.8L110.5,222.5L111.3,223.2L112.1,223.9L112.9,224.6L113.7,225.2L114.6,225.9L115.4,226.5L116.2,227.1L117,227.7L117.8,228.3L118.7,228.9L119.5,229.5L120.3,230.1L121.1,230.6L121.9,231.1L122.8,231.7L123.6,232.2L124.4,232.7L125.2,233.2L126,233.6L126.9,234.1L127.7,234.5L128.5,235L129.3,235.4L130.1,235.8L131,236.2L131.8,236.6L132.6,237L133.4,237.3L134.2,237.7L135.1,238L135.9,238.4L136.7,238.7L137.5,239L138.3,239.3L139.2,239.5L140,239.8L140.8,240L141.6,240.3L142.4,240.5L143.3,240.7L144.1,240.9L144.9,241.1L145.7,241.3L146.5,241.5L147.4,241.6L148.2,241.8L149,241.9L149.8,242L150.6,242.1L151.5,242.2L152.3,242.3L153.1,242.4L153.9,242.4L154.7,242.5L155.6,242.5L156.4,242.5L157.2,242.5L158,242.5L158.8,242.5L159.7,242.5L160.5,242.4L161.3,242.4L162.1,242.3L162.9,242.2L163.8,242.1L164.6,242L165.4,241.9L166.2,241.8L167,241.6L167.9,241.5L168.7,241.3L169.5,241.1L170.3,240.9L171.1,240.7L172,240.5L172.8,240.3L173.6,240L174.4,239.8L175.2,239.5L176.1,239.3L176.9,239L177.7,238.7L178.5,238.4L179.3,238L180.2,237.7L181,237.3L181.8,237L182.6,236.6L183.4,236.2L184.3,235.8L185.1,235.4L185.9,235L186.7,234.5L187.5,234.1L188.4,233.6L189.2,233.2L190,232.7L190.8,232.2L191.6,231.7L192.5,231.1L193.3,230.6L194.1,230.1L194.9,229.5L195.7,228.9L196.6,228.3L197.4,227.7L198.2,227.1L199,226.5L199.8,225.9L200.7,225.2L201.5,224.6L202.3,223.9L203.1,223.2L203.9,222.5L204.8,221.8L205.6,221.1L206.4,220.4L207.2,219.6L208,218.9L208.9,218.1L209.7,217.3L210.5,216.5L211.3,215.7L212.1,214.9L213,214.1L213.8,213.2L214.6,212.4L215.4,211.5L216.2,210.6L217.1,209.7L217.9,208.8L218.7,207.9L219.5,207L220.3,206L221.2,205.1L222,204.1L222.8,203.1L223.6,202.2L224.4,201.1L225.3,200.1L226.1,199.1L226.9,198.1L227.7,197L228.5,196L229.4,194.9L230.2,193.8L231,192.7L231.8,191.6L232.6,190.4L233.5,189.3L234.3,188.2L235.1,187L235.9,185.8L236.7,184.6L237.6,183.4L238.4,182.2L239.2,181L240,179.8L240.8,178.5L241.7,177.3L242.5,176L243.3,174.7L244.1,173.4L244.9,172.1L245.8,170.8L246.6,169.4L247.4,168.1L248.2,166.7L249,165.4L249.9,164L250.7,162.6L251.5,161.2L252.3,159.7L253.1,158.3L254,156.9L254.8,155.4L255.6,153.9L256.4,152.5L257.2,151L258.1,149.5L258.9,147.9L259.7,146.4L260.5,144.9L261.3,143.3L262.2,141.7L263,140.2L263.8,138.6L264.6,137L265.4,135.3L266.3,133.7L267.1,132.1L267.9,130.4L268.7,128.7L269.5,127.1L270.4,125.4L271.2,123.7L272,122L272.8,120.2L273.6,118.5L274.5,116.7L275.3,115L276.1,113.2L276.9,111.4L277.7,109.6L278.6,107.8L279.4,106L280.2,104.1L281,102.3L281.8,100.4L282.7,98.5L283.5,96.6L284.3,94.7L285.1,92.8L285.9,90.9L286.8,89L287.6,87L288.4,85L289.2,83.1L290,81.1L290.9,79.1L291.7,77.1L292.5,75.1L293.3,73L294.1,71L295,68.9L295.8,66.8L296.6,64.8L297.4,62.7L298.2,60.5L299.1,58.4L299.9,56.3L300.7,54.1L301.5,52L302.3,49.8L303.2,47.6L304,45.4L304.8,43.2L305.6,41L306.4,38.8L307.3,36.5L308.1,34.3L308.9,32L309.7,29.7L310.5,27.4L311.4,25.1L312.2,22.8L313,20.5L313.8,18.1L314.6,15.8L315.5,13.4L316.3,11L317.1,8.6L317.9,6.2L318.7,3.8L319.6,1.4L320.4,-1.1L321.2,-3.5L322,-6L322.8,-8.5L323.7,-11L324.5,-13.5L325.3,-16L326.1,-18.5L326.9,-21L327.8,-23.6L328.6,-26.2L329.4,-28.7L330.2,-31.3L331,-33.9L331.9,-36.5L332.7,-39.2L333.5,-41.8L334.3,-44.5L335.1,-47.1L336,-49.8L336.8,-52.5L337.6,-55.2L338.4,-57.9L339.2,-60.6L340.1,-63.4L340.9,-66.1L341.7,-68.9L342.5,-71.7L343.3,-74.4L344.2,-77.2L345,-80L345.8,-82.9L346.6,-85.7L347.4,-88.6L348.3,-91.4L349.1,-94.3L349.9,-97.2"/>
+<path class="s-k2" d="M26,242.5L26.8,242L27.6,241.5L28.5,241L29.3,240.5L30.1,240L30.9,239.6L31.7,239.1L32.6,238.6L33.4,238.1L34.2,237.6L35,237.1L35.8,236.6L36.7,236.1L37.5,235.6L38.3,235.1L39.1,234.6L39.9,234.1L40.8,233.7L41.6,233.2L42.4,232.7L43.2,232.2L44,231.7L44.9,231.2L45.7,230.7L46.5,230.2L47.3,229.7L48.1,229.2L49,228.7L49.8,228.2L50.6,227.7L51.4,227.3L52.2,226.8L53.1,226.3L53.9,225.8L54.7,225.3L55.5,224.8L56.3,224.3L57.2,223.8L58,223.3L58.8,222.8L59.6,222.3L60.4,221.8L61.3,221.3L62.1,220.9L62.9,220.4L63.7,219.9L64.5,219.4L65.4,218.9L66.2,218.4L67,217.9L67.8,217.4L68.6,216.9L69.5,216.4L70.3,215.9L71.1,215.4L71.9,215L72.7,214.5L73.6,214L74.4,213.5L75.2,213L76,212.5L76.8,212L77.7,211.5L78.5,211L79.3,210.5L80.1,210L80.9,209.5L81.8,209L82.6,208.6L83.4,208.1L84.2,207.6L85,207.1L85.9,206.6L86.7,206.1L87.5,205.6L88.3,205.1L89.1,204.6L90,204.1L90.8,203.6L91.6,203.1L92.4,202.7L93.2,202.2L94.1,201.7L94.9,201.2L95.7,200.7L96.5,200.2L97.3,199.7L98.2,199.2L99,198.7L99.8,198.2L100.6,197.7L101.4,197.2L102.3,196.7L103.1,196.3L103.9,195.8L104.7,195.3L105.5,194.8L106.4,194.3L107.2,193.8L108,193.3L108.8,192.8L109.6,192.3L110.5,191.8L111.3,191.3L112.1,190.8L112.9,190.3L113.7,189.9L114.6,189.4L115.4,188.9L116.2,188.4L117,187.9L117.8,187.4L118.7,186.9L119.5,186.4L120.3,185.9L121.1,185.4L121.9,184.9L122.8,184.4L123.6,184L124.4,183.5L125.2,183L126,182.5L126.9,182L127.7,181.5L128.5,181L129.3,180.5L130.1,180L131,179.5L131.8,179L132.6,178.5L133.4,178L134.2,177.6L135.1,177.1L135.9,176.6L136.7,176.1L137.5,175.6L138.3,175.1L139.2,174.6L140,174.1L140.8,173.6L141.6,173.1L142.4,172.6L143.3,172.1L144.1,171.7L144.9,171.2L145.7,170.7L146.5,170.2L147.4,169.7L148.2,169.2L149,168.7L149.8,168.2L150.6,167.7L151.5,167.2L152.3,166.7L153.1,166.2L153.9,165.7L154.7,165.3L155.6,164.8L156.4,164.3L157.2,163.8L158,163.3L158.8,162.8L159.7,162.3L160.5,161.8L161.3,161.3L162.1,160.8L162.9,160.3L163.8,159.8L164.6,159.3L165.4,158.9L166.2,158.4L167,157.9L167.9,157.4L168.7,156.9L169.5,156.4L170.3,155.9L171.1,155.4L172,154.9L172.8,154.4L173.6,153.9L174.4,153.4L175.2,153L176.1,152.5L176.9,152L177.7,151.5L178.5,151L179.3,150.5L180.2,150L181,149.5L181.8,149L182.6,148.5L183.4,148L184.3,147.5L185.1,147L185.9,146.6L186.7,146.1L187.5,145.6L188.4,145.1L189.2,144.6L190,144.1L190.8,143.6L191.6,143.1L192.5,142.6L193.3,142.1L194.1,141.6L194.9,141.1L195.7,140.7L196.6,140.2L197.4,139.7L198.2,139.2L199,138.7L199.8,138.2L200.7,137.7L201.5,137.2L202.3,136.7L203.1,136.2L203.9,135.7L204.8,135.2L205.6,134.7L206.4,134.3L207.2,133.8L208,133.3L208.9,132.8L209.7,132.3L210.5,131.8L211.3,131.3L212.1,130.8L213,130.3L213.8,129.8L214.6,129.3L215.4,128.8L216.2,128.3L217.1,127.9L217.9,127.4L218.7,126.9L219.5,126.4L220.3,125.9L221.2,125.4L222,124.9L222.8,124.4L223.6,123.9L224.4,123.4L225.3,122.9L226.1,122.4L226.9,122L227.7,121.5L228.5,121L229.4,120.5L230.2,120L231,119.5L231.8,119L232.6,118.5L233.5,118L234.3,117.5L235.1,117L235.9,116.5L236.7,116L237.6,115.6L238.4,115.1L239.2,114.6L240,114.1L240.8,113.6L241.7,113.1L242.5,112.6L243.3,112.1L244.1,111.6L244.9,111.1L245.8,110.6L246.6,110.1L247.4,109.7L248.2,109.2L249,108.7L249.9,108.2L250.7,107.7L251.5,107.2L252.3,106.7L253.1,106.2L254,105.7L254.8,105.2L255.6,104.7L256.4,104.2L257.2,103.7L258.1,103.3L258.9,102.8L259.7,102.3L260.5,101.8L261.3,101.3L262.2,100.8L263,100.3L263.8,99.8L264.6,99.3L265.4,98.8L266.3,98.3L267.1,97.8L267.9,97.3L268.7,96.9L269.5,96.4L270.4,95.9L271.2,95.4L272,94.9L272.8,94.4L273.6,93.9L274.5,93.4L275.3,92.9L276.1,92.4L276.9,91.9L277.7,91.4L278.6,91L279.4,90.5L280.2,90L281,89.5L281.8,89L282.7,88.5L283.5,88L284.3,87.5L285.1,87L285.9,86.5L286.8,86L287.6,85.5L288.4,85L289.2,84.6L290,84.1L290.9,83.6L291.7,83.1L292.5,82.6L293.3,82.1L294.1,81.6L295,81.1L295.8,80.6L296.6,80.1L297.4,79.6L298.2,79.1L299.1,78.7L299.9,78.2L300.7,77.7L301.5,77.2L302.3,76.7L303.2,76.2L304,75.7L304.8,75.2L305.6,74.7L306.4,74.2L307.3,73.7L308.1,73.2L308.9,72.7L309.7,72.3L310.5,71.8L311.4,71.3L312.2,70.8L313,70.3L313.8,69.8L314.6,69.3L315.5,68.8L316.3,68.3L317.1,67.8L317.9,67.3L318.7,66.8L319.6,66.3L320.4,65.9L321.2,65.4L322,64.9L322.8,64.4L323.7,63.9L324.5,63.4L325.3,62.9L326.1,62.4L326.9,61.9L327.8,61.4L328.6,60.9L329.4,60.4L330.2,60L331,59.5L331.9,59L332.7,58.5L333.5,58L334.3,57.5L335.1,57L336,56.5L336.8,56L337.6,55.5L338.4,55L339.2,54.5L340.1,54L340.9,53.6L341.7,53.1L342.5,52.6L343.3,52.1L344.2,51.6L345,51.1L345.8,50.6L346.6,50.1L347.4,49.6L348.3,49.1L349.1,48.6L349.9,48.1L350.7,47.7L351.5,47.2L352.4,46.7L353.2,46.2L354,45.7"/>
+<circle class="s-tocka" cx="91.6" cy="203.1" r="4.5"/>
+<text class="s-txt-b" x="83.6" y="197.1" text-anchor="end">(−1, 1)</text>
+<circle class="s-tocka" cx="288.4" cy="85" r="4.5"/>
+<text class="s-txt-b" x="296.4" y="97" text-anchor="start">(2, 4)</text>
+<text class="s-txt-k2" x="347.4" y="39.8" text-anchor="end">y = x + 2</text>
+<text class="s-txt-k1" x="35.8" y="116.5" text-anchor="start">y = x²</text>
+<text class="s-txt-b" x="190" y="187.4" text-anchor="middle">S = 9/2</text>
+</svg>
+<figcaption>Ploščina med \(y = x + 2\) (zgoraj) in \(y = x^2\) (spodaj) od \(-1\) do \(2\).</figcaption>
+</figure>
+            <figure class="slika slika--siroka">
+<svg viewBox="0 0 420 280" role="img" aria-label="Vrtenina okoli osi x" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g5-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g5-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g5-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g5-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g5-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g5-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<path class="s-mreza" d="M65.4,254V26M131.1,254V26M196.9,254V26M262.6,254V26M328.3,254V26M394,254V26M26,227.7H394M26,183.8H394M26,140H394M26,96.2H394M26,52.3H394"/>
+<polygon class="s-ploskev" points="65.4,140 66.7,133.8 68.1,131.2 69.4,129.3 70.7,127.6 72,126.1 73.3,124.8 74.6,123.6 75.9,122.5 77.3,121.4 78.6,120.4 79.9,119.4 81.2,118.5 82.5,117.6 83.8,116.8 85.1,116 86.5,115.2 87.8,114.4 89.1,113.7 90.4,113 91.7,112.3 93,111.6 94.3,110.9 95.7,110.3 97,109.6 98.3,109 99.6,108.4 100.9,107.8 102.2,107.2 103.5,106.6 104.9,106 106.2,105.5 107.5,104.9 108.8,104.4 110.1,103.8 111.4,103.3 112.7,102.8 114.1,102.3 115.4,101.8 116.7,101.3 118,100.8 119.3,100.3 120.6,99.8 121.9,99.3 123.3,98.9 124.6,98.4 125.9,97.9 127.2,97.5 128.5,97 129.8,96.6 131.1,96.2 132.5,95.7 133.8,95.3 135.1,94.9 136.4,94.4 137.7,94 139,93.6 140.3,93.2 141.7,92.8 143,92.4 144.3,92 145.6,91.6 146.9,91.2 148.2,90.8 149.5,90.4 150.9,90 152.2,89.6 153.5,89.2 154.8,88.9 156.1,88.5 157.4,88.1 158.7,87.8 160.1,87.4 161.4,87 162.7,86.7 164,86.3 165.3,85.9 166.6,85.6 167.9,85.2 169.3,84.9 170.6,84.5 171.9,84.2 173.2,83.8 174.5,83.5 175.8,83.2 177.1,82.8 178.5,82.5 179.8,82.2 181.1,81.8 182.4,81.5 183.7,81.2 185,80.8 186.3,80.5 187.7,80.2 189,79.9 190.3,79.6 191.6,79.2 192.9,78.9 194.2,78.6 195.5,78.3 196.9,78 198.2,77.7 199.5,77.4 200.8,77.1 202.1,76.8 203.4,76.5 204.7,76.2 206.1,75.9 207.4,75.6 208.7,75.3 210,75 211.3,74.7 212.6,74.4 213.9,74.1 215.3,73.8 216.6,73.5 217.9,73.2 219.2,72.9 220.5,72.6 221.8,72.4 223.1,72.1 224.5,71.8 225.8,71.5 227.1,71.2 228.4,71 229.7,70.7 231,70.4 232.3,70.1 233.7,69.8 235,69.6 236.3,69.3 237.6,69 238.9,68.8 240.2,68.5 241.5,68.2 242.9,68 244.2,67.7 245.5,67.4 246.8,67.2 248.1,66.9 249.4,66.6 250.7,66.4 252.1,66.1 253.4,65.8 254.7,65.6 256,65.3 257.3,65.1 258.6,64.8 259.9,64.6 261.3,64.3 262.6,64.1 263.9,63.8 265.2,63.6 266.5,63.3 267.8,63.1 269.1,62.8 270.5,62.6 271.8,62.3 273.1,62.1 274.4,61.8 275.7,61.6 277,61.3 278.3,61.1 279.7,60.8 281,60.6 282.3,60.3 283.6,60.1 284.9,59.9 286.2,59.6 287.5,59.4 288.9,59.2 290.2,58.9 291.5,58.7 292.8,58.4 294.1,58.2 295.4,58 296.7,57.7 298.1,57.5 299.4,57.3 300.7,57 302,56.8 303.3,56.6 304.6,56.3 305.9,56.1 307.3,55.9 308.6,55.7 309.9,55.4 311.2,55.2 312.5,55 313.8,54.8 315.1,54.5 316.5,54.3 317.8,54.1 319.1,53.9 320.4,53.6 321.7,53.4 323,53.2 324.3,53 325.7,52.7 327,52.5 328.3,52.3 328.3,227.7 327,227.5 325.7,227.3 324.3,227 323,226.8 321.7,226.6 320.4,226.4 319.1,226.1 317.8,225.9 316.5,225.7 315.1,225.5 313.8,225.2 312.5,225 311.2,224.8 309.9,224.6 308.6,224.3 307.3,224.1 305.9,223.9 304.6,223.7 303.3,223.4 302,223.2 300.7,223 299.4,222.7 298.1,222.5 296.7,222.3 295.4,222 294.1,221.8 292.8,221.6 291.5,221.3 290.2,221.1 288.9,220.8 287.5,220.6 286.2,220.4 284.9,220.1 283.6,219.9 282.3,219.7 281,219.4 279.7,219.2 278.3,218.9 277,218.7 275.7,218.4 274.4,218.2 273.1,217.9 271.8,217.7 270.5,217.4 269.1,217.2 267.8,216.9 266.5,216.7 265.2,216.4 263.9,216.2 262.6,215.9 261.3,215.7 259.9,215.4 258.6,215.2 257.3,214.9 256,214.7 254.7,214.4 253.4,214.2 252.1,213.9 250.7,213.6 249.4,213.4 248.1,213.1 246.8,212.8 245.5,212.6 244.2,212.3 242.9,212 241.5,211.8 240.2,211.5 238.9,211.2 237.6,211 236.3,210.7 235,210.4 233.7,210.2 232.3,209.9 231,209.6 229.7,209.3 228.4,209 227.1,208.8 225.8,208.5 224.5,208.2 223.1,207.9 221.8,207.6 220.5,207.4 219.2,207.1 217.9,206.8 216.6,206.5 215.3,206.2 213.9,205.9 212.6,205.6 211.3,205.3 210,205 208.7,204.7 207.4,204.4 206.1,204.1 204.7,203.8 203.4,203.5 202.1,203.2 200.8,202.9 199.5,202.6 198.2,202.3 196.9,202 195.5,201.7 194.2,201.4 192.9,201.1 191.6,200.8 190.3,200.4 189,200.1 187.7,199.8 186.3,199.5 185,199.2 183.7,198.8 182.4,198.5 181.1,198.2 179.8,197.8 178.5,197.5 177.1,197.2 175.8,196.8 174.5,196.5 173.2,196.2 171.9,195.8 170.6,195.5 169.3,195.1 167.9,194.8 166.6,194.4 165.3,194.1 164,193.7 162.7,193.3 161.4,193 160.1,192.6 158.7,192.2 157.4,191.9 156.1,191.5 154.8,191.1 153.5,190.8 152.2,190.4 150.9,190 149.5,189.6 148.2,189.2 146.9,188.8 145.6,188.4 144.3,188 143,187.6 141.7,187.2 140.3,186.8 139,186.4 137.7,186 136.4,185.6 135.1,185.1 133.8,184.7 132.5,184.3 131.1,183.8 129.8,183.4 128.5,183 127.2,182.5 125.9,182.1 124.6,181.6 123.3,181.1 121.9,180.7 120.6,180.2 119.3,179.7 118,179.2 116.7,178.7 115.4,178.2 114.1,177.7 112.7,177.2 111.4,176.7 110.1,176.2 108.8,175.6 107.5,175.1 106.2,174.5 104.9,174 103.5,173.4 102.2,172.8 100.9,172.2 99.6,171.6 98.3,171 97,170.4 95.7,169.7 94.3,169.1 93,168.4 91.7,167.7 90.4,167 89.1,166.3 87.8,165.6 86.5,164.8 85.1,164 83.8,163.2 82.5,162.4 81.2,161.5 79.9,160.6 78.6,159.6 77.3,158.6 75.9,157.5 74.6,156.4 73.3,155.2 72,153.9 70.7,152.4 69.4,150.7 68.1,148.8 66.7,146.2 65.4,140"/>
+<line class="s-os" x1="26" y1="140" x2="402" y2="140" marker-end="url(#g5-p)"/>
+<line class="s-os" x1="65.4" y1="254" x2="65.4" y2="18" marker-end="url(#g5-p)"/>
+<text class="s-os-txt" x="396" y="132" text-anchor="end">x</text>
+<text class="s-os-txt" x="73.4" y="30">y</text>
+<line class="s-os" x1="131.1" y1="137" x2="131.1" y2="143"/><text class="s-os-txt" x="131.1" y="155" text-anchor="middle">1</text><line class="s-os" x1="196.9" y1="137" x2="196.9" y2="143"/><text class="s-os-txt" x="196.9" y="155" text-anchor="middle">2</text><line class="s-os" x1="262.6" y1="137" x2="262.6" y2="143"/><text class="s-os-txt" x="262.6" y="155" text-anchor="middle">3</text><line class="s-os" x1="328.3" y1="137" x2="328.3" y2="143"/><text class="s-os-txt" x="328.3" y="155" text-anchor="middle">4</text><line class="s-os" x1="62.400000000000006" y1="227.7" x2="68.4" y2="227.7"/><text class="s-os-txt" x="59.400000000000006" y="231.7" text-anchor="end">-2</text><line class="s-os" x1="62.400000000000006" y1="183.8" x2="68.4" y2="183.8"/><text class="s-os-txt" x="59.400000000000006" y="187.8" text-anchor="end">-1</text><line class="s-os" x1="62.400000000000006" y1="96.2" x2="68.4" y2="96.2"/><text class="s-os-txt" x="59.400000000000006" y="100.2" text-anchor="end">1</text><line class="s-os" x1="62.400000000000006" y1="52.3" x2="68.4" y2="52.3"/><text class="s-os-txt" x="59.400000000000006" y="56.3" text-anchor="end">2</text><text class="s-os-txt" x="59.400000000000006" y="155" text-anchor="end">0</text>
+<path class="s-k1" d="M65.4,140L66.2,135.3L66.9,133.4L67.7,131.9L68.5,130.6L69.2,129.5L70,128.5L70.7,127.6L71.5,126.7L72.2,125.9L73,125.1L73.7,124.4L74.5,123.7L75.3,123L76,122.4L76.8,121.8L77.5,121.2L78.3,120.6L79,120.1L79.8,119.5L80.5,119L81.3,118.5L82.1,117.9L82.8,117.5L83.6,117L84.3,116.5L85.1,116L85.8,115.6L86.6,115.1L87.3,114.7L88.1,114.2L88.9,113.8L89.6,113.4L90.4,113L91.1,112.6L91.9,112.2L92.6,111.8L93.4,111.4L94.1,111L94.9,110.6L95.7,110.3L96.4,109.9L97.2,109.5L97.9,109.2L98.7,108.8L99.4,108.5L100.2,108.1L100.9,107.8L101.7,107.4L102.5,107.1L103.2,106.8L104,106.4L104.7,106.1L105.5,105.8L106.2,105.4L107,105.1L107.7,104.8L108.5,104.5L109.3,104.2L110,103.9L110.8,103.6L111.5,103.3L112.3,103L113,102.7L113.8,102.4L114.6,102.1L115.3,101.8L116.1,101.5L116.8,101.2L117.6,100.9L118.3,100.7L119.1,100.4L119.8,100.1L120.6,99.8L121.4,99.6L122.1,99.3L122.9,99L123.6,98.7L124.4,98.5L125.1,98.2L125.9,97.9L126.6,97.7L127.4,97.4L128.2,97.2L128.9,96.9L129.7,96.6L130.4,96.4L131.2,96.1L131.9,95.9L132.7,95.6L133.4,95.4L134.2,95.1L135,94.9L135.7,94.7L136.5,94.4L137.2,94.2L138,93.9L138.7,93.7L139.5,93.5L140.2,93.2L141,93L141.8,92.7L142.5,92.5L143.3,92.3L144,92L144.8,91.8L145.5,91.6L146.3,91.4L147,91.1L147.8,90.9L148.6,90.7L149.3,90.5L150.1,90.2L150.8,90L151.6,89.8L152.3,89.6L153.1,89.4L153.8,89.1L154.6,88.9L155.4,88.7L156.1,88.5L156.9,88.3L157.6,88.1L158.4,87.9L159.1,87.6L159.9,87.4L160.6,87.2L161.4,87L162.2,86.8L162.9,86.6L163.7,86.4L164.4,86.2L165.2,86L165.9,85.8L166.7,85.6L167.5,85.4L168.2,85.2L169,85L169.7,84.8L170.5,84.6L171.2,84.4L172,84.2L172.7,84L173.5,83.8L174.3,83.6L175,83.4L175.8,83.2L176.5,83L177.3,82.8L178,82.6L178.8,82.4L179.5,82.2L180.3,82L181.1,81.8L181.8,81.7L182.6,81.5L183.3,81.3L184.1,81.1L184.8,80.9L185.6,80.7L186.3,80.5L187.1,80.3L187.9,80.2L188.6,80L189.4,79.8L190.1,79.6L190.9,79.4L191.6,79.2L192.4,79.1L193.1,78.9L193.9,78.7L194.7,78.5L195.4,78.3L196.2,78.2L196.9,78L197.7,77.8L198.4,77.6L199.2,77.4L199.9,77.3L200.7,77.1L201.5,76.9L202.2,76.7L203,76.6L203.7,76.4L204.5,76.2L205.2,76L206,75.9L206.7,75.7L207.5,75.5L208.3,75.4L209,75.2L209.8,75L210.5,74.8L211.3,74.7L212,74.5L212.8,74.3L213.5,74.2L214.3,74L215.1,73.8L215.8,73.7L216.6,73.5L217.3,73.3L218.1,73.2L218.8,73L219.6,72.8L220.4,72.7L221.1,72.5L221.9,72.4L222.6,72.2L223.4,72L224.1,71.9L224.9,71.7L225.6,71.5L226.4,71.4L227.2,71.2L227.9,71.1L228.7,70.9L229.4,70.7L230.2,70.6L230.9,70.4L231.7,70.3L232.4,70.1L233.2,69.9L234,69.8L234.7,69.6L235.5,69.5L236.2,69.3L237,69.2L237.7,69L238.5,68.8L239.2,68.7L240,68.5L240.8,68.4L241.5,68.2L242.3,68.1L243,67.9L243.8,67.8L244.5,67.6L245.3,67.5L246,67.3L246.8,67.2L247.6,67L248.3,66.9L249.1,66.7L249.8,66.6L250.6,66.4L251.3,66.3L252.1,66.1L252.8,66L253.6,65.8L254.4,65.7L255.1,65.5L255.9,65.4L256.6,65.2L257.4,65.1L258.1,64.9L258.9,64.8L259.6,64.6L260.4,64.5L261.2,64.3L261.9,64.2L262.7,64L263.4,63.9L264.2,63.7L264.9,63.6L265.7,63.5L266.4,63.3L267.2,63.2L268,63L268.7,62.9L269.5,62.7L270.2,62.6L271,62.5L271.7,62.3L272.5,62.2L273.3,62L274,61.9L274.8,61.7L275.5,61.6L276.3,61.5L277,61.3L277.8,61.2L278.5,61L279.3,60.9L280.1,60.8L280.8,60.6L281.6,60.5L282.3,60.3L283.1,60.2L283.8,60.1L284.6,59.9L285.3,59.8L286.1,59.7L286.9,59.5L287.6,59.4L288.4,59.2L289.1,59.1L289.9,59L290.6,58.8L291.4,58.7L292.1,58.6L292.9,58.4L293.7,58.3L294.4,58.2L295.2,58L295.9,57.9L296.7,57.7L297.4,57.6L298.2,57.5L298.9,57.3L299.7,57.2L300.5,57.1L301.2,56.9L302,56.8L302.7,56.7L303.5,56.5L304.2,56.4L305,56.3L305.7,56.2L306.5,56L307.3,55.9L308,55.8L308.8,55.6L309.5,55.5L310.3,55.4L311,55.2L311.8,55.1L312.5,55L313.3,54.8L314.1,54.7L314.8,54.6L315.6,54.5L316.3,54.3L317.1,54.2L317.8,54.1L318.6,53.9L319.3,53.8L320.1,53.7L320.9,53.6L321.6,53.4L322.4,53.3L323.1,53.2L323.9,53L324.6,52.9L325.4,52.8L326.2,52.7L326.9,52.5L327.7,52.4L328.4,52.3L329.2,52.2L329.9,52L330.7,51.9L331.4,51.8L332.2,51.7L333,51.5L333.7,51.4L334.5,51.3L335.2,51.2L336,51L336.7,50.9L337.5,50.8L338.2,50.7L339,50.5L339.8,50.4L340.5,50.3L341.3,50.2L342,50L342.8,49.9L343.5,49.8L344.3,49.7L345,49.6L345.8,49.4L346.6,49.3L347.3,49.2L348.1,49.1L348.8,48.9L349.6,48.8L350.3,48.7L351.1,48.6L351.8,48.5L352.6,48.3L353.4,48.2L354.1,48.1L354.9,48L355.6,47.9L356.4,47.7L357.1,47.6L357.9,47.5L358.6,47.4L359.4,47.3L360.2,47.1L360.9,47L361.7,46.9L362.4,46.8L363.2,46.7L363.9,46.6L364.7,46.4L365.4,46.3L366.2,46.2L367,46.1L367.7,46"/>
+<path class="s-pom" d="M65.4,140L66.1,144.4L66.7,146.2L67.4,147.6L68.1,148.8L68.7,149.8L69.4,150.7L70,151.6L70.7,152.4L71.3,153.2L72,153.9L72.7,154.5L73.3,155.2L74,155.8L74.6,156.4L75.3,157L75.9,157.5L76.6,158.1L77.3,158.6L77.9,159.1L78.6,159.6L79.2,160.1L79.9,160.6L80.5,161L81.2,161.5L81.9,161.9L82.5,162.4L83.2,162.8L83.8,163.2L84.5,163.6L85.1,164L85.8,164.4L86.5,164.8L87.1,165.2L87.8,165.6L88.4,165.9L89.1,166.3L89.7,166.7L90.4,167L91.1,167.4L91.7,167.7L92.4,168.1L93,168.4L93.7,168.8L94.3,169.1L95,169.4L95.7,169.7L96.3,170.1L97,170.4L97.6,170.7L98.3,171L98.9,171.3L99.6,171.6L100.3,171.9L100.9,172.2L101.6,172.5L102.2,172.8L102.9,173.1L103.5,173.4L104.2,173.7L104.9,174L105.5,174.2L106.2,174.5L106.8,174.8L107.5,175.1L108.1,175.3L108.8,175.6L109.5,175.9L110.1,176.2L110.8,176.4L111.4,176.7L112.1,176.9L112.7,177.2L113.4,177.5L114.1,177.7L114.7,178L115.4,178.2L116,178.5L116.7,178.7L117.3,179L118,179.2L118.7,179.5L119.3,179.7L120,179.9L120.6,180.2L121.3,180.4L121.9,180.7L122.6,180.9L123.3,181.1L123.9,181.4L124.6,181.6L125.2,181.8L125.9,182.1L126.5,182.3L127.2,182.5L127.9,182.7L128.5,183L129.2,183.2L129.8,183.4L130.5,183.6L131.1,183.8L131.8,184.1L132.5,184.3L133.1,184.5L133.8,184.7L134.4,184.9L135.1,185.1L135.7,185.4L136.4,185.6L137.1,185.8L137.7,186L138.4,186.2L139,186.4L139.7,186.6L140.3,186.8L141,187L141.7,187.2L142.3,187.4L143,187.6L143.6,187.8L144.3,188L144.9,188.2L145.6,188.4L146.3,188.6L146.9,188.8L147.6,189L148.2,189.2L148.9,189.4L149.5,189.6L150.2,189.8L150.9,190L151.5,190.2L152.2,190.4L152.8,190.6L153.5,190.8L154.1,190.9L154.8,191.1L155.5,191.3L156.1,191.5L156.8,191.7L157.4,191.9L158.1,192.1L158.7,192.2L159.4,192.4L160.1,192.6L160.7,192.8L161.4,193L162,193.2L162.7,193.3L163.3,193.5L164,193.7L164.7,193.9L165.3,194.1L166,194.2L166.6,194.4L167.3,194.6L167.9,194.8L168.6,194.9L169.3,195.1L169.9,195.3L170.6,195.5L171.2,195.6L171.9,195.8L172.5,196L173.2,196.2L173.9,196.3L174.5,196.5L175.2,196.7L175.8,196.8L176.5,197L177.1,197.2L177.8,197.3L178.5,197.5L179.1,197.7L179.8,197.8L180.4,198L181.1,198.2L181.7,198.3L182.4,198.5L183.1,198.7L183.7,198.8L184.4,199L185,199.2L185.7,199.3L186.3,199.5L187,199.6L187.7,199.8L188.3,200L189,200.1L189.6,200.3L190.3,200.4L190.9,200.6L191.6,200.8L192.3,200.9L192.9,201.1L193.6,201.2L194.2,201.4L194.9,201.5L195.5,201.7L196.2,201.9L196.9,202L197.5,202.2L198.2,202.3L198.8,202.5L199.5,202.6L200.1,202.8L200.8,202.9L201.5,203.1L202.1,203.2L202.8,203.4L203.4,203.5L204.1,203.7L204.7,203.8L205.4,204L206.1,204.1L206.7,204.3L207.4,204.4L208,204.6L208.7,204.7L209.3,204.9L210,205L210.7,205.2L211.3,205.3L212,205.5L212.6,205.6L213.3,205.8L213.9,205.9L214.6,206.1L215.3,206.2L215.9,206.4L216.6,206.5L217.2,206.6L217.9,206.8L218.5,206.9L219.2,207.1L219.9,207.2L220.5,207.4L221.2,207.5L221.8,207.6L222.5,207.8L223.1,207.9L223.8,208.1L224.5,208.2L225.1,208.3L225.8,208.5L226.4,208.6L227.1,208.8L227.7,208.9L228.4,209L229.1,209.2L229.7,209.3L230.4,209.5L231,209.6L231.7,209.7L232.3,209.9L233,210L233.7,210.2L234.3,210.3L235,210.4L235.6,210.6L236.3,210.7L236.9,210.8L237.6,211L238.3,211.1L238.9,211.2L239.6,211.4L240.2,211.5L240.9,211.6L241.5,211.8L242.2,211.9L242.9,212L243.5,212.2L244.2,212.3L244.8,212.4L245.5,212.6L246.1,212.7L246.8,212.8L247.5,213L248.1,213.1L248.8,213.2L249.4,213.4L250.1,213.5L250.7,213.6L251.4,213.8L252.1,213.9L252.7,214L253.4,214.2L254,214.3L254.7,214.4L255.3,214.5L256,214.7L256.7,214.8L257.3,214.9L258,215.1L258.6,215.2L259.3,215.3L259.9,215.4L260.6,215.6L261.3,215.7L261.9,215.8L262.6,215.9L263.2,216.1L263.9,216.2L264.5,216.3L265.2,216.4L265.9,216.6L266.5,216.7L267.2,216.8L267.8,216.9L268.5,217.1L269.1,217.2L269.8,217.3L270.5,217.4L271.1,217.6L271.8,217.7L272.4,217.8L273.1,217.9L273.7,218.1L274.4,218.2L275.1,218.3L275.7,218.4L276.4,218.6L277,218.7L277.7,218.8L278.3,218.9L279,219L279.7,219.2L280.3,219.3L281,219.4L281.6,219.5L282.3,219.7L282.9,219.8L283.6,219.9L284.3,220L284.9,220.1L285.6,220.3L286.2,220.4L286.9,220.5L287.5,220.6L288.2,220.7L288.9,220.8L289.5,221L290.2,221.1L290.8,221.2L291.5,221.3L292.1,221.4L292.8,221.6L293.5,221.7L294.1,221.8L294.8,221.9L295.4,222L296.1,222.1L296.7,222.3L297.4,222.4L298.1,222.5L298.7,222.6L299.4,222.7L300,222.8L300.7,223L301.3,223.1L302,223.2L302.7,223.3L303.3,223.4L304,223.5L304.6,223.7L305.3,223.8L305.9,223.9L306.6,224L307.3,224.1L307.9,224.2L308.6,224.3L309.2,224.5L309.9,224.6L310.5,224.7L311.2,224.8L311.9,224.9L312.5,225L313.2,225.1L313.8,225.2L314.5,225.4L315.1,225.5L315.8,225.6L316.5,225.7L317.1,225.8L317.8,225.9L318.4,226L319.1,226.1L319.7,226.3L320.4,226.4L321.1,226.5L321.7,226.6L322.4,226.7L323,226.8L323.7,226.9L324.3,227L325,227.1L325.7,227.3L326.3,227.4L327,227.5L327.6,227.6L328.3,227.7"/>
+<text class="s-txt-k1" x="364.4" y="37" text-anchor="end">y = √x</text>
+<text class="s-txt-k2" x="226.4" y="126.8" text-anchor="start">πf(x)²</text>
+<ellipse class="s-k2" cx="328.3" cy="140" rx="7.9" ry="87.7" style="fill:none"/><ellipse class="s-k2" cx="210" cy="140" rx="5.3" ry="65.0" style="fill:rgba(220,38,38,.12)"/>
+</svg>
+<figcaption>Ko lik pod \(y = \sqrt{x}\) zavrtimo okoli osi \(x\), je vsak prerez krog s ploščino \(\pi f(x)^2\). Vsota prerezov je \(V = \pi\int_a^b f(x)^2\,dx\).</figcaption>
+</figure>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-9">
+              <h4>Tip 9: Ploščina lika med grafom in osjo x</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Izračunajte ploščino lika, ki ga graf \(f(x) = x^2 - 2x\) oklepa z osjo \(x\) na intervalu \([0, 3]\).</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> „ploščina lika med grafom in abscisno osjo“.</p><ul class="kljucne"><li>„ploščina lika“</li><li>„graf oklepa z osjo x“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Poišči ničle na intervalu.</p><div class="na-nalogi"><p>\(x(x - 2) = 0\): \(0\) in \(2\).</p></div></li>
+              <li><p class="korak">Razdeli interval in ugotovi, kje je graf pod osjo.</p><div class="na-nalogi"><p>Na \((0, 2)\) pod osjo, na \((2, 3)\) nad osjo.</p></div></li>
+              <li><p class="korak">Izračunaj integrala po delih.</p><div class="na-nalogi"><p>\(F(x) = \frac{x^3}{3} - x^2\): \(\int_0^2 f = -\frac{4}{3}\), \(\int_2^3 f = 0 - \left(-\frac{4}{3}\right) = \frac{4}{3}\).</p></div></li>
+              <li><p class="korak">Seštej absolutne vrednosti.</p><div class="na-nalogi"><p>\(S = \frac{4}{3} + \frac{4}{3} = \frac{8}{3}\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> \(y = 4 - x^2\) in os \(x\)</p><p>\(\int_{-2}^{2}(4 - x^2)\,dx = \frac{32}{3}\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> \(y = \sin x\) na \([0, 2\pi]\)</p><p>\(2 + 2 = 4\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> \(y = \frac{1}{x}\) na \([1, e^2]\)</p><p>\(\ln e^2 = 2\).</p></div>
+            </div>
+            <div class="tip-naloge" id="tip-10">
+              <h4>Tip 10: Ploščina lika med krivuljama</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Izračunajte ploščino lika med parabolo \(y = x^2\) in premico \(y = x + 2\).</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> lik omejujeta dva grafa.</p><ul class="kljucne"><li>„ploščina lika, ki ga omejujeta“</li><li>„med krivuljama“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Izračunaj presečišči (meji).</p><div class="na-nalogi"><p>\(x^2 = x + 2\): \(x = -1\), \(x = 2\).</p></div></li>
+              <li><p class="korak">Ugotovi, katera krivulja je zgoraj.</p><div class="na-nalogi"><p>Pri \(x = 0\): premica 2, parabola 0, zgoraj je premica.</p></div></li>
+              <li><p class="korak">Zapiši integral razlike.</p><div class="na-nalogi"><p>\(S = \int_{-1}^{2}(x + 2 - x^2)\,dx\).</p></div></li>
+              <li><p class="korak">Izračunaj.</p><div class="na-nalogi"><p>\(\left[\frac{x^2}{2} + 2x - \frac{x^3}{3}\right]_{-1}^{2} = \frac{10}{3} + \frac{7}{6} = \frac{9}{2}\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> \(y = \sqrt{x}\) in \(y = x^2\)</p><p>\(\int_0^1(\sqrt{x} - x^2)\,dx = \frac{1}{3}\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> \(y = 6 - x^2\) in \(y = 2\)</p><p>\(\int_{-2}^{2}(4 - x^2)\,dx = \frac{32}{3}\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> \(y = x\) in \(y = x^3\) (oba dela)</p><p>\(2\int_0^1(x - x^3)\,dx = \frac{1}{2}\).</p></div>
+            </div>
+            <div class="tip-naloge" id="tip-11">
+              <h4>Tip 11: Prostornina vrtenine <span class="badge-vr">VR</span></h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Lik med grafom \(f(x) = \sqrt{x}\), osjo \(x\) in premico \(x = 4\) zavrtimo okoli osi \(x\). Izračunajte prostornino nastale vrtenine.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> lik se vrti okoli osi.</p><ul class="kljucne"><li>„zavrtimo okoli osi x“</li><li>„prostornina vrtenine“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Določi meji.</p><div class="na-nalogi"><p>\(a = 0\), \(b = 4\).</p></div></li>
+              <li><p class="korak">Kvadriraj funkcijo.</p><div class="na-nalogi"><p>\(f(x)^2 = x\).</p></div></li>
+              <li><p class="korak">Integriraj.</p><div class="na-nalogi"><p>\(\int_0^4 x\,dx = 8\).</p></div></li>
+              <li><p class="korak">Pomnoži s \(\pi\).</p><div class="na-nalogi"><p>\(V = 8\pi\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Krogla: \(f(x) = \sqrt{r^2 - x^2}\) na \([-r, r]\)</p><p>\(\pi\int_{-r}^{r}(r^2 - x^2)\,dx = \frac{4}{3}\pi r^3\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> \(y = x^2\) na \([0, 1]\)</p><p>\(\pi\int_0^1 x^4\,dx = \frac{\pi}{5}\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Stožec: \(y = \frac{r}{h}x\) na \([0, h]\)</p><p>\(\frac{\pi r^2 h}{3}\).</p></div>
+            </div>
+            <div class="tip-naloge" id="tip-12">
+              <h4>Tip 12: Realni problem z določenim integralom</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Hitrost telesa je \(v(t) = 6 - 2t\) (v m/s). Kolikšno pot opravi v prvih treh sekundah?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> dana je hitrost spreminjanja, iščemo skupno spremembo ali povprečje.</p><ul class="kljucne"><li>„hitrost je \(v(t)\), kolikšna pot“</li><li>„pretok“</li><li>„povprečna vrednost“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Prepoznaj, katero količino integriramo.</p><div class="na-nalogi"><p>Pot je integral hitrosti.</p></div></li>
+              <li><p class="korak">Določi meji.</p><div class="na-nalogi"><p>\(t \in [0, 3]\) (hitrost je tu nenegativna).</p></div></li>
+              <li><p class="korak">Izračunaj integral.</p><div class="na-nalogi"><p>\(\int_0^3(6 - 2t)\,dt = [6t - t^2]_0^3 = 9\).</p></div></li>
+              <li><p class="korak">Odgovori z enoto.</p><div class="na-nalogi"><p>9 m.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Pretok \(q(t) = 2t + 1\) L/min. Koliko vode priteče v 5 minutah?</p><p>\(\int_0^5(2t + 1)\,dt = 30\) L.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Povprečna temperatura \(T(t) = 10 + 6\sin\frac{\pi t}{12}\) na \([0, 12]\)</p><p>\(\frac{1}{12}\int_0^{12} T\,dt = 10 + \frac{12}{\pi} \approx 13{,}8\) °C.</p></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="subsection" id="kljuc">
+          <div class="subsection-head">
+            <h2>Ključ: kateri tip naloge je to?</h2>
+            <p>Poišči besedo iz navodila naloge in skoči na pravi postopek.</p>
+          </div>
+          <div class="info-card">
+            <div class="tabela-wrap">
+              <table class="tabela">
+                <thead><tr><th>V besedilu naloge piše …</th><th>Tip</th></tr></thead>
+                <tbody>
+                  <tr><td>„primitivna funkcija“, „graf gre skozi točko“</td><td><a href="#tip-1">Tip 1</a></td></tr>
+                  <tr><td>„nedoločeni integral“ vsote osnovnih funkcij</td><td><a href="#tip-2">Tip 2</a></td></tr>
+                  <tr><td>notranja funkcija in njen odvod v integralu</td><td><a href="#tip-3">Tip 3</a></td></tr>
+                  <tr><td>\(\int x e^x\,dx\), \(\int \ln x\,dx\)</td><td><a href="#tip-4">Tip 4</a></td></tr>
+                  <tr><td>ulomek polinomov, „parcialni ulomki“</td><td><a href="#tip-5">Tip 5</a></td></tr>
+                  <tr><td>„iz grafa“, polkrog, trikotnik</td><td><a href="#tip-6">Tip 6</a></td></tr>
+                  <tr><td>„znano je, da je \(\int\)“, soda in liha funkcija</td><td><a href="#tip-7">Tip 7</a></td></tr>
+                  <tr><td>\(\int_a^b\) z znano primitivno funkcijo</td><td><a href="#tip-8">Tip 8</a></td></tr>
+                  <tr><td>„ploščina lika med grafom in osjo“</td><td><a href="#tip-9">Tip 9</a></td></tr>
+                  <tr><td>„ploščina lika med krivuljama“</td><td><a href="#tip-10">Tip 10</a></td></tr>
+                  <tr><td>„zavrtimo okoli osi“</td><td><a href="#tip-11">Tip 11</a></td></tr>
+                  <tr><td>hitrost, pretok, povprečna vrednost</td><td><a href="#tip-12">Tip 12</a></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
         <section class="subsection">
           <div class="subsection-head">
-            <h2>3. Pogoste napake</h2>
+            <h2>Pogoste napake</h2>
           </div>
           <div class="info-card">
             <ul>
-              <li>Pozabiš prišteti integracijsko konstanto \(C\) pri nedoločenem integralu.</li>
-              <li>Pri določenem integralu pozabiš vstavi \(F(b) - F(a)\) (vrstni red!).</li>
-              <li>Pri substituciji pozabiš zamenjati \(dx\) z \(du\) ali vrnitvi v prvotno spremenljivko.</li>
-              <li>Pri per partes zamenjaš \(u\) in \(dv\) (uporabi LIATE).</li>
-              <li>Pri ploščini pozabiš na absolutno vrednost (negativni deli se odštejejo, ne prištejejo).</li>
-              <li>Pri prostornini vrtenine pozabiš kvadrirati funkcijo ali pomnožiti s \(\pi\).</li>
-              <li>Pri \(\int \tfrac{1}{x} dx\) pozabiš absolutno vrednost: \(\ln|x|\), ne \(\ln x\).</li>
-              <li>Pri \(\int x^n dx\) za \(n = -1\) uporabiš formulo \(\tfrac{x^{n+1}}{n+1}\) — to je narobe, uporabi \(\ln|x|\).</li>
-              <li>Pri limitah \(0/0\) pozabiš razstaviti ali racionalizirati.</li>
-              <li>Pri tangenti pozabiš, da je \(k = f'(x_0)\), ne \(f(x_0)\).</li>
+              <li>Pri nedoločenem integralu pozabiš konstanto \(C\).</li>
+              <li>\(\int x^{-1}\,dx\) računaš kot \(\frac{x^0}{0}\) namesto \(\ln|x|\).</li>
+              <li>Integral produkta računaš kot produkt integralov.</li>
+              <li>Pri ploščini ne razdeliš intervala pri ničlah in del pod osjo odšteješ.</li>
+              <li>Pri ploščini med krivuljama odšteješ zgornjo od spodnje.</li>
+              <li>Pri vrtenini pozabiš kvadrirati funkcijo ali pomnožiti s \(\pi\).</li>
             </ul>
           </div>
         </section>
 
-        <!-- ============ 4. ŠTUDIJSKI VODIČ ============ -->
         <section class="subsection">
           <div class="subsection-head">
-            <h2>4. Študijski vodič — hitri pregled</h2>
-            <p>Kaj moraš znati na pamet in kako pristopiti k nalogi.</p>
-          </div>
-
-          <div class="info-card">
-            <h3>Kaj moraš znati na pamet</h3>
-            <ul>
-              <li><strong>Tabela integralov</strong> (15 osnovnih) — glej zgoraj.</li>
-              <li><strong>Newton–Leibnizova formula:</strong> \(\int_a^b f = F(b) - F(a)\).</li>
-              <li><strong>Ploščina:</strong> \(S = \int_a^b |f(x)|\,dx\) ali \(\int_a^b (f-g)\,dx\).</li>
-              <li><strong>Prostornina vrtenine:</strong> \(V = \pi\int_a^b [f(x)]^2\,dx\).</li>
-              <li><strong>Per partes:</strong> \(\int u\,dv = uv - \int v\,du\).</li>
-              <li><strong>Substitucija:</strong> \(\int f(g(x))g'(x)\,dx = \int f(u)\,du\).</li>
-              <li><strong>Limite:</strong> \(\lim_{x\to 0}\tfrac{\sin x}{x} = 1\), \(\lim_{n\to\infty}(1+\tfrac{1}{n})^n = e\).</li>
-            </ul>
-          </div>
-
-          <div class="info-card">
-            <h3>Kako pristopiti k nalogi</h3>
-            <ol>
-              <li><strong>Preberi nalogo in prepoznaj tip:</strong> nedoločeni integral, določeni integral, ploščina, prostornina, limita, odvod, tangenta?</li>
-              <li><strong>Za nedoločeni integral:</strong> uporabi tabelo, substitucijo ali per partes.</li>
-              <li><strong>Za določeni integral:</strong> izračunaj nedoločeni, vstavi meje.</li>
-              <li><strong>Za ploščino:</strong> preveri, kje je funkcija pozitivna/negativna, razdeli interval.</li>
-              <li><strong>Za prostornino:</strong> kvadriraj funkcijo, integriraj, pomnoži s \(\pi\).</li>
-              <li><strong>Za limite:</strong> poskusi vstaviti, nato razstavi/racionaliziraj/L'Hôpital.</li>
-              <li><strong>Za odvod:</strong> uporabi pravila in verižno pravilo.</li>
-              <li><strong>Za tangento:</strong> izračunaj \(y_0\), \(k = f'(x_0)\), zapiši \(y - y_0 = k(x-x_0)\).</li>
-            </ol>
-          </div>
-
-          <div class="info-card">
-            <h3>⏱️ Časovni načrt za en večer</h3>
-            <ul>
-              <li><strong>30 min:</strong> Teorija — tabela integralov, lastnosti, metode.</li>
-              <li><strong>60 min:</strong> Tipi 1–7 (osnovni integrali, substitucija, per partes, parcialni ulomki, določeni integral).</li>
-              <li><strong>45 min:</strong> Tipi 8–10 (ploščine, prostornine, povprečna vrednost).</li>
-              <li><strong>45 min:</strong> Tipi 11–14 (limite, odvodi, tangente, ekstremi).</li>
-              <li><strong>30 min:</strong> Ponovi pogoste napake in študijski vodič.</li>
-              <li><strong>30 min:</strong> Reši 2–3 izpitne pole za vajo.</li>
-            </ul>
-          </div>
-        </section>
-
-        <!-- ============ 5. POVEZAVE ============ -->
-        <section class="subsection">
-          <div class="subsection-head">
-            <h2>5. Vadi naprej</h2>
+            <h2>Vadi naprej</h2>
             <p>Ko predelaš razlago, preveri znanje z nalogami.</p>
           </div>
           <div class="link-list">
-            <a class="link-item" href="/views/matematika/matura/osnovna_raven/naloge/resene/">
+            <a class="link-item" href="/views/matematika/matura/matura.html">
               <span class="link-item-text">
-                <strong>Rešene naloge — osnovna raven</strong>
-                <small>Primeri z razlago</small>
-              </span>
-              <span class="arrow">→</span>
-            </a>
-            <a class="link-item" href="/views/matematika/matura/visja_raven/naloge/resene/">
-              <span class="link-item-text">
-                <strong>Rešene naloge — višja raven</strong>
-                <small>Zahtevnejši primeri</small>
+                <strong>Maturitetne pole</strong>
+                <small>Rešuj prave izpitne pole</small>
               </span>
               <span class="arrow">→</span>
             </a>
@@ -772,7 +582,6 @@
   </div>
 
   <div id="footer"></div>
-
   <script src="/components/components.js"></script>
 </body>
 </html>
