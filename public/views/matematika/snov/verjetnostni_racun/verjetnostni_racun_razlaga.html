@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Verjetnostni račun — razlaga in postopki | Piflar.si</title>
-  <meta name="description" content="Celovita razlaga verjetnostnega računa za maturo: poskus, dogodek, klasična verjetnost, nasprotni dogodek, unija, pogojna verjetnost, neodvisni dogodki, Bernoullijevo zaporedje, Bayesova formula.">
+  <meta name="description" content="Verjetnostni račun za maturo: poskus, dogodek in vzorčni prostor, računanje z dogodki, vrste verjetnosti, nasprotni dogodek in vsota dogodkov, pogojna verjetnost, neodvisni dogodki, Bernoullijevo zaporedje poskusov in normalna porazdelitev.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
@@ -23,28 +23,24 @@
         <header class="page-header">
           <span class="page-eyebrow">Matematika · Snov · 4.16</span>
           <h1>Verjetnostni račun</h1>
-          <p>Vse o verjetnosti za maturo: osnovni pojmi (poskus, dogodek, vzorčni prostor), klasična verjetnost, nasprotni dogodek, unija, pogojna verjetnost, neodvisni dogodki, Bernoullijevo zaporedje in Bayesova formula.</p>
+          <p>Verjetnost meri, kako pričakovan je izid poskusa, katerega rezultata ne moremo napovedati. Pri večini nalog najprej preštejemo izide (kombinatorika), nato pa uporabimo pravila za nasprotni dogodek, vsoto in produkt. Pod razlago vsakega podpoglavja so vsi tipi nalog, ki se pojavijo pri tem sklopu.</p>
           <div class="page-meta">
-            <div class="page-meta-item"><strong>10</strong><span>Tipov nalog</span></div>
-            <div class="page-meta-item"><strong>40+</strong><span>Primerov</span></div>
+            <div class="page-meta-item"><strong>8</strong><span>Podpoglavij</span></div>
+            <div class="page-meta-item"><strong>8</strong><span>Tipov nalog</span></div>
             <div class="page-meta-item"><strong>~50 min</strong><span>Branja</span></div>
           </div>
         </header>
 
-        <!-- ============ MATURA FORMULE ============ -->
         <div class="matura-formule">
-          <h3>Formule na maturi — osnovna raven</h3>
-          <p>Na maturitetnem listu s formulami so za <strong>verjetnostni račun</strong> relevantne naslednje formule:</p>
+          <h3>Formule na maturi</h3>
+          <p>Na listu za višjo raven je Bernoullijeva formula. Na pamet:</p>
           <div class="matura-grid">
             <div class="matura-levo">
               <ul>
-                <li><strong>Klasična verjetnost:</strong> \(P(A) = \dfrac{|A|}{|\Omega|}\) (ugodni / vsi izidi)</li>
-                <li><strong>Nasprotni dogodek:</strong> \(P(A') = 1 - P(A)\)</li>
-                <li><strong>Unija:</strong> \(P(A \cup B) = P(A) + P(B) - P(A \cap B)\)</li>
-                <li><strong>Pogojna verjetnost:</strong> \(P(A|B) = \dfrac{P(A \cap B)}{P(B)}\)</li>
-                <li><strong>Neodvisni dogodki:</strong> \(P(A \cap B) = P(A) \cdot P(B)\)</li>
-                <li><strong>Bernoullijeva formula:</strong> \(P(n, p, k) = \dbinom{n}{k} p^k (1-p)^{n-k}\)</li>
-                <li><strong>Bayesova formula:</strong> \(P(B_k|A) = \dfrac{P(A|B_k) P(B_k)}{\sum P(A|B_i) P(B_i)}\)</li>
+                <li>\(P(A) = \dfrac{\text{število ugodnih izidov}}{\text{število vseh izidov}}\)</li>
+                <li>\(P(A') = 1 - P(A)\), \(P(A + B) = P(A) + P(B) - P(AB)\)</li>
+                <li>\(P(A \mid B) = \dfrac{P(AB)}{P(B)}\); neodvisna: \(P(AB) = P(A)P(B)\)</li>
+                <li>\(P_n(k) = \dbinom{n}{k}p^k(1 - p)^{n - k}\) <em>(na listu VR)</em></li>
               </ul>
             </div>
             <div class="matura-slika">
@@ -53,416 +49,412 @@
           </div>
         </div>
 
-        <!-- ============ 1. TEORIJA ============ -->
-        <section class="subsection">
-          <div class="subsection-head">
-            <h2>1. Teorija — pojmi in formule</h2>
-            <p>Kar moraš znati na pamet, preden se lotiš nalog.</p>
-          </div>
+        <nav class="kazalo" aria-label="Podpoglavja">
+          <h2>Podpoglavja</h2>
+          <ol>
+            <li><a href="#sklop-1"><span class="kazalo-st">1</span> Osnovni pojmi verjetnostnega računa</a></li>
+            <li><a href="#sklop-2"><span class="kazalo-st">2</span> Računanje z dogodki</a></li>
+            <li><a href="#sklop-3"><span class="kazalo-st">3</span> Subjektivna, empirična in matematična verjetnost</a></li>
+            <li><a href="#sklop-4"><span class="kazalo-st">4</span> Verjetnost nasprotnih dogodkov in vsote dogodkov</a></li>
+            <li><a href="#sklop-5"><span class="kazalo-st">5</span> Pogojna verjetnost <span class="badge-vr">VR</span></a></li>
+            <li><a href="#sklop-6"><span class="kazalo-st">6</span> Verjetnost produkta, neodvisna dogodka <span class="badge-vr">VR</span></a></li>
+            <li><a href="#sklop-7"><span class="kazalo-st">7</span> Zaporedje neodvisnih poskusov <span class="badge-vr">VR</span></a></li>
+            <li><a href="#sklop-8"><span class="kazalo-st">8</span> Normalna porazdelitev</a></li>
+            <li><a href="#kljuc"><span class="kazalo-st">?</span> Ključ: kateri tip naloge je to?</a></li>
+          </ol>
+        </nav>
 
-          <div class="info-card">
-            <h3>Osnovni pojmi</h3>
-            <div class="concept-list two-col">
-              <div class="concept">
-                <h4>Poskus</h4>
-                <div class="concept-formula">postopek z več možnimi izidi</div>
-                <p class="concept-desc">Npr. met kocke, žrebanje kroglic.</p>
-              </div>
-              <div class="concept">
-                <h4>Izid</h4>
-                <div class="concept-formula">\(\omega\)</div>
-                <p class="concept-desc">En sam rezultat poskusa.</p>
-              </div>
-              <div class="concept">
-                <h4>Vzorčni prostor</h4>
-                <div class="concept-formula">\(\Omega\)</div>
-                <p class="concept-desc">Množica vseh možnih izidov.</p>
-              </div>
-              <div class="concept">
-                <h4>Dogodek</h4>
-                <div class="concept-formula">\(A \subseteq \Omega\)</div>
-                <p class="concept-desc">Množica izidov, ki nas zanimajo.</p>
-              </div>
-              <div class="concept">
-                <h4>Gotov dogodek</h4>
-                <div class="concept-formula">\(G = \Omega\), \(P(G) = 1\)</div>
-              </div>
-              <div class="concept">
-                <h4>Nemogoč dogodek</h4>
-                <div class="concept-formula">\(N = \emptyset\), \(P(N) = 0\)</div>
-              </div>
-              <div class="concept">
-                <h4>Nasprotni dogodek</h4>
-                <div class="concept-formula">\(A'\), \(\overline{A}\)</div>
-                <p class="concept-desc">Vsi izidi, ki niso v \(A\).</p>
-              </div>
-              <div class="concept">
-                <h4>Neodvisna dogodka</h4>
-                <div class="concept-formula">\(P(A \cap B) = P(A) P(B)\)</div>
-                <p class="concept-desc">Nastop enega ne vpliva na drugega.</p>
-              </div>
-            </div>
+        <!-- SKLOP 1 -->
+        <section class="sklop" id="sklop-1">
+          <header class="sklop-header">
+            <span class="sklop-num">4.16 · 1</span>
+            <h2>Osnovni pojmi verjetnostnega računa</h2>
+            <p>Poskus, izid, dogodek, vzorčni prostor.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <ul>
+              <li><strong>Poskus</strong> je dejanje z negotovim izidom, ki ga lahko ponavljamo pod enakimi pogoji (met kocke).</li>
+              <li><strong>Izid</strong> (elementarni dogodek) je en mogoč rezultat, <strong>vzorčni prostor</strong> \(G\) množica vseh izidov.</li>
+              <li><strong>Dogodek</strong> je podmnožica vzorčnega prostora. \(G\) je gotov dogodek, \(\emptyset\) nemogoč. Poskus z \(n\) izidi ima \(2^n\) dogodkov.</li>
+            </ul>
           </div>
-
-          <div class="info-card">
-            <h3>Definicije verjetnosti</h3>
-            <div class="concept-list two-col">
-              <div class="concept">
-                <h4>Subjektivna verjetnost</h4>
-                <div class="concept-formula">osebna ocena</div>
-                <p class="concept-desc">Temelji na prepričanju posameznika.</p>
-              </div>
-              <div class="concept">
-                <h4>Empirična verjetnost</h4>
-                <div class="concept-formula">relativna frekvenca</div>
-                <p class="concept-desc">Iz opazovanj: \(\dfrac{\text{št. ugodnih}}{\text{št. poskusov}}\).</p>
-              </div>
-              <div class="concept">
-                <h4>Matematična verjetnost</h4>
-                <div class="concept-formula">\(P(A) = \dfrac{|A|}{|\Omega|}\)</div>
-                <p class="concept-desc">Klasična definicija, velja, ko so vsi izidi enako verjetni.</p>
-              </div>
-              <div class="concept">
-                <h4>Lastnosti verjetnosti</h4>
-                <div class="concept-formula">\(0 \leq P(A) \leq 1\)</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="info-card">
-            <h3>Računanje z dogodki</h3>
-            <div class="concept-list two-col">
-              <div class="concept">
-                <h4>Nasprotni dogodek</h4>
-                <div class="concept-formula">\(P(A') = 1 - P(A)\)</div>
-              </div>
-              <div class="concept">
-                <h4>Unija (vsota)</h4>
-                <div class="concept-formula">\(P(A \cup B) = P(A) + P(B) - P(A \cap B)\)</div>
-                <p class="concept-desc">Če sta dogodka nezdružljiva (\(A \cap B = \emptyset\)), je \(P(A \cup B) = P(A) + P(B)\).</p>
-              </div>
-              <div class="concept">
-                <h4>Presek (produkt)</h4>
-                <div class="concept-formula">\(P(A \cap B)\)</div>
-                <p class="concept-desc">Oba dogodka hkrati.</p>
-              </div>
-              <div class="concept">
-                <h4>Pogojna verjetnost</h4>
-                <div class="concept-formula">\(P(A|B) = \dfrac{P(A \cap B)}{P(B)}\)</div>
-                <p class="concept-desc">Verjetnost \(A\), če vemo, da se je zgodil \(B\).</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="info-card">
-            <h3>Bernoullijevo zaporedje in Bayesova formula</h3>
-            <div class="concept-list two-col">
-              <div class="concept">
-                <h4>Bernoullijevo zaporedje</h4>
-                <div class="concept-formula">\(P(X = k) = \dbinom{n}{k} p^k (1-p)^{n-k}\)</div>
-                <p class="concept-desc">\(n\) ponovitev poskusa, vsakič ista verjetnost \(p\) uspeha.</p>
-              </div>
-              <div class="concept">
-                <h4>Pričakovana vrednost</h4>
-                <div class="concept-formula">\(E(X) = np\)</div>
-              </div>
-              <div class="concept">
-                <h4>Standardni odklon</h4>
-                <div class="concept-formula">\(\sigma = \sqrt{np(1-p)}\)</div>
-              </div>
-              <div class="concept">
-                <h4>Bayesova formula</h4>
-                <div class="concept-formula">\(P(B_k|A) = \dfrac{P(A|B_k) P(B_k)}{\sum P(A|B_i) P(B_i)}\)</div>
-                <p class="concept-desc">Obrat pogojne verjetnosti.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="info-card">
-            <h3>Formula za totalno verjetnost</h3>
-            <div class="concept-list two-col">
-              <div class="concept">
-                <h4>Totalna verjetnost</h4>
-                <div class="concept-formula">\(P(A) = \sum_i P(A|B_i) P(B_i)\)</div>
-                <p class="concept-desc">Dogodki \(B_i\) tvorijo popoln sistem (razbitje \(\Omega\)).</p>
-              </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-1">
+              <h4>Tip 1: Vzorčni prostor in dogodki</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Hkrati vržemo kovanec in kocko. Zapišite vzorčni prostor, število izidov in dogodek \(A\): pade grb in sodo število.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> sprašujejo po vseh možnih izidih ali po izidih, ki ustrezajo dogodku.</p><ul class="kljucne"><li>„zapišite vzorčni prostor“</li><li>„koliko je izidov“</li><li>„zapišite dogodek“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Zapiši izide posameznih delov poskusa.</p><div class="na-nalogi"><p>Kovanec: G, C. Kocka: 1 do 6.</p></div></li>
+              <li><p class="korak">Sestavi vzorčni prostor (pari, osnovni izrek za število).</p><div class="na-nalogi"><p>\(G = \{(G, 1), \ldots, (G, 6), (C, 1), \ldots, (C, 6)\}\), \(2 \cdot 6 = 12\) izidov.</p></div></li>
+              <li><p class="korak">Izberi izide, ki ustrezajo dogodku.</p><div class="na-nalogi"><p>\(A = \{(G, 2), (G, 4), (G, 6)\}\).</p></div></li>
+              <li><p class="korak">Preštej.</p><div class="na-nalogi"><p>\(|A| = 3\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Met dveh kock: izidi in dogodek „vsota je 7“</p><p>36 izidov; \((1, 6), (2, 5), \ldots, (6, 1)\): 6 izidov.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Met treh kovancev, „vsaj dva grba“</p><p>8 izidov; GGG, GGC, GCG, CGG: 4 izidi.</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Koliko dogodkov ima poskus s 4 izidi?</p><p>\(2^4 = 16\).</p></div>
             </div>
           </div>
         </section>
 
-        <!-- ============ 2. TIPI NALOG ============ -->
-        <section class="subsection">
-          <div class="subsection-head">
-            <h2>2. Tipi nalog — postopki po korakih</h2>
-            <p>Za vsak tip: kako ga prepoznaš, kako ga rešiš, primer.</p>
+        <!-- SKLOP 2 -->
+        <section class="sklop" id="sklop-2">
+          <header class="sklop-header">
+            <span class="sklop-num">4.16 · 2</span>
+            <h2>Računanje z dogodki</h2>
+            <p>Vsota, produkt, nasprotni dogodek.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <ul>
+              <li><strong>Vsota</strong> \(A + B\): zgodi se \(A\) ali \(B\) (unija).</li>
+              <li><strong>Produkt</strong> \(AB\): zgodita se oba (presek).</li>
+              <li><strong>Nasprotni dogodek</strong> \(A'\): \(A\) se ne zgodi. Velja \(A + A' = G\), \(AA' = \emptyset\).</li>
+              <li><strong>Razlika</strong> \(A - B\): zgodi se \(A\), \(B\) pa ne.</li>
+              <li>Dogodka sta <strong>nezdružljiva</strong>, če je \(AB = \emptyset\) (ne moreta se zgoditi hkrati).</li>
+            </ul>
+            <figure class="slika slika--ozka">
+<svg viewBox="0 0 340 251" role="img" aria-label="Vennov diagram dogodkov A in B" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g1-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g1-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g1-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g1-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g1-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g1-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<polygon class="s-pom" points="26.9,224 313.1,224 313.1,27 26.9,27"/>
+<text class="s-txt-k1" x="94" y="125.5" text-anchor="middle">A</text>
+<text class="s-txt-k3" x="246" y="125.5" text-anchor="middle">B</text>
+<text class="s-txt-b" x="170" y="125.5" text-anchor="middle">AB</text>
+<text class="s-txt-muted" x="44.8" y="44.9" text-anchor="middle">G</text>
+<text class="s-txt-muted" x="67.2" y="212.8" text-anchor="middle">1, 3</text>
+<text class="s-txt-k1" x="111.9" y="156.9" text-anchor="middle">2</text>
+<text class="s-txt-b" x="170" y="156.9" text-anchor="middle">4, 6</text>
+<text class="s-txt-k3" x="228.1" y="156.9" text-anchor="middle">5</text>
+<circle class="s-lik" cx="134.2" cy="130" r="71.5"/>
+<circle class="s-lik-2" cx="205.8" cy="130" r="71.5"/>
+</svg>
+<figcaption>Met kocke: \(A\) = pade sodo število \(\{2, 4, 6\}\), \(B\) = pade več kot 3 \(\{4, 5, 6\}\). Presek \(AB = \{4, 6\}\), vsota \(A + B = \{2, 4, 5, 6\}\).</figcaption>
+</figure>
           </div>
-
-          <!-- TIP 1 -->
-          <div class="info-card" id="tip-1">
-            <div class="tip-header">
-              <h3>Tip 1: Klasična verjetnost</h3>
-              <div class="tip-formula">\(P(A) = \dfrac{|A|}{|\Omega|}\)</div>
-            </div>
-            <p><strong>Kako prepoznaš:</strong> "izračunajte verjetnost dogodka", vsi izidi enako verjetni.</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Preštej vse možne izide \(|\Omega|\).</li>
-              <li>Preštej ugodne izide \(|A|\).</li>
-              <li>Izračunaj \(P(A) = \dfrac{|A|}{|\Omega|}\).</li>
-            </ol>
-            <p class="plain-example"><strong>Primer:</strong> Vržemo kocko. Verjetnost, da pade sodo število?</p>
-            <div class="plain-example">
-              <p>\(|\Omega| = 6\), \(|A| = 3\) (2, 4, 6). \(P(A) = \dfrac{3}{6} = \dfrac{1}{2}\).</p>
-            </div>
-          </div>
-
-          <!-- TIP 2 -->
-          <div class="info-card" id="tip-2">
-            <div class="tip-header">
-              <h3>Tip 2: Nasprotni dogodek</h3>
-              <div class="tip-formula">\(P(A') = 1 - P(A)\)</div>
-            </div>
-            <p><strong>Kako prepoznaš:</strong> "vsaj eden", "niti en", "nasprotni dogodek".</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Prepoznaj nasprotni dogodek \(A'\).</li>
-              <li>Izračunaj \(P(A')\), nato \(P(A) = 1 - P(A')\).</li>
-            </ol>
-            <p class="plain-example"><strong>Primer:</strong> Kovanec vržemo 5-krat. Verjetnost, da vsaj enkrat pade grb?</p>
-            <div class="plain-example">
-              <p>Nasprotni dogodek: vsakič pade številka. \(P(A') = \left(\dfrac{1}{2}\right)^5 = \dfrac{1}{32}\).</p>
-              <p>\(P(A) = 1 - \dfrac{1}{32} = \dfrac{31}{32}\).</p>
-            </div>
-          </div>
-
-          <!-- TIP 3 -->
-          <div class="info-card" id="tip-3">
-            <div class="tip-header">
-              <h3>Tip 3: Unija dogodkov</h3>
-              <div class="tip-formula">\(P(A \cup B) = P(A) + P(B) - P(A \cap B)\)</div>
-            </div>
-            <p><strong>Kako prepoznaš:</strong> "A ali B", "vsaj eden od dogodkov".</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Preveri, ali sta dogodka nezdružljiva (potem \(P(A \cap B) = 0\)).</li>
-              <li>Uporabi formulo.</li>
-            </ol>
-            <p class="plain-example"><strong>Primer:</strong> \(P(A) = 0{,}5\), \(P(B) = 0{,}4\), \(P(A \cap B) = 0{,}1\)</p>
-            <div class="plain-example">
-              <p>\(P(A \cup B) = 0{,}5 + 0{,}4 - 0{,}1 = 0{,}8\).</p>
-            </div>
-          </div>
-
-          <!-- TIP 4 -->
-          <div class="info-card" id="tip-4">
-            <div class="tip-header">
-              <h3>Tip 4: Neodvisni dogodki</h3>
-              <div class="tip-formula">\(P(A \cap B) = P(A) \cdot P(B)\)</div>
-            </div>
-            <p><strong>Kako prepoznaš:</strong> "neodvisno", "dva ločena poskusa", "hkrati".</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Preveri, ali dogodka vplivata eden na drugega.</li>
-              <li>Zmnoži verjetnosti.</li>
-            </ol>
-            <p class="plain-example"><strong>Primer:</strong> Verjetnost, da obakrat pade šestica, pri dveh metih kocke?</p>
-            <div class="plain-example">
-              <p>\(P = \dfrac{1}{6} \cdot \dfrac{1}{6} = \dfrac{1}{36}\).</p>
-            </div>
-          </div>
-
-          <!-- TIP 5 -->
-          <div class="info-card" id="tip-5">
-            <div class="tip-header">
-              <h3>Tip 5: Pogojna verjetnost</h3>
-              <div class="tip-formula">\(P(A|B) = \dfrac{P(A \cap B)}{P(B)}\)</div>
-            </div>
-            <p><strong>Kako prepoznaš:</strong> "če vemo, da …", "pod pogojem, da …".</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Zapiši \(P(A \cap B)\) in \(P(B)\).</li>
-              <li>Uporabi formulo.</li>
-            </ol>
-            <p class="plain-example"><strong>Primer:</strong> Vržemo kocko. Kolikšna je verjetnost, da pade 6, če vemo, da je padlo sodo število?</p>
-            <div class="plain-example">
-              <p>\(A\) = pade 6. \(B\) = pade sodo. \(P(A \cap B) = \dfrac{1}{6}\), \(P(B) = \dfrac{1}{2}\).</p>
-              <p>\(P(A|B) = \dfrac{1/6}{1/2} = \dfrac{1}{3}\).</p>
-            </div>
-          </div>
-
-          <!-- TIP 6 -->
-          <div class="info-card" id="tip-6">
-            <div class="tip-header">
-              <h3>Tip 6: Totalna verjetnost</h3>
-              <div class="tip-formula">\(P(A) = \sum_i P(A|B_i) P(B_i)\)</div>
-            </div>
-            <p><strong>Kako prepoznaš:</strong> "iz dveh različnih virov", "v dveh fazah".</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Prepoznaj razbitje \(B_1, B_2, \ldots\).</li>
-              <li>Zapiši \(P(A|B_i)\) in \(P(B_i)\).</li>
-              <li>Seštej produkte.</li>
-            </ol>
-            <p class="plain-example"><strong>Primer:</strong> Tovarna A proizvede 60 %, tovarna B 40 % izdelkov. 2 % iz A in 3 % iz B je pokvarjenih.</p>
-            <div class="plain-example">
-              <p>\(P(\text{pokvarjen}) = 0{,}6 \cdot 0{,}02 + 0{,}4 \cdot 0{,}03 = 0{,}012 + 0{,}012 = 0{,}024\).</p>
-            </div>
-          </div>
-
-          <!-- TIP 7 -->
-          <div class="info-card" id="tip-7">
-            <div class="tip-header">
-              <h3>Tip 7: Bernoullijevo zaporedje</h3>
-              <div class="tip-formula">\(P(X=k) = \dbinom{n}{k} p^k (1-p)^{n-k}\)</div>
-            </div>
-            <p><strong>Kako prepoznaš:</strong> "ponovimo poskus \(n\)-krat", "natanko \(k\)-krat".</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Določi \(n\) (število poskusov), \(k\) (kolikokrat uspeh), \(p\) (verjetnost uspeha).</li>
-              <li>Uporabi formulo.</li>
-            </ol>
-            <p class="plain-example"><strong>Primer:</strong> Kocko vržemo 5-krat. Verjetnost, da natanko 3-krat pade 6?</p>
-            <div class="plain-example">
-              <p>\(P = \dbinom{5}{3} \left(\dfrac{1}{6}\right)^3 \left(\dfrac{5}{6}\right)^2 = 10 \cdot \dfrac{25}{7776} \approx 0{,}0322\).</p>
-            </div>
-          </div>
-
-          <!-- TIP 8 -->
-          <div class="info-card" id="tip-8">
-            <div class="tip-header">
-              <h3>Tip 8: Bayesova formula</h3>
-              <div class="tip-formula">\(P(B_k|A) = \dfrac{P(A|B_k) P(B_k)}{P(A)}\)</div>
-            </div>
-            <p><strong>Kako prepoznaš:</strong> "izračunajte verjetnost, da je izdelek iz tovarne A, če je pokvarjen".</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Izračunaj \(P(A)\) z totalno verjetnostjo.</li>
-              <li>Uporabi Bayesovo formulo za \(B_k\).</li>
-            </ol>
-            <p class="plain-example"><strong>Primer:</strong> nadaljevanje prejšnjega primera. \(P(A|\text{pokvarjen})\)?</p>
-            <div class="plain-example">
-              <p>\(P(A|\text{pokv.}) = \dfrac{0{,}6 \cdot 0{,}02}{0{,}024} = \dfrac{0{,}012}{0{,}024} = 0{,}5\).</p>
-            </div>
-          </div>
-
-          <!-- TIP 9 -->
-          <div class="info-card" id="tip-9">
-            <div class="tip-header">
-              <h3>Tip 9: Kombinacije v verjetnosti</h3>
-              <div class="tip-formula">\(P(A) = \dfrac{\dbinom{\ldots}{\ldots}}{\dbinom{\ldots}{\ldots}}\)</div>
-            </div>
-            <p><strong>Kako prepoznaš:</strong> izbiranje skupin (npr. žrebanje kroglic, izbira delegacije).</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Izračunaj \(|\Omega|\) s kombinacijami.</li>
-              <li>Izračunaj \(|A|\) s kombinacijami.</li>
-              <li>Uporabi \(P(A) = \dfrac{|A|}{|\Omega|}\).</li>
-            </ol>
-            <p class="plain-example"><strong>Primer:</strong> V vreči je 5 belih in 3 črne kroglice. Izvlečemo 2. Verjetnost, da sta obe beli?</p>
-            <div class="plain-example">
-              <p>\(|\Omega| = \dbinom{8}{2} = 28\), \(|A| = \dbinom{5}{2} = 10\). \(P(A) = \dfrac{10}{28} = \dfrac{5}{14}\).</p>
-            </div>
-          </div>
-
-          <!-- TIP 10 -->
-          <div class="info-card" id="tip-10">
-            <div class="tip-header">
-              <h3>Tip 10: Pričakovana vrednost in standardni odklon (Bernoulli)</h3>
-              <div class="tip-formula">\(E(X) = np\), \(\sigma = \sqrt{np(1-p)}\)</div>
-            </div>
-            <p><strong>Kako prepoznaš:</strong> "povprečno število uspehov", "pričakovano število".</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Določi \(n\) in \(p\).</li>
-              <li>Izračunaj \(E(X) = np\).</li>
-              <li>Za \(\sigma\): \(\sqrt{np(1-p)}\).</li>
-            </ol>
-            <p class="plain-example"><strong>Primer:</strong> Kocko vržemo 60-krat. Pričakovano število šestic?</p>
-            <div class="plain-example">
-              <p>\(E(X) = 60 \cdot \dfrac{1}{6} = 10\). \(\sigma = \sqrt{60 \cdot \tfrac{1}{6} \cdot \tfrac{5}{6}} \approx 2{,}89\).</p>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-2">
+              <h4>Tip 2: Računanje z dogodki</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Vržemo kocko. \(A\): pade sodo število, \(B\): pade več kot 3. Zapišite \(A + B\), \(AB\), \(A'\) in \(A - B\). Ali sta \(A\) in \(B\) nezdružljiva?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> dogodke povezujejo besede „in“, „ali“, „ne“.</p><ul class="kljucne"><li>„zapišite dogodek \(A + B\)“</li><li>„nezdružljiva“</li><li>„nasprotni dogodek“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Zapiši dogodka kot množici izidov.</p><div class="na-nalogi"><p>\(A = \{2, 4, 6\}\), \(B = \{4, 5, 6\}\).</p></div></li>
+              <li><p class="korak">Vsota je unija, produkt presek.</p><div class="na-nalogi"><p>\(A + B = \{2, 4, 5, 6\}\), \(AB = \{4, 6\}\).</p></div></li>
+              <li><p class="korak">Nasprotni in razlika.</p><div class="na-nalogi"><p>\(A' = \{1, 3, 5\}\), \(A - B = \{2\}\).</p></div></li>
+              <li><p class="korak">Preveri nezdružljivost (\(AB = \emptyset\)?).</p><div class="na-nalogi"><p>\(AB \ne \emptyset\): nista nezdružljiva.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> \(C\): pade 1. Sta \(A\) in \(C\) nezdružljiva?</p><p>Da, \(AC = \emptyset\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> \((A + B)'\)</p><p>\(A'B' = \{1, 3\}\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> \(A + A'\)</p><p>Gotov dogodek \(G\).</p></div>
             </div>
           </div>
         </section>
 
-        <!-- ============ 3. POGOSTE NAPAKE ============ -->
+        <!-- SKLOP 3 -->
+        <section class="sklop" id="sklop-3">
+          <header class="sklop-header">
+            <span class="sklop-num">4.16 · 3</span>
+            <h2>Subjektivna, empirična in matematična verjetnost</h2>
+            <p>Tri poti do števila \(P(A)\).</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <ul>
+              <li><strong>Subjektivna</strong> verjetnost je ocena na podlagi izkušenj ali prepričanja („verjetno bo deževalo“).</li>
+              <li><strong>Empirična</strong> (statistična) verjetnost je relativna frekvenca \(\frac{k}{n}\) dogodka v velikem številu ponovitev poskusa.</li>
+              <li><strong>Matematična</strong> (klasična) verjetnost: če so vsi izidi enako verjetni, je \(P(A) = \frac{m}{n}\), kjer je \(m\) število ugodnih in \(n\) število vseh izidov.</li>
+            </ul>
+            <p>Pri velikem številu ponovitev se relativna frekvenca ustali okoli matematične verjetnosti. Vedno velja \(0 \le P(A) \le 1\), \(P(G) = 1\), \(P(\emptyset) = 0\).</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-3">
+              <h4>Tip 3: Matematična verjetnost</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Vržemo dve kocki. Kolikšna je verjetnost, da je vsota pik 8?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> enako verjetni izidi, ki jih lahko preštejemo.</p><ul class="kljucne"><li>„kolikšna je verjetnost“</li><li>„naključno izvlečemo“</li><li>„relativna frekvenca“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Preštej vse izide.</p><div class="na-nalogi"><p>\(6 \cdot 6 = 36\).</p></div></li>
+              <li><p class="korak">Preštej ugodne izide.</p><div class="na-nalogi"><p>\((2, 6), (3, 5), (4, 4), (5, 3), (6, 2)\): 5.</p></div></li>
+              <li><p class="korak">Deli.</p><div class="na-nalogi"><p>\(P = \frac{5}{36}\).</p></div></li>
+              <li><p class="korak">Preveri, da je med 0 in 1, in po potrebi zaokroži.</p><div class="na-nalogi"><p>\(\approx 0{,}139\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Iz škatle s 5 rdečimi in 3 modrimi izvlečemo 2. Obe rdeči?</p><p>\(\frac{\binom{5}{2}}{\binom{8}{2}} = \frac{10}{28} = \frac{5}{14}\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Kartica s številko 1 do 20, deljivo s 3</p><p>\(\frac{6}{20} = \frac{3}{10}\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Žebljiček je v 200 metih 130-krat padel na glavo.</p><p>Empirična verjetnost \(\frac{130}{200} = 0{,}65\).</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 4 -->
+        <section class="sklop" id="sklop-4">
+          <header class="sklop-header">
+            <span class="sklop-num">4.16 · 4</span>
+            <h2>Verjetnost nasprotnih dogodkov in vsote dogodkov</h2>
+            <p>\(P(A')\) in \(P(A + B)\).</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <p>\[P(A') = 1 - P(A), \qquad P(A + B) = P(A) + P(B) - P(AB).\]</p>
+            <p>Pri nezdružljivih dogodkih je \(P(AB) = 0\), zato \(P(A + B) = P(A) + P(B)\). Nasprotni dogodek je najkrajša pot pri nalogah z besedo „vsaj“: \(P(\text{vsaj eden}) = 1 - P(\text{nobeden})\).</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-4">
+              <h4>Tip 4: Nasprotni dogodek in vsota dogodkov</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Vržemo tri kovance. Kolikšna je verjetnost, da pade vsaj en grb?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> „vsaj“, „največ“, „ali“.</p><ul class="kljucne"><li>„vsaj eden“</li><li>„A ali B“</li><li>„ni nobenega“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Ugotovi, ali je nasprotni dogodek preprostejši.</p><div class="na-nalogi"><p>Nasprotno: ne pade noben grb (CCC).</p></div></li>
+              <li><p class="korak">Izračunaj verjetnost nasprotnega dogodka.</p><div class="na-nalogi"><p>\(P(CCC) = \frac{1}{8}\).</p></div></li>
+              <li><p class="korak">Odštej od 1.</p><div class="na-nalogi"><p>\(1 - \frac{1}{8}\).</p></div></li>
+              <li><p class="korak">Zapiši rezultat.</p><div class="na-nalogi"><p>\(\frac{7}{8}\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> \(P(A) = 0{,}5\), \(P(B) = 0{,}4\), \(P(AB) = 0{,}2\). \(P(A + B)\)?</p><p>\(0{,}7\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Kartica 1 do 30, deljivo z 2 ali s 3</p><p>\(\frac{15 + 10 - 5}{30} = \frac{2}{3}\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Med 4 osebami sta vsaj dve rojeni na isti dan v tednu</p><p>\(1 - \frac{7 \cdot 6 \cdot 5 \cdot 4}{7^4} = 1 - \frac{840}{2401} \approx 0{,}65\).</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 5 -->
+        <section class="sklop" id="sklop-5">
+          <header class="sklop-header">
+            <span class="sklop-num">4.16 · 5</span>
+            <h2>Pogojna verjetnost <span class="badge-vr">VR</span></h2>
+            <p>Verjetnost ob dodatni informaciji.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <p><strong>Pogojna verjetnost</strong> dogodka \(A\) pri pogoju \(B\) (vemo, da se je \(B\) zgodil) je</p>
+            <p>\[P(A \mid B) = \frac{P(AB)}{P(B)}, \quad P(B) &gt; 0.\]</p>
+            <p>Vzorčni prostor se zoži na \(B\): pri enako verjetnih izidih je \(P(A \mid B) = \frac{|AB|}{|B|}\). Pri podatkih v tabeli delimo z vsoto ustrezne vrstice ali stolpca.</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-5">
+              <h4>Tip 5: Pogojna verjetnost <span class="badge-vr">VR</span></h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Vržemo dve kocki. Kolikšna je verjetnost, da je vsota 8, če vemo, da je na prvi kocki padlo sodo število?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> „če vemo, da“, „pod pogojem“, „med tistimi, ki“.</p><ul class="kljucne"><li>„če vemo, da“</li><li>„pogojna verjetnost“</li><li>„med dekleti jih je“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Določi pogoj \(B\) in preštej njegove izide.</p><div class="na-nalogi"><p>Prva kocka soda: \(3 \cdot 6 = 18\) izidov.</p></div></li>
+              <li><p class="korak">Določi \(AB\) (izidi iz \(B\), ki ustrezajo \(A\)).</p><div class="na-nalogi"><p>\((2, 6), (4, 4), (6, 2)\): 3 izidi.</p></div></li>
+              <li><p class="korak">Deli \(|AB|\) z \(|B|\) (ali \(P(AB)\) s \(P(B)\)).</p><div class="na-nalogi"><p>\(\frac{3}{18}\).</p></div></li>
+              <li><p class="korak">Zapiši rezultat.</p><div class="na-nalogi"><p>\(P(A \mid B) = \frac{1}{6}\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> 60 % dijakov je deklet, 30 % vseh dijakov so dekleta, ki igrajo inštrument. Verjetnost, da dekle igra inštrument?</p><p>\(\frac{0{,}3}{0{,}6} = 0{,}5\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Družina ima dva otroka, vsaj eden je fant. Verjetnost, da sta oba fanta?</p><p>\(B = \{FF, FD, DF\}\): \(\frac{1}{3}\).</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 6 -->
+        <section class="sklop" id="sklop-6">
+          <header class="sklop-header">
+            <span class="sklop-num">4.16 · 6</span>
+            <h2>Verjetnost produkta, neodvisna dogodka <span class="badge-vr">VR</span></h2>
+            <p>Zaporedni poskusi.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <p>Za produkt dogodkov velja</p>
+            <p>\[P(AB) = P(A) \cdot P(B \mid A).\]</p>
+            <p>Dogodka sta <strong>neodvisna</strong>, če izid enega ne vpliva na verjetnost drugega: \(P(B \mid A) = P(B)\), torej \(P(AB) = P(A)P(B)\). Nezdružljiva dogodka s pozitivnima verjetnostma nista neodvisna (če se zgodi \(A\), se \(B\) zagotovo ne).</p>
+            <p>Zaporedne poskuse prikažemo z <strong>verjetnostnim drevesom</strong>: verjetnosti vzdolž poti množimo, verjetnosti poti, ki ustrezajo dogodku, seštejemo.</p>
+            <figure class="slika slika--ozka">
+<svg viewBox="0 0 400 297" role="img" aria-label="Verjetnostno drevo" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g2-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g2-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g2-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g2-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g2-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g2-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<line class="s-k1" x1="33.6" y1="164" x2="133.1" y2="101.9"/>
+<line class="s-k2" x1="33.6" y1="164" x2="133.1" y2="226.2"/>
+<line class="s-k1" x1="133.1" y1="101.9" x2="251.3" y2="70.8"/>
+<line class="s-k2" x1="133.1" y1="101.9" x2="251.3" y2="133"/>
+<line class="s-k1" x1="133.1" y1="226.2" x2="251.3" y2="195.1"/>
+<line class="s-k2" x1="133.1" y1="226.2" x2="251.3" y2="257.3"/>
+<circle class="s-tocka" cx="33.6" cy="164" r="4.5"/>
+<circle class="s-tocka" cx="133.1" cy="101.9" r="4.5"/>
+<text class="s-txt-b" x="133.1" y="91.9" text-anchor="middle">B</text>
+<circle class="s-tocka" cx="133.1" cy="226.2" r="4.5"/>
+<text class="s-txt-b" x="133.1" y="244.2" text-anchor="middle">Č</text>
+<circle class="s-tocka" cx="251.3" cy="70.8" r="4.5"/>
+<circle class="s-tocka-2" cx="251.3" cy="133" r="4.5"/>
+<circle class="s-tocka" cx="251.3" cy="195.1" r="4.5"/>
+<circle class="s-tocka-2" cx="251.3" cy="257.3" r="4.5"/>
+<text class="s-txt-k1" x="74" y="122.1" text-anchor="end">4/10</text>
+<text class="s-txt-k2" x="74" y="212.2" text-anchor="end">6/10</text>
+<text class="s-txt-k1" x="189.1" y="75.5" text-anchor="end">3/9</text>
+<text class="s-txt-k2" x="189.1" y="131.4" text-anchor="end">6/9</text>
+<text class="s-txt-k1" x="189.1" y="199.8" text-anchor="end">4/9</text>
+<text class="s-txt-k2" x="189.1" y="255.7" text-anchor="end">5/9</text>
+<text class="s-txt-b" x="270" y="73.9" text-anchor="start">BB: 12/90</text>
+<text class="s-txt-b" x="270" y="136.1" text-anchor="start">BČ: 24/90</text>
+<text class="s-txt-b" x="270" y="198.2" text-anchor="start">ČB: 24/90</text>
+<text class="s-txt-b" x="270" y="260.4" text-anchor="start">ČČ: 30/90</text>
+<text class="s-txt-muted" x="133.1" y="33.5" text-anchor="middle">1. kroglica</text>
+<text class="s-txt-muted" x="251.3" y="33.5" text-anchor="middle">2. kroglica</text>
+
+</svg>
+<figcaption>Vlečenje dveh kroglic brez vračanja iz škatle s 4 belimi in 6 črnimi. Verjetnosti vzdolž poti množimo, verjetnosti različnih poti seštevamo.</figcaption>
+</figure>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-6">
+              <h4>Tip 6: Verjetnost produkta in neodvisnost <span class="badge-vr">VR</span></h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>V škatli so 4 bele in 6 črnih kroglic. Zaporedoma brez vračanja izvlečemo dve. Kolikšna je verjetnost, da sta obe beli? Kolikšna, če prvo vrnemo?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> dva ali več zaporednih poskusov, „in“, „z vračanjem“, „brez vračanja“.</p><ul class="kljucne"><li>„brez vračanja“</li><li>„neodvisno“</li><li>„ali sta dogodka neodvisna“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Verjetnost prvega dogodka.</p><div class="na-nalogi"><p>\(P(B_1) = \frac{4}{10}\).</p></div></li>
+              <li><p class="korak">Pogojna verjetnost drugega (brez vračanja se škatla spremeni).</p><div class="na-nalogi"><p>\(P(B_2 \mid B_1) = \frac{3}{9}\).</p></div></li>
+              <li><p class="korak">Zmnoži.</p><div class="na-nalogi"><p>\(\frac{4}{10} \cdot \frac{3}{9} = \frac{2}{15}\).</p></div></li>
+              <li><p class="korak">Z vračanjem sta dogodka neodvisna.</p><div class="na-nalogi"><p>\(\frac{4}{10} \cdot \frac{4}{10} = 0{,}16\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Strelca neodvisno zadeneta z verjetnostma 0,8 in 0,6. Vsaj eden zadene?</p><p>\(1 - 0{,}2 \cdot 0{,}4 = 0{,}92\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Kocka: \(A\) sodo, \(B = \{1, 2\}\). Ali sta neodvisna?</p><p>\(P(AB) = \frac{1}{6} = \frac{1}{2} \cdot \frac{1}{3}\): sta.</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Verjetnost, da sta kroglici različnih barv (brez vračanja)</p><p>\(\frac{24}{90} + \frac{24}{90} = \frac{8}{15}\).</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 7 -->
+        <section class="sklop" id="sklop-7">
+          <header class="sklop-header">
+            <span class="sklop-num">4.16 · 7</span>
+            <h2>Zaporedje neodvisnih poskusov <span class="badge-vr">VR</span></h2>
+            <p>Bernoullijeva formula.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <p>Poskus ponovimo \(n\)-krat neodvisno, pri vsaki ponovitvi se dogodek \(A\) zgodi z verjetnostjo \(p\). Verjetnost, da se zgodi natanko \(k\)-krat, je</p>
+            <p>\[P_n(k) = \binom{n}{k}p^k(1 - p)^{n - k}.\]</p>
+            <p>\(\binom{n}{k}\) pove, na koliko mestih v zaporedju so uspehi, \(p^k(1 - p)^{n - k}\) pa verjetnost enega takega zaporedja.</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-7">
+              <h4>Tip 7: Bernoullijevo zaporedje poskusov <span class="badge-vr">VR</span></h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Kocko vržemo petkrat. Kolikšna je verjetnost, da šestica pade natanko dvakrat?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> isti poskus se ponovi \(n\)-krat, iščemo verjetnost \(k\) uspehov.</p><ul class="kljucne"><li>„natanko \(k\)-krat“</li><li>„vsaj enkrat v \(n\) poskusih“</li><li>„test z ugibanjem“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Določi \(n\), \(k\) in \(p\).</p><div class="na-nalogi"><p>\(n = 5\), \(k = 2\), \(p = \frac{1}{6}\).</p></div></li>
+              <li><p class="korak">Zapiši Bernoullijevo formulo.</p><div class="na-nalogi"><p>\(\binom{5}{2}\left(\frac{1}{6}\right)^2\left(\frac{5}{6}\right)^3\).</p></div></li>
+              <li><p class="korak">Izračunaj.</p><div class="na-nalogi"><p>\(10 \cdot \frac{1}{36} \cdot \frac{125}{216} = \frac{1250}{7776}\).</p></div></li>
+              <li><p class="korak">Zaokroži.</p><div class="na-nalogi"><p>\(\approx 0{,}161\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Kovanec 10-krat, natanko 5 grbov</p><p>\(\binom{10}{5}\frac{1}{2^{10}} = \frac{252}{1024} \approx 0{,}246\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Vsaj ena šestica v 4 metih</p><p>\(1 - \left(\frac{5}{6}\right)^4 \approx 0{,}518\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Test s 5 vprašanji, vsako s 4 odgovori, ugibamo. Vsaj 4 pravilni?</p><p>\(5 \cdot \frac{3}{4^5} + \frac{1}{4^5} = \frac{16}{1024} = \frac{1}{64}\).</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 8 -->
+        <section class="sklop" id="sklop-8">
+          <header class="sklop-header">
+            <span class="sklop-num">4.16 · 8</span>
+            <h2>Normalna porazdelitev</h2>
+            <p>Zvonasta krivulja za merjene količine.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <p>Mnoge merjene količine (telesna višina, napake meritev, rezultati testov) so <strong>normalno porazdeljene</strong>: vrednosti se gostijo okoli povprečja \(\mu\), redkejše so daleč od njega. Porazdelitev \(N(\mu, \sigma)\) je določena s povprečjem \(\mu\) in standardnim odklonom \(\sigma\); graf gostote je simetričen zvon z vrhom pri \(\mu\).</p>
+            <figure class="slika slika--siroka">
+<svg viewBox="0 0 480 260" role="img" aria-label="Normalna porazdelitev" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g3-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g3-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g3-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g3-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g3-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g3-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<path class="s-mreza" d="M61.7,234V26M121.1,234V26M180.6,234V26M240,234V26M299.4,234V26M358.9,234V26M418.3,234V26M26,213.6H454M26,172.8H454M26,132H454M26,91.3H454M26,50.5H454"/>
+<polygon class="s-ploskev" points="121.1,191.6 122.3,190.7 123.5,189.8 124.7,188.8 125.9,187.8 127.1,186.8 128.2,185.8 129.4,184.8 130.6,183.7 131.8,182.6 133,181.4 134.2,180.2 135.4,179 136.6,177.8 137.8,176.5 138.9,175.3 140.1,173.9 141.3,172.6 142.5,171.2 143.7,169.8 144.9,168.4 146.1,166.9 147.3,165.4 148.5,163.9 149.6,162.4 150.8,160.8 152,159.2 153.2,157.6 154.4,155.9 155.6,154.2 156.8,152.5 158,150.8 159.2,149.1 160.3,147.3 161.5,145.5 162.7,143.7 163.9,141.9 165.1,140 166.3,138.2 167.5,136.3 168.7,134.4 169.9,132.5 171,130.6 172.2,128.7 173.4,126.7 174.6,124.8 175.8,122.8 177,120.8 178.2,118.9 179.4,116.9 180.6,114.9 181.7,112.9 182.9,111 184.1,109 185.3,107 186.5,105.1 187.7,103.1 188.9,101.2 190.1,99.3 191.3,97.4 192.4,95.5 193.6,93.6 194.8,91.7 196,89.9 197.2,88.1 198.4,86.3 199.6,84.5 200.8,82.7 202,81 203.1,79.4 204.3,77.7 205.5,76.1 206.7,74.5 207.9,73 209.1,71.5 210.3,70 211.5,68.6 212.7,67.2 213.8,65.9 215,64.6 216.2,63.4 217.4,62.2 218.6,61.1 219.8,60 221,59 222.2,58.1 223.4,57.2 224.5,56.3 225.7,55.5 226.9,54.8 228.1,54.1 229.3,53.5 230.5,53 231.7,52.5 232.9,52.1 234.1,51.7 235.2,51.4 236.4,51.2 237.6,51 238.8,50.9 240,50.9 241.2,50.9 242.4,51 243.6,51.2 244.8,51.4 245.9,51.7 247.1,52.1 248.3,52.5 249.5,53 250.7,53.5 251.9,54.1 253.1,54.8 254.3,55.5 255.5,56.3 256.6,57.2 257.8,58.1 259,59 260.2,60 261.4,61.1 262.6,62.2 263.8,63.4 265,64.6 266.2,65.9 267.3,67.2 268.5,68.6 269.7,70 270.9,71.5 272.1,73 273.3,74.5 274.5,76.1 275.7,77.7 276.9,79.4 278,81 279.2,82.7 280.4,84.5 281.6,86.3 282.8,88.1 284,89.9 285.2,91.7 286.4,93.6 287.6,95.5 288.7,97.4 289.9,99.3 291.1,101.2 292.3,103.1 293.5,105.1 294.7,107 295.9,109 297.1,111 298.3,112.9 299.4,114.9 300.6,116.9 301.8,118.9 303,120.8 304.2,122.8 305.4,124.8 306.6,126.7 307.8,128.7 309,130.6 310.1,132.5 311.3,134.4 312.5,136.3 313.7,138.2 314.9,140 316.1,141.9 317.3,143.7 318.5,145.5 319.7,147.3 320.8,149.1 322,150.8 323.2,152.5 324.4,154.2 325.6,155.9 326.8,157.6 328,159.2 329.2,160.8 330.4,162.4 331.5,163.9 332.7,165.4 333.9,166.9 335.1,168.4 336.3,169.8 337.5,171.2 338.7,172.6 339.9,173.9 341.1,175.3 342.2,176.5 343.4,177.8 344.6,179 345.8,180.2 347,181.4 348.2,182.6 349.4,183.7 350.6,184.8 351.8,185.8 352.9,186.8 354.1,187.8 355.3,188.8 356.5,189.8 357.7,190.7 358.9,191.6 358.9,213.6 357.7,213.6 356.5,213.6 355.3,213.6 354.1,213.6 352.9,213.6 351.8,213.6 350.6,213.6 349.4,213.6 348.2,213.6 347,213.6 345.8,213.6 344.6,213.6 343.4,213.6 342.2,213.6 341.1,213.6 339.9,213.6 338.7,213.6 337.5,213.6 336.3,213.6 335.1,213.6 333.9,213.6 332.7,213.6 331.5,213.6 330.4,213.6 329.2,213.6 328,213.6 326.8,213.6 325.6,213.6 324.4,213.6 323.2,213.6 322,213.6 320.8,213.6 319.7,213.6 318.5,213.6 317.3,213.6 316.1,213.6 314.9,213.6 313.7,213.6 312.5,213.6 311.3,213.6 310.1,213.6 309,213.6 307.8,213.6 306.6,213.6 305.4,213.6 304.2,213.6 303,213.6 301.8,213.6 300.6,213.6 299.4,213.6 298.3,213.6 297.1,213.6 295.9,213.6 294.7,213.6 293.5,213.6 292.3,213.6 291.1,213.6 289.9,213.6 288.7,213.6 287.6,213.6 286.4,213.6 285.2,213.6 284,213.6 282.8,213.6 281.6,213.6 280.4,213.6 279.2,213.6 278,213.6 276.9,213.6 275.7,213.6 274.5,213.6 273.3,213.6 272.1,213.6 270.9,213.6 269.7,213.6 268.5,213.6 267.3,213.6 266.2,213.6 265,213.6 263.8,213.6 262.6,213.6 261.4,213.6 260.2,213.6 259,213.6 257.8,213.6 256.6,213.6 255.5,213.6 254.3,213.6 253.1,213.6 251.9,213.6 250.7,213.6 249.5,213.6 248.3,213.6 247.1,213.6 245.9,213.6 244.8,213.6 243.6,213.6 242.4,213.6 241.2,213.6 240,213.6 238.8,213.6 237.6,213.6 236.4,213.6 235.2,213.6 234.1,213.6 232.9,213.6 231.7,213.6 230.5,213.6 229.3,213.6 228.1,213.6 226.9,213.6 225.7,213.6 224.5,213.6 223.4,213.6 222.2,213.6 221,213.6 219.8,213.6 218.6,213.6 217.4,213.6 216.2,213.6 215,213.6 213.8,213.6 212.7,213.6 211.5,213.6 210.3,213.6 209.1,213.6 207.9,213.6 206.7,213.6 205.5,213.6 204.3,213.6 203.1,213.6 202,213.6 200.8,213.6 199.6,213.6 198.4,213.6 197.2,213.6 196,213.6 194.8,213.6 193.6,213.6 192.4,213.6 191.3,213.6 190.1,213.6 188.9,213.6 187.7,213.6 186.5,213.6 185.3,213.6 184.1,213.6 182.9,213.6 181.7,213.6 180.6,213.6 179.4,213.6 178.2,213.6 177,213.6 175.8,213.6 174.6,213.6 173.4,213.6 172.2,213.6 171,213.6 169.9,213.6 168.7,213.6 167.5,213.6 166.3,213.6 165.1,213.6 163.9,213.6 162.7,213.6 161.5,213.6 160.3,213.6 159.2,213.6 158,213.6 156.8,213.6 155.6,213.6 154.4,213.6 153.2,213.6 152,213.6 150.8,213.6 149.6,213.6 148.5,213.6 147.3,213.6 146.1,213.6 144.9,213.6 143.7,213.6 142.5,213.6 141.3,213.6 140.1,213.6 138.9,213.6 137.8,213.6 136.6,213.6 135.4,213.6 134.2,213.6 133,213.6 131.8,213.6 130.6,213.6 129.4,213.6 128.2,213.6 127.1,213.6 125.9,213.6 124.7,213.6 123.5,213.6 122.3,213.6 121.1,213.6"/>
+<polygon class="s-ploskev" points="180.6,114.9 181.2,113.9 181.7,112.9 182.3,112 182.9,111 183.5,110 184.1,109 184.7,108 185.3,107 185.9,106.1 186.5,105.1 187.1,104.1 187.7,103.1 188.3,102.2 188.9,101.2 189.5,100.2 190.1,99.3 190.7,98.3 191.3,97.4 191.9,96.4 192.4,95.5 193,94.5 193.6,93.6 194.2,92.6 194.8,91.7 195.4,90.8 196,89.9 196.6,89 197.2,88.1 197.8,87.2 198.4,86.3 199,85.4 199.6,84.5 200.2,83.6 200.8,82.7 201.4,81.9 202,81 202.6,80.2 203.1,79.4 203.7,78.5 204.3,77.7 204.9,76.9 205.5,76.1 206.1,75.3 206.7,74.5 207.3,73.7 207.9,73 208.5,72.2 209.1,71.5 209.7,70.7 210.3,70 210.9,69.3 211.5,68.6 212.1,67.9 212.7,67.2 213.3,66.6 213.8,65.9 214.4,65.3 215,64.6 215.6,64 216.2,63.4 216.8,62.8 217.4,62.2 218,61.7 218.6,61.1 219.2,60.6 219.8,60 220.4,59.5 221,59 221.6,58.5 222.2,58.1 222.8,57.6 223.4,57.2 224,56.7 224.5,56.3 225.1,55.9 225.7,55.5 226.3,55.1 226.9,54.8 227.5,54.5 228.1,54.1 228.7,53.8 229.3,53.5 229.9,53.2 230.5,53 231.1,52.7 231.7,52.5 232.3,52.3 232.9,52.1 233.5,51.9 234.1,51.7 234.7,51.6 235.2,51.4 235.8,51.3 236.4,51.2 237,51.1 237.6,51 238.2,51 238.8,50.9 239.4,50.9 240,50.9 240.6,50.9 241.2,50.9 241.8,51 242.4,51 243,51.1 243.6,51.2 244.2,51.3 244.8,51.4 245.4,51.6 245.9,51.7 246.5,51.9 247.1,52.1 247.7,52.3 248.3,52.5 248.9,52.7 249.5,53 250.1,53.2 250.7,53.5 251.3,53.8 251.9,54.1 252.5,54.5 253.1,54.8 253.7,55.1 254.3,55.5 254.9,55.9 255.5,56.3 256.1,56.7 256.6,57.2 257.2,57.6 257.8,58.1 258.4,58.5 259,59 259.6,59.5 260.2,60 260.8,60.6 261.4,61.1 262,61.7 262.6,62.2 263.2,62.8 263.8,63.4 264.4,64 265,64.6 265.6,65.3 266.2,65.9 266.8,66.6 267.3,67.2 267.9,67.9 268.5,68.6 269.1,69.3 269.7,70 270.3,70.7 270.9,71.5 271.5,72.2 272.1,73 272.7,73.7 273.3,74.5 273.9,75.3 274.5,76.1 275.1,76.9 275.7,77.7 276.3,78.5 276.9,79.4 277.5,80.2 278,81 278.6,81.9 279.2,82.7 279.8,83.6 280.4,84.5 281,85.4 281.6,86.3 282.2,87.2 282.8,88.1 283.4,89 284,89.9 284.6,90.8 285.2,91.7 285.8,92.6 286.4,93.6 287,94.5 287.6,95.5 288.2,96.4 288.7,97.4 289.3,98.3 289.9,99.3 290.5,100.2 291.1,101.2 291.7,102.2 292.3,103.1 292.9,104.1 293.5,105.1 294.1,106.1 294.7,107 295.3,108 295.9,109 296.5,110 297.1,111 297.7,112 298.3,112.9 298.8,113.9 299.4,114.9 299.4,213.6 298.8,213.6 298.3,213.6 297.7,213.6 297.1,213.6 296.5,213.6 295.9,213.6 295.3,213.6 294.7,213.6 294.1,213.6 293.5,213.6 292.9,213.6 292.3,213.6 291.7,213.6 291.1,213.6 290.5,213.6 289.9,213.6 289.3,213.6 288.7,213.6 288.2,213.6 287.6,213.6 287,213.6 286.4,213.6 285.8,213.6 285.2,213.6 284.6,213.6 284,213.6 283.4,213.6 282.8,213.6 282.2,213.6 281.6,213.6 281,213.6 280.4,213.6 279.8,213.6 279.2,213.6 278.6,213.6 278,213.6 277.5,213.6 276.9,213.6 276.3,213.6 275.7,213.6 275.1,213.6 274.5,213.6 273.9,213.6 273.3,213.6 272.7,213.6 272.1,213.6 271.5,213.6 270.9,213.6 270.3,213.6 269.7,213.6 269.1,213.6 268.5,213.6 267.9,213.6 267.3,213.6 266.8,213.6 266.2,213.6 265.6,213.6 265,213.6 264.4,213.6 263.8,213.6 263.2,213.6 262.6,213.6 262,213.6 261.4,213.6 260.8,213.6 260.2,213.6 259.6,213.6 259,213.6 258.4,213.6 257.8,213.6 257.2,213.6 256.6,213.6 256.1,213.6 255.5,213.6 254.9,213.6 254.3,213.6 253.7,213.6 253.1,213.6 252.5,213.6 251.9,213.6 251.3,213.6 250.7,213.6 250.1,213.6 249.5,213.6 248.9,213.6 248.3,213.6 247.7,213.6 247.1,213.6 246.5,213.6 245.9,213.6 245.4,213.6 244.8,213.6 244.2,213.6 243.6,213.6 243,213.6 242.4,213.6 241.8,213.6 241.2,213.6 240.6,213.6 240,213.6 239.4,213.6 238.8,213.6 238.2,213.6 237.6,213.6 237,213.6 236.4,213.6 235.8,213.6 235.2,213.6 234.7,213.6 234.1,213.6 233.5,213.6 232.9,213.6 232.3,213.6 231.7,213.6 231.1,213.6 230.5,213.6 229.9,213.6 229.3,213.6 228.7,213.6 228.1,213.6 227.5,213.6 226.9,213.6 226.3,213.6 225.7,213.6 225.1,213.6 224.5,213.6 224,213.6 223.4,213.6 222.8,213.6 222.2,213.6 221.6,213.6 221,213.6 220.4,213.6 219.8,213.6 219.2,213.6 218.6,213.6 218,213.6 217.4,213.6 216.8,213.6 216.2,213.6 215.6,213.6 215,213.6 214.4,213.6 213.8,213.6 213.3,213.6 212.7,213.6 212.1,213.6 211.5,213.6 210.9,213.6 210.3,213.6 209.7,213.6 209.1,213.6 208.5,213.6 207.9,213.6 207.3,213.6 206.7,213.6 206.1,213.6 205.5,213.6 204.9,213.6 204.3,213.6 203.7,213.6 203.1,213.6 202.6,213.6 202,213.6 201.4,213.6 200.8,213.6 200.2,213.6 199.6,213.6 199,213.6 198.4,213.6 197.8,213.6 197.2,213.6 196.6,213.6 196,213.6 195.4,213.6 194.8,213.6 194.2,213.6 193.6,213.6 193,213.6 192.4,213.6 191.9,213.6 191.3,213.6 190.7,213.6 190.1,213.6 189.5,213.6 188.9,213.6 188.3,213.6 187.7,213.6 187.1,213.6 186.5,213.6 185.9,213.6 185.3,213.6 184.7,213.6 184.1,213.6 183.5,213.6 182.9,213.6 182.3,213.6 181.7,213.6 181.2,213.6 180.6,213.6"/>
+<line class="s-os" x1="26" y1="213.6" x2="462" y2="213.6" marker-end="url(#g3-p)"/>
+<line class="s-os" x1="240" y1="234" x2="240" y2="18" marker-end="url(#g3-p)"/>
+<text class="s-os-txt" x="456" y="205.6" text-anchor="end">cm</text>
+<text class="s-os-txt" x="248" y="30"> </text>
+<path class="s-k1" d="M26,213.4L27.1,213.3L28.1,213.3L29.2,213.3L30.3,213.3L31.3,213.3L32.4,213.2L33.5,213.2L34.6,213.2L35.6,213.2L36.7,213.1L37.8,213.1L38.8,213.1L39.9,213L41,213L42.1,213L43.1,212.9L44.2,212.9L45.3,212.8L46.3,212.8L47.4,212.8L48.5,212.7L49.5,212.6L50.6,212.6L51.7,212.5L52.8,212.5L53.8,212.4L54.9,212.3L56,212.3L57,212.2L58.1,212.1L59.2,212L60.2,211.9L61.3,211.8L62.4,211.7L63.5,211.6L64.5,211.5L65.6,211.4L66.7,211.3L67.7,211.2L68.8,211L69.9,210.9L70.9,210.8L72,210.6L73.1,210.5L74.2,210.3L75.2,210.1L76.3,209.9L77.4,209.8L78.4,209.6L79.5,209.4L80.6,209.1L81.6,208.9L82.7,208.7L83.8,208.5L84.9,208.2L85.9,208L87,207.7L88.1,207.4L89.1,207.1L90.2,206.8L91.3,206.5L92.3,206.2L93.4,205.8L94.5,205.5L95.6,205.1L96.6,204.7L97.7,204.3L98.8,203.9L99.8,203.5L100.9,203.1L102,202.6L103,202.2L104.1,201.7L105.2,201.2L106.3,200.7L107.3,200.1L108.4,199.6L109.5,199L110.5,198.4L111.6,197.8L112.7,197.2L113.7,196.6L114.8,195.9L115.9,195.2L117,194.5L118,193.8L119.1,193L120.2,192.3L121.2,191.5L122.3,190.7L123.4,189.9L124.4,189L125.5,188.1L126.6,187.3L127.7,186.3L128.7,185.4L129.8,184.4L130.9,183.4L131.9,182.4L133,181.4L134.1,180.4L135.1,179.3L136.2,178.2L137.3,177L138.4,175.9L139.4,174.7L140.5,173.5L141.6,172.3L142.6,171.1L143.7,169.8L144.8,168.5L145.8,167.2L146.9,165.9L148,164.5L149,163.1L150.1,161.7L151.2,160.3L152.3,158.9L153.3,157.4L154.4,155.9L155.5,154.4L156.5,152.9L157.6,151.3L158.7,149.8L159.8,148.2L160.8,146.6L161.9,145L163,143.4L164,141.7L165.1,140L166.2,138.4L167.2,136.7L168.3,135L169.4,133.3L170.5,131.5L171.5,129.8L172.6,128.1L173.7,126.3L174.7,124.6L175.8,122.8L176.9,121L177.9,119.3L179,117.5L180.1,115.7L181.1,113.9L182.2,112.2L183.3,110.4L184.4,108.6L185.4,106.8L186.5,105.1L187.6,103.3L188.6,101.6L189.7,99.8L190.8,98.1L191.9,96.4L192.9,94.7L194,93L195.1,91.3L196.1,89.7L197.2,88.1L198.3,86.4L199.3,84.8L200.4,83.3L201.5,81.7L202.6,80.2L203.6,78.7L204.7,77.2L205.8,75.8L206.8,74.4L207.9,73L209,71.6L210,70.3L211.1,69L212.2,67.8L213.3,66.6L214.3,65.4L215.4,64.3L216.5,63.2L217.5,62.1L218.6,61.1L219.7,60.1L220.7,59.2L221.8,58.3L222.9,57.5L224,56.7L225,56L226.1,55.3L227.2,54.7L228.2,54.1L229.3,53.5L230.4,53L231.4,52.6L232.5,52.2L233.6,51.8L234.7,51.6L235.7,51.3L236.8,51.1L237.9,51L238.9,50.9L240,50.9L241.1,50.9L242.1,51L243.2,51.1L244.3,51.3L245.4,51.6L246.4,51.8L247.5,52.2L248.6,52.6L249.6,53L250.7,53.5L251.8,54.1L252.8,54.7L253.9,55.3L255,56L256.1,56.7L257.1,57.5L258.2,58.3L259.3,59.2L260.3,60.1L261.4,61.1L262.5,62.1L263.5,63.2L264.6,64.3L265.7,65.4L266.8,66.6L267.8,67.8L268.9,69L270,70.3L271,71.6L272.1,73L273.2,74.4L274.2,75.8L275.3,77.2L276.4,78.7L277.5,80.2L278.5,81.7L279.6,83.3L280.7,84.8L281.7,86.4L282.8,88.1L283.9,89.7L284.9,91.3L286,93L287.1,94.7L288.2,96.4L289.2,98.1L290.3,99.8L291.4,101.6L292.4,103.3L293.5,105.1L294.6,106.8L295.6,108.6L296.7,110.4L297.8,112.2L298.8,113.9L299.9,115.7L301,117.5L302.1,119.3L303.1,121L304.2,122.8L305.3,124.6L306.3,126.3L307.4,128.1L308.5,129.8L309.5,131.5L310.6,133.3L311.7,135L312.8,136.7L313.8,138.4L314.9,140L316,141.7L317,143.4L318.1,145L319.2,146.6L320.3,148.2L321.3,149.8L322.4,151.3L323.5,152.9L324.5,154.4L325.6,155.9L326.7,157.4L327.7,158.9L328.8,160.3L329.9,161.7L331,163.1L332,164.5L333.1,165.9L334.2,167.2L335.2,168.5L336.3,169.8L337.4,171.1L338.4,172.3L339.5,173.5L340.6,174.7L341.7,175.9L342.7,177L343.8,178.2L344.9,179.3L345.9,180.4L347,181.4L348.1,182.4L349.1,183.4L350.2,184.4L351.3,185.4L352.4,186.3L353.4,187.3L354.5,188.1L355.6,189L356.6,189.9L357.7,190.7L358.8,191.5L359.8,192.3L360.9,193L362,193.8L363.1,194.5L364.1,195.2L365.2,195.9L366.3,196.6L367.3,197.2L368.4,197.8L369.5,198.4L370.5,199L371.6,199.6L372.7,200.1L373.7,200.7L374.8,201.2L375.9,201.7L377,202.2L378,202.6L379.1,203.1L380.2,203.5L381.2,203.9L382.3,204.3L383.4,204.7L384.5,205.1L385.5,205.5L386.6,205.8L387.7,206.2L388.7,206.5L389.8,206.8L390.9,207.1L391.9,207.4L393,207.7L394.1,208L395.2,208.2L396.2,208.5L397.3,208.7L398.4,208.9L399.4,209.1L400.5,209.4L401.6,209.6L402.6,209.8L403.7,209.9L404.8,210.1L405.8,210.3L406.9,210.5L408,210.6L409.1,210.8L410.1,210.9L411.2,211L412.3,211.2L413.3,211.3L414.4,211.4L415.5,211.5L416.6,211.6L417.6,211.7L418.7,211.8L419.8,211.9L420.8,212L421.9,212.1L423,212.2L424,212.3L425.1,212.3L426.2,212.4L427.3,212.5L428.3,212.5L429.4,212.6L430.5,212.6L431.5,212.7L432.6,212.8L433.7,212.8L434.7,212.8L435.8,212.9L436.9,212.9L438,213L439,213L440.1,213L441.2,213.1L442.2,213.1L443.3,213.1L444.4,213.2L445.4,213.2L446.5,213.2L447.6,213.2L448.7,213.3L449.7,213.3L450.8,213.3L451.9,213.3L452.9,213.3L454,213.4"/>
+<text class="s-os-txt" x="61.7" y="226.7" text-anchor="middle">157</text>
+<text class="s-os-txt" x="121.1" y="226.7" text-anchor="middle">164</text>
+<text class="s-os-txt" x="180.6" y="226.7" text-anchor="middle">171</text>
+<text class="s-os-txt" x="240" y="226.7" text-anchor="middle">178</text>
+<text class="s-os-txt" x="299.4" y="226.7" text-anchor="middle">185</text>
+<text class="s-os-txt" x="358.9" y="226.7" text-anchor="middle">192</text>
+<text class="s-os-txt" x="418.3" y="226.7" text-anchor="middle">199</text>
+<text class="s-txt-b" x="240" y="140.2" text-anchor="middle">68 %</text>
+<text class="s-txt-k1" x="150.8" y="199.3" text-anchor="middle">13,5 %</text>
+<text class="s-txt-k1" x="329.2" y="199.3" text-anchor="middle">13,5 %</text>
+<text class="s-txt-k2" x="248.9" y="40.3" text-anchor="start">μ = 178</text>
+<text class="s-txt-muted" x="85.4" y="185.1" text-anchor="middle">2,5 %</text>
+<text class="s-txt-muted" x="394.6" y="185.1" text-anchor="middle">2,5 %</text>
+</svg>
+<figcaption>Normalna porazdelitev \(N(178, 7)\): v pasu \(\mu \pm \sigma\) je približno 68 % podatkov, v pasu \(\mu \pm 2\sigma\) približno 95 %, v pasu \(\mu \pm 3\sigma\) 99,7 %.</figcaption>
+</figure>
+            <p>Za izračun deleža vrednost <strong>standardiziramo</strong>: \(z = \frac{x - \mu}{\sigma}\) in delež preberemo iz tabele standardne normalne porazdelitve ali ocenimo s pravilom 68 %, 95 %, 99,7 %.</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-8">
+              <h4>Tip 8: Delež pri normalni porazdelitvi</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Višina 18-letnih fantov je normalno porazdeljena s \(\mu = 178\) cm in \(\sigma = 7\) cm. Približno kolikšen delež fantov je višjih od 192 cm?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> „normalno porazdeljena“, dana \(\mu\) in \(\sigma\), iščemo delež.</p><ul class="kljucne"><li>„normalna porazdelitev“</li><li>„kolikšen delež“</li><li>„standardni odklon“ in „povprečje“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Zapiši \(\mu\) in \(\sigma\).</p><div class="na-nalogi"><p>\(\mu = 178\), \(\sigma = 7\).</p></div></li>
+              <li><p class="korak">Standardiziraj mejo.</p><div class="na-nalogi"><p>\(z = \frac{192 - 178}{7} = 2\).</p></div></li>
+              <li><p class="korak">Uporabi pravilo (ali tabelo).</p><div class="na-nalogi"><p>Med \(\mu \pm 2\sigma\) je 95 %, zunaj 5 %, nad \(\mu + 2\sigma\) polovica: 2,5 % (tabela da 2,3 %).</p></div></li>
+              <li><p class="korak">Odgovori.</p><div class="na-nalogi"><p>Približno 2,5 % fantov.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Delež med 171 in 185 cm</p><p>\(z = \pm 1\): približno 68 %.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Delež nižjih od 164 cm</p><p>\(z = -2\): približno 2,5 %.</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Rezultati testa \(N(60, 10)\). Delež nad 70 točk?</p><p>\(z = 1\): \(\frac{100 - 68}{2} = 16\) %.</p></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="subsection" id="kljuc">
+          <div class="subsection-head">
+            <h2>Ključ: kateri tip naloge je to?</h2>
+            <p>Poišči besedo iz navodila naloge in skoči na pravi postopek.</p>
+          </div>
+          <div class="info-card">
+            <div class="tabela-wrap">
+              <table class="tabela">
+                <thead><tr><th>V besedilu naloge piše …</th><th>Tip</th></tr></thead>
+                <tbody>
+                  <tr><td>„zapišite vzorčni prostor“, „koliko izidov“</td><td><a href="#tip-1">Tip 1</a></td></tr>
+                  <tr><td>„zapišite dogodek \(A + B\)“, „nezdružljiva“</td><td><a href="#tip-2">Tip 2</a></td></tr>
+                  <tr><td>„kolikšna je verjetnost“, preštevanje izidov</td><td><a href="#tip-3">Tip 3</a></td></tr>
+                  <tr><td>„vsaj eden“, „A ali B“</td><td><a href="#tip-4">Tip 4</a></td></tr>
+                  <tr><td>„če vemo, da“, „pod pogojem“</td><td><a href="#tip-5">Tip 5</a></td></tr>
+                  <tr><td>„brez vračanja“, „neodvisno“, drevo</td><td><a href="#tip-6">Tip 6</a></td></tr>
+                  <tr><td>„natanko \(k\)-krat v \(n\) poskusih“</td><td><a href="#tip-7">Tip 7</a></td></tr>
+                  <tr><td>„normalno porazdeljena“, \(\mu\), \(\sigma\)</td><td><a href="#tip-8">Tip 8</a></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
         <section class="subsection">
           <div class="subsection-head">
-            <h2>3. Pogoste napake</h2>
+            <h2>Pogoste napake</h2>
           </div>
           <div class="info-card">
             <ul>
-              <li>Zamenjaš <strong>nezdružljiva</strong> in <strong>neodvisna</strong> dogodka.</li>
-              <li>Pri uniji pozabiš odšteti \(P(A \cap B)\).</li>
-              <li>Pri pogojni verjetnosti zamenjaš \(P(A|B)\) in \(P(B|A)\).</li>
-              <li>Pri Bernoullijevem zaporedju zamenjaš \(p\) in \(1-p\).</li>
-              <li>Pri kombinacijah v verjetnosti uporabiš variacije (vrstni red ni pomemben).</li>
-              <li>Pri Bayesovi formuli pozabiš deliti s \(P(A)\) (totalno verjetnostjo).</li>
-              <li>Pri "vsaj eden" pozabiš uporabiti nasprotni dogodek.</li>
+              <li>Pri „vsaj eden“ računaš vse primere posebej namesto z nasprotnim dogodkom.</li>
+              <li>Pri vsoti dogodkov ne odšteješ \(P(AB)\), čeprav dogodka nista nezdružljiva.</li>
+              <li>Zamenjaš nezdružljiva in neodvisna dogodka.</li>
+              <li>Pri vlečenju brez vračanja ne zmanjšaš števila kroglic v drugem poskusu.</li>
+              <li>Pri Bernoullijevi formuli pozabiš na \(\binom{n}{k}\).</li>
+              <li>Pri normalni porazdelitvi vzameš 95 % kot delež na eni strani namesto obeh.</li>
             </ul>
           </div>
         </section>
 
-        <!-- ============ 4. ŠTUDIJSKI VODIČ ============ -->
         <section class="subsection">
           <div class="subsection-head">
-            <h2>4. Študijski vodič — hitri pregled</h2>
-          </div>
-          <div class="info-card">
-            <h3>Kaj moraš znati na pamet</h3>
-            <ul>
-              <li><strong>Klasična:</strong> \(P(A) = \dfrac{|A|}{|\Omega|}\).</li>
-              <li><strong>Nasprotni:</strong> \(P(A') = 1 - P(A)\).</li>
-              <li><strong>Unija:</strong> \(P(A \cup B) = P(A) + P(B) - P(A \cap B)\).</li>
-              <li><strong>Neodvisna:</strong> \(P(A \cap B) = P(A) P(B)\).</li>
-              <li><strong>Pogojna:</strong> \(P(A|B) = \dfrac{P(A \cap B)}{P(B)}\).</li>
-              <li><strong>Totalna:</strong> \(P(A) = \sum P(A|B_i) P(B_i)\).</li>
-              <li><strong>Bernoulli:</strong> \(P(X=k) = \dbinom{n}{k} p^k (1-p)^{n-k}\).</li>
-              <li><strong>Bayes:</strong> \(P(B_k|A) = \dfrac{P(A|B_k) P(B_k)}{P(A)}\).</li>
-              <li><strong>Pričakovana:</strong> \(E(X) = np\), \(\sigma = \sqrt{np(1-p)}\).</li>
-            </ul>
-          </div>
-
-          <div class="info-card">
-            <h3>Kako pristopiti k nalogi</h3>
-            <ol>
-              <li><strong>Preberi nalogo in prepoznaj tip:</strong> klasična, nasprotni, unija, pogojna, Bernoullijeva?</li>
-              <li><strong>Za klasično:</strong> preštej \(|\Omega|\) in \(|A|\).</li>
-              <li><strong>Za "vsaj eden":</strong> uporabi nasprotni dogodek.</li>
-              <li><strong>Za "natanko k-krat":</strong> Bernoullijeva formula.</li>
-              <li><strong>Za "če vemo, da":</strong> pogojna verjetnost.</li>
-              <li><strong>Za "iz katerega vira":</strong> Bayesova formula.</li>
-            </ol>
-          </div>
-
-          <div class="info-card">
-            <h3>⏱️ Časovni načrt za en večer</h3>
-            <ul>
-              <li><strong>20 min:</strong> Teorija — osnovni pojmi in formule.</li>
-              <li><strong>55 min:</strong> Tipi 1–6 (klasična, nasprotni, unija, neodvisni, pogojna, totalna).</li>
-              <li><strong>40 min:</strong> Tipi 7–10 (Bernoulli, Bayes, kombinacije, pričakovana vrednost).</li>
-              <li><strong>25 min:</strong> Ponovi pogoste napake in študijski vodič.</li>
-            </ul>
-          </div>
-        </section>
-
-        <!-- ============ 5. POVEZAVE ============ -->
-        <section class="subsection">
-          <div class="subsection-head">
-            <h2>5. Vadi naprej</h2>
+            <h2>Vadi naprej</h2>
             <p>Ko predelaš razlago, preveri znanje z nalogami.</p>
           </div>
           <div class="link-list">
-            <a class="link-item" href="/views/matematika/matura/osnovna_raven/naloge/resene/">
+            <a class="link-item" href="/views/matematika/matura/matura.html">
               <span class="link-item-text">
-                <strong>Rešene naloge — osnovna raven</strong>
-                <small>Primeri z razlago</small>
-              </span>
-              <span class="arrow">→</span>
-            </a>
-            <a class="link-item" href="/views/matematika/matura/visja_raven/naloge/resene/">
-              <span class="link-item-text">
-                <strong>Rešene naloge — višja raven</strong>
-                <small>Zahtevnejši primeri</small>
+                <strong>Maturitetne pole</strong>
+                <small>Rešuj prave izpitne pole</small>
               </span>
               <span class="arrow">→</span>
             </a>
