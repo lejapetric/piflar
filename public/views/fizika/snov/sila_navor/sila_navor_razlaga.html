@@ -1,0 +1,587 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sila in navor — razlaga in postopki | Piflar.si</title>
+  <meta name="description" content="Sila in navor za maturo iz fizike: sila kot medsebojni vpliv, sestavljanje in razstavljanje sil, ravnovesje sil, sile na klancu, notranje in zunanje sile, Hookov zakon, trenje in lepenje, tlak, navor in težišče.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
+  <link rel="stylesheet" href="/style/snov.css">
+</head>
+<body>
+  <div id="header"></div>
+
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view">
+
+<header class="page-header">
+          <span class="page-eyebrow">Fizika · Snov · 4.3</span>
+          <h1>Sila in navor</h1>
+          <p>Sila je merilo za medsebojni vpliv dveh teles. Na tej strani so sile, ko telo miruje (statika): kako sile sestavljamo, kdaj so v ravnovesju, kako delujejo vzmet, trenje in tlak ter kdaj se telo ne zavrti. Pod razlago vsakega podpoglavja so vsi tipi nalog, ki se pojavijo pri tem sklopu. Vsebine, označene s <span class="badge-vr">PZ</span>, so posebna znanja iz kataloga.</p>
+          <div class="page-meta">
+            <div class="page-meta-item"><strong>7</strong><span>Podpoglavij</span></div>
+            <div class="page-meta-item"><strong>10</strong><span>Tipov nalog</span></div>
+            <div class="page-meta-item"><strong>~60 min</strong><span>Branja</span></div>
+          </div>
+        </header>
+
+        <div class="matura-formule">
+          <h3>Formule na maturi</h3>
+          <p>Enačbe, ki jih potrebuješ (večina je na listu s konstantami in enačbami, ki je del izpitne pole):</p>
+          <div class="matura-levo">
+            <ul>
+              <li>teža: \(F_g = mg\); ravnovesje: \(\sum \vec{F} = 0\)</li>
+              <li>vzmet: \(F = kx\)</li>
+              <li>trenje: \(F_{tr} = k_{tr} F_n\); lepenje: \(F_l \le k_l F_n\)</li>
+              <li>tlak: \(p = \dfrac{F}{S}\)</li>
+              <li>navor: \(M = rF\sin\alpha\); ravnovesje navorov: \(\sum M = 0\)</li>
+            </ul>
+          </div>
+        </div>
+
+        <nav class="kazalo" aria-label="Podpoglavja">
+          <h2>Podpoglavja</h2>
+          <ol>
+            <li><a href="#sklop-1"><span class="kazalo-st">1</span> Sila</a></li>
+            <li><a href="#sklop-2"><span class="kazalo-st">2</span> Ravnovesje sil</a></li>
+            <li><a href="#sklop-3"><span class="kazalo-st">3</span> Sistem in okolica</a></li>
+            <li><a href="#sklop-4"><span class="kazalo-st">4</span> Prožnost</a></li>
+            <li><a href="#sklop-5"><span class="kazalo-st">5</span> Trenje, lepenje in upor sredstva</a></li>
+            <li><a href="#sklop-6"><span class="kazalo-st">6</span> Tlak</a></li>
+            <li><a href="#sklop-7"><span class="kazalo-st">7</span> Navor</a></li>
+            <li><a href="#kljuc"><span class="kazalo-st">?</span> Ključ: kateri tip naloge je to?</a></li>
+          </ol>
+        </nav>
+
+        <!-- SKLOP 1 -->
+        <section class="sklop" id="sklop-1">
+          <header class="sklop-header">
+            <span class="sklop-num">4.3 · 1</span>
+            <h2>Sila</h2>
+            <p>Sila kot medsebojni vpliv, učinki sile, sestavljanje in razstavljanje sil.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <p><strong>Sila</strong> opisuje medsebojni vpliv dveh teles. Vedno jo povzroča neko drugo telo: Zemlja (teža), vrv (sila vrvi), podlaga (sila podlage), vzmet. Sila ima <strong>velikost, smer in prijemališče</strong>, zato jo rišemo kot puščico (vektor). Enota je newton: \(1\ \text{N} = 1\ \text{kg}\,\text{m/s}^2\).</p>
+            <p><strong>Učinki sile:</strong> sila telo <strong>deformira</strong> (stisne vzmet, upogne palico) ali mu <strong>spremeni gibanje</strong> (velikost ali smer hitrosti). Teža telesa z maso \(m\) je \(F_g = mg\) in kaže navpično navzdol.</p>
+            <h4>Sestavljanje sil</h4>
+            <p>Več sil, ki delujejo na isto telo, nadomestimo z eno, <strong>rezultanto</strong>, ki je njihova vektorska vsota. Grafično: paralelogramsko pravilo ali sile nanizamo eno za drugo (začetek naslednje na konec prejšnje).</p>
+            <ul>
+              <li>sili v isti smeri: \(F = F_1 + F_2\); v nasprotnih smereh: \(F = |F_1 - F_2|\);</li>
+              <li>pravokotni sili: \(F = \sqrt{F_1^2 + F_2^2}\);</li>
+              <li>pod poljubnim kotom \(\varphi\) med silama: \(F^2 = F_1^2 + F_2^2 + 2F_1F_2\cos\varphi\) (kosinusni izrek).</li>
+            </ul>
+            <div class="slike-vrsta"><figure class="slika">
+<svg viewBox="0 0 260 179" role="img" aria-label="Paralelogramsko pravilo za sile" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g1-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g1-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g1-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g1-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g1-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g1-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<line class="s-pom" x1="165.6" y1="135.5" x2="216.5" y2="46.1"/>
+<line class="s-pom" x1="89.3" y1="46.1" x2="216.5" y2="46.1"/>
+<line class="s-k1" x1="38.4" y1="135.5" x2="165.6" y2="135.5" marker-end="url(#g1-k1)"/>
+<text class="s-txt-k1" x="102" y="153.5" text-anchor="middle">F<tspan dy="4" style="font-size:10px">1</tspan></text>
+<line class="s-k3" x1="38.4" y1="135.5" x2="89.3" y2="46.1" marker-end="url(#g1-k3)"/>
+<text class="s-txt-k3" x="53.9" y="90.8" text-anchor="end">F<tspan dy="4" style="font-size:10px">2</tspan></text>
+<line class="s-k2" x1="38.4" y1="135.5" x2="216.5" y2="46.1" marker-end="url(#g1-k2)"/>
+<text class="s-txt-k2" x="137.5" y="104.8" text-anchor="start">F</text>
+<circle class="s-tocka" cx="38.4" cy="135.5" r="4"/>
+
+</svg>
+<figcaption>Rezultanta dveh sil je diagonala paralelograma.</figcaption>
+</figure><figure class="slika">
+<svg viewBox="0 0 260 179" role="img" aria-label="Razstavljanje sile na komponente" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g2-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g2-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g2-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g2-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g2-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g2-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<line class="s-pom" x1="191.1" y1="135.5" x2="191.1" y2="46.1"/>
+<line class="s-pom" x1="38.4" y1="46.1" x2="191.1" y2="46.1"/>
+<line class="s-k2" x1="38.4" y1="135.5" x2="191.1" y2="46.1" marker-end="url(#g2-k2)"/>
+<text class="s-txt-k2" x="108.8" y="82.8" text-anchor="end">F</text>
+<line class="s-k1" x1="38.4" y1="135.5" x2="191.1" y2="135.5" marker-end="url(#g2-k1)"/>
+<text class="s-txt-k1" x="114.8" y="153.5" text-anchor="middle">F<tspan dy="4" style="font-size:10px">x</tspan><tspan dy="-4"> = F cos α</tspan></text>
+<line class="s-k3" x1="38.4" y1="135.5" x2="38.4" y2="46.1" marker-end="url(#g2-k3)"/>
+<text class="s-txt-k3" x="30.4" y="90.8" text-anchor="end">F<tspan dy="4" style="font-size:10px">y</tspan></text>
+<circle class="s-tocka" cx="38.4" cy="135.5" r="4"/>
+<path class="s-kot" d="M38.4,135.5 L72.4,135.5 A34,34 0 0 0 67.8,118.4 Z"/>
+<text class="s-txt-k4" x="81.8" y="127.8" text-anchor="middle">α</text>
+</svg>
+<figcaption>Razstavljanje: \(F_x = F\cos\alpha\), \(F_y = F\sin\alpha\).</figcaption>
+</figure></div>
+            <h4>Razstavljanje sil na komponente <span class="badge-vr">PZ</span></h4>
+            <p>Silo lahko nadomestimo z dvema silama v izbranih smereh. V pravokotnem koordinatnem sistemu je \(F_x = F\cos\alpha\) in \(F_y = F\sin\alpha\), kjer je \(\alpha\) kot med silo in osjo \(x\). Sile seštevamo tako, da posebej seštejemo vse komponente \(x\) in vse komponente \(y\).</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-1">
+              <h4>Tip 1: Rezultanta sil</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Na telo delujeta sili \(30\ \text{N}\) proti vzhodu in \(40\ \text{N}\) proti severu. Določite velikost in smer rezultante.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> na telo deluje več sil, sprašujejo po skupni (rezultantni) sili ali po tem, katera slika pravilno kaže vsoto.</p><ul class="kljucne"><li>„rezultanta“</li><li>„skupna sila“</li><li>„dva psa vlečeta sani“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Nariši sile iz skupnega prijemališča in določi kot med njimi.</p><div class="na-nalogi"><p>Sili sta pravokotni, \(\varphi = 90^\circ\).</p></div></li>
+              <li><p class="korak">Izberi pravilo: isto ali nasprotno smer seštej oziroma odštej, pravokotni Pitagora, sicer kosinusni izrek ali komponente.</p><div class="na-nalogi"><p>\(F = \sqrt{30^2 + 40^2}\ \text{N} = 50\ \text{N}\).</p></div></li>
+              <li><p class="korak">Smer določi s kotom (tangens ali sinusni izrek).</p><div class="na-nalogi"><p>\(\tan\beta = 40/30\), \(\beta = 53^\circ\) severno od vzhoda.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Sili 30 N in 40 N oklepata kot \(60^\circ\). Rezultanta?</p><p>\(F = \sqrt{900 + 1600 + 2 \cdot 30 \cdot 40 \cdot 0{,}5}\ \text{N} = 61\ \text{N}\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Kolikšna je najmanjša in največja možna rezultanta sil 5 N in 8 N?</p><p>3 N (nasprotni smeri) in 13 N (ista smer).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Tri sile po 10 N oklepajo med seboj kote \(120^\circ\). Rezultanta?</p><p>0 (zaprt enakostranični trikotnik).</p></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-2">
+              <h4>Tip 2: Razstavljanje sile na komponente <span class="badge-vr">PZ</span></h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Sani vlečemo z vrvjo s silo \(80\ \text{N}\), vrv oklepa z vodoravnico kot \(30^\circ\). Kolikšni sta vodoravna in navpična komponenta sile?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> sila deluje poševno, zanima pa nas njen učinek v določeni smeri (vodoravno, vzdolž klanca).</p><ul class="kljucne"><li>„pod kotom“</li><li>„komponenta“</li><li>„vleče poševno“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Postavi osi (vodoravno, navpično ali vzdolž podlage) in odčitaj kot med silo in osjo \(x\).</p><div class="na-nalogi"><p>\(\alpha = 30^\circ\) od vodoravnice.</p></div></li>
+              <li><p class="korak">Komponenta ob kotu je s kosinusom, nasproti kota s sinusom.</p><div class="na-nalogi"><p>\(F_x = 80 \cos 30^\circ\ \text{N} = 69\ \text{N}\), \(F_y = 80 \sin 30^\circ\ \text{N} = 40\ \text{N}\).</p></div></li>
+              <li><p class="korak">Preveri: \(F_x^2 + F_y^2 = F^2\).</p><div class="na-nalogi"><p>\(69{,}3^2 + 40^2 = 6400 = 80^2\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Sila 50 N kaže \(37^\circ\) nad osjo \(x\).</p><p>\(F_x = 40\ \text{N}\), \(F_y = 30\ \text{N}\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Seštejte \(\vec{F}_1 = (3, 4)\ \text{N}\) in \(\vec{F}_2 = (5, -10)\ \text{N}\).</p><p>\((8, -6)\ \text{N}\), velikost 10 N.</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Zakaj je sani lažje vleči poševno kot jih potiskati poševno navzdol?</p><p>Pri vleki navpična komponenta zmanjša silo podlage in s tem trenje.</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 2 -->
+        <section class="sklop" id="sklop-2">
+          <header class="sklop-header">
+            <span class="sklop-num">4.3 · 2</span>
+            <h2>Ravnovesje sil</h2>
+            <p>Izrek o ravnovesju sil, sile na klancu.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <p><strong>Izrek o ravnovesju sil:</strong> telo miruje ali se giblje enakomerno premo natanko tedaj, ko je vsota vseh sil nanj enaka nič:</p>
+            <p>\[\sum \vec{F} = 0 \quad\Longleftrightarrow\quad \sum F_x = 0 \ \text{ in } \ \sum F_y = 0.\]</p>
+            <p>Pri treh silah v ravnovesju se sile, nanizane druga za drugo, zaprejo v trikotnik. Pri reševanju vedno najprej <strong>nariši vse sile na telo</strong> (teža, sile vrvi, sila podlage, trenje), nato zapiši ravnovesje po komponentah.</p>
+            <div class="slike-vrsta"><figure class="slika">
+<svg viewBox="0 0 300 220" role="img" aria-label="Svetilka na dveh vrveh" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g3-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g3-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g3-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g3-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g3-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g3-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<polygon class="s-lik" points="18,32.2 282,32.2 282,18 18,18"/>
+<line class="s-crta" x1="32.1" y1="32.2" x2="150" y2="102.9"/>
+<line class="s-crta" x1="267.9" y1="32.2" x2="150" y2="102.9"/>
+<line class="s-k1" x1="150" y1="102.9" x2="91.1" y2="67.5" marker-end="url(#g3-k1)"/>
+<text class="s-txt-k1" x="114.6" y="101.2" text-anchor="end">F<tspan dy="4" style="font-size:10px">1</tspan></text>
+<line class="s-k1" x1="150" y1="102.9" x2="208.9" y2="67.5" marker-end="url(#g3-k1)"/>
+<text class="s-txt-k1" x="185.5" y="101.2" text-anchor="start">F<tspan dy="4" style="font-size:10px">2</tspan></text>
+<line class="s-k2" x1="150" y1="102.9" x2="150" y2="173.7" marker-end="url(#g3-k2)"/>
+<text class="s-txt-k2" x="158" y="138.3" text-anchor="start">F<tspan dy="4" style="font-size:10px">g</tspan></text>
+<circle class="s-tocka" cx="150" cy="102.9" r="5"/>
+<path class="s-kot" d="M32.1,32.2 L54.4,45.6 A26,26 0 0 0 58.1,32.2 Z"/>
+<text class="s-txt-k4" x="71.8" y="46.1" text-anchor="middle">α</text>
+</svg>
+<figcaption>Svetilka visi na dveh vrveh. V ravnovesju je vsota vseh sil enaka nič.</figcaption>
+</figure><figure class="slika">
+<svg viewBox="0 0 200 145" role="img" aria-label="Trikotnik sil" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g4-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g4-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g4-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g4-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g4-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g4-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<line class="s-k2" x1="100" y1="34.4" x2="100" y2="116.1" marker-end="url(#g4-k2)"/>
+<text class="s-txt-k2" x="92" y="75.3" text-anchor="end">F<tspan dy="4" style="font-size:10px">g</tspan></text>
+<line class="s-k1" x1="100" y1="116.1" x2="168.3" y2="75.2" marker-end="url(#g4-k1)"/>
+<text class="s-txt-k1" x="142.2" y="103.7" text-anchor="start">F<tspan dy="4" style="font-size:10px">2</tspan></text>
+<line class="s-k1" x1="168.3" y1="75.2" x2="100" y2="34.4" marker-end="url(#g4-k1)"/>
+<text class="s-txt-k1" x="142.2" y="48.8" text-anchor="start">F<tspan dy="4" style="font-size:10px">1</tspan></text>
+
+</svg>
+<figcaption>Sile v ravnovesju, nanizane druga za drugo, tvorijo zaprt trikotnik.</figcaption>
+</figure></div>
+            <h4>Sile na klancu <span class="badge-vr">PZ</span></h4>
+            <p>Na telo na klancu z naklonom \(\alpha\) delujejo teža \(F_g\), sila podlage \(F_n\) (pravokotno na klanec) in sila trenja ali lepenja (vzdolž klanca). Osi postavimo vzdolž klanca in pravokotno nanj, težo razstavimo:</p>
+            <ul>
+              <li>vzdolž klanca (dinamična komponenta): \(F_d = F_g \sin\alpha\);</li>
+              <li>pravokotno na klanec: \(F_g \cos\alpha\), ki jo uravnovesi sila podlage: \(F_n = F_g\cos\alpha\).</li>
+            </ul>
+            <figure class="slika">
+<svg viewBox="0 0 440 315" role="img" aria-label="Sile na klancu" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g5-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g5-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g5-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g5-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g5-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g5-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<polygon class="s-lik" points="36.4,267.6 354.4,267.6 354.4,84.1"/>
+<polygon class="s-lik-2" points="182.7,183.2 246.3,146.5 222.4,105.2 158.8,141.9"/>
+<line class="s-k2" x1="202.5" y1="144.2" x2="202.5" y2="276.3" marker-end="url(#g5-k2)"/>
+<text class="s-txt-k2" x="210.5" y="232.3" text-anchor="start">F<tspan dy="4" style="font-size:10px">g</tspan></text>
+<line class="s-k4" x1="202.5" y1="144.2" x2="145.3" y2="177.2" marker-end="url(#g5-k4)"/>
+<text class="s-txt-k4" x="139.9" y="182.7" text-anchor="end">F<tspan dy="4" style="font-size:10px">g</tspan><tspan dy="-4"> sin α</tspan></text>
+<line class="s-k4" x1="202.5" y1="144.2" x2="259.8" y2="243.3" marker-end="url(#g5-k4)"/>
+<text class="s-txt-k4" x="241.2" y="203.8" text-anchor="start">F<tspan dy="4" style="font-size:10px">g</tspan><tspan dy="-4"> cos α</tspan></text>
+<line class="s-k1" x1="190.6" y1="123.5" x2="133.4" y2="24.4" marker-end="url(#g5-k1)"/>
+<text class="s-txt-k1" x="154" y="70" text-anchor="end">F<tspan dy="4" style="font-size:10px">n</tspan></text>
+<line class="s-k3" x1="234.4" y1="125.8" x2="275.7" y2="102" marker-end="url(#g5-k3)"/>
+<text class="s-txt-k3" x="259.1" y="127.9" text-anchor="start">F<tspan dy="4" style="font-size:10px">tr</tspan></text>
+<circle class="s-tocka" cx="202.5" cy="144.2" r="3.5"/>
+<path class="s-kot" d="M36.4,267.6 L72.4,267.6 A36,36 0 0 0 67.6,249.6 Z"/>
+<text class="s-txt-k4" x="81.8" y="259.4" text-anchor="middle">α</text>
+</svg>
+<figcaption>Sile na kvader na klancu: teža \(F_g\), sila podlage \(F_n\) in trenje \(F_{tr}\). Težo razstavimo na dinamično komponento \(F_g \sin\alpha\) vzdolž klanca in komponento \(F_g \cos\alpha\), pravokotno na klanec.</figcaption>
+</figure>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-3">
+              <h4>Tip 3: Ravnovesje treh sil (telo na vrveh)</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Svetilka z maso \(2{,}0\ \text{kg}\) visi na sredini med dvema enakima vrvema, ki z vodoravnim stropom oklepata kot \(30^\circ\). S kolikšno silo je napeta vsaka vrv?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> telo miruje, na njem so obešene vrvi ali je podprto, sprašujejo po silah v vrveh ali opornikih.</p><ul class="kljucne"><li>„visi“, „obešena“</li><li>„miruje“</li><li>„s kolikšno silo je napeta vrv“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Nariši vse sile na telo.</p><div class="na-nalogi"><p>Teža \(F_g = 2{,}0 \cdot 9{,}81\ \text{N} = 19{,}6\ \text{N}\) navzdol, sili vrvi \(F_1 = F_2 = F\) vzdolž vrvi.</p></div></li>
+              <li><p class="korak">Sile razstavi na vodoravne in navpične komponente.</p><div class="na-nalogi"><p>Navpični komponenti vrvi: \(F\sin 30^\circ\), vodoravni: \(\pm F\cos 30^\circ\).</p></div></li>
+              <li><p class="korak">Zapiši ravnovesje v obeh smereh.</p><div class="na-nalogi"><p>Vodoravno se izničita. Navpično: \(2F\sin 30^\circ = F_g\).</p></div></li>
+              <li><p class="korak">Izračunaj neznanko.</p><div class="na-nalogi"><p>\(F = \dfrac{F_g}{2\sin 30^\circ} = 19{,}6\ \text{N}\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Kaj se zgodi s silo v vrveh, če kot z vodoravnico zmanjšamo na \(5^\circ\)?</p><p>\(F = F_g/(2\sin 5^\circ) = 5{,}7\,F_g\): skoraj vodoravno napeto vrv je težko napeti.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Utež 10 N visi na vrvi, ki jo z vodoravno silo odmaknemo za \(30^\circ\) od navpičnice. Vodoravna sila?</p><p>\(F = F_g \tan 30^\circ = 5{,}8\ \text{N}\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Svetilka 3 kg visi na eni navpični vrvi. Sila vrvi?</p><p>\(F = mg = 29\ \text{N}\).</p></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-4">
+              <h4>Tip 4: Telo na klancu <span class="badge-vr">PZ</span></h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Kvader z maso \(5{,}0\ \text{kg}\) leži na klancu z naklonom \(30^\circ\). Koeficient trenja je \(0{,}20\). S kolikšno silo vzdolž klanca ga moramo vleči, da se enakomerno giblje navzgor?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> telo je na klancu (nagnjeni podlagi).</p><ul class="kljucne"><li>„klanec z naklonom“</li><li>„strmina“</li><li>„zdrsne po klancu“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Nariši sile in postavi osi vzdolž klanca in pravokotno nanj.</p><div class="na-nalogi"><p>Teža, sila podlage, trenje (navzdol, ker se telo giblje navzgor), vlečna sila \(F\).</p></div></li>
+              <li><p class="korak">Težo razstavi: \(F_g\sin\alpha\) vzdolž klanca, \(F_g\cos\alpha\) pravokotno.</p><div class="na-nalogi"><p>\(F_g = 49{,}1\ \text{N}\): \(F_g\sin 30^\circ = 24{,}5\ \text{N}\), \(F_g\cos 30^\circ = 42{,}5\ \text{N}\).</p></div></li>
+              <li><p class="korak">Pravokotno na klanec: \(F_n = F_g\cos\alpha\), iz tega trenje.</p><div class="na-nalogi"><p>\(F_{tr} = 0{,}20 \cdot 42{,}5\ \text{N} = 8{,}5\ \text{N}\).</p></div></li>
+              <li><p class="korak">Vzdolž klanca zapiši ravnovesje (ali Newtonov zakon, če telo pospešuje).</p><div class="na-nalogi"><p>\(F = F_g\sin\alpha + F_{tr} = 24{,}5 + 8{,}5 = 33\ \text{N}\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Pri katerem naklonu kvader začne drseti, če je koeficient lepenja 0,5?</p><p>\(F_g\sin\alpha = k_l F_g\cos\alpha\), \(\tan\alpha = 0{,}5\), \(\alpha = 27^\circ\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Kolikšna je sila podlage na 10 kg telo na klancu \(20^\circ\)?</p><p>\(F_n = 98{,}1 \cos 20^\circ = 92\ \text{N}\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Kvader miruje na klancu \(30^\circ\), \(m = 2\ \text{kg}\). Sila lepenja?</p><p>\(F_l = F_g\sin 30^\circ = 9{,}8\ \text{N}\), usmerjena navzgor po klancu.</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 3 -->
+        <section class="sklop" id="sklop-3">
+          <header class="sklop-header">
+            <span class="sklop-num">4.3 · 3</span>
+            <h2>Sistem in okolica</h2>
+            <p>Zunanje in notranje sile.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <p>Pri reševanju najprej izberemo <strong>sistem</strong>: telo ali skupino teles, ki jo opazujemo. Vse drugo je <strong>okolica</strong>.</p>
+            <ul>
+              <li><strong>Notranje sile</strong> delujejo med telesi znotraj sistema. Vedno nastopajo v parih (tretji Newtonov zakon) in se v vsoti izničijo, zato ne spremenijo gibanja sistema kot celote.</li>
+              <li><strong>Zunanje sile</strong> povzroča okolica (Zemlja, podlaga, vrv, ki jo vleče nekdo zunaj). Samo te določajo gibanje sistema kot celote.</li>
+            </ul>
+            <p>Ista sila je lahko notranja ali zunanja, odvisno od izbire sistema: sila vrvice med vozičkoma je notranja za sistem obeh vozičkov in zunanja za vsak voziček posebej. Na diagram sil za izbrano telo rišemo <strong>samo sile, ki delujejo na to telo</strong>, ne sil, s katerimi telo deluje na druga.</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-5">
+              <h4>Tip 5: Diagram sil na telo in izbira sistema</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Knjiga z maso \(1{,}0\ \text{kg}\) leži na mizi, na knjigi stoji skodelica z maso \(0{,}30\ \text{kg}\). Narišite sile na knjigo in izračunajte silo mize na knjigo. Katere sile so notranje za sistem knjiga in skodelica?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> več teles se dotika ali so povezana, sprašujejo po silah na eno izmed njih ali po notranjih in zunanjih silah.</p><ul class="kljucne"><li>„narišite vse sile na …“</li><li>„notranje, zunanje sile“</li><li>„s kolikšno silo deluje … na …“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Izberi telo in poišči vsa telesa, ki se ga dotikajo, ter Zemljo (teža).</p><div class="na-nalogi"><p>Knjigo se dotikata miza in skodelica, deluje še Zemlja.</p></div></li>
+              <li><p class="korak">Za vsako tako telo nariši eno silo na izbrano telo.</p><div class="na-nalogi"><p>Teža knjige \(9{,}8\ \text{N}\) navzdol, sila skodelice na knjigo \(0{,}30 \cdot 9{,}81 = 2{,}9\ \text{N}\) navzdol, sila mize \(F_n\) navzgor.</p></div></li>
+              <li><p class="korak">Zapiši ravnovesje (ali Newtonov zakon) in izračunaj.</p><div class="na-nalogi"><p>\(F_n = 9{,}8 + 2{,}9 = 12{,}8\ \text{N}\).</p></div></li>
+              <li><p class="korak">Za sistem preveri, katere sile delujejo med njegovimi deli (notranje) in katere iz okolice (zunanje).</p><div class="na-nalogi"><p>Notranji sta sila skodelice na knjigo in knjige na skodelico. Zunanje so teži in sila mize.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Ali lahko voznik premakne avto, če potiska armaturno ploščo?</p><p>Ne, to je notranja sila sistema avto in voznik.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Dva vozička povezana z vrvico vlečemo s silo 12 N. Katera sila je zunanja za sistem obeh?</p><p>Vlečna sila 12 N (in teži ter sili podlage); sila vrvice je notranja.</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Žoga leži na tleh. Ali sta teža žoge in sila tal na žogo par po tretjem Newtonovem zakonu?</p><p>Ne. Obe delujeta na žogo; par teže je sila žoge na Zemljo.</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 4 -->
+        <section class="sklop" id="sklop-4">
+          <header class="sklop-header">
+            <span class="sklop-num">4.3 · 4</span>
+            <h2>Prožnost</h2>
+            <p>Hookov zakon, vzmet kot merilnik sil.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <p>Prožno telo se po prenehanju delovanja sile vrne v prvotno obliko. Za vijačno vzmet velja <strong>Hookov zakon</strong>: raztezek je sorazmeren s silo,</p>
+            <p>\[F = kx,\]</p>
+            <p>kjer je \(x\) raztezek (ali skrček) glede na neobremenjeno vzmet in \(k\) <strong>koeficient vzmeti</strong> (enota N/m). Trša vzmet ima večji \(k\). Zakon velja do <strong>meje prožnosti</strong>; pri večjih silah se vzmet trajno deformira.</p>
+            <figure class="slika slika--ozka">
+<svg viewBox="0 0 380 260" role="img" aria-label="Hookov zakon" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g6-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g6-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g6-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g6-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g6-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g6-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<path class="s-mreza" d="M26,234V26M80.7,234V26M135.3,234V26M190,234V26M244.7,234V26M299.3,234V26M354,234V26M26,234H354M26,199.3H354M26,164.7H354M26,130H354M26,95.3H354M26,60.7H354M26,26H354"/>
+<line class="s-os" x1="26" y1="234" x2="362" y2="234" marker-end="url(#g6-p)"/>
+<line class="s-os" x1="26" y1="234" x2="26" y2="18" marker-end="url(#g6-p)"/>
+<text class="s-os-txt" x="356" y="226" text-anchor="end">x [cm]</text>
+<text class="s-os-txt" x="34" y="30">F [N]</text>
+<line class="s-os" x1="80.7" y1="231" x2="80.7" y2="237"/><text class="s-os-txt" x="80.7" y="249" text-anchor="middle">2</text><line class="s-os" x1="135.3" y1="231" x2="135.3" y2="237"/><text class="s-os-txt" x="135.3" y="249" text-anchor="middle">4</text><line class="s-os" x1="190" y1="231" x2="190" y2="237"/><text class="s-os-txt" x="190" y="249" text-anchor="middle">6</text><line class="s-os" x1="244.7" y1="231" x2="244.7" y2="237"/><text class="s-os-txt" x="244.7" y="249" text-anchor="middle">8</text><line class="s-os" x1="299.3" y1="231" x2="299.3" y2="237"/><text class="s-os-txt" x="299.3" y="249" text-anchor="middle">10</text><line class="s-os" x1="23" y1="199.3" x2="29" y2="199.3"/><text class="s-os-txt" x="20" y="203.3" text-anchor="end">1</text><line class="s-os" x1="23" y1="164.7" x2="29" y2="164.7"/><text class="s-os-txt" x="20" y="168.7" text-anchor="end">2</text><line class="s-os" x1="23" y1="130" x2="29" y2="130"/><text class="s-os-txt" x="20" y="134" text-anchor="end">3</text><line class="s-os" x1="23" y1="95.3" x2="29" y2="95.3"/><text class="s-os-txt" x="20" y="99.3" text-anchor="end">4</text><line class="s-os" x1="23" y1="60.7" x2="29" y2="60.7"/><text class="s-os-txt" x="20" y="64.7" text-anchor="end">5</text><text class="s-os-txt" x="20" y="249" text-anchor="end">0</text>
+<path class="s-k1" d="M26,234L26.6,233.6L27.2,233.2L27.8,232.8L28.5,232.4L29.1,232.1L29.7,231.7L30.3,231.3L30.9,230.9L31.5,230.5L32.2,230.1L32.8,229.7L33.4,229.3L34,228.9L34.6,228.5L35.2,228.2L35.8,227.8L36.5,227.4L37.1,227L37.7,226.6L38.3,226.2L38.9,225.8L39.5,225.4L40.1,225L40.8,224.6L41.4,224.3L42,223.9L42.6,223.5L43.2,223.1L43.8,222.7L44.5,222.3L45.1,221.9L45.7,221.5L46.3,221.1L46.9,220.7L47.5,220.4L48.1,220L48.8,219.6L49.4,219.2L50,218.8L50.6,218.4L51.2,218L51.8,217.6L52.4,217.2L53.1,216.8L53.7,216.5L54.3,216.1L54.9,215.7L55.5,215.3L56.1,214.9L56.8,214.5L57.4,214.1L58,213.7L58.6,213.3L59.2,212.9L59.8,212.6L60.4,212.2L61.1,211.8L61.7,211.4L62.3,211L62.9,210.6L63.5,210.2L64.1,209.8L64.7,209.4L65.4,209L66,208.7L66.6,208.3L67.2,207.9L67.8,207.5L68.4,207.1L69.1,206.7L69.7,206.3L70.3,205.9L70.9,205.5L71.5,205.1L72.1,204.8L72.7,204.4L73.4,204L74,203.6L74.6,203.2L75.2,202.8L75.8,202.4L76.4,202L77,201.6L77.7,201.2L78.3,200.9L78.9,200.5L79.5,200.1L80.1,199.7L80.7,199.3L81.4,198.9L82,198.5L82.6,198.1L83.2,197.7L83.8,197.3L84.4,197L85,196.6L85.7,196.2L86.3,195.8L86.9,195.4L87.5,195L88.1,194.6L88.7,194.2L89.3,193.8L90,193.4L90.6,193.1L91.2,192.7L91.8,192.3L92.4,191.9L93,191.5L93.7,191.1L94.3,190.7L94.9,190.3L95.5,189.9L96.1,189.5L96.7,189.2L97.3,188.8L98,188.4L98.6,188L99.2,187.6L99.8,187.2L100.4,186.8L101,186.4L101.6,186L102.3,185.6L102.9,185.3L103.5,184.9L104.1,184.5L104.7,184.1L105.3,183.7L106,183.3L106.6,182.9L107.2,182.5L107.8,182.1L108.4,181.7L109,181.4L109.6,181L110.3,180.6L110.9,180.2L111.5,179.8L112.1,179.4L112.7,179L113.3,178.6L113.9,178.2L114.6,177.8L115.2,177.5L115.8,177.1L116.4,176.7L117,176.3L117.6,175.9L118.3,175.5L118.9,175.1L119.5,174.7L120.1,174.3L120.7,173.9L121.3,173.6L121.9,173.2L122.6,172.8L123.2,172.4L123.8,172L124.4,171.6L125,171.2L125.6,170.8L126.2,170.4L126.9,170L127.5,169.7L128.1,169.3L128.7,168.9L129.3,168.5L129.9,168.1L130.6,167.7L131.2,167.3L131.8,166.9L132.4,166.5L133,166.1L133.6,165.8L134.2,165.4L134.9,165L135.5,164.6L136.1,164.2L136.7,163.8L137.3,163.4L137.9,163L138.5,162.6L139.2,162.2L139.8,161.9L140.4,161.5L141,161.1L141.6,160.7L142.2,160.3L142.9,159.9L143.5,159.5L144.1,159.1L144.7,158.7L145.3,158.3L145.9,158L146.5,157.6L147.2,157.2L147.8,156.8L148.4,156.4L149,156L149.6,155.6L150.2,155.2L150.8,154.8L151.5,154.4L152.1,154.1L152.7,153.7L153.3,153.3L153.9,152.9L154.5,152.5L155.1,152.1L155.8,151.7L156.4,151.3L157,150.9L157.6,150.5L158.2,150.2L158.8,149.8L159.5,149.4L160.1,149L160.7,148.6L161.3,148.2L161.9,147.8L162.5,147.4L163.1,147L163.8,146.6L164.4,146.3L165,145.9L165.6,145.5L166.2,145.1L166.8,144.7L167.5,144.3L168.1,143.9L168.7,143.5L169.3,143.1L169.9,142.7L170.5,142.4L171.1,142L171.8,141.6L172.4,141.2L173,140.8L173.6,140.4L174.2,140L174.8,139.6L175.4,139.2L176.1,138.8L176.7,138.5L177.3,138.1L177.9,137.7L178.5,137.3L179.1,136.9L179.8,136.5L180.4,136.1L181,135.7L181.6,135.3L182.2,134.9L182.8,134.6L183.4,134.2L184.1,133.8L184.7,133.4L185.3,133L185.9,132.6L186.5,132.2L187.1,131.8L187.7,131.4L188.4,131L189,130.7L189.6,130.3L190.2,129.9L190.8,129.5L191.4,129.1L192.1,128.7L192.7,128.3L193.3,127.9L193.9,127.5L194.5,127.1L195.1,126.8L195.7,126.4L196.4,126L197,125.6L197.6,125.2L198.2,124.8L198.8,124.4L199.4,124L200,123.6L200.7,123.2L201.3,122.9L201.9,122.5L202.5,122.1L203.1,121.7L203.7,121.3L204.4,120.9L205,120.5L205.6,120.1L206.2,119.7L206.8,119.3L207.4,119L208,118.6L208.7,118.2L209.3,117.8L209.9,117.4L210.5,117L211.1,116.6L211.7,116.2L212.3,115.8L213,115.4L213.6,115.1L214.2,114.7L214.8,114.3L215.4,113.9L216,113.5L216.7,113.1L217.3,112.7L217.9,112.3L218.5,111.9L219.1,111.5L219.7,111.2L220.3,110.8L221,110.4L221.6,110L222.2,109.6L222.8,109.2L223.4,108.8L224,108.4L224.6,108L225.3,107.6L225.9,107.3L226.5,106.9L227.1,106.5L227.7,106.1L228.3,105.7L229,105.3L229.6,104.9L230.2,104.5L230.8,104.1L231.4,103.7L232,103.4L232.6,103L233.3,102.6L233.9,102.2L234.5,101.8L235.1,101.4L235.7,101L236.3,100.6L236.9,100.2L237.6,99.8L238.2,99.5L238.8,99.1L239.4,98.7L240,98.3L240.6,97.9L241.3,97.5L241.9,97.1L242.5,96.7L243.1,96.3L243.7,95.9L244.3,95.6L244.9,95.2L245.6,94.8L246.2,94.4L246.8,94L247.4,93.6L248,93.2L248.6,92.8L249.2,92.4L249.9,92L250.5,91.7L251.1,91.3L251.7,90.9L252.3,90.5L252.9,90.1L253.6,89.7L254.2,89.3L254.8,88.9L255.4,88.5L256,88.1L256.6,87.8L257.2,87.4L257.9,87L258.5,86.6L259.1,86.2L259.7,85.8L260.3,85.4L260.9,85L261.5,84.6L262.2,84.2L262.8,83.9L263.4,83.5L264,83.1L264.6,82.7L265.2,82.3L265.9,81.9L266.5,81.5L267.1,81.1L267.7,80.7L268.3,80.3L268.9,80L269.5,79.6L270.2,79.2L270.8,78.8L271.4,78.4L272,78"/>
+<path class="s-k2" d="M272,78L272.2,77.9L272.3,77.9L272.5,77.8L272.7,77.8L272.9,77.7L273,77.7L273.2,77.6L273.4,77.6L273.5,77.5L273.7,77.5L273.9,77.4L274,77.4L274.2,77.3L274.4,77.3L274.6,77.2L274.7,77.2L274.9,77.1L275.1,77.1L275.2,77L275.4,76.9L275.6,76.9L275.8,76.8L275.9,76.8L276.1,76.7L276.3,76.7L276.4,76.6L276.6,76.6L276.8,76.5L277,76.5L277.1,76.4L277.3,76.4L277.5,76.3L277.6,76.3L277.8,76.3L278,76.2L278.2,76.2L278.3,76.1L278.5,76.1L278.7,76L278.8,76L279,75.9L279.2,75.9L279.3,75.8L279.5,75.8L279.7,75.7L279.9,75.7L280,75.6L280.2,75.6L280.4,75.5L280.5,75.5L280.7,75.4L280.9,75.4L281.1,75.4L281.2,75.3L281.4,75.3L281.6,75.2L281.7,75.2L281.9,75.1L282.1,75.1L282.3,75L282.4,75L282.6,75L282.8,74.9L282.9,74.9L283.1,74.8L283.3,74.8L283.4,74.7L283.6,74.7L283.8,74.6L284,74.6L284.1,74.6L284.3,74.5L284.5,74.5L284.6,74.4L284.8,74.4L285,74.4L285.2,74.3L285.3,74.3L285.5,74.2L285.7,74.2L285.8,74.1L286,74.1L286.2,74.1L286.4,74L286.5,74L286.7,73.9L286.9,73.9L287,73.9L287.2,73.8L287.4,73.8L287.5,73.7L287.7,73.7L287.9,73.7L288.1,73.6L288.2,73.6L288.4,73.5L288.6,73.5L288.7,73.5L288.9,73.4L289.1,73.4L289.3,73.4L289.4,73.3L289.6,73.3L289.8,73.2L289.9,73.2L290.1,73.2L290.3,73.1L290.5,73.1L290.6,73.1L290.8,73L291,73L291.1,73L291.3,72.9L291.5,72.9L291.6,72.8L291.8,72.8L292,72.8L292.2,72.7L292.3,72.7L292.5,72.7L292.7,72.6L292.8,72.6L293,72.6L293.2,72.5L293.4,72.5L293.5,72.5L293.7,72.4L293.9,72.4L294,72.4L294.2,72.3L294.4,72.3L294.5,72.3L294.7,72.2L294.9,72.2L295.1,72.2L295.2,72.1L295.4,72.1L295.6,72.1L295.7,72L295.9,72L296.1,72L296.3,71.9L296.4,71.9L296.6,71.9L296.8,71.9L296.9,71.8L297.1,71.8L297.3,71.8L297.5,71.7L297.6,71.7L297.8,71.7L298,71.6L298.1,71.6L298.3,71.6L298.5,71.6L298.7,71.5L298.8,71.5L299,71.5L299.2,71.4L299.3,71.4L299.5,71.4L299.7,71.4L299.8,71.3L300,71.3L300.2,71.3L300.4,71.2L300.5,71.2L300.7,71.2L300.9,71.2L301,71.1L301.2,71.1L301.4,71.1L301.6,71.1L301.7,71L301.9,71L302.1,71L302.2,71L302.4,70.9L302.6,70.9L302.8,70.9L302.9,70.9L303.1,70.8L303.3,70.8L303.4,70.8L303.6,70.8L303.8,70.7L303.9,70.7L304.1,70.7L304.3,70.7L304.5,70.6L304.6,70.6L304.8,70.6L305,70.6L305.1,70.5L305.3,70.5L305.5,70.5L305.7,70.5L305.8,70.5L306,70.4L306.2,70.4L306.3,70.4L306.5,70.4L306.7,70.4L306.9,70.3L307,70.3L307.2,70.3L307.4,70.3L307.5,70.2L307.7,70.2L307.9,70.2L308,70.2L308.2,70.2L308.4,70.1L308.6,70.1L308.7,70.1L308.9,70.1L309.1,70.1L309.2,70.1L309.4,70L309.6,70L309.8,70L309.9,70L310.1,70L310.3,69.9L310.4,69.9L310.6,69.9L310.8,69.9L311,69.9L311.1,69.9L311.3,69.8L311.5,69.8L311.6,69.8L311.8,69.8L312,69.8L312.1,69.8L312.3,69.7L312.5,69.7L312.7,69.7L312.8,69.7L313,69.7L313.2,69.7L313.3,69.6L313.5,69.6L313.7,69.6L313.9,69.6L314,69.6L314.2,69.6L314.4,69.6L314.5,69.6L314.7,69.5L314.9,69.5L315,69.5L315.2,69.5L315.4,69.5L315.6,69.5L315.7,69.5L315.9,69.4L316.1,69.4L316.2,69.4L316.4,69.4L316.6,69.4L316.8,69.4L316.9,69.4L317.1,69.4L317.3,69.4L317.4,69.3L317.6,69.3L317.8,69.3L318,69.3L318.1,69.3L318.3,69.3L318.5,69.3L318.6,69.3L318.8,69.3L319,69.2L319.2,69.2L319.3,69.2L319.5,69.2L319.7,69.2L319.8,69.2L320,69.2L320.2,69.2L320.3,69.2L320.5,69.2L320.7,69.2L320.9,69.2L321,69.1L321.2,69.1L321.4,69.1L321.5,69.1L321.7,69.1L321.9,69.1L322.1,69.1L322.2,69.1L322.4,69.1L322.6,69.1L322.7,69.1L322.9,69.1L323.1,69.1L323.3,69.1L323.4,69.1L323.6,69.1L323.8,69L323.9,69L324.1,69L324.3,69L324.4,69L324.6,69L324.8,69L325,69L325.1,69L325.3,69L325.5,69L325.6,69L325.8,69L326,69L326.2,69L326.3,69L326.5,69L326.7,69L326.8,69L327,69L327.2,69L327.4,69L327.5,69L327.7,69L327.9,69L328,69L328.2,69L328.4,69L328.5,69L328.7,69L328.9,69L329.1,69L329.2,69L329.4,69L329.6,69L329.7,69L329.9,69L330.1,69L330.3,69L330.4,69L330.6,69L330.8,69L330.9,69L331.1,69L331.3,69L331.5,69L331.6,69L331.8,69L332,69L332.1,69L332.3,69L332.5,69L332.6,69L332.8,69L333,69L333.2,69L333.3,69L333.5,69L333.7,69L333.8,69L334,69L334.2,69L334.4,69.1L334.5,69.1L334.7,69.1L334.9,69.1L335,69.1L335.2,69.1L335.4,69.1L335.5,69.1L335.7,69.1L335.9,69.1L336.1,69.1L336.2,69.1L336.4,69.1L336.6,69.1L336.7,69.1L336.9,69.1L337.1,69.2L337.3,69.2L337.4,69.2L337.6,69.2L337.8,69.2L337.9,69.2L338.1,69.2L338.3,69.2L338.5,69.2L338.6,69.2L338.8,69.2L339,69.3L339.1,69.3L339.3,69.3L339.5,69.3L339.7,69.3L339.8,69.3L340,69.3L340.2,69.3L340.3,69.3"/>
+<circle class="s-tocka-2" cx="272" cy="78" r="4"/>
+<text class="s-txt-k1" x="135.3" y="123.1" text-anchor="end">F = kx</text>
+<text class="s-txt-k2" x="288.4" y="39.9" text-anchor="middle">meja prožnosti</text>
+</svg>
+<figcaption>Do meje prožnosti je sila sorazmerna raztezku (\(F = kx\)), strmina grafa \(F(x)\) je koeficient vzmeti \(k\). Tu je \(k = 0{,}5\ \text{N/cm} = 50\ \text{N/m}\).</figcaption>
+</figure>
+            <p><strong>Vzmet kot merilnik sil</strong> (vzmetna tehtnica, silomer): ker je raztezek sorazmeren s silo, lahko skalo umerimo v newtonih. Na obešeno utež deluje vzmet s silo \(F = kx = mg\), zato iz raztezka določimo težo.</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-6">
+              <h4>Tip 6: Hookov zakon</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Ko na vzmet obesimo utež z maso \(200\ \text{g}\), se raztegne za \(4{,}0\ \text{cm}\). Kolikšen je koeficient vzmeti? Za koliko se raztegne, če obesimo \(300\ \text{g}\)?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> vzmet, elastika, silomer; povezani sta sila in raztezek.</p><ul class="kljucne"><li>„vzmet se raztegne za“</li><li>„koeficient vzmeti“</li><li>„silomer“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Določi silo na vzmet (pri obešeni uteži v ravnovesju je to teža).</p><div class="na-nalogi"><p>\(F = 0{,}200 \cdot 9{,}81\ \text{N} = 1{,}96\ \text{N}\).</p></div></li>
+              <li><p class="korak">Raztezek merimo od neobremenjene dolžine; pretvori v metre.</p><div class="na-nalogi"><p>\(x = 0{,}040\ \text{m}\).</p></div></li>
+              <li><p class="korak">Iz \(F = kx\) izračunaj neznanko.</p><div class="na-nalogi"><p>\(k = 1{,}96/0{,}040 = 49\ \text{N/m}\).</p></div></li>
+              <li><p class="korak">Za novo obremenitev uporabi isti \(k\) (ali sorazmerje).</p><div class="na-nalogi"><p>\(x = \dfrac{2{,}94\ \text{N}}{49\ \text{N/m}} = 6{,}0\ \text{cm}\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Vzmet je neobremenjena dolga 15 cm, z utežjo 18 cm. Raztezek?</p><p>3 cm (ne 18 cm).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Kolikšno silo potrebujemo, da vzmet s \(k = 200\ \text{N/m}\) stisnemo za 5 cm?</p><p>\(10\ \text{N}\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Silomer kaže 3,0 N pri raztezku 6 cm. Kaj pokaže pri 4 cm?</p><p>2,0 N.</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 5 -->
+        <section class="sklop" id="sklop-5">
+          <header class="sklop-header">
+            <span class="sklop-num">4.3 · 5</span>
+            <h2>Trenje, lepenje in upor sredstva</h2>
+            <p>Kvalitativna obravnava, koeficient trenja, koeficient lepenja.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <ul>
+              <li><strong>Lepenje</strong> deluje, dokler telo na podlagi miruje. Sila lepenja je ravno tolikšna, da telo ostane pri miru, a največ \(F_l^{\max} = k_l F_n\). Ko vlečna sila preseže to vrednost, telo zdrsne. Koeficient lepenja \(k_l\) <span class="badge-vr">PZ</span>.</li>
+              <li><strong>Trenje</strong> deluje, ko telo drsi: \(F_{tr} = k_{tr} F_n\). Kaže nasprotno smeri gibanja telesa glede na podlago. Navadno je \(k_{tr} &lt; k_l\), zato je telo težje premakniti kot vleči.</li>
+              <li>Sila podlage \(F_n\) ni vedno enaka teži: na klancu je \(F_g\cos\alpha\), pri poševni vleki se zmanjša za navpično komponento vlečne sile.</li>
+              <li><strong>Upor sredstva</strong> (zrak, voda) narašča s hitrostjo in je odvisen od oblike in preseka telesa. Pri padanju v zraku se zato hitrost ustali, ko je upor enak teži (končna hitrost).</li>
+            </ul>
+            <figure class="slika slika--ozka">
+<svg viewBox="0 0 400 240" role="img" aria-label="Lepenje in trenje" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g7-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g7-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g7-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g7-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g7-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g7-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<path class="s-mreza" d="M26,214V26M60.8,214V26M95.6,214V26M130.4,214V26M165.2,214V26M200,214V26M234.8,214V26M269.6,214V26M304.4,214V26M339.2,214V26M374,214V26M26,214H374M26,182.7H374M26,151.3H374M26,120H374M26,88.7H374M26,57.3H374M26,26H374"/>
+<line class="s-os" x1="26" y1="214" x2="382" y2="214" marker-end="url(#g7-p)"/>
+<line class="s-os" x1="26" y1="214" x2="26" y2="18" marker-end="url(#g7-p)"/>
+<text class="s-os-txt" x="376" y="206" text-anchor="end">F (vlečna sila)</text>
+<text class="s-os-txt" x="34" y="30">sila trenja</text>
+<line class="s-pom" x1="193" y1="63.6" x2="193" y2="101.2"/>
+<path class="s-k1" d="M26,214L26.4,213.6L26.8,213.2L27.3,212.9L27.7,212.5L28.1,212.1L28.5,211.7L28.9,211.4L29.3,211L29.8,210.6L30.2,210.2L30.6,209.9L31,209.5L31.4,209.1L31.8,208.7L32.3,208.4L32.7,208L33.1,207.6L33.5,207.2L33.9,206.9L34.4,206.5L34.8,206.1L35.2,205.7L35.6,205.4L36,205L36.4,204.6L36.9,204.2L37.3,203.8L37.7,203.5L38.1,203.1L38.5,202.7L38.9,202.3L39.4,202L39.8,201.6L40.2,201.2L40.6,200.8L41,200.5L41.5,200.1L41.9,199.7L42.3,199.3L42.7,199L43.1,198.6L43.5,198.2L44,197.8L44.4,197.5L44.8,197.1L45.2,196.7L45.6,196.3L46,196L46.5,195.6L46.9,195.2L47.3,194.8L47.7,194.4L48.1,194.1L48.6,193.7L49,193.3L49.4,192.9L49.8,192.6L50.2,192.2L50.6,191.8L51.1,191.4L51.5,191.1L51.9,190.7L52.3,190.3L52.7,189.9L53.1,189.6L53.6,189.2L54,188.8L54.4,188.4L54.8,188.1L55.2,187.7L55.6,187.3L56.1,186.9L56.5,186.6L56.9,186.2L57.3,185.8L57.7,185.4L58.2,185L58.6,184.7L59,184.3L59.4,183.9L59.8,183.5L60.2,183.2L60.7,182.8L61.1,182.4L61.5,182L61.9,181.7L62.3,181.3L62.7,180.9L63.2,180.5L63.6,180.2L64,179.8L64.4,179.4L64.8,179L65.3,178.7L65.7,178.3L66.1,177.9L66.5,177.5L66.9,177.2L67.3,176.8L67.8,176.4L68.2,176L68.6,175.6L69,175.3L69.4,174.9L69.8,174.5L70.3,174.1L70.7,173.8L71.1,173.4L71.5,173L71.9,172.6L72.4,172.3L72.8,171.9L73.2,171.5L73.6,171.1L74,170.8L74.4,170.4L74.9,170L75.3,169.6L75.7,169.3L76.1,168.9L76.5,168.5L76.9,168.1L77.4,167.8L77.8,167.4L78.2,167L78.6,166.6L79,166.2L79.5,165.9L79.9,165.5L80.3,165.1L80.7,164.7L81.1,164.4L81.5,164L82,163.6L82.4,163.2L82.8,162.9L83.2,162.5L83.6,162.1L84,161.7L84.5,161.4L84.9,161L85.3,160.6L85.7,160.2L86.1,159.9L86.6,159.5L87,159.1L87.4,158.7L87.8,158.4L88.2,158L88.6,157.6L89.1,157.2L89.5,156.8L89.9,156.5L90.3,156.1L90.7,155.7L91.1,155.3L91.6,155L92,154.6L92.4,154.2L92.8,153.8L93.2,153.5L93.7,153.1L94.1,152.7L94.5,152.3L94.9,152L95.3,151.6L95.7,151.2L96.2,150.8L96.6,150.5L97,150.1L97.4,149.7L97.8,149.3L98.2,149L98.7,148.6L99.1,148.2L99.5,147.8L99.9,147.4L100.3,147.1L100.8,146.7L101.2,146.3L101.6,145.9L102,145.6L102.4,145.2L102.8,144.8L103.3,144.4L103.7,144.1L104.1,143.7L104.5,143.3L104.9,142.9L105.3,142.6L105.8,142.2L106.2,141.8L106.6,141.4L107,141.1L107.4,140.7L107.8,140.3L108.3,139.9L108.7,139.6L109.1,139.2L109.5,138.8L109.9,138.4L110.4,138L110.8,137.7L111.2,137.3L111.6,136.9L112,136.5L112.4,136.2L112.9,135.8L113.3,135.4L113.7,135L114.1,134.7L114.5,134.3L114.9,133.9L115.4,133.5L115.8,133.2L116.2,132.8L116.6,132.4L117,132L117.5,131.7L117.9,131.3L118.3,130.9L118.7,130.5L119.1,130.2L119.5,129.8L120,129.4L120.4,129L120.8,128.6L121.2,128.3L121.6,127.9L122,127.5L122.5,127.1L122.9,126.8L123.3,126.4L123.7,126L124.1,125.6L124.6,125.3L125,124.9L125.4,124.5L125.8,124.1L126.2,123.8L126.6,123.4L127.1,123L127.5,122.6L127.9,122.3L128.3,121.9L128.7,121.5L129.1,121.1L129.6,120.8L130,120.4L130.4,120L130.8,119.6L131.2,119.2L131.7,118.9L132.1,118.5L132.5,118.1L132.9,117.7L133.3,117.4L133.7,117L134.2,116.6L134.6,116.2L135,115.9L135.4,115.5L135.8,115.1L136.2,114.7L136.7,114.4L137.1,114L137.5,113.6L137.9,113.2L138.3,112.9L138.8,112.5L139.2,112.1L139.6,111.7L140,111.4L140.4,111L140.8,110.6L141.3,110.2L141.7,109.8L142.1,109.5L142.5,109.1L142.9,108.7L143.3,108.3L143.8,108L144.2,107.6L144.6,107.2L145,106.8L145.4,106.5L145.9,106.1L146.3,105.7L146.7,105.3L147.1,105L147.5,104.6L147.9,104.2L148.4,103.8L148.8,103.5L149.2,103.1L149.6,102.7L150,102.3L150.4,102L150.9,101.6L151.3,101.2L151.7,100.8L152.1,100.4L152.5,100.1L153,99.7L153.4,99.3L153.8,98.9L154.2,98.6L154.6,98.2L155,97.8L155.5,97.4L155.9,97.1L156.3,96.7L156.7,96.3L157.1,95.9L157.5,95.6L158,95.2L158.4,94.8L158.8,94.4L159.2,94.1L159.6,93.7L160,93.3L160.5,92.9L160.9,92.6L161.3,92.2L161.7,91.8L162.1,91.4L162.6,91L163,90.7L163.4,90.3L163.8,89.9L164.2,89.5L164.6,89.2L165.1,88.8L165.5,88.4L165.9,88L166.3,87.7L166.7,87.3L167.1,86.9L167.6,86.5L168,86.2L168.4,85.8L168.8,85.4L169.2,85L169.7,84.7L170.1,84.3L170.5,83.9L170.9,83.5L171.3,83.2L171.7,82.8L172.2,82.4L172.6,82L173,81.6L173.4,81.3L173.8,80.9L174.2,80.5L174.7,80.1L175.1,79.8L175.5,79.4L175.9,79L176.3,78.6L176.8,78.3L177.2,77.9L177.6,77.5L178,77.1L178.4,76.8L178.8,76.4L179.3,76L179.7,75.6L180.1,75.3L180.5,74.9L180.9,74.5L181.3,74.1L181.8,73.8L182.2,73.4L182.6,73L183,72.6L183.4,72.2L183.9,71.9L184.3,71.5L184.7,71.1L185.1,70.7L185.5,70.4L185.9,70L186.4,69.6L186.8,69.2L187.2,68.9L187.6,68.5L188,68.1L188.4,67.7L188.9,67.4L189.3,67L189.7,66.6L190.1,66.2L190.5,65.9L191,65.5L191.4,65.1L191.8,64.7L192.2,64.4L192.6,64L193,63.6"/>
+<path class="s-k2" d="M193,101.2L193.5,101.2L193.9,101.2L194.4,101.2L194.8,101.2L195.3,101.2L195.8,101.2L196.2,101.2L196.7,101.2L197.1,101.2L197.6,101.2L198,101.2L198.5,101.2L198.9,101.2L199.4,101.2L199.8,101.2L200.3,101.2L200.7,101.2L201.2,101.2L201.6,101.2L202.1,101.2L202.5,101.2L203,101.2L203.4,101.2L203.9,101.2L204.4,101.2L204.8,101.2L205.3,101.2L205.7,101.2L206.2,101.2L206.6,101.2L207.1,101.2L207.5,101.2L208,101.2L208.4,101.2L208.9,101.2L209.3,101.2L209.8,101.2L210.2,101.2L210.7,101.2L211.1,101.2L211.6,101.2L212,101.2L212.5,101.2L212.9,101.2L213.4,101.2L213.9,101.2L214.3,101.2L214.8,101.2L215.2,101.2L215.7,101.2L216.1,101.2L216.6,101.2L217,101.2L217.5,101.2L217.9,101.2L218.4,101.2L218.8,101.2L219.3,101.2L219.7,101.2L220.2,101.2L220.6,101.2L221.1,101.2L221.5,101.2L222,101.2L222.4,101.2L222.9,101.2L223.4,101.2L223.8,101.2L224.3,101.2L224.7,101.2L225.2,101.2L225.6,101.2L226.1,101.2L226.5,101.2L227,101.2L227.4,101.2L227.9,101.2L228.3,101.2L228.8,101.2L229.2,101.2L229.7,101.2L230.1,101.2L230.6,101.2L231,101.2L231.5,101.2L231.9,101.2L232.4,101.2L232.9,101.2L233.3,101.2L233.8,101.2L234.2,101.2L234.7,101.2L235.1,101.2L235.6,101.2L236,101.2L236.5,101.2L236.9,101.2L237.4,101.2L237.8,101.2L238.3,101.2L238.7,101.2L239.2,101.2L239.6,101.2L240.1,101.2L240.5,101.2L241,101.2L241.4,101.2L241.9,101.2L242.4,101.2L242.8,101.2L243.3,101.2L243.7,101.2L244.2,101.2L244.6,101.2L245.1,101.2L245.5,101.2L246,101.2L246.4,101.2L246.9,101.2L247.3,101.2L247.8,101.2L248.2,101.2L248.7,101.2L249.1,101.2L249.6,101.2L250,101.2L250.5,101.2L250.9,101.2L251.4,101.2L251.9,101.2L252.3,101.2L252.8,101.2L253.2,101.2L253.7,101.2L254.1,101.2L254.6,101.2L255,101.2L255.5,101.2L255.9,101.2L256.4,101.2L256.8,101.2L257.3,101.2L257.7,101.2L258.2,101.2L258.6,101.2L259.1,101.2L259.5,101.2L260,101.2L260.4,101.2L260.9,101.2L261.4,101.2L261.8,101.2L262.3,101.2L262.7,101.2L263.2,101.2L263.6,101.2L264.1,101.2L264.5,101.2L265,101.2L265.4,101.2L265.9,101.2L266.3,101.2L266.8,101.2L267.2,101.2L267.7,101.2L268.1,101.2L268.6,101.2L269,101.2L269.5,101.2L269.9,101.2L270.4,101.2L270.9,101.2L271.3,101.2L271.8,101.2L272.2,101.2L272.7,101.2L273.1,101.2L273.6,101.2L274,101.2L274.5,101.2L274.9,101.2L275.4,101.2L275.8,101.2L276.3,101.2L276.7,101.2L277.2,101.2L277.6,101.2L278.1,101.2L278.5,101.2L279,101.2L279.4,101.2L279.9,101.2L280.4,101.2L280.8,101.2L281.3,101.2L281.7,101.2L282.2,101.2L282.6,101.2L283.1,101.2L283.5,101.2L284,101.2L284.4,101.2L284.9,101.2L285.3,101.2L285.8,101.2L286.2,101.2L286.7,101.2L287.1,101.2L287.6,101.2L288,101.2L288.5,101.2L288.9,101.2L289.4,101.2L289.9,101.2L290.3,101.2L290.8,101.2L291.2,101.2L291.7,101.2L292.1,101.2L292.6,101.2L293,101.2L293.5,101.2L293.9,101.2L294.4,101.2L294.8,101.2L295.3,101.2L295.7,101.2L296.2,101.2L296.6,101.2L297.1,101.2L297.5,101.2L298,101.2L298.4,101.2L298.9,101.2L299.4,101.2L299.8,101.2L300.3,101.2L300.7,101.2L301.2,101.2L301.6,101.2L302.1,101.2L302.5,101.2L303,101.2L303.4,101.2L303.9,101.2L304.3,101.2L304.8,101.2L305.2,101.2L305.7,101.2L306.1,101.2L306.6,101.2L307,101.2L307.5,101.2L307.9,101.2L308.4,101.2L308.9,101.2L309.3,101.2L309.8,101.2L310.2,101.2L310.7,101.2L311.1,101.2L311.6,101.2L312,101.2L312.5,101.2L312.9,101.2L313.4,101.2L313.8,101.2L314.3,101.2L314.7,101.2L315.2,101.2L315.6,101.2L316.1,101.2L316.5,101.2L317,101.2L317.5,101.2L317.9,101.2L318.4,101.2L318.8,101.2L319.3,101.2L319.7,101.2L320.2,101.2L320.6,101.2L321.1,101.2L321.5,101.2L322,101.2L322.4,101.2L322.9,101.2L323.3,101.2L323.8,101.2L324.2,101.2L324.7,101.2L325.1,101.2L325.6,101.2L326,101.2L326.5,101.2L327,101.2L327.4,101.2L327.9,101.2L328.3,101.2L328.8,101.2L329.2,101.2L329.7,101.2L330.1,101.2L330.6,101.2L331,101.2L331.5,101.2L331.9,101.2L332.4,101.2L332.8,101.2L333.3,101.2L333.7,101.2L334.2,101.2L334.6,101.2L335.1,101.2L335.5,101.2L336,101.2L336.5,101.2L336.9,101.2L337.4,101.2L337.8,101.2L338.3,101.2L338.7,101.2L339.2,101.2L339.6,101.2L340.1,101.2L340.5,101.2L341,101.2L341.4,101.2L341.9,101.2L342.3,101.2L342.8,101.2L343.2,101.2L343.7,101.2L344.1,101.2L344.6,101.2L345,101.2L345.5,101.2L346,101.2L346.4,101.2L346.9,101.2L347.3,101.2L347.8,101.2L348.2,101.2L348.7,101.2L349.1,101.2L349.6,101.2L350,101.2L350.5,101.2L350.9,101.2L351.4,101.2L351.8,101.2L352.3,101.2L352.7,101.2L353.2,101.2L353.6,101.2L354.1,101.2L354.5,101.2L355,101.2L355.5,101.2L355.9,101.2L356.4,101.2L356.8,101.2L357.3,101.2L357.7,101.2L358.2,101.2L358.6,101.2L359.1,101.2L359.5,101.2L360,101.2L360.4,101.2L360.9,101.2L361.3,101.2L361.8,101.2L362.2,101.2L362.7,101.2L363.1,101.2L363.6,101.2L364,101.2L364.5,101.2L365,101.2L365.4,101.2L365.9,101.2L366.3,101.2L366.8,101.2L367.2,101.2L367.7,101.2L368.1,101.2L368.6,101.2L369,101.2L369.5,101.2L369.9,101.2L370.4,101.2L370.8,101.2L371.3,101.2L371.7,101.2L372.2,101.2L372.6,101.2L373.1,101.2L373.5,101.2L374,101.2"/>
+<circle class="s-tocka" cx="193" cy="63.6" r="4"/>
+<text class="s-txt-k1" x="102.6" y="107.5" text-anchor="middle">lepenje</text>
+<text class="s-txt-k2" x="287" y="85.5" text-anchor="middle">trenje: k<tspan dy="4" style="font-size:10px">tr</tspan><tspan dy="-4"> </tspan>F<tspan dy="4" style="font-size:10px">n</tspan></text>
+<text class="s-txt-k1" x="193" y="47.9" text-anchor="middle">k<tspan dy="4" style="font-size:10px">l</tspan><tspan dy="-4"> </tspan>F<tspan dy="4" style="font-size:10px">n</tspan></text>
+</svg>
+<figcaption>Dokler telo miruje, je sila lepenja enaka vlečni sili, največ \(k_l F_n\). Ko telo zdrsne, deluje manjša sila trenja \(k_{tr} F_n\).</figcaption>
+</figure>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-7">
+              <h4>Tip 7: Trenje in lepenje</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Zaboj z maso \(40\ \text{kg}\) stoji na tleh. Koeficient lepenja je \(0{,}50\), koeficient trenja \(0{,}30\). S kolikšno vodoravno silo ga premaknemo in s kolikšno ga nato enakomerno vlečemo? Kolikšna je sila lepenja, če ga potiskamo s \(150\ \text{N}\)?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> telo drsi ali bi lahko zdrsnilo po podlagi; podan je koeficient trenja ali lepenja.</p><ul class="kljucne"><li>„koeficient trenja“</li><li>„najmanjša sila, da se premakne“</li><li>„enakomerno vlečemo“</li><li>„ali se premakne“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Določi silo podlage \(F_n\) iz ravnovesja v navpični smeri.</p><div class="na-nalogi"><p>\(F_n = mg = 392\ \text{N}\).</p></div></li>
+              <li><p class="korak">Največja sila lepenja \(k_l F_n\): pri večji vlečni sili telo zdrsne.</p><div class="na-nalogi"><p>\(F_l^{\max} = 0{,}50 \cdot 392\ \text{N} = 196\ \text{N}\).</p></div></li>
+              <li><p class="korak">Ko telo drsi, deluje trenje \(k_{tr}F_n\); pri enakomernem gibanju je vlečna sila enaka trenju.</p><div class="na-nalogi"><p>\(F = 0{,}30 \cdot 392\ \text{N} = 118\ \text{N}\).</p></div></li>
+              <li><p class="korak">Če je vlečna sila manjša od \(k_l F_n\), telo miruje in je sila lepenja enaka vlečni sili.</p><div class="na-nalogi"><p>\(150\ \text{N} &lt; 196\ \text{N}\): zaboj miruje, sila lepenja je \(150\ \text{N}\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Klado 2 kg vlečemo enakomerno s silo 5,0 N. Koeficient trenja?</p><p>\(k_{tr} = 5{,}0/19{,}6 = 0{,}26\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Ali se trenje spremeni, če klado obrnemo na manjšo ploskev?</p><p>Ne, trenje je odvisno le od \(F_n\) in snovi.</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Zakaj padalec pada s stalno hitrostjo?</p><p>Upor zraka je enak teži, vsota sil je nič.</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 6 -->
+        <section class="sklop" id="sklop-6">
+          <header class="sklop-header">
+            <span class="sklop-num">4.3 · 6</span>
+            <h2>Tlak</h2>
+            <p>Površinsko porazdeljene sile in tlak.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <p>Kadar sila deluje porazdeljeno po ploskvi, je pomemben <strong>tlak</strong>, sila na enoto ploščine:</p>
+            <p>\[p = \frac{F}{S}, \qquad [p] = \text{N/m}^2 = \text{Pa}.\]</p>
+            <p>Pri tem je \(F\) sila, pravokotna na ploskev. Ista sila na manjšo ploskev da večji tlak: nož in žebelj sta ošiljena, smuči in gosenice imajo veliko ploskev. Zračni tlak ob morju je približno \(10^5\ \text{Pa} = 1\ \text{bar}\).</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-8">
+              <h4>Tip 8: Tlak trdnega telesa na podlago</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Smučar z maso \(60\ \text{kg}\) stoji na dveh smučeh, vsaka je dolga \(1{,}6\ \text{m}\) in široka \(10\ \text{cm}\). Kolikšen je tlak na sneg? Kolikšen je tlak, ko stoji v čevljih s skupno ploščino podplatov \(500\ \text{cm}^2\)?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> sila deluje na ploskev, sprašujejo po tlaku ali ploščini, ki zdrži dani tlak.</p><ul class="kljucne"><li>„tlak na podlago“</li><li>„ploščina“</li><li>„pogreza se“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Določi silo pravokotno na ploskev (pri vodoravni podlagi teža).</p><div class="na-nalogi"><p>\(F = 60 \cdot 9{,}81\ \text{N} = 589\ \text{N}\).</p></div></li>
+              <li><p class="korak">Izračunaj celotno ploščino stika v m².</p><div class="na-nalogi"><p>\(S = 2 \cdot 1{,}6 \cdot 0{,}10\ \text{m}^2 = 0{,}32\ \text{m}^2\); čevlji: \(0{,}050\ \text{m}^2\).</p></div></li>
+              <li><p class="korak">Deli silo s ploščino.</p><div class="na-nalogi"><p>\(p = 589/0{,}32\ \text{Pa} = 1{,}8\ \text{kPa}\); v čevljih \(p = 12\ \text{kPa}\), šestkrat več.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Na žebljico s konico \(0{,}1\ \text{mm}^2\) pritisnemo z 20 N. Tlak?</p><p>\(p = 20/10^{-7}\ \text{Pa} = 2 \cdot 10^{8}\ \text{Pa}\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Kocka z robom 10 cm in maso 8 kg leži na mizi. Tlak?</p><p>\(78{,}5\ \text{N}/0{,}01\ \text{m}^2 = 7{,}8\ \text{kPa}\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> S kolikšno silo zrak pritiska na okno \(1\ \text{m} \times 1{,}5\ \text{m}\) (\(p = 100\ \text{kPa}\))?</p><p>\(1{,}5 \cdot 10^{5}\ \text{N}\); z druge strani enaka sila, zato okno zdrži.</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 7 -->
+        <section class="sklop" id="sklop-7">
+          <header class="sklop-header">
+            <span class="sklop-num">4.3 · 7</span>
+            <h2>Navor</h2>
+            <p>Navori sil v ravnini, ravnovesje navorov, prijemališče teže.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <p>Sila lahko telo tudi <strong>zavrti</strong>. Vrtilni učinek sile glede na izbrano os je <strong>navor</strong>:</p>
+            <p>\[M = rF\sin\alpha = F \cdot r_\perp,\]</p>
+            <p>kjer je \(r\) razdalja od osi do prijemališča, \(\alpha\) kot med \(\vec{r}\) in silo, \(r_\perp = r\sin\alpha\) pa <strong>ročica</strong>, pravokotna razdalja od osi do nosilke sile. Enota je \(\text{N m}\). Sila, katere nosilka gre skozi os, nima navora. Navor je pozitiven, če suče v nasprotni smeri urinega kazalca, sicer negativen.</p>
+            <figure class="slika slika--ozka">
+<svg viewBox="0 0 320 222" role="img" aria-label="Ročica sile" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g8-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g8-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g8-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g8-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g8-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g8-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<polygon class="s-lik-2" points="55.9,122.4 230.1,122.4 230.1,111 55.9,111"/>
+<line class="s-pom" x1="169.5" y1="182.4" x2="207.3" y2="116.7"/>
+<line class="s-k1" x1="55.9" y1="116.7" x2="169.5" y2="182.4"/>
+<line class="s-k2" x1="207.3" y1="116.7" x2="252.8" y2="37.8" marker-end="url(#g8-k2)"/>
+<text class="s-txt-k2" x="238.1" y="77.3" text-anchor="start">F</text>
+<circle class="s-tocka" cx="55.9" cy="116.7" r="4.5"/>
+<text class="s-txt-b" x="47.9" y="132.7" text-anchor="end">os</text>
+<text class="s-txt-b" x="131.6" y="132.7" text-anchor="middle">r</text>
+<text class="s-txt-k1" x="105.1" y="158.4" text-anchor="end">ročica r sin α</text>
+<path class="s-kot" d="M207.3,116.7 L229.3,116.7 A22,22 0 0 0 218.3,97.6 Z"/>
+<text class="s-txt-k4" x="235.9" y="104.2" text-anchor="middle">α</text>
+</svg>
+<figcaption>Navor je \(M = rF\sin\alpha\): produkt sile in ročice, ki je razdalja od osi do nosilke sile.</figcaption>
+</figure>
+            <h4>Ravnovesje togega telesa</h4>
+            <p>Togo telo miruje, ko sta izpolnjena <strong>oba</strong> pogoja:</p>
+            <p>\[\sum \vec{F} = 0 \qquad \text{in} \qquad \sum M = 0.\]</p>
+            <p>Os za računanje navorov lahko izberemo kjerkoli; najbolje v prijemališču neznane sile, ker ta potem nima navora.</p>
+            <figure class="slika">
+<svg viewBox="0 0 460 267" role="img" aria-label="Ravnovesje navorov na vzvodu" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g9-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g9-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g9-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g9-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g9-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g9-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<polygon class="s-lik-2" points="37.3,156.6 422.7,156.6 422.7,145.1 37.3,145.1"/>
+<polygon class="s-lik" points="230,156.6 206.9,202.8 253.1,202.8"/>
+<line class="s-k1" x1="75.8" y1="218.2" x2="230" y2="218.2"/>
+<line class="s-k3" x1="230" y1="218.2" x2="345.6" y2="218.2"/>
+<line class="s-k1" x1="75.8" y1="225.9" x2="75.8" y2="210.5"/>
+<line class="s-crta" x1="230" y1="225.9" x2="230" y2="210.5"/>
+<line class="s-k3" x1="345.6" y1="225.9" x2="345.6" y2="210.5"/>
+<line class="s-k2" x1="75.8" y1="41.1" x2="75.8" y2="145.1" marker-end="url(#g9-k2)"/>
+<text class="s-txt-k2" x="65.8" y="85.1" text-anchor="end">F<tspan dy="4" style="font-size:10px">1</tspan><tspan dy="-4"> = 30 N</tspan></text>
+<line class="s-k2" x1="345.6" y1="29.6" x2="345.6" y2="145.1" marker-end="url(#g9-k2)"/>
+<text class="s-txt-k2" x="355.6" y="79.4" text-anchor="start">F<tspan dy="4" style="font-size:10px">2</tspan><tspan dy="-4"> = 40 N</tspan></text>
+<text class="s-txt-k1" x="152.9" y="236.2" text-anchor="middle">r<tspan dy="4" style="font-size:10px">1</tspan><tspan dy="-4"> = 0,40 m</tspan></text>
+<text class="s-txt-k3" x="287.8" y="236.2" text-anchor="middle">r<tspan dy="4" style="font-size:10px">2</tspan><tspan dy="-4"> = 0,30 m</tspan></text>
+
+</svg>
+<figcaption>Vzvod je v ravnovesju, ko sta navora na obeh straneh osi enaka: \(F_1 r_1 = F_2 r_2\), tu \(30\ \text{N} \cdot 0{,}40\ \text{m} = 40\ \text{N} \cdot 0{,}30\ \text{m} = 12\ \text{N m}\).</figcaption>
+</figure>
+            <h4>Prijemališče teže (težišče)</h4>
+            <p>Teža telesa deluje, kot da bi bila vsa zbrana v <strong>težišču</strong>. Pri homogeni palici ali deski je težišče na sredini. Telo, obešeno v eni točki, se umiri tako, da je težišče navpično pod točko obešanja. Telo stoji stabilno, dokler je navpičnica skozi težišče znotraj ploskve podpore.</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-9">
+              <h4>Tip 9: Ravnovesje navorov (vzvod, gugalnica)</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Oče z maso \(80\ \text{kg}\) sedi na gugalnici \(1{,}2\ \text{m}\) od osi. Kako daleč od osi na drugi strani mora sedeti otrok z maso \(30\ \text{kg}\), da je gugalnica v ravnovesju?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> telo se lahko vrti okoli osi (vzvod, gugalnica, ključ, vrata), sprašujejo po sili ali razdalji za ravnovesje.</p><ul class="kljucne"><li>„vzvod“, „gugalnica“, „ročica“</li><li>„os“</li><li>„navor“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Določi os in vse sile z njihovimi ročicami.</p><div class="na-nalogi"><p>Os na sredini. Oče: \(F_1 = 785\ \text{N}\), \(r_1 = 1{,}2\ \text{m}\). Otrok: \(F_2 = 294\ \text{N}\), \(r_2 = ?\).</p></div></li>
+              <li><p class="korak">Izračunaj navore (\(M = F r_\perp\)) in jim določi smer vrtenja.</p><div class="na-nalogi"><p>Očetov navor suče v eno smer, otrokov v drugo.</p></div></li>
+              <li><p class="korak">Vsota navorov v eno smer je enaka vsoti navorov v drugo.</p><div class="na-nalogi"><p>\(F_1 r_1 = F_2 r_2\), \(r_2 = \dfrac{80 \cdot 1{,}2}{30}\ \text{m} = 3{,}2\ \text{m}\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Z vijačnim ključem dolžine 25 cm delujemo s silo 80 N pod kotom \(60^\circ\) glede na ključ. Navor?</p><p>\(M = 0{,}25 \cdot 80 \cdot \sin 60^\circ = 17\ \text{N m}\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Zakaj je kljuka daleč od tečajev?</p><p>Večja ročica da pri isti sili večji navor.</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Na vzvodu je 30 N na 0,40 m od osi. Kolikšna sila na 0,30 m na drugi strani ga uravnovesi?</p><p>40 N.</p></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-10">
+              <h4>Tip 10: Sile podpor (ravnovesje sil in navorov)</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Homogena deska z dolžino \(4{,}0\ \text{m}\) in maso \(20\ \text{kg}\) leži na dveh podporah na krajiščih. Človek z maso \(60\ \text{kg}\) stoji \(1{,}0\ \text{m}\) od levega krajišča. S kolikšnima silama delujeta podpori?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> palica, deska ali most je podprt v dveh točkah ali vpet, sprašujejo po silah podpor.</p><ul class="kljucne"><li>„podprta na krajiščih“</li><li>„s kolikšno silo deluje podpora“</li><li>„homogena palica“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Nariši vse sile: teže (v težiščih) in neznane sile podpor.</p><div class="na-nalogi"><p>Teža deske \(196\ \text{N}\) na sredini (2,0 m), teža človeka \(589\ \text{N}\) pri 1,0 m, \(F_L\) pri 0, \(F_D\) pri 4,0 m.</p></div></li>
+              <li><p class="korak">Os postavi v prijemališče ene neznane sile in zapiši ravnovesje navorov.</p><div class="na-nalogi"><p>Os v levi podpori: \(F_D \cdot 4{,}0 = 196 \cdot 2{,}0 + 589 \cdot 1{,}0\), \(F_D = 245\ \text{N}\).</p></div></li>
+              <li><p class="korak">Drugo neznanko izračunaj iz ravnovesja sil.</p><div class="na-nalogi"><p>\(F_L = 196 + 589 - 245 = 540\ \text{N}\).</p></div></li>
+              <li><p class="korak">Preveri: podpora, ki je bližje bremenu, nosi več.</p><div class="na-nalogi"><p>Človek je bliže levi podpori, \(F_L &gt; F_D\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Homogena palica 10 kg je podprta na krajiščih. Sili podpor?</p><p>Vsaka 49 N.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Kje je težišče dveh krogel 1 kg in 3 kg na koncih lahke palice dolžine 80 cm?</p><p>\(1 \cdot x = 3 \cdot (80 - x)\), \(x = 60\ \text{cm}\) od lažje.</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Zakaj se tovornjak z visoko naloženim tovorom na klancu laže prevrne?</p><p>Višje težišče: navpičnica skozi težišče prej pade izven ploskve podpore.</p></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="subsection" id="kljuc">
+          <div class="subsection-head">
+            <h2>Ključ: kateri tip naloge je to?</h2>
+            <p>Poišči besedo iz navodila naloge in skoči na pravi postopek.</p>
+          </div>
+          <div class="info-card">
+            <div class="tabela-wrap">
+              <table class="tabela">
+                <thead><tr><th>V besedilu naloge piše …</th><th>Tip</th></tr></thead>
+                <tbody>
+                  <tr><td>„rezultanta“, „skupna sila“</td><td><a href="#tip-1">Tip 1</a></td></tr>
+                  <tr><td>„pod kotom“, „komponenta sile“</td><td><a href="#tip-2">Tip 2</a></td></tr>
+                  <tr><td>„visi na vrveh“, „miruje“, „napeta vrv“</td><td><a href="#tip-3">Tip 3</a></td></tr>
+                  <tr><td>„klanec z naklonom“</td><td><a href="#tip-4">Tip 4</a></td></tr>
+                  <tr><td>„narišite sile na …“, „notranje, zunanje“</td><td><a href="#tip-5">Tip 5</a></td></tr>
+                  <tr><td>„vzmet“, „raztezek“, „silomer“</td><td><a href="#tip-6">Tip 6</a></td></tr>
+                  <tr><td>„koeficient trenja / lepenja“, „premaknemo“</td><td><a href="#tip-7">Tip 7</a></td></tr>
+                  <tr><td>„tlak na podlago“, „ploščina“</td><td><a href="#tip-8">Tip 8</a></td></tr>
+                  <tr><td>„vzvod“, „gugalnica“, „ključ“, „navor“</td><td><a href="#tip-9">Tip 9</a></td></tr>
+                  <tr><td>„podprta na krajiščih“, „sila podpore“, „težišče“</td><td><a href="#tip-10">Tip 10</a></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>Pogoste napake</h2>
+          </div>
+          <div class="info-card">
+            <ul>
+              <li>Sile seštevaš kot števila, ko niso v isti smeri.</li>
+              <li>Na diagram sil za telo narišeš tudi sile, s katerimi telo deluje na druga telesa.</li>
+              <li>Pri klancu zamenjaš sinus in kosinus: vzdolž klanca je \(F_g\sin\alpha\).</li>
+              <li>Silo lepenja vedno računaš kot \(k_l F_n\), čeprav je to le največja možna vrednost.</li>
+              <li>Pri navoru vzameš razdaljo do prijemališča namesto ročice, ko sila ni pravokotna.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>Naslednje poglavje</h2>
+          </div>
+          <div class="link-list">
+            <a class="link-item" href="/views/fizika/snov/newtonovi_zakoni_gravitacija/newtonovi_zakoni_gravitacija_razlaga.html">
+              <span class="link-item-text"><strong>4.4 Newtonovi zakoni in gravitacija</strong><small>Prvi, drugi in tretji Newtonov zakon, masa, teža, gostota, gravitacijski zakon</small></span>
+              <span class="arrow">→</span>
+            </a>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>

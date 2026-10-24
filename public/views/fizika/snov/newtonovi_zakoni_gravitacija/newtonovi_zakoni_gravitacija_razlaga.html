@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Newtonovi zakoni in gravitacija — razlaga in postopki | Piflar.si</title>
+  <meta name="description" content="Newtonovi zakoni in gravitacija za maturo iz fizike: prvi, drugi in tretji Newtonov zakon, povezana telesa, dvigalo, Newtonov zakon pri kroženju, masa, teža in gostota, gravitacijski zakon, težni pospešek na višini, gibanje planetov in satelitov.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
+  <link rel="stylesheet" href="/style/snov.css">
+</head>
+<body>
+  <div id="header"></div>
+
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view">
+
+<header class="page-header">
+          <span class="page-eyebrow">Fizika · Snov · 4.4</span>
+          <h1>Newtonovi zakoni in gravitacija</h1>
+          <p>Newtonovi zakoni povežejo sile z gibanjem: sila ne povzroča hitrosti, ampak pospešek. Skoraj vsaka računska naloga iz mehanike se začne z diagramom sil in enačbo \(F = ma\). Pod razlago vsakega podpoglavja so vsi tipi nalog, ki se pojavijo pri tem sklopu. Vsebine, označene s <span class="badge-vr">PZ</span>, so posebna znanja iz kataloga.</p>
+          <div class="page-meta">
+            <div class="page-meta-item"><strong>3</strong><span>Podpoglavja</span></div>
+            <div class="page-meta-item"><strong>9</strong><span>Tipov nalog</span></div>
+            <div class="page-meta-item"><strong>~55 min</strong><span>Branja</span></div>
+          </div>
+        </header>
+
+        <div class="matura-formule">
+          <h3>Formule na maturi</h3>
+          <p>Enačbe, ki jih potrebuješ (večina je na listu s konstantami in enačbami, ki je del izpitne pole):</p>
+          <div class="matura-levo">
+            <ul>
+              <li>\(\vec{F} = m\vec{a}\) (\(\vec{F}\) je vsota vseh sil), \(F_g = mg\)</li>
+              <li>pri kroženju: \(F_r = m\dfrac{v^2}{r}\)</li>
+              <li>gostota: \(\rho = \dfrac{m}{V}\)</li>
+              <li>gravitacijski zakon: \(F = G\dfrac{m_1 m_2}{r^2}\), \(G = 6{,}67 \cdot 10^{-11}\ \text{N m}^2/\text{kg}^2\)</li>
+              <li>polmer Zemlje \(R = 6370\ \text{km}\), \(g = 9{,}81\ \text{m/s}^2\), zato \(GM_Z = gR^2\)</li>
+            </ul>
+          </div>
+        </div>
+
+        <nav class="kazalo" aria-label="Podpoglavja">
+          <h2>Podpoglavja</h2>
+          <ol>
+            <li><a href="#sklop-1"><span class="kazalo-st">1</span> Newtonovi zakoni</a></li>
+            <li><a href="#sklop-2"><span class="kazalo-st">2</span> Masa, teža, gostota</a></li>
+            <li><a href="#sklop-3"><span class="kazalo-st">3</span> Gravitacija</a></li>
+            <li><a href="#kljuc"><span class="kazalo-st">?</span> Ključ: kateri tip naloge je to?</a></li>
+          </ol>
+        </nav>
+
+        <!-- SKLOP 1 -->
+        <section class="sklop" id="sklop-1">
+          <header class="sklop-header">
+            <span class="sklop-num">4.4 · 1</span>
+            <h2>Newtonovi zakoni</h2>
+            <p>Prvi in drugi Newtonov zakon, zakon o vzajemnem učinku, Newtonovi zakoni pri kroženju.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <h4>Prvi Newtonov zakon (zakon o ravnovesju)</h4>
+            <p>Če je vsota sil na telo enaka nič, telo miruje ali se giblje enakomerno premo. Za stalno hitrost torej <strong>ni potrebna sila</strong>; sila je potrebna le za spremembo hitrosti. Avto, ki vozi enakomerno, ima vlečno silo ravno enako uporu in trenju.</p>
+            <h4>Drugi Newtonov zakon</h4>
+            <p>Če vsota sil ni nič, telo pospešuje v smeri vsote sil:</p>
+            <p>\[\vec{F} = m\vec{a}, \qquad \vec{F} = \sum \vec{F}_i.\]</p>
+            <p>Masa je merilo za <strong>vztrajnost</strong>: pri isti sili ima telo z dvakrat večjo maso dvakrat manjši pospešek. Pri sistemu povezanih teles z enakim pospeškom (vozički, vrvica čez škripec) pišemo enačbo za vsako telo posebej ali za ves sistem: notranje sile se v vsoti izničijo.</p>
+            <figure class="slika">
+<svg viewBox="0 0 460 342" role="img" aria-label="Voziček na mizi, povezan z utežjo čez škripec" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g1-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g1-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g1-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g1-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g1-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g1-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<polygon class="s-lik" points="18,254.1 372.1,254.1 372.1,122.9 18,122.9"/>
+<polygon class="s-lik-2" points="127.3,112 232.2,112 232.2,68.3 127.3,68.3"/>
+<polygon class="s-lik-2" points="374.2,245.3 409.2,245.3 409.2,210.3 374.2,210.3"/>
+<line class="s-crta" x1="232.2" y1="83.6" x2="372.1" y2="83.6"/>
+<line class="s-crta" x1="391.7" y1="103.2" x2="391.7" y2="210.3"/>
+<line class="s-k1" x1="232.2" y1="83.6" x2="297.8" y2="83.6" marker-end="url(#g1-k1)"/>
+<text class="s-txt-k1" x="265" y="75.6" text-anchor="middle">F</text>
+<line class="s-k1" x1="391.7" y1="210.3" x2="391.7" y2="157.9" marker-end="url(#g1-k1)"/>
+<text class="s-txt-k1" x="399.7" y="184.1" text-anchor="start">F</text>
+<line class="s-k2" x1="391.7" y1="227.8" x2="391.7" y2="310.9" marker-end="url(#g1-k2)"/>
+<text class="s-txt-k2" x="399.7" y="275.4" text-anchor="start">m<tspan dy="4" style="font-size:10px">2</tspan><tspan dy="-4">g</tspan></text>
+<line class="s-k3" x1="144.8" y1="35.5" x2="210.3" y2="35.5" marker-end="url(#g1-k3)"/>
+<text class="s-txt-k3" x="177.6" y="27.5" text-anchor="middle">a</text>
+<text class="s-txt-b" x="179.7" y="90.1" text-anchor="middle">m<tspan dy="4" style="font-size:10px">1</tspan></text>
+<text class="s-txt-b" x="415.2" y="227.8" text-anchor="start">m<tspan dy="4" style="font-size:10px">2</tspan></text>
+<circle class="s-crta" cx="149.1" cy="117.7" r="5.7"/>
+<circle class="s-crta" cx="210.3" cy="117.7" r="5.7"/>
+<circle class="s-crta" cx="372.1" cy="103.2" r="19.7"/>
+</svg>
+<figcaption>Voziček \(m_1\) na vodoravni mizi je čez škripec povezan z utežjo \(m_2\). Vrvica vleče oba s silo \(F\), pospešek obeh je enak.</figcaption>
+</figure>
+            <h4>Tretji Newtonov zakon (zakon o vzajemnem učinku)</h4>
+            <p>Če telo A deluje na telo B s silo \(\vec{F}\), deluje B na A s silo \(-\vec{F}\): enako veliko, nasprotno usmerjeno. Sili delujeta <strong>na različni telesi</strong>, zato se ne izničita. Primer: Zemlja vleče jabolko s silo \(mg\), jabolko vleče Zemljo z enako silo, a Zemlja ima ogromno maso, zato je njen pospešek neopazen.</p>
+            <h4>Newtonovi zakoni in kroženje</h4>
+            <p>Pri enakomernem kroženju ima telo radialni pospešek \(a_r = v^2/r\) proti središču. Po drugem Newtonovem zakonu mora vsota sil kazati v središče in imeti velikost</p>
+            <p>\[F_r = m\frac{v^2}{r}.\]</p>
+            <p>Radialna sila ni nova vrsta sile: to vlogo prevzame sila vrvice, lepenje med gumami in cesto, gravitacija ali vsota teže in sile podlage.</p>
+            <figure class="slika slika--ozka">
+<svg viewBox="0 0 220 312" role="img" aria-label="Človek v dvigalu" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g2-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g2-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g2-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g2-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g2-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g2-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<polygon class="s-lik" points="32.2,244.5 173.7,244.5 173.7,39.2 32.2,39.2"/>
+<polygon class="s-lik-2" points="81.7,244.5 124.2,244.5 124.2,145.4 81.7,145.4"/>
+<line class="s-k1" x1="102.9" y1="244.5" x2="102.9" y2="95.8" marker-end="url(#g2-k1)"/>
+<text class="s-txt-k1" x="110.9" y="146.2" text-anchor="start">F<tspan dy="4" style="font-size:10px">n</tspan></text>
+<line class="s-k2" x1="106.5" y1="194.9" x2="106.5" y2="286.9" marker-end="url(#g2-k2)"/>
+<text class="s-txt-k2" x="116.5" y="270.9" text-anchor="start">mg</text>
+<line class="s-k3" x1="187.8" y1="166.6" x2="187.8" y2="95.8" marker-end="url(#g2-k3)"/>
+<text class="s-txt-k3" x="183.8" y="113.2" text-anchor="end">a</text>
+
+</svg>
+<figcaption>V dvigalu, ki pospešuje navzgor, je sila tehtnice \(F_n = m(g + a)\) večja od teže.</figcaption>
+</figure>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-1">
+              <h4>Tip 1: Drugi Newtonov zakon za eno telo</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Avto z maso \(1200\ \text{kg}\) spelje z vlečno silo \(3000\ \text{N}\). Upor in trenje skupaj znašata \(600\ \text{N}\). Kolikšen je pospešek in kolikšna je hitrost po \(5{,}0\ \text{s}\)?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> na telo delujejo sile, ki niso v ravnovesju, sprašujejo po pospešku ali potrebni sili.</p><ul class="kljucne"><li>„s kolikšnim pospeškom“</li><li>„kolikšna sila je potrebna, da …“</li><li>„zavira s silo“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Nariši vse sile na telo in izberi pozitivno smer (smer pospeška).</p><div class="na-nalogi"><p>Vlečna sila naprej, upor nazaj; teža in sila podlage se navpično izničita.</p></div></li>
+              <li><p class="korak">Seštej sile v smeri gibanja (s predznaki).</p><div class="na-nalogi"><p>\(F = 3000 - 600 = 2400\ \text{N}\).</p></div></li>
+              <li><p class="korak">Zapiši \(F = ma\) in izračunaj.</p><div class="na-nalogi"><p>\(a = 2400/1200 = 2{,}0\ \text{m/s}^2\).</p></div></li>
+              <li><p class="korak">Če sprašujejo po hitrosti ali poti, nadaljuj s kinematiko.</p><div class="na-nalogi"><p>\(v = at = 2{,}0 \cdot 5{,}0 = 10\ \text{m/s}\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Kolikšna sila ustavi 1000 kg avto s 20 m/s na poti 40 m?</p><p>\(a = v^2/2s = 5\ \text{m/s}^2\), \(F = 5000\ \text{N}\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Kvader 2,0 kg vlečemo vodoravno z 10 N, \(k_{tr} = 0{,}2\). Pospešek?</p><p>\(a = (10 - 3{,}9)/2{,}0 = 3{,}0\ \text{m/s}^2\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Avto vozi enakomerno s 100 km/h. Kolikšna je vsota sil nanj?</p><p>0 (prvi Newtonov zakon).</p></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-2">
+              <h4>Tip 2: Povezana telesa (vrvica, škripec)</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Voziček z maso \(2{,}0\ \text{kg}\) na vodoravni mizi je z vrvico čez škripec povezan z utežjo z maso \(0{,}50\ \text{kg}\), ki visi (slika zgoraj). Trenje zanemarimo. Kolikšen je pospešek in s kolikšno silo je napeta vrvica?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> dve ali več teles je povezanih z vrvico ali se potiskajo in se gibljejo z enakim pospeškom.</p><ul class="kljucne"><li>„povezana z vrvico“</li><li>„čez škripec“</li><li>„vlečemo dva vozička“</li><li>„sila v vrvici“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Za ves sistem: zunanja sila, ki ga poganja, deljena s skupno maso.</p><div class="na-nalogi"><p>Poganja ga teža uteži \(m_2 g = 4{,}91\ \text{N}\): \(a = \dfrac{m_2 g}{m_1 + m_2} = \dfrac{4{,}91}{2{,}5} = 1{,}96\ \text{m/s}^2\).</p></div></li>
+              <li><p class="korak">Za silo v vrvici napiši Newtonov zakon za eno telo, na katero vrvica deluje.</p><div class="na-nalogi"><p>Voziček: \(F = m_1 a = 2{,}0 \cdot 1{,}96 = 3{,}9\ \text{N}\).</p></div></li>
+              <li><p class="korak">Preveri z drugim telesom.</p><div class="na-nalogi"><p>Utež: \(m_2 g - F = m_2 a\): \(4{,}91 - 3{,}92 = 0{,}98 = 0{,}50 \cdot 1{,}96\). Sila vrvice je manjša od teže uteži.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Dva vozička 1 kg in 3 kg, povezana z vrvico, vlečemo za težjega z 8 N. Sila v vrvici?</p><p>\(a = 2\ \text{m/s}^2\), vrvica vleče lažjega: \(F = 2\ \text{N}\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Čez škripec visita uteži 3 kg in 2 kg. Pospešek?</p><p>\(a = \dfrac{(3 - 2) g}{5} = 1{,}96\ \text{m/s}^2\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Ali je sila vrvice enaka teži viseče uteži, ko sistem pospešuje?</p><p>Ne, manjša je; enaka je le, ko utež miruje ali se giblje enakomerno.</p></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-3">
+              <h4>Tip 3: Telo v dvigalu (navidezna teža)</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Človek z maso \(60\ \text{kg}\) stoji na tehtnici v dvigalu. Kaj kaže tehtnica, ko dvigalo pospešuje navzgor s \(1{,}5\ \text{m/s}^2\), in kaj, ko s tem pospeškom pospešuje navzdol?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> telo je v pospešujočem dvigalu ali na pospešujoči podlagi, sprašujejo po sili podlage ali po tem, kaj kaže tehtnica.</p><ul class="kljucne"><li>„dvigalo“</li><li>„kaj kaže tehtnica“</li><li>„breztežnost“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Nariši sili na človeka: teža navzdol, sila tehtnice navzgor.</p><div class="na-nalogi"><p>\(mg = 589\ \text{N}\), \(F_n = ?\).</p></div></li>
+              <li><p class="korak">Pozitivna smer naj bo smer pospeška; zapiši \(F = ma\).</p><div class="na-nalogi"><p>Navzgor: \(F_n - mg = ma\).</p></div></li>
+              <li><p class="korak">Izrazi silo podlage.</p><div class="na-nalogi"><p>\(F_n = m(g + a) = 60 \cdot 11{,}3 = 679\ \text{N}\) (tehtnica kaže 69 kg). Navzdol: \(F_n = m(g - a) = 499\ \text{N}\) (51 kg).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Kaj kaže tehtnica, ko se dvigalo giblje enakomerno navzgor?</p><p>Pravo težo (\(a = 0\)).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Kdaj kaže tehtnica nič?</p><p>Pri prostem padu dvigala, \(a = g\) (breztežnost).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Dvigalo z maso 800 kg vleče vrv s silo 9000 N. Pospešek?</p><p>\(a = (9000 - 7848)/800 = 1{,}4\ \text{m/s}^2\) navzgor.</p></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-4">
+              <h4>Tip 4: Tretji Newtonov zakon (pari sil, odriv)</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Drsalec z maso \(60\ \text{kg}\) odrine drsalko z maso \(40\ \text{kg}\) s silo \(120\ \text{N}\). Kolikšna sta njuna pospeška med odrivom?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> dve telesi delujeta drugo na drugo, sprašujejo po primerjavi sil ali pospeškov ali po paru dane sile.</p><ul class="kljucne"><li>„s kolikšno silo deluje … na …“</li><li>„odrine“</li><li>„katera sila je par“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Ugotovi par sil: deluje na drugo telo, je enako velika in nasprotna.</p><div class="na-nalogi"><p>Drsalka deluje na drsalca s silo \(120\ \text{N}\) v nasprotni smeri.</p></div></li>
+              <li><p class="korak">Za vsako telo posebej uporabi drugi Newtonov zakon.</p><div class="na-nalogi"><p>\(a_1 = 120/60 = 2{,}0\ \text{m/s}^2\), \(a_2 = 120/40 = 3{,}0\ \text{m/s}^2\).</p></div></li>
+              <li><p class="korak">Primerjaj: sili sta enaki, pospeška sta obratno sorazmerna z masama.</p><div class="na-nalogi"><p>Lažja drsalka dobi večji pospešek, smeri sta nasprotni.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Tovornjak trči v kolesarja. Kdo deluje z večjo silo?</p><p>Sili sta enaki, kolesar ima večji pospešek.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Kaj je par sili, s katero tla delujejo na stopalo pri hoji?</p><p>Sila stopala na tla.</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Kako raketa pospešuje v vesolju, kjer se nima česa odriniti?</p><p>Izpuhe potiska nazaj, plini potiskajo raketo naprej.</p></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-5">
+              <h4>Tip 5: Newtonov zakon pri kroženju</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Avto z maso \(1000\ \text{kg}\) pelje s hitrostjo \(54\ \text{km/h}\) skozi vodoraven ovinek s polmerom \(50\ \text{m}\). Kolikšna sila mora delovati nanj proti središču ovinka in kolikšen mora biti vsaj koeficient lepenja?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> telo kroži, sprašujejo po sili vrvice, podlage ali lepenja ali po največji hitrosti.</p><ul class="kljucne"><li>„ovinek“</li><li>„vrti na vrvici“</li><li>„na vrhu mostu“</li><li>„največja hitrost, da ne zdrsne“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Nariši sile na telo in ugotovi, katera (ali vsota katerih) kaže proti središču.</p><div class="na-nalogi"><p>Proti središču deluje le sila lepenja med gumami in cesto.</p></div></li>
+              <li><p class="korak">Zapiši: vsota sil proti središču \(= mv^2/r\).</p><div class="na-nalogi"><p>\(F_l = \dfrac{1000 \cdot 15^2}{50}\ \text{N} = 4500\ \text{N}\).</p></div></li>
+              <li><p class="korak">Uporabi pogoj iz naloge (lepenje največ \(k_l F_n\), vrvica se ne sme pretrgati …).</p><div class="na-nalogi"><p>\(k_l mg \ge 4500\ \text{N}\): \(k_l \ge \dfrac{4500}{9810} = 0{,}46\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Avto 1000 kg pelje z 20 m/s čez vrh mostu s polmerom krivine 80 m. Sila podlage?</p><p>\(mg - F_n = mv^2/r\): \(F_n = 9810 - 5000 = 4810\ \text{N}\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Kamen 0,2 kg na 0,5 m dolgi vrvici kroži vodoravno (na gladki mizi) s 3 m/s. Sila vrvice?</p><p>\(F = 0{,}2 \cdot 9/0{,}5 = 3{,}6\ \text{N}\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Kaj se zgodi s kamnom, če se vrvica pretrga?</p><p>Odleti v smeri tangente (prvi Newtonov zakon).</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 2 -->
+        <section class="sklop" id="sklop-2">
+          <header class="sklop-header">
+            <span class="sklop-num">4.4 · 2</span>
+            <h2>Masa, teža, gostota</h2>
+            <p>Teža in masa, masa in gostota.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <ul>
+              <li><strong>Masa</strong> \(m\) (kg) je lastnost telesa, merilo za njegovo vztrajnost in za to, kako močno ga privlači gravitacija. Povsod je enaka: na Luni ima astronavt enako maso kot na Zemlji.</li>
+              <li><strong>Teža</strong> \(F_g = mg\) (N) je sila, s katero Zemlja (ali drugo nebesno telo) privlači telo. Odvisna je od kraja: na Luni je \(g\) približno šestkrat manjši, zato je teža šestkrat manjša.</li>
+              <li><strong>Gostota</strong> \(\rho = m/V\) (\(\text{kg/m}^3\)) je lastnost snovi. Voda ima \(1000\ \text{kg/m}^3 = 1\ \text{g/cm}^3\), aluminij \(2700\ \text{kg/m}^3\), železo \(7900\ \text{kg/m}^3\), zrak približno \(1{,}2\ \text{kg/m}^3\).</li>
+            </ul>
+            <p>Pri telesu iz več delov seštejemo mase in prostornine posebej; povprečna gostota je \(\bar{\rho} = \dfrac{m_1 + m_2}{V_1 + V_2}\), ne povprečje gostot.</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-6">
+              <h4>Tip 6: Masa, teža in gostota</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Kocka z robom \(3{,}0\ \text{cm}\) ima maso \(72{,}9\ \text{g}\). Iz katere snovi je (aluminij \(2700\ \text{kg/m}^3\), železo \(7900\ \text{kg/m}^3\))? Kolikšna sta njena masa in teža na Luni (\(g_L = 1{,}6\ \text{m/s}^2\))?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> povezujejo maso, prostornino in snov, ali primerjajo telo na Zemlji in na drugem nebesnem telesu.</p><ul class="kljucne"><li>„gostota“</li><li>„iz katere snovi“</li><li>„na Luni“</li><li>„povprečna gostota“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Izračunaj prostornino iz mer telesa.</p><div class="na-nalogi"><p>\(V = (3{,}0\ \text{cm})^3 = 27\ \text{cm}^3\).</p></div></li>
+              <li><p class="korak">Gostota je masa, deljena s prostornino; pretvori v \(\text{kg/m}^3\) in primerjaj s tabelo.</p><div class="na-nalogi"><p>\(\rho = 72{,}9/27 = 2{,}7\ \text{g/cm}^3 = 2700\ \text{kg/m}^3\): aluminij.</p></div></li>
+              <li><p class="korak">Masa je povsod enaka, teža je \(mg\) z lokalnim \(g\).</p><div class="na-nalogi"><p>Na Luni \(m = 72{,}9\ \text{g}\), \(F_g = 0{,}0729 \cdot 1{,}6 = 0{,}12\ \text{N}\) (na Zemlji 0,72 N).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Kolikšna je masa zraka v sobi \(5 \times 4 \times 2{,}5\ \text{m}\)?</p><p>\(m = 1{,}2 \cdot 50 = 60\ \text{kg}\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Zmešamo 1 l vode in 1 l alkohola (\(790\ \text{kg/m}^3\)). Povprečna gostota (prostornini seštejemo)?</p><p>\((1{,}00 + 0{,}79)/2 = 0{,}90\ \text{kg/l}\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Astronavt ima na Zemlji težo 785 N. Masa na Marsu?</p><p>80 kg, enaka kot na Zemlji.</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 3 -->
+        <section class="sklop" id="sklop-3">
+          <header class="sklop-header">
+            <span class="sklop-num">4.4 · 3</span>
+            <h2>Gravitacija</h2>
+            <p>Gravitacijski zakon, težni pospešek in razdalja, gibanje planetov in satelitov.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <h4>Gravitacijski zakon</h4>
+            <p>Vsaki telesi se privlačita s silo, ki je sorazmerna z obema masama in obratno sorazmerna s kvadratom razdalje med njunima središčema:</p>
+            <p>\[F = G\frac{m_1 m_2}{r^2}, \qquad G = 6{,}67 \cdot 10^{-11}\ \frac{\text{N m}^2}{\text{kg}^2}.\]</p>
+            <p>Za krogelno simetrična telesa (planeti, zvezde) je \(r\) razdalja med središči. Gravitacija med predmeti iz vsakdanjega življenja je zelo šibka; opazna postane, ko je vsaj ena masa ogromna. Na dvakratni razdalji je sila štirikrat manjša.</p>
+            <h4>Težni pospešek in razdalja <span class="badge-vr">PZ</span></h4>
+            <p>Na površju Zemlje je teža enaka gravitacijski sili: \(mg_0 = G\dfrac{mM}{R^2}\), zato \(g_0 = \dfrac{GM}{R^2}\) in \(GM = g_0 R^2\). Na razdalji \(r\) od središča (višina \(h\), \(r = R + h\)) je</p>
+            <p>\[g(r) = \frac{GM}{r^2} = g_0 \frac{R^2}{r^2}.\]</p>
+            <figure class="slika slika--ozka">
+<svg viewBox="0 0 420 260" role="img" aria-label="Težni pospešek v odvisnosti od razdalje" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g3-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g3-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g3-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g3-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g3-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g3-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<path class="s-mreza" d="M26,234V26M109.6,234V26M193.3,234V26M276.9,234V26M360.5,234V26M26,234H394M26,196.2H394M26,158.4H394M26,120.5H394M26,82.7H394M26,44.9H394"/>
+<line class="s-os" x1="26" y1="234" x2="402" y2="234" marker-end="url(#g3-p)"/>
+<line class="s-os" x1="26" y1="234" x2="26" y2="18" marker-end="url(#g3-p)"/>
+<text class="s-os-txt" x="396" y="226" text-anchor="end">r</text>
+<text class="s-os-txt" x="34" y="30">g [m/s²]</text>
+<line class="s-os" x1="109.6" y1="231" x2="109.6" y2="237"/><text class="s-os-txt" x="109.6" y="249" text-anchor="middle">1R</text><line class="s-os" x1="193.3" y1="231" x2="193.3" y2="237"/><text class="s-os-txt" x="193.3" y="249" text-anchor="middle">2R</text><line class="s-os" x1="276.9" y1="231" x2="276.9" y2="237"/><text class="s-os-txt" x="276.9" y="249" text-anchor="middle">3R</text><line class="s-os" x1="360.5" y1="231" x2="360.5" y2="237"/><text class="s-os-txt" x="360.5" y="249" text-anchor="middle">4R</text><line class="s-os" x1="23" y1="196.2" x2="29" y2="196.2"/><text class="s-os-txt" x="20" y="200.2" text-anchor="end">2</text><line class="s-os" x1="23" y1="158.4" x2="29" y2="158.4"/><text class="s-os-txt" x="20" y="162.4" text-anchor="end">4</text><line class="s-os" x1="23" y1="120.5" x2="29" y2="120.5"/><text class="s-os-txt" x="20" y="124.5" text-anchor="end">6</text><line class="s-os" x1="23" y1="82.7" x2="29" y2="82.7"/><text class="s-os-txt" x="20" y="86.7" text-anchor="end">8</text><line class="s-os" x1="23" y1="44.9" x2="29" y2="44.9"/><text class="s-os-txt" x="20" y="48.9" text-anchor="end">10</text><text class="s-os-txt" x="20" y="249" text-anchor="end">0</text>
+<line class="s-pom" x1="193.3" y1="234" x2="193.3" y2="187.6"/>
+<line class="s-pom" x1="26" y1="187.6" x2="193.3" y2="187.6"/>
+<line class="s-pom" x1="26" y1="48.5" x2="109.6" y2="48.5"/>
+<path class="s-k1" d="M109.6,48.5L110.3,51.5L111,54.5L111.7,57.4L112.4,60.2L113.1,62.9L113.8,65.6L114.5,68.2L115.2,70.8L115.8,73.3L116.5,75.7L117.2,78.1L117.9,80.4L118.6,82.7L119.3,84.9L120,87.1L120.7,89.2L121.4,91.3L122.1,93.4L122.7,95.4L123.4,97.3L124.1,99.2L124.8,101.1L125.5,103L126.2,104.8L126.9,106.5L127.6,108.2L128.3,109.9L129,111.6L129.6,113.2L130.3,114.8L131,116.4L131.7,117.9L132.4,119.4L133.1,120.9L133.8,122.3L134.5,123.7L135.2,125.1L135.9,126.5L136.5,127.8L137.2,129.1L137.9,130.4L138.6,131.7L139.3,132.9L140,134.2L140.7,135.3L141.4,136.5L142.1,137.7L142.8,138.8L143.4,139.9L144.1,141L144.8,142.1L145.5,143.2L146.2,144.2L146.9,145.2L147.6,146.2L148.3,147.2L149,148.2L149.7,149.1L150.3,150.1L151,151L151.7,151.9L152.4,152.8L153.1,153.7L153.8,154.6L154.5,155.4L155.2,156.2L155.9,157.1L156.6,157.9L157.2,158.7L157.9,159.5L158.6,160.2L159.3,161L160,161.7L160.7,162.5L161.4,163.2L162.1,163.9L162.8,164.6L163.5,165.3L164.1,166L164.8,166.7L165.5,167.3L166.2,168L166.9,168.6L167.6,169.3L168.3,169.9L169,170.5L169.7,171.1L170.4,171.7L171,172.3L171.7,172.9L172.4,173.5L173.1,174L173.8,174.6L174.5,175.2L175.2,175.7L175.9,176.2L176.6,176.8L177.3,177.3L177.9,177.8L178.6,178.3L179.3,178.8L180,179.3L180.7,179.8L181.4,180.3L182.1,180.7L182.8,181.2L183.5,181.7L184.2,182.1L184.8,182.6L185.5,183L186.2,183.5L186.9,183.9L187.6,184.3L188.3,184.7L189,185.2L189.7,185.6L190.4,186L191.1,186.4L191.7,186.8L192.4,187.2L193.1,187.5L193.8,187.9L194.5,188.3L195.2,188.7L195.9,189L196.6,189.4L197.3,189.8L198,190.1L198.6,190.5L199.3,190.8L200,191.2L200.7,191.5L201.4,191.8L202.1,192.2L202.8,192.5L203.5,192.8L204.2,193.1L204.9,193.4L205.5,193.7L206.2,194.1L206.9,194.4L207.6,194.7L208.3,195L209,195.3L209.7,195.5L210.4,195.8L211.1,196.1L211.8,196.4L212.4,196.7L213.1,196.9L213.8,197.2L214.5,197.5L215.2,197.8L215.9,198L216.6,198.3L217.3,198.5L218,198.8L218.7,199L219.3,199.3L220,199.5L220.7,199.8L221.4,200L222.1,200.3L222.8,200.5L223.5,200.7L224.2,201L224.9,201.2L225.6,201.4L226.2,201.6L226.9,201.9L227.6,202.1L228.3,202.3L229,202.5L229.7,202.7L230.4,202.9L231.1,203.1L231.8,203.4L232.5,203.6L233.1,203.8L233.8,204L234.5,204.2L235.2,204.4L235.9,204.6L236.6,204.7L237.3,204.9L238,205.1L238.7,205.3L239.4,205.5L240,205.7L240.7,205.9L241.4,206L242.1,206.2L242.8,206.4L243.5,206.6L244.2,206.7L244.9,206.9L245.6,207.1L246.3,207.3L246.9,207.4L247.6,207.6L248.3,207.7L249,207.9L249.7,208.1L250.4,208.2L251.1,208.4L251.8,208.5L252.5,208.7L253.2,208.9L253.8,209L254.5,209.2L255.2,209.3L255.9,209.5L256.6,209.6L257.3,209.7L258,209.9L258.7,210L259.4,210.2L260.1,210.3L260.7,210.5L261.4,210.6L262.1,210.7L262.8,210.9L263.5,211L264.2,211.1L264.9,211.3L265.6,211.4L266.3,211.5L267,211.7L267.6,211.8L268.3,211.9L269,212L269.7,212.2L270.4,212.3L271.1,212.4L271.8,212.5L272.5,212.6L273.2,212.8L273.9,212.9L274.5,213L275.2,213.1L275.9,213.2L276.6,213.3L277.3,213.5L278,213.6L278.7,213.7L279.4,213.8L280.1,213.9L280.8,214L281.4,214.1L282.1,214.2L282.8,214.3L283.5,214.4L284.2,214.5L284.9,214.6L285.6,214.7L286.3,214.8L287,214.9L287.7,215L288.3,215.1L289,215.2L289.7,215.3L290.4,215.4L291.1,215.5L291.8,215.6L292.5,215.7L293.2,215.8L293.9,215.9L294.6,216L295.2,216.1L295.9,216.2L296.6,216.3L297.3,216.4L298,216.5L298.7,216.6L299.4,216.6L300.1,216.7L300.8,216.8L301.5,216.9L302.1,217L302.8,217.1L303.5,217.2L304.2,217.2L304.9,217.3L305.6,217.4L306.3,217.5L307,217.6L307.7,217.6L308.4,217.7L309,217.8L309.7,217.9L310.4,218L311.1,218L311.8,218.1L312.5,218.2L313.2,218.3L313.9,218.3L314.6,218.4L315.3,218.5L315.9,218.6L316.6,218.6L317.3,218.7L318,218.8L318.7,218.9L319.4,218.9L320.1,219L320.8,219.1L321.5,219.1L322.2,219.2L322.8,219.3L323.5,219.3L324.2,219.4L324.9,219.5L325.6,219.5L326.3,219.6L327,219.7L327.7,219.7L328.4,219.8L329.1,219.9L329.7,219.9L330.4,220L331.1,220.1L331.8,220.1L332.5,220.2L333.2,220.3L333.9,220.3L334.6,220.4L335.3,220.4L336,220.5L336.6,220.6L337.3,220.6L338,220.7L338.7,220.7L339.4,220.8L340.1,220.8L340.8,220.9L341.5,221L342.2,221L342.9,221.1L343.5,221.1L344.2,221.2L344.9,221.2L345.6,221.3L346.3,221.4L347,221.4L347.7,221.5L348.4,221.5L349.1,221.6L349.8,221.6L350.4,221.7L351.1,221.7L351.8,221.8L352.5,221.8L353.2,221.9L353.9,221.9L354.6,222L355.3,222L356,222.1L356.7,222.1L357.3,222.2L358,222.2L358.7,222.3L359.4,222.3L360.1,222.4L360.8,222.4L361.5,222.5L362.2,222.5L362.9,222.6L363.6,222.6L364.2,222.7L364.9,222.7L365.6,222.8L366.3,222.8L367,222.8L367.7,222.9L368.4,222.9L369.1,223L369.8,223L370.5,223.1L371.1,223.1L371.8,223.2L372.5,223.2L373.2,223.2L373.9,223.3L374.6,223.3L375.3,223.4L376,223.4L376.7,223.4L377.4,223.5L378,223.5L378.7,223.6L379.4,223.6L380.1,223.7L380.8,223.7L381.5,223.7L382.2,223.8L382.9,223.8L383.6,223.9L384.3,223.9L384.9,223.9L385.6,224"/>
+<circle class="s-tocka" cx="109.6" cy="48.5" r="4.5"/>
+<text class="s-txt-b" x="117.6" y="42.5" text-anchor="start">9,81</text>
+<circle class="s-tocka" cx="193.3" cy="187.7" r="4.5"/>
+<text class="s-txt-b" x="201.3" y="179.7" text-anchor="start">2,45 = g/4</text>
+<circle class="s-tocka" cx="276.9" cy="213.4" r="4.5"/>
+<text class="s-txt-b" x="284.9" y="205.4" text-anchor="start">g/9</text>
+</svg>
+<figcaption>Nad površjem pada težni pospešek s kvadratom razdalje od središča Zemlje: \(g(r) = g_0 R^2/r^2\). Na dvakratni razdalji je štirikrat manjši.</figcaption>
+</figure>
+            <h4>Gibanje planetov in satelitov <span class="badge-vr">PZ</span></h4>
+            <p>Satelit (ali planet okoli Sonca) na krožnem tiru kroži zato, ker mu gravitacijska sila daje radialni pospešek:</p>
+            <p>\[G\frac{mM}{r^2} = m\frac{v^2}{r} \quad\Rightarrow\quad v = \sqrt{\frac{GM}{r}}, \qquad t_0 = \frac{2\pi r}{v}, \qquad \frac{r^3}{t_0^2} = \frac{GM}{4\pi^2}.\]</p>
+            <p>Masa satelita se pokrajša: vsi sateliti na isti višini krožijo z enako hitrostjo. Bolj oddaljeni krožijo počasneje in imajo daljši obhodni čas (tretji Keplerjev zakon). <strong>Geostacionarni satelit</strong> ima obhodni čas en dan in kroži nad ekvatorjem, zato miruje nad isto točko (višina približno 36 000 km). Astronavti v vesoljski postaji so v breztežnem stanju, ker skupaj s postajo prosto padajo, ne zato, ker gravitacije ne bi bilo.</p>
+            <figure class="slika slika--ozka">
+<svg viewBox="0 0 320 320" role="img" aria-label="Satelit v krožni orbiti" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g4-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g4-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g4-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g4-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g4-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g4-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<line class="s-crta" x1="157.2" y1="168.4" x2="101.5" y2="168.4"/>
+<line class="s-k3" x1="246.8" y1="93.2" x2="211" y2="50.5" marker-end="url(#g4-k3)"/>
+<text class="s-txt-k3" x="234.9" y="63.9" text-anchor="start">v</text>
+<line class="s-k2" x1="246.8" y1="93.2" x2="212.8" y2="121.7" marker-end="url(#g4-k2)"/>
+<text class="s-txt-k2" x="239.8" y="115.5" text-anchor="start">F<tspan dy="4" style="font-size:10px">g</tspan></text>
+<circle class="s-tocka-2" cx="246.8" cy="93.2" r="5.5"/>
+<circle class="s-tocka" cx="157.2" cy="168.4" r="3"/>
+<text class="s-txt-b" x="129.4" y="160.4" text-anchor="middle">R</text>
+<text class="s-txt-muted" x="157.2" y="196.2" text-anchor="middle">Zemlja</text>
+<text class="s-txt-muted" x="157.2" y="257.5" text-anchor="middle">r = R + h</text>
+<circle class="s-lik-2" cx="157.2" cy="168.4" r="55.7"/>
+<circle class="s-asim" cx="157.2" cy="168.4" r="116.9"/>
+</svg>
+<figcaption>Satelit kroži, ker mu gravitacijska sila daje radialni pospešek: \(G\dfrac{mM}{r^2} = m\dfrac{v^2}{r}\).</figcaption>
+</figure>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-7">
+              <h4>Tip 7: Gravitacijska sila med telesoma</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Kolikšna je gravitacijska sila med Zemljo (\(6{,}0 \cdot 10^{24}\ \text{kg}\)) in Luno (\(7{,}3 \cdot 10^{22}\ \text{kg}\)), ki sta \(3{,}84 \cdot 10^{8}\ \text{m}\) narazen? Kolikokrat se sila spremeni, če bi bila razdalja dvakrat manjša?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> podani sta masi in razdalja, ali sprašujejo, kako se sila spremeni pri spremembi razdalje ali mase.</p><ul class="kljucne"><li>„gravitacijska sila“</li><li>„privlačita“</li><li>„kolikokrat se spremeni“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Izpiši masi in razdaljo med središči v enotah SI.</p><div class="na-nalogi"><p>\(m_1 = 6{,}0 \cdot 10^{24}\ \text{kg}\), \(m_2 = 7{,}3 \cdot 10^{22}\ \text{kg}\), \(r = 3{,}84 \cdot 10^{8}\ \text{m}\).</p></div></li>
+              <li><p class="korak">Vstavi v gravitacijski zakon; pazi na kvadrat razdalje.</p><div class="na-nalogi"><p>\(F = 6{,}67 \cdot 10^{-11} \cdot \dfrac{6{,}0 \cdot 10^{24} \cdot 7{,}3 \cdot 10^{22}}{(3{,}84 \cdot 10^{8})^2}\ \text{N} = 2{,}0 \cdot 10^{20}\ \text{N}\).</p></div></li>
+              <li><p class="korak">Pri primerjavi zapiši razmerje: \(F \propto m_1 m_2 / r^2\).</p><div class="na-nalogi"><p>Pol manjša razdalja: \(F' = F \cdot 2^2 = 4F\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Gravitacijska sila med dvema 70 kg človekoma na razdalji 1 m?</p><p>\(3{,}3 \cdot 10^{-7}\ \text{N}\), neopazno.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Kako se spremeni sila, če obe masi podvojimo in razdaljo podvojimo?</p><p>\(4/4 = 1\): ostane enaka.</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Kje med Zemljo in Luno je gravitacijska sila na sondo enaka nič?</p><p>Kjer \(M_Z/x^2 = M_L/(d - x)^2\): približno \(0{,}9\,d\) od Zemlje.</p></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-8">
+              <h4>Tip 8: Težni pospešek na višini ali na drugem planetu <span class="badge-vr">PZ</span></h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Kolikšen je težni pospešek na višini, ki je enaka polmeru Zemlje? Kolikšen je težni pospešek na površju Marsa (masa \(6{,}4 \cdot 10^{23}\ \text{kg}\), polmer \(3{,}4 \cdot 10^{6}\ \text{m}\))?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> sprašujejo po \(g\) ali teži na višini, na drugem planetu, ali primerjajo teži na dveh telesih.</p><ul class="kljucne"><li>„na višini“</li><li>„na površju planeta“</li><li>„koliko bi tehtal na …“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Zapiši \(g = GM/r^2\), kjer je \(r\) razdalja od središča (polmer + višina).</p><div class="na-nalogi"><p>Na višini \(R\): \(r = 2R\).</p></div></li>
+              <li><p class="korak">Če ni podana masa Zemlje, uporabi razmerje z \(g_0\) na površju: \(g = g_0 R^2/r^2\).</p><div class="na-nalogi"><p>\(g = 9{,}81/4 = 2{,}45\ \text{m/s}^2\).</p></div></li>
+              <li><p class="korak">Za drug planet vstavi njegovo maso in polmer.</p><div class="na-nalogi"><p>\(g_M = \dfrac{6{,}67 \cdot 10^{-11} \cdot 6{,}4 \cdot 10^{23}}{(3{,}4 \cdot 10^{6})^2} = 3{,}7\ \text{m/s}^2\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Na kateri višini je \(g\) enak polovici vrednosti na površju?</p><p>\(r = \sqrt{2}R\), \(h = 0{,}41R = 2640\ \text{km}\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Planet ima dvakrat večjo maso in dvakrat večji polmer od Zemlje. \(g\)?</p><p>\(2/4 \cdot g_0 = 4{,}9\ \text{m/s}^2\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Iz \(g_0\) in \(R\) izračunajte maso Zemlje.</p><p>\(M = g_0 R^2/G = 6{,}0 \cdot 10^{24}\ \text{kg}\).</p></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-9">
+              <h4>Tip 9: Satelit ali planet na krožnem tiru <span class="badge-vr">PZ</span></h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Vesoljska postaja kroži na višini \(400\ \text{km}\) nad površjem Zemlje. Kolikšna je njena hitrost in obhodni čas?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> telo kroži okoli planeta ali zvezde, sprašujejo po hitrosti, obhodnem času, polmeru tira ali masi osrednjega telesa.</p><ul class="kljucne"><li>„satelit kroži“</li><li>„obhodni čas“</li><li>„geostacionarni“</li><li>„Luna, planet okoli Sonca“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Določi polmer tira od središča osrednjega telesa.</p><div class="na-nalogi"><p>\(r = 6370\ \text{km} + 400\ \text{km} = 6{,}77 \cdot 10^{6}\ \text{m}\).</p></div></li>
+              <li><p class="korak">Izenači gravitacijsko silo in radialno silo: \(GmM/r^2 = mv^2/r\).</p><div class="na-nalogi"><p>\(v = \sqrt{GM/r}\), \(GM = g_0 R^2 = 9{,}81 \cdot (6{,}37 \cdot 10^{6})^2 = 3{,}98 \cdot 10^{14}\ \text{m}^3/\text{s}^2\).</p></div></li>
+              <li><p class="korak">Izračunaj hitrost.</p><div class="na-nalogi"><p>\(v = \sqrt{3{,}98 \cdot 10^{14}/6{,}77 \cdot 10^{6}}\ \text{m/s} = 7{,}7\ \text{km/s}\).</p></div></li>
+              <li><p class="korak">Obhodni čas \(t_0 = 2\pi r/v\).</p><div class="na-nalogi"><p>\(t_0 = \dfrac{2\pi \cdot 6{,}77 \cdot 10^{6}}{7670}\ \text{s} = 5{,}5 \cdot 10^{3}\ \text{s} = 92\ \text{min}\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Na kateri oddaljenosti od središča Zemlje kroži geostacionarni satelit?</p><p>\(r^3 = GM t_0^2/4\pi^2\), \(t_0 = 86\,400\ \text{s}\): \(r = 4{,}2 \cdot 10^{7}\ \text{m}\) (višina 36 000 km).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Zemlja kroži okoli Sonca na razdalji \(1{,}5 \cdot 10^{11}\ \text{m}\) v enem letu. Masa Sonca?</p><p>\(M = 4\pi^2 r^3/(G t_0^2) = 2{,}0 \cdot 10^{30}\ \text{kg}\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Kako se spremeni hitrost satelita, če se polmer tira poveča za štirikrat?</p><p>\(v \propto 1/\sqrt{r}\): dvakrat manjša.</p></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="subsection" id="kljuc">
+          <div class="subsection-head">
+            <h2>Ključ: kateri tip naloge je to?</h2>
+            <p>Poišči besedo iz navodila naloge in skoči na pravi postopek.</p>
+          </div>
+          <div class="info-card">
+            <div class="tabela-wrap">
+              <table class="tabela">
+                <thead><tr><th>V besedilu naloge piše …</th><th>Tip</th></tr></thead>
+                <tbody>
+                  <tr><td>„s kolikšnim pospeškom“, „potrebna sila“, eno telo</td><td><a href="#tip-1">Tip 1</a></td></tr>
+                  <tr><td>„povezana z vrvico“, „čez škripec“</td><td><a href="#tip-2">Tip 2</a></td></tr>
+                  <tr><td>„dvigalo“, „kaj kaže tehtnica“</td><td><a href="#tip-3">Tip 3</a></td></tr>
+                  <tr><td>„odrine“, „s kolikšno silo deluje … na …“</td><td><a href="#tip-4">Tip 4</a></td></tr>
+                  <tr><td>„ovinek“, „vrti na vrvici“, „vrh mostu“</td><td><a href="#tip-5">Tip 5</a></td></tr>
+                  <tr><td>„gostota“, „iz katere snovi“, „na Luni“</td><td><a href="#tip-6">Tip 6</a></td></tr>
+                  <tr><td>„gravitacijska sila“, masi in razdalja</td><td><a href="#tip-7">Tip 7</a></td></tr>
+                  <tr><td>„na višini“, „na površju planeta“</td><td><a href="#tip-8">Tip 8</a></td></tr>
+                  <tr><td>„satelit“, „obhodni čas“, „geostacionarni“</td><td><a href="#tip-9">Tip 9</a></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>Pogoste napake</h2>
+          </div>
+          <div class="info-card">
+            <ul>
+              <li>Misliš, da je za stalno hitrost potrebna stalna sila (pri enakomernem gibanju je vsota sil nič).</li>
+              <li>Pri povezanih telesih vzameš silo vrvice enako teži viseče uteži.</li>
+              <li>Para sil po tretjem zakonu narišeš na isto telo in ju „izničiš“.</li>
+              <li>Pri kroženju dodaš „centripetalno silo“ kot še eno silo poleg ostalih.</li>
+              <li>Pri gravitaciji vstaviš višino nad površjem namesto razdalje od središča.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>Naslednje poglavje</h2>
+          </div>
+          <div class="link-list">
+            <a class="link-item" href="/views/fizika/snov/gibalna_kolicina/gibalna_kolicina_razlaga.html">
+              <span class="link-item-text"><strong>4.5 Izrek o gibalni količini</strong><small>Sunek sile, gibalna količina, trki in odrivi</small></span>
+              <span class="arrow">→</span>
+            </a>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>
