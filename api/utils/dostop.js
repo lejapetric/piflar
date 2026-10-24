@@ -1,14 +1,14 @@
 // api/utils/dostop.js
 // Kdo sme videti kaj. Čiste funkcije brez baze, da jih lahko testiramo.
 //
-//   brezplacno (gost ali prijavljen): vse nerešene pole + zadnja rešena pola
-//                                     za vsak predmet in raven
-//   osnovni  (plačnik):  vse za izbrane predmete (največ MAX_PREDMETOV)
-//   premium:             vse za vse predmete
+//   brezplacno (gost ali prijavljen): snov, interaktivne naloge, vse nerešene
+//                 pole in zadnja rešena pola za vsak predmet in raven
+//   osnovni:      vse za predmete v PAKET_OSNOVNI
+//   premium:      vse za vse predmete
 
-export const PREDMETI = ["matematika", "fizika"];
+export const PREDMETI = ["matematika", "fizika", "anglescina", "slovenscina"];
 export const PAKETI = ["brezplacno", "osnovni", "premium"];
-export const MAX_PREDMETOV = 3;
+export const PAKET_OSNOVNI = ["matematika", "anglescina", "slovenscina"];
 
 function paketVeljaven(uporabnik, zdaj) {
   return !uporabnik.paketVelja || new Date(uporabnik.paketVelja) >= zdaj;
@@ -18,7 +18,7 @@ function paketVeljaven(uporabnik, zdaj) {
 export function imaPolniDostop(uporabnik, predmet, zdaj = new Date()) {
   if (!uporabnik || !paketVeljaven(uporabnik, zdaj)) return false;
   if (uporabnik.paket === "premium") return true;
-  if (uporabnik.paket === "osnovni") return (uporabnik.predmeti ?? []).includes(predmet);
+  if (uporabnik.paket === "osnovni") return PAKET_OSNOVNI.includes(predmet);
   return false;
 }
 

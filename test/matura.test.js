@@ -22,7 +22,7 @@ test("starejša rešena pola je zaklenjena za goste, odklenjena za plačnike", (
 
   const placnik = poklici(ctrl.maturaReadOne, {
     params: { maturaId: id },
-    uporabnik: { paket: "osnovni", predmeti: ["matematika"] },
+    uporabnik: { paket: "osnovni" },
   });
   assert.equal(placnik.body.odklenjena, true);
   assert.ok(placnik.body.naloge[0].razlaga);

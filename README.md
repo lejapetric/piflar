@@ -24,7 +24,7 @@ app.js                     Express: statične strani iz public/, API pod /api, 4
 api/
   routes/api.js            seznam API poti
   controllers/             snovi, naloge, matura, avtentikacija
-  models/uporabnik.js      uporabnik v MongoDB (paket, predmeti, geslo kot bcrypt hash)
+  models/uporabnik.js      uporabnik v MongoDB (paket, geslo kot bcrypt hash)
   data/                    snovi.json, naloge.json, matura.json (+ index.js, ki jih prebere ob zagonu)
   middleware/              prijavljen uporabnik, obravnava napak
   utils/dostop.js          pravila, kdo sme videti kaj
@@ -78,8 +78,8 @@ in `<script src="/components/naloge.js" defer></script>` (glej `mnozice_naloge.h
 
 | Paket | Kaj vidi |
 | --- | --- |
-| gost ali `brezplacno` | vse nerešene pole in zadnjo rešeno polo za vsak predmet in raven |
-| `osnovni` | vse za predmete v `predmeti` (največ 3) |
+| gost ali `brezplacno` | snov, interaktivne naloge, vse nerešene pole in zadnjo rešeno polo za vsak predmet in raven |
+| `osnovni` | vse za matematiko, angleščino in slovenščino (`PAKET_OSNOVNI`) |
 | `premium` | vse za vse predmete |
 
 Paket in `paketVelja` bo nastavljal plačilni sistem. Pravila so v `api/utils/dostop.js`.

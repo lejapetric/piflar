@@ -59,7 +59,6 @@ test("registracija, prijava, dostop glede na paket, odjava", async () => {
   const zaklenjena = "/matura/primer-matematika-osnovna-2024-spomladanski";
   assert.equal((await (await get(zaklenjena, piskotek)).json()).odklenjena, false);
   baza[0].paket = "osnovni";
-  baza[0].predmeti = ["matematika"];
   assert.equal((await (await get(zaklenjena, piskotek)).json()).odklenjena, true);
 
   assert.equal((await get("/jaz", "piflar_zeton=ponarejen")).status, 401);

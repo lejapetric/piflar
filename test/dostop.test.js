@@ -7,11 +7,12 @@ const pola = (id, predmet, raven, leto, resena = true, rok = "spomladanski") => 
   id, predmet, raven, leto, rok, naloge: resena ? [{ razlaga: "…" }] : [{}],
 });
 
-test("paketi: gost, osnovni (izbrani predmeti), premium, potekel paket", () => {
+test("paketi: gost, osnovni (matematika, angleščina, slovenščina), premium, potekel paket", () => {
   assert.equal(imaPolniDostop(null, "matematika", zdaj), false);
   assert.equal(imaPolniDostop({ paket: "brezplacno" }, "matematika", zdaj), false);
-  const osnovni = { paket: "osnovni", predmeti: ["matematika"] };
+  const osnovni = { paket: "osnovni" };
   assert.equal(imaPolniDostop(osnovni, "matematika", zdaj), true);
+  assert.equal(imaPolniDostop(osnovni, "slovenscina", zdaj), true);
   assert.equal(imaPolniDostop(osnovni, "fizika", zdaj), false);
   assert.equal(imaPolniDostop({ paket: "premium" }, "fizika", zdaj), true);
   assert.equal(imaPolniDostop({ paket: "premium", paketVelja: "2026-01-01" }, "fizika", zdaj), false);
@@ -31,5 +32,5 @@ test("javna je samo zadnja rešena pola za vsak predmet in raven", () => {
   const javne = javneResenePole(pole);
   assert.equal(lahkoVidiResitve(null, pole[0], javne, zdaj), false);
   assert.equal(lahkoVidiResitve(null, pole[2], javne, zdaj), true);
-  assert.equal(lahkoVidiResitve({ paket: "osnovni", predmeti: ["matematika"] }, pole[0], javne, zdaj), true);
+  assert.equal(lahkoVidiResitve({ paket: "osnovni" }, pole[0], javne, zdaj), true);
 });

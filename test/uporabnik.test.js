@@ -13,12 +13,9 @@ test("geslo se shrani kot hash in ga je mogoče preveriti", async () => {
   assert.equal("gesloHash" in u.toJSON(), false);
 });
 
-test("osnovni paket ima največ 3 predmete in samo znane predmete", () => {
+test("paket je lahko samo brezplacno, osnovni ali premium", () => {
   const u = new Uporabnik({ ime: "Ana", email: "a@b.si", gesloHash: "x", paket: "osnovni" });
-  u.predmeti = ["matematika", "fizika"];
   assert.equal(u.validateSync(), undefined);
-  u.predmeti = ["kemija"];
-  assert.ok(u.validateSync()?.errors);
-  u.predmeti = ["matematika", "fizika", "matematika", "fizika"];
-  assert.ok(u.validateSync()?.errors);
+  u.paket = "zlati";
+  assert.ok(u.validateSync()?.errors.paket);
 });

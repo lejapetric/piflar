@@ -1,7 +1,7 @@
 // api/models/uporabnik.js
 import mongoose from "mongoose";
 import bcrypt from "bcryptjs";
-import { PAKETI, PREDMETI, MAX_PREDMETOV } from "../utils/dostop.js";
+import { PAKETI } from "../utils/dostop.js";
 
 const uporabnikSchema = new mongoose.Schema(
   {
@@ -9,10 +9,6 @@ const uporabnikSchema = new mongoose.Schema(
     email: { type: String, required: true, unique: true, lowercase: true, trim: true, maxlength: 254 },
     gesloHash: { type: String, required: true, select: false },
     paket: { type: String, enum: PAKETI, default: "brezplacno" },
-    predmeti: {
-      type: [{ type: String, enum: PREDMETI }],
-      validate: [(v) => v.length <= MAX_PREDMETOV, `Največ ${MAX_PREDMETOV} predmeti.`],
-    },
     // Do kdaj velja plačan paket (nastavi plačilni sistem); prazno = brez omejitve
     paketVelja: Date,
   },
