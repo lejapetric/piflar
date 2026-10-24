@@ -1,37 +1,201 @@
 [
   {
+    "id": "primer-matematika-osnovna-2026-spomladanski",
+    "predmet": "matematika",
+    "raven": "osnovna",
+    "leto": 2026,
+    "rok": "spomladanski",
+    "naslov": "Primer pole (testni podatki): matematika, osnovna raven, spomladanski rok 2026",
+    "pdf": null,
+    "vir": "Primer pole (testni podatki). Prave pole izdaja Državni izpitni center (RIC), ki ima nanje vse avtorske pravice.",
+    "naloge": [
+      {
+        "id": "1",
+        "poglavje": "algebrski_izrazi_enacbe_neenacbe",
+        "tocke": 2,
+        "besedilo": "Reši enačbo \\(3x - 7 = 11\\).",
+        "rezultat": "\\(x = 6\\)",
+        "razlaga": "<p>K obema stranema prištejemo 7: \\(3x = 18\\). Delimo s 3: \\(x = 6\\).</p>"
+      },
+      {
+        "id": "2",
+        "poglavje": "diferencialni_racun",
+        "tocke": 3,
+        "besedilo": "Izračunaj odvod funkcije \\(f(x) = x^3 - 4x + 2\\) in zapiši \\(f'(1)\\).",
+        "rezultat": "\\(f'(x) = 3x^2 - 4\\), \\(f'(1) = -1\\)",
+        "razlaga": "<p>Odvajamo člen za členom: \\((x^3)' = 3x^2\\), \\((-4x)' = -4\\), \\((2)' = 0\\). Torej \\(f'(x) = 3x^2 - 4\\).</p><p>Vstavimo \\(x = 1\\): \\(f'(1) = 3 - 4 = -1\\).</p>"
+      },
+      {
+        "id": "3",
+        "poglavje": "kombinatorika",
+        "tocke": 2,
+        "besedilo": "Na koliko načinov lahko razporedimo 4 različne knjige na polico?",
+        "rezultat": "\\(24\\)",
+        "razlaga": "<p>Gre za permutacije 4 elementov: \\(P_4 = 4! = 4 \\cdot 3 \\cdot 2 \\cdot 1 = 24\\).</p>"
+      }
+    ]
+  },
+  {
+    "id": "primer-matematika-osnovna-2026-jesenski",
+    "predmet": "matematika",
+    "raven": "osnovna",
+    "leto": 2026,
+    "rok": "jesenski",
+    "naslov": "Primer pole (testni podatki): matematika, osnovna raven, jesenski rok 2026",
+    "pdf": null,
+    "vir": "Primer pole (testni podatki). Prave pole izdaja Državni izpitni center (RIC), ki ima nanje vse avtorske pravice.",
+    "naloge": [
+      {
+        "id": "1",
+        "poglavje": "potence_koreni",
+        "tocke": 2,
+        "besedilo": "Poenostavi \\(\\dfrac{a^5 \\cdot a^{-2}}{a^2}\\).",
+        "rezultat": "\\(a\\)",
+        "razlaga": "<p>Pri množenju eksponente seštejemo: \\(a^5 \\cdot a^{-2} = a^3\\). Pri deljenju jih odštejemo: \\(a^3 : a^2 = a\\).</p>"
+      },
+      {
+        "id": "2",
+        "poglavje": "diferencialni_racun",
+        "tocke": 4,
+        "besedilo": "Zapiši enačbo tangente na graf funkcije \\(f(x) = x^2 + 1\\) v točki z absciso \\(x_0 = 2\\).",
+        "rezultat": "\\(y = 4x - 3\\)",
+        "razlaga": "<p>Ordinata dotikališča: \\(f(2) = 5\\). Odvod: \\(f'(x) = 2x\\), zato je smerni koeficient \\(k = f'(2) = 4\\).</p><p>Tangenta: \\(y - 5 = 4(x - 2)\\), torej \\(y = 4x - 3\\).</p>"
+      },
+      {
+        "id": "3",
+        "poglavje": "statistika",
+        "tocke": 2,
+        "besedilo": "Izračunaj aritmetično sredino podatkov \\(4, 7, 7, 10\\).",
+        "rezultat": "\\(7\\)",
+        "razlaga": "<p>\\(\\bar{x} = \\dfrac{4 + 7 + 7 + 10}{4} = \\dfrac{28}{4} = 7\\).</p>"
+      }
+    ]
+  },
+  {
+    "id": "primer-matematika-visja-2026-spomladanski",
+    "predmet": "matematika",
+    "raven": "visja",
+    "leto": 2026,
+    "rok": "spomladanski",
+    "naslov": "Primer pole (testni podatki): matematika, višja raven, spomladanski rok 2026",
+    "pdf": null,
+    "vir": "Primer pole (testni podatki). Prave pole izdaja Državni izpitni center (RIC), ki ima nanje vse avtorske pravice.",
+    "naloge": [
+      {
+        "id": "1",
+        "poglavje": "diferencialni_racun",
+        "tocke": 5,
+        "besedilo": "Določi lokalne ekstreme funkcije \\(f(x) = x^3 - 3x\\).",
+        "rezultat": "lokalni maksimum \\(T(-1, 2)\\), lokalni minimum \\(T(1, -2)\\)",
+        "razlaga": "<p>\\(f'(x) = 3x^2 - 3 = 3(x - 1)(x + 1)\\), stacionarni točki sta \\(x = -1\\) in \\(x = 1\\).</p><p>\\(f''(x) = 6x\\): \\(f''(-1) = -6 < 0\\), zato je pri \\(x = -1\\) maksimum \\(f(-1) = 2\\); \\(f''(1) = 6 > 0\\), zato je pri \\(x = 1\\) minimum \\(f(1) = -2\\).</p>"
+      },
+      {
+        "id": "2",
+        "poglavje": "integralski_racun",
+        "tocke": 4,
+        "besedilo": "Izračunaj \\(\\displaystyle\\int_0^2 (3x^2 - 2x)\\,dx\\).",
+        "rezultat": "\\(4\\)",
+        "razlaga": "<p>Nedoločeni integral: \\(x^3 - x^2\\).</p><p>\\(\\left[x^3 - x^2\\right]_0^2 = (8 - 4) - 0 = 4\\).</p>"
+      },
+      {
+        "id": "3",
+        "poglavje": "verjetnostni_racun",
+        "tocke": 3,
+        "besedilo": "Vržemo dve pošteni kocki. Kolikšna je verjetnost, da je vsota pik enaka 7?",
+        "rezultat": "\\(\\dfrac{1}{6}\\)",
+        "razlaga": "<p>Vseh izidov je \\(36\\). Ugodni: \\((1,6), (2,5), (3,4), (4,3), (5,2), (6,1)\\), torej 6.</p><p>\\(P = \\dfrac{6}{36} = \\dfrac{1}{6}\\).</p>"
+      }
+    ]
+  },
+  {
+    "id": "primer-matematika-visja-2026-jesenski",
+    "predmet": "matematika",
+    "raven": "visja",
+    "leto": 2026,
+    "rok": "jesenski",
+    "naslov": "Primer pole (testni podatki): matematika, višja raven, jesenski rok 2026",
+    "pdf": null,
+    "vir": "Primer pole (testni podatki). Prave pole izdaja Državni izpitni center (RIC), ki ima nanje vse avtorske pravice.",
+    "naloge": [
+      {
+        "id": "1",
+        "poglavje": "zaporedja_vrste",
+        "tocke": 3,
+        "besedilo": "Izračunaj vsoto neskončne geometrijske vrste \\(8 + 4 + 2 + 1 + \\dots\\)",
+        "rezultat": "\\(16\\)",
+        "razlaga": "<p>\\(a_1 = 8\\), \\(q = \\dfrac{1}{2}\\). Ker je \\(|q| < 1\\), vrsta konvergira: \\(s = \\dfrac{a_1}{1 - q} = \\dfrac{8}{1/2} = 16\\).</p>"
+      },
+      {
+        "id": "2",
+        "poglavje": "diferencialni_racun",
+        "tocke": 4,
+        "besedilo": "Pravokotnik ima obseg \\(20\\ \\text{cm}\\). Kolikšni naj bosta stranici, da bo ploščina največja?",
+        "rezultat": "\\(a = b = 5\\ \\text{cm}\\)",
+        "razlaga": "<p>\\(2a + 2b = 20\\), zato \\(b = 10 - a\\) in \\(S(a) = a(10 - a) = 10a - a^2\\).</p><p>\\(S'(a) = 10 - 2a = 0\\) da \\(a = 5\\). \\(S''(a) = -2 < 0\\), torej je to maksimum; \\(b = 5\\).</p>"
+      },
+      {
+        "id": "3",
+        "poglavje": "vektorji_ravnina_prostor",
+        "tocke": 3,
+        "besedilo": "Izračunaj skalarni produkt vektorjev \\(\\vec{a} = (1, 2, -1)\\) in \\(\\vec{b} = (3, 0, 2)\\). Ali sta pravokotna?",
+        "rezultat": "\\(\\vec{a} \\cdot \\vec{b} = 1\\), nista pravokotna",
+        "razlaga": "<p>\\(\\vec{a} \\cdot \\vec{b} = 1 \\cdot 3 + 2 \\cdot 0 + (-1) \\cdot 2 = 1\\).</p><p>Vektorja sta pravokotna samo, če je skalarni produkt 0, zato nista pravokotna.</p>"
+      }
+    ]
+  },
+  {
     "id": "primer-matematika-osnovna-2025-spomladanski",
     "predmet": "matematika",
     "raven": "osnovna",
     "leto": 2025,
     "rok": "spomladanski",
-    "naslov": "Primer pole (testni podatki) — matematika, osnovna raven 2025",
+    "naslov": "Primer pole (testni podatki): matematika, osnovna raven, spomladanski rok 2025",
     "pdf": null,
+    "vir": "Primer pole (testni podatki). Prave pole izdaja Državni izpitni center (RIC), ki ima nanje vse avtorske pravice.",
     "naloge": [
       {
         "id": "1",
+        "poglavje": "algebrski_izrazi_enacbe_neenacbe",
+        "tocke": 2,
         "besedilo": "Reši enačbo \\(2x + 5 = 13\\).",
         "rezultat": "\\(x = 4\\)",
-        "razlaga": "<p>Od obeh strani odštejemo 5: \\(2x = 8\\). Delimo z 2: \\(x = 4\\).</p>",
-        "povezave": [{ "naslov": "Linearne enačbe", "url": "/views/matematika/snov/algebrski_izrazi_enacbe_neenacbe/algebrski_izrazi_enacbe_neenacbe_razlaga.html" }]
+        "razlaga": "<p>Od obeh strani odštejemo 5: \\(2x = 8\\). Delimo z 2: \\(x = 4\\).</p>"
+      },
+      {
+        "id": "2",
+        "poglavje": "funkcije",
+        "tocke": 3,
+        "besedilo": "Določi ničli kvadratne funkcije \\(f(x) = x^2 - 5x + 6\\).",
+        "rezultat": "\\(x_1 = 2\\), \\(x_2 = 3\\)",
+        "razlaga": "<p>Razstavimo: \\(x^2 - 5x + 6 = (x - 2)(x - 3)\\). Produkt je 0, ko je \\(x = 2\\) ali \\(x = 3\\).</p>"
       }
     ]
   },
   {
-    "id": "primer-matematika-osnovna-2024-spomladanski",
+    "id": "primer-matematika-osnovna-2025-jesenski",
     "predmet": "matematika",
     "raven": "osnovna",
-    "leto": 2024,
-    "rok": "spomladanski",
-    "naslov": "Primer pole (testni podatki) — matematika, osnovna raven 2024",
+    "leto": 2025,
+    "rok": "jesenski",
+    "naslov": "Primer pole (testni podatki): matematika, osnovna raven, jesenski rok 2025",
     "pdf": null,
+    "vir": "Primer pole (testni podatki). Prave pole izdaja Državni izpitni center (RIC), ki ima nanje vse avtorske pravice.",
     "naloge": [
       {
         "id": "1",
-        "besedilo": "Izračunaj \\(3^2 + 4^2\\).",
-        "rezultat": "\\(25\\)",
-        "razlaga": "<p>\\(3^2 = 9\\), \\(4^2 = 16\\), zato \\(9 + 16 = 25\\).</p>",
-        "povezave": [{ "naslov": "Potence", "url": "/views/matematika/snov/potence_koreni/potence_koreni_razlaga.html" }]
+        "poglavje": "geometrijski_liki_telesa",
+        "tocke": 2,
+        "besedilo": "Izračunaj ploščino kroga s polmerom \\(r = 3\\ \\text{cm}\\).",
+        "rezultat": "\\(S = 9\\pi\\ \\text{cm}^2 \\approx 28{,}3\\ \\text{cm}^2\\)",
+        "razlaga": "<p>\\(S = \\pi r^2 = \\pi \\cdot 9 = 9\\pi \\approx 28{,}3\\ \\text{cm}^2\\).</p>"
+      },
+      {
+        "id": "2",
+        "poglavje": "diferencialni_racun",
+        "tocke": 3,
+        "besedilo": "Izračunaj odvod funkcije \\(f(x) = x \\cdot e^x\\).",
+        "rezultat": "\\(f'(x) = (x + 1)e^x\\)",
+        "razlaga": "<p>Pravilo za odvod produkta: \\((uv)' = u'v + uv'\\).</p><p>\\(f'(x) = 1 \\cdot e^x + x \\cdot e^x = (x + 1)e^x\\).</p>"
       }
     ]
   },
@@ -41,8 +205,92 @@
     "raven": "visja",
     "leto": 2025,
     "rok": "spomladanski",
-    "naslov": "Primer pole (testni podatki) — matematika, višja raven 2025 (še nerešena)",
+    "naslov": "Primer pole (testni podatki): matematika, višja raven, spomladanski rok 2025",
     "pdf": null,
-    "naloge": []
+    "vir": "Primer pole (testni podatki). Prave pole izdaja Državni izpitni center (RIC), ki ima nanje vse avtorske pravice.",
+    "naloge": [
+      {
+        "id": "1",
+        "poglavje": "stoznice",
+        "tocke": 3,
+        "besedilo": "Določi središče in polmer krožnice \\(x^2 + y^2 - 4x + 6y - 3 = 0\\).",
+        "rezultat": "\\(S(2, -3)\\), \\(r = 4\\)",
+        "razlaga": "<p>Dopolnimo do popolnih kvadratov: \\((x - 2)^2 - 4 + (y + 3)^2 - 9 - 3 = 0\\).</p><p>\\((x - 2)^2 + (y + 3)^2 = 16\\), zato \\(S(2, -3)\\) in \\(r = 4\\).</p>"
+      },
+      {
+        "id": "2",
+        "poglavje": "integralski_racun",
+        "tocke": 4,
+        "besedilo": "Izračunaj ploščino lika med grafom \\(f(x) = 4 - x^2\\) in osjo \\(x\\).",
+        "rezultat": "\\(\\dfrac{32}{3}\\)",
+        "razlaga": "<p>Ničli: \\(x = \\pm 2\\). \\(S = \\displaystyle\\int_{-2}^{2} (4 - x^2)\\,dx = \\left[4x - \\dfrac{x^3}{3}\\right]_{-2}^{2}\\).</p><p>\\(= \\left(8 - \\dfrac{8}{3}\\right) - \\left(-8 + \\dfrac{8}{3}\\right) = \\dfrac{32}{3}\\).</p>"
+      }
+    ]
+  },
+  {
+    "id": "primer-matematika-visja-2025-jesenski",
+    "predmet": "matematika",
+    "raven": "visja",
+    "leto": 2025,
+    "rok": "jesenski",
+    "naslov": "Primer pole (testni podatki): matematika, višja raven, jesenski rok 2025",
+    "pdf": null,
+    "vir": "Primer pole (testni podatki). Prave pole izdaja Državni izpitni center (RIC), ki ima nanje vse avtorske pravice.",
+    "naloge": [
+      {
+        "id": "1",
+        "poglavje": "stevilske_mnozice",
+        "tocke": 3,
+        "besedilo": "Izračunaj \\((2 + 3i)(1 - i)\\).",
+        "rezultat": "\\(5 + i\\)",
+        "razlaga": "<p>\\((2 + 3i)(1 - i) = 2 - 2i + 3i - 3i^2 = 2 + i + 3 = 5 + i\\), ker je \\(i^2 = -1\\).</p>"
+      },
+      {
+        "id": "2",
+        "poglavje": "diferencialni_racun",
+        "tocke": 4,
+        "besedilo": "Določi intervale naraščanja in padanja funkcije \\(f(x) = x^2 e^{-x}\\).",
+        "rezultat": "narašča na \\((0, 2)\\), pada na \\((-\\infty, 0)\\) in \\((2, \\infty)\\)",
+        "razlaga": "<p>\\(f'(x) = 2x e^{-x} - x^2 e^{-x} = x(2 - x)e^{-x}\\).</p><p>Ker je \\(e^{-x} > 0\\), je predznak odvoda enak predznaku \\(x(2 - x)\\): pozitiven na \\((0, 2)\\), sicer negativen.</p>"
+      }
+    ]
+  },
+  {
+    "id": "primer-matematika-osnovna-2024-spomladanski",
+    "predmet": "matematika",
+    "raven": "osnovna",
+    "leto": 2024,
+    "rok": "spomladanski",
+    "naslov": "Primer pole (testni podatki): matematika, osnovna raven, spomladanski rok 2024",
+    "pdf": null,
+    "vir": "Primer pole (testni podatki). Prave pole izdaja Državni izpitni center (RIC), ki ima nanje vse avtorske pravice.",
+    "naloge": [
+      {
+        "id": "1",
+        "poglavje": "potence_koreni",
+        "tocke": 2,
+        "besedilo": "Izračunaj \\(3^2 + 4^2\\).",
+        "rezultat": "\\(25\\)",
+        "razlaga": "<p>\\(3^2 = 9\\), \\(4^2 = 16\\), zato \\(9 + 16 = 25\\).</p>"
+      }
+    ]
+  },
+  {
+    "id": "primer-matematika-visja-2024-spomladanski",
+    "predmet": "matematika",
+    "raven": "visja",
+    "leto": 2024,
+    "rok": "spomladanski",
+    "naslov": "Primer pole (testni podatki): matematika, višja raven, spomladanski rok 2024",
+    "pdf": null,
+    "vir": "Primer pole (testni podatki). Prave pole izdaja Državni izpitni center (RIC), ki ima nanje vse avtorske pravice.",
+    "naloge": [
+      {
+        "id": "1",
+        "poglavje": "osnove_logike",
+        "tocke": 2,
+        "besedilo": "Zapiši negacijo izjave \\(\\forall x \\in \\mathbb{R}: x^2 \\ge 0\\)."
+      }
+    ]
   }
 ]
