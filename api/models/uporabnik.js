@@ -11,12 +11,17 @@ const uporabnikSchema = new mongoose.Schema(
     paket: { type: String, enum: PAKETI, default: "brezplacno" },
     // Do kdaj velja plačan paket (nastavi plačilni sistem); prazno = brez omejitve
     paketVelja: Date,
+    // Stripe: id kupca in že obdelana enkratna plačila (da se ponovljen webhook ne šteje dvakrat)
+    stripeKupec: { type: String, index: { unique: true, sparse: true } },
+    obdelanaPlacila: { type: [String], select: false },
   },
   {
     timestamps: true,
     toJSON: {
       transform: (doc, ret) => {
         delete ret.gesloHash;
+        delete ret.obdelanaPlacila;
+        delete ret.stripeKupec;
         delete ret.__v;
         return ret;
       },
