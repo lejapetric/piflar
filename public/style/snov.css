@@ -1,6 +1,7 @@
 /* ============================================================
-   public/views/matematika/snov/integralski_racun/integralski_style.css
-   Lokalni stil za stran "Integralski račun"
+   public/style/snov.css
+   Skupni stili za strani z razlago snovi (matematika in fizika).
+   Naslanja se na globalne spremenljivke iz style.css.
    ============================================================ */
 
 /* ============================================================
