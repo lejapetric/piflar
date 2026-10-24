@@ -737,7 +737,7 @@ mjx-container[display="true"] {
 /* ============================================================
    13. PODPOGLAVJA (sklopi) — vsaka stran je razdeljena po
        podpoglavjih iz maturitetnega kataloga. Vsak sklop ima:
-       glavo, cilje, razlago (sklop-teorija) in tipe nalog
+       glavo, razlago (sklop-teorija) in tipe nalog
        (sklop-naloge). Višja raven ima rumeno oznako.
    ============================================================ */
 
@@ -906,40 +906,6 @@ mjx-container[display="true"] {
     color: #92400E;
 }
 
-/* ---------- Cilji iz kataloga ---------- */
-.sklop-cilji {
-    background: var(--primary-soft);
-    border-left: 3px solid var(--primary);
-    border-radius: var(--radius-sm);
-    padding: var(--space-4) var(--space-5);
-    margin-bottom: var(--space-5);
-}
-
-.sklop--visja .sklop-cilji {
-    background: #FFFBF3;
-    border-left-color: var(--warning);
-}
-
-.sklop-cilji h3 {
-    font-family: var(--font-display);
-    font-size: var(--text-base);
-    font-weight: 700;
-    color: var(--text-primary);
-    margin-bottom: var(--space-2);
-}
-
-.sklop-cilji ul {
-    padding-left: 20px;
-    margin: 0;
-}
-
-.sklop-cilji li {
-    color: var(--text-secondary);
-    font-size: var(--text-sm);
-    line-height: 1.6;
-    margin-bottom: var(--space-1);
-}
-
 /* ---------- Razlaga ---------- */
 .sklop-teorija,
 .sklop-naloge {
@@ -1072,25 +1038,60 @@ mjx-container[display="true"] {
     color: var(--text-primary);
 }
 
-/* Kako prepoznaš: ključne besede iz besedila naloge */
-.prepoznaj {
-    background: #F0FDF4;
-    border-left: 3px solid var(--success);
+/* Naloga, na kateri je razložen univerzalni postopek */
+.tip-naloga {
+    border: 1px solid var(--border-color);
+    border-left: 3px solid var(--primary);
     border-radius: var(--radius-sm);
     padding: var(--space-3) var(--space-4);
-    margin: var(--space-2) 0 var(--space-3);
+    margin: 0 0 var(--space-3);
+    overflow-x: auto;
 }
 
-.prepoznaj p {
-    margin: 0 0 var(--space-2);
+.tip-naloga-oznaka {
+    display: block;
+    font-size: var(--text-xs);
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--primary);
+    margin-bottom: var(--space-1);
+}
+
+.tip-naloge .tip-naloga p {
     color: var(--text-primary);
+    margin: 0 0 var(--space-2);
+}
+
+.tip-naloge .tip-naloga p:last-child {
+    margin-bottom: 0;
+}
+
+/* Kako prepoznaš: ključne besede iz besedila naloge (sivo) */
+.prepoznaj {
+    background: var(--bg-primary);
+    border-left: 3px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    padding: var(--space-3) var(--space-4);
+    margin: 0 0 var(--space-3);
+}
+
+.tip-naloge .prepoznaj p {
+    margin: 0 0 var(--space-2);
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+.tip-naloge .prepoznaj strong {
+    color: var(--text-secondary);
 }
 
 .prepoznaj p:last-child {
     margin-bottom: 0;
 }
 
-.kljucne {
+.kljucne,
+.tip-naloge ul.kljucne {
     display: flex;
     flex-wrap: wrap;
     gap: 6px;
@@ -1099,15 +1100,70 @@ mjx-container[display="true"] {
     list-style: none;
 }
 
-.kljucne li {
+.tip-naloge .kljucne li {
     margin: 0;
     font-size: var(--text-sm);
     line-height: 1.4;
-    background: #FFFFFF;
-    border: 1px solid #BBF7D0;
-    color: #166534;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    color: var(--text-muted);
     padding: 3px 10px;
     border-radius: 999px;
+}
+
+/* Univerzalni postopek: korak, pod njim isti korak na nalogi */
+.tip-naloge ol.postopek {
+    list-style: none;
+    counter-reset: korak;
+    padding-left: 0;
+    margin: var(--space-2) 0 var(--space-3);
+}
+
+.tip-naloge ol.postopek > li {
+    counter-increment: korak;
+    position: relative;
+    padding-left: 34px;
+    margin-bottom: var(--space-3);
+}
+
+.tip-naloge ol.postopek > li::before {
+    content: counter(korak);
+    position: absolute;
+    left: 0;
+    top: 2px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--primary-soft);
+    color: var(--primary);
+    font-weight: 700;
+    font-size: var(--text-sm);
+    line-height: 24px;
+    text-align: center;
+}
+
+.tip-naloge .korak {
+    color: var(--text-primary);
+    font-weight: 600;
+    margin: 0 0 var(--space-1);
+}
+
+.na-nalogi {
+    border-left: 2px solid var(--primary-soft);
+    padding: var(--space-1) 0 var(--space-1) var(--space-3);
+    overflow-x: auto;
+}
+
+.tip-naloge .na-nalogi p {
+    margin: 0 0 var(--space-2);
+}
+
+.tip-naloge .na-nalogi p:last-child {
+    margin-bottom: 0;
+}
+
+.tip-naloge .na-nalogi .slika {
+    margin: var(--space-2) 0;
 }
 
 /* Pazi: pogoste pasti */
@@ -1136,7 +1192,7 @@ mjx-container[display="true"] {
     margin-bottom: var(--space-1);
 }
 
-/* Rešen primer znotraj tipa naloge */
+/* Primeri nalog pod postopkom */
 .primer {
     background: var(--bg-primary);
     border-radius: var(--radius-sm);
@@ -1328,8 +1384,110 @@ mjx-container[display="true"] {
     .tip-naloge {
         padding: var(--space-3) var(--space-4);
     }
-
-    .sklop-cilji {
-        padding: var(--space-3) var(--space-4);
-    }
 }
+
+/* ============================================================
+   TEMNI NAČIN (spremenljivke so v style.css)
+   ============================================================ */
+[data-theme="dark"] .badge-vr {
+    color: #FCD34D;
+    background: rgba(245, 158, 11, 0.14);
+    border-color: rgba(245, 158, 11, 0.35);
+}
+[data-theme="dark"] .sklop--visja .sklop-header { border-bottom-color: rgba(245, 158, 11, 0.35); }
+[data-theme="dark"] .sklop--visja .sklop-num { color: #FCD34D; }
+[data-theme="dark"] .pazi { background: rgba(245, 158, 11, 0.09); }
+[data-theme="dark"] .pazi,
+[data-theme="dark"] .pazi strong,
+[data-theme="dark"] .pazi li { color: #FDE68A; }
+[data-theme="dark"] .tabela td.poudarek { background: rgba(245, 158, 11, 0.16); }
+[data-theme="dark"] .raven-locnica {
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.08) 0%, rgba(245, 158, 11, 0.16) 100%);
+    border-color: rgba(245, 158, 11, 0.35);
+}
+[data-theme="dark"] .raven-locnica-eyebrow {
+    color: #FCD34D;
+    background: var(--bg-card);
+    border-color: rgba(245, 158, 11, 0.35);
+}
+[data-theme="dark"] .raven-locnica h2,
+[data-theme="dark"] .raven-locnica p { color: #FDE68A; }
+
+/* Slike: ozadje in barve risb */
+[data-theme="dark"] .slika { background: #13172A; }
+[data-theme="dark"] .slika text { stroke: #13172A; }
+[data-theme="dark"] .slika .s-mreza { stroke: #262B42; }
+[data-theme="dark"] .slika .s-os { stroke: #8D94AE; }
+[data-theme="dark"] .slika .s-os-txt,
+[data-theme="dark"] .slika .s-txt-muted { fill: #A9AFC6; }
+[data-theme="dark"] .slika .s-k1,
+[data-theme="dark"] .slika .s-kot-3,
+[data-theme="dark"] .slika .s-lik,
+[data-theme="dark"] .slika .s-prazna { stroke: #818CF8; }
+[data-theme="dark"] .slika .s-k2,
+[data-theme="dark"] .slika .s-kot-4,
+[data-theme="dark"] .slika .s-asim { stroke: #F87171; }
+[data-theme="dark"] .slika .s-k3,
+[data-theme="dark"] .slika .s-kot-2,
+[data-theme="dark"] .slika .s-lik-2 { stroke: #4ADE80; }
+[data-theme="dark"] .slika .s-k4,
+[data-theme="dark"] .slika .s-kot { stroke: #FBBF24; }
+[data-theme="dark"] .slika .s-pom { stroke: #6B7390; }
+[data-theme="dark"] .slika .s-crta { stroke: #D5D9E8; }
+[data-theme="dark"] .slika .s-tocka { fill: #818CF8; stroke: #13172A; }
+[data-theme="dark"] .slika .s-tocka-2 { fill: #F87171; stroke: #13172A; }
+[data-theme="dark"] .slika .s-prazna { fill: #13172A; }
+[data-theme="dark"] .slika .s-ploskev { fill: rgba(129, 140, 248, 0.22); }
+[data-theme="dark"] .slika .s-ploskev-2 { fill: rgba(248, 113, 113, 0.2); }
+[data-theme="dark"] .slika .s-lik { fill: rgba(129, 140, 248, 0.1); }
+[data-theme="dark"] .slika .s-lik-2 { fill: rgba(74, 222, 128, 0.1); }
+[data-theme="dark"] .slika .s-txt-k1 { fill: #A5B4FC; }
+[data-theme="dark"] .slika .s-txt-k2 { fill: #FCA5A5; }
+[data-theme="dark"] .slika .s-txt-k3 { fill: #86EFAC; }
+[data-theme="dark"] .slika .s-txt-k4 { fill: #FCD34D; }
+
+/* Barve, zapisane neposredno v SVG na straneh */
+[data-theme="dark"] .view svg [fill="#171A2E"] { fill: #D5D9E8; }
+[data-theme="dark"] .view svg [style*="fill:#171A2E"] { fill: #D5D9E8 !important; }
+[data-theme="dark"] .view svg [stroke="#171A2E"] { stroke: #D5D9E8; }
+[data-theme="dark"] .view svg [style*="stroke:#171A2E"] { stroke: #D5D9E8 !important; }
+[data-theme="dark"] .view svg [fill="#5B6178"] { fill: #A9AFC6; }
+[data-theme="dark"] .view svg [style*="fill:#5B6178"] { fill: #A9AFC6 !important; }
+[data-theme="dark"] .view svg [stroke="#5B6178"] { stroke: #A9AFC6; }
+[data-theme="dark"] .view svg [style*="stroke:#5B6178"] { stroke: #A9AFC6 !important; }
+[data-theme="dark"] .view svg [fill="#DC2626"] { fill: #F87171; }
+[data-theme="dark"] .view svg [style*="fill:#DC2626"] { fill: #F87171 !important; }
+[data-theme="dark"] .view svg [stroke="#DC2626"] { stroke: #F87171; }
+[data-theme="dark"] .view svg [style*="stroke:#DC2626"] { stroke: #F87171 !important; }
+[data-theme="dark"] .view svg [fill="#4F46E5"] { fill: #818CF8; }
+[data-theme="dark"] .view svg [style*="fill:#4F46E5"] { fill: #818CF8 !important; }
+[data-theme="dark"] .view svg [stroke="#4F46E5"] { stroke: #818CF8; }
+[data-theme="dark"] .view svg [style*="stroke:#4F46E5"] { stroke: #818CF8 !important; }
+[data-theme="dark"] .view svg [fill="#D97706"] { fill: #FBBF24; }
+[data-theme="dark"] .view svg [style*="fill:#D97706"] { fill: #FBBF24 !important; }
+[data-theme="dark"] .view svg [stroke="#D97706"] { stroke: #FBBF24; }
+[data-theme="dark"] .view svg [style*="stroke:#D97706"] { stroke: #FBBF24 !important; }
+[data-theme="dark"] .view svg [fill="#16A34A"] { fill: #4ADE80; }
+[data-theme="dark"] .view svg [style*="fill:#16A34A"] { fill: #4ADE80 !important; }
+[data-theme="dark"] .view svg [stroke="#16A34A"] { stroke: #4ADE80; }
+[data-theme="dark"] .view svg [style*="stroke:#16A34A"] { stroke: #4ADE80 !important; }
+[data-theme="dark"] .view svg [fill="#B45309"] { fill: #FBBF24; }
+[data-theme="dark"] .view svg [style*="fill:#B45309"] { fill: #FBBF24 !important; }
+[data-theme="dark"] .view svg [stroke="#B45309"] { stroke: #FBBF24; }
+[data-theme="dark"] .view svg [style*="stroke:#B45309"] { stroke: #FBBF24 !important; }
+[data-theme="dark"] .view svg [fill="#94A0B8"] { fill: #6B7390; }
+[data-theme="dark"] .view svg [style*="fill:#94A0B8"] { fill: #6B7390 !important; }
+[data-theme="dark"] .view svg [stroke="#94A0B8"] { stroke: #6B7390; }
+[data-theme="dark"] .view svg [style*="stroke:#94A0B8"] { stroke: #6B7390 !important; }
+[data-theme="dark"] .view svg [fill="#C7CBF5"] { fill: #3B4170; }
+[data-theme="dark"] .view svg [style*="fill:#C7CBF5"] { fill: #3B4170 !important; }
+[data-theme="dark"] .view svg [stroke="#C7CBF5"] { stroke: #3B4170; }
+[data-theme="dark"] .view svg [style*="stroke:#C7CBF5"] { stroke: #3B4170 !important; }
+[data-theme="dark"] .view svg [fill="#C9CDE0"] { fill: #3A4058; }
+[data-theme="dark"] .view svg [style*="fill:#C9CDE0"] { fill: #3A4058 !important; }
+[data-theme="dark"] .view svg [stroke="#C9CDE0"] { stroke: #3A4058; }
+[data-theme="dark"] .view svg [style*="stroke:#C9CDE0"] { stroke: #3A4058 !important; }
+[data-theme="dark"] .view svg [fill="#FFFFFF"] { fill: #13172A; }
+[data-theme="dark"] .view svg [style*="fill:#FFFFFF"] { fill: #13172A !important; }
+[data-theme="dark"] .view svg [stroke="#FFFFFF"] { stroke: #13172A; }
+[data-theme="dark"] .view svg [style*="stroke:#FFFFFF"] { stroke: #13172A !important; }

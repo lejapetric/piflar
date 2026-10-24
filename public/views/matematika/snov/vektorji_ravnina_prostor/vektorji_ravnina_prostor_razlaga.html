@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
   <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
   <link rel="stylesheet" href="/style/snov.css">
 </head>
 <body>
@@ -32,7 +33,7 @@
         </header>
 
         <div class="matura-formule">
-          <h3>📋 Formule na maturi</h3>
+          <h3>Formule na maturi</h3>
           <p>Formul za vektorje <strong>ni</strong> na listu s formulami. Na pamet:</p>
           <div class="matura-grid">
             <div class="matura-levo">
@@ -71,7 +72,7 @@
             <li class="kazalo-skupina">Uporaba</li>
             <li><a href="#sklop-13"><span class="kazalo-st">4.8.13</span> Trikotnik in paralelogram, razmerja, težišče <span class="badge-vr">VR</span></a></li>
             <li><a href="#sklop-14"><span class="kazalo-st">4.8.14</span> Skalarni produkt in kosinusni izrek</a></li>
-            <li><a href="#kljuc"><span class="kazalo-st">🔎</span> Ključ: kateri tip naloge je to?</a></li>
+            <li><a href="#kljuc"><span class="kazalo-st">?</span> Ključ: kateri tip naloge je to?</a></li>
           </ol>
         </nav>
 
@@ -82,12 +83,8 @@
             <h2>Opredelitev vektorjev</h2>
             <p>Kaj je vektor in kdaj sta dva vektorja enaka.</p>
           </header>
-          <div class="sklop-cilji">
-            <h3>🎯 Cilji iz kataloga</h3>
-            <ul><li>Nariše vektorje.</li></ul>
-          </div>
           <div class="sklop-teorija">
-            <h3>📖 Razlaga</h3>
+            <h3>Razlaga</h3>
             <p><strong>Skalarna</strong> količina je določena s številom (masa, temperatura). <strong>Vektorska</strong> količina ima še smer (sila, hitrost, premik). Vektor predstavimo z <strong>usmerjeno daljico</strong> \(\vec{AB}\): \(A\) je začetna točka, \(B\) končna.</p>
             <figure class="slika slika--siroka">
 <svg viewBox="0 0 560 231" role="img" aria-label="Usmerjena daljica, enaki in nasprotni vektorji" xmlns="http://www.w3.org/2000/svg">
@@ -124,23 +121,19 @@
             <p>Usmerjeni daljici, ki se ujemata v vseh treh, predstavljata <strong>isti vektor</strong>, tudi če ležita na različnih mestih. Vektor torej lahko poljubno vzporedno premikamo. Posebna vektorja: <strong>ničelni</strong> \(\vec{0}\) (dolžina 0, \(\vec{AA}\)) in <strong>enotski</strong> (dolžina 1). Nasprotni vektor: \(\vec{BA} = -\vec{AB}\).</p>
           </div>
           <div class="sklop-naloge">
-            <h3>✏️ Tipi nalog v tem sklopu</h3>
+            <h3>Tipi nalog v tem sklopu</h3>
             <div class="tip-naloge" id="tip-1">
               <h4>Tip 1: Enaki in nasprotni vektorji na liku</h4>
-              <div class="prepoznaj">
-                <p><strong>Kako prepoznaš:</strong> dan je lik (paralelogram, pravilni šestkotnik, kocka) in iščejo vse vektorje, ki so enaki/nasprotni danemu.</p>
-                <ul class="kljucne"><li>„kateri vektorji so enaki“</li><li>„nasprotni vektor“</li><li>„pravilni šestkotnik“</li></ul>
-              </div>
-              <h5>Univerzalni postopek</h5>
-              <ol>
-                <li>Poišči daljice na liku, ki so vzporedne in enako dolge kot dana.</li>
-                <li>Preveri usmerjenost: kaže v isto stran → enak, v nasprotno → nasproten.</li>
-                <li>Zapiši z začetno in končno točko v pravem vrstnem redu.</li>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>\(ABCD\) je paralelogram. Kateri vektor je enak \(\vec{AB}\) in kateri je nasproten \(\vec{AD}\)?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> dan je lik (paralelogram, pravilni šestkotnik, kocka) in iščejo vse vektorje, ki so enaki/nasprotni danemu.</p><ul class="kljucne"><li>„kateri vektorji so enaki“</li><li>„nasprotni vektor“</li><li>„pravilni šestkotnik“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Poišči daljice na liku, ki so vzporedne in enako dolge kot dana.</p><div class="na-nalogi"><p>\(AB\) je vzporedna in enako dolga kot \(DC\). \(AD\) kot \(BC\).</p></div></li>
+              <li><p class="korak">Preveri usmerjenost: v isto stran pomeni enak vektor, v nasprotno nasproten.</p><div class="na-nalogi"><p>Od \(D\) do \(C\) gremo v isto smer kot od \(A\) do \(B\). Od \(C\) do \(B\) gremo nasprotno kot od \(A\) do \(D\).</p></div></li>
+              <li><p class="korak">Zapiši z začetno in končno točko v pravem vrstnem redu.</p><div class="na-nalogi"><p>\(\vec{DC} = \vec{AB}\), \(\vec{CB} = -\vec{AD}\).</p></div></li>
               </ol>
-              <div class="primer">
-                <p><strong>Primer:</strong> \(ABCD\) je paralelogram. Kateri vektor je enak \(\vec{AB}\) in kateri nasproten \(\vec{AD}\)?</p>
-                <p>\(\vec{DC} = \vec{AB}\) (nasprotni stranici, enako usmerjeni). \(\vec{CB} = -\vec{AD}\).</p>
-              </div>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> V pravilnem šestkotniku \(ABCDEF\) s središčem \(S\): kateri vektorji so enaki \(\vec{AB}\)?</p><p>\(\vec{FS}\), \(\vec{SC}\) in \(\vec{ED}\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> V kocki \(ABCDEFGH\): kateri robovi dajo vektor, enak \(\vec{AE}\)?</p><p>\(\vec{BF}\), \(\vec{CG}\), \(\vec{DH}\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Ali je \(\vec{AB} = \vec{BA}\)?</p><p>Ne, \(\vec{BA} = -\vec{AB}\). Dolžina je enaka, smer nasprotna.</p></div>
             </div>
           </div>
         </section>
@@ -152,15 +145,8 @@
             <h2>Seštevanje, množenje s skalarjem (sile) – grafična interpretacija</h2>
             <p>Puščice zlagamo eno za drugo, raztegujemo in obračamo.</p>
           </header>
-          <div class="sklop-cilji">
-            <h3>🎯 Cilji iz kataloga</h3>
-            <ul>
-              <li>Nariše vektorje, grafično sešteva in razstavlja vektorje ter množi vektorje s skalarjem.</li>
-              <li>Usvoji računanje z vektorji na grafičnem in računskem nivoju.</li>
-            </ul>
-          </div>
           <div class="sklop-teorija">
-            <h3>📖 Razlaga</h3>
+            <h3>Razlaga</h3>
             <h4>Seštevanje in odštevanje</h4>
             <div class="slike-vrsta"><figure class="slika">
 <svg viewBox="0 0 230 208" role="img" aria-label="Trikotniško pravilo" xmlns="http://www.w3.org/2000/svg">
@@ -248,42 +234,33 @@
             <p>Sile so vektorji. Več sil, ki delujejo na isto telo, nadomestimo z eno silo, <strong>rezultanto</strong> (njihovo vsoto). Telo je v ravnovesju, ko je rezultanta \(\vec{0}\). Velikost rezultante dveh sil, ki oklepata kot \(\varphi\), dobimo s kosinusnim izrekom: \(R^2 = F_1^2 + F_2^2 + 2F_1F_2\cos\varphi\).</p>
           </div>
           <div class="sklop-naloge">
-            <h3>✏️ Tipi nalog v tem sklopu</h3>
+            <h3>Tipi nalog v tem sklopu</h3>
             <div class="tip-naloge" id="tip-2">
               <h4>Tip 2: Izrazi vektor z danimi vektorji na liku</h4>
-              <div class="prepoznaj">
-                <p><strong>Kako prepoznaš:</strong> dana sta npr. \(\vec{a} = \vec{AB}\) in \(\vec{b} = \vec{AD}\), iščejo izražavo drugega vektorja na sliki.</p>
-                <ul class="kljucne"><li>„izrazite z \(\vec{a}\) in \(\vec{b}\)“</li><li>„narišite \(\vec{a} - 2\vec{b}\)“</li><li>„poenostavite vsoto vektorjev“</li></ul>
-              </div>
-              <h5>Univerzalni postopek</h5>
-              <ol>
-                <li>Poišči pot po stranicah lika od začetka do konca iskanega vektorja.</li>
-                <li>Vsak korak zapiši z danimi vektorji (proti puščici → minus).</li>
-                <li>Seštej in poenostavi.</li>
-                <li>Pri risanju: vektorje zloži v verigo in nariši vsoto od začetka do konca.</li>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>V paralelogramu \(ABCD\) je \(\vec{a} = \vec{AB}\) in \(\vec{b} = \vec{AD}\). Izrazite \(\vec{BD}\) in \(\vec{CA}\) z \(\vec{a}\) in \(\vec{b}\).</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> dana sta npr. \(\vec{a} = \vec{AB}\) in \(\vec{b} = \vec{AD}\), iščejo izražavo drugega vektorja na sliki.</p><ul class="kljucne"><li>„izrazite z \(\vec{a}\) in \(\vec{b}\)“</li><li>„narišite \(\vec{a} - 2\vec{b}\)“</li><li>„poenostavite vsoto vektorjev“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Poišči pot po stranicah lika od začetka do konca iskanega vektorja.</p><div class="na-nalogi"><p>\(\vec{BD}\): od \(B\) do \(A\), nato do \(D\). \(\vec{CA}\): od \(C\) do \(B\), nato do \(A\).</p></div></li>
+              <li><p class="korak">Vsak korak zapiši z danimi vektorji. Proti puščici danega vektorja pišeš minus.</p><div class="na-nalogi"><p>\(\vec{BA} = -\vec{a}\), \(\vec{AD} = \vec{b}\), \(\vec{CB} = -\vec{b}\).</p></div></li>
+              <li><p class="korak">Seštej in poenostavi.</p><div class="na-nalogi"><p>\(\vec{BD} = -\vec{a} + \vec{b}\). \(\vec{CA} = -\vec{b} - \vec{a}\).</p></div></li>
               </ol>
-              <div class="primer">
-                <p><strong>Primer:</strong> V paralelogramu \(ABCD\) je \(\vec{a} = \vec{AB}\), \(\vec{b} = \vec{AD}\). Izrazite \(\vec{BD}\) in \(\vec{CA}\).</p>
-                <p>\(\vec{BD} = \vec{BA} + \vec{AD} = -\vec{a} + \vec{b}\). \(\vec{CA} = \vec{CB} + \vec{BA} = -\vec{b} - \vec{a}\).</p>
-              </div>
+              <div class="pazi"><strong>Risanje:</strong> vektorje zloži v verigo (začetek naslednjega na konec prejšnjega). Vsota je vektor od začetka prvega do konca zadnjega.</div>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Poenostavite \(\vec{AB} + \vec{BC} + \vec{CD}\).</p><p>\(\vec{AD}\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> V paralelogramu \(ABCD\) z \(\vec{a} = \vec{AB}\), \(\vec{b} = \vec{AD}\) izrazite \(\vec{AC}\).</p><p>\(\vec{a} + \vec{b}\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Poenostavite \(\vec{AB} - \vec{AC}\).</p><p>\(\vec{AB} + \vec{CA} = \vec{CB}\).</p></div>
             </div>
             <div class="tip-naloge" id="tip-3">
               <h4>Tip 3: Rezultanta sil</h4>
-              <div class="prepoznaj">
-                <p><strong>Kako prepoznaš:</strong> na telo deluje več sil, iščejo skupni učinek ali silo za ravnovesje.</p>
-                <ul class="kljucne"><li>„rezultanta“</li><li>„sili oklepata kot“</li><li>„ravnovesje“</li></ul>
-              </div>
-              <h5>Univerzalni postopek</h5>
-              <ol>
-                <li>Nariši sili iz iste točke in dopolni paralelogram.</li>
-                <li>Pravokotni sili: \(R = \sqrt{F_1^2 + F_2^2}\). Splošno: \(R^2 = F_1^2 + F_2^2 + 2F_1F_2\cos\varphi\).</li>
-                <li>Ravnovesna sila je \(-\vec{R}\).</li>
-                <li>Če so sile podane s komponentami, jih seštej po komponentah.</li>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Na telo delujeta pravokotni sili 30 N in 40 N. Kolikšna je rezultanta in kolikšna je sila, ki telo uravnoteži?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> na telo deluje več sil, iščejo skupni učinek ali silo za ravnovesje.</p><ul class="kljucne"><li>„rezultanta“</li><li>„sili oklepata kot“</li><li>„ravnovesje“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Nariši sili iz iste točke in dopolni paralelogram.</p><div class="na-nalogi"><p>Sili sta pravokotni, paralelogram je pravokotnik \(30 \times 40\).</p></div></li>
+              <li><p class="korak">Pravokotni sili: \(R = \sqrt{F_1^2 + F_2^2}\). Splošno: \(R^2 = F_1^2 + F_2^2 + 2F_1F_2\cos\varphi\). Pri komponentah seštej po komponentah.</p><div class="na-nalogi"><p>\(R = \sqrt{900 + 1600} = 50\) N.</p></div></li>
+              <li><p class="korak">Ravnovesna sila je \(-\vec{R}\): enako velika, nasprotno usmerjena.</p><div class="na-nalogi"><p>Telo uravnoteži sila 50 N v nasprotni smeri rezultante.</p></div></li>
               </ol>
-              <div class="primer">
-                <p><strong>Primer:</strong> Sili 30 N in 40 N delujeta pravokotno. Kolikšna je rezultanta?</p>
-                <p>\(R = \sqrt{900 + 1600} = 50\) N.</p>
-              </div>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Sili 5 N in 3 N delujeta v isto smer. Kolikšna je rezultanta?</p><p>\(8\) N.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Sili po 10 N oklepata \(60°\). Kolikšna je rezultanta?</p><p>\(R^2 = 100 + 100 + 200 \cdot \frac{1}{2} = 300\), \(R = 10\sqrt{3} \approx 17{,}3\) N.</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> \(\vec{F}_1 = (3, 1)\) N, \(\vec{F}_2 = (-1, 4)\) N. Kolikšna je rezultanta?</p><p>\((2, 5)\), \(R = \sqrt{29} \approx 5{,}4\) N.</p></div>
             </div>
           </div>
         </section>
@@ -295,12 +272,8 @@
             <h2>Kolinearnost, koplanarnost – grafična interpretacija</h2>
             <p>Vektorji na isti premici ali v isti ravnini.</p>
           </header>
-          <div class="sklop-cilji">
-            <h3>🎯 Cilji iz kataloga</h3>
-            <ul><li>Presodi kolinearnost in koplanarnost vektorjev.</li></ul>
-          </div>
           <div class="sklop-teorija">
-            <h3>📖 Razlaga</h3>
+            <h3>Razlaga</h3>
             <ul>
               <li>Vektorja sta <strong>kolinearna</strong> (vzporedna), če ju lahko premaknemo na isto premico. Algebrsko: \(\vec{b} = k\vec{a}\) za neko število \(k\) (glej sliko \(k\vec{a}\) zgoraj).</li>
               <li>Točke \(A\), \(B\), \(C\) ležijo na isti premici natanko takrat, ko sta \(\vec{AB}\) in \(\vec{AC}\) kolinearna.</li>
@@ -339,23 +312,19 @@
 </figure>
           </div>
           <div class="sklop-naloge">
-            <h3>✏️ Tipi nalog v tem sklopu</h3>
+            <h3>Tipi nalog v tem sklopu</h3>
             <div class="tip-naloge" id="tip-4">
               <h4>Tip 4: Prepoznaj kolinearne in koplanarne vektorje</h4>
-              <div class="prepoznaj">
-                <p><strong>Kako prepoznaš:</strong> na telesu ali liku sprašujejo, ali so vektorji vzporedni oziroma v isti ravnini.</p>
-                <ul class="kljucne"><li>„kolinearna“</li><li>„koplanarni“</li><li>„ali ležijo na isti premici“</li></ul>
-              </div>
-              <h5>Univerzalni postopek</h5>
-              <ol>
-                <li>Kolinearnost: ali je en vektor večkratnik drugega (vzporedne stranice, razpolovišča)?</li>
-                <li>Koplanarnost na telesu: premakni vse v isto začetno točko in poglej, ali obstaja ploskev ali presek, ki jih vsebuje.</li>
-                <li>Če so dani izrazi z baznimi vektorji, preveri, ali lahko enega zapišeš z drugima.</li>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>V kocki \(ABCDEFGH\) ugotovite, ali so vektorji \(\vec{AB}\), \(\vec{AD}\) in \(\vec{EG}\) koplanarni.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> na telesu ali liku sprašujejo, ali so vektorji vzporedni oziroma v isti ravnini.</p><ul class="kljucne"><li>„kolinearna“</li><li>„koplanarni“</li><li>„ali ležijo na isti premici“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Kolinearnost: preveri, ali je en vektor večkratnik drugega.</p><div class="na-nalogi"><p>Nobena dva izmed treh nista vzporedna.</p></div></li>
+              <li><p class="korak">Koplanarnost: premakni vse vektorje v isto začetno točko in poglej, ali jih vsebuje ena ravnina. Ali enega izrazi z drugima.</p><div class="na-nalogi"><p>\(\vec{EG}\) je enak \(\vec{AC}\) (vzporedna in enako dolga diagonala zgornje in spodnje ploskve). \(\vec{AC} = \vec{AB} + \vec{AD}\).</p></div></li>
+              <li><p class="korak">Odgovori.</p><div class="na-nalogi"><p>\(\vec{EG} = \vec{AB} + \vec{AD}\), zato so koplanarni (vsi v ravnini osnovne ploskve).</p></div></li>
               </ol>
-              <div class="primer">
-                <p><strong>Primer:</strong> V kocki \(ABCDEFGH\) ali so \(\vec{AB}\), \(\vec{AD}\) in \(\vec{EG}\) koplanarni?</p>
-                <p>\(\vec{EG} = \vec{AC} = \vec{AB} + \vec{AD}\), zato da (vsi v ravnini osnovne ploskve).</p>
-              </div>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Ali so \(\vec{AB}\), \(\vec{AD}\), \(\vec{AE}\) v kocki koplanarni?</p><p>Ne, kažejo v tri pravokotne smeri.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Ali sta \(\vec{u} = 2\vec{a} - \vec{b}\) in \(\vec{v} = -4\vec{a} + 2\vec{b}\) kolinearna?</p><p>Da, \(\vec{v} = -2\vec{u}\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Ali so \(\vec{AB}\), \(\vec{BC}\), \(\vec{AC}\) koplanarni?</p><p>Da, vedno: \(\vec{AC} = \vec{AB} + \vec{BC}\).</p></div>
             </div>
           </div>
         </section>
@@ -367,12 +336,8 @@
             <h2>Razvoj vektorjev po bazi (razstavljanje sile na komponente), pravokotna projekcija – grafična interpretacija</h2>
             <p>Vektor zapišemo kot vsoto dveh vektorjev v danih smereh.</p>
           </header>
-          <div class="sklop-cilji">
-            <h3>🎯 Cilji iz kataloga</h3>
-            <ul><li>Grafično razstavlja vektorje.</li></ul>
-          </div>
           <div class="sklop-teorija">
-            <h3>📖 Razlaga</h3>
+            <h3>Razlaga</h3>
             <div class="slike-vrsta"><figure class="slika">
 <svg viewBox="0 0 300 221" role="img" aria-label="Razstavljanje vektorja po dveh smereh" xmlns="http://www.w3.org/2000/svg">
 <defs><marker id="g8-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g8-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g8-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g8-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g8-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g8-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
@@ -414,23 +379,19 @@
             <p>Najpogosteje razstavljamo na <strong>pravokotni</strong> smeri. Takrat je komponenta v smeri \(\vec{b}\) ravno <strong>pravokotna projekcija</strong> (podrobneje v 4.8.11): dolžina komponente je \(|\vec{c}|\cos\varphi\), pravokotne komponente pa \(|\vec{c}|\sin\varphi\).</p>
           </div>
           <div class="sklop-naloge">
-            <h3>✏️ Tipi nalog v tem sklopu</h3>
+            <h3>Tipi nalog v tem sklopu</h3>
             <div class="tip-naloge" id="tip-5">
               <h4>Tip 5: Razstavi silo na komponente</h4>
-              <div class="prepoznaj">
-                <p><strong>Kako prepoznaš:</strong> klanec, vlečenje pod kotom, sila v vrvi; iščejo del sile v dani smeri.</p>
-                <ul class="kljucne"><li>„komponenta“</li><li>„pod kotom glede na vodoravnico“</li><li>„klanec z naklonom“</li></ul>
-              </div>
-              <h5>Univerzalni postopek</h5>
-              <ol>
-                <li>Nariši silo in obe smeri (vzdolž podlage in pravokotno nanjo).</li>
-                <li>Dopolni pravokotnik (paralelogram) in poišči kot med silo in eno smerjo.</li>
-                <li>Priležna komponenta \(F\cos\varphi\), nasprotna \(F\sin\varphi\).</li>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Sani vlečemo s silo 200 N pod kotom \(30°\) glede na tla. Kolikšna je vodoravna komponenta sile?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> klanec, vlečenje pod kotom, sila v vrvi; iščejo del sile v dani smeri.</p><ul class="kljucne"><li>„komponenta“</li><li>„pod kotom glede na vodoravnico“</li><li>„klanec z naklonom“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Nariši silo in obe smeri (vzdolž podlage in pravokotno nanjo).</p><div class="na-nalogi"><p>Smeri sta vodoravna in navpična.</p></div></li>
+              <li><p class="korak">Dopolni pravokotnik in poišči kot med silo in eno smerjo.</p><div class="na-nalogi"><p>Sila oklepa z vodoravnico \(30°\).</p></div></li>
+              <li><p class="korak">Priležna komponenta je \(F\cos\varphi\), nasprotna \(F\sin\varphi\).</p><div class="na-nalogi"><p>\(F_x = 200 \cos 30° = 100\sqrt{3} \approx 173\) N, \(F_y = 200 \sin 30° = 100\) N.</p></div></li>
               </ol>
-              <div class="primer">
-                <p><strong>Primer:</strong> Sani vlečemo s silo 200 N pod kotom \(30°\) glede na tla. Kolikšna je vodoravna komponenta?</p>
-                <p>\(F_x = 200 \cos 30° = 100\sqrt{3} \approx 173\) N (navpična \(F_y = 100\) N).</p>
-              </div>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Teža 100 N na klancu z naklonom \(20°\). Kolikšna je komponenta vzdolž klanca?</p><p>\(100 \sin 20° \approx 34{,}2\) N.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Sila 50 N kaže pod kotom \(60°\) nad vodoravnico. Kolikšna je navpična komponenta?</p><p>\(50 \sin 60° \approx 43{,}3\) N.</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Komponenti sile sta 6 N in 8 N. Kolikšna je sila?</p><p>\(10\) N.</p></div>
             </div>
           </div>
         </section>
@@ -442,12 +403,8 @@
             <h2>Linearna kombinacija vektorjev</h2>
             <p>Vsota večkratnikov vektorjev.</p>
           </header>
-          <div class="sklop-cilji">
-            <h3>🎯 Cilji iz kataloga</h3>
-            <ul><li>Usvoji računanje z vektorji na grafičnem in računskem nivoju.</li></ul>
-          </div>
           <div class="sklop-teorija">
-            <h3>📖 Razlaga</h3>
+            <h3>Razlaga</h3>
             <p><strong>Linearna kombinacija</strong> vektorjev \(\vec{a}_1, \ldots, \vec{a}_n\) je vsak vektor oblike \(\alpha_1\vec{a}_1 + \alpha_2\vec{a}_2 + \cdots + \alpha_n\vec{a}_n\), kjer so \(\alpha_i\) realna števila (koeficienti).</p>
             <p>Najpomembnejši primeri na likih:</p>
             <ul>
@@ -457,23 +414,19 @@
             </ul>
           </div>
           <div class="sklop-naloge">
-            <h3>✏️ Tipi nalog v tem sklopu</h3>
+            <h3>Tipi nalog v tem sklopu</h3>
             <div class="tip-naloge" id="tip-6">
               <h4>Tip 6: Linearna kombinacija na liku (razpolovišča, delilne točke)</h4>
-              <div class="prepoznaj">
-                <p><strong>Kako prepoznaš:</strong> razpolovišče, točka deli stranico v razmerju, izrazi vektor z \(\vec{a}\) in \(\vec{b}\).</p>
-                <ul class="kljucne"><li>„razpolovišče“</li><li>„deli v razmerju“</li><li>„izrazite kot linearno kombinacijo“</li></ul>
-              </div>
-              <h5>Univerzalni postopek</h5>
-              <ol>
-                <li>Nariši lik in označi dane vektorje iz iste točke.</li>
-                <li>Delilno točko zapiši: \(\vec{AT} = \frac{m}{m + n}\vec{AB}\).</li>
-                <li>Pot do iskane točke sestavi iz delov in poenostavi.</li>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>V trikotniku \(ABC\) je \(\vec{a} = \vec{AB}\) in \(\vec{b} = \vec{AC}\). Točka \(D\) deli stranico \(BC\) v razmerju \(1 : 2\) (od \(B\) proti \(C\)). Izrazite \(\vec{AD}\) z \(\vec{a}\) in \(\vec{b}\).</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> razpolovišče, točka deli stranico v razmerju, izrazi vektor z \(\vec{a}\) in \(\vec{b}\).</p><ul class="kljucne"><li>„razpolovišče“</li><li>„deli v razmerju“</li><li>„izrazite kot linearno kombinacijo“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Nariši lik in označi dane vektorje iz iste točke.</p><div class="na-nalogi"><p>\(\vec{a}\) in \(\vec{b}\) izhajata iz \(A\). \(\vec{BC} = \vec{b} - \vec{a}\).</p></div></li>
+              <li><p class="korak">Delilno točko zapiši kot del stranice: \(\vec{BT} = \frac{m}{m + n}\vec{BC}\).</p><div class="na-nalogi"><p>\(\vec{BD} = \frac{1}{3}\vec{BC} = \frac{1}{3}(\vec{b} - \vec{a})\).</p></div></li>
+              <li><p class="korak">Pot do iskane točke sestavi iz delov in poenostavi.</p><div class="na-nalogi"><p>\(\vec{AD} = \vec{AB} + \vec{BD} = \vec{a} + \frac{1}{3}\vec{b} - \frac{1}{3}\vec{a} = \frac{2}{3}\vec{a} + \frac{1}{3}\vec{b}\).</p></div></li>
               </ol>
-              <div class="primer">
-                <p><strong>Primer:</strong> V trikotniku \(ABC\) je \(\vec{a} = \vec{AB}\), \(\vec{b} = \vec{AC}\). Točka \(D\) deli \(BC\) v razmerju \(1 : 2\). Izrazite \(\vec{AD}\).</p>
-                <p>\(\vec{BD} = \frac{1}{3}\vec{BC} = \frac{1}{3}(\vec{b} - \vec{a})\). \(\vec{AD} = \vec{a} + \frac{1}{3}(\vec{b} - \vec{a}) = \frac{2}{3}\vec{a} + \frac{1}{3}\vec{b}\).</p>
-              </div>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> \(M\) je razpolovišče \(BC\). Izrazite \(\vec{AM}\).</p><p>\(\frac{1}{2}(\vec{a} + \vec{b})\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> \(T\) je težišče trikotnika \(ABC\). Izrazite \(\vec{AT}\).</p><p>\(\frac{2}{3}\vec{AM} = \frac{1}{3}(\vec{a} + \vec{b})\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> V paralelogramu \(ABCD\) je \(E\) razpolovišče \(CD\). Izrazite \(\vec{AE}\) z \(\vec{a} = \vec{AB}\), \(\vec{b} = \vec{AD}\).</p><p>\(\vec{b} + \frac{1}{2}\vec{a}\).</p></div>
             </div>
           </div>
         </section>
@@ -485,12 +438,8 @@
             <h2>Linearna neodvisnost vektorjev</h2>
             <p>Kdaj nobenega vektorja ne moremo izraziti z ostalimi.</p>
           </header>
-          <div class="sklop-cilji">
-            <h3>🎯 Cilji iz kataloga</h3>
-            <ul><li>Presodi linearno neodvisnost vektorjev.</li></ul>
-          </div>
           <div class="sklop-teorija">
-            <h3>📖 Razlaga</h3>
+            <h3>Razlaga</h3>
             <p>Vektorji \(\vec{a}_1, \ldots, \vec{a}_n\) so <strong>linearno neodvisni</strong>, če je \(\alpha_1\vec{a}_1 + \cdots + \alpha_n\vec{a}_n = \vec{0}\) mogoče le pri \(\alpha_1 = \cdots = \alpha_n = 0\). Sicer so <strong>odvisni</strong> (enega lahko izrazimo z ostalimi).</p>
             <ul>
               <li>Dva vektorja sta odvisna natanko takrat, ko sta kolinearna.</li>
@@ -500,23 +449,19 @@
             <p><strong>Ključna posledica:</strong> če sta \(\vec{a}\) in \(\vec{b}\) neodvisna in \(\alpha\vec{a} + \beta\vec{b} = \gamma\vec{a} + \delta\vec{b}\), potem \(\alpha = \gamma\) in \(\beta = \delta\) (<strong>primerjava koeficientov</strong>). Na tem temeljijo dokazi razmerij v 4.8.13.</p>
           </div>
           <div class="sklop-naloge">
-            <h3>✏️ Tipi nalog v tem sklopu</h3>
+            <h3>Tipi nalog v tem sklopu</h3>
             <div class="tip-naloge" id="tip-7">
               <h4>Tip 7: Ali so vektorji linearno neodvisni</h4>
-              <div class="prepoznaj">
-                <p><strong>Kako prepoznaš:</strong> „linearno (ne)odvisni“, „ali tvorijo bazo“, parameter, pri katerem so vektorji odvisni.</p>
-                <ul class="kljucne"><li>„linearno neodvisni“</li><li>„za kateri \(m\) so odvisni“</li><li>„ali tvorijo bazo“</li></ul>
-              </div>
-              <h5>Univerzalni postopek</h5>
-              <ol>
-                <li>Dva vektorja: preveri, ali je \(\vec{b} = k\vec{a}\) (razmerja istoležnih komponent enaka).</li>
-                <li>Trije vektorji v prostoru: poskusi \(\vec{c} = \alpha\vec{a} + \beta\vec{b}\); zapiši sistem treh enačb z dvema neznankama.</li>
-                <li>Če ima sistem rešitev, so odvisni; če je protisloven, so neodvisni.</li>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Ali so vektorji \(\vec{a} = (1, 0, 2)\), \(\vec{b} = (0, 1, 1)\) in \(\vec{c} = (2, 3, 7)\) linearno neodvisni?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> „linearno (ne)odvisni“, „ali tvorijo bazo“, parameter, pri katerem so vektorji odvisni.</p><ul class="kljucne"><li>„linearno neodvisni“</li><li>„za kateri \(m\) so odvisni“</li><li>„ali tvorijo bazo“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Dva vektorja sta odvisna, če je \(\vec{b} = k\vec{a}\). Pri treh v prostoru poskusi \(\vec{c} = \alpha\vec{a} + \beta\vec{b}\).</p><div class="na-nalogi"><p>\((2, 3, 7) = \alpha(1, 0, 2) + \beta(0, 1, 1)\).</p></div></li>
+              <li><p class="korak">Zapiši sistem po komponentah.</p><div class="na-nalogi"><p>\(\alpha = 2\), \(\beta = 3\), \(2\alpha + \beta = 7\).</p></div></li>
+              <li><p class="korak">Reši prvi dve enačbi in preveri tretjo. Če sistem ima rešitev, so vektorji odvisni; če je protisloven, neodvisni.</p><div class="na-nalogi"><p>\(2 \cdot 2 + 3 = 7\), tretja enačba drži. \(\vec{c} = 2\vec{a} + 3\vec{b}\): vektorji so linearno odvisni.</p></div></li>
               </ol>
-              <div class="primer">
-                <p><strong>Primer:</strong> Ali so \(\vec{a} = (1, 0, 2)\), \(\vec{b} = (0, 1, 1)\), \(\vec{c} = (2, 3, 7)\) linearno neodvisni?</p>
-                <p>\(\vec{c} = \alpha\vec{a} + \beta\vec{b}\): \(\alpha = 2\), \(\beta = 3\), tretja komponenta \(2\alpha + \beta = 7\) ✓. Torej \(\vec{c} = 2\vec{a} + 3\vec{b}\): vektorji so odvisni.</p>
-              </div>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Ali sta \((2, 4)\) in \((3, 6)\) neodvisna?</p><p>\((3, 6) = 1{,}5 \cdot (2, 4)\), sta odvisna.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Ali \((1, 0, 0)\), \((1, 1, 0)\), \((1, 1, 1)\) tvorijo bazo prostora?</p><p>\(\alpha + \beta = 1\), \(\beta = 1\), \(0 = 1\) protislovje: neodvisni, tvorijo bazo.</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Za kateri \(m\) sta \((m, 2)\) in \((3, 6)\) odvisna?</p><p>\(k = \frac{1}{3}\): \(m = 1\).</p></div>
             </div>
           </div>
         </section>
@@ -528,12 +473,8 @@
             <h2>Baza v ravnini in prostoru</h2>
             <p>Najmanjši nabor vektorjev, s katerim izrazimo vse.</p>
           </header>
-          <div class="sklop-cilji">
-            <h3>🎯 Cilji iz kataloga</h3>
-            <ul><li>Usvoji računanje z vektorji na grafičnem in računskem nivoju.</li></ul>
-          </div>
           <div class="sklop-teorija">
-            <h3>📖 Razlaga</h3>
+            <h3>Razlaga</h3>
             <ul>
               <li><strong>Baza ravnine</strong> sta katerakoli dva nekolinearna vektorja \(\vec{a}, \vec{b}\). Vsak vektor ravnine je enolično \(\vec{c} = \alpha\vec{a} + \beta\vec{b}\); števili \(\alpha, \beta\) sta <strong>komponenti</strong> (koordinati) \(\vec{c}\) v tej bazi.</li>
               <li><strong>Baza prostora</strong> so katerikoli trije nekoplanarni vektorji.</li>
@@ -541,23 +482,19 @@
             </ul>
           </div>
           <div class="sklop-naloge">
-            <h3>✏️ Tipi nalog v tem sklopu</h3>
+            <h3>Tipi nalog v tem sklopu</h3>
             <div class="tip-naloge" id="tip-8">
               <h4>Tip 8: Razvij vektor po dani bazi</h4>
-              <div class="prepoznaj">
-                <p><strong>Kako prepoznaš:</strong> vektorji so dani s koordinatami; iščejo koeficienta, s katerima en vektor izrazimo z drugima.</p>
-                <ul class="kljucne"><li>„zapišite \(\vec{c}\) kot linearno kombinacijo \(\vec{a}\) in \(\vec{b}\)“</li><li>„razvijte po bazi“</li></ul>
-              </div>
-              <h5>Univerzalni postopek</h5>
-              <ol>
-                <li>Zapiši \(\vec{c} = \alpha\vec{a} + \beta\vec{b}\) po komponentah.</li>
-                <li>Dobiš sistem enačb (za vsako komponento eno) in ga reši.</li>
-                <li>Preveri z vstavitvijo.</li>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Zapišite \(\vec{c} = (7, 0)\) kot linearno kombinacijo vektorjev \(\vec{a} = (1, 2)\) in \(\vec{b} = (3, -1)\).</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> vektorji so dani s koordinatami; iščejo koeficienta, s katerima en vektor izrazimo z drugima.</p><ul class="kljucne"><li>„zapišite \(\vec{c}\) kot linearno kombinacijo \(\vec{a}\) in \(\vec{b}\)“</li><li>„razvijte po bazi“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Zapiši \(\vec{c} = \alpha\vec{a} + \beta\vec{b}\) po komponentah.</p><div class="na-nalogi"><p>\(\alpha + 3\beta = 7\) in \(2\alpha - \beta = 0\).</p></div></li>
+              <li><p class="korak">Reši sistem.</p><div class="na-nalogi"><p>Iz druge \(\beta = 2\alpha\), v prvo: \(7\alpha = 7\), \(\alpha = 1\), \(\beta = 2\).</p></div></li>
+              <li><p class="korak">Preveri z vstavitvijo.</p><div class="na-nalogi"><p>\((1, 2) + 2(3, -1) = (7, 0)\). Torej \(\vec{c} = \vec{a} + 2\vec{b}\).</p></div></li>
               </ol>
-              <div class="primer">
-                <p><strong>Primer:</strong> Zapišite \(\vec{c} = (7, 0)\) z \(\vec{a} = (1, 2)\) in \(\vec{b} = (3, -1)\).</p>
-                <p>\(\alpha + 3\beta = 7\) in \(2\alpha - \beta = 0\). Iz druge \(\beta = 2\alpha\), v prvo: \(7\alpha = 7\), \(\alpha = 1\), \(\beta = 2\). \(\vec{c} = \vec{a} + 2\vec{b}\). Preizkus: \((1, 2) + (6, -2) = (7, 0)\) ✓.</p>
-              </div>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Zapišite \((5, 1)\) z \((1, 1)\) in \((1, -1)\).</p><p>\(\alpha + \beta = 5\), \(\alpha - \beta = 1\): \(\alpha = 3\), \(\beta = 2\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Zapišite \((4, 6)\) z \((2, 0)\) in \((0, 3)\).</p><p>\(2(2, 0) + 2(0, 3)\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Zapišite \((1, 2, 3)\) z \(\vec{i}\), \(\vec{j}\), \(\vec{k}\).</p><p>\(\vec{i} + 2\vec{j} + 3\vec{k}\).</p></div>
             </div>
           </div>
         </section>
@@ -569,15 +506,8 @@
             <h2>Pravokotni koordinatni sistem v ravnini in prostoru; krajevni vektor točke</h2>
             <p>Točke in vektorji postanejo urejeni pari in trojice števil.</p>
           </header>
-          <div class="sklop-cilji">
-            <h3>🎯 Cilji iz kataloga</h3>
-            <ul>
-              <li>Računa z vektorji, zapisanimi s koordinatami (komponentami).</li>
-              <li>Razume pravokotnost v prostoru.</li>
-            </ul>
-          </div>
           <div class="sklop-teorija">
-            <h3>📖 Razlaga</h3>
+            <h3>Razlaga</h3>
             <div class="slike-vrsta"><figure class="slika slika--ozka">
 <svg viewBox="0 0 340 280" role="img" aria-label="Krajevni vektor v ravnini" xmlns="http://www.w3.org/2000/svg">
 <defs><marker id="g10-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g10-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g10-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g10-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g10-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g10-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
@@ -637,23 +567,19 @@
             <p>V prostoru osi \(x\), \(y\), \(z\) tvorijo <strong>desnosučni</strong> sistem; os \(x\) rišemo „proti nam“ (poševno navzdol). Koordinatne ravnine (\(xy\), \(yz\), \(xz\)) delijo prostor na osem oktantov. Točka v ravnini \(xy\) ima \(z = 0\), na osi \(z\) pa \(x = y = 0\).</p>
           </div>
           <div class="sklop-naloge">
-            <h3>✏️ Tipi nalog v tem sklopu</h3>
+            <h3>Tipi nalog v tem sklopu</h3>
             <div class="tip-naloge" id="tip-9">
               <h4>Tip 9: Koordinate točke z vektorji (razpolovišče, četrto oglišče)</h4>
-              <div class="prepoznaj">
-                <p><strong>Kako prepoznaš:</strong> dane so koordinate nekaj točk, iščejo koordinate nove točke (razpolovišče, oglišče paralelograma, težišče).</p>
-                <ul class="kljucne"><li>„določite točko \(D\), da bo \(ABCD\) paralelogram“</li><li>„razpolovišče“</li><li>„krajevni vektor“</li></ul>
-              </div>
-              <h5>Univerzalni postopek</h5>
-              <ol>
-                <li>Zapiši pogoj z vektorji (paralelogram: \(\vec{AD} = \vec{BC}\), razpolovišče: \(\vec{r}_M = \frac{1}{2}(\vec{r}_A + \vec{r}_B)\)).</li>
-                <li>Izrazi krajevni vektor iskane točke: \(\vec{r}_D = \vec{r}_A + \vec{BC}\).</li>
-                <li>Izračunaj po komponentah.</li>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Dane so točke \(A(1, 2, 0)\), \(B(4, 3, 1)\) in \(C(5, 7, 2)\). Določite točko \(D\), da bo \(ABCD\) paralelogram.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> dane so koordinate nekaj točk, iščejo koordinate nove točke (razpolovišče, oglišče paralelograma, težišče).</p><ul class="kljucne"><li>„določite točko \(D\), da bo \(ABCD\) paralelogram“</li><li>„razpolovišče“</li><li>„krajevni vektor“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Zapiši pogoj z vektorji.</p><div class="na-nalogi"><p>V paralelogramu \(ABCD\) velja \(\vec{AD} = \vec{BC}\).</p></div></li>
+              <li><p class="korak">Izrazi krajevni vektor iskane točke.</p><div class="na-nalogi"><p>\(\vec{r}_D = \vec{r}_A + \vec{BC}\).</p></div></li>
+              <li><p class="korak">Izračunaj po komponentah.</p><div class="na-nalogi"><p>\(\vec{BC} = (5 - 4, 7 - 3, 2 - 1) = (1, 4, 1)\), \(\vec{r}_D = (1, 2, 0) + (1, 4, 1) = (2, 6, 1)\). \(D(2, 6, 1)\).</p></div></li>
               </ol>
-              <div class="primer">
-                <p><strong>Primer:</strong> \(A(1, 2, 0)\), \(B(4, 3, 1)\), \(C(5, 7, 2)\). Določite \(D\), da bo \(ABCD\) paralelogram.</p>
-                <p>\(\vec{BC} = (1, 4, 1)\), \(\vec{r}_D = (1, 2, 0) + (1, 4, 1) = (2, 6, 1)\). \(D(2, 6, 1)\).</p>
-              </div>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Razpolovišče \(A(2, -4)\) in \(B(6, 0)\)?</p><p>\(M(4, -2)\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Težišče trikotnika \(A(0, 0)\), \(B(6, 0)\), \(C(0, 3)\)?</p><p>\(T\left(\frac{6}{3}, \frac{3}{3}\right) = (2, 1)\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> \(M(3, 1)\) je razpolovišče \(AB\), \(A(1, 5)\). Določite \(B\).</p><p>\(\vec{r}_B = 2\vec{r}_M - \vec{r}_A = (5, -3)\).</p></div>
             </div>
           </div>
         </section>
@@ -665,12 +591,8 @@
             <h2>Zapis vektorja s koordinatami (komponentami)</h2>
             <p>Vektor med dvema točkama.</p>
           </header>
-          <div class="sklop-cilji">
-            <h3>🎯 Cilji iz kataloga</h3>
-            <ul><li>Računa z vektorji, zapisanimi s koordinatami (komponentami).</li></ul>
-          </div>
           <div class="sklop-teorija">
-            <h3>📖 Razlaga</h3>
+            <h3>Razlaga</h3>
             <figure class="slika slika--ozka">
 <svg viewBox="0 0 380 280" role="img" aria-label="Vektor med točkama A in B" xmlns="http://www.w3.org/2000/svg">
 <defs><marker id="g12-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g12-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g12-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g12-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g12-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g12-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
@@ -700,22 +622,19 @@
             <p>Pravilo: <strong>konec minus začetek</strong>. Komponente povedo, za koliko se premaknemo v smeri vsake osi.</p>
           </div>
           <div class="sklop-naloge">
-            <h3>✏️ Tipi nalog v tem sklopu</h3>
+            <h3>Tipi nalog v tem sklopu</h3>
             <div class="tip-naloge" id="tip-10">
               <h4>Tip 10: Vektor med točkama</h4>
-              <div class="prepoznaj">
-                <p><strong>Kako prepoznaš:</strong> dani sta točki, iščejo \(\vec{AB}\), ali pa sta dana \(\vec{AB}\) in ena točka, iščejo drugo.</p>
-                <ul class="kljucne"><li>„zapišite vektor \(\vec{AB}\)“</li><li>„končna točka vektorja“</li></ul>
-              </div>
-              <h5>Univerzalni postopek</h5>
-              <ol>
-                <li>\(\vec{AB} = B - A\) po komponentah.</li>
-                <li>Če iščeš končno točko: \(\vec{r}_B = \vec{r}_A + \vec{AB}\); začetno: \(\vec{r}_A = \vec{r}_B - \vec{AB}\).</li>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>\(\vec{AB} = (3, -2, 5)\) in \(B(1, 1, 1)\). Določite točko \(A\).</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> dani sta točki, iščejo \(\vec{AB}\), ali pa sta dana \(\vec{AB}\) in ena točka, iščejo drugo.</p><ul class="kljucne"><li>„zapišite vektor \(\vec{AB}\)“</li><li>„končna točka vektorja“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Zapiši zvezo \(\vec{AB} = \vec{r}_B - \vec{r}_A\).</p><div class="na-nalogi"><p>\((3, -2, 5) = (1, 1, 1) - \vec{r}_A\).</p></div></li>
+              <li><p class="korak">Izrazi iskano točko: končna \(\vec{r}_B = \vec{r}_A + \vec{AB}\), začetna \(\vec{r}_A = \vec{r}_B - \vec{AB}\).</p><div class="na-nalogi"><p>\(\vec{r}_A = (1, 1, 1) - (3, -2, 5)\).</p></div></li>
+              <li><p class="korak">Izračunaj po komponentah.</p><div class="na-nalogi"><p>\(A(-2, 3, -4)\).</p></div></li>
               </ol>
-              <div class="primer">
-                <p><strong>Primer:</strong> \(\vec{AB} = (3, -2, 5)\), \(B(1, 1, 1)\). Določite \(A\).</p>
-                <p>\(\vec{r}_A = (1, 1, 1) - (3, -2, 5) = (-2, 3, -4)\).</p>
-              </div>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> \(A(2, 1)\), \(B(5, -3)\). Zapišite \(\vec{AB}\).</p><p>\((3, -4)\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> \(A(0, 2, 1)\), \(\vec{AB} = (1, 1, 1)\). Določite \(B\).</p><p>\(B(1, 3, 2)\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Zapišite \(\vec{BA}\) za \(A(1, 1)\), \(B(4, 5)\).</p><p>\((-3, -4)\).</p></div>
             </div>
           </div>
         </section>
@@ -727,15 +646,8 @@
             <h2>Računske operacije z vektorji, zapisanimi s koordinatami</h2>
             <p>Vse operacije delamo po komponentah.</p>
           </header>
-          <div class="sklop-cilji">
-            <h3>🎯 Cilji iz kataloga</h3>
-            <ul>
-              <li>Računa z vektorji, zapisanimi s koordinatami (komponentami).</li>
-              <li>Utemelji pravokotnost in vzporednost vektorjev.</li>
-            </ul>
-          </div>
           <div class="sklop-teorija">
-            <h3>📖 Razlaga</h3>
+            <h3>Razlaga</h3>
             <div class="tabela-wrap">
               <table class="tabela">
                 <thead><tr><th>Operacija</th><th>Formula za \(\vec{a} = (a_1, a_2, a_3)\), \(\vec{b} = (b_1, b_2, b_3)\)</th></tr></thead>
@@ -750,41 +662,32 @@
             </div>
           </div>
           <div class="sklop-naloge">
-            <h3>✏️ Tipi nalog v tem sklopu</h3>
+            <h3>Tipi nalog v tem sklopu</h3>
             <div class="tip-naloge" id="tip-11">
               <h4>Tip 11: Linearna kombinacija in dolžina v koordinatah</h4>
-              <div class="prepoznaj">
-                <p><strong>Kako prepoznaš:</strong> izračunajte \(2\vec{a} - 3\vec{b}\), njegovo dolžino, enotski vektor.</p>
-                <ul class="kljucne"><li>„izračunajte \(2\vec{a} - \vec{b}\)“</li><li>„dolžina vektorja“</li><li>„enotski vektor“</li><li>„razdalja med točkama“</li></ul>
-              </div>
-              <h5>Univerzalni postopek</h5>
-              <ol>
-                <li>Pomnoži vsako komponento s skalarjem, nato seštej istoležne komponente.</li>
-                <li>Dolžina: koren vsote kvadratov komponent.</li>
-                <li>Enotski vektor: deli vektor z njegovo dolžino.</li>
-                <li>Razdalja med točkama je \(|\vec{AB}|\).</li>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>\(\vec{a} = (1, -2, 2)\), \(\vec{b} = (0, 1, 3)\). Izračunajte \(|2\vec{a} + \vec{b}|\).</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> izračunajte \(2\vec{a} - 3\vec{b}\), njegovo dolžino, enotski vektor.</p><ul class="kljucne"><li>„izračunajte \(2\vec{a} - \vec{b}\)“</li><li>„dolžina vektorja“</li><li>„enotski vektor“</li><li>„razdalja med točkama“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Pomnoži vsako komponento s skalarjem.</p><div class="na-nalogi"><p>\(2\vec{a} = (2, -4, 4)\).</p></div></li>
+              <li><p class="korak">Seštej istoležne komponente.</p><div class="na-nalogi"><p>\(2\vec{a} + \vec{b} = (2, -3, 7)\).</p></div></li>
+              <li><p class="korak">Dolžina je koren vsote kvadratov komponent. Enotski vektor dobiš, če vektor deliš z njegovo dolžino.</p><div class="na-nalogi"><p>\(\sqrt{4 + 9 + 49} = \sqrt{62} \approx 7{,}87\).</p></div></li>
               </ol>
-              <div class="primer">
-                <p><strong>Primer:</strong> \(\vec{a} = (1, -2, 2)\), \(\vec{b} = (0, 1, 3)\). Izračunajte \(|2\vec{a} + \vec{b}|\).</p>
-                <p>\(2\vec{a} + \vec{b} = (2, -3, 7)\), \(|2\vec{a} + \vec{b}| = \sqrt{4 + 9 + 49} = \sqrt{62} \approx 7{,}87\).</p>
-              </div>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Kolikšna je dolžina \((3, 4)\)?</p><p>\(5\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Zapišite enotski vektor v smeri \((2, -1, 2)\).</p><p>\(|\vec{v}| = 3\): \(\left(\frac{2}{3}, -\frac{1}{3}, \frac{2}{3}\right)\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Razdalja med \(A(1, 2, 3)\) in \(B(3, 2, 1)\)?</p><p>\(|(2, 0, -2)| = 2\sqrt{2}\).</p></div>
             </div>
             <div class="tip-naloge" id="tip-12">
               <h4>Tip 12: Vzporednost in kolinearnost točk v koordinatah</h4>
-              <div class="prepoznaj">
-                <p><strong>Kako prepoznaš:</strong> „ali so točke kolinearne“, „določite parameter, da bosta vektorja vzporedna“.</p>
-                <ul class="kljucne"><li>„vzporedna“</li><li>„kolinearne točke“</li><li>„ležijo na isti premici“</li></ul>
-              </div>
-              <h5>Univerzalni postopek</h5>
-              <ol>
-                <li>Za točke izračunaj \(\vec{AB}\) in \(\vec{AC}\).</li>
-                <li>Zapiši \(\vec{AC} = k\vec{AB}\) po komponentah.</li>
-                <li>Iz ene enačbe izračunaj \(k\), preveri ostale (ali iz njih izračunaj parameter).</li>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Za kateri \(m\) sta vektorja \(\vec{a} = (2, -1, 4)\) in \(\vec{b} = (6, m, 12)\) vzporedna?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> „ali so točke kolinearne“, „določite parameter, da bosta vektorja vzporedna“.</p><ul class="kljucne"><li>„vzporedna“</li><li>„kolinearne točke“</li><li>„ležijo na isti premici“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Zapiši \(\vec{b} = k\vec{a}\) po komponentah. (Za točke najprej izračunaj \(\vec{AB}\) in \(\vec{AC}\).)</p><div class="na-nalogi"><p>\(6 = 2k\), \(m = -k\), \(12 = 4k\).</p></div></li>
+              <li><p class="korak">Iz enačbe brez parametra izračunaj \(k\) in ga preveri na ostalih.</p><div class="na-nalogi"><p>\(k = 3\) iz prve, tudi \(\frac{12}{4} = 3\) drži.</p></div></li>
+              <li><p class="korak">Iz preostale enačbe izračunaj parameter.</p><div class="na-nalogi"><p>\(m = -3\).</p></div></li>
               </ol>
-              <div class="primer">
-                <p><strong>Primer:</strong> Za kateri \(m\) sta \(\vec{a} = (2, -1, 4)\) in \(\vec{b} = (6, m, 12)\) vzporedna?</p>
-                <p>\(k = \frac{6}{2} = 3\), \(\frac{12}{4} = 3\) ✓, zato \(m = 3 \cdot (-1) = -3\).</p>
-              </div>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Ali so \(A(1, 1)\), \(B(3, 5)\), \(C(4, 7)\) kolinearne?</p><p>\(\vec{AB} = (2, 4)\), \(\vec{AC} = (3, 6) = 1{,}5\,\vec{AB}\). Da.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Ali sta \((1, 2, 3)\) in \((2, 4, 5)\) vzporedna?</p><p>\(k = 2\) iz prvih dveh, a \(5 \ne 6\). Nista.</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Za kateri \(t\) so \(A(0, 0)\), \(B(2, 3)\), \(C(4, t)\) kolinearne?</p><p>\(\vec{AC} = 2\vec{AB}\): \(t = 6\).</p></div>
             </div>
           </div>
         </section>
@@ -796,12 +699,8 @@
             <h2>Pravokotna projekcija vektorja na drug vektor</h2>
             <p>„Senca“ vektorja na smeri drugega.</p>
           </header>
-          <div class="sklop-cilji">
-            <h3>🎯 Cilji iz kataloga</h3>
-            <ul><li>Izračuna pravokotno projekcijo vektorja.</li></ul>
-          </div>
           <div class="sklop-teorija">
-            <h3>📖 Razlaga</h3>
+            <h3>Razlaga</h3>
             <figure class="slika slika--ozka">
 <svg viewBox="0 0 380 276" role="img" aria-label="Pravokotna projekcija vektorja a na b" xmlns="http://www.w3.org/2000/svg">
 <defs><marker id="g13-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g13-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g13-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g13-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g13-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g13-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
@@ -824,23 +723,19 @@
             <p>Če je kot \(\varphi\) top, kaže projekcija v nasprotni smeri kot \(\vec{b}\) (koeficient je negativen). Ostanek \(\vec{a} - \vec{a}_b\) je pravokoten na \(\vec{b}\): tako vektor razstavimo na vzporedno in pravokotno komponento.</p>
           </div>
           <div class="sklop-naloge">
-            <h3>✏️ Tipi nalog v tem sklopu</h3>
+            <h3>Tipi nalog v tem sklopu</h3>
             <div class="tip-naloge" id="tip-13">
               <h4>Tip 13: Pravokotna projekcija</h4>
-              <div class="prepoznaj">
-                <p><strong>Kako prepoznaš:</strong> beseda „projekcija“ ali „komponenta v smeri“ ali „razdalja točke od premice“ (z vektorji).</p>
-                <ul class="kljucne"><li>„pravokotna projekcija \(\vec{a}\) na \(\vec{b}\)“</li><li>„dolžina projekcije“</li><li>„nožišče“</li></ul>
-              </div>
-              <h5>Univerzalni postopek</h5>
-              <ol>
-                <li>Izračunaj \(\vec{a} \cdot \vec{b}\) in \(|\vec{b}|^2\).</li>
-                <li>\(\vec{a}_b = \frac{\vec{a} \cdot \vec{b}}{|\vec{b}|^2}\vec{b}\) (vektor) ali \(|\vec{a}_b| = \frac{|\vec{a} \cdot \vec{b}|}{|\vec{b}|}\) (dolžina).</li>
-                <li>Pazi, na kateri vektor projiciraš: v imenovalcu je vedno tisti, <strong>na</strong> katerega projiciraš.</li>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Izračunajte pravokotno projekcijo vektorja \(\vec{a} = (2, 3)\) na vektor \(\vec{b} = (4, 0)\) in njeno dolžino.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> beseda „projekcija“ ali „komponenta v smeri“ ali „razdalja točke od premice“ (z vektorji).</p><ul class="kljucne"><li>„pravokotna projekcija \(\vec{a}\) na \(\vec{b}\)“</li><li>„dolžina projekcije“</li><li>„nožišče“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Izračunaj \(\vec{a} \cdot \vec{b}\) in \(|\vec{b}|^2\). Pazi, na kateri vektor projiciraš: v imenovalcu je vedno ta.</p><div class="na-nalogi"><p>\(\vec{a} \cdot \vec{b} = 8 + 0 = 8\), \(|\vec{b}|^2 = 16\).</p></div></li>
+              <li><p class="korak">Vektor projekcije: \(\vec{a}_b = \frac{\vec{a} \cdot \vec{b}}{|\vec{b}|^2}\vec{b}\).</p><div class="na-nalogi"><p>\(\vec{a}_b = \frac{8}{16}(4, 0) = (2, 0)\).</p></div></li>
+              <li><p class="korak">Dolžina projekcije: \(\frac{|\vec{a} \cdot \vec{b}|}{|\vec{b}|}\).</p><div class="na-nalogi"><p>\(\frac{8}{4} = 2\).</p></div></li>
               </ol>
-              <div class="primer">
-                <p><strong>Primer:</strong> Projicirajte \(\vec{a} = (2, 3)\) na \(\vec{b} = (4, 0)\).</p>
-                <p>\(\vec{a} \cdot \vec{b} = 8\), \(|\vec{b}|^2 = 16\): \(\vec{a}_b = \frac{8}{16}(4, 0) = (2, 0)\), dolžina 2.</p>
-              </div>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Projekcija \((1, 2, 2)\) na \((0, 0, 1)\)?</p><p>\((0, 0, 2)\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Dolžina projekcije \((3, 4)\) na \((1, 1)\)?</p><p>\(\frac{7}{\sqrt{2}} \approx 4{,}95\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Kdaj je projekcija ničelni vektor?</p><p>Ko sta vektorja pravokotna (\(\vec{a} \cdot \vec{b} = 0\)).</p></div>
             </div>
           </div>
         </section>
@@ -852,15 +747,8 @@
             <h2>Skalarni produkt, kot med vektorjema in dolžina vektorja</h2>
             <p>Produkt dveh vektorjev, ki je število.</p>
           </header>
-          <div class="sklop-cilji">
-            <h3>🎯 Cilji iz kataloga</h3>
-            <ul>
-              <li>Izračuna kot med vektorjema, dolžino vektorja in pravokotno projekcijo vektorja.</li>
-              <li>Utemelji pravokotnost in vzporednost vektorjev.</li>
-            </ul>
-          </div>
           <div class="sklop-teorija">
-            <h3>📖 Razlaga</h3>
+            <h3>Razlaga</h3>
             <p><strong>Skalarni produkt</strong> je število:</p>
             <p>\[\vec{a} \cdot \vec{b} = |\vec{a}|\,|\vec{b}|\cos\varphi = a_1 b_1 + a_2 b_2 + a_3 b_3\]</p>
             <div class="slike-vrsta"><figure class="slika">
@@ -910,74 +798,58 @@
             </ul>
           </div>
           <div class="sklop-naloge">
-            <h3>✏️ Tipi nalog v tem sklopu</h3>
+            <h3>Tipi nalog v tem sklopu</h3>
             <div class="tip-naloge" id="tip-14">
               <h4>Tip 14: Skalarni produkt v koordinatah</h4>
-              <div class="prepoznaj">
-                <p><strong>Kako prepoznaš:</strong> vektorja s koordinatami, iščejo \(\vec{a} \cdot \vec{b}\) ali izraz z njim.</p>
-                <ul class="kljucne"><li>„skalarni produkt“</li><li>„\(\vec{a} \cdot (\vec{b} - 2\vec{c})\)“</li></ul>
-              </div>
-              <h5>Univerzalni postopek</h5>
-              <ol>
-                <li>Najprej izračunaj vektorje v oklepajih.</li>
-                <li>Pomnoži istoležne komponente in seštej.</li>
-                <li>Rezultat je <strong>število</strong>, ne vektor.</li>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>\(\vec{a} = (1, 2, -1)\), \(\vec{b} = (3, 0, 4)\). Izračunajte \(\vec{a} \cdot \vec{b}\).</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> vektorja s koordinatami, iščejo \(\vec{a} \cdot \vec{b}\) ali izraz z njim.</p><ul class="kljucne"><li>„skalarni produkt“</li><li>„\(\vec{a} \cdot (\vec{b} - 2\vec{c})\)“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Najprej izračunaj vektorje v oklepajih.</p><div class="na-nalogi"><p>Oklepajev ni.</p></div></li>
+              <li><p class="korak">Pomnoži istoležne komponente in seštej.</p><div class="na-nalogi"><p>\(1 \cdot 3 + 2 \cdot 0 + (-1) \cdot 4 = 3 + 0 - 4\).</p></div></li>
+              <li><p class="korak">Rezultat je število. Predznak pove, ali je kot oster (\(+\)), pravi (0) ali top (\(-\)).</p><div class="na-nalogi"><p>\(\vec{a} \cdot \vec{b} = -1\), kot med vektorjema je top.</p></div></li>
               </ol>
-              <div class="primer">
-                <p><strong>Primer:</strong> \(\vec{a} = (1, 2, -1)\), \(\vec{b} = (3, 0, 4)\). Izračunajte \(\vec{a} \cdot \vec{b}\).</p>
-                <p>\(3 + 0 - 4 = -1\) (kot je top).</p>
-              </div>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> \((2, 5) \cdot (-1, 3)\)?</p><p>\(-2 + 15 = 13\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> \(\vec{a} = (1, 1)\), \(\vec{b} = (2, 0)\), \(\vec{c} = (0, 1)\). Izračunajte \(\vec{a} \cdot (\vec{b} - 2\vec{c})\).</p><p>\(\vec{b} - 2\vec{c} = (2, -2)\), produkt \(0\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> \(\vec{a} \cdot \vec{a}\) za \(\vec{a} = (2, 3, 6)\)?</p><p>\(49 = |\vec{a}|^2\).</p></div>
             </div>
             <div class="tip-naloge" id="tip-15">
               <h4>Tip 15: Kot med vektorjema</h4>
-              <div class="prepoznaj">
-                <p><strong>Kako prepoznaš:</strong> „kot med vektorjema“, kot v trikotniku ali med premicama s koordinatami.</p>
-                <ul class="kljucne"><li>„kot med vektorjema“</li><li>„na stotinko stopinje“</li></ul>
-              </div>
-              <h5>Univerzalni postopek</h5>
-              <ol>
-                <li>Izračunaj \(\vec{a} \cdot \vec{b}\), \(|\vec{a}|\), \(|\vec{b}|\).</li>
-                <li>\(\cos\varphi = \frac{\vec{a} \cdot \vec{b}}{|\vec{a}||\vec{b}|}\), nato \(\varphi = \arccos(\ldots)\).</li>
-                <li>Negativen kosinus → topi kot (to je pravilno, ne napaka).</li>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Izračunajte kot med vektorjema \(\vec{a} = (1, 1, 0)\) in \(\vec{b} = (1, 0, 1)\).</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> „kot med vektorjema“, kot v trikotniku ali med premicama s koordinatami.</p><ul class="kljucne"><li>„kot med vektorjema“</li><li>„na stotinko stopinje“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Izračunaj \(\vec{a} \cdot \vec{b}\), \(|\vec{a}|\) in \(|\vec{b}|\).</p><div class="na-nalogi"><p>\(\vec{a} \cdot \vec{b} = 1\), \(|\vec{a}| = |\vec{b}| = \sqrt{2}\).</p></div></li>
+              <li><p class="korak">\(\cos\varphi = \frac{\vec{a} \cdot \vec{b}}{|\vec{a}||\vec{b}|}\).</p><div class="na-nalogi"><p>\(\cos\varphi = \frac{1}{2}\).</p></div></li>
+              <li><p class="korak">\(\varphi = \arccos(\ldots)\). Negativen kosinus pomeni topi kot.</p><div class="na-nalogi"><p>\(\varphi = 60°\).</p></div></li>
               </ol>
-              <div class="primer">
-                <p><strong>Primer:</strong> Kot med \(\vec{a} = (1, 1, 0)\) in \(\vec{b} = (1, 0, 1)\)?</p>
-                <p>\(\cos\varphi = \frac{1}{\sqrt{2}\sqrt{2}} = \frac{1}{2}\), \(\varphi = 60°\).</p>
-              </div>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Kot med \((1, 0)\) in \((-1, 1)\)?</p><p>\(\cos\varphi = -\frac{1}{\sqrt{2}}\), \(\varphi = 135°\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Kot med \((3, 4)\) in \((4, 3)\)?</p><p>\(\cos\varphi = \frac{24}{25}\), \(\varphi \approx 16{,}26°\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Kot med \((1, 2, 2)\) in \((2, -2, 1)\)?</p><p>Produkt \(0\): \(90°\).</p></div>
             </div>
             <div class="tip-naloge" id="tip-16">
               <h4>Tip 16: Pravokotnost (neznana komponenta)</h4>
-              <div class="prepoznaj">
-                <p><strong>Kako prepoznaš:</strong> „določite \(m\), da bosta vektorja pravokotna“, „ali je trikotnik pravokoten“.</p>
-                <ul class="kljucne"><li>„pravokotna“</li><li>„za kateri parameter“</li><li>„pravi kot pri oglišču“</li></ul>
-              </div>
-              <h5>Univerzalni postopek</h5>
-              <ol>
-                <li>Zapiši skalarni produkt s parametrom.</li>
-                <li>Izenači z 0 in reši enačbo.</li>
-                <li>Pri trikotniku: kot pri \(A\) je pravi, če \(\vec{AB} \cdot \vec{AC} = 0\).</li>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Za kateri \(m\) sta vektorja \(\vec{a} = (m, 2, -1)\) in \(\vec{b} = (3, m, 4)\) pravokotna?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> „določite \(m\), da bosta vektorja pravokotna“, „ali je trikotnik pravokoten“.</p><ul class="kljucne"><li>„pravokotna“</li><li>„za kateri parameter“</li><li>„pravi kot pri oglišču“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Zapiši skalarni produkt s parametrom.</p><div class="na-nalogi"><p>\(3m + 2m - 4 = 5m - 4\).</p></div></li>
+              <li><p class="korak">Izenači z 0 in reši.</p><div class="na-nalogi"><p>\(5m - 4 = 0\), \(m = \frac{4}{5}\).</p></div></li>
+              <li><p class="korak">Pri trikotniku je kot pri \(A\) pravi, če je \(\vec{AB} \cdot \vec{AC} = 0\).</p><div class="na-nalogi"><p>Tu gre za vektorja, odgovor je \(m = \frac{4}{5}\).</p></div></li>
               </ol>
-              <div class="primer">
-                <p><strong>Primer:</strong> Za kateri \(m\) sta \(\vec{a} = (m, 2, -1)\) in \(\vec{b} = (3, m, 4)\) pravokotna?</p>
-                <p>\(3m + 2m - 4 = 0\), \(m = \frac{4}{5}\).</p>
-              </div>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Za kateri \(t\) sta \((2, t)\) in \((3, -6)\) pravokotna?</p><p>\(6 - 6t = 0\), \(t = 1\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Ali ima trikotnik \(A(0, 0)\), \(B(4, 0)\), \(C(0, 3)\) pravi kot pri \(A\)?</p><p>\((4, 0) \cdot (0, 3) = 0\), da.</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Poiščite kakšen vektor, pravokoten na \((1, 2)\).</p><p>\((2, -1)\) (ali katerikoli večkratnik).</p></div>
             </div>
             <div class="tip-naloge" id="tip-17">
               <h4>Tip 17: Skalarni produkt brez koordinat</h4>
-              <div class="prepoznaj">
-                <p><strong>Kako prepoznaš:</strong> dane so dolžine \(|\vec{a}|\), \(|\vec{b}|\) in kot med njima; iščejo \(|\vec{a} + \vec{b}|\) ali produkt izrazov.</p>
-                <ul class="kljucne"><li>„\(|\vec{a}| = 3\), \(|\vec{b}| = 2\), kot \(60°\)“</li><li>„izračunajte \(|\vec{a} - 2\vec{b}|\)“</li></ul>
-              </div>
-              <h5>Univerzalni postopek</h5>
-              <ol>
-                <li>Izračunaj \(\vec{a} \cdot \vec{b} = |\vec{a}||\vec{b}|\cos\varphi\).</li>
-                <li>Dolžino izraza kvadriraj: \(|\vec{u}|^2 = \vec{u} \cdot \vec{u}\), razčleni kot pri algebri.</li>
-                <li>Vstavi \(\vec{a} \cdot \vec{a} = |\vec{a}|^2\) in koreni.</li>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>\(|\vec{a}| = 3\), \(|\vec{b}| = 2\), kot med njima je \(60°\). Izračunajte \(|\vec{a} - 2\vec{b}|\).</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> dane so dolžine \(|\vec{a}|\), \(|\vec{b}|\) in kot med njima; iščejo \(|\vec{a} + \vec{b}|\) ali produkt izrazov.</p><ul class="kljucne"><li>„\(|\vec{a}| = 3\), \(|\vec{b}| = 2\), kot \(60°\)“</li><li>„izračunajte \(|\vec{a} - 2\vec{b}|\)“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Izračunaj \(\vec{a} \cdot \vec{b} = |\vec{a}||\vec{b}|\cos\varphi\).</p><div class="na-nalogi"><p>\(3 \cdot 2 \cdot \frac{1}{2} = 3\).</p></div></li>
+              <li><p class="korak">Dolžino izraza kvadriraj: \(|\vec{u}|^2 = \vec{u} \cdot \vec{u}\), in razčleni kot pri algebri.</p><div class="na-nalogi"><p>\(|\vec{a} - 2\vec{b}|^2 = \vec{a} \cdot \vec{a} - 4\,\vec{a} \cdot \vec{b} + 4\,\vec{b} \cdot \vec{b}\).</p></div></li>
+              <li><p class="korak">Vstavi \(\vec{a} \cdot \vec{a} = |\vec{a}|^2\) in koreni.</p><div class="na-nalogi"><p>\(9 - 12 + 16 = 13\), \(|\vec{a} - 2\vec{b}| = \sqrt{13}\).</p></div></li>
               </ol>
-              <div class="primer">
-                <p><strong>Primer:</strong> \(|\vec{a}| = 3\), \(|\vec{b}| = 2\), \(\varphi = 60°\). Izračunajte \(|\vec{a} - 2\vec{b}|\).</p>
-                <p>\(\vec{a} \cdot \vec{b} = 3\). \(|\vec{a} - 2\vec{b}|^2 = 9 - 4 \cdot 3 + 4 \cdot 4 = 13\), \(|\vec{a} - 2\vec{b}| = \sqrt{13}\).</p>
-              </div>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> \(|\vec{a}| = 4\), \(|\vec{b}| = 3\), \(\vec{a} \perp \vec{b}\). Koliko je \(|\vec{a} + \vec{b}|\)?</p><p>\(\sqrt{16 + 9} = 5\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> \(|\vec{a}| = 2\), \(|\vec{b}| = 5\), \(\varphi = 120°\). Koliko je \(\vec{a} \cdot \vec{b}\)?</p><p>\(10 \cdot (-\frac{1}{2}) = -5\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> \(|\vec{a}| = |\vec{b}| = 1\), \(\varphi = 60°\). Koliko je \((\vec{a} + \vec{b}) \cdot (\vec{a} - \vec{b})\)?</p><p>\(1 - 1 = 0\).</p></div>
             </div>
           </div>
         </section>
@@ -989,12 +861,8 @@
             <h2>Uporaba vektorskega računa v trikotniku in paralelogramu, razmerja, težišče</h2>
             <p>Dokazovanje geometrijskih trditev z vektorji.</p>
           </header>
-          <div class="sklop-cilji">
-            <h3>🎯 Cilji iz kataloga</h3>
-            <ul><li>Utemelji pravokotnost in vzporednost vektorjev ter uporablja vektorje pri reševanju geometrijskih problemov.</li></ul>
-          </div>
           <div class="sklop-teorija">
-            <h3>📖 Razlaga</h3>
+            <h3>Razlaga</h3>
             <div class="slike-vrsta"><figure class="slika">
 <svg viewBox="0 0 300 232" role="img" aria-label="Težišče z vektorji" xmlns="http://www.w3.org/2000/svg">
 <defs><marker id="g17-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g17-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g17-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g17-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g17-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g17-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
@@ -1052,23 +920,20 @@
             </ol>
           </div>
           <div class="sklop-naloge">
-            <h3>✏️ Tipi nalog v tem sklopu</h3>
+            <h3>Tipi nalog v tem sklopu</h3>
             <div class="tip-naloge" id="tip-18">
               <h4>Tip 18: Razmerje, v katerem se daljici sekata</h4>
-              <div class="prepoznaj">
-                <p><strong>Kako prepoznaš:</strong> „v kakšnem razmerju deli“, „dokažite z vektorji“, težišče, srednjica.</p>
-                <ul class="kljucne"><li>„v kakšnem razmerju“</li><li>„z vektorji dokažite“</li><li>„presečišče“</li><li>„težišče“</li></ul>
-              </div>
-              <h5>Univerzalni postopek</h5>
-              <ol>
-                <li>Postavi bazo \(\vec{a}, \vec{b}\) in izrazi vse potrebne vektorje.</li>
-                <li>Iskano točko zapiši na dva načina z neznankama \(x, y\).</li>
-                <li>Primerjaj koeficiente, reši sistem, zapiši razmerje.</li>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>V paralelogramu \(ABCD\) je \(M\) razpolovišče stranice \(BC\). V kakšnem razmerju deli diagonala \(BD\) daljico \(AM\)?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> „v kakšnem razmerju deli“, „dokažite z vektorji“, težišče, srednjica.</p><ul class="kljucne"><li>„v kakšnem razmerju“</li><li>„z vektorji dokažite“</li><li>„presečišče“</li><li>„težišče“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Postavi bazo in izrazi vse potrebne vektorje.</p><div class="na-nalogi"><p>\(\vec{a} = \vec{AB}\), \(\vec{b} = \vec{AD}\). \(\vec{AM} = \vec{a} + \frac{1}{2}\vec{b}\), \(\vec{BD} = \vec{b} - \vec{a}\).</p></div></li>
+              <li><p class="korak">Presečišče \(P\) zapiši na dva načina z neznankama.</p><div class="na-nalogi"><p>\(P\) na \(AM\): \(\vec{AP} = x\vec{AM} = x\vec{a} + \frac{x}{2}\vec{b}\). \(P\) na \(BD\): \(\vec{AP} = \vec{a} + y(\vec{b} - \vec{a}) = (1 - y)\vec{a} + y\vec{b}\).</p></div></li>
+              <li><p class="korak">Primerjaj koeficiente pri baznih vektorjih in reši sistem.</p><div class="na-nalogi"><p>\(x = 1 - y\) in \(\frac{x}{2} = y\). Torej \(x = 1 - \frac{x}{2}\), \(x = \frac{2}{3}\).</p></div></li>
+              <li><p class="korak">Zapiši razmerje.</p><div class="na-nalogi"><p>\(\vec{AP} = \frac{2}{3}\vec{AM}\), zato \(AP : PM = 2 : 1\).</p></div></li>
               </ol>
-              <div class="primer">
-                <p><strong>Primer:</strong> V paralelogramu \(ABCD\) je \(M\) razpolovišče \(BC\). V kakšnem razmerju deli diagonala \(BD\) daljico \(AM\)?</p>
-                <p>\(\vec{a} = \vec{AB}\), \(\vec{b} = \vec{AD}\). \(\vec{AP} = x\vec{AM} = x\vec{a} + \frac{x}{2}\vec{b}\) in \(\vec{AP} = \vec{a} + y(\vec{b} - \vec{a}) = (1 - y)\vec{a} + y\vec{b}\). Primerjava: \(x = 1 - y\), \(\frac{x}{2} = y\) → \(x = \frac{2}{3}\). Torej \(AP : PM = 2 : 1\).</p>
-              </div>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> V kakšnem razmerju se razpolavljata diagonali paralelograma?</p><p>\(1 : 1\) (obe se razpolovita).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> V kakšnem razmerju težišče deli težiščnico?</p><p>\(2 : 1\) od oglišča.</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Pokažite, da je srednjica trikotnika vzporedna stranici in pol krajša.</p><p>\(\vec{MN} = \frac{1}{2}\vec{AC} - \frac{1}{2}\vec{AB} = \frac{1}{2}\vec{BC}\).</p></div>
             </div>
           </div>
         </section>
@@ -1080,12 +945,8 @@
             <h2>Povezava med skalarnim produktom in kosinusnim izrekom</h2>
             <p>Kosinusni izrek je skalarni produkt v preobleki.</p>
           </header>
-          <div class="sklop-cilji">
-            <h3>🎯 Cilji iz kataloga</h3>
-            <ul><li>Izračuna kot med vektorjema in ga poveže s koti v trikotniku.</li></ul>
-          </div>
           <div class="sklop-teorija">
-            <h3>📖 Razlaga</h3>
+            <h3>Razlaga</h3>
             <figure class="slika slika--ozka">
 <svg viewBox="0 0 360 275" role="img" aria-label="Kosinusni izrek z vektorji" xmlns="http://www.w3.org/2000/svg">
 <defs><marker id="g19-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g19-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g19-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g19-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g19-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g19-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
@@ -1113,30 +974,26 @@
             <p>Zato kot v trikotniku s koordinatami oglišč izračunamo kar s skalarnim produktom vektorjev, ki <strong>izhajata iz istega oglišča</strong>.</p>
           </div>
           <div class="sklop-naloge">
-            <h3>✏️ Tipi nalog v tem sklopu</h3>
+            <h3>Tipi nalog v tem sklopu</h3>
             <div class="tip-naloge" id="tip-19">
               <h4>Tip 19: Koti, stranice in ploščina trikotnika iz koordinat oglišč</h4>
-              <div class="prepoznaj">
-                <p><strong>Kako prepoznaš:</strong> dana so oglišča \(A, B, C\) s koordinatami (pogosto v prostoru), iščejo kot, obseg ali ploščino.</p>
-                <ul class="kljucne"><li>„oglišča trikotnika so“</li><li>„notranji kot pri \(A\)“</li><li>„obseg“</li><li>„ploščina“</li></ul>
-              </div>
-              <h5>Univerzalni postopek</h5>
-              <ol>
-                <li>Za kot pri \(A\) izračunaj \(\vec{AB}\) in \(\vec{AC}\) (oba iz \(A\)!).</li>
-                <li>\(\cos\alpha = \frac{\vec{AB} \cdot \vec{AC}}{|\vec{AB}||\vec{AC}|}\).</li>
-                <li>Stranice so dolžine vektorjev; ploščina \(S = \frac{1}{2}|\vec{AB}||\vec{AC}|\sin\alpha\).</li>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Trikotnik ima oglišča \(A(1, 0, 0)\), \(B(3, 2, 1)\) in \(C(1, 3, 4)\). Izračunajte notranji kot pri \(A\) in ploščino.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> dana so oglišča \(A, B, C\) s koordinatami (pogosto v prostoru), iščejo kot, obseg ali ploščino.</p><ul class="kljucne"><li>„oglišča trikotnika so“</li><li>„notranji kot pri \(A\)“</li><li>„obseg“</li><li>„ploščina“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Za kot pri \(A\) izračunaj \(\vec{AB}\) in \(\vec{AC}\) (oba iz \(A\)).</p><div class="na-nalogi"><p>\(\vec{AB} = (2, 2, 1)\), \(\vec{AC} = (0, 3, 4)\).</p></div></li>
+              <li><p class="korak">Izračunaj skalarni produkt in dolžini, nato kosinus kota.</p><div class="na-nalogi"><p>\(\vec{AB} \cdot \vec{AC} = 0 + 6 + 4 = 10\), \(|\vec{AB}| = 3\), \(|\vec{AC}| = 5\). \(\cos\alpha = \frac{10}{15} = \frac{2}{3}\), \(\alpha \approx 48{,}19°\).</p></div></li>
+              <li><p class="korak">Ploščina: \(S = \frac{1}{2}|\vec{AB}||\vec{AC}|\sin\alpha\).</p><div class="na-nalogi"><p>\(\sin\alpha = \sqrt{1 - \frac{4}{9}} = \frac{\sqrt{5}}{3}\). \(S = \frac{1}{2} \cdot 3 \cdot 5 \cdot \frac{\sqrt{5}}{3} = \frac{5\sqrt{5}}{2} \approx 5{,}59\).</p></div></li>
               </ol>
-              <div class="primer">
-                <p><strong>Primer:</strong> \(A(1, 0, 0)\), \(B(3, 2, 1)\), \(C(1, 3, 4)\). Izračunajte kot pri \(A\).</p>
-                <p>\(\vec{AB} = (2, 2, 1)\), \(\vec{AC} = (0, 3, 4)\), \(\vec{AB} \cdot \vec{AC} = 10\), \(|\vec{AB}| = 3\), \(|\vec{AC}| = 5\). \(\cos\alpha = \frac{10}{15}\), \(\alpha \approx 48{,}19°\).</p>
-              </div>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Obseg trikotnika \(A(0, 0)\), \(B(3, 0)\), \(C(0, 4)\)?</p><p>\(3 + 4 + 5 = 12\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Kot pri \(B\) za \(A(0, 0)\), \(B(2, 0)\), \(C(2, 2)\)?</p><p>\(\vec{BA} = (-2, 0)\), \(\vec{BC} = (0, 2)\): \(90°\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Ploščina trikotnika z \(\vec{AB} = (4, 0, 0)\), \(\vec{AC} = (0, 3, 0)\)?</p><p>Pravokotna, \(S = 6\).</p></div>
             </div>
           </div>
         </section>
 
         <section class="subsection" id="kljuc">
           <div class="subsection-head">
-            <h2>🔎 Ključ: kateri tip naloge je to?</h2>
+            <h2>Ključ: kateri tip naloge je to?</h2>
             <p>Poišči besedo iz navodila naloge in skoči na pravi postopek.</p>
           </div>
           <div class="info-card">
@@ -1171,7 +1028,7 @@
 
         <section class="subsection">
           <div class="subsection-head">
-            <h2>⚠️ Pogoste napake</h2>
+            <h2>Pogoste napake</h2>
           </div>
           <div class="info-card">
             <ul>

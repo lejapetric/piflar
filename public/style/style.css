@@ -182,7 +182,6 @@ input:focus-visible {
     letter-spacing: -0.02em;
     transition: opacity var(--transition);
     flex-shrink: 0;
-    margin-right: auto;
 }
 
 .header-brand:hover {
@@ -196,6 +195,7 @@ input:focus-visible {
 /* Actions (datum) */
 .header-actions {
     display: flex;
+    margin-left: auto;
     align-items: center;
     gap: var(--space-4);
     color: var(--text-muted);
@@ -587,6 +587,12 @@ input:focus-visible {
     color: var(--sb-accent);
     border-left-color: var(--sb-accent);
     font-weight: 600;
+}
+
+/* podpoglavja (npr. 4.10.1) pod poglavjem */
+.nav-sub-list a.nav-pod {
+    padding-left: 72px;
+    font-size: 12.5px;
 }
 
 .nav-link-special {
@@ -2128,3 +2134,351 @@ mjx-container[jax="CHTML"][display="true"] {
     font-size: var(--text-sm);
     color: var(--text-muted);
 }
+
+/* ============================================================
+   31. ISKALNIK V GLAVI
+   ============================================================ */
+.iskalnik {
+    position: relative;
+    flex: 0 1 420px;
+    margin: 0 auto 0 var(--space-4);
+    display: flex;
+    align-items: center;
+}
+
+.iskalnik-ikona {
+    position: absolute;
+    left: 12px;
+    color: var(--text-muted);
+    pointer-events: none;
+}
+
+.iskalnik-vnos {
+    width: 100%;
+    height: 38px;
+    padding: 0 var(--space-3) 0 36px;
+    font: inherit;
+    font-size: var(--text-sm);
+    color: var(--text-primary);
+    background: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-radius: 999px;
+    transition: border-color var(--transition), box-shadow var(--transition), background var(--transition);
+}
+
+.iskalnik-vnos::placeholder {
+    color: var(--text-muted);
+}
+
+.iskalnik-vnos:focus {
+    outline: none;
+    background: var(--bg-card);
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px var(--primary-soft);
+}
+
+.iskalnik-vnos::-webkit-search-cancel-button {
+    cursor: pointer;
+}
+
+.iskalnik-predlogi {
+    position: absolute;
+    top: calc(100% + 8px);
+    left: 0;
+    right: 0;
+    min-width: 320px;
+    max-height: min(70vh, 520px);
+    overflow-y: auto;
+    padding: var(--space-2);
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    box-shadow: var(--shadow-lg);
+}
+
+.iskalnik-predlogi[hidden] {
+    display: none;
+}
+
+.iskalnik-predlog {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: var(--space-2) var(--space-3);
+    border-radius: var(--radius-sm);
+    color: var(--text-primary);
+    text-decoration: none;
+    font-size: var(--text-sm);
+    line-height: 1.45;
+}
+
+.iskalnik-predlog:hover,
+.iskalnik-predlog.aktiven,
+.iskalnik-vsi:hover,
+.iskalnik-vsi.aktiven {
+    background: var(--primary-soft);
+}
+
+.iskalnik-kje {
+    font-size: var(--text-xs);
+    color: var(--text-muted);
+}
+
+.iskalnik-vsi {
+    display: block;
+    margin-top: var(--space-1);
+    padding: var(--space-2) var(--space-3);
+    border-top: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: var(--primary);
+    text-decoration: none;
+}
+
+.iskalnik-prazno {
+    padding: var(--space-3);
+    font-size: var(--text-sm);
+    color: var(--text-muted);
+}
+
+/* Okrogli gumbi v glavi (tema, iskanje na telefonu) */
+.header-ikona {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    border: 1px solid var(--border-color);
+    border-radius: 999px;
+    background: var(--bg-card);
+    color: var(--text-secondary);
+    cursor: pointer;
+    transition: color var(--transition), border-color var(--transition), background var(--transition);
+}
+
+.header-ikona:hover {
+    color: var(--primary);
+    border-color: var(--primary);
+}
+
+.iskalnik-odpri {
+    display: none;
+}
+
+.tema-sonce,
+[data-theme="dark"] .tema-luna {
+    display: none;
+}
+
+[data-theme="dark"] .tema-sonce {
+    display: block;
+}
+
+/* Iskana beseda v odlomku in na strani */
+.iskanje-odlomek {
+    overflow-wrap: anywhere;
+}
+
+.iskanje-odlomek mark,
+.iskanje-oznaka {
+    background: rgba(250, 204, 21, 0.4);
+    color: inherit;
+    border-radius: 3px;
+    padding: 0 1px;
+}
+
+.iskanje-odlomek mark {
+    font-weight: 700;
+}
+
+.iskanje-oznaka--izbrana {
+    background: #F59E0B;
+    color: #171A2E;
+    box-shadow: 0 0 0 3px rgba(245, 158, 11, 0.35);
+    scroll-margin-top: calc(var(--header-height) + 24px);
+}
+
+@media (max-width: 1100px) {
+    .header-date {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .iskalnik {
+        display: none;
+    }
+
+    .iskalnik-odpri {
+        display: inline-flex;
+    }
+
+    .header--iskanje .iskalnik {
+        display: flex;
+        flex: 1 1 auto;
+        margin: 0;
+        position: static;
+    }
+
+    .header--iskanje .header-brand,
+    .header--iskanje .header-actions > :not(.iskalnik-odpri) {
+        display: none;
+    }
+
+    .header--iskanje .iskalnik-ikona {
+        left: calc(var(--space-4) + 36px + var(--space-3) + 12px);
+    }
+
+    .header--iskanje .iskalnik-predlogi {
+        top: var(--header-height);
+        left: var(--space-3);
+        right: var(--space-3);
+        min-width: 0;
+    }
+
+    .header-actions {
+        gap: var(--space-3);
+    }
+}
+
+/* ============================================================
+   32. STRAN Z REZULTATI ISKANJA
+   ============================================================ */
+.iskanje-povzetek {
+    margin-bottom: var(--space-5);
+    color: var(--text-secondary);
+}
+
+.iskanje-skupina {
+    margin-bottom: var(--space-6);
+}
+
+.iskanje-skupina h2 {
+    display: flex;
+    align-items: baseline;
+    gap: var(--space-3);
+    margin-bottom: var(--space-3);
+    font-family: var(--font-display);
+    font-size: var(--text-xl);
+}
+
+.iskanje-skupina h2 a {
+    color: var(--text-primary);
+    text-decoration: none;
+}
+
+.iskanje-skupina h2 a:hover {
+    color: var(--primary);
+}
+
+.iskanje-stevec {
+    font-family: var(--font-body);
+    font-size: var(--text-xs);
+    font-weight: 600;
+    color: var(--text-muted);
+}
+
+.iskanje-predmet {
+    font-family: var(--font-body);
+    font-size: var(--text-xs);
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--primary);
+}
+
+.iskanje-zadetki {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+.iskanje-zadetek {
+    display: block;
+    padding: var(--space-3) var(--space-4);
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    color: var(--text-primary);
+    text-decoration: none;
+    transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.iskanje-zadetek:hover {
+    border-color: var(--primary);
+    box-shadow: var(--shadow-sm);
+}
+
+.iskanje-zadetek .iskalnik-kje {
+    display: block;
+    margin-bottom: 2px;
+}
+
+.iskanje-prazno {
+    padding: var(--space-6);
+    text-align: center;
+    color: var(--text-secondary);
+    background: var(--bg-card);
+    border: 1px dashed var(--border-color);
+    border-radius: var(--radius);
+}
+
+/* ============================================================
+   33. TEMNI NAČIN
+   ============================================================ */
+[data-theme="dark"] {
+    color-scheme: dark;
+
+    --primary: #7B80F7;
+    --primary-dark: #A5B4FC;
+    --primary-light: #6366F1;
+    --primary-soft: rgba(123, 128, 247, 0.16);
+    --secondary: #38BDF8;
+    --success: #22C55E;
+    --warning: #F59E0B;
+    --danger: #F87171;
+
+    --text-primary: #E6E8F2;
+    --text-secondary: #A9AFC6;
+    --text-muted: #7A829C;
+
+    --bg-primary: #0E1120;
+    --bg-card: #161A2D;
+
+    --border-color: #2A2F48;
+    --shadow-sm: 0 1px 2px rgba(0, 0, 0, 0.4);
+    --shadow: 0 12px 28px -14px rgba(0, 0, 0, 0.7);
+    --shadow-lg: 0 20px 44px -16px rgba(0, 0, 0, 0.75);
+
+    --sb-bg: #161A2D;
+    --sb-border: #2A2F48;
+    --sb-text: #E6E8F2;
+    --sb-text-muted: #A9AFC6;
+    --sb-hover-bg: #1E2339;
+    --sb-active-bg: rgba(123, 128, 247, 0.16);
+    --sb-accent: #7B80F7;
+    --sb-accent-dark: #A5B4FC;
+}
+
+[data-theme="dark"] #sidebar::-webkit-scrollbar-thumb { background: #343A57; }
+[data-theme="dark"] #sidebar::-webkit-scrollbar-thumb:hover { background: #454C6E; }
+[data-theme="dark"] .sidebar-nav .nav-group,
+[data-theme="dark"] .sidebar-nav .nav-sub-group,
+[data-theme="dark"] .sidebar-nav .nav-sub-sub-group,
+[data-theme="dark"] .nav-link-special { border-color: var(--border-color); }
+[data-theme="dark"] .dropdown-toggle:hover,
+[data-theme="dark"] .sidebar-nav .nav-sub-header:hover .dropdown-toggle:hover { background: var(--bg-card); }
+[data-theme="dark"] .overlay { background: rgba(0, 0, 0, 0.55); }
+[data-theme="dark"] .result-box.success { background: rgba(34, 197, 94, 0.12); }
+[data-theme="dark"] .result-box.error,
+[data-theme="dark"] .narocnina-obvestilo.napaka { background: rgba(248, 113, 113, 0.12); }
+[data-theme="dark"] .hero { background: linear-gradient(180deg, var(--bg-card) 0%, var(--bg-primary) 100%); }
+[data-theme="dark"] .cta-band .btn-primary,
+[data-theme="dark"] .cta-band .btn-primary:hover { color: #3730A3; }
+[data-theme="dark"] ::selection { background: rgba(123, 128, 247, 0.35); color: #FFFFFF; }
+[data-theme="dark"] .iskanje-odlomek mark,
+[data-theme="dark"] .iskanje-oznaka { background: rgba(250, 204, 21, 0.28); }
+[data-theme="dark"] .iskanje-oznaka--izbrana { background: #F59E0B; color: #171A2E; }

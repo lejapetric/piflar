@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
   <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
   <link rel="stylesheet" href="/style/snov.css">
 </head>
 <body>
@@ -32,7 +33,7 @@
         </header>
 
         <div class="matura-formule">
-          <h3>📋 Formule na maturi</h3>
+          <h3>Formule na maturi</h3>
           <p>Na listu s formulami je <strong>ploščina trikotnika s koordinatami oglišč</strong>. Razdaljo in razpolovišče znaj na pamet:</p>
           <div class="matura-grid">
             <div class="matura-levo">
@@ -55,7 +56,7 @@
             <li><a href="#sklop-1"><span class="kazalo-st">4.9.1</span> Množice točk v ravnini</a></li>
             <li><a href="#sklop-2"><span class="kazalo-st">4.9.2</span> Razdalja med točkama v koordinatni ravnini</a></li>
             <li><a href="#sklop-3"><span class="kazalo-st">4.9.3</span> Ploščina trikotnika</a></li>
-            <li><a href="#kljuc"><span class="kazalo-st">🔎</span> Ključ: kateri tip naloge je to?</a></li>
+            <li><a href="#kljuc"><span class="kazalo-st">?</span> Ključ: kateri tip naloge je to?</a></li>
           </ol>
         </nav>
 
@@ -66,16 +67,8 @@
             <h2>Množice točk v ravnini</h2>
             <p>Od pogoja na koordinate do območja na sliki in nazaj.</p>
           </header>
-          <div class="sklop-cilji">
-            <h3>🎯 Cilji iz kataloga</h3>
-            <ul>
-              <li>Uporablja pravokotni koordinatni sistem v ravnini.</li>
-              <li>Odčita in nariše množico točk v koordinatni ravnini ob danih pogojih.</li>
-              <li>Uporablja zvezo med urejenimi pari števil in točkami na ravnini.</li>
-            </ul>
-          </div>
           <div class="sklop-teorija">
-            <h3>📖 Razlaga</h3>
+            <h3>Razlaga</h3>
             <p>Dve pravokotni številski premici (abscisna os \(x\) in ordinatna os \(y\)) s skupnim izhodiščem \(O(0, 0)\) tvorita <strong>pravokotni koordinatni sistem</strong>. Vsaki točki pripada natanko en urejen par \((x, y)\): najprej abscisa, nato ordinata. \((2, 3) \ne (3, 2)\).</p>
             <figure class="slika slika--ozka">
 <svg viewBox="0 0 320 280" role="img" aria-label="Kvadranti in zrcalne točke" xmlns="http://www.w3.org/2000/svg">
@@ -173,57 +166,47 @@
             <div class="pazi"><strong>Pazi:</strong> mejo, ki spada zraven (\(\le\), \(\ge\)), rišemo s polno črto, mejo, ki ne spada (\(&lt;\), \(&gt;\)), s črtkano. Krajišča: poln krogec je vključen, prazen ni.</div>
           </div>
           <div class="sklop-naloge">
-            <h3>✏️ Tipi nalog v tem sklopu</h3>
+            <h3>Tipi nalog v tem sklopu</h3>
             <div class="tip-naloge" id="tip-1">
               <h4>Tip 1: Nariši množico točk, podano s pogoji</h4>
-              <div class="prepoznaj">
-                <p><strong>Kako prepoznaš:</strong> množica je zapisana kot \(\{(x, y);\ \ldots\}\) z neenačbami, absolutno vrednostjo ali predznaki.</p>
-                <ul class="kljucne"><li>„v koordinatnem sistemu označite množico“</li><li>\(\{(x, y);\ |x| \le 2,\ y &gt; 1\}\)</li></ul>
-              </div>
-              <h5>Univerzalni postopek</h5>
-              <ol>
-                <li>Vsak pogoj spremeni v enačbo meje (\(x = 2\), \(y = 1\), \(y = x\)) in nariši mejno črto (polno ali črtkano).</li>
-                <li>Za vsak pogoj določi pravo stran (preveri s poskusno točko, npr. \(O(0, 0)\)).</li>
-                <li>Pri „in“ osenči le del, ki ustreza vsem pogojem; pri „ali“ vse.</li>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>V koordinatnem sistemu narišite množico \(\{(x, y);\ x \ge 1,\ y &lt; 2\}\).</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> množica je zapisana kot \(\{(x, y);\ \ldots\}\) z neenačbami, absolutno vrednostjo ali predznaki.</p><ul class="kljucne"><li>„v koordinatnem sistemu označite množico“</li><li>\(\{(x, y);\ |x| \le 2,\ y &gt; 1\}\)</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Vsak pogoj spremeni v enačbo meje in nariši mejno črto: polno pri \(\le, \ge\), črtkano pri \(&lt;, &gt;\).</p><div class="na-nalogi"><p>\(x = 1\): navpična polna črta. \(y = 2\): vodoravna črtkana črta.</p></div></li>
+              <li><p class="korak">Za vsak pogoj določi pravo stran (preveri s poskusno točko, npr. \(O(0, 0)\)).</p><div class="na-nalogi"><p>\(x \ge 1\): desno od \(x = 1\) (\(O\) ne ustreza). \(y &lt; 2\): pod \(y = 2\) (\(O\) ustreza).</p></div></li>
+              <li><p class="korak">Pri „in“ (vejica) osenči le del, ki ustreza vsem pogojem; pri „ali“ vse.</p><div class="na-nalogi"><p>Osenčimo neomejeno območje desno od \(x = 1\) in pod \(y = 2\) (prva slika v razlagi).</p></div></li>
               </ol>
-              <div class="primer">
-                <p><strong>Primer:</strong> Narišite \(\{(x, y);\ x \ge 1,\ y &lt; 2\}\).</p>
-                <p>Navpična meja \(x = 1\) (polna), desno od nje. Vodoravna meja \(y = 2\) (črtkana), pod njo. Presek je neomejen „kot“ desno spodaj (prva slika zgoraj).</p>
-              </div>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Narišite \(\{(x, y);\ |y| \le 1\}\).</p><p>Vodoravni pas med \(y = -1\) in \(y = 1\), meji polni.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Narišite \(\{(x, y);\ x &gt; 0,\ y &gt; 0\}\).</p><p>Prvi kvadrant brez osi.</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Narišite \(\{(x, y);\ y \ge x\}\).</p><p>Polna premica \(y = x\) in vse nad njo (točka \((0, 1)\) ustreza).</p></div>
             </div>
             <div class="tip-naloge" id="tip-2">
               <h4>Tip 2: Zapiši pogoje za narisano množico</h4>
-              <div class="prepoznaj">
-                <p><strong>Kako prepoznaš:</strong> na sliki je osenčeno območje, zapisati moraš množico.</p>
-                <ul class="kljucne"><li>„zapišite množico točk na sliki“</li><li>„s pogoji opišite“</li></ul>
-              </div>
-              <h5>Univerzalni postopek</h5>
-              <ol>
-                <li>Za vsako mejno črto zapiši njeno enačbo.</li>
-                <li>Določi, na kateri strani je območje (večje/manjše).</li>
-                <li>Iz vrste črte določi, ali je neenakost stroga.</li>
-                <li>Pogoje poveži z vejico („in“).</li>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Na sliki je osenčen navpični pas med premicama \(x = -2\) in \(x = 2\), obe meji sta narisani polno. Zapišite množico s pogoji.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> na sliki je osenčeno območje, zapisati moraš množico.</p><ul class="kljucne"><li>„zapišite množico točk na sliki“</li><li>„s pogoji opišite“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Za vsako mejno črto zapiši njeno enačbo.</p><div class="na-nalogi"><p>\(x = -2\) in \(x = 2\).</p></div></li>
+              <li><p class="korak">Določi, na kateri strani je območje.</p><div class="na-nalogi"><p>Desno od \(x = -2\) in levo od \(x = 2\): \(x \ge -2\) in \(x \le 2\).</p></div></li>
+              <li><p class="korak">Iz vrste črte določi, ali je neenakost stroga (črtkano) ali ne (polno).</p><div class="na-nalogi"><p>Obe meji sta polni, neenakosti nista strogi.</p></div></li>
+              <li><p class="korak">Pogoje poveži in po možnosti zapiši krajše.</p><div class="na-nalogi"><p>\(\{(x, y);\ -2 \le x \le 2\} = \{(x, y);\ |x| \le 2\}\).</p></div></li>
               </ol>
-              <div class="primer">
-                <p><strong>Primer:</strong> Osenčen je navpični pas med \(x = -2\) in \(x = 2\), obe meji polni.</p>
-                <p>\(\{(x, y);\ -2 \le x \le 2\} = \{(x, y);\ |x| \le 2\}\).</p>
-              </div>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Osenčen je tretji kvadrant brez osi. Zapišite množico.</p><p>\(\{(x, y);\ x &lt; 0,\ y &lt; 0\}\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Osenčeno je vse nad črtkano premico \(y = 3\).</p><p>\(\{(x, y);\ y &gt; 3\}\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Osenčen je kvadrat z oglišči \((\pm 1, \pm 1)\), skupaj z robom.</p><p>\(\{(x, y);\ |x| \le 1,\ |y| \le 1\}\).</p></div>
             </div>
             <div class="tip-naloge" id="tip-3">
               <h4>Tip 3: Simetrične točke in kvadranti</h4>
-              <div class="prepoznaj">
-                <p><strong>Kako prepoznaš:</strong> zrcaljenje točke čez os ali izhodišče, v katerem kvadrantu leži točka s parametrom.</p>
-                <ul class="kljucne"><li>„prezrcalite čez os“</li><li>„simetrična glede na izhodišče“</li><li>„v katerem kvadrantu“</li></ul>
-              </div>
-              <h5>Univerzalni postopek</h5>
-              <ol>
-                <li>Čez os \(x\): \((x, -y)\). Čez os \(y\): \((-x, y)\). Čez \(O\): \((-x, -y)\). Čez \(y = x\): \((y, x)\).</li>
-                <li>Za kvadrant poglej predznaka obeh koordinat (pri parametru reši neenačbi).</li>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Za katere vrednosti \(a\) leži točka \(T(a - 2,\ 3 - a)\) v I. kvadrantu?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> zrcaljenje točke čez os ali izhodišče, v katerem kvadrantu leži točka s parametrom.</p><ul class="kljucne"><li>„prezrcalite čez os“</li><li>„simetrična glede na izhodišče“</li><li>„v katerem kvadrantu“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Zapiši predznaka koordinat v iskanem kvadrantu (I: \(+, +\); II: \(-, +\); III: \(-, -\); IV: \(+, -\)).</p><div class="na-nalogi"><p>I. kvadrant: \(x &gt; 0\) in \(y &gt; 0\).</p></div></li>
+              <li><p class="korak">Zapiši neenačbi za koordinati in ju reši.</p><div class="na-nalogi"><p>\(a - 2 &gt; 0\) da \(a &gt; 2\). \(3 - a &gt; 0\) da \(a &lt; 3\).</p></div></li>
+              <li><p class="korak">Vzemi presek.</p><div class="na-nalogi"><p>\(2 &lt; a &lt; 3\).</p></div></li>
               </ol>
-              <div class="primer">
-                <p><strong>Primer:</strong> Za katere \(a\) leži \(T(a - 2,\ 3 - a)\) v I. kvadrantu?</p>
-                <p>\(a - 2 &gt; 0\) in \(3 - a &gt; 0\) → \(2 &lt; a &lt; 3\).</p>
-              </div>
+              <div class="pazi"><strong>Zrcaljenja:</strong> čez os \(x\) je \((x, -y)\), čez os \(y\) je \((-x, y)\), čez izhodišče \((-x, -y)\), čez simetralo lihih kvadrantov \(y = x\) pa \((y, x)\).</div>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Prezrcalite \(A(3, -5)\) čez os \(y\).</p><p>\(A'(-3, -5)\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Prezrcalite \(B(2, 7)\) čez premico \(y = x\).</p><p>\(B'(7, 2)\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> V katerem kvadrantu je \(C(-4, 1)\)?</p><p>V II. kvadrantu.</p></div>
             </div>
           </div>
         </section>
@@ -235,12 +218,8 @@
             <h2>Razdalja med točkama v koordinatni ravnini</h2>
             <p>Pitagorov izrek v koordinatah, razpolovišče in težišče.</p>
           </header>
-          <div class="sklop-cilji">
-            <h3>🎯 Cilji iz kataloga</h3>
-            <ul><li>Izračuna razdaljo med točkama ter uporabi formulo v matematičnih problemih.</li></ul>
-          </div>
           <div class="sklop-teorija">
-            <h3>📖 Razlaga</h3>
+            <h3>Razlaga</h3>
             <figure class="slika slika--ozka">
 <svg viewBox="0 0 360 290" role="img" aria-label="Razdalja med točkama" xmlns="http://www.w3.org/2000/svg">
 <defs><marker id="g5-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g5-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g5-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g5-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g5-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g5-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
@@ -272,56 +251,45 @@
             <p>Razpolovišče \(M\) daljice \(AB\) ima koordinati enaki povprečju koordinat krajišč: \(M\left(\frac{x_1 + x_2}{2}, \frac{y_1 + y_2}{2}\right)\). Težišče trikotnika je povprečje vseh treh oglišč.</p>
           </div>
           <div class="sklop-naloge">
-            <h3>✏️ Tipi nalog v tem sklopu</h3>
+            <h3>Tipi nalog v tem sklopu</h3>
             <div class="tip-naloge" id="tip-4">
               <h4>Tip 4: Razdalja, obseg in vrsta trikotnika</h4>
-              <div class="prepoznaj">
-                <p><strong>Kako prepoznaš:</strong> dane so koordinate točk, iščejo dolžino daljice, obseg ali ali je trikotnik enakokrak/pravokoten.</p>
-                <ul class="kljucne"><li>„razdalja med točkama“</li><li>„obseg trikotnika“</li><li>„ali je trikotnik enakokrak / pravokoten“</li></ul>
-              </div>
-              <h5>Univerzalni postopek</h5>
-              <ol>
-                <li>Izračunaj dolžine vseh potrebnih daljic s formulo za razdaljo.</li>
-                <li>Obseg: seštej. Enakokrak: dve dolžini enaki. Pravokoten: velja \(c^2 = a^2 + b^2\) za najdaljšo \(c\) (računaj s kvadrati, brez korenov).</li>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Ali je trikotnik z oglišči \(A(0, 0)\), \(B(4, 2)\), \(C(1, 3)\) pravokoten?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> dane so koordinate točk, iščejo dolžino daljice, obseg ali ali je trikotnik enakokrak/pravokoten.</p><ul class="kljucne"><li>„razdalja med točkama“</li><li>„obseg trikotnika“</li><li>„ali je trikotnik enakokrak / pravokoten“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Izračunaj kvadrate dolžin stranic: \(d^2 = (x_2 - x_1)^2 + (y_2 - y_1)^2\).</p><div class="na-nalogi"><p>\(|AB|^2 = 16 + 4 = 20\), \(|AC|^2 = 1 + 9 = 10\), \(|BC|^2 = 9 + 1 = 10\).</p></div></li>
+              <li><p class="korak">Za obseg korene seštej. Za enakokrak trikotnik primerjaj dolžine. Za pravokotnega preveri \(c^2 = a^2 + b^2\) za najdaljšo stranico.</p><div class="na-nalogi"><p>Najdaljša je \(AB\): \(10 + 10 = 20\), pogoj velja.</p></div></li>
+              <li><p class="korak">Odgovori.</p><div class="na-nalogi"><p>Trikotnik je pravokoten s pravim kotom pri \(C\) (in enakokrak, ker je \(|AC| = |BC|\)).</p></div></li>
               </ol>
-              <div class="primer">
-                <p><strong>Primer:</strong> Ali je trikotnik \(A(0, 0)\), \(B(4, 2)\), \(C(1, 3)\) pravokoten?</p>
-                <p>\(|AB|^2 = 20\), \(|AC|^2 = 10\), \(|BC|^2 = 9 + 1 = 10\). \(10 + 10 = 20\) ✓ — pravi kot je pri \(C\) (trikotnik je tudi enakokrak).</p>
-              </div>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Razdalja med \(A(-1, 2)\) in \(B(2, 6)\)?</p><p>\(\sqrt{9 + 16} = 5\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Obseg trikotnika \(A(0, 0)\), \(B(6, 0)\), \(C(0, 8)\)?</p><p>\(6 + 8 + 10 = 24\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Ali je trikotnik \(A(0, 0)\), \(B(2, 0)\), \(C(1, 3)\) enakokrak?</p><p>\(|AC| = |BC| = \sqrt{10}\), da.</p></div>
             </div>
             <div class="tip-naloge" id="tip-5">
               <h4>Tip 5: Neznana koordinata pri dani razdalji</h4>
-              <div class="prepoznaj">
-                <p><strong>Kako prepoznaš:</strong> točka ima eno neznano koordinato in je od druge točke oddaljena za dano razdaljo ali enako oddaljena od dveh točk.</p>
-                <ul class="kljucne"><li>„na osi \(x\) poiščite točko“</li><li>„enako oddaljena od \(A\) in \(B\)“</li><li>„oddaljena 5 enot“</li></ul>
-              </div>
-              <h5>Univerzalni postopek</h5>
-              <ol>
-                <li>Neznano točko zapiši s parametrom (na osi \(x\): \(T(x, 0)\)).</li>
-                <li>Zapiši pogoj z razdaljami in obe strani kvadriraj (koreni izginejo).</li>
-                <li>Reši enačbo; pri dani razdalji sta pogosto dve rešitvi.</li>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Na osi \(x\) poiščite točko, ki je enako oddaljena od točk \(A(1, 3)\) in \(B(5, 1)\).</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> točka ima eno neznano koordinato in je od druge točke oddaljena za dano razdaljo ali enako oddaljena od dveh točk.</p><ul class="kljucne"><li>„na osi \(x\) poiščite točko“</li><li>„enako oddaljena od \(A\) in \(B\)“</li><li>„oddaljena 5 enot“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Neznano točko zapiši s parametrom.</p><div class="na-nalogi"><p>Na osi \(x\): \(T(x, 0)\).</p></div></li>
+              <li><p class="korak">Zapiši pogoj z razdaljami in obe strani kvadriraj.</p><div class="na-nalogi"><p>\(|TA|^2 = |TB|^2\): \((x - 1)^2 + 9 = (x - 5)^2 + 1\).</p></div></li>
+              <li><p class="korak">Reši enačbo. Pri dani razdalji sta pogosto dve rešitvi.</p><div class="na-nalogi"><p>\(x^2 - 2x + 10 = x^2 - 10x + 26\), \(8x = 16\), \(x = 2\). \(T(2, 0)\).</p></div></li>
               </ol>
-              <div class="primer">
-                <p><strong>Primer:</strong> Na osi \(x\) poiščite točko, ki je enako oddaljena od \(A(1, 3)\) in \(B(5, 1)\).</p>
-                <p>\((x - 1)^2 + 9 = (x - 5)^2 + 1\) → \(-2x + 10 = -10x + 26\) → \(x = 2\). \(T(2, 0)\).</p>
-              </div>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Točka \(T(x, 2)\) je od \(A(1, -2)\) oddaljena 5. Določite \(x\).</p><p>\((x - 1)^2 + 16 = 25\), \(x = 4\) ali \(x = -2\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Na osi \(y\) poiščite točko, enako oddaljeno od \(A(2, 0)\) in \(B(0, 4)\).</p><p>\(4 + y^2 = (y - 4)^2\), \(y = 1{,}5\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Za kateri \(m\) je razdalja med \((m, 1)\) in \((3, 5)\) enaka 5?</p><p>\((m - 3)^2 = 9\): \(m = 0\) ali \(m = 6\).</p></div>
             </div>
             <div class="tip-naloge" id="tip-6">
               <h4>Tip 6: Razpolovišče, krajišče in težišče</h4>
-              <div class="prepoznaj">
-                <p><strong>Kako prepoznaš:</strong> iščejo razpolovišče, manjkajoče krajišče daljice pri znanem razpolovišču ali težišče.</p>
-                <ul class="kljucne"><li>„razpolovišče“</li><li>„središče daljice“</li><li>„težišče trikotnika“</li></ul>
-              </div>
-              <h5>Univerzalni postopek</h5>
-              <ol>
-                <li>Razpolovišče: povprečje koordinat.</li>
-                <li>Manjkajoče krajišče: \(x_2 = 2x_M - x_1\), \(y_2 = 2y_M - y_1\).</li>
-                <li>Težišče: vsoto koordinat deli s 3.</li>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Razpolovišče daljice \(AB\) je \(M(2, -1)\), krajišče \(A(5, 3)\). Določite krajišče \(B\).</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> iščejo razpolovišče, manjkajoče krajišče daljice pri znanem razpolovišču ali težišče.</p><ul class="kljucne"><li>„razpolovišče“</li><li>„središče daljice“</li><li>„težišče trikotnika“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Zapiši formulo: razpolovišče je povprečje koordinat.</p><div class="na-nalogi"><p>\(2 = \frac{5 + x_B}{2}\), \(-1 = \frac{3 + y_B}{2}\).</p></div></li>
+              <li><p class="korak">Manjkajoče krajišče: \(x_2 = 2x_M - x_1\), \(y_2 = 2y_M - y_1\).</p><div class="na-nalogi"><p>\(x_B = 4 - 5 = -1\), \(y_B = -2 - 3 = -5\).</p></div></li>
+              <li><p class="korak">Zapiši rezultat in preveri.</p><div class="na-nalogi"><p>\(B(-1, -5)\). Preizkus: \(\left(\frac{5 - 1}{2}, \frac{3 - 5}{2}\right) = (2, -1)\).</p></div></li>
               </ol>
-              <div class="primer">
-                <p><strong>Primer:</strong> Razpolovišče daljice \(AB\) je \(M(2, -1)\), \(A(5, 3)\). Določite \(B\).</p>
-                <p>\(B(2 \cdot 2 - 5,\ 2 \cdot (-1) - 3) = B(-1, -5)\).</p>
-              </div>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Razpolovišče \(A(-3, 4)\) in \(B(5, 0)\)?</p><p>\(M(1, 2)\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Težišče trikotnika \(A(1, 1)\), \(B(5, 2)\), \(C(3, 6)\)?</p><p>\(T(3, 3)\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Središče kroga je \(S(0, 0)\), en konec premera je \((3, 4)\). Kje je drugi?</p><p>\((-3, -4)\).</p></div>
             </div>
           </div>
         </section>
@@ -333,12 +301,8 @@
             <h2>Ploščina trikotnika</h2>
             <p>Ploščina iz koordinat oglišč, brez višine.</p>
           </header>
-          <div class="sklop-cilji">
-            <h3>🎯 Cilji iz kataloga</h3>
-            <ul><li>Izračuna ploščino trikotnika ter uporabi formulo v matematičnih problemih.</li></ul>
-          </div>
           <div class="sklop-teorija">
-            <h3>📖 Razlaga</h3>
+            <h3>Razlaga</h3>
             <p>\[S = \frac{1}{2}\left|(x_2 - x_1)(y_3 - y_1) - (x_3 - x_1)(y_2 - y_1)\right|\]</p>
             <p>Formula izhaja iz vektorjev \(\vec{AB} = (x_2 - x_1, y_2 - y_1)\) in \(\vec{AC} = (x_3 - x_1, y_3 - y_1)\): ploščina je polovica absolutne vrednosti „navzkrižnega“ produkta njunih komponent. Ni pomembno, katero oglišče je \(A\).</p>
             <figure class="slika slika--ozka">
@@ -394,64 +358,54 @@
 </figure>
           </div>
           <div class="sklop-naloge">
-            <h3>✏️ Tipi nalog v tem sklopu</h3>
+            <h3>Tipi nalog v tem sklopu</h3>
             <div class="tip-naloge" id="tip-7">
               <h4>Tip 7: Ploščina trikotnika iz koordinat</h4>
-              <div class="prepoznaj">
-                <p><strong>Kako prepoznaš:</strong> dana so tri oglišča s koordinatami.</p>
-                <ul class="kljucne"><li>„ploščina trikotnika z oglišči“</li><li>„izračunajte ploščino“</li></ul>
-              </div>
-              <h5>Univerzalni postopek</h5>
-              <ol>
-                <li>Izberi \(A\) in izračunaj razlike \(x_2 - x_1\), \(y_2 - y_1\), \(x_3 - x_1\), \(y_3 - y_1\).</li>
-                <li>Vstavi v formulo, izračunaj in vzemi absolutno vrednost.</li>
-                <li>Če iščeš višino: \(v_a = \frac{2S}{a}\), kjer je \(a\) dolžina stranice (razdalja).</li>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Izračunajte ploščino trikotnika z oglišči \(A(-1, 2)\), \(B(3, -1)\) in \(C(4, 5)\).</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> dana so tri oglišča s koordinatami.</p><ul class="kljucne"><li>„ploščina trikotnika z oglišči“</li><li>„izračunajte ploščino“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Izberi \(A\) in izračunaj razlike koordinat do \(B\) in \(C\).</p><div class="na-nalogi"><p>\(x_2 - x_1 = 4\), \(y_2 - y_1 = -3\), \(x_3 - x_1 = 5\), \(y_3 - y_1 = 3\).</p></div></li>
+              <li><p class="korak">Vstavi v formulo \(S = \frac{1}{2}\big|(x_2 - x_1)(y_3 - y_1) - (x_3 - x_1)(y_2 - y_1)\big|\).</p><div class="na-nalogi"><p>\(S = \frac{1}{2}|4 \cdot 3 - 5 \cdot (-3)| = \frac{1}{2}|12 + 15|\).</p></div></li>
+              <li><p class="korak">Izračunaj in vzemi absolutno vrednost. Za višino uporabi \(v_a = \frac{2S}{a}\).</p><div class="na-nalogi"><p>\(S = 13{,}5\).</p></div></li>
               </ol>
-              <div class="primer">
-                <p><strong>Primer:</strong> \(A(-1, 2)\), \(B(3, -1)\), \(C(4, 5)\).</p>
-                <p>\(S = \frac{1}{2}|4 \cdot 3 - 5 \cdot (-3)| = \frac{1}{2}|12 + 15| = 13{,}5\).</p>
-              </div>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Ploščina \(A(0, 0)\), \(B(4, 0)\), \(C(0, 3)\)?</p><p>\(\frac{1}{2}|4 \cdot 3 - 0| = 6\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Ploščina \(A(1, 1)\), \(B(6, 2)\), \(C(3, 5)\)?</p><p>\(\frac{1}{2}|5 \cdot 4 - 2 \cdot 1| = 9\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Trikotnik \(A(0, 0)\), \(B(6, 0)\), \(C(2, 4)\). Kolikšna je višina na \(AB\)?</p><p>\(S = 12\), \(v = \frac{24}{6} = 4\).</p></div>
             </div>
             <div class="tip-naloge" id="tip-8">
               <h4>Tip 8: Ploščina mnogokotnika na mreži</h4>
-              <div class="prepoznaj">
-                <p><strong>Kako prepoznaš:</strong> štirikotnik ali petkotnik na koordinatni mreži (slika).</p>
-                <ul class="kljucne"><li>„ploščina osenčenega lika“</li><li>„štirikotnik z oglišči“</li></ul>
-              </div>
-              <h5>Univerzalni postopek</h5>
-              <ol>
-                <li>Odčitaj koordinate oglišč.</li>
-                <li>Razdeli lik z diagonalo na trikotnike (ali ga vpiši v pravokotnik in odštej robne trikotnike).</li>
-                <li>Seštej ploščine trikotnikov.</li>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Izračunajte ploščino štirikotnika \(A(0, 3)\), \(B(4, 4)\), \(C(5, 2)\), \(D(2, 0)\).</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> štirikotnik ali petkotnik na koordinatni mreži (slika).</p><ul class="kljucne"><li>„ploščina osenčenega lika“</li><li>„štirikotnik z oglišči“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Odčitaj koordinate oglišč.</p><div class="na-nalogi"><p>Oglišča so dana.</p></div></li>
+              <li><p class="korak">Razdeli lik z diagonalo na trikotnike (ali ga vpiši v pravokotnik in odštej robne trikotnike).</p><div class="na-nalogi"><p>Diagonala \(AC\) da trikotnika \(ABC\) in \(ACD\).</p></div></li>
+              <li><p class="korak">Izračunaj ploščini trikotnikov (<a href="#tip-7">Tip 7</a>).</p><div class="na-nalogi"><p>\(S_{ABC} = \frac{1}{2}|4 \cdot (-1) - 5 \cdot 1| = 4{,}5\), \(S_{ACD} = \frac{1}{2}|5 \cdot (-3) - 2 \cdot (-1)| = 6{,}5\).</p></div></li>
+              <li><p class="korak">Seštej.</p><div class="na-nalogi"><p>\(S = 4{,}5 + 6{,}5 = 11\).</p></div></li>
               </ol>
-              <div class="primer">
-                <p><strong>Primer:</strong> Štirikotnik \(A(0, 3)\), \(B(4, 4)\), \(C(5, 2)\), \(D(2, 0)\) s slike.</p>
-                <p>\(S_{ABC} = \frac{1}{2}|4 \cdot (-1) - 5 \cdot 1| = 4{,}5\), \(S_{ACD} = \frac{1}{2}|5 \cdot (-3) - 2 \cdot (-1)| = 6{,}5\). \(S = 11\).</p>
-              </div>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Ploščina kvadrata \((0, 0)\), \((2, 1)\), \((1, 3)\), \((-1, 2)\)?</p><p>Stranica \(\sqrt{5}\), \(S = 5\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Ploščina trapeza \((0, 0)\), \((6, 0)\), \((4, 2)\), \((1, 2)\)?</p><p>\(\frac{(6 + 3) \cdot 2}{2} = 9\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Štirikotnik \((0, 0)\), \((4, 0)\), \((4, 3)\), \((0, 5)\)?</p><p>Trikotnika z diagonalo \((0, 0)\)–\((4, 3)\): \(6 + 10 = 16\).</p></div>
             </div>
             <div class="tip-naloge" id="tip-9">
               <h4>Tip 9: Neznana koordinata pri dani ploščini, kolinearnost</h4>
-              <div class="prepoznaj">
-                <p><strong>Kako prepoznaš:</strong> eno oglišče ima parameter, dana je ploščina; ali sprašujejo, ali so točke na isti premici.</p>
-                <ul class="kljucne"><li>„ploščina je 10, določite \(m\)“</li><li>„ali ležijo na isti premici“</li></ul>
-              </div>
-              <h5>Univerzalni postopek</h5>
-              <ol>
-                <li>Formulo zapiši s parametrom.</li>
-                <li>Absolutna vrednost: \(|izraz| = 2S\) → \(izraz = 2S\) ali \(izraz = -2S\) (dve rešitvi).</li>
-                <li>Kolinearnost: izraz \(= 0\).</li>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Dane so točke \(A(0, 0)\), \(B(4, 2)\) in \(C(m, 3)\). Za katere \(m\) ima trikotnik \(ABC\) ploščino 6?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> eno oglišče ima parameter, dana je ploščina; ali sprašujejo, ali so točke na isti premici.</p><ul class="kljucne"><li>„ploščina je 10, določite \(m\)“</li><li>„ali ležijo na isti premici“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Formulo za ploščino zapiši s parametrom.</p><div class="na-nalogi"><p>\(\frac{1}{2}|4 \cdot 3 - m \cdot 2| = 6\), torej \(|12 - 2m| = 12\).</p></div></li>
+              <li><p class="korak">Absolutno vrednost razreši na dve možnosti.</p><div class="na-nalogi"><p>\(12 - 2m = 12\) ali \(12 - 2m = -12\).</p></div></li>
+              <li><p class="korak">Reši obe enačbi.</p><div class="na-nalogi"><p>\(m = 0\) ali \(m = 12\).</p></div></li>
               </ol>
-              <div class="primer">
-                <p><strong>Primer:</strong> \(A(0, 0)\), \(B(4, 2)\), \(C(m, 3)\). Za katere \(m\) je ploščina 6? Ali so \(P(1, 1)\), \(Q(3, 5)\), \(R(4, 7)\) kolinearne?</p>
-                <p>\(\frac{1}{2}|4 \cdot 3 - m \cdot 2| = 6\) → \(12 - 2m = 12\) ali \(12 - 2m = -12\) → \(m = 0\) ali \(m = 12\). Za \(P, Q, R\): \(2 \cdot 6 - 3 \cdot 4 = 0\), torej da.</p>
-              </div>
+              <div class="pazi"><strong>Kolinearnost:</strong> tri točke ležijo na isti premici natanko tedaj, ko je izraz v absolutni vrednosti enak 0 (ploščina je 0).</div>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Ali so \(P(1, 1)\), \(Q(3, 5)\), \(R(4, 7)\) kolinearne?</p><p>\(2 \cdot 6 - 3 \cdot 4 = 0\), da.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Za kateri \(t\) so \((0, 0)\), \((2, 1)\), \((6, t)\) kolinearne?</p><p>\(2t - 6 = 0\), \(t = 3\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> \(A(0, 0)\), \(B(2, 0)\), \(C(1, y)\), ploščina 5. Koliko je \(y\)?</p><p>\(\frac{1}{2}|2y| = 5\), \(y = \pm 5\).</p></div>
             </div>
           </div>
         </section>
 
         <section class="subsection" id="kljuc">
           <div class="subsection-head">
-            <h2>🔎 Ključ: kateri tip naloge je to?</h2>
+            <h2>Ključ: kateri tip naloge je to?</h2>
             <p>Poišči besedo iz navodila naloge in skoči na pravi postopek.</p>
           </div>
           <div class="info-card">
@@ -476,7 +430,7 @@
 
         <section class="subsection">
           <div class="subsection-head">
-            <h2>⚠️ Pogoste napake</h2>
+            <h2>Pogoste napake</h2>
           </div>
           <div class="info-card">
             <ul>

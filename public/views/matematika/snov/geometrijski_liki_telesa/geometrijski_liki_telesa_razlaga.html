@@ -9,6 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
   <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
   <link rel="stylesheet" href="/style/snov.css">
 </head>
 <body>
@@ -32,7 +33,7 @@
         </header>
 
         <div class="matura-formule">
-          <h3>📋 Formule na maturi</h3>
+          <h3>Formule na maturi</h3>
           <p>Na listu s formulami so <strong>Heronova formula</strong>, <strong>polmera \(r = \frac{S}{s}\) in \(R = \frac{abc}{4S}\)</strong>, <strong>ploščina trikotnika s koordinatami</strong> ter <strong>površina in prostornina krogle</strong>. Vse ostalo znaj na pamet:</p>
           <div class="matura-grid">
             <div class="matura-levo">
@@ -61,7 +62,7 @@
             <li><a href="#sklop-6"><span class="kazalo-st">4.7.6</span> Poševna telesa <span class="badge-vr">VR</span></a></li>
             <li><a href="#sklop-7"><span class="kazalo-st">4.7.7</span> Vrtenine <span class="badge-vr">VR</span></a></li>
             <li><a href="#sklop-8"><span class="kazalo-st">4.7.8</span> Geometrijski matematični problemi</a></li>
-            <li><a href="#kljuc"><span class="kazalo-st">🔎</span> Ključ: kateri tip naloge je to?</a></li>
+            <li><a href="#kljuc"><span class="kazalo-st">?</span> Ključ: kateri tip naloge je to?</a></li>
           </ol>
         </nav>
 
@@ -72,16 +73,8 @@
             <h2>Ploščine geometrijskih likov, Heronova formula</h2>
             <p>Ploščine trikotnikov, štirikotnikov, kroga in njegovih delov.</p>
           </header>
-          <div class="sklop-cilji">
-            <h3>🎯 Cilji iz kataloga</h3>
-            <ul>
-              <li>Razvije in izboljša geometrijsko predstavo.</li>
-              <li>Uporablja obrazce za izražanje posameznih količin.</li>
-              <li>Kritično oceni in presodi dobljene vrednosti ter pazi na merske enote.</li>
-            </ul>
-          </div>
           <div class="sklop-teorija">
-            <h3>📖 Razlaga</h3>
+            <h3>Razlaga</h3>
             <p><strong>Ploščina</strong> pove, koliko enotskih kvadratov pokrije lik. Vse formule izhajajo iz pravokotnika \(S = ab\): paralelogram preoblikujemo v pravokotnik, trikotnik je polovica paralelograma, trapez sta dva trikotnika.</p>
             <div class="slike-vrsta"><figure class="slika">
 <svg viewBox="0 0 230 208" role="img" aria-label="Trikotnik z višino" xmlns="http://www.w3.org/2000/svg">
@@ -195,58 +188,46 @@
             <div class="pazi"><strong>Pazi:</strong> enote za ploščino so kvadratne: \(1\ \text{m}^2 = 100\ \text{dm}^2 = 10\,000\ \text{cm}^2\), \(1\ \text{a} = 100\ \text{m}^2\), \(1\ \text{ha} = 10\,000\ \text{m}^2\).</div>
           </div>
           <div class="sklop-naloge">
-            <h3>✏️ Tipi nalog v tem sklopu</h3>
+            <h3>Tipi nalog v tem sklopu</h3>
             <div class="tip-naloge" id="tip-1">
               <h4>Tip 1: Ploščina trikotnika</h4>
-              <div class="prepoznaj">
-                <p><strong>Kako prepoznaš:</strong> iščejo ploščino (ali iz ploščine stranico/višino) trikotnika.</p>
-                <ul class="kljucne"><li>„ploščina trikotnika“</li><li>„stranice merijo“</li><li>„oklepata kot“</li><li>„višina na stranico“</li></ul>
-              </div>
-              <h5>Univerzalni postopek</h5>
-              <ol>
-                <li>Preglej podatke in izberi formulo po tabeli zgoraj.</li>
-                <li>Pri Heronovi formuli najprej izračunaj \(s\), nato \(s - a\), \(s - b\), \(s - c\).</li>
-                <li>Če iščeš višino: \(v_a = \frac{2S}{a}\).</li>
-                <li>Rezultat zapiši s kvadratno enoto.</li>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Trikotnik ima stranice 13 cm, 14 cm in 15 cm. Izračunajte ploščino in višino na najdaljšo stranico.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> iščejo ploščino (ali iz ploščine stranico/višino) trikotnika.</p><ul class="kljucne"><li>„ploščina trikotnika“</li><li>„stranice merijo“</li><li>„oklepata kot“</li><li>„višina na stranico“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Preglej podatke in izberi formulo: stranica in višina \(\frac{a v_a}{2}\), dve stranici in kot \(\frac{ab\sin\gamma}{2}\), tri stranice Heron.</p><div class="na-nalogi"><p>Dane so tri stranice: Heronova formula.</p></div></li>
+              <li><p class="korak">Pri Heronovi formuli izračunaj \(s\), nato \(s - a\), \(s - b\), \(s - c\).</p><div class="na-nalogi"><p>\(s = \frac{13 + 14 + 15}{2} = 21\); \(s - a = 8\), \(s - b = 7\), \(s - c = 6\).</p></div></li>
+              <li><p class="korak">Izračunaj ploščino.</p><div class="na-nalogi"><p>\(S = \sqrt{21 \cdot 8 \cdot 7 \cdot 6} = \sqrt{7056} = 84\ \text{cm}^2\).</p></div></li>
+              <li><p class="korak">Če iščeš višino: \(v_a = \frac{2S}{a}\). Rezultat zapiši z enoto.</p><div class="na-nalogi"><p>\(v_{15} = \frac{2 \cdot 84}{15} = 11{,}2\) cm.</p></div></li>
               </ol>
-              <div class="primer">
-                <p><strong>Primer:</strong> Trikotnik ima stranice 13, 14 in 15 cm. Izračunajte ploščino in višino na najdaljšo stranico.</p>
-                <p>\(s = 21\), \(S = \sqrt{21 \cdot 8 \cdot 7 \cdot 6} = \sqrt{7056} = 84\ \text{cm}^2\). \(v_{15} = \frac{2 \cdot 84}{15} = 11{,}2\) cm.</p>
-              </div>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Stranici 6 cm in 10 cm oklepata kot \(30°\). Kolikšna je ploščina?</p><p>\(\frac{6 \cdot 10 \cdot \sin 30°}{2} = 15\ \text{cm}^2\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Kolikšna je ploščina enakostraničnega trikotnika s stranico 4 cm?</p><p>\(\frac{16\sqrt{3}}{4} = 4\sqrt{3} \approx 6{,}93\ \text{cm}^2\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Trikotnik ima ploščino \(30\ \text{cm}^2\) in stranico 12 cm. Kolikšna je višina na to stranico?</p><p>\(v = \frac{60}{12} = 5\) cm.</p></div>
             </div>
             <div class="tip-naloge" id="tip-2">
               <h4>Tip 2: Ploščina štirikotnika ali sestavljenega lika</h4>
-              <div class="prepoznaj">
-                <p><strong>Kako prepoznaš:</strong> paralelogram, trapez, romb ali lik na sliki, sestavljen iz več delov.</p>
-                <ul class="kljucne"><li>„ploščina trapeza“</li><li>„osenčeni lik“</li><li>„zemljišče oblike“</li></ul>
-              </div>
-              <h5>Univerzalni postopek</h5>
-              <ol>
-                <li>Prepoznaj lik in zapiši formulo; manjkajočo višino ali diagonalo izračunaj s Pitagorovim izrekom ali kotnimi funkcijami (4.6).</li>
-                <li>Sestavljen lik razreži na znane like (seštevaj) ali ga dopolni do večjega lika (odštevaj).</li>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Romb ima stranico 10 cm in eno diagonalo 12 cm. Kolikšna je njegova ploščina?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> paralelogram, trapez, romb ali lik na sliki, sestavljen iz več delov.</p><ul class="kljucne"><li>„ploščina trapeza“</li><li>„osenčeni lik“</li><li>„zemljišče oblike“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Prepoznaj lik in zapiši formulo.</p><div class="na-nalogi"><p>Romb: \(S = \frac{e f}{2}\). Manjka diagonala \(f\).</p></div></li>
+              <li><p class="korak">Manjkajočo dolžino izračunaj s Pitagorovim izrekom ali kotnimi funkcijami.</p><div class="na-nalogi"><p>Polovici diagonal in stranica tvorijo pravokotni trikotnik: \(\frac{f}{2} = \sqrt{100 - 36} = 8\), \(f = 16\) cm.</p></div></li>
+              <li><p class="korak">Izračunaj. Sestavljen lik razreži na znane like ali ga dopolni do večjega in odštej.</p><div class="na-nalogi"><p>\(S = \frac{12 \cdot 16}{2} = 96\ \text{cm}^2\).</p></div></li>
               </ol>
-              <div class="primer">
-                <p><strong>Primer:</strong> Romb ima stranico 10 cm in diagonalo 12 cm. Kolikšna je ploščina?</p>
-                <p>Polovici diagonal in stranica tvorijo pravokotni trikotnik: \(\frac{f}{2} = \sqrt{100 - 36} = 8\), \(f = 16\). \(S = \frac{12 \cdot 16}{2} = 96\ \text{cm}^2\).</p>
-              </div>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Trapez ima osnovnici 10 in 6 ter višino 4. Kolikšna je ploščina?</p><p>\(\frac{(10 + 6) \cdot 4}{2} = 32\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Paralelogram ima stranici 8 in 5 ter kot \(45°\). Kolikšna je ploščina?</p><p>\(8 \cdot 5 \sin 45° = 20\sqrt{2} \approx 28{,}3\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Iz kvadrata s stranico 10 izrežemo pravokotni trikotnik s katetama 4 in 6. Koliko ostane?</p><p>\(100 - 12 = 88\).</p></div>
             </div>
             <div class="tip-naloge" id="tip-3">
               <h4>Tip 3: Krog, krožni izsek, odsek in kolobar</h4>
-              <div class="prepoznaj">
-                <p><strong>Kako prepoznaš:</strong> kos pice, vrtni sektor, osenčen del kroga, ura, lok.</p>
-                <ul class="kljucne"><li>„izsek“</li><li>„lok“</li><li>„osenčeni del“</li><li>„kolobar“</li><li>„središčni kot“</li></ul>
-              </div>
-              <h5>Univerzalni postopek</h5>
-              <ol>
-                <li>Ugotovi polmer in središčni kot \(\alpha\) (pri uri: 1 ura = \(30°\)).</li>
-                <li>Izsek \(\frac{\pi r^2 \alpha}{360°}\), lok \(\frac{\pi r \alpha}{180°}\).</li>
-                <li>Odsek = izsek − enakokraki trikotnik \(\frac{r^2 \sin\alpha}{2}\).</li>
-                <li>Osenčene dele dobiš kot razliko ploščin (npr. kvadrat − četrtina kroga).</li>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Izračunajte ploščino krožnega odseka s polmerom 6 cm in središčnim kotom \(60°\).</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> kos pice, vrtni sektor, osenčen del kroga, ura, lok.</p><ul class="kljucne"><li>„izsek“</li><li>„lok“</li><li>„osenčeni del“</li><li>„kolobar“</li><li>„središčni kot“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Določi polmer in središčni kot \(\alpha\) (pri uri je ena ura \(30°\)).</p><div class="na-nalogi"><p>\(r = 6\) cm, \(\alpha = 60°\).</p></div></li>
+              <li><p class="korak">Izračunaj izsek \(\frac{\pi r^2 \alpha}{360°}\) (lok bi bil \(\frac{\pi r \alpha}{180°}\)).</p><div class="na-nalogi"><p>\(\frac{36\pi \cdot 60°}{360°} = 6\pi\ \text{cm}^2\).</p></div></li>
+              <li><p class="korak">Odsek je izsek minus enakokraki trikotnik \(\frac{r^2 \sin\alpha}{2}\).</p><div class="na-nalogi"><p>Trikotnik: \(\frac{36 \sin 60°}{2} = 9\sqrt{3}\). Odsek: \(6\pi - 9\sqrt{3} \approx 3{,}26\ \text{cm}^2\).</p></div></li>
               </ol>
-              <div class="primer">
-                <p><strong>Primer:</strong> Izračunajte ploščino krožnega odseka s polmerom 6 cm in središčnim kotom \(60°\).</p>
-                <p>Izsek \(\frac{36\pi \cdot 60°}{360°} = 6\pi\), trikotnik \(\frac{36 \sin 60°}{2} = 9\sqrt{3}\). Odsek \(6\pi - 9\sqrt{3} \approx 3{,}26\ \text{cm}^2\).</p>
-              </div>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Kolikšna je dolžina loka s polmerom 9 cm in kotom \(40°\)?</p><p>\(\frac{\pi \cdot 9 \cdot 40°}{180°} = 2\pi \approx 6{,}28\) cm.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Kolobar ima polmera 5 in 3. Kolikšna je ploščina?</p><p>\(\pi(25 - 9) = 16\pi\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Kolikšno ploščino pokrije minutni kazalec dolžine 10 cm v 20 minutah?</p><p>\(\alpha = 120°\): \(\frac{100\pi}{3} \approx 104{,}7\ \text{cm}^2\).</p></div>
             </div>
           </div>
         </section>
@@ -258,12 +239,8 @@
             <h2>Polmer trikotniku včrtanega in očrtanega kroga</h2>
             <p>Povezava med ploščino, obsegom in polmeroma.</p>
           </header>
-          <div class="sklop-cilji">
-            <h3>🎯 Cilji iz kataloga</h3>
-            <ul><li>Uporabi usvojeno znanje ravninske geometrije ter rešuje probleme v povezavi s polmerom trikotniku včrtanega in očrtanega kroga.</li></ul>
-          </div>
           <div class="sklop-teorija">
-            <h3>📖 Razlaga</h3>
+            <h3>Razlaga</h3>
             <figure class="slika slika--ozka">
 <svg viewBox="0 0 400 400" role="img" aria-label="Včrtani in očrtani krog trikotnika" xmlns="http://www.w3.org/2000/svg">
 <defs><marker id="g8-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g8-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g8-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g8-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g8-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g8-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
@@ -304,23 +281,19 @@
             </div>
           </div>
           <div class="sklop-naloge">
-            <h3>✏️ Tipi nalog v tem sklopu</h3>
+            <h3>Tipi nalog v tem sklopu</h3>
             <div class="tip-naloge" id="tip-4">
               <h4>Tip 4: Polmer včrtanega ali očrtanega kroga</h4>
-              <div class="prepoznaj">
-                <p><strong>Kako prepoznaš:</strong> „včrtan“, „očrtan“ krog trikotnika; dane so stranice.</p>
-                <ul class="kljucne"><li>„trikotniku včrtan krog“</li><li>„očrtan krog“</li><li>„polmer“</li></ul>
-              </div>
-              <h5>Univerzalni postopek</h5>
-              <ol>
-                <li>Izračunaj ploščino \(S\) (najpogosteje Heron) in polobseg \(s\).</li>
-                <li>\(r = \frac{S}{s}\), \(R = \frac{abc}{4S}\).</li>
-                <li>Če je trikotnik pravokoten, je hitreje \(R = \frac{c}{2}\).</li>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Trikotnik ima stranice 13 cm, 14 cm in 15 cm. Izračunajte polmera včrtanega in očrtanega kroga.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> „včrtan“, „očrtan“ krog trikotnika; dane so stranice.</p><ul class="kljucne"><li>„trikotniku včrtan krog“</li><li>„očrtan krog“</li><li>„polmer“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Izračunaj ploščino \(S\) (najpogosteje Heron) in polobseg \(s\).</p><div class="na-nalogi"><p>\(s = 21\), \(S = 84\ \text{cm}^2\) (glej <a href="#tip-1">Tip 1</a>).</p></div></li>
+              <li><p class="korak">Včrtani krog: \(r = \frac{S}{s}\).</p><div class="na-nalogi"><p>\(r = \frac{84}{21} = 4\) cm.</p></div></li>
+              <li><p class="korak">Očrtani krog: \(R = \frac{abc}{4S}\). Pri pravokotnem trikotniku je hitreje \(R = \frac{c}{2}\).</p><div class="na-nalogi"><p>\(R = \frac{13 \cdot 14 \cdot 15}{4 \cdot 84} = \frac{2730}{336} = 8{,}125\) cm.</p></div></li>
               </ol>
-              <div class="primer">
-                <p><strong>Primer:</strong> Trikotnik ima stranice 13, 14, 15 cm. Izračunajte \(r\) in \(R\).</p>
-                <p>\(S = 84\), \(s = 21\): \(r = 4\) cm. \(R = \frac{13 \cdot 14 \cdot 15}{4 \cdot 84} = \frac{2730}{336} = 8{,}125\) cm.</p>
-              </div>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Kateti merita 6 in 8. Kolikšna sta \(r\) in \(R\)?</p><p>\(c = 10\), \(R = 5\). \(S = 24\), \(s = 12\), \(r = 2\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Trikotnik ima \(S = 30\) in obseg 30. Kolikšen je \(r\)?</p><p>\(s = 15\), \(r = 2\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Kolikšen je \(R\) enakostraničnega trikotnika s stranico 6?</p><p>\(R = \frac{a\sqrt{3}}{3} = 2\sqrt{3}\).</p></div>
             </div>
           </div>
         </section>
@@ -332,12 +305,8 @@
             <h2>Geometrijska telesa: prizma, valj, piramida, stožec, krogla</h2>
             <p>Kako so telesa sestavljena in kako jih rišemo.</p>
           </header>
-          <div class="sklop-cilji">
-            <h3>🎯 Cilji iz kataloga</h3>
-            <ul><li>Opiše geometrijsko telo.</li></ul>
-          </div>
           <div class="sklop-teorija">
-            <h3>📖 Razlaga</h3>
+            <h3>Razlaga</h3>
             <div class="slike-vrsta"><figure class="slika">
 <svg viewBox="0 0 200 188" role="img" aria-label="Kvader" xmlns="http://www.w3.org/2000/svg">
 <defs><marker id="g9-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g9-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g9-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g9-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g9-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g9-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
@@ -440,22 +409,20 @@
             <p>Za oglišča (\(o\)), robove (\(r\)) in ploskve (\(p\)) vsakega poliedra brez lukenj velja <strong>Eulerjeva formula</strong> \(o - r + p = 2\).</p>
           </div>
           <div class="sklop-naloge">
-            <h3>✏️ Tipi nalog v tem sklopu</h3>
+            <h3>Tipi nalog v tem sklopu</h3>
             <div class="tip-naloge" id="tip-5">
               <h4>Tip 5: Opis telesa in osni presek</h4>
-              <div class="prepoznaj">
-                <p><strong>Kako prepoznaš:</strong> sprašujejo po številu robov/oglišč/ploskev ali po osnem preseku in njegovi ploščini.</p>
-                <ul class="kljucne"><li>„koliko robov ima“</li><li>„osni presek“</li><li>„enakostranični valj/stožec“</li></ul>
-              </div>
-              <h5>Univerzalni postopek</h5>
-              <ol>
-                <li>\(n\)-strana prizma: \(2n\) oglišč, \(3n\) robov, \(n + 2\) ploskev. \(n\)-strana piramida: \(n + 1\) oglišč, \(2n\) robov, \(n + 1\) ploskev.</li>
-                <li>Osni presek nariši posebej v ravnini in v njem uporabi geometrijo trikotnika ali pravokotnika.</li>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Osni presek stožca je enakostranični trikotnik s ploščino \(16\sqrt{3}\ \text{cm}^2\). Kolikšen je polmer osnovne ploskve?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> sprašujejo po številu robov/oglišč/ploskev ali po osnem preseku in njegovi ploščini.</p><ul class="kljucne"><li>„koliko robov ima“</li><li>„osni presek“</li><li>„enakostranični valj/stožec“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Osni presek nariši posebej v ravnini in označi, kaj je kaj.</p><div class="na-nalogi"><p>Enakostranični trikotnik: osnovnica je premer \(2r\), kraka sta stranici stožca \(s\).</p></div></li>
+              <li><p class="korak">V preseku uporabi geometrijo trikotnika ali pravokotnika.</p><div class="na-nalogi"><p>\(\frac{a^2\sqrt{3}}{4} = 16\sqrt{3}\), \(a^2 = 64\), \(a = 8\) cm.</p></div></li>
+              <li><p class="korak">Iz preseka preberi iskano količino telesa.</p><div class="na-nalogi"><p>\(a = 2r = 8\), zato \(r = 4\) cm.</p></div></li>
               </ol>
-              <div class="primer">
-                <p><strong>Primer:</strong> Osni presek stožca je enakostranični trikotnik s ploščino \(16\sqrt{3}\ \text{cm}^2\). Kolikšen je polmer osnovne ploskve?</p>
-                <p>\(\frac{a^2\sqrt{3}}{4} = 16\sqrt{3}\) → \(a = 8\) cm \(= 2r\), zato \(r = 4\) cm.</p>
-              </div>
+              <div class="pazi"><strong>Štetje:</strong> \(n\)-strana prizma ima \(2n\) oglišč, \(3n\) robov in \(n + 2\) ploskev. \(n\)-strana piramida ima \(n + 1\) oglišč, \(2n\) robov in \(n + 1\) ploskev.</div>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Koliko robov ima šeststrana prizma?</p><p>\(18\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Osni presek valja je kvadrat s ploščino \(36\). Kolikšna sta \(r\) in \(v\)?</p><p>Stranica 6: \(v = 6\), \(r = 3\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Koliko ploskev ima petstrana piramida?</p><p>\(6\).</p></div>
             </div>
           </div>
         </section>
@@ -467,15 +434,8 @@
             <h2>Površina in prostornina pokončne prizme, valja, piramide, stožca in krogle</h2>
             <p>Mreže teles in skrite pravokotne trikotnike.</p>
           </header>
-          <div class="sklop-cilji">
-            <h3>🎯 Cilji iz kataloga</h3>
-            <ul>
-              <li>Uporabi usvojeno znanje kotnih funkcij in geometrije na modelih geometrijskih teles.</li>
-              <li>Rešuje geometrijske probleme v povezavi s površino in prostornino teles ter kritično oceni in presodi dobljene rezultate ter merske enote.</li>
-            </ul>
-          </div>
           <div class="sklop-teorija">
-            <h3>📖 Razlaga</h3>
+            <h3>Razlaga</h3>
             <p><strong>Površina</strong> je vsota ploščin vseh ploskev (ploščina mreže). <strong>Prostornina</strong> pove, koliko enotskih kock gre v telo.</p>
             <div class="tabela-wrap">
               <table class="tabela">
@@ -556,109 +516,85 @@
             <p>\(1\ \text{dm}^3 = 1\ \text{L}\), \(1\ \text{m}^3 = 1000\ \text{L}\), \(1\ \text{cm}^3 = 1\ \text{mL}\). Pri prostornini se pretvornik kubira: \(1\ \text{m}^3 = 10^3\ \text{dm}^3 = 10^6\ \text{cm}^3\).</p>
           </div>
           <div class="sklop-naloge">
-            <h3>✏️ Tipi nalog v tem sklopu</h3>
+            <h3>Tipi nalog v tem sklopu</h3>
             <div class="tip-naloge" id="tip-6">
               <h4>Tip 6: Prizma (kocka, kvader, pravilna prizma)</h4>
-              <div class="prepoznaj">
-                <p><strong>Kako prepoznaš:</strong> škatla, bazen, akvarij, pravilna tristrana/šeststrana prizma.</p>
-                <ul class="kljucne"><li>„kvader“</li><li>„pravilna šeststrana prizma“</li><li>„bazen“</li><li>„koliko litrov“</li></ul>
-              </div>
-              <h5>Univerzalni postopek</h5>
-              <ol>
-                <li>Izračunaj osnovno ploskev \(O\) (pravilni šestkotnik = 6 enakostraničnih trikotnikov: \(O = \frac{3a^2\sqrt{3}}{2}\)).</li>
-                <li>Plašč: obseg osnovne ploskve × višina (pri pokončni prizmi).</li>
-                <li>\(P = 2O + pl\), \(V = O \cdot v\); pretvori v zahtevane enote.</li>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Pravilna tristrana prizma ima osnovni rob 4 cm in višino 10 cm. Izračunajte površino in prostornino.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> škatla, bazen, akvarij, pravilna tristrana/šeststrana prizma.</p><ul class="kljucne"><li>„kvader“</li><li>„pravilna šeststrana prizma“</li><li>„bazen“</li><li>„koliko litrov“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Izračunaj osnovno ploskev \(O\).</p><div class="na-nalogi"><p>Enakostranični trikotnik: \(O = \frac{4^2\sqrt{3}}{4} = 4\sqrt{3}\ \text{cm}^2\).</p></div></li>
+              <li><p class="korak">Plašč je obseg osnovne ploskve krat višina.</p><div class="na-nalogi"><p>\(pl = 3 \cdot 4 \cdot 10 = 120\ \text{cm}^2\).</p></div></li>
+              <li><p class="korak">\(P = 2O + pl\), \(V = O \cdot v\). Pretvori v zahtevane enote.</p><div class="na-nalogi"><p>\(P = 8\sqrt{3} + 120 \approx 133{,}9\ \text{cm}^2\), \(V = 40\sqrt{3} \approx 69{,}3\ \text{cm}^3\).</p></div></li>
               </ol>
-              <div class="primer">
-                <p><strong>Primer:</strong> Pravilna tristrana prizma ima osnovni rob 4 cm in višino 10 cm. Izračunajte \(P\) in \(V\).</p>
-                <p>\(O = \frac{16\sqrt{3}}{4} = 4\sqrt{3}\), \(pl = 3 \cdot 4 \cdot 10 = 120\). \(P = 8\sqrt{3} + 120 \approx 133{,}9\ \text{cm}^2\), \(V = 40\sqrt{3} \approx 69{,}3\ \text{cm}^3\).</p>
-              </div>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Bazen je dolg 25 m, širok 10 m in globok 2 m. Koliko litrov vode drži?</p><p>\(500\ \text{m}^3 = 500\,000\) L.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Kocka ima površino \(54\ \text{cm}^2\). Kolikšna je prostornina?</p><p>\(6a^2 = 54\), \(a = 3\), \(V = 27\ \text{cm}^3\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Pravilna šeststrana prizma ima \(a = 2\) in \(v = 5\). Kolikšna je prostornina?</p><p>\(O = \frac{3 \cdot 4\sqrt{3}}{2} = 6\sqrt{3}\), \(V = 30\sqrt{3}\).</p></div>
             </div>
             <div class="tip-naloge" id="tip-7">
               <h4>Tip 7: Valj</h4>
-              <div class="prepoznaj">
-                <p><strong>Kako prepoznaš:</strong> pločevinka, cev, kozarec, sod, steber.</p>
-                <ul class="kljucne"><li>„valj“</li><li>„pločevinka“</li><li>„plašč valja“</li><li>„enakostranični valj“</li></ul>
-              </div>
-              <h5>Univerzalni postopek</h5>
-              <ol>
-                <li>Iz podatkov določi \(r\) in \(v\) (pazi: premer \(= 2r\)).</li>
-                <li>\(V = \pi r^2 v\), \(P = 2\pi r^2 + 2\pi r v\); odprta posoda nima zgornje osnovne ploskve.</li>
-                <li>Če je dana prostornina, izrazi neznanko: \(v = \frac{V}{\pi r^2}\).</li>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Pločevinka s premerom 6 cm ima prostornino 0,33 L. Kako visoka je?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> pločevinka, cev, kozarec, sod, steber.</p><ul class="kljucne"><li>„valj“</li><li>„pločevinka“</li><li>„plašč valja“</li><li>„enakostranični valj“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Iz podatkov določi \(r\) in \(v\) in poenoti enote (premer je \(2r\)).</p><div class="na-nalogi"><p>\(r = 3\) cm, \(V = 0{,}33\ \text{L} = 330\ \text{cm}^3\).</p></div></li>
+              <li><p class="korak">Zapiši formulo: \(V = \pi r^2 v\), \(P = 2\pi r^2 + 2\pi r v\).</p><div class="na-nalogi"><p>\(330 = \pi \cdot 9 \cdot v\).</p></div></li>
+              <li><p class="korak">Izrazi neznanko in izračunaj.</p><div class="na-nalogi"><p>\(v = \frac{330}{9\pi} \approx 11{,}7\) cm.</p></div></li>
               </ol>
-              <div class="primer">
-                <p><strong>Primer:</strong> Pločevinka s premerom 6 cm ima prostornino 0,33 L. Kako visoka je?</p>
-                <p>\(V = 330\ \text{cm}^3\), \(r = 3\): \(v = \frac{330}{9\pi} \approx 11{,}7\) cm.</p>
-              </div>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Kolikšna je površina valja z \(r = 2\) in \(v = 5\)?</p><p>\(8\pi + 20\pi = 28\pi \approx 88\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Enakostranični valj ima \(r = 4\). Kolikšna je prostornina?</p><p>\(v = 2r = 8\): \(V = 128\pi\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Koliko pločevine potrebujemo za odprt kozarec z \(r = 3\) in \(v = 10\)?</p><p>Brez pokrova: \(9\pi + 60\pi = 69\pi \approx 216{,}8\).</p></div>
             </div>
             <div class="tip-naloge" id="tip-8">
               <h4>Tip 8: Piramida</h4>
-              <div class="prepoznaj">
-                <p><strong>Kako prepoznaš:</strong> pravilna štiristrana (tristrana, šeststrana) piramida, streha, šotor.</p>
-                <ul class="kljucne"><li>„pravilna štiristrana piramida“</li><li>„stranski rob“</li><li>„višina stranske ploskve“</li><li>„naklonski kot“</li></ul>
-              </div>
-              <h5>Univerzalni postopek</h5>
-              <ol>
-                <li>Nariši piramido in vriši pravokotna trikotnika (\(v, \frac{a}{2}, v_s\)) in (\(v, \frac{d}{2}, s\)).</li>
-                <li>Manjkajočo dolžino izračunaj s Pitagorovim izrekom ali s kotno funkcijo, če je dan kot.</li>
-                <li>\(pl = n \cdot \frac{a\,v_s}{2}\), \(P = O + pl\), \(V = \frac{O v}{3}\).</li>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Pravilna štiristrana piramida ima osnovni rob 6 cm in višino 4 cm. Izračunajte površino in prostornino.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> pravilna štiristrana (tristrana, šeststrana) piramida, streha, šotor.</p><ul class="kljucne"><li>„pravilna štiristrana piramida“</li><li>„stranski rob“</li><li>„višina stranske ploskve“</li><li>„naklonski kot“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Nariši piramido in vriši pravokotna trikotnika \((v, \frac{a}{2}, v_s)\) in \((v, \frac{d}{2}, s)\).</p><div class="na-nalogi"><p>Za plašč potrebujemo \(v_s\), zato vzamemo trikotnik \((v, \frac{a}{2}, v_s)\) s katetama 4 in 3.</p></div></li>
+              <li><p class="korak">Manjkajočo dolžino izračunaj s Pitagorovim izrekom ali s kotno funkcijo.</p><div class="na-nalogi"><p>\(v_s = \sqrt{4^2 + 3^2} = 5\) cm.</p></div></li>
+              <li><p class="korak">\(pl = n \cdot \frac{a\,v_s}{2}\), \(P = O + pl\), \(V = \frac{O v}{3}\).</p><div class="na-nalogi"><p>\(pl = 4 \cdot \frac{6 \cdot 5}{2} = 60\), \(P = 36 + 60 = 96\ \text{cm}^2\). \(V = \frac{36 \cdot 4}{3} = 48\ \text{cm}^3\).</p></div></li>
               </ol>
-              <div class="primer">
-                <p><strong>Primer:</strong> Pravilna štiristrana piramida ima osnovni rob 6 cm in višino 4 cm. Izračunajte površino.</p>
-                <p>\(v_s = \sqrt{4^2 + 3^2} = 5\). \(pl = 4 \cdot \frac{6 \cdot 5}{2} = 60\), \(P = 36 + 60 = 96\ \text{cm}^2\). (\(V = \frac{36 \cdot 4}{3} = 48\ \text{cm}^3\).)</p>
-              </div>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Pravilna štiristrana piramida ima \(a = 8\) in stranski rob \(s = 9\). Kolikšna je višina?</p><p>\(\frac{d}{2} = 4\sqrt{2}\), \(v = \sqrt{81 - 32} = 7\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Piramida ima \(O = 20\) in \(V = 40\). Kolikšna je višina?</p><p>\(v = \frac{3V}{O} = 6\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Pravilna štiristrana piramida ima \(a = 10\), \(v_s = 13\). Kolikšna je višina?</p><p>\(\sqrt{169 - 25} = 12\).</p></div>
             </div>
             <div class="tip-naloge" id="tip-9">
               <h4>Tip 9: Stožec</h4>
-              <div class="prepoznaj">
-                <p><strong>Kako prepoznaš:</strong> kornet, lijak, kup peska, plašč stožca iz krožnega izseka.</p>
-                <ul class="kljucne"><li>„stožec“</li><li>„stranica stožca“</li><li>„plašč je krožni izsek“</li><li>„kornet“</li></ul>
-              </div>
-              <h5>Univerzalni postopek</h5>
-              <ol>
-                <li>Poveži \(r\), \(v\), \(s\) s Pitagorovim izrekom: \(s^2 = r^2 + v^2\).</li>
-                <li>\(pl = \pi r s\), \(P = \pi r^2 + \pi r s\), \(V = \frac{\pi r^2 v}{3}\).</li>
-                <li>Če je plašč izsek s kotom \(\varphi\) in polmerom \(s\): lok \(= 2\pi r\), zato \(r = \frac{s \varphi}{360°}\).</li>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Iz polkroga s polmerom 10 cm zvijemo plašč stožca. Kolikšna sta polmer osnovne ploskve in višina stožca?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> kornet, lijak, kup peska, plašč stožca iz krožnega izseka.</p><ul class="kljucne"><li>„stožec“</li><li>„stranica stožca“</li><li>„plašč je krožni izsek“</li><li>„kornet“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Ugotovi, kaj je dano. Če je plašč izsek s kotom \(\varphi\) in polmerom \(s\), je lok izseka obseg osnovne ploskve: \(r = \frac{s \varphi}{360°}\).</p><div class="na-nalogi"><p>\(s = 10\), \(\varphi = 180°\): \(r = \frac{10 \cdot 180°}{360°} = 5\) cm.</p></div></li>
+              <li><p class="korak">Poveži \(r\), \(v\) in \(s\) s Pitagorovim izrekom: \(s^2 = r^2 + v^2\).</p><div class="na-nalogi"><p>\(v = \sqrt{100 - 25} = 5\sqrt{3} \approx 8{,}66\) cm.</p></div></li>
+              <li><p class="korak">Po potrebi izračunaj \(pl = \pi r s\), \(P = \pi r^2 + \pi r s\), \(V = \frac{\pi r^2 v}{3}\).</p><div class="na-nalogi"><p>Npr. \(V = \frac{25\pi \cdot 5\sqrt{3}}{3} \approx 226{,}7\ \text{cm}^3\).</p></div></li>
               </ol>
-              <div class="primer">
-                <p><strong>Primer:</strong> Iz polkroga s polmerom 10 cm zvijemo plašč stožca. Kolikšna sta \(r\) in \(v\)?</p>
-                <p>\(s = 10\), \(\varphi = 180°\): \(r = \frac{10 \cdot 180°}{360°} = 5\) cm, \(v = \sqrt{100 - 25} = 5\sqrt{3} \approx 8{,}66\) cm.</p>
-              </div>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Stožec ima \(r = 3\) in \(v = 4\). Kolikšna je površina?</p><p>\(s = 5\): \(9\pi + 15\pi = 24\pi\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Kup peska ima obliko stožca s premerom 4 m in višino 1,5 m. Kolikšna je prostornina?</p><p>\(\frac{\pi \cdot 4 \cdot 1{,}5}{3} = 2\pi \approx 6{,}28\ \text{m}^3\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Plašč stožca s \(s = 12\) je izsek s kotom \(120°\). Koliko je \(r\)?</p><p>\(r = \frac{12 \cdot 120°}{360°} = 4\).</p></div>
             </div>
             <div class="tip-naloge" id="tip-10">
               <h4>Tip 10: Krogla</h4>
-              <div class="prepoznaj">
-                <p><strong>Kako prepoznaš:</strong> žoga, kroglica, Zemlja, polkrogla (kupola).</p>
-                <ul class="kljucne"><li>„krogla“</li><li>„polkrogla“</li><li>„žoga“</li><li>„premer“</li></ul>
-              </div>
-              <h5>Univerzalni postopek</h5>
-              <ol>
-                <li>Iz premera izračunaj \(r\).</li>
-                <li>\(P = 4\pi r^2\), \(V = \frac{4\pi r^3}{3}\) (na listu s formulami).</li>
-                <li>Polkrogla: \(V\) polovica; površina \(2\pi r^2\) (ukrivljen del) \(+ \pi r^2\) (krog), če je zaprta.</li>
-                <li>Iz prostornine: \(r = \sqrt[3]{\frac{3V}{4\pi}}\).</li>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Kolikšen je polmer krogle s prostornino \(36\pi\ \text{cm}^3\)?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> žoga, kroglica, Zemlja, polkrogla (kupola).</p><ul class="kljucne"><li>„krogla“</li><li>„polkrogla“</li><li>„žoga“</li><li>„premer“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Zapiši formulo: \(P = 4\pi r^2\), \(V = \frac{4\pi r^3}{3}\).</p><div class="na-nalogi"><p>\(\frac{4\pi r^3}{3} = 36\pi\).</p></div></li>
+              <li><p class="korak">Izrazi neznanko: \(r = \sqrt[3]{\frac{3V}{4\pi}}\).</p><div class="na-nalogi"><p>\(r^3 = \frac{3 \cdot 36}{4} = 27\).</p></div></li>
+              <li><p class="korak">Izračunaj.</p><div class="na-nalogi"><p>\(r = 3\) cm.</p></div></li>
               </ol>
-              <div class="primer">
-                <p><strong>Primer:</strong> Kolikšen je polmer krogle s prostornino \(36\pi\ \text{cm}^3\)?</p>
-                <p>\(\frac{4\pi r^3}{3} = 36\pi\) → \(r^3 = 27\) → \(r = 3\) cm.</p>
-              </div>
+              <div class="pazi"><strong>Polkrogla:</strong> prostornina je polovica krogle. Površina zaprte polkrogle je \(2\pi r^2 + \pi r^2 = 3\pi r^2\).</div>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Kolikšna je površina žoge s premerom 22 cm?</p><p>\(r = 11\), \(P = 484\pi \approx 1520{,}5\ \text{cm}^2\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Kolikšna je prostornina polkrogle z \(r = 6\)?</p><p>\(\frac{1}{2} \cdot \frac{4\pi \cdot 216}{3} = 144\pi\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Krogla ima površino \(100\pi\). Kolikšen je polmer?</p><p>\(4r^2 = 100\), \(r = 5\).</p></div>
             </div>
             <div class="tip-naloge" id="tip-11">
               <h4>Tip 11: Pretvarjanje enot in sprememba velikosti</h4>
-              <div class="prepoznaj">
-                <p><strong>Kako prepoznaš:</strong> podatki v različnih enotah, litri, „kolikokrat se poveča prostornina“.</p>
-                <ul class="kljucne"><li>„v litrih“</li><li>„v \(\text{m}^3\)“</li><li>„podvojimo polmer“</li></ul>
-              </div>
-              <h5>Univerzalni postopek</h5>
-              <ol>
-                <li>Pred računanjem vse dolžine pretvori v isto enoto.</li>
-                <li>Prostornino pretvori v litre: \(\text{dm}^3 = \text{L}\).</li>
-                <li>Če vse dolžine pomnožimo s \(k\): površina \(\cdot k^2\), prostornina \(\cdot k^3\). Če spremenimo le eno dolžino, poglej formulo (npr. \(V\) valja je sorazmerna z \(r^2\)).</li>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Kolikokrat se poveča prostornina valja, če polmer podvojimo, višino pa razpolovimo?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> podatki v različnih enotah, litri, „kolikokrat se poveča prostornina“.</p><ul class="kljucne"><li>„v litrih“</li><li>„v \(\text{m}^3\)“</li><li>„podvojimo polmer“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Zapiši formulo s staro velikostjo.</p><div class="na-nalogi"><p>\(V = \pi r^2 v\).</p></div></li>
+              <li><p class="korak">Vstavi spremenjene dolžine. Če vse dolžine pomnožimo s \(k\), se površina pomnoži s \(k^2\), prostornina s \(k^3\).</p><div class="na-nalogi"><p>Spremenita se le dve dolžini: \(V' = \pi (2r)^2 \cdot \frac{v}{2} = \pi \cdot 4r^2 \cdot \frac{v}{2}\).</p></div></li>
+              <li><p class="korak">Primerjaj z originalom.</p><div class="na-nalogi"><p>\(V' = 2\pi r^2 v = 2V\). Prostornina se podvoji.</p></div></li>
               </ol>
-              <div class="primer">
-                <p><strong>Primer:</strong> Kolikokrat se poveča prostornina valja, če polmer podvojimo, višino pa razpolovimo?</p>
-                <p>\(\pi (2r)^2 \cdot \frac{v}{2} = 2\pi r^2 v\): dvakrat.</p>
-              </div>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Koliko litrov je \(2{,}5\ \text{m}^3\)?</p><p>\(2500\) L (\(1\ \text{m}^3 = 1000\ \text{dm}^3\)).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Rob kocke povečamo za 10 %. Za koliko se poveča prostornina?</p><p>\(1{,}1^3 = 1{,}331\), za 33,1 %.</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Kolikokrat se poveča površina krogle, če polmer potrojimo?</p><p>\(9\)-krat.</p></div>
             </div>
           </div>
         </section>
@@ -670,12 +606,8 @@
             <h2>Cavalierijevo pravilo</h2>
             <p>Zakaj imajo poševna in pokončna telesa enako prostornino.</p>
           </header>
-          <div class="sklop-cilji">
-            <h3>🎯 Cilji iz kataloga</h3>
-            <ul><li>Rešuje geometrijske probleme v povezavi s prostornino teles in utemelji formule s Cavalierijevim pravilom.</li></ul>
-          </div>
           <div class="sklop-teorija">
-            <h3>📖 Razlaga</h3>
+            <h3>Razlaga</h3>
             <figure class="slika">
 <svg viewBox="0 0 460 238" role="img" aria-label="Cavalierijevo pravilo s kovanci" xmlns="http://www.w3.org/2000/svg">
 <defs><marker id="g16-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g16-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g16-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g16-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g16-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g16-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
@@ -710,23 +642,19 @@
             </ul>
           </div>
           <div class="sklop-naloge">
-            <h3>✏️ Tipi nalog v tem sklopu</h3>
+            <h3>Tipi nalog v tem sklopu</h3>
             <div class="tip-naloge" id="tip-12">
               <h4>Tip 12: Primerjava prostornin s Cavalierijevim pravilom</h4>
-              <div class="prepoznaj">
-                <p><strong>Kako prepoznaš:</strong> primerjaj prostornini dveh teles z enako višino; utemelji, zakaj sta enaki.</p>
-                <ul class="kljucne"><li>„utemeljite, da imata enako prostornino“</li><li>„Cavalierijevo pravilo“</li><li>„poševni in pokončni“</li></ul>
-              </div>
-              <h5>Univerzalni postopek</h5>
-              <ol>
-                <li>Preveri, da imata telesi enako višino.</li>
-                <li>Opiši presek na poljubni višini \(x\) in pokaži, da sta ploščini presekov enaki (kot funkciji \(x\)).</li>
-                <li>Sklepaj: prostornini sta enaki.</li>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Pokončna in poševna prizma imata isto osnovno ploskev s ploščino \(12\ \text{cm}^2\) in višino 5 cm. Primerjajte njuni prostornini.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> primerjaj prostornini dveh teles z enako višino; utemelji, zakaj sta enaki.</p><ul class="kljucne"><li>„utemeljite, da imata enako prostornino“</li><li>„Cavalierijevo pravilo“</li><li>„poševni in pokončni“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Preveri, da imata telesi enako višino.</p><div class="na-nalogi"><p>Obe imata višino 5 cm.</p></div></li>
+              <li><p class="korak">Opiši presek na poljubni višini in pokaži, da sta ploščini presekov enaki.</p><div class="na-nalogi"><p>Vsak presek, vzporeden z osnovno ploskvijo, je pri obeh prizmah skladen z osnovno ploskvijo, torej ima ploščino \(12\ \text{cm}^2\).</p></div></li>
+              <li><p class="korak">Sklepaj po Cavalierijevem pravilu.</p><div class="na-nalogi"><p>Prostornini sta enaki: \(V_1 = V_2 = 12 \cdot 5 = 60\ \text{cm}^3\).</p></div></li>
               </ol>
-              <div class="primer">
-                <p><strong>Primer:</strong> Pokončna in poševna prizma imata isto osnovno ploskev s ploščino \(12\ \text{cm}^2\) in višino 5 cm. Primerjajte prostornini.</p>
-                <p>Vsak vzporedni presek obeh prizem je skladen z osnovno ploskvijo (\(12\ \text{cm}^2\)), višini sta enaki → \(V_1 = V_2 = 60\ \text{cm}^3\).</p>
-              </div>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Valj in prizma imata enako ploščino osnovne ploskve in enako višino. Kaj velja za prostornini?</p><p>Sta enaki (preseki imajo enako ploščino).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Piramida in stožec imata \(O = 10\) in \(v = 6\). Kolikšni sta prostornini?</p><p>Obe \(\frac{10 \cdot 6}{3} = 20\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Ali imata poševni in pokončni valj z enakim \(r\) in \(v\) tudi enako površino?</p><p>Ne, Cavalierijevo pravilo velja samo za prostornino.</p></div>
             </div>
           </div>
         </section>
@@ -738,12 +666,8 @@
             <h2>Poševna telesa</h2>
             <p>Prizma, valj, piramida in stožec, katerih višina ni stranski rob.</p>
           </header>
-          <div class="sklop-cilji">
-            <h3>🎯 Cilji iz kataloga</h3>
-            <ul><li>Rešuje geometrijske probleme s poševnimi telesi.</li></ul>
-          </div>
           <div class="sklop-teorija">
-            <h3>📖 Razlaga</h3>
+            <h3>Razlaga</h3>
             <figure class="slika slika--ozka">
 <svg viewBox="0 0 380 267" role="img" aria-label="Poševna prizma z višino" xmlns="http://www.w3.org/2000/svg">
 <defs><marker id="g17-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g17-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g17-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g17-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g17-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g17-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
@@ -780,23 +704,19 @@
             </ul>
           </div>
           <div class="sklop-naloge">
-            <h3>✏️ Tipi nalog v tem sklopu</h3>
+            <h3>Tipi nalog v tem sklopu</h3>
             <div class="tip-naloge" id="tip-13">
               <h4>Tip 13: Poševno telo</h4>
-              <div class="prepoznaj">
-                <p><strong>Kako prepoznaš:</strong> „poševna prizma“, „poševni valj“, stranski rob oklepa z osnovno ploskvijo kot \(\varphi\).</p>
-                <ul class="kljucne"><li>„poševna“</li><li>„stranski rob je nagnjen“</li><li>„oklepa z osnovno ploskvijo“</li></ul>
-              </div>
-              <h5>Univerzalni postopek</h5>
-              <ol>
-                <li>Nariši pravokotni trikotnik: stranski rob \(s\) (hipotenuza), višina \(v\) in projekcija roba na osnovno ploskev.</li>
-                <li>\(v = s \sin\varphi\).</li>
-                <li>Izračunaj \(O\) in \(V\); za površino računaj vsako stransko ploskev posebej.</li>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Poševni valj ima polmer 3 cm, stranica meri 10 cm in oklepa z osnovno ploskvijo kot \(60°\). Izračunajte prostornino.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> „poševna prizma“, „poševni valj“, stranski rob oklepa z osnovno ploskvijo kot \(\varphi\).</p><ul class="kljucne"><li>„poševna“</li><li>„stranski rob je nagnjen“</li><li>„oklepa z osnovno ploskvijo“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Nariši pravokotni trikotnik: stranski rob (hipotenuza), višina in projekcija roba na osnovno ploskev.</p><div class="na-nalogi"><p>Hipotenuza \(s = 10\), kot ob osnovni ploskvi \(60°\), višina je kateta nasproti kota.</p></div></li>
+              <li><p class="korak">Izračunaj višino: \(v = s \sin\varphi\).</p><div class="na-nalogi"><p>\(v = 10 \sin 60° = 5\sqrt{3}\) cm.</p></div></li>
+              <li><p class="korak">Izračunaj \(O\) in \(V = O \cdot v\).</p><div class="na-nalogi"><p>\(O = 9\pi\), \(V = 9\pi \cdot 5\sqrt{3} = 45\sqrt{3}\,\pi \approx 244{,}9\ \text{cm}^3\).</p></div></li>
               </ol>
-              <div class="primer">
-                <p><strong>Primer:</strong> Poševni valj ima polmer 3 cm, stranica meri 10 cm in oklepa z osnovno ploskvijo kot \(60°\). Izračunajte prostornino.</p>
-                <p>\(v = 10 \sin 60° = 5\sqrt{3}\). \(V = 9\pi \cdot 5\sqrt{3} = 45\sqrt{3}\,\pi \approx 244{,}9\ \text{cm}^3\).</p>
-              </div>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Poševna prizma ima stranski rob 8 cm pod kotom \(30°\) in \(O = 15\). Kolikšna je prostornina?</p><p>\(v = 4\), \(V = 60\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Poševna kocka (paralelepiped) ima vse robove 2 in stranski rob pod kotom \(45°\). Kolikšna je višina?</p><p>\(2 \sin 45° = \sqrt{2}\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Zakaj ima poševni valj manjšo prostornino od pokončnega z enako stranico?</p><p>Ker je višina \(s \sin\varphi &lt; s\).</p></div>
             </div>
           </div>
         </section>
@@ -808,15 +728,8 @@
             <h2>Vrtenine</h2>
             <p>Telesa, ki nastanejo z vrtenjem lika okoli osi.</p>
           </header>
-          <div class="sklop-cilji">
-            <h3>🎯 Cilji iz kataloga</h3>
-            <ul>
-              <li>Določi os vrtenja in analizira nastalo vrtenino glede na izbiro osi.</li>
-              <li>Rešuje probleme v povezavi s prostornino rotacijskih teles.</li>
-            </ul>
-          </div>
           <div class="sklop-teorija">
-            <h3>📖 Razlaga</h3>
+            <h3>Razlaga</h3>
             <div class="slike-vrsta"><figure class="slika">
 <svg viewBox="0 0 200 200" role="img" aria-label="Vrtenje pravokotnika okoli stranice" xmlns="http://www.w3.org/2000/svg">
 <defs><marker id="g18-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g18-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g18-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g18-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g18-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g18-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
@@ -869,24 +782,20 @@
             <p>Vedno najprej nariši lik, os in zrcalno sliko lika čez os. Nastala slika je osni presek vrtenine, iz nje razbereš polmere in višine.</p>
           </div>
           <div class="sklop-naloge">
-            <h3>✏️ Tipi nalog v tem sklopu</h3>
+            <h3>Tipi nalog v tem sklopu</h3>
             <div class="tip-naloge" id="tip-14">
               <h4>Tip 14: Prostornina in površina vrtenine</h4>
-              <div class="prepoznaj">
-                <p><strong>Kako prepoznaš:</strong> lik se vrti okoli stranice, osi, premice.</p>
-                <ul class="kljucne"><li>„zavrtimo okoli“</li><li>„vrtenina“</li><li>„rotacijsko telo“</li><li>„okoli hipotenuze“</li></ul>
-              </div>
-              <h5>Univerzalni postopek</h5>
-              <ol>
-                <li>Nariši lik, os in zrcalni lik (osni presek vrtenine).</li>
-                <li>Razdeli vrtenino na znana telesa (valj, stožec, prisekani stožec) in za vsako odčitaj \(r\) in \(v\).</li>
-                <li>Prostornine seštej (ali odštej, če je del izdolben).</li>
-                <li>Površina: seštej plašče in osnovne ploskve, ki so <strong>na zunanji strani</strong> (skupne ploskve ne štejemo).</li>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Pravokotni trikotnik s katetama 3 cm in 4 cm zavrtimo okoli hipotenuze. Izračunajte prostornino nastalega telesa.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> lik se vrti okoli stranice, osi, premice.</p><ul class="kljucne"><li>„zavrtimo okoli“</li><li>„vrtenina“</li><li>„rotacijsko telo“</li><li>„okoli hipotenuze“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Nariši lik, os in zrcalni lik (osni presek vrtenine).</p><div class="na-nalogi"><p>Hipotenuza je os. Telo sta dva stožca s skupno osnovno ploskvijo.</p></div></li>
+              <li><p class="korak">Razdeli vrtenino na znana telesa in za vsako odčitaj \(r\) in \(v\).</p><div class="na-nalogi"><p>Polmer je višina na hipotenuzo: \(c = 5\), \(r = v_c = \frac{3 \cdot 4}{5} = 2{,}4\). Višini stožcev sta odseka hipotenuze, skupaj \(5\).</p></div></li>
+              <li><p class="korak">Prostornine seštej (ali odštej, če je del izdolben).</p><div class="na-nalogi"><p>\(V = \frac{\pi r^2 c_1}{3} + \frac{\pi r^2 c_2}{3} = \frac{\pi \cdot 2{,}4^2 \cdot 5}{3} = 9{,}6\pi \approx 30{,}2\ \text{cm}^3\).</p></div></li>
+              <li><p class="korak">Za površino seštej samo zunanje plašče in ploskve.</p><div class="na-nalogi"><p>Površina sta plašča: \(\pi \cdot 2{,}4 \cdot (3 + 4) = 16{,}8\pi\).</p></div></li>
               </ol>
-              <div class="primer">
-                <p><strong>Primer:</strong> Pravokotni trikotnik s katetama 3 cm in 4 cm zavrtimo okoli hipotenuze. Izračunajte prostornino nastalega telesa.</p>
-                <p>\(c = 5\), \(v_c = \frac{3 \cdot 4}{5} = 2{,}4\). \(V = \frac{\pi \cdot 2{,}4^2 \cdot 5}{3} = 9{,}6\pi \approx 30{,}2\ \text{cm}^3\).</p>
-              </div>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Pravokotnik \(4 \times 2\) zavrtimo okoli daljše stranice. Kaj dobimo in kolikšna je prostornina?</p><p>Valj z \(r = 2\), \(v = 4\): \(V = 16\pi\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Pravokotni trikotnik s katetama 3 in 4 zavrtimo okoli katete 4. Kolikšna je prostornina?</p><p>Stožec z \(r = 3\), \(v = 4\): \(12\pi\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Polkrog s polmerom 2 zavrtimo okoli premera. Kaj dobimo?</p><p>Kroglo z \(r = 2\), \(V = \frac{32\pi}{3}\).</p></div>
             </div>
           </div>
         </section>
@@ -898,16 +807,8 @@
             <h2>Geometrijski matematični problemi</h2>
             <p>Sestavljena telesa, pretakanje, taljenje in uporaba trigonometrije.</p>
           </header>
-          <div class="sklop-cilji">
-            <h3>🎯 Cilji iz kataloga</h3>
-            <ul>
-              <li>Prepozna geometrijski problem, ga predstavi, ugotovi, s katerimi pojmi, spremenljivkami in zvezami med njimi ga lahko rešuje, problem reši, rešitve predstavi in razmisli o njihovi smiselnosti.</li>
-              <li>Pri reševanju geometrijskih problemov samostojno izbere in uporablja ustrezne strategije in povezuje vsebine iz ravninske in prostorske geometrije.</li>
-              <li>Rešuje geometrijske probleme z uporabo trigonometrije.</li>
-            </ul>
-          </div>
           <div class="sklop-teorija">
-            <h3>📖 Razlaga</h3>
+            <h3>Razlaga</h3>
             <p>Problemske naloge združujejo več sklopov. Strategije, ki skoraj vedno pomagajo:</p>
             <ul>
               <li><strong>Skica in osni presek:</strong> prostorsko nalogo prevedi na ravninski lik.</li>
@@ -918,64 +819,52 @@
             </ul>
           </div>
           <div class="sklop-naloge">
-            <h3>✏️ Tipi nalog v tem sklopu</h3>
+            <h3>Tipi nalog v tem sklopu</h3>
             <div class="tip-naloge" id="tip-15">
               <h4>Tip 15: Sestavljeno telo</h4>
-              <div class="prepoznaj">
-                <p><strong>Kako prepoznaš:</strong> telo je opisano kot več teles skupaj (silos = valj + stožec, hiša = kvader + prizma) ali z izvrtino.</p>
-                <ul class="kljucne"><li>„na valj je postavljen“</li><li>„izvrtina“</li><li>„iz kocke izrežemo“</li></ul>
-              </div>
-              <h5>Univerzalni postopek</h5>
-              <ol>
-                <li>Nariši telo in loči dele.</li>
-                <li>\(V\) = vsota (ali razlika) prostornin delov.</li>
-                <li>\(P\): seštej samo zunanje ploskve; stične ploskve odpadejo, pri izvrtini se doda notranji plašč.</li>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Silos je valj s polmerom 2 m in višino 6 m, na vrhu ima stožec z višino 1,5 m. Kolikšna je prostornina silosa?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> telo je opisano kot več teles skupaj (silos = valj + stožec, hiša = kvader + prizma) ali z izvrtino.</p><ul class="kljucne"><li>„na valj je postavljen“</li><li>„izvrtina“</li><li>„iz kocke izrežemo“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Nariši telo in loči dele.</p><div class="na-nalogi"><p>Valj (\(r = 2\), \(v = 6\)) in stožec (\(r = 2\), \(v = 1{,}5\)).</p></div></li>
+              <li><p class="korak">Izračunaj prostornino vsakega dela.</p><div class="na-nalogi"><p>Valj: \(\pi \cdot 4 \cdot 6 = 24\pi\). Stožec: \(\frac{\pi \cdot 4 \cdot 1{,}5}{3} = 2\pi\).</p></div></li>
+              <li><p class="korak">Seštej (pri izvrtini odštej). Pri površini štej samo zunanje ploskve.</p><div class="na-nalogi"><p>\(V = 26\pi \approx 81{,}7\ \text{m}^3\).</p></div></li>
               </ol>
-              <div class="primer">
-                <p><strong>Primer:</strong> Silos je valj s polmerom 2 m in višino 6 m, na vrhu ima stožec z višino 1,5 m. Kolikšna je prostornina?</p>
-                <p>\(V = \pi \cdot 4 \cdot 6 + \frac{\pi \cdot 4 \cdot 1{,}5}{3} = 24\pi + 2\pi = 26\pi \approx 81{,}7\ \text{m}^3\).</p>
-              </div>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Iz kocke z robom 4 izvrtamo valj s polmerom 1 skozi sredino. Koliko ostane?</p><p>\(64 - 4\pi \approx 51{,}4\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Hiša je kvader \(10 \times 8 \times 3\) s streho (tristrana prizma z višino trikotnika 2 nad širino 8). Kolikšna je prostornina?</p><p>\(240 + \frac{8 \cdot 2}{2} \cdot 10 = 320\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Na valj z \(r = 3\) postavimo polkroglo z \(r = 3\). Katere ploskve štejemo v površino?</p><p>Spodnjo osnovno ploskev valja, plašč valja in ukrivljeni del polkrogle. Zgornja osnovna ploskev valja odpade.</p></div>
             </div>
             <div class="tip-naloge" id="tip-16">
               <h4>Tip 16: Prelivanje, taljenje, preoblikovanje</h4>
-              <div class="prepoznaj">
-                <p><strong>Kako prepoznaš:</strong> snov iz enega telesa preoblikujejo v drugo; voda se dvigne, ko potopimo telo.</p>
-                <ul class="kljucne"><li>„pretopimo“</li><li>„prelijemo“</li><li>„za koliko se dvigne gladina“</li><li>„koliko kroglic“</li></ul>
-              </div>
-              <h5>Univerzalni postopek</h5>
-              <ol>
-                <li>Izračunaj prostornino snovi pred preoblikovanjem.</li>
-                <li>Zapiši prostornino novega telesa z neznanko in ju izenači.</li>
-                <li>Pri dvigu gladine: prostornina potopljenega telesa = osnovna ploskev posode × dvig.</li>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>V valjasto posodo s polmerom 5 cm, delno napolnjeno z vodo, potopimo kroglo s polmerom 3 cm. Za koliko se dvigne gladina?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> snov iz enega telesa preoblikujejo v drugo; voda se dvigne, ko potopimo telo.</p><ul class="kljucne"><li>„pretopimo“</li><li>„prelijemo“</li><li>„za koliko se dvigne gladina“</li><li>„koliko kroglic“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Izračunaj prostornino snovi, ki se preoblikuje (ali potopljenega telesa).</p><div class="na-nalogi"><p>\(V_k = \frac{4\pi \cdot 27}{3} = 36\pi\ \text{cm}^3\).</p></div></li>
+              <li><p class="korak">Zapiši prostornino novega telesa z neznanko. Pri dvigu gladine je to osnovna ploskev posode krat dvig.</p><div class="na-nalogi"><p>\(25\pi \cdot h\).</p></div></li>
+              <li><p class="korak">Izenači in reši.</p><div class="na-nalogi"><p>\(25\pi h = 36\pi\), \(h = 1{,}44\) cm.</p></div></li>
               </ol>
-              <div class="primer">
-                <p><strong>Primer:</strong> V valjasto posodo s polmerom 5 cm potopimo kroglo s polmerom 3 cm. Za koliko se dvigne gladina?</p>
-                <p>\(V_k = 36\pi\), \(25\pi \cdot h = 36\pi\), \(h = 1{,}44\) cm.</p>
-              </div>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Kocko z robom 6 cm pretopimo v kroglice s polmerom 1 cm. Koliko kroglic dobimo?</p><p>\(\frac{216}{\frac{4\pi}{3}} \approx 51{,}6\): 51 celih kroglic.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Vodo iz kocke z robom 10 cm prelijemo v valj z \(r = 5\). Kako visoko sega?</p><p>\(\frac{1000}{25\pi} \approx 12{,}7\) cm.</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Valj z \(r = 2\) in \(v = 9\) pretopimo v kroglo. Kolikšen je polmer?</p><p>\(36\pi = \frac{4\pi r^3}{3}\), \(r = 3\).</p></div>
             </div>
             <div class="tip-naloge" id="tip-17">
               <h4>Tip 17: Koti v telesih (trigonometrija)</h4>
-              <div class="prepoznaj">
-                <p><strong>Kako prepoznaš:</strong> dan ali iskan je kot med stransko ploskvijo/robom/stranico in osnovno ploskvijo ali kot ob vrhu.</p>
-                <ul class="kljucne"><li>„naklonski kot“</li><li>„kot med stransko in osnovno ploskvijo“</li><li>„kot ob vrhu osnega preseka“</li></ul>
-              </div>
-              <h5>Univerzalni postopek</h5>
-              <ol>
-                <li>Poišči pravokotni trikotnik, v katerem leži kot (glej strategije zgoraj).</li>
-                <li>Zapiši ustrezno kotno funkcijo z znanima stranicama.</li>
-                <li>Izračunaj kot ali manjkajočo stranico; nadaljuj s formulami za \(P\) in \(V\).</li>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Pravilna štiristrana piramida ima osnovni rob 8 cm, stranska ploskev oklepa z osnovno ploskvijo kot \(60°\). Izračunajte prostornino.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> dan ali iskan je kot med stransko ploskvijo/robom/stranico in osnovno ploskvijo ali kot ob vrhu.</p><ul class="kljucne"><li>„naklonski kot“</li><li>„kot med stransko in osnovno ploskvijo“</li><li>„kot ob vrhu osnega preseka“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Poišči pravokotni trikotnik, v katerem leži kot.</p><div class="na-nalogi"><p>Kot med stransko in osnovno ploskvijo leži v trikotniku \((v, \frac{a}{2}, v_s)\), ob kateti \(\frac{a}{2} = 4\).</p></div></li>
+              <li><p class="korak">Zapiši kotno funkcijo z znanima stranicama.</p><div class="na-nalogi"><p>\(\tan 60° = \frac{v}{4}\).</p></div></li>
+              <li><p class="korak">Izračunaj manjkajočo stranico ali kot in nadaljuj s formulami za \(P\) in \(V\).</p><div class="na-nalogi"><p>\(v = 4\sqrt{3}\). \(V = \frac{64 \cdot 4\sqrt{3}}{3} \approx 147{,}8\ \text{cm}^3\).</p></div></li>
               </ol>
-              <div class="primer">
-                <p><strong>Primer:</strong> Pravilna štiristrana piramida ima osnovni rob 8 cm, stranska ploskev oklepa z osnovno ploskvijo kot \(60°\). Izračunajte prostornino.</p>
-                <p>V trikotniku \((v, \frac{a}{2}, v_s)\): \(v = 4 \tan 60° = 4\sqrt{3}\). \(V = \frac{64 \cdot 4\sqrt{3}}{3} \approx 147{,}8\ \text{cm}^3\).</p>
-              </div>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Stožec ima \(r = 5\) in \(v = 5\). Kolikšen je kot ob vrhu osnega preseka?</p><p>Polovica kota: \(\tan\frac{\varphi}{2} = 1\), \(\varphi = 90°\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Stranica stožca \(s = 10\) oklepa z osnovno ploskvijo \(30°\). Koliko sta \(r\) in \(v\)?</p><p>\(v = 5\), \(r = 5\sqrt{3}\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Pravilna štiristrana piramida ima \(a = 6\) in \(v = 3\). Kolikšen kot oklepa stranski rob z osnovno ploskvijo?</p><p>\(\frac{d}{2} = 3\sqrt{2}\), \(\tan\varphi = \frac{1}{\sqrt{2}}\), \(\varphi \approx 35{,}26°\).</p></div>
             </div>
           </div>
         </section>
 
         <section class="subsection" id="kljuc">
           <div class="subsection-head">
-            <h2>🔎 Ključ: kateri tip naloge je to?</h2>
+            <h2>Ključ: kateri tip naloge je to?</h2>
             <p>Poišči besedo iz navodila naloge in skoči na pravi postopek.</p>
           </div>
           <div class="info-card">
@@ -1008,7 +897,7 @@
 
         <section class="subsection">
           <div class="subsection-head">
-            <h2>⚠️ Pogoste napake</h2>
+            <h2>Pogoste napake</h2>
           </div>
           <div class="info-card">
             <ul>
