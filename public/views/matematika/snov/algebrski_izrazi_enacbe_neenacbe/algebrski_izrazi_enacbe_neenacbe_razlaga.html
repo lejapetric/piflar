@@ -4,12 +4,12 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Algebrski izrazi, enačbe in neenačbe — razlaga in postopki | Piflar.si</title>
-  <meta name="description" content="Razlaga po sklopih za maturo 4.4: potenciranje in razstavljanje izrazov, računanje z ulomki, linearne enačbe, razcepne enačbe in linearne neenačbe; na koncu še linearna enačba in neenačba s parametrom (višja raven).">
+  <meta name="description" content="Algebrski izrazi, enačbe in neenačbe za maturo po podpoglavjih kataloga: računanje z izrazi, potenciranje, razstavljanje, algebrski ulomki, linearne in razcepne enačbe, linearne neenačbe in enačbe ter neenačbe s parametrom.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
   <link rel="stylesheet" href="/style/style.css">
-  <link rel="stylesheet" href="/views/matematika/snov/algebrski_izrazi_enacbe_neenacbe/algebrski_izrazi_enacbe_neenacbe_style.css">
+  <link rel="stylesheet" href="/style/snov.css">
 </head>
 <body>
   <div id="header"></div>
@@ -23,653 +23,818 @@
         <header class="page-header">
           <span class="page-eyebrow">Matematika · Snov · 4.4</span>
           <h1>Algebrski izrazi, enačbe in neenačbe</h1>
-          <p>Razlaga po sklopih iz učnega načrta: računske operacije z izrazi (potenciranje, razstavljanje, ulomki), linearne enačbe in neenačbe, razcepne enačbe; na koncu še linearna enačba in neenačba s parametrom kot višja raven.</p>
+          <p>Računanje z algebrskimi izrazi, kvadrat in kub dvočlenika, razstavljanje, algebrski ulomki, linearne in razcepne enačbe, linearne neenačbe ter enačbe in neenačbe s parametrom. Pod razlago vsakega podpoglavja so vsi tipi nalog, ki se pojavijo pri tem sklopu.</p>
           <div class="page-meta">
-            <div class="page-meta-item"><strong>8</strong><span>Sklopov</span></div>
-            <div class="page-meta-item"><strong>40+</strong><span>Rešenih primerov</span></div>
-            <div class="page-meta-item"><strong>~60 min</strong><span>Branja</span></div>
+            <div class="page-meta-item"><strong>10</strong><span>Podpoglavij</span></div>
+            <div class="page-meta-item"><strong>16</strong><span>Tipov nalog</span></div>
+            <div class="page-meta-item"><strong>~75 min</strong><span>Branja</span></div>
           </div>
         </header>
 
-        <!-- ============================================================
-             NADNASLOV A: RAČUNSKE OPERACIJE Z IZRAZI
-             ============================================================ -->
-        <div class="sklop-nadnaslov">
-          <span class="sklop-nadnaslov-eyebrow">Sklop A</span>
-          <h2>Računske operacije z izrazi</h2>
-          <p>Potenciranje, razstavljanje in računanje z ulomki — osnova za vse enačbe in neenačbe.</p>
+        <!-- ============ MATURA FORMULE ============ -->
+        <div class="matura-formule">
+          <h3>📋 Formule na maturi</h3>
+          <p>Na listu s formulami je za to poglavje samo <strong>vsota in razlika kubov</strong>. Vse ostalo moraš znati na pamet.</p>
+          <div class="matura-grid">
+            <div class="matura-levo">
+              <ul>
+                <li><strong>Na listu:</strong> \(a^3 \pm b^3 = (a \pm b)(a^2 \mp ab + b^2)\)</li>
+                <li><strong>Na pamet:</strong> \((a \pm b)^2 = a^2 \pm 2ab + b^2\)</li>
+                <li><strong>Na pamet:</strong> \((a \pm b)^3 = a^3 \pm 3a^2b + 3ab^2 \pm b^3\)</li>
+                <li><strong>Na pamet:</strong> \(a^2 - b^2 = (a - b)(a + b)\)</li>
+                <li><strong>Na pamet:</strong> \(x^2 + bx + c = (x - x_1)(x - x_2)\), \(x_1 + x_2 = -b\), \(x_1 x_2 = c\)</li>
+              </ul>
+            </div>
+            <div class="matura-slika">
+              <img src="/views/matematika/images/formule_osnovna_raven.png" alt="Formule na maturi — osnovna raven">
+            </div>
+          </div>
         </div>
 
-        <!-- ============ SKLOP 1: POTENCIRANJE IZRAZOV ============ -->
+        <!-- ============ KAZALO ============ -->
+        <nav class="kazalo" aria-label="Podpoglavja">
+          <h2>Podpoglavja</h2>
+          <ol>
+            <li><a href="#sklop-1"><span class="kazalo-st">4.4.1</span> Računske operacije z izrazi</a></li>
+            <li><a href="#sklop-2"><span class="kazalo-st">4.4.2</span> Potenciranje izrazov</a></li>
+            <li><a href="#sklop-3"><span class="kazalo-st">4.4.3</span> Razstavljanje izrazov</a></li>
+            <li><a href="#sklop-4"><span class="kazalo-st">4.4.4</span> Računanje z ulomki</a></li>
+            <li><a href="#sklop-5"><span class="kazalo-st">4.4.5</span> Enačbe in neenačbe</a></li>
+            <li><a href="#sklop-6"><span class="kazalo-st">4.4.6</span> Linearna enačba</a></li>
+            <li><a href="#sklop-7"><span class="kazalo-st">4.4.7</span> Razcepna enačba</a></li>
+            <li><a href="#sklop-8"><span class="kazalo-st">4.4.8</span> Linearna enačba s parametrom <span class="badge-vr">VR</span></a></li>
+            <li><a href="#sklop-9"><span class="kazalo-st">4.4.9</span> Linearna neenačba</a></li>
+            <li><a href="#sklop-10"><span class="kazalo-st">4.4.10</span> Linearna neenačba s parametrom <span class="badge-vr">VR</span></a></li>
+            <li><a href="#kljuc"><span class="kazalo-st">🔎</span> Ključ: kateri tip naloge je to?</a></li>
+          </ol>
+        </nav>
+
+        <!-- ============ SKLOP 1 ============ -->
         <section class="sklop" id="sklop-1">
           <header class="sklop-header">
-            <span class="sklop-num">Sklop 1</span>
-            <h2>Potenciranje izrazov</h2>
-            <p>Kvadrat in kub dvočlenika, Pascalov trikotnik, višje potence dvočlenika.</p>
+            <span class="sklop-num">4.4.1</span>
+            <h2>Računske operacije z izrazi</h2>
+            <p>Izraz, spremenljivka, seštevanje in množenje algebrskih izrazov.</p>
           </header>
-
           <div class="sklop-cilji">
-            <h3>🎯 Cilji</h3>
+            <h3>🎯 Cilji iz kataloga</h3>
             <ul>
-              <li>Uporabljaš in utemeljiš pravili za kvadrat in kub dvočlenika.</li>
-              <li>S pomočjo Pascalovega trikotnika določiš pravila za višje potence dvočlenika in jih uporabljaš.</li>
+              <li>Primerja in razlikuje zapis in pomen izraza in enačbe ter spremenljivke in neznanke.</li>
+              <li>Sešteva in množi algebrske izraze.</li>
             </ul>
           </div>
-
           <div class="sklop-teorija">
-            <h3>📖 Teorija</h3>
-
-            <div class="concept-list four-col">
+            <h3>📖 Razlaga</h3>
+            <h4>Izraz ali enačba? Spremenljivka ali neznanka?</h4>
+            <div class="concept-list two-col">
               <div class="concept">
-                <h4>Kvadrat binoma</h4>
-                <div class="concept-formula">\((a \pm b)^2 = a^2 \pm 2ab + b^2\)</div>
+                <h4>Izraz</h4>
+                <div class="concept-formula">\(3x^2 - 2x + 5\)</div>
+                <p class="concept-desc">Zapis s števili, črkami in računskimi operacijami, <strong>brez enačaja</strong>. Izraz lahko poenostavimo, razstavimo ali izračunamo njegovo vrednost. Črka v izrazu je <strong>spremenljivka</strong>: zanjo lahko vstavimo poljubno število.</p>
               </div>
               <div class="concept">
-                <h4>Kub binoma</h4>
-                <div class="concept-formula">\((a \pm b)^3 = a^3 \pm 3a^2b + 3ab^2 \pm b^3\)</div>
-              </div>
-              <div class="concept">
-                <h4>Kvadrat trinoma</h4>
-                <div class="concept-formula">\((a+b+c)^2 = a^2+b^2+c^2+2ab+2ac+2bc\)</div>
-              </div>
-              <div class="concept">
-                <h4>Potenca produkta</h4>
-                <div class="concept-formula">\((ab)^n = a^n b^n\)</div>
+                <h4>Enačba</h4>
+                <div class="concept-formula">\(3x^2 - 2x + 5 = 6\)</div>
+                <p class="concept-desc">Dva izraza, povezana z enačajem. Enačbo <strong>rešujemo</strong>: iščemo vrednosti, pri katerih je enakost resnična. Črka v enačbi je <strong>neznanka</strong>.</p>
               </div>
             </div>
-
-            <h4>Pascalov trikotnik</h4>
-            <p>Koeficienti pri razvoju \((a+b)^n\) se berejo iz Pascalovega trikotnika:</p>
-            <pre class="pascal">
-n = 0:              1
-n = 1:            1   1
-n = 2:          1   2   1
-n = 3:        1   3   3   1
-n = 4:      1   4   6   4   1
-n = 5:    1   5  10  10   5   1
-            </pre>
-            <p>Splošna binomska formula:</p>
-            <div class="formula-card">\((a+b)^n = \sum_{k=0}^{n} \binom{n}{k} a^{n-k} b^k\)</div>
+            <h4>Členi in podobni členi</h4>
+            <p>Izraz \(4x^2y - 3xy + 7\) ima tri <strong>člene</strong>. Člen \(4x^2y\) ima <strong>koeficient</strong> 4 in <strong>stopnjo</strong> 3 (vsota eksponentov). <strong>Podobni členi</strong> imajo enake spremenljivke z enakimi eksponenti (\(3x^2y\) in \(-5x^2y\)); samo te lahko seštejemo, tako da seštejemo koeficiente: \(3x^2y - 5x^2y = -2x^2y\).</p>
+            <h4>Množenje izrazov</h4>
+            <ul>
+              <li><strong>Enočlenik z enočlenikom:</strong> zmnožimo koeficiente, potence z isto osnovo zmnožimo (eksponente seštejemo): \(3a^2b \cdot (-2ab^3) = -6a^3b^4\).</li>
+              <li><strong>Enočlenik z veččlenikom:</strong> distributivnost, \(2x(x^2 - 3x + 1) = 2x^3 - 6x^2 + 2x\).</li>
+              <li><strong>Veččlenik z veččlenikom:</strong> „vsak z vsakim“, nato seštej podobne člene: \((x + 2)(x^2 - x + 3) = x^3 - x^2 + 3x + 2x^2 - 2x + 6 = x^3 + x^2 + x + 6\).</li>
+              <li><strong>Minus pred oklepajem</strong> spremeni predznak vsem členom v oklepaju: \(-(2x - 3y + 1) = -2x + 3y - 1\).</li>
+            </ul>
           </div>
-
           <div class="sklop-naloge">
-            <h3>✏️ Rešeni primeri</h3>
-
-            <p class="plain-example"><strong>Primer 1:</strong> Razvij \((2x + 3)^2\).</p>
-            <div class="plain-example">
-              <p>\((2x + 3)^2 = (2x)^2 + 2 \cdot 2x \cdot 3 + 3^2 = 4x^2 + 12x + 9\).</p>
+            <h3>✏️ Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-1">
+              <h4>Tip 1: Poenostavi izraz (seštevanje in množenje)</h4>
+              <div class="prepoznaj">
+                <p><strong>Kako prepoznaš:</strong> dolg izraz z oklepaji, ki ga moraš zapisati krajše; ni enačaja.</p>
+                <ul class="kljucne"><li>„poenostavite izraz“</li><li>„zmnožite in uredite“</li><li>„zapišite kot polinom“</li></ul>
+              </div>
+              <h5>Univerzalni postopek</h5>
+              <ol>
+                <li>Najprej izračunaj potence oklepajev (formule iz <a href="#sklop-2">4.4.2</a>).</li>
+                <li>Nato odpravi oklepaje z množenjem; pazi na minus pred oklepajem (zapiši rezultat množenja v oklepaj, nato odpravi minus).</li>
+                <li>Seštej podobne člene in jih uredi po padajočih potencah.</li>
+              </ol>
+              <div class="primer">
+                <p><strong>Primer:</strong> Poenostavite \((2x - 1)(x + 3) - 2(x - 1)^2\).</p>
+                <p>\((2x^2 + 6x - x - 3) - 2(x^2 - 2x + 1) = 2x^2 + 5x - 3 - 2x^2 + 4x - 2 = 9x - 5\).</p>
+              </div>
             </div>
-
-            <p class="plain-example"><strong>Primer 2:</strong> Razvij \((x - 2)^3\).</p>
-            <div class="plain-example">
-              <p>\((x - 2)^3 = x^3 - 3x^2 \cdot 2 + 3x \cdot 2^2 - 2^3 = x^3 - 6x^2 + 12x - 8\).</p>
-            </div>
-
-            <p class="plain-example"><strong>Primer 3:</strong> Razvij \((a + b)^4\) s Pascalovim trikotnikom.</p>
-            <div class="plain-example">
-              <p>Vrstica \(n = 4\): \(1, 4, 6, 4, 1\).</p>
-              <p>\((a+b)^4 = a^4 + 4a^3b + 6a^2b^2 + 4ab^3 + b^4\).</p>
-            </div>
-
-            <p class="plain-example"><strong>Primer 4:</strong> Razvij \((x + 1)^5\).</p>
-            <div class="plain-example">
-              <p>Vrstica \(n = 5\): \(1, 5, 10, 10, 5, 1\).</p>
-              <p>\((x+1)^5 = x^5 + 5x^4 + 10x^3 + 10x^2 + 5x + 1\).</p>
+            <div class="tip-naloge" id="tip-2">
+              <h4>Tip 2: Vrednost izraza</h4>
+              <div class="prepoznaj">
+                <p><strong>Kako prepoznaš:</strong> dan je izraz in vrednosti spremenljivk.</p>
+                <ul class="kljucne"><li>„izračunajte vrednost izraza za \(x = -2\)“</li><li>„če je \(a = \frac{1}{2}\)“</li></ul>
+              </div>
+              <h5>Univerzalni postopek</h5>
+              <ol>
+                <li>Če je izraz dolg, ga najprej poenostavi (Tip 1), šele nato vstavi.</li>
+                <li>Negativna števila in ulomke vstavljaj <strong>v oklepajih</strong>: \(x^2\) pri \(x = -2\) je \((-2)^2 = 4\).</li>
+              </ol>
+              <div class="primer">
+                <p><strong>Primer:</strong> Izračunajte \((2x - 1)(x + 3) - 2(x - 1)^2\) za \(x = -\frac{1}{3}\).</p>
+                <p>Poenostavljeno \(9x - 5\): \(9 \cdot \left(-\frac{1}{3}\right) - 5 = -3 - 5 = -8\).</p>
+              </div>
             </div>
           </div>
         </section>
 
-        <!-- ============ SKLOP 2: RAZSTAVLJANJE IZRAZOV ============ -->
+        <!-- ============ SKLOP 2 ============ -->
         <section class="sklop" id="sklop-2">
           <header class="sklop-header">
-            <span class="sklop-num">Sklop 2</span>
-            <h2>Razstavljanje izrazov</h2>
-            <p>Izpostavljanje, razlika kvadratov, vsota in razlika kubov, Vietovo pravilo, razstavljanje štiričlenikov.</p>
+            <span class="sklop-num">4.4.2</span>
+            <h2>Potenciranje izrazov</h2>
+            <p>Kvadrat in kub dvočlenika, Pascalov trikotnik, višje potence.</p>
           </header>
-
           <div class="sklop-cilji">
-            <h3>🎯 Cilji</h3>
+            <h3>🎯 Cilji iz kataloga</h3>
             <ul>
-              <li>Prepoznaš in uporabljaš ustrezen način razstavljanja: izpostavljanje, razlika kvadratov, vsota in razlika kubov, Vietovo pravilo, razstavljanje štiričlenikov.</li>
+              <li>Uporablja in utemelji pravili za kvadrat in kub dvočlenika.</li>
+              <li>S pomočjo Pascalovega trikotnika določi pravila za višje potence dvočlenika in jih tudi uporablja.</li>
             </ul>
           </div>
-
           <div class="sklop-teorija">
-            <h3>📖 Teorija — kaj pomeni razstaviti izraz</h3>
-
-            <p><strong>Razstaviti (faktorizirati) izraz</strong> pomeni, da izraz, ki je zapisan kot <strong>vsota ali razlika členov</strong>, prepišemo v obliko <strong>produkta faktorjev</strong>.</p>
-
-            <div class="formula-grid">
-              <div class="formula-card">vsota/razlika členov \(\;\longrightarrow\;\) produkt faktorjev</div>
-            </div>
-
-            <div class="concept-list two-col" style="margin-top: var(--space-4);">
-              <div class="concept">
-                <h4>Nerazstavljeno</h4>
-                <div class="concept-formula">\(x^2 - 9\)</div>
-                <p class="concept-desc">Razlika dveh členov. Ni še produkt.</p>
-              </div>
-              <div class="concept">
-                <h4>Razstavljeno</h4>
-                <div class="concept-formula">\((x - 3)(x + 3)\)</div>
-                <p class="concept-desc">Produkt dveh faktorjev. Izraz je razstavljen.</p>
-              </div>
-            </div>
-
-            <p><strong>Zakaj to počnemo?</strong></p>
-            <ul>
-              <li><strong>Krajšanje ulomkov:</strong> skupne faktorje okrajšamo (npr. \(\frac{x^2-9}{x-3} = x+3\)).</li>
-              <li><strong>Reševanje enačb:</strong> produkt = 0 pomeni vsaj en faktor = 0.</li>
-              <li><strong>Določanje ničel polinoma:</strong> ničle preberemo iz faktorjev.</li>
-            </ul>
-
-            <h3 style="margin-top: var(--space-5);">📖 Pregled metod</h3>
-            <div class="concept-list three-col">
-              <div class="concept">
-                <h4>Skupni faktor</h4>
-                <div class="concept-formula">\(a^2 - 3a = a(a - 3)\)</div>
-              </div>
-              <div class="concept">
-                <h4>Razlika kvadratov</h4>
-                <div class="concept-formula">\(a^2 - b^2 = (a - b)(a + b)\)</div>
-              </div>
-              <div class="concept">
-                <h4>Vsota kubov</h4>
-                <div class="concept-formula">\(a^3 + b^3 = (a + b)(a^2 - ab + b^2)\)</div>
-              </div>
-              <div class="concept">
-                <h4>Razlika kubov</h4>
-                <div class="concept-formula">\(a^3 - b^3 = (a - b)(a^2 + ab + b^2)\)</div>
-              </div>
-              <div class="concept">
-                <h4>Kvadratni tričlenik</h4>
-                <div class="concept-formula">\(ax^2 + bx + c = a(x - x_1)(x - x_2)\)</div>
-              </div>
-              <div class="concept">
-                <h4>Vietovo pravilo</h4>
-                <div class="concept-formula">\(x_1 + x_2 = -\dfrac{b}{a}\), \(x_1 x_2 = \dfrac{c}{a}\)</div>
-              </div>
-              <div class="concept">
-                <h4>Razstavljanje štiričlenikov</h4>
-                <div class="concept-formula">grupiranje: \(ac + ad + bc + bd = a(c+d) + b(c+d)\)</div>
-              </div>
-              <div class="concept">
-                <h4>Preverjanje</h4>
-                <div class="concept-formula">faktorje zmnožimo nazaj</div>
-              </div>
-              <div class="concept">
-                <h4>Do konca razstavljeno</h4>
-                <div class="concept-formula">faktorji, ki jih ne moremo več razstaviti</div>
-              </div>
-            </div>
+            <h3>📖 Razlaga</h3>
+            <h4>Kvadrat dvočlenika in njegova utemeljitev</h4>
+            <div class="formula-card">\((a + b)^2 = a^2 + 2ab + b^2 \qquad (a - b)^2 = a^2 - 2ab + b^2\)</div>
+            <p>Algebrsko: \((a + b)^2 = (a + b)(a + b) = a^2 + ab + ba + b^2\). Geometrijsko: kvadrat s stranico \(a + b\) razpade na kvadrat \(a^2\), kvadrat \(b^2\) in dva pravokotnika \(ab\).</p>
+            <figure class="slika slika--ozka">
+<svg viewBox="0 0 300 300" role="img" aria-label="Kvadrat dvočlenika kot ploščina" xmlns="http://www.w3.org/2000/svg">
+<rect x="40" y="30" width="160" height="160" class="s-lik"/>
+<rect x="200" y="30" width="70" height="160" class="s-lik-2"/>
+<rect x="40" y="190" width="160" height="70" class="s-lik-2"/>
+<rect x="200" y="190" width="70" height="70" style="fill:rgba(217,119,6,0.12);stroke:#D97706;stroke-width:2"/>
+<text x="120" y="115" text-anchor="middle" class="s-txt-k1" style="font-size:18px">a²</text>
+<text x="235" y="115" text-anchor="middle" class="s-txt-k3" style="font-size:16px">ab</text>
+<text x="120" y="230" text-anchor="middle" class="s-txt-k3" style="font-size:16px">ab</text>
+<text x="235" y="230" text-anchor="middle" class="s-txt-k4" style="font-size:16px">b²</text>
+<text x="120" y="22" text-anchor="middle" class="s-txt-muted">a</text><text x="235" y="22" text-anchor="middle" class="s-txt-muted">b</text>
+<text x="28" y="115" text-anchor="middle" class="s-txt-muted">a</text><text x="28" y="230" text-anchor="middle" class="s-txt-muted">b</text>
+<text x="155" y="285" text-anchor="middle" class="s-txt-b">(a + b)² = a² + 2ab + b²</text>
+</svg>
+<figcaption>Kvadrat s stranico \(a + b\) je sestavljen iz kvadratov \(a^2\) in \(b^2\) ter dveh pravokotnikov \(ab\).</figcaption>
+</figure>
+            <p>Pomnilo: „kvadrat prvega, dvakratnik produkta, kvadrat drugega“. Najpogostejša napaka je \((a + b)^2 = a^2 + b^2\): manjka srednji člen.</p>
+            <h4>Kvadrat tričlenika</h4>
+            <div class="formula-card">\((a + b + c)^2 = a^2 + b^2 + c^2 + 2ab + 2ac + 2bc\)</div>
+            <h4>Kub dvočlenika</h4>
+            <div class="formula-card">\((a \pm b)^3 = a^3 \pm 3a^2b + 3ab^2 \pm b^3\)</div>
+            <p>Pri \((a - b)^3\) se predznaki izmenjujejo: \(+, -, +, -\).</p>
+            <h4>Pascalov trikotnik in višje potence</h4>
+            <p>Koeficienti v razvoju \((a + b)^n\) so v \(n\)-ti vrstici Pascalovega trikotnika. Vsako število je vsota dveh nad njim.</p>
+            <figure class="slika slika--siroka">
+<svg viewBox="0 0 520 270" role="img" aria-label="Pascalov trikotnik" xmlns="http://www.w3.org/2000/svg"><text x="20" y="33" class="s-txt-muted" style="font-size:12px">n = 0</text><circle cx="280" cy="28" r="15" style="fill:rgba(79,70,229,0.08);stroke:#C7CBF5"/><text x="280" y="33" text-anchor="middle" class="s-txt-b">1</text><text x="20" y="69" class="s-txt-muted" style="font-size:12px">n = 1</text><circle cx="254" cy="64" r="15" style="fill:rgba(79,70,229,0.08);stroke:#C7CBF5"/><text x="254" y="69" text-anchor="middle" class="s-txt-b">1</text><circle cx="306" cy="64" r="15" style="fill:rgba(79,70,229,0.08);stroke:#C7CBF5"/><text x="306" y="69" text-anchor="middle" class="s-txt-b">1</text><text x="20" y="105" class="s-txt-muted" style="font-size:12px">n = 2</text><circle cx="228" cy="100" r="15" style="fill:rgba(79,70,229,0.08);stroke:#C7CBF5"/><text x="228" y="105" text-anchor="middle" class="s-txt-b">1</text><circle cx="280" cy="100" r="15" style="fill:rgba(79,70,229,0.08);stroke:#C7CBF5"/><text x="280" y="105" text-anchor="middle" class="s-txt-b">2</text><circle cx="332" cy="100" r="15" style="fill:rgba(79,70,229,0.08);stroke:#C7CBF5"/><text x="332" y="105" text-anchor="middle" class="s-txt-b">1</text><text x="20" y="141" class="s-txt-muted" style="font-size:12px">n = 3</text><circle cx="202" cy="136" r="15" style="fill:rgba(79,70,229,0.08);stroke:#C7CBF5"/><text x="202" y="141" text-anchor="middle" class="s-txt-b">1</text><circle cx="254" cy="136" r="15" style="fill:rgba(79,70,229,0.08);stroke:#C7CBF5"/><text x="254" y="141" text-anchor="middle" class="s-txt-b">3</text><circle cx="306" cy="136" r="15" style="fill:rgba(79,70,229,0.08);stroke:#C7CBF5"/><text x="306" y="141" text-anchor="middle" class="s-txt-b">3</text><circle cx="358" cy="136" r="15" style="fill:rgba(79,70,229,0.08);stroke:#C7CBF5"/><text x="358" y="141" text-anchor="middle" class="s-txt-b">1</text><text x="20" y="177" class="s-txt-muted" style="font-size:12px">n = 4</text><circle cx="176" cy="172" r="15" style="fill:rgba(79,70,229,0.08);stroke:#C7CBF5"/><text x="176" y="177" text-anchor="middle" class="s-txt-b">1</text><circle cx="228" cy="172" r="15" style="fill:rgba(79,70,229,0.08);stroke:#C7CBF5"/><text x="228" y="177" text-anchor="middle" class="s-txt-b">4</text><circle cx="280" cy="172" r="15" style="fill:rgba(220,38,38,0.12);stroke:#DC2626"/><text x="280" y="177" text-anchor="middle" class="s-txt-k2">6</text><circle cx="332" cy="172" r="15" style="fill:rgba(79,70,229,0.08);stroke:#C7CBF5"/><text x="332" y="177" text-anchor="middle" class="s-txt-b">4</text><circle cx="384" cy="172" r="15" style="fill:rgba(79,70,229,0.08);stroke:#C7CBF5"/><text x="384" y="177" text-anchor="middle" class="s-txt-b">1</text><text x="20" y="213" class="s-txt-muted" style="font-size:12px">n = 5</text><circle cx="150" cy="208" r="15" style="fill:rgba(79,70,229,0.08);stroke:#C7CBF5"/><text x="150" y="213" text-anchor="middle" class="s-txt-b">1</text><circle cx="202" cy="208" r="15" style="fill:rgba(79,70,229,0.08);stroke:#C7CBF5"/><text x="202" y="213" text-anchor="middle" class="s-txt-b">5</text><circle cx="254" cy="208" r="15" style="fill:rgba(79,70,229,0.08);stroke:#C7CBF5"/><text x="254" y="213" text-anchor="middle" class="s-txt-b">10</text><circle cx="306" cy="208" r="15" style="fill:rgba(79,70,229,0.08);stroke:#C7CBF5"/><text x="306" y="213" text-anchor="middle" class="s-txt-b">10</text><circle cx="358" cy="208" r="15" style="fill:rgba(79,70,229,0.08);stroke:#C7CBF5"/><text x="358" y="213" text-anchor="middle" class="s-txt-b">5</text><circle cx="410" cy="208" r="15" style="fill:rgba(79,70,229,0.08);stroke:#C7CBF5"/><text x="410" y="213" text-anchor="middle" class="s-txt-b">1</text><text x="20" y="249" class="s-txt-muted" style="font-size:12px">n = 6</text><circle cx="124" cy="244" r="15" style="fill:rgba(79,70,229,0.08);stroke:#C7CBF5"/><text x="124" y="249" text-anchor="middle" class="s-txt-b">1</text><circle cx="176" cy="244" r="15" style="fill:rgba(79,70,229,0.08);stroke:#C7CBF5"/><text x="176" y="249" text-anchor="middle" class="s-txt-b">6</text><circle cx="228" cy="244" r="15" style="fill:rgba(79,70,229,0.08);stroke:#C7CBF5"/><text x="228" y="249" text-anchor="middle" class="s-txt-b">15</text><circle cx="280" cy="244" r="15" style="fill:rgba(79,70,229,0.08);stroke:#C7CBF5"/><text x="280" y="249" text-anchor="middle" class="s-txt-b">20</text><circle cx="332" cy="244" r="15" style="fill:rgba(79,70,229,0.08);stroke:#C7CBF5"/><text x="332" y="249" text-anchor="middle" class="s-txt-b">15</text><circle cx="384" cy="244" r="15" style="fill:rgba(79,70,229,0.08);stroke:#C7CBF5"/><text x="384" y="249" text-anchor="middle" class="s-txt-b">6</text><circle cx="436" cy="244" r="15" style="fill:rgba(79,70,229,0.08);stroke:#C7CBF5"/><text x="436" y="249" text-anchor="middle" class="s-txt-b">1</text><line x1="254" y1="151" x2="274" y2="158" class="s-k2" style="stroke-width:1.5"/><line x1="306" y1="151" x2="286" y2="158" class="s-k2" style="stroke-width:1.5"/></svg>
+<figcaption>Pascalov trikotnik: vsako število je vsota dveh števil nad njim (rdeče: \(3 + 3 = 6\)). Vrstica \(n\) da koeficiente razvoja \((a + b)^n\).</figcaption>
+</figure>
+            <p>V razvoju \((a + b)^n\) eksponenti pri \(a\) padajo od \(n\) do 0, pri \(b\) naraščajo od 0 do \(n\); vsota eksponentov je v vsakem členu \(n\). Primer:</p>
+            <div class="formula-card">\((a + b)^4 = a^4 + 4a^3b + 6a^2b^2 + 4ab^3 + b^4\)</div>
+            <p>Pri \((a - b)^n\) se predznaki izmenjujejo. Če sta člena sestavljena (npr. \(2x\) in \(-3\)), ju vstavi <strong>z oklepaji</strong>.</p>
           </div>
-
           <div class="sklop-naloge">
-            <h3>✏️ Rešeni primeri</h3>
-
-            <p class="plain-example"><strong>Primer 1:</strong> Razstavi \(x^2 + 2x - 48\).</p>
-            <div class="plain-example">
-              <p>\(D = 4 + 192 = 196\), \(\sqrt{D} = 14\). \(x_{1,2} = \dfrac{-2 \pm 14}{2} \Rightarrow x_1 = 6, x_2 = -8\).</p>
-              <p>Rezultat: \((x-6)(x+8)\).</p>
+            <h3>✏️ Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-3">
+              <h4>Tip 3: Kvadriraj ali kubiraj dvočlenik (tričlenik)</h4>
+              <div class="prepoznaj">
+                <p><strong>Kako prepoznaš:</strong> oklepaj na kvadrat ali kub, pogosto znotraj daljšega izraza.</p>
+                <ul class="kljucne"><li>\((3x - 2y)^2\)</li><li>„izračunajte“</li><li>„razvijte“</li></ul>
+              </div>
+              <h5>Univerzalni postopek</h5>
+              <ol>
+                <li>Določi \(a\) in \(b\) (s predznakom in koeficientom!).</li>
+                <li>Vstavi v formulo, vsak del v oklepaju: \((3x)^2 + 2(3x)(-2y) + (-2y)^2\).</li>
+                <li>Izračunaj potence in produkte.</li>
+              </ol>
+              <div class="primer">
+                <p><strong>Primer:</strong> \((2x - 3)^3\).</p>
+                <p>\((2x)^3 - 3(2x)^2 \cdot 3 + 3(2x) \cdot 3^2 - 3^3 = 8x^3 - 36x^2 + 54x - 27\).</p>
+              </div>
             </div>
-
-            <p class="plain-example"><strong>Primer 2:</strong> Razstavi \(a^3 + 2a^2 - 9a - 18\).</p>
-            <div class="plain-example">
-              <p>Grupiramo: \(a^2(a+2) - 9(a+2) = (a+2)(a^2-9) = (a+2)(a-3)(a+3)\).</p>
-            </div>
-
-            <p class="plain-example"><strong>Primer 3:</strong> Razstavi \(2x^4 - 72x^2\).</p>
-            <div class="plain-example">
-              <p>\(= 2x^2(x^2 - 36) = 2x^2(x-6)(x+6)\).</p>
-            </div>
-
-            <p class="plain-example"><strong>Primer 4:</strong> Razstavi \(8 - 27x^3\).</p>
-            <div class="plain-example">
-              <p>\(8 - 27x^3 = 2^3 - (3x)^3 = (2 - 3x)(4 + 6x + 9x^2)\).</p>
-            </div>
-
-            <p class="plain-example"><strong>Primer 5:</strong> Razstavi \(x^3 - x\).</p>
-            <div class="plain-example">
-              <p>\(x^3 - x = x(x^2 - 1) = x(x-1)(x+1)\).</p>
+            <div class="tip-naloge" id="tip-4">
+              <h4>Tip 4: Višja potenca dvočlenika (Pascalov trikotnik)</h4>
+              <div class="prepoznaj">
+                <p><strong>Kako prepoznaš:</strong> potenca 4 ali več, ali vprašanje po enem samem členu razvoja.</p>
+                <ul class="kljucne"><li>„s Pascalovim trikotnikom“</li><li>\((x + 2)^5\)</li><li>„koeficient pri \(x^3\)“</li></ul>
+              </div>
+              <h5>Univerzalni postopek</h5>
+              <ol>
+                <li>Napiši \(n\)-to vrstico Pascalovega trikotnika.</li>
+                <li>Zapiši člene: koeficient · \(a^{n-k}\) · \(b^k\) za \(k = 0, 1, \dots, n\).</li>
+                <li>Izračunaj potence (pozor na predznak, če je \(b\) negativen).</li>
+                <li>Za en sam člen izberi pravi \(k\) (eksponent pri spremenljivki).</li>
+              </ol>
+              <div class="primer">
+                <p><strong>Primer:</strong> Določite koeficient pri \(x^3\) v razvoju \((x + 2)^5\).</p>
+                <p>Vrstica 5: 1, 5, 10, 10, 5, 1. Člen z \(x^3\): \(10 \cdot x^3 \cdot 2^2 = 40x^3\). Koeficient je 40.</p>
+              </div>
             </div>
           </div>
         </section>
 
-        <!-- ============ SKLOP 3: RAČUNANJE Z ULOMKI ============ -->
+        <!-- ============ SKLOP 3 ============ -->
         <section class="sklop" id="sklop-3">
           <header class="sklop-header">
-            <span class="sklop-num">Sklop 3</span>
-            <h2>Računanje z ulomki</h2>
-            <p>Vse štiri računske operacije z algebrskimi ulomki in izrazi z oklepaji.</p>
+            <span class="sklop-num">4.4.3</span>
+            <h2>Razstavljanje izrazov</h2>
+            <p>Iz vsote v produkt: izpostavljanje, razlika kvadratov, vsota in razlika kubov, Vietovo pravilo, štiričleniki.</p>
           </header>
-
           <div class="sklop-cilji">
-            <h3>🎯 Cilji</h3>
+            <h3>🎯 Cilji iz kataloga</h3>
             <ul>
-              <li>Računaš z algebrskimi ulomki (vse štiri računske operacije in izrazi z oklepaji).</li>
+              <li>Prepozna in uporablja ustrezni način razstavljanja danega izraza: izpostavljanje, razlika kvadratov, vsota in razlika kubov, Vietovo pravilo, razstavljanje štiričlenikov.</li>
+              <li><span class="badge-vr">VR</span> Razstavi izraze \(a^n \pm b^n\).</li>
             </ul>
           </div>
-
           <div class="sklop-teorija">
-            <h3>📖 Teorija</h3>
-            <div class="concept-list three-col">
-              <div class="concept">
-                <h4>Pogoj</h4>
-                <div class="concept-formula">imenovalec \(\neq 0\)</div>
-              </div>
-              <div class="concept">
-                <h4>Krajšanje</h4>
-                <div class="concept-formula">\(\dfrac{a^2-b^2}{a-b} = a+b\)</div>
-              </div>
-              <div class="concept">
-                <h4>Seštevanje / odštevanje</h4>
-                <div class="concept-formula">skupni imenovalec</div>
-              </div>
-              <div class="concept">
-                <h4>Množenje</h4>
-                <div class="concept-formula">\(\dfrac{a}{b} \cdot \dfrac{c}{d} = \dfrac{ac}{bd}\)</div>
-              </div>
-              <div class="concept">
-                <h4>Deljenje</h4>
-                <div class="concept-formula">\(\dfrac{a}{b} : \dfrac{c}{d} = \dfrac{a}{b} \cdot \dfrac{d}{c}\)</div>
-              </div>
-              <div class="concept">
-                <h4>Dvojni ulomek</h4>
-                <div class="concept-formula">\(\dfrac{\frac{a}{b}}{\frac{c}{d}} = \dfrac{a}{b} \cdot \dfrac{d}{c}\)</div>
-              </div>
+            <h3>📖 Razlaga</h3>
+            <p><strong>Razstaviti</strong> izraz pomeni zapisati ga kot <strong>produkt</strong> faktorjev, ki jih ne moremo več razstaviti. To potrebujemo za krajšanje ulomkov, reševanje razcepnih enačb in iskanje ničel.</p>
+            <h4>Metode</h4>
+            <div class="tabela-wrap">
+              <table class="tabela">
+                <thead><tr><th>Metoda</th><th>Formula</th><th>Primer</th></tr></thead>
+                <tbody>
+                  <tr><td>izpostavljanje</td><td>\(ab + ac = a(b + c)\)</td><td>\(6x^3 - 9x^2 = 3x^2(2x - 3)\)</td></tr>
+                  <tr><td>razlika kvadratov</td><td>\(a^2 - b^2 = (a - b)(a + b)\)</td><td>\(4x^2 - 25 = (2x - 5)(2x + 5)\)</td></tr>
+                  <tr><td>vsota kubov</td><td>\(a^3 + b^3 = (a + b)(a^2 - ab + b^2)\)</td><td>\(x^3 + 8 = (x + 2)(x^2 - 2x + 4)\)</td></tr>
+                  <tr><td>razlika kubov</td><td>\(a^3 - b^3 = (a - b)(a^2 + ab + b^2)\)</td><td>\(27 - y^3 = (3 - y)(9 + 3y + y^2)\)</td></tr>
+                  <tr><td>popolni kvadrat</td><td>\(a^2 \pm 2ab + b^2 = (a \pm b)^2\)</td><td>\(x^2 - 6x + 9 = (x - 3)^2\)</td></tr>
+                  <tr><td>Vietovo pravilo</td><td>\(x^2 + bx + c = (x + p)(x + q)\), \(p + q = b\), \(pq = c\)</td><td>\(x^2 - x - 12 = (x - 4)(x + 3)\)</td></tr>
+                  <tr><td>tričlenik z \(a \ne 1\)</td><td>\(ax^2 + bx + c = a(x - x_1)(x - x_2)\)</td><td>\(2x^2 + 5x - 3 = (2x - 1)(x + 3)\)</td></tr>
+                  <tr><td>štiričlenik (grupiranje)</td><td>\(ac + ad + bc + bd = (a + b)(c + d)\)</td><td>\(x^3 + 2x^2 - 9x - 18 = (x + 2)(x - 3)(x + 3)\)</td></tr>
+                </tbody>
+              </table>
             </div>
+            <p>Vsota kvadratov \(a^2 + b^2\) se v realnih številih <strong>ne da</strong> razstaviti. Prav tako ne drugi faktor pri vsoti/razliki kubov.</p>
+            <figure class="slika slika--siroka">
+<svg viewBox="0 0 520 250" role="img" aria-label="Razlika kvadratov kot ploščina" xmlns="http://www.w3.org/2000/svg">
+<rect x="30" y="30" width="170" height="170" class="s-lik"/>
+<rect x="140" y="140" width="60" height="60" fill="#FFFFFF" stroke="#94A0B8" stroke-dasharray="5 4" stroke-width="1.5"/>
+<line x1="140" y1="30" x2="140" y2="140" class="s-pom"/>
+<text x="85" y="95" text-anchor="middle" class="s-txt-k1">I</text><text x="170" y="95" text-anchor="middle" class="s-txt-k3">II</text><text x="85" y="175" text-anchor="middle" class="s-txt-k1">I</text>
+<text x="115" y="22" text-anchor="middle" class="s-txt-muted">a</text><text x="170" y="175" text-anchor="middle" class="s-txt-muted">b²</text>
+<text x="215" y="175" class="s-txt-muted">b</text>
+<text x="115" y="225" text-anchor="middle" class="s-txt-b">a² − b²</text>
+<text x="260" y="120" class="s-txt-muted" style="font-size:22px">→</text>
+<rect x="300" y="85" width="110" height="115" class="s-lik"/>
+<rect x="410" y="85" width="60" height="115" class="s-lik-2"/>
+<text x="355" y="148" text-anchor="middle" class="s-txt-k1">I</text><text x="440" y="148" text-anchor="middle" class="s-txt-k3">II</text>
+<text x="385" y="77" text-anchor="middle" class="s-txt-muted">a + b</text><text x="290" y="148" text-anchor="end" class="s-txt-muted">a − b</text>
+<text x="385" y="225" text-anchor="middle" class="s-txt-b">(a + b)(a − b)</text>
+</svg>
+<figcaption>Iz kvadrata \(a^2\) izrežemo kvadrat \(b^2\). Pas II prestavimo ob pas I in dobimo pravokotnik s stranicama \(a + b\) in \(a - b\).</figcaption>
+</figure>
+            <h4>Vietovo pravilo — kako najdeš števili</h4>
+            <p>Za \(x^2 + bx + c\) iščeš števili \(p, q\) z <strong>zmnožkom \(c\)</strong> in <strong>vsoto \(b\)</strong>. Začni pri zmnožku (naštej pare deliteljev \(c\)), nato preveri vsoto. Če je \(c &gt; 0\), imata enak predznak (predznak \(b\)); če je \(c &lt; 0\), različna.</p>
+            <h4>Razstavljanje \(a^n \pm b^n\) <span class="badge-vr">VR</span></h4>
+            <ul>
+              <li>\(a^n - b^n = (a - b)(a^{n-1} + a^{n-2}b + \dots + ab^{n-2} + b^{n-1})\) za vsak \(n\).</li>
+              <li>\(a^n + b^n = (a + b)(a^{n-1} - a^{n-2}b + \dots - ab^{n-2} + b^{n-1})\) samo za <strong>lihe</strong> \(n\).</li>
+              <li>Za sode \(n\) najprej uporabi razliko kvadratov: \(a^4 - b^4 = (a^2 - b^2)(a^2 + b^2) = (a - b)(a + b)(a^2 + b^2)\); \(x^6 - 1 = (x^3 - 1)(x^3 + 1)\).</li>
+            </ul>
           </div>
-
           <div class="sklop-naloge">
-            <h3>✏️ Rešeni primeri</h3>
-
-            <p class="plain-example"><strong>Primer 1:</strong> Poenostavi \(\dfrac{2}{a^2-9} - \dfrac{1}{a^2+3a}\).</p>
-            <div class="plain-example">
-              <p>Pogoji: \(a \neq \pm 3, a \neq 0\).</p>
-              <p>Razstavi: \((a-3)(a+3)\) in \(a(a+3)\). Skupni imenovalec: \(a(a-3)(a+3)\).</p>
-              <p>\(= \dfrac{2a - (a-3)}{a(a-3)(a+3)} = \dfrac{a+3}{a(a-3)(a+3)} = \dfrac{1}{a(a-3)}\).</p>
+            <h3>✏️ Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-5">
+              <h4>Tip 5: Razstavi izraz</h4>
+              <div class="prepoznaj">
+                <p><strong>Kako prepoznaš:</strong> izraz (brez enačaja), ki ga moraš zapisati kot produkt.</p>
+                <ul class="kljucne"><li>„razstavite“</li><li>„zapišite kot produkt“</li><li>„faktorizirajte“</li></ul>
+              </div>
+              <h5>Univerzalni postopek — vedno v tem vrstnem redu</h5>
+              <ol>
+                <li><strong>Izpostavi</strong> skupni faktor (največji skupni delitelj koeficientov in najnižjo potenco spremenljivke). Če je prvi člen negativen, izpostavi tudi minus.</li>
+                <li><strong>Preštej člene</strong> v oklepaju:
+                  <ul>
+                    <li>2 člena → razlika kvadratov, vsota/razlika kubov (\(a^n \pm b^n\)).</li>
+                    <li>3 členi → popolni kvadrat ali Vietovo pravilo (\(a \ne 1\): formula za ničle ali „razbijanje“ srednjega člena).</li>
+                    <li>4 členi → grupiranje 2 + 2 (ali 3 + 1, če trije tvorijo popolni kvadrat).</li>
+                  </ul>
+                </li>
+                <li><strong>Preveri vsak faktor</strong>: ali ga lahko razstaviš še naprej?</li>
+                <li>Kontrola: faktorje zmnoži nazaj ali vstavi \(x = 1\) v obe obliki.</li>
+              </ol>
+              <div class="primer">
+                <p><strong>Primer:</strong> Razstavite \(2x^4 - 32\) in \(x^2 - y^2 + 6y - 9\).</p>
+                <p>\(2(x^4 - 16) = 2(x^2 - 4)(x^2 + 4) = 2(x - 2)(x + 2)(x^2 + 4)\).</p>
+                <p>\(x^2 - (y^2 - 6y + 9) = x^2 - (y - 3)^2 = (x - y + 3)(x + y - 3)\) (grupiranje 1 + 3).</p>
+              </div>
             </div>
-
-            <p class="plain-example"><strong>Primer 2:</strong> Poenostavi \(\dfrac{x^2-4}{x+2} \cdot \dfrac{x+2}{x-2}\).</p>
-            <div class="plain-example">
-              <p>Pogoji: \(x \neq \pm 2\).</p>
-              <p>Razstavi: \(\dfrac{(x-2)(x+2)}{x+2} \cdot \dfrac{x+2}{x-2} = (x-2) \cdot \dfrac{x+2}{x-2} = x+2\).</p>
-            </div>
-
-            <p class="plain-example"><strong>Primer 3:</strong> Poenostavi \(\dfrac{\frac{1}{x} + \frac{1}{y}}{\frac{1}{x} - \frac{1}{y}}\).</p>
-            <div class="plain-example">
-              <p>Pogoji: \(x, y \neq 0, x \neq y\).</p>
-              <p>Števec: \(\dfrac{x+y}{xy}\), imenovalec: \(\dfrac{y-x}{xy}\).</p>
-              <p>Ulomek: \(\dfrac{x+y}{xy} \cdot \dfrac{xy}{y-x} = \dfrac{x+y}{y-x}\).</p>
+            <div class="tip-naloge" id="tip-6">
+              <h4>Tip 6: Razstavljanje \(a^n \pm b^n\) <span class="badge-vr">VR</span></h4>
+              <div class="prepoznaj">
+                <p><strong>Kako prepoznaš:</strong> dvočlenik z eksponentom 4, 5, 6 ali več.</p>
+                <ul class="kljucne"><li>\(x^5 - 32\)</li><li>\(x^6 - 64\)</li><li>\(a^4 - 81\)</li></ul>
+              </div>
+              <h5>Univerzalni postopek</h5>
+              <ol>
+                <li>Oba člena zapiši kot \(n\)-to potenco: \(32 = 2^5\).</li>
+                <li>Sod eksponent: razlika kvadratov, dokler gre; nato kubi.</li>
+                <li>Lih eksponent: formula za \(a^n \pm b^n\) (\(+\) samo pri lihem \(n\)).</li>
+              </ol>
+              <div class="primer">
+                <p><strong>Primer:</strong> Razstavite \(x^6 - 64\).</p>
+                <p>\((x^3 - 8)(x^3 + 8) = (x - 2)(x^2 + 2x + 4)(x + 2)(x^2 - 2x + 4)\).</p>
+              </div>
             </div>
           </div>
         </section>
 
-        <!-- ============================================================
-             NADNASLOV B: ENAČBE IN NEENAČBE
-             ============================================================ -->
-        <div class="sklop-nadnaslov">
-          <span class="sklop-nadnaslov-eyebrow">Sklop B</span>
-          <h2>Enačbe in neenačbe</h2>
-          <p>Linearne enačbe, razcepne enačbe in linearne neenačbe — osnovna raven.</p>
-        </div>
-
-        <!-- ============ SKLOP 4: LINEARNA ENAČBA ============ -->
+        <!-- ============ SKLOP 4 ============ -->
         <section class="sklop" id="sklop-4">
           <header class="sklop-header">
-            <span class="sklop-num">Sklop 4</span>
-            <h2>Linearna enačba</h2>
-            <p>Ekvivalentne enačbe, reševanje linearnih enačb, izražanje neznank iz fizikalnih in kemijskih enačb.</p>
+            <span class="sklop-num">4.4.4</span>
+            <h2>Računanje z ulomki</h2>
+            <p>Algebrski ulomki: krajšanje, seštevanje, množenje, deljenje, dvojni ulomki.</p>
           </header>
-
           <div class="sklop-cilji">
-            <h3>🎯 Cilji</h3>
+            <h3>🎯 Cilji iz kataloga</h3>
+            <ul><li>Računa z algebrskimi ulomki (vse štiri računske operacije in izrazi z oklepaji).</li></ul>
+          </div>
+          <div class="sklop-teorija">
+            <h3>📖 Razlaga</h3>
+            <p><strong>Algebrski ulomek</strong> je ulomek, ki ima v števcu in imenovalcu izraza, npr. \(\dfrac{x^2 - 4}{x^2 + 2x}\). Računamo z istimi pravili kot s številskimi ulomki, le da namesto števil razcepljamo izraze.</p>
+            <h4>Pogoji (definicijsko območje)</h4>
+            <p>Imenovalec ne sme biti 0. Pred računanjem razstavi imenovalec in zapiši, za katere \(x\) ulomek ni definiran: \(x^2 + 2x = x(x + 2) \ne 0\) → \(x \ne 0\), \(x \ne -2\). Pri deljenju mora biti različen od 0 tudi števec delitelja.</p>
+            <h4>Krajšanje</h4>
+            <p>Krajšamo samo <strong>faktorje</strong> (dele produkta), nikoli posameznih členov vsote:</p>
+            <div class="formula-card">\(\dfrac{x^2 - 4}{x^2 + 2x} = \dfrac{(x - 2)(x + 2)}{x(x + 2)} = \dfrac{x - 2}{x}\) ✓ &nbsp;&nbsp;&nbsp; \(\dfrac{x + 2}{x} \ne 2\) ✗</div>
+            <h4>Seštevanje in odštevanje</h4>
+            <ol>
+              <li>Razstavi vse imenovalce.</li>
+              <li><strong>Skupni imenovalec</strong> = produkt vseh različnih faktorjev z najvišjo potenco (kot \(v\) pri številih).</li>
+              <li>Vsak ulomek razširi: števec pomnoži s faktorji, ki mu manjkajo do skupnega imenovalca.</li>
+              <li>Seštej števce (pazi na minus pred ulomkom: ves števec v oklepaj!), poenostavi in poskusi okrajšati.</li>
+            </ol>
+            <h4>Množenje, deljenje, dvojni ulomek</h4>
             <ul>
-              <li>Uporabljaš pravila za tvorbo ekvivalentnih enačb in enačbe spretno rešuješ.</li>
-              <li>Prepoznaš in rešiš linearno enačbo.</li>
-              <li>Spretno izražaš neznanke iz različnih fizikalnih ali kemijskih enačb.</li>
+              <li>Množenje: števec · števec, imenovalec · imenovalec; pred tem vse razstavi in krajšaj navzkriž.</li>
+              <li>Deljenje: pomnoži z obratno vrednostjo delitelja.</li>
+              <li>Dvojni ulomek: števec in imenovalec posebej zapiši kot en ulomek, nato deli.</li>
             </ul>
           </div>
-
-          <div class="sklop-teorija">
-            <h3>📖 Teorija</h3>
-            <div class="concept-list three-col">
-              <div class="concept">
-                <h4>Splošna oblika</h4>
-                <div class="concept-formula">\(ax + b = 0\), \(a \neq 0\)</div>
-              </div>
-              <div class="concept">
-                <h4>Rešitev</h4>
-                <div class="concept-formula">\(x = -\dfrac{b}{a}\)</div>
-              </div>
-              <div class="concept">
-                <h4>Ekvivalentne operacije</h4>
-                <div class="concept-formula">prištejemo/odštejemo isto št. na obeh straneh</div>
-              </div>
-              <div class="concept">
-                <h4>Množenje/deljenje</h4>
-                <div class="concept-formula">z istim \(\neq 0\) na obeh straneh</div>
-              </div>
-              <div class="concept">
-                <h4>Odprava oklepajev</h4>
-                <div class="concept-formula">razporedimo člene</div>
-              </div>
-              <div class="concept">
-                <h4>Odprava ulomkov</h4>
-                <div class="concept-formula">pomnožimo s skupnim imenovalcem</div>
-              </div>
-            </div>
-          </div>
-
           <div class="sklop-naloge">
-            <h3>✏️ Rešeni primeri</h3>
-
-            <p class="plain-example"><strong>Primer 1:</strong> Reši \(3(x - 2) + 5 = 2x + 7\).</p>
-            <div class="plain-example">
-              <p>\(3x - 6 + 5 = 2x + 7 \Rightarrow 3x - 1 = 2x + 7 \Rightarrow x = 8\).</p>
-              <p>Preveri: \(3(8-2)+5 = 23\), \(2 \cdot 8 + 7 = 23\) ✓</p>
+            <h3>✏️ Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-7">
+              <h4>Tip 7: Okrajšaj algebrski ulomek</h4>
+              <div class="prepoznaj">
+                <p><strong>Kako prepoznaš:</strong> en sam ulomek z izrazi.</p>
+                <ul class="kljucne"><li>„okrajšajte“</li><li>„poenostavite ulomek“</li><li>„zapišite pogoje“</li></ul>
+              </div>
+              <h5>Univerzalni postopek</h5>
+              <ol>
+                <li>Razstavi števec in imenovalec (<a href="#tip-5">Tip 5</a>).</li>
+                <li>Iz razcepa imenovalca zapiši pogoje.</li>
+                <li>Okrajšaj enake faktorje. Pozor: \(a - b = -(b - a)\), zato \(\frac{2 - x}{x - 2} = -1\).</li>
+              </ol>
+              <div class="primer">
+                <p><strong>Primer:</strong> Okrajšajte \(\dfrac{x^3 - 9x}{x^2 - x - 6}\).</p>
+                <p>\(\dfrac{x(x - 3)(x + 3)}{(x - 3)(x + 2)} = \dfrac{x(x + 3)}{x + 2}\), \(x \ne 3, x \ne -2\).</p>
+              </div>
             </div>
-
-            <p class="plain-example"><strong>Primer 2:</strong> Reši \(\dfrac{x}{2} + \dfrac{x-1}{3} = 1\).</p>
-            <div class="plain-example">
-              <p>Skupni imenovalec 6: \(3x + 2(x-1) = 6 \Rightarrow 5x - 2 = 6 \Rightarrow 5x = 8 \Rightarrow x = \dfrac{8}{5}\).</p>
-            </div>
-
-            <p class="plain-example"><strong>Primer 3:</strong> Iz enačbe \(s = v_0 t + \dfrac{1}{2} a t^2\) izrazi \(v_0\).</p>
-            <div class="plain-example">
-              <p>\(v_0 t = s - \dfrac{1}{2} a t^2 \Rightarrow v_0 = \dfrac{s}{t} - \dfrac{1}{2} a t\).</p>
+            <div class="tip-naloge" id="tip-8">
+              <h4>Tip 8: Seštej, odštej, zmnoži ali deli algebrske ulomke</h4>
+              <div class="prepoznaj">
+                <p><strong>Kako prepoznaš:</strong> več ulomkov z izrazi in računske operacije med njimi.</p>
+                <ul class="kljucne"><li>„izračunajte in poenostavite“</li><li>„zapišite z enim ulomkom“</li><li>dvojni ulomek</li></ul>
+              </div>
+              <h5>Univerzalni postopek</h5>
+              <ol>
+                <li>Razstavi vse števce in imenovalce.</li>
+                <li>Najprej oklepaji, nato množenje/deljenje, nato seštevanje/odštevanje.</li>
+                <li>Seštevanje: skupni imenovalec, razširi, seštej števce. Množenje: krajšaj navzkriž.</li>
+                <li>Rezultat razstavi in okrajšaj do konca.</li>
+              </ol>
+              <div class="primer">
+                <p><strong>Primer:</strong> Izračunajte \(\dfrac{2}{x - 1} - \dfrac{x + 3}{x^2 - 1}\).</p>
+                <p>Skupni imenovalec \((x - 1)(x + 1)\): \(\dfrac{2(x + 1) - (x + 3)}{(x - 1)(x + 1)} = \dfrac{x - 1}{(x - 1)(x + 1)} = \dfrac{1}{x + 1}\), \(x \ne \pm 1\).</p>
+              </div>
             </div>
           </div>
         </section>
 
-        <!-- ============ SKLOP 5: RAZCEPNA ENAČBA ============ -->
+        <!-- ============ SKLOP 5 ============ -->
         <section class="sklop" id="sklop-5">
           <header class="sklop-header">
-            <span class="sklop-num">Sklop 5</span>
-            <h2>Razcepna enačba</h2>
-            <p>Enačbe oblike produkt = 0; reševanje z razstavljanjem.</p>
+            <span class="sklop-num">4.4.5</span>
+            <h2>Enačbe in neenačbe</h2>
+            <p>Ekvivalentne enačbe in izražanje neznanke iz formule.</p>
           </header>
-
           <div class="sklop-cilji">
-            <h3>🎯 Cilji</h3>
+            <h3>🎯 Cilji iz kataloga</h3>
             <ul>
-              <li>Prepoznaš in rešiš razcepne enačbe.</li>
+              <li>Uporablja pravila za tvorbo ekvivalentnih enačb in enačbe spretno rešuje.</li>
+              <li>Spretno izraža neznanke iz različnih fizikalnih ali kemijskih enačb.</li>
             </ul>
           </div>
-
           <div class="sklop-teorija">
-            <h3>📖 Teorija</h3>
-            <div class="concept-list three-col">
-              <div class="concept">
-                <h4>Načelo</h4>
-                <div class="concept-formula">\(A \cdot B = 0 \iff A = 0 \lor B = 0\)</div>
-              </div>
-              <div class="concept">
-                <h4>Priprava</h4>
-                <div class="concept-formula">vse na eno stran, druga stran = 0</div>
-              </div>
-              <div class="concept">
-                <h4>Razstavljanje</h4>
-                <div class="concept-formula">izpostavi / razlika kvadratov / tričlenik</div>
-              </div>
-              <div class="concept">
-                <h4>Kvadratna enačba</h4>
-                <div class="concept-formula">\(ax^2+bx+c=0 \Rightarrow a(x-x_1)(x-x_2)=0\)</div>
-              </div>
-              <div class="concept">
-                <h4>Diskriminanta</h4>
-                <div class="concept-formula">\(D = b^2 - 4ac\)</div>
-              </div>
-              <div class="concept">
-                <h4>Rešitvi</h4>
-                <div class="concept-formula">\(x_{1,2} = \dfrac{-b \pm \sqrt{D}}{2a}\)</div>
-              </div>
-            </div>
+            <h3>📖 Razlaga</h3>
+            <p><strong>Rešitev</strong> enačbe je število, ki enačbo spremeni v pravilno enakost. Dve enačbi sta <strong>ekvivalentni</strong> (enakovredni), če imata iste rešitve. Pri reševanju enačbo z dovoljenimi koraki spreminjamo v vedno preprostejše ekvivalentne enačbe:</p>
+            <ul>
+              <li>obema stranema prištejemo ali odštejemo isto število (izraz) — „prenos člena na drugo stran s spremenjenim predznakom“;</li>
+              <li>obe strani pomnožimo ali delimo z istim <strong>neničelnim</strong> številom.</li>
+            </ul>
+            <div class="pazi"><strong>Pazi:</strong> množenje z izrazom, ki je lahko 0, ali kvadriranje obeh strani lahko prinese <strong>navidezne</strong> rešitve. Deljenje z izrazom, ki je lahko 0, pa lahko rešitve <strong>izgubi</strong> (\(x^2 = 3x\) deljeno z \(x\) izgubi \(x = 0\)). V takšnih primerih vedno naredi preizkus.</div>
+            <h4>Izražanje neznanke iz formule</h4>
+            <p>Formula iz fizike je enačba z več črkami. Izraziti neznanko pomeni zapisati jo samo na eni strani, vse ostalo na drugi. Pravila so enaka kot pri številih:</p>
+            <ol>
+              <li>Odpravi ulomke (pomnoži s skupnim imenovalcem).</li>
+              <li>Člene z iskano količino zberi na eni strani, ostale na drugi.</li>
+              <li>Iskano količino izpostavi, nato deli s tem, kar je ob njej.</li>
+              <li>Če je iskana količina pod korenom ali na kvadrat, na koncu korenimo ali kvadriramo.</li>
+            </ol>
           </div>
-
           <div class="sklop-naloge">
-            <h3>✏️ Rešeni primeri</h3>
-
-            <p class="plain-example"><strong>Primer 1:</strong> Reši \(x^2 - 3x - 10 = 0\).</p>
-            <div class="plain-example">
-              <p>\(D = 9 + 40 = 49\), \(\sqrt{D} = 7\). \(x_{1,2} = \dfrac{3 \pm 7}{2} \Rightarrow x_1 = 5, x_2 = -2\).</p>
-            </div>
-
-            <p class="plain-example"><strong>Primer 2:</strong> Reši \((x-3)(x+4) = 0\).</p>
-            <div class="plain-example">
-              <p>\(x - 3 = 0 \lor x + 4 = 0 \Rightarrow x = 3 \lor x = -4\).</p>
-            </div>
-
-            <p class="plain-example"><strong>Primer 3:</strong> Reši \(x^3 - x = 0\).</p>
-            <div class="plain-example">
-              <p>\(x(x^2 - 1) = 0 \Rightarrow x(x-1)(x+1) = 0 \Rightarrow x = 0 \lor x = 1 \lor x = -1\).</p>
-            </div>
-
-            <p class="plain-example"><strong>Primer 4:</strong> Reši \(2x^2 - 12x + 18 = 0\).</p>
-            <div class="plain-example">
-              <p>Deli z 2: \(x^2 - 6x + 9 = 0 \Rightarrow (x-3)^2 = 0 \Rightarrow x = 3\) (dvojna ničla).</p>
+            <h3>✏️ Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-9">
+              <h4>Tip 9: Izrazi neznanko iz formule</h4>
+              <div class="prepoznaj">
+                <p><strong>Kako prepoznaš:</strong> dana je formula z več črkami (fizika, geometrija, kemija).</p>
+                <ul class="kljucne"><li>„izrazite \(v_0\) iz …“</li><li>„iz formule izrazite“</li><li>„zapišite \(R_1\) z …“</li></ul>
+              </div>
+              <h5>Univerzalni postopek</h5>
+              <ol>
+                <li>Obkroži iskano količino povsod, kjer nastopa.</li>
+                <li>Odpravi ulomke, odpravi oklepaje, kjer je iskana količina v njih.</li>
+                <li>Vse člene z iskano količino na levo, ostale na desno; izpostavi in deli.</li>
+                <li>Preveri enote ali vstavi preproste številke.</li>
+              </ol>
+              <div class="primer">
+                <p><strong>Primer:</strong> Iz \(\dfrac{1}{R} = \dfrac{1}{R_1} + \dfrac{1}{R_2}\) izrazite \(R_1\).</p>
+                <p>\(\dfrac{1}{R_1} = \dfrac{1}{R} - \dfrac{1}{R_2} = \dfrac{R_2 - R}{R R_2}\), zato \(R_1 = \dfrac{R R_2}{R_2 - R}\).</p>
+              </div>
             </div>
           </div>
         </section>
 
-        <!-- ============ SKLOP 6: LINEARNA NEENAČBA ============ -->
+        <!-- ============ SKLOP 6 ============ -->
         <section class="sklop" id="sklop-6">
           <header class="sklop-header">
-            <span class="sklop-num">Sklop 6</span>
-            <h2>Linearna neenačba</h2>
-            <p>Ekvivalentne neenačbe, reševanje linearnih neenačb, zapis rešitve z intervalom.</p>
+            <span class="sklop-num">4.4.6</span>
+            <h2>Linearna enačba</h2>
+            <p>Enačba oblike \(ax = b\), z ulomki in v besedilnih nalogah.</p>
           </header>
-
           <div class="sklop-cilji">
-            <h3>🎯 Cilji</h3>
-            <ul>
-              <li>Uporabljaš pravila za tvorbo ekvivalentnih neenačb ter korake reševanja neenačb utemeljiš.</li>
-              <li>Prepoznaš in rešiš linearno neenačbo.</li>
-            </ul>
+            <h3>🎯 Cilji iz kataloga</h3>
+            <ul><li>Prepozna in reši linearno enačbo.</li></ul>
           </div>
-
           <div class="sklop-teorija">
-            <h3>📖 Teorija</h3>
-            <div class="concept-list three-col">
-              <div class="concept">
-                <h4>Splošna oblika</h4>
-                <div class="concept-formula">\(ax + b < 0\) (tudi \(\leq, >, \geq\))</div>
-              </div>
-              <div class="concept">
-                <h4>Ekvivalentne operacije</h4>
-                <div class="concept-formula">prištejemo/odštejemo isto št.</div>
-              </div>
-              <div class="concept">
-                <h4>Množenje/deljenje</h4>
-                <div class="concept-formula">z istim \(\neq 0\); pri negativnem se neenakost obrne</div>
-              </div>
-              <div class="concept">
-                <h4>Zapis rešitve</h4>
-                <div class="concept-formula">interval: \([a, b]\), \((a, b)\), \((-\infty, a]\) …</div>
-              </div>
-              <div class="concept">
-                <h4>Ponazoritev</h4>
-                <div class="concept-formula">na številski premici</div>
-              </div>
-              <div class="concept">
-                <h4>Poseben primer</h4>
-                <div class="concept-formula">\(0 \cdot x < c\): bodisi vedno res, bodisi nikoli</div>
-              </div>
+            <h3>📖 Razlaga</h3>
+            <p><strong>Linearna enačba</strong> je enačba, ki jo lahko preoblikujemo v \(ax = b\) (neznanka nastopa samo na prvo potenco). Število rešitev:</p>
+            <div class="tabela-wrap">
+              <table class="tabela">
+                <thead><tr><th>Primer</th><th>Rešitve</th><th>Zgled</th></tr></thead>
+                <tbody>
+                  <tr><td>\(a \ne 0\)</td><td>natanko ena: \(x = \frac{b}{a}\)</td><td>\(3x = 6\) → \(x = 2\)</td></tr>
+                  <tr><td>\(a = 0\), \(b \ne 0\)</td><td>ni rešitve (protislovje)</td><td>\(0x = 5\)</td></tr>
+                  <tr><td>\(a = 0\), \(b = 0\)</td><td>vsako realno število (identiteta)</td><td>\(0x = 0\)</td></tr>
+                </tbody>
+              </table>
             </div>
+            <p>Geometrijsko: rešitev enačbe \(ax + c = 0\) je ničla linearne funkcije \(f(x) = ax + c\), torej točka, kjer premica seka os \(x\).</p>
+            <figure class="slika">
+<svg viewBox="0 0 380 300" role="img" aria-label="Graf funkcije f(x) = 2x − 3" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g1-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g1-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g1-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g1-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g1-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g1-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<path class="s-mreza" d="M26,274V26M80.7,274V26M135.3,274V26M190,274V26M244.7,274V26M299.3,274V26M354,274V26M26,274H354M26,243H354M26,212H354M26,181H354M26,150H354M26,119H354M26,88H354M26,57H354M26,26H354"/>
+<line class="s-os" x1="26" y1="150" x2="362" y2="150" marker-end="url(#g1-p)"/>
+<line class="s-os" x1="135.3" y1="274" x2="135.3" y2="18" marker-end="url(#g1-p)"/>
+<text class="s-os-txt" x="356" y="142" text-anchor="end">x</text>
+<text class="s-os-txt" x="143.3" y="30">y</text>
+<line class="s-os" x1="26" y1="147" x2="26" y2="153"/><text class="s-os-txt" x="26" y="165" text-anchor="middle">-2</text><line class="s-os" x1="80.7" y1="147" x2="80.7" y2="153"/><text class="s-os-txt" x="80.7" y="165" text-anchor="middle">-1</text><line class="s-os" x1="190" y1="147" x2="190" y2="153"/><text class="s-os-txt" x="190" y="165" text-anchor="middle">1</text><line class="s-os" x1="244.7" y1="147" x2="244.7" y2="153"/><text class="s-os-txt" x="244.7" y="165" text-anchor="middle">2</text><line class="s-os" x1="299.3" y1="147" x2="299.3" y2="153"/><text class="s-os-txt" x="299.3" y="165" text-anchor="middle">3</text><line class="s-os" x1="132.3" y1="274" x2="138.3" y2="274"/><text class="s-os-txt" x="129.3" y="278" text-anchor="end">-4</text><line class="s-os" x1="132.3" y1="243" x2="138.3" y2="243"/><text class="s-os-txt" x="129.3" y="247" text-anchor="end">-3</text><line class="s-os" x1="132.3" y1="212" x2="138.3" y2="212"/><text class="s-os-txt" x="129.3" y="216" text-anchor="end">-2</text><line class="s-os" x1="132.3" y1="181" x2="138.3" y2="181"/><text class="s-os-txt" x="129.3" y="185" text-anchor="end">-1</text><line class="s-os" x1="132.3" y1="119" x2="138.3" y2="119"/><text class="s-os-txt" x="129.3" y="123" text-anchor="end">1</text><line class="s-os" x1="132.3" y1="88" x2="138.3" y2="88"/><text class="s-os-txt" x="129.3" y="92" text-anchor="end">2</text><line class="s-os" x1="132.3" y1="57" x2="138.3" y2="57"/><text class="s-os-txt" x="129.3" y="61" text-anchor="end">3</text><text class="s-os-txt" x="129.3" y="165" text-anchor="end">0</text>
+<path class="s-k1" d="M26,367L26.8,366.1L27.6,365.1L28.5,364.2L29.3,363.3L30.1,362.4L30.9,361.4L31.7,360.5L32.6,359.6L33.4,358.6L34.2,357.7L35,356.8L35.8,355.8L36.7,354.9L37.5,354L38.3,353.1L39.1,352.1L39.9,351.2L40.8,350.3L41.6,349.3L42.4,348.4L43.2,347.5L44,346.5L44.9,345.6L45.7,344.7L46.5,343.8L47.3,342.8L48.1,341.9L49,341L49.8,340L50.6,339.1L51.4,338.2L52.2,337.2L53.1,336.3L53.9,335.4L54.7,334.5L55.5,333.5L56.3,332.6L57.2,331.7L58,330.7L58.8,329.8L59.6,328.9L60.4,327.9L61.3,327L62.1,326.1L62.9,325.2L63.7,324.2L64.5,323.3L65.4,322.4L66.2,321.4L67,320.5L67.8,319.6L68.6,318.6L69.5,317.7L70.3,316.8L71.1,315.8L71.9,314.9L72.7,314L73.6,313.1L74.4,312.1L75.2,311.2L76,310.3L76.8,309.3L77.7,308.4L78.5,307.5L79.3,306.6L80.1,305.6L80.9,304.7L81.8,303.8L82.6,302.8L83.4,301.9L84.2,301L85,300L85.9,299.1L86.7,298.2L87.5,297.3L88.3,296.3L89.1,295.4L90,294.5L90.8,293.5L91.6,292.6L92.4,291.7L93.2,290.7L94.1,289.8L94.9,288.9L95.7,288L96.5,287L97.3,286.1L98.2,285.2L99,284.2L99.8,283.3L100.6,282.4L101.4,281.4L102.3,280.5L103.1,279.6L103.9,278.7L104.7,277.7L105.5,276.8L106.4,275.9L107.2,274.9L108,274L108.8,273.1L109.6,272.1L110.5,271.2L111.3,270.3L112.1,269.4L112.9,268.4L113.7,267.5L114.6,266.6L115.4,265.6L116.2,264.7L117,263.8L117.8,262.8L118.7,261.9L119.5,261L120.3,260.1L121.1,259.1L121.9,258.2L122.8,257.3L123.6,256.3L124.4,255.4L125.2,254.5L126,253.5L126.9,252.6L127.7,251.7L128.5,250.8L129.3,249.8L130.1,248.9L131,248L131.8,247L132.6,246.1L133.4,245.2L134.2,244.2L135.1,243.3L135.9,242.4L136.7,241.5L137.5,240.5L138.3,239.6L139.2,238.7L140,237.7L140.8,236.8L141.6,235.9L142.4,234.9L143.3,234L144.1,233.1L144.9,232.2L145.7,231.2L146.5,230.3L147.4,229.4L148.2,228.4L149,227.5L149.8,226.6L150.6,225.6L151.5,224.7L152.3,223.8L153.1,222.9L153.9,221.9L154.7,221L155.6,220.1L156.4,219.1L157.2,218.2L158,217.3L158.8,216.3L159.7,215.4L160.5,214.5L161.3,213.6L162.1,212.6L162.9,211.7L163.8,210.8L164.6,209.8L165.4,208.9L166.2,208L167,207L167.9,206.1L168.7,205.2L169.5,204.3L170.3,203.3L171.1,202.4L172,201.5L172.8,200.5L173.6,199.6L174.4,198.7L175.2,197.7L176.1,196.8L176.9,195.9L177.7,195L178.5,194L179.3,193.1L180.2,192.2L181,191.2L181.8,190.3L182.6,189.4L183.4,188.4L184.3,187.5L185.1,186.6L185.9,185.7L186.7,184.7L187.5,183.8L188.4,182.9L189.2,181.9L190,181L190.8,180.1L191.6,179.1L192.5,178.2L193.3,177.3L194.1,176.4L194.9,175.4L195.7,174.5L196.6,173.6L197.4,172.6L198.2,171.7L199,170.8L199.8,169.8L200.7,168.9L201.5,168L202.3,167.1L203.1,166.1L203.9,165.2L204.8,164.3L205.6,163.3L206.4,162.4L207.2,161.5L208,160.5L208.9,159.6L209.7,158.7L210.5,157.8L211.3,156.8L212.1,155.9L213,155L213.8,154L214.6,153.1L215.4,152.2L216.2,151.2L217.1,150.3L217.9,149.4L218.7,148.5L219.5,147.5L220.3,146.6L221.2,145.7L222,144.7L222.8,143.8L223.6,142.9L224.4,141.9L225.3,141L226.1,140.1L226.9,139.2L227.7,138.2L228.5,137.3L229.4,136.4L230.2,135.4L231,134.5L231.8,133.6L232.6,132.6L233.5,131.7L234.3,130.8L235.1,129.9L235.9,128.9L236.7,128L237.6,127.1L238.4,126.1L239.2,125.2L240,124.3L240.8,123.3L241.7,122.4L242.5,121.5L243.3,120.5L244.1,119.6L244.9,118.7L245.8,117.8L246.6,116.8L247.4,115.9L248.2,115L249,114L249.9,113.1L250.7,112.2L251.5,111.3L252.3,110.3L253.1,109.4L254,108.5L254.8,107.5L255.6,106.6L256.4,105.7L257.2,104.7L258.1,103.8L258.9,102.9L259.7,101.9L260.5,101L261.3,100.1L262.2,99.2L263,98.2L263.8,97.3L264.6,96.4L265.4,95.4L266.3,94.5L267.1,93.6L267.9,92.7L268.7,91.7L269.5,90.8L270.4,89.9L271.2,88.9L272,88L272.8,87.1L273.6,86.1L274.5,85.2L275.3,84.3L276.1,83.4L276.9,82.4L277.7,81.5L278.6,80.6L279.4,79.6L280.2,78.7L281,77.8L281.8,76.8L282.7,75.9L283.5,75L284.3,74.1L285.1,73.1L285.9,72.2L286.8,71.3L287.6,70.3L288.4,69.4L289.2,68.5L290,67.5L290.9,66.6L291.7,65.7L292.5,64.8L293.3,63.8L294.1,62.9L295,62L295.8,61L296.6,60.1L297.4,59.2L298.2,58.2L299.1,57.3L299.9,56.4L300.7,55.4L301.5,54.5L302.3,53.6L303.2,52.7L304,51.7L304.8,50.8L305.6,49.9L306.4,48.9L307.3,48L308.1,47.1L308.9,46.2L309.7,45.2L310.5,44.3L311.4,43.4L312.2,42.4L313,41.5L313.8,40.6L314.6,39.6L315.5,38.7L316.3,37.8L317.1,36.8L317.9,35.9L318.7,35L319.6,34.1L320.4,33.1L321.2,32.2L322,31.3L322.8,30.3L323.7,29.4L324.5,28.5L325.3,27.6L326.1,26.6L326.9,25.7L327.8,24.8L328.6,23.8L329.4,22.9L330.2,22L331,21L331.9,20.1L332.7,19.2L333.5,18.3L334.3,17.3L335.1,16.4L336,15.5L336.8,14.5L337.6,13.6L338.4,12.7L339.2,11.7L340.1,10.8L340.9,9.9L341.7,8.9L342.5,8L343.3,7.1L344.2,6.2L345,5.2L345.8,4.3L346.6,3.4L347.4,2.4L348.3,1.5L349.1,0.6L349.9,-0.3L350.7,-1.3L351.5,-2.2L352.4,-3.1L353.2,-4.1L354,-5"/>
+<circle class="s-tocka" cx="217.3" cy="150" r="4.5"/>
+<text class="s-txt-b" x="227.3" y="140" text-anchor="start">x = 3/2</text>
+<text class="s-txt-k1" x="233.7" y="69.4" text-anchor="end">f(x) = 2x − 3</text>
+</svg>
+<figcaption>Rešitev enačbe \(2x - 3 = 0\) je \(x = \frac{3}{2}\): tam premica \(y = 2x - 3\) seka os \(x\).</figcaption>
+</figure>
+            <h4>Postopek reševanja</h4>
+            <ol>
+              <li>Odpravi ulomke: obe strani pomnoži s skupnim imenovalcem.</li>
+              <li>Odpravi oklepaje.</li>
+              <li>Člene z \(x\) prenesi na levo, števila na desno.</li>
+              <li>Uredi in deli s koeficientom pri \(x\).</li>
+              <li>Preizkus: vstavi rešitev v prvotno enačbo.</li>
+            </ol>
+            <h4>Besedilne naloge</h4>
+            <p>Neznanko izberi tako, da označuje iskano količino (ali nekaj, iz česar jo hitro dobiš). Vse ostale količine izrazi z njo. Enačbo dobiš iz stavka, ki pove, da sta dve količini enaki (skupaj, enako, za toliko več …).</p>
           </div>
-
           <div class="sklop-naloge">
-            <h3>✏️ Rešeni primeri</h3>
-
-            <p class="plain-example"><strong>Primer 1:</strong> Reši \(2x - 5 < 3x + 1\).</p>
-            <div class="plain-example">
-              <p>\(-5 - 1 < 3x - 2x \Rightarrow -6 < x \Rightarrow x \in (-6, \infty)\).</p>
+            <h3>✏️ Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-10">
+              <h4>Tip 10: Reši linearno enačbo (z ulomki in oklepaji)</h4>
+              <div class="prepoznaj">
+                <p><strong>Kako prepoznaš:</strong> po odpravi oklepajev ostane \(x\) samo na prvo potenco (kvadrati se odštejejo).</p>
+                <ul class="kljucne"><li>„rešite enačbo“</li><li>ulomki z števili v imenovalcu</li></ul>
+              </div>
+              <h5>Univerzalni postopek</h5>
+              <ol>
+                <li>Pomnoži s skupnim imenovalcem; vsak števec v oklepaj.</li>
+                <li>Odpravi oklepaje, prenesi, uredi, deli.</li>
+                <li>Preveri, ali je enačba morda brez rešitev ali identiteta.</li>
+              </ol>
+              <div class="primer">
+                <p><strong>Primer:</strong> Rešite \(\dfrac{x - 1}{3} - \dfrac{2x + 1}{4} = 1\).</p>
+                <p>\(\cdot 12\): \(4(x - 1) - 3(2x + 1) = 12\) → \(4x - 4 - 6x - 3 = 12\) → \(-2x = 19\) → \(x = -\frac{19}{2}\).</p>
+              </div>
             </div>
-
-            <p class="plain-example"><strong>Primer 2:</strong> Reši \(-3x + 4 \geq 10\).</p>
-            <div class="plain-example">
-              <p>\(-3x \geq 6\). Delimo z \(-3\) in obrnemo: \(x \leq -2 \Rightarrow x \in (-\infty, -2]\).</p>
-            </div>
-
-            <p class="plain-example"><strong>Primer 3:</strong> Reši sistem \((x+2)^2 \leq x^2 + 8\), \(1 - 3x < 5\).</p>
-            <div class="plain-example">
-              <p><strong>Prva:</strong> \(x^2 + 4x + 4 \leq x^2 + 8 \Rightarrow 4x \leq 4 \Rightarrow x \leq 1\).</p>
-              <p><strong>Druga:</strong> \(-3x < 4 \Rightarrow x > -\dfrac{4}{3}\).</p>
-              <p><strong>Rešitev:</strong> \(x \in \left(-\dfrac{4}{3}, 1\right]\).</p>
+            <div class="tip-naloge" id="tip-11">
+              <h4>Tip 11: Besedilna naloga z linearno enačbo</h4>
+              <div class="prepoznaj">
+                <p><strong>Kako prepoznaš:</strong> zgodba s starostmi, cenami, mešanicami, gibanjem, delom … z eno neznano količino.</p>
+                <ul class="kljucne"><li>„koliko je …“</li><li>„za … več kot“</li><li>„čez koliko let“</li><li>„skupaj“</li></ul>
+              </div>
+              <h5>Univerzalni postopek</h5>
+              <ol>
+                <li>Označi neznanko z besedami: „\(x\) … število …“.</li>
+                <li>Vse ostale količine izrazi z \(x\) (pomagaj si s tabelo).</li>
+                <li>Poišči stavek z enakostjo in ga zapiši kot enačbo.</li>
+                <li>Reši, preveri v besedilu in odgovori s celim stavkom in enoto.</li>
+              </ol>
+              <div class="primer">
+                <p><strong>Primer:</strong> Oče je star 42 let, sin 12. Čez koliko let bo oče dvakrat starejši od sina?</p>
+                <p>Čez \(x\) let: \(42 + x = 2(12 + x)\) → \(42 + x = 24 + 2x\) → \(x = 18\). Čez 18 let (oče 60, sin 30).</p>
+              </div>
             </div>
           </div>
         </section>
-        <!-- ============================================================
-             VIŠJA RAVEN — ločen razdelek
-             ============================================================ -->
-        <div class="raven-locnica" id="visja-raven">
-          <div class="raven-locnica-inner">
-            <span class="raven-locnica-eyebrow">Ločen razdelek</span>
-            <h2>VIŠJA RAVEN</h2>
-            <p>Spodnje naloge in razlage so namenjene <strong>višji ravni</strong>. Obdelane so na enak način kot naloge za osnovno raven — vsak sklop ima svoj naslov, cilje, teorijo in rešene primere.</p>
-          </div>
-        </div>
 
-        <!-- ============ SKLOP V1: LINEARNA ENAČBA S PARAMETROM ============ -->
-        <section class="sklop sklop--visja" id="sklop-v1">
+        <!-- ============ SKLOP 7 ============ -->
+        <section class="sklop" id="sklop-7">
           <header class="sklop-header">
-            <span class="sklop-num sklop-num--visja">Sklop V1 · Višja raven</span>
+            <span class="sklop-num">4.4.7</span>
+            <h2>Razcepna enačba</h2>
+            <p>Produkt je enak 0, ko je vsaj en faktor enak 0.</p>
+          </header>
+          <div class="sklop-cilji">
+            <h3>🎯 Cilji iz kataloga</h3>
+            <ul><li>Prepozna in reši razcepne enačbe.</li></ul>
+          </div>
+          <div class="sklop-teorija">
+            <h3>📖 Razlaga</h3>
+            <div class="formula-card">\(A \cdot B \cdot C = 0 \;\Leftrightarrow\; A = 0 \;\lor\; B = 0 \;\lor\; C = 0\)</div>
+            <p><strong>Razcepna enačba</strong> je enačba, ki ji lahko eno stran razstavimo, na drugi strani pa je 0. Namesto ene težke enačbe tako rešujemo več lahkih.</p>
+            <ol>
+              <li>Vse člene prenesi na eno stran, da je na drugi 0.</li>
+              <li>Razstavi (<a href="#tip-5">Tip 5</a>).</li>
+              <li>Vsak faktor enači z 0 in reši.</li>
+              <li>Zapiši vse rešitve (vsako enkrat).</li>
+            </ol>
+            <div class="pazi"><strong>Pazi:</strong> princip deluje samo, ko je na drugi strani <strong>0</strong>. Iz \((x - 1)(x - 2) = 6\) ne sledi \(x - 1 = 6\)! Najprej odpravi oklepaje, prenesi 6 na levo in znova razstavi: \(x^2 - 3x - 4 = (x - 4)(x + 1) = 0\).</div>
+            <p>Ne deli z izrazom z neznanko: iz \(x^3 = 4x\) z deljenjem izgubiš rešitev \(x = 0\). Pravilno: \(x^3 - 4x = x(x - 2)(x + 2) = 0\), rešitve \(0, 2, -2\).</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>✏️ Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-12">
+              <h4>Tip 12: Reši razcepno enačbo</h4>
+              <div class="prepoznaj">
+                <p><strong>Kako prepoznaš:</strong> enačba višje stopnje (kvadrati, kubi), ki jo lahko razstaviš brez Hornerjevega algoritma.</p>
+                <ul class="kljucne"><li>\(x^3 - 2x^2 - 9x + 18 = 0\)</li><li>\(x^4 = 16x^2\)</li><li>„rešite enačbo“</li></ul>
+              </div>
+              <h5>Univerzalni postopek</h5>
+              <ol>
+                <li>Vse na levo, desno 0.</li>
+                <li>Izpostavi, nato razstavi preostanek (razlika kvadratov, Viete, grupiranje).</li>
+                <li>Vsak faktor = 0. Faktor brez realnih ničel (npr. \(x^2 + 4\)) nima realnih rešitev.</li>
+              </ol>
+              <div class="primer">
+                <p><strong>Primer:</strong> Rešite \(x^3 - 2x^2 - 9x + 18 = 0\).</p>
+                <p>\(x^2(x - 2) - 9(x - 2) = (x - 2)(x^2 - 9) = (x - 2)(x - 3)(x + 3) = 0\).</p>
+                <p>\(x_1 = 2\), \(x_2 = 3\), \(x_3 = -3\).</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- ============ SKLOP 8 (VR) ============ -->
+        <section class="sklop sklop--visja" id="sklop-8">
+          <header class="sklop-header">
+            <span class="sklop-num">4.4.8</span><span class="badge-vr">Višja raven</span>
             <h2>Linearna enačba s parametrom</h2>
-            <p>Obravnava linearne enačbe s parametrom: kdaj ima enačba eno rešitev, kdaj nobene, kdaj neskončno mnogo.</p>
+            <p>Koliko rešitev ima enačba glede na vrednost parametra.</p>
           </header>
-
           <div class="sklop-cilji">
-            <h3>🎯 Cilji</h3>
+            <h3>🎯 Cilji iz kataloga</h3>
+            <ul><li>Obravnava linearne enačbe s parametrom.</li></ul>
+          </div>
+          <div class="sklop-teorija">
+            <h3>📖 Razlaga</h3>
+            <p><strong>Parameter</strong> (\(a\), \(m\), \(k\)) je število, ki ga ne poznamo, a ga obravnavamo kot dano konstanto. Rešitev enačbe izrazimo s parametrom. <strong>Obravnavati</strong> enačbo pomeni povedati, kakšne so rešitve za <strong>vse</strong> vrednosti parametra.</p>
+            <p>Enačbo preoblikujemo v \(A(m) \cdot x = B(m)\) in ločimo primere:</p>
             <ul>
-              <li>Obravnavaš linearno enačbo s parametrom.</li>
+              <li>\(A(m) \ne 0\): ena rešitev \(x = \dfrac{B(m)}{A(m)}\).</li>
+              <li>\(A(m) = 0\): vstavimo to vrednost \(m\) in pogledamo \(B(m)\): če \(B \ne 0\), ni rešitve; če \(B = 0\), je rešitev vsak \(x\).</li>
             </ul>
           </div>
-
-          <div class="sklop-teorija">
-            <h3>📖 Teorija</h3>
-            <div class="concept-list three-col">
-              <div class="concept">
-                <h4>Oblika</h4>
-                <div class="concept-formula">\(ax + b = 0\), \(a = a(p)\), \(b = b(p)\)</div>
-              </div>
-              <div class="concept">
-                <h4>\(a \neq 0\)</h4>
-                <div class="concept-formula">enolična rešitev \(x = -\dfrac{b}{a}\)</div>
-              </div>
-              <div class="concept">
-                <h4>\(a = 0, b \neq 0\)</h4>
-                <div class="concept-formula">enačba nima rešitve</div>
-              </div>
-              <div class="concept">
-                <h4>\(a = 0, b = 0\)</h4>
-                <div class="concept-formula">vsak \(x\) je rešitev</div>
-              </div>
-              <div class="concept">
-                <h4>Postopek</h4>
-                <div class="concept-formula">zberi člene z \(x\), obravnavaj vodilni koeficient</div>
-              </div>
-              <div class="concept">
-                <h4>Zapis rešitve</h4>
-                <div class="concept-formula">po odsekih glede na parameter</div>
-              </div>
-            </div>
-          </div>
-
           <div class="sklop-naloge">
-            <h3>✏️ Rešeni primeri</h3>
-
-            <p class="plain-example"><strong>Primer 1:</strong> Reši \(ax - 3 = 2x + 1\) glede na parameter \(a\).</p>
-            <div class="plain-example">
-              <p>\(ax - 2x = 4 \Rightarrow (a-2)x = 4\).</p>
-              <p>Če \(a \neq 2\): \(x = \dfrac{4}{a-2}\).</p>
-              <p>Če \(a = 2\): \(0 \cdot x = 4\) → ni rešitve.</p>
-            </div>
-
-            <p class="plain-example"><strong>Primer 2:</strong> Reši \((m-1)x = m^2 - 1\) glede na parameter \(m\).</p>
-            <div class="plain-example">
-              <p>Če \(m \neq 1\): \(x = \dfrac{m^2-1}{m-1} = m+1\).</p>
-              <p>Če \(m = 1\): \(0 \cdot x = 0\) → vsak \(x\) je rešitev.</p>
-            </div>
-
-            <p class="plain-example"><strong>Primer 3:</strong> Reši \(a(x-1) = 2(x+1)\) glede na parameter \(a\).</p>
-            <div class="plain-example">
-              <p>\(ax - a = 2x + 2 \Rightarrow (a-2)x = a+2\).</p>
-              <p>Če \(a \neq 2\): \(x = \dfrac{a+2}{a-2}\).</p>
-              <p>Če \(a = 2\): \(0 \cdot x = 4\) → ni rešitve.</p>
+            <h3>✏️ Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-13">
+              <h4>Tip 13: Obravnavaj linearno enačbo s parametrom</h4>
+              <div class="prepoznaj">
+                <p><strong>Kako prepoznaš:</strong> poleg \(x\) nastopa še ena črka, sprašujejo „za katere vrednosti parametra“.</p>
+                <ul class="kljucne"><li>„obravnavajte enačbo“</li><li>„za katere \(a\) ima enačba eno rešitev / nobene“</li><li>„da bo rešitev pozitivna“</li></ul>
+              </div>
+              <h5>Univerzalni postopek</h5>
+              <ol>
+                <li>Uredi v obliko \(A(m)\, x = B(m)\); \(A\) in \(B\) razstavi.</li>
+                <li>Poišči vrednosti \(m\), pri katerih je \(A(m) = 0\).</li>
+                <li>Za vsako tako vrednost vstavi v \(B\) in odloči: ni rešitve ali neskončno rešitev.</li>
+                <li>Za ostale \(m\): \(x = B/A\) (okrajšaj). Če je dodaten pogoj (npr. \(x &gt; 0\)), reši neenačbo za \(m\).</li>
+                <li>Odgovor zapiši pregledno po primerih.</li>
+              </ol>
+              <div class="primer">
+                <p><strong>Primer:</strong> Obravnavajte \(a^2 x - 1 = x + a\).</p>
+                <p>\((a^2 - 1)x = a + 1\) → \((a - 1)(a + 1)x = a + 1\).</p>
+                <p>\(a = 1\): \(0 \cdot x = 2\) → ni rešitve. \(a = -1\): \(0 \cdot x = 0\) → vsak \(x \in \mathbb{R}\).</p>
+                <p>\(a \ne \pm 1\): \(x = \dfrac{1}{a - 1}\).</p>
+              </div>
             </div>
           </div>
         </section>
 
-        <!-- ============ SKLOP V2: LINEARNA NEENAČBA S PARAMETROM ============ -->
-        <section class="sklop sklop--visja" id="sklop-v2">
+        <!-- ============ SKLOP 9 ============ -->
+        <section class="sklop" id="sklop-9">
           <header class="sklop-header">
-            <span class="sklop-num sklop-num--visja">Sklop V2 · Višja raven</span>
-            <h2>Linearna neenačba s parametrom</h2>
-            <p>Preproste linearne neenačbe s parametrom; obravnava predznaka parametra in obrata neenakosti.</p>
+            <span class="sklop-num">4.4.9</span>
+            <h2>Linearna neenačba</h2>
+            <p>Ekvivalentne neenačbe, reševanje in zapis z intervalom.</p>
           </header>
-
           <div class="sklop-cilji">
-            <h3>🎯 Cilji</h3>
+            <h3>🎯 Cilji iz kataloga</h3>
             <ul>
-              <li>Obravnavaš preproste linearne neenačbe s parametrom.</li>
+              <li>Uporablja pravila za tvorbo ekvivalentnih neenačb ter korake reševanja neenačb utemelji.</li>
+              <li>Prepozna in reši linearno neenačbo.</li>
             </ul>
           </div>
-
           <div class="sklop-teorija">
-            <h3>📖 Teorija</h3>
-            <div class="concept-list three-col">
-              <div class="concept">
-                <h4>Oblika</h4>
-                <div class="concept-formula">\(ax + b < 0\) (tudi \(\leq, >, \geq\))</div>
+            <h3>📖 Razlaga</h3>
+            <p>Neenačbo rešujemo kot enačbo, z <strong>eno izjemo</strong>:</p>
+            <div class="formula-card">Pri množenju ali deljenju z <strong>negativnim</strong> številom se znak neenakosti <strong>obrne</strong>: \(-2x &lt; 6 \Rightarrow x &gt; -3\).</div>
+            <p>Zakaj? Množenje z negativnim številom zrcali števila čez 0, zato se vrstni red obrne: \(2 &lt; 3\), toda \(-2 &gt; -3\).</p>
+            <p>Rešitev neenačbe je navadno <strong>interval</strong> (neskončno števil). Zapišemo jo z intervalom in narišemo na številsko premico.</p>
+            <figure class="slika slika--siroka">
+<svg viewBox="0 0 560 162" role="img" aria-label="Rešitev sistema neenačb" xmlns="http://www.w3.org/2000/svg"><defs><marker id="pr2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker></defs><line class="s-os" x1="14" y1="132" x2="552" y2="132" marker-end="url(#pr2)"/><line class="s-os" x1="28" y1="127" x2="28" y2="137"/><text class="s-os-txt" x="28" y="151" text-anchor="middle">−3</text><line class="s-os" x1="84" y1="127" x2="84" y2="137"/><text class="s-os-txt" x="84" y="151" text-anchor="middle">−2</text><line class="s-os" x1="140" y1="127" x2="140" y2="137"/><text class="s-os-txt" x="140" y="151" text-anchor="middle">−1</text><line class="s-os" x1="196" y1="127" x2="196" y2="137"/><text class="s-os-txt" x="196" y="151" text-anchor="middle">0</text><line class="s-os" x1="252" y1="127" x2="252" y2="137"/><text class="s-os-txt" x="252" y="151" text-anchor="middle">1</text><line class="s-os" x1="308" y1="127" x2="308" y2="137"/><text class="s-os-txt" x="308" y="151" text-anchor="middle">2</text><line class="s-os" x1="364" y1="127" x2="364" y2="137"/><text class="s-os-txt" x="364" y="151" text-anchor="middle">3</text><line class="s-os" x1="420" y1="127" x2="420" y2="137"/><text class="s-os-txt" x="420" y="151" text-anchor="middle">4</text><line class="s-os" x1="476" y1="127" x2="476" y2="137"/><text class="s-os-txt" x="476" y="151" text-anchor="middle">5</text><line class="s-os" x1="532" y1="127" x2="532" y2="137"/><text class="s-os-txt" x="532" y="151" text-anchor="middle">6</text><line class="s-k1" x1="11.2" y1="48" x2="252" y2="48"/><circle cx="252" cy="48" r="5.5" class="s-tocka" style="fill:#4F46E5"/><text class="s-txt-k1" x="112" y="38" text-anchor="middle">x ≤ 1</text><line class="s-k3" x1="121.3" y1="78" x2="548.8" y2="78"/><circle cx="121.3" cy="78" r="5.5" class="s-prazna" style="stroke:#16A34A"/><text class="s-txt-k3" x="364" y="68" text-anchor="middle">x > −4/3</text><line class="s-k2" x1="121.3" y1="108" x2="252" y2="108"/><circle cx="121.3" cy="108" r="5.5" class="s-prazna" style="stroke:#DC2626"/><circle cx="252" cy="108" r="5.5" class="s-tocka" style="fill:#DC2626"/><text class="s-txt-k2" x="186.7" y="98" text-anchor="middle">presek: (−4/3, 1]</text></svg>
+<figcaption>Sistem \(x \le 1\) in \(x &gt; -\frac{4}{3}\): rešitev je del premice, kjer veljata obe neenačbi, \(\left(-\frac{4}{3}, 1\right]\).</figcaption>
+</figure>
+            <h4>Sistem neenačb</h4>
+            <p>Vsako neenačbo reši posebej, rešitve nariši eno nad drugo na številsko premico. Rešitev sistema je <strong>presek</strong> (tam, kjer veljata obe). Dvojno neenačbo \(a &lt; E &lt; b\) rešuješ naenkrat: isto operacijo naredi na vseh treh delih.</p>
+            <h4>Posebni primeri</h4>
+            <p>Če se \(x\) odšteje: \(0 \cdot x &lt; 5\) velja za vse \(x\) (\(x \in \mathbb{R}\)); \(0 \cdot x &gt; 5\) ne velja nikoli (\(x \in \emptyset\)).</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>✏️ Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-14">
+              <h4>Tip 14: Reši linearno neenačbo (ali sistem) in zapiši interval</h4>
+              <div class="prepoznaj">
+                <p><strong>Kako prepoznaš:</strong> znak \(&lt;, \le, &gt;, \ge\) in \(x\) samo na prvo potenco.</p>
+                <ul class="kljucne"><li>„rešite neenačbo“</li><li>„rešitev zapišite z intervalom“</li><li>„največje celo število, ki …“</li><li>„sistem neenačb“</li></ul>
               </div>
-              <div class="concept">
-                <h4>\(a > 0\)</h4>
-                <div class="concept-formula">neenakost se ohrani</div>
+              <h5>Univerzalni postopek</h5>
+              <ol>
+                <li>Odpravi ulomke (množi s <strong>pozitivnim</strong> skupnim imenovalcem, znak ostane).</li>
+                <li>Odpravi oklepaje, prenesi \(x\) na eno stran.</li>
+                <li>Deli s koeficientom pri \(x\); če je negativen, obrni znak.</li>
+                <li>Zapiši interval in nariši na premico. Pri sistemu poišči presek.</li>
+                <li>Če iščeš cela/naravna števila, jih naštej iz intervala.</li>
+              </ol>
+              <div class="primer">
+                <p><strong>Primer:</strong> Rešite \(\dfrac{x}{2} - \dfrac{x - 1}{3} \le 1\) in zapišite največje celo število, ki reši neenačbo.</p>
+                <p>\(\cdot 6\): \(3x - 2x + 2 \le 6\) → \(x \le 4\). \(x \in (-\infty, 4]\), največje celo število je 4.</p>
               </div>
-              <div class="concept">
-                <h4>\(a < 0\)</h4>
-                <div class="concept-formula">neenakost se obrne</div>
+            </div>
+            <div class="tip-naloge" id="tip-15">
+              <h4>Tip 15: Besedilna naloga z neenačbo</h4>
+              <div class="prepoznaj">
+                <p><strong>Kako prepoznaš:</strong> v zgodbi so besede, ki opisujejo neenakost.</p>
+                <ul class="kljucne"><li>„največ“ (\(\le\))</li><li>„vsaj“, „najmanj“ (\(\ge\))</li><li>„več kot“ (\(&gt;\))</li><li>„se splača“</li></ul>
               </div>
-              <div class="concept">
-                <h4>\(a = 0\)</h4>
-                <div class="concept-formula">odvisno od \(b\): vedno res / nikoli</div>
-              </div>
-              <div class="concept">
-                <h4>Postopek</h4>
-                <div class="concept-formula">zberi člene, obravnavaj predznak \(a\)</div>
-              </div>
-              <div class="concept">
-                <h4>Zapis rešitve</h4>
-                <div class="concept-formula">intervali po odsekih glede na parameter</div>
+              <h5>Univerzalni postopek</h5>
+              <ol>
+                <li>Neznanka je navadno število kosov, ur, kilometrov …</li>
+                <li>Zapiši neenačbo iz stavka z „največ / vsaj / več kot“.</li>
+                <li>Reši; rezultat zaokroži v smeri, ki ustreza zgodbi (kosov ne more biti 7,4).</li>
+              </ol>
+              <div class="primer">
+                <p><strong>Primer:</strong> Paket A: 10 € naročnine in 0,05 € na minuto. Paket B: 0,09 € na minuto. Od koliko minut naprej je A cenejši?</p>
+                <p>\(10 + 0{,}05x &lt; 0{,}09x\) → \(10 &lt; 0{,}04x\) → \(x &gt; 250\). Od 251 minut naprej.</p>
               </div>
             </div>
           </div>
+        </section>
 
+        <!-- ============ SKLOP 10 (VR) ============ -->
+        <section class="sklop sklop--visja" id="sklop-10">
+          <header class="sklop-header">
+            <span class="sklop-num">4.4.10</span><span class="badge-vr">Višja raven</span>
+            <h2>Linearna neenačba s parametrom</h2>
+            <p>Smer neenakosti je odvisna od predznaka koeficienta.</p>
+          </header>
+          <div class="sklop-cilji">
+            <h3>🎯 Cilji iz kataloga</h3>
+            <ul><li>Obravnava preproste linearne neenačbe s parametrom.</li></ul>
+          </div>
+          <div class="sklop-teorija">
+            <h3>📖 Razlaga</h3>
+            <p>Neenačbo preoblikujemo v \(A(m)\, x &lt; B(m)\). Ker ne vemo, ali je \(A(m)\) pozitiven ali negativen, ločimo <strong>tri</strong> primere:</p>
+            <ul>
+              <li>\(A(m) &gt; 0\): \(x &lt; \dfrac{B(m)}{A(m)}\) (znak ostane).</li>
+              <li>\(A(m) &lt; 0\): \(x &gt; \dfrac{B(m)}{A(m)}\) (znak se obrne).</li>
+              <li>\(A(m) = 0\): \(0 &lt; B(m)\) → vsak \(x\) ali noben \(x\), odvisno od \(B\).</li>
+            </ul>
+          </div>
           <div class="sklop-naloge">
-            <h3>✏️ Rešeni primeri</h3>
-
-            <p class="plain-example"><strong>Primer 1:</strong> Reši \(ax - 2 < 4\) glede na parameter \(a\).</p>
-            <div class="plain-example">
-              <p>\(ax < 6\).</p>
-              <p>Če \(a > 0\): \(x < \dfrac{6}{a}\).</p>
-              <p>Če \(a < 0\): \(x > \dfrac{6}{a}\).</p>
-              <p>Če \(a = 0\): \(0 < 6\) → vedno res, \(x \in \mathbb{R}\).</p>
+            <h3>✏️ Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-16">
+              <h4>Tip 16: Obravnavaj linearno neenačbo s parametrom</h4>
+              <div class="prepoznaj">
+                <p><strong>Kako prepoznaš:</strong> neenačba s parametrom ali vprašanje „za katere vrednosti parametra je rešitev …“.</p>
+                <ul class="kljucne"><li>„obravnavajte neenačbo“</li><li>„v odvisnosti od parametra“</li></ul>
+              </div>
+              <h5>Univerzalni postopek</h5>
+              <ol>
+                <li>Uredi v \(A(m)\, x \lessgtr B(m)\).</li>
+                <li>Določi, kdaj je \(A &gt; 0\), \(A &lt; 0\), \(A = 0\) (morda je to neenačba za \(m\)).</li>
+                <li>Za vsak primer zapiši rešitev; pri \(A &lt; 0\) obrni znak.</li>
+              </ol>
+              <div class="primer">
+                <p><strong>Primer:</strong> Obravnavajte \(mx - 2 &gt; x + 1\).</p>
+                <p>\((m - 1)x &gt; 3\).</p>
+                <p>\(m &gt; 1\): \(x &gt; \frac{3}{m - 1}\). \(m &lt; 1\): \(x &lt; \frac{3}{m - 1}\). \(m = 1\): \(0 &gt; 3\) → ni rešitve.</p>
+              </div>
             </div>
+          </div>
+        </section>
 
-            <p class="plain-example"><strong>Primer 2:</strong> Reši \((m-2)x \geq 3\) glede na parameter \(m\).</p>
-            <div class="plain-example">
-              <p>Če \(m > 2\): \(x \geq \dfrac{3}{m-2}\).</p>
-              <p>Če \(m < 2\): \(x \leq \dfrac{3}{m-2}\).</p>
-              <p>Če \(m = 2\): \(0 \geq 3\) → nikoli, ni rešitve.</p>
+        <!-- ============ KLJUČ ============ -->
+        <section class="subsection" id="kljuc">
+          <div class="subsection-head">
+            <h2>🔎 Ključ: kateri tip naloge je to?</h2>
+            <p>Poišči besedo iz navodila naloge in skoči na pravi postopek.</p>
+          </div>
+          <div class="info-card">
+            <div class="tabela-wrap">
+              <table class="tabela">
+                <thead><tr><th>V besedilu naloge piše …</th><th>Tip</th></tr></thead>
+                <tbody>
+                  <tr><td>„poenostavite“, „zmnožite“ (brez enačaja)</td><td><a href="#tip-1">Tip 1</a></td></tr>
+                  <tr><td>„izračunajte vrednost izraza za …“</td><td><a href="#tip-2">Tip 2</a></td></tr>
+                  <tr><td>\((\dots)^2\), \((\dots)^3\)</td><td><a href="#tip-3">Tip 3</a></td></tr>
+                  <tr><td>„Pascalov trikotnik“, „koeficient pri \(x^k\)“</td><td><a href="#tip-4">Tip 4</a></td></tr>
+                  <tr><td>„razstavite“, „zapišite kot produkt“</td><td><a href="#tip-5">Tip 5</a>, <a href="#tip-6">Tip 6</a></td></tr>
+                  <tr><td>„okrajšajte ulomek“</td><td><a href="#tip-7">Tip 7</a></td></tr>
+                  <tr><td>računanje z več algebrskimi ulomki</td><td><a href="#tip-8">Tip 8</a></td></tr>
+                  <tr><td>„izrazite … iz formule“</td><td><a href="#tip-9">Tip 9</a></td></tr>
+                  <tr><td>enačba, kjer \(x\) ostane na prvo potenco</td><td><a href="#tip-10">Tip 10</a></td></tr>
+                  <tr><td>zgodba, ki se konča z enakostjo</td><td><a href="#tip-11">Tip 11</a></td></tr>
+                  <tr><td>enačba višje stopnje, ki se jo da razstaviti</td><td><a href="#tip-12">Tip 12</a></td></tr>
+                  <tr><td>„obravnavajte enačbo“, parameter</td><td><a href="#tip-13">Tip 13</a></td></tr>
+                  <tr><td>\(&lt;, \le, &gt;, \ge\), „z intervalom“</td><td><a href="#tip-14">Tip 14</a></td></tr>
+                  <tr><td>„največ“, „vsaj“, „se splača“</td><td><a href="#tip-15">Tip 15</a></td></tr>
+                  <tr><td>„obravnavajte neenačbo“</td><td><a href="#tip-16">Tip 16</a></td></tr>
+                </tbody>
+              </table>
             </div>
+          </div>
+        </section>
 
-            <p class="plain-example"><strong>Primer 3:</strong> Reši \(a(x-1) \leq x+2\) glede na parameter \(a\).</p>
-            <div class="plain-example">
-              <p>\(ax - a \leq x + 2 \Rightarrow (a-1)x \leq a+2\).</p>
-              <p>Če \(a > 1\): \(x \leq \dfrac{a+2}{a-1}\).</p>
-              <p>Če \(a < 1\): \(x \geq \dfrac{a+2}{a-1}\).</p>
-              <p>Če \(a = 1\): \(0 \leq 3\) → vedno res, \(x \in \mathbb{R}\).</p>
-            </div>
+        <!-- ============ POGOSTE NAPAKE ============ -->
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>⚠️ Pogoste napake</h2>
+          </div>
+          <div class="info-card">
+            <ul>
+              <li>\((a + b)^2 = a^2 + b^2\) (manjka \(2ab\)).</li>
+              <li>Minus pred oklepajem spremeni predznak samo prvemu členu.</li>
+              <li>Pri krajšanju ulomka krajšaš člene vsote namesto faktorjev.</li>
+              <li>Pozabiš pogoje za imenovalce.</li>
+              <li>Pri \(A \cdot B = c \ne 0\) enačiš faktorje s \(c\).</li>
+              <li>Enačbo deliš z \(x\) in izgubiš rešitev \(x = 0\).</li>
+              <li>Pri deljenju neenačbe z negativnim številom ne obrneš znaka.</li>
+              <li>Pri parametru pozabiš primer, ko je koeficient pri \(x\) enak 0.</li>
+            </ul>
+          </div>
+        </section>
+
+        <!-- ============ VADI NAPREJ ============ -->
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>Vadi naprej</h2>
+            <p>Ko predelaš razlago, preveri znanje z nalogami.</p>
+          </div>
+          <div class="link-list">
+            <a class="link-item" href="/views/matematika/matura/matura.html">
+              <span class="link-item-text">
+                <strong>Maturitetne pole</strong>
+                <small>Rešuj prave izpitne pole</small>
+              </span>
+              <span class="arrow">→</span>
+            </a>
           </div>
         </section>
 

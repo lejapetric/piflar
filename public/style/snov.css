@@ -1234,6 +1234,10 @@ mjx-container[display="true"] {
     font-family: var(--font-body);
     font-size: 13px;
     fill: var(--text-primary);
+    paint-order: stroke;
+    stroke: #FBFBFE;
+    stroke-width: 3px;
+    stroke-linejoin: round;
 }
 
 .slika .s-mreza { stroke: #ECEEF6; stroke-width: 1; }
