@@ -10,17 +10,25 @@ npm run dev     # razvoj (samodejni ponovni zagon)
 npm start       # produkcija
 ```
 
-Stran teče na <http://localhost:3000> (vrata nastaviš s `PORT` v `.env`).
+Stran teče na <http://localhost:3000>. Nastavitve so v `.env` (glej `.env.example`):
+`PORT`, `MONGODB_URI` (npr. brezplačni MongoDB Atlas) in `JWT_SECRET`.
+Brez `MONGODB_URI` stran deluje, le prijava ni na voljo.
+
+`npm test` zažene teste (preverjanje odgovorov, pravila dostopa, prijava).
 
 ## Struktura
 
 ```
-server.js                  Express: statične strani iz public/, API pod /api, 404
+server.js                  zažene strežnik (poveže bazo, posluša na PORT)
+app.js                     Express: statične strani iz public/, API pod /api, 404
 api/
   routes/api.js            seznam API poti
-  controllers/             snovi.js, matura.js
-  data/                    snovi.json, matura.json (+ index.js, ki ju prebere ob zagonu)
-  middleware/              obravnava napak
+  controllers/             snovi, naloge, matura, avtentikacija
+  models/uporabnik.js      uporabnik v MongoDB (paket, predmeti, geslo kot bcrypt hash)
+  data/                    snovi.json, naloge.json, matura.json (+ index.js, ki jih prebere ob zagonu)
+  middleware/              prijavljen uporabnik, obravnava napak
+  utils/dostop.js          pravila, kdo sme videti kaj
+test/                      testi (node --test)
 public/
   index.html               naslovnica
   404.html                 stran ne obstaja / še v pripravi
@@ -66,6 +74,17 @@ Stran z nalogami potrebuje samo `<div id="naloge" data-poglavje="…" data-math>
 in `<script src="/components/naloge.js" defer></script>` (glej `mnozice_naloge.html`).
 `npm test` preveri preverjanje odgovorov in veljavnost `naloge.json`.
 
+## Dostop
+
+| Paket | Kaj vidi |
+| --- | --- |
+| gost ali `brezplacno` | vse nerešene pole in zadnjo rešeno polo za vsak predmet in raven |
+| `osnovni` | vse za predmete v `predmeti` (največ 3) |
+| `premium` | vse za vse predmete |
+
+Paket in `paketVelja` bo nastavljal plačilni sistem. Pravila so v `api/utils/dostop.js`.
+Prijava se hrani v piškotku `httpOnly` (7 dni), zato je JavaScript na strani ne more ukrasti.
+
 ## API
 
 | Pot | Opis |
@@ -75,7 +94,9 @@ in `<script src="/components/naloge.js" defer></script>` (glej `mnozice_naloge.h
 | `GET /api/naloge?poglavje=mnozice` | naloge brez odgovorov |
 | `POST /api/naloge/:id/odgovor` | preveri odgovor `{ "odgovor": "7" }` → `{ "pravilno": true }` |
 | `GET /api/naloge/:id/postopek` | postopek in rezultat |
-| `GET /api/matura?raven=osnovna&tip=naloge` | seznam maturitetnih pol |
-| `GET /api/matura/:id` | ena pola |
-| `GET /api/matura/:id/naloge?status=resene` | naloge pole |
-| `GET /api/matura/:id/naloge/:nalogaId` | ena naloga |
+| `GET /api/matura?predmet=matematika&raven=osnovna` | seznam pol (`resena`, `odklenjena`) |
+| `GET /api/matura/:id` | pola z nalogami; rešitve samo, če je `odklenjena` |
+| `POST /api/registracija` | `{ ime, email, geslo }` |
+| `POST /api/prijava` | `{ email, geslo }` |
+| `POST /api/odjava` | odjava |
+| `GET /api/jaz` | prijavljen uporabnik |

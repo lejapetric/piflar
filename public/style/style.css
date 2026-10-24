@@ -208,6 +208,33 @@ input:focus-visible {
     text-transform: capitalize;
 }
 
+.header-uporabnik {
+    display: flex;
+    align-items: center;
+    gap: var(--space-3);
+    font-size: var(--text-sm);
+}
+
+.header-ime {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.header-link {
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+    font-weight: 600;
+    color: var(--primary);
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.header-link:hover {
+    text-decoration: underline;
+}
+
 /* ============================================================
    3. SIDEBAR — OSNOVNA POSTAVITEV
    ============================================================ */
@@ -1936,4 +1963,55 @@ mjx-container[jax="CHTML"][display="true"] {
     .header-date {
         display: none; /* na ozkih zaslonih skrij datum */
     }
+}
+/* ============================================================
+   29. PRIJAVA IN REGISTRACIJA
+   ============================================================ */
+.prijava {
+    max-width: 440px;
+    margin: 0 auto;
+}
+
+.prijava-obrazec {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    padding: var(--space-5);
+}
+
+.prijava-polje {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-1);
+    font-size: var(--text-sm);
+    font-weight: 600;
+}
+
+.prijava-polje[hidden] {
+    display: none;
+}
+
+.prijava-polje input {
+    font: inherit;
+    font-weight: 400;
+    padding: var(--space-2) var(--space-3);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    background: var(--bg-primary);
+}
+
+.prijava-sporocilo {
+    min-height: 1.4em;
+    color: var(--danger);
+    font-size: var(--text-sm);
+    font-weight: 600;
+}
+
+.prijava-preklop {
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+    text-align: center;
 }

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Prijava | Piflar.si</title>
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+</head>
+<body>
+  <div id="header"></div>
+
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view prijava">
+
+        <header class="page-header">
+          <span class="page-eyebrow">Račun</span>
+          <h1 id="naslov">Prijava</h1>
+          <p>Nerešene pole in zadnja rešena pola so na voljo vsem. Z naročnino odkleneš vse rešitve.</p>
+        </header>
+
+        <form id="obrazec" class="prijava-obrazec" novalidate>
+          <label class="prijava-polje" id="poljeIme" hidden>
+            <span>Ime</span>
+            <input name="ime" type="text" autocomplete="name" maxlength="100">
+          </label>
+          <label class="prijava-polje">
+            <span>E-naslov</span>
+            <input name="email" type="email" autocomplete="email" required maxlength="254">
+          </label>
+          <label class="prijava-polje">
+            <span>Geslo</span>
+            <input name="geslo" type="password" autocomplete="current-password" required minlength="8" maxlength="200">
+          </label>
+          <p id="sporocilo" class="prijava-sporocilo" role="alert"></p>
+          <button type="submit" id="potrdi" class="btn btn-primary">Prijava</button>
+          <p class="prijava-preklop">
+            <span id="preklopBesedilo">Še nimaš računa?</span>
+            <button type="button" id="preklop" class="header-link">Registriraj se</button>
+          </p>
+        </form>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+
+  <script src="/components/components.js"></script>
+  <script>
+    (() => {
+      const form = document.getElementById("obrazec");
+      const sporocilo = document.getElementById("sporocilo");
+      let registracija = location.hash === "#registracija";
+
+      function nastaviNacin() {
+        document.getElementById("naslov").textContent = registracija ? "Registracija" : "Prijava";
+        document.getElementById("potrdi").textContent = registracija ? "Ustvari račun" : "Prijava";
+        document.getElementById("poljeIme").hidden = !registracija;
+        form.ime.required = registracija;
+        form.geslo.autocomplete = registracija ? "new-password" : "current-password";
+        document.getElementById("preklopBesedilo").textContent = registracija ? "Že imaš račun?" : "Še nimaš računa?";
+        document.getElementById("preklop").textContent = registracija ? "Prijavi se" : "Registriraj se";
+        sporocilo.textContent = "";
+      }
+
+      document.getElementById("preklop").addEventListener("click", () => {
+        registracija = !registracija;
+        history.replaceState(null, "", registracija ? "#registracija" : location.pathname + location.search);
+        nastaviNacin();
+      });
+
+      form.addEventListener("submit", async (e) => {
+        e.preventDefault();
+        const podatki = Object.fromEntries(new FormData(form));
+        if (!registracija) delete podatki.ime;
+        sporocilo.textContent = "";
+        const res = await fetch(registracija ? "/api/registracija" : "/api/prijava", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(podatki),
+        }).catch(() => null);
+        if (res?.ok) {
+          // Vrni se samo na stran na tej domeni
+          const naprej = new URLSearchParams(location.search).get("naprej");
+          location.href = naprej?.startsWith("/") && !naprej.startsWith("//") ? naprej : "/";
+          return;
+        }
+        const napaka = await res?.json().catch(() => null);
+        sporocilo.textContent = napaka?.message || "Povezava s strežnikom ni uspela.";
+      });
+
+      nastaviNacin();
+    })();
+  </script>
+</body>
+</html>

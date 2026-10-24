@@ -137,6 +137,30 @@ function initHeader() {
 }
 
 // ============================================================
+// 5. PRIJAVLJEN UPORABNIK V HEADERJU
+// ============================================================
+async function initUporabnik() {
+  const el = document.getElementById("uporabnik");
+  if (!el) return;
+  const res = await fetch("/api/jaz").catch(() => null);
+  if (!res?.ok) return; // gost: ostane povezava "Prijava"
+  const uporabnik = await res.json();
+
+  const ime = document.createElement("span");
+  ime.className = "header-ime";
+  ime.textContent = uporabnik.ime;
+  const odjava = document.createElement("button");
+  odjava.type = "button";
+  odjava.className = "header-link";
+  odjava.textContent = "Odjava";
+  odjava.addEventListener("click", async () => {
+    await fetch("/api/odjava", { method: "POST" });
+    window.location.reload();
+  });
+  el.replaceChildren(ime, odjava);
+}
+
+// ============================================================
 // ZAGON
 // ============================================================
 async function init() {
@@ -150,6 +174,7 @@ async function init() {
 
   initHeader();
   initSidebar();
+  initUporabnik();
 }
 
 if (document.readyState === "loading") {
