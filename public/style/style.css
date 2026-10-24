@@ -589,6 +589,12 @@ input:focus-visible {
     font-weight: 600;
 }
 
+/* podpoglavja (npr. 4.10.1) pod poglavjem */
+.nav-sub-list a.nav-pod {
+    padding-left: 72px;
+    font-size: 12.5px;
+}
+
 .nav-link-special {
     font-weight: 600;
     color: var(--sb-accent) !important;
