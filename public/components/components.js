@@ -1,58 +1,144 @@
-document.addEventListener("DOMContentLoaded", async () => {
-  console.log("✅ components.js zagnan");
+// public/components/components.js
+// Skupni del vseh strani: header, sidebar, footer, MathJax in fiksni header.
 
-  // ============================================================
-  // 0. NALOŽI MATHJAX
-  // ============================================================
-  await new Promise((resolve) => {
-    const script = document.createElement('script');
-    script.src = 'https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
-    script.async = true;
-    script.onload = () => {
-      console.log("✅ MathJax naložen");
-      resolve();
-    };
-    document.head.appendChild(script);
-  });
+const MATHJAX_URL = "https://cdn.jsdelivr.net/npm/mathjax@3.2.2/es5/tex-mml-chtml.js";
+const MOBILE_BREAKPOINT = 768;
+const HIDE_HEADER_AFTER = 80; // px
 
-  // Konfiguracija MathJax (mora biti pred nalaganjem, ampak ker nalagamo dinamično,
-  // nastavimo window.MathJax pred nalaganjem)
+// ============================================================
+// 1. MATHJAX — naloži se samo na straneh, ki vsebujejo formule
+// ============================================================
+function loadMathJax() {
+  const text = document.body.textContent;
+  if (!text.includes("\\(") && !text.includes("\\[") && !text.includes("$$")) return;
+
+  // Konfiguracija mora obstajati, preden se skripta naloži.
   window.MathJax = {
     tex: {
-      inlineMath: [['\\(', '\\)']],
-      displayMath: [['$$', '$$'], ['\\[', '\\]']],
+      inlineMath: [["\\(", "\\)"]],
+      displayMath: [["$$", "$$"], ["\\[", "\\]"]],
       processEscapes: true,
-      processEnvironments: true
+      processEnvironments: true,
     },
     options: {
-      skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+      skipHtmlTags: ["script", "noscript", "style", "textarea", "pre", "code"],
     },
-    svg: { fontCache: 'global' },
-    startup: {
-      typeset: true,
-      pageReady: () => {
-        return MathJax.startup.defaultPageReady().then(() => {
-          console.log("✅ MathJax typeset končan");
-        });
-      }
-    }
   };
 
-  // ============================================================
-  // 1. NALOŽI KOMPONENTE
-  // ============================================================
-  async function loadComponent(url, targetId) {
-    const el = document.getElementById(targetId);
-    if (!el) return;
-    try {
-      const res = await fetch(url);
-      if (!res.ok) throw new Error(`${url} → ${res.status}`);
-      el.innerHTML = await res.text();
-      console.log(`✅ Naložen ${url}`);
-    } catch (err) {
-      console.error(`❌ Napaka pri nalaganju ${url}:`, err);
-    }
+  const script = document.createElement("script");
+  script.src = MATHJAX_URL;
+  script.async = true;
+  script.onerror = () => console.error("MathJax se ni naložil:", MATHJAX_URL);
+  document.head.appendChild(script);
+}
+
+// ============================================================
+// 2. KOMPONENTE (header, sidebar, footer)
+// ============================================================
+async function loadComponent(url, targetId) {
+  const el = document.getElementById(targetId);
+  if (!el) return;
+  try {
+    const res = await fetch(url);
+    if (!res.ok) throw new Error(`${url} → ${res.status}`);
+    el.innerHTML = await res.text();
+  } catch (err) {
+    console.error("Napaka pri nalaganju komponente:", err);
   }
+}
+
+// ============================================================
+// 3. SIDEBAR (odpri/zapri, podmeniji, aktivna povezava)
+// ============================================================
+function initSidebar() {
+  const sidebar = document.getElementById("sidebar");
+  const mainContent = document.getElementById("mainContent");
+  const menuBtn = document.getElementById("openSidebar");
+  if (!sidebar) return;
+
+  const overlay = document.createElement("div");
+  overlay.className = "overlay";
+  document.body.appendChild(overlay);
+
+  function setOpen(open) {
+    sidebar.classList.toggle("open", open);
+    mainContent?.classList.toggle("shifted", open);
+    overlay.classList.toggle("visible", open);
+    menuBtn?.setAttribute("aria-expanded", String(open));
+  }
+
+  menuBtn?.addEventListener("click", () => setOpen(!sidebar.classList.contains("open")));
+  document.getElementById("closeSidebar")?.addEventListener("click", () => setOpen(false));
+  overlay.addEventListener("click", () => setOpen(false));
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") setOpen(false);
+  });
+
+  // En poslušalec za vse klike v sidebarju
+  sidebar.addEventListener("click", (e) => {
+    const toggle = e.target.closest(".dropdown-toggle");
+    if (toggle) {
+      const target = document.getElementById(toggle.dataset.target);
+      if (!target) return;
+      const isOpen = target.classList.toggle("open");
+      toggle.classList.toggle("open", isOpen);
+      toggle.setAttribute("aria-expanded", String(isOpen));
+      return;
+    }
+    if (e.target.closest("a") && window.innerWidth <= MOBILE_BREAKPOINT) setOpen(false);
+  });
+
+  // Označi aktivno povezavo in odpri vse menije nad njo
+  const currentPath = window.location.pathname;
+  const active = [...sidebar.querySelectorAll(".sidebar-nav a")].find(
+    (link) => link.getAttribute("href") === currentPath
+  );
+  if (!active) return;
+
+  active.classList.add("active");
+  for (let el = active.parentElement; el && el !== sidebar; el = el.parentElement) {
+    if (!el.id) continue;
+    const toggle = sidebar.querySelector(`.dropdown-toggle[data-target="${el.id}"]`);
+    if (!toggle) continue;
+    el.classList.add("open");
+    toggle.classList.add("open");
+    toggle.setAttribute("aria-expanded", "true");
+  }
+}
+
+// ============================================================
+// 4. FIKSNI HEADER — skrij ob drsenju navzdol, pokaži ob drsenju navzgor
+// ============================================================
+function initHeader() {
+  const header = document.getElementById("siteHeader");
+  if (!header) return;
+
+  const dateEl = document.getElementById("currentDate");
+  if (dateEl) {
+    dateEl.textContent = new Date().toLocaleDateString("sl-SI", {
+      day: "numeric",
+      month: "long",
+      year: "numeric",
+    });
+  }
+
+  let lastScrollY = window.scrollY;
+  const onScroll = () => {
+    const y = window.scrollY;
+    header.classList.toggle("header--scrolled", y > 0);
+    if (y <= 0 || y < lastScrollY) header.classList.remove("header--hidden");
+    else if (y > HIDE_HEADER_AFTER) header.classList.add("header--hidden");
+    lastScrollY = y;
+  };
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+}
+
+// ============================================================
+// ZAGON
+// ============================================================
+async function init() {
+  loadMathJax();
 
   await Promise.all([
     loadComponent("/components/header.html", "header"),
@@ -60,167 +146,12 @@ document.addEventListener("DOMContentLoaded", async () => {
     loadComponent("/components/footer.html", "footer"),
   ]);
 
-  // Po nalaganju komponent znova procesiraj MathJax (če je treba)
-  if (window.MathJax && window.MathJax.typesetPromise) {
-    try {
-      await window.MathJax.typesetPromise();
-      console.log("✅ MathJax ponovno procesiran");
-    } catch (e) {
-      console.warn("MathJax typeset warning:", e);
-    }
-  }
+  initHeader();
+  initSidebar();
+}
 
-  // ============================================================
-  // 2. SIDEBAR TOGGLE (odpri/zapri)
-  // ============================================================
-  const sidebarEl = document.getElementById("sidebar");
-  const mainContent = document.getElementById("mainContent");
-
-  let overlay = document.getElementById("overlay");
-  if (!overlay) {
-    overlay = document.createElement("div");
-    overlay.id = "overlay";
-    overlay.className = "overlay";
-    document.body.appendChild(overlay);
-  }
-
-  function openSidebar() {
-    if (!sidebarEl || !mainContent) return;
-    sidebarEl.classList.add("open");
-    mainContent.classList.add("shifted");
-    overlay.classList.add("visible");
-  }
-
-  function closeSidebar() {
-    if (!sidebarEl || !mainContent) return;
-    sidebarEl.classList.remove("open");
-    mainContent.classList.remove("shifted");
-    overlay.classList.remove("visible");
-  }
-
-  const menuBtn = document.getElementById("openSidebar") || document.getElementById("menuBtn");
-  if (menuBtn) menuBtn.addEventListener("click", openSidebar);
-
-  const closeBtn = document.getElementById("closeSidebar") || document.getElementById("closeBtn");
-  if (closeBtn) closeBtn.addEventListener("click", closeSidebar);
-
-  overlay.addEventListener("click", closeSidebar);
-
-  // ============================================================
-  // 3. DROPDOWN TOGGLE (▸ / ▾)
-  // ============================================================
-  document.querySelectorAll(".dropdown-toggle").forEach((btn) => {
-    btn.addEventListener("click", (e) => {
-      e.preventDefault();
-      e.stopPropagation();
-
-      const targetId = btn.getAttribute("data-target");
-      const target = document.getElementById(targetId);
-      if (!target) {
-        console.warn("Ni elementa z id:", targetId);
-        return;
-      }
-
-      const isOpen = target.classList.toggle("open");
-      btn.classList.toggle("open", isOpen);
-    });
-  });
-
-  // ============================================================
-  // 4. OZNAČI AKTIVNI LINK
-  // ============================================================
-  const currentPath = window.location.pathname;
-
-  document.querySelectorAll(".sidebar-nav a").forEach((link) => {
-    const href = link.getAttribute("href");
-    if (href && href !== "/" && currentPath.startsWith(href)) {
-      link.classList.add("active");
-    }
-  });
-
-  // ============================================================
-  // 5. ODPRI DROPDOWNE, ČE JE AKTIVNI LINK ZNOTRAJ
-  // ============================================================
-  document.querySelectorAll(".nav-sub-list, .nav-sub-sub-list").forEach((list) => {
-    if (list.querySelector("a.active")) {
-      list.classList.add("open");
-
-      const toggle = document.querySelector(`.dropdown-toggle[data-target="${list.id}"]`);
-      if (toggle) toggle.classList.add("open");
-
-      // Odpri vse starše
-      let parent = list.parentElement;
-      while (parent && parent !== document.body) {
-        if (parent.classList.contains("nav-sub") || parent.classList.contains("nav-sub-group")) {
-          parent.classList.add("open");
-          const pid = parent.id;
-          if (pid) {
-            const pt = document.querySelector(`.dropdown-toggle[data-target="${pid}"]`);
-            if (pt) pt.classList.add("open");
-          }
-        }
-        parent = parent.parentElement;
-      }
-    }
-  });
-
-  // ============================================================
-  // 6. ZAPRI SIDEBAR OB KLIKU NA LINK (mobilni)
-  // ============================================================
-  document.querySelectorAll(".sidebar-nav a").forEach((link) => {
-    link.addEventListener("click", () => {
-      if (window.innerWidth <= 768) {
-        closeSidebar();
-      }
-    });
-  });
-
-  // ============================================================
-  // 7. NASTAVI DATUM V HEADERJU
-  // ============================================================
-  const dateEl = document.getElementById("currentDate");
-  if (dateEl) {
-    const now = new Date();
-    const options = { day: "numeric", month: "long", year: "numeric" };
-    dateEl.textContent = now.toLocaleDateString("sl-SI", options);
-  }
-
-  console.log("✅ components.js končan");
-});
-
-  // ============================================================
-  // 1.5 FIXED HEADER – hide on scroll down, show on scroll up
-  // ============================================================
-  const header = document.getElementById("siteHeader");
-  if (header) {
-    let lastScrollY = window.scrollY;
-    const HIDE_AFTER = 80; // px
-
-    const onScroll = () => {
-      const currentScrollY = window.scrollY;
-
-      // Na vrhu: vedno pokaži, brez sence
-      if (currentScrollY <= 0) {
-        header.classList.remove("header--hidden", "header--scrolled");
-        lastScrollY = currentScrollY;
-        return;
-      }
-
-      // Ko nismo več čisto na vrhu, dodaj senco
-      header.classList.add("header--scrolled");
-
-      if (currentScrollY > lastScrollY && currentScrollY > HIDE_AFTER) {
-        // scroll navzdol → skrij
-        header.classList.add("header--hidden");
-      } else if (currentScrollY < lastScrollY) {
-        // scroll navzgor → pokaži
-        header.classList.remove("header--hidden");
-      }
-
-      lastScrollY = currentScrollY;
-    };
-
-    window.addEventListener("scroll", onScroll, { passive: true });
-    onScroll(); // inicialno stanje
-    console.log("✅ Fixed header inicializiran");
-  }
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", init);
+} else {
+  init();
+}

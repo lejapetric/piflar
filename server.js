@@ -1,64 +1,30 @@
 // server.js
+import "dotenv/config";
 import express from "express";
-import passport from "passport";
-import { dirname, join } from "node:path";
 import { fileURLToPath } from "node:url";
-import cors from "cors";
-import dotenv from "dotenv";
-
-dotenv.config();
 
 import apiRouter from "./api/routes/api.js";
-
-import swaggerJsDoc from "swagger-jsdoc";
-import swaggerUi from "swagger-ui-express";
-
-const swaggerDocument = swaggerJsDoc({
-  definition: {
-    openapi: "3.1.1",
-    info: {
-      title: "Piflar.si API Documentation",
-      version: "0.1.0",
-      description: "API za maturitetno stran (matematika, fizika).",
-    },
-    servers: [
-      { url: "http://localhost:3000/api", description: "Development server" },
-    ],
-  },
-  apis: ["./api/models/*", "./api/controllers/*.js"],
-});
+import errorHandler from "./api/middleware/error-handler.js";
 
 const port = process.env.PORT || 3000;
+const isProduction = process.env.NODE_ENV === "production";
+const publicDir = fileURLToPath(new URL("./public", import.meta.url));
+
 const app = express();
-const __dirname = dirname(fileURLToPath(import.meta.url));
+app.disable("x-powered-by");
 
-app.use(cors());
+// API
+app.use("/api", express.json(), apiRouter);
 
-// Serviraj statične datoteke iz public/
-app.use(express.static(join(__dirname, "public")));
-app.use(express.json());
-app.use(express.urlencoded({ extended: true }));
+// Statične datoteke iz public/ (v produkciji jih brskalnik predpomni 1 dan)
+app.use(express.static(publicDir, { maxAge: isProduction ? "1d" : 0 }));
 
-// Swagger
-app.get("/api/swagger.json", (req, res) =>
-  res.status(200).json(swaggerDocument)
-);
-
-app.use(
-  "/api/docs",
-  swaggerUi.serve,
-  swaggerUi.setup(swaggerDocument, {
-    customCss: ".swagger-ui .topbar { display: none }",
-  })
-);
-
-// API routing
-app.use("/api", apiRouter);
-
-// Catch-all — pošlji index.html za vse ostale poti (SPA fallback)
-app.get(/.*/, (req, res) => {
-  res.sendFile(join(__dirname, "public", "index.html"));  // ✅
+// Vse ostalo: stran ne obstaja
+app.use((req, res) => {
+  res.status(404).sendFile("404.html", { root: publicDir });
 });
+
+app.use(errorHandler);
 
 app.listen(port, () => {
   console.log(

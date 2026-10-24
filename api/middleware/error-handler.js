@@ -1,20 +1,8 @@
 // api/middleware/error-handler.js
-exports.errorHandler = (err, req, res, next) => {
-    console.error(err.stack);
-    
-    res.status(err.status || 500).json({
-        error: {
-            message: err.message || 'Internal Server Error',
-            status: err.status || 500
-        }
-    });
-};
-
-exports.notFound = (req, res, next) => {
-    res.status(404).json({
-        error: {
-            message: 'API route not found',
-            status: 404
-        }
-    });
-};
+// Zadnji middleware: ujame napake iz vseh poti.
+export default function errorHandler(err, req, res, next) {
+  console.error(err);
+  if (res.headersSent) return next(err);
+  const status = err.status || err.statusCode || 500;
+  res.status(status).json({ message: status === 500 ? "Napaka na strežniku." : err.message });
+}
