@@ -29,11 +29,14 @@ api/
   data/                    snovi.json, naloge.json, matura.json (+ index.js, ki jih prebere ob zagonu)
   middleware/              prijavljen uporabnik, obravnava napak
   utils/dostop.js          pravila, kdo sme videti kaj
+  utils/iskanje.js         indeks besedila strani snovi za iskalnik
 test/                      testi (node --test)
 public/
   index.html               naslovnica
   404.html                 stran ne obstaja / še v pripravi
+  iskanje.html             vsi zadetki iskanja (components/iskanje.js)
   components/              header, sidebar, footer + components.js (naloži jih na vsaki strani)
+                           tema.js v <head> nastavi temni/svetli način pred izrisom
   style/
     style.css              globalni stil
     snov.css               skupni stil vseh strani z razlago snovi
@@ -43,16 +46,30 @@ public/
 ## Nova stran z razlago
 
 1. Ustvari `public/views/<predmet>/snov/<poglavje>/<poglavje>_razlaga.html` (kopiraj obstoječo).
-2. V `<head>` naj bosta `/style/style.css` in `/style/snov.css`; dodaten CSS samo, če ga stran res potrebuje.
+2. V `<head>` naj bodo `/style/style.css`, `/style/snov.css` in `<script src="/components/tema.js">`; dodaten CSS samo, če ga stran res potrebuje.
 3. Dodaj poglavje v `api/data/snovi.json` in povezavo v `public/components/sidebar.html`.
 
 Strani matematike so razdeljene po podpoglavjih maturitetnega kataloga (`<section class="sklop" id="sklop-N">`).
-Vsak sklop ima glavo, cilje iz kataloga (`sklop-cilji`), razlago (`sklop-teorija`) in tipe nalog
-(`sklop-naloge` z `tip-naloge`: kako prepoznaš, univerzalni postopek, primer). Vsebine višje ravni
+Vsak sklop ima glavo, razlago (`sklop-teorija`) in tipe nalog (`sklop-naloge` z `tip-naloge`:
+naslov tipa, naloga, kako prepoznaš, univerzalni postopek z rešitvijo naloge po korakih, primeri nalog). Vsebine višje ravni
 imajo `sklop--visja` in oznako `badge-vr`. Grafi, vektorji in liki so inline SVG v `<figure class="slika">`
 (razredi `s-os`, `s-k1` … so v `snov.css`). Na vrhu strani je kazalo, na dnu ključ za prepoznavanje tipov.
 
 Formule pišeš v LaTeX-u med `\( … \)` (v vrstici) ali `\[ … \]` (samostojno). MathJax se naloži samo na straneh s formulami.
+
+Nova stran se sama pojavi v iskalniku: strežnik prebere vse neprazne strani v `public/views/`
+(besedilo znotraj `.view`, brez formul, SVG in kazala). Zadetek vodi na najbližji element z `id`
+(`sklop-N`, `tip-N`), zato naj imajo sklopi in tipi nalog `id`. Poglavje se prebere iz `page-eyebrow`
+in `<h1>`. V razvoju se indeks osveži vsakih 5 s, v produkciji ob zagonu.
+
+## Temni način in iskanje
+
+- Stikalo z luno/soncem v glavi preklaplja `data-theme` na `<html>`; izbira se shrani v `localStorage`,
+  sicer velja nastavitev sistema. Barve so spremenljivke v `:root` (`style.css`), temne vrednosti so v
+  razdelku TEMNI NAČIN v `style.css` in `snov.css` (tam so tudi barve slik in barve, zapisane v SVG).
+- Iskalnik v glavi med tipkanjem pokaže predloge z odlomkom in poglavjem. Klik odpre stran na izbranem
+  mestu (`?isci=…&k=…#sidro`, beseda je obarvana), Enter odpre `/iskanje.html?q=…` z vsemi zadetki.
+  Iskanje ne loči velikih črk in strešic (`krozn` najde `krožnica`).
 
 ## Interaktivne naloge
 
@@ -110,6 +127,7 @@ Prijava se hrani v piškotku `httpOnly` (7 dni), zato je JavaScript na strani ne
 | --- | --- |
 | `GET /api/snovi?predmet=matematika` | seznam poglavij |
 | `GET /api/snovi/:slug` | eno poglavje |
+| `GET /api/iskanje?q=elipsa&predlogi=1&omejitev=8` | zadetki v snovi (odlomek, poglavje, razdelek, povezava) |
 | `GET /api/naloge?poglavje=mnozice` | naloge brez odgovorov |
 | `POST /api/naloge/:id/odgovor` | preveri odgovor `{ "odgovor": "7" }` → `{ "pravilno": true }` |
 | `GET /api/naloge/:id/postopek` | postopek in rezultat |
