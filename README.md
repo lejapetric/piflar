@@ -39,12 +39,42 @@ public/
 
 Formule pišeš v LaTeX-u med `\( … \)` (v vrstici) ali `\[ … \]` (samostojno). MathJax se naloži samo na straneh s formulami.
 
+## Interaktivne naloge
+
+Naloge so v `api/data/naloge.json`. Pravilni odgovor in postopek ostaneta na strežniku,
+zato ju dijak ne vidi v izvorni kodi strani.
+
+```json
+{
+  "id": "mnozice-2",
+  "poglavje": "mnozice",
+  "raven": "osnovna",
+  "besedilo": "Izračunaj \\(m(A \\cup B)\\) …",
+  "namig": "neobvezno, prikaže se pod poljem za odgovor",
+  "odgovor": { "tip": "stevilo", "vrednost": 7 },
+  "rezultat": "\\(m(A \\cup B) = 7\\)",
+  "postopek": "<p>Postopek v HTML z LaTeX formulami …</p>",
+  "povezave": [{ "naslov": "Tip 5: Moč unije", "url": "/views/matematika/snov/mnozice/mnozice_razlaga.html#tip-5" }]
+}
+```
+
+Tipi odgovora: `stevilo` (`vrednost`, neobvezno `toleranca`; sprejme `3,5` in `1/2`),
+`mnozica` (`elementi`, vrstni red ni pomemben) in `besedilo` (`sprejemljivi`).
+Vsak tip na strani z razlago ima sidro `#tip-N`, zato lahko naloga kaže točno na pravi del razlage.
+
+Stran z nalogami potrebuje samo `<div id="naloge" data-poglavje="…" data-math></div>`
+in `<script src="/components/naloge.js" defer></script>` (glej `mnozice_naloge.html`).
+`npm test` preveri preverjanje odgovorov in veljavnost `naloge.json`.
+
 ## API
 
 | Pot | Opis |
 | --- | --- |
 | `GET /api/snovi?predmet=matematika` | seznam poglavij |
 | `GET /api/snovi/:slug` | eno poglavje |
+| `GET /api/naloge?poglavje=mnozice` | naloge brez odgovorov |
+| `POST /api/naloge/:id/odgovor` | preveri odgovor `{ "odgovor": "7" }` → `{ "pravilno": true }` |
+| `GET /api/naloge/:id/postopek` | postopek in rezultat |
 | `GET /api/matura?raven=osnovna&tip=naloge` | seznam maturitetnih pol |
 | `GET /api/matura/:id` | ena pola |
 | `GET /api/matura/:id/naloge?status=resene` | naloge pole |

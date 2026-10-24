@@ -7,10 +7,12 @@ const HIDE_HEADER_AFTER = 80; // px
 
 // ============================================================
 // 1. MATHJAX — naloži se samo na straneh, ki vsebujejo formule
+//    (ali imajo data-math, ker formule naložijo kasneje, npr. naloge)
 // ============================================================
 function loadMathJax() {
   const text = document.body.textContent;
-  if (!text.includes("\\(") && !text.includes("\\[") && !text.includes("$$")) return;
+  const hasMath = text.includes("\\(") || text.includes("\\[") || text.includes("$$");
+  if (!hasMath && !document.querySelector("[data-math]")) return;
 
   // Konfiguracija mora obstajati, preden se skripta naloži.
   window.MathJax = {
