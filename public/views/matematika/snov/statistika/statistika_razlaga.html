@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Statistika — razlaga in postopki | Piflar.si</title>
-  <meta name="description" content="Celovita razlaga statistike za maturo: vrste podatkov, prikazovanje (stolpčni, tortni, histogram, škatla z brki), srednje vrednosti (aritmetična sredina, mediana, modus), razpršenost (variacijski razmik, standardni odklon, medčetrtinski razmik), regresija.">
+  <meta name="description" content="Statistika za maturo: osnovni statistični pojmi, vrste podatkov, zbiranje, urejanje in prikazovanje podatkov, aritmetična sredina, mediana, modus, variacijski razmik, standardni odklon, medčetrtinski razmik in statistična naloga.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
@@ -23,27 +23,24 @@
         <header class="page-header">
           <span class="page-eyebrow">Matematika · Snov · 4.17</span>
           <h1>Statistika</h1>
-          <p>Vse o statistiki za maturo: osnovni pojmi, vrste podatkov, prikazovanje podatkov (stolpčni, tortni, histogram, škatla z brki), srednje vrednosti (aritmetična sredina, mediana, modus), mere razpršenosti (variacijski razmik, standardni odklon, medčetrtinski razmik), kvartili, normalna porazdelitev in linearna regresija.</p>
+          <p>Statistika zbira, ureja, prikazuje in povzema podatke ter iz njih sklepa. Pri vsaki nalogi je najprej treba vedeti, kakšne vrste so podatki, ker to določa primeren diagram in primerne mere. Pod razlago vsakega podpoglavja so vsi tipi nalog, ki se pojavijo pri tem sklopu.</p>
           <div class="page-meta">
-            <div class="page-meta-item"><strong>10</strong><span>Tipov nalog</span></div>
-            <div class="page-meta-item"><strong>40+</strong><span>Primerov</span></div>
-            <div class="page-meta-item"><strong>~50 min</strong><span>Branja</span></div>
+            <div class="page-meta-item"><strong>8</strong><span>Podpoglavij</span></div>
+            <div class="page-meta-item"><strong>9</strong><span>Tipov nalog</span></div>
+            <div class="page-meta-item"><strong>~45 min</strong><span>Branja</span></div>
           </div>
         </header>
 
-        <!-- ============ MATURA FORMULE ============ -->
         <div class="matura-formule">
-          <h3>Formule na maturi — osnovna raven</h3>
-          <p>Na maturitetnem listu s formulami so za <strong>statistiko</strong> relevantne naslednje formule:</p>
+          <h3>Formule na maturi</h3>
+          <p>Na listu s formulami je standardni odklon. Na pamet:</p>
           <div class="matura-grid">
             <div class="matura-levo">
               <ul>
-                <li><strong>Aritmetična sredina:</strong> \(\bar{x} = \dfrac{1}{n}\sum_{i=1}^{n} x_i\)</li>
-                <li><strong>Standardni odklon:</strong> \(\sigma = \sqrt{\dfrac{(x_1-\bar{x})^2 + (x_2-\bar{x})^2 + \cdots + (x_n-\bar{x})^2}{n}}\)</li>
-                <li><strong>Mediana:</strong> srednja vrednost v urejenem nizu</li>
-                <li><strong>Modus:</strong> najpogostejša vrednost</li>
-                <li><strong>Variacijski razmik:</strong> \(R = x_{\max} - x_{\min}\)</li>
-                <li><strong>Medčetrtinski razmik:</strong> \(IQR = Q_3 - Q_1\)</li>
+                <li>\(\bar{x} = \dfrac{x_1 + x_2 + \ldots + x_N}{N}\), iz frekvenčne tabele \(\bar{x} = \dfrac{\sum f_i x_i}{N}\)</li>
+                <li>\(\sigma = \sqrt{\dfrac{(x_1 - \bar{x})^2 + \ldots + (x_N - \bar{x})^2}{N}}\) <em>(na listu)</em></li>
+                <li>relativna frekvenca \(f_r = \frac{f}{N}\), kot v tortnem diagramu \(f_r \cdot 360^\circ\)</li>
+                <li>variacijski razmik \(x_{\max} - x_{\min}\), medčetrtinski razmik \(Q_3 - Q_1\)</li>
               </ul>
             </div>
             <div class="matura-slika">
@@ -52,460 +49,472 @@
           </div>
         </div>
 
-        <!-- ============ 1. TEORIJA ============ -->
-        <section class="subsection">
-          <div class="subsection-head">
-            <h2>1. Teorija — pojmi in formule</h2>
-            <p>Kar moraš znati na pamet, preden se lotiš nalog.</p>
-          </div>
+        <nav class="kazalo" aria-label="Podpoglavja">
+          <h2>Podpoglavja</h2>
+          <ol>
+            <li><a href="#sklop-1"><span class="kazalo-st">1</span> Osnovni statistični pojmi</a></li>
+            <li><a href="#sklop-2"><span class="kazalo-st">2</span> Vrste podatkov</a></li>
+            <li><a href="#sklop-3"><span class="kazalo-st">3</span> Zbiranje podatkov</a></li>
+            <li><a href="#sklop-4"><span class="kazalo-st">4</span> Urejanje in strukturiranje podatkov</a></li>
+            <li><a href="#sklop-5"><span class="kazalo-st">5</span> Prikazovanje podatkov</a></li>
+            <li><a href="#sklop-6"><span class="kazalo-st">6</span> Aritmetična sredina, mediana, modus</a></li>
+            <li><a href="#sklop-7"><span class="kazalo-st">7</span> Variacijski razmik, standardni odklon, medčetrtinski razmik</a></li>
+            <li><a href="#sklop-8"><span class="kazalo-st">8</span> Statistična naloga</a></li>
+            <li><a href="#kljuc"><span class="kazalo-st">?</span> Ključ: kateri tip naloge je to?</a></li>
+          </ol>
+        </nav>
 
-          <div class="info-card">
-            <h3>Osnovni pojmi</h3>
-            <div class="concept-list two-col">
-              <div class="concept">
-                <h4>Populacija</h4>
-                <div class="concept-formula">celotna množica enot</div>
-                <p class="concept-desc">Vse enote, ki jih preučujemo.</p>
-              </div>
-              <div class="concept">
-                <h4>Vzorec</h4>
-                <div class="concept-formula">podmnožica populacije</div>
-                <p class="concept-desc">Del populacije, na katerem izvajamo meritve.</p>
-              </div>
-              <div class="concept">
-                <h4>Spremenljivka (značilnost)</h4>
-                <div class="concept-formula">\(X\)</div>
-                <p class="concept-desc">Kar preučujemo (npr. višina, ocena).</p>
-              </div>
-              <div class="concept">
-                <h4>Enota</h4>
-                <div class="concept-formula">posamezen element</div>
-                <p class="concept-desc">Npr. posamezen dijak.</p>
-              </div>
-              <div class="concept">
-                <h4>Vrednost spremenljivke</h4>
-                <div class="concept-formula">\(x_i\)</div>
-                <p class="concept-desc">Izmerjena vrednost pri enoti.</p>
-              </div>
-              <div class="concept">
-                <h4>Frekvenca</h4>
-                <div class="concept-formula">\(f_i\)</div>
-                <p class="concept-desc">Kolikokrat se določena vrednost pojavi.</p>
-              </div>
-            </div>
+        <!-- SKLOP 1 -->
+        <section class="sklop" id="sklop-1">
+          <header class="sklop-header">
+            <span class="sklop-num">4.17 · 1</span>
+            <h2>Osnovni statistični pojmi</h2>
+            <p>Populacija, vzorec, enota, spremenljivka.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <ul>
+              <li><strong>Populacija</strong> je množica vseh enot, ki jih preučujemo (vsi dijaki šole).</li>
+              <li><strong>Vzorec</strong> je del populacije, ki ga dejansko opazujemo (120 anketiranih dijakov).</li>
+              <li><strong>Statistična enota</strong> je posamezen element (en dijak).</li>
+              <li><strong>Statistična spremenljivka</strong> (preučevana značilnost) je lastnost, ki jo merimo (število ur športa), njene <strong>vrednosti</strong> pa so dobljeni podatki (0, 2, 5 ...).</li>
+            </ul>
           </div>
-
-          <div class="info-card">
-            <h3>Vrste podatkov</h3>
-            <div class="concept-list two-col">
-              <div class="concept">
-                <h4>Kvalitativni (opisni)</h4>
-                <div class="concept-formula">npr. barva oči</div>
-                <p class="concept-desc">Ne moremo jih meriti s števili.</p>
-              </div>
-              <div class="concept">
-                <h4>Ordinalni (vrstni)</h4>
-                <div class="concept-formula">npr. ocene 1–5</div>
-                <p class="concept-desc">Lahko jih uredimo po velikosti.</p>
-              </div>
-              <div class="concept">
-                <h4>Kvantitativni (številski)</h4>
-                <div class="concept-formula">npr. višina v cm</div>
-                <p class="concept-desc">Zanje lahko računamo povprečja.</p>
-              </div>
-              <div class="concept">
-                <h4>Diskretni</h4>
-                <div class="concept-formula">npr. število otrok</div>
-                <p class="concept-desc">Končno mnogo vrednosti.</p>
-              </div>
-              <div class="concept">
-                <h4>Zvezni</h4>
-                <div class="concept-formula">npr. čas, masa</div>
-                <p class="concept-desc">Vrednosti v intervalu.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="info-card">
-            <h3>Srednje vrednosti</h3>
-            <div class="concept-list two-col">
-              <div class="concept">
-                <h4>Aritmetična sredina</h4>
-                <div class="concept-formula">\(\bar{x} = \dfrac{1}{n}\sum_{i=1}^{n} x_i\)</div>
-                <p class="concept-desc">Vsota vseh vrednosti, deljena s številom.</p>
-              </div>
-              <div class="concept">
-                <h4>Utežena aritmetična sredina</h4>
-                <div class="concept-formula">\(\bar{x} = \dfrac{\sum f_i x_i}{\sum f_i}\)</div>
-                <p class="concept-desc">Če imamo frekvence.</p>
-              </div>
-              <div class="concept">
-                <h4>Mediana</h4>
-                <div class="concept-formula">\(\tilde{x}\)</div>
-                <p class="concept-desc">Srednja vrednost v <strong>urejenem nizu</strong>. Če je \(n\) sodo: povprečje dveh srednjih.</p>
-              </div>
-              <div class="concept">
-                <h4>Modus</h4>
-                <div class="concept-formula">\(M_0\)</div>
-                <p class="concept-desc">Najpogostejša vrednost.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="info-card">
-            <h3>Mere razpršenosti</h3>
-            <div class="concept-list two-col">
-              <div class="concept">
-                <h4>Variacijski razmik</h4>
-                <div class="concept-formula">\(R = x_{\max} - x_{\min}\)</div>
-                <p class="concept-desc">Razlika med največjo in najmanjšo vrednostjo.</p>
-              </div>
-              <div class="concept">
-                <h4>Varianca</h4>
-                <div class="concept-formula">\(\sigma^2 = \dfrac{1}{n}\sum (x_i - \bar{x})^2\)</div>
-                <p class="concept-desc">Povprečje kvadratov odklonov od sredine.</p>
-              </div>
-              <div class="concept">
-                <h4>Standardni odklon</h4>
-                <div class="concept-formula">\(\sigma = \sqrt{\sigma^2}\)</div>
-                <p class="concept-desc">V isti enoti kot podatki.</p>
-              </div>
-              <div class="concept">
-                <h4>Koeficient variacije</h4>
-                <div class="concept-formula">\(CV = \dfrac{\sigma}{\bar{x}} \cdot 100\%\)</div>
-                <p class="concept-desc">Relativna mera razpršenosti.</p>
-              </div>
-            </div>
-          </div>
-
-          <div class="info-card">
-            <h3>Kvartili in škatla z brki</h3>
-            <div class="concept-list two-col">
-              <div class="concept">
-                <h4>Kvartili</h4>
-                <div class="concept-formula">\(Q_1, Q_2, Q_3\)</div>
-                <p class="concept-desc">\(Q_1\) = 25. percentil, \(Q_2\) = mediana, \(Q_3\) = 75. percentil.</p>
-              </div>
-              <div class="concept">
-                <h4>Medčetrtinski razmik</h4>
-                <div class="concept-formula">\(IQR = Q_3 - Q_1\)</div>
-              </div>
-              <div class="concept">
-                <h4>Škatla z brki</h4>
-                <div class="concept-formula">min — \(Q_1\) — \(Q_2\) — \(Q_3\) — max</div>
-                <p class="concept-desc">Grafični prikaz porazdelitve.</p>
-              </div>
-              <div class="concept">
-                <h4>Osamelci</h4>
-                <div class="concept-formula">pod \(Q_1 - 1{,}5 \cdot IQR\) ali nad \(Q_3 + 1{,}5 \cdot IQR\)</div>
-              </div>
-            </div>
-          </div>
-
-          <div class="info-card">
-            <h3>Normalna porazdelitev in regresija</h3>
-            <div class="concept-list two-col">
-              <div class="concept">
-                <h4>Normalna porazdelitev</h4>
-                <div class="concept-formula">zvonasta krivulja, simetrična okoli \(\bar{x}\)</div>
-              </div>
-              <div class="concept">
-                <h4>Pravilo 68–95–99,7</h4>
-                <div class="concept-formula">68 % v \(\bar{x} \pm \sigma\), 95 % v \(\bar{x} \pm 2\sigma\), 99,7 % v \(\bar{x} \pm 3\sigma\)</div>
-              </div>
-              <div class="concept">
-                <h4>Standardizacija</h4>
-                <div class="concept-formula">\(z = \dfrac{x - \bar{x}}{\sigma}\)</div>
-                <p class="concept-desc">Pretvorba v standardno normalno porazdelitev.</p>
-              </div>
-              <div class="concept">
-                <h4>Korelacijski koeficient</h4>
-                <div class="concept-formula">\(r \in [-1, 1]\)</div>
-                <p class="concept-desc">Mera linearne povezanosti.</p>
-              </div>
-              <div class="concept">
-                <h4>Regresijska premica</h4>
-                <div class="concept-formula">\(y = kx + n\)</div>
-                <p class="concept-desc">\(k = \dfrac{\sum(x_i-\bar{x})(y_i-\bar{y})}{\sum(x_i-\bar{x})^2}\), \(n = \bar{y} - k\bar{x}\).</p>
-              </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-1">
+              <h4>Tip 1: Prepoznavanje statističnih pojmov</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Na šoli s 600 dijaki so 120 dijakov vprašali, koliko ur na teden se ukvarjajo s športom. Določite populacijo, vzorec, statistično enoto in spremenljivko.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> opisana je raziskava, sprašujejo po pojmih.</p><ul class="kljucne"><li>„populacija“, „vzorec“</li><li>„statistična enota“</li><li>„preučevana značilnost“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Kdo ali kaj nas zanima v celoti: populacija.</p><div class="na-nalogi"><p>Vseh 600 dijakov šole.</p></div></li>
+              <li><p class="korak">Kdo je bil dejansko zajet: vzorec.</p><div class="na-nalogi"><p>120 anketiranih dijakov.</p></div></li>
+              <li><p class="korak">En element: enota.</p><div class="na-nalogi"><p>En dijak.</p></div></li>
+              <li><p class="korak">Kaj merimo: spremenljivka (in njena vrsta).</p><div class="na-nalogi"><p>Število ur športa na teden, številska spremenljivka.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Tovarna izmeri maso 50 izmed 10 000 čokolad.</p><p>Populacija: 10 000 čokolad, vzorec: 50, enota: čokolada, spremenljivka: masa.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Vsi dijaki razreda povedo najljubši predmet.</p><p>Populacija je razred (vzorec je kar populacija), spremenljivka: najljubši predmet.</p></div>
             </div>
           </div>
         </section>
 
-        <!-- ============ 2. TIPI NALOG ============ -->
-        <section class="subsection">
-          <div class="subsection-head">
-            <h2>2. Tipi nalog — postopki po korakih</h2>
-            <p>Za vsak tip: kako ga prepoznaš, kako ga rešiš, primer.</p>
+        <!-- SKLOP 2 -->
+        <section class="sklop" id="sklop-2">
+          <header class="sklop-header">
+            <span class="sklop-num">4.17 · 2</span>
+            <h2>Vrste podatkov</h2>
+            <p>Opisni, vrstni in številski podatki.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <div class="tabela-wrap">
+              <table class="tabela">
+                <thead><tr><th>Vrsta</th><th>Primer</th><th>Primeren diagram</th><th>Mere</th></tr></thead>
+                <tbody>
+                  <tr><td>opisni (kvalitativni, imenski)</td><td>barva oči, najljubši predmet</td><td>stolpčni, tortni</td><td>modus</td></tr>
+                  <tr><td>vrstni (ordinalni)</td><td>šolska ocena, stopnja zadovoljstva</td><td>stolpčni, tortni</td><td>modus, mediana</td></tr>
+                  <tr><td>številski (kvantitativni)</td><td>višina, čas, število bratov</td><td>histogram, škatla z brki, linijski, razsevni</td><td>vse: \(\bar{x}\), Me, Mo, \(\sigma\), razmiki</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p>Številski podatki so lahko <strong>diskretni</strong> (štetje: število bratov) ali <strong>zvezni</strong> (merjenje: višina, čas).</p>
           </div>
-
-          <!-- TIP 1 -->
-          <div class="info-card" id="tip-1">
-            <div class="tip-header">
-              <h3>Tip 1: Aritmetična sredina</h3>
-              <div class="tip-formula">\(\bar{x} = \dfrac{1}{n}\sum x_i\)</div>
-            </div>
-            <p><strong>Kako prepoznaš:</strong> "izračunajte povprečje".</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Seštej vse vrednosti.</li>
-              <li>Deli s številom vrednosti.</li>
-            </ol>
-            <p class="plain-example"><strong>Primer:</strong> Podatki: 3, 7, 5, 9, 7, 4, 7.</p>
-            <div class="plain-example">
-              <p>Vsota = 42, \(n = 7\). \(\bar{x} = 6\).</p>
-            </div>
-          </div>
-
-          <!-- TIP 2 -->
-          <div class="info-card" id="tip-2">
-            <div class="tip-header">
-              <h3>Tip 2: Mediana</h3>
-              <div class="tip-formula">srednja vrednost urejenega niza</div>
-            </div>
-            <p><strong>Kako prepoznaš:</strong> "izračunajte mediano".</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Uredi podatke po velikosti.</li>
-              <li>Če je \(n\) <strong>liho</strong>: mediana je srednji element.</li>
-              <li>Če je \(n\) <strong>sodo</strong>: mediana je povprečje dveh srednjih elementov.</li>
-            </ol>
-            <p class="plain-example"><strong>Primer:</strong> 3, 4, 5, 7, 7, 7, 9 (\(n = 7\), liho).</p>
-            <div class="plain-example">
-              <p>Mediana = 7 (4. element).</p>
-            </div>
-          </div>
-
-          <!-- TIP 3 -->
-          <div class="info-card" id="tip-3">
-            <div class="tip-header">
-              <h3>Tip 3: Modus</h3>
-              <div class="tip-formula">najpogostejša vrednost</div>
-            </div>
-            <p><strong>Kako prepoznaš:</strong> "najpogostejša vrednost".</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Preštej, kolikokrat se pojavi vsaka vrednost.</li>
-              <li>Izberi najpogostejšo.</li>
-            </ol>
-            <p class="plain-example"><strong>Primer:</strong> 3, 4, 5, 7, 7, 7, 9. Modus = 7 (pojavi se 3-krat).</p>
-          </div>
-
-          <!-- TIP 4 -->
-          <div class="info-card" id="tip-4">
-            <div class="tip-header">
-              <h3>Tip 4: Standardni odklon</h3>
-              <div class="tip-formula">\(\sigma = \sqrt{\dfrac{1}{n}\sum (x_i - \bar{x})^2}\)</div>
-            </div>
-            <p><strong>Kako prepoznaš:</strong> "izračunajte standardni odklon".</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Izračunaj \(\bar{x}\).</li>
-              <li>Za vsak \(x_i\) izračunaj \((x_i - \bar{x})^2\).</li>
-              <li>Seštej kvadrate in deli z \(n\).</li>
-              <li>Koreni.</li>
-            </ol>
-            <p class="plain-example"><strong>Primer:</strong> Podatki: 3, 7, 5, 9, 7, 4, 7. \(\bar{x} = 6\).</p>
-            <div class="plain-example">
-              <p>\((3-6)^2 = 9\), \((7-6)^2 = 1\), \((5-6)^2 = 1\), \((9-6)^2 = 9\), \(1\), \((4-6)^2 = 4\), \(1\).</p>
-              <p>Vsota = 26. \(\sigma^2 = 26/7 \approx 3{,}71\), \(\sigma \approx 1{,}93\).</p>
-            </div>
-          </div>
-
-          <!-- TIP 5 -->
-          <div class="info-card" id="tip-5">
-            <div class="tip-header">
-              <h3>Tip 5: Utežena aritmetična sredina</h3>
-              <div class="tip-formula">\(\bar{x} = \dfrac{\sum f_i x_i}{\sum f_i}\)</div>
-            </div>
-            <p><strong>Kako prepoznaš:</strong> podana preglednica vrednosti + frekvence.</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Za vsako vrednost izračunaj \(f_i \cdot x_i\).</li>
-              <li>Seštej.</li>
-              <li>Deli z vsoto frekvenc.</li>
-            </ol>
-            <p class="plain-example"><strong>Primer:</strong> Vrednosti: 16 (1×), 19 (6×), 20 (11×), 21 (8×), 23 (3×), 24 (1×).</p>
-            <div class="plain-example">
-              <p>\(\sum f_i x_i = 16 + 114 + 220 + 168 + 69 + 24 = 611\). \(\sum f_i = 30\). \(\bar{x} \approx 20{,}37\).</p>
-            </div>
-          </div>
-
-          <!-- TIP 6 -->
-          <div class="info-card" id="tip-6">
-            <div class="tip-header">
-              <h3>Tip 6: Kvartili in medčetrtinski razmik</h3>
-              <div class="tip-formula">\(IQR = Q_3 - Q_1\)</div>
-            </div>
-            <p><strong>Kako prepoznaš:</strong> "izračunajte kvartile", "IQR".</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Uredi podatke.</li>
-              <li>\(Q_1\) = mediana prve polovice, \(Q_3\) = mediana druge polovice.</li>
-              <li>\(IQR = Q_3 - Q_1\).</li>
-            </ol>
-            <p class="plain-example"><strong>Primer:</strong> 3, 4, 5, 7, 7, 7, 9, 10.</p>
-            <div class="plain-example">
-              <p>\(n = 8\), mediana = \(\dfrac{7 + 7}{2} = 7\). \(Q_1 = \dfrac{4 + 5}{2} = 4{,}5\). \(Q_3 = \dfrac{9 + 10}{2} = 9{,}5\). \(IQR = 5\).</p>
-            </div>
-          </div>
-
-          <!-- TIP 7 -->
-          <div class="info-card" id="tip-7">
-            <div class="tip-header">
-              <h3>Tip 7: Branje škatle z brki</h3>
-              <div class="tip-formula">min — Q₁ — Q₂ — Q₃ — max</div>
-            </div>
-            <p><strong>Kako prepoznaš:</strong> podana škatla z brki, "kolikšen je …".</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Preberi vrednosti iz grafa: minimum, \(Q_1\), mediana, \(Q_3\), maksimum.</li>
-              <li>Izračunaj razlike (npr. IQR).</li>
-            </ol>
-            <p class="plain-example"><strong>Primer:</strong> ženske: 22–28–44–54–62, moški: 32–39–42,5–50–59.</p>
-            <div class="plain-example">
-              <p>Mediana žensk = 44, mediana moških = 42,5. IQR žensk = 26, IQR moških = 11.</p>
-            </div>
-          </div>
-
-          <!-- TIP 8 -->
-          <div class="info-card" id="tip-8">
-            <div class="tip-header">
-              <h3>Tip 8: Normalna porazdelitev</h3>
-              <div class="tip-formula">68 % v \(\bar{x} \pm \sigma\), 95 % v \(\bar{x} \pm 2\sigma\)</div>
-            </div>
-            <p><strong>Kako prepoznaš:</strong> "podatki so normalno porazdeljeni".</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Izračunaj \(\bar{x}\) in \(\sigma\).</li>
-              <li>Uporabi pravilo 68–95–99,7 za oceno deleža.</li>
-            </ol>
-            <p class="plain-example"><strong>Primer:</strong> \(\bar{x} = 170\) cm, \(\sigma = 10\) cm.</p>
-            <div class="plain-example">
-              <p>68 % med 160 in 180 cm, 95 % med 150 in 190 cm.</p>
-            </div>
-          </div>
-
-          <!-- TIP 9 -->
-          <div class="info-card" id="tip-9">
-            <div class="tip-header">
-              <h3>Tip 9: Linearna regresija</h3>
-              <div class="tip-formula">\(y = kx + n\)</div>
-            </div>
-            <p><strong>Kako prepoznaš:</strong> "zapišite enačbo regresijske premice", "napovejte vrednost".</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Izračunaj \(k = \dfrac{\sum(x_i-\bar{x})(y_i-\bar{y})}{\sum(x_i-\bar{x})^2}\).</li>
-              <li>Izračunaj \(n = \bar{y} - k\bar{x}\).</li>
-              <li>Zapiši \(y = kx + n\).</li>
-              <li>Za napoved vstavi \(x\).</li>
-            </ol>
-            <p class="plain-example"><strong>Primer:</strong> podatki \((x_i, y_i)\) s \(\bar{x} = 5\), \(\bar{y} = 10\), \(k = 2\).</p>
-            <div class="plain-example">
-              <p>\(n = 10 - 2 \cdot 5 = 0\). \(y = 2x\). Za \(x = 8\): \(y = 16\).</p>
-            </div>
-          </div>
-
-          <!-- TIP 10 -->
-          <div class="info-card" id="tip-10">
-            <div class="tip-header">
-              <h3>Tip 10: Primerjava dveh skupin</h3>
-              <div class="tip-formula">primerjaj \(\bar{x}\), mediano, \(\sigma\), IQR</div>
-            </div>
-            <p><strong>Kako prepoznaš:</strong> "primerjajte skupini A in B".</p>
-            <p><strong>Postopek:</strong></p>
-            <ol>
-              <li>Izračunaj srednje vrednosti obeh skupin.</li>
-              <li>Izračunaj razpršenost (IQR ali \(\sigma\)).</li>
-              <li>Primerjaj — katera je višja/nižja, katera bolj razpršena.</li>
-            </ol>
-            <p class="plain-example"><strong>Primer:</strong> ženske (mediana 44, IQR 26) vs. moški (mediana 42,5, IQR 11).</p>
-            <div class="plain-example">
-              <p>Ženske so v povprečju starejše, a bolj razpršene po starosti.</p>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-2">
+              <h4>Tip 2: Vrsta podatkov ter primeren prikaz in mera</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Za spremenljivke najljubši predmet, šolska ocena in čas teka na 100 m določite vrsto podatkov ter primeren diagram in mero osredinjenosti.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> sprašujejo po vrsti podatkov ali ustreznosti diagrama ali mere.</p><ul class="kljucne"><li>„vrsta podatkov“</li><li>„kateri diagram je primeren“</li><li>„ali je smiselno računati povprečje“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Ali so vrednosti besede ali števila?</p><div class="na-nalogi"><p>Predmet: besede; ocena in čas: števila.</p></div></li>
+              <li><p class="korak">Ali imajo besede ali števila naraven vrstni red in ali je razlika smiselna?</p><div class="na-nalogi"><p>Predmeti nimajo reda; ocene imajo red, razlike niso enake; čas je merjen.</p></div></li>
+              <li><p class="korak">Določi vrsto.</p><div class="na-nalogi"><p>Opisni, vrstni, številski (zvezni).</p></div></li>
+              <li><p class="korak">Izberi diagram in mero.</p><div class="na-nalogi"><p>Predmet: tortni, modus. Ocena: stolpčni, mediana (ali modus). Čas: histogram, aritmetična sredina in standardni odklon.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Število bratov in sester</p><p>Številski diskretni: stolpčni diagram, \(\bar{x}\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Spol</p><p>Opisni: tortni ali stolpčni, modus.</p></div>
             </div>
           </div>
         </section>
 
-        <!-- ============ 3. POGOSTE NAPAKE ============ -->
+        <!-- SKLOP 3 -->
+        <section class="sklop" id="sklop-3">
+          <header class="sklop-header">
+            <span class="sklop-num">4.17 · 3</span>
+            <h2>Zbiranje podatkov</h2>
+            <p>Anketa, meritev, opazovanje in izbira vzorca.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <p>Podatke zbiramo z <strong>anketo</strong> (vprašalnik), <strong>meritvami</strong>, <strong>opazovanjem</strong> ali iz obstoječih virov (statistični urad). Pri vzorcu je pomembno, da je <strong>reprezentativen</strong>: izbran naključno in dovolj velik, da dobro predstavlja populacijo. Vzorec, ki zajame le del populacije z drugačnimi lastnostmi, je <strong>pristranski</strong>.</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-3">
+              <h4>Tip 3: Ocena primernosti vzorca</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Da bi ugotovili, koliko časa na dan dijaki šole preživijo na telefonu, so anketirali 40 dijakov enega oddelka 4. letnika. Ali je vzorec primeren?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> opisan je način zbiranja, sprašujejo, ali so sklepi veljavni.</p><ul class="kljucne"><li>„ali je vzorec reprezentativen“</li><li>„kako bi zbrali podatke“</li><li>„kritično ovrednotite“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Določi populacijo.</p><div class="na-nalogi"><p>Vsi dijaki šole, vseh letnikov.</p></div></li>
+              <li><p class="korak">Opiši, kako je izbran vzorec.</p><div class="na-nalogi"><p>En oddelek enega letnika.</p></div></li>
+              <li><p class="korak">Poišči razlog za pristranskost.</p><div class="na-nalogi"><p>Dijaki istega oddelka in starosti imajo podobne navade; mlajši letniki niso zajeti.</p></div></li>
+              <li><p class="korak">Predlagaj izboljšavo.</p><div class="na-nalogi"><p>Naključno izberemo dijake iz seznama vseh dijakov, sorazmerno po letnikih.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Spletna anketa o uporabi interneta med starejšimi</p><p>Pristranska: zajame le starejše, ki že uporabljajo internet.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Merjenje višine 5 dijakov za oceno povprečja šole</p><p>Vzorec je premajhen, ocena je nezanesljiva.</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 4 -->
+        <section class="sklop" id="sklop-4">
+          <header class="sklop-header">
+            <span class="sklop-num">4.17 · 4</span>
+            <h2>Urejanje in strukturiranje podatkov</h2>
+            <p>Frekvenčna tabela in razredi.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <p>Zbrane podatke uredimo v <strong>frekvenčno tabelo</strong>:</p>
+            <ul>
+              <li><strong>frekvenca</strong> \(f\): kolikokrat se vrednost pojavi,</li>
+              <li><strong>relativna frekvenca</strong> \(f_r = \frac{f}{N}\) (delež, pogosto v %),</li>
+              <li><strong>kumulativna frekvenca</strong> \(F\): koliko podatkov je manjših ali enakih dani vrednosti.</li>
+            </ul>
+            <p>Pri številskih podatkih z veliko različnimi vrednostmi jih združimo v <strong>razrede</strong> (intervale enake širine), na primer \([12, 13)\), \([13, 14)\), in kot predstavnika razreda vzamemo njegovo sredino.</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-4">
+              <h4>Tip 4: Frekvenčna tabela</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Ocene 20 dijakov so: 3, 4, 5, 2, 3, 4, 4, 5, 3, 3, 2, 4, 5, 4, 3, 1, 4, 3, 4, 5. Sestavite frekvenčno tabelo z relativnimi in kumulativnimi frekvencami.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> dan je seznam podatkov, ki ga je treba urediti.</p><ul class="kljucne"><li>„frekvenčna tabela“</li><li>„relativna frekvenca“</li><li>„razvrstite v razrede“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Določi vse različne vrednosti (ali razrede).</p><div class="na-nalogi"><p>1, 2, 3, 4, 5.</p></div></li>
+              <li><p class="korak">Preštej frekvence in preveri vsoto.</p><div class="na-nalogi"><p>1, 2, 6, 7, 4; vsota 20.</p></div></li>
+              <li><p class="korak">Izračunaj relativne frekvence.</p><div class="na-nalogi"><p>5 %, 10 %, 30 %, 35 %, 20 %.</p></div></li>
+              <li><p class="korak">Seštevaj frekvence za kumulativo.</p><div class="na-nalogi"><p>1, 3, 9, 16, 20.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Časi teka 12,4; 13,1; 14,8; 13,6; 15,2 v razredih širine 1 s od 12 s naprej</p><p>\([12, 13)\): 1, \([13, 14)\): 2, \([14, 15)\): 1, \([15, 16)\): 1.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Delež ocen vsaj 4 iz zgornje tabele</p><p>\(35 + 20 = 55\) %.</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 5 -->
+        <section class="sklop" id="sklop-5">
+          <header class="sklop-header">
+            <span class="sklop-num">4.17 · 5</span>
+            <h2>Prikazovanje podatkov</h2>
+            <p>Stolpčni, tortni, histogram, razsevni, linijski diagram, škatla z brki.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <ul>
+              <li><strong>Stolpčni</strong> diagram: višina stolpca je frekvenca; za opisne in diskretne podatke.</li>
+              <li><strong>Tortni</strong> diagram: izsek s kotom \(f_r \cdot 360^\circ\); prikaže deleže celote.</li>
+              <li><strong>Pozicijski</strong> (točkovni) diagram: vsak podatek je pika nad številsko premico.</li>
+              <li><strong>Histogram</strong>: stolpci nad razredi se dotikajo; za zvezne podatke.</li>
+              <li><strong>Linijski</strong> ali <strong>krivuljni</strong> diagram: spreminjanje količine skozi čas.</li>
+              <li><strong>Razsevni</strong> diagram: pari podatkov kot točke; pokaže povezanost dveh spremenljivk.</li>
+              <li><strong>Škatla z brki</strong>: minimum, \(Q_1\), mediana, \(Q_3\), maksimum.</li>
+            </ul>
+            <div class="slike-vrsta"><figure class="slika">
+<svg viewBox="0 0 280 240" role="img" aria-label="Stolpčni diagram ocen" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g1-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g1-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g1-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g1-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g1-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g1-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<path class="s-mreza" d="M26,214V26M59.5,214V26M93.1,214V26M126.6,214V26M160.1,214V26M193.6,214V26M227.2,214V26M26,201.6H254M26,180.9H254M26,160.3H254M26,139.6H254M26,119H254M26,98.3H254M26,77.6H254M26,57H254M26,36.3H254"/>
+<polygon class="s-lik" points="49.5,201.6 69.6,201.6 69.6,180.9 49.5,180.9"/>
+<polygon class="s-lik" points="83,201.6 103.1,201.6 103.1,160.3 83,160.3"/>
+<polygon class="s-lik" points="116.5,201.6 136.6,201.6 136.6,77.6 116.5,77.6"/>
+<polygon class="s-lik" points="150.1,201.6 170.2,201.6 170.2,57 150.1,57"/>
+<polygon class="s-lik" points="183.6,201.6 203.7,201.6 203.7,119 183.6,119"/>
+<line class="s-os" x1="26" y1="201.6" x2="262" y2="201.6" marker-end="url(#g1-p)"/>
+<line class="s-os" x1="26" y1="214" x2="26" y2="18" marker-end="url(#g1-p)"/>
+<text class="s-os-txt" x="256" y="193.6" text-anchor="end">ocena</text>
+<text class="s-os-txt" x="34" y="30">f</text>
+<line class="s-os" x1="59.5" y1="198.6" x2="59.5" y2="204.6"/><text class="s-os-txt" x="59.5" y="216.6" text-anchor="middle">1</text><line class="s-os" x1="93.1" y1="198.6" x2="93.1" y2="204.6"/><text class="s-os-txt" x="93.1" y="216.6" text-anchor="middle">2</text><line class="s-os" x1="126.6" y1="198.6" x2="126.6" y2="204.6"/><text class="s-os-txt" x="126.6" y="216.6" text-anchor="middle">3</text><line class="s-os" x1="160.1" y1="198.6" x2="160.1" y2="204.6"/><text class="s-os-txt" x="160.1" y="216.6" text-anchor="middle">4</text><line class="s-os" x1="193.6" y1="198.6" x2="193.6" y2="204.6"/><text class="s-os-txt" x="193.6" y="216.6" text-anchor="middle">5</text><line class="s-os" x1="227.2" y1="198.6" x2="227.2" y2="204.6"/><text class="s-os-txt" x="227.2" y="216.6" text-anchor="middle">6</text><line class="s-os" x1="23" y1="160.3" x2="29" y2="160.3"/><text class="s-os-txt" x="20" y="164.3" text-anchor="end">2</text><line class="s-os" x1="23" y1="119" x2="29" y2="119"/><text class="s-os-txt" x="20" y="123" text-anchor="end">4</text><line class="s-os" x1="23" y1="77.6" x2="29" y2="77.6"/><text class="s-os-txt" x="20" y="81.6" text-anchor="end">6</text><line class="s-os" x1="23" y1="36.3" x2="29" y2="36.3"/><text class="s-os-txt" x="20" y="40.3" text-anchor="end">8</text><text class="s-os-txt" x="20" y="216.6" text-anchor="end">0</text>
+<text class="s-txt-k1" x="59.5" y="175.8" text-anchor="middle">1</text>
+<text class="s-txt-k1" x="93.1" y="155.1" text-anchor="middle">2</text>
+<text class="s-txt-k1" x="126.6" y="72.5" text-anchor="middle">6</text>
+<text class="s-txt-k1" x="160.1" y="51.8" text-anchor="middle">7</text>
+<text class="s-txt-k1" x="193.6" y="113.8" text-anchor="middle">4</text>
+</svg>
+<figcaption>Stolpčni diagram: višina stolpca je frekvenca ocene.</figcaption>
+</figure><figure class="slika">
+<svg viewBox="0 0 260 241" role="img" aria-label="Tortni diagram ocen" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g2-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g2-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g2-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g2-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g2-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g2-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<polygon class="s-ploskev-2" points="130,126.1 130,51.5 130.8,51.5 131.6,51.6 132.3,51.6 133.1,51.6 133.9,51.6 134.7,51.7 135.5,51.7 136.2,51.8 137,51.9 137.8,52 138.6,52 139.4,52.1 140.1,52.2 140.9,52.3 141.7,52.5 142.5,52.6 143.2,52.7 144,52.9 144.8,53 145.5,53.2 146.3,53.3 147.1,53.5 147.8,53.7 148.6,53.9 149.3,54.1 150.1,54.3 150.8,54.5 151.6,54.7 152.3,55 153.1,55.2"/>
+<polygon class="s-lik-2" points="130,126.1 153.1,55.2 154.6,55.7 156,56.2 157.5,56.8 158.9,57.4 160.4,58 161.8,58.6 163.2,59.3 164.6,60 166,60.8 167.3,61.5 168.7,62.3 170,63.2 171.3,64 172.6,64.9 173.9,65.8 175.1,66.7 176.4,67.7 177.6,68.7 178.8,69.7 180,70.7 181.1,71.7 182.2,72.8 183.3,73.9 184.4,75.1 185.5,76.2 186.5,77.4 187.5,78.6 188.5,79.8 189.5,81 190.4,82.3"/>
+<polygon class="s-lik" points="130,126.1 190.4,82.3 193,86.1 195.4,90.2 197.6,94.4 199.4,98.6 201,103.1 202.3,107.6 203.3,112.1 204.1,116.7 204.5,121.4 204.7,126.1 204.5,130.8 204.1,135.4 203.3,140.1 202.3,144.6 201,149.1 199.4,153.5 197.6,157.8 195.4,162 193,166 190.4,169.9 187.5,173.6 184.4,177.1 181.1,180.4 177.6,183.5 173.9,186.4 170,189 166,191.4 161.8,193.5 157.5,195.4 153.1,197"/>
+<polygon class="s-ploskev" points="130,126.1 153.1,197 147.8,198.5 142.5,199.6 137,200.3 131.6,200.6 126.1,200.5 120.6,200 115.2,199.2 109.9,197.9 104.7,196.2 99.6,194.2 94.7,191.8 90,189 85.5,185.9 81.2,182.5 77.2,178.8 73.5,174.8 70.1,170.5 67,166 64.2,161.3 61.8,156.4 59.7,151.3 58.1,146.1 56.8,140.8 55.9,135.4 55.4,130 55.3,124.5 55.7,119.1 56.4,113.7 57.5,108.3 59,103.1"/>
+<polygon class="s-lik-2" points="130,126.1 59,103.1 60,100.1 61.2,97.2 62.4,94.4 63.8,91.6 65.3,88.8 67,86.1 68.7,83.5 70.5,81 72.5,78.6 74.5,76.2 76.7,73.9 78.9,71.7 81.2,69.7 83.6,67.7 86.1,65.8 88.7,64 91.3,62.3 94,60.8 96.8,59.3 99.6,58 102.5,56.8 105.4,55.7 108.4,54.7 111.4,53.9 114.5,53.2 117.5,52.6 120.6,52.1 123.8,51.8 126.9,51.6 130,51.5"/>
+<text class="s-txt-b" x="144.3" y="40" text-anchor="middle">1: 18°</text>
+<text class="s-txt-b" x="157.2" y="92.4" text-anchor="middle">2: 36°</text>
+<text class="s-txt-b" x="174" y="144.1" text-anchor="middle">3: 108°</text>
+<text class="s-txt-b" x="97.3" y="162.5" text-anchor="middle">4: 126°</text>
+<text class="s-txt-b" x="102.8" y="92.4" text-anchor="middle">5: 72°</text>
+
+</svg>
+<figcaption>Tortni diagram: kot izseka je \(f_r \cdot 360^\circ\).</figcaption>
+</figure></div>
+            <figure class="slika slika--siroka">
+<svg viewBox="0 0 420 260" role="img" aria-label="Histogram časov teka" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g3-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g3-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g3-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g3-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g3-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g3-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<path class="s-mreza" d="M61.6,234V26M121,234V26M180.3,234V26M239.7,234V26M299,234V26M358.4,234V26M26,218.6H394M26,187.8H394M26,157H394M26,126.1H394M26,95.3H394M26,64.5H394M26,33.7H394"/>
+<polygon class="s-lik" points="61.6,218.6 121,218.6 121,172.4 61.6,172.4"/>
+<polygon class="s-lik" points="121,218.6 180.3,218.6 180.3,95.3 121,95.3"/>
+<polygon class="s-lik" points="180.3,218.6 239.7,218.6 239.7,49.1 180.3,49.1"/>
+<polygon class="s-lik" points="239.7,218.6 299,218.6 299,126.1 239.7,126.1"/>
+<polygon class="s-lik" points="299,218.6 358.4,218.6 358.4,187.8 299,187.8"/>
+<line class="s-os" x1="26" y1="218.6" x2="402" y2="218.6" marker-end="url(#g3-p)"/>
+<line class="s-os" x1="26" y1="234" x2="26" y2="18" marker-end="url(#g3-p)"/>
+<text class="s-os-txt" x="396" y="210.6" text-anchor="end">t (s)</text>
+<text class="s-os-txt" x="34" y="30">f</text>
+<line class="s-os" x1="61.6" y1="215.6" x2="61.6" y2="221.6"/><text class="s-os-txt" x="61.6" y="233.6" text-anchor="middle">12</text><line class="s-os" x1="121" y1="215.6" x2="121" y2="221.6"/><text class="s-os-txt" x="121" y="233.6" text-anchor="middle">13</text><line class="s-os" x1="180.3" y1="215.6" x2="180.3" y2="221.6"/><text class="s-os-txt" x="180.3" y="233.6" text-anchor="middle">14</text><line class="s-os" x1="239.7" y1="215.6" x2="239.7" y2="221.6"/><text class="s-os-txt" x="239.7" y="233.6" text-anchor="middle">15</text><line class="s-os" x1="299" y1="215.6" x2="299" y2="221.6"/><text class="s-os-txt" x="299" y="233.6" text-anchor="middle">16</text><line class="s-os" x1="358.4" y1="215.6" x2="358.4" y2="221.6"/><text class="s-os-txt" x="358.4" y="233.6" text-anchor="middle">17</text><line class="s-os" x1="23" y1="187.8" x2="29" y2="187.8"/><text class="s-os-txt" x="20" y="191.8" text-anchor="end">2</text><line class="s-os" x1="23" y1="157" x2="29" y2="157"/><text class="s-os-txt" x="20" y="161" text-anchor="end">4</text><line class="s-os" x1="23" y1="126.1" x2="29" y2="126.1"/><text class="s-os-txt" x="20" y="130.1" text-anchor="end">6</text><line class="s-os" x1="23" y1="95.3" x2="29" y2="95.3"/><text class="s-os-txt" x="20" y="99.3" text-anchor="end">8</text><line class="s-os" x1="23" y1="64.5" x2="29" y2="64.5"/><text class="s-os-txt" x="20" y="68.5" text-anchor="end">10</text><line class="s-os" x1="23" y1="33.7" x2="29" y2="33.7"/><text class="s-os-txt" x="20" y="37.7" text-anchor="end">12</text><text class="s-os-txt" x="20" y="233.6" text-anchor="end">0</text>
+<text class="s-txt-k1" x="91.3" y="167" text-anchor="middle">3</text>
+<text class="s-txt-k1" x="150.6" y="89.9" text-anchor="middle">8</text>
+<text class="s-txt-k1" x="210" y="43.7" text-anchor="middle">11</text>
+<text class="s-txt-k1" x="269.4" y="120.8" text-anchor="middle">6</text>
+<text class="s-txt-k1" x="328.7" y="182.4" text-anchor="middle">2</text>
+</svg>
+<figcaption>Histogram časov teka na 100 m (30 dijakov): stolpci se dotikajo, ker so razredi zaporedni intervali.</figcaption>
+</figure>
+            <figure class="slika slika--siroka">
+<svg viewBox="0 0 400 270" role="img" aria-label="Razsevni diagram" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g5-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g5-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g5-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g5-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g5-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g5-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<path class="s-mreza" d="M26,244V26M60.8,244V26M95.6,244V26M130.4,244V26M165.2,244V26M200,244V26M234.8,244V26M269.6,244V26M304.4,244V26M339.2,244V26M374,244V26M26,244H374M26,210.5H374M26,176.9H374M26,143.4H374M26,109.8H374M26,76.3H374M26,42.8H374"/>
+<line class="s-os" x1="26" y1="244" x2="382" y2="244" marker-end="url(#g5-p)"/>
+<line class="s-os" x1="26" y1="244" x2="26" y2="18" marker-end="url(#g5-p)"/>
+<text class="s-os-txt" x="376" y="236" text-anchor="end">šport (h/teden)</text>
+<text class="s-os-txt" x="34" y="30">telefon (h/dan)</text>
+<line class="s-os" x1="60.8" y1="241" x2="60.8" y2="247"/><text class="s-os-txt" x="60.8" y="259" text-anchor="middle">1</text><line class="s-os" x1="95.6" y1="241" x2="95.6" y2="247"/><text class="s-os-txt" x="95.6" y="259" text-anchor="middle">2</text><line class="s-os" x1="130.4" y1="241" x2="130.4" y2="247"/><text class="s-os-txt" x="130.4" y="259" text-anchor="middle">3</text><line class="s-os" x1="165.2" y1="241" x2="165.2" y2="247"/><text class="s-os-txt" x="165.2" y="259" text-anchor="middle">4</text><line class="s-os" x1="200" y1="241" x2="200" y2="247"/><text class="s-os-txt" x="200" y="259" text-anchor="middle">5</text><line class="s-os" x1="234.8" y1="241" x2="234.8" y2="247"/><text class="s-os-txt" x="234.8" y="259" text-anchor="middle">6</text><line class="s-os" x1="269.6" y1="241" x2="269.6" y2="247"/><text class="s-os-txt" x="269.6" y="259" text-anchor="middle">7</text><line class="s-os" x1="304.4" y1="241" x2="304.4" y2="247"/><text class="s-os-txt" x="304.4" y="259" text-anchor="middle">8</text><line class="s-os" x1="339.2" y1="241" x2="339.2" y2="247"/><text class="s-os-txt" x="339.2" y="259" text-anchor="middle">9</text><line class="s-os" x1="23" y1="210.5" x2="29" y2="210.5"/><text class="s-os-txt" x="20" y="214.5" text-anchor="end">1</text><line class="s-os" x1="23" y1="176.9" x2="29" y2="176.9"/><text class="s-os-txt" x="20" y="180.9" text-anchor="end">2</text><line class="s-os" x1="23" y1="143.4" x2="29" y2="143.4"/><text class="s-os-txt" x="20" y="147.4" text-anchor="end">3</text><line class="s-os" x1="23" y1="109.8" x2="29" y2="109.8"/><text class="s-os-txt" x="20" y="113.8" text-anchor="end">4</text><line class="s-os" x1="23" y1="76.3" x2="29" y2="76.3"/><text class="s-os-txt" x="20" y="80.3" text-anchor="end">5</text><line class="s-os" x1="23" y1="42.8" x2="29" y2="42.8"/><text class="s-os-txt" x="20" y="46.8" text-anchor="end">6</text><text class="s-os-txt" x="20" y="259" text-anchor="end">0</text>
+<path class="s-pom" d="M43.4,61.7L44.2,62L45,62.4L45.7,62.7L46.5,63L47.3,63.3L48.1,63.7L48.9,64L49.7,64.3L50.4,64.6L51.2,65L52,65.3L52.8,65.6L53.6,65.9L54.4,66.3L55.1,66.6L55.9,66.9L56.7,67.2L57.5,67.6L58.3,67.9L59.1,68.2L59.8,68.5L60.6,68.9L61.4,69.2L62.2,69.5L63,69.8L63.8,70.2L64.5,70.5L65.3,70.8L66.1,71.1L66.9,71.5L67.7,71.8L68.5,72.1L69.2,72.4L70,72.8L70.8,73.1L71.6,73.4L72.4,73.7L73.2,74L73.9,74.4L74.7,74.7L75.5,75L76.3,75.3L77.1,75.7L77.9,76L78.6,76.3L79.4,76.6L80.2,77L81,77.3L81.8,77.6L82.6,77.9L83.3,78.3L84.1,78.6L84.9,78.9L85.7,79.2L86.5,79.6L87.2,79.9L88,80.2L88.8,80.5L89.6,80.9L90.4,81.2L91.2,81.5L91.9,81.8L92.7,82.2L93.5,82.5L94.3,82.8L95.1,83.1L95.9,83.5L96.6,83.8L97.4,84.1L98.2,84.4L99,84.8L99.8,85.1L100.6,85.4L101.3,85.7L102.1,86.1L102.9,86.4L103.7,86.7L104.5,87L105.3,87.4L106,87.7L106.8,88L107.6,88.3L108.4,88.7L109.2,89L110,89.3L110.7,89.6L111.5,89.9L112.3,90.3L113.1,90.6L113.9,90.9L114.7,91.2L115.4,91.6L116.2,91.9L117,92.2L117.8,92.5L118.6,92.9L119.4,93.2L120.1,93.5L120.9,93.8L121.7,94.2L122.5,94.5L123.3,94.8L124,95.1L124.8,95.5L125.6,95.8L126.4,96.1L127.2,96.4L128,96.8L128.7,97.1L129.5,97.4L130.3,97.7L131.1,98.1L131.9,98.4L132.7,98.7L133.4,99L134.2,99.4L135,99.7L135.8,100L136.6,100.3L137.4,100.7L138.1,101L138.9,101.3L139.7,101.6L140.5,102L141.3,102.3L142.1,102.6L142.8,102.9L143.6,103.3L144.4,103.6L145.2,103.9L146,104.2L146.8,104.6L147.5,104.9L148.3,105.2L149.1,105.5L149.9,105.8L150.7,106.2L151.5,106.5L152.2,106.8L153,107.1L153.8,107.5L154.6,107.8L155.4,108.1L156.2,108.4L156.9,108.8L157.7,109.1L158.5,109.4L159.3,109.7L160.1,110.1L160.9,110.4L161.6,110.7L162.4,111L163.2,111.4L164,111.7L164.8,112L165.5,112.3L166.3,112.7L167.1,113L167.9,113.3L168.7,113.6L169.5,114L170.2,114.3L171,114.6L171.8,114.9L172.6,115.3L173.4,115.6L174.2,115.9L174.9,116.2L175.7,116.6L176.5,116.9L177.3,117.2L178.1,117.5L178.9,117.9L179.6,118.2L180.4,118.5L181.2,118.8L182,119.2L182.8,119.5L183.6,119.8L184.3,120.1L185.1,120.5L185.9,120.8L186.7,121.1L187.5,121.4L188.3,121.7L189,122.1L189.8,122.4L190.6,122.7L191.4,123L192.2,123.4L193,123.7L193.7,124L194.5,124.3L195.3,124.7L196.1,125L196.9,125.3L197.7,125.6L198.4,126L199.2,126.3L200,126.6L200.8,126.9L201.6,127.3L202.3,127.6L203.1,127.9L203.9,128.2L204.7,128.6L205.5,128.9L206.3,129.2L207,129.5L207.8,129.9L208.6,130.2L209.4,130.5L210.2,130.8L211,131.2L211.7,131.5L212.5,131.8L213.3,132.1L214.1,132.5L214.9,132.8L215.7,133.1L216.4,133.4L217.2,133.8L218,134.1L218.8,134.4L219.6,134.7L220.4,135.1L221.1,135.4L221.9,135.7L222.7,136L223.5,136.3L224.3,136.7L225.1,137L225.8,137.3L226.6,137.6L227.4,138L228.2,138.3L229,138.6L229.8,138.9L230.5,139.3L231.3,139.6L232.1,139.9L232.9,140.2L233.7,140.6L234.5,140.9L235.2,141.2L236,141.5L236.8,141.9L237.6,142.2L238.4,142.5L239.2,142.8L239.9,143.2L240.7,143.5L241.5,143.8L242.3,144.1L243.1,144.5L243.8,144.8L244.6,145.1L245.4,145.4L246.2,145.8L247,146.1L247.8,146.4L248.5,146.7L249.3,147.1L250.1,147.4L250.9,147.7L251.7,148L252.5,148.4L253.2,148.7L254,149L254.8,149.3L255.6,149.7L256.4,150L257.2,150.3L257.9,150.6L258.7,151L259.5,151.3L260.3,151.6L261.1,151.9L261.9,152.2L262.6,152.6L263.4,152.9L264.2,153.2L265,153.5L265.8,153.9L266.6,154.2L267.3,154.5L268.1,154.8L268.9,155.2L269.7,155.5L270.5,155.8L271.3,156.1L272,156.5L272.8,156.8L273.6,157.1L274.4,157.4L275.2,157.8L276,158.1L276.7,158.4L277.5,158.7L278.3,159.1L279.1,159.4L279.9,159.7L280.6,160L281.4,160.4L282.2,160.7L283,161L283.8,161.3L284.6,161.7L285.3,162L286.1,162.3L286.9,162.6L287.7,163L288.5,163.3L289.3,163.6L290,163.9L290.8,164.3L291.6,164.6L292.4,164.9L293.2,165.2L294,165.6L294.7,165.9L295.5,166.2L296.3,166.5L297.1,166.9L297.9,167.2L298.7,167.5L299.4,167.8L300.2,168.1L301,168.5L301.8,168.8L302.6,169.1L303.4,169.4L304.1,169.8L304.9,170.1L305.7,170.4L306.5,170.7L307.3,171.1L308.1,171.4L308.8,171.7L309.6,172L310.4,172.4L311.2,172.7L312,173L312.8,173.3L313.5,173.7L314.3,174L315.1,174.3L315.9,174.6L316.7,175L317.5,175.3L318.2,175.6L319,175.9L319.8,176.3L320.6,176.6L321.4,176.9L322.1,177.2L322.9,177.6L323.7,177.9L324.5,178.2L325.3,178.5L326.1,178.9L326.8,179.2L327.6,179.5L328.4,179.8L329.2,180.2L330,180.5L330.8,180.8L331.5,181.1L332.3,181.5L333.1,181.8L333.9,182.1L334.7,182.4L335.5,182.8L336.2,183.1L337,183.4L337.8,183.7L338.6,184L339.4,184.4L340.2,184.7L340.9,185L341.7,185.3L342.5,185.7L343.3,186L344.1,186.3L344.9,186.6L345.6,187L346.4,187.3L347.2,187.6L348,187.9L348.8,188.3L349.6,188.6L350.3,188.9L351.1,189.2L351.9,189.6L352.7,189.9L353.5,190.2L354.3,190.5L355,190.9L355.8,191.2L356.6,191.5"/>
+<circle class="s-tocka" cx="60.8" cy="59.5" r="4.5"/>
+<circle class="s-tocka" cx="95.6" cy="76.3" r="4.5"/>
+<circle class="s-tocka" cx="95.6" cy="103.1" r="4.5"/>
+<circle class="s-tocka" cx="130.4" cy="93.1" r="4.5"/>
+<circle class="s-tocka" cx="165.2" cy="116.6" r="4.5"/>
+<circle class="s-tocka" cx="165.2" cy="136.7" r="4.5"/>
+<circle class="s-tocka" cx="200" cy="126.6" r="4.5"/>
+<circle class="s-tocka" cx="234.8" cy="150.1" r="4.5"/>
+<circle class="s-tocka" cx="234.8" cy="133.3" r="4.5"/>
+<circle class="s-tocka" cx="269.6" cy="170.2" r="4.5"/>
+<circle class="s-tocka" cx="304.4" cy="160.2" r="4.5"/>
+<circle class="s-tocka" cx="339.2" cy="183.6" r="4.5"/>
+</svg>
+<figcaption>Razsevni diagram: več športa, manj telefona. Točke se razvrščajo okoli padajoče premice, povezanost je negativna.</figcaption>
+</figure>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-5">
+              <h4>Tip 5: Izdelava in branje diagrama</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Za ocene iz frekvenčne tabele (1: 1, 2: 2, 3: 6, 4: 7, 5: 4) izračunajte kote izsekov tortnega diagrama.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> narisati ali prebrati je treba diagram.</p><ul class="kljucne"><li>„narišite tortni diagram“</li><li>„iz histograma preberite“</li><li>„kaj kaže razsevni diagram“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Izračunaj relativne frekvence.</p><div class="na-nalogi"><p>0,05; 0,10; 0,30; 0,35; 0,20.</p></div></li>
+              <li><p class="korak">Pomnoži s \(360^\circ\).</p><div class="na-nalogi"><p>\(18^\circ, 36^\circ, 108^\circ, 126^\circ, 72^\circ\).</p></div></li>
+              <li><p class="korak">Preveri, da je vsota \(360^\circ\).</p><div class="na-nalogi"><p>\(18 + 36 + 108 + 126 + 72 = 360\).</p></div></li>
+              <li><p class="korak">Nariši izseke s kotomerom in jih označi (legenda, deleži).</p><div class="na-nalogi"><p>Glej tortni diagram zgoraj.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Iz histograma časov teka: koliko dijakov je teklo manj kot 14 s?</p><p>\(3 + 8 = 11\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Razsevni diagram šport in telefon</p><p>Negativna povezanost: z več športa gre manj časa na telefonu (to še ne pomeni, da je šport vzrok).</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 6 -->
+        <section class="sklop" id="sklop-6">
+          <header class="sklop-header">
+            <span class="sklop-num">4.17 · 6</span>
+            <h2>Aritmetična sredina, mediana, modus</h2>
+            <p>Mere osredinjenosti.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <ul>
+              <li><strong>Aritmetična sredina</strong> \(\bar{x} = \frac{x_1 + \ldots + x_N}{N}\); iz frekvenčne tabele \(\bar{x} = \frac{\sum f_i x_i}{N}\), pri razredih vzamemo sredine razredov.</li>
+              <li><strong>Mediana</strong> Me je srednja vrednost urejenih podatkov: pri lihem \(N\) podatek na mestu \(\frac{N + 1}{2}\), pri sodem povprečje dveh srednjih.</li>
+              <li><strong>Modus</strong> Mo je najpogostejša vrednost.</li>
+            </ul>
+            <p>Ekstremne vrednosti (osamelci) močno premaknejo aritmetično sredino, mediane skoraj nič. Zato je pri plačah ali cenah stanovanj mediana pogosto bolj povedna.</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-6">
+              <h4>Tip 6: Aritmetična sredina, mediana in modus</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Za podatke 8, 3, 10, 2, 8, 5, 7, 8, 3 izračunajte aritmetično sredino, mediano in modus.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> „povprečje“, „srednja vrednost“, „najpogostejša“.</p><ul class="kljucne"><li>„aritmetična sredina“</li><li>„mediana“</li><li>„modus“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Uredi podatke po velikosti in jih preštej.</p><div class="na-nalogi"><p>2, 3, 3, 5, 7, 8, 8, 8, 10; \(N = 9\).</p></div></li>
+              <li><p class="korak">Aritmetična sredina: vsota deljeno z \(N\).</p><div class="na-nalogi"><p>\(\frac{54}{9} = 6\).</p></div></li>
+              <li><p class="korak">Mediana: srednji podatek.</p><div class="na-nalogi"><p>5. podatek: Me = 7.</p></div></li>
+              <li><p class="korak">Modus: najpogostejši.</p><div class="na-nalogi"><p>Mo = 8.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> 1, 4, 6, 9</p><p>\(\bar{x} = 5\), Me \(= \frac{4 + 6}{2} = 5\), modusa ni.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Ocene iz tabele (1: 1, 2: 2, 3: 6, 4: 7, 5: 4)</p><p>\(\bar{x} = \frac{1 + 4 + 18 + 28 + 20}{20} = 3{,}55\); 10. in 11. podatek sta 4: Me = 4; Mo = 4.</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Histogram časov teka (sredine razredov 12,5 do 16,5)</p><p>\(\bar{x} = \frac{431}{30} \approx 14{,}4\) s.</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 7 -->
+        <section class="sklop" id="sklop-7">
+          <header class="sklop-header">
+            <span class="sklop-num">4.17 · 7</span>
+            <h2>Variacijski razmik, standardni odklon, medčetrtinski razmik</h2>
+            <p>Mere razpršenosti.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <ul>
+              <li><strong>Variacijski razmik</strong> \(R = x_{\max} - x_{\min}\).</li>
+              <li><strong>Standardni odklon</strong> \(\sigma = \sqrt{\frac{\sum (x_i - \bar{x})^2}{N}}\): povprečna oddaljenost podatkov od sredine.</li>
+              <li><strong>Kvartili</strong>: \(Q_1\) je mediana spodnje polovice, \(Q_2\) mediana, \(Q_3\) mediana zgornje polovice urejenih podatkov. <strong>Medčetrtinski razmik</strong> \(Q_3 - Q_1\) zajame srednjo polovico podatkov in ni občutljiv na osamelce.</li>
+            </ul>
+            <figure class="slika slika--siroka">
+<svg viewBox="0 0 440 170" role="img" aria-label="Škatla z brki" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g4-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g4-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g4-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g4-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g4-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g4-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<path class="s-mreza" d="M26,144V26M55.8,144V26M85.7,144V26M115.5,144V26M145.4,144V26M175.2,144V26M205.1,144V26M234.9,144V26M264.8,144V26M294.6,144V26M324.5,144V26M354.3,144V26M384.2,144V26M414,144V26M26,134.6H414"/>
+<polygon class="s-lik" points="130.5,111 294.6,111 294.6,63.8 130.5,63.8"/>
+<line class="s-os" x1="26" y1="134.6" x2="422" y2="134.6" marker-end="url(#g4-p)"/>
+<line class="s-os" x1="26" y1="144" x2="26" y2="18" marker-end="url(#g4-p)"/>
+<text class="s-os-txt" x="416" y="126.6" text-anchor="end"> </text>
+<text class="s-os-txt" x="34" y="30"> </text>
+<line class="s-os" x1="55.8" y1="131.6" x2="55.8" y2="137.6"/><text class="s-os-txt" x="55.8" y="149.6" text-anchor="middle">1</text><line class="s-os" x1="85.7" y1="131.6" x2="85.7" y2="137.6"/><text class="s-os-txt" x="85.7" y="149.6" text-anchor="middle">2</text><line class="s-os" x1="115.5" y1="131.6" x2="115.5" y2="137.6"/><text class="s-os-txt" x="115.5" y="149.6" text-anchor="middle">3</text><line class="s-os" x1="145.4" y1="131.6" x2="145.4" y2="137.6"/><text class="s-os-txt" x="145.4" y="149.6" text-anchor="middle">4</text><line class="s-os" x1="175.2" y1="131.6" x2="175.2" y2="137.6"/><text class="s-os-txt" x="175.2" y="149.6" text-anchor="middle">5</text><line class="s-os" x1="205.1" y1="131.6" x2="205.1" y2="137.6"/><text class="s-os-txt" x="205.1" y="149.6" text-anchor="middle">6</text><line class="s-os" x1="234.9" y1="131.6" x2="234.9" y2="137.6"/><text class="s-os-txt" x="234.9" y="149.6" text-anchor="middle">7</text><line class="s-os" x1="264.8" y1="131.6" x2="264.8" y2="137.6"/><text class="s-os-txt" x="264.8" y="149.6" text-anchor="middle">8</text><line class="s-os" x1="294.6" y1="131.6" x2="294.6" y2="137.6"/><text class="s-os-txt" x="294.6" y="149.6" text-anchor="middle">9</text><line class="s-os" x1="324.5" y1="131.6" x2="324.5" y2="137.6"/><text class="s-os-txt" x="324.5" y="149.6" text-anchor="middle">10</text><line class="s-os" x1="354.3" y1="131.6" x2="354.3" y2="137.6"/><text class="s-os-txt" x="354.3" y="149.6" text-anchor="middle">11</text><line class="s-os" x1="384.2" y1="131.6" x2="384.2" y2="137.6"/><text class="s-os-txt" x="384.2" y="149.6" text-anchor="middle">12</text><text class="s-os-txt" x="20" y="149.6" text-anchor="end">0</text>
+<line class="s-crta" x1="55.8" y1="87.4" x2="130.5" y2="87.4"/>
+<line class="s-crta" x1="294.6" y1="87.4" x2="384.2" y2="87.4"/>
+<line class="s-k2" x1="220" y1="111" x2="220" y2="63.8"/>
+<line class="s-crta" x1="55.8" y1="99.2" x2="55.8" y2="75.6"/>
+<line class="s-crta" x1="384.2" y1="99.2" x2="384.2" y2="75.6"/>
+<text class="s-txt-muted" x="55.8" y="47.2" text-anchor="middle">min 1</text>
+<text class="s-txt-k1" x="130.5" y="47.2" text-anchor="middle">Q₁ = 3,5</text>
+<text class="s-txt-k2" x="220" y="47.2" text-anchor="middle">Me = 6,5</text>
+<text class="s-txt-k1" x="294.6" y="47.2" text-anchor="middle">Q₃ = 9</text>
+<text class="s-txt-muted" x="384.2" y="47.2" text-anchor="middle">max 12</text>
+</svg>
+<figcaption>Škatla z brki za podatke 1, 3, 4, 6, 7, 8, 10, 12: škatla sega od \(Q_1\) do \(Q_3\) (srednja polovica podatkov), črta v njej je mediana.</figcaption>
+</figure>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-7">
+              <h4>Tip 7: Standardni odklon</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Za podatke 4, 6, 7, 9, 14 izračunajte variacijski razmik in standardni odklon.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> sprašujejo, kako razpršeni so podatki.</p><ul class="kljucne"><li>„standardni odklon“</li><li>„variacijski razmik“</li><li>„kateri podatki so bolj razpršeni“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Izračunaj aritmetično sredino (in razmik).</p><div class="na-nalogi"><p>\(\bar{x} = \frac{40}{5} = 8\); \(R = 14 - 4 = 10\).</p></div></li>
+              <li><p class="korak">Izračunaj odmike od sredine in jih kvadriraj.</p><div class="na-nalogi"><p>\(-4, -2, -1, 1, 6\): kvadrati \(16, 4, 1, 1, 36\).</p></div></li>
+              <li><p class="korak">Kvadrate seštej in deli z \(N\).</p><div class="na-nalogi"><p>\(\frac{58}{5} = 11{,}6\).</p></div></li>
+              <li><p class="korak">Koreni.</p><div class="na-nalogi"><p>\(\sigma = \sqrt{11{,}6} \approx 3{,}41\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> 5, 5, 5, 5</p><p>\(\sigma = 0\): ni razpršenosti.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> 2, 4, 6</p><p>\(\bar{x} = 4\), \(\sigma = \sqrt{\frac{8}{3}} \approx 1{,}63\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Vsem podatkom prištejemo 10. Kaj se zgodi s \(\sigma\)?</p><p>Ostane enak, sredina se poveča za 10.</p></div>
+            </div>
+            <div class="tip-naloge" id="tip-8">
+              <h4>Tip 8: Kvartili, medčetrtinski razmik in škatla z brki</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Za podatke 1, 3, 4, 6, 7, 8, 10, 12 določite kvartile, medčetrtinski razmik in narišite škatlo z brki.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> „kvartil“, „medčetrtinski razmik“, „škatla z brki“.</p><ul class="kljucne"><li>„škatla z brki“</li><li>„medčetrtinski razmik“</li><li>„prvi in tretji kvartil“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Uredi podatke in določi mediano.</p><div class="na-nalogi"><p>\(N = 8\): Me \(= \frac{6 + 7}{2} = 6{,}5\).</p></div></li>
+              <li><p class="korak">\(Q_1\) je mediana spodnje polovice, \(Q_3\) zgornje.</p><div class="na-nalogi"><p>1, 3, 4, 6: \(Q_1 = 3{,}5\); 7, 8, 10, 12: \(Q_3 = 9\).</p></div></li>
+              <li><p class="korak">Medčetrtinski razmik.</p><div class="na-nalogi"><p>\(9 - 3{,}5 = 5{,}5\).</p></div></li>
+              <li><p class="korak">Nariši škatlo od \(Q_1\) do \(Q_3\) s črto pri mediani in brke do minimuma in maksimuma.</p><div class="na-nalogi"><p>min 1, \(Q_1 = 3{,}5\), Me = 6,5, \(Q_3 = 9\), max 12 (slika zgoraj).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> 2, 5, 7, 8, 9, 11, 15</p><p>Me = 8, \(Q_1 = 5\), \(Q_3 = 11\), razmik 6 (pri lihem \(N\) mediane ne štejemo v polovici).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Kateri skupini sta bolj razpršeni, če ima prva škatlo širine 4, druga 9?</p><p>Druga: srednja polovica podatkov je bolj razpotegnjena.</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 8 -->
+        <section class="sklop" id="sklop-8">
+          <header class="sklop-header">
+            <span class="sklop-num">4.17 · 8</span>
+            <h2>Statistična naloga</h2>
+            <p>Celoten postopek empiričnega preiskovanja.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <ol>
+              <li>Izberi temo in postavi <strong>preiskovalno vprašanje</strong>, na katero lahko odgovorimo s podatki.</li>
+              <li>Načrtuj in <strong>zberi podatke</strong> (populacija, vzorec, anketa ali meritev).</li>
+              <li>Podatke <strong>uredi</strong> v tabele.</li>
+              <li><strong>Analiziraj</strong>: izračunaj ustrezne mere.</li>
+              <li>Rezultate <strong>prikaži</strong> s primernimi diagrami.</li>
+              <li>Rezultate <strong>interpretiraj</strong>: odgovori na vprašanje in oceni omejitve (velikost vzorca, pristranskost, povezanost ni vzročnost).</li>
+            </ol>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-9">
+              <h4>Tip 9: Statistična naloga</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Raziščite, ali dijaki, ki več časa namenijo športu, manj časa preživijo na telefonu.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> naloga zahteva načrt raziskave ali presojo celotnega postopka.</p><ul class="kljucne"><li>„postavite preiskovalno vprašanje“</li><li>„načrtujte raziskavo“</li><li>„interpretirajte rezultate“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Postavi preiskovalno vprašanje in spremenljivki.</p><div class="na-nalogi"><p>Ali je čas športa povezan s časom na telefonu? Spremenljivki: ure športa na teden, ure telefona na dan (obe številski).</p></div></li>
+              <li><p class="korak">Zberi podatke na reprezentativnem vzorcu.</p><div class="na-nalogi"><p>Naključno izbranih 30 dijakov iz vseh letnikov, anketa.</p></div></li>
+              <li><p class="korak">Uredi in prikaži podatke.</p><div class="na-nalogi"><p>Tabela parov, razsevni diagram, za vsako spremenljivko \(\bar{x}\) in \(\sigma\).</p></div></li>
+              <li><p class="korak">Interpretiraj.</p><div class="na-nalogi"><p>Točke padajo: negativna povezanost. Ne pomeni, da šport povzroča manj telefona; vzorec je majhen.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Kateri diagram za vprašanje „Kateri predmet imajo dijaki najraje?“</p><p>Stolpčni ali tortni, modus.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Kako primerjati čase teka fantov in deklet?</p><p>Dve škatli z brki ali histograma, primerjava \(\bar{x}\) in \(\sigma\).</p></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="subsection" id="kljuc">
+          <div class="subsection-head">
+            <h2>Ključ: kateri tip naloge je to?</h2>
+            <p>Poišči besedo iz navodila naloge in skoči na pravi postopek.</p>
+          </div>
+          <div class="info-card">
+            <div class="tabela-wrap">
+              <table class="tabela">
+                <thead><tr><th>V besedilu naloge piše …</th><th>Tip</th></tr></thead>
+                <tbody>
+                  <tr><td>„populacija“, „vzorec“, „enota“</td><td><a href="#tip-1">Tip 1</a></td></tr>
+                  <tr><td>„vrsta podatkov“, „primeren diagram“</td><td><a href="#tip-2">Tip 2</a></td></tr>
+                  <tr><td>„ali je vzorec reprezentativen“</td><td><a href="#tip-3">Tip 3</a></td></tr>
+                  <tr><td>„frekvenčna tabela“, „relativna frekvenca“</td><td><a href="#tip-4">Tip 4</a></td></tr>
+                  <tr><td>„narišite tortni diagram“, „iz histograma preberite“</td><td><a href="#tip-5">Tip 5</a></td></tr>
+                  <tr><td>„povprečje“, „mediana“, „modus“</td><td><a href="#tip-6">Tip 6</a></td></tr>
+                  <tr><td>„standardni odklon“, „razpršenost“</td><td><a href="#tip-7">Tip 7</a></td></tr>
+                  <tr><td>„kvartil“, „škatla z brki“</td><td><a href="#tip-8">Tip 8</a></td></tr>
+                  <tr><td>„preiskovalno vprašanje“, „načrtujte raziskavo“</td><td><a href="#tip-9">Tip 9</a></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
         <section class="subsection">
           <div class="subsection-head">
-            <h2>3. Pogoste napake</h2>
+            <h2>Pogoste napake</h2>
           </div>
           <div class="info-card">
             <ul>
-              <li>Pri mediani pozabiš <strong>urediti</strong> podatke po velikosti.</li>
-              <li>Pri sodem \(n\) pozabiš vzeti povprečja dveh srednjih vrednosti.</li>
-              <li>Zamenjaš <strong>varianco</strong> (\(\sigma^2\)) in <strong>standardni odklon</strong> (\(\sigma\)).</li>
-              <li>Pri standardnem odklonu pozabiš kvadrirati odklone ali koreniti na koncu.</li>
-              <li>Pri uteženi sredini pozabiš množiti z <strong>frekvencami</strong>.</li>
-              <li>Pri kvartilih zamešaš \(Q_1\) (25 %) s \(Q_3\) (75 %).</li>
-              <li>Pri regresiji zamenjaš \(k\) in \(n\).</li>
-              <li>Pri branju škatle z brki zamešaš mediano z aritmetično sredino.</li>
+              <li>Mediano določiš iz neurejenih podatkov.</li>
+              <li>Pri frekvenčni tabeli aritmetično sredino računaš kot povprečje vrednosti brez frekvenc.</li>
+              <li>Pri standardnem odklonu pozabiš koreniti ali deliš z \(N - 1\) namesto z \(N\).</li>
+              <li>Za opisne podatke računaš aritmetično sredino.</li>
+              <li>Pri histogramu pustiš presledke med stolpci ali uporabiš neenake razrede brez prilagoditve.</li>
+              <li>Povezanost na razsevnem diagramu razlagaš kot vzročnost.</li>
             </ul>
           </div>
         </section>
 
-        <!-- ============ 4. ŠTUDIJSKI VODIČ ============ -->
         <section class="subsection">
           <div class="subsection-head">
-            <h2>4. Študijski vodič — hitri pregled</h2>
-          </div>
-          <div class="info-card">
-            <h3>Kaj moraš znati na pamet</h3>
-            <ul>
-              <li><strong>Aritmetična sredina:</strong> \(\bar{x} = \dfrac{1}{n}\sum x_i\).</li>
-              <li><strong>Mediana:</strong> srednja vrednost urejenega niza.</li>
-              <li><strong>Modus:</strong> najpogostejša vrednost.</li>
-              <li><strong>Variacijski razmik:</strong> \(R = x_{\max} - x_{\min}\).</li>
-              <li><strong>Varianca:</strong> \(\sigma^2 = \dfrac{1}{n}\sum (x_i - \bar{x})^2\).</li>
-              <li><strong>Standardni odklon:</strong> \(\sigma = \sqrt{\sigma^2}\).</li>
-              <li><strong>Kvartili:</strong> \(Q_1, Q_2, Q_3\), IQR = \(Q_3 - Q_1\).</li>
-              <li><strong>Normalna porazdelitev:</strong> 68–95–99,7.</li>
-              <li><strong>Regresija:</strong> \(y = kx + n\).</li>
-            </ul>
-          </div>
-
-          <div class="info-card">
-            <h3>Kako pristopiti k nalogi</h3>
-            <ol>
-              <li><strong>Preberi nalogo in prepoznaj tip:</strong> srednja vrednost, razpršenost, kvartili, normalna, regresija?</li>
-              <li><strong>Za srednjo vrednost:</strong> \(\bar{x}\), mediana ali modus — preveri, kaj naloga zahteva.</li>
-              <li><strong>Za razpršenost:</strong> preveri, ali gre za \(\sigma\) ali IQR.</li>
-              <li><strong>Za kvartile:</strong> uredi podatke, razdeli na polovice.</li>
-              <li><strong>Za normalno porazdelitev:</strong> uporabi 68–95–99,7.</li>
-              <li><strong>Za regresijo:</strong> izračunaj \(k\) in \(n\), zapiši premico.</li>
-            </ol>
-          </div>
-
-          <div class="info-card">
-            <h3>⏱️ Časovni načrt za en večer</h3>
-            <ul>
-              <li><strong>20 min:</strong> Teorija — pojmi, vrste podatkov, srednje vrednosti, mere razpršenosti.</li>
-              <li><strong>45 min:</strong> Tipi 1–5 (sredina, mediana, modus, \(\sigma\), utežena sredina).</li>
-              <li><strong>45 min:</strong> Tipi 6–10 (kvartili, škatla, normalna, regresija, primerjava).</li>
-              <li><strong>25 min:</strong> Ponovi pogoste napake in študijski vodič.</li>
-            </ul>
-          </div>
-        </section>
-
-        <!-- ============ 5. POVEZAVE ============ -->
-        <section class="subsection">
-          <div class="subsection-head">
-            <h2>5. Vadi naprej</h2>
+            <h2>Vadi naprej</h2>
             <p>Ko predelaš razlago, preveri znanje z nalogami.</p>
           </div>
           <div class="link-list">
-            <a class="link-item" href="/views/matematika/matura/osnovna_raven/naloge/resene/">
+            <a class="link-item" href="/views/matematika/matura/matura.html">
               <span class="link-item-text">
-                <strong>Rešene naloge — osnovna raven</strong>
-                <small>Primeri z razlago</small>
-              </span>
-              <span class="arrow">→</span>
-            </a>
-            <a class="link-item" href="/views/matematika/matura/visja_raven/naloge/resene/">
-              <span class="link-item-text">
-                <strong>Rešene naloge — višja raven</strong>
-                <small>Zahtevnejši primeri</small>
+                <strong>Maturitetne pole</strong>
+                <small>Rešuj prave izpitne pole</small>
               </span>
               <span class="arrow">→</span>
             </a>
