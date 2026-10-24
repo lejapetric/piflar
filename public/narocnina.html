@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Naročnina | Piflar.si</title>
+  <meta name="description" content="Paketi Piflar.si: odkleni vse rešene maturitetne pole z razlagami.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+</head>
+<body>
+  <div id="header"></div>
+
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view">
+
+        <header class="page-header">
+          <span class="page-eyebrow">Naročnina</span>
+          <h1>Odkleni vse rešene pole</h1>
+          <p>
+            Snov, interaktivne naloge, vse nerešene pole in razlaga zadnje mature so brezplačni.
+            Z naročnino dobiš podrobne razlage vseh rešenih maturitetnih pol.
+          </p>
+        </header>
+
+        <p id="obvestilo" class="narocnina-obvestilo" role="status" hidden></p>
+
+        <div id="mojPaket" class="narocnina-moj" hidden>
+          <p id="mojPaketBesedilo"></p>
+          <button type="button" id="portal" class="btn btn-secondary">Upravljaj naročnino</button>
+        </div>
+
+        <div class="narocnina-obdobja" role="radiogroup" aria-label="Obdobje plačila">
+          <button type="button" class="narocnina-obdobje" data-obdobje="mesecno" role="radio">Mesečno</button>
+          <button type="button" class="narocnina-obdobje" data-obdobje="letno" role="radio">Letno</button>
+          <button type="button" class="narocnina-obdobje" data-obdobje="solsko" role="radio">Šolsko leto (10 mesecev)</button>
+        </div>
+
+        <div class="narocnina-paketi">
+          <article class="narocnina-paket" data-paket="osnovni">
+            <h2>Osnovni</h2>
+            <p class="narocnina-cena" data-cena>—</p>
+            <ul>
+              <li>Matematika, angleščina, slovenščina</li>
+              <li>Razlage vseh rešenih pol</li>
+              <li>Shranjevanje napredka</li>
+            </ul>
+            <button type="button" class="btn btn-primary" data-kupi>Izberi osnovni</button>
+          </article>
+          <article class="narocnina-paket narocnina-paket--premium" data-paket="premium">
+            <h2>Premium</h2>
+            <p class="narocnina-cena" data-cena>—</p>
+            <ul>
+              <li>Vsi maturitetni predmeti</li>
+              <li>Razlage vseh rešenih pol</li>
+              <li>Shranjevanje napredka</li>
+            </ul>
+            <button type="button" class="btn btn-primary" data-kupi>Izberi premium</button>
+          </article>
+        </div>
+
+        <p class="narocnina-opomba">
+          Mesečno in letno naročnino lahko kadarkoli prekličeš. Šolsko leto je enkratno plačilo za 10 mesecev.
+          Plačilo poteka prek Stripe; podatkov o kartici ne shranjujemo.
+        </p>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+
+  <script src="/components/components.js"></script>
+  <script src="/components/narocnina.js" defer></script>
+</body>
+</html>

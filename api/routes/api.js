@@ -4,6 +4,7 @@ import ctrlSnovi from "../controllers/snovi.js";
 import ctrlMatura from "../controllers/matura.js";
 import ctrlNaloge from "../controllers/naloge.js";
 import ctrlAvt from "../controllers/avtentikacija.js";
+import ctrlPlacila from "../controllers/placila.js";
 import { naloziUporabnika, zahtevajPrijavo, zahtevajBazo } from "../middleware/uporabnik.js";
 
 const router = Router();
@@ -15,6 +16,11 @@ router.post("/registracija", zahtevajBazo, ctrlAvt.registracija);
 router.post("/prijava", zahtevajBazo, ctrlAvt.prijava);
 router.post("/odjava", ctrlAvt.odjava);
 router.get("/jaz", zahtevajPrijavo, ctrlAvt.jaz);
+
+// PLAČILA (webhook je v app.js)
+router.get("/placila/cenik", ctrlPlacila.cenikGet);
+router.post("/placila/checkout", zahtevajBazo, zahtevajPrijavo, ctrlPlacila.checkout);
+router.post("/placila/portal", zahtevajBazo, zahtevajPrijavo, ctrlPlacila.portal);
 
 // SNOV
 router.get("/snovi", ctrlSnovi.snoviList);

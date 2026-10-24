@@ -83,7 +83,19 @@ in `<script src="/components/naloge.js" defer></script>` (glej `mnozice_naloge.h
 | `osnovni` | vse za matematiko, angleščino in slovenščino (`PAKET_OSNOVNI`) |
 | `premium` | vse za vse predmete |
 
-Paket in `paketVelja` bo nastavljal plačilni sistem. Pravila so v `api/utils/dostop.js`.
+Pravila so v `api/utils/dostop.js`.
+
+## Plačila (Stripe)
+
+Na `/narocnina.html` dijak izbere paket in obdobje: **mesečno** ali **letno** (naročnina,
+Stripe jo obnavlja sam) ali **šolsko leto** (enkratno plačilo za 10 mesecev). Cene in popuste
+nastaviš v Stripe nadzorni plošči, v `.env` pa vpišeš id-je cen (`STRIPE_CENA_<PAKET>_<OBDOBJE>`).
+
+Stripe po plačilu pokliče `/api/placila/webhook` (dogodka `checkout.session.completed` in
+`invoice.paid`), ki nastavi `paket` in `paketVelja`. Preklic in menjavo kartice dijak opravi v
+Stripe portalu (gumb „Upravljaj naročnino“; portal vklopiš v Stripe → Settings → Billing → Customer portal).
+
+Lokalno preizkusiš webhook s Stripe CLI: `stripe listen --forward-to localhost:3000/api/placila/webhook`.
 Prijava se hrani v piškotku `httpOnly` (7 dni), zato je JavaScript na strani ne more ukrasti.
 
 ## API
@@ -102,3 +114,6 @@ Prijava se hrani v piškotku `httpOnly` (7 dni), zato je JavaScript na strani ne
 | `POST /api/prijava` | `{ email, geslo }` |
 | `POST /api/odjava` | odjava |
 | `GET /api/jaz` | prijavljen uporabnik |
+| `GET /api/placila/cenik` | cene paketov iz Stripe |
+| `POST /api/placila/checkout` | `{ paket, obdobje }` → `{ url }` za plačilo |
+| `POST /api/placila/portal` | `{ url }` za upravljanje naročnine |

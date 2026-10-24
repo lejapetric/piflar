@@ -4,6 +4,7 @@ import express from "express";
 import { fileURLToPath } from "node:url";
 
 import apiRouter from "./api/routes/api.js";
+import ctrlPlacila from "./api/controllers/placila.js";
 import errorHandler from "./api/middleware/error-handler.js";
 
 const isProduction = process.env.NODE_ENV === "production";
@@ -11,6 +12,9 @@ const publicDir = fileURLToPath(new URL("./public", import.meta.url));
 
 const app = express();
 app.disable("x-powered-by");
+
+// Stripe webhook potrebuje surovo telo za preverjanje podpisa, zato je pred express.json()
+app.post("/api/placila/webhook", express.raw({ type: "application/json" }), ctrlPlacila.webhook);
 
 // API
 app.use("/api", express.json(), apiRouter);
