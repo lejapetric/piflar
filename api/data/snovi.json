@@ -76,5 +76,11 @@
   { "predmet": "biologija", "stevilka": "4.3.1", "slug": "celicni_cikel", "naslov": "Celični cikel, mitoza, mejoza in uravnavanje genov", "opis": "Interfaza, mitoza, mejoza, rak, uravnavanje izražanja genov in operon." },
   { "predmet": "biologija", "stevilka": "4.3.2", "slug": "dedovanje", "naslov": "Mutacije in načini dedovanja", "opis": "Mutacije, biotehnologija, Mendlova pravila, križanja, spolno vezano dedovanje in rodovniki." },
   { "predmet": "biologija", "stevilka": "4.4.1", "slug": "evolucija", "naslov": "Nastanek življenja in mehanizmi evolucije", "opis": "Nastanek življenja, endosimbioza, naravni izbor, Hardy-Weinberg, speciacija in dokazi evolucije." },
-  { "predmet": "biologija", "stevilka": "4.4.2", "slug": "sistematika", "naslov": "Razvrščanje organizmov in evolucija človeka", "opis": "Taksonomske kategorije, določevalni ključ, kladogram, domene in kraljestva, skupine rastlin in živali, evolucija človeka." }
+  { "predmet": "biologija", "stevilka": "4.4.2", "slug": "sistematika", "naslov": "Razvrščanje organizmov in evolucija človeka", "opis": "Taksonomske kategorije, določevalni ključ, kladogram, domene in kraljestva, skupine rastlin in živali, evolucija človeka." },
+  { "predmet": "biologija", "stevilka": "4.5.1", "slug": "bakterije_glive", "naslov": "Virusi, bakterije, protisti in glive", "opis": "Zgradba in razmnoževanje virusov, bakterij in gliv, rast bakterij, antibiotiki, lišaji in mikoriza." },
+  { "predmet": "biologija", "stevilka": "4.5.2", "slug": "rastline", "naslov": "Zgradba in delovanje rastlin", "opis": "Tkiva in organi, transport vode in sladkorjev, reže, cvet in oploditev, seme, hormoni in prilagoditve." },
+  { "predmet": "biologija", "stevilka": "4.5.3", "slug": "kri_imunost", "naslov": "Transport pri živalih, kri in imunost", "opis": "Krvni obtok, srce in žile, kri in hemoglobin, imunski odziv, cepljenje in krvne skupine." },
+  { "predmet": "biologija", "stevilka": "4.5.4", "slug": "dihala_prebava_izlocala", "naslov": "Dihala, prebavila in izločala", "opis": "Izmenjava plinov, dihanje, prebava in encimi, absorpcija, ledvice, nefron in ADH." },
+  { "predmet": "biologija", "stevilka": "4.5.5", "slug": "regulacija", "naslov": "Hormoni, živčevje in čutila", "opis": "Homeostaza, hormoni in glukoza, akcijski potencial, sinapsa, refleksi, oko in uho." },
+  { "predmet": "biologija", "stevilka": "4.5.6", "slug": "gibanje_razmnozevanje", "naslov": "Koža, gibanje in razmnoževanje", "opis": "Koža in ogrodje, krčenje mišic, nastanek gamet, menstruacijski cikel, oploditev in razvoj." }
 ]
