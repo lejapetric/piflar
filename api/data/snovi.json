@@ -34,5 +34,9 @@
   { "predmet": "fizika", "stevilka": "4.16", "slug": "svetloba_optika", "naslov": "Svetloba in optika", "opis": "Spekter, uklonska mrežica, lom, zrcala in leče." },
   { "predmet": "fizika", "stevilka": "4.17", "slug": "atom", "naslov": "Atom", "opis": "Zgradba atoma, foton, fotoefekt, energijska stanja, spektri." },
   { "predmet": "fizika", "stevilka": "4.18", "slug": "atomsko_jedro", "naslov": "Atomsko jedro", "opis": "Nukleoni, vezavna energija, razpadi, jedrske reakcije." },
-  { "predmet": "fizika", "stevilka": "4.19", "slug": "astronomija", "naslov": "Astronomija", "opis": "Osončje, objekti v vesolju, razdalje, Stefanov zakon, fuzija." }
+  { "predmet": "fizika", "stevilka": "4.19", "slug": "astronomija", "naslov": "Astronomija", "opis": "Osončje, objekti v vesolju, razdalje, Stefanov zakon, fuzija." },
+  { "predmet": "informatika", "stevilka": "4.1", "slug": "osnove_informatike", "naslov": "Osnove informatike", "opis": "Podatek, informacija, znanje, količina informacije, varovanje podatkov, komuniciranje." },
+  { "predmet": "informatika", "stevilka": "4.2", "slug": "informacijska_tehnologija", "naslov": "Informacijska tehnologija", "opis": "Ergonomija, von Neumannov model, strojna in programska oprema, omrežja." },
+  { "predmet": "informatika", "stevilka": "4.3", "slug": "predstavitev_informacije", "naslov": "Predstavitev informacije", "opis": "Dvojiški zapis, kodne tabele, slika, zvok, video, prosojnice, HTML." },
+  { "predmet": "informatika", "stevilka": "4.4", "slug": "delo_s_podatki", "naslov": "Delo s podatki", "opis": "Algoritmi, programiranje, podatkovne baze, preglednice, odločanje." }
 ]
