@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Maturitetne pole iz matematike | Piflar.si</title>
+  <meta name="description" content="Maturitetne pole iz matematike po letih, spomladanski in jesenski rok, z rešitvami in postopki ter prenosom v PDF.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
+  <link rel="stylesheet" href="/style/snov.css">
+</head>
+<body>
+  <div id="header"></div>
+
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view">
+
+        <header class="page-header">
+          <span class="page-eyebrow">Matematika · Matura</span>
+          <h1>Maturitetne pole</h1>
+          <p>
+            Pole iz preteklih let, razdeljene po letih. V vsakem letu je najprej spomladanski,
+            nato jesenski rok. Pri vsaki nalogi lahko odpreš rešitev ali celoten postopek.
+          </p>
+        </header>
+
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>Pole po letih</h2>
+            <p>Izberi leto. Na strani leta izbereš še osnovno ali višjo raven.</p>
+          </div>
+          <div id="matura" data-nacin="leta" data-predmet="matematika">
+            <p>Nalagam pole …</p>
+          </div>
+        </section>
+
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>Prenesi vse pole</h2>
+            <p>Vse pole ene ravni v enem PDF-ju. V oknu za tisk izberi Shrani kot PDF.</p>
+          </div>
+          <div class="two-col">
+            <div class="info-card">
+              <h3>Osnovna raven</h3>
+              <div class="matura-prenosi">
+                <a class="btn btn-secondary" href="/views/matematika/matura/pole/leto.html?raven=osnovna&amp;tisk=brez" target="_blank">PDF brez rešitev</a>
+                <a class="btn btn-secondary" href="/views/matematika/matura/pole/leto.html?raven=osnovna&amp;tisk=resitve" target="_blank">PDF z rešitvami</a>
+              </div>
+            </div>
+            <div class="info-card">
+              <h3>Višja raven</h3>
+              <div class="matura-prenosi">
+                <a class="btn btn-secondary" href="/views/matematika/matura/pole/leto.html?raven=visja&amp;tisk=brez" target="_blank">PDF brez rešitev</a>
+                <a class="btn btn-secondary" href="/views/matematika/matura/pole/leto.html?raven=visja&amp;tisk=resitve" target="_blank">PDF z rešitvami</a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <div class="note-band">
+          <p>
+            <strong>Avtorstvo:</strong> Maturitetne pole izdaja Državni izpitni center (RIC), ki ima
+            nanje vse avtorske pravice. Uradne pole so na
+            <a href="https://www.ric.si/" target="_blank" rel="noopener">ric.si</a>.
+            Rešitve in postopki na tej strani so delo Piflar.si.
+          </p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+
+  <script src="/components/components.js"></script>
+  <script src="/components/matura.js" defer></script>
+</body>
+</html>

@@ -98,6 +98,40 @@ Stran z nalogami potrebuje samo `<div id="naloge" data-poglavje="…" data-math>
 in `<script src="/components/naloge.js" defer></script>` (glej `mnozice_naloge.html`).
 `npm test` preveri preverjanje odgovorov in veljavnost `naloge.json`.
 
+## Matura
+
+Poglavje Matura (`public/views/matematika/matura/`) ima dve podpoglavji:
+
+- **Maturitetne pole** (`pole/pole.html`): seznam let, stran leta je `pole/leto.html?leto=2026`
+  (najprej spomladanski, nato jesenski rok; raven izbereš z gumboma na vrhu).
+- **Maturitetne naloge po snovi** (`po_snovi/po_snovi.html`): poglavja po sklopih (`sklop` v `snovi.json`),
+  stran poglavja je `po_snovi/naloge.html?poglavje=diferencialni_racun`, stran sklopa `?sklop=4`.
+
+Strani izriše `components/matura.js`. Na vrhu sta gumba Pokaži vse rešitve in Pokaži vse postopke,
+pri vsaki nalogi pa Rešitev in Postopek. PDF brez rešitev / z rešitvami odpre tisk brskalnika
+(Shrani kot PDF) v svetli temi brez menija; povezava s `?tisk=brez` ali `?tisk=resitve` odpre tisk sama.
+Rešitve pridejo s strežnika samo, če je pola odklenjena (glej Dostop), zato veljajo tudi v PDF-ju.
+
+Pole so v `api/data/matura.json`. Vsaka naloga ima `poglavje` (slug iz `snovi.json`, lahko seznam),
+zato se sama pojavi na strani poglavja:
+
+```json
+{
+  "id": "matematika-osnovna-2026-spomladanski",
+  "predmet": "matematika", "raven": "osnovna", "leto": 2026, "rok": "spomladanski",
+  "pdf": "https://www.ric.si/…/pola.pdf",
+  "vir": "Pole izdaja Državni izpitni center (RIC), ki ima nanje vse avtorske pravice.",
+  "naloge": [
+    { "id": "2", "poglavje": "diferencialni_racun", "tocke": 3,
+      "besedilo": "neobvezno; brez besedila stran pokaže povezavo na uradno polo",
+      "rezultat": "\\(f'(1) = -1\\)", "razlaga": "<p>Postopek …</p>" }
+  ]
+}
+```
+
+Besedila nalog RIC so avtorsko zaščitena: brez dovoljenja RIC pusti `besedilo` prazno in v `pdf`
+povezavo na uradno polo na ric.si. Novo leto dodaš v `matura.json` in kot povezavo v `sidebar.html`.
+
 ## Dostop
 
 | Paket | Kaj vidi |
@@ -132,7 +166,8 @@ Prijava se hrani v piškotku `httpOnly` (7 dni), zato je JavaScript na strani ne
 | `POST /api/naloge/:id/odgovor` | preveri odgovor `{ "odgovor": "7" }` → `{ "pravilno": true }` |
 | `GET /api/naloge/:id/postopek` | postopek in rezultat |
 | `GET /api/napredek?poglavje=mnozice` | napredek prijavljenega (poskusi, rešeno, ogledan postopek) |
-| `GET /api/matura?predmet=matematika&raven=osnovna` | seznam pol (`resena`, `odklenjena`) |
+| `GET /api/matura?predmet=matematika&raven=osnovna&leto=2026` | seznam pol (`resena`, `odklenjena`), z `&naloge=1` tudi naloge |
+| `GET /api/matura/naloge?predmet=matematika&poglavje=diferencialni_racun` | naloge iz vseh pol za poglavja (več ločiš z vejico) |
 | `GET /api/matura/:id` | pola z nalogami; rešitve samo, če je `odklenjena` |
 | `POST /api/registracija` | `{ ime, email, geslo }` |
 | `POST /api/prijava` | `{ email, geslo }` |

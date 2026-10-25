@@ -39,6 +39,7 @@ router.get("/iskanje", ctrlIskanje.iskanje);
 
 // MATURITETNE POLE
 router.get("/matura", ctrlMatura.maturaList);
+router.get("/matura/naloge", ctrlMatura.maturaNaloge);
 router.get("/matura/:maturaId", ctrlMatura.maturaReadOne);
 
 // Neznana API pot

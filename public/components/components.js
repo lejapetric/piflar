@@ -132,10 +132,12 @@ function initSidebar() {
   });
 
   // Označi aktivno povezavo in odpri vse menije nad njo
+  // (strani matura z ?leto= ali ?poglavje= imajo vsaka svojo povezavo)
   const currentPath = window.location.pathname;
-  const active = [...sidebar.querySelectorAll(".sidebar-nav a")].find(
-    (link) => link.getAttribute("href") === currentPath
-  );
+  const links = [...sidebar.querySelectorAll(".sidebar-nav a")];
+  const active =
+    links.find((link) => link.getAttribute("href") === currentPath + window.location.search) ??
+    links.find((link) => link.getAttribute("href") === currentPath);
   if (!active) return;
 
   active.classList.add("active");
