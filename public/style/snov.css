@@ -1337,6 +1337,11 @@ mjx-container[display="true"] {
 .slika .s-pou5 { fill: rgba(14, 165, 233, 0.30); stroke: #0284C7; stroke-width: 0.8; }
 .slika .s-pou6 { fill: rgba(168, 85, 247, 0.28); stroke: #9333EA; stroke-width: 0.8; }
 .slika .s-stolpec { fill: #93C5FD; stroke: #3B82F6; stroke-width: 0.8; }
+.slika .s-ps { fill: #F4F5FA; stroke: #C9CEDD; stroke-width: 0.8; }
+.slika .s-par { fill: #171A2E; }
+.slika .s-klin { fill: #171A2E; }
+.kf { white-space: nowrap; }
+.kf sub, .kf sup, .ke sub, .ke sup { font-size: 0.72em; line-height: 0; }
 
 /* ---------- Ločnica pred vsebinami višje ravni ---------- */
 .raven-locnica {
@@ -1662,6 +1667,9 @@ mjx-container[display="true"] {
 
 [data-theme="dark"] .slika .s-morje { fill: #16233A; }
 [data-theme="dark"] .slika .s-kopno { fill: #252A3C; stroke: #4A5068; }
+[data-theme="dark"] .slika .s-ps { fill: #252A3C; stroke: #4A5068; }
+[data-theme="dark"] .slika .s-par,
+[data-theme="dark"] .slika .s-klin { fill: #D5D9E8; }
 [data-theme="dark"] .slika .s-meja { stroke: #4A5068; }
 [data-theme="dark"] .slika .s-mreza-geo { stroke: #2C3A55; }
 [data-theme="dark"] .slika .s-reka { stroke: #60A5FA; }

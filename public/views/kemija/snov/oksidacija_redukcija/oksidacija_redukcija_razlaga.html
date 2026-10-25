@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kemija: oksidacija in redukcija — razlaga in postopki | Piflar.si</title>
+  <meta name="description" content="Oksidacija in redukcija za maturo iz kemije: oksidacijska števila, oksidant in reducent, urejanje redoks enačb, redoks vrsta, galvanski členi, baterije, korozija, elektroliza in Faradayev zakon.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
+  <link rel="stylesheet" href="/style/snov.css">
+</head>
+<body>
+  <div id="header"></div>
+
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view">
+
+<header class="page-header">
+          <span class="page-eyebrow">Kemija · Snov · 4.10</span>
+          <h1>Oksidacija in redukcija</h1>
+          <p>Pri redoks reakcijah elektroni prehajajo z ene snovi na drugo. Takšne reakcije so gorenje, rjavenje železa, delovanje baterij, pridobivanje kovin in elektroliza. Najprej se naučiš določati oksidacijska števila, z njimi urejati enačbe in iz redoks vrste napovedati, ali reakcija poteče. Nato spoznaš, kako spontana redoks reakcija v galvanskem členu daje električni tok in kako električni tok pri elektrolizi poganja reakcijo, ki sama ne bi potekla. Pod razlago so vsi tipi nalog.</p>
+          <div class="page-meta">
+            <div class="page-meta-item"><strong>4</strong><span>Podpoglavja</span></div>
+            <div class="page-meta-item"><strong>7</strong><span>Tipov nalog</span></div>
+            <div class="page-meta-item"><strong>~45 min</strong><span>Branja</span></div>
+          </div>
+        </header>
+
+        <div class="matura-formule">
+          <h3>Formule na maturi</h3>
+          <p>Zveze, ki jih uporabljaš pri redoks reakcijah in elektrokemiji:</p>
+          <div class="matura-levo">
+            <ul>
+              <li>vsota oksidacijskih števil: v molekuli \(= 0\), v ionu \(=\) naboj iona</li>
+              <li>napetost galvanskega člena: \(E^\circ_{\text{člena}} = E^\circ(\text{oksidant}) - E^\circ(\text{reducent})\), torej \(E^\circ_{\text{katoda}} - E^\circ_{\text{anoda}}\)</li>
+              <li>naboj: \(Q = I \cdot t\) (A · s = C)</li>
+              <li>Faradayev zakon: \(I \cdot t = n \cdot z \cdot F\), \(F = 96\,500\ \text{A s/mol}\), \(z\) je število elektronov na en delec produkta</li>
+              <li>masa izločene snovi: \(m = \dfrac{I \cdot t \cdot M}{z \cdot F}\); prostornina plina: \(V = \dfrac{n R T}{p}\) ali \(V = n \cdot V_m\)</li>
+            </ul>
+          </div>
+          <p class="matura-opomba">Standardne elektrodne potenciale dobiš v preglednici na izpitu. Čas vedno pretvori v sekunde.</p>
+        </div>
+
+        <nav class="kazalo" aria-label="Podpoglavja">
+          <h2>Podpoglavja</h2>
+          <ol>
+            <li><a href="#sklop-1"><span class="kazalo-st">1</span> Oksidacijska števila, oksidacija in redukcija</a></li>
+            <li><a href="#sklop-2"><span class="kazalo-st">2</span> Urejanje enačb redoks reakcij</a></li>
+            <li><a href="#sklop-3"><span class="kazalo-st">3</span> Redoks vrsta, galvanski členi, baterije in korozija</a></li>
+            <li><a href="#sklop-4"><span class="kazalo-st">4</span> Elektroliza in Faradayev zakon</a></li>
+            <li><a href="#kljuc"><span class="kazalo-st">?</span> Ključ: kateri tip naloge je to?</a></li>
+          </ol>
+        </nav>
+
+        <!-- SKLOP 1 -->
+        <section class="sklop" id="sklop-1">
+          <header class="sklop-header">
+            <span class="sklop-num">4.10 · 1</span>
+            <h2>Oksidacijska števila, oksidacija in redukcija</h2>
+            <p>Pravila za oksidacijska števila, oksidant in reducent.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <p>Včasih je oksidacija pomenila le reakcijo s kisikom, redukcija pa pridobivanje elementa iz oksida. Danes ju opišemo z elektroni. <strong>Oksidacija</strong> je oddajanje elektronov, <strong>redukcija</strong> je sprejemanje elektronov. Elektroni ne morejo obstajati sami, zato oksidacija in redukcija vedno potekata hkrati; reakcijo imenujemo <strong>redoks reakcija</strong>. Število elektronov, ki jih ena snov odda, je enako številu elektronov, ki jih druga sprejme.</p>
+            <p>Primer: segret natrij burno reagira s klorom, nastane bel natrijev klorid. Natrij elektrone odda, klor jih sprejme:</p>
+            <ul>
+              <li>oksidacija: <span class="ke">2Na&nbsp;→ 2Na<sup>+</sup> + 2e<sup>−</sup></span></li>
+              <li>redukcija: <span class="ke">Cl<sub>2</sub> + 2e<sup>−</sup>&nbsp;→ 2Cl<sup>−</sup></span></li>
+              <li>skupaj: <span class="ke">2Na + Cl<sub>2</sub>&nbsp;→ 2NaCl</span></li>
+            </ul>
+            <p><strong>Reducent</strong> je snov, ki elektrone odda in se pri tem sama oksidira (tu natrij). <strong>Oksidant</strong> je snov, ki elektrone sprejme in se pri tem sama reducira (tu klor). Podobno se pri gorenju magnezija <span class="ke">2Mg + O<sub>2</sub>&nbsp;→ 2MgO</span> magnezij oksidira (<span class="ke">Mg&nbsp;→ Mg<sup>2+</sup> + 2e<sup>−</sup></span>), kisik pa reducira (<span class="ke">O<sub>2</sub> + 4e<sup>−</sup>&nbsp;→ 2O<sup>2−</sup></span>).</p>
+            <p>Pri reakcijah molekul elektroni ne prehajajo v celoti, zato si pomagamo z <strong>oksidacijskim številom</strong>. To je naboj, ki bi ga atom imel, če bi bile vse vezi ionske. Oksidacijsko število ne opisuje dejanske zgradbe, je pa zelo uporabno za prepoznavanje in urejanje redoks reakcij. Pravila:</p>
+            <ol>
+              <li>Atom v elementu ima oksidacijsko število 0 (<span class="kf">O<sub>2</sub></span>, <span class="kf">H<sub>2</sub></span>, <span class="kf">S<sub>8</sub></span>, <span class="kf">P<sub>4</sub></span>, Na, Fe).</li>
+              <li>Enoatomni ion ima oksidacijsko število enako svojemu naboju (<span class="kf">Na<sup>+</sup></span>: +1, <span class="kf">Cl<sup>−</sup></span>: −1, <span class="kf">Fe<sup>3+</sup></span>: +3).</li>
+              <li>Vodik ima v spojinah +1, razen v kovinskih hidridih (LiH, NaH, <span class="kf">CaH<sub>2</sub></span>), kjer ima −1.</li>
+              <li>Kisik ima v spojinah −2, razen v peroksidih (<span class="kf">H<sub>2</sub>O<sub>2</sub></span>, <span class="kf">Na<sub>2</sub>O<sub>2</sub></span>), kjer ima −1 (in v <span class="kf">OF<sub>2</sub></span>, kjer ima +2).</li>
+              <li>Fluor ima v spojinah vedno −1. Alkalijske kovine imajo +1, zemeljskoalkalijske +2, aluminij +3.</li>
+              <li>Vsota oksidacijskih števil vseh atomov je v molekuli 0, v ionu pa enaka naboju iona.</li>
+            </ol>
+            <p>Na primer v <span class="kf">HNO<sub>3</sub></span>: \(+1 + x + 3 \cdot (-2) = 0\), torej ima dušik +5. V <span class="kf">CO<sub>3</sub><sup>2−</sup></span>: \(x + 3 \cdot (-2) = -2\), torej ima ogljik +4. Isti element ima lahko v različnih spojinah zelo različna oksidacijska števila: dušik od −3 (<span class="kf">NH<sub>3</sub></span>) do +5 (<span class="kf">HNO<sub>3</sub></span>), mangan +7 v <span class="kf">KMnO<sub>4</sub></span> (vijoličen), +6 v <span class="kf">K<sub>2</sub>MnO<sub>4</sub></span> (zelen), +4 v <span class="kf">MnO<sub>2</sub></span> in +2 v <span class="kf">MnCl<sub>2</sub></span> (skoraj brezbarven). Oksidacijsko število pišemo v imenih spojin z rimsko številko: železov(III) klorid, natrijev sulfat(IV) (<span class="kf">Na<sub>2</sub>SO<sub>3</sub></span>, sulfit).</p>
+            <p>Z oksidacijskimi števili oksidacijo in redukcijo prepoznamo takole: element, ki se <strong>oksidira</strong>, oksidacijsko število <strong>poveča</strong>; element, ki se <strong>reducira</strong>, ga <strong>zmanjša</strong>. Reakcija je redoks reakcija, če se vsaj dvema elementoma spremeni oksidacijsko število. Nevtralizacije (<span class="ke">KOH + HCl&nbsp;→ KCl + H<sub>2</sub>O</span>), obarjanja (<span class="ke">NaCl + AgNO<sub>3</sub>&nbsp;→ AgCl + NaNO<sub>3</sub></span>), razkroj karbonatov (<span class="ke">MgCO<sub>3</sub>&nbsp;→ MgO + CO<sub>2</sub></span>) in reakcije oksidov z vodo (<span class="ke">CaO + H<sub>2</sub>O&nbsp;→ Ca(OH)<sub>2</sub></span>) niso redoks reakcije. Vse reakcije, pri katerih element vstopa v spojino ali izstopa iz nje, pa so redoks reakcije.</p>
+            <p>Tipični oksidanti so kisik, halogeni, <span class="kf">KMnO<sub>4</sub></span>, <span class="kf">K<sub>2</sub>Cr<sub>2</sub>O<sub>7</sub></span>, <span class="kf">H<sub>2</sub>O<sub>2</sub></span>, koncentrirana <span class="kf">HNO<sub>3</sub></span> in <span class="kf">H<sub>2</sub>SO<sub>4</sub></span>; tipični reducenti so kovine, vodik, ogljik, <span class="kf">CO</span>, <span class="kf">H<sub>2</sub>S</span> in sulfiti. Snov z elementom v vmesnem oksidacijskem stanju (npr. <span class="kf">SO<sub>2</sub></span>, <span class="kf">H<sub>2</sub>O<sub>2</sub></span>) je lahko oksidant ali reducent, odvisno od partnerja: v <span class="ke">2H<sub>2</sub>S + SO<sub>2</sub>&nbsp;→ 3S + 2H<sub>2</sub>O</span> je <span class="kf">SO<sub>2</sub></span> oksidant.</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-1">
+              <h4>Tip 1: Določi oksidacijsko število elementa</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Določi oksidacijsko število kroma v dikromatnem ionu <span class="kf">Cr<sub>2</sub>O<sub>7</sub><sup>2−</sup></span>.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> dana je formula molekule ali iona, sprašujejo po oksidacijskem številu enega elementa ali po spojini, v kateri ima element največje oziroma najmanjše oksidacijsko število.</p><ul class="kljucne"><li>„oksidacijsko število“</li><li>„v kateri spojini ima … +4“</li><li>„najvišje oksidacijsko število“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Zapiši znana oksidacijska števila (H +1, O −2, F −1, alkalijske kovine +1 …) in neznano označi z \(x\).</p><div class="na-nalogi"><p>O: −2, Cr: \(x\).</p></div></li>
+              <li><p class="korak">Seštej vse atome (pomnoži z indeksi) in vsoto izenači z 0 za molekulo ali z nabojem za ion.</p><div class="na-nalogi"><p>\(2x + 7 \cdot (-2) = -2\)</p></div></li>
+              <li><p class="korak">Izračunaj \(x\) in zapiši s predznakom.</p><div class="na-nalogi"><p>\(2x = 12\), \(x = +6\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Mangan v <span class="kf">KMnO<sub>4</sub></span>?</p><p>\(+1 + x + 4 \cdot (-2) = 0\) → \(x = +7\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Dušik v <span class="kf">NH<sub>4</sub><sup>+</sup></span>?</p><p>\(x + 4 \cdot (+1) = +1\) → \(x = -3\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Kisik v <span class="kf">H<sub>2</sub>O<sub>2</sub></span> in vodik v <span class="kf">CaH<sub>2</sub></span>?</p><p>Izjemi: kisik −1 (peroksid), vodik −1 (kovinski hidrid).</p></div>
+              <div class="primer"><p><strong>Primer 4:</strong> Ogljik v <span class="kf">CH<sub>4</sub></span>, <span class="kf">CO<sub>2</sub></span> in metanolu <span class="kf">CH<sub>3</sub>OH</span>?</p><p>−4, +4 in −2 (\(x + 4 \cdot 1 - 2 = 0\)).</p></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-2">
+              <h4>Tip 2: Prepoznaj redoks reakcijo, oksidant in reducent</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>V reakciji <span class="ke">2Fe<sup>3+</sup> + 2I<sup>−</sup>&nbsp;→ 2Fe<sup>2+</sup> + I<sub>2</sub></span> določi, kaj se oksidira, kaj se reducira, ter kaj je oksidant in kaj reducent.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> dana je ena ali več enačb; sprašujejo, katera je redoks reakcija, katera snov je oksidant ali reducent, ali koliko elektronov se izmenja.</p><ul class="kljucne"><li>„oksidant“, „reducent“</li><li>„se oksidira / reducira“</li><li>„katera enačba (ne) prikazuje redoks reakcije“</li><li>„odda / sprejme elektrone“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Nad vsak element na levi in desni zapiši oksidacijsko število.</p><div class="na-nalogi"><p>Fe: +3 → +2; I: −1 → 0.</p></div></li>
+              <li><p class="korak">Če se nobenemu ne spremeni, reakcija ni redoks. Element, ki oksidacijsko število poveča, se oksidira; ki ga zmanjša, se reducira.</p><div class="na-nalogi"><p>Jod se oksidira, železo se reducira.</p></div></li>
+              <li><p class="korak">Oksidant je delec (snov), ki vsebuje element, ki se reducira; reducent je delec, ki vsebuje element, ki se oksidira.</p><div class="na-nalogi"><p>Oksidant: <span class="kf">Fe<sup>3+</sup></span>; reducent: <span class="kf">I<sup>−</sup></span>.</p></div></li>
+              <li><p class="korak">Po potrebi zapiši delni enačbi in preštej izmenjane elektrone.</p><div class="na-nalogi"><p><span class="ke">2I<sup>−</sup>&nbsp;→ I<sub>2</sub> + 2e<sup>−</sup></span>, <span class="ke">2Fe<sup>3+</sup> + 2e<sup>−</sup>&nbsp;→ 2Fe<sup>2+</sup></span>: izmenjata se 2 elektrona.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> <span class="ke">ZnO + H<sub>2</sub>&nbsp;→ Zn + H<sub>2</sub>O</span></p><p>Zn +2 → 0 (reducira se), H 0 → +1 (oksidira se). Oksidant <span class="kf">ZnO</span>, reducent <span class="kf">H<sub>2</sub></span>.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Katera ni redoks: <span class="ke">Zn + 2HCl&nbsp;→ ZnCl<sub>2</sub> + H<sub>2</sub></span>, <span class="ke">Fe + S&nbsp;→ FeS</span>, <span class="ke">CaO + H<sub>2</sub>O&nbsp;→ Ca(OH)<sub>2</sub></span>, <span class="ke">Mg + ZnCl<sub>2</sub>&nbsp;→ MgCl<sub>2</sub> + Zn</span>?</p><p><span class="ke">CaO + H<sub>2</sub>O&nbsp;→ Ca(OH)<sub>2</sub></span>: Ca +2, O −2, H +1 ostanejo enaki.</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> <span class="ke">2H<sub>2</sub>S + SO<sub>2</sub>&nbsp;→ 3S + 2H<sub>2</sub>O</span></p><p>S v <span class="kf">H<sub>2</sub>S</span>: −2 → 0 (oksidira se, reducent), S v <span class="kf">SO<sub>2</sub></span>: +4 → 0 (reducira se, oksidant).</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 2 -->
+        <section class="sklop" id="sklop-2">
+          <header class="sklop-header">
+            <span class="sklop-num">4.10 · 2</span>
+            <h2>Urejanje enačb redoks reakcij</h2>
+            <p>Bilanca elektronov, delni enačbi, najmanjši skupni večkratnik.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <p>Enostavne redoks enačbe uredimo s poskušanjem, zapletene pa z <strong>bilanco elektronov</strong>. Osnovno pravilo: število elektronov, ki jih odda reducent, je enako številu elektronov, ki jih sprejme oksidant. Pri reakcijah spojin se oksidacijsko število navadno spremeni le enemu elementu v vsaki spojini.</p>
+            <p>Postopek:</p>
+            <ol>
+              <li>Zapiši neurejeno enačbo s formulami reaktantov in produktov.</li>
+              <li>Določi oksidacijska števila in poišči elementa, ki se jima spremenita.</li>
+              <li>Zapiši delni enačbi za oksidacijo in redukcijo ter število oddanih in sprejetih elektronov (pomnoži z indeksom, če je v formuli več takih atomov).</li>
+              <li>Izenači elektrone z najmanjšim skupnim večkratnikom: delni enačbi pomnoži, da je oddanih toliko kot sprejetih. Faktorja postaneta koeficienta pri oksidantu in reducentu (ter njunih produktih).</li>
+              <li>Uredi ostale atome (kovinske ione, anione kisline), nato vodik z vodo in na koncu preveri kisik.</li>
+            </ol>
+            <p>Primer: <span class="ke">SnO<sub>2</sub> + C&nbsp;→ Sn + CO</span>. Kositer +4 → 0 sprejme 4 e⁻, ogljik 0 → +2 odda 2 e⁻. Najmanjši skupni večkratnik je 4, zato ogljik pomnožimo z 2: <span class="ke">SnO<sub>2</sub> + 2C&nbsp;→ Sn + 2CO</span>.</p>
+            <p>Če del snovi sodeluje pri redoks reakciji, del pa le daje ione za sol, je koeficient pri tej snovi večji od tistega iz bilance elektronov. Tak primer je klorovodikova kislina pri reakciji s kalijevim permanganatom (laboratorijska priprava klora) ali dušikova kislina pri raztapljanju bakra.</p>
+            <p>Ionske enačbe uredimo enako, na koncu pa preverimo še <strong>vsoto nabojev</strong>, ki mora biti na obeh straneh enaka. V kisli raztopini manjkajoči kisik dodamo kot <span class="kf">H<sub>2</sub>O</span>, vodik kot <span class="kf">H<sup>+</sup></span> (ali <span class="kf">H<sub>3</sub>O<sup>+</sup></span>); v bazični raztopini uporabimo <span class="kf">OH<sup>−</sup></span> in <span class="kf">H<sub>2</sub>O</span>. Kalijev permanganat se v kisli raztopini reducira do <span class="kf">Mn<sup>2+</sup></span> (razbarva se), v nevtralni do rjavega <span class="kf">MnO<sub>2</sub></span>, v bazični do zelenega <span class="kf">MnO<sub>4</sub><sup>2−</sup></span>.</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-3">
+              <h4>Tip 3: Uredi enačbo redoks reakcije</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Uredi enačbo raztapljanja bakra v razredčeni dušikovi kislini: <span class="ke">Cu + HNO<sub>3</sub>&nbsp;→ Cu(NO<sub>3</sub>)<sub>2</sub> + NO + H<sub>2</sub>O</span>.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> dana je neurejena enačba, v kateri se spreminjajo oksidacijska števila; s poskušanjem je ne uredimo hitro. Lahko sprašujejo le po enem koeficientu ali po vsoti koeficientov.</p><ul class="kljucne"><li>„uredi enačbo redoks reakcije“</li><li>„koeficient pri …“</li><li>„delni enačbi“</li><li><span class="kf">KMnO<sub>4</sub></span>, <span class="kf">K<sub>2</sub>Cr<sub>2</sub>O<sub>7</sub></span>, <span class="kf">HNO<sub>3</sub></span></li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Določi oksidacijska števila elementov, ki se spremenijo.</p><div class="na-nalogi"><p>Cu: 0 → +2; N: +5 (v <span class="kf">HNO<sub>3</sub></span>) → +2 (v NO). N v <span class="kf">Cu(NO<sub>3</sub>)<sub>2</sub></span> ostane +5.</p></div></li>
+              <li><p class="korak">Zapiši delni enačbi z elektroni.</p><div class="na-nalogi"><p>oksidacija: Cu → Cu(+2) + 2 e⁻; redukcija: N(+5) + 3 e⁻ → N(+2).</p></div></li>
+              <li><p class="korak">Izenači elektrone z najmanjšim skupnim večkratnikom.</p><div class="na-nalogi"><p>NSV(2, 3) = 6: oksidacija × 3, redukcija × 2 → 3 Cu, 3 <span class="kf">Cu(NO<sub>3</sub>)<sub>2</sub></span>, 2 NO.</p></div></li>
+              <li><p class="korak">Uredi atome, ki se jim oksidacijsko število ne spremeni (tu dušik v soli), nato vodo.</p><div class="na-nalogi"><p>N na desni: \(3 \cdot 2 + 2 = 8\) → 8 <span class="kf">HNO<sub>3</sub></span>; H: 8 → 4 <span class="kf">H<sub>2</sub>O</span>.</p></div></li>
+              <li><p class="korak">Preveri kisik (in pri ionskih enačbah naboj).</p><div class="na-nalogi"><p><span class="ke">3Cu + 8HNO<sub>3</sub>&nbsp;→ 3Cu(NO<sub>3</sub>)<sub>2</sub> + 2NO + 4H<sub>2</sub>O</span>; O: 24 = 18 + 2 + 4.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> <span class="ke">KMnO<sub>4</sub> + HCl&nbsp;→ KCl + MnCl<sub>2</sub> + Cl<sub>2</sub> + H<sub>2</sub>O</span></p><p>Mn +7 → +2 (5 e⁻), 2Cl⁻ → <span class="kf">Cl<sub>2</sub></span> (2 e⁻). NSV 10: 2 <span class="kf">KMnO<sub>4</sub></span>, 5 <span class="kf">Cl<sub>2</sub></span>. Cl skupaj: \(2 + 4 + 10 = 16\) HCl, 8 <span class="kf">H<sub>2</sub>O</span>: <span class="ke">2KMnO<sub>4</sub> + 16HCl&nbsp;→ 2KCl + 2MnCl<sub>2</sub> + 5Cl<sub>2</sub> + 8H<sub>2</sub>O</span>.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Ionska enačba v kisli raztopini: <span class="ke">MnO<sub>4</sub><sup>−</sup> + Fe<sup>2+</sup> + H<sup>+</sup>&nbsp;→ Mn<sup>2+</sup> + Fe<sup>3+</sup> + H<sub>2</sub>O</span></p><p>Mn sprejme 5 e⁻, Fe odda 1 e⁻ → 1 <span class="kf">MnO<sub>4</sub><sup>−</sup></span>, 5 <span class="kf">Fe<sup>2+</sup></span>; 4 O → 4 <span class="kf">H<sub>2</sub>O</span> → 8 <span class="kf">H<sup>+</sup></span>: <span class="ke">MnO<sub>4</sub><sup>−</sup> + 5Fe<sup>2+</sup> + 8H<sup>+</sup>&nbsp;→ Mn<sup>2+</sup> + 5Fe<sup>3+</sup> + 4H<sub>2</sub>O</span>. Naboj: \(-1 + 10 + 8 = +17 = 2 + 15\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> <span class="ke">Cu + H<sub>2</sub>SO<sub>4</sub>(konc)&nbsp;→ CuSO<sub>4</sub> + SO<sub>2</sub> + H<sub>2</sub>O</span></p><p>Cu 0 → +2 (2 e⁻), S +6 → +4 (2 e⁻), razmerje 1 : 1; še en <span class="kf">H<sub>2</sub>SO<sub>4</sub></span> za sol: <span class="ke">Cu + 2H<sub>2</sub>SO<sub>4</sub>&nbsp;→ CuSO<sub>4</sub> + SO<sub>2</sub> + 2H<sub>2</sub>O</span>.</p></div>
+              <div class="primer"><p><strong>Primer 4:</strong> <span class="ke">Cr<sub>2</sub>O<sub>7</sub><sup>2−</sup> + I<sup>−</sup> + H<sup>+</sup>&nbsp;→ Cr<sup>3+</sup> + I<sub>2</sub> + H<sub>2</sub>O</span></p><p>2 Cr: +6 → +3 sprejmeta 6 e⁻; 2 <span class="kf">I<sup>−</sup></span> → <span class="kf">I<sub>2</sub></span> oddata 2 e⁻ → 3 <span class="kf">I<sub>2</sub></span>: <span class="ke">Cr<sub>2</sub>O<sub>7</sub><sup>2−</sup> + 6I<sup>−</sup> + 14H<sup>+</sup>&nbsp;→ 2Cr<sup>3+</sup> + 3I<sub>2</sub> + 7H<sub>2</sub>O</span>.</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 3 -->
+        <section class="sklop" id="sklop-3">
+          <header class="sklop-header">
+            <span class="sklop-num">4.10 · 3</span>
+            <h2>Redoks vrsta, galvanski členi, baterije in korozija</h2>
+            <p>Standardni elektrodni potencial, napovedovanje reakcij, napetost člena.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <p>Če cinkovo ploščico potopimo v modro raztopino bakrovega(II) sulfata, se na njej izloča rdečkast baker, cink pa prehaja v raztopino: <span class="ke">Zn(s) + Cu<sup>2+</sup>(aq)&nbsp;→ Zn<sup>2+</sup>(aq) + Cu(s)</span>. Obratna reakcija (baker v raztopini cinkovih ionov) ne poteče. Cink je torej boljši reducent od bakra.</p>
+            <p><strong>Galvanski člen</strong> je naprava, v kateri spontana redoks reakcija daje enosmerni električni tok. Oksidacija in redukcija potekata ločeno v dveh <strong>polčlenih</strong>; polčlen je navadno kovina, potopljena v raztopino svojih ionov. Elektroni potujejo po zunanjem vodniku (žici), <strong>elektrolitski ključ</strong> (solni most, npr. raztopina <span class="kf">KNO<sub>3</sub></span>) pa z gibanjem ionov sklene tokokrog in preprečuje mešanje raztopin. Brez žice ali brez ključa tok ne teče.</p>
+            <ul>
+              <li><strong>Anoda</strong> je elektroda, na kateri poteka <strong>oksidacija</strong>; v galvanskem členu je negativni pol (−). Kovina se raztaplja, elektroda se tanjša.</li>
+              <li><strong>Katoda</strong> je elektroda, na kateri poteka <strong>redukcija</strong>; v galvanskem členu je pozitivni pol (+). Kovina se izloča, elektroda se debeli.</li>
+            </ul>
+            <figure class="slika slika--siroka">
+<svg viewBox="0 0 520 306" role="img" aria-label="Daniellov galvanski člen" xmlns="http://www.w3.org/2000/svg"><rect class="s-voda" x="42" y="150" width="156" height="110"/><path class="s-lik" style="fill:none" d="M40,120 L40,262 L200,262 L200,120"/><rect class="s-voda" x="322" y="150" width="156" height="110"/><path class="s-lik" style="fill:none" d="M320,120 L320,262 L480,262 L480,120"/><path d="M170,196 L170,100 L350,100 L350,196" fill="none" stroke="#CBD5E1" stroke-width="16" stroke-linejoin="round"/><text class="s-txt-muted" x="260" y="126" text-anchor="middle" style="font-size:11px">solni most (<tspan>KNO</tspan><tspan dy="3.5" style="font-size:0.72em">3</tspan><tspan dy="-3.5"></tspan>)</text><path class="s-crta" style="fill:none" d="M110,72 L110,40 L244,40 M276,40 L410,40 L410,72"/><circle class="s-crta" style="fill:none" cx="260" cy="40" r="16"/><text class="s-txt-b" x="260" y="45" text-anchor="middle" style="font-size:14px">V</text><line class="s-k2" x1="140" y1="28" x2="207" y2="28"/><polygon class="s-txt-k2" points="215,28 207,32.5 207,23.5"/><text class="s-txt-k2" x="178" y="20" text-anchor="middle" style="font-size:12px">e<tspan dy="-5" style="font-size:0.72em">−</tspan></text><line class="s-k2" x1="305" y1="28" x2="372" y2="28"/><polygon class="s-txt-k2" points="380,28 372,32.5 372,23.5"/><text class="s-txt-k2" x="342" y="20" text-anchor="middle" style="font-size:12px">e<tspan dy="-5" style="font-size:0.72em">−</tspan></text><rect x="100" y="72" width="20" height="160" fill="#9CA3AF" stroke="#4B5563"/><rect x="400" y="72" width="20" height="160" fill="#D97706" stroke="#92400E"/><text class="s-txt-k1" x="94" y="100" text-anchor="end" style="font-size:12px">Zn, anoda (−)</text><text class="s-txt-k2" x="426" y="100" text-anchor="start" style="font-size:12px">Cu, katoda (+)</text><text class="s-txt-b" x="120" y="250" text-anchor="middle" style="font-size:11px"><tspan>Zn → Zn</tspan><tspan dy="-5" style="font-size:0.72em">2+</tspan><tspan dy="5"> + 2e</tspan><tspan dy="-5" style="font-size:0.72em">−</tspan><tspan dy="5"></tspan></text><text class="s-txt-b" x="400" y="250" text-anchor="middle" style="font-size:11px"><tspan>Cu</tspan><tspan dy="-5" style="font-size:0.72em">2+</tspan><tspan dy="5"> + 2e</tspan><tspan dy="-5" style="font-size:0.72em">−</tspan><tspan dy="5"> → Cu</tspan></text><text class="s-txt-muted" x="120" y="282" text-anchor="middle" style="font-size:11px"><tspan>ZnSO</tspan><tspan dy="3.5" style="font-size:0.72em">4</tspan><tspan dy="-3.5">(aq)</tspan></text><text class="s-txt-muted" x="400" y="282" text-anchor="middle" style="font-size:11px"><tspan>CuSO</tspan><tspan dy="3.5" style="font-size:0.72em">4</tspan><tspan dy="-3.5">(aq)</tspan></text><text class="s-txt-k1" x="120" y="298" text-anchor="middle" style="font-size:11px">oksidacija</text><text class="s-txt-k2" x="400" y="298" text-anchor="middle" style="font-size:11px">redukcija</text></svg>
+<figcaption>Daniellov člen. Cink se na anodi oksidira in raztaplja, elektroni potujejo po žici k bakreni katodi, kjer se bakrovi ioni reducirajo in izločajo kot baker. Solni most sklene krog in ohranja raztopini električno nevtralni. Napetost člena je \(E = 0{,}34\ \text{V} - (-0{,}76\ \text{V}) = 1{,}10\ \text{V}\).</figcaption>
+</figure>
+            <p>Člen zapišemo skrajšano: na levi anoda, na desni katoda, enojna črta je meja faz, dvojna črta elektrolitski ključ: Zn(s) | <span class="kf">Zn<sup>2+</sup>(aq)</span> || <span class="kf">Cu<sup>2+</sup>(aq)</span> | Cu(s).</p>
+            <p>Absolutnega potenciala posameznega polčlena ne moremo izmeriti, zato vse polčlene primerjamo s <strong>standardnim vodikovim polčlenom</strong> (platinasta elektroda v raztopini s \([\text{H}_3\text{O}^+] = 1{,}0\ \text{mol/L}\), vodik pri 100 kPa, 25 °C), ki mu pripišemo \(E^\circ = 0{,}000\ \text{V}\). Izmerjena napetost je <strong>standardni elektrodni potencial</strong> \(E^\circ\) (standardni pogoji: 25 °C, koncentracija ionov 1 mol/L, plini pri 100 kPa). Cink v členu z vodikovim polčlenom postane anoda, napetost je 0,76 V, zato je \(E^\circ(\text{Zn}^{2+}/\text{Zn}) = -0{,}76\ \text{V}\). Baker postane katoda, zato je \(E^\circ(\text{Cu}^{2+}/\text{Cu}) = +0{,}34\ \text{V}\).</p>
+            <p>Če pare razvrstimo po \(E^\circ\), dobimo <strong>redoks vrsto</strong> (elektrokemijsko napetostno vrsto). Levo (bolj negativen \(E^\circ\)) so najboljši reducenti, desno najboljši oksidanti:</p>
+            <div class="tabela-wrap">
+              <table class="tabela">
+                <thead><tr><th>Par</th><th>\(E^\circ\) / V</th><th>Par</th><th>\(E^\circ\) / V</th></tr></thead>
+                <tbody>
+                  <tr><td><span class="kf">Li<sup>+</sup></span>/Li</td><td>−3,04</td><td><span class="kf">Pb<sup>2+</sup></span>/Pb</td><td>−0,13</td></tr>
+                  <tr><td><span class="kf">K<sup>+</sup></span>/K</td><td>−2,93</td><td><span class="kf">H<sup>+</sup></span>/<span class="kf">H<sub>2</sub></span></td><td>0,00</td></tr>
+                  <tr><td><span class="kf">Ca<sup>2+</sup></span>/Ca</td><td>−2,87</td><td><span class="kf">Cu<sup>2+</sup></span>/Cu</td><td>+0,34</td></tr>
+                  <tr><td><span class="kf">Na<sup>+</sup></span>/Na</td><td>−2,71</td><td><span class="kf">I<sub>2</sub></span>/<span class="kf">I<sup>−</sup></span></td><td>+0,54</td></tr>
+                  <tr><td><span class="kf">Mg<sup>2+</sup></span>/Mg</td><td>−2,37</td><td><span class="kf">Ag<sup>+</sup></span>/Ag</td><td>+0,80</td></tr>
+                  <tr><td><span class="kf">Al<sup>3+</sup></span>/Al</td><td>−1,66</td><td><span class="kf">Br<sub>2</sub></span>/<span class="kf">Br<sup>−</sup></span></td><td>+1,07</td></tr>
+                  <tr><td><span class="kf">Zn<sup>2+</sup></span>/Zn</td><td>−0,76</td><td><span class="kf">Cl<sub>2</sub></span>/<span class="kf">Cl<sup>−</sup></span></td><td>+1,36</td></tr>
+                  <tr><td><span class="kf">Fe<sup>2+</sup></span>/Fe</td><td>−0,44</td><td><span class="kf">Au<sup>3+</sup></span>/Au</td><td>+1,50</td></tr>
+                  <tr><td><span class="kf">Ni<sup>2+</sup></span>/Ni</td><td>−0,25</td><td><span class="kf">F<sub>2</sub></span>/<span class="kf">F<sup>−</sup></span></td><td>+2,87</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p>Uporaba redoks vrste:</p>
+            <ul>
+              <li>Reakcija poteče, če reducirana oblika (kovina) leži levo od oksidirane oblike partnerja (iona), ki jo želimo reducirati: cink izpodriva svinec, <span class="ke">Zn + Pb<sup>2+</sup>&nbsp;→ Zn<sup>2+</sup> + Pb</span>; srebro bakra ne izpodriva.</li>
+              <li>V <strong>neoksidirajočih kislinah</strong> (HCl, razredčena <span class="kf">H<sub>2</sub>SO<sub>4</sub></span>, <span class="kf">CH<sub>3</sub>COOH</span>) se raztapljajo le kovine pred vodikom, pri tem nastaja vodik: <span class="ke">Zn + 2H<sub>3</sub>O<sup>+</sup>&nbsp;→ Zn<sup>2+</sup> + H<sub>2</sub> + 2H<sub>2</sub>O</span>. Baker, srebro in zlato se v HCl ne raztapljajo; baker in srebro raztopijo le <strong>oksidirajoče kisline</strong> (<span class="kf">HNO<sub>3</sub></span>, vroča koncentrirana <span class="kf">H<sub>2</sub>SO<sub>4</sub></span>), pri katerih ne nastaja vodik, temveč NO, <span class="kf">NO<sub>2</sub></span> ali <span class="kf">SO<sub>2</sub></span>.</li>
+              <li>Halogen z višjim \(E^\circ\) oksidira halogenidne ione halogena z nižjim: <span class="ke">Cl<sub>2</sub> + 2Br<sup>−</sup>&nbsp;→ 2Cl<sup>−</sup> + Br<sub>2</sub></span>.</li>
+              <li>Bolj kot sta para v vrsti narazen, večja je napetost člena: \(E^\circ_{\text{člena}} = E^\circ(\text{oksidant}) - E^\circ(\text{reducent})\). Daniellov člen: \(0{,}34 - (-0{,}76) = 1{,}10\ \text{V}\); člen Fe | <span class="kf">Fe<sup>2+</sup></span> || <span class="kf">Cu<sup>2+</sup></span> | Cu: \(0{,}34 - (-0{,}44) = 0{,}78\ \text{V}\).</li>
+            </ul>
+            <p><strong>Baterije</strong> so praktični galvanski členi. <strong>Primarni členi</strong> so za enkratno uporabo (cink-ogljikova suha baterija in alkalna baterija: anoda cink, katoda <span class="kf">MnO<sub>2</sub></span>, približno 1,5 V). <strong>Sekundarni členi</strong> ali <strong>akumulatorji</strong> se dajo ponovno napolniti, ker z zunanjo napetostjo reakcijo obrnemo (elektroliza). Svinčev akumulator (Planté, 1859) ima elektrodi iz Pb in <span class="kf">PbO<sub>2</sub></span> v žveplovi kislini; pri praznjenju na obeh nastaja <span class="kf">PbSO<sub>4</sub></span>, en člen da 2 V, avtomobilski akumulator ima šest členov (12 V). Litij-ionski akumulatorji so v telefonih in električnih avtomobilih. <strong>Gorivna celica</strong> se ne izrabi, ker ji gorivo (vodik) in oksidant (kisik) stalno dovajamo; nastaja le voda: <span class="ke">2H<sub>2</sub> + O<sub>2</sub>&nbsp;→ 2H<sub>2</sub>O</span>. Izrabljene baterije so nevaren odpadek (težke kovine, kisline).</p>
+            <p><strong>Korozija</strong> je razjedanje kovin zaradi redoks reakcij z okolico. Železo na vlažnem zraku rjavi: železo se oksidira (<span class="ke">Fe&nbsp;→ Fe<sup>2+</sup> + 2e<sup>−</sup></span>), kisik v vodi se reducira (<span class="ke">O<sub>2</sub> + 2H<sub>2</sub>O + 4e<sup>−</sup>&nbsp;→ 4OH<sup>−</sup></span>), nastane rja (hidratirani železovi oksidi). Korozijo pospešujejo vlaga, soli (morska voda, sol na cestah) in stik z manj reaktivno kovino, ker nastanejo <strong>mikrogalvanski členi</strong>: bolj reaktivna kovina postane anoda in se raztaplja. Zato bakren snegobran na pocinkanem žlebu poškoduje žleb. Zaščita: barvanje, mazanje, plastična prevleka, prevleka z drugo kovino (pocinkanje, kromanje) in <strong>katodna zaščita</strong> z <strong>žrtveno anodo</strong>: z ladjo ali cevovodom povežemo bolj reaktivno kovino (Mg, Zn), ki se raztaplja namesto železa.</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-4">
+              <h4>Tip 4: Ali reakcija poteče? (redoks vrsta)</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Bakreno ploščico potopimo v raztopino srebrovega nitrata, srebrno pa v raztopino bakrovega(II) sulfata. Kje poteče reakcija? Zapiši enačbo.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> kovino damo v raztopino soli druge kovine ali v kislino, halogen v raztopino halogenida; sprašujejo, ali se kaj zgodi, kaj se izloči ali katera kovina je najboljši reducent.</p><ul class="kljucne"><li>„ploščico potopimo v raztopino“</li><li>„ali reakcija poteče“</li><li>„se raztaplja v kislini“</li><li>„najboljši reducent / oksidant“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Ugotovi, kaj je možni reducent (kovina, halogenidni ion) in kaj možni oksidant (kovinski ion, <span class="kf">H<sub>3</sub>O<sup>+</sup></span>, halogen).</p><div class="na-nalogi"><p>1. primer: reducent Cu, oksidant <span class="kf">Ag<sup>+</sup></span>. 2. primer: reducent Ag, oksidant <span class="kf">Cu<sup>2+</sup></span>.</p></div></li>
+              <li><p class="korak">Poišči \(E^\circ\) obeh parov.</p><div class="na-nalogi"><p>\(E^\circ(\text{Cu}^{2+}/\text{Cu}) = +0{,}34\ \text{V}\), \(E^\circ(\text{Ag}^+/\text{Ag}) = +0{,}80\ \text{V}\).</p></div></li>
+              <li><p class="korak">Reakcija poteče, če ima oksidant višji \(E^\circ\) kot reducent (napetost \(E^\circ(\text{oks}) - E^\circ(\text{red}) \gt 0\)).</p><div class="na-nalogi"><p>1. primer: \(0{,}80 - 0{,}34 = 0{,}46\ \text{V} \gt 0\), poteče. 2. primer: \(0{,}34 - 0{,}80 \lt 0\), ne poteče.</p></div></li>
+              <li><p class="korak">Zapiši in uredi enačbo (izenači elektrone).</p><div class="na-nalogi"><p><span class="ke">Cu + 2Ag<sup>+</sup>&nbsp;→ Cu<sup>2+</sup> + 2Ag</span>; raztopina pomodri, na bakru se izloča srebro.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Se cink raztaplja v klorovodikovi kislini? Baker?</p><p>Zn (−0,76 V) je pred vodikom: <span class="ke">Zn + 2HCl&nbsp;→ ZnCl<sub>2</sub> + H<sub>2</sub></span>. Cu (+0,34 V) je za vodikom: ne reagira.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Klorovico dodamo raztopini KI.</p><p><span class="kf">Cl<sub>2</sub></span> (+1,36 V) oksidira <span class="kf">I<sup>−</sup></span> (+0,54 V): <span class="ke">Cl<sub>2</sub> + 2KI&nbsp;→ 2KCl + I<sub>2</sub></span>, raztopina porjavi.</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Razvrsti Zn, Cu, Mg, Fe od najboljšega reducenta.</p><p>Po \(E^\circ\): Mg (−2,37) &gt; Zn (−0,76) &gt; Fe (−0,44) &gt; Cu (+0,34).</p></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-5">
+              <h4>Tip 5: Galvanski člen: anoda, katoda in napetost</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Galvanski člen sestavimo iz cinkovega in srebrovega polčlena pri standardnih pogojih. Določi anodo in katodo, zapiši reakciji na elektrodah, zapis člena in izračunaj napetost.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> opisan ali narisan je člen iz dveh polčlenov; sprašujejo po polu, smeri toka elektronov, elektrodi, ki se tanjša ali debeli, napetosti ali zapisu člena.</p><ul class="kljucne"><li>„galvanski člen“, „polčlen“</li><li>„anoda“, „katoda“, „pol“</li><li>„napetost člena“</li><li>„smer elektronov“, „elektrolitski ključ“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Poišči \(E^\circ\) obeh parov. Par z nižjim \(E^\circ\) je reducent in tvori anodo (−), par z višjim je oksidant in tvori katodo (+).</p><div class="na-nalogi"><p>Zn: −0,76 V → anoda (−); Ag: +0,80 V → katoda (+).</p></div></li>
+              <li><p class="korak">Zapiši reakciji: na anodi oksidacija, na katodi redukcija; nato izenači elektrone in seštej.</p><div class="na-nalogi"><p><span class="ke">Zn&nbsp;→ Zn<sup>2+</sup> + 2e<sup>−</sup></span>; <span class="ke">Ag<sup>+</sup> + e<sup>−</sup>&nbsp;→ Ag</span> (× 2). Skupaj: <span class="ke">Zn + 2Ag<sup>+</sup>&nbsp;→ Zn<sup>2+</sup> + 2Ag</span>.</p></div></li>
+              <li><p class="korak">Zapiši člen: anoda levo, katoda desno.</p><div class="na-nalogi"><p>Zn(s) | <span class="kf">Zn<sup>2+</sup>(aq)</span> || <span class="kf">Ag<sup>+</sup>(aq)</span> | Ag(s)</p></div></li>
+              <li><p class="korak">Izračunaj napetost; koeficientov iz enačbe ne upoštevaš (\(E^\circ\) se ne množi).</p><div class="na-nalogi"><p>\(E^\circ = 0{,}80 - (-0{,}76) = 1{,}56\ \text{V}\). Elektroni tečejo po žici od cinka k srebru; cinkova elektroda se tanjša, srebrna debeli.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Daniellov člen (Zn, Cu).</p><p>Anoda Zn, katoda Cu, \(E^\circ = 0{,}34 - (-0{,}76) = 1{,}10\ \text{V}\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Člen Fe | <span class="kf">Fe<sup>2+</sup></span> || <span class="kf">Cu<sup>2+</sup></span> | Cu.</p><p>\(E^\circ = 0{,}34 - (-0{,}44) = 0{,}78\ \text{V}\); <span class="ke">Fe + Cu<sup>2+</sup>&nbsp;→ Fe<sup>2+</sup> + Cu</span>.</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Napetost člena z vodikovim polčlenom je 2,37 V, kovina je anoda. \(E^\circ\)?</p><p>\(0 - E^\circ = 2{,}37\ \text{V}\) → \(E^\circ = -2{,}37\ \text{V}\) (magnezij).</p></div>
+              <div class="primer"><p><strong>Primer 4:</strong> Kaj je naloga elektrolitskega ključa?</p><p>Z gibanjem ionov sklene tokokrog in ohranja raztopini električno nevtralni; raztopini se ne mešata.</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 4 -->
+        <section class="sklop" id="sklop-4">
+          <header class="sklop-header">
+            <span class="sklop-num">4.10 · 4</span>
+            <h2>Elektroliza in Faradayev zakon</h2>
+            <p>Elektroliza talin in raztopin, industrijska uporaba, računanje izločene snovi.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <p><strong>Elektroliza</strong> je proces, pri katerem enosmerna napetost, priključena na elektrodi, povzroči redoks reakcijo v <strong>elektrolitu</strong> (talini ali raztopini, ki prevaja tok). Poteka v <strong>elektrolitski celici</strong>. Reakcija pri elektrolizi sama od sebe ne bi potekla; energijo zanjo dobimo iz vira napetosti. Galvanski člen je ravno obratno: spontana reakcija daje tok.</p>
+            <ul>
+              <li><strong>Katoda</strong> je priključena na negativni pol (−), nanjo potujejo kationi in se <strong>reducirajo</strong>.</li>
+              <li><strong>Anoda</strong> je priključena na pozitivni pol (+), nanjo potujejo anioni in se <strong>oksidirajo</strong>.</li>
+              <li>Na anodi je vedno oksidacija, na katodi redukcija (enako kot v galvanskem členu), le predznaka polov sta obratna.</li>
+            </ul>
+            <figure class="slika">
+<svg viewBox="0 0 420 306" role="img" aria-label="Elektroliza raztopine bakrovega(II) klorida" xmlns="http://www.w3.org/2000/svg"><rect class="s-voda" x="72" y="140" width="276" height="120"/><path class="s-lik" style="fill:none" d="M70,110 L70,262 L350,262 L350,110"/><path class="s-crta" style="fill:none" d="M130,80 L130,40 L203,40 M217,40 L290,40 L290,80"/><path class="s-crta" style="stroke-width:3" d="M203,24 V56 M217,31 V49"/><text class="s-txt-k2" x="195" y="22" text-anchor="middle" style="font-size:14px">+</text><text class="s-txt-k1" x="226" y="22" text-anchor="middle" style="font-size:14px">−</text><rect x="120" y="80" width="20" height="150" fill="#4B5563" stroke="#1F2937"/><rect x="280" y="80" width="20" height="150" fill="#4B5563" stroke="#1F2937"/><rect x="276" y="168" width="4" height="62" fill="#D97706"/><rect x="300" y="168" width="4" height="62" fill="#D97706"/><circle class="s-crta" style="fill:none" cx="150" cy="212" r="4"/><circle class="s-crta" style="fill:none" cx="156" cy="190" r="4"/><circle class="s-crta" style="fill:none" cx="148" cy="172" r="4"/><circle class="s-crta" style="fill:none" cx="154" cy="152" r="4"/><text class="s-txt-k2" x="118" y="72" text-anchor="end" style="font-size:12px">anoda (+)</text><text class="s-txt-k1" x="302" y="72" text-anchor="start" style="font-size:12px">katoda (−)</text><text class="s-txt-muted" x="210" y="160" text-anchor="middle" style="font-size:11px"><tspan>CuCl</tspan><tspan dy="3.5" style="font-size:0.72em">2</tspan><tspan dy="-3.5">(aq)</tspan></text><text class="s-txt-b" x="196" y="196" text-anchor="middle" style="font-size:12px"><tspan>Cl</tspan><tspan dy="-5" style="font-size:0.72em">−</tspan><tspan dy="5"></tspan></text><line class="s-k2" x1="186" y1="206" x2="168" y2="206"/><polygon class="s-txt-k2" points="160,206 168,201.5 168,210.5"/><text class="s-txt-b" x="232" y="196" text-anchor="middle" style="font-size:12px"><tspan>Cu</tspan><tspan dy="-5" style="font-size:0.72em">2+</tspan><tspan dy="5"></tspan></text><line class="s-k1" x1="222" y1="206" x2="258" y2="206"/><polygon class="s-txt-k1" points="266,206 258,210.5 258,201.5"/><text class="s-txt-b" x="130" y="282" text-anchor="middle" style="font-size:11px"><tspan>2Cl</tspan><tspan dy="-5" style="font-size:0.72em">−</tspan><tspan dy="5"> → Cl</tspan><tspan dy="3.5" style="font-size:0.72em">2</tspan><tspan dy="-3.5"> + 2e</tspan><tspan dy="-5" style="font-size:0.72em">−</tspan><tspan dy="5"></tspan></text><text class="s-txt-b" x="290" y="282" text-anchor="middle" style="font-size:11px"><tspan>Cu</tspan><tspan dy="-5" style="font-size:0.72em">2+</tspan><tspan dy="5"> + 2e</tspan><tspan dy="-5" style="font-size:0.72em">−</tspan><tspan dy="5"> → Cu</tspan></text><text class="s-txt-k2" x="130" y="298" text-anchor="middle" style="font-size:11px">oksidacija</text><text class="s-txt-k1" x="290" y="298" text-anchor="middle" style="font-size:11px">redukcija</text></svg>
+<figcaption>Elektroliza vodne raztopine <span class="kf">CuCl<sub>2</sub></span> z grafitnima elektrodama. Zunanji vir potiska elektrone na katodo (−), kamor potujejo kationi <span class="kf">Cu<sup>2+</sup></span> in se reducirajo v baker. Anioni <span class="kf">Cl<sup>−</sup></span> potujejo k anodi (+) in se oksidirajo v klor, ki uhaja v mehurčkih.</figcaption>
+</figure>
+            <p>Najmanjšo napetost, pri kateri elektroliza začne potekati, imenujemo <strong>razkrojna napetost</strong>. Teoretično je enaka napetosti galvanskega člena z isto reakcijo v obratni smeri.</p>
+            <p><strong>Elektroliza talin.</strong> V talini so le ioni soli, zato se izločita element kovine in nekovine. Talina NaCl: katoda <span class="ke">2Na<sup>+</sup> + 2e<sup>−</sup>&nbsp;→ 2Na</span>, anoda <span class="ke">2Cl<sup>−</sup>&nbsp;→ Cl<sub>2</sub> + 2e<sup>−</sup></span>, skupaj <span class="ke">2NaCl(l)&nbsp;→ 2Na(l) + Cl<sub>2</sub>(g)</span>. Tako pridobivamo zelo reaktivne kovine (Li, Na, K, Mg, Ca, Al) in fluor (Moissan, 1886), ki jih z drugimi reducenti ne moremo dobiti.</p>
+            <p><strong>Elektroliza vodnih raztopin.</strong> V raztopini se lahko reducira ali oksidira tudi voda, zato pri elektrolizi vodnih raztopin pogosto nastajata vodik in kisik:</p>
+            <ul>
+              <li>Na katodi se izločijo manj reaktivne kovine (Cu, Ag, Au, tudi Zn, Ni, Pb). Ioni zelo reaktivnih kovin (<span class="kf">Li<sup>+</sup></span>, <span class="kf">Na<sup>+</sup></span>, <span class="kf">K<sup>+</sup></span>, <span class="kf">Ca<sup>2+</sup></span>, <span class="kf">Mg<sup>2+</sup></span>, <span class="kf">Al<sup>3+</sup></span>) se ne reducirajo, namesto njih se reducira voda: <span class="ke">2H<sub>2</sub>O + 2e<sup>−</sup>&nbsp;→ H<sub>2</sub> + 2OH<sup>−</sup></span> (ob katodi raztopina postane bazična).</li>
+              <li>Na anodi se halogenidni ioni (<span class="kf">Cl<sup>−</sup></span>, <span class="kf">Br<sup>−</sup></span>, <span class="kf">I<sup>−</sup></span>) oksidirajo v halogen. Anioni kislin s kisikom (<span class="kf">SO<sub>4</sub><sup>2−</sup></span>, <span class="kf">NO<sub>3</sub><sup>−</sup></span>, <span class="kf">CO<sub>3</sub><sup>2−</sup></span>) in <span class="kf">F<sup>−</sup></span> se ne oksidirajo, namesto njih se oksidira voda: <span class="ke">2H<sub>2</sub>O&nbsp;→ O<sub>2</sub> + 4H<sup>+</sup> + 4e<sup>−</sup></span> (ob anodi raztopina postane kisla).</li>
+            </ul>
+            <p>Raztopina NaCl: na katodi vodik, na anodi klor, v raztopini ostane NaOH: <span class="ke">2NaCl + 2H<sub>2</sub>O&nbsp;→ H<sub>2</sub> + Cl<sub>2</sub> + 2NaOH</span> (industrijsko pridobivanje klora in natrijevega hidroksida). Raztopina <span class="kf">CuSO<sub>4</sub></span>: na katodi baker, na anodi kisik, nastaja žveplova kislina. Elektroliza vode (z malo <span class="kf">H<sub>2</sub>SO<sub>4</sub></span> ali NaOH za prevodnost): <span class="ke">2H<sub>2</sub>O&nbsp;→ 2H<sub>2</sub> + O<sub>2</sub></span>, prostorninsko razmerje vodika in kisika je 2 : 1.</p>
+            <p><strong>Pridobivanje aluminija</strong> (Talum, Kidričevo): glinica <span class="kf">Al<sub>2</sub>O<sub>3</sub></span> se tali pri 2072 °C, z dodatkom kriolita <span class="kf">Na<sub>3</sub>AlF<sub>6</sub></span> pa talina nastane že pri približno 950 °C, kar prihrani energijo. Kovinsko dno peči je katoda (<span class="ke">Al<sup>3+</sup> + 3e<sup>−</sup>&nbsp;→ Al</span>), anode so iz ogljika (<span class="ke">2O<sup>2−</sup>&nbsp;→ O<sub>2</sub> + 4e<sup>−</sup></span>); skupaj <span class="ke">2Al<sub>2</sub>O<sub>3</sub>&nbsp;→ 4Al + 3O<sub>2</sub></span>. Kisik reagira z ogljikovimi anodami v <span class="kf">CO<sub>2</sub></span>, zato se anode porabljajo.</p>
+            <p>Druge uporabe: <strong>galvanizacija</strong> (predmet je katoda, anoda je kovina prevleke, npr. ponikljanje, kromanje, posrebrenje), <strong>čiščenje (rafinacija) bakra</strong> (nečisti baker je anoda, tanka ploščica čistega bakra katoda; baker se z anode raztaplja in izloča na katodi, plemenite primesi Ag in Au padejo na dno kot anodno blato) in polnjenje akumulatorjev.</p>
+            <p><strong>Faradayev zakon</strong>: množina izločene snovi je sorazmerna naboju, ki je stekel skozi elektrolit. Naboj enega mola elektronov je <strong>Faradayeva konstanta</strong> \(F = e_0 \cdot N_A\), kjer je \(e_0 = 1{,}602 \cdot 10^{-19}\ \text{C}\) in \(N_A = 6{,}02 \cdot 10^{23}\ \text{mol}^{-1}\), torej \(F \approx 96\,500\ \text{A s/mol}\). Za 1 mol snovi, pri kateri delec izmenja \(z\) elektronov, potrebujemo naboj \(z \cdot F\):</p>
+            <ul>
+              <li>\(z = 1\): Ag, Na, K (<span class="ke">Ag<sup>+</sup> + e<sup>−</sup>&nbsp;→ Ag</span>), 96 500 A s;</li>
+              <li>\(z = 2\): Cu, Zn, Ca, <span class="kf">H<sub>2</sub></span> (<span class="ke">2H<sup>+</sup> + 2e<sup>−</sup>&nbsp;→ H<sub>2</sub></span>), <span class="kf">Cl<sub>2</sub></span>, 193 000 A s;</li>
+              <li>\(z = 3\): Al, Fe iz <span class="kf">Fe<sup>3+</sup></span>, Au, 289 500 A s;</li>
+              <li>\(z = 4\): <span class="kf">O<sub>2</sub></span> (<span class="ke">2O<sup>2−</sup>&nbsp;→ O<sub>2</sub> + 4e<sup>−</sup></span>), 386 000 A s.</li>
+            </ul>
+            <p>Iz \(I \cdot t = n \cdot z \cdot F\) izračunamo množino, maso \(m = n \cdot M\) ali prostornino plina \(V = nRT/p\). Če je več celic zaporedno vezanih, skozi vse steče enak naboj, zato je množina elektronov enaka v vseh.</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-6">
+              <h4>Tip 6: Kaj nastane pri elektrolizi?</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Elektroliziramo vodno raztopino natrijevega klorida z inertnima elektrodama. Zapiši reakciji na elektrodah in skupno enačbo. Kaj ostane v raztopini?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> navedena je talina ali raztopina soli, ki jo elektroliziramo; sprašujejo po produktih, reakcijah na elektrodah, spremembi pH ali po polu elektrode.</p><ul class="kljucne"><li>„elektroliza taline / raztopine“</li><li>„kaj se izloči na katodi / anodi“</li><li>„barva indikatorja ob elektrodi“</li><li>„galvanizacija“, „rafinacija“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Zapiši ione v elektrolitu; pri raztopini dodaj še vodo.</p><div class="na-nalogi"><p><span class="kf">Na<sup>+</sup></span>, <span class="kf">Cl<sup>−</sup></span>, <span class="kf">H<sub>2</sub>O</span>.</p></div></li>
+              <li><p class="korak">Katoda (−), redukcija: kovinski ion, če kovina ni zelo reaktivna, sicer voda v vodik.</p><div class="na-nalogi"><p><span class="kf">Na<sup>+</sup></span> se v raztopini ne reducira: <span class="ke">2H<sub>2</sub>O + 2e<sup>−</sup>&nbsp;→ H<sub>2</sub> + 2OH<sup>−</sup></span>.</p></div></li>
+              <li><p class="korak">Anoda (+), oksidacija: halogenidni ion v halogen; pri <span class="kf">SO<sub>4</sub><sup>2−</sup></span>, <span class="kf">NO<sub>3</sub><sup>−</sup></span>, <span class="kf">F<sup>−</sup></span> voda v kisik. Pri talini se izločita kar oba elementa soli.</p><div class="na-nalogi"><p><span class="ke">2Cl<sup>−</sup>&nbsp;→ Cl<sub>2</sub> + 2e<sup>−</sup></span></p></div></li>
+              <li><p class="korak">Izenači elektrone, seštej in ugotovi, kaj ostane v raztopini.</p><div class="na-nalogi"><p><span class="ke">2NaCl + 2H<sub>2</sub>O&nbsp;→ H<sub>2</sub> + Cl<sub>2</sub> + 2NaOH</span>; v raztopini ostane NaOH (ob katodi fenolftalein pordeči).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Talina NaCl.</p><p>Katoda: Na; anoda: <span class="kf">Cl<sub>2</sub></span>; <span class="ke">2NaCl&nbsp;→ 2Na + Cl<sub>2</sub></span>.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Raztopina <span class="kf">CuSO<sub>4</sub></span>.</p><p>Katoda: <span class="ke">Cu<sup>2+</sup> + 2e<sup>−</sup>&nbsp;→ Cu</span>; anoda: <span class="ke">2H<sub>2</sub>O&nbsp;→ O<sub>2</sub> + 4H<sup>+</sup> + 4e<sup>−</sup></span>; skupaj <span class="ke">2CuSO<sub>4</sub> + 2H<sub>2</sub>O&nbsp;→ 2Cu + O<sub>2</sub> + 2H<sub>2</sub>SO<sub>4</sub></span>, raztopina postaja kisla in bledi.</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Raztopina KI.</p><p>Katoda: <span class="kf">H<sub>2</sub></span> (in <span class="kf">OH<sup>−</sup></span>); anoda: <span class="kf">I<sub>2</sub></span> (raztopina ob anodi porjavi).</p></div>
+              <div class="primer"><p><strong>Primer 4:</strong> Ključ želimo posrebriti. Kaj je katoda?</p><p>Ključ (katoda, −), anoda je srebro, elektrolit raztopina srebrove soli; <span class="ke">Ag<sup>+</sup> + e<sup>−</sup>&nbsp;→ Ag</span>.</p></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-7">
+              <h4>Tip 7: Faradayev zakon: masa, prostornina, čas ali tok</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Raztopino bakrovega(II) sulfata elektroliziramo 30,0 minut s tokom 2,00 A. Koliko gramov bakra se izloči na katodi?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> podana sta tok in čas (ali naboj) in sprašujejo po masi ali prostornini produkta, ali obratno: po času ali toku za določeno maso.</p><ul class="kljucne"><li>„tok … A“, „čas … min“</li><li>„koliko gramov se izloči“</li><li>„prostornina plina na anodi“</li><li>„koliko časa“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Zapiši reakcijo na elektrodi in odčitaj \(z\) (število elektronov na en delec produkta).</p><div class="na-nalogi"><p><span class="ke">Cu<sup>2+</sup> + 2e<sup>−</sup>&nbsp;→ Cu</span>, \(z = 2\).</p></div></li>
+              <li><p class="korak">Izračunaj naboj \(Q = I \cdot t\) (čas v sekundah).</p><div class="na-nalogi"><p>\(Q = 2{,}00\ \text{A} \cdot 1800\ \text{s} = 3600\ \text{A s}\)</p></div></li>
+              <li><p class="korak">Izračunaj množino produkta \(n = \dfrac{Q}{z F}\).</p><div class="na-nalogi"><p>\(n = \dfrac{3600}{2 \cdot 96\,500} = 0{,}01865\ \text{mol}\)</p></div></li>
+              <li><p class="korak">Pretvori v maso \(m = nM\) ali prostornino \(V = nRT/p\) (ali \(n V_m\)).</p><div class="na-nalogi"><p>\(m = 0{,}01865\ \text{mol} \cdot 63{,}55\ \text{g/mol} = 1{,}19\ \text{g}\)</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Masa kalija iz taline KBr pri 2,50 A v 1,00 h?</p><p>\(m = \dfrac{2{,}50 \cdot 3600 \cdot 39{,}1}{1 \cdot 96\,500}\) \(= 3{,}65\ \text{g}\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Prostornina klora pri 10,0 A, 2,00 h, 20 °C in 98 kPa?</p><p>\(n = \dfrac{10{,}0 \cdot 7200}{2 \cdot 96\,500} = 0{,}373\ \text{mol}\); \(V = \dfrac{0{,}373 \cdot 8{,}314 \cdot 293}{98\,000}\) \(= 9{,}27 \cdot 10^{-3}\ \text{m}^3 = 9{,}3\ \text{L}\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Koliko časa potrebujemo za 1,00 g srebra pri toku 0,500 A?</p><p>\(n = 1{,}00/107{,}9 = 0{,}00927\ \text{mol}\); \(t = \dfrac{nzF}{I}\) \(= \dfrac{0{,}00927 \cdot 96\,500}{0{,}500}\) \(= 1789\ \text{s} \approx 29{,}8\ \text{min}\).</p></div>
+              <div class="primer"><p><strong>Primer 4:</strong> Isti naboj steče skozi celici z <span class="kf">AgNO<sub>3</sub></span> in <span class="kf">CuSO<sub>4</sub></span>. Izloči se 1,08 g Ag. Koliko bakra?</p><p>\(n(e^-) = 1{,}08/107{,}9 = 0{,}0100\ \text{mol}\); \(n(\text{Cu}) = 0{,}00500\ \text{mol}\), \(m = 0{,}318\ \text{g}\).</p></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="subsection" id="kljuc">
+          <div class="subsection-head">
+            <h2>Ključ: kateri tip naloge je to?</h2>
+            <p>Poišči besedo iz navodila naloge in skoči na pravi postopek.</p>
+          </div>
+          <div class="info-card">
+            <div class="tabela-wrap">
+              <table class="tabela">
+                <thead><tr><th>V besedilu naloge piše …</th><th>Tip</th></tr></thead>
+                <tbody>
+                  <tr><td>„oksidacijsko število“</td><td><a href="#tip-1">Tip 1</a></td></tr>
+                  <tr><td>„oksidant“, „reducent“, „redoks reakcija“</td><td><a href="#tip-2">Tip 2</a></td></tr>
+                  <tr><td>„uredi enačbo“ s <span class="kf">KMnO<sub>4</sub></span>, <span class="kf">HNO<sub>3</sub></span>, dikromatom</td><td><a href="#tip-3">Tip 3</a></td></tr>
+                  <tr><td>„ploščico potopimo“, „ali poteče“, „se raztaplja v kislini“</td><td><a href="#tip-4">Tip 4</a></td></tr>
+                  <tr><td>„galvanski člen“, „napetost“, „anoda / katoda“</td><td><a href="#tip-5">Tip 5</a></td></tr>
+                  <tr><td>„elektroliza taline / raztopine“, „kaj se izloči“</td><td><a href="#tip-6">Tip 6</a></td></tr>
+                  <tr><td>tok in čas, „koliko gramov / litrov se izloči“</td><td><a href="#tip-7">Tip 7</a></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>Pogoste napake</h2>
+          </div>
+          <div class="info-card">
+            <ul>
+              <li>Zamenjaš oksidant in reducent: oksidant se <strong>reducira</strong>, reducent se <strong>oksidira</strong>.</li>
+              <li>Pri oksidacijskem številu pozabiš indeks (v <span class="kf">Cr<sub>2</sub>O<sub>7</sub><sup>2−</sup></span> sta dva atoma kroma).</li>
+              <li>Pri urejanju ne upoštevaš, da del kisline (<span class="kf">HCl</span>, <span class="kf">HNO<sub>3</sub></span>) ni oksidant, temveč daje anione za sol.</li>
+              <li>Pomnožiš \(E^\circ\) s koeficientom iz enačbe; standardni potencial se nikoli ne množi.</li>
+              <li>Zamenjaš polova: v galvanskem členu je anoda (−), pri elektrolizi (+); oksidacija je vedno na anodi.</li>
+              <li>Pri elektrolizi raztopine NaCl zapišeš, da na katodi nastaja natrij (nastaja vodik).</li>
+              <li>Čas pri Faradayevem zakonu pustiš v minutah ali urah, ali za klor vzameš \(z = 1\) namesto 2.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>Naslednje poglavje</h2>
+          </div>
+          <div class="link-list">
+            <a class="link-item" href="/views/kemija/snov/periodni_sistem_elementov/periodni_sistem_elementov_razlaga.html">
+              <span class="link-item-text"><strong>4.11 Elementi v periodnem sistemu</strong><small>Področja periodnega sistema, oksidi, prehodni elementi in koordinacijske spojine</small></span>
+              <span class="arrow">→</span>
+            </a>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>

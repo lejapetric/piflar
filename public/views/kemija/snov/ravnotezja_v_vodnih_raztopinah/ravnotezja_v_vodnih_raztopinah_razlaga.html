@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kemija: ravnotežja v vodnih raztopinah — razlaga in postopki | Piflar.si</title>
+  <meta name="description" content="Ravnotežja v vodnih raztopinah za maturo iz kemije: poimenovanje kislin, baz in soli, Brønstedove kisline in baze, konjugirani pari, Ka, Kb in Kw, pH in pOH, indikatorji, kislinsko-bazne titracije, ionske reakcije in protoliza ionov soli, z vsemi tipi nalog.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
+  <link rel="stylesheet" href="/style/snov.css">
+</head>
+<body>
+  <div id="header"></div>
+
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view">
+
+<header class="page-header">
+          <span class="page-eyebrow">Kemija · Snov · 4.9</span>
+          <h1>Ravnotežja v vodnih raztopinah</h1>
+          <p>Kisline in baze so povsod: v želodcu, v kisu, v čistilih, v dežju. Po Brønstedu je kislina snov, ki odda proton, baza pa snov, ki ga sprejme. Iz tega izpeljemo moč kislin in baz, lestvico pH, delovanje indikatorjev in titracijo, s katero določimo koncentracijo raztopine. Na koncu so ionske reakcije in to, zakaj so raztopine nekaterih soli kisle ali bazične. To je eno najobsežnejših poglavij na maturi. Pod razlago so vsi tipi nalog.</p>
+          <div class="page-meta">
+            <div class="page-meta-item"><strong>6</strong><span>Podpoglavij</span></div>
+            <div class="page-meta-item"><strong>8</strong><span>Tipov nalog</span></div>
+            <div class="page-meta-item"><strong>~50 min</strong><span>Branja</span></div>
+          </div>
+        </header>
+
+        <div class="matura-formule">
+          <h3>Formule na maturi</h3>
+          <p>Zveze za kisline, baze in pH (pri 25 °C):</p>
+          <div class="matura-levo">
+            <ul>
+              <li>ionski produkt vode: \(K_w = [\text{H}_3\text{O}^+][\text{OH}^-] = 1{,}0 \cdot 10^{-14}\)</li>
+              <li>\(\text{pH} = -\log[\text{H}_3\text{O}^+]\), \(\text{pOH} = -\log[\text{OH}^-]\), \(\text{pH} + \text{pOH} = 14\); obratno \([\text{H}_3\text{O}^+] = 10^{-\text{pH}}\)</li>
+              <li>šibka kislina: \(K_a = \dfrac{[\text{H}_3\text{O}^+][\text{A}^-]}{[\text{HA}]}\); šibka baza: \(K_b = \dfrac{[\text{BH}^+][\text{OH}^-]}{[\text{B}]}\); za konjugirani par \(K_a \cdot K_b = K_w\)</li>
+              <li>močna kislina HA: \([\text{H}_3\text{O}^+] = c(\text{HA})\); močna baza MOH: \([\text{OH}^-] = c(\text{MOH})\) (pri <span class="kf">Ba(OH)<sub>2</sub></span> dvakrat)</li>
+              <li>titracija: v ekvivalentni točki je množina kisline in baze v razmerju koeficientov: \(n(\text{kislina}) : n(\text{baza}) = a : b\)</li>
+            </ul>
+          </div>
+          <p class="matura-opomba">pH zaokroži na dve decimalki; število decimalk pH ustreza številu veljavnih mest koncentracije.</p>
+        </div>
+
+        <nav class="kazalo" aria-label="Podpoglavja">
+          <h2>Podpoglavja</h2>
+          <ol>
+            <li><a href="#sklop-1"><span class="kazalo-st">1</span> Poimenovanje kislin, baz in soli</a></li>
+            <li><a href="#sklop-2"><span class="kazalo-st">2</span> Kisline in baze po Brønstedu</a></li>
+            <li><a href="#sklop-3"><span class="kazalo-st">3</span> Ionski produkt vode in pH</a></li>
+            <li><a href="#sklop-4"><span class="kazalo-st">4</span> Indikatorji in kislinsko-bazne titracije</a></li>
+            <li><a href="#sklop-5"><span class="kazalo-st">5</span> Ionske reakcije</a></li>
+            <li><a href="#sklop-6"><span class="kazalo-st">6</span> Protoliza ionov soli</a></li>
+            <li><a href="#kljuc"><span class="kazalo-st">?</span> Ključ: kateri tip naloge je to?</a></li>
+          </ol>
+        </nav>
+
+        <!-- SKLOP 1 -->
+        <section class="sklop" id="sklop-1">
+          <header class="sklop-header">
+            <span class="sklop-num">4.9 · 1</span>
+            <h2>Poimenovanje kislin, baz in soli</h2>
+            <p>Binarne kisline, oksokisline, hidroksidi, soli in hidrogensoli.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <p>Kisline nastanejo, ko nekovinski oksidi reagirajo z vodo (<span class="ke">SO<sub>3</sub> + H<sub>2</sub>O&nbsp;→ H<sub>2</sub>SO<sub>4</sub></span>, <span class="ke">P<sub>4</sub>O<sub>10</sub> + 6H<sub>2</sub>O&nbsp;→ 4H<sub>3</sub>PO<sub>4</sub></span>, <span class="ke">CO<sub>2</sub> + H<sub>2</sub>O&nbsp;→ H<sub>2</sub>CO<sub>3</sub></span>). Baze (hidroksidi) nastanejo iz oksidov kovin in vode (<span class="ke">CaO + H<sub>2</sub>O&nbsp;→ Ca(OH)<sub>2</sub></span>, <span class="ke">Na<sub>2</sub>O + H<sub>2</sub>O&nbsp;→ 2NaOH</span>) ali iz zelo reaktivnih kovin in vode (<span class="ke">2Na + 2H<sub>2</sub>O&nbsp;→ 2NaOH + H<sub>2</sub></span>).</p>
+            <p><strong>Binarne kisline.</strong> Plinasta spojina vodika s halogenom ali žveplom se imenuje vodikov halogenid: HCl(g) vodikov klorid, <span class="kf">H<sub>2</sub>S</span> vodikov sulfid. Vodna raztopina je kislina s končnico <em>-ovodikova</em>: HCl(aq) klorovodikova, HBr(aq) bromovodikova, HF(aq) fluorovodikova, HI(aq) jodovodikova kislina.</p>
+            <p><strong>Oksokisline</strong> vsebujejo vodik, kisik in osrednji element. Ime tvorimo iz slovenskega imena osrednjega elementa s pripono <em>-ova</em> ali <em>-jeva</em>, oksidacijsko število pa zapišemo z rimsko številko. Dovoljena so tudi ustaljena imena. Anion kisline dobimo, ko odmislimo vse vodikove atome; naboj aniona je enak številu odvzetih vodikov.</p>
+            <div class="tabela-wrap">
+              <table class="tabela">
+                <thead><tr><th>Kislina</th><th>Ime</th><th>Anion</th><th>Ime aniona (soli)</th></tr></thead>
+                <tbody>
+                  <tr><td><span class="kf">H<sub>2</sub>SO<sub>4</sub></span></td><td>žveplova(VI), žveplova</td><td><span class="kf">SO<sub>4</sub><sup>2−</sup></span></td><td>sulfat(VI), sulfat</td></tr>
+                  <tr><td><span class="kf">H<sub>2</sub>SO<sub>3</sub></span></td><td>žveplova(IV), žveplasta</td><td><span class="kf">SO<sub>3</sub><sup>2−</sup></span></td><td>sulfat(IV), sulfit</td></tr>
+                  <tr><td><span class="kf">HNO<sub>3</sub></span></td><td>dušikova(V), dušikova</td><td><span class="kf">NO<sub>3</sub><sup>−</sup></span></td><td>nitrat(V), nitrat</td></tr>
+                  <tr><td><span class="kf">HNO<sub>2</sub></span></td><td>dušikova(III), dušikasta</td><td><span class="kf">NO<sub>2</sub><sup>−</sup></span></td><td>nitrat(III), nitrit</td></tr>
+                  <tr><td><span class="kf">H<sub>3</sub>PO<sub>4</sub></span></td><td>fosforjeva(V), fosforjeva</td><td><span class="kf">PO<sub>4</sub><sup>3−</sup></span></td><td>fosfat(V), fosfat</td></tr>
+                  <tr><td><span class="kf">H<sub>2</sub>CO<sub>3</sub></span></td><td>ogljikova(IV), ogljikova</td><td><span class="kf">CO<sub>3</sub><sup>2−</sup></span></td><td>karbonat</td></tr>
+                  <tr><td><span class="kf">HClO</span></td><td>klorova(I), hipoklorasta</td><td><span class="kf">ClO<sup>−</sup></span></td><td>klorat(I), hipoklorit</td></tr>
+                  <tr><td><span class="kf">HClO<sub>3</sub></span></td><td>klorova(V), klorova</td><td><span class="kf">ClO<sub>3</sub><sup>−</sup></span></td><td>klorat(V), klorat</td></tr>
+                  <tr><td><span class="kf">HClO<sub>4</sub></span></td><td>klorova(VII), perklorova</td><td><span class="kf">ClO<sub>4</sub><sup>−</sup></span></td><td>klorat(VII), perklorat</td></tr>
+                  <tr><td><span class="kf">CH<sub>3</sub>COOH</span></td><td>etanojska, ocetna</td><td><span class="kf">CH<sub>3</sub>COO<sup>−</sup></span></td><td>etanoat, acetat</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p>Druga pomembna aniona sta <span class="kf">MnO<sub>4</sub><sup>−</sup></span> manganat(VII) ali permanganat in <span class="kf">Cr<sub>2</sub>O<sub>7</sub><sup>2−</sup></span> dikromat(VI). Med večatomnimi kationi sta najpomembnejša <span class="kf">NH<sub>4</sub><sup>+</sup></span> amonijev in <span class="kf">H<sub>3</sub>O<sup>+</sup></span> oksonijev ion.</p>
+            <p><strong>Hidroksidi</strong>: ime kovine in beseda hidroksid: NaOH natrijev hidroksid, <span class="kf">Ca(OH)<sub>2</sub></span> kalcijev hidroksid, <span class="kf">Fe(OH)<sub>3</sub></span> železov(III) hidroksid. Vodna raztopina amoniaka je baza, ki nima hidroksidne skupine.</p>
+            <p><strong>Soli</strong> poimenujemo z imenom kationa (pridevnik) in imenom aniona: <span class="kf">Na<sub>2</sub>SO<sub>4</sub></span> natrijev sulfat(VI), <span class="kf">Fe(NO<sub>3</sub>)<sub>3</sub></span> železov(III) nitrat(V), <span class="kf">K<sub>2</sub>SO<sub>3</sub></span> kalijev sulfit, <span class="kf">Ba(ClO<sub>4</sub>)<sub>2</sub></span> barijev perklorat, <span class="kf">(NH<sub>4</sub>)<sub>2</sub>CO<sub>3</sub></span> amonijev karbonat. <strong>Hidrogensoli</strong> (kisle soli) nastanejo, ko večprotonska kislina odda le del protonov: <span class="kf">NaHCO<sub>3</sub></span> natrijev hidrogenkarbonat, <span class="kf">NaHSO<sub>4</sub></span> natrijev hidrogensulfat, <span class="kf">Na<sub>2</sub>HPO<sub>4</sub></span> natrijev hidrogenfosfat, <span class="kf">NaH<sub>2</sub>PO<sub>4</sub></span> natrijev dihidrogenfosfat. <strong>Hidrati</strong> imajo v kristalu vezano vodo: <span class="kf">CuSO<sub>4</sub>·5H<sub>2</sub>O</span> bakrov(II) sulfat pentahidrat (modra galica).</p>
+            <p>Formulo soli iz imena sestavimo tako, da je vsota nabojev nič: kalcijev fosfat je <span class="kf">Ca<sup>2+</sup></span> in <span class="kf">PO<sub>4</sub><sup>3−</sup></span>, zato <span class="kf">Ca<sub>3</sub>(PO<sub>4</sub>)<sub>2</sub></span> (\(3 \cdot 2 = 2 \cdot 3\)). Večatomni ion, ki ga potrebujemo več kot enkrat, damo v oklepaj.</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-1">
+              <h4>Tip 1: Poimenuj kislino, bazo ali sol oziroma zapiši njeno formulo</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Zapiši formulo železovega(III) sulfata(VI) in poimenuj spojino <span class="kf">KH<sub>2</sub>PO<sub>4</sub></span>.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> dano je ime in zahtevajo formulo ali obratno; pogosto kot del daljše naloge (zapiši enačbo nevtralizacije, ime produkta).</p><ul class="kljucne"><li>„zapiši formulo“</li><li>„poimenuj“</li><li>„ime soli“</li><li>„hidrogen…“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Prepoznaj kation in anion ter njuna naboja (iz imena kisline: toliko negativnih nabojev, kolikor vodikov je kislina oddala; rimska številka pri kovini je naboj kationa).</p><div class="na-nalogi"><p>železov(III): <span class="kf">Fe<sup>3+</sup></span>; sulfat(VI) iz <span class="kf">H<sub>2</sub>SO<sub>4</sub></span>: <span class="kf">SO<sub>4</sub><sup>2−</sup></span>.</p></div></li>
+              <li><p class="korak">Vsota nabojev mora biti nič: poišči najmanjši skupni večkratnik nabojev.</p><div class="na-nalogi"><p>NSV(3, 2) = 6: 2 <span class="kf">Fe<sup>3+</sup></span> in 3 <span class="kf">SO<sub>4</sub><sup>2−</sup></span>.</p></div></li>
+              <li><p class="korak">Zapiši formulo; večatomni ion, ki se ponovi, daj v oklepaj.</p><div class="na-nalogi"><p><span class="kf">Fe<sub>2</sub>(SO<sub>4</sub>)<sub>3</sub></span></p></div></li>
+              <li><p class="korak">Pri poimenovanju najprej kation (pridevnik), nato anion; vodike v anionu označi s hidrogen ali dihidrogen.</p><div class="na-nalogi"><p><span class="kf">KH<sub>2</sub>PO<sub>4</sub></span>: <span class="kf">K<sup>+</sup></span> in <span class="kf">H<sub>2</sub>PO<sub>4</sub><sup>−</sup></span> → kalijev dihidrogenfosfat(V).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Formula aluminijevega nitrata(V)?</p><p><span class="kf">Al<sup>3+</sup></span> in <span class="kf">NO<sub>3</sub><sup>−</sup></span>: <span class="kf">Al(NO<sub>3</sub>)<sub>3</sub></span>.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Ime <span class="kf">Cu(NO<sub>2</sub>)<sub>2</sub></span>?</p><p>Bakrov(II) nitrat(III) ali bakrov(II) nitrit.</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Ime <span class="kf">Ca(HCO<sub>3</sub>)<sub>2</sub></span>?</p><p>Kalcijev hidrogenkarbonat (povzroča trdoto vode).</p></div>
+              <div class="primer"><p><strong>Primer 4:</strong> Kaj je HBr(aq) in kaj HBr(g)?</p><p>Bromovodikova kislina oziroma vodikov bromid.</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 2 -->
+        <section class="sklop" id="sklop-2">
+          <header class="sklop-header">
+            <span class="sklop-num">4.9 · 2</span>
+            <h2>Kisline in baze po Brønstedu</h2>
+            <p>Protolitske reakcije, konjugirani pari in moč kislin.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <p>Kisline imajo kisel okus, so jedke in obarvajo lakmus rdeče; baze (alkalije) so na otip milnate in obarvajo lakmus modro; med seboj se nevtralizirajo. Po <strong>Arrheniusu</strong> (1884) je kislina snov, ki v vodi tvori ione <span class="kf">H<sup>+</sup></span> (HCl, <span class="kf">H<sub>2</sub>SO<sub>4</sub></span>), baza pa snov, ki v vodi tvori ione <span class="kf">OH<sup>−</sup></span> (NaOH, <span class="kf">Ca(OH)<sub>2</sub></span>); nevtralizacija je <span class="ke">H<sup>+</sup> + OH<sup>−</sup>&nbsp;→ H<sub>2</sub>O</span>. Ta teorija velja le za vodne raztopine in ne pojasni bazičnosti amoniaka ali natrijevega karbonata, ki nimata skupine OH. Splošnejša je Brønsted-Lowryjeva teorija.</p>
+            <p>Po Brønstedovi teoriji je <strong>kislina</strong> delec, ki odda proton (<span class="kf">H<sup>+</sup></span>), <strong>baza</strong> pa delec, ki proton sprejme. Reakcija, pri kateri se proton prenese s kisline na bazo, je <strong>protolitska reakcija</strong>:</p>
+            <p><span class="ke">HCl + H<sub>2</sub>O&nbsp;→ H<sub>3</sub>O<sup>+</sup> + Cl<sup>−</sup></span> &nbsp; (HCl je kislina, voda baza)</p>
+            <p><span class="ke">NH<sub>3</sub> + H<sub>2</sub>O&nbsp;⇌ NH<sub>4</sub><sup>+</sup> + OH<sup>−</sup></span> &nbsp; (amonijak je baza, voda kislina)</p>
+            <p>Ko kislina odda proton, postane <strong>konjugirana baza</strong>; ko baza sprejme proton, postane <strong>konjugirana kislina</strong>. <span class="kf">HCl</span> in <span class="kf">Cl<sup>−</sup></span> sta konjugirani par, prav tako <span class="kf">H<sub>3</sub>O<sup>+</sup></span> in <span class="kf">H<sub>2</sub>O</span>. Konjugirana para se vedno razlikujeta za en <span class="kf">H<sup>+</sup></span>. Voda je <strong>amfoterna</strong>: proti kislini deluje kot baza, proti bazi kot kislina. Amfoterni so tudi <span class="kf">HCO<sub>3</sub><sup>−</sup></span>, <span class="kf">HSO<sub>4</sub><sup>−</sup></span>, <span class="kf">H<sub>2</sub>PO<sub>4</sub><sup>−</sup></span>.</p>
+            <p>Raztopine kislin in baz prevajajo električni tok, ker vsebujejo ione: so <strong>elektroliti</strong>. <strong>Močne kisline</strong> (<span class="kf">HCl</span>, <span class="kf">HBr</span>, <span class="kf">HI</span>, <span class="kf">HNO<sub>3</sub></span>, <span class="kf">H<sub>2</sub>SO<sub>4</sub></span>, <span class="kf">HClO<sub>4</sub></span>) v vodi popolnoma protolizirajo (enojna puščica), <strong>šibke</strong> (ocetna, ogljikova, fluorovodikova, fosforjeva) le delno; vzpostavi se ravnotežje. Moč opisuje <strong>konstanta kisline</strong> \(K_a\): večja \(K_a\) pomeni močnejšo kislino. Pri bazah enako velja za \(K_b\). Močnejša kot je kislina, šibkejša je njena konjugirana baza (\(K_a \cdot K_b = K_w\)).</p>
+            <div class="tabela-wrap">
+              <table class="tabela">
+                <thead><tr><th>Kislina</th><th>\(K_a\)</th><th>Konjugirana baza</th></tr></thead>
+                <tbody>
+                  <tr><td>fluorovodikova <span class="kf">HF</span></td><td>\(6{,}8 \cdot 10^{-4}\)</td><td><span class="kf">F<sup>−</sup></span></td></tr>
+                  <tr><td>ocetna <span class="kf">CH<sub>3</sub>COOH</span></td><td>\(1{,}8 \cdot 10^{-5}\)</td><td><span class="kf">CH<sub>3</sub>COO<sup>−</sup></span></td></tr>
+                  <tr><td>amonijev ion <span class="kf">NH<sub>4</sub><sup>+</sup></span></td><td>\(5{,}6 \cdot 10^{-10}\)</td><td><span class="kf">NH<sub>3</sub></span></td></tr>
+                  <tr><td>cianovodikova <span class="kf">HCN</span></td><td>\(4{,}9 \cdot 10^{-10}\)</td><td><span class="kf">CN<sup>−</sup></span></td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p><strong>Vpliv na okolje:</strong> pri gorenju fosilnih goriv nastajata <span class="kf">SO<sub>2</sub></span> in dušikovi oksidi, ki z vodo v ozračju tvorijo kisline. <strong>Kisel dež</strong> (pH pod 5,6) zakisa jezera in prst, poškoduje gozdove ter raztaplja apnenec in kovine.</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-2">
+              <h4>Tip 2: Zapiši protolitsko reakcijo in določi konjugirane pare</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Zapiši enačbo protolitske reakcije hidrogenkarbonatnega iona z vodo, v kateri ion deluje kot baza. Označi oba konjugirana para.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> sprašujejo, kaj je v reakciji kislina in kaj baza, za konjugirano kislino ali bazo ali za enačbo reakcije z vodo.</p><ul class="kljucne"><li>„protolitska reakcija“</li><li>„konjugirani par“</li><li>„Brønstedova kislina, baza“</li><li>„amfoterna“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Ugotovi, kdo proton odda (kislina) in kdo ga sprejme (baza).</p><div class="na-nalogi"><p><span class="kf">HCO<sub>3</sub><sup>−</sup></span> kot baza sprejme proton, voda ga odda.</p></div></li>
+              <li><p class="korak">Kislini odvzemi <span class="kf">H<sup>+</sup></span> (naboj se zmanjša za 1), bazi ga dodaj (naboj se poveča za 1).</p><div class="na-nalogi"><p><span class="kf">HCO<sub>3</sub><sup>−</sup></span> → <span class="kf">H<sub>2</sub>CO<sub>3</sub></span>; <span class="kf">H<sub>2</sub>O</span> → <span class="kf">OH<sup>−</sup></span>.</p></div></li>
+              <li><p class="korak">Zapiši enačbo (šibki elektroliti z ⇌).</p><div class="na-nalogi"><p><span class="ke">HCO<sub>3</sub><sup>−</sup> + H<sub>2</sub>O&nbsp;⇌ H<sub>2</sub>CO<sub>3</sub> + OH<sup>−</sup></span></p></div></li>
+              <li><p class="korak">Zapiši konjugirana para (kislina/baza).</p><div class="na-nalogi"><p><span class="kf">H<sub>2</sub>CO<sub>3</sub></span>/<span class="kf">HCO<sub>3</sub><sup>−</sup></span> in <span class="kf">H<sub>2</sub>O</span>/<span class="kf">OH<sup>−</sup></span>.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Konjugirana baza <span class="kf">H<sub>2</sub>PO<sub>4</sub><sup>−</sup></span>?</p><p><span class="kf">HPO<sub>4</sub><sup>2−</sup></span> (odvzamemo en <span class="kf">H<sup>+</sup></span>).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Kaj je kislina v <span class="ke">NH<sub>4</sub><sup>+</sup> + OH<sup>−</sup>&nbsp;⇌ NH<sub>3</sub> + H<sub>2</sub>O</span>?</p><p><span class="kf">NH<sub>4</sub><sup>+</sup></span> (odda proton <span class="kf">OH<sup>−</sup></span>).</p></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-3">
+              <h4>Tip 3: Primerjaj moč kislin ali baz s \(K_a\) in \(K_b\)</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Z uporabo tabele razvrsti kisline <span class="kf">HF</span>, <span class="kf">CH<sub>3</sub>COOH</span> in <span class="kf">HCN</span> po naraščajoči moči. Katera konjugirana baza je najmočnejša? Katera 0,1 M raztopina ima najnižji pH?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> podane so \(K_a\) ali \(K_b\) (ali \(pK_a\)), sprašujejo za moč, primerjavo pH ali smer ravnotežja.</p><ul class="kljucne"><li>„\(K_a\)“, „\(K_b\)“</li><li>„najmočnejša kislina“</li><li>„šibka, močna“</li><li>„konjugirana baza“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Uredi po \(K_a\): večja \(K_a\) = močnejša kislina (pri \(pK_a\) obratno: manjši \(pK_a\) = močnejša).</p><div class="na-nalogi"><p><span class="kf">HCN</span> (\(4{,}9 \cdot 10^{-10}\)) &lt; <span class="kf">CH<sub>3</sub>COOH</span> (\(1{,}8 \cdot 10^{-5}\)) &lt; <span class="kf">HF</span> (\(6{,}8 \cdot 10^{-4}\)).</p></div></li>
+              <li><p class="korak">Najšibkejša kislina ima najmočnejšo konjugirano bazo.</p><div class="na-nalogi"><p><span class="kf">CN<sup>−</sup></span> je najmočnejša baza.</p></div></li>
+              <li><p class="korak">Pri enaki koncentraciji ima najmočnejša kislina največ <span class="kf">H<sub>3</sub>O<sup>+</sup></span> in najnižji pH.</p><div class="na-nalogi"><p>Najnižji pH ima raztopina <span class="kf">HF</span>.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Zakaj 0,1 M <span class="kf">HCl</span> bolje prevaja tok kot 0,1 M ocetna kislina?</p><p><span class="kf">HCl</span> je močna kislina in popolnoma protolizira, zato je ionov več.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> \(K_b\) za <span class="kf">CH<sub>3</sub>COO<sup>−</sup></span>?</p><p>\(K_w/K_a = 10^{-14}/1{,}8 \cdot 10^{-5} = 5{,}6 \cdot 10^{-10}\).</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 3 -->
+        <section class="sklop" id="sklop-3">
+          <header class="sklop-header">
+            <span class="sklop-num">4.9 · 3</span>
+            <h2>Ionski produkt vode in pH</h2>
+            <p>Kako izmerimo kislost in kako izračunamo pH.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <p>Tudi čista voda vsebuje malo ionov, ker molekule vode med seboj izmenjujejo protone (avtoprotoliza): <span class="ke">2H<sub>2</sub>O&nbsp;⇌ H<sub>3</sub>O<sup>+</sup> + OH<sup>−</sup></span>. Produkt koncentracij je pri 25 °C stalen: \(K_w = [\text{H}_3\text{O}^+][\text{OH}^-] = 1{,}0 \cdot 10^{-14}\). V čisti vodi sta koncentraciji enaki, \(10^{-7}\) mol/L.</p>
+            <p>V kisli raztopini je \([\text{H}_3\text{O}^+] \gt [\text{OH}^-]\), v bazični obratno; zmnožek pa je vedno \(10^{-14}\). Ker so koncentracije zelo majhne, jih izrazimo z logaritmom: \(\text{pH} = -\log[\text{H}_3\text{O}^+]\).</p>
+            <figure class="slika slika--siroka">
+<svg viewBox="0 0 560 140" role="img" aria-label="Lestvica pH" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="phg" x1="0" x2="1"><stop offset="0.000" stop-color="#DC2626"/><stop offset="0.071" stop-color="#EA580C"/><stop offset="0.143" stop-color="#F59E0B"/><stop offset="0.214" stop-color="#EAB308"/><stop offset="0.286" stop-color="#A3E635"/><stop offset="0.357" stop-color="#4ADE80"/><stop offset="0.429" stop-color="#22C55E"/><stop offset="0.500" stop-color="#14B8A6"/><stop offset="0.571" stop-color="#0EA5E9"/><stop offset="0.643" stop-color="#3B82F6"/><stop offset="0.714" stop-color="#6366F1"/><stop offset="0.786" stop-color="#7C3AED"/><stop offset="0.857" stop-color="#9333EA"/><stop offset="0.929" stop-color="#7E22CE"/><stop offset="1.000" stop-color="#6B21A8"/></linearGradient></defs><rect x="20" y="60" width="520" height="26" rx="4" fill="url(#phg)"/><text class="s-txt-b" x="20" y="104" text-anchor="middle" style="font-size:12px">0</text><text class="s-txt-b" x="57.14285714285714" y="104" text-anchor="middle" style="font-size:12px">1</text><text class="s-txt-b" x="94.28571428571428" y="104" text-anchor="middle" style="font-size:12px">2</text><text class="s-txt-b" x="131.42857142857142" y="104" text-anchor="middle" style="font-size:12px">3</text><text class="s-txt-b" x="168.57142857142856" y="104" text-anchor="middle" style="font-size:12px">4</text><text class="s-txt-b" x="205.71428571428572" y="104" text-anchor="middle" style="font-size:12px">5</text><text class="s-txt-b" x="242.85714285714283" y="104" text-anchor="middle" style="font-size:12px">6</text><text class="s-txt-b" x="280" y="104" text-anchor="middle" style="font-size:12px">7</text><text class="s-txt-b" x="317.1428571428571" y="104" text-anchor="middle" style="font-size:12px">8</text><text class="s-txt-b" x="354.28571428571433" y="104" text-anchor="middle" style="font-size:12px">9</text><text class="s-txt-b" x="391.42857142857144" y="104" text-anchor="middle" style="font-size:12px">10</text><text class="s-txt-b" x="428.57142857142856" y="104" text-anchor="middle" style="font-size:12px">11</text><text class="s-txt-b" x="465.71428571428567" y="104" text-anchor="middle" style="font-size:12px">12</text><text class="s-txt-b" x="502.8571428571429" y="104" text-anchor="middle" style="font-size:12px">13</text><text class="s-txt-b" x="540" y="104" text-anchor="middle" style="font-size:12px">14</text><line class="s-crta" x1="57.14285714285714" y1="52" x2="57.14285714285714" y2="60"/><text class="s-txt-muted" x="57.14285714285714" y="44" text-anchor="middle" style="font-size:11px">želodčni sok</text><line class="s-crta" x1="109.14285714285714" y1="90" x2="109.14285714285714" y2="114"/><text class="s-txt-muted" x="109.14285714285714" y="128" text-anchor="middle" style="font-size:11px">limonin sok</text><line class="s-crta" x1="131.42857142857142" y1="52" x2="131.42857142857142" y2="60"/><text class="s-txt-muted" x="131.42857142857142" y="44" text-anchor="middle" style="font-size:11px">kis</text><line class="s-crta" x1="227.99999999999997" y1="90" x2="227.99999999999997" y2="114"/><text class="s-txt-muted" x="227.99999999999997" y="128" text-anchor="middle" style="font-size:11px">deževnica</text><line class="s-crta" x1="280" y1="52" x2="280" y2="60"/><text class="s-txt-muted" x="280" y="44" text-anchor="middle" style="font-size:11px">čista voda</text><line class="s-crta" x1="328.2857142857143" y1="90" x2="328.2857142857143" y2="114"/><text class="s-txt-muted" x="328.2857142857143" y="128" text-anchor="middle" style="font-size:11px">morska voda</text><line class="s-crta" x1="447.1428571428571" y1="52" x2="447.1428571428571" y2="60"/><text class="s-txt-muted" x="447.1428571428571" y="44" text-anchor="middle" style="font-size:11px">amonijak (čistilo)</text><line class="s-crta" x1="521.4285714285714" y1="90" x2="521.4285714285714" y2="114"/><text class="s-txt-muted" x="521.4285714285714" y="128" text-anchor="middle" style="font-size:11px">NaOH (1 M)</text><text class="s-txt-k2" x="20" y="18" style="font-size:12px">kislo</text><text class="s-txt-k3" x="280" y="18" text-anchor="middle" style="font-size:12px">nevtralno</text><text class="s-txt-k1" x="540" y="18" text-anchor="end" style="font-size:12px">bazično</text></svg>
+<figcaption>Lestvica pH s primeri. Pri 25 °C je raztopina kisla pod pH 7, nevtralna pri pH 7 in bazična nad pH 7. Sprememba za 1 enoto pH pomeni desetkratno spremembo koncentracije oksonijevih ionov.</figcaption>
+</figure>
+            <p>Za <strong>močne kisline in baze</strong> je račun preprost, ker so popolnoma protolizirane: v 0,010 M <span class="kf">HCl</span> je \([\text{H}_3\text{O}^+] = 0{,}010\) mol/L in pH = 2. Pri bazah izračunamo najprej pOH, nato pH = 14 − pOH. Pri redčenju za faktor 10 se pH kisline poveča za 1 (pri bazi zmanjša za 1), a nikoli ne preide čez 7.</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-4">
+              <h4>Tip 4: Izračunaj pH raztopine močne kisline ali baze</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Izračunaj pH raztopine, ki jo dobimo, če 0,20 g natrijevega hidroksida raztopimo v vodi in dopolnimo do 500 mL.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> podana je koncentracija ali masa močne kisline ali baze (ali pH), iskani so pH, pOH, \([\text{H}_3\text{O}^+]\) ali \([\text{OH}^-]\).</p><ul class="kljucne"><li>„izračunaj pH“</li><li>„koncentracija oksonijevih ionov“</li><li>„pOH“</li><li>„razredčimo“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Izračunaj koncentracijo kisline ali baze.</p><div class="na-nalogi"><p>\(n = 0{,}20/40{,}0 = 0{,}0050\ \text{mol}\); \(c = 0{,}0050/0{,}500 = 0{,}010\ \text{mol/L}\)</p></div></li>
+              <li><p class="korak">Iz nje zapiši \([\text{H}_3\text{O}^+]\) ali \([\text{OH}^-]\) (upoštevaj število <span class="kf">H<sup>+</sup></span> ali <span class="kf">OH<sup>−</sup></span> v formuli).</p><div class="na-nalogi"><p>NaOH: \([\text{OH}^-] = 0{,}010\ \text{mol/L}\)</p></div></li>
+              <li><p class="korak">Izračunaj pH (pri bazi prek pOH).</p><div class="na-nalogi"><p>\(\text{pOH} = -\log 0{,}010 = 2{,}00\); \(\text{pH} = 14 - 2{,}00 = 12{,}00\)</p></div></li>
+              <li><p class="korak">Preveri smiselnost: baza mora imeti pH nad 7.</p><div class="na-nalogi"><p>12 &gt; 7, raztopina je bazična.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> pH je 3,40. Kolikšna je \([\text{H}_3\text{O}^+]\)?</p><p>\(10^{-3{,}40} = 4{,}0 \cdot 10^{-4}\ \text{mol/L}\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> 10,0 mL 0,10 M <span class="kf">HCl</span> razredčimo na 1,00 L. pH?</p><p>\(c = 0{,}0010\ \text{mol/L}\), pH = 3,00.</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 4 -->
+        <section class="sklop" id="sklop-4">
+          <header class="sklop-header">
+            <span class="sklop-num">4.9 · 4</span>
+            <h2>Indikatorji in kislinsko-bazne titracije</h2>
+            <p>Nevtralizacija, ekvivalentna točka, izbira indikatorja.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <p><strong>Indikatorji</strong> so šibke organske kisline ali baze, pri katerih ima kislinska oblika drugačno barvo kot bazična. Barvo spremenijo v ozkem območju pH (<strong>območje preskoka</strong>):</p>
+            <div class="tabela-wrap">
+              <table class="tabela">
+                <thead><tr><th>Indikator</th><th>Barva v kislem</th><th>Območje preskoka (pH)</th><th>Barva v bazičnem</th></tr></thead>
+                <tbody>
+                  <tr><td>metiloranž</td><td>rdeča</td><td>3,1 do 4,4</td><td>rumena</td></tr>
+                  <tr><td>lakmus</td><td>rdeča</td><td>5,0 do 8,0</td><td>modra</td></tr>
+                  <tr><td>fenolftalein</td><td>brezbarven</td><td>8,2 do 10,0</td><td>rožnat (vijoličast)</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p><strong>Nevtralizacija</strong> je reakcija kisline z bazo, pri kateri nastaneta sol in voda; bistvo je <span class="ke">H<sub>3</sub>O<sup>+</sup> + OH<sup>−</sup>&nbsp;→ 2H<sub>2</sub>O</span>. <strong>Titracija</strong> je postopek, s katerim določimo neznano koncentracijo raztopine: iz birete dodajamo raztopino z znano koncentracijo (<strong>titrant</strong>) k natančno odmerjeni prostornini vzorca, dokler indikator ne spremeni barve. Tedaj smo dosegli <strong>ekvivalentno točko</strong>: množini kisline in baze sta v razmerju koeficientov iz enačbe.</p>
+            <figure class="slika slika--siroka">
+<svg viewBox="0 0 500 330" role="img" aria-label="Titracijski krivulji" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g1-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g1-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g1-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g1-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g1-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g1-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<path class="s-mreza" d="M32,298V32M75.6,298V32M119.2,298V32M162.8,298V32M206.4,298V32M250,298V32M293.6,298V32M337.2,298V32M380.8,298V32M424.4,298V32M468,298V32M32,298H468M32,279H468M32,260H468M32,241H468M32,222H468M32,203H468M32,184H468M32,165H468M32,146H468M32,127H468M32,108H468M32,89H468M32,70H468M32,51H468M32,32H468"/>
+<polygon class="s-ploskev-2" points="32,108 34.2,108 36.4,108 38.5,108 40.7,108 42.9,108 45.1,108 47.3,108 49.4,108 51.6,108 53.8,108 56,108 58.2,108 60.3,108 62.5,108 64.7,108 66.9,108 69.1,108 71.2,108 73.4,108 75.6,108 77.8,108 80,108 82.1,108 84.3,108 86.5,108 88.7,108 90.9,108 93,108 95.2,108 97.4,108 99.6,108 101.8,108 103.9,108 106.1,108 108.3,108 110.5,108 112.7,108 114.8,108 117,108 119.2,108 121.4,108 123.6,108 125.7,108 127.9,108 130.1,108 132.3,108 134.5,108 136.6,108 138.8,108 141,108 143.2,108 145.4,108 147.5,108 149.7,108 151.9,108 154.1,108 156.3,108 158.4,108 160.6,108 162.8,108 165,108 167.2,108 169.3,108 171.5,108 173.7,108 175.9,108 178.1,108 180.2,108 182.4,108 184.6,108 186.8,108 189,108 191.1,108 193.3,108 195.5,108 197.7,108 199.9,108 202,108 204.2,108 206.4,108 208.6,108 210.8,108 212.9,108 215.1,108 217.3,108 219.5,108 221.7,108 223.8,108 226,108 228.2,108 230.4,108 232.6,108 234.7,108 236.9,108 239.1,108 241.3,108 243.5,108 245.6,108 247.8,108 250,108 252.2,108 254.4,108 256.5,108 258.7,108 260.9,108 263.1,108 265.3,108 267.4,108 269.6,108 271.8,108 274,108 276.2,108 278.3,108 280.5,108 282.7,108 284.9,108 287.1,108 289.2,108 291.4,108 293.6,108 295.8,108 298,108 300.1,108 302.3,108 304.5,108 306.7,108 308.9,108 311,108 313.2,108 315.4,108 317.6,108 319.8,108 321.9,108 324.1,108 326.3,108 328.5,108 330.7,108 332.8,108 335,108 337.2,108 339.4,108 341.6,108 343.7,108 345.9,108 348.1,108 350.3,108 352.5,108 354.6,108 356.8,108 359,108 361.2,108 363.4,108 365.5,108 367.7,108 369.9,108 372.1,108 374.3,108 376.4,108 378.6,108 380.8,108 383,108 385.2,108 387.3,108 389.5,108 391.7,108 393.9,108 396.1,108 398.2,108 400.4,108 402.6,108 404.8,108 407,108 409.1,108 411.3,108 413.5,108 415.7,108 417.9,108 420,108 422.2,108 424.4,108 426.6,108 428.8,108 430.9,108 433.1,108 435.3,108 437.5,108 439.7,108 441.8,108 444,108 446.2,108 448.4,108 450.6,108 452.7,108 454.9,108 457.1,108 459.3,108 461.5,108 463.6,108 465.8,108 468,108 468,142.2 465.8,142.2 463.6,142.2 461.5,142.2 459.3,142.2 457.1,142.2 454.9,142.2 452.7,142.2 450.6,142.2 448.4,142.2 446.2,142.2 444,142.2 441.8,142.2 439.7,142.2 437.5,142.2 435.3,142.2 433.1,142.2 430.9,142.2 428.8,142.2 426.6,142.2 424.4,142.2 422.2,142.2 420,142.2 417.9,142.2 415.7,142.2 413.5,142.2 411.3,142.2 409.1,142.2 407,142.2 404.8,142.2 402.6,142.2 400.4,142.2 398.2,142.2 396.1,142.2 393.9,142.2 391.7,142.2 389.5,142.2 387.3,142.2 385.2,142.2 383,142.2 380.8,142.2 378.6,142.2 376.4,142.2 374.3,142.2 372.1,142.2 369.9,142.2 367.7,142.2 365.5,142.2 363.4,142.2 361.2,142.2 359,142.2 356.8,142.2 354.6,142.2 352.5,142.2 350.3,142.2 348.1,142.2 345.9,142.2 343.7,142.2 341.6,142.2 339.4,142.2 337.2,142.2 335,142.2 332.8,142.2 330.7,142.2 328.5,142.2 326.3,142.2 324.1,142.2 321.9,142.2 319.8,142.2 317.6,142.2 315.4,142.2 313.2,142.2 311,142.2 308.9,142.2 306.7,142.2 304.5,142.2 302.3,142.2 300.1,142.2 298,142.2 295.8,142.2 293.6,142.2 291.4,142.2 289.2,142.2 287.1,142.2 284.9,142.2 282.7,142.2 280.5,142.2 278.3,142.2 276.2,142.2 274,142.2 271.8,142.2 269.6,142.2 267.4,142.2 265.3,142.2 263.1,142.2 260.9,142.2 258.7,142.2 256.5,142.2 254.4,142.2 252.2,142.2 250,142.2 247.8,142.2 245.6,142.2 243.5,142.2 241.3,142.2 239.1,142.2 236.9,142.2 234.7,142.2 232.6,142.2 230.4,142.2 228.2,142.2 226,142.2 223.8,142.2 221.7,142.2 219.5,142.2 217.3,142.2 215.1,142.2 212.9,142.2 210.8,142.2 208.6,142.2 206.4,142.2 204.2,142.2 202,142.2 199.9,142.2 197.7,142.2 195.5,142.2 193.3,142.2 191.1,142.2 189,142.2 186.8,142.2 184.6,142.2 182.4,142.2 180.2,142.2 178.1,142.2 175.9,142.2 173.7,142.2 171.5,142.2 169.3,142.2 167.2,142.2 165,142.2 162.8,142.2 160.6,142.2 158.4,142.2 156.3,142.2 154.1,142.2 151.9,142.2 149.7,142.2 147.5,142.2 145.4,142.2 143.2,142.2 141,142.2 138.8,142.2 136.6,142.2 134.5,142.2 132.3,142.2 130.1,142.2 127.9,142.2 125.7,142.2 123.6,142.2 121.4,142.2 119.2,142.2 117,142.2 114.8,142.2 112.7,142.2 110.5,142.2 108.3,142.2 106.1,142.2 103.9,142.2 101.8,142.2 99.6,142.2 97.4,142.2 95.2,142.2 93,142.2 90.9,142.2 88.7,142.2 86.5,142.2 84.3,142.2 82.1,142.2 80,142.2 77.8,142.2 75.6,142.2 73.4,142.2 71.2,142.2 69.1,142.2 66.9,142.2 64.7,142.2 62.5,142.2 60.3,142.2 58.2,142.2 56,142.2 53.8,142.2 51.6,142.2 49.4,142.2 47.3,142.2 45.1,142.2 42.9,142.2 40.7,142.2 38.5,142.2 36.4,142.2 34.2,142.2 32,142.2"/>
+<polygon class="s-ploskev" points="32,214.4 34.2,214.4 36.4,214.4 38.5,214.4 40.7,214.4 42.9,214.4 45.1,214.4 47.3,214.4 49.4,214.4 51.6,214.4 53.8,214.4 56,214.4 58.2,214.4 60.3,214.4 62.5,214.4 64.7,214.4 66.9,214.4 69.1,214.4 71.2,214.4 73.4,214.4 75.6,214.4 77.8,214.4 80,214.4 82.1,214.4 84.3,214.4 86.5,214.4 88.7,214.4 90.9,214.4 93,214.4 95.2,214.4 97.4,214.4 99.6,214.4 101.8,214.4 103.9,214.4 106.1,214.4 108.3,214.4 110.5,214.4 112.7,214.4 114.8,214.4 117,214.4 119.2,214.4 121.4,214.4 123.6,214.4 125.7,214.4 127.9,214.4 130.1,214.4 132.3,214.4 134.5,214.4 136.6,214.4 138.8,214.4 141,214.4 143.2,214.4 145.4,214.4 147.5,214.4 149.7,214.4 151.9,214.4 154.1,214.4 156.3,214.4 158.4,214.4 160.6,214.4 162.8,214.4 165,214.4 167.2,214.4 169.3,214.4 171.5,214.4 173.7,214.4 175.9,214.4 178.1,214.4 180.2,214.4 182.4,214.4 184.6,214.4 186.8,214.4 189,214.4 191.1,214.4 193.3,214.4 195.5,214.4 197.7,214.4 199.9,214.4 202,214.4 204.2,214.4 206.4,214.4 208.6,214.4 210.8,214.4 212.9,214.4 215.1,214.4 217.3,214.4 219.5,214.4 221.7,214.4 223.8,214.4 226,214.4 228.2,214.4 230.4,214.4 232.6,214.4 234.7,214.4 236.9,214.4 239.1,214.4 241.3,214.4 243.5,214.4 245.6,214.4 247.8,214.4 250,214.4 252.2,214.4 254.4,214.4 256.5,214.4 258.7,214.4 260.9,214.4 263.1,214.4 265.3,214.4 267.4,214.4 269.6,214.4 271.8,214.4 274,214.4 276.2,214.4 278.3,214.4 280.5,214.4 282.7,214.4 284.9,214.4 287.1,214.4 289.2,214.4 291.4,214.4 293.6,214.4 295.8,214.4 298,214.4 300.1,214.4 302.3,214.4 304.5,214.4 306.7,214.4 308.9,214.4 311,214.4 313.2,214.4 315.4,214.4 317.6,214.4 319.8,214.4 321.9,214.4 324.1,214.4 326.3,214.4 328.5,214.4 330.7,214.4 332.8,214.4 335,214.4 337.2,214.4 339.4,214.4 341.6,214.4 343.7,214.4 345.9,214.4 348.1,214.4 350.3,214.4 352.5,214.4 354.6,214.4 356.8,214.4 359,214.4 361.2,214.4 363.4,214.4 365.5,214.4 367.7,214.4 369.9,214.4 372.1,214.4 374.3,214.4 376.4,214.4 378.6,214.4 380.8,214.4 383,214.4 385.2,214.4 387.3,214.4 389.5,214.4 391.7,214.4 393.9,214.4 396.1,214.4 398.2,214.4 400.4,214.4 402.6,214.4 404.8,214.4 407,214.4 409.1,214.4 411.3,214.4 413.5,214.4 415.7,214.4 417.9,214.4 420,214.4 422.2,214.4 424.4,214.4 426.6,214.4 428.8,214.4 430.9,214.4 433.1,214.4 435.3,214.4 437.5,214.4 439.7,214.4 441.8,214.4 444,214.4 446.2,214.4 448.4,214.4 450.6,214.4 452.7,214.4 454.9,214.4 457.1,214.4 459.3,214.4 461.5,214.4 463.6,214.4 465.8,214.4 468,214.4 468,239.1 465.8,239.1 463.6,239.1 461.5,239.1 459.3,239.1 457.1,239.1 454.9,239.1 452.7,239.1 450.6,239.1 448.4,239.1 446.2,239.1 444,239.1 441.8,239.1 439.7,239.1 437.5,239.1 435.3,239.1 433.1,239.1 430.9,239.1 428.8,239.1 426.6,239.1 424.4,239.1 422.2,239.1 420,239.1 417.9,239.1 415.7,239.1 413.5,239.1 411.3,239.1 409.1,239.1 407,239.1 404.8,239.1 402.6,239.1 400.4,239.1 398.2,239.1 396.1,239.1 393.9,239.1 391.7,239.1 389.5,239.1 387.3,239.1 385.2,239.1 383,239.1 380.8,239.1 378.6,239.1 376.4,239.1 374.3,239.1 372.1,239.1 369.9,239.1 367.7,239.1 365.5,239.1 363.4,239.1 361.2,239.1 359,239.1 356.8,239.1 354.6,239.1 352.5,239.1 350.3,239.1 348.1,239.1 345.9,239.1 343.7,239.1 341.6,239.1 339.4,239.1 337.2,239.1 335,239.1 332.8,239.1 330.7,239.1 328.5,239.1 326.3,239.1 324.1,239.1 321.9,239.1 319.8,239.1 317.6,239.1 315.4,239.1 313.2,239.1 311,239.1 308.9,239.1 306.7,239.1 304.5,239.1 302.3,239.1 300.1,239.1 298,239.1 295.8,239.1 293.6,239.1 291.4,239.1 289.2,239.1 287.1,239.1 284.9,239.1 282.7,239.1 280.5,239.1 278.3,239.1 276.2,239.1 274,239.1 271.8,239.1 269.6,239.1 267.4,239.1 265.3,239.1 263.1,239.1 260.9,239.1 258.7,239.1 256.5,239.1 254.4,239.1 252.2,239.1 250,239.1 247.8,239.1 245.6,239.1 243.5,239.1 241.3,239.1 239.1,239.1 236.9,239.1 234.7,239.1 232.6,239.1 230.4,239.1 228.2,239.1 226,239.1 223.8,239.1 221.7,239.1 219.5,239.1 217.3,239.1 215.1,239.1 212.9,239.1 210.8,239.1 208.6,239.1 206.4,239.1 204.2,239.1 202,239.1 199.9,239.1 197.7,239.1 195.5,239.1 193.3,239.1 191.1,239.1 189,239.1 186.8,239.1 184.6,239.1 182.4,239.1 180.2,239.1 178.1,239.1 175.9,239.1 173.7,239.1 171.5,239.1 169.3,239.1 167.2,239.1 165,239.1 162.8,239.1 160.6,239.1 158.4,239.1 156.3,239.1 154.1,239.1 151.9,239.1 149.7,239.1 147.5,239.1 145.4,239.1 143.2,239.1 141,239.1 138.8,239.1 136.6,239.1 134.5,239.1 132.3,239.1 130.1,239.1 127.9,239.1 125.7,239.1 123.6,239.1 121.4,239.1 119.2,239.1 117,239.1 114.8,239.1 112.7,239.1 110.5,239.1 108.3,239.1 106.1,239.1 103.9,239.1 101.8,239.1 99.6,239.1 97.4,239.1 95.2,239.1 93,239.1 90.9,239.1 88.7,239.1 86.5,239.1 84.3,239.1 82.1,239.1 80,239.1 77.8,239.1 75.6,239.1 73.4,239.1 71.2,239.1 69.1,239.1 66.9,239.1 64.7,239.1 62.5,239.1 60.3,239.1 58.2,239.1 56,239.1 53.8,239.1 51.6,239.1 49.4,239.1 47.3,239.1 45.1,239.1 42.9,239.1 40.7,239.1 38.5,239.1 36.4,239.1 34.2,239.1 32,239.1"/>
+<line class="s-os" x1="32" y1="298" x2="476" y2="298" marker-end="url(#g1-p)"/>
+<line class="s-os" x1="32" y1="298" x2="32" y2="24" marker-end="url(#g1-p)"/>
+<text class="s-os-txt" x="470" y="290" text-anchor="end">V(NaOH) / mL</text>
+<text class="s-os-txt" x="40" y="36">pH</text>
+<line class="s-asim" x1="250" y1="298" x2="250" y2="41.5"/>
+<path class="s-k1" d="M32,279L32.5,279L33.1,278.9L33.6,278.9L34.2,278.8L34.7,278.8L35.3,278.8L35.8,278.7L36.4,278.7L36.9,278.6L37.5,278.6L38,278.5L38.5,278.5L39.1,278.5L39.6,278.4L40.2,278.4L40.7,278.3L41.3,278.3L41.8,278.3L42.4,278.2L42.9,278.2L43.4,278.1L44,278.1L44.5,278.1L45.1,278L45.6,278L46.2,277.9L46.7,277.9L47.3,277.8L47.8,277.8L48.4,277.8L48.9,277.7L49.4,277.7L50,277.6L50.5,277.6L51.1,277.6L51.6,277.5L52.2,277.5L52.7,277.4L53.3,277.4L53.8,277.3L54.3,277.3L54.9,277.3L55.4,277.2L56,277.2L56.5,277.1L57.1,277.1L57.6,277.1L58.2,277L58.7,277L59.3,276.9L59.8,276.9L60.3,276.8L60.9,276.8L61.4,276.8L62,276.7L62.5,276.7L63.1,276.6L63.6,276.6L64.2,276.5L64.7,276.5L65.2,276.5L65.8,276.4L66.3,276.4L66.9,276.3L67.4,276.3L68,276.3L68.5,276.2L69.1,276.2L69.6,276.1L70.2,276.1L70.7,276L71.2,276L71.8,276L72.3,275.9L72.9,275.9L73.4,275.8L74,275.8L74.5,275.7L75.1,275.7L75.6,275.7L76.1,275.6L76.7,275.6L77.2,275.5L77.8,275.5L78.3,275.4L78.9,275.4L79.4,275.4L80,275.3L80.5,275.3L81.1,275.2L81.6,275.2L82.1,275.1L82.7,275.1L83.2,275L83.8,275L84.3,275L84.9,274.9L85.4,274.9L86,274.8L86.5,274.8L87,274.7L87.6,274.7L88.1,274.7L88.7,274.6L89.2,274.6L89.8,274.5L90.3,274.5L90.9,274.4L91.4,274.4L92,274.3L92.5,274.3L93,274.3L93.6,274.2L94.1,274.2L94.7,274.1L95.2,274.1L95.8,274L96.3,274L96.9,273.9L97.4,273.9L97.9,273.8L98.5,273.8L99,273.8L99.6,273.7L100.1,273.7L100.7,273.6L101.2,273.6L101.8,273.5L102.3,273.5L102.9,273.4L103.4,273.4L103.9,273.3L104.5,273.3L105,273.2L105.6,273.2L106.1,273.2L106.7,273.1L107.2,273.1L107.8,273L108.3,273L108.8,272.9L109.4,272.9L109.9,272.8L110.5,272.8L111,272.7L111.6,272.7L112.1,272.6L112.7,272.6L113.2,272.5L113.8,272.5L114.3,272.4L114.8,272.4L115.4,272.3L115.9,272.3L116.5,272.3L117,272.2L117.6,272.2L118.1,272.1L118.7,272.1L119.2,272L119.7,272L120.3,271.9L120.8,271.9L121.4,271.8L121.9,271.8L122.5,271.7L123,271.7L123.6,271.6L124.1,271.6L124.7,271.5L125.2,271.5L125.7,271.4L126.3,271.4L126.8,271.3L127.4,271.3L127.9,271.2L128.5,271.2L129,271.1L129.6,271.1L130.1,271L130.6,270.9L131.2,270.9L131.7,270.8L132.3,270.8L132.8,270.7L133.4,270.7L133.9,270.6L134.5,270.6L135,270.5L135.6,270.5L136.1,270.4L136.6,270.4L137.2,270.3L137.7,270.3L138.3,270.2L138.8,270.2L139.4,270.1L139.9,270L140.5,270L141,269.9L141.5,269.9L142.1,269.8L142.6,269.8L143.2,269.7L143.7,269.7L144.3,269.6L144.8,269.5L145.4,269.5L145.9,269.4L146.5,269.4L147,269.3L147.5,269.3L148.1,269.2L148.6,269.1L149.2,269.1L149.7,269L150.3,269L150.8,268.9L151.4,268.9L151.9,268.8L152.4,268.7L153,268.7L153.5,268.6L154.1,268.6L154.6,268.5L155.2,268.4L155.7,268.4L156.3,268.3L156.8,268.3L157.4,268.2L157.9,268.1L158.4,268.1L159,268L159.5,267.9L160.1,267.9L160.6,267.8L161.2,267.8L161.7,267.7L162.3,267.6L162.8,267.6L163.3,267.5L163.9,267.4L164.4,267.4L165,267.3L165.5,267.2L166.1,267.2L166.6,267.1L167.2,267L167.7,267L168.3,266.9L168.8,266.8L169.3,266.8L169.9,266.7L170.4,266.6L171,266.6L171.5,266.5L172.1,266.4L172.6,266.3L173.2,266.3L173.7,266.2L174.2,266.1L174.8,266.1L175.3,266L175.9,265.9L176.4,265.8L177,265.8L177.5,265.7L178.1,265.6L178.6,265.5L179.2,265.5L179.7,265.4L180.2,265.3L180.8,265.2L181.3,265.2L181.9,265.1L182.4,265L183,264.9L183.5,264.8L184.1,264.8L184.6,264.7L185.1,264.6L185.7,264.5L186.2,264.4L186.8,264.4L187.3,264.3L187.9,264.2L188.4,264.1L189,264L189.5,263.9L190.1,263.8L190.6,263.8L191.1,263.7L191.7,263.6L192.2,263.5L192.8,263.4L193.3,263.3L193.9,263.2L194.4,263.1L195,263L195.5,262.9L196,262.8L196.6,262.8L197.1,262.7L197.7,262.6L198.2,262.5L198.8,262.4L199.3,262.3L199.9,262.2L200.4,262.1L201,262L201.5,261.9L202,261.7L202.6,261.6L203.1,261.5L203.7,261.4L204.2,261.3L204.8,261.2L205.3,261.1L205.9,261L206.4,260.9L206.9,260.8L207.5,260.6L208,260.5L208.6,260.4L209.1,260.3L209.7,260.2L210.2,260L210.8,259.9L211.3,259.8L211.9,259.7L212.4,259.5L212.9,259.4L213.5,259.3L214,259.1L214.6,259L215.1,258.8L215.7,258.7L216.2,258.6L216.8,258.4L217.3,258.3L217.8,258.1L218.4,258L218.9,257.8L219.5,257.7L220,257.5L220.6,257.3L221.1,257.2L221.7,257L222.2,256.8L222.8,256.7L223.3,256.5L223.8,256.3L224.4,256.1L224.9,255.9L225.5,255.7L226,255.5L226.6,255.3L227.1,255.1L227.7,254.9L228.2,254.7L228.7,254.5L229.3,254.3L229.8,254L230.4,253.8L230.9,253.5L231.5,253.3L232,253L232.6,252.8L233.1,252.5L233.7,252.2L234.2,251.9L234.7,251.6L235.3,251.3L235.8,251L236.4,250.7L236.9,250.3L237.5,250L238,249.6L238.6,249.2L239.1,248.8L239.6,248.3L240.2,247.9L240.7,247.4L241.3,246.9L241.8,246.3L242.4,245.8L242.9,245.1L243.5,244.5L244,243.7L244.6,242.9L245.1,242.1L245.6,241.1L246.2,240L246.7,238.7L247.3,237.2L247.8,235.3L248.4,232.9L248.9,229.6L249.5,223.9L250,165L250.5,106.2L251.1,100.5L251.6,97.1L252.2,94.8L252.7,92.9L253.3,91.4L253.8,90.2L254.4,89.1L254.9,88.1L255.5,87.3L256,86.5L256.5,85.8L257.1,85.1L257.6,84.5L258.2,84L258.7,83.4L259.3,83L259.8,82.5L260.4,82.1L260.9,81.6L261.4,81.3L262,80.9L262.5,80.5L263.1,80.2L263.6,79.9L264.2,79.5L264.7,79.2L265.3,78.9L265.8,78.7L266.4,78.4L266.9,78.1L267.4,77.9L268,77.6L268.5,77.4L269.1,77.2L269.6,77L270.2,76.7L270.7,76.5L271.3,76.3L271.8,76.1L272.3,75.9L272.9,75.7L273.4,75.6L274,75.4L274.5,75.2L275.1,75L275.6,74.9L276.2,74.7L276.7,74.5L277.3,74.4L277.8,74.2L278.3,74.1L278.9,73.9L279.4,73.8L280,73.6L280.5,73.5L281.1,73.4L281.6,73.2L282.2,73.1L282.7,73L283.2,72.8L283.8,72.7L284.3,72.6L284.9,72.5L285.4,72.4L286,72.2L286.5,72.1L287.1,72L287.6,71.9L288.2,71.8L288.7,71.7L289.2,71.6L289.8,71.5L290.3,71.4L290.9,71.3L291.4,71.2L292,71.1L292.5,71L293.1,70.9L293.6,70.8L294.1,70.7L294.7,70.6L295.2,70.5L295.8,70.4L296.3,70.3L296.9,70.2L297.4,70.2L298,70.1L298.5,70L299.1,69.9L299.6,69.8L300.1,69.7L300.7,69.7L301.2,69.6L301.8,69.5L302.3,69.4L302.9,69.4L303.4,69.3L304,69.2L304.5,69.1L305,69.1L305.6,69L306.1,68.9L306.7,68.8L307.2,68.8L307.8,68.7L308.3,68.6L308.9,68.6L309.4,68.5L310,68.4L310.5,68.4L311,68.3L311.6,68.2L312.1,68.2L312.7,68.1L313.2,68.1L313.8,68L314.3,67.9L314.9,67.9L315.4,67.8L315.9,67.7L316.5,67.7L317,67.6L317.6,67.6L318.1,67.5L318.7,67.5L319.2,67.4L319.8,67.3L320.3,67.3L320.9,67.2L321.4,67.2L321.9,67.1L322.5,67.1L323,67L323.6,67L324.1,66.9L324.7,66.9L325.2,66.8L325.8,66.8L326.3,66.7L326.8,66.7L327.4,66.6L327.9,66.6L328.5,66.5L329,66.5L329.6,66.4L330.1,66.4L330.7,66.3L331.2,66.3L331.8,66.2L332.3,66.2L332.8,66.1L333.4,66.1L333.9,66L334.5,66L335,66L335.6,65.9L336.1,65.9L336.7,65.8L337.2,65.8L337.7,65.7L338.3,65.7L338.8,65.7L339.4,65.6L339.9,65.6L340.5,65.5L341,65.5L341.6,65.5L342.1,65.4L342.7,65.4L343.2,65.3L343.7,65.3L344.3,65.3L344.8,65.2L345.4,65.2L345.9,65.1L346.5,65.1L347,65.1L347.6,65L348.1,65L348.6,64.9L349.2,64.9L349.7,64.9L350.3,64.8L350.8,64.8L351.4,64.8L351.9,64.7L352.5,64.7L353,64.7L353.6,64.6L354.1,64.6L354.6,64.6L355.2,64.5L355.7,64.5L356.3,64.4L356.8,64.4L357.4,64.4L357.9,64.3L358.5,64.3L359,64.3L359.5,64.2L360.1,64.2L360.6,64.2L361.2,64.1L361.7,64.1L362.3,64.1L362.8,64.1L363.4,64L363.9,64L364.5,64L365,63.9L365.5,63.9L366.1,63.9L366.6,63.8L367.2,63.8L367.7,63.8L368.3,63.7L368.8,63.7L369.4,63.7L369.9,63.7L370.4,63.6L371,63.6L371.5,63.6L372.1,63.5L372.6,63.5L373.2,63.5L373.7,63.5L374.3,63.4L374.8,63.4L375.4,63.4L375.9,63.3L376.4,63.3L377,63.3L377.5,63.3L378.1,63.2L378.6,63.2L379.2,63.2L379.7,63.2L380.3,63.1L380.8,63.1L381.3,63.1L381.9,63L382.4,63L383,63L383.5,63L384.1,62.9L384.6,62.9L385.2,62.9L385.7,62.9L386.3,62.8L386.8,62.8L387.3,62.8L387.9,62.8L388.4,62.7L389,62.7L389.5,62.7L390.1,62.7L390.6,62.6L391.2,62.6L391.7,62.6L392.2,62.6L392.8,62.5L393.3,62.5L393.9,62.5L394.4,62.5L395,62.5L395.5,62.4L396.1,62.4L396.6,62.4L397.2,62.4L397.7,62.3L398.2,62.3L398.8,62.3L399.3,62.3L399.9,62.2L400.4,62.2L401,62.2L401.5,62.2L402.1,62.2L402.6,62.1L403.1,62.1L403.7,62.1L404.2,62.1L404.8,62.1L405.3,62L405.9,62L406.4,62L407,62L407.5,61.9L408.1,61.9L408.6,61.9L409.1,61.9L409.7,61.9L410.2,61.8L410.8,61.8L411.3,61.8L411.9,61.8L412.4,61.8L413,61.7L413.5,61.7L414,61.7L414.6,61.7L415.1,61.7L415.7,61.6L416.2,61.6L416.8,61.6L417.3,61.6L417.9,61.6L418.4,61.5L419,61.5L419.5,61.5L420,61.5L420.6,61.5L421.1,61.4L421.7,61.4L422.2,61.4L422.8,61.4L423.3,61.4L423.9,61.4L424.4,61.3L424.9,61.3L425.5,61.3L426,61.3L426.6,61.3L427.1,61.2L427.7,61.2L428.2,61.2L428.8,61.2L429.3,61.2L429.9,61.2L430.4,61.1L430.9,61.1L431.5,61.1L432,61.1L432.6,61.1L433.1,61.1L433.7,61L434.2,61L434.8,61L435.3,61L435.8,61L436.4,60.9L436.9,60.9L437.5,60.9L438,60.9L438.6,60.9L439.1,60.9L439.7,60.8L440.2,60.8L440.8,60.8L441.3,60.8L441.8,60.8L442.4,60.8L442.9,60.8L443.5,60.7L444,60.7L444.6,60.7L445.1,60.7L445.7,60.7L446.2,60.7L446.7,60.6L447.3,60.6L447.8,60.6L448.4,60.6L448.9,60.6L449.5,60.6L450,60.5L450.6,60.5L451.1,60.5L451.7,60.5L452.2,60.5L452.7,60.5L453.3,60.5L453.8,60.4L454.4,60.4L454.9,60.4L455.5,60.4L456,60.4L456.6,60.4L457.1,60.3L457.6,60.3L458.2,60.3L458.7,60.3L459.3,60.3L459.8,60.3L460.4,60.3L460.9,60.2L461.5,60.2L462,60.2L462.6,60.2L463.1,60.2L463.6,60.2L464.2,60.2L464.7,60.1L465.3,60.1L465.8,60.1L466.4,60.1L466.9,60.1L467.5,60.1L468,60.1"/>
+<path class="s-k4" d="M32,243.4L32.5,242.6L33.1,241.8L33.6,241L34.2,240.3L34.7,239.6L35.3,238.9L35.8,238.2L36.4,237.5L36.9,236.9L37.5,236.3L38,235.7L38.5,235.2L39.1,234.7L39.6,234.2L40.2,233.7L40.7,233.2L41.3,232.8L41.8,232.4L42.4,232L42.9,231.6L43.4,231.2L44,230.8L44.5,230.5L45.1,230.1L45.6,229.8L46.2,229.5L46.7,229.2L47.3,228.9L47.8,228.6L48.4,228.3L48.9,228L49.4,227.8L50,227.5L50.5,227.2L51.1,227L51.6,226.7L52.2,226.5L52.7,226.3L53.3,226L53.8,225.8L54.3,225.6L54.9,225.4L55.4,225.2L56,225L56.5,224.8L57.1,224.6L57.6,224.4L58.2,224.2L58.7,224L59.3,223.8L59.8,223.6L60.3,223.4L60.9,223.3L61.4,223.1L62,222.9L62.5,222.7L63.1,222.6L63.6,222.4L64.2,222.2L64.7,222.1L65.2,221.9L65.8,221.8L66.3,221.6L66.9,221.5L67.4,221.3L68,221.2L68.5,221L69.1,220.9L69.6,220.7L70.2,220.6L70.7,220.4L71.2,220.3L71.8,220.2L72.3,220L72.9,219.9L73.4,219.8L74,219.6L74.5,219.5L75.1,219.4L75.6,219.2L76.1,219.1L76.7,219L77.2,218.9L77.8,218.7L78.3,218.6L78.9,218.5L79.4,218.4L80,218.3L80.5,218.1L81.1,218L81.6,217.9L82.1,217.8L82.7,217.7L83.2,217.6L83.8,217.4L84.3,217.3L84.9,217.2L85.4,217.1L86,217L86.5,216.9L87,216.8L87.6,216.7L88.1,216.6L88.7,216.5L89.2,216.3L89.8,216.2L90.3,216.1L90.9,216L91.4,215.9L92,215.8L92.5,215.7L93,215.6L93.6,215.5L94.1,215.4L94.7,215.3L95.2,215.2L95.8,215.1L96.3,215L96.9,214.9L97.4,214.8L97.9,214.7L98.5,214.6L99,214.5L99.6,214.4L100.1,214.3L100.7,214.2L101.2,214.1L101.8,214.1L102.3,214L102.9,213.9L103.4,213.8L103.9,213.7L104.5,213.6L105,213.5L105.6,213.4L106.1,213.3L106.7,213.2L107.2,213.1L107.8,213L108.3,212.9L108.8,212.9L109.4,212.8L109.9,212.7L110.5,212.6L111,212.5L111.6,212.4L112.1,212.3L112.7,212.2L113.2,212.1L113.8,212.1L114.3,212L114.8,211.9L115.4,211.8L115.9,211.7L116.5,211.6L117,211.5L117.6,211.4L118.1,211.4L118.7,211.3L119.2,211.2L119.7,211.1L120.3,211L120.8,210.9L121.4,210.8L121.9,210.8L122.5,210.7L123,210.6L123.6,210.5L124.1,210.4L124.7,210.3L125.2,210.2L125.7,210.2L126.3,210.1L126.8,210L127.4,209.9L127.9,209.8L128.5,209.7L129,209.7L129.6,209.6L130.1,209.5L130.6,209.4L131.2,209.3L131.7,209.2L132.3,209.2L132.8,209.1L133.4,209L133.9,208.9L134.5,208.8L135,208.7L135.6,208.7L136.1,208.6L136.6,208.5L137.2,208.4L137.7,208.3L138.3,208.3L138.8,208.2L139.4,208.1L139.9,208L140.5,207.9L141,207.8L141.5,207.8L142.1,207.7L142.6,207.6L143.2,207.5L143.7,207.4L144.3,207.3L144.8,207.3L145.4,207.2L145.9,207.1L146.5,207L147,206.9L147.5,206.9L148.1,206.8L148.6,206.7L149.2,206.6L149.7,206.5L150.3,206.4L150.8,206.4L151.4,206.3L151.9,206.2L152.4,206.1L153,206L153.5,205.9L154.1,205.9L154.6,205.8L155.2,205.7L155.7,205.6L156.3,205.5L156.8,205.4L157.4,205.3L157.9,205.3L158.4,205.2L159,205.1L159.5,205L160.1,204.9L160.6,204.8L161.2,204.8L161.7,204.7L162.3,204.6L162.8,204.5L163.3,204.4L163.9,204.3L164.4,204.2L165,204.2L165.5,204.1L166.1,204L166.6,203.9L167.2,203.8L167.7,203.7L168.3,203.6L168.8,203.5L169.3,203.5L169.9,203.4L170.4,203.3L171,203.2L171.5,203.1L172.1,203L172.6,202.9L173.2,202.8L173.7,202.7L174.2,202.6L174.8,202.6L175.3,202.5L175.9,202.4L176.4,202.3L177,202.2L177.5,202.1L178.1,202L178.6,201.9L179.2,201.8L179.7,201.7L180.2,201.6L180.8,201.5L181.3,201.4L181.9,201.3L182.4,201.2L183,201.1L183.5,201L184.1,201L184.6,200.9L185.1,200.8L185.7,200.7L186.2,200.6L186.8,200.5L187.3,200.4L187.9,200.3L188.4,200.2L189,200.1L189.5,199.9L190.1,199.8L190.6,199.7L191.1,199.6L191.7,199.5L192.2,199.4L192.8,199.3L193.3,199.2L193.9,199.1L194.4,199L195,198.9L195.5,198.8L196,198.7L196.6,198.6L197.1,198.4L197.7,198.3L198.2,198.2L198.8,198.1L199.3,198L199.9,197.9L200.4,197.8L201,197.6L201.5,197.5L202,197.4L202.6,197.3L203.1,197.2L203.7,197L204.2,196.9L204.8,196.8L205.3,196.7L205.9,196.5L206.4,196.4L206.9,196.3L207.5,196.1L208,196L208.6,195.9L209.1,195.7L209.7,195.6L210.2,195.5L210.8,195.3L211.3,195.2L211.9,195.1L212.4,194.9L212.9,194.8L213.5,194.6L214,194.5L214.6,194.3L215.1,194.2L215.7,194L216.2,193.9L216.8,193.7L217.3,193.5L217.8,193.4L218.4,193.2L218.9,193L219.5,192.9L220,192.7L220.6,192.5L221.1,192.3L221.7,192.2L222.2,192L222.8,191.8L223.3,191.6L223.8,191.4L224.4,191.2L224.9,191L225.5,190.8L226,190.6L226.6,190.4L227.1,190.2L227.7,189.9L228.2,189.7L228.7,189.5L229.3,189.2L229.8,189L230.4,188.8L230.9,188.5L231.5,188.2L232,188L232.6,187.7L233.1,187.4L233.7,187.1L234.2,186.8L234.7,186.5L235.3,186.2L235.8,185.8L236.4,185.5L236.9,185.1L237.5,184.8L238,184.4L238.6,184L239.1,183.6L239.6,183.1L240.2,182.6L240.7,182.1L241.3,181.6L241.8,181.1L242.4,180.5L242.9,179.8L243.5,179.2L244,178.4L244.6,177.6L245.1,176.7L245.6,175.7L246.2,174.6L246.7,173.3L247.3,171.8L247.8,169.9L248.4,167.5L248.9,164.2L249.5,158.4L250,132.3L250.5,106.2L251.1,100.5L251.6,97.1L252.2,94.8L252.7,92.9L253.3,91.4L253.8,90.2L254.4,89.1L254.9,88.1L255.5,87.3L256,86.5L256.5,85.8L257.1,85.1L257.6,84.5L258.2,84L258.7,83.4L259.3,83L259.8,82.5L260.4,82.1L260.9,81.6L261.4,81.3L262,80.9L262.5,80.5L263.1,80.2L263.6,79.9L264.2,79.5L264.7,79.2L265.3,78.9L265.8,78.7L266.4,78.4L266.9,78.1L267.4,77.9L268,77.6L268.5,77.4L269.1,77.2L269.6,77L270.2,76.7L270.7,76.5L271.3,76.3L271.8,76.1L272.3,75.9L272.9,75.7L273.4,75.6L274,75.4L274.5,75.2L275.1,75L275.6,74.9L276.2,74.7L276.7,74.5L277.3,74.4L277.8,74.2L278.3,74.1L278.9,73.9L279.4,73.8L280,73.6L280.5,73.5L281.1,73.4L281.6,73.2L282.2,73.1L282.7,73L283.2,72.8L283.8,72.7L284.3,72.6L284.9,72.5L285.4,72.4L286,72.2L286.5,72.1L287.1,72L287.6,71.9L288.2,71.8L288.7,71.7L289.2,71.6L289.8,71.5L290.3,71.4L290.9,71.3L291.4,71.2L292,71.1L292.5,71L293.1,70.9L293.6,70.8L294.1,70.7L294.7,70.6L295.2,70.5L295.8,70.4L296.3,70.3L296.9,70.2L297.4,70.2L298,70.1L298.5,70L299.1,69.9L299.6,69.8L300.1,69.7L300.7,69.7L301.2,69.6L301.8,69.5L302.3,69.4L302.9,69.4L303.4,69.3L304,69.2L304.5,69.1L305,69.1L305.6,69L306.1,68.9L306.7,68.8L307.2,68.8L307.8,68.7L308.3,68.6L308.9,68.6L309.4,68.5L310,68.4L310.5,68.4L311,68.3L311.6,68.2L312.1,68.2L312.7,68.1L313.2,68.1L313.8,68L314.3,67.9L314.9,67.9L315.4,67.8L315.9,67.7L316.5,67.7L317,67.6L317.6,67.6L318.1,67.5L318.7,67.5L319.2,67.4L319.8,67.3L320.3,67.3L320.9,67.2L321.4,67.2L321.9,67.1L322.5,67.1L323,67L323.6,67L324.1,66.9L324.7,66.9L325.2,66.8L325.8,66.8L326.3,66.7L326.8,66.7L327.4,66.6L327.9,66.6L328.5,66.5L329,66.5L329.6,66.4L330.1,66.4L330.7,66.3L331.2,66.3L331.8,66.2L332.3,66.2L332.8,66.1L333.4,66.1L333.9,66L334.5,66L335,66L335.6,65.9L336.1,65.9L336.7,65.8L337.2,65.8L337.7,65.7L338.3,65.7L338.8,65.7L339.4,65.6L339.9,65.6L340.5,65.5L341,65.5L341.6,65.5L342.1,65.4L342.7,65.4L343.2,65.3L343.7,65.3L344.3,65.3L344.8,65.2L345.4,65.2L345.9,65.1L346.5,65.1L347,65.1L347.6,65L348.1,65L348.6,64.9L349.2,64.9L349.7,64.9L350.3,64.8L350.8,64.8L351.4,64.8L351.9,64.7L352.5,64.7L353,64.7L353.6,64.6L354.1,64.6L354.6,64.6L355.2,64.5L355.7,64.5L356.3,64.4L356.8,64.4L357.4,64.4L357.9,64.3L358.5,64.3L359,64.3L359.5,64.2L360.1,64.2L360.6,64.2L361.2,64.1L361.7,64.1L362.3,64.1L362.8,64.1L363.4,64L363.9,64L364.5,64L365,63.9L365.5,63.9L366.1,63.9L366.6,63.8L367.2,63.8L367.7,63.8L368.3,63.7L368.8,63.7L369.4,63.7L369.9,63.7L370.4,63.6L371,63.6L371.5,63.6L372.1,63.5L372.6,63.5L373.2,63.5L373.7,63.5L374.3,63.4L374.8,63.4L375.4,63.4L375.9,63.3L376.4,63.3L377,63.3L377.5,63.3L378.1,63.2L378.6,63.2L379.2,63.2L379.7,63.2L380.3,63.1L380.8,63.1L381.3,63.1L381.9,63L382.4,63L383,63L383.5,63L384.1,62.9L384.6,62.9L385.2,62.9L385.7,62.9L386.3,62.8L386.8,62.8L387.3,62.8L387.9,62.8L388.4,62.7L389,62.7L389.5,62.7L390.1,62.7L390.6,62.6L391.2,62.6L391.7,62.6L392.2,62.6L392.8,62.5L393.3,62.5L393.9,62.5L394.4,62.5L395,62.5L395.5,62.4L396.1,62.4L396.6,62.4L397.2,62.4L397.7,62.3L398.2,62.3L398.8,62.3L399.3,62.3L399.9,62.2L400.4,62.2L401,62.2L401.5,62.2L402.1,62.2L402.6,62.1L403.1,62.1L403.7,62.1L404.2,62.1L404.8,62.1L405.3,62L405.9,62L406.4,62L407,62L407.5,61.9L408.1,61.9L408.6,61.9L409.1,61.9L409.7,61.9L410.2,61.8L410.8,61.8L411.3,61.8L411.9,61.8L412.4,61.8L413,61.7L413.5,61.7L414,61.7L414.6,61.7L415.1,61.7L415.7,61.6L416.2,61.6L416.8,61.6L417.3,61.6L417.9,61.6L418.4,61.5L419,61.5L419.5,61.5L420,61.5L420.6,61.5L421.1,61.4L421.7,61.4L422.2,61.4L422.8,61.4L423.3,61.4L423.9,61.4L424.4,61.3L424.9,61.3L425.5,61.3L426,61.3L426.6,61.3L427.1,61.2L427.7,61.2L428.2,61.2L428.8,61.2L429.3,61.2L429.9,61.2L430.4,61.1L430.9,61.1L431.5,61.1L432,61.1L432.6,61.1L433.1,61.1L433.7,61L434.2,61L434.8,61L435.3,61L435.8,61L436.4,60.9L436.9,60.9L437.5,60.9L438,60.9L438.6,60.9L439.1,60.9L439.7,60.8L440.2,60.8L440.8,60.8L441.3,60.8L441.8,60.8L442.4,60.8L442.9,60.8L443.5,60.7L444,60.7L444.6,60.7L445.1,60.7L445.7,60.7L446.2,60.7L446.7,60.6L447.3,60.6L447.8,60.6L448.4,60.6L448.9,60.6L449.5,60.6L450,60.5L450.6,60.5L451.1,60.5L451.7,60.5L452.2,60.5L452.7,60.5L453.3,60.5L453.8,60.4L454.4,60.4L454.9,60.4L455.5,60.4L456,60.4L456.6,60.4L457.1,60.3L457.6,60.3L458.2,60.3L458.7,60.3L459.3,60.3L459.8,60.3L460.4,60.3L460.9,60.2L461.5,60.2L462,60.2L462.6,60.2L463.1,60.2L463.6,60.2L464.2,60.2L464.7,60.1L465.3,60.1L465.8,60.1L466.4,60.1L466.9,60.1L467.5,60.1L468,60.1"/>
+<circle class="s-tocka" cx="250" cy="165" r="4"/>
+<circle class="s-tocka-2" cx="250" cy="132.3" r="4"/>
+<text class="s-txt-k2" x="424.4" y="126" text-anchor="middle">fenolftalein</text>
+<text class="s-txt-k1" x="424.4" y="229.6" text-anchor="middle">metiloranž</text>
+<text class="s-txt-k1" x="66.9" y="267.6" text-anchor="middle">HCl</text>
+<text class="s-txt-k4" x="84.3" y="195.4" text-anchor="middle">CH₃COOH</text>
+<text class="s-txt-muted" x="258.7" y="39.6" text-anchor="start">ekvivalentna točka</text>
+<text class="s-txt-muted" x="119.2" y="312.3" text-anchor="middle">10</text>
+<text class="s-txt-muted" x="206.4" y="312.3" text-anchor="middle">20</text>
+<text class="s-txt-muted" x="293.6" y="312.3" text-anchor="middle">30</text>
+<text class="s-txt-muted" x="380.8" y="312.3" text-anchor="middle">40</text>
+<text class="s-txt-muted" x="468" y="312.3" text-anchor="middle">50</text>
+<text class="s-txt-muted" x="25" y="264.8" text-anchor="end">2</text>
+<text class="s-txt-muted" x="25" y="226.8" text-anchor="end">4</text>
+<text class="s-txt-muted" x="25" y="188.8" text-anchor="end">6</text>
+<text class="s-txt-muted" x="25" y="150.8" text-anchor="end">8</text>
+<text class="s-txt-muted" x="25" y="112.8" text-anchor="end">10</text>
+<text class="s-txt-muted" x="25" y="74.8" text-anchor="end">12</text>
+</svg>
+<figcaption>Titracija 25,0 mL 0,100 M kisline z 0,100 M NaOH. Pri močni kislini (modro) je ekvivalentna točka pri pH 7 in skok je velik (od pH 3 do 11), zato ustrezata oba indikatorja. Pri šibki ocetni kislini (oranžno) je ekvivalentna točka bazična (pH ≈ 8,7), zato izberemo fenolftalein. Osenčeni pasovi so območja preskoka barve indikatorjev.</figcaption>
+</figure>
+            <p>Na <strong>titracijski krivulji</strong> se pH ob ekvivalentni točki skokovito spremeni. Indikator izberemo tako, da njegovo območje preskoka leži znotraj tega skoka: pri titraciji močne kisline z močno bazo ustreza katerikoli od zgornjih, pri šibki kislini in močni bazi fenolftalein, pri šibki bazi in močni kislini metiloranž.</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-5">
+              <h4>Tip 5: Izračunaj koncentracijo iz podatkov titracije</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Za nevtralizacijo 20,00 mL raztopine žveplove(VI) kisline smo porabili 18,40 mL 0,1000 M raztopine NaOH. Izračunaj koncentracijo kisline.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> podani sta prostornini obeh raztopin in koncentracija ene; iskana je koncentracija druge (ali masa snovi v vzorcu).</p><ul class="kljucne"><li>„titracija“</li><li>„porabili smo … mL“</li><li>„za nevtralizacijo“</li><li>„ekvivalentna točka“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Zapiši urejeno enačbo nevtralizacije.</p><div class="na-nalogi"><p><span class="ke">H<sub>2</sub>SO<sub>4</sub> + 2NaOH&nbsp;→ Na<sub>2</sub>SO<sub>4</sub> + 2H<sub>2</sub>O</span></p></div></li>
+              <li><p class="korak">Izračunaj množino titranta: \(n = c \cdot V\).</p><div class="na-nalogi"><p>\(n(\text{NaOH}) = 0{,}1000 \cdot 0{,}01840 = 1{,}840 \cdot 10^{-3}\ \text{mol}\)</p></div></li>
+              <li><p class="korak">Z razmerjem koeficientov izračunaj množino druge snovi.</p><div class="na-nalogi"><p>\(n(\text{H}_2\text{SO}_4) = \tfrac{1}{2} \cdot 1{,}840 \cdot 10^{-3} = 9{,}200 \cdot 10^{-4}\ \text{mol}\)</p></div></li>
+              <li><p class="korak">Deli s prostornino vzorca.</p><div class="na-nalogi"><p>\(c = \dfrac{9{,}200 \cdot 10^{-4}}{0{,}02000} = 0{,}04600\ \text{mol/L}\)</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> 25,00 mL <span class="kf">HCl</span> porabi 20,00 mL 0,125 M NaOH. \(c(\text{HCl})\)?</p><p>Razmerje 1 : 1: \(c = 0{,}125 \cdot 20{,}00/25{,}00 = 0{,}100\ \text{mol/L}\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Koliko mg ocetne kisline je v vzorcu kisa, ki porabi 12,0 mL 0,100 M NaOH?</p><p>\(n = 1{,}20 \cdot 10^{-3}\ \text{mol}\); \(m = 72{,}1\ \text{mg}\).</p></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-6">
+              <h4>Tip 6: Izberi indikator ali razberi titracijsko krivuljo</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Na sliki je titracijska krivulja ocetne kisline z natrijevim hidroksidom. Pri kateri prostornini je ekvivalentna točka in kateri indikator je primeren: metiloranž ali fenolftalein? Kakšne barve je raztopina s fenolftaleinom pred ekvivalentno točko in po njej?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> podana je titracijska krivulja ali opis titracije; sprašujejo za ekvivalentno točko, indikator ali barvo indikatorja.</p><ul class="kljucne"><li>„titracijska krivulja“</li><li>„primeren indikator“</li><li>„barva raztopine“</li><li>„pH v ekvivalentni točki“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Ekvivalentna točka je sredina navpičnega skoka krivulje; odčitaj prostornino in pH.</p><div class="na-nalogi"><p>Pri 25 mL, pH približno 8,7.</p></div></li>
+              <li><p class="korak">Ugotovi, ali je ekvivalentna točka kisla, nevtralna ali bazična (šibka kislina + močna baza = bazična).</p><div class="na-nalogi"><p>Bazična.</p></div></li>
+              <li><p class="korak">Izberi indikator, katerega območje preskoka leži v navpičnem delu krivulje.</p><div class="na-nalogi"><p>Fenolftalein (8,2 do 10,0); metiloranž bi spremenil barvo prezgodaj.</p></div></li>
+              <li><p class="korak">Barvo določi s primerjavo pH z območjem preskoka.</p><div class="na-nalogi"><p>Pred točko (pH &lt; 8,2) brezbarvna, po njej (pH &gt; 10) rožnata.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Kakšne barve je metiloranž v raztopini s pH 6?</p><p>Rumene (nad 4,4).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Kakšen je pH v ekvivalentni točki pri titraciji <span class="kf">HCl</span> z NaOH?</p><p>7, ker nastane nevtralna sol <span class="kf">NaCl</span>.</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 5 -->
+        <section class="sklop" id="sklop-5">
+          <header class="sklop-header">
+            <span class="sklop-num">4.9 · 5</span>
+            <h2>Ionske reakcije</h2>
+            <p>Kdaj reakcija med ioni v raztopini poteče in kako jo zapišemo.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <p>Raztopine soli, kislin in baz vsebujejo ione. Ko zmešamo dve raztopini, reakcija dejansko poteče le, če se ioni povežejo v snov, ki iz raztopine »izstopi«:</p>
+            <ul>
+              <li>nastane <strong>oborina</strong> (slabo topna sol): <span class="ke">Ag<sup>+</sup>(aq) + Cl<sup>−</sup>(aq)&nbsp;→ AgCl(s)</span>;</li>
+              <li>nastane <strong>plin</strong>: <span class="ke">CO<sub>3</sub><sup>2−</sup>(aq) + 2H<sub>3</sub>O<sup>+</sup>(aq)&nbsp;→ CO<sub>2</sub>(g) + 3H<sub>2</sub>O(l)</span>;</li>
+              <li>nastane <strong>slabo disociirana snov</strong>, npr. voda pri nevtralizaciji ali šibka kislina: <span class="ke">H<sub>3</sub>O<sup>+</sup> + OH<sup>−</sup>&nbsp;→ 2H<sub>2</sub>O</span>.</li>
+            </ul>
+            <p>Če nič od tega ne nastane (npr. pri mešanju raztopin <span class="kf">NaCl</span> in <span class="kf">KNO<sub>3</sub></span>), ostanejo vsi ioni v raztopini in reakcije ni. Ione, ki se ne spremenijo, imenujemo <strong>ioni opazovalci</strong> in jih v <strong>ionski (neto) enačbi</strong> ne pišemo.</p>
+            <p><strong>Pravila topnosti</strong> (za vodne raztopine): topne so vse soli alkalijskih kovin in amonijeve soli ter vsi nitrati; kloridi, bromidi in jodidi so topni razen srebrovih in svinčevih; sulfati so topni razen barijevega, svinčevega (in slabo kalcijevega); karbonati, fosfati, sulfidi in hidroksidi so netopni razen soli alkalijskih kovin in amonijevih (barijev hidroksid je topen, kalcijev slabo).</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-7">
+              <h4>Tip 7: Zapiši ionsko enačbo in ugotovi, ali reakcija poteče</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Zmešamo raztopini barijevega klorida in natrijevega sulfata. Ali reakcija poteče? Zapiši ionsko enačbo in navedi ione opazovalce.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> mešamo raztopini dveh elektrolitov; sprašujejo, kaj opazimo, ali reakcija poteče, ali za ionsko enačbo.</p><ul class="kljucne"><li>„ionska enačba“</li><li>„nastane oborina“</li><li>„ioni opazovalci“</li><li>„kaj opazimo“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Zapiši vse ione v obeh raztopinah.</p><div class="na-nalogi"><p><span class="kf">Ba<sup>2+</sup></span>, <span class="kf">Cl<sup>−</sup></span>, <span class="kf">Na<sup>+</sup></span>, <span class="kf">SO<sub>4</sub><sup>2−</sup></span></p></div></li>
+              <li><p class="korak">Preveri nove kombinacije: ali nastane oborina, plin ali voda (šibka kislina)?</p><div class="na-nalogi"><p><span class="kf">BaSO<sub>4</sub></span> je netopen: nastane bela oborina. <span class="kf">NaCl</span> je topen.</p></div></li>
+              <li><p class="korak">V ionsko enačbo zapiši le ione, ki tvorijo produkt, z agregatnimi stanji.</p><div class="na-nalogi"><p><span class="ke">Ba<sup>2+</sup>(aq) + SO<sub>4</sub><sup>2−</sup>(aq)&nbsp;→ BaSO<sub>4</sub>(s)</span></p></div></li>
+              <li><p class="korak">Ioni, ki so ostali nespremenjeni, so opazovalci.</p><div class="na-nalogi"><p><span class="kf">Na<sup>+</sup></span> in <span class="kf">Cl<sup>−</sup></span>.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Marmor in klorovodikova kislina?</p><p><span class="ke">CaCO<sub>3</sub>(s) + 2H<sub>3</sub>O<sup>+</sup>(aq)&nbsp;→ Ca<sup>2+</sup>(aq) + CO<sub>2</sub>(g) + 3H<sub>2</sub>O(l)</span>; opazimo mehurčke.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Ali reagirata raztopini <span class="kf">KCl</span> in <span class="kf">NaNO<sub>3</sub></span>?</p><p>Ne, vse možne soli so topne.</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 6 -->
+        <section class="sklop" id="sklop-6">
+          <header class="sklop-header">
+            <span class="sklop-num">4.9 · 6</span>
+            <h2>Protoliza ionov soli</h2>
+            <p>Zakaj je raztopina sode bazična, raztopina amonijevega klorida pa kisla.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <p>Raztopina soli ni vedno nevtralna. Nekateri ioni soli reagirajo z vodo (protolizirajo):</p>
+            <ul>
+              <li><strong>Anion šibke kisline</strong> je baza in z vodo tvori <span class="kf">OH<sup>−</sup></span>: <span class="ke">CH<sub>3</sub>COO<sup>−</sup> + H<sub>2</sub>O&nbsp;⇌ CH<sub>3</sub>COOH + OH<sup>−</sup></span>. Raztopina je <strong>bazična</strong> (natrijev acetat, natrijev karbonat, natrijev hidrogenkarbonat).</li>
+              <li><strong>Kation šibke baze</strong> (amonijev ion) je kislina in z vodo tvori <span class="kf">H<sub>3</sub>O<sup>+</sup></span>: <span class="ke">NH<sub>4</sub><sup>+</sup> + H<sub>2</sub>O&nbsp;⇌ NH<sub>3</sub> + H<sub>3</sub>O<sup>+</sup></span>. Raztopina je <strong>kisla</strong> (amonijev klorid, amonijev nitrat). Kisle so tudi raztopine nekaterih soli z majhnimi, močno nabitimi kationi (<span class="kf">Al<sup>3+</sup></span>, <span class="kf">Fe<sup>3+</sup></span>).</li>
+              <li>Ioni močnih kislin in baz (<span class="kf">Na<sup>+</sup></span>, <span class="kf">K<sup>+</sup></span>, <span class="kf">Ca<sup>2+</sup></span>, <span class="kf">Cl<sup>−</sup></span>, <span class="kf">NO<sub>3</sub><sup>−</sup></span>, <span class="kf">SO<sub>4</sub><sup>2−</sup></span>) ne protolizirajo; raztopina <span class="kf">NaCl</span> je <strong>nevtralna</strong>.</li>
+            </ul>
+            <p>Hiter način: sol si zamisli kot produkt nevtralizacije. Iz katere kisline in baze nastane? Raztopina »se nagne« na stran močnejšega partnerja: močna baza + šibka kislina = bazična, šibka baza + močna kislina = kisla, močna + močna = nevtralna.</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-8">
+              <h4>Tip 8: Napovej, ali je raztopina soli kisla, bazična ali nevtralna</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Ali je vodna raztopina natrijevega karbonata kisla, bazična ali nevtralna? Odgovor utemelji z enačbo protolize.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> podana je sol, sprašujejo za pH raztopine, barvo indikatorja ali za enačbo reakcije iona z vodo.</p><ul class="kljucne"><li>„raztopina soli“</li><li>„protoliza iona“</li><li>„kisla ali bazična“</li><li>„hidroliza“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Razstavi sol na katione in anione.</p><div class="na-nalogi"><p><span class="kf">Na<sub>2</sub>CO<sub>3</sub></span> → 2 <span class="kf">Na<sup>+</sup></span> + <span class="kf">CO<sub>3</sub><sup>2−</sup></span></p></div></li>
+              <li><p class="korak">Za vsak ion ugotovi, ali izvira iz močne ali šibke kisline/baze.</p><div class="na-nalogi"><p><span class="kf">Na<sup>+</sup></span> iz močne baze NaOH (ne protolizira); <span class="kf">CO<sub>3</sub><sup>2−</sup></span> iz šibke ogljikove kisline (je baza).</p></div></li>
+              <li><p class="korak">Zapiši enačbo protolize iona, ki reagira z vodo.</p><div class="na-nalogi"><p><span class="ke">CO<sub>3</sub><sup>2−</sup> + H<sub>2</sub>O&nbsp;⇌ HCO<sub>3</sub><sup>−</sup> + OH<sup>−</sup></span></p></div></li>
+              <li><p class="korak">Iz nastalih ionov sklepaj o pH.</p><div class="na-nalogi"><p>Nastajajo <span class="kf">OH<sup>−</sup></span>: raztopina je bazična (pH &gt; 7), fenolftalein se obarva rožnato.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> <span class="kf">NH<sub>4</sub>NO<sub>3</sub></span>?</p><p>Kisla: <span class="ke">NH<sub>4</sub><sup>+</sup> + H<sub>2</sub>O&nbsp;⇌ NH<sub>3</sub> + H<sub>3</sub>O<sup>+</sup></span>, <span class="kf">NO<sub>3</sub><sup>−</sup></span> ne protolizira.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> <span class="kf">KNO<sub>3</sub></span>?</p><p>Nevtralna: oba iona izvirata iz močne baze in močne kisline.</p></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="subsection" id="kljuc">
+          <div class="subsection-head">
+            <h2>Ključ: kateri tip naloge je to?</h2>
+            <p>Poišči besedo iz navodila naloge in skoči na pravi postopek.</p>
+          </div>
+          <div class="info-card">
+            <div class="tabela-wrap">
+              <table class="tabela">
+                <thead><tr><th>V besedilu naloge piše …</th><th>Tip</th></tr></thead>
+                <tbody>
+                  <tr><td>„zapiši formulo“, „poimenuj sol / kislino“</td><td><a href="#tip-1">Tip 1</a></td></tr>
+                  <tr><td>„protolitska reakcija“, „konjugirani par“</td><td><a href="#tip-2">Tip 2</a></td></tr>
+                  <tr><td>„\(K_a\)“, „\(K_b\)“, „najmočnejša kislina“</td><td><a href="#tip-3">Tip 3</a></td></tr>
+                  <tr><td>„izračunaj pH“, „pOH“, „koncentracija oksonijevih ionov“</td><td><a href="#tip-4">Tip 4</a></td></tr>
+                  <tr><td>„titracija“, „porabili smo … mL“</td><td><a href="#tip-5">Tip 5</a></td></tr>
+                  <tr><td>„indikator“, „titracijska krivulja“, „barva“</td><td><a href="#tip-6">Tip 6</a></td></tr>
+                  <tr><td>„ionska enačba“, „oborina“, „ioni opazovalci“</td><td><a href="#tip-7">Tip 7</a></td></tr>
+                  <tr><td>„raztopina soli“, „protoliza iona“</td><td><a href="#tip-8">Tip 8</a></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>Pogoste napake</h2>
+          </div>
+          <div class="info-card">
+            <ul>
+              <li>Pri bazi izračunaš pOH in ga zapišeš kot pH.</li>
+              <li>Pri <span class="kf">Ba(OH)<sub>2</sub></span> ali <span class="kf">H<sub>2</sub>SO<sub>4</sub></span> pozabiš, da formula da dva <span class="kf">OH<sup>−</sup></span> oziroma ima dva protona.</li>
+              <li>Pri titraciji pozabiš na razmerje koeficientov ali prostornine ne pretvoriš v litre.</li>
+              <li>Konjugirana para se razlikujeta za več kot en proton ali spremeniš naboj v napačno smer.</li>
+              <li>V ionsko enačbo zapišeš oborino kot ione ali pustiš ione opazovalce.</li>
+              <li>Misliš, da je raztopina vsake soli nevtralna.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>Naslednje poglavje</h2>
+          </div>
+          <div class="link-list">
+            <a class="link-item" href="/views/kemija/snov/oksidacija_redukcija/oksidacija_redukcija_razlaga.html">
+              <span class="link-item-text"><strong>4.10 Reakcije oksidacije in redukcije</strong><small>Oksidacijska števila, redoks vrsta, galvanski člen, elektroliza</small></span>
+              <span class="arrow">→</span>
+            </a>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>
