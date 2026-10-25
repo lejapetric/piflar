@@ -207,7 +207,7 @@ const primerjajStevilke = (a, b) => {
   return 0;
 };
 
-const PREDMETI = ["Matematika", "Fizika", "Informatika", "Geografija"];
+const PREDMETI = ["Matematika", "Fizika", "Informatika", "Geografija", "Zgodovina"];
 const vrstniRedPredmeta = (p) => (PREDMETI.includes(p) ? PREDMETI.indexOf(p) : PREDMETI.length);
 
 let predpomnilnik = null;

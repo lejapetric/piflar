@@ -43,5 +43,9 @@
   { "predmet": "geografija", "stevilka": "4.2", "slug": "regionalna_geografija_sveta", "naslov": "Regionalna geografija sveta", "opis": "Razvitost sveta, Azija, Afrika, Latinska in Severna Amerika, Avstralija, polarna območja." },
   { "predmet": "geografija", "stevilka": "4.3", "slug": "regionalna_geografija_evrope", "naslov": "Regionalna geografija Evrope", "opis": "Naravne enote, podnebje, prebivalstvo, EU, gospodarstvo in regije Evrope." },
   { "predmet": "geografija", "stevilka": "4.4", "slug": "geografija_slovenije", "naslov": "Geografija Slovenije", "opis": "Lega, relief, podnebje, vode, prebivalstvo, naselja, gospodarstvo in promet Slovenije." },
-  { "predmet": "geografija", "stevilka": "4.5", "slug": "slovenske_pokrajine", "naslov": "Slovenske pokrajine", "opis": "Alpske, predalpske, obsredozemske, dinarskokraške in obpanonske pokrajine ter zamejstvo." }
+  { "predmet": "geografija", "stevilka": "4.5", "slug": "slovenske_pokrajine", "naslov": "Slovenske pokrajine", "opis": "Alpske, predalpske, obsredozemske, dinarskokraške in obpanonske pokrajine ter zamejstvo." },
+  { "predmet": "zgodovina", "stevilka": "4.1", "slug": "stari_vek", "naslov": "Stari vek", "opis": "Prazgodovina, Mezopotamija, Egipt, grška in rimska civilizacija, slovenski prostor v antiki." },
+  { "predmet": "zgodovina", "stevilka": "4.2", "slug": "srednji_in_novi_vek", "naslov": "Srednji in novi vek", "opis": "Fevdalizem, cerkev, mesta, odkritja, reformacija, absolutizem, Karantanija in slovenski prostor." },
+  { "predmet": "zgodovina", "stevilka": "4.3", "slug": "devetnajsto_stoletje", "naslov": "19. stoletje", "opis": "Revolucije, industrializacija, nacionalna gibanja, imperializem, Ilirske province, Zedinjena Slovenija." },
+  { "predmet": "zgodovina", "stevilka": "4.4", "slug": "dvajseto_stoletje", "naslov": "20. stoletje", "opis": "Svetovni vojni, totalitarizmi, hladna vojna, Jugoslavija, osamosvojitev Slovenije." }
 ]
