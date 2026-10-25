@@ -38,5 +38,10 @@
   { "predmet": "informatika", "stevilka": "4.1", "slug": "osnove_informatike", "naslov": "Osnove informatike", "opis": "Podatek, informacija, znanje, količina informacije, varovanje podatkov, komuniciranje." },
   { "predmet": "informatika", "stevilka": "4.2", "slug": "informacijska_tehnologija", "naslov": "Informacijska tehnologija", "opis": "Ergonomija, von Neumannov model, strojna in programska oprema, omrežja." },
   { "predmet": "informatika", "stevilka": "4.3", "slug": "predstavitev_informacije", "naslov": "Predstavitev informacije", "opis": "Dvojiški zapis, kodne tabele, slika, zvok, video, prosojnice, HTML." },
-  { "predmet": "informatika", "stevilka": "4.4", "slug": "delo_s_podatki", "naslov": "Delo s podatki", "opis": "Algoritmi, programiranje, podatkovne baze, preglednice, odločanje." }
+  { "predmet": "informatika", "stevilka": "4.4", "slug": "delo_s_podatki", "naslov": "Delo s podatki", "opis": "Algoritmi, programiranje, podatkovne baze, preglednice, odločanje." },
+  { "predmet": "geografija", "stevilka": "4.1", "slug": "obca_geografija", "naslov": "Obča geografija", "opis": "Zemljevid, zgradba Zemlje, relief, podnebje, vode, prst, prebivalstvo, naselja, gospodarstvo." },
+  { "predmet": "geografija", "stevilka": "4.2", "slug": "regionalna_geografija_sveta", "naslov": "Regionalna geografija sveta", "opis": "Razvitost sveta, Azija, Afrika, Latinska in Severna Amerika, Avstralija, polarna območja." },
+  { "predmet": "geografija", "stevilka": "4.3", "slug": "regionalna_geografija_evrope", "naslov": "Regionalna geografija Evrope", "opis": "Naravne enote, podnebje, prebivalstvo, EU, gospodarstvo in regije Evrope." },
+  { "predmet": "geografija", "stevilka": "4.4", "slug": "geografija_slovenije", "naslov": "Geografija Slovenije", "opis": "Lega, relief, podnebje, vode, prebivalstvo, naselja, gospodarstvo in promet Slovenije." },
+  { "predmet": "geografija", "stevilka": "4.5", "slug": "slovenske_pokrajine", "naslov": "Slovenske pokrajine", "opis": "Alpske, predalpske, obsredozemske, dinarskokraške in obpanonske pokrajine ter zamejstvo." }
 ]
