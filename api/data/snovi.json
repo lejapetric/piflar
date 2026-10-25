@@ -82,5 +82,8 @@
   { "predmet": "biologija", "stevilka": "4.5.3", "slug": "kri_imunost", "naslov": "Transport pri živalih, kri in imunost", "opis": "Krvni obtok, srce in žile, kri in hemoglobin, imunski odziv, cepljenje in krvne skupine." },
   { "predmet": "biologija", "stevilka": "4.5.4", "slug": "dihala_prebava_izlocala", "naslov": "Dihala, prebavila in izločala", "opis": "Izmenjava plinov, dihanje, prebava in encimi, absorpcija, ledvice, nefron in ADH." },
   { "predmet": "biologija", "stevilka": "4.5.5", "slug": "regulacija", "naslov": "Hormoni, živčevje in čutila", "opis": "Homeostaza, hormoni in glukoza, akcijski potencial, sinapsa, refleksi, oko in uho." },
-  { "predmet": "biologija", "stevilka": "4.5.6", "slug": "gibanje_razmnozevanje", "naslov": "Koža, gibanje in razmnoževanje", "opis": "Koža in ogrodje, krčenje mišic, nastanek gamet, menstruacijski cikel, oploditev in razvoj." }
+  { "predmet": "biologija", "stevilka": "4.5.6", "slug": "gibanje_razmnozevanje", "naslov": "Koža, gibanje in razmnoževanje", "opis": "Koža in ogrodje, krčenje mišic, nastanek gamet, menstruacijski cikel, oploditev in razvoj." },
+  { "predmet": "biologija", "stevilka": "4.6.1", "slug": "populacije", "naslov": "Populacije in odnosi med organizmi", "opis": "Ekološki dejavniki in strpnost, rast populacij, plenilec in plen, tekmovanje, simbioza in starostne piramide." },
+  { "predmet": "biologija", "stevilka": "4.6.2", "slug": "ekosistemi", "naslov": "Ekosistemi in varstvo narave", "opis": "Prehranjevalni spleti, ekološke piramide, kroženje ogljika in dušika, sukcesija, evtrofikacija in varstvo narave." },
+  { "predmet": "biologija", "stevilka": "4.7", "slug": "raziskovanje", "naslov": "Raziskovanje v biologiji", "opis": "Hipoteza in spremenljivke, načrtovanje poskusa, grafi in izračuni, mikroskop, dokazne reakcije in kromatografija." }
 ]
