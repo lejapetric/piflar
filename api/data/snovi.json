@@ -53,5 +53,12 @@
   { "predmet": "kemija", "stevilka": "4.3", "slug": "kemijske_vezi", "naslov": "Povezovanje delcev", "opis": "Ionska in kovalentna vez, oblika molekul, medmolekulske sile, kristali." },
   { "predmet": "kemija", "stevilka": "4.4", "slug": "mnozina_snovi", "naslov": "Množina snovi", "opis": "Molska masa, Avogadrova konstanta, empirična formula, plini." },
   { "predmet": "kemija", "stevilka": "4.5", "slug": "kemijska_reakcija", "naslov": "Kemijska reakcija", "opis": "Urejanje enačb, stehiometrija, prebitni reaktant, entalpija." },
-  { "predmet": "kemija", "stevilka": "4.6", "slug": "raztopine", "naslov": "Raztopine", "opis": "Topnost, masni delež, koncentracija, redčenje, hidratacija." }
+  { "predmet": "kemija", "stevilka": "4.6", "slug": "raztopine", "naslov": "Raztopine", "opis": "Topnost, masni delež, koncentracija, redčenje, hidratacija." },
+  { "predmet": "kemija", "stevilka": "4.7", "slug": "hitrost_reakcij", "naslov": "Hitrost kemijskih reakcij", "opis": "Hitrost, trki, aktivacijska energija, dejavniki, katalizatorji." },
+  { "predmet": "kemija", "stevilka": "4.8", "slug": "kemijsko_ravnotezje", "naslov": "Kemijsko ravnotežje", "opis": "Konstanta ravnotežja, Le Chatelierjevo načelo, Haber-Boschev postopek." },
+  { "predmet": "kemija", "stevilka": "4.9", "slug": "ravnotezja_v_vodnih_raztopinah", "naslov": "Ravnotežja v vodnih raztopinah", "opis": "Kisline, baze in soli, pH, Ka in Kb, nevtralizacija, titracija." },
+  { "predmet": "kemija", "stevilka": "4.10", "slug": "oksidacija_redukcija", "naslov": "Oksidacija in redukcija", "opis": "Oksidacijska števila, urejanje, galvanski členi, korozija, elektroliza." },
+  { "predmet": "kemija", "stevilka": "4.11", "slug": "periodni_sistem_elementov", "naslov": "Elementi v periodnem sistemu", "opis": "Kovine in nekovine, oksidi, prehodni elementi, kompleksne spojine." },
+  { "predmet": "kemija", "stevilka": "4.12", "slug": "alkalijske_kovine_halogeni", "naslov": "Alkalijske kovine in halogeni", "opis": "Reakcije z vodo in kisikom, plamenske reakcije, izpodrivanje, halogenidi." },
+  { "predmet": "kemija", "stevilka": "4.13", "slug": "elementi_spojine_tehnologije", "naslov": "Elementi in spojine v bioloških sistemih in sodobnih tehnologijah", "opis": "Aluminij, žveplova in dušikova kislina, gnojila, silicij, steklo, cement." }
 ]
