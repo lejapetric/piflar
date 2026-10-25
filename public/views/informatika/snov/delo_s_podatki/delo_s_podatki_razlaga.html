@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delo s podatki — razlaga in postopki | Piflar.si</title>
+  <meta name="description" content="Delo s podatki za maturo iz informatike: računalniška obdelava podatkov, algoritmi in diagrami poteka, programski jeziki, prevajalnik in tolmač, programiranje v Pythonu, podatkovne baze in ključi, poizvedbe, preglednice, analiza kaj-če, grafikoni in odločitveni modeli.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
+  <link rel="stylesheet" href="/style/snov.css">
+</head>
+<body>
+  <div id="header"></div>
+
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view">
+
+<header class="page-header">
+          <span class="page-eyebrow">Informatika · Snov · 4.4</span>
+          <h1>Delo s podatki</h1>
+          <p>Podatke obdelujemo s programi, ki jih zapišemo kot algoritme, hranimo jih v podatkovnih bazah, računamo z njimi v preglednicah in na njihovi podlagi odločamo. To poglavje prinese največ nalog s postopki: sledenje algoritmom, pisanje programov, načrtovanje tabel, formule in odločitvene modele. Pod razlago so vsi tipi nalog, ki se pojavijo pri tem sklopu.</p>
+          <div class="page-meta">
+            <div class="page-meta-item"><strong>7</strong><span>Podpoglavij</span></div>
+            <div class="page-meta-item"><strong>14</strong><span>Tipov nalog</span></div>
+            <div class="page-meta-item"><strong>~70 min</strong><span>Branja</span></div>
+          </div>
+        </header>
+
+        <div class="matura-formule">
+          <h3>Kar moraš znati</h3>
+          <p>Katalog ne predpisuje programskega jezika; rešitve v katalogu in tukaj so v Pythonu. Najpogosteje rabiš:</p>
+          <div class="matura-levo">
+            <ul>
+              <li>gradniki algoritma: zaporedje, odločitev (če), ponavljanje (zanka)</li>
+              <li>Python: <code class="k">input</code>, <code class="k">print</code>, <code class="k">if/elif/else</code>, <code class="k">for … in range(…)</code>, <code class="k">while</code>, seznami, <code class="k">def</code></li>
+              <li>preglednica: relativni naslov <code class="k">A1</code>, absolutni <code class="k">$A$1</code>; funkcije SUM, AVERAGE, MAX, MIN, COUNT, COUNTIF, IF</li>
+              <li>utežena vsota: \(O = \sum_i u_i \cdot o_i\), uteži skupaj 1 (100 %)</li>
+            </ul>
+          </div>
+          <p class="matura-opomba">V slovenskih nastavitvah preglednic se argumenti funkcij ločijo s podpičjem: <code class="k">=IF(B2&gt;=50;"opravil";"ni opravil")</code>.</p>
+        </div>
+
+        <nav class="kazalo" aria-label="Podpoglavja">
+          <h2>Podpoglavja</h2>
+          <ol>
+            <li><a href="#sklop-1"><span class="kazalo-st">1</span> Računalniška obdelava podatkov</a></li>
+            <li><a href="#sklop-2"><span class="kazalo-st">2</span> Algoritem</a></li>
+            <li><a href="#sklop-3"><span class="kazalo-st">3</span> Programski jezik</a></li>
+            <li><a href="#sklop-4"><span class="kazalo-st">4</span> Programiranje</a></li>
+            <li><a href="#sklop-5"><span class="kazalo-st">5</span> Podatkovna baza</a></li>
+            <li><a href="#sklop-6"><span class="kazalo-st">6</span> Preglednica</a></li>
+            <li><a href="#sklop-7"><span class="kazalo-st">7</span> Tehnologije znanja in odločanje</a></li>
+            <li><a href="#kljuc"><span class="kazalo-st">?</span> Ključ: kateri tip naloge je to?</a></li>
+          </ol>
+        </nav>
+
+        <!-- SKLOP 1 -->
+        <section class="sklop" id="sklop-1">
+          <header class="sklop-header">
+            <span class="sklop-num">4.4 · 1</span>
+            <h2>Računalniška obdelava podatkov</h2>
+            <p>Kaj je računalniška obdelava, njen namen, lastnosti kakovostne obdelave in vloga programa.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <p><strong>Računalniška obdelava podatkov</strong> je pretvarjanje vhodnih podatkov v izhodne (informacije) po navodilih programa. Obdelava zajema računanje, razvrščanje, iskanje, združevanje, povzemanje, preverjanje in pretvarjanje podatkov.</p>
+            <figure class="slika slika--siroka">
+<svg viewBox="0 0 520 190" role="img" aria-label="Vhod, obdelava, izhod" xmlns="http://www.w3.org/2000/svg"><defs><marker id="d1-k1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="d1-k2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="d1-k3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="d1-k4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="d1-crn" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs><polyline class="s-k1" fill="none" points="130,60 190,60" marker-end="url(#d1-k1)"/><polyline class="s-k1" fill="none" points="330,60 390,60" marker-end="url(#d1-k1)"/><polyline class="s-k4" fill="none" points="260,88 260,125" marker-end="url(#d1-k4)" marker-start="url(#d1-k4)"/><polygon class="s-lik" points="22,32 130,32 118,88 10,88"/><text class="s-txt-b" x="70" y="56.5" text-anchor="middle">vhod</text><text class="s-txt-muted" x="70" y="71.5" text-anchor="middle" style="font-size:12px">ocene dijakov</text><rect class="s-lik-2" x="190" y="32" width="140" height="56" rx="4"/><text class="s-txt-b" x="260" y="56.5" text-anchor="middle">obdelava</text><text class="s-txt-muted" x="260" y="71.5" text-anchor="middle" style="font-size:12px">povprečje, razvrščanje</text><polygon class="s-lik" points="402,32 510,32 498,88 390,88"/><text class="s-txt-b" x="450" y="56.5" text-anchor="middle">izhod</text><text class="s-txt-muted" x="450" y="71.5" text-anchor="middle" style="font-size:12px">spričevalo</text><path class="s-kot" d="M195,132 A65,7 0 0 1 325,132 V168 A65,7 0 0 1 195,168 Z M195,132 A65,7 0 0 0 325,132"/><text class="s-txt-b" x="260" y="146.5" text-anchor="middle">shranjevanje</text><text class="s-txt-muted" x="260" y="161.5" text-anchor="middle" style="font-size:12px">baza podatkov</text></svg>
+<figcaption>Vsaka računalniška obdelava podatkov ima vhod, obdelavo in izhod; podatke vmes ali trajno shranimo.</figcaption>
+</figure>
+            <p><strong>Namen</strong> obdelave je pridobiti informacije za delo in odločanje hitreje, natančneje in ceneje kot ročno. <strong>Kakovostna obdelava</strong> je točna (pravilni vhodni podatki in postopek; „smeti noter, smeti ven“), pravočasna, zanesljiva, varna (zaščita podatkov), ekonomična (stroški manjši od koristi) in prijazna uporabniku (razumljiv izhod).</p>
+            <p><strong>Program</strong> je zaporedje ukazov, ki računalniku natančno pove, kako naj podatke obdela. Računalnik brez programa ne zna ničesar. <strong>Programiranje</strong> je izdelava programov: od razumevanja problema prek algoritma do kode, preizkušanja in dokumentiranja.</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-1">
+              <h4>Tip 1: Vhod, obdelava in izhod</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Trgovina želi na koncu dneva izvedeti, koliko je zaslužila in katerega izdelka mora naročiti. Določi vhodne podatke, obdelavo in izhodne podatke. Kaj se zgodi, če blagajničarka napačno vnese ceno?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> opisan je postopek, ki ga je treba razčleniti na vhod, obdelavo in izhod, ali presoditi kakovost obdelave.</p><ul class="kljucne"><li>„vhodni podatki“</li><li>„izhodni podatki“</li><li>„obdelava“</li><li>„kakovostna obdelava“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Določi, kaj želimo izvedeti (izhod).</p><div class="na-nalogi"><p>Dnevni zaslužek in seznam izdelkov z nizko zalogo.</p></div></li>
+              <li><p class="korak">Določi, kateri podatki so za to potrebni (vhod).</p><div class="na-nalogi"><p>Prodani izdelki s količinami in cenami, nabavne cene, začetne zaloge, najmanjša dovoljena zaloga.</p></div></li>
+              <li><p class="korak">Opiši obdelavo, ki vhod pretvori v izhod.</p><div class="na-nalogi"><p>Seštej prihodke, odštej nabavno vrednost; od zaloge odštej prodano in izberi izdelke pod mejo.</p></div></li>
+              <li><p class="korak">Presodi kakovost: napaka na vhodu da napačen izhod.</p><div class="na-nalogi"><p>Napačna cena pokvari zaslužek; pomaga branje črtne kode namesto ročnega vnosa.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Kaj je vhod in kaj izhod pri navigaciji v avtu?</p><p>Vhod: cilj, položaj GPS, zemljevid, promet. Izhod: pot in navodila.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Kdaj obdelava ni ekonomična?</p><p>Ko stane več, kot prinese (na primer drag sistem za nekaj podatkov letno).</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 2 -->
+        <section class="sklop" id="sklop-2">
+          <header class="sklop-header">
+            <span class="sklop-num">4.4 · 2</span>
+            <h2>Algoritem</h2>
+            <p>Opredelitev in zahteve, gradniki algoritma, diagram poteka, razvoj algoritma za preprost problem ter analiza in vrednotenje algoritma.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <h4>Kaj je algoritem</h4>
+            <p><strong>Algoritem</strong> je končno zaporedje natančno določenih korakov, ki iz vhodnih podatkov pripelje do rešitve problema. Zahteve:</p>
+            <ul>
+              <li><strong>končnost</strong>: konča se po končnem številu korakov;</li>
+              <li><strong>nedvoumnost</strong> (določenost): vsak korak je natančno določen in ga lahko izvede vsak na enak način;</li>
+              <li><strong>vhod in izhod</strong>: ima nič ali več vhodnih podatkov in vsaj en rezultat;</li>
+              <li><strong>izvedljivost</strong>: vsak korak je mogoče izvesti;</li>
+              <li><strong>splošnost</strong>: reši vse primere problema, ne le enega.</li>
+            </ul>
+            <h4>Gradniki in diagram poteka</h4>
+            <p>Vsak algoritem lahko sestavimo iz treh gradnikov: <strong>zaporedje</strong> (koraki eden za drugim), <strong>odločitev</strong> (izbira poti glede na pogoj) in <strong>ponavljanje</strong> (zanka, ki korake ponavlja, dokler velja pogoj). Algoritem zapišemo z besedami, s psevdokodo, v programskem jeziku ali z <strong>diagramom poteka</strong>:</p>
+            <figure class="slika slika--siroka">
+<svg viewBox="0 0 540 110" role="img" aria-label="Simboli diagrama poteka" xmlns="http://www.w3.org/2000/svg"><defs><marker id="d2-k1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="d2-k2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="d2-k3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="d2-k4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="d2-crn" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs><polyline class="s-crta" fill="none" points="500,40 530,40" marker-end="url(#d2-crn)"/><rect class="s-lik" x="22" y="22" width="96" height="36" rx="18"/><text class="s-txt-b" x="70" y="44" text-anchor="middle"></text><polygon class="s-lik-2" points="154,22 238,22 226,58 142,58"/><text class="s-txt-b" x="190" y="44" text-anchor="middle"></text><rect class="s-lik" x="262" y="22" width="96" height="36" rx="4"/><text class="s-txt-b" x="310" y="44" text-anchor="middle"></text><polygon class="s-lik-2" points="430,15 475,40 430,65 385,40"/><text class="s-txt-b" x="430" y="44" text-anchor="middle"></text><text class="s-txt-b" x="70" y="92" text-anchor="middle">začetek, konec</text><text class="s-txt-b" x="190" y="92" text-anchor="middle">vhod, izhod</text><text class="s-txt-b" x="310" y="92" text-anchor="middle">obdelava</text><text class="s-txt-b" x="430" y="92" text-anchor="middle">odločitev</text><text class="s-txt-b" x="515" y="92" text-anchor="middle">tok</text></svg>
+<figcaption>Simboli diagrama poteka. Puščice kažejo vrstni red korakov; iz odločitve vodita dve puščici (da, ne).</figcaption>
+</figure>
+            <figure class="slika">
+<svg viewBox="0 0 470 480" role="img" aria-label="Diagram poteka Evklidovega algoritma" xmlns="http://www.w3.org/2000/svg"><defs><marker id="d3-k1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="d3-k2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="d3-k3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="d3-k4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="d3-crn" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs><polyline class="s-crta" fill="none" points="210,41 210,62" marker-end="url(#d3-crn)"/><polyline class="s-crta" fill="none" points="210,98 210,125" marker-end="url(#d3-crn)"/><polyline class="s-crta" fill="none" points="210,185 210,215" marker-end="url(#d3-crn)"/><text class="s-txt-muted" x="218" y="202" text-anchor="start">da</text><polyline class="s-crta" fill="none" points="275,245 315,245" marker-end="url(#d3-crn)"/><text class="s-txt-muted" x="285" y="238" text-anchor="start">da</text><polyline class="s-crta" fill="none" points="210,275 210,312" marker-end="url(#d3-crn)"/><text class="s-txt-muted" x="218" y="293" text-anchor="start">ne</text><polyline class="s-k1" fill="none" points="265,330 445,330 445,112 210,112" marker-end="url(#d3-k1)"/><polyline class="s-k1" fill="none" points="370,263 370,330"/><polyline class="s-crta" fill="none" points="145,155 60,155 60,382" marker-end="url(#d3-crn)"/><text class="s-txt-muted" x="100" y="148" text-anchor="middle">ne</text><polyline class="s-crta" fill="none" points="100,418 100,439" marker-end="url(#d3-crn)"/><rect class="s-kot" x="160" y="9" width="100" height="32" rx="16"/><text class="s-txt-b" x="210" y="29" text-anchor="middle">začetek</text><polygon class="s-lik" points="157,62 275,62 263,98 145,98"/><text class="s-txt-b" x="210" y="84" text-anchor="middle">vnesi a, b</text><polygon class="s-lik-2" points="210,125 275,155 210,185 145,155"/><text class="s-txt-b" x="210" y="159" text-anchor="middle">a ≠ b ?</text><polygon class="s-lik-2" points="210,215 275,245 210,275 145,245"/><text class="s-txt-b" x="210" y="249" text-anchor="middle">a > b ?</text><rect class="s-lik" x="315" y="227" width="110" height="36" rx="4"/><text class="s-txt-b" x="370" y="249" text-anchor="middle">a = a − b</text><rect class="s-lik" x="155" y="312" width="110" height="36" rx="4"/><text class="s-txt-b" x="210" y="334" text-anchor="middle">b = b − a</text><polygon class="s-lik" points="47,382 165,382 153,418 35,418"/><text class="s-txt-b" x="100" y="404" text-anchor="middle">izpiši a</text><rect class="s-kot" x="55" y="439" width="90" height="32" rx="16"/><text class="s-txt-b" x="100" y="459" text-anchor="middle">konec</text></svg>
+<figcaption>Evklidov algoritem za največji skupni delitelj: dokler sta števili različni, večjemu odštejemo manjše. Modra puščica je zanka, ki se vrača na pogoj.</figcaption>
+</figure>
+            <h4>Analiza in vrednotenje</h4>
+            <p>Algoritem <strong>analiziramo</strong> tako, da ga izvedemo na primerih (sledenje s tabelo vrednosti spremenljivk), preverimo robne primere (prazen vhod, enaki podatki, negativna števila) in ocenimo <strong>zahtevnost</strong>: koliko korakov potrebuje v odvisnosti od količine podatkov. Linearno iskanje med \(n\) elementi potrebuje do \(n\) primerjav, dvojiško iskanje v urejenem seznamu (vedno pogledamo sredino in zavržemo polovico) pa le okoli \(\log_2 n\). Med pravilnimi algoritmi je boljši tisti, ki je hitrejši, porabi manj pomnilnika in je razumljivejši.</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-2">
+              <h4>Tip 2: Sledenje algoritmu (diagram poteka)</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Izvedi algoritem z zgornjega diagrama poteka za \(a = 48\) in \(b = 18\). Zapiši vrednosti spremenljivk po vsakem koraku. Kaj algoritem izračuna?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> podan je diagram poteka, psevdokoda ali opis korakov in vhodni podatki; sprašujejo, kaj algoritem vrne, kolikokrat se zanka ponovi ali kaj algoritem počne.</p><ul class="kljucne"><li>„izvedi algoritem“</li><li>„kaj izpiše“</li><li>„kolikokrat se ponovi“</li><li>„tabela vrednosti“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Nariši tabelo s stolpcem za vsako spremenljivko in za pogoj.</p><div class="na-nalogi"><p>Stolpci: a, b, a ≠ b?, a &gt; b?</p></div></li>
+              <li><p class="korak">Pojdi po diagramu korak za korakom, pri vsakem pogoju zapiši da/ne in nove vrednosti.</p><div class="na-nalogi">
+            <div class="tabela-wrap"><table class="tabela"><thead><tr><th>a</th><th>b</th><th>a ≠ b?</th><th>a &gt; b?</th></tr></thead><tbody>
+            <tr><td>48</td><td>18</td><td>da</td><td>da</td></tr><tr><td>30</td><td>18</td><td>da</td><td>da</td></tr><tr><td>12</td><td>18</td><td>da</td><td>ne</td></tr><tr><td>12</td><td>6</td><td>da</td><td>da</td></tr><tr><td>6</td><td>6</td><td>ne</td><td></td></tr></tbody></table></div></div></li>
+              <li><p class="korak">Ko pogoj zanke ne velja več, preberi izhod in poveži rezultat s pomenom.</p><div class="na-nalogi"><p>Izpiše 6, kar je največji skupni delitelj števil 48 in 18. Zanka se je izvedla štirikrat.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Kaj se zgodi z algoritmom, če vnesemo \(a = 5\), \(b = 0\)?</p><p>\(a\) se nikoli ne zmanjša na 0, zanka se ne konča: algoritem ni končen za ta vhod, treba je preveriti vhodne podatke.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Kolikokrat se izvede zanka „za i od 1 do 10 s korakom 3“?</p><p>Štirikrat (1, 4, 7, 10).</p></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-3">
+              <h4>Tip 3: Sestavi algoritem in diagram poteka</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Sestavi algoritem, ki prebere število \(n\) in nato \(n\) števil ter izpiše največje med njimi. Nariši diagram poteka.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> opisan je problem; zahtevajo algoritem z besedami, psevdokodo ali diagramom poteka.</p><ul class="kljucne"><li>„sestavi algoritem“</li><li>„nariši diagram poteka“</li><li>„zapiši postopek“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Določi vhod, izhod in spremenljivke, ki jih potrebuješ.</p><div class="na-nalogi"><p>Vhod: n in n števil. Izhod: največje. Spremenljivke: x (trenutno število), naj (največje doslej), i (števec).</p></div></li>
+              <li><p class="korak">Reši problem ročno na majhnem primeru in opazuj, kaj ponavljaš.</p><div class="na-nalogi"><p>Za 4, 9, 2: kandidat 4; 9 je večje, kandidat 9; 2 ni večje. Ponavljamo: preberi, primerjaj, morda zamenjaj.</p></div></li>
+              <li><p class="korak">Zapiši korake z gradniki (zaporedje, odločitev, zanka) in nastavi začetne vrednosti.</p><div class="na-nalogi"><p>Prvo število je začetni kandidat (ne 0, ker so lahko vsa števila negativna). Zanka teče, dokler ni prebranih n števil.</p></div></li>
+              <li><p class="korak">Nariši diagram in ga preveri na primeru.</p><div class="na-nalogi"><figure class="slika">
+<svg viewBox="0 0 470 470" role="img" aria-label="Diagram poteka za največje število" xmlns="http://www.w3.org/2000/svg"><defs><marker id="d4-k1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="d4-k2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="d4-k3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="d4-k4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="d4-crn" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs><polyline class="s-crta" fill="none" points="200,37 200,55" marker-end="url(#d4-crn)"/><polyline class="s-crta" fill="none" points="200,89 200,109" marker-end="url(#d4-crn)"/><polyline class="s-crta" fill="none" points="200,155 200,187" marker-end="url(#d4-crn)"/><polyline class="s-crta" fill="none" points="200,243 200,273" marker-end="url(#d4-crn)"/><text class="s-txt-muted" x="208" y="256" text-anchor="start">da</text><polyline class="s-crta" fill="none" points="200,307 200,332" marker-end="url(#d4-crn)"/><polyline class="s-crta" fill="none" points="265,360 310,360" marker-end="url(#d4-crn)"/><text class="s-txt-muted" x="278" y="352" text-anchor="start">da</text><polyline class="s-crta" fill="none" points="200,388 200,421" marker-end="url(#d4-crn)"/><text class="s-txt-muted" x="208" y="402" text-anchor="start">ne</text><polyline class="s-crta" fill="none" points="360,377 360,438 255,438" marker-end="url(#d4-crn)"/><polyline class="s-k1" fill="none" points="145,438 40,438 40,172 200,172" marker-end="url(#d4-k1)"/><polyline class="s-crta" fill="none" points="260,215 330,215" marker-end="url(#d4-crn)"/><text class="s-txt-muted" x="285" y="207" text-anchor="start">ne</text><polyline class="s-crta" fill="none" points="390,232 390,260" marker-end="url(#d4-crn)"/><rect class="s-kot" x="150" y="7" width="100" height="30" rx="15"/><text class="s-txt-b" x="200" y="26" text-anchor="middle">začetek</text><polygon class="s-lik" points="152,55 260,55 248,89 140,89"/><text class="s-txt-b" x="200" y="76" text-anchor="middle">vnesi n</text><rect class="s-lik" x="125" y="109" width="150" height="46" rx="4"/><text class="s-txt-b" x="200" y="128.5" text-anchor="middle">vnesi x</text><text class="s-txt-muted" x="200" y="143.5" text-anchor="middle" style="font-size:12px">naj = x, i = 1</text><polygon class="s-lik-2" points="200,187 260,215 200,243 140,215"/><text class="s-txt-b" x="200" y="219" text-anchor="middle">i < n ?</text><polygon class="s-lik" points="152,273 260,273 248,307 140,307"/><text class="s-txt-b" x="200" y="294" text-anchor="middle">vnesi x</text><polygon class="s-lik-2" points="200,332 265,360 200,388 135,360"/><text class="s-txt-b" x="200" y="364" text-anchor="middle">x > naj ?</text><rect class="s-lik" x="310" y="343" width="100" height="34" rx="4"/><text class="s-txt-b" x="360" y="364" text-anchor="middle">naj = x</text><rect class="s-lik" x="145" y="421" width="110" height="34" rx="4"/><text class="s-txt-b" x="200" y="442" text-anchor="middle">i = i + 1</text><polygon class="s-lik" points="342,198 450,198 438,232 330,232"/><text class="s-txt-b" x="390" y="219" text-anchor="middle">izpiši naj</text><rect class="s-kot" x="350" y="260" width="80" height="30" rx="15"/><text class="s-txt-b" x="390" y="279" text-anchor="middle">konec</text></svg>
+<figcaption>Algoritem za največje izmed n števil: prvo število je začetni kandidat, vsako naslednje primerjamo s kandidatom.</figcaption>
+</figure></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Algoritem, ki ugotovi, ali je leto prestopno.</p><p>Prestopno, če je deljivo s 400, ali pa deljivo s 4 in ne s 100.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Algoritem, ki sešteje števke števila.</p><p>Dokler je število večje od 0: vsoti prištej ostanek pri deljenju z 10, število celoštevilsko deli z 10.</p></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-4">
+              <h4>Tip 4: Analiza in vrednotenje algoritma</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>V telefonskem imeniku je 1000 urejenih imen. Koliko primerjav potrebujemo v najslabšem primeru z linearnim in koliko z dvojiškim iskanjem? Kateri algoritem je boljši in kdaj ga lahko uporabimo?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> primerjata se dva algoritma, ali pa sprašujejo po številu korakov, pravilnosti ali pomanjkljivostih algoritma.</p><ul class="kljucne"><li>„koliko korakov, primerjav“</li><li>„kateri algoritem je boljši“</li><li>„analiziraj“</li><li>„ovrednoti“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Za vsak algoritem ugotovi, koliko korakov naredi v odvisnosti od \(n\) (najslabši primer).</p><div class="na-nalogi"><p>Linearno: vsako ime posebej, do 1000 primerjav. Dvojiško: vsaka primerjava prepolovi del, \(2^{10} = 1024 \ge 1000\), torej do 10 primerjav.</p></div></li>
+              <li><p class="korak">Preveri pogoje za uporabo in robne primere.</p><div class="na-nalogi"><p>Dvojiško iskanje deluje le na urejenem seznamu; linearno na vsakem.</p></div></li>
+              <li><p class="korak">Ovrednoti in utemelji.</p><div class="na-nalogi"><p>Za urejen imenik je dvojiško iskanje mnogo hitrejše; če podatki niso urejeni in iščemo le enkrat, je linearno preprostejše.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Koliko primerjav potrebuje dvojiško iskanje med milijonom elementov?</p><p>Okoli 20 (\(2^{20} \approx 10^6\)).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Algoritem za povprečje deli vsoto z \(n\). Kateri robni primer manjka?</p><p>\(n = 0\) (deljenje z nič).</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 3 -->
+        <section class="sklop" id="sklop-3">
+          <header class="sklop-header">
+            <span class="sklop-num">4.4 · 3</span>
+            <h2>Programski jezik</h2>
+            <p>Opredelitev in funkcija programskega jezika, gradniki jezika, načini programiranja, prevajalnik in tolmač.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <h4>Kaj je programski jezik</h4>
+            <p><strong>Programski jezik</strong> je umeten jezik z natančno določeno skladnjo (pravili zapisa) in pomenom, v katerem zapišemo algoritem tako, da ga računalnik lahko izvede. Procesor razume le <strong>strojni jezik</strong> (zaporedja bitov); <strong>zbirnik</strong> ga zapiše s kraticami ukazov. <strong>Višji programski jeziki</strong> (Python, Java, C, JavaScript) so bližje človeku, neodvisni od procesorja in zato prenosljivi.</p>
+            <h4>Gradniki jezika (na primeru Pythona)</h4>
+            <div class="tabela-wrap">
+              <table class="tabela">
+                <thead><tr><th>Gradnik</th><th>Naloga</th><th>Python</th></tr></thead>
+                <tbody>
+                  <tr><td>spremenljivka in prireditev</td><td>hrani vrednost</td><td><code class="k">vsota = 0</code></td></tr>
+                  <tr><td>podatkovni tipi</td><td>vrsta vrednosti</td><td><code class="k">int</code>, <code class="k">float</code>, <code class="k">str</code>, <code class="k">bool</code>, <code class="k">list</code></td></tr>
+                  <tr><td>izrazi in operatorji</td><td>računanje in primerjanje</td><td><code class="k">+ - * / // % **</code>, <code class="k">== != &lt; &gt;</code>, <code class="k">and or not</code></td></tr>
+                  <tr><td>vhod, izhod</td><td>branje in izpis</td><td><code class="k">input()</code>, <code class="k">print()</code></td></tr>
+                  <tr><td>odločitev</td><td>izbira poti</td><td><code class="k">if</code>, <code class="k">elif</code>, <code class="k">else</code></td></tr>
+                  <tr><td>zanke</td><td>ponavljanje</td><td><code class="k">for i in range(n):</code>, <code class="k">while pogoj:</code></td></tr>
+                  <tr><td>podprogram (funkcija)</td><td>poimenovan del programa za večkratno uporabo</td><td><code class="k">def povprecje(s):</code> … <code class="k">return</code></td></tr>
+                  <tr><td>komentar</td><td>pojasnilo za ljudi</td><td><code class="k"># izračun povprečja</code></td></tr>
+                </tbody>
+              </table>
+            </div>
+            <h4>Načini programiranja</h4>
+            <ul>
+              <li><strong>Strukturirano</strong> (proceduralno): program je zaporedje ukazov, razdeljeno na podprograme, z gradniki zaporedje, odločitev, zanka (C, Pascal, Python).</li>
+              <li><strong>Objektno</strong>: program sestavljajo objekti, ki združujejo podatke (lastnosti) in postopke (metode); objekti so primerki razredov (Java, C#, Python).</li>
+              <li><strong>Dogodkovno</strong>: program se odziva na dogodke (klik, pritisk tipke, prihod sporočila); značilno za grafične vmesnike in spletne strani (JavaScript, Scratch).</li>
+              <li><strong>Funkcijsko</strong>: program je sestav funkcij brez spreminjanja stanja (Haskell, Lisp).</li>
+              <li><strong>Logično</strong>: zapišemo dejstva in pravila, sistem sam izpelje odgovor (Prolog).</li>
+              <li><strong>Skriptno</strong>: kratki programi, ki avtomatizirajo opravila v drugem okolju (JavaScript v brskalniku, makri v preglednici, ukazne datoteke).</li>
+            </ul>
+            <h4>Prevajalnik in tolmač</h4>
+            <figure class="slika slika--siroka">
+<svg viewBox="0 0 540 190" role="img" aria-label="Prevajalnik in tolmač" xmlns="http://www.w3.org/2000/svg"><defs><marker id="d5-k1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="d5-k2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="d5-k3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="d5-k4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="d5-crn" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs><polyline class="s-k1" fill="none" points="125,45 155,45" marker-end="url(#d5-k1)"/><polyline class="s-k1" fill="none" points="265,45 295,45" marker-end="url(#d5-k1)"/><polyline class="s-k1" fill="none" points="405,45 435,45" marker-end="url(#d5-k1)"/><polyline class="s-k1" fill="none" points="125,140 175,140" marker-end="url(#d5-k1)"/><polyline class="s-k1" fill="none" points="385,140 435,140" marker-end="url(#d5-k1)"/><rect class="s-kot" x="15" y="23" width="110" height="44" rx="4"/><text class="s-txt-b" x="70" y="41.5" text-anchor="middle">izvorna</text><text class="s-txt-muted" x="70" y="56.5" text-anchor="middle" style="font-size:12px">koda</text><rect class="s-lik-2" x="155" y="23" width="110" height="44" rx="4"/><text class="s-txt-b" x="210" y="49" text-anchor="middle">prevajalnik</text><rect class="s-lik" x="295" y="23" width="110" height="44" rx="4"/><text class="s-txt-b" x="350" y="41.5" text-anchor="middle">strojna koda</text><text class="s-txt-muted" x="350" y="56.5" text-anchor="middle" style="font-size:12px">(.exe)</text><rect class="s-lik" x="435" y="23" width="90" height="44" rx="4"/><text class="s-txt-b" x="480" y="49" text-anchor="middle">izvajanje</text><rect class="s-kot" x="15" y="118" width="110" height="44" rx="4"/><text class="s-txt-b" x="70" y="136.5" text-anchor="middle">izvorna</text><text class="s-txt-muted" x="70" y="151.5" text-anchor="middle" style="font-size:12px">koda</text><rect class="s-lik-2" x="175" y="118" width="210" height="44" rx="4"/><text class="s-txt-b" x="280" y="136.5" text-anchor="middle">tolmač</text><text class="s-txt-muted" x="280" y="151.5" text-anchor="middle" style="font-size:12px">prevede in izvede ukaz za ukazom</text><rect class="s-lik" x="435" y="118" width="90" height="44" rx="4"/><text class="s-txt-b" x="480" y="144" text-anchor="middle">rezultat</text><text class="s-txt-muted" x="280" y="98" text-anchor="middle" style="font-size:11px">enkrat prevedemo, večkrat poženemo</text></svg>
+<figcaption>Prevajalnik celoten program vnaprej prevede v strojno kodo, ki se nato hitro izvaja brez prevajalnika. Tolmač program bere in izvaja sproti, ukaz za ukazom.</figcaption>
+</figure>
+            <p>Prevedeni program teče hitreje in ga lahko razdelimo brez izvorne kode, a ga moramo po vsaki spremembi znova prevesti, in deluje le na izbranem sistemu. Tolmačen program je prenosljiv in priročen za preizkušanje (spremembo takoj poženemo), a teče počasneje in na računalniku mora biti tolmač. C in C++ sta običajno prevajana, Python in JavaScript tolmačena; Java se prevede v vmesno kodo, ki jo izvaja navidezni stroj.</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-5">
+              <h4>Tip 5: Način programiranja, prevajalnik ali tolmač</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Spletna stran ob kliku na gumb preveri izpolnjen obrazec. Kateri način programiranja je to? Podjetje želi prodajati program, ne da bi kupci videli izvorno kodo, in želi, da teče čim hitreje. Ali naj uporabi prevajalnik ali tolmač?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> opisan je program ali zahteva, iščejo način programiranja, vrsto jezika ali primerjavo prevajalnika in tolmača.</p><ul class="kljucne"><li>„objektno, dogodkovno, strukturirano“</li><li>„prevajalnik, tolmač“</li><li>„strojni jezik, višji jezik“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Poišči ključno značilnost opisa: odziv na dogodke, objekti, pravila, funkcije, zaporedje ukazov.</p><div class="na-nalogi"><p>„Ob kliku“ je odziv na dogodek: dogodkovno programiranje (tipično skriptni jezik JavaScript).</p></div></li>
+              <li><p class="korak">Za prevajalnik in tolmač primerjaj zahteve s prednostmi.</p><div class="na-nalogi"><p>Hitrost in skrita koda sta prednosti prevedenega programa.</p></div></li>
+              <li><p class="korak">Odgovori in utemelji.</p><div class="na-nalogi"><p>Prevajalnik: kupci dobijo le strojno kodo, ki teče hitro.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Razred Avto ima lastnosti barva in hitrost ter metodo pospeši. Kateri način programiranja?</p><p>Objektni.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Zakaj je tolmač priročen pri učenju programiranja?</p><p>Spremembo takoj poženeš in vidiš rezultat, napaka se pokaže v vrstici, kjer nastane.</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 4 -->
+        <section class="sklop" id="sklop-4">
+          <header class="sklop-header">
+            <span class="sklop-num">4.4 · 4</span>
+            <h2>Programiranje</h2>
+            <p>Izdelava programa za dani algoritem, dokumentiranje, analiza programa in vrednotenje rezultatov.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <h4>Od algoritma do programa</h4>
+            <p>Vsak gradnik algoritma ima v jeziku svoj stavek. V Pythonu zamik (štirje presledki) določa, kateri stavki so znotraj odločitve ali zanke.</p>
+<pre class="koda"><code># Program prebere n ocen, izpiše povprečje
+# in število ocen, ki so večje od povprečja.
+n = int(input("Število ocen: "))
+ocene = []
+for i in range(n):              # ponavljanje
+    ocene.append(int(input("Ocena: ")))
+
+povp = sum(ocene) / n            # zaporedje
+nad = 0
+for o in ocene:
+    if o &gt; povp:                 # odločitev
+        nad = nad + 1
+
+print("Povprečje:", round(povp, 2))
+print("Nad povprečjem:", nad)</code></pre>
+            <p>Pogoste prijeme si zapomni: <strong>števec</strong> (<code class="k">st = st + 1</code>), <strong>vsota</strong> (<code class="k">s = s + x</code>), <strong>največji element</strong> (kandidat in primerjava), <strong>ostanek</strong> (<code class="k">x % 2 == 0</code> za sodo število), <strong>celoštevilsko deljenje</strong> (<code class="k">x // 10</code>).</p>
+            <h4>Dokumentiranje</h4>
+            <p>Program dokumentiramo, da ga razumejo drugi in mi sami čez čas: komentarji v kodi, smiselna imena spremenljivk (<code class="k">povp</code> namesto <code class="k">a</code>), opis namena, vhodov in izhodov, navodila za uporabo, opis preizkusov. Brez dokumentacije je program težko popravljati in nadgrajevati.</p>
+            <h4>Analiza programa in napake</h4>
+            <ul>
+              <li><strong>Skladenjska</strong> (sintaktična) napaka: program ni pravilno zapisan (manjka dvopičje, napačen zamik); program se sploh ne zažene.</li>
+              <li><strong>Izvajalna</strong> napaka: med izvajanjem pride do nedovoljene operacije (deljenje z 0, črka namesto števila pri <code class="k">int()</code>).</li>
+              <li><strong>Logična</strong> napaka: program teče, a vrne napačen rezultat (napačen pogoj, zanka se izvede enkrat premalo).</li>
+            </ul>
+            <p>Program preizkusimo s <strong>testnimi primeri</strong>, za katere vnaprej poznamo rezultat, vključno z robnimi primeri. Rezultat ovrednotimo: ali je smiseln, ali so enote prave, ali program obravnava napačne vnose.</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-6">
+              <h4>Tip 6: Napiši program</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Napiši program, ki bere cela števila, dokler uporabnik ne vnese 0, in nato izpiše, koliko je bilo vnesenih sodih števil in kolikšna je njihova vsota.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> opisano je, kaj naj program prebere in izpiše; zahtevajo kodo v poljubnem jeziku.</p><ul class="kljucne"><li>„napiši program“</li><li>„zapiši v programskem jeziku“</li><li>„napiši funkcijo“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Določi vhod, izhod in spremenljivke z začetnimi vrednostmi.</p><div class="na-nalogi"><p>Vhod: števila do 0. Izhod: število sodih in njihova vsota. Spremenljivki <code class="k">st = 0</code>, <code class="k">vsota = 0</code>.</p></div></li>
+              <li><p class="korak">Izberi vrsto zanke: <code class="k">for</code>, ko poznaš število ponovitev; <code class="k">while</code>, ko se ponavlja do pogoja.</p><div class="na-nalogi"><p>Število vnosov ni znano, zato <code class="k">while</code>, ki teče, dokler vnos ni 0.</p></div></li>
+              <li><p class="korak">Zapiši telo zanke z odločitvami, nato izpis po zanki.</p><div class="na-nalogi">
+<pre class="koda"><code>st = 0
+vsota = 0
+x = int(input("Število: "))
+while x != 0:
+    if x % 2 == 0:       # sodo število
+        st = st + 1
+        vsota = vsota + x
+    x = int(input("Število: "))
+print("Sodih:", st, "vsota:", vsota)</code></pre></div></li>
+              <li><p class="korak">Preizkusi s primerom, ki ga izračunaš ročno.</p><div class="na-nalogi"><p>Vnos 3, 4, 10, 7, 0: sodih 2, vsota 14.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Funkcija, ki vrne, ali je leto prestopno.</p>
+<pre class="koda"><code>def prestopno(leto):
+    return leto % 400 == 0 or (leto % 4 == 0 and leto % 100 != 0)</code></pre></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Izpiši poštevanko števila 7 do 10.</p>
+<pre class="koda"><code>for i in range(1, 11):
+    print(7, "*", i, "=", 7 * i)</code></pre></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-7">
+              <h4>Tip 7: Kaj izpiše program</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Kaj izpiše program?</p>
+<pre class="koda"><code>x = 1
+s = 0
+while x &lt; 20:
+    s = s + x
+    x = x * 3
+print(x, s)</code></pre></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> podana je koda, sprašujejo po izpisu, vrednosti spremenljivke ali številu ponovitev.</p><ul class="kljucne"><li>„kaj izpiše“</li><li>„kolikšna je vrednost“</li><li>„kolikokrat se izvede“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Napravi tabelo spremenljivk z začetnimi vrednostmi.</p><div class="na-nalogi"><p>\(x = 1\), \(s = 0\).</p></div></li>
+              <li><p class="korak">Pred vsakim obhodom preveri pogoj zanke, nato izvedi stavke v vrstnem redu in zapiši nove vrednosti.</p><div class="na-nalogi"><p>\(1 &lt; 20\): \(s = 1\), \(x = 3\). \(3 &lt; 20\): \(s = 4\), \(x = 9\). \(9 &lt; 20\): \(s = 13\), \(x = 27\). \(27 &lt; 20\) ne velja.</p></div></li>
+              <li><p class="korak">Izpiši tisto, kar zahteva <code class="k">print</code>, v pravem vrstnem redu.</p><div class="na-nalogi"><p>Izpiše <code class="k">27 13</code>.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Kaj izpiše <code class="k">print(17 // 5, 17 % 5)</code>?</p><p><code class="k">3 2</code>.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Kolikokrat se izvede <code class="k">for i in range(2, 11, 2)</code>?</p><p>Petkrat (2, 4, 6, 8, 10).</p></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-8">
+              <h4>Tip 8: Poišči in popravi napako</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Program naj bi izpisal vsoto števil od 1 do 10, a izpiše 45. Poišči napako, določi njeno vrsto in jo popravi.</p>
+<pre class="koda"><code>vsota = 0
+for i in range(1, 10):
+    vsota = vsota + i
+print(vsota)</code></pre></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> program ne deluje ali vrne napačen rezultat; iščejo vzrok, vrsto napake ali popravek.</p><ul class="kljucne"><li>„poišči napako“</li><li>„popravi program“</li><li>„skladenjska, logična napaka“</li><li>„testni primer“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Ali se program zažene? Če ne, išči skladenjsko napako (dvopičje, zamik, oklepaji, narekovaji).</p><div class="na-nalogi"><p>Zažene se; skladnja je pravilna.</p></div></li>
+              <li><p class="korak">Ali se ustavi z napako med izvajanjem? Če ne, gre za logično napako: primerjaj pričakovani in dejanski rezultat.</p><div class="na-nalogi"><p>Pričakujemo 55, dobimo 45; manjka 10. Logična napaka.</p></div></li>
+              <li><p class="korak">Sledi kodi na majhnem primeru in poišči mesto, kjer se rezultat odmakne.</p><div class="na-nalogi"><p><code class="k">range(1, 10)</code> da števila od 1 do 9; zgornja meja ni vključena. Popravek: <code class="k">range(1, 11)</code>.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> <code class="k">if x &gt; 0</code> brez dvopičja.</p><p>Skladenjska napaka; program se ne zažene.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> <code class="k">povp = vsota / n</code>, ko je \(n = 0\).</p><p>Izvajalna napaka (deljenje z nič); pred deljenjem preveri <code class="k">n &gt; 0</code>.</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 5 -->
+        <section class="sklop" id="sklop-5">
+          <header class="sklop-header">
+            <span class="sklop-num">4.4 · 5</span>
+            <h2>Podatkovna baza</h2>
+            <p>Realnost in model, podatkovno modeliranje, zahteve ANSI, relacijski model, gradniki baze, ključi, tipi podatkov in indeksi.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <h4>Realnost in model</h4>
+            <p><strong>Podatkovna baza</strong> je urejena zbirka med seboj povezanih podatkov, ki jih upravlja <strong>sistem za upravljanje podatkovnih baz</strong> (SUPB, na primer MySQL, PostgreSQL, Microsoft Access). Baza ne vsebuje vse resničnosti, ampak njen <strong>model</strong>: le entitete in lastnosti, ki so za namen pomembne. <strong>Podatkovno modeliranje</strong> je postopek, s katerim določimo entitete, njihove atribute in povezave; rezultat pogosto narišemo kot entitetno-relacijski (ER) diagram. Povezave so lahko ena-ena (1 : 1), ena-več (1 : N) in več-več (M : N).</p>
+            <figure class="slika slika--siroka">
+<svg viewBox="0 0 560 190" role="img" aria-label="Entitetno-relacijski diagram knjižnice" xmlns="http://www.w3.org/2000/svg"><defs><marker id="d6-k1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="d6-k2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="d6-k3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="d6-k4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="d6-crn" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs><polyline class="s-k1" fill="none" points="145,50 215,50"/><polyline class="s-k1" fill="none" points="415,50 345,50"/><rect class="s-lik" x="15" y="32" width="130" height="36" rx="4"/><text class="s-txt-b" x="80" y="54" text-anchor="middle">Član</text><rect class="s-lik" x="215" y="32" width="130" height="36" rx="4"/><text class="s-txt-b" x="280" y="54" text-anchor="middle">Izposoja</text><rect class="s-lik" x="415" y="32" width="130" height="36" rx="4"/><text class="s-txt-b" x="480" y="54" text-anchor="middle">Knjiga</text><text class="s-txt-k1" x="156" y="44" text-anchor="middle">1</text><text class="s-txt-k1" x="205" y="44" text-anchor="middle">N</text><text class="s-txt-k1" x="355" y="44" text-anchor="middle">N</text><text class="s-txt-k1" x="405" y="44" text-anchor="middle">1</text><text class="s-txt-k2" x="80" y="92" text-anchor="middle" style="font-size:12px">ŠtIzkaznice (PK)</text><text class="s-txt-muted" x="80" y="108" text-anchor="middle" style="font-size:12px">Ime, Priimek</text><text class="s-txt-muted" x="80" y="124" text-anchor="middle" style="font-size:12px">Naslov</text><text class="s-txt-k2" x="280" y="92" text-anchor="middle" style="font-size:12px">IdIzposoje (PK)</text><text class="s-txt-muted" x="280" y="108" text-anchor="middle" style="font-size:12px">ŠtIzkaznice (FK)</text><text class="s-txt-muted" x="280" y="124" text-anchor="middle" style="font-size:12px">IdKnjige (FK)</text><text class="s-txt-muted" x="280" y="140" text-anchor="middle" style="font-size:12px">DatumIzposoje</text><text class="s-txt-k2" x="480" y="92" text-anchor="middle" style="font-size:12px">IdKnjige (PK)</text><text class="s-txt-muted" x="480" y="108" text-anchor="middle" style="font-size:12px">Naslov, Avtor</text><text class="s-txt-muted" x="480" y="124" text-anchor="middle" style="font-size:12px">ISBN, Leto</text></svg>
+<figcaption>Podatkovni model knjižnice. En član ima lahko več izposoj, ena knjiga je lahko izposojena večkrat. Povezavo več-več med člani in knjigami razbijemo s tabelo Izposoja. PK je primarni ključ, FK tuji ključ.</figcaption>
+</figure>
+            <h4>Zahteve za podatkovno bazo (ANSI)</h4>
+            <p>Ameriški standardizacijski inštitut ANSI je opredelil, kaj mora podatkovna baza zagotavljati:</p>
+            <ul>
+              <li>vsak podatek je shranjen le enkrat (ni nepotrebnega <strong>podvajanja</strong> in s tem neskladij);</li>
+              <li><strong>neodvisnost</strong> podatkov od programov: spremembo zapisa lahko naredimo, ne da bi spreminjali vse programe;</li>
+              <li><strong>celovitost</strong> (integriteta): podatki so pravilni in skladni (veljavne vrednosti, tuji ključ kaže na obstoječ zapis);</li>
+              <li><strong>varnost</strong>: dostop le pooblaščenim, vsak s svojimi pravicami;</li>
+              <li>hkratna uporaba več uporabnikov in obnova po napaki.</li>
+            </ul>
+            <figure class="slika">
+<svg viewBox="0 0 480 230" role="img" aria-label="Tri ravni podatkovne baze" xmlns="http://www.w3.org/2000/svg"><defs><marker id="d7-k1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="d7-k2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="d7-k3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="d7-k4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="d7-crn" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs><polyline class="s-crta" fill="none" points="175,30 150,95" marker-end="url(#d7-crn)" marker-start="url(#d7-crn)"/><polyline class="s-crta" fill="none" points="240,47 240,95" marker-end="url(#d7-crn)" marker-start="url(#d7-crn)"/><polyline class="s-crta" fill="none" points="305,30 330,95" marker-end="url(#d7-crn)" marker-start="url(#d7-crn)"/><polyline class="s-crta" fill="none" points="240,135 240,175" marker-end="url(#d7-crn)" marker-start="url(#d7-crn)"/><rect class="s-kot" x="65" y="13" width="110" height="34" rx="4"/><text class="s-txt-b" x="120" y="34" text-anchor="middle">pogled tajnice</text><rect class="s-kot" x="185" y="13" width="110" height="34" rx="4"/><text class="s-txt-b" x="240" y="34" text-anchor="middle">pogled učitelja</text><rect class="s-kot" x="305" y="13" width="110" height="34" rx="4"/><text class="s-txt-b" x="360" y="34" text-anchor="middle">pogled dijaka</text><rect class="s-lik-2" x="70" y="95" width="340" height="40" rx="4"/><text class="s-txt-b" x="240" y="111.5" text-anchor="middle">konceptualna raven</text><text class="s-txt-muted" x="240" y="126.5" text-anchor="middle" style="font-size:12px">vse tabele, polja, povezave</text><path class="s-lik" d="M70,182 A170,7 0 0 1 410,182 V208 A170,7 0 0 1 70,208 Z M70,182 A170,7 0 0 0 410,182"/><text class="s-txt-b" x="240" y="191.5" text-anchor="middle">notranja raven</text><text class="s-txt-muted" x="240" y="206.5" text-anchor="middle" style="font-size:12px">zapis na disku, indeksi</text><text class="s-txt-muted" x="470" y="34" text-anchor="end" style="font-size:11px">zunanja</text></svg>
+<figcaption>Tri ravni podatkovne baze po ANSI/SPARC. Vsak uporabnik vidi svoj del podatkov (zunanja raven), celotna logična zgradba je opisana enkrat (konceptualna), fizični zapis pa je skrit (notranja). Zato lahko spremenimo eno raven, ne da bi spreminjali druge.</figcaption>
+</figure>
+            <h4>Relacijski model</h4>
+            <p>V <strong>relacijskem modelu</strong> so podatki v tabelah (relacijah). Vsaka tabela opisuje eno vrsto entitet, povezave med tabelami pa naredimo s skupnimi polji (ključi).</p>
+            <figure class="slika">
+<svg viewBox="0 0 480 190" role="img" aria-label="Zgradba tabele" xmlns="http://www.w3.org/2000/svg"><rect x="110" y="40" width="80" height="28" fill="#EEF0FF" stroke="#94A0B8"/><text x="150" y="58" text-anchor="middle" class="s-txt-b">Id</text><rect x="190" y="40" width="80" height="28" fill="#EEF0FF" stroke="#94A0B8"/><text x="230" y="58" text-anchor="middle" class="s-txt-b">Ime</text><rect x="270" y="40" width="80" height="28" fill="#EEF0FF" stroke="#94A0B8"/><text x="310" y="58" text-anchor="middle" class="s-txt-b">Priimek</text><rect x="350" y="40" width="80" height="28" fill="#EEF0FF" stroke="#94A0B8"/><text x="390" y="58" text-anchor="middle" class="s-txt-b">Razred</text><rect x="110" y="68" width="80" height="28" fill="#FEF3C7" stroke="#94A0B8"/><text x="150" y="86" text-anchor="middle">1</text><rect x="190" y="68" width="80" height="28" fill="#FFFFFF" stroke="#94A0B8"/><text x="230" y="86" text-anchor="middle">Ana</text><rect x="270" y="68" width="80" height="28" fill="#FFFFFF" stroke="#94A0B8"/><text x="310" y="86" text-anchor="middle">Kos</text><rect x="350" y="68" width="80" height="28" fill="#FFFFFF" stroke="#94A0B8"/><text x="390" y="86" text-anchor="middle">4.a</text><rect x="110" y="96" width="80" height="28" fill="#FEF3C7" stroke="#94A0B8"/><text x="150" y="114" text-anchor="middle">2</text><rect x="190" y="96" width="80" height="28" fill="#FFFFFF" stroke="#94A0B8"/><text x="230" y="114" text-anchor="middle">Bor</text><rect x="270" y="96" width="80" height="28" fill="#FFFFFF" stroke="#94A0B8"/><text x="310" y="114" text-anchor="middle">Zupan</text><rect x="350" y="96" width="80" height="28" fill="#FFFFFF" stroke="#94A0B8"/><text x="390" y="114" text-anchor="middle">3.b</text><rect x="110" y="124" width="80" height="28" fill="#FEF3C7" stroke="#94A0B8"/><text x="150" y="142" text-anchor="middle">3</text><rect x="190" y="124" width="80" height="28" fill="#FFFFFF" stroke="#94A0B8"/><text x="230" y="142" text-anchor="middle">Ana</text><rect x="270" y="124" width="80" height="28" fill="#FFFFFF" stroke="#94A0B8"/><text x="310" y="142" text-anchor="middle">Novak</text><rect x="350" y="124" width="80" height="28" fill="#FFFFFF" stroke="#94A0B8"/><text x="390" y="142" text-anchor="middle">4.b</text><rect x="108" y="94" width="324" height="32" fill="none" stroke="#DC2626" stroke-width="2.5"/><text class="s-txt-k2" x="102" y="114" text-anchor="end">zapis</text><rect x="268" y="38" width="84" height="116" fill="none" stroke="#16A34A" stroke-width="2.5"/><text class="s-txt-k3" x="310" y="30" text-anchor="middle">polje</text><text class="s-txt-k4" x="150" y="174" text-anchor="middle">primarni ključ</text><text class="s-txt-muted" x="390" y="174" text-anchor="middle">podatek: „4.b“</text></svg>
+<figcaption>Tabela (relacija): vsak zapis (vrstica) opisuje eno entiteto, vsako polje (stolpec) en atribut. Ker sta dve Ani, ime ni primerno za ključ; zato dodamo enolično številko Id.</figcaption>
+</figure>
+            <ul>
+              <li><strong>Polje</strong> (stolpec, atribut) ima ime in tip podatka. <strong>Zapis</strong> (vrstica) so podatki o eni entiteti. <strong>Podatek</strong> je vrednost v enem polju enega zapisa.</li>
+              <li><strong>Primarni ključ</strong> je polje (ali več polj), ki enolično določa zapis. Biti mora enoličen, ne sme biti prazen, naj se ne spreminja in naj bo čim krajši. Ime in priimek nista dobra ključa (ni enolično); pogosto dodamo umetni ključ (številka).</li>
+              <li><strong>Tuji ključ</strong> je polje, ki vsebuje vrednost primarnega ključa druge tabele in tako povezuje tabeli.</li>
+            </ul>
+            <p><strong>Tipi podatkov:</strong> znakovni (kratko besedilo, na primer ime, poštna številka, telefon), številski (cela in decimalna števila, s katerimi računamo), logični (da/ne), datum in čas, besedilo (dolgo besedilo, opombe). Telefonska številka in EMŠO sta znakovna, ker z njima ne računamo in imata lahko vodilne ničle.</p>
+            <h4>Gradniki baze in indeks</h4>
+            <ul>
+              <li><strong>tabela</strong> hrani podatke;</li>
+              <li><strong>poizvedba</strong> izbere podatke, ki ustrezajo pogojem, iz ene ali več tabel, jih razvrsti in izračuna nova polja;</li>
+              <li><strong>obrazec</strong> je prijazen zaslon za vnos in pregled podatkov;</li>
+              <li><strong>poročilo</strong> je oblikovan izpis za tiskanje, z združevanjem in povzetki.</li>
+            </ul>
+            <p>Zapisi so v tabeli shranjeni v vrstnem redu vnosa. <strong>Indeks</strong> (indeksna datoteka) je ločen urejen seznam vrednosti izbranega polja s kazalci na zapise, podobno kot stvarno kazalo v knjigi. Z njim baza hitro najde in razvrsti zapise, ne da bi preurejala tabelo; vsak indeks pa porabi prostor in upočasni vnos.</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-9">
+              <h4>Tip 9: Načrtuj tabele, ključe in tipe podatkov</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Šolska knjižnica želi bazo o članih, knjigah in izposojah. Določi tabele, polja z njihovimi tipi, primarne in tuje ključe. Zakaj ne zadošča ena sama tabela z vsemi podatki?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> opisan je sistem, za katerega je treba zasnovati bazo; ali pa je dana tabela, ki ji je treba določiti ključ ali tipe polj.</p><ul class="kljucne"><li>„primarni ključ“</li><li>„tuji ključ“</li><li>„tip podatka“</li><li>„zasnuj tabele“</li><li>„povezava 1 : N“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Poišči entitete; vsaka postane tabela.</p><div class="na-nalogi"><p>Član, Knjiga, Izposoja.</p></div></li>
+              <li><p class="korak">Za vsako tabelo naštej polja in tip vsakega.</p><div class="na-nalogi"><p>Član: ŠtIzkaznice (število), Ime, Priimek, Razred (znakovno). Knjiga: IdKnjige (število), Naslov, Avtor, ISBN (znakovno), Leto (število). Izposoja: IdIzposoje (število), ŠtIzkaznice, IdKnjige (število), DatumIzposoje, DatumVrnitve (datum), Vrnjena (logično).</p></div></li>
+              <li><p class="korak">Vsaki tabeli določi primarni ključ (enoličen, neprazen, nespremenljiv).</p><div class="na-nalogi"><p>ŠtIzkaznice, IdKnjige, IdIzposoje. ISBN ni primeren, ker ima knjižnica lahko več izvodov iste knjige.</p></div></li>
+              <li><p class="korak">Povezave 1 : N uredi s tujim ključem na strani N; povezavo M : N razbij z vmesno tabelo.</p><div class="na-nalogi"><p>Član in Knjiga sta v povezavi M : N; vmesna tabela Izposoja ima tuja ključa ŠtIzkaznice in IdKnjige. Ena tabela bi podatke o članu ponavljala pri vsaki izposoji (podvajanje, neskladja).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Kateri tip izbereš za poštno številko?</p><p>Znakovni (z njo ne računamo).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Zakaj je indeks smiseln na polju Priimek?</p><p>Po priimku pogosto iščemo in razvrščamo; indeks to pospeši.</p></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-10">
+              <h4>Tip 10: Poizvedba s pogoji</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Iz tabele Dijaki izberi zapise, za katere velja: letnik = 4 IN (kraj = „Kranj“ ALI ocena ≥ 4).</p>
+            <div class="tabela-wrap"><table class="tabela"><thead><tr><th>Ime</th><th>Letnik</th><th>Ocena</th><th>Kraj</th></tr></thead><tbody>
+            <tr><td>Ana</td><td>4</td><td>5</td><td>Kranj</td></tr><tr><td>Bor</td><td>3</td><td>5</td><td>Kranj</td></tr><tr><td>Cene</td><td>4</td><td>3</td><td>Škofja Loka</td></tr><tr><td>Dana</td><td>4</td><td>4</td><td>Tržič</td></tr><tr><td>Eva</td><td>4</td><td>2</td><td>Kranj</td></tr><tr><td>Filip</td><td>2</td><td>4</td><td>Tržič</td></tr></tbody></table></div></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> podana je tabela in pogoji (lahko z IN, ALI, NE); iščejo zapise, ki jih vrne poizvedba, ali pogoj za dani rezultat.</p><ul class="kljucne"><li>„poizvedba“</li><li>„izberi zapise“</li><li>„pogoj, kriterij“</li><li>„IN, ALI“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Razčleni pogoj; najprej izračunaj oklepaje. IN zahteva, da veljata oba dela, ALI vsaj eden.</p><div class="na-nalogi"><p>Zapis mora biti iz 4. letnika in hkrati izpolniti vsaj eno: Kranj ali ocena vsaj 4.</p></div></li>
+              <li><p class="korak">Preveri vsak zapis posebej.</p><div class="na-nalogi"><p>Ana: 4, Kranj, da. Bor: 3. letnik, ne. Cene: ne Kranj, ocena 3, ne. Dana: ocena 4, da. Eva: Kranj, da. Filip: 2. letnik, ne.</p></div></li>
+              <li><p class="korak">Zapiši rezultat (in po potrebi razvrstitev ali izbrana polja).</p><div class="na-nalogi"><p>Ana, Dana, Eva.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Kaj vrne pogoj letnik = 4 IN kraj = „Kranj“ IN ocena ≥ 4?</p><p>Samo Ano.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Zapiši pogoj za dijake, ki niso iz Kranja in imajo oceno 5.</p><p>NE kraj = „Kranj“ IN ocena = 5 (rezultat: nihče).</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 6 -->
+        <section class="sklop" id="sklop-6">
+          <header class="sklop-header">
+            <span class="sklop-num">4.4 · 6</span>
+            <h2>Preglednica</h2>
+            <p>Lastnosti in funkcija preglednice, formule in naslovi celic, analiza kaj-če, preglednica ali baza, vrste grafikonov.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <h4>Kaj je preglednica</h4>
+            <p><strong>Preglednica</strong> (Excel, LibreOffice Calc, Google Preglednice) je mreža celic, označenih s stolpcem in vrstico (B3). Celica vsebuje besedilo, število, datum ali <strong>formulo</strong>, ki se začne z = in se ob spremembi podatkov sama preračuna. Preglednica je namenjena računanju, analizi in grafičnemu prikazu manjših količin številskih podatkov.</p>
+            <h4>Naslovi celic</h4>
+            <p>Ko formulo kopiramo, se <strong>relativni naslovi</strong> (B2) prilagodijo novemu položaju: <code class="k">=B2*C2</code> v D2 postane v D3 <code class="k">=B3*C3</code>. <strong>Absolutni naslov</strong> (<code class="k">$F$1</code>) ostane enak; uporabimo ga za celico s stalno vrednostjo (davčna stopnja, tečaj). Mešani naslov (<code class="k">$F1</code>, <code class="k">F$1</code>) zaklene le stolpec ali vrstico.</p>
+            <p>Pogoste funkcije: <code class="k">SUM</code> (vsota), <code class="k">AVERAGE</code> (povprečje), <code class="k">MAX</code>, <code class="k">MIN</code>, <code class="k">COUNT</code> (koliko števil), <code class="k">COUNTIF</code> (koliko ustreza pogoju), <code class="k">IF</code> (odločitev), <code class="k">ROUND</code>. Območje zapišemo z dvopičjem (<code class="k">B2:B20</code>).</p>
+            <h4>Analiza kaj-če</h4>
+            <p>Ker se formule preračunajo same, lahko spremenimo vhodni podatek in takoj vidimo posledice: <strong>kaj se zgodi, če</strong> se cena dvigne za 10 %? Orodja: ročno spreminjanje vrednosti, scenariji (več naborov vhodov), <strong>iskanje cilja</strong> (preglednica poišče vhod, pri katerem formula doseže želeno vrednost), podatkovne tabele.</p>
+            <h4>Preglednica ali podatkovna baza</h4>
+            <p>Preglednico izberemo za računanje, analizo kaj-če in grafikone pri manjši količini podatkov, ki jih obdeluje en uporabnik. Bazo izberemo, ko je podatkov veliko, so med seboj povezani (več tabel), jih hkrati uporablja več ljudi, potrebujemo zanesljivo celovitost, varnost in poizvedbe.</p>
+            <h4>Grafikoni</h4>
+            <div class="slike-vrsta"><figure class="slika">
+<svg viewBox="0 0 200 170" role="img" aria-label="Stolpčni grafikon" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g1-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g1-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g1-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g1-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g1-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g1-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<polygon class="s-lik" points="45.4,148 76.6,148 76.6,47.2 45.4,47.2"/>
+<polygon class="s-lik" points="84.4,148 115.6,148 115.6,30.4 84.4,30.4"/>
+<polygon class="s-lik" points="123.4,148 154.6,148 154.6,68.2 123.4,68.2"/>
+<line class="s-os" x1="22" y1="148" x2="186" y2="148" marker-end="url(#g1-p)"/>
+<line class="s-os" x1="22" y1="148" x2="22" y2="14" marker-end="url(#g1-p)"/>
+<text class="s-os-txt" x="180" y="140" text-anchor="end"> </text>
+<text class="s-os-txt" x="30" y="26"> </text>
+<text class="s-txt-muted" x="61" y="160.6" text-anchor="middle">1.a</text>
+<text class="s-txt-muted" x="100" y="160.6" text-anchor="middle">2.a</text>
+<text class="s-txt-muted" x="139" y="160.6" text-anchor="middle">3.a</text>
+</svg>
+<figcaption><strong>Stolpčni grafikon</strong> (histogram): primerjava vrednosti med skupinami.</figcaption>
+</figure><figure class="slika">
+<svg viewBox="0 0 200 170" role="img" aria-label="Lomljenka" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g2-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g2-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g2-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g2-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g2-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g2-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<line class="s-os" x1="22" y1="148" x2="186" y2="148" marker-end="url(#g2-p)"/>
+<line class="s-os" x1="22" y1="148" x2="22" y2="14" marker-end="url(#g2-p)"/>
+<text class="s-os-txt" x="180" y="140" text-anchor="end"> </text>
+<text class="s-os-txt" x="30" y="26"> </text>
+<line class="s-k2" x1="28.5" y1="143" x2="41.5" y2="132.9"/>
+<line class="s-k2" x1="41.5" y1="132.9" x2="54.5" y2="112.7"/>
+<line class="s-k2" x1="54.5" y1="112.7" x2="67.5" y2="87.5"/>
+<line class="s-k2" x1="67.5" y1="87.5" x2="80.5" y2="67.4"/>
+<line class="s-k2" x1="80.5" y1="67.4" x2="93.5" y2="47.2"/>
+<line class="s-k2" x1="93.5" y1="47.2" x2="106.5" y2="37.1"/>
+<line class="s-k2" x1="106.5" y1="37.1" x2="119.5" y2="42.2"/>
+<line class="s-k2" x1="119.5" y1="42.2" x2="132.5" y2="62.3"/>
+<line class="s-k2" x1="132.5" y1="62.3" x2="145.5" y2="87.5"/>
+<line class="s-k2" x1="145.5" y1="87.5" x2="158.5" y2="112.7"/>
+<line class="s-k2" x1="158.5" y1="112.7" x2="171.5" y2="137.9"/>
+<text class="s-txt-muted" x="100" y="163.1" text-anchor="middle">meseci</text>
+</svg>
+<figcaption><strong>Lomljenka</strong> (črtni grafikon): spreminjanje vrednosti skozi čas.</figcaption>
+</figure><figure class="slika">
+<svg viewBox="0 0 200 170" role="img" aria-label="Krožni grafikon" xmlns="http://www.w3.org/2000/svg"><path d="M100,85 L100,15 A70,70 0 0 1 121.63118960624632,151.57395614066075 Z" fill="#4F46E5" stroke="#fff" stroke-width="2"/><path d="M100,85 L121.63118960624632,151.57395614066075 A70,70 0 0 1 30,85.00000000000001 Z" fill="#16A34A" stroke="#fff" stroke-width="2"/><path d="M100,85 L30,85.00000000000001 A70,70 0 0 1 58.85503233952687,28.368810393753684 Z" fill="#D97706" stroke="#fff" stroke-width="2"/><path d="M100,85 L58.85503233952687,28.368810393753684 A70,70 0 0 1 99.99999999999999,15 Z" fill="#DC2626" stroke="#fff" stroke-width="2"/></svg>
+<figcaption><strong>Krožni grafikon</strong>: deleži celote (skupaj 100 %).</figcaption>
+</figure></div>
+            <p>Grafikon mora imeti naslov, označene osi z enotami in legendo, kadar je podatkovnih nizov več. Os vrednosti naj se praviloma začne pri 0, sicer so razlike videti večje, kot so.</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-11">
+              <h4>Tip 11: Formule in kopiranje formul</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>V stolpcu B so cene izdelkov brez DDV (B2:B6), v stolpcu C količine, v celici F1 stopnja DDV 22 %. Zapiši formulo v D2 za znesek z DDV tako, da jo lahko kopiraš navzdol. Zapiši formulo za skupni znesek in za oznako „popust“, če je znesek nad 100 €.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> opisana je razporeditev podatkov v preglednici, iščejo formulo, rezultat formule ali obliko formule po kopiranju.</p><ul class="kljucne"><li>„zapiši formulo“</li><li>„kopiramo v celico“</li><li>„absolutni naslov“</li><li>„SUM, IF, COUNTIF“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Zapiši izračun za prvo vrstico z naslovi celic.</p><div class="na-nalogi"><p>Znesek = cena · količina · (1 + DDV): <code class="k">=B2*C2*(1+F1)</code>.</p></div></li>
+              <li><p class="korak">Ugotovi, katere celice se pri kopiranju ne smejo premakniti, in jih zakleni z $.</p><div class="na-nalogi"><p>F1 je ista za vse: <code class="k">=B2*C2*(1+$F$1)</code>. V D3 postane <code class="k">=B3*C3*(1+$F$1)</code>.</p></div></li>
+              <li><p class="korak">Za povzetke uporabi funkcije nad območjem, za odločitve IF.</p><div class="na-nalogi"><p><code class="k">=SUM(D2:D6)</code>; v E2 <code class="k">=IF(D2&gt;100;"popust";"")</code>.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Formulo <code class="k">=A1+$B$1+C$1</code> kopiramo iz D1 v E3. Kako se glasi?</p><p><code class="k">=B3+$B$1+D$1</code>.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Koliko dijakov v B2:B30 ima oceno 5?</p><p><code class="k">=COUNTIF(B2:B30;5)</code>.</p></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-12">
+              <h4>Tip 12: Analiza kaj-če</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Prevoz za izlet stane 450 €, vstopnina 8 € na osebo. V preglednici je število udeležencev v B1, cena na osebo v B3. Zapiši formulo za B3 in izračunaj ceno za 30 in za 25 udeležencev. Najmanj koliko jih mora biti, da cena ne preseže 20 €?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> sprašujejo, kako se rezultat spremeni ob spremembi vhoda, ali kakšen mora biti vhod za želeni rezultat.</p><ul class="kljucne"><li>„kaj če“</li><li>„kako se spremeni“</li><li>„najmanj koliko“</li><li>„iskanje cilja“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Zapiši model kot formulo, odvisno od vhodne celice.</p><div class="na-nalogi"><p><code class="k">B3 = 450/B1 + 8</code>.</p></div></li>
+              <li><p class="korak">Spremeni vhod in odčitaj rezultat.</p><div class="na-nalogi"><p>30 oseb: \(450/30 + 8 = 23\) €. 25 oseb: \(18 + 8 = 26\) €.</p></div></li>
+              <li><p class="korak">Za ciljno vrednost uporabi iskanje cilja ali reši neenačbo; zaokroži v smeri, ki izpolni pogoj.</p><div class="na-nalogi"><p>\(450/n + 8 \le 20 \Rightarrow n \ge 37{,}5\), torej najmanj 38 udeležencev.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Kaj se zgodi s ceno, če se prevoz podraži na 540 € pri 30 osebah?</p><p>\(18 + 8 = 26\) €.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Zakaj je za analizo kaj-če primernejša preglednica kot baza?</p><p>Formule se ob vsaki spremembi takoj preračunajo.</p></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-13">
+              <h4>Tip 13: Izbira grafikona ter preglednice ali baze</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Katero vrsto grafikona izbereš za: (a) povprečno mesečno temperaturo skozi leto, (b) delež glasov strank na volitvah, (c) število dijakov v posameznih razredih? Šola želi voditi podatke o 800 dijakih, njihovih ocenah in odsotnostih, do katerih dostopajo vsi učitelji. Preglednica ali baza?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> opisani so podatki in namen prikaza ali obdelave; iščejo primeren grafikon ali orodje.</p><ul class="kljucne"><li>„kateri grafikon“</li><li>„histogram, lomljenka, krožni“</li><li>„preglednica ali podatkovna baza“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Ugotovi, kaj želiš pokazati: spreminjanje skozi čas, deleže celote ali primerjavo med skupinami.</p><div class="na-nalogi"><p>(a) čas, (b) deleži, (c) primerjava.</p></div></li>
+              <li><p class="korak">Izberi grafikon: čas lomljenka, deleži krožni, primerjava stolpčni.</p><div class="na-nalogi"><p>(a) lomljenka, (b) krožni, (c) stolpčni grafikon (histogram).</p></div></li>
+              <li><p class="korak">Za orodje presodi količino, povezanost podatkov in število uporabnikov.</p><div class="na-nalogi"><p>Veliko povezanih podatkov (dijaki, ocene, odsotnosti), hkratni dostop več učiteljev, varnost: podatkovna baza.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Zakaj krožni grafikon ni primeren za temperature skozi leto?</p><p>Temperature niso deleži celote.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Družinski proračun za en mesec?</p><p>Preglednica: malo podatkov, računanje, grafikoni.</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 7 -->
+        <section class="sklop" id="sklop-7">
+          <header class="sklop-header">
+            <span class="sklop-num">4.4 · 7</span>
+            <h2>Tehnologije znanja in odločanje</h2>
+            <p>Vloga tehnologij znanja in upravljanje znanja, modeliranje in simulacija, faze odločitvenega procesa, metode odločanja in večparametrski odločitveni model.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <h4>Tehnologije znanja</h4>
+            <p><strong>Tehnologije znanja</strong> so metode in orodja za zajemanje, shranjevanje, uporabo in prenos znanja. <strong>Upravljanje znanja</strong> v organizaciji skrbi, da se znanje posameznikov zapiše in deli (baze znanja, priročniki, interni wikiji, mentorstvo), da ne odide z ljudmi. Vrste tehnologij znanja:</p>
+            <ul>
+              <li><strong>izvedenski (ekspertni) sistemi</strong>: v bazo znanja zapišemo pravila strokovnjaka (če … potem …), sistem z njimi sklepa in svetuje (diagnostika okvar, svetovanje pri izbiri). <strong>Lupina</strong> izvedenskega sistema je program brez znanja, v katerega vnesemo pravila za svoje področje;</li>
+              <li><strong>sistemi za podporo odločanju</strong> in odločitveni modeli;</li>
+              <li><strong>strojno učenje</strong> in podatkovno rudarjenje: računalnik iz velike količine podatkov sam izlušči pravila ali vzorce;</li>
+              <li>umetna inteligenca na splošno (prepoznavanje slik in govora, jezikovni modeli).</li>
+            </ul>
+            <h4>Modeliranje in simulacija</h4>
+            <p><strong>Model</strong> je poenostavljena predstavitev resničnega sistema s tistimi lastnostmi, ki so za problem pomembne. <strong>Simulacija</strong> je preizkušanje modela pri različnih pogojih (napoved vremena, širjenje bolezni, simulator letenja, kaj-če v preglednici). Z njo preizkusimo odločitve brez tveganja in stroškov v resničnosti; rezultat pa je le tako dober kot model.</p>
+            <h4>Faze odločitvenega procesa</h4>
+            <figure class="slika slika--siroka">
+<svg viewBox="0 0 560 150" role="img" aria-label="Faze odločitvenega procesa" xmlns="http://www.w3.org/2000/svg"><defs><marker id="d8-k1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="d8-k2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="d8-k3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="d8-k4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="d8-crn" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs><polyline class="s-k1" fill="none" points="165,35 210,35" marker-end="url(#d8-k1)"/><polyline class="s-k1" fill="none" points="350,35 395,35" marker-end="url(#d8-k1)"/><polyline class="s-k1" fill="none" points="465,55 465,75 95,75 95,95" marker-end="url(#d8-k1)"/><polyline class="s-k1" fill="none" points="165,115 210,115" marker-end="url(#d8-k1)"/><polyline class="s-k1" fill="none" points="350,115 395,115" marker-end="url(#d8-k1)"/><rect class="s-lik" x="25" y="13" width="140" height="44" rx="22"/><text class="s-txt-b" x="95" y="31.5" text-anchor="middle">1. opredelitev</text><text class="s-txt-muted" x="95" y="46.5" text-anchor="middle" style="font-size:12px">problema</text><rect class="s-lik-2" x="210" y="13" width="140" height="44" rx="22"/><text class="s-txt-b" x="280" y="31.5" text-anchor="middle">2. kriteriji</text><text class="s-txt-muted" x="280" y="46.5" text-anchor="middle" style="font-size:12px">in uteži</text><rect class="s-lik" x="395" y="13" width="140" height="44" rx="22"/><text class="s-txt-b" x="465" y="39" text-anchor="middle">3. variante</text><rect class="s-lik-2" x="25" y="93" width="140" height="44" rx="22"/><text class="s-txt-b" x="95" y="119" text-anchor="middle">4. vrednotenje</text><rect class="s-lik" x="210" y="93" width="140" height="44" rx="22"/><text class="s-txt-b" x="280" y="111.5" text-anchor="middle">5. analiza</text><text class="s-txt-muted" x="280" y="126.5" text-anchor="middle" style="font-size:12px">(kaj-če)</text><rect class="s-lik-2" x="395" y="93" width="140" height="44" rx="22"/><text class="s-txt-b" x="465" y="111.5" text-anchor="middle">6. odločitev,</text><text class="s-txt-muted" x="465" y="126.5" text-anchor="middle" style="font-size:12px">izvedba</text></svg>
+<figcaption>Faze odločitvenega procesa. Analiza občutljivosti (kaj-če) pokaže, ali bi se odločitev spremenila ob drugačnih utežeh ali ocenah.</figcaption>
+</figure>
+            <h4>Metode odločanja in večparametrski model</h4>
+            <p>Pri zahtevnejših odločitvah, kjer variante ocenjujemo po več kriterijih hkrati, uporabimo <strong>večparametrski odločitveni model</strong>:</p>
+            <figure class="slika slika--siroka">
+<svg viewBox="0 0 520 175" role="img" aria-label="Večparametrski odločitveni model" xmlns="http://www.w3.org/2000/svg"><defs><marker id="d9-k1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="d9-k2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="d9-k3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="d9-k4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="d9-crn" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs><polyline class="s-pom" fill="none" points="70,100 260,50"/><polyline class="s-pom" fill="none" points="200,100 260,50"/><polyline class="s-pom" fill="none" points="330,100 260,50"/><polyline class="s-pom" fill="none" points="455,100 260,50"/><rect class="s-kot" x="204" y="10" width="112" height="40" rx="4"/><text class="s-txt-b" x="260" y="26.5" text-anchor="middle">prenosnik</text><text class="s-txt-muted" x="260" y="41.5" text-anchor="middle" style="font-size:12px">skupna ocena</text><rect class="s-lik" x="14" y="100" width="112" height="40" rx="4"/><text class="s-txt-b" x="70" y="116.5" text-anchor="middle">cena</text><text class="s-txt-muted" x="70" y="131.5" text-anchor="middle" style="font-size:12px">utež 40 %</text><rect class="s-lik-2" x="144" y="100" width="112" height="40" rx="4"/><text class="s-txt-b" x="200" y="116.5" text-anchor="middle">zmogljivost</text><text class="s-txt-muted" x="200" y="131.5" text-anchor="middle" style="font-size:12px">utež 30 %</text><rect class="s-lik" x="274" y="100" width="112" height="40" rx="4"/><text class="s-txt-b" x="330" y="116.5" text-anchor="middle">teža</text><text class="s-txt-muted" x="330" y="131.5" text-anchor="middle" style="font-size:12px">utež 20 %</text><rect class="s-lik" x="399" y="100" width="112" height="40" rx="4"/><text class="s-txt-b" x="455" y="116.5" text-anchor="middle">baterija</text><text class="s-txt-muted" x="455" y="131.5" text-anchor="middle" style="font-size:12px">utež 10 %</text><text class="s-txt-muted" x="200" y="160" text-anchor="middle" style="font-size:11px">(procesor, pomnilnik, disk)</text></svg>
+<figcaption>Večparametrski odločitveni model: odločitev razčlenimo na kriterije (parametre), vsakemu določimo utež po pomembnosti; kriterij lahko še naprej razčlenimo.</figcaption>
+</figure>
+            <ul>
+              <li><strong>utežena vsota v preglednici</strong>: vsako varianto po vsakem kriteriju ocenimo (na primer od 1 do 5), oceno pomnožimo z utežjo in seštejemo; zmaga varianta z najvišjo vsoto;</li>
+              <li><strong>kvalitativni hierarhični modeli</strong> (program DEXi): kriterije ocenjujemo z opisnimi vrednostmi (slabo, dobro, odlično), z odločitvenimi pravili jih združimo v višje kriterije;</li>
+              <li><strong>lupine izvedenskih sistemov</strong> z odločitvenimi pravili.</li>
+            </ul>
+            <p>Model gradimo tako: določimo cilj, kriterije in jih uredimo v drevo, določimo uteži (skupaj 100 %) in merske lestvice, ocenimo variante, izračunamo skupne ocene, z <strong>analizo kaj-če</strong> (občutljivosti) preverimo, ali se odločitev spremeni ob drugačnih utežeh, in utemeljimo končno odločitev. Model lahko spreminjamo: dodamo kriterij, spremenimo utež ali oceno.</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-14">
+              <h4>Tip 14: Večparametrski odločitveni model</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Izbiramo prenosnik. Kriteriji in uteži: cena 40 %, zmogljivost 30 %, teža 20 %, baterija 10 %. Ocene (1 do 5, večja je boljša): A (3, 5, 2, 3), B (5, 3, 4, 4), C (4, 4, 5, 2). Kateri prenosnik izberemo? Ali se odločitev spremeni, če zamenjamo uteži cene in zmogljivosti?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> izbira med več variantami po več kriterijih z utežmi; zahtevajo izračun, odločitev, analizo kaj-če ali gradnjo modela.</p><ul class="kljucne"><li>„kriteriji, uteži“</li><li>„odločitveni model“</li><li>„variante“</li><li>„analiza kaj-če“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Preveri, da so uteži skupaj 100 % in da so ocene na isti lestvici (večja je boljša; pri ceni nižja cena dobi višjo oceno).</p><div class="na-nalogi"><p>\(0{,}4 + 0{,}3 + 0{,}2 + 0{,}1 = 1\).</p></div></li>
+              <li><p class="korak">Za vsako varianto izračunaj uteženo vsoto.</p><div class="na-nalogi"><p>A: \(0{,}4 \cdot 3 + 0{,}3 \cdot 5 + 0{,}2 \cdot 2 + 0{,}1 \cdot 3 = 3{,}4\). B: \(2{,}0 + 0{,}9 + 0{,}8 + 0{,}4 = 4{,}1\). C: \(1{,}6 + 1{,}2 + 1{,}0 + 0{,}2 = 4{,}0\).</p></div></li>
+              <li><p class="korak">Izberi varianto z najvišjo oceno.</p><div class="na-nalogi"><p>Prenosnik B.</p></div></li>
+              <li><p class="korak">Analiza kaj-če: spremeni uteži ali ocene in ponovno izračunaj.</p><div class="na-nalogi"><p>Cena 30 %, zmogljivost 40 %: A 3,6, B 3,9, C 4,0. Zmaga C. Odločitev je občutljiva na uteži, saj sta B in C skoraj izenačena; o utežeh se je treba dobro premisliti.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Kaj pomeni, da je model neobčutljiv na spremembo uteži?</p><p>Ista varianta zmaga pri različnih utežeh, zato je odločitev zanesljiva.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Kako v preglednici izračunaš uteženo vsoto za varianto v vrstici 3, če so uteži v B1:E1?</p><p><code class="k">=SUMPRODUCT($B$1:$E$1;B3:E3)</code> ali <code class="k">=$B$1*B3+$C$1*C3+$D$1*D3+$E$1*E3</code>.</p></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="subsection" id="kljuc">
+          <div class="subsection-head">
+            <h2>Ključ: kateri tip naloge je to?</h2>
+            <p>Poišči besedo iz navodila naloge in skoči na pravi postopek.</p>
+          </div>
+          <div class="info-card">
+            <div class="tabela-wrap">
+              <table class="tabela">
+                <thead><tr><th>V besedilu naloge piše …</th><th>Tip</th></tr></thead>
+                <tbody>
+                  <tr><td>„vhodni podatki“, „izhodni podatki“, „obdelava“</td><td><a href="#tip-1">Tip 1</a></td></tr>
+                  <tr><td>„izvedi algoritem“, „diagram poteka“ (podan)</td><td><a href="#tip-2">Tip 2</a></td></tr>
+                  <tr><td>„sestavi algoritem“, „nariši diagram poteka“</td><td><a href="#tip-3">Tip 3</a></td></tr>
+                  <tr><td>„koliko primerjav“, „kateri algoritem je boljši“</td><td><a href="#tip-4">Tip 4</a></td></tr>
+                  <tr><td>„objektno, dogodkovno“, „prevajalnik ali tolmač“</td><td><a href="#tip-5">Tip 5</a></td></tr>
+                  <tr><td>„napiši program“</td><td><a href="#tip-6">Tip 6</a></td></tr>
+                  <tr><td>„kaj izpiše program“</td><td><a href="#tip-7">Tip 7</a></td></tr>
+                  <tr><td>„poišči napako“, „popravi program“</td><td><a href="#tip-8">Tip 8</a></td></tr>
+                  <tr><td>„primarni ključ“, „tip podatka“, „zasnuj tabele“</td><td><a href="#tip-9">Tip 9</a></td></tr>
+                  <tr><td>„poizvedba“, „izberi zapise“, „IN, ALI“</td><td><a href="#tip-10">Tip 10</a></td></tr>
+                  <tr><td>„formula“, „kopiramo v celico“, „$“</td><td><a href="#tip-11">Tip 11</a></td></tr>
+                  <tr><td>„kaj če“, „iskanje cilja“</td><td><a href="#tip-12">Tip 12</a></td></tr>
+                  <tr><td>„kateri grafikon“, „preglednica ali baza“</td><td><a href="#tip-13">Tip 13</a></td></tr>
+                  <tr><td>„kriteriji, uteži“, „odločitveni model“</td><td><a href="#tip-14">Tip 14</a></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>Pogoste napake</h2>
+          </div>
+          <div class="info-card">
+            <ul>
+              <li>Pri iskanju največjega elementa začneš s 0 namesto s prvim elementom (napačno pri samih negativnih številih).</li>
+              <li>Pozabiš, da <code class="k">range(a, b)</code> ne vključi števila b.</li>
+              <li>Pri sledenju zanki preveriš pogoj po izvedbi telesa namesto pred njo.</li>
+              <li>Za primarni ključ izbereš ime, ISBN ali drugo neenolično polje.</li>
+              <li>Telefonsko številko shraniš kot število (izgubi se vodilna ničla).</li>
+              <li>Pri kopiranju formule ne zakleneš celice s stalno vrednostjo ($).</li>
+              <li>Pri odločitvenem modelu pri ceni višji ceni daš višjo oceno ali uteži ne seštejejo v 100 %.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>Vsa poglavja</h2>
+          </div>
+          <div class="link-list">
+            <a class="link-item" href="/views/informatika/snov/snov.html">
+              <span class="link-item-text"><strong>Pregled snovi iz informatike</strong><small>Vsa štiri poglavja po maturitetnem katalogu</small></span>
+              <span class="arrow">→</span>
+            </a>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>

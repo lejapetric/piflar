@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Predstavitev informacije — razlaga in postopki | Piflar.si</title>
+  <meta name="description" content="Predstavitev informacije za maturo iz informatike: zapis podatkov, dvojiški in šestnajstiški sistem, posnetek in opis, zgoščevanje, kodne tabele, oblikovanje besedila s slogi, slika (ločljivost, RGB, CMYK, JPEG, PNG), zvok, video, prosojnice, splet in osnove HTML.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
+  <link rel="stylesheet" href="/style/snov.css">
+</head>
+<body>
+  <div id="header"></div>
+
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view">
+
+<header class="page-header">
+          <span class="page-eyebrow">Informatika · Snov · 4.3</span>
+          <h1>Predstavitev informacije</h1>
+          <p>Ista informacija je lahko zapisana z besedilom, sliko, zvokom ali videom. Tu je, kako računalnik zapiše vsako od teh oblik, koliko prostora zapis potrebuje, kako ga zgostimo in kako informacijo kakovostno predstavimo v dokumentu, na prosojnicah in na spletu. Pod razlago so vsi tipi nalog, ki se pojavijo pri tem sklopu.</p>
+          <div class="page-meta">
+            <div class="page-meta-item"><strong>7</strong><span>Podpoglavij</span></div>
+            <div class="page-meta-item"><strong>13</strong><span>Tipov nalog</span></div>
+            <div class="page-meta-item"><strong>~60 min</strong><span>Branja</span></div>
+          </div>
+        </header>
+
+        <div class="matura-formule">
+          <h3>Kar moraš znati izračunati</h3>
+          <p>Na maturi ni lista z enačbami; te zveze si zapomni:</p>
+          <div class="matura-levo">
+            <ul>
+              <li>nestisnjena slika: velikost \(= \text{širina} \cdot \text{višina} \cdot \text{barvna globina}\) (v bitih); 24 bitov = 3 B na točko</li>
+              <li>število barv pri \(k\) bitih na točko: \(2^k\)</li>
+              <li>velikost odtisa: \(\text{dolžina} = \dfrac{\text{število točk}}{\text{dpi}}\) palcev, \(1\ \text{palec} = 2{,}54\ \text{cm}\)</li>
+              <li>nestisnjen zvok: velikost \(= f_\text{vzorčenja} \cdot \text{bitov na vzorec} \cdot \text{kanali} \cdot t\)</li>
+              <li>nestisnjen video: velikost \(= \text{velikost sličice} \cdot \text{sličic/s} \cdot t\); stisnjen: \(\text{bitna hitrost} \cdot t\)</li>
+              <li>razmerje stiskanja \(= \dfrac{\text{izvirna velikost}}{\text{stisnjena velikost}}\)</li>
+            </ul>
+          </div>
+          <p class="matura-opomba">\(1\ \text{B} = 8\ \text{b}\). Pri predponah upoštevaj navodilo naloge (\(1\ \text{kB} = 1000\ \text{B}\) ali \(1\ \text{KiB} = 1024\ \text{B}\)).</p>
+        </div>
+
+        <nav class="kazalo" aria-label="Podpoglavja">
+          <h2>Podpoglavja</h2>
+          <ol>
+            <li><a href="#sklop-1"><span class="kazalo-st">1</span> Zapis in predstavitev podatkov</a></li>
+            <li><a href="#sklop-2"><span class="kazalo-st">2</span> Pisna predstavitev</a></li>
+            <li><a href="#sklop-3"><span class="kazalo-st">3</span> Slikovna predstavitev</a></li>
+            <li><a href="#sklop-4"><span class="kazalo-st">4</span> Zvočna predstavitev</a></li>
+            <li><a href="#sklop-5"><span class="kazalo-st">5</span> Gibljiva slika</a></li>
+            <li><a href="#sklop-6"><span class="kazalo-st">6</span> Računalniške prosojnice</a></li>
+            <li><a href="#sklop-7"><span class="kazalo-st">7</span> Predstavitev na svetovnem spletu</a></li>
+            <li><a href="#kljuc"><span class="kazalo-st">?</span> Ključ: kateri tip naloge je to?</a></li>
+          </ol>
+        </nav>
+
+        <!-- SKLOP 1 -->
+        <section class="sklop" id="sklop-1">
+          <header class="sklop-header">
+            <span class="sklop-num">4.3 · 1</span>
+            <h2>Zapis in predstavitev podatkov</h2>
+            <p>Dvojiški zapis, posnetek in opis, vrste zapisov (MIME), poudarki, zgoščevanje, standardi in prenosljivost.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <h4>Dvojiški in šestnajstiški zapis</h4>
+            <p>Računalnik vse podatke zapiše z biti, torej v <strong>dvojiškem</strong> (binarnem) številskem sistemu z osnovo 2. Vsako mesto ima vrednost potence števila 2:</p>
+            <p>\[101101_2 = 1 \cdot 32 + 0 \cdot 16 + 1 \cdot 8 + 1 \cdot 4 + 0 \cdot 2 + 1 \cdot 1 = 45_{10}.\]</p>
+            <p>Desetiško število pretvorimo v dvojiško z zaporednim deljenjem z 2 in branjem ostankov od spodaj navzgor, ali pa odštevamo največje potence števila 2, ki gredo v število. Ker so dvojiški zapisi dolgi, jih krajše pišemo v <strong>šestnajstiškem</strong> sistemu (števke 0 do 9 in A = 10 do F = 15): vsaka šestnajstiška števka ustreza natanko štirim bitom. \(45 = 0010\,1101_2 = 2\text{D}_{16}\). Šestnajstiško zapisujemo na primer barve na spletu (#FF8000) in naslove v pomnilniku.</p>
+            <h4>Posnetek in opis</h4>
+            <p>Informacijo lahko računalniško predstavimo na dva osnovna načina:</p>
+            <div class="slike-vrsta"><figure class="slika">
+<svg viewBox="0 0 200 200" role="img" aria-label="Posnetek" xmlns="http://www.w3.org/2000/svg"><rect x="16" y="10" width="14" height="14" fill="#FFFFFF" stroke="#94A0B8" stroke-width="0.8"/><rect x="30" y="10" width="14" height="14" fill="#FFFFFF" stroke="#94A0B8" stroke-width="0.8"/><rect x="44" y="10" width="14" height="14" fill="#FFFFFF" stroke="#94A0B8" stroke-width="0.8"/><rect x="58" y="10" width="14" height="14" fill="#FFFFFF" stroke="#94A0B8" stroke-width="0.8"/><rect x="72" y="10" width="14" height="14" fill="#FFFFFF" stroke="#94A0B8" stroke-width="0.8"/><rect x="86" y="10" width="14" height="14" fill="#FFFFFF" stroke="#94A0B8" stroke-width="0.8"/><rect x="100" y="10" width="14" height="14" fill="#FFFFFF" stroke="#94A0B8" stroke-width="0.8"/><rect x="114" y="10" width="14" height="14" fill="#FFFFFF" stroke="#94A0B8" stroke-width="0.8"/><rect x="128" y="10" width="14" height="14" fill="#FFFFFF" stroke="#94A0B8" stroke-width="0.8"/><rect x="142" y="10" width="14" height="14" fill="#FFFFFF" stroke="#94A0B8" stroke-width="0.8"/><rect x="156" y="10" width="14" height="14" fill="#FFFFFF" stroke="#94A0B8" stroke-width="0.8"/><rect x="170" y="10" width="14" height="14" fill="#FFFFFF" stroke="#94A0B8" stroke-width="0.8"/><rect x="16" y="24" width="14" height="14" fill="#FFFFFF" stroke="#94A0B8" stroke-width="0.8"/><rect x="30" y="24" width="14" height="14" fill="#FFFFFF" stroke="#94A0B8" stroke-width="0.8"/><rect x="44" y="24" width="14" height="14" fill="#FFFFFF" stroke="#94A0B8" stroke-width="0.8"/><rect x="58" y="24" width="14" height="14" fill="#818CF8" stroke="#94A0B8" stroke-width="0.8"/><rect x="72" y="24" width="14" height="14" fill="#818CF8" stroke="#94A0B8" stroke-width="0.8"/><rect x="86" y="24" width="14" height="14" fill="#818CF8" stroke="#94A0B8" stroke-width="0.8"/><rect x="100" y="24" width="14" height="14" fill="#818CF8" stroke="#94A0B8" stroke-width="0.8"/><rect x="114" y="24" width="14" height="14" fill="#818CF8" stroke="#94A0B8" stroke-width="0.8"/><rect x="128" y="24" width="14" height="14" fill="#818CF8" stroke="#94A0B8" stroke-width="0.8"/><rect x="142" y="24" width="14" height="14" fill="#FFFFFF" stroke="#94A0B8" stroke-width="0.8"/><rect x="156" y="24" width="14" height="14" fill="#FFFFFF" stroke="#94A0B8" stroke-width="0.8"/><rect x="170" y="24" width="14" height="14" fill="#FFFFFF" stroke="#94A0B8" stroke-width="0.8"/><rect x="16" y="38" width="14" height="14" fill="#FFFFFF" stroke="#94A0B8" stroke-width="0.8"/><rect x="30" y="38" width="14" height="14" fill="#FFFFFF" stroke="#94A0B8" stroke-width="0.8"/><rect x="44" y="38" width="14" height="14" fill="#818CF8" stroke="#94A0B8" stroke-width="0.8"/><rect x="58" y="38" width="14" height="14" fill="#818CF8" stroke="#94A0B8" stroke-width="0.8"/><rect x="72" y="38" width="14" height="14" fill="#818CF8" stroke="#94A0B8" stroke-width="0.8"/><rect x="86" y="38" width="14" height="14" fill="#818CF8" stroke="#94A0B8" stroke-width="0.8"/><rect x="100" y="38" width="14" height="14" fill="#818CF8" stroke="#94A0B8" stroke-width="0.8"/><rect x="114" y="38" width="14" height="14" fill="#818CF8" stroke="#94A0B8" stroke-width="0.8"/><rect x="128" y="38" width="14" height="14" fill="#818CF8" stroke="#94A0B8" stroke-width="0.8"/><rect x="142" y="38" width="14" height="14" fill="#818CF8" stroke="#94A0B8" stroke-width="0.8"/><rect x="156" y="38" width="14" height="14" fill="#FFFFFF" stroke="#94A0B8" stroke-width="0.8"/><rect x="170" y="38" width="14" height="14" fill="#FFFFFF" stroke="#94A0B8" stroke-width="0.8"/><rect x="16" y="52" width="14" height="14" fill="#FFFFFF" stroke="#94A0B8" stroke-width="0.8"/><rect x="30" y="52" width="14" height="14" fill="#818CF8" stroke="#94A0B8" stroke-width="0.8"/><rect x="44" y="52" width="14" height="14" fill="#818CF8" stroke="#94A0B8" stroke-width="0.8"/><rect x="58" y="52" width="14" height="14" fill="#818CF8" stroke="#94A0B8" stroke-width="0.8"/><rect x="72" y="52" width="14" height="14" fill="#818CF8" stroke="#94A0B8" stroke-width="0.8"/><rect x="86" y="52" width="14" height="14" fill="#818CF8" stroke="#94A0B8" stroke-width="0.8"/><rect x="100" y="52" width="14" height="14" fill="#818CF8" stroke="#94A0B8" stroke-width="0.8"/><rect x="114" y="52" width="14" height="14" fill="#818CF8" stroke="#94A0B8" stroke-width="0.8"/><rect x="128" y="52" width="14" height="14" fill="#818CF8" stroke="#94A0B8" stroke-width="0.8"/><rect x="142" y="52" width="14" height="14" fill="#818CF8" stroke="#94A0B8" stroke-width="0.8"/><rect x="156" y="52" width="14" height="14" fill="#818CF8" stroke="#94A0B8" stroke-width="0.8"/><rect x="170" y="52" width="14" height="14" fill="#FFFFFF" stroke="#94A0B8" stroke-width="0.8"/><rect x="16" y="66" width="14" height="14" fill="#FFFFFF" stroke="#94A0B8" stroke-width="0.8"/><rect x="30" y="66" width="14" height="14" fill="#818CF8" stroke="#94A0B8" stroke-width="0.8"/><rect x="44" y="66" width="14" height="14" fill="#818CF8" stroke="#94A0B8" stroke-width="0.8"/><rect x="58" y="66" width="14" height="14" fill="#818CF8" stroke="#94A0B8" stroke-width="0.8"/><rect x="72" y="66" width="14" height="14" fill="#818CF8" stroke="#94A0B8" stroke-width="0.8"/><rect x="86" y="66" width="14" height="14" fill="#818CF8" stroke="#94A0B8" stroke-width="0.8"/><rect x="100" y="66" width="14" height="14" fill="#818CF8" stroke="#94A0B8" stroke-width="0.8"/><rect x="114" y="66" width="14" height="14" fill="#818CF8" stroke="#94A0B8" stroke-width="0.8"/><rect x="128" y="66" width="14" height="14" fill="#818CF8" stroke="#94A0B8" stroke-width="0.8"/><rect x="142" y="66" width="14" height="14" fill="#818CF8" stroke="#94A0B8" stroke-width="0.8"/><rect x="156" y="66" width="14" height="14" fill="#818CF8" stroke="#94A0B8" stroke-width="0.8"/><rect x="170" y="66" width="14" height="14" fill="#FFFFFF" stroke="#94A0B8" stroke-width="0.8"/><rect x="16" y="80" width="14" height="14" fill="#FFFFFF" stroke="#94A0B8" stroke-width="0.8"/><rect x="30" y="80" width="14" height="14" fill="#818CF8" stroke="#94A0B8" stroke-width="0.8"/><rect x="44" y="80" width="14" height="14" fill="#818CF8" stroke="#94A0B8" stroke-width="0.8"/><rect x="58" y="80" width="14" height="14" fill="#818CF8" stroke="#94A0B8" stroke-width="0.8"/><rect x="72" y="80" width="14" height="14" fill="#818CF8" stroke="#94A0B8" stroke-width="0.8"/><rect x="86" y="80" width="14" height="14" fill="#818CF8" stroke="#94A0B8" stroke-width="0.8"/><rect x="100" y="80" width="14" height="14" fill="#818CF8" stroke="#94A0B8" stroke-width="0.8"/><rect x="114" y="80" width="14" height="14" fill="#818CF8" stroke="#94A0B8" stroke-width="0.8"/><rect x="128" y="80" width="14" height="14" fill="#818CF8" stroke="#94A0B8" stroke-width="0.8"/><rect x="142" y="80" width="14" height="14" fill="#818CF8" stroke="#94A0B8" stroke-width="0.8"/><rect x="156" y="80" width="14" height="14" fill="#818CF8" stroke="#94A0B8" stroke-width="0.8"/><rect x="170" y="80" width="14" height="14" fill="#FFFFFF" stroke="#94A0B8" stroke-width="0.8"/><rect x="16" y="94" width="14" height="14" fill="#FFFFFF" stroke="#94A0B8" stroke-width="0.8"/><rect x="30" y="94" width="14" height="14" fill="#818CF8" stroke="#94A0B8" stroke-width="0.8"/><rect x="44" y="94" width="14" height="14" fill="#818CF8" stroke="#94A0B8" stroke-width="0.8"/><rect x="58" y="94" width="14" height="14" fill="#818CF8" stroke="#94A0B8" stroke-width="0.8"/><rect x="72" y="94" width="14" height="14" fill="#818CF8" stroke="#94A0B8" stroke-width="0.8"/><rect x="86" y="94" width="14" height="14" fill="#818CF8" stroke="#94A0B8" stroke-width="0.8"/><rect x="100" y="94" width="14" height="14" fill="#818CF8" stroke="#94A0B8" stroke-width="0.8"/><rect x="114" y="94" width="14" height="14" fill="#818CF8" stroke="#94A0B8" stroke-width="0.8"/><rect x="128" y="94" width="14" height="14" fill="#818CF8" stroke="#94A0B8" stroke-width="0.8"/><rect x="142" y="94" width="14" height="14" fill="#818CF8" stroke="#94A0B8" stroke-width="0.8"/><rect x="156" y="94" width="14" height="14" fill="#818CF8" stroke="#94A0B8" stroke-width="0.8"/><rect x="170" y="94" width="14" height="14" fill="#FFFFFF" stroke="#94A0B8" stroke-width="0.8"/><rect x="16" y="108" width="14" height="14" fill="#FFFFFF" stroke="#94A0B8" stroke-width="0.8"/><rect x="30" y="108" width="14" height="14" fill="#818CF8" stroke="#94A0B8" stroke-width="0.8"/><rect x="44" y="108" width="14" height="14" fill="#818CF8" stroke="#94A0B8" stroke-width="0.8"/><rect x="58" y="108" width="14" height="14" fill="#818CF8" stroke="#94A0B8" stroke-width="0.8"/><rect x="72" y="108" width="14" height="14" fill="#818CF8" stroke="#94A0B8" stroke-width="0.8"/><rect x="86" y="108" width="14" height="14" fill="#818CF8" stroke="#94A0B8" stroke-width="0.8"/><rect x="100" y="108" width="14" height="14" fill="#818CF8" stroke="#94A0B8" stroke-width="0.8"/><rect x="114" y="108" width="14" height="14" fill="#818CF8" stroke="#94A0B8" stroke-width="0.8"/><rect x="128" y="108" width="14" height="14" fill="#818CF8" stroke="#94A0B8" stroke-width="0.8"/><rect x="142" y="108" width="14" height="14" fill="#818CF8" stroke="#94A0B8" stroke-width="0.8"/><rect x="156" y="108" width="14" height="14" fill="#818CF8" stroke="#94A0B8" stroke-width="0.8"/><rect x="170" y="108" width="14" height="14" fill="#FFFFFF" stroke="#94A0B8" stroke-width="0.8"/><rect x="16" y="122" width="14" height="14" fill="#FFFFFF" stroke="#94A0B8" stroke-width="0.8"/><rect x="30" y="122" width="14" height="14" fill="#818CF8" stroke="#94A0B8" stroke-width="0.8"/><rect x="44" y="122" width="14" height="14" fill="#818CF8" stroke="#94A0B8" stroke-width="0.8"/><rect x="58" y="122" width="14" height="14" fill="#818CF8" stroke="#94A0B8" stroke-width="0.8"/><rect x="72" y="122" width="14" height="14" fill="#818CF8" stroke="#94A0B8" stroke-width="0.8"/><rect x="86" y="122" width="14" height="14" fill="#818CF8" stroke="#94A0B8" stroke-width="0.8"/><rect x="100" y="122" width="14" height="14" fill="#818CF8" stroke="#94A0B8" stroke-width="0.8"/><rect x="114" y="122" width="14" height="14" fill="#818CF8" stroke="#94A0B8" stroke-width="0.8"/><rect x="128" y="122" width="14" height="14" fill="#818CF8" stroke="#94A0B8" stroke-width="0.8"/><rect x="142" y="122" width="14" height="14" fill="#818CF8" stroke="#94A0B8" stroke-width="0.8"/><rect x="156" y="122" width="14" height="14" fill="#818CF8" stroke="#94A0B8" stroke-width="0.8"/><rect x="170" y="122" width="14" height="14" fill="#FFFFFF" stroke="#94A0B8" stroke-width="0.8"/><rect x="16" y="136" width="14" height="14" fill="#FFFFFF" stroke="#94A0B8" stroke-width="0.8"/><rect x="30" y="136" width="14" height="14" fill="#FFFFFF" stroke="#94A0B8" stroke-width="0.8"/><rect x="44" y="136" width="14" height="14" fill="#818CF8" stroke="#94A0B8" stroke-width="0.8"/><rect x="58" y="136" width="14" height="14" fill="#818CF8" stroke="#94A0B8" stroke-width="0.8"/><rect x="72" y="136" width="14" height="14" fill="#818CF8" stroke="#94A0B8" stroke-width="0.8"/><rect x="86" y="136" width="14" height="14" fill="#818CF8" stroke="#94A0B8" stroke-width="0.8"/><rect x="100" y="136" width="14" height="14" fill="#818CF8" stroke="#94A0B8" stroke-width="0.8"/><rect x="114" y="136" width="14" height="14" fill="#818CF8" stroke="#94A0B8" stroke-width="0.8"/><rect x="128" y="136" width="14" height="14" fill="#818CF8" stroke="#94A0B8" stroke-width="0.8"/><rect x="142" y="136" width="14" height="14" fill="#818CF8" stroke="#94A0B8" stroke-width="0.8"/><rect x="156" y="136" width="14" height="14" fill="#FFFFFF" stroke="#94A0B8" stroke-width="0.8"/><rect x="170" y="136" width="14" height="14" fill="#FFFFFF" stroke="#94A0B8" stroke-width="0.8"/><rect x="16" y="150" width="14" height="14" fill="#FFFFFF" stroke="#94A0B8" stroke-width="0.8"/><rect x="30" y="150" width="14" height="14" fill="#FFFFFF" stroke="#94A0B8" stroke-width="0.8"/><rect x="44" y="150" width="14" height="14" fill="#FFFFFF" stroke="#94A0B8" stroke-width="0.8"/><rect x="58" y="150" width="14" height="14" fill="#818CF8" stroke="#94A0B8" stroke-width="0.8"/><rect x="72" y="150" width="14" height="14" fill="#818CF8" stroke="#94A0B8" stroke-width="0.8"/><rect x="86" y="150" width="14" height="14" fill="#818CF8" stroke="#94A0B8" stroke-width="0.8"/><rect x="100" y="150" width="14" height="14" fill="#818CF8" stroke="#94A0B8" stroke-width="0.8"/><rect x="114" y="150" width="14" height="14" fill="#818CF8" stroke="#94A0B8" stroke-width="0.8"/><rect x="128" y="150" width="14" height="14" fill="#818CF8" stroke="#94A0B8" stroke-width="0.8"/><rect x="142" y="150" width="14" height="14" fill="#FFFFFF" stroke="#94A0B8" stroke-width="0.8"/><rect x="156" y="150" width="14" height="14" fill="#FFFFFF" stroke="#94A0B8" stroke-width="0.8"/><rect x="170" y="150" width="14" height="14" fill="#FFFFFF" stroke="#94A0B8" stroke-width="0.8"/><rect x="16" y="164" width="14" height="14" fill="#FFFFFF" stroke="#94A0B8" stroke-width="0.8"/><rect x="30" y="164" width="14" height="14" fill="#FFFFFF" stroke="#94A0B8" stroke-width="0.8"/><rect x="44" y="164" width="14" height="14" fill="#FFFFFF" stroke="#94A0B8" stroke-width="0.8"/><rect x="58" y="164" width="14" height="14" fill="#FFFFFF" stroke="#94A0B8" stroke-width="0.8"/><rect x="72" y="164" width="14" height="14" fill="#FFFFFF" stroke="#94A0B8" stroke-width="0.8"/><rect x="86" y="164" width="14" height="14" fill="#FFFFFF" stroke="#94A0B8" stroke-width="0.8"/><rect x="100" y="164" width="14" height="14" fill="#FFFFFF" stroke="#94A0B8" stroke-width="0.8"/><rect x="114" y="164" width="14" height="14" fill="#FFFFFF" stroke="#94A0B8" stroke-width="0.8"/><rect x="128" y="164" width="14" height="14" fill="#FFFFFF" stroke="#94A0B8" stroke-width="0.8"/><rect x="142" y="164" width="14" height="14" fill="#FFFFFF" stroke="#94A0B8" stroke-width="0.8"/><rect x="156" y="164" width="14" height="14" fill="#FFFFFF" stroke="#94A0B8" stroke-width="0.8"/><rect x="170" y="164" width="14" height="14" fill="#FFFFFF" stroke="#94A0B8" stroke-width="0.8"/><text class="s-txt-muted" x="100" y="196" text-anchor="middle" style="font-size:12px">144 točk, vsaka s svojo barvo</text></svg>
+<figcaption>Posnetek (rastrska slika): zapišemo barvo vsake točke. Pri povečavi se vidijo kvadratki.</figcaption>
+</figure><figure class="slika">
+<svg viewBox="0 0 200 200" role="img" aria-label="Opis" xmlns="http://www.w3.org/2000/svg"><circle cx="100" cy="80" r="62" fill="#818CF8"/><text x="100" y="168" text-anchor="middle" style="font-size:12px;font-family:monospace">krog: središče (100, 80),</text><text x="100" y="184" text-anchor="middle" style="font-size:12px;font-family:monospace">polmer 62, barva modra</text></svg>
+<figcaption>Opis (vektorska slika): zapišemo, kaj narisati. Zapis je kratek in sliko lahko poljubno povečamo.</figcaption>
+</figure></div>
+            <ul>
+              <li><strong>posnetek</strong>: zapišemo vrednosti v mnogih točkah (rastrska slika, posnet zvok, video). Primeren za resnični svet (fotografija, govor), a zavzame veliko prostora in se pri povečavi poslabša;</li>
+              <li><strong>opis</strong>: zapišemo navodila, kako informacijo ustvariti (vektorska slika, zapis MIDI, besedilo z oznakami oblikovanja, 3D-model). Zapis je kratek, poljubno povečljiv in ga lahko preprosto spreminjamo, ni pa primeren za zapletene naravne prizore.</li>
+            </ul>
+            <h4>Vrste zapisov in zvrsti MIME</h4>
+            <p>Datoteke imajo različne <strong>oblike zapisa</strong> (formate), ki jih pogosto prepoznamo po končnici (.txt, .docx, .pdf, .jpg, .png, .mp3, .mp4, .html). Na internetu vrsto vsebine označuje <strong>zvrst MIME</strong> oblike vrsta/podvrsta, na primer <code class="k">text/html</code>, <code class="k">image/png</code>, <code class="k">audio/mpeg</code>, <code class="k">application/pdf</code>; po njej brskalnik ali poštni program ve, s katerim programom vsebino odpre. Obliko izberemo glede na vsebino in namen: dokument za urejanje (.docx, .odt), za nespremenljiv izpis in tiskanje (.pdf), za splet (.html, .jpg, .png).</p>
+            <h4>Poudarki</h4>
+            <p>Pomembne dele informacije poudarimo s pisavo (krepko, ležeče, velikost), slogom, barvo, okvirjem ali zvokom. Poudarkov mora biti malo in morajo biti dosledni; če je poudarjeno vse, ni poudarjeno nič. Barva ne sme biti edini nosilec pomena (barvno slepi, črno-beli tisk).</p>
+            <h4>Zgoščevanje (stiskanje)</h4>
+            <p>Z zgoščevanjem zmanjšamo velikost zapisa, da potrebuje manj prostora in se hitreje prenese. <strong>Brezizgubno</strong> zgoščevanje (ZIP, PNG, FLAC) omogoča natančno obnovo izvirnika; izkorišča ponavljanja. Najpreprostejši primer je kodiranje ponovitev (RLE): zaporedje <code class="k">AAAAABBBCCCCCCCC</code> zapišemo kot <code class="k">5A3B8C</code>. <strong>Izgubno</strong> zgoščevanje (JPEG, MP3, MP4) zavrže podrobnosti, ki jih človek slabo zazna; zapis je mnogo manjši, izvirnika pa ne moremo več obnoviti. Besedil in programov nikoli ne stiskamo izgubno.</p>
+            <h4>Standardi in prenosljivost</h4>
+            <p><strong>Standard</strong> je dogovorjeno pravilo o zapisu ali postopku (ASCII, Unicode, JPEG, HTML, PDF). Standardi omogočajo <strong>prenosljivost</strong>: podatke lahko odpremo v drugem programu, na drugem operacijskem sistemu ali napravi. Odprti standardi (ODF, PNG, HTML) so javno opisani in jih lahko uporablja vsak, kar zmanjša odvisnost od enega proizvajalca.</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-1">
+              <h4>Tip 1: Pretvarjanje med številskimi sistemi</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Pretvori desetiško število 214 v dvojiški in šestnajstiški zapis. Koliko je \(1011\,0011_2\) desetiško?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> število je zapisano v enem sistemu, iščejo zapis v drugem; ali pa gre za barvo v zapisu #RRGGBB.</p><ul class="kljucne"><li>„dvojiško, binarno“</li><li>„šestnajstiško, heksadecimalno“</li><li>„pretvori“</li><li>„#FF8000“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Iz desetiškega v dvojiško: deli z 2 in zapisuj ostanke; preberi jih od zadnjega proti prvemu.</p><div class="na-nalogi"><p>214 : 2 = 107 (0), 107 : 2 = 53 (1), 53 : 2 = 26 (1), 26 : 2 = 13 (0), 13 : 2 = 6 (1), 6 : 2 = 3 (0), 3 : 2 = 1 (1), 1 : 2 = 0 (1). Torej \(214 = 1101\,0110_2\).</p></div></li>
+              <li><p class="korak">Iz dvojiškega v šestnajstiško: bite od desne razdeli v skupine po štiri in vsako zapiši z eno števko.</p><div class="na-nalogi"><p>\(1101 = 13 = \text{D}\), \(0110 = 6\), torej \(214 = \text{D6}_{16}\).</p></div></li>
+              <li><p class="korak">Iz dvojiškega v desetiško: seštej vrednosti mest (128, 64, 32, 16, 8, 4, 2, 1), kjer je enica.</p><div class="na-nalogi"><p>\(1011\,0011_2 = 128 + 32 + 16 + 2 + 1 = 179\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Katera barva je #FF8000?</p><p>R = FF = 255, G = 80 = 128, B = 00 = 0: oranžna.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Koliko je največje število, ki ga zapišemo z 8 biti?</p><p>\(1111\,1111_2 = 255\) (vseh vrednosti je 256).</p></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-2">
+              <h4>Tip 2: Posnetek ali opis, izbira oblike zapisa</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Za vsak primer določi, ali je bolje uporabiti posnetek ali opis, in predlagaj obliko zapisa: (a) logotip šole, ki bo na vizitkah in na velikem plakatu; (b) fotografija razreda; (c) skladba za klavir, ki jo bo predvajal računalnik; (d) pogodba, ki je ne smejo spreminjati.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> opisana je vsebina in njen namen, iščejo primeren način predstavitve ali obliko datoteke.</p><ul class="kljucne"><li>„posnetek ali opis“</li><li>„v kateri obliki shraniš“</li><li>„MIME“</li><li>„utemelji izbiro“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Ali vsebina izvira iz resničnega sveta (fotografija, govor) ali jo lahko opišemo z liki, notami, znaki?</p><div class="na-nalogi"><p>(a) logotip so liki, (b) fotografija je resnični prizor, (c) note je mogoče opisati, (d) besedilo.</p></div></li>
+              <li><p class="korak">Upoštevaj namen: povečevanje, tisk, splet, urejanje, nespremenljivost.</p><div class="na-nalogi"><p>(a) se mora povečevati brez izgube, (d) mora ostati nespremenjen.</p></div></li>
+              <li><p class="korak">Izberi obliko in jo utemelji.</p><div class="na-nalogi"><p>(a) opis, vektorsko (SVG, PDF); (b) posnetek, JPEG; (c) opis, MIDI; (d) PDF, po možnosti z elektronskim podpisom.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Katera zvrst MIME je spletna stran?</p><p><code class="k">text/html</code>.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Zakaj je odprti standard boljša izbira za dolgoročno hrambo?</p><p>Opis zapisa je javen, zato ga bodo programi znali brati tudi, ko izvirnega programa ne bo več.</p></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-3">
+              <h4>Tip 3: Zgoščevanje in razmerje stiskanja</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Vrstica črno-bele slike je <code class="k">BBBBBBBBCCCBBBBBBBBBBBBB</code> (B bela, C črna točka). Zapiši jo s kodiranjem ponovitev in izračunaj razmerje stiskanja, če vsak znak zavzame en bajt. Ali je to zgoščevanje izgubno?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> sprašujejo po zgoščenem zapisu, razmerju velikosti pred in po stiskanju, ali po razliki med izgubnim in brezizgubnim stiskanjem.</p><ul class="kljucne"><li>„stisni, zgosti“</li><li>„razmerje stiskanja“</li><li>„izgubno, brezizgubno“</li><li>„RLE, ZIP“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Poišči zaporedja enakih znakov in vsako zapiši kot število ponovitev in znak.</p><div class="na-nalogi"><p>8 B, 3 C, 13 B: <code class="k">8B3C13B</code>.</p></div></li>
+              <li><p class="korak">Preštej velikost pred in po stiskanju ter izračunaj razmerje.</p><div class="na-nalogi"><p>Pred: 24 B, po: 7 B; razmerje \(24 : 7 \approx 3{,}4 : 1\).</p></div></li>
+              <li><p class="korak">Ugotovi, ali se izvirnik da natančno obnoviti.</p><div class="na-nalogi"><p>Da, zato je brezizgubno.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Fotografija ima nestisnjena 24 MB, kot JPEG 3 MB. Kolikšno je razmerje stiskanja?</p><p>\(8 : 1\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Zakaj RLE slabo stisne fotografijo?</p><p>V fotografiji se sosednje točke skoraj vedno razlikujejo, zato ni dolgih ponovitev.</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 2 -->
+        <section class="sklop" id="sklop-2">
+          <header class="sklop-header">
+            <span class="sklop-num">4.3 · 2</span>
+            <h2>Pisna predstavitev</h2>
+            <p>Govorno in pisno komuniciranje, kodne tabele in nacionalni znaki, slovenjenje, oblikovanje besedila s slogi in predlogami, tabele, viri, kazala, spajanje dokumentov in namizno založništvo.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <h4>Govorno in pisno</h4>
+            <p>Govorno komuniciranje je hitro, neposredno in ima takojšnjo povratno zvezo (glas, mimika), a je minljivo. Pisno komuniciranje je trajno, natančneje premišljeno, ga lahko večkrat preberemo in razširimo mnogim, nima pa sprotne povratne zveze, zato mora biti jasno in nedvoumno.</p>
+            <h4>Kodne tabele</h4>
+            <p>Vsak znak v računalniku je zapisan s številom; preslikavo med znaki in števili določa <strong>kodna tabela</strong>.</p>
+            <div class="tabela-wrap">
+              <table class="tabela">
+                <thead><tr><th>Kodna tabela</th><th>Bitov na znak</th><th>Število znakov</th><th>Posebnost</th></tr></thead>
+                <tbody>
+                  <tr><td>ASCII</td><td>7 (zapisano v 1 B)</td><td>128</td><td>angleška abeceda, števke, ločila; brez č, š, ž</td></tr>
+                  <tr><td>ISO 8859-2, Windows-1250</td><td>8</td><td>256</td><td>ASCII + srednjeevropski znaki (č, š, ž, ć, đ)</td></tr>
+                  <tr><td>Unicode, zapis UTF-8</td><td>8 do 32 (1 do 4 B)</td><td>več kot milijon</td><td>vse pisave sveta; znaki ASCII v 1 B, č, š, ž v 2 B</td></tr>
+                  <tr><td>Unicode, zapis UTF-16</td><td>16 ali 32</td><td>več kot milijon</td><td>večina znakov v 2 B</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p><strong>Problem nacionalnih znakov:</strong> če besedilo zapišemo v eni kodni tabeli in ga beremo z drugo, se znaki, ki niso v ASCII, prikažejo napačno (namesto „čevelj“ vidimo „Ä�evelj“ ali „?evelj“). Rešitev je enotna uporaba Unicode (UTF-8) in pravilna oznaka kodiranja v dokumentu ali na spletni strani. <strong>Slovenjenje</strong> programov pomeni prevod uporabniškega vmesnika in pomoči ter prilagoditev krajevnim nastavitvam (decimalna vejica, oblika datuma, abecedno razvrščanje s č, š, ž, slovarji za črkovanje). Težave nastanejo pri nedoslednih prevodih izrazov in pri funkcijah, katerih imena se v preglednicah prevedejo.</p>
+            <h4>Urejeno besedilo</h4>
+            <p><strong>Logične sestavine</strong> povedo, kaj del besedila je: naslov, podnaslov, odstavek, seznam, citat, opomba. <strong>Fizične sestavine</strong> povedo, kako je videti: pisava, velikost, barva, poravnava, razmiki. Dobro urejeno besedilo najprej razčlenimo logično, nato vsaki logični sestavini določimo videz.</p>
+            <ul>
+              <li><strong>Neposredno oblikovanje</strong>: vsak del oblikujemo posebej (izberemo besedilo, nastavimo pisavo). Hitro za kratka besedila, a nedosledno in zamudno za spreminjanje.</li>
+              <li><strong>Oblikovanje s slogi</strong>: slog je poimenovan nabor oblikovanja (Naslov 1, Navadno). Sprememba sloga takoj spremeni vse dele s tem slogom; iz slogov naslovov program samodejno izdela kazalo vsebine.</li>
+              <li><strong>Predloga</strong> je vzorec dokumenta s slogi, postavitvijo in stalnimi deli (glava, logotip). Iz nje ustvarimo enotne dokumente (dopisi podjetja, seminarske naloge).</li>
+            </ul>
+            <p><strong>Tabela</strong> je primerna za podatke, ki jih primerjamo po več lastnostih; imeti mora naslov, glavo stolpcev in enote. Pri daljših besedilih uporabljamo <strong>navajanje virov</strong> (literatura po dogovorjenem standardu), <strong>kazala</strong> (vsebine, slik, stvarno kazalo), sprotne opombe in samodejno številčenje. <strong>Spajanje dokumentov</strong> (zlivanje pošte) združi vzorčni dopis s seznamom naslovnikov (iz preglednice ali baze) in izdela osebno pismo za vsakega. <strong>Namizno založništvo</strong> so programi (na primer Scribus, Adobe InDesign) za natančno postavitev časopisov, revij, letakov in knjig za tisk.</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-4">
+              <h4>Tip 4: Velikost besedila v kodni tabeli</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Koliko bajtov zavzame beseda „Čebelica“ v kodni tabeli Windows-1250, v UTF-8 in v UTF-16? Ali jo lahko zapišemo v ASCII?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> podano je besedilo ali število znakov in kodna tabela, iščejo velikost zapisa ali število znakov, ki jih tabela zmore.</p><ul class="kljucne"><li>„ASCII“</li><li>„UTF-8, Unicode“</li><li>„koliko bajtov“</li><li>„šumniki“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Preštej znake (tudi presledke in ločila) in posebej znake zunaj ASCII.</p><div class="na-nalogi"><p>8 znakov, od tega en (Č) zunaj ASCII.</p></div></li>
+              <li><p class="korak">Določi velikost vsakega znaka v izbrani tabeli.</p><div class="na-nalogi"><p>Windows-1250: vsi po 1 B. UTF-8: znaki ASCII 1 B, Č 2 B. UTF-16: vsi po 2 B.</p></div></li>
+              <li><p class="korak">Seštej.</p><div class="na-nalogi"><p>Windows-1250: 8 B; UTF-8: \(7 + 2 = 9\) B; UTF-16: 16 B. V ASCII ni mogoče, ker ASCII nima črke Č.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Koliko prostora potrebuje 2000 znakov angleškega besedila v ASCII?</p><p>2000 B (vsak znak v 1 B).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Na spletni strani se namesto „š“ pokaže „Å¡“. Zakaj?</p><p>Besedilo je zapisano v UTF-8, brskalnik pa ga bere kot drugo kodno tabelo; v glavi strani je treba navesti <code class="k">&lt;meta charset="UTF-8"&gt;</code>.</p></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-5">
+              <h4>Tip 5: Slogi, predloge in spajanje dokumentov</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Dijak piše 30 strani dolgo seminarsko nalogo s poglavji, slikami in viri. Mentor želi, da so vsi naslovi poglavij modri in da je na začetku kazalo vsebine. Šola pa želi vsem 150 staršem poslati vabilo z njihovim imenom. Opiši najprimernejši postopek za oboje.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> opisan je daljši dokument ali množično pošiljanje, iščejo primeren način oblikovanja, samodejna kazala ali osebna pisma.</p><ul class="kljucne"><li>„slog“</li><li>„predloga“</li><li>„kazalo vsebine“</li><li>„spajanje, zlivanje pošte“</li><li>„logične in fizične sestavine“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Določi logično zgradbo dokumenta (naslovi, odstavki, napisi slik).</p><div class="na-nalogi"><p>Naslovi poglavij in podpoglavij, navadni odstavki, napisi slik, seznam virov.</p></div></li>
+              <li><p class="korak">Vsaki logični sestavini dodeli slog; spremembe videza delaj v slogu, ne neposredno.</p><div class="na-nalogi"><p>Naslovom dodeli Naslov 1 in Naslov 2; barvo spremeni v slogu Naslov 1, in vsi naslovi postanejo modri.</p></div></li>
+              <li><p class="korak">Uporabi samodejne funkcije: kazalo, napise, navajanje virov.</p><div class="na-nalogi"><p>Kazalo vsebine izdela program iz slogov naslovov in ga posodobi s klikom.</p></div></li>
+              <li><p class="korak">Za množična osebna pisma uporabi spajanje: vzorčni dopis + seznam podatkov.</p><div class="na-nalogi"><p>Vabilo z oznakami polj (ime, priimek), seznam staršev v preglednici, spajanje izdela 150 pisem.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Ali je „pisava Arial 12 pt“ logična ali fizična sestavina?</p><p>Fizična.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Zakaj podjetje uporablja predlogo za dopise?</p><p>Vsi dopisi so enotni (logotip, glava, slogi) in hitreje izdelani.</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 3 -->
+        <section class="sklop" id="sklop-3">
+          <header class="sklop-header">
+            <span class="sklop-num">4.3 · 3</span>
+            <h2>Slikovna predstavitev</h2>
+            <p>Prednosti slike, ločljivost, rastrska in vektorska grafika, barvni modeli RGB in CMYK, lastnosti barv ter oblike zapisa slik.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <h4>Zakaj slika</h4>
+            <p>Slika pove veliko naenkrat, hitro jo razumemo in si jo zapomnimo, premaguje jezikovne ovire (prometni znaki, ikone). Uporabljamo jo za ponazoritev zgradbe (sheme, zemljevidi), podatkov (grafikoni), postopkov (diagrami) in videza (fotografije). Slabost: lahko je dvoumna in zavzame več prostora kot besedilo.</p>
+            <h4>Rastrska in vektorska slika</h4>
+            <p><strong>Rastrska</strong> (točkovna) slika je mreža slikovnih točk (pikslov), za vsako je zapisana barva. Primerna je za fotografije in naravne prizore. <strong>Vektorska</strong> (predmetna) slika je zapisana kot seznam likov (črte, krogi, krivulje) z lastnostmi. Primerna je za logotipe, risbe, načrte, ikone, pisave.</p>
+            <div class="slike-vrsta"><figure class="slika">
+<svg viewBox="0 0 200 190" role="img" aria-label="Povečana rastrska slika" xmlns="http://www.w3.org/2000/svg"><rect x="16" y="6" width="21" height="21" fill="#FFFFFF" stroke="#94A0B8" stroke-width="0.8"/><rect x="37" y="6" width="21" height="21" fill="#FFFFFF" stroke="#94A0B8" stroke-width="0.8"/><rect x="58" y="6" width="21" height="21" fill="#FFFFFF" stroke="#94A0B8" stroke-width="0.8"/><rect x="79" y="6" width="21" height="21" fill="#FFFFFF" stroke="#94A0B8" stroke-width="0.8"/><rect x="100" y="6" width="21" height="21" fill="#FFFFFF" stroke="#94A0B8" stroke-width="0.8"/><rect x="121" y="6" width="21" height="21" fill="#FFFFFF" stroke="#94A0B8" stroke-width="0.8"/><rect x="142" y="6" width="21" height="21" fill="#FFFFFF" stroke="#94A0B8" stroke-width="0.8"/><rect x="163" y="6" width="21" height="21" fill="#FFFFFF" stroke="#94A0B8" stroke-width="0.8"/><rect x="16" y="27" width="21" height="21" fill="#FFFFFF" stroke="#94A0B8" stroke-width="0.8"/><rect x="37" y="27" width="21" height="21" fill="#FFFFFF" stroke="#94A0B8" stroke-width="0.8"/><rect x="58" y="27" width="21" height="21" fill="#4F46E5" stroke="#94A0B8" stroke-width="0.8"/><rect x="79" y="27" width="21" height="21" fill="#4F46E5" stroke="#94A0B8" stroke-width="0.8"/><rect x="100" y="27" width="21" height="21" fill="#4F46E5" stroke="#94A0B8" stroke-width="0.8"/><rect x="121" y="27" width="21" height="21" fill="#4F46E5" stroke="#94A0B8" stroke-width="0.8"/><rect x="142" y="27" width="21" height="21" fill="#FFFFFF" stroke="#94A0B8" stroke-width="0.8"/><rect x="163" y="27" width="21" height="21" fill="#FFFFFF" stroke="#94A0B8" stroke-width="0.8"/><rect x="16" y="48" width="21" height="21" fill="#FFFFFF" stroke="#94A0B8" stroke-width="0.8"/><rect x="37" y="48" width="21" height="21" fill="#4F46E5" stroke="#94A0B8" stroke-width="0.8"/><rect x="58" y="48" width="21" height="21" fill="#4F46E5" stroke="#94A0B8" stroke-width="0.8"/><rect x="79" y="48" width="21" height="21" fill="#4F46E5" stroke="#94A0B8" stroke-width="0.8"/><rect x="100" y="48" width="21" height="21" fill="#4F46E5" stroke="#94A0B8" stroke-width="0.8"/><rect x="121" y="48" width="21" height="21" fill="#4F46E5" stroke="#94A0B8" stroke-width="0.8"/><rect x="142" y="48" width="21" height="21" fill="#4F46E5" stroke="#94A0B8" stroke-width="0.8"/><rect x="163" y="48" width="21" height="21" fill="#FFFFFF" stroke="#94A0B8" stroke-width="0.8"/><rect x="16" y="69" width="21" height="21" fill="#FFFFFF" stroke="#94A0B8" stroke-width="0.8"/><rect x="37" y="69" width="21" height="21" fill="#4F46E5" stroke="#94A0B8" stroke-width="0.8"/><rect x="58" y="69" width="21" height="21" fill="#4F46E5" stroke="#94A0B8" stroke-width="0.8"/><rect x="79" y="69" width="21" height="21" fill="#4F46E5" stroke="#94A0B8" stroke-width="0.8"/><rect x="100" y="69" width="21" height="21" fill="#4F46E5" stroke="#94A0B8" stroke-width="0.8"/><rect x="121" y="69" width="21" height="21" fill="#4F46E5" stroke="#94A0B8" stroke-width="0.8"/><rect x="142" y="69" width="21" height="21" fill="#4F46E5" stroke="#94A0B8" stroke-width="0.8"/><rect x="163" y="69" width="21" height="21" fill="#FFFFFF" stroke="#94A0B8" stroke-width="0.8"/><rect x="16" y="90" width="21" height="21" fill="#FFFFFF" stroke="#94A0B8" stroke-width="0.8"/><rect x="37" y="90" width="21" height="21" fill="#4F46E5" stroke="#94A0B8" stroke-width="0.8"/><rect x="58" y="90" width="21" height="21" fill="#4F46E5" stroke="#94A0B8" stroke-width="0.8"/><rect x="79" y="90" width="21" height="21" fill="#4F46E5" stroke="#94A0B8" stroke-width="0.8"/><rect x="100" y="90" width="21" height="21" fill="#4F46E5" stroke="#94A0B8" stroke-width="0.8"/><rect x="121" y="90" width="21" height="21" fill="#4F46E5" stroke="#94A0B8" stroke-width="0.8"/><rect x="142" y="90" width="21" height="21" fill="#4F46E5" stroke="#94A0B8" stroke-width="0.8"/><rect x="163" y="90" width="21" height="21" fill="#FFFFFF" stroke="#94A0B8" stroke-width="0.8"/><rect x="16" y="111" width="21" height="21" fill="#FFFFFF" stroke="#94A0B8" stroke-width="0.8"/><rect x="37" y="111" width="21" height="21" fill="#4F46E5" stroke="#94A0B8" stroke-width="0.8"/><rect x="58" y="111" width="21" height="21" fill="#4F46E5" stroke="#94A0B8" stroke-width="0.8"/><rect x="79" y="111" width="21" height="21" fill="#4F46E5" stroke="#94A0B8" stroke-width="0.8"/><rect x="100" y="111" width="21" height="21" fill="#4F46E5" stroke="#94A0B8" stroke-width="0.8"/><rect x="121" y="111" width="21" height="21" fill="#4F46E5" stroke="#94A0B8" stroke-width="0.8"/><rect x="142" y="111" width="21" height="21" fill="#4F46E5" stroke="#94A0B8" stroke-width="0.8"/><rect x="163" y="111" width="21" height="21" fill="#FFFFFF" stroke="#94A0B8" stroke-width="0.8"/><rect x="16" y="132" width="21" height="21" fill="#FFFFFF" stroke="#94A0B8" stroke-width="0.8"/><rect x="37" y="132" width="21" height="21" fill="#FFFFFF" stroke="#94A0B8" stroke-width="0.8"/><rect x="58" y="132" width="21" height="21" fill="#4F46E5" stroke="#94A0B8" stroke-width="0.8"/><rect x="79" y="132" width="21" height="21" fill="#4F46E5" stroke="#94A0B8" stroke-width="0.8"/><rect x="100" y="132" width="21" height="21" fill="#4F46E5" stroke="#94A0B8" stroke-width="0.8"/><rect x="121" y="132" width="21" height="21" fill="#4F46E5" stroke="#94A0B8" stroke-width="0.8"/><rect x="142" y="132" width="21" height="21" fill="#FFFFFF" stroke="#94A0B8" stroke-width="0.8"/><rect x="163" y="132" width="21" height="21" fill="#FFFFFF" stroke="#94A0B8" stroke-width="0.8"/><rect x="16" y="153" width="21" height="21" fill="#FFFFFF" stroke="#94A0B8" stroke-width="0.8"/><rect x="37" y="153" width="21" height="21" fill="#FFFFFF" stroke="#94A0B8" stroke-width="0.8"/><rect x="58" y="153" width="21" height="21" fill="#FFFFFF" stroke="#94A0B8" stroke-width="0.8"/><rect x="79" y="153" width="21" height="21" fill="#FFFFFF" stroke="#94A0B8" stroke-width="0.8"/><rect x="100" y="153" width="21" height="21" fill="#FFFFFF" stroke="#94A0B8" stroke-width="0.8"/><rect x="121" y="153" width="21" height="21" fill="#FFFFFF" stroke="#94A0B8" stroke-width="0.8"/><rect x="142" y="153" width="21" height="21" fill="#FFFFFF" stroke="#94A0B8" stroke-width="0.8"/><rect x="163" y="153" width="21" height="21" fill="#FFFFFF" stroke="#94A0B8" stroke-width="0.8"/></svg>
+<figcaption>Majhna rastrska slika kroga, povečana: robovi so nazobčani, ker ima slika premalo točk.</figcaption>
+</figure><figure class="slika">
+<svg viewBox="0 0 200 190" role="img" aria-label="Povečana vektorska slika" xmlns="http://www.w3.org/2000/svg"><circle cx="100" cy="90" r="80" fill="#4F46E5"/></svg>
+<figcaption>Isti krog kot vektorska slika: pri vsaki povečavi se nariše na novo in je gladek.</figcaption>
+</figure></div>
+            <p><strong>Ločljivost</strong> rastrske slike je število točk po širini in višini (1920 × 1080). Pri tisku je pomembna še gostota točk v <strong>dpi</strong> (točk na palec): za kakovosten tisk okoli 300 dpi. Zasloni imajo značilne ločljivosti 1366 × 768, 1920 × 1080 (Full HD), 2560 × 1440, 3840 × 2160 (4K).</p>
+            <h4>Barve</h4>
+            <div class="slike-vrsta"><figure class="slika">
+<svg viewBox="0 0 220 200" role="img" aria-label="RGB" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="220" height="200" fill="#111"/><g style="isolation:isolate"><circle cx="80" cy="75" r="52" fill="#f00" style="mix-blend-mode:screen"/><circle cx="140" cy="75" r="52" fill="#0f0" style="mix-blend-mode:screen"/><circle cx="110" cy="125" r="52" fill="#00f" style="mix-blend-mode:screen"/></g><text x="110" y="98" text-anchor="middle" style="font-size:11px;fill:#000;stroke:none">bela</text></svg>
+<figcaption><strong>RGB</strong> (aditivni model, zasloni): rdeča, zelena in modra svetloba se seštevajo; vse tri skupaj dajo belo.</figcaption>
+</figure><figure class="slika">
+<svg viewBox="0 0 220 200" role="img" aria-label="CMYK" xmlns="http://www.w3.org/2000/svg"><rect x="0" y="0" width="220" height="200" fill="#fff"/><g style="isolation:isolate"><circle cx="80" cy="75" r="52" fill="#0ff" style="mix-blend-mode:multiply"/><circle cx="140" cy="75" r="52" fill="#f0f" style="mix-blend-mode:multiply"/><circle cx="110" cy="125" r="52" fill="#ff0" style="mix-blend-mode:multiply"/></g><text x="110" y="98" text-anchor="middle" style="font-size:11px;fill:#fff;stroke:none">črna</text></svg>
+<figcaption><strong>CMYK</strong> (subtraktivni model, tisk): cian, magenta in rumena barva vpijajo svetlobo; skupaj dajo (skoraj) črno, zato dodamo še črno (K).</figcaption>
+</figure></div>
+            <p>V modelu <strong>RGB</strong> je vsaka barva zapisana s tremi vrednostmi (rdeča, zelena, modra), običajno po 8 bitov, od 0 do 255; to je 24-bitna barvna globina z \(2^{24} \approx 16{,}7\) milijona barv. Na spletu jih zapišemo šestnajstiško: #FF0000 je rdeča, #FFFFFF bela. Model <strong>CMYK</strong> uporabljajo tiskarne. Model HSV (odtenek, nasičenost, svetlost) je priročen za izbiro barv. <strong>Barvna globina</strong> je število bitov za eno točko: 1 bit (črno-belo), 8 bitov (256 barv ali sivin), 24 bitov (prave barve), 32 bitov (z neprozornostjo).</p>
+            <p>Pri uporabi barv pazimo na kontrast med besedilom in ozadjem, na zmerno število barv, na doslednost (ista barva za isti pomen) in na pomen barv (rdeča za opozorilo). Tople barve (rdeča, oranžna) delujejo bližje in vznemirljivo, hladne (modra, zelena) oddaljeno in umirjeno.</p>
+            <h4>Oblike zapisa slik</h4>
+            <div class="tabela-wrap">
+              <table class="tabela">
+                <thead><tr><th>Oblika</th><th>Vrsta</th><th>Stiskanje</th><th>Uporaba</th></tr></thead>
+                <tbody>
+                  <tr><td>BMP</td><td>rastrska</td><td>nestisnjena</td><td>redko; velike datoteke</td></tr>
+                  <tr><td>JPEG (.jpg)</td><td>rastrska</td><td>izgubno, nastavljiva kakovost</td><td>fotografije</td></tr>
+                  <tr><td>PNG</td><td>rastrska</td><td>brezizgubno, prosojnost</td><td>zaslonske slike, grafika z ostrimi robovi, logotipi na spletu</td></tr>
+                  <tr><td>GIF</td><td>rastrska</td><td>brezizgubno, največ 256 barv</td><td>preproste animacije, ikone</td></tr>
+                  <tr><td>SVG</td><td>vektorska</td><td>besedilni opis</td><td>logotipi, ikone in risbe na spletu</td></tr>
+                  <tr><td>PDF, EPS</td><td>vektorska (lahko vsebuje rastrske)</td><td>različno</td><td>tisk</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-6">
+              <h4>Tip 6: Velikost slike</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Koliko prostora zavzame nestisnjena slika z ločljivostjo 1920 × 1080 in 24-bitno barvno globino? Koliko bi zavzela, če bi bila v 256 sivinah? Shranjena kot JPEG zavzame 0,8 MB; kolikšno je razmerje stiskanja?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> podana sta ločljivost in barvna globina ali število barv; iščejo velikost datoteke, število barv ali razmerje stiskanja.</p><ul class="kljucne"><li>„ločljivost“</li><li>„barvna globina“</li><li>„koliko barv“</li><li>„velikost nestisnjene slike“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Izračunaj število točk.</p><div class="na-nalogi"><p>\(1920 \cdot 1080 = 2\,073\,600\) točk.</p></div></li>
+              <li><p class="korak">Določi bite na točko. Iz števila barv \(n\) dobiš \(k = \log_2 n\) (zaokroženo navzgor).</p><div class="na-nalogi"><p>24 bitov = 3 B; 256 sivin: \(\log_2 256 = 8\) bitov = 1 B.</p></div></li>
+              <li><p class="korak">Pomnoži in pretvori v ustrezno enoto.</p><div class="na-nalogi"><p>\(2\,073\,600 \cdot 3\ \text{B} = 6\,220\,800\ \text{B} \approx 6{,}2\ \text{MB}\); v sivinah \(2{,}1\ \text{MB}\).</p></div></li>
+              <li><p class="korak">Razmerje stiskanja: izvirna velikost proti stisnjeni.</p><div class="na-nalogi"><p>\(6{,}2/0{,}8 \approx 7{,}8 : 1\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Koliko barv omogoča 16-bitna barvna globina?</p><p>\(2^{16} = 65\,536\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Ikona 32 × 32 točk s 16 barvami?</p><p>4 biti na točko: \(32 \cdot 32 \cdot 4 = 4096\) bitov = 512 B.</p></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-7">
+              <h4>Tip 7: Ločljivost in velikost odtisa</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Fotografija ima 3000 × 2000 točk. Kako velika bo natisnjena pri 300 dpi? Ali je primerna za plakat velikosti 60 × 40 cm?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> podano je število točk in gostota tiska v dpi, ali velikost odtisa; iščejo velikost v cm, potrebno ločljivost ali dpi.</p><ul class="kljucne"><li>„dpi“</li><li>„natisnemo“</li><li>„palec“</li><li>„kakovost tiska“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Število točk deli z dpi, da dobiš dolžino v palcih.</p><div class="na-nalogi"><p>\(3000/300 = 10\) palcev, \(2000/300 = 6{,}67\) palca.</p></div></li>
+              <li><p class="korak">Pretvori v centimetre (krat 2,54).</p><div class="na-nalogi"><p>\(25{,}4\ \text{cm} \times 16{,}9\ \text{cm}\).</p></div></li>
+              <li><p class="korak">Za drugo velikost izračunaj, koliko dpi ostane, in presodi.</p><div class="na-nalogi"><p>60 cm = 23,6 palca: \(3000/23{,}6 = 127\ \text{dpi}\). Za plakat, ki ga gledamo z razdalje, je to še sprejemljivo, od blizu bodo točke vidne.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Koliko točk potrebuje slika za tisk 10 × 15 cm pri 300 dpi?</p><p>\(3{,}94 \cdot 300 \approx 1181\) in \(5{,}91 \cdot 300 \approx 1772\) točk.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Zakaj logotipa ne povečamo iz majhne rastrske slike?</p><p>Robovi postanejo nazobčani; logotip naj bo vektorski.</p></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-8">
+              <h4>Tip 8: Izbira vrste slike, barvnega modela in oblike zapisa</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Za spletno stran društva potrebuješ: (a) logotip s prosojnim ozadjem, (b) fotografije s prireditve, (c) posnetek zaslona s navodili. Za tiskani letak pa iste slike. Izberi vrsto, obliko zapisa in barvni model.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> dana je vrsta slike in namen (splet, tisk, urejanje), iščejo primerno obliko zapisa, rastrsko ali vektorsko obliko ali barvni model.</p><ul class="kljucne"><li>„JPEG, PNG, GIF, SVG“</li><li>„RGB ali CMYK“</li><li>„rastrska ali vektorska“</li><li>„za splet, za tisk“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Določi vrsto vsebine: fotografija, risba z ostrimi robovi, logotip.</p><div class="na-nalogi"><p>(a) logotip, (b) fotografije, (c) zaslonska slika z besedilom.</p></div></li>
+              <li><p class="korak">Izberi obliko: fotografija JPEG, ostri robovi in prosojnost PNG, povečljivo vektorsko SVG ali PDF.</p><div class="na-nalogi"><p>(a) SVG ali PNG, (b) JPEG, (c) PNG (JPEG bi zameglil črke).</p></div></li>
+              <li><p class="korak">Izberi barvni model: zaslon RGB, tisk CMYK; za tisk še dovolj dpi.</p><div class="na-nalogi"><p>Splet RGB; za letak pretvori v CMYK, fotografije s 300 dpi, logotip vektorsko (PDF).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Zakaj ni dobro fotografije shraniti kot GIF?</p><p>GIF ima največ 256 barv, fotografija pa jih ima mnogo več.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Kolikšne so vrednosti RGB za rumeno?</p><p>(255, 255, 0), #FFFF00.</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 4 -->
+        <section class="sklop" id="sklop-4">
+          <header class="sklop-header">
+            <span class="sklop-num">4.3 · 4</span>
+            <h2>Zvočna predstavitev</h2>
+            <p>Zvok kot nosilec informacije, digitalizacija in vzorčenje, oblike zapisa zvoka.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <h4>Zvok kot predstavitev informacije</h4>
+            <p>Zvok uporabljamo za govor (predavanja, podkasti, navodila), glasbo, opozorila (alarm, obvestilo) in za ljudi, ki ne vidijo (bralniki zaslona). Prednost je, da ga zaznamo, ne da bi gledali; slabost, da je zaporeden in ga ne moremo hitro preleteti.</p>
+            <h4>Digitalizacija zvoka</h4>
+            <figure class="slika slika--siroka">
+<svg viewBox="0 0 460 230" role="img" aria-label="Vzorčenje zvoka" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g1-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g1-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g1-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g1-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g1-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g1-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<path class="s-mreza" d="M26,204V26M46,204V26M66,204V26M86,204V26M106,204V26M126,204V26M146,204V26M166,204V26M186,204V26M206,204V26M226,204V26M246,204V26M266,204V26M286,204V26M306,204V26M326,204V26M346,204V26M366,204V26M386,204V26M406,204V26M426,204V26M26,204H434M26,186.2H434M26,168.4H434M26,150.6H434M26,132.8H434M26,115H434M26,97.2H434M26,79.4H434M26,61.6H434M26,43.8H434M26,26H434"/>
+<line class="s-os" x1="26" y1="115" x2="442" y2="115" marker-end="url(#g1-p)"/>
+<line class="s-os" x1="26" y1="204" x2="26" y2="18" marker-end="url(#g1-p)"/>
+<text class="s-os-txt" x="436" y="107" text-anchor="end">t</text>
+<text class="s-os-txt" x="34" y="30">tlak</text>
+<line class="s-pom" x1="26" y1="115" x2="26" y2="115"/>
+<line class="s-pom" x1="46" y1="115" x2="46" y2="79.4"/>
+<line class="s-pom" x1="66" y1="115" x2="66" y2="61.6"/>
+<line class="s-pom" x1="86" y1="115" x2="86" y2="61.6"/>
+<line class="s-pom" x1="106" y1="115" x2="106" y2="79.4"/>
+<line class="s-pom" x1="126" y1="115" x2="126" y2="61.6"/>
+<line class="s-pom" x1="146" y1="115" x2="146" y2="61.6"/>
+<line class="s-pom" x1="166" y1="115" x2="166" y2="79.4"/>
+<line class="s-pom" x1="186" y1="115" x2="186" y2="115"/>
+<line class="s-pom" x1="206" y1="115" x2="206" y2="168.4"/>
+<line class="s-pom" x1="226" y1="115" x2="226" y2="186.2"/>
+<line class="s-pom" x1="246" y1="115" x2="246" y2="168.4"/>
+<line class="s-pom" x1="266" y1="115" x2="266" y2="150.6"/>
+<line class="s-pom" x1="286" y1="115" x2="286" y2="150.6"/>
+<line class="s-pom" x1="306" y1="115" x2="306" y2="168.4"/>
+<line class="s-pom" x1="326" y1="115" x2="326" y2="150.6"/>
+<line class="s-pom" x1="346" y1="115" x2="346" y2="115"/>
+<line class="s-pom" x1="366" y1="115" x2="366" y2="61.6"/>
+<line class="s-pom" x1="386" y1="115" x2="386" y2="43.8"/>
+<line class="s-pom" x1="406" y1="115" x2="406" y2="43.8"/>
+<line class="s-pom" x1="426" y1="115" x2="426" y2="79.4"/>
+<path class="s-k3" d="M26,115L27,112.5L28,110L29.1,107.5L30.1,105L31.1,102.5L32.1,100L33.1,97.6L34.2,95.2L35.2,92.9L36.2,90.6L37.2,88.3L38.2,86.1L39.3,83.9L40.3,81.8L41.3,79.8L42.3,77.8L43.3,75.9L44.4,74L45.4,72.3L46.4,70.6L47.4,69L48.4,67.4L49.5,66L50.5,64.6L51.5,63.3L52.5,62.1L53.5,61L54.6,60L55.6,59.1L56.6,58.2L57.6,57.5L58.6,56.8L59.7,56.2L60.7,55.7L61.7,55.3L62.7,54.9L63.7,54.7L64.8,54.5L65.8,54.4L66.8,54.4L67.8,54.4L68.8,54.5L69.9,54.7L70.9,54.9L71.9,55.2L72.9,55.6L73.9,56L75,56.4L76,56.9L77,57.5L78,58.1L79,58.7L80.1,59.3L81.1,60L82.1,60.7L83.1,61.4L84.1,62.1L85.2,62.8L86.2,63.5L87.2,64.3L88.2,65L89.2,65.7L90.3,66.4L91.3,67.1L92.3,67.8L93.3,68.5L94.3,69.1L95.4,69.7L96.4,70.3L97.4,70.9L98.4,71.4L99.4,71.9L100.5,72.3L101.5,72.7L102.5,73.1L103.5,73.4L104.5,73.6L105.6,73.9L106.6,74L107.6,74.2L108.6,74.3L109.6,74.3L110.7,74.3L111.7,74.2L112.7,74.1L113.7,73.9L114.7,73.7L115.8,73.5L116.8,73.2L117.8,72.9L118.8,72.5L119.8,72.2L120.9,71.7L121.9,71.3L122.9,70.8L123.9,70.3L124.9,69.8L126,69.2L127,68.7L128,68.1L129,67.5L130,67L131.1,66.4L132.1,65.8L133.1,65.3L134.1,64.7L135.1,64.2L136.2,63.7L137.2,63.2L138.2,62.7L139.2,62.3L140.2,61.9L141.3,61.5L142.3,61.2L143.3,61L144.3,60.8L145.3,60.6L146.4,60.5L147.4,60.5L148.4,60.5L149.4,60.6L150.4,60.8L151.5,61L152.5,61.4L153.5,61.7L154.5,62.2L155.5,62.8L156.6,63.4L157.6,64.1L158.6,64.9L159.6,65.8L160.6,66.7L161.7,67.8L162.7,68.9L163.7,70.1L164.7,71.4L165.7,72.8L166.8,74.3L167.8,75.8L168.8,77.4L169.8,79.1L170.8,80.9L171.9,82.7L172.9,84.6L173.9,86.6L174.9,88.7L175.9,90.8L177,92.9L178,95.1L179,97.4L180,99.7L181,102L182.1,104.4L183.1,106.8L184.1,109.3L185.1,111.7L186.1,114.2L187.2,116.7L188.2,119.2L189.2,121.7L190.2,124.2L191.2,126.8L192.3,129.3L193.3,131.7L194.3,134.2L195.3,136.6L196.3,139L197.4,141.4L198.4,143.8L199.4,146.1L200.4,148.3L201.4,150.5L202.5,152.7L203.5,154.7L204.5,156.8L205.5,158.7L206.5,160.6L207.6,162.4L208.6,164.2L209.6,165.9L210.6,167.4L211.6,168.9L212.7,170.4L213.7,171.7L214.7,173L215.7,174.1L216.7,175.2L217.8,176.2L218.8,177.1L219.8,177.9L220.8,178.6L221.8,179.2L222.9,179.7L223.9,180.2L224.9,180.6L225.9,180.8L226.9,181L228,181.1L229,181.2L230,181.1L231,181L232,180.8L233.1,180.5L234.1,180.2L235.1,179.8L236.1,179.3L237.1,178.8L238.2,178.2L239.2,177.6L240.2,177L241.2,176.2L242.2,175.5L243.3,174.7L244.3,173.9L245.3,173.1L246.3,172.2L247.3,171.4L248.4,170.5L249.4,169.6L250.4,168.7L251.4,167.8L252.4,166.9L253.5,166L254.5,165.1L255.5,164.3L256.5,163.4L257.5,162.6L258.6,161.8L259.6,161L260.6,160.3L261.6,159.5L262.6,158.9L263.7,158.2L264.7,157.6L265.7,157.1L266.7,156.5L267.7,156.1L268.8,155.6L269.8,155.3L270.8,154.9L271.8,154.6L272.8,154.4L273.9,154.2L274.9,154.1L275.9,154L276.9,153.9L277.9,153.9L279,154L280,154.1L281,154.2L282,154.4L283,154.6L284.1,154.8L285.1,155.1L286.1,155.4L287.1,155.7L288.1,156.1L289.2,156.4L290.2,156.8L291.2,157.2L292.2,157.7L293.2,158.1L294.3,158.5L295.3,159L296.3,159.4L297.3,159.8L298.3,160.2L299.4,160.6L300.4,161L301.4,161.3L302.4,161.6L303.4,161.9L304.5,162.2L305.5,162.4L306.5,162.6L307.5,162.7L308.5,162.8L309.6,162.8L310.6,162.8L311.6,162.7L312.6,162.5L313.6,162.3L314.7,162L315.7,161.7L316.7,161.2L317.7,160.7L318.7,160.1L319.8,159.5L320.8,158.8L321.8,157.9L322.8,157.1L323.8,156.1L324.9,155L325.9,153.9L326.9,152.7L327.9,151.4L328.9,150L330,148.6L331,147L332,145.4L333,143.7L334,142L335.1,140.2L336.1,138.3L337.1,136.3L338.1,134.3L339.1,132.2L340.2,130.1L341.2,127.9L342.2,125.7L343.2,123.4L344.2,121.1L345.3,118.7L346.3,116.4L347.3,114L348.3,111.5L349.3,109.1L350.4,106.6L351.4,104.1L352.4,101.6L353.4,99.2L354.4,96.7L355.5,94.2L356.5,91.8L357.5,89.3L358.5,86.9L359.5,84.6L360.6,82.2L361.6,79.9L362.6,77.6L363.6,75.4L364.6,73.3L365.7,71.1L366.7,69.1L367.7,67.1L368.7,65.2L369.7,63.3L370.8,61.5L371.8,59.8L372.8,58.2L373.8,56.7L374.8,55.2L375.9,53.8L376.9,52.5L377.9,51.3L378.9,50.2L379.9,49.2L381,48.3L382,47.4L383,46.7L384,46L385,45.5L386.1,45L387.1,44.6L388.1,44.3L389.1,44.1L390.1,44L391.2,44L392.2,44.1L393.2,44.2L394.2,44.4L395.2,44.7L396.3,45.1L397.3,45.5L398.3,46L399.3,46.6L400.3,47.2L401.4,47.9L402.4,48.7L403.4,49.5L404.4,50.3L405.4,51.2L406.5,52.1L407.5,53.1L408.5,54L409.5,55.1L410.5,56.1L411.6,57.1L412.6,58.2L413.6,59.3L414.6,60.3L415.6,61.4L416.7,62.5L417.7,63.5L418.7,64.6L419.7,65.6L420.7,66.6L421.8,67.6L422.8,68.6L423.8,69.5L424.8,70.4L425.8,71.3L426.9,72.1L427.9,72.9L428.9,73.7L429.9,74.4L430.9,75.1L432,75.7L433,76.3L434,76.8"/>
+<circle class="s-tocka" cx="26" cy="115" r="3.5"/>
+<circle class="s-tocka" cx="46" cy="79.4" r="3.5"/>
+<circle class="s-tocka" cx="66" cy="61.6" r="3.5"/>
+<circle class="s-tocka" cx="86" cy="61.6" r="3.5"/>
+<circle class="s-tocka" cx="106" cy="79.4" r="3.5"/>
+<circle class="s-tocka" cx="126" cy="61.6" r="3.5"/>
+<circle class="s-tocka" cx="146" cy="61.6" r="3.5"/>
+<circle class="s-tocka" cx="166" cy="79.4" r="3.5"/>
+<circle class="s-tocka" cx="186" cy="115" r="3.5"/>
+<circle class="s-tocka" cx="206" cy="168.4" r="3.5"/>
+<circle class="s-tocka" cx="226" cy="186.2" r="3.5"/>
+<circle class="s-tocka" cx="246" cy="168.4" r="3.5"/>
+<circle class="s-tocka" cx="266" cy="150.6" r="3.5"/>
+<circle class="s-tocka" cx="286" cy="150.6" r="3.5"/>
+<circle class="s-tocka" cx="306" cy="168.4" r="3.5"/>
+<circle class="s-tocka" cx="326" cy="150.6" r="3.5"/>
+<circle class="s-tocka" cx="346" cy="115" r="3.5"/>
+<circle class="s-tocka" cx="366" cy="61.6" r="3.5"/>
+<circle class="s-tocka" cx="386" cy="43.8" r="3.5"/>
+<circle class="s-tocka" cx="406" cy="43.8" r="3.5"/>
+<circle class="s-tocka" cx="426" cy="79.4" r="3.5"/>
+<text class="s-txt-k1" x="426" y="193.3" text-anchor="end">čas med vzorcema = 1/f</text>
+</svg>
+<figcaption>Digitalizacija zvoka. Zvezni signal (zelen) v enakih časovnih presledkih izmerimo (vzorčenje) in vsako vrednost zaokrožimo na eno od \(2^k\) stopenj (kvantizacija). Več vzorcev na sekundo in več bitov na vzorec pomeni bolj zvest, a večji zapis.</figcaption>
+</figure>
+            <ul>
+              <li><strong>Frekvenca vzorčenja</strong> je število meritev na sekundo. Človek sliši do okoli 20 kHz; vzorčiti moramo vsaj dvakrat hitreje od najvišje frekvence, zato ima CD 44,1 kHz, telefon pa le 8 kHz (dovolj za govor).</li>
+              <li><strong>Bitna ločljivost</strong> (bitov na vzorec) določa, na koliko stopenj zaokrožimo vrednost: 8 bitov 256 stopenj, 16 bitov (CD) 65 536 stopenj.</li>
+              <li><strong>Število kanalov</strong>: mono 1, stereo 2.</li>
+            </ul>
+            <p>Velikost nestisnjenega zapisa je frekvenca vzorčenja × bitov na vzorec × kanali × čas. Minuta zvoka v kakovosti CD je \(44\,100 \cdot 16 \cdot 2 \cdot 60\ \text{b} \approx 10{,}6\ \text{MB}\).</p>
+            <h4>Oblike zapisa zvoka</h4>
+            <ul>
+              <li><strong>WAV</strong>: nestisnjen posnetek, največja kakovost, velike datoteke.</li>
+              <li><strong>MP3, AAC, OGG</strong>: izgubno stisnjeni posnetki; velikost določa <strong>bitna hitrost</strong> (128 kb/s, 320 kb/s), razmerje stiskanja okoli 10 : 1.</li>
+              <li><strong>FLAC</strong>: brezizgubno stisnjen posnetek, okoli pol manjši od WAV.</li>
+              <li><strong>MIDI</strong>: opis glasbe (katera nota, kateri inštrument, kdaj, kako glasno); zelo majhna datoteka, zvok ustvari sintetizator. Govora ne more zapisati.</li>
+            </ul>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-9">
+              <h4>Tip 9: Velikost zvočnega posnetka</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Skladba traja 3 minute. Koliko prostora zavzame nestisnjen stereo posnetek s frekvenco vzorčenja 44,1 kHz in 16 biti na vzorec? Koliko zavzame kot MP3 z bitno hitrostjo 128 kb/s?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> podani so frekvenca vzorčenja, biti na vzorec, kanali in čas, ali bitna hitrost; iščejo velikost datoteke ali čas, ki gre na medij.</p><ul class="kljucne"><li>„frekvenca vzorčenja“</li><li>„bitov na vzorec“</li><li>„stereo, mono“</li><li>„kb/s“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Čas pretvori v sekunde, frekvenco v Hz.</p><div class="na-nalogi"><p>\(t = 180\ \text{s}\), \(f = 44\,100\ \text{Hz}\).</p></div></li>
+              <li><p class="korak">Pomnoži frekvenco, bite na vzorec, kanale in čas; dobiš bite.</p><div class="na-nalogi"><p>\(44\,100 \cdot 16 \cdot 2 \cdot 180 = 254\,016\,000\ \text{b}\).</p></div></li>
+              <li><p class="korak">Deli z 8 za bajte in pretvori v MB.</p><div class="na-nalogi"><p>\(31\,752\,000\ \text{B} \approx 31{,}8\ \text{MB}\).</p></div></li>
+              <li><p class="korak">Pri stisnjenem zapisu pomnoži bitno hitrost s časom.</p><div class="na-nalogi"><p>\(128\,000 \cdot 180/8 = 2\,880\,000\ \text{B} \approx 2{,}9\ \text{MB}\), okoli 11-krat manj.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Koliko ur govora (mono, 8 kHz, 8 bitov) gre na 1 GB?</p><p>\(8000\ \text{B/s}\): \(10^9/8000 = 125\,000\ \text{s} \approx 35\ \text{h}\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Zakaj je datoteka MIDI tako majhna?</p><p>Vsebuje le opis not, ne posnetka zvoka.</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 5 -->
+        <section class="sklop" id="sklop-5">
+          <header class="sklop-header">
+            <span class="sklop-num">4.3 · 5</span>
+            <h2>Gibljiva slika</h2>
+            <p>Video, animacija in navidezna resničnost; hitrost sličic, ločljivost, stiskanje in kakovost; sodejna predstavitev.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <h4>Načini predstavitve</h4>
+            <figure class="slika slika--siroka">
+<svg viewBox="0 0 470 120" role="img" aria-label="Zaporedje sličic" xmlns="http://www.w3.org/2000/svg"><rect x="5" y="10" width="460" height="96" rx="4" fill="#171A2E"/><rect x="18" y="24" width="64" height="68" rx="3" fill="#F7F8FB"/><rect x="24" y="13" width="8" height="7" fill="#F7F8FB"/><rect x="24" y="96" width="8" height="7" fill="#F7F8FB"/><rect x="39" y="13" width="8" height="7" fill="#F7F8FB"/><rect x="39" y="96" width="8" height="7" fill="#F7F8FB"/><rect x="54" y="13" width="8" height="7" fill="#F7F8FB"/><rect x="54" y="96" width="8" height="7" fill="#F7F8FB"/><rect x="69" y="13" width="8" height="7" fill="#F7F8FB"/><rect x="69" y="96" width="8" height="7" fill="#F7F8FB"/><circle cx="30" cy="80" r="8" fill="#DC2626"/><rect x="93" y="24" width="64" height="68" rx="3" fill="#F7F8FB"/><rect x="99" y="13" width="8" height="7" fill="#F7F8FB"/><rect x="99" y="96" width="8" height="7" fill="#F7F8FB"/><rect x="114" y="13" width="8" height="7" fill="#F7F8FB"/><rect x="114" y="96" width="8" height="7" fill="#F7F8FB"/><rect x="129" y="13" width="8" height="7" fill="#F7F8FB"/><rect x="129" y="96" width="8" height="7" fill="#F7F8FB"/><rect x="144" y="13" width="8" height="7" fill="#F7F8FB"/><rect x="144" y="96" width="8" height="7" fill="#F7F8FB"/><circle cx="113" cy="57.41430106419858" r="8" fill="#DC2626"/><rect x="168" y="24" width="64" height="68" rx="3" fill="#F7F8FB"/><rect x="174" y="13" width="8" height="7" fill="#F7F8FB"/><rect x="174" y="96" width="8" height="7" fill="#F7F8FB"/><rect x="189" y="13" width="8" height="7" fill="#F7F8FB"/><rect x="189" y="96" width="8" height="7" fill="#F7F8FB"/><rect x="204" y="13" width="8" height="7" fill="#F7F8FB"/><rect x="204" y="96" width="8" height="7" fill="#F7F8FB"/><rect x="219" y="13" width="8" height="7" fill="#F7F8FB"/><rect x="219" y="96" width="8" height="7" fill="#F7F8FB"/><circle cx="196" cy="42.71843656131095" r="8" fill="#DC2626"/><rect x="243" y="24" width="64" height="68" rx="3" fill="#F7F8FB"/><rect x="249" y="13" width="8" height="7" fill="#F7F8FB"/><rect x="249" y="96" width="8" height="7" fill="#F7F8FB"/><rect x="264" y="13" width="8" height="7" fill="#F7F8FB"/><rect x="264" y="96" width="8" height="7" fill="#F7F8FB"/><rect x="279" y="13" width="8" height="7" fill="#F7F8FB"/><rect x="279" y="96" width="8" height="7" fill="#F7F8FB"/><rect x="294" y="13" width="8" height="7" fill="#F7F8FB"/><rect x="294" y="96" width="8" height="7" fill="#F7F8FB"/><circle cx="279" cy="41.04609476487219" r="8" fill="#DC2626"/><rect x="318" y="24" width="64" height="68" rx="3" fill="#F7F8FB"/><rect x="324" y="13" width="8" height="7" fill="#F7F8FB"/><rect x="324" y="96" width="8" height="7" fill="#F7F8FB"/><rect x="339" y="13" width="8" height="7" fill="#F7F8FB"/><rect x="339" y="96" width="8" height="7" fill="#F7F8FB"/><rect x="354" y="13" width="8" height="7" fill="#F7F8FB"/><rect x="354" y="96" width="8" height="7" fill="#F7F8FB"/><rect x="369" y="13" width="8" height="7" fill="#F7F8FB"/><rect x="369" y="96" width="8" height="7" fill="#F7F8FB"/><circle cx="362" cy="52.98147277795396" r="8" fill="#DC2626"/><rect x="393" y="24" width="64" height="68" rx="3" fill="#F7F8FB"/><rect x="399" y="13" width="8" height="7" fill="#F7F8FB"/><rect x="399" y="96" width="8" height="7" fill="#F7F8FB"/><rect x="414" y="13" width="8" height="7" fill="#F7F8FB"/><rect x="414" y="96" width="8" height="7" fill="#F7F8FB"/><rect x="429" y="13" width="8" height="7" fill="#F7F8FB"/><rect x="429" y="96" width="8" height="7" fill="#F7F8FB"/><rect x="444" y="13" width="8" height="7" fill="#F7F8FB"/><rect x="444" y="96" width="8" height="7" fill="#F7F8FB"/><circle cx="445" cy="74.35519967760531" r="8" fill="#DC2626"/><text x="235" y="118" text-anchor="middle" class="s-txt-muted" style="font-size:11px">25 sličic na sekundo</text></svg>
+<figcaption>Gibljiva slika je zaporedje mirujočih sličic. Če si sledijo dovolj hitro (vsaj okoli 24 na sekundo), oko vidi zvezno gibanje.</figcaption>
+</figure>
+            <ul>
+              <li><strong>Video</strong> je posnetek resničnega dogajanja (zaporedje fotografij), običajno z zvokom.</li>
+              <li><strong>Animacija</strong> je umetno ustvarjeno gibanje: risana (sličico za sličico), računalniška 2D ali 3D (podamo začetni in končni položaj, vmesne sličice izračuna program).</li>
+              <li><strong>Navidezna resničnost</strong> (VR) uporabnika s posebnimi očali in tipali postavi v računalniško ustvarjen 3D-prostor, kjer se lahko giblje in deluje. <strong>Obogatena resničnost</strong> (AR) resnični sliki doda računalniške predmete.</li>
+            </ul>
+            <h4>Prvine obdelave in kakovost</h4>
+            <p>Kakovost gibljive slike določajo <strong>ločljivost</strong> sličic (720p, 1080p, 4K), <strong>hitrost</strong> (sličic na sekundo, fps: film 24, televizija 25 ali 30, igre 60 in več), <strong>barvna globina</strong> in <strong>stiskanje</strong>. Nestisnjen video je ogromen, zato ga vedno stiskamo s <strong>kodeki</strong> (H.264, H.265, VP9). Ti izkoriščajo, da se zaporedne sličice malo razlikujejo, in zapišejo le spremembe. Velikost stisnjenega videa določa <strong>bitna hitrost</strong> (Mb/s). Oblika datoteke (MP4, MKV, AVI) je „zabojnik“, ki vsebuje video, zvok in podnapise. Pri obdelavi video režemo, sestavljamo, dodajamo prehode, napise in zvok.</p>
+            <h4>Sodejna (interaktivna) predstavitev</h4>
+            <p>Pri sodejni predstavitvi uporabnik vpliva na potek: izbira poti (spletna stran, interaktivni video, e-učbenik), odgovarja na vprašanja, upravlja simulacijo. Bolj pritegne in omogoča učenje lastnim tempom, a je zahtevnejša za izdelavo.</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-10">
+              <h4>Tip 10: Velikost videa in bitna hitrost</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Koliko prostora zavzame minuta nestisnjenega videa z ločljivostjo 1920 × 1080, 24-bitnimi barvami in 25 sličicami na sekundo (brez zvoka)? Koliko zavzame, če ga stisnemo na bitno hitrost 8 Mb/s?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> podani so ločljivost, barvna globina, sličice na sekundo in trajanje, ali bitna hitrost; iščejo velikost ali čas prenosa.</p><ul class="kljucne"><li>„sličic na sekundo“</li><li>„fps“</li><li>„bitna hitrost“</li><li>„nestisnjen video“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Izračunaj velikost ene sličice (kot pri sliki).</p><div class="na-nalogi"><p>\(1920 \cdot 1080 \cdot 3\ \text{B} = 6{,}22\ \text{MB}\).</p></div></li>
+              <li><p class="korak">Pomnoži s številom sličic: fps × čas v sekundah.</p><div class="na-nalogi"><p>\(25 \cdot 60 = 1500\) sličic; \(6{,}22\ \text{MB} \cdot 1500 = 9330\ \text{MB} \approx 9{,}3\ \text{GB}\).</p></div></li>
+              <li><p class="korak">Pri stisnjenem videu pomnoži bitno hitrost s časom in deli z 8.</p><div class="na-nalogi"><p>\(8 \cdot 10^6 \cdot 60/8 = 6 \cdot 10^7\ \text{B} = 60\ \text{MB}\), razmerje stiskanja okoli 155 : 1.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Koliko minut videa z bitno hitrostjo 5 Mb/s gre na 4,7 GB velik DVD?</p><p>\(4{,}7 \cdot 10^9 \cdot 8/5 \cdot 10^6 = 7520\ \text{s} \approx 125\ \text{min}\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Zakaj se video s hitrim gibanjem slabše stisne?</p><p>Zaporedne sličice se bolj razlikujejo, zato je treba zapisati več sprememb.</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 6 -->
+        <section class="sklop" id="sklop-6">
+          <header class="sklop-header">
+            <span class="sklop-num">4.3 · 6</span>
+            <h2>Računalniške prosojnice</h2>
+            <p>Namen prosojnic, naslovna in vodilna prosojnica, gradniki prosojnice in njihove lastnosti, kakovost predstavitve.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <h4>Namen</h4>
+            <p>Računalniške prosojnice podpirajo govorno predstavitev: poslušalcem pokažejo zgradbo, ključne pojme, slike in grafikone, govorcu pa služijo kot opora. Niso namenjene branju celotnega besedila; tega pove govorec.</p>
+            <h4>Naslovna in vodilna prosojnica</h4>
+            <p><strong>Naslovna</strong> (ključna) prosojnica je prva: naslov, avtor, datum, priložnost. <strong>Vodilna</strong> prosojnica (matrica, predloga) določa skupni videz vseh prosojnic: ozadje, pisave, barve, položaj naslova, logotip, številko prosojnice. Spremembo naredimo enkrat na vodilni prosojnici in velja povsod, zato je predstavitev enotna.</p>
+            <h4>Gradniki in kakovost</h4>
+            <p>Gradniki prosojnice so besedilo, slika, tabela, grafikon, animacija, zvok, video in ozadje. Pravila za kakovostno predstavitev:</p>
+            <div class="slike-vrsta"><figure class="slika">
+<svg viewBox="0 0 240 150" role="img" aria-label="Slaba prosojnica" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="2" width="236" height="146" fill="#FDE68A" stroke="#D97706"/><text x="12" y="20" style="font-size:10px;fill:#EAB308;stroke:none">Zgodovina računalnikov in vse o tem</text><text x="12" y="38" style="font-size:8px;fill:#B45309;stroke:none">• Dolga poved, ki jo bo predavatelj prebral z zaslona 1</text><text x="12" y="50" style="font-size:8px;fill:#B45309;stroke:none">• Dolga poved, ki jo bo predavatelj prebral z zaslona 2</text><text x="12" y="62" style="font-size:8px;fill:#B45309;stroke:none">• Dolga poved, ki jo bo predavatelj prebral z zaslona 3</text><text x="12" y="74" style="font-size:8px;fill:#B45309;stroke:none">• Dolga poved, ki jo bo predavatelj prebral z zaslona 4</text><text x="12" y="86" style="font-size:8px;fill:#B45309;stroke:none">• Dolga poved, ki jo bo predavatelj prebral z zaslona 5</text><text x="12" y="98" style="font-size:8px;fill:#B45309;stroke:none">• Dolga poved, ki jo bo predavatelj prebral z zaslona 6</text><text x="12" y="110" style="font-size:8px;fill:#B45309;stroke:none">• Dolga poved, ki jo bo predavatelj prebral z zaslona 7</text><text x="12" y="122" style="font-size:8px;fill:#B45309;stroke:none">• Dolga poved, ki jo bo predavatelj prebral z zaslona 8</text><text x="12" y="134" style="font-size:8px;fill:#B45309;stroke:none">• Dolga poved, ki jo bo predavatelj prebral z zaslona 9</text></svg>
+<figcaption>Slabo: preveč besedila, drobna pisava, slab kontrast, naslov ne pove bistva.</figcaption>
+</figure><figure class="slika">
+<svg viewBox="0 0 240 150" role="img" aria-label="Dobra prosojnica" xmlns="http://www.w3.org/2000/svg"><rect x="2" y="2" width="236" height="146" fill="#FFFFFF" stroke="#4F46E5"/><rect x="2" y="2" width="236" height="30" fill="#4F46E5"/><text x="14" y="23" style="font-size:15px;fill:#FFFFFF;stroke:none;font-weight:700">Generacije računalnikov</text><text x="16" y="58" style="font-size:13px;fill:#171A2E;stroke:none">1. elektronke</text><text x="16" y="80" style="font-size:13px;fill:#171A2E;stroke:none">2. tranzistorji</text><text x="16" y="102" style="font-size:13px;fill:#171A2E;stroke:none">3. integrirana vezja</text><text x="16" y="124" style="font-size:13px;fill:#171A2E;stroke:none">4. mikroprocesorji</text><rect x="160" y="50" width="62" height="78" fill="#EEF0FF" stroke="#818CF8"/><text x="191" y="94" text-anchor="middle" style="font-size:10px;fill:#4F46E5;stroke:none">slika</text></svg>
+<figcaption>Dobro: kratek naslov, nekaj ključnih besed, velika berljiva pisava, močan kontrast, slika podpira besedilo.</figcaption>
+</figure></div>
+            <ul>
+              <li>ena misel na prosojnico, malo besedila (vodilo: največ okoli 6 alinej po 6 besed), ključne besede namesto povedi;</li>
+              <li>dovolj velika pisava (naslovi okoli 32 pt, besedilo vsaj 24 pt), pisava brez serifov, največ dve vrsti pisave;</li>
+              <li>močan kontrast med besedilom in ozadjem, mirno ozadje;</li>
+              <li>slike in grafikoni, ki podpirajo vsebino, dovolj veliki in ostri;</li>
+              <li>zmerne in enotne animacije ter prehodi, ki ne odvračajo pozornosti;</li>
+              <li>zvok in video le, kadar sta del vsebine;</li>
+              <li>preglednost: kazalo ali zgradba, na koncu povzetek in viri.</li>
+            </ul>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-11">
+              <h4>Tip 11: Ovrednoti in izboljšaj prosojnice</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Prosojnica ima rumeno ozadje s svetlo rumenim naslovom, devet alinej celih povedi v pisavi 12 pt, vsaka alineja prileti z drugo animacijo in zvokom. Oceni kakovost in predlagaj izboljšave. Kako bi zagotovil, da imajo vse prosojnice enak logotip in pisavo?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> opisana ali prikazana je prosojnica ali predstavitev, iščejo napake, izboljšave ali vlogo vodilne prosojnice.</p><ul class="kljucne"><li>„ovrednoti prosojnico“</li><li>„vodilna prosojnica“</li><li>„naslovna prosojnica“</li><li>„gradniki prosojnice“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Preveri besedilo: količina, velikost pisave, berljivost.</p><div class="na-nalogi"><p>Devet celih povedi je preveč, 12 pt je premajhna pisava.</p></div></li>
+              <li><p class="korak">Preveri barve in kontrast.</p><div class="na-nalogi"><p>Svetlo rumeno na rumenem je skoraj neberljivo.</p></div></li>
+              <li><p class="korak">Preveri animacije, zvok in slike: ali podpirajo vsebino.</p><div class="na-nalogi"><p>Različne animacije z zvoki motijo in ne prispevajo k vsebini.</p></div></li>
+              <li><p class="korak">Predlagaj izboljšave in enoten videz prek vodilne prosojnice.</p><div class="na-nalogi"><p>Razdeli na dve prosojnici z največ šestimi ključnimi besedami, pisava 24 pt ali več, temno besedilo na svetlem ozadju, ena enotna animacija brez zvoka. Logotip in pisavo nastavi na vodilni prosojnici.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Kaj sodi na naslovno prosojnico?</p><p>Naslov, avtor, datum in priložnost.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Kdaj je smiselno v prosojnico vstaviti tabelo in kdaj grafikon?</p><p>Tabelo za natančne vrednosti, grafikon za prikaz razmerij ali trendov.</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 7 -->
+        <section class="sklop" id="sklop-7">
+          <header class="sklop-header">
+            <span class="sklop-num">4.3 · 7</span>
+            <h2>Predstavitev na svetovnem spletu</h2>
+            <p>Temeljni pojmi spleta, uporabe spleta, iskanje in preverjanje podatkov, avtorske pravice, zakonitosti predstavitve na spletu in osnove jezika HTML.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <h4>Temeljni pojmi</h4>
+            <ul>
+              <li><strong>Spletna stran</strong> je dokument v jeziku HTML, ki ga prikaže brskalnik. <strong>Spletni sestavek</strong> (spletišče) je skupina povezanih strani pod skupnim naslovom.</li>
+              <li><strong>Povezava</strong> (hiperpovezava) je del strani, ki ob kliku odpre drugo stran ali mesto; povezave naredijo splet nelinearen.</li>
+              <li><strong>Protokol</strong> HTTP (HTTPS) določa pravila, po katerih brskalnik od strežnika zahteva stran.</li>
+              <li><strong>Spletni naslov</strong> (URL) enolično določa dokument:</li>
+            </ul>
+            <figure class="slika slika--siroka">
+<svg viewBox="0 0 560 110" role="img" aria-label="Deli spletnega naslova" xmlns="http://www.w3.org/2000/svg"><text class="s-txt-k2" x="10" y="40" style="font-family:monospace;font-size:14px">https</text><line class="s-pom" x1="10" y1="50" x2="52" y2="50"/><text class="s-txt-k2" x="31" y="72" text-anchor="middle" style="font-size:12px">protokol</text><text class="s-txt-muted" x="52" y="40" style="font-family:monospace;font-size:14px">://</text><text class="s-txt-k1" x="77.2" y="40" style="font-family:monospace;font-size:14px">www.ric.si</text><line class="s-pom" x1="77.2" y1="50" x2="161.2" y2="50"/><text class="s-txt-k1" x="119.2" y="92" text-anchor="middle" style="font-size:12px">domena (strežnik)</text><text class="s-txt-k3" x="161.2" y="40" style="font-family:monospace;font-size:14px">/splosna_matura/predmeti</text><line class="s-pom" x1="161.2" y1="50" x2="362.8" y2="50"/><text class="s-txt-k3" x="262" y="72" text-anchor="middle" style="font-size:12px">pot do mape</text><text class="s-txt-k4" x="362.8" y="40" style="font-family:monospace;font-size:14px">/informatika.html</text><line class="s-pom" x1="362.8" y1="50" x2="505.6" y2="50"/><text class="s-txt-k4" x="434.20000000000005" y="92" text-anchor="middle" style="font-size:12px">datoteka</text></svg>
+<figcaption>Spletni naslov (URL) pove, s katerim protokolom, na katerem strežniku in na kateri poti je dokument.</figcaption>
+</figure>
+            <h4>Uporaba, iskanje in preverjanje</h4>
+            <p>Splet uporabljamo za iskanje informacij, spletno trgovino in bančništvo, e-učenje, javne storitve, komunikacijo in zabavo. Iskalnik poišče strani po ključnih besedah; iskanje izboljšamo z natančnimi izrazi v narekovajih, izključevanjem besed (z znakom minus), iskanjem po določenem spletišču (site:) ali vrsti datoteke (filetype:pdf).</p>
+            <p>Najdeno informacijo vedno <strong>preverimo</strong>: kdo je avtor in ali je strokovnjak, kdo stoji za stranjo (domena, ustanova), kdaj je bila objavljena ali posodobljena, ali navaja vire, ali jo potrjujejo drugi neodvisni viri, ali je stran pristranska ali oglasna. Pri uporabi tujih besedil, slik in posnetkov upoštevamo <strong>avtorske pravice</strong>: navedemo vir in avtorja, uporabimo le z dovoljenjem ali pod licenco, ki to dovoljuje (na primer Creative Commons z oznakami BY, NC, ND, SA).</p>
+            <h4>Zakonitosti predstavitve na spletu</h4>
+            <p>Bralci na spletu besedilo preletijo, zato: najpomembnejše na začetek, kratki odstavki, jasni podnaslovi, seznami, poudarjene ključne besede. Dobra spletna stran ima pregledno in enotno navigacijo (uporabnik vedno ve, kje je, in pride domov z enim klikom), berljivo pisavo in kontrast, hitro nalaganje (stisnjene slike), deluje na telefonu (prilagodljiva postavitev), opisuje slike z nadomestnim besedilom (dostopnost) in ima povezave, ki povedo, kam vodijo (ne „klikni tukaj“).</p>
+            <h4>Osnove HTML</h4>
+            <p>HTML opisuje logično zgradbo strani z <strong>značkami</strong> v lomljenih oklepajih. Večina ima začetno in končno značko (<code class="k">&lt;p&gt;…&lt;/p&gt;</code>), nekatere so prazne (<code class="k">&lt;br&gt;</code>, <code class="k">&lt;img&gt;</code>). Značke imajo lahko <strong>atribute</strong> (<code class="k">href</code>, <code class="k">src</code>, <code class="k">alt</code>). Videz določamo ločeno, s slogi CSS.</p>
+<pre class="koda"><code>&lt;!DOCTYPE html&gt;
+&lt;html lang="sl"&gt;
+  &lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;title&gt;Planinsko društvo&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Planinsko društvo Kamnik&lt;/h1&gt;
+    &lt;p&gt;Vabimo vas na &lt;strong&gt;izlet na Veliko planino&lt;/strong&gt;.&lt;/p&gt;
+    &lt;img src="planina.jpg" alt="Pastirske koče na Veliki planini"&gt;
+    &lt;ul&gt;
+      &lt;li&gt;odhod ob 7.00&lt;/li&gt;
+      &lt;li&gt;vrnitev ob 18.00&lt;/li&gt;
+    &lt;/ul&gt;
+    &lt;a href="prijava.html"&gt;Prijava na izlet&lt;/a&gt;
+  &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+            <div class="tabela-wrap">
+              <table class="tabela">
+                <thead><tr><th>Značka</th><th>Pomen</th></tr></thead>
+                <tbody>
+                  <tr><td><code class="k">&lt;html&gt;</code>, <code class="k">&lt;head&gt;</code>, <code class="k">&lt;body&gt;</code></td><td>celoten dokument, glava (podatki o strani), telo (vsebina)</td></tr>
+                  <tr><td><code class="k">&lt;title&gt;</code></td><td>naslov strani v zavihku brskalnika in v iskalnikih</td></tr>
+                  <tr><td><code class="k">&lt;h1&gt;</code> … <code class="k">&lt;h6&gt;</code></td><td>naslovi šestih ravni</td></tr>
+                  <tr><td><code class="k">&lt;p&gt;</code>, <code class="k">&lt;br&gt;</code></td><td>odstavek, prelom vrstice</td></tr>
+                  <tr><td><code class="k">&lt;strong&gt;</code>, <code class="k">&lt;em&gt;</code></td><td>močan poudarek (krepko), poudarek (ležeče)</td></tr>
+                  <tr><td><code class="k">&lt;a href="…"&gt;</code></td><td>povezava</td></tr>
+                  <tr><td><code class="k">&lt;img src="…" alt="…"&gt;</code></td><td>slika in nadomestno besedilo</td></tr>
+                  <tr><td><code class="k">&lt;ul&gt;</code>, <code class="k">&lt;ol&gt;</code>, <code class="k">&lt;li&gt;</code></td><td>neurejen (alineje) in urejen (oštevilčen) seznam, element seznama</td></tr>
+                  <tr><td><code class="k">&lt;table&gt;</code>, <code class="k">&lt;tr&gt;</code>, <code class="k">&lt;th&gt;</code>, <code class="k">&lt;td&gt;</code></td><td>tabela, vrstica, glava stolpca, celica</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-12">
+              <h4>Tip 12: Zapis ali popravek kode HTML</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Zapiši kodo HTML, ki prikaže naslov prve ravni „Urnik“, pod njim oštevilčen seznam s predmetoma Matematika in Informatika ter povezavo „Šolska stran“ na naslov https://www.sola.si.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> opisan je želeni prikaz strani ali dana koda z napako; zahtevajo ustrezne značke ali popravek.</p><ul class="kljucne"><li>„zapiši kodo HTML“</li><li>„katero značko“</li><li>„popravi napako“</li><li>„kaj prikaže brskalnik“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Razčleni želeni prikaz na logične dele (naslov, odstavek, seznam, slika, povezava, tabela).</p><div class="na-nalogi"><p>Naslov prve ravni, urejen seznam z dvema elementoma, povezava.</p></div></li>
+              <li><p class="korak">Vsakemu delu izberi značko in potrebne atribute.</p><div class="na-nalogi"><p><code class="k">h1</code>; <code class="k">ol</code> z dvema <code class="k">li</code>; <code class="k">a</code> z atributom <code class="k">href</code>.</p></div></li>
+              <li><p class="korak">Zapiši kodo; vsaka odprta značka mora biti zaprta v pravilnem vrstnem redu (gnezdenje).</p><div class="na-nalogi">
+<pre class="koda"><code>&lt;h1&gt;Urnik&lt;/h1&gt;
+&lt;ol&gt;
+  &lt;li&gt;Matematika&lt;/li&gt;
+  &lt;li&gt;Informatika&lt;/li&gt;
+&lt;/ol&gt;
+&lt;a href="https://www.sola.si"&gt;Šolska stran&lt;/a&gt;</code></pre></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Kaj je narobe: <code class="k">&lt;p&gt;Zelo &lt;strong&gt;pomembno&lt;/p&gt;&lt;/strong&gt;</code>?</p><p>Značke se prekrivajo; pravilno je <code class="k">&lt;p&gt;Zelo &lt;strong&gt;pomembno&lt;/strong&gt;&lt;/p&gt;</code>.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Čemu služi atribut <code class="k">alt</code> pri sliki?</p><p>Nadomestno besedilo, ki ga prebere bralnik zaslona ali se prikaže, če se slika ne naloži.</p></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-13">
+              <h4>Tip 13: Spletni naslov, iskanje in vrednotenje spletnih virov</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Za seminarsko nalogo o podnebnih spremembah si našel članek na strani https://blog-o-vsem.com/klima/resnica.html brez avtorja in datuma. Določi dele naslova. Ali je vir zanesljiv? Kako bi poiskal boljše vire in kako boš uporabil sliko z drugega spletišča?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> dan je spletni naslov ali vir, iščejo dele naslova, oceno zanesljivosti, način iskanja ali pravilno uporabo tujih vsebin.</p><ul class="kljucne"><li>„spletni naslov, URL“</li><li>„zanesljivost vira“</li><li>„iskalnik“</li><li>„avtorske pravice“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Razčleni naslov na protokol, domeno, pot in datoteko.</p><div class="na-nalogi"><p>Protokol https, domena blog-o-vsem.com, pot /klima/, datoteka resnica.html.</p></div></li>
+              <li><p class="korak">Preveri avtorja, ustanovo, datum, vire in neodvisno potrditev.</p><div class="na-nalogi"><p>Brez avtorja in datuma, osebni blog, brez navedenih virov: vir ni zanesljiv.</p></div></li>
+              <li><p class="korak">Predlagaj boljše iskanje (natančni izrazi, uradne ustanove, strokovni članki).</p><div class="na-nalogi"><p>Iskanje <code class="k">"podnebne spremembe" site:arso.gov.si</code> ali poročila IPCC.</p></div></li>
+              <li><p class="korak">Za tuje vsebine preveri licenco in navedi vir.</p><div class="na-nalogi"><p>Sliko uporabi le, če licenca to dovoljuje (na primer CC BY), in navedi avtorja ter vir.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Kaj pomeni licenca CC BY-NC?</p><p>Uporaba je dovoljena z navedbo avtorja, a ne v komercialne namene.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Navedi dve značilnosti dobre spletne navigacije.</p><p>Enotna na vseh straneh; vedno je jasno, kje si, in povezava na domačo stran.</p></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="subsection" id="kljuc">
+          <div class="subsection-head">
+            <h2>Ključ: kateri tip naloge je to?</h2>
+            <p>Poišči besedo iz navodila naloge in skoči na pravi postopek.</p>
+          </div>
+          <div class="info-card">
+            <div class="tabela-wrap">
+              <table class="tabela">
+                <thead><tr><th>V besedilu naloge piše …</th><th>Tip</th></tr></thead>
+                <tbody>
+                  <tr><td>„dvojiško“, „šestnajstiško“, „#RRGGBB“</td><td><a href="#tip-1">Tip 1</a></td></tr>
+                  <tr><td>„posnetek ali opis“, „v kateri obliki shraniš“, „MIME“</td><td><a href="#tip-2">Tip 2</a></td></tr>
+                  <tr><td>„stisni“, „razmerje stiskanja“, „izgubno“</td><td><a href="#tip-3">Tip 3</a></td></tr>
+                  <tr><td>„ASCII“, „UTF-8“, „koliko bajtov besedilo“</td><td><a href="#tip-4">Tip 4</a></td></tr>
+                  <tr><td>„slog“, „predloga“, „kazalo“, „spajanje“</td><td><a href="#tip-5">Tip 5</a></td></tr>
+                  <tr><td>„ločljivost“, „barvna globina“, „velikost slike“</td><td><a href="#tip-6">Tip 6</a></td></tr>
+                  <tr><td>„dpi“, „natisnemo v velikosti“</td><td><a href="#tip-7">Tip 7</a></td></tr>
+                  <tr><td>„JPEG ali PNG“, „RGB ali CMYK“, „vektorska“</td><td><a href="#tip-8">Tip 8</a></td></tr>
+                  <tr><td>„frekvenca vzorčenja“, „stereo“, „MP3“</td><td><a href="#tip-9">Tip 9</a></td></tr>
+                  <tr><td>„sličic na sekundo“, „bitna hitrost videa“</td><td><a href="#tip-10">Tip 10</a></td></tr>
+                  <tr><td>„prosojnica“, „vodilna prosojnica“</td><td><a href="#tip-11">Tip 11</a></td></tr>
+                  <tr><td>„koda HTML“, „značka“</td><td><a href="#tip-12">Tip 12</a></td></tr>
+                  <tr><td>„URL“, „zanesljiv vir“, „avtorske pravice“</td><td><a href="#tip-13">Tip 13</a></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>Pogoste napake</h2>
+          </div>
+          <div class="info-card">
+            <ul>
+              <li>Pri velikosti slike, zvoka ali videa pozabiš deliti z 8 (biti v bajte) ali pomnožiti s številom kanalov.</li>
+              <li>Pri pretvorbi v dvojiško bereš ostanke od zgoraj navzdol namesto od spodaj navzgor.</li>
+              <li>Fotografijo shraniš kot GIF ali PNG (prevelika ali preveč barv za GIF), logotip pa kot JPEG (zamegljeni robovi).</li>
+              <li>Za tisk uporabiš RGB in premalo dpi.</li>
+              <li>Misliš, da UTF-8 zapiše vsak znak z dvema bajtoma; znaki ASCII imajo en bajt.</li>
+              <li>Oblikuješ neposredno namesto s slogi, zato kazala ni mogoče samodejno izdelati.</li>
+              <li>V HTML pozabiš zapreti značko ali jih zapreš v napačnem vrstnem redu.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>Naslednje poglavje</h2>
+          </div>
+          <div class="link-list">
+            <a class="link-item" href="/views/informatika/snov/delo_s_podatki/delo_s_podatki_razlaga.html">
+              <span class="link-item-text"><strong>4.4 Delo s podatki</strong><small>Algoritmi, programiranje, podatkovne baze, preglednice, odločanje</small></span>
+              <span class="arrow">→</span>
+            </a>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>

@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Informacijska tehnologija — razlaga in postopki | Piflar.si</title>
+  <meta name="description" content="Informacijska tehnologija za maturo iz informatike: vloga in razvoj IT, vpliv na zdravje in ergonomija, von Neumannov model, strojna oprema in izbira računalnika, programska oprema in licence, računalniški vsiljivci, računalniška omrežja in internetne storitve.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
+  <link rel="stylesheet" href="/style/snov.css">
+</head>
+<body>
+  <div id="header"></div>
+
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view">
+
+<header class="page-header">
+          <span class="page-eyebrow">Informatika · Snov · 4.2</span>
+          <h1>Informacijska tehnologija</h1>
+          <p>Informacijska tehnologija so naprave in programi, s katerimi delamo z informacijami. Tu so njen razvoj in vpliv na življenje in zdravje, zgradba in delovanje računalnika, izbira strojne opreme, vrste programov in licenc, zaščita pred vsiljivci ter računalniška omrežja z internetom. Pod razlago so vsi tipi nalog, ki se pojavijo pri tem sklopu.</p>
+          <div class="page-meta">
+            <div class="page-meta-item"><strong>5</strong><span>Podpoglavij</span></div>
+            <div class="page-meta-item"><strong>9</strong><span>Tipov nalog</span></div>
+            <div class="page-meta-item"><strong>~40 min</strong><span>Branja</span></div>
+          </div>
+        </header>
+
+        <div class="matura-formule">
+          <h3>Kar moraš znati izračunati</h3>
+          <p>Na maturi ni lista z enačbami; te zveze si zapomni:</p>
+          <div class="matura-levo">
+            <ul>
+              <li>\(1\ \text{B} = 8\ \text{b}\); hitrosti prenosa so v bitih na sekundo (Mb/s), velikosti datotek v bajtih (MB)</li>
+              <li>predpone SI: \(1\ \text{kB} = 10^3\ \text{B}\), \(1\ \text{MB} = 10^6\ \text{B}\), \(1\ \text{GB} = 10^9\ \text{B}\), \(1\ \text{TB} = 10^{12}\ \text{B}\)</li>
+              <li>dvojiške predpone: \(1\ \text{KiB} = 2^{10}\ \text{B} = 1024\ \text{B}\), \(1\ \text{MiB} = 2^{20}\ \text{B}\), \(1\ \text{GiB} = 2^{30}\ \text{B}\)</li>
+              <li>čas prenosa: \(t = \dfrac{\text{velikost v bitih}}{\text{hitrost v b/s}}\)</li>
+              <li>število datotek na mediju: \(N = \dfrac{\text{zmogljivost}}{\text{velikost datoteke}}\) (zaokroži navzdol)</li>
+            </ul>
+          </div>
+          <p class="matura-opomba">Če naloga ne pove drugače, računaj s predponami SI. Nekatere naloge in operacijski sistemi uporabljajo \(1\ \text{KB} = 1024\ \text{B}\); preberi, kaj zahteva naloga.</p>
+        </div>
+
+        <nav class="kazalo" aria-label="Podpoglavja">
+          <h2>Podpoglavja</h2>
+          <ol>
+            <li><a href="#sklop-1"><span class="kazalo-st">1</span> Namen, vloga in pomen informacijske tehnologije</a></li>
+            <li><a href="#sklop-2"><span class="kazalo-st">2</span> Zgradba in delovanje računalnika</a></li>
+            <li><a href="#sklop-3"><span class="kazalo-st">3</span> Strojna oprema računalnika</a></li>
+            <li><a href="#sklop-4"><span class="kazalo-st">4</span> Programska oprema računalnika</a></li>
+            <li><a href="#sklop-5"><span class="kazalo-st">5</span> Računalniška omrežja</a></li>
+            <li><a href="#kljuc"><span class="kazalo-st">?</span> Ključ: kateri tip naloge je to?</a></li>
+          </ol>
+        </nav>
+
+        <!-- SKLOP 1 -->
+        <section class="sklop" id="sklop-1">
+          <header class="sklop-header">
+            <span class="sklop-num">4.2 · 1</span>
+            <h2>Namen, vloga in pomen informacijske tehnologije</h2>
+            <p>Kje uporabljamo IT, ravni uporabe, mejniki razvoja, vpliv na kakovost življenja in zdravje, ergonomija delovnega mesta.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <h4>Kdaj in kje uporabljamo IT</h4>
+            <p>Informacijsko tehnologijo uporabimo povsod, kjer je treba hitro in zanesljivo obdelati veliko podatkov, opravila ponavljati, podatke hraniti ali jih prenašati na daljavo: v bankah, trgovinah (blagajne, zaloge), zdravstvu (e-recept, slikovna diagnostika), prometu (navigacija, vozni redi), proizvodnji (roboti, krmiljenje strojev), izobraževanju in javni upravi (eUprava). IT prevzame rutinsko delo in človeku pusti ustvarjalno delo, odločanje in komunikacijo; tako bolje izkoristimo človekove miselne sposobnosti.</p>
+            <p>Po <strong>ravneh uporabe</strong> ločimo uporabo za posameznika (osebni računalnik, telefon), za skupino ali oddelek (skupni dokumenti, deljeni koledar), za celotno organizacijo (informacijski sistem podjetja) in med organizacijami ter v družbi (spletno bančništvo, elektronsko poslovanje med podjetji, eUprava).</p>
+            <h4>Mejniki razvoja</h4>
+            <figure class="slika slika--siroka">
+<svg viewBox="0 0 600 190" role="img" aria-label="Mejniki razvoja računalnikov" xmlns="http://www.w3.org/2000/svg"><line class="s-os" x1="45" y1="95" x2="580" y2="95"/><circle class="s-tocka-2" cx="55" cy="95" r="5"/><line class="s-pom" x1="55" y1="70" x2="55" y2="90"/><text class="s-txt-b" x="55" y="20" text-anchor="middle" style="font-size:12px">1642</text><text x="55" y="36" text-anchor="middle" style="font-size:11px">Pascalov</text><text class="s-txt-muted" x="55" y="50" text-anchor="middle" style="font-size:11px">računski stroj</text><circle class="s-tocka-2" cx="109.44444444444444" cy="95" r="5"/><line class="s-pom" x1="109.44444444444444" y1="100" x2="109.44444444444444" y2="118"/><text class="s-txt-b" x="109.44444444444444" y="132" text-anchor="middle" style="font-size:12px">1837</text><text x="109.44444444444444" y="148" text-anchor="middle" style="font-size:11px">Babbagev</text><text class="s-txt-muted" x="109.44444444444444" y="162" text-anchor="middle" style="font-size:11px">analitični stroj</text><circle class="s-tocka-2" cx="163.88888888888889" cy="95" r="5"/><line class="s-pom" x1="163.88888888888889" y1="70" x2="163.88888888888889" y2="90"/><text class="s-txt-b" x="163.88888888888889" y="20" text-anchor="middle" style="font-size:12px">1890</text><text x="163.88888888888889" y="36" text-anchor="middle" style="font-size:11px">Hollerith:</text><text class="s-txt-muted" x="163.88888888888889" y="50" text-anchor="middle" style="font-size:11px">luknjane kartice</text><circle class="s-tocka" cx="218.33333333333331" cy="95" r="5"/><line class="s-pom" x1="218.33333333333331" y1="100" x2="218.33333333333331" y2="118"/><text class="s-txt-b" x="218.33333333333331" y="132" text-anchor="middle" style="font-size:12px">1946</text><text x="218.33333333333331" y="148" text-anchor="middle" style="font-size:11px">ENIAC</text><text class="s-txt-muted" x="218.33333333333331" y="162" text-anchor="middle" style="font-size:11px">(elektronke)</text><circle class="s-tocka" cx="272.77777777777777" cy="95" r="5"/><line class="s-pom" x1="272.77777777777777" y1="70" x2="272.77777777777777" y2="90"/><text class="s-txt-b" x="272.77777777777777" y="20" text-anchor="middle" style="font-size:12px">1947</text><text x="272.77777777777777" y="36" text-anchor="middle" style="font-size:11px">tranzistor</text><text class="s-txt-muted" x="272.77777777777777" y="50" text-anchor="middle" style="font-size:11px"></text><circle class="s-tocka" cx="327.22222222222223" cy="95" r="5"/><line class="s-pom" x1="327.22222222222223" y1="100" x2="327.22222222222223" y2="118"/><text class="s-txt-b" x="327.22222222222223" y="132" text-anchor="middle" style="font-size:12px">1958</text><text x="327.22222222222223" y="148" text-anchor="middle" style="font-size:11px">integrirano</text><text class="s-txt-muted" x="327.22222222222223" y="162" text-anchor="middle" style="font-size:11px">vezje</text><circle class="s-tocka" cx="381.66666666666663" cy="95" r="5"/><line class="s-pom" x1="381.66666666666663" y1="70" x2="381.66666666666663" y2="90"/><text class="s-txt-b" x="381.66666666666663" y="20" text-anchor="middle" style="font-size:12px">1971</text><text x="381.66666666666663" y="36" text-anchor="middle" style="font-size:11px">mikroprocesor</text><text class="s-txt-muted" x="381.66666666666663" y="50" text-anchor="middle" style="font-size:11px">Intel 4004</text><circle class="s-tocka" cx="436.1111111111111" cy="95" r="5"/><line class="s-pom" x1="436.1111111111111" y1="100" x2="436.1111111111111" y2="118"/><text class="s-txt-b" x="436.1111111111111" y="132" text-anchor="middle" style="font-size:12px">1981</text><text x="436.1111111111111" y="148" text-anchor="middle" style="font-size:11px">osebni</text><text class="s-txt-muted" x="436.1111111111111" y="162" text-anchor="middle" style="font-size:11px">računalnik IBM PC</text><circle class="s-tocka" cx="490.55555555555554" cy="95" r="5"/><line class="s-pom" x1="490.55555555555554" y1="70" x2="490.55555555555554" y2="90"/><text class="s-txt-b" x="490.55555555555554" y="20" text-anchor="middle" style="font-size:12px">1991</text><text x="490.55555555555554" y="36" text-anchor="middle" style="font-size:11px">svetovni</text><text class="s-txt-muted" x="490.55555555555554" y="50" text-anchor="middle" style="font-size:11px">splet</text><circle class="s-tocka" cx="545" cy="95" r="5"/><line class="s-pom" x1="545" y1="100" x2="545" y2="118"/><text class="s-txt-b" x="545" y="132" text-anchor="middle" style="font-size:12px">2007</text><text x="545" y="148" text-anchor="middle" style="font-size:11px">pametni</text><text class="s-txt-muted" x="545" y="162" text-anchor="middle" style="font-size:11px">telefon</text><text class="s-txt-k2" x="55" y="184" style="font-size:11px">mehanski</text><text class="s-txt-k1" x="218.33333333333331" y="184" style="font-size:11px">elektronski</text></svg>
+<figcaption>Nekateri mejniki razvoja računalnikov (razmiki med letnicami niso v merilu). Vsaka nova tehnologija je naprave pomanjšala, pocenila in pospešila.</figcaption>
+</figure>
+            <p>Generacije elektronskih računalnikov ločimo po gradnikih: elektronke (1. generacija), tranzistorji (2.), integrirana vezja (3.), mikroprocesorji (4.). Z vsako je računalnik postal manjši, cenejši, hitrejši in zanesljivejši. Z osebnim računalnikom je IT prišla v domove, z internetom in pametnim telefonom pa je postala del vsakdana.</p>
+            <h4>Vpliv na kakovost in način življenja</h4>
+            <p><strong>Prednosti:</strong> hiter dostop do informacij, komunikacija na daljavo, delo od doma, manj rutinskega dela, boljše zdravstvo, varnejši promet, novi poklici. <strong>Slabosti:</strong> odvisnost od tehnologije, izguba nekaterih delovnih mest, digitalni razkorak (kdor nima dostopa ali znanja, zaostaja), ogrožena zasebnost, spletno nasilje, zasvojenost, manj gibanja in osebnih stikov.</p>
+            <h4>Vpliv na zdravje in ergonomija</h4>
+            <p>Dolgotrajno delo z računalnikom povzroča bolečine v hrbtu, vratu in zapestjih, utrujene in suhe oči, glavobol in pomanjkanje gibanja. <strong>Ergonomija</strong> je veda o prilagajanju delovnega okolja človeku. Pravilno urejeno delovno mesto:</p>
+            <figure class="slika">
+<svg viewBox="0 0 480 290" role="img" aria-label="Ergonomija delovnega mesta" xmlns="http://www.w3.org/2000/svg"><rect class="s-lik" x="230" y="170" width="190" height="10"/><line class="s-crta" x1="410" y1="180" x2="410" y2="270"/><line class="s-crta" x1="20" y1="270" x2="430" y2="270"/><rect class="s-lik-2" x="372" y="78" width="14" height="80"/><line class="s-crta" x1="380" y1="158" x2="380" y2="170"/><line class="s-crta" x1="366" y1="170" x2="394" y2="170"/><rect class="s-lik" x="250" y="164" width="60" height="6"/><path class="s-lik" d="M80,190 H170 V200 H80 Z"/><path class="s-lik" d="M78,190 L70,90 L82,90 L92,190 Z"/><line class="s-crta" x1="125" y1="200" x2="125" y2="245"/><line class="s-crta" x1="95" y1="250" x2="155" y2="250"/><line class="s-crta" x1="125" y1="245" x2="95" y2="262"/><line class="s-crta" x1="125" y1="245" x2="155" y2="262"/><circle cx="118" cy="62" r="16" fill="#FDE68A" stroke="#B45309" stroke-width="2"/><g stroke="#B45309" stroke-width="7" stroke-linecap="round" fill="none"><path d="M112,80 L102,185"/><path d="M102,185 H190 V265 H210"/><path d="M110,95 L130,150 L255,160"/></g><line class="s-k1" x1="132" y1="60" x2="370" y2="86" stroke-dasharray="6 4"/><text class="s-txt-k1" x="250" y="62" text-anchor="middle" style="font-size:12px">pogled malo navzdol</text><line class="s-k4" x1="134" y1="40" x2="372" y2="40"/><line class="s-k4" x1="134" y1="34" x2="134" y2="46"/><line class="s-k4" x1="372" y1="34" x2="372" y2="46"/><text class="s-txt-k4" x="253" y="30" text-anchor="middle" style="font-size:12px">50–70 cm</text><text class="s-txt-k3" x="140" y="140" style="font-size:12px">≈ 90°</text><text class="s-txt-k3" x="200" y="210" style="font-size:12px">≈ 90°</text><text class="s-txt-muted" x="214" y="262" style="font-size:12px">stopala na tleh</text><text class="s-txt-muted" x="20" y="120" style="font-size:12px">opora</text><text class="s-txt-muted" x="20" y="134" style="font-size:12px">za hrbet</text><text class="s-txt-muted" x="392" y="96" style="font-size:11px">zgornji rob</text><text class="s-txt-muted" x="392" y="110" style="font-size:11px">v višini oči</text></svg>
+<figcaption>Pravilno urejeno delovno mesto: zaslon na razdalji 50 do 70 cm z zgornjim robom v višini oči, roke in kolena pod kotom okoli 90°, podlakti oprte, hrbet naslonjen, stopala na tleh. Zaslon naj bo pravokotno na okno, da ni odsevov.</figcaption>
+</figure>
+            <ul>
+              <li>zaslon na razdalji 50 do 70 cm, zgornji rob v višini oči ali malo nižje, pravokotno na okno, brez odsevov;</li>
+              <li>nastavljiv stol z oporo za hrbet; kolena in komolci pod kotom okoli 90°, stopala na tleh ali na opori;</li>
+              <li>tipkovnica in miška v višini komolcev, zapestja ravna in podprta;</li>
+              <li>dovolj enakomerne svetlobe, brez bleščanja;</li>
+              <li>redni kratki odmori, vaje za oči (pogled v daljavo) in razgibavanje.</li>
+            </ul>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-1">
+              <h4>Tip 1: Presoja delovnega mesta (ergonomija)</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Maja dela s prenosnikom na kuhinjski mizi, sedi na barskem stolu brez naslonjala, zaslon je obrnjen proti oknu za njim in pogleduje navzdol na zaslon, oddaljen 35 cm. Dela po štiri ure brez odmora. Oceni delovno mesto in predlagaj izboljšave.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> opisano ali narisano je delovno mesto z računalnikom, naloga zahteva oceno in utemeljene izboljšave.</p><ul class="kljucne"><li>„ergonomija“</li><li>„oceni delovno mesto“</li><li>„vpliv na zdravje“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Preveri zaslon: razdalja, višina, odsevi.</p><div class="na-nalogi"><p>35 cm je preblizu (50 do 70 cm). Okno za hrbtom povzroča odseve na zaslonu. Gleda strmo navzdol, kar obremenjuje vrat.</p></div></li>
+              <li><p class="korak">Preveri stol in držo: opora za hrbet, koti, stopala.</p><div class="na-nalogi"><p>Barski stol nima opore in je previsok, stopala ne dosežejo tal.</p></div></li>
+              <li><p class="korak">Preveri vhodne enote, svetlobo in odmore.</p><div class="na-nalogi"><p>Pri prenosniku sta tipkovnica in zaslon skupaj, zato ne moreta biti oba na pravi višini.</p></div></li>
+              <li><p class="korak">Za vsako pomanjkljivost predlagaj izboljšavo in jo utemelji.</p><div class="na-nalogi"><p>Prenosnik na podstavek ali zunanji zaslon v višini oči, zunanja tipkovnica in miška; pisarniški stol z naslonjalom; miza pravokotno na okno; vsako uro kratek odmor in razgibavanje.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Zakaj zaslon ne sme stati pred oknom?</p><p>Oči se ves čas prilagajajo močni svetlobi ozadja, zato se hitro utrudijo.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Navedi dve težavi pri dolgotrajnem tipkanju z upognjenimi zapestji.</p><p>Bolečine v zapestju, sindrom karpalnega kanala.</p></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-2">
+              <h4>Tip 2: Vplivi in raven uporabe IT</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Šola uvede e-dnevnik namesto papirnega. Na kateri ravni uporabe IT je to? Navedi dve prednosti in dve slabosti ter ovrednoti uvedbo.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> opisana je uporaba IT v nekem okolju, naloga zahteva prednosti in slabosti, vpliv na življenje ali uvrstitev po ravni uporabe.</p><ul class="kljucne"><li>„vpliv IT na“</li><li>„prednosti in slabosti“</li><li>„raven uporabe“</li><li>„ovrednoti“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Določi, kdo sistem uporablja: posameznik, skupina, organizacija ali več organizacij.</p><div class="na-nalogi"><p>Uporabljajo ga vsi učitelji, vodstvo, dijaki in starši, torej je to raven organizacije (z dostopom zunanjih uporabnikov).</p></div></li>
+              <li><p class="korak">Naštej prednosti: hitrost, dostopnost, manj napak, manj rutinskega dela.</p><div class="na-nalogi"><p>Starši ocene vidijo takoj; ni prepisovanja in izgubljenih zvezkov; statistike se izračunajo same.</p></div></li>
+              <li><p class="korak">Naštej slabosti: odvisnost od tehnologije, varnost, stroški, neenak dostop.</p><div class="na-nalogi"><p>Ob izpadu omrežja vpis ni mogoč; osebni podatki so na spletu in jih je treba varovati.</p></div></li>
+              <li><p class="korak">Ovrednoti: tehtaj prednosti in slabosti ter predlagaj, kako slabosti zmanjšati.</p><div class="na-nalogi"><p>Prednosti prevladajo, če so podatki zaščiteni (gesla, pravice dostopa) in so narejene varnostne kopije.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Kaj je digitalni razkorak?</p><p>Razlika med tistimi, ki imajo dostop do IT in jo znajo uporabljati, ter tistimi, ki tega nimajo.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Razvrsti po času: tranzistor, ENIAC, mikroprocesor, svetovni splet.</p><p>ENIAC (1946), tranzistor (1947), mikroprocesor (1971), splet (1991).</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 2 -->
+        <section class="sklop" id="sklop-2">
+          <header class="sklop-header">
+            <span class="sklop-num">4.2 · 2</span>
+            <h2>Zgradba in delovanje računalnika</h2>
+            <p>Von Neumannov model računalnika in izvajanje programa.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <h4>Von Neumannov model</h4>
+            <p>Skoraj vsi današnji računalniki delujejo po zamisli, ki jo je leta 1945 opisal John von Neumann. Računalnik sestavljajo:</p>
+            <ul>
+              <li><strong>centralna procesna enota</strong> (CPE, procesor), ki jo sestavljata <strong>krmilna enota</strong> (bere ukaze in usmerja delovanje vseh enot) in <strong>aritmetično-logična enota</strong> (računa in primerja); delne rezultate hrani v <strong>registrih</strong>;</li>
+              <li><strong>pomnilnik</strong>, v katerem so <em>hkrati program in podatki</em> (zamisel o shranjenem programu);</li>
+              <li><strong>vhodne enote</strong> (tipkovnica, miška, mikrofon, tipala) in <strong>izhodne enote</strong> (zaslon, tiskalnik, zvočniki);</li>
+              <li><strong>vodila</strong>, po katerih se med enotami prenašajo podatki, naslovi in krmilni signali.</li>
+            </ul>
+            <figure class="slika">
+<svg viewBox="0 0 500 250" role="img" aria-label="Von Neumannov model računalnika" xmlns="http://www.w3.org/2000/svg"><defs><marker id="d1-k1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="d1-k2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="d1-k3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="d1-k4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="d1-crn" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs><polyline class="s-k1" fill="none" points="100,70 125,70" marker-end="url(#d1-k1)"/><polyline class="s-k1" fill="none" points="375,70 400,70" marker-end="url(#d1-k1)"/><polyline class="s-k1" fill="none" points="220,182 220,118" marker-end="url(#d1-k1)" marker-start="url(#d1-k1)"/><text class="s-txt-muted" x="212" y="155" text-anchor="end">podatki</text><polyline class="s-k4" fill="none" points="280,182 280,118" marker-end="url(#d1-k4)"/><text class="s-txt-k4" x="288" y="155" text-anchor="start">ukazi</text><rect class="s-ploskev" x="125" y="22" width="250" height="96" rx="4"/><text class="s-txt-b" x="250" y="74" text-anchor="middle"></text><rect class="s-lik" x="135" y="56" width="104" height="52" rx="4"/><text class="s-txt-b" x="187" y="78.5" text-anchor="middle">krmilna</text><text class="s-txt-muted" x="187" y="93.5" text-anchor="middle" style="font-size:12px">enota</text><rect class="s-lik-2" x="261" y="56" width="104" height="52" rx="4"/><text class="s-txt-b" x="313" y="78.5" text-anchor="middle">aritm.-logična</text><text class="s-txt-muted" x="313" y="93.5" text-anchor="middle" style="font-size:12px">enota</text><rect class="s-kot" x="135" y="182" width="230" height="46" rx="4"/><text class="s-txt-b" x="250" y="201.5" text-anchor="middle">pomnilnik</text><text class="s-txt-muted" x="250" y="216.5" text-anchor="middle" style="font-size:12px">program in podatki</text><rect class="s-lik" x="10" y="47" width="90" height="46" rx="4"/><text class="s-txt-b" x="55" y="66.5" text-anchor="middle">vhodne</text><text class="s-txt-muted" x="55" y="81.5" text-anchor="middle" style="font-size:12px">enote</text><rect class="s-lik" x="400" y="47" width="90" height="46" rx="4"/><text class="s-txt-b" x="445" y="66.5" text-anchor="middle">izhodne</text><text class="s-txt-muted" x="445" y="81.5" text-anchor="middle" style="font-size:12px">enote</text><text class="s-txt-b" x="250" y="38" text-anchor="middle" style="font-size:12px">centralna procesna enota (CPE)</text></svg>
+<figcaption>Von Neumannov model: program in podatki so v istem pomnilniku. Krmilna enota prevzame ukaz iz pomnilnika, ga dekodira in ukaže aritmetično-logični enoti, da ga izvede; nato prevzame naslednjega.</figcaption>
+</figure>
+            <h4>Izvajanje programa</h4>
+            <p>Procesor izvaja ukaze enega za drugim v ponavljajočem se ciklu:</p>
+            <ol>
+              <li><strong>prevzem</strong>: krmilna enota iz pomnilnika prebere ukaz na naslovu, ki ga hrani programski števec;</li>
+              <li><strong>dekodiranje</strong>: ugotovi, kaj ukaz zahteva, in po potrebi prebere podatke;</li>
+              <li><strong>izvedba</strong>: aritmetično-logična enota izvede operacijo, rezultat se shrani v register ali pomnilnik;</li>
+              <li>programski števec se poveča (ali skoči drugam) in cikel se ponovi.</li>
+            </ol>
+            <p>Ritem daje <strong>ura</strong> procesorja; frekvenca 3 GHz pomeni 3 milijarde taktov na sekundo. Ker si program in podatki delijo isto pot do pomnilnika, je ta pot pogosto ozko grlo; zato imajo procesorji hiter predpomnilnik.</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-3">
+              <h4>Tip 3: Delovanje računalnika po von Neumannu</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Uporabnik v programu za računanje vtipka \(12 + 30\) in pritisne Enter. Na von Neumannovem modelu opiši, katere enote sodelujejo in v kakšnem vrstnem redu.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> sprašujejo po enotah računalnika, njihovi nalogi ali po poti podatkov in ukazov med enotami.</p><ul class="kljucne"><li>„von Neumannov model“</li><li>„krmilna enota“</li><li>„aritmetično-logična enota“</li><li>„opiši pot podatka“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Vhod: podatek pride prek vhodne enote in se shrani v pomnilnik.</p><div class="na-nalogi"><p>Tipkovnica pošlje znake, program jih shrani v pomnilnik kot števili 12 in 30.</p></div></li>
+              <li><p class="korak">Krmilna enota prevzema ukaze programa iz pomnilnika in jih dekodira.</p><div class="na-nalogi"><p>Prevzame ukaz „seštej“ in naloži obe števili v registre.</p></div></li>
+              <li><p class="korak">Aritmetično-logična enota izvede operacijo; rezultat gre v register ali pomnilnik.</p><div class="na-nalogi"><p>ALE izračuna 42 in ga shrani v pomnilnik.</p></div></li>
+              <li><p class="korak">Izhod: rezultat se prikaže na izhodni enoti.</p><div class="na-nalogi"><p>Program pošlje 42 na zaslon.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Kaj je bistvena novost von Neumannovega modela?</p><p>Program je shranjen v pomnilniku skupaj s podatki, zato ga lahko zamenjamo brez spreminjanja vezja.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Ali je zaslon na dotik vhodna ali izhodna enota?</p><p>Oboje.</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 3 -->
+        <section class="sklop" id="sklop-3">
+          <header class="sklop-header">
+            <span class="sklop-num">4.2 · 3</span>
+            <h2>Strojna oprema računalnika</h2>
+            <p>Enote osebnega računalnika, njihove tehnične lastnosti in izbira računalnika glede na potrebe uporabnika.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <h4>Enote in njihove lastnosti</h4>
+            <div class="tabela-wrap">
+              <table class="tabela">
+                <thead><tr><th>Enota</th><th>Naloga</th><th>Lastnosti, ki določajo kakovost</th></tr></thead>
+                <tbody>
+                  <tr><td>procesor</td><td>izvaja ukaze</td><td>takt (GHz), število jeder, velikost predpomnilnika, poraba energije</td></tr>
+                  <tr><td>delovni pomnilnik (RAM)</td><td>hrani programe in podatke med delom; ob izklopu se izbriše</td><td>zmogljivost (GB), hitrost</td></tr>
+                  <tr><td>trajni pomnilnik (SSD, trdi disk)</td><td>trajno hrani datoteke in programe</td><td>zmogljivost (GB, TB), hitrost branja in pisanja; SSD je hitrejši, tišji in odpornejši, disk cenejši na GB</td></tr>
+                  <tr><td>matična plošča</td><td>povezuje vse enote</td><td>podprti procesorji in pomnilnik, število in vrsta priključkov</td></tr>
+                  <tr><td>grafična kartica</td><td>izračuna sliko za zaslon</td><td>lasten pomnilnik, zmogljivost za 3D (igre, video, modeliranje)</td></tr>
+                  <tr><td>zaslon</td><td>izhod slike</td><td>diagonala (palci), ločljivost, osveževanje (Hz), barvna natančnost</td></tr>
+                  <tr><td>tiskalnik</td><td>izpis na papir</td><td>vrsta (laserski, brizgalni), ločljivost (dpi), hitrost (strani na minuto), cena tiska</td></tr>
+                  <tr><td>napajalnik, baterija</td><td>oskrba z energijo</td><td>moč (W), pri prenosniku trajanje baterije</td></tr>
+                  <tr><td>vhodne enote</td><td>vnos podatkov</td><td>tipkovnica, miška, optični čitalnik, kamera, mikrofon</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <figure class="slika">
+<svg viewBox="0 0 460 230" role="img" aria-label="Hierarhija pomnilnikov" xmlns="http://www.w3.org/2000/svg"><polygon class="s-lik" points="160,20 240,20 270,56 130,56"/><text class="s-txt-b" x="200" y="37" text-anchor="middle" style="font-size:12px">registri</text><text class="s-txt-muted" x="200" y="51" text-anchor="middle" style="font-size:11px">v procesorju, bajti</text><polygon class="s-lik" points="130,60 270,60 300,96 100,96"/><text class="s-txt-b" x="200" y="77" text-anchor="middle" style="font-size:12px">predpomnilnik</text><text class="s-txt-muted" x="200" y="91" text-anchor="middle" style="font-size:11px">MB</text><polygon class="s-lik" points="100,100 300,100 330,136 70,136"/><text class="s-txt-b" x="200" y="117" text-anchor="middle" style="font-size:12px">delovni pomnilnik RAM</text><text class="s-txt-muted" x="200" y="131" text-anchor="middle" style="font-size:11px">GB, izbriše se ob izklopu</text><polygon class="s-lik-2" points="70,140 330,140 360,176 40,176"/><text class="s-txt-b" x="200" y="157" text-anchor="middle" style="font-size:12px">SSD / trdi disk</text><text class="s-txt-muted" x="200" y="171" text-anchor="middle" style="font-size:11px">stotine GB do TB, trajno</text><polygon class="s-lik-2" points="40,180 360,180 390,216 10,216"/><text class="s-txt-b" x="200" y="197" text-anchor="middle" style="font-size:12px">zunanji mediji, oblak</text><text class="s-txt-muted" x="200" y="211" text-anchor="middle" style="font-size:11px">TB, najpočasnejši</text><line class="s-k2" x1="420" y1="210" x2="420" y2="28"/><polygon points="414,30 426,30 420,18" fill="#DC2626"/><text class="s-txt-k2" x="412" y="120" text-anchor="end" style="font-size:12px">hitreje,</text><text class="s-txt-k2" x="412" y="134" text-anchor="end" style="font-size:12px">dražje</text><line class="s-k3" x1="440" y1="20" x2="440" y2="202"/><polygon points="434,200 446,200 440,212" fill="#16A34A"/><text class="s-txt-k3" x="448" y="120" transform="rotate(90 448 120)" text-anchor="middle" style="font-size:12px">večja zmogljivost</text></svg>
+<figcaption>Hierarhija pomnilnikov: višje ravni so hitrejše, a manjše in dražje na bajt. Procesor dela s podatki v registrih in predpomnilniku, programi se med izvajanjem nahajajo v RAM, trajno pa jih hranimo na disku.</figcaption>
+</figure>
+            <h4>Kako izberemo računalnik</h4>
+            <p>Računalnik izberemo po tem, za kaj ga bomo uporabljali, in po proračunu. Za pisarniško delo in splet zadoščajo povprečen procesor, 8 GB RAM in SSD. Za obdelavo videa in fotografij potrebujemo zmogljiv večjedrni procesor, veliko pomnilnika (16 do 32 GB), velik in hiter disk ter kakovosten zaslon z natančnimi barvami. Za igre je odločilna grafična kartica. Kdor potuje, izbere lahek prenosnik z dolgo baterijo. Vedno utemeljimo, zakaj je izbrana lastnost pomembna za tega uporabnika.</p>
+            <h4>Enote za količino podatkov</h4>
+            <p>Najmanjša enota je bit (b), osem bitov je bajt (B). Proizvajalci diskov uporabljajo predpone SI (1 GB = \(10^9\) B), operacijski sistemi pa pogosto dvojiške (\(2^{30}\) B), zato disk z oznako 1 TB v sistemu pokaže le okoli 931 „GB“. Hitrosti prenosa so podane v bitih na sekundo: 100 Mb/s je \(12{,}5\ \text{MB/s}\).</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-4">
+              <h4>Tip 4: Sestavi računalnik po zahtevah uporabnika</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Študentka arhitekture potrebuje računalnik za 3D-modeliranje in risanje načrtov, pogosto dela tudi na fakulteti. Izberi enote in njihove lastnosti ter izbor utemelji.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> opisan je uporabnik in njegove potrebe, naloga zahteva izbiro računalnika ali posameznih enot z utemeljitvijo.</p><ul class="kljucne"><li>„sestavi računalnik“</li><li>„izberi enote“</li><li>„utemelji izbor“</li><li>„glede na potrebe uporabnika“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Iz opisa izlušči zahteve: kaj bo uporabnik delal, kje, s kakšnim proračunom.</p><div class="na-nalogi"><p>Zahtevna 3D-grafika, velike datoteke, prenosnost.</p></div></li>
+              <li><p class="korak">Za vsako zahtevo določi ključno enoto in potrebno lastnost.</p><div class="na-nalogi"><p>3D: zmogljiva grafična kartica in večjedrni procesor. Veliki modeli: 32 GB RAM. Datoteke: SSD vsaj 1 TB. Načrti: zaslon z visoko ločljivostjo. Prenosnost: prenosnik.</p></div></li>
+              <li><p class="korak">Dopolni z ostalimi enotami in vsako izbiro utemelji z uporabo.</p><div class="na-nalogi"><p>Zmogljiv prenosnik z zgornjimi lastnostmi; doma še zunanji zaslon in miška, zaradi ergonomije in natančnega risanja; zunanji disk za varnostne kopije.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Kateri tiskalnik izbereš za pisarno, ki natisne 2000 strani besedila na mesec?</p><p>Laserski črno-beli: hiter in poceni na stran.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Računalnik se ob odprtih več programih zelo upočasni, disk pa neprestano dela. Kaj nadgradiš?</p><p>Delovni pomnilnik (RAM).</p></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-5">
+              <h4>Tip 5: Zmogljivost pomnilnika in čas prenosa</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Fotoaparat shrani vsako fotografijo v povprečno 6 MB veliko datoteko. Koliko fotografij gre na 64 GB veliko kartico? Koliko časa traja prenos polne kartice v oblak prek povezave s hitrostjo 100 Mb/s?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> podane so velikosti datotek, zmogljivost medija ali hitrost povezave; iščejo število datotek, potreben prostor ali čas prenosa.</p><ul class="kljucne"><li>„koliko datotek gre na“</li><li>„koliko časa traja prenos“</li><li>„Mb/s“</li><li>„zmogljivost diska“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Vse velikosti pretvori v isto enoto (bajte), pazi na SI ali dvojiške predpone.</p><div class="na-nalogi"><p>\(64\ \text{GB} = 64 \cdot 10^9\ \text{B}\), \(6\ \text{MB} = 6 \cdot 10^6\ \text{B}\).</p></div></li>
+              <li><p class="korak">Število datotek: zmogljivost deli z velikostjo datoteke in zaokroži navzdol.</p><div class="na-nalogi"><p>\(N = 64 \cdot 10^9 / 6 \cdot 10^6 = 10\,666\) fotografij.</p></div></li>
+              <li><p class="korak">Za čas prenosa pretvori velikost v bite (krat 8) in deli s hitrostjo v b/s.</p><div class="na-nalogi"><p>\(64 \cdot 10^9 \cdot 8\ \text{b} = 5{,}12 \cdot 10^{11}\ \text{b}\); \(t = 5{,}12 \cdot 10^{11}/10^8 = 5120\ \text{s} \approx 85\ \text{min}\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Koliko časa traja prenos filma velikosti 4,7 GB prek povezave 20 Mb/s?</p><p>\(4{,}7 \cdot 10^9 \cdot 8/2 \cdot 10^7 = 1880\ \text{s} \approx 31\ \text{min}\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Koliko GiB pokaže sistem za disk z oznako 1 TB?</p><p>\(10^{12}/2^{30} = 931\ \text{GiB}\).</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 4 -->
+        <section class="sklop" id="sklop-4">
+          <header class="sklop-header">
+            <span class="sklop-num">4.2 · 4</span>
+            <h2>Programska oprema računalnika</h2>
+            <p>Vrste programske opreme in njihove naloge, programi glede na avtorsko zaščito, računalniški vsiljivci in zaščita pred njimi.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <h4>Vrste programske opreme</h4>
+            <figure class="slika slika--ozka">
+<svg viewBox="0 0 360 210" role="img" aria-label="Plasti programske opreme" xmlns="http://www.w3.org/2000/svg"><defs><marker id="d2-k1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="d2-k2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="d2-k3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="d2-k4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="d2-crn" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs><rect class="s-kot" x="30" y="9" width="300" height="38" rx="4"/><text class="s-txt-b" x="180" y="32" text-anchor="middle">uporabnik</text><rect class="s-lik-2" x="30" y="59" width="300" height="38" rx="4"/><text class="s-txt-b" x="180" y="82" text-anchor="middle">uporabniški programi</text><rect class="s-lik" x="30" y="109" width="300" height="38" rx="4"/><text class="s-txt-b" x="180" y="132" text-anchor="middle">sistemski programi (OS, gonilniki)</text><rect class="s-ploskev" x="30" y="159" width="300" height="38" rx="4"/><text class="s-txt-b" x="180" y="182" text-anchor="middle">strojna oprema</text></svg>
+<figcaption>Operacijski sistem upravlja strojno opremo in jo ponuja uporabniškim programom; uporabnik dela z uporabniškimi programi.</figcaption>
+</figure>
+            <ul>
+              <li><strong>Sistemska programska oprema</strong>: operacijski sistem (Windows, macOS, Linux, Android, iOS) upravlja strojno opremo, datoteke, pomnilnik in izvajanje programov ter ponuja uporabniški vmesnik; gonilniki omogočajo delo s posameznimi napravami; pripomočki skrbijo za vzdrževanje (stiskanje, varnostne kopije, protivirusni programi).</li>
+              <li><strong>Razvojna programska oprema</strong>: programski jeziki, prevajalniki, razvojna okolja, s katerimi izdelujemo nove programe.</li>
+              <li><strong>Uporabniška programska oprema</strong> opravlja konkretne naloge uporabnika: urejevalnik besedil, preglednica, program za predstavitve, podatkovna baza, brskalnik, e-poštni odjemalec, programi za obdelavo slik, zvoka in videa, igre, poslovni programi (računovodstvo, skladišče).</li>
+            </ul>
+            <h4>Programi glede na avtorsko zaščito</h4>
+            <div class="tabela-wrap">
+              <table class="tabela">
+                <thead><tr><th>Vrsta</th><th>Kaj smemo</th><th>Primer</th></tr></thead>
+                <tbody>
+                  <tr><td><strong>tržni</strong> (komercialni)</td><td>uporaba po nakupu licence; kopiranje in spreminjanje prepovedano</td><td>Microsoft Office, Adobe Photoshop</td></tr>
+                  <tr><td><strong>poskusni</strong></td><td>brezplačna uporaba omejen čas ali z omejenimi funkcijami, nato nakup</td><td>preizkusna različica protivirusnega programa</td></tr>
+                  <tr><td><strong>prosti</strong> (brezplačni)</td><td>brezplačna uporaba in deljenje; koda ni na voljo, spreminjanje prepovedano</td><td>Adobe Acrobat Reader</td></tr>
+                  <tr><td><strong>odprtokodni</strong></td><td>izvorna koda je javna; smemo jo uporabljati, spreminjati in deliti pod pogoji licence (na primer GPL)</td><td>LibreOffice, Firefox, Linux, GIMP</td></tr>
+                  <tr><td><strong>javni</strong> (v javni domeni)</td><td>avtor se je odpovedal pravicam; uporaba brez omejitev</td><td>nekateri stari programi in knjižnice</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p>Odgovoren odnos do pravic pomeni, da uporabljamo programe le v skladu z licenco: ne nameščamo nelegalnih kopij in ne delimo kupljenih programov. Nelegalna uporaba je kršitev avtorskih pravic, poleg tega so piratske kopije pogost vir vsiljivcev.</p>
+            <h4>Računalniški vsiljivci</h4>
+            <ul>
+              <li><strong>virus</strong> se pripne na drug program ali dokument in se širi, ko ga zaženemo;</li>
+              <li><strong>črv</strong> se sam širi po omrežju, brez pomoči uporabnika;</li>
+              <li><strong>trojanski konj</strong> se predstavlja kot koristen program, v ozadju pa napadalcu odpre dostop;</li>
+              <li><strong>vohunski program</strong> zbira podatke (gesla, obiskane strani) in jih pošilja naprej;</li>
+              <li><strong>izsiljevalski program</strong> zašifrira datoteke in zahteva odkupnino;</li>
+              <li><strong>oglaševalski program</strong> vsiljuje oglase.</li>
+            </ul>
+            <p><strong>Zaščita:</strong> posodobljen operacijski sistem in programi, protivirusni program in požarni zid, programi le iz zaupanja vrednih virov, previdnost pri priponkah in povezavah, močna gesla in redne varnostne kopije (ki niso stalno priklopljene). <strong>Zdravljenje:</strong> protivirusni program okuženo datoteko očisti, premakne v karanteno ali izbriše; pri izsiljevalskem programu datoteke obnovimo iz varnostne kopije, v skrajnem primeru znova namestimo sistem.</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-6">
+              <h4>Tip 6: Vrsta programa in licenca</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Društvo želi urejevalnik besedil za 15 računalnikov z najmanj stroški, prostovoljec pa bi rad program prilagodil potrebam društva. Katero vrsto programa glede na avtorsko zaščito izbereš? Ali sme društvo en kupljen izvod tržnega programa namestiti na vse računalnike?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> sprašujejo, kaj smemo s programom narediti (uporabljati, kopirati, spreminjati, prodajati), ali kateri vrsti pripada program.</p><ul class="kljucne"><li>„licenca“</li><li>„odprtokodni, prosti, tržni, poskusni“</li><li>„ali sme namestiti“</li><li>„sistemski ali uporabniški“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Ugotovi zahteve: cena, število namestitev, ali je potrebno spreminjanje.</p><div class="na-nalogi"><p>Brezplačno, 15 namestitev, spreminjanje kode.</p></div></li>
+              <li><p class="korak">Preveri, katera vrsta to dovoljuje.</p><div class="na-nalogi"><p>Spreminjanje dovoljujejo le odprtokodni programi (in programi v javni domeni). Izberemo odprtokodni urejevalnik, na primer LibreOffice Writer.</p></div></li>
+              <li><p class="korak">Za vprašanje o kopiranju preberi licenco tržnega programa.</p><div class="na-nalogi"><p>Ne; tržna licenca praviloma velja za eno namestitev, za 15 računalnikov potrebujejo 15 licenc ali skupinsko licenco.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Ali je gonilnik tiskalnika sistemski ali uporabniški program?</p><p>Sistemski.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> V čem se prosti program razlikuje od odprtokodnega?</p><p>Prosti je brezplačen, a brez dostopa do kode in pravice spreminjanja; odprtokodni dovoljuje oboje.</p></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-7">
+              <h4>Tip 7: Vsiljivci, zaščita in zdravljenje</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Po namestitvi brezplačne igre s spletne strani neznanega avtorja se na računalniku pojavljajo oglasi, prijatelji pa dobivajo sporočila, ki jih uporabnik ni poslal. Za katero vrsto vsiljivca gre? Kako bi računalnik očistil in se v prihodnje zaščitil?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> opisani so znaki okužbe ali tvegano ravnanje; iščejo vrsto vsiljivca, zaščito ali postopek čiščenja.</p><ul class="kljucne"><li>„virus, črv, trojanski konj“</li><li>„okužen računalnik“</li><li>„kako se zaščitiš“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Iz načina okužbe in znakov določi vrsto vsiljivca.</p><div class="na-nalogi"><p>Program se je predstavljal kot igra (trojanski konj), prikazuje oglase (oglaševalski) in pošilja sporočila (širjenje, kraja dostopa).</p></div></li>
+              <li><p class="korak">Opiši zdravljenje: odklop iz omrežja, pregled s posodobljenim protivirusnim programom, odstranitev, menjava gesel.</p><div class="na-nalogi"><p>Odstrani igro, računalnik preglej s protivirusnim programom, okužene datoteke daj v karanteno, z drugega računalnika zamenjaj gesla.</p></div></li>
+              <li><p class="korak">Navedi preventivo.</p><div class="na-nalogi"><p>Programe nameščaj le iz uradnih virov, redno posodabljaj sistem, imej vklopljen protivirusni program in požarni zid ter varnostne kopije.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Po odprtju priponke so vse datoteke zašifrirane, pojavi se zahteva po plačilu. Kaj storiš?</p><p>Izsiljevalski program; ne plačaš, računalnik odklopiš, sistem očistiš ali znova namestiš in datoteke obnoviš iz varnostne kopije.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Po čem se črv razlikuje od virusa?</p><p>Črv se širi sam po omrežju, virus potrebuje gostiteljski program, ki ga zaženemo.</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 5 -->
+        <section class="sklop" id="sklop-5">
+          <header class="sklop-header">
+            <span class="sklop-num">4.2 · 5</span>
+            <h2>Računalniška omrežja</h2>
+            <p>Pomen omrežij, načini organizacije, sestavine omrežja ter internet in njegove storitve.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <h4>Zakaj povezujemo računalnike</h4>
+            <p>Računalniško omrežje so računalniki in druge naprave, povezani tako, da si izmenjujejo podatke. Omrežje omogoča deljenje virov (tiskalnik, datoteke, internetna povezava), komunikacijo (pošta, klepet, videoklici), skupno delo na dokumentih, središčno hrambo in varnostno kopiranje podatkov ter dostop do storitev na daljavo.</p>
+            <h4>Organizacija omrežij</h4>
+            <p><strong>Po velikosti:</strong> lokalno omrežje <strong>LAN</strong> (dom, šola, podjetje), mestno <strong>MAN</strong> in prostrano <strong>WAN</strong> (povezuje oddaljene kraje; največje je internet). <strong>Po vlogi računalnikov:</strong> pri modelu <strong>odjemalec–strežnik</strong> strežnik ponuja storitve (datoteke, pošto, spletne strani), odjemalci jih uporabljajo; upravljanje in varnostne kopije so središčne. V <strong>enakovrednem</strong> omrežju (P2P) je vsak računalnik hkrati odjemalec in strežnik; je preprosto, a težje za upravljanje. <strong>Po topologiji</strong>, to je načinu povezave:</p>
+            <div class="slike-vrsta"><figure class="slika">
+<svg viewBox="0 0 170 150" role="img" aria-label="Topologija zvezda" xmlns="http://www.w3.org/2000/svg"><defs><marker id="d3-k1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="d3-k2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="d3-k3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="d3-k4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="d3-crn" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs><polyline class="s-crta" fill="none" points="85,72 85,30"/><polyline class="s-crta" fill="none" points="85,72 127.2,56"/><polyline class="s-crta" fill="none" points="85,72 119.1,104.1"/><polyline class="s-crta" fill="none" points="85,72 50.9,104"/><polyline class="s-crta" fill="none" points="85,72 42.9,55.9"/><rect class="s-kot" x="56" y="61" width="58" height="22" rx="4"/><text class="s-txt-b" x="85" y="76" text-anchor="middle">stikalo</text><rect class="s-prazna" x="72" y="10" width="26" height="20" rx="4"/><text class="s-txt-b" x="85.04618694922253" y="24" text-anchor="middle"></text><rect class="s-prazna" x="127.2" y="46" width="26" height="20" rx="4"/><text class="s-txt-b" x="140.17487034616983" y="60" text-anchor="middle"></text><rect class="s-prazna" x="106.1" y="104.1" width="26" height="20" rx="4"/><text class="s-txt-b" x="119.05764778086588" y="118.1" text-anchor="middle"></text><rect class="s-prazna" x="37.9" y="104" width="26" height="20" rx="4"/><text class="s-txt-b" x="50.87631444007304" y="118" text-anchor="middle"></text><rect class="s-prazna" x="16.9" y="45.9" width="26" height="20" rx="4"/><text class="s-txt-b" x="29.85034918558209" y="59.9" text-anchor="middle"></text><text class="s-txt-b" x="85" y="146" text-anchor="middle">zvezda</text></svg>
+<figcaption>Vse naprave so povezane s središčnim stikalom. Okvara enega kabla izloči le eno napravo. Danes najpogostejša.</figcaption>
+</figure><figure class="slika">
+<svg viewBox="0 0 170 150" role="img" aria-label="Topologija vodilo" xmlns="http://www.w3.org/2000/svg"><defs><marker id="d4-k1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="d4-k2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="d4-k3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="d4-k4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="d4-crn" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs><polyline class="s-crta" fill="none" points="25,50 25,72"/><polyline class="s-crta" fill="none" points="65,95 65,72"/><polyline class="s-crta" fill="none" points="105,50 105,72"/><polyline class="s-crta" fill="none" points="145,95 145,72"/><rect class="s-prazna" x="12" y="30" width="26" height="20" rx="4"/><text class="s-txt-b" x="25" y="44" text-anchor="middle"></text><rect class="s-prazna" x="52" y="95" width="26" height="20" rx="4"/><text class="s-txt-b" x="65" y="109" text-anchor="middle"></text><rect class="s-prazna" x="92" y="30" width="26" height="20" rx="4"/><text class="s-txt-b" x="105" y="44" text-anchor="middle"></text><rect class="s-prazna" x="132" y="95" width="26" height="20" rx="4"/><text class="s-txt-b" x="145" y="109" text-anchor="middle"></text><text class="s-txt-b" x="85" y="146" text-anchor="middle">vodilo</text><line class="s-k1" x1="8" y1="72" x2="162" y2="72"/></svg>
+<figcaption>Vse naprave so na skupnem kablu. Preprosto, a okvara vodila ustavi vse.</figcaption>
+</figure><figure class="slika">
+<svg viewBox="0 0 170 150" role="img" aria-label="Topologija obroč" xmlns="http://www.w3.org/2000/svg"><defs><marker id="d5-k1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="d5-k2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="d5-k3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="d5-k4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="d5-crn" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs><polyline class="s-k1" fill="none" points="85,18 140.2,54"/><polyline class="s-k1" fill="none" points="140.2,54 119.1,112.1"/><polyline class="s-k1" fill="none" points="119.1,112.1 50.9,112"/><polyline class="s-k1" fill="none" points="50.9,112 29.9,53.9"/><polyline class="s-k1" fill="none" points="29.9,53.9 85,18"/><rect class="s-prazna" x="72" y="8" width="26" height="20" rx="4"/><text class="s-txt-b" x="85.04618694922253" y="22" text-anchor="middle"></text><rect class="s-prazna" x="127.2" y="44" width="26" height="20" rx="4"/><text class="s-txt-b" x="140.17487034616983" y="58" text-anchor="middle"></text><rect class="s-prazna" x="106.1" y="102.1" width="26" height="20" rx="4"/><text class="s-txt-b" x="119.05764778086588" y="116.1" text-anchor="middle"></text><rect class="s-prazna" x="37.9" y="102" width="26" height="20" rx="4"/><text class="s-txt-b" x="50.87631444007304" y="116" text-anchor="middle"></text><rect class="s-prazna" x="16.9" y="43.9" width="26" height="20" rx="4"/><text class="s-txt-b" x="29.85034918558209" y="57.9" text-anchor="middle"></text><text class="s-txt-b" x="85" y="146" text-anchor="middle">obroč</text></svg>
+<figcaption>Podatki krožijo od naprave do naprave. Prekinitev obroča lahko ustavi promet.</figcaption>
+</figure></div>
+            <h4>Sestavine omrežja</h4>
+            <ul>
+              <li><strong>omrežna kartica</strong> (žična ali brezžična) v vsaki napravi, z enolično strojno številko (naslov MAC);</li>
+              <li><strong>prenosni medij</strong>: bakreni kabel (UTP), optično vlakno (hitro, na velike razdalje), radijski valovi (Wi-Fi, mobilno omrežje);</li>
+              <li><strong>stikalo</strong> poveže naprave v lokalnem omrežju; <strong>dostopna točka</strong> poveže brezžične naprave;</li>
+              <li><strong>usmerjevalnik</strong> povezuje različna omrežja (domače omrežje z internetom) in izbira pot paketov;</li>
+              <li><strong>modem</strong> prilagodi signal mediju ponudnika (optika, kabel, telefonska linija);</li>
+              <li><strong>strežnik</strong> ponuja storitve;</li>
+              <li><strong>protokoli</strong> so pravila sporazumevanja. Internet temelji na TCP/IP: vsaka naprava ima <strong>naslov IP</strong>, podatki potujejo v paketih. Sistem <strong>DNS</strong> imena (www.ric.si) pretvarja v naslove IP.</li>
+            </ul>
+            <figure class="slika slika--siroka">
+<svg viewBox="0 0 520 230" role="img" aria-label="Domače omrežje" xmlns="http://www.w3.org/2000/svg"><defs><marker id="d6-k1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="d6-k2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="d6-k3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="d6-k4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="d6-crn" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs><polyline class="s-k1" fill="none" points="90,110 124,110"/><polyline class="s-k1" fill="none" points="216,110 245,110"/><polyline class="s-k1" fill="none" points="355,100 405,40"/><text class="s-txt-k1" x="385" y="92" text-anchor="start">kabel</text><polyline class="s-k3" fill="none" points="355,110 405,110" stroke-dasharray="6 4"/><polyline class="s-k3" fill="none" points="355,120 405,180" stroke-dasharray="6 4"/><text class="s-txt-k3" x="382" y="142" text-anchor="start">brezžično</text><ellipse class="s-kot" cx="50" cy="110" rx="40" ry="22"/><text class="s-txt-b" x="50" y="114" text-anchor="middle">internet</text><rect class="s-lik" x="124" y="88" width="92" height="44" rx="4"/><text class="s-txt-b" x="170" y="106.5" text-anchor="middle">modem</text><text class="s-txt-muted" x="170" y="121.5" text-anchor="middle" style="font-size:12px">pri ponudniku</text><rect class="s-lik-2" x="245" y="85" width="110" height="50" rx="4"/><text class="s-txt-b" x="300" y="106.5" text-anchor="middle">usmerjevalnik</text><text class="s-txt-muted" x="300" y="121.5" text-anchor="middle" style="font-size:12px">stikalo, Wi-Fi</text><rect class="s-lik" x="405" y="23" width="100" height="34" rx="4"/><text class="s-txt-b" x="455" y="44" text-anchor="middle">osebni rač.</text><rect class="s-lik" x="405" y="93" width="100" height="34" rx="4"/><text class="s-txt-b" x="455" y="114" text-anchor="middle">tiskalnik</text><rect class="s-lik" x="405" y="163" width="100" height="34" rx="4"/><text class="s-txt-b" x="455" y="184" text-anchor="middle">telefon</text></svg>
+<figcaption>Tipično domače omrežje (LAN). Usmerjevalnik povezuje domače omrežje z internetom, naprave dobijo zasebne naslove IP, z napravami se povezuje po kablu ali brezžično (Wi-Fi). Pogosto so modem, usmerjevalnik, stikalo in dostopna točka v eni napravi.</figcaption>
+</figure>
+            <h4>Internet in njegove storitve</h4>
+            <p><strong>Internet</strong> je svetovno omrežje omrežij, povezanih s protokoli TCP/IP. Na njem delujejo storitve:</p>
+            <div class="tabela-wrap">
+              <table class="tabela">
+                <thead><tr><th>Storitev</th><th>Čemu služi</th><th>Protokol, primer</th></tr></thead>
+                <tbody>
+                  <tr><td>svetovni splet (WWW)</td><td>ogled povezanih spletnih strani v brskalniku</td><td>HTTP, HTTPS (šifrirano)</td></tr>
+                  <tr><td>elektronska pošta</td><td>pošiljanje sporočil in priponk</td><td>SMTP (pošiljanje), POP3, IMAP (prejem)</td></tr>
+                  <tr><td>prenos datotek</td><td>nalaganje datotek na strežnik in z njega</td><td>FTP, SFTP</td></tr>
+                  <tr><td>oddaljena prijava</td><td>delo na oddaljenem računalniku prek ukazne vrstice</td><td>telnet (nešifriran), SSH (šifriran)</td></tr>
+                  <tr><td>klepet, videoklici, IP-telefonija</td><td>sporazumevanje v realnem času</td><td>VoIP, aplikacije za sporočanje</td></tr>
+                  <tr><td>storitve v oblaku</td><td>hramba datotek, programi v brskalniku</td><td>spletni diski, spletne pisarne</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-8">
+              <h4>Tip 8: Organizacija in sestavine omrežja</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Manjša pisarna ima 6 namiznih računalnikov, en tiskalnik, prenosnike sodelavcev in internetno povezavo prek optike. Vsi dokumenti naj bodo na enem mestu in redno varnostno kopirani. Predlagaj organizacijo omrežja in naštej potrebne naprave z njihovo nalogo.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> opisano je okolje z napravami, ki jih je treba povezati, ali pa sprašujejo po vrsti omrežja, topologiji ali nalogi naprave.</p><ul class="kljucne"><li>„poveži v omrežje“</li><li>„LAN, WAN“</li><li>„odjemalec–strežnik“</li><li>„stikalo, usmerjevalnik“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Določi obseg (LAN, WAN) in vlogo računalnikov (strežnik ali enakovredno).</p><div class="na-nalogi"><p>LAN; ker naj bodo dokumenti na enem mestu in središčno kopirani, izberemo model odjemalec–strežnik z datotečnim strežnikom.</p></div></li>
+              <li><p class="korak">Izberi topologijo in medij.</p><div class="na-nalogi"><p>Zvezda s stikalom; namizni računalniki, tiskalnik in strežnik po kablu, prenosniki brezžično.</p></div></li>
+              <li><p class="korak">Naštej naprave in njihove naloge, od interneta do končnih naprav.</p><div class="na-nalogi"><p>Optični modem ponudnika, usmerjevalnik s požarnim zidom (povezava z internetom), stikalo (povezava naprav v LAN), dostopna točka (Wi-Fi), datotečni strežnik in zunanji disk za varnostne kopije, omrežni tiskalnik.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Katera naprava povezuje lokalno omrežje z internetom?</p><p>Usmerjevalnik.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Kaj se zgodi v topologiji zvezda, če se pokvari kabel do enega računalnika?</p><p>Brez omrežja ostane le ta računalnik.</p></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-9">
+              <h4>Tip 9: Internetne storitve in protokoli</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Dijak je izdelal spletno stran in jo mora prenesti na strežnik, nato pa po e-pošti obvestiti mentorja. Katere storitve uporabi? Zakaj je pri vpisu gesla na spletni strani pomembno, da naslov začne s https?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> opisano je opravilo na internetu, iščejo ustrezno storitev ali protokol, ali pa sprašujejo, kaj storitev omogoča.</p><ul class="kljucne"><li>„storitev interneta“</li><li>„FTP, HTTP, SMTP, telnet“</li><li>„protokol“</li><li>„DNS, naslov IP“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Razčleni opravilo na posamezna dejanja.</p><div class="na-nalogi"><p>Prenos datotek na strežnik; pošiljanje sporočila; prijava na spletni strani.</p></div></li>
+              <li><p class="korak">Vsakemu dejanju pripiši storitev in protokol.</p><div class="na-nalogi"><p>Prenos datotek: FTP (ali SFTP). Sporočilo: e-pošta, SMTP. Spletna stran: WWW, HTTP/HTTPS.</p></div></li>
+              <li><p class="korak">Pri vprašanjih o varnosti pomisli na šifriranje.</p><div class="na-nalogi"><p>HTTPS podatke med brskalnikom in strežnikom šifrira, zato gesla med prenosom ne more prebrati nihče vmes.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Kaj naredi DNS?</p><p>Domensko ime (www.ric.si) pretvori v naslov IP strežnika.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Zakaj danes namesto telneta uporabljamo SSH?</p><p>Telnet geslo in podatke prenaša nešifrirano.</p></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="subsection" id="kljuc">
+          <div class="subsection-head">
+            <h2>Ključ: kateri tip naloge je to?</h2>
+            <p>Poišči besedo iz navodila naloge in skoči na pravi postopek.</p>
+          </div>
+          <div class="info-card">
+            <div class="tabela-wrap">
+              <table class="tabela">
+                <thead><tr><th>V besedilu naloge piše …</th><th>Tip</th></tr></thead>
+                <tbody>
+                  <tr><td>„ergonomija“, „delovno mesto“, „vpliv na zdravje“</td><td><a href="#tip-1">Tip 1</a></td></tr>
+                  <tr><td>„prednosti in slabosti IT“, „raven uporabe“, „mejniki razvoja“</td><td><a href="#tip-2">Tip 2</a></td></tr>
+                  <tr><td>„von Neumannov model“, „krmilna enota“, „ALE“</td><td><a href="#tip-3">Tip 3</a></td></tr>
+                  <tr><td>„sestavi računalnik“, „izberi enote“</td><td><a href="#tip-4">Tip 4</a></td></tr>
+                  <tr><td>„koliko datotek gre na“, „čas prenosa“, „Mb/s“</td><td><a href="#tip-5">Tip 5</a></td></tr>
+                  <tr><td>„licenca“, „odprtokodni“, „sistemski program“</td><td><a href="#tip-6">Tip 6</a></td></tr>
+                  <tr><td>„virus“, „trojanski konj“, „zaščita pred vsiljivci“</td><td><a href="#tip-7">Tip 7</a></td></tr>
+                  <tr><td>„poveži v omrežje“, „stikalo, usmerjevalnik“, „topologija“</td><td><a href="#tip-8">Tip 8</a></td></tr>
+                  <tr><td>„storitve interneta“, „FTP, HTTP, SMTP“, „DNS“</td><td><a href="#tip-9">Tip 9</a></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>Pogoste napake</h2>
+          </div>
+          <div class="info-card">
+            <ul>
+              <li>Pri času prenosa pozabiš velikost v bajtih pretvoriti v bite (krat 8).</li>
+              <li>Mešaš delovni pomnilnik (RAM) in trajni pomnilnik (disk); „več pomnilnika“ ne pomeni več prostora za datoteke.</li>
+              <li>Pri izbiri računalnika navedeš le lastnosti brez utemeljitve za konkretnega uporabnika.</li>
+              <li>Prosti (brezplačni) in odprtokodni program obravnavaš kot isto.</li>
+              <li>Zameniš internet (omrežje) in svetovni splet (ena od storitev na internetu).</li>
+              <li>Stikalo in usmerjevalnik uporabljaš kot sopomenki.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>Naslednje poglavje</h2>
+          </div>
+          <div class="link-list">
+            <a class="link-item" href="/views/informatika/snov/predstavitev_informacije/predstavitev_informacije_razlaga.html">
+              <span class="link-item-text"><strong>4.3 Predstavitev informacije</strong><small>Kodiranje, besedilo, slika, zvok, video, prosojnice, splet in HTML</small></span>
+              <span class="arrow">→</span>
+            </a>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>

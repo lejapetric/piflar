@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Svetloba in optika — razlaga in postopki | Piflar.si</title>
+  <meta name="description" content="Svetloba in optika za maturo iz fizike: elektromagnetni spekter, uklon in interferenca svetlobe, uklonska mrežica, odbojni in lomni zakon, popolni odboj, slike z zrcali in lečami, enačba leče, oko in fotoaparat, gostota svetlobnega toka in Stefanov zakon.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
+  <link rel="stylesheet" href="/style/snov.css">
+</head>
+<body>
+  <div id="header"></div>
+
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view">
+
+<header class="page-header">
+          <span class="page-eyebrow">Fizika · Snov · 4.16</span>
+          <h1>Svetloba in optika</h1>
+          <p>Svetloba je elektromagnetno valovanje. Kot valovanje se uklanja in interferira, na mejah med snovmi pa se odbija in lomi, kar s pridom uporabljamo v zrcalih, lečah, očesu in fotoaparatu. Tu so spekter, uklonska mrežica, odboj in lom, preslikave in svetlobni tok. Pod razlago so vsi tipi nalog, ki se pojavijo pri tem sklopu. Vsebine, označene s <span class="badge-vr">PZ</span>, so posebna znanja iz kataloga.</p>
+          <div class="page-meta">
+            <div class="page-meta-item"><strong>5</strong><span>Podpoglavij</span></div>
+            <div class="page-meta-item"><strong>7</strong><span>Tipov nalog</span></div>
+            <div class="page-meta-item"><strong>~40 min</strong><span>Branja</span></div>
+          </div>
+        </header>
+
+        <div class="matura-formule">
+          <h3>Formule na maturi</h3>
+          <p>Enačbe, ki jih potrebuješ (večina je na listu s konstantami in enačbami, ki je del izpitne pole):</p>
+          <div class="matura-levo">
+            <ul>
+              <li>hitrost svetlobe: \(c_0 = 3{,}0 \cdot 10^8\ \text{m/s}\), \(c_0 = \lambda\nu\)</li>
+              <li>uklonska mrežica <span class="badge-vr">PZ</span>: \(d\sin\alpha_N = N\lambda\)</li>
+              <li>lomni količnik: \(n = \dfrac{c_0}{c}\); lomni zakon: \(n_1\sin\alpha = n_2\sin\beta\)</li>
+              <li>mejni kot popolnega odboja: \(\sin\alpha_m = \dfrac{n_2}{n_1}\)</li>
+              <li>enačba leče in zrcala <span class="badge-vr">PZ</span>: \(\dfrac1f = \dfrac1a + \dfrac1b\), povečava \(\dfrac{S}{P} = \dfrac{b}{a}\); krivo zrcalo \(f = \dfrac{r}{2}\)</li>
+              <li>gostota svetlobnega toka <span class="badge-vr">PZ</span>: \(j = \dfrac{P}{4\pi r^2}\); Stefanov zakon \(j = \sigma T^4\)</li>
+            </ul>
+          </div>
+          <p class="matura-opomba">\(\sigma = 5{,}67 \cdot 10^{-8}\ \text{W/(m}^2\text{K}^4)\). Lomni količnik zraka je skoraj 1, vode 1,33, stekla okoli 1,5.</p>
+        </div>
+
+        <nav class="kazalo" aria-label="Podpoglavja">
+          <h2>Podpoglavja</h2>
+          <ol>
+            <li><a href="#sklop-1"><span class="kazalo-st">1</span> Elektromagnetno valovanje</a></li>
+            <li><a href="#sklop-2"><span class="kazalo-st">2</span> Interferenčni pojavi</a></li>
+            <li><a href="#sklop-3"><span class="kazalo-st">3</span> Odboj in lom svetlobe</a></li>
+            <li><a href="#sklop-4"><span class="kazalo-st">4</span> Preslikave z zrcali in lečami</a></li>
+            <li><a href="#sklop-5"><span class="kazalo-st">5</span> Svetlobni tok</a></li>
+            <li><a href="#kljuc"><span class="kazalo-st">?</span> Ključ: kateri tip naloge je to?</a></li>
+          </ol>
+        </nav>
+
+        <!-- SKLOP 1 -->
+        <section class="sklop" id="sklop-1">
+          <header class="sklop-header">
+            <span class="sklop-num">4.16 · 1</span>
+            <h2>Elektromagnetno valovanje</h2>
+            <p>Elektromagnetni spekter.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <p>Elektromagnetno valovanje sestavljata električno in magnetno polje, ki nihata pravokotno drug na drugega in na smer širjenja: je transverzalno. Za širjenje ne potrebuje snovi; v vakuumu se vsa elektromagnetna valovanja širijo s hitrostjo \(c_0 = 3{,}0 \cdot 10^8\ \text{m/s}\). Nastaja pri pospešenem gibanju nabojev: v antenah, pri prehodih elektronov v atomih in pri jedrskih procesih.</p>
+            <figure class="slika">
+<svg viewBox="0 0 560 193" role="img" aria-label="Elektromagnetni spekter" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g1-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g1-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g1-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g1-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g1-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g1-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<defs><linearGradient id="mavrica" x1="0" x2="1"><stop offset="0" stop-color="#d00"/><stop offset="0.2" stop-color="#f80"/><stop offset="0.4" stop-color="#ee0"/><stop offset="0.6" stop-color="#2b2"/><stop offset="0.8" stop-color="#22f"/><stop offset="1" stop-color="#80c"/></linearGradient></defs><rect x="28.5" y="70.3" width="115.30000000000001" height="41.900000000000006" class="s-ploskev" style="stroke:#fff"/><text class="s-txt-b" x="86.15" y="135.8" text-anchor="middle" style="font-size:11px">radijski valovi</text><rect x="143.8" y="70.3" width="73.29999999999998" height="41.900000000000006" class="s-ploskev" style="stroke:#fff"/><text class="s-txt-b" x="180.45" y="135.8" text-anchor="middle" style="font-size:11px">mikrovalovi</text><rect x="217.1" y="70.3" width="73.4" height="41.900000000000006" class="s-ploskev" style="stroke:#fff"/><text class="s-txt-b" x="253.8" y="135.8" text-anchor="middle" style="font-size:11px">infrardeča</text><rect x="321.9" y="70.3" width="52.400000000000034" height="41.900000000000006" class="s-ploskev" style="stroke:#fff"/><text class="s-txt-b" x="348.1" y="135.8" text-anchor="middle" style="font-size:11px">UV</text><rect x="374.3" y="70.3" width="73.39999999999998" height="41.900000000000006" class="s-ploskev" style="stroke:#fff"/><text class="s-txt-b" x="411" y="135.8" text-anchor="middle" style="font-size:11px">rentgenski</text><rect x="447.7" y="70.3" width="83.80000000000001" height="41.900000000000006" class="s-ploskev" style="stroke:#fff"/><text class="s-txt-b" x="489.6" y="135.8" text-anchor="middle" style="font-size:11px">žarki γ</text><rect x="290.5" y="70.3" width="31.399999999999977" height="41.900000000000006" fill="url(#mavrica)"/><text class="s-txt-k2" x="306.2" y="52" text-anchor="middle" style="font-size:11px">vidna svetloba</text><text class="s-txt-muted" x="288.5" y="161.9" text-anchor="end" style="font-size:11px">750 nm</text><text class="s-txt-muted" x="323.9" y="161.9" text-anchor="start" style="font-size:11px">400 nm</text><text class="s-txt-k1" x="28.5" y="33.7" style="font-size:12px">daljša λ, nižja ν</text><text class="s-txt-k1" x="531.5" y="33.7" text-anchor="end" style="font-size:12px">krajša λ, višja ν, večja energija fotona</text>
+</svg>
+<figcaption>Vsa elektromagnetna valovanja se v vakuumu širijo z isto hitrostjo \(c = 3{,}0 \cdot 10^8\ \text{m/s}\), razlikujejo se po valovni dolžini in frekvenci. Vidna svetloba je le ozek pas med okoli 400 nm (vijolična) in 750 nm (rdeča).</figcaption>
+</figure>
+            <p>Razpored po valovni dolžini (ali frekvenci) je <strong>elektromagnetni spekter</strong>. Od najdaljših do najkrajših valovnih dolžin: radijski valovi, mikrovalovi, infrardeča svetloba, vidna svetloba (rdeča, oranžna, rumena, zelena, modra, vijolična), ultravijolična svetloba, rentgenski žarki in žarki gama. Krajša valovna dolžina pomeni višjo frekvenco in večjo energijo fotona.</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-1">
+              <h4>Tip 1: Valovna dolžina in frekvenca v spektru</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Mikrovalovna pečica deluje pri frekvenci \(2{,}45\ \text{GHz}\). Kolikšna je valovna dolžina teh mikrovalov? Kolikšna je frekvenca zelene svetlobe z valovno dolžino \(530\ \text{nm}\)? Razvrsti ju v spekter.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> nastopa vrsta elektromagnetnega valovanja (radio, mikrovalovi, svetloba, rentgen), sprašujejo po valovni dolžini, frekvenci ali razvrstitvi.</p><ul class="kljucne"><li>„frekvenca radijske postaje“</li><li>„valovna dolžina svetlobe“</li><li>„razvrsti po valovni dolžini“</li><li>„GHz, nm“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Pretvori predpone v osnovne enote (\(\text{GHz} = 10^9\ \text{Hz}\), \(\text{nm} = 10^{-9}\ \text{m}\)).</p><div class="na-nalogi"><p>\(\nu = 2{,}45 \cdot 10^9\ \text{Hz}\), \(\lambda = 5{,}30 \cdot 10^{-7}\ \text{m}\).</p></div></li>
+              <li><p class="korak">Uporabi \(c_0 = \lambda\nu\).</p><div class="na-nalogi"><p>\(\lambda = \dfrac{3{,}0 \cdot 10^8}{2{,}45 \cdot 10^9}\ \text{m} = 12\ \text{cm}\); \(\nu = \dfrac{3{,}0 \cdot 10^8}{5{,}30 \cdot 10^{-7}}\ \text{Hz} = 5{,}7 \cdot 10^{14}\ \text{Hz}\).</p></div></li>
+              <li><p class="korak">Rezultat umesti v spekter.</p><div class="na-nalogi"><p>12 cm: mikrovalovi; 530 nm: vidna svetloba (zelena).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Kaj ima večjo frekvenco: rdeča svetloba ali UV?</p><p>UV.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Ali se rentgenski žarki v vakuumu širijo hitreje od radijskih valov?</p><p>Ne, enako hitro.</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 2 -->
+        <section class="sklop" id="sklop-2">
+          <header class="sklop-header">
+            <span class="sklop-num">4.16 · 2</span>
+            <h2>Interferenčni pojavi</h2>
+            <p>Uklon svetlobe, interferenca na dveh režah in na mrežici; merjenje valovne dolžine z mrežico <span class="badge-vr">PZ</span>.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <p>Svetloba se uklanja na zelo ozkih režah in drobnih ovirah (velikosti nekaj mikrometrov). Če svetlobo enobarvnega izvira (laserja) spustimo skozi dve ozki reži, dobimo na zaslonu niz svetlih in temnih prog: svetloba iz obeh rež se na nekaterih mestih ojači, na drugih oslabi, enako kot valovi na vodi. To je dokaz, da je svetloba valovanje.</p>
+            <p><strong>Uklonska mrežica</strong> ima veliko enakomerno razmaknjenih rež (na primer 500 na milimeter). Svetle proge so zato ostre in daleč narazen. Bela svetloba se na mrežici razkloni v spekter, saj ima vsaka barva ojačitve v drugih smereh; rdeča se ukloni bolj kot vijolična.</p>
+            <figure class="slika slika--ozka">
+<svg viewBox="0 0 420 373" role="img" aria-label="Uklonska mrežica" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g2-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g2-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g2-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g2-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g2-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g2-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<polygon class="s-lik-2" points="96,262 102.9,262 102.9,111 96,111"/>
+<polygon class="s-ploskev-2" points="332.2,349.2 339.2,349.2 339.2,23.8 332.2,23.8"/>
+<line class="s-k3" x1="29.6" y1="238.8" x2="96.5" y2="238.8"/>
+<line class="s-k3" x1="29.6" y1="221.4" x2="96.5" y2="221.4"/>
+<line class="s-k3" x1="29.6" y1="203.9" x2="96.5" y2="203.9"/>
+<line class="s-k3" x1="29.6" y1="186.5" x2="96.5" y2="186.5"/>
+<line class="s-k3" x1="29.6" y1="169.1" x2="96.5" y2="169.1"/>
+<line class="s-k3" x1="29.6" y1="151.6" x2="96.5" y2="151.6"/>
+<line class="s-k3" x1="29.6" y1="134.2" x2="96.5" y2="134.2"/>
+<line class="s-k1" x1="99.5" y1="186.5" x2="332.2" y2="331.8"/>
+<line class="s-k1" x1="99.5" y1="186.5" x2="332.2" y2="259.1"/>
+<line class="s-k2" x1="99.5" y1="186.5" x2="332.2" y2="186.5"/>
+<line class="s-k1" x1="99.5" y1="186.5" x2="332.2" y2="113.9"/>
+<line class="s-k1" x1="99.5" y1="186.5" x2="332.2" y2="41.2"/>
+<line class="s-asim" x1="99.5" y1="186.5" x2="332.2" y2="186.5"/>
+<circle class="s-tocka-2" cx="335.7" cy="331.8" r="5"/>
+<text class="s-txt-b" x="347.7" y="335.8" text-anchor="start">N = 2</text>
+<circle class="s-tocka-2" cx="335.7" cy="259.1" r="5"/>
+<text class="s-txt-b" x="347.7" y="263.1" text-anchor="start">N = 1</text>
+<circle class="s-tocka-2" cx="335.7" cy="186.5" r="5"/>
+<text class="s-txt-b" x="347.7" y="190.5" text-anchor="start">N = 0</text>
+<circle class="s-tocka-2" cx="335.7" cy="113.9" r="5"/>
+<text class="s-txt-b" x="347.7" y="117.9" text-anchor="start">N = 1</text>
+<circle class="s-tocka-2" cx="335.7" cy="41.2" r="5"/>
+<text class="s-txt-b" x="347.7" y="45.2" text-anchor="start">N = 2</text>
+<text class="s-txt-k3" x="64.5" y="108.1" text-anchor="middle">svetloba</text>
+<text class="s-txt-muted" x="99.5" y="282.4" text-anchor="middle">mrežica</text>
+<text class="s-txt-muted" x="335.7" y="365.2" text-anchor="middle">zaslon</text>
+<path class="s-kot" d="M99.5,186.5 L159.5,186.5 A60,60 0 0 0 156.8,168.6 Z"/>
+<text class="s-txt-k4" x="172.7" y="179.3" text-anchor="middle">α<tspan dy="4" style="font-size:10px">1</tspan></text>
+</svg>
+<figcaption>Vzporeden curek enobarvne svetlobe gre skozi mrežico z razmikom rež \(d\). Na zaslonu se pokažejo svetle lise v smereh, kjer je razlika poti iz sosednjih rež \(N\lambda\): \(d\sin\alpha_N = N\lambda\).</figcaption>
+</figure>
+            <h4>Merjenje valovne dolžine <span class="badge-vr">PZ</span></h4>
+            <p>Ojačitve so v smereh, kjer je razlika poti svetlobe iz sosednjih rež celo število valovnih dolžin:</p>
+            <p>\[d\sin\alpha_N = N\lambda, \qquad N = 0, 1, 2, \ldots\]</p>
+            <p>\(d\) je razmik med sosednjima režama (pri 500 režah na milimeter je \(d = 2\ \mu\text{m}\)). Kot \(\alpha_N\) izmerimo iz razdalje \(L\) do zaslona in odmika lise \(x_N\) od sredine: \(\tan\alpha_N = x_N/L\). Največji red je največje \(N\), za katerega je \(N\lambda/d \le 1\).</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-2">
+              <h4>Tip 2: Uklonska mrežica <span class="badge-vr">PZ</span></h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Laserska svetloba pade pravokotno na uklonsko mrežico s \(300\) režami na milimeter. Zaslon je \(2{,}0\ \text{m}\) za mrežico, lisi prvega reda sta \(0{,}40\ \text{m}\) levo in desno od sredine. Kolikšna je valovna dolžina svetlobe? Koliko svetlih lis je na zaslonu?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> mrežica (ali reža) in enobarvna svetloba, sprašujejo po valovni dolžini, kotu ali razdalji do lis, ali po številu redov.</p><ul class="kljucne"><li>„uklonska mrežica“</li><li>„rež na milimeter“</li><li>„lisa prvega reda“</li><li>„laser“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Izračunaj razmik med režama \(d\) (1 mm deljen s številom rež).</p><div class="na-nalogi"><p>\(d = \dfrac{10^{-3}}{300}\ \text{m} = 3{,}33\ \mu\text{m}\).</p></div></li>
+              <li><p class="korak">Iz geometrije določi kot \(\tan\alpha = x/L\).</p><div class="na-nalogi"><p>\(\tan\alpha_1 = 0{,}40/2{,}0 = 0{,}20\): \(\alpha_1 = 11{,}3^\circ\).</p></div></li>
+              <li><p class="korak">Uporabi \(d\sin\alpha_N = N\lambda\).</p><div class="na-nalogi"><p>\(\lambda = d\sin\alpha_1 = 3{,}33 \cdot 10^{-6} \cdot 0{,}196\ \text{m} = 6{,}5 \cdot 10^{-7}\ \text{m} = 650\ \text{nm}\) (rdeča svetloba).</p></div></li>
+              <li><p class="korak">Za število lis poišči največji \(N\) z \(N\lambda/d \le 1\) in štej obe strani in sredino.</p><div class="na-nalogi"><p>\(d/\lambda = 5{,}1\): \(N_{max} = 5\), lis je \(2 \cdot 5 + 1 = 11\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Kako se razmakneta lisi, če uporabimo zeleno svetlobo namesto rdeče?</p><p>Lisi sta bližje sredini.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Pod kolikšnim kotom je drugi red za 500 nm in mrežico s 400 režami na mm?</p><p>\(\sin\alpha = 2 \cdot 500 \cdot 10^{-9}/2{,}5 \cdot 10^{-6} = 0{,}40\), \(\alpha = 24^\circ\).</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 3 -->
+        <section class="sklop" id="sklop-3">
+          <header class="sklop-header">
+            <span class="sklop-num">4.16 · 3</span>
+            <h2>Odboj in lom svetlobe</h2>
+            <p>Odbojni zakon, lomni zakon in lomni količnik, popolni odboj.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <h4>Odbojni zakon</h4>
+            <p>Pri odboju na gladki ploskvi je odbojni kot enak vpadnemu, \(\alpha' = \alpha\). Oba merimo od vpadne pravokotnice, vpadni žarek, odbiti žarek in pravokotnica ležijo v isti ravnini. Na hrapavi ploskvi se svetloba razprši na vse strani (difuzni odboj), zato predmete vidimo z vseh smeri.</p>
+            <h4>Lom in lomni količnik</h4>
+            <p>V snovi je hitrost svetlobe manjša kot v vakuumu. Lomni količnik pove, kolikokrat:</p>
+            <p>\[n = \frac{c_0}{c}.\]</p>
+            <p>Pri prehodu svetlobe v drugo snov se spremeni hitrost in žarek se lomi po lomnem zakonu:</p>
+            <p>\[n_1\sin\alpha = n_2\sin\beta.\]</p>
+            <figure class="slika slika--ozka">
+<svg viewBox="0 0 340 315" role="img" aria-label="Odboj in lom svetlobe" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g3-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g3-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g3-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g3-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g3-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g3-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<polygon class="s-ploskev" points="18,297 322,297 322,157.5 18,157.5"/>
+<line class="s-crta" x1="18" y1="157.5" x2="322" y2="157.5"/>
+<line class="s-asim" x1="170" y1="290.7" x2="170" y2="24.3"/>
+<line class="s-k2" x1="73" y1="76" x2="150.6" y2="141.2" marker-end="url(#g3-k2)"/>
+<line class="s-k2" x1="150.6" y1="141.2" x2="170" y2="157.5"/>
+<line class="s-k4" x1="170" y1="157.5" x2="267" y2="76" marker-end="url(#g3-k4)"/>
+<line class="s-k1" x1="170" y1="157.5" x2="234.7" y2="266.5" marker-end="url(#g3-k1)"/>
+<text class="s-txt-b" x="30.7" y="37" text-anchor="start">n<tspan dy="4" style="font-size:10px">1</tspan><tspan dy="-4"> (zrak)</tspan></text>
+<text class="s-txt-b" x="30.7" y="278" text-anchor="start">n<tspan dy="4" style="font-size:10px">2</tspan><tspan dy="-4"> (steklo)</tspan></text>
+<text class="s-txt-k4" x="268.2" y="37" text-anchor="middle">odbiti</text>
+<text class="s-txt-k1" x="258.7" y="281.1" text-anchor="middle">lomljeni</text>
+<text class="s-txt-k2" x="59.2" y="94.1" text-anchor="end">vpadni</text>
+<path class="s-kot" d="M170,157.5 L170,121.5 A36,36 0 0 0 142.4,134.4 Z"/>
+<text class="s-txt-k4" x="150.1" y="118.9" text-anchor="middle">α</text>
+<path class="s-kot" d="M170,157.5 L197.6,134.4 A36,36 0 0 0 170,121.5 Z"/>
+<text class="s-txt-k4" x="189.9" y="118.9" text-anchor="middle">α'</text>
+<path class="s-kot" d="M170,157.5 L170,193.5 A36,36 0 0 0 188.4,188.5 Z"/>
+<text class="s-txt-k4" x="182.4" y="206.8" text-anchor="middle">β</text>
+</svg>
+<figcaption>Na meji se del svetlobe odbije (odbojni kot je enak vpadnemu), del se lomi. Pri prehodu v optično gostejšo snov se žarek lomi proti vpadni pravokotnici.</figcaption>
+</figure>
+            <p>Pri prehodu v optično gostejšo snov (večji \(n\)) se žarek lomi proti pravokotnici, pri prehodu v redkejšo od nje. Frekvenca se ne spremeni, valovna dolžina se skrajša \(n\)-krat. Lomni količnik je malo odvisen od barve, zato prizma razkloni belo svetlobo v mavrico (disperzija).</p>
+            <h4>Popolni odboj</h4>
+            <p>Ko gre svetloba iz gostejše v redkejšo snov, je lomni kot večji od vpadnega. Pri <strong>mejnem kotu</strong> \(\alpha_m\) je lomni kot \(90^\circ\); pri še večjih vpadnih kotih lomljenega žarka ni in vsa svetloba se odbije:</p>
+            <p>\[\sin\alpha_m = \frac{n_2}{n_1}.\]</p>
+            <figure class="slika slika--ozka">
+<svg viewBox="0 0 340 304" role="img" aria-label="Popolni odboj" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g4-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g4-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g4-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g4-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g4-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g4-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<polygon class="s-ploskev" points="18,286 322,286 322,152 18,152"/>
+<line class="s-crta" x1="18" y1="152" x2="322" y2="152"/>
+<line class="s-asim" x1="163.9" y1="279.9" x2="163.9" y2="24.1"/>
+<line class="s-k3" x1="112.5" y1="262.4" x2="163.9" y2="152"/>
+<line class="s-k3" x1="163.9" y1="152" x2="241" y2="57.8" marker-end="url(#g4-k3)"/>
+<line class="s-k4" x1="82.9" y1="242.8" x2="163.9" y2="152"/>
+<line class="s-k4" x1="163.9" y1="152" x2="297.7" y2="150.8" marker-end="url(#g4-k4)"/>
+<line class="s-k2" x1="58.6" y1="212.9" x2="163.9" y2="152"/>
+<line class="s-k2" x1="163.9" y1="152" x2="269.2" y2="212.9" marker-end="url(#g4-k2)"/>
+<text class="s-txt-b" x="30.2" y="36.3" text-anchor="start">zrak</text>
+<text class="s-txt-b" x="30.2" y="267.7" text-anchor="start">steklo</text>
+<text class="s-txt-k2" x="252.1" y="234.2" text-anchor="start">popolni odboj</text>
+<text class="s-txt-k4" x="315.9" y="136.8" text-anchor="end">mejni kot</text>
+
+</svg>
+<figcaption>Žarki iz stekla proti zraku. Pri mejnem kotu (\(42^\circ\) za steklo) gre lomljeni žarek vzdolž meje, pri večjih vpadnih kotih se vsa svetloba odbije nazaj v steklo.</figcaption>
+</figure>
+            <p>Popolni odboj vodi svetlobo po optičnih vlaknih in se uporablja v prizmah daljnogledov. Lesk diamanta je posledica majhnega mejnega kota (\(24^\circ\)).</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-3">
+              <h4>Tip 3: Odbojni in lomni zakon</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Žarek iz zraka pade na gladino vode (\(n = 1{,}33\)) pod kotom \(50^\circ\) glede na vpadno pravokotnico. Pod kolikšnim kotom se odbije in pod kolikšnim kotom se lomi? Kolikšna je hitrost svetlobe v vodi?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> žarek prehaja mejo med dvema snovema ali se odbije; sprašujejo po kotu, lomnem količniku ali hitrosti svetlobe v snovi.</p><ul class="kljucne"><li>„lomni količnik“</li><li>„vpadni kot“</li><li>„pod kolikšnim kotom se lomi“</li><li>„hitrost svetlobe v“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Nariši vpadno pravokotnico in preveri, da so koti merjeni od nje (ne od ploskve).</p><div class="na-nalogi"><p>\(\alpha = 50^\circ\) od pravokotnice; odbojni kot je tudi \(50^\circ\).</p></div></li>
+              <li><p class="korak">Zapiši lomni zakon in izračunaj neznani kot.</p><div class="na-nalogi"><p>\(\sin\beta = \dfrac{1 \cdot \sin 50^\circ}{1{,}33} = 0{,}576\): \(\beta = 35^\circ\).</p></div></li>
+              <li><p class="korak">Hitrost v snovi je \(c = c_0/n\).</p><div class="na-nalogi"><p>\(c = 3{,}0 \cdot 10^8/1{,}33 = 2{,}26 \cdot 10^8\ \text{m/s}\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Žarek pade na ravno zrcalo pod kotom \(30^\circ\) glede na ploskev zrcala. Odbojni kot glede na pravokotnico?</p><p>\(60^\circ\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Svetloba z valovno dolžino 600 nm preide v steklo z \(n = 1{,}5\). Valovna dolžina v steklu?</p><p>400 nm (barva se ne spremeni, frekvenca ostane).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Žarek gre iz zraka v steklo pod kotom \(40^\circ\) in se lomi pod \(25^\circ\). Lomni količnik?</p><p>\(n = \sin 40^\circ/\sin 25^\circ = 1{,}52\).</p></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-4">
+              <h4>Tip 4: Popolni odboj</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Kolikšen je mejni kot popolnega odboja za prehod iz stekla z lomnim količnikom \(1{,}50\) v zrak? Ali se žarek, ki v steklu vpade na mejo pod kotom \(45^\circ\), lomi v zrak?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> svetloba gre iz gostejše v redkejšo snov (iz vode, stekla, vlakna v zrak), sprašujejo po mejnem kotu ali ali žarek izstopi.</p><ul class="kljucne"><li>„mejni kot“</li><li>„popolni odboj“</li><li>„optično vlakno“</li><li>„ali žarek izstopi“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Preveri, da gre svetloba iz snovi z večjim v snov z manjšim lomnim količnikom (sicer popolnega odboja ni).</p><div class="na-nalogi"><p>Iz stekla (1,50) v zrak (1,00): popolni odboj je mogoč.</p></div></li>
+              <li><p class="korak">Izračunaj mejni kot \(\sin\alpha_m = n_2/n_1\).</p><div class="na-nalogi"><p>\(\sin\alpha_m = 1/1{,}50 = 0{,}667\): \(\alpha_m = 42^\circ\).</p></div></li>
+              <li><p class="korak">Primerjaj vpadni kot z mejnim: večji pomeni popolni odboj.</p><div class="na-nalogi"><p>\(45^\circ &gt; 42^\circ\): žarek se popolnoma odbije, v zrak ne izstopi.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Mejni kot za prehod iz vode v zrak?</p><p>\(49^\circ\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Ali je popolni odboj mogoč pri prehodu iz zraka v vodo?</p><p>Ne.</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 4 -->
+        <section class="sklop" id="sklop-4">
+          <header class="sklop-header">
+            <span class="sklop-num">4.16 · 4</span>
+            <h2>Preslikave z zrcali in lečami</h2>
+            <p>Grafična konstrukcija slik z ravnimi in krivimi zrcali ter lečami, oko in fotoaparat; enačba preslikave <span class="badge-vr">PZ</span>.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <h4>Ravno zrcalo</h4>
+            <p>Ravno zrcalo da navidezno, pokončno sliko enake velikosti, ki je za zrcalom enako daleč, kot je predmet pred njim. Leva in desna stran sta zamenjani.</p>
+            <h4>Krivo zrcalo</h4>
+            <p>Vbočeno (konkavno) zrcalo zbira vzporedne žarke v gorišču \(F\), ki je na polovici krivinskega polmera: \(f = r/2\). Izbočeno (konveksno) zrcalo žarke razpršuje, da vedno pomanjšano navidezno sliko (vzvratna ogledala, zrcala na križiščih). Za konstrukcijo uporabimo dva od teh žarkov:</p>
+            <ul>
+              <li>žarek, vzporeden z osjo, se odbije skozi gorišče;</li>
+              <li>žarek skozi gorišče se odbije vzporedno z osjo;</li>
+              <li>žarek skozi središče krivine \(C\) se odbije sam vase.</li>
+            </ul>
+            <figure class="slika">
+<svg viewBox="0 0 420 307" role="img" aria-label="Konkavno zrcalo" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g5-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g5-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g5-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g5-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g5-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g5-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<line class="s-pom" x1="18" y1="142.2" x2="379.4" y2="142.2"/>
+<line class="s-k2" x1="176.1" y1="85.8" x2="356.8" y2="85.8"/>
+<line class="s-k2" x1="356.8" y1="85.8" x2="18" y2="255.1"/>
+<line class="s-k1" x1="176.1" y1="85.8" x2="356.8" y2="236.3"/>
+<line class="s-k1" x1="356.8" y1="236.3" x2="18" y2="236.3"/>
+<line class="s-k3" x1="176.1" y1="142.2" x2="176.1" y2="85.8" marker-end="url(#g5-k3)"/>
+<text class="s-txt-k3" x="184.1" y="114" text-anchor="start">P</text>
+<line class="s-k2" x1="55.6" y1="142.2" x2="55.6" y2="236.3" marker-end="url(#g5-k2)"/>
+<text class="s-txt-k2" x="45.6" y="189.3" text-anchor="end">S</text>
+<circle class="s-tocka" cx="243.9" cy="142.2" r="3.5"/>
+<text class="s-txt-b" x="243.9" y="158.2" text-anchor="middle">F</text>
+<circle class="s-tocka" cx="130.9" cy="142.2" r="3.5"/>
+<text class="s-txt-b" x="130.9" y="158.2" text-anchor="middle">C</text>
+<path class="s-crta" d="M316,271.7 A225.9,225.9 0 0 0 316,12.7"/>
+</svg>
+<figcaption>Konkavno (vbočeno) zrcalo z goriščem na polovici krivinskega polmera. Žarek, vzporeden z osjo, se odbije skozi gorišče; žarek skozi gorišče se odbije vzporedno z osjo. Predmet med \(F\) in \(C\) da realno, obrnjeno, povečano sliko.</figcaption>
+</figure>
+            <h4>Leče</h4>
+            <p>Zbiralna leča (na sredini debelejša) zbira vzporedne žarke v gorišču \(F'\) za lečo, razpršilna (na sredini tanjša) jih razprši, kot da bi izhajali iz gorišča pred lečo. Za konstrukcijo slike uporabimo:</p>
+            <ul>
+              <li>žarek, vzporeden z osjo, gre po leči skozi gorišče \(F'\) (pri razpršilni leči, kot da bi prihajal iz \(F\));</li>
+              <li>žarek skozi središče leče gre naravnost;</li>
+              <li>žarek skozi gorišče \(F\) gre po leči vzporedno z osjo.</li>
+            </ul>
+            <figure class="slika">
+<svg viewBox="0 0 460 222" role="img" aria-label="Realna slika zbiralne leče" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g6-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g6-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g6-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g6-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g6-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g6-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<line class="s-pom" x1="18" y1="99.8" x2="442" y2="99.8"/>
+<line class="s-k2" x1="62.6" y1="55.2" x2="174.2" y2="55.2"/>
+<line class="s-k2" x1="174.2" y1="55.2" x2="442" y2="215.9"/>
+<line class="s-k1" x1="62.6" y1="55.2" x2="442" y2="207"/>
+<line class="s-k3" x1="62.6" y1="99.8" x2="62.6" y2="55.2" marker-end="url(#g6-k3)"/>
+<text class="s-txt-k3" x="52.6" y="77.5" text-anchor="end">P</text>
+<line class="s-k2" x1="397.4" y1="99.8" x2="397.4" y2="189.1" marker-end="url(#g6-k2)"/>
+<text class="s-txt-k2" x="407.4" y="144.5" text-anchor="start">S</text>
+<circle class="s-tocka" cx="248.6" cy="99.8" r="3.5"/>
+<text class="s-txt-b" x="248.6" y="115.8" text-anchor="middle">F'</text>
+<circle class="s-tocka" cx="99.8" cy="99.8" r="3.5"/>
+<text class="s-txt-b" x="99.8" y="115.8" text-anchor="middle">F</text>
+<path class="s-lik" d="M174.2,-8 Q192.2,99.85 174.2,207.7 Q156.2,99.85 174.2,-8 Z"/>
+</svg>
+<figcaption>Predmet je med \(f\) in \(2f\) pred zbiralno lečo. Žarek, vzporeden z osjo, gre po leči skozi gorišče \(F'\); žarek skozi središče leče gre naravnost. Kjer se sekata, je slika: realna, obrnjena, povečana.</figcaption>
+</figure>
+            <p>Če se žarki za lečo res sekajo, je slika <strong>realna</strong> (lahko jo ujamemo na zaslon) in obrnjena. Če se razhajajo, se sekajo le njihova podaljška; slika je <strong>navidezna</strong>, pokončna in je na isti strani kot predmet.</p>
+            <div class="slike-vrsta"><figure class="slika">
+<svg viewBox="0 0 300 164" role="img" aria-label="Navidezna slika zbiralne leče" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g7-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g7-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g7-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g7-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g7-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g7-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<line class="s-pom" x1="18" y1="123.4" x2="282" y2="123.4"/>
+<line class="s-k2" x1="108.5" y1="93.3" x2="153.8" y2="93.3"/>
+<line class="s-k2" x1="153.8" y1="93.3" x2="282" y2="144.5"/>
+<line class="s-k1" x1="108.5" y1="93.3" x2="282" y2="208.7"/>
+<line class="s-asim" x1="153.8" y1="93.3" x2="40.6" y2="48.1"/>
+<line class="s-asim" x1="108.5" y1="93.3" x2="40.6" y2="48.1"/>
+<line class="s-k3" x1="108.5" y1="123.4" x2="108.5" y2="93.3" marker-end="url(#g7-k3)"/>
+<text class="s-txt-k3" x="98.5" y="108.4" text-anchor="end">P</text>
+<line class="s-k4" x1="40.6" y1="123.4" x2="40.6" y2="48.1" marker-end="url(#g7-k4)" stroke-dasharray="6 4"/>
+<text class="s-txt-k4" x="50.6" y="85.8" text-anchor="start">S</text>
+<circle class="s-tocka" cx="229.2" cy="123.4" r="3.5"/>
+<text class="s-txt-b" x="229.2" y="139.4" text-anchor="middle">F'</text>
+<circle class="s-tocka" cx="78.3" cy="123.4" r="3.5"/>
+<text class="s-txt-b" x="78.3" y="139.4" text-anchor="middle">F</text>
+<path class="s-lik" d="M153.8,29.3 Q171.8,123.4 153.8,217.5 Q135.8,123.4 153.8,29.3 Z"/>
+</svg>
+<figcaption>Predmet med lečo in goriščem: slika je navidezna, pokončna in povečana (lupa).</figcaption>
+</figure><figure class="slika">
+<svg viewBox="0 0 300 149" role="img" aria-label="Razpršilna leča" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g8-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g8-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g8-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g8-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g8-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g8-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<line class="s-pom" x1="18" y1="108.4" x2="282" y2="108.4"/>
+<line class="s-k2" x1="40.6" y1="63.2" x2="153.8" y2="63.2"/>
+<line class="s-k2" x1="153.8" y1="63.2" x2="282" y2="-13.6"/>
+<line class="s-k1" x1="40.6" y1="63.2" x2="282" y2="159.6"/>
+<line class="s-asim" x1="153.8" y1="63.2" x2="108.5" y2="90.3"/>
+<line class="s-asim" x1="40.6" y1="63.2" x2="108.5" y2="90.3"/>
+<line class="s-k3" x1="40.6" y1="108.4" x2="40.6" y2="63.2" marker-end="url(#g8-k3)"/>
+<text class="s-txt-k3" x="30.6" y="85.8" text-anchor="end">P</text>
+<line class="s-k4" x1="108.5" y1="108.4" x2="108.5" y2="90.3" marker-end="url(#g8-k4)" stroke-dasharray="6 4"/>
+<text class="s-txt-k4" x="118.5" y="99.4" text-anchor="start">S</text>
+<circle class="s-tocka" cx="78.3" cy="108.4" r="3.5"/>
+<text class="s-txt-b" x="78.3" y="124.4" text-anchor="middle">F'</text>
+<circle class="s-tocka" cx="229.2" cy="108.4" r="3.5"/>
+<text class="s-txt-b" x="229.2" y="124.4" text-anchor="middle">F</text>
+<path class="s-lik" d="M144.8,44.4 L162.8,44.4 Q154.8,108.4 162.8,172.4 L144.8,172.4 Q152.8,108.4 144.8,44.4 Z"/>
+</svg>
+<figcaption>Razpršilna leča: slika je vedno navidezna, pokončna in pomanjšana.</figcaption>
+</figure></div>
+            <table class="tabela">
+              <thead><tr><th>Lega predmeta (zbiralna leča)</th><th>Slika</th></tr></thead>
+              <tbody>
+                <tr><td>dlje od \(2f\)</td><td>realna, obrnjena, pomanjšana (fotoaparat, oko)</td></tr>
+                <tr><td>v \(2f\)</td><td>realna, obrnjena, enako velika</td></tr>
+                <tr><td>med \(f\) in \(2f\)</td><td>realna, obrnjena, povečana (projektor)</td></tr>
+                <tr><td>v gorišču</td><td>ni slike (žarki so vzporedni)</td></tr>
+                <tr><td>med lečo in \(f\)</td><td>navidezna, pokončna, povečana (lupa)</td></tr>
+              </tbody>
+            </table>
+            <h4>Enačba preslikave <span class="badge-vr">PZ</span></h4>
+            <p>Za tanke leče in zrcala velja</p>
+            <p>\[\frac1f = \frac1a + \frac1b, \qquad \frac{S}{P} = \frac{b}{a},\]</p>
+            <p>kjer je \(a\) razdalja predmeta, \(b\) razdalja slike in \(f\) goriščna razdalja. Za navidezno sliko je \(b\) negativen, za razpršilno lečo in izbočeno zrcalo je \(f\) negativna. Lomnost leče je \(1/f\), merimo jo v dioptrijah (\(1\ \text{D} = 1\ \text{m}^{-1}\)).</p>
+            <h4>Oko in fotoaparat</h4>
+            <p>Fotoaparat ima objektiv (zbiralno lečo), ki da na senzorju realno, obrnjeno, pomanjšano sliko; ostrimo s premikanjem objektiva, s čimer spreminjamo razdaljo \(b\). V očesu roženica in leča skupaj delujeta kot zbiralna leča in dasta sliko na mrežnici. Razdalja do mrežnice je stalna, zato oko izostri tako, da mišice spreminjajo ukrivljenost leče (akomodacija). Kratkovidnemu očesu pomagamo z razpršilno lečo, daljnovidnemu z zbiralno.</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-5">
+              <h4>Tip 5: Grafična konstrukcija slike</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Predmet je \(3\ \text{cm}\) pred zbiralno lečo z goriščno razdaljo \(2\ \text{cm}\). Nariši sliko in jo opiši. Kaj se zgodi, če predmet premaknemo na \(1\ \text{cm}\) pred lečo?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> sprašujejo po legi, velikosti ali vrsti slike, pogosto v mreži, kjer moraš narisati žarke; ali opisno (kakšna je slika v ogledalu, lupi, fotoaparatu).</p><ul class="kljucne"><li>„nariši sliko“</li><li>„konstruiraj“</li><li>„realna ali navidezna“</li><li>„pokončna ali obrnjena“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Nariši optično os, lečo (zrcalo), obe gorišči in predmet kot puščico na osi.</p><div class="na-nalogi"><p>Predmet na \(-3\), gorišči na \(\pm 2\).</p></div></li>
+              <li><p class="korak">Iz vrha predmeta nariši vsaj dva značilna žarka (vzporedni, skozi središče, skozi gorišče).</p><div class="na-nalogi"><p>Vzporedni žarek gre za lečo skozi \(F'\), žarek skozi središče gre naravnost.</p></div></li>
+              <li><p class="korak">Kjer se žarka sekata, je vrh slike; če se razhajata, ju podaljšaj nazaj (navidezna slika).</p><div class="na-nalogi"><p>Žarka se sekata 6 cm za lečo: slika je realna, obrnjena, dvakrat povečana.</p></div></li>
+              <li><p class="korak">Opiši sliko: realna ali navidezna, pokončna ali obrnjena, povečana ali pomanjšana.</p><div class="na-nalogi"><p>Pri 1 cm (med lečo in goriščem) se žarka za lečo razhajata; podaljška se sekata pred lečo: navidezna, pokončna, povečana slika.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Kakšna je slika v izbočenem vzvratnem ogledalu?</p><p>Navidezna, pokončna, pomanjšana.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Kje mora biti predmet pred zbiralno lečo, da dobimo enako veliko realno sliko?</p><p>Na razdalji \(2f\).</p></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-6">
+              <h4>Tip 6: Enačba preslikave in povečava <span class="badge-vr">PZ</span></h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Predmet z višino \(2{,}0\ \text{cm}\) je \(30\ \text{cm}\) pred zbiralno lečo z goriščno razdaljo \(10\ \text{cm}\). Kje je slika in kako velika je? Kje je slika, če je predmet \(5{,}0\ \text{cm}\) pred lečo?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> podane so razdalje predmeta, slike ali goriščna razdalja (dioptrija), sprašujejo po legi ali velikosti slike.</p><ul class="kljucne"><li>„goriščna razdalja“</li><li>„dioptrija“</li><li>„kje nastane slika“</li><li>„kolikokrat povečana“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Zapiši znane količine s predznaki (\(f &gt; 0\) za zbiralno lečo in vbočeno zrcalo).</p><div class="na-nalogi"><p>\(f = 10\ \text{cm}\), \(a = 30\ \text{cm}\).</p></div></li>
+              <li><p class="korak">Iz \(1/f = 1/a + 1/b\) izračunaj neznano razdaljo.</p><div class="na-nalogi"><p>\(\dfrac1b = \dfrac1{10} - \dfrac1{30} = \dfrac1{15}\): \(b = 15\ \text{cm}\) (realna slika za lečo).</p></div></li>
+              <li><p class="korak">Povečava je \(b/a\), velikost slike \(S = P\,b/a\).</p><div class="na-nalogi"><p>\(S = 2{,}0 \cdot 15/30 = 1{,}0\ \text{cm}\), obrnjena.</p></div></li>
+              <li><p class="korak">Negativen \(b\) pomeni navidezno sliko na strani predmeta.</p><div class="na-nalogi"><p>\(a = 5{,}0\): \(\dfrac1b = \dfrac1{10} - \dfrac15 = -\dfrac1{10}\), \(b = -10\ \text{cm}\): navidezna, pokončna, dvakrat povečana.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Leča ima lomnost 4 D. Goriščna razdalja?</p><p>25 cm.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Projektor z objektivom \(f = 10\ \text{cm}\) da sliko na zaslonu 4,0 m stran. Kje je diapozitiv?</p><p>\(a = 10{,}3\ \text{cm}\), povečava 39.</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Vbočeno zrcalo s krivinskim polmerom 40 cm, predmet 30 cm pred njim. Slika?</p><p>\(f = 20\), \(b = 60\ \text{cm}\), realna, dvakrat povečana.</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 5 -->
+        <section class="sklop sklop--visja" id="sklop-5">
+          <header class="sklop-header">
+            <span class="sklop-num">4.16 · 5</span>
+            <h2>Svetlobni tok <span class="badge-vr">PZ</span></h2>
+            <p>Moč in gostota svetlobnega toka točkastega svetila, Stefanov zakon.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <p>Točkasto svetilo z močjo \(P\) seva enakomerno na vse strani. Na razdalji \(r\) se ta moč porazdeli po krogli s površino \(4\pi r^2\). <strong>Gostota svetlobnega toka</strong> (moč na enoto ploščine, pravokotne na žarke) je</p>
+            <p>\[j = \frac{P}{4\pi r^2}.\]</p>
+            <p>Enota je \(\text{W/m}^2\). Gostota pada s kvadratom razdalje: dvakrat dlje je štirikrat manjša. Na ploskev \(S\), pravokotno na žarke, pade moč \(jS\). Primer: gostota sončnega toka nad ozračjem Zemlje je okoli \(1{,}4\ \text{kW/m}^2\) (solarna konstanta).</p>
+            <h4>Stefanov zakon</h4>
+            <p>Telo s temperaturo \(T\) seva; črno telo seva z enoto površine moč</p>
+            <p>\[j = \sigma T^4, \qquad \sigma = 5{,}67 \cdot 10^{-8}\ \frac{\text{W}}{\text{m}^2\text{K}^4}.\]</p>
+            <p>Celotna moč sevanja krogle s polmerom \(R\) je \(P = 4\pi R^2 \sigma T^4\). Pri dvakrat višji absolutni temperaturi telo seva šestnajstkrat več.</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-7">
+              <h4>Tip 7: Gostota svetlobnega toka in sevanje <span class="badge-vr">PZ</span></h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Žarnica s svetlobno močjo \(12\ \text{W}\) sveti enakomerno na vse strani. Kolikšna je gostota svetlobnega toka \(2{,}0\ \text{m}\) od nje? Koliko svetlobne moči pade na knjigo s ploščino \(0{,}060\ \text{m}^2\), ki je pravokotna na žarke?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> točkasto svetilo (žarnica, zvezda, Sonce) in razdalja, sprašujejo po gostoti toka, moči na ploskev ali po temperaturi sevajočega telesa.</p><ul class="kljucne"><li>„gostota svetlobnega toka“</li><li>„W/m²“</li><li>„seva enakomerno na vse strani“</li><li>„temperatura površja“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Moč porazdeli po površini krogle z razdaljo kot polmerom.</p><div class="na-nalogi"><p>\(j = \dfrac{12}{4\pi \cdot 2{,}0^2}\ \text{W/m}^2 = 0{,}24\ \text{W/m}^2\).</p></div></li>
+              <li><p class="korak">Moč na ploskev je \(jS\) (ploskev pravokotna na žarke).</p><div class="na-nalogi"><p>\(P' = 0{,}24 \cdot 0{,}060\ \text{W} = 14\ \text{mW}\).</p></div></li>
+              <li><p class="korak">Pri sevanju telesa uporabi \(j = \sigma T^4\) na njegovi površini.</p><div class="na-nalogi"><p>Pri tej nalogi ni potrebno; glej primere.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Koliko seva \(1\ \text{m}^2\) površja s temperaturo 6000 K?</p><p>\(7{,}3 \cdot 10^7\ \text{W}\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Razdaljo od svetila potrojimo. Gostota toka?</p><p>Devetkrat manjša.</p></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="subsection" id="kljuc">
+          <div class="subsection-head">
+            <h2>Ključ: kateri tip naloge je to?</h2>
+            <p>Poišči besedo iz navodila naloge in skoči na pravi postopek.</p>
+          </div>
+          <div class="info-card">
+            <div class="tabela-wrap">
+              <table class="tabela">
+                <thead><tr><th>V besedilu naloge piše …</th><th>Tip</th></tr></thead>
+                <tbody>
+                  <tr><td>„frekvenca radijske postaje“, „valovna dolžina svetlobe“, „spekter“</td><td><a href="#tip-1">Tip 1</a></td></tr>
+                  <tr><td>„uklonska mrežica“, „rež na milimeter“</td><td><a href="#tip-2">Tip 2</a></td></tr>
+                  <tr><td>„lomni količnik“, „pod kolikšnim kotom se lomi“</td><td><a href="#tip-3">Tip 3</a></td></tr>
+                  <tr><td>„mejni kot“, „popolni odboj“, „optično vlakno“</td><td><a href="#tip-4">Tip 4</a></td></tr>
+                  <tr><td>„nariši sliko“, „realna ali navidezna“</td><td><a href="#tip-5">Tip 5</a></td></tr>
+                  <tr><td>„goriščna razdalja“, „kje nastane slika“, „dioptrija“</td><td><a href="#tip-6">Tip 6</a></td></tr>
+                  <tr><td>„gostota svetlobnega toka“, „seva na vse strani“</td><td><a href="#tip-7">Tip 7</a></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>Pogoste napake</h2>
+          </div>
+          <div class="info-card">
+            <ul>
+              <li>Kote meriš od ploskve namesto od vpadne pravokotnice.</li>
+              <li>Pri mrežici vzameš število rež na milimeter kot \(d\) (treba je obrniti).</li>
+              <li>Misliš, da je popolni odboj mogoč tudi pri prehodu v gostejšo snov.</li>
+              <li>Pri enačbi leče pozabiš na predznak navidezne slike ali razpršilne leče.</li>
+              <li>Pri gostoti toka vzameš \(\pi r^2\) namesto \(4\pi r^2\).</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>Naslednje poglavje</h2>
+          </div>
+          <div class="link-list">
+            <a class="link-item" href="/views/fizika/snov/atom/atom_razlaga.html">
+              <span class="link-item-text"><strong>4.17 Atom</strong><small>Zgradba atoma, foton, fotoefekt, energijska stanja, spektri</small></span>
+              <span class="arrow">→</span>
+            </a>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>

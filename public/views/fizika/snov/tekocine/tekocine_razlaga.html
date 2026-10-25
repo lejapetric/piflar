@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tekočine — razlaga in postopki | Piflar.si</title>
+  <meta name="description" content="Tekočine za maturo iz fizike: hidrostatični (težni) tlak v mirujočih tekočinah, zračni tlak, U-cev, vzgon, Arhimedov zakon, plavanje in potapljanje teles.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
+  <link rel="stylesheet" href="/style/snov.css">
+</head>
+<body>
+  <div id="header"></div>
+
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view">
+
+<header class="page-header">
+          <span class="page-eyebrow">Fizika · Snov · 4.7</span>
+          <h1>Tekočine</h1>
+          <p>Tekočina (kapljevina ali plin) pritiska na vse ploskve, ki se jih dotika, in tlak narašča z globino. Iz razlike tlakov nastane vzgon, ki odloča, ali telo plava ali potone. Pod razlago so vsi tipi nalog, ki se pojavijo pri tem sklopu. Vsebine, označene s <span class="badge-vr">PZ</span>, so posebna znanja iz kataloga.</p>
+          <div class="page-meta">
+            <div class="page-meta-item"><strong>1</strong><span>Podpoglavje</span></div>
+            <div class="page-meta-item"><strong>4</strong><span>Tipi nalog</span></div>
+            <div class="page-meta-item"><strong>~25 min</strong><span>Branja</span></div>
+          </div>
+        </header>
+
+        <div class="matura-formule">
+          <h3>Formule na maturi</h3>
+          <p>Enačbe, ki jih potrebuješ (večina je na listu s konstantami in enačbami, ki je del izpitne pole):</p>
+          <div class="matura-levo">
+            <ul>
+              <li>tlak: \(p = \dfrac{F}{S}\); hidrostatični tlak: \(p = \rho g h\)</li>
+              <li>vzgon: \(F_{vz} = \rho_t g V\) (\(\rho_t\) gostota tekočine, \(V\) prostornina izpodrinjene tekočine)</li>
+              <li>zračni tlak ob morju \(p_0 \approx 1{,}0 \cdot 10^{5}\ \text{Pa}\), gostota vode \(1000\ \text{kg/m}^3\)</li>
+            </ul>
+          </div>
+        </div>
+
+        <nav class="kazalo" aria-label="Podpoglavja">
+          <h2>Podpoglavja</h2>
+          <ol>
+            <li><a href="#sklop-1"><span class="kazalo-st">1</span> Tlak in vzgon</a></li>
+            <li><a href="#kljuc"><span class="kazalo-st">?</span> Ključ: kateri tip naloge je to?</a></li>
+          </ol>
+        </nav>
+
+        <!-- SKLOP 1 -->
+        <section class="sklop" id="sklop-1">
+          <header class="sklop-header">
+            <span class="sklop-num">4.7 · 1</span>
+            <h2>Tlak in vzgon</h2>
+            <p>Težni tlak v mirujočih tekočinah (kvalitativno in kvantitativno), vzgon.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <h4>Težni (hidrostatični) tlak</h4>
+            <p>Tekočina ima težo, zato spodnje plasti nosijo zgornje: tlak v mirujoči tekočini <strong>narašča z globino</strong>. Na isti globini je tlak enak in deluje enako v vse smeri, pravokotno na vsako ploskev. Tlak na dnu ni odvisen od oblike posode, ampak le od globine in gostote tekočine.</p>
+            <figure class="slika">
+<svg viewBox="0 0 480 214" role="img" aria-label="Tlak na dnu je odvisen le od globine" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g1-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g1-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g1-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g1-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g1-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g1-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<polygon class="s-ploskev" points="33.9,157.9 110,157.9 110,62.5 33.9,62.5"/>
+<polygon class="s-ploskev" points="173.4,157.9 224.1,157.9 257.4,62.5 140.1,62.5"/>
+<polygon class="s-ploskev" points="306.6,157.9 382.7,157.9 358.9,62.5 330.4,62.5"/>
+<polygon class="s-ploskev" points="408.1,157.9 446.1,157.9 446.1,62.5 408.1,62.5"/>
+<line class="s-crta" x1="33.9" y1="157.9" x2="110" y2="157.9"/>
+<line class="s-crta" x1="33.9" y1="157.9" x2="33.9" y2="30.7"/>
+<line class="s-crta" x1="110" y1="157.9" x2="110" y2="30.7"/>
+<line class="s-crta" x1="173.4" y1="157.9" x2="224.1" y2="157.9"/>
+<line class="s-crta" x1="173.4" y1="157.9" x2="129" y2="30.7"/>
+<line class="s-crta" x1="224.1" y1="157.9" x2="268.5" y2="30.7"/>
+<line class="s-crta" x1="306.6" y1="157.9" x2="382.7" y2="157.9"/>
+<line class="s-crta" x1="306.6" y1="157.9" x2="338.3" y2="30.7"/>
+<line class="s-crta" x1="382.7" y1="157.9" x2="351" y2="30.7"/>
+<line class="s-crta" x1="408.1" y1="157.9" x2="446.1" y2="157.9"/>
+<line class="s-crta" x1="408.1" y1="157.9" x2="408.1" y2="30.7"/>
+<line class="s-crta" x1="446.1" y1="157.9" x2="446.1" y2="30.7"/>
+<line class="s-asim" x1="18" y1="62.5" x2="462" y2="62.5"/>
+<text class="s-txt-k1" x="240" y="183.3" text-anchor="middle">enaka globina h → enak tlak na dnu</text>
+
+</svg>
+<figcaption>Hidrostatični tlak na dnu je v vseh posodah enak, ker je enaka globina tekočine. Oblika posode in količina tekočine nista pomembni.</figcaption>
+</figure>
+            <p>Kvantitativno <span class="badge-vr">PZ</span>: stolpec tekočine z višino \(h\) in presekom \(S\) ima težo \(\rho S h g\), zato je tlak pod njim</p>
+            <p>\[p = \rho g h.\]</p>
+            <p>V vodi tlak naraste za približno \(1\ \text{bar}\) na vsakih 10 m globine. Nad gladino pritiska še zrak, zato je skupni tlak \(p = p_0 + \rho g h\). V <strong>U-cevi</strong> z dvema tekočinama, ki se ne mešata, je tlak na isti višini v isti tekočini enak, zato \(\rho_1 h_1 = \rho_2 h_2\) (višini merimo od meje med tekočinama).</p>
+            <h4>Vzgon</h4>
+            <p>Na potopljeno telo tekočina od spodaj pritiska bolj kot od zgoraj. Rezultanta teh sil je <strong>vzgon</strong>, usmerjen navpično navzgor. Arhimedov zakon: vzgon je enak teži izpodrinjene tekočine,</p>
+            <p>\[F_{vz} = \rho_t g V_{pot}.\]</p>
+            <div class="slike-vrsta"><figure class="slika">
+<svg viewBox="0 0 280 256" role="img" aria-label="Sile tekočine na potopljeno telo" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g2-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g2-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g2-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g2-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g2-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g2-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<polygon class="s-ploskev" points="18,238 262,238 262,42.4 18,42.4"/>
+<polygon class="s-lik-2" points="99.3,189.1 180.7,189.1 180.7,107.6 99.3,107.6"/>
+<line class="s-k4" x1="140" y1="58.7" x2="140" y2="103.6" marker-end="url(#g2-k4)"/>
+<text class="s-txt-k4" x="148" y="81.2" text-anchor="start">F<tspan dy="4" style="font-size:10px">1</tspan></text>
+<line class="s-k4" x1="140" y1="233.9" x2="140" y2="193.2" marker-end="url(#g2-k4)"/>
+<text class="s-txt-k4" x="148" y="223.6" text-anchor="start">F<tspan dy="4" style="font-size:10px">2</tspan></text>
+<line class="s-k4" x1="46.5" y1="148.4" x2="95.3" y2="148.4" marker-end="url(#g2-k4)"/>
+<line class="s-k4" x1="233.5" y1="148.4" x2="184.7" y2="148.4" marker-end="url(#g2-k4)"/>
+<text class="s-txt-b" x="140" y="153.4" text-anchor="middle">telo</text>
+<text class="s-txt-muted" x="229.5" y="30.2" text-anchor="middle">gladina</text>
+
+</svg>
+<figcaption>Tlak spodaj je večji kot zgoraj, zato je sila \(F_2\) večja od \(F_1\). Bočne sile se izničijo.</figcaption>
+</figure><figure class="slika">
+<svg viewBox="0 0 280 256" role="img" aria-label="Vzgon in teža" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g3-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g3-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g3-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g3-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g3-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g3-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<polygon class="s-ploskev" points="18,238 262,238 262,42.4 18,42.4"/>
+<polygon class="s-lik-2" points="99.3,189.1 180.7,189.1 180.7,107.6 99.3,107.6"/>
+<line class="s-k1" x1="127.8" y1="148.4" x2="127.8" y2="54.7" marker-end="url(#g3-k1)"/>
+<text class="s-txt-k1" x="119.8" y="91.6" text-anchor="end">F<tspan dy="4" style="font-size:10px">vz</tspan></text>
+<line class="s-k2" x1="152.2" y1="148.4" x2="152.2" y2="229.9" marker-end="url(#g3-k2)"/>
+<text class="s-txt-k2" x="160.2" y="197.2" text-anchor="start">F<tspan dy="4" style="font-size:10px">g</tspan></text>
+
+</svg>
+<figcaption>Razlika je vzgon \(F_{vz} = \rho_t g V\), usmerjen navzgor. Telo potone, če je \(F_g &gt; F_{vz}\).</figcaption>
+</figure></div>
+            <ul>
+              <li>Če je gostota telesa večja od gostote tekočine, telo potone. Silomer v vodi pokaže manj kot v zraku (navidezna teža \(F_g - F_{vz}\)).</li>
+              <li>Če je gostota telesa manjša, telo splava in se potopi le toliko, da je vzgon enak teži: \(\rho_t V_{pot} = \rho V\). Delež potopljene prostornine je \(\rho/\rho_t\).</li>
+              <li>Vzgon deluje tudi v zraku (balon), a je majhen, ker je gostota zraka majhna.</li>
+            </ul>
+            <figure class="slika slika--ozka">
+<svg viewBox="0 0 300 238" role="img" aria-label="Plavajoča kocka" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g4-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g4-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g4-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g4-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g4-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g4-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<polygon class="s-ploskev" points="18,220 282,220 282,88.3 18,88.3"/>
+<polygon class="s-lik-2" points="97.2,151.5 202.8,151.5 202.8,46.1 97.2,46.1"/>
+<line class="s-k2" x1="220.4" y1="88.3" x2="220.4" y2="151.5"/>
+<line class="s-k2" x1="213.8" y1="151.5" x2="227" y2="151.5"/>
+<line class="s-k1" x1="18" y1="88.3" x2="282" y2="88.3"/>
+<text class="s-txt-k2" x="229.2" y="123.9" text-anchor="start">h₁ = 0,6a</text>
+<text class="s-txt-b" x="150" y="72.9" text-anchor="middle">a</text>
+
+</svg>
+<figcaption>Kocka lesa z gostoto \(600\ \text{kg/m}^3\) plava tako, da je potopljenih 60 % prostornine: \(\rho_t V_{pot} = \rho V\).</figcaption>
+</figure>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-1">
+              <h4>Tip 1: Hidrostatični tlak na globini</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Potapljač je \(12\ \text{m}\) pod gladino morja (\(\rho = 1030\ \text{kg/m}^3\)). Kolikšen je hidrostatični tlak in kolikšen je skupni tlak na tej globini? S kolikšno silo voda pritiska na steklo maske s ploščino \(80\ \text{cm}^2\)?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> sprašujejo po tlaku v tekočini na neki globini ali po sili na steno, dno, zapornico. Kvalitativna vprašanja (kje je tlak večji) znajo vsi, računanje je <span class="badge-vr">PZ</span>.</p><ul class="kljucne"><li>„na globini“</li><li>„tlak na dno“</li><li>„pod gladino“</li><li>„v kateri posodi je tlak večji“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Določi globino pod gladino (ne višino od dna) in gostoto tekočine.</p><div class="na-nalogi"><p>\(h = 12\ \text{m}\), \(\rho = 1030\ \text{kg/m}^3\).</p></div></li>
+              <li><p class="korak">Izračunaj \(p = \rho g h\).</p><div class="na-nalogi"><p>\(p = 1030 \cdot 9{,}81 \cdot 12\ \text{Pa} = 1{,}21 \cdot 10^{5}\ \text{Pa}\).</p></div></li>
+              <li><p class="korak">Če sprašujejo po skupnem tlaku, prištej zračni tlak.</p><div class="na-nalogi"><p>\(p = 1{,}0 \cdot 10^{5} + 1{,}21 \cdot 10^{5} = 2{,}2 \cdot 10^{5}\ \text{Pa}\).</p></div></li>
+              <li><p class="korak">Silo na ploskev izračunaj s \(F = pS\) (na maski deluje razlika tlakov, če je v njej zračni tlak).</p><div class="na-nalogi"><p>Razlika je hidrostatični tlak: \(F = 1{,}21 \cdot 10^{5} \cdot 0{,}0080\ \text{N} = 970\ \text{N}\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> V kateri od dveh posod z enako globino vode je tlak na dnu večji: v široki ali ozki?</p><p>Enak.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Na kateri globini je v sladki vodi tlak dvakrat večji od zračnega?</p><p>\(\rho g h = p_0\), \(h = 10\ \text{m}\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Zakaj je jez spodaj debelejši?</p><p>Tlak in s tem sila na enoto ploščine naraščata z globino.</p></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-2">
+              <h4>Tip 2: U-cev z dvema tekočinama <span class="badge-vr">PZ</span></h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>V U-cev nalijemo vodo, nato v en krak še olje z gostoto \(800\ \text{kg/m}^3\). Stolpec olja nad mejo z vodo je visok \(10\ \text{cm}\). Kako visoko nad mejo sega voda v drugem kraku?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> povezani posodi ali U-cev, v kateri sta tekočini z različnima gostotama, ali manometer.</p><ul class="kljucne"><li>„U-cev“</li><li>„v en krak nalijemo“</li><li>„razlika gladin“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Izberi vodoravno ravnino skozi mejo med tekočinama; pod njo je v obeh krakih ista tekočina.</p><div class="na-nalogi"><p>Ravnina na meji olje voda.</p></div></li>
+              <li><p class="korak">Tlaka v obeh krakih na tej ravnini izenači.</p><div class="na-nalogi"><p>\(\rho_o g h_o = \rho_v g h_v\).</p></div></li>
+              <li><p class="korak">Izračunaj neznanko.</p><div class="na-nalogi"><p>\(h_v = \dfrac{800 \cdot 10}{1000}\ \text{cm} = 8{,}0\ \text{cm}\); gladina olja je 2 cm višje.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Voda v kraku je 13,6 cm nad mejo z živim srebrom. Kako visoko je živo srebro (13 600 kg/m³) v drugem kraku?</p><p>1,0 cm.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> V obeh krakih je ista tekočina. Kako sta gladini?</p><p>Na isti višini.</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Manometer z vodo kaže razliko gladin 20 cm. Nadtlak plina?</p><p>\(1000 \cdot 9{,}81 \cdot 0{,}20 = 2{,}0\ \text{kPa}\).</p></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-3">
+              <h4>Tip 3: Vzgon na potopljeno telo</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Kamen z maso \(3{,}0\ \text{kg}\) in prostornino \(1{,}2\ \text{l}\) obesimo na silomer in ga potopimo v vodo. Kolikšen je vzgon in kaj pokaže silomer?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> telo je delno ali v celoti potopljeno, sprašujejo po vzgonu, navidezni teži ali gostoti iz meritve s silomerom.</p><ul class="kljucne"><li>„potopimo“</li><li>„silomer pokaže v vodi“</li><li>„vzgon“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Določi prostornino izpodrinjene tekočine (pri popolni potopitvi je to prostornina telesa) in jo pretvori v \(\text{m}^3\).</p><div class="na-nalogi"><p>\(V = 1{,}2 \cdot 10^{-3}\ \text{m}^3\).</p></div></li>
+              <li><p class="korak">Izračunaj vzgon z gostoto tekočine (ne telesa).</p><div class="na-nalogi"><p>\(F_{vz} = 1000 \cdot 9{,}81 \cdot 1{,}2 \cdot 10^{-3}\ \text{N} = 11{,}8\ \text{N}\).</p></div></li>
+              <li><p class="korak">Zapiši ravnovesje sil na telo: teža, vzgon in sila silomera (ali podlage, vrvice).</p><div class="na-nalogi"><p>\(F + F_{vz} = F_g\): \(F = 29{,}4 - 11{,}8 = 17{,}7\ \text{N}\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Telo ima v zraku težo 10 N, v vodi 6 N. Gostota telesa?</p><p>\(F_{vz} = 4\ \text{N}\), \(V = 0{,}41\ \text{l}\), \(\rho = 10/4 \cdot 1000 = 2500\ \text{kg/m}^3\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Ali je vzgon na potopljeno telo odvisen od globine?</p><p>Ne (tekočina je nestisljiva), le od prostornine in gostote tekočine.</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Kolikšen je vzgon na človeka (70 l) v zraku?</p><p>\(1{,}2 \cdot 9{,}81 \cdot 0{,}070 = 0{,}82\ \text{N}\).</p></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-4">
+              <h4>Tip 4: Plavanje (kolikšen del je potopljen)</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Lesena kocka z robom \(10\ \text{cm}\) in gostoto \(600\ \text{kg/m}^3\) plava v vodi. Kako globoko je potopljena? Koliko mase moramo položiti nanjo, da se potopi do roba?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> telo plava (miruje na gladini), sprašujejo po potopljenem delu, gostoti ali dodatni obtežitvi.</p><ul class="kljucne"><li>„plava“</li><li>„kolikšen del gleda iz vode“</li><li>„ledena gora“</li><li>„splav“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Pri plavanju je vzgon enak teži (vseh teles na plavajočem telesu).</p><div class="na-nalogi"><p>\(\rho_v g V_{pot} = \rho g V\).</p></div></li>
+              <li><p class="korak">Izrazi potopljeno prostornino ali globino.</p><div class="na-nalogi"><p>\(V_{pot}/V = 600/1000 = 0{,}60\): potopljena je 6,0 cm globoko.</p></div></li>
+              <li><p class="korak">Za dodatno obtežitev zapiši ravnovesje s polnim vzgonom.</p><div class="na-nalogi"><p>\(\rho_v V = \rho V + m\): \(m = (1000 - 600) \cdot 0{,}001\ \text{kg} = 0{,}40\ \text{kg}\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Kolikšen del ledene gore (920 kg/m³) v morju (1030 kg/m³) je nad gladino?</p><p>\(1 - 920/1030 = 11\ \%\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Ladja pripluje iz reke v morje. Se dvigne ali potopi?</p><p>Dvigne se, ker ima morje večjo gostoto.</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Valj plava v vodi potopljen do 3/4. Gostota valja?</p><p>\(750\ \text{kg/m}^3\).</p></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="subsection" id="kljuc">
+          <div class="subsection-head">
+            <h2>Ključ: kateri tip naloge je to?</h2>
+            <p>Poišči besedo iz navodila naloge in skoči na pravi postopek.</p>
+          </div>
+          <div class="info-card">
+            <div class="tabela-wrap">
+              <table class="tabela">
+                <thead><tr><th>V besedilu naloge piše …</th><th>Tip</th></tr></thead>
+                <tbody>
+                  <tr><td>„na globini“, „tlak na dno“, „pod gladino“</td><td><a href="#tip-1">Tip 1</a></td></tr>
+                  <tr><td>„U-cev“, „razlika gladin“, „manometer“</td><td><a href="#tip-2">Tip 2</a></td></tr>
+                  <tr><td>„potopimo“, „silomer v vodi“, „vzgon“</td><td><a href="#tip-3">Tip 3</a></td></tr>
+                  <tr><td>„plava“, „kolikšen del gleda iz vode“</td><td><a href="#tip-4">Tip 4</a></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>Pogoste napake</h2>
+          </div>
+          <div class="info-card">
+            <ul>
+              <li>Globino meriš od dna namesto od gladine.</li>
+              <li>Pri vzgonu vstaviš gostoto telesa namesto gostote tekočine.</li>
+              <li>Pri plavajočem telesu vzameš prostornino celega telesa namesto potopljenega dela.</li>
+              <li>Pozabiš, da litre pretvoriš v \(\text{m}^3\) (\(1\ \text{l} = 10^{-3}\ \text{m}^3\)).</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>Naslednje poglavje</h2>
+          </div>
+          <div class="link-list">
+            <a class="link-item" href="/views/fizika/snov/temperatura/temperatura_razlaga.html">
+              <span class="link-item-text"><strong>4.8 Temperatura</strong><small>Kelvinova lestvica, raztezanje, splošna plinska enačba</small></span>
+              <span class="arrow">→</span>
+            </a>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>
