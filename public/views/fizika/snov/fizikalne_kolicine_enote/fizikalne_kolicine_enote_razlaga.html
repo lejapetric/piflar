@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fizikalne količine in enote — razlaga in postopki | Piflar.si</title>
+  <meta name="description" content="Fizikalne količine in enote za maturo iz fizike: osnovne in sestavljene enote SI, pretvarjanje enot, velikostni redi, merjenje, povprečje, absolutna in relativna napaka, računanje z napakami ter grafi meritev.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
+  <link rel="stylesheet" href="/style/snov.css">
+</head>
+<body>
+  <div id="header"></div>
+
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view">
+
+<header class="page-header">
+          <span class="page-eyebrow">Fizika · Snov · 4.1</span>
+          <h1>Fizikalne količine in enote</h1>
+          <p>Vsaka fizikalna količina je produkt števila in enote. Kdor zna enote pretvarjati, rezultat zapisati z napako in odčitati graf meritev, ima na maturi zagotovljenih nekaj točk v skoraj vsaki nalogi. Pod razlago vsakega podpoglavja so vsi tipi nalog, ki se pojavijo pri tem sklopu. Vsebine, označene s <span class="badge-vr">PZ</span>, so posebna znanja iz kataloga.</p>
+          <div class="page-meta">
+            <div class="page-meta-item"><strong>2</strong><span>Podpoglavji</span></div>
+            <div class="page-meta-item"><strong>8</strong><span>Tipov nalog</span></div>
+            <div class="page-meta-item"><strong>~40 min</strong><span>Branja</span></div>
+          </div>
+        </header>
+
+        <div class="matura-formule">
+          <h3>Formule na maturi</h3>
+          <p>Na listu s konstantami in enačbami so konstante z enotami. Napak in predpon ni, te znaj na pamet:</p>
+          <div class="matura-levo">
+            <ul>
+              <li>povprečje: \(\bar{x} = \dfrac{x_1 + x_2 + \dots + x_N}{N}\)</li>
+              <li>absolutna napaka \(\Delta x\): največje odstopanje meritve od povprečja (ne manj kot natančnost merila)</li>
+              <li>relativna napaka: \(\delta x = \dfrac{\Delta x}{\bar{x}}\), rezultat: \(x = \bar{x} \pm \Delta x\)</li>
+              <li>vsota in razlika: \(\Delta(a \pm b) = \Delta a + \Delta b\); produkt in kvocient: \(\delta(ab) = \delta(a/b) = \delta a + \delta b\); potenca: \(\delta(a^n) = |n|\,\delta a\)</li>
+              <li>predpone: p \(10^{-12}\), n \(10^{-9}\), µ \(10^{-6}\), m \(10^{-3}\), c \(10^{-2}\), d \(10^{-1}\), k \(10^{3}\), M \(10^{6}\), G \(10^{9}\), T \(10^{12}\)</li>
+            </ul>
+          </div>
+        </div>
+
+        <nav class="kazalo" aria-label="Podpoglavja">
+          <h2>Podpoglavja</h2>
+          <ol>
+            <li><a href="#sklop-1"><span class="kazalo-st">1</span> Enote</a></li>
+            <li><a href="#sklop-2"><span class="kazalo-st">2</span> Merjenje</a></li>
+            <li><a href="#kljuc"><span class="kazalo-st">?</span> Ključ: kateri tip naloge je to?</a></li>
+          </ol>
+        </nav>
+
+        <!-- SKLOP 1 -->
+        <section class="sklop" id="sklop-1">
+          <header class="sklop-header">
+            <span class="sklop-num">4.1 · 1</span>
+            <h2>Enote</h2>
+            <p>Osnovne in sestavljene enote SI, pretvarjanje enot, zapis s potencami števila 10.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <p><strong>Fizikalna količina</strong> je lastnost telesa ali pojava, ki jo lahko izmerimo. Zapišemo jo kot <strong>število × enota</strong>: \(m = 2{,}5\ \text{kg}\) pomeni, da je masa 2,5-krat večja od enote kilogram. Brez enote zapis ni pravilen in na maturi izgubiš točko.</p>
+            <h4>Osnovne enote SI</h4>
+            <p>Mednarodni sistem enot (SI) ima sedem osnovnih količin. Vse druge enote so iz njih sestavljene.</p>
+            <div class="tabela-wrap">
+              <table class="tabela">
+                <thead><tr><th>Količina</th><th>Oznaka</th><th>Enota</th><th>Znak</th></tr></thead>
+                <tbody>
+                  <tr><td>dolžina</td><td>\(l, s, x\)</td><td>meter</td><td>m</td></tr>
+                  <tr><td>masa</td><td>\(m\)</td><td>kilogram</td><td>kg</td></tr>
+                  <tr><td>čas</td><td>\(t\)</td><td>sekunda</td><td>s</td></tr>
+                  <tr><td>električni tok</td><td>\(I\)</td><td>amper</td><td>A</td></tr>
+                  <tr><td>temperatura</td><td>\(T\)</td><td>kelvin</td><td>K</td></tr>
+                  <tr><td>množina snovi</td><td>\(n\)</td><td>mol</td><td>mol</td></tr>
+                  <tr><td>svetilnost</td><td>\(I_v\)</td><td>kandela</td><td>cd</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <h4>Sestavljene enote</h4>
+            <p>Enoto sestavljene količine dobimo tako, da v enačbo, ki količino definira, vstavimo enote. Najpogostejše imajo svoja imena:</p>
+            <ul>
+              <li>sila: \(F = ma\), \([F] = \text{kg}\,\text{m/s}^2 = \text{N}\) (newton)</li>
+              <li>delo, energija: \(A = Fs\), \([A] = \text{N}\,\text{m} = \text{kg}\,\text{m}^2/\text{s}^2 = \text{J}\) (joule)</li>
+              <li>moč: \(P = A/t\), \([P] = \text{J/s} = \text{W}\) (watt)</li>
+              <li>tlak: \(p = F/S\), \([p] = \text{N/m}^2 = \text{Pa}\) (pascal); \(1\ \text{bar} = 10^5\ \text{Pa}\)</li>
+              <li>naboj: \(e = It\), \([e] = \text{A}\,\text{s} = \text{C}\) (coulomb)</li>
+              <li>napetost: \(U = A/e\), \([U] = \text{J/C} = \text{V}\) (volt); upor: \(R = U/I\), \([R] = \text{V/A} = \Omega\) (ohm)</li>
+              <li>frekvenca: \([\nu] = 1/\text{s} = \text{Hz}\) (hertz)</li>
+            </ul>
+            <p>Enote so tudi kontrola računa: če na koncu izračuna hitrosti dobiš \(\text{m}^2/\text{s}\), je nekje napaka. Seštevati smemo samo količine z enako enoto.</p>
+            <h4>Predpone in zapis s potencami števila 10</h4>
+            <p>Zelo velika in zelo majhna števila zapišemo kot \(a \cdot 10^n\), kjer je \(1 \le a &lt; 10\) (znanstveni zapis). Predpona pred enoto pomeni množenje s potenco števila 10: \(3\ \text{µm} = 3 \cdot 10^{-6}\ \text{m}\), \(4{,}2\ \text{MJ} = 4{,}2 \cdot 10^{6}\ \text{J}\). <strong>Velikostni red</strong> količine je potenca števila 10, ki ji je količina najbližja: polmer Zemlje \(6{,}37 \cdot 10^{6}\ \text{m}\) je reda \(10^{7}\ \text{m}\), atom je reda \(10^{-10}\ \text{m}\), jedro reda \(10^{-15}\ \text{m}\).</p>
+            <h4>Pretvarjanje enot</h4>
+            <p>Pretvarjamo tako, da enoto zamenjamo z njeno vrednostjo v novih enotah. Pri ploščinah in prostorninah se pretvorba potencira:</p>
+            <ul>
+              <li>\(1\ \text{km/h} = \dfrac{1000\ \text{m}}{3600\ \text{s}} = \dfrac{1}{3{,}6}\ \text{m/s}\), zato km/h delimo s 3,6, m/s pa množimo s 3,6</li>
+              <li>\(1\ \text{cm}^2 = (10^{-2}\ \text{m})^2 = 10^{-4}\ \text{m}^2\), \(1\ \text{mm}^2 = 10^{-6}\ \text{m}^2\)</li>
+              <li>\(1\ \text{cm}^3 = 10^{-6}\ \text{m}^3\), \(1\ \text{l} = 1\ \text{dm}^3 = 10^{-3}\ \text{m}^3\)</li>
+              <li>\(1\ \text{g/cm}^3 = \dfrac{10^{-3}\ \text{kg}}{10^{-6}\ \text{m}^3} = 1000\ \text{kg/m}^3\)</li>
+              <li>\(1\ \text{h} = 3600\ \text{s}\), \(1\ \text{kWh} = 1000\ \text{W} \cdot 3600\ \text{s} = 3{,}6 \cdot 10^{6}\ \text{J}\)</li>
+              <li>\(1\ \text{eV} = 1{,}6 \cdot 10^{-19}\ \text{J}\); temperatura: \(T[\text{K}] = t[^\circ\text{C}] + 273\)</li>
+            </ul>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-1">
+              <h4>Tip 1: Pretvarjanje enot</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Gostota olja je \(0{,}92\ \text{g/cm}^3\), hitrost avtomobila \(90\ \text{km/h}\), presek žice \(0{,}5\ \text{mm}^2\). Zapišite vse tri količine v osnovnih enotah SI.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> količina je podana v enoti, ki ni osnovna SI, ali pa so podatki v različnih enotah in jih moraš poenotiti pred računanjem.</p><ul class="kljucne"><li>„izrazite v m/s“</li><li>g/cm³, km/h, mm², l, kWh, eV</li><li>„koliko je to v …“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Vsako enoto s predpono zapiši kot potenco števila 10 krat osnovno enoto.</p><div class="na-nalogi"><p>\(1\ \text{g} = 10^{-3}\ \text{kg}\), \(1\ \text{cm} = 10^{-2}\ \text{m}\), \(1\ \text{km} = 10^{3}\ \text{m}\), \(1\ \text{h} = 3600\ \text{s}\), \(1\ \text{mm} = 10^{-3}\ \text{m}\).</p></div></li>
+              <li><p class="korak">Vstavi v enoto in pri kvadratih ali kubih potenciraj tudi potenco števila 10.</p><div class="na-nalogi"><p>\(0{,}92\ \dfrac{\text{g}}{\text{cm}^3} = 0{,}92\ \dfrac{10^{-3}\ \text{kg}}{10^{-6}\ \text{m}^3}\), \(90\ \dfrac{\text{km}}{\text{h}} = 90\ \dfrac{10^{3}\ \text{m}}{3600\ \text{s}}\), \(0{,}5\ \text{mm}^2 = 0{,}5\ (10^{-3}\ \text{m})^2\).</p></div></li>
+              <li><p class="korak">Izračunaj in zapiši v znanstvenem zapisu, z enoto.</p><div class="na-nalogi"><p>\(\rho = 920\ \text{kg/m}^3\), \(v = 25\ \text{m/s}\), \(S = 5 \cdot 10^{-7}\ \text{m}^2\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Koliko m³ je 2,5 l?</p><p>\(2{,}5 \cdot 10^{-3}\ \text{m}^3\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Hladilnik porabi 0,8 kWh na dan. Koliko je to v joulih?</p><p>\(0{,}8 \cdot 3{,}6 \cdot 10^{6}\ \text{J} = 2{,}9 \cdot 10^{6}\ \text{J}\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Elektron ima energijo 5,0 keV. Koliko je to v joulih?</p><p>\(5{,}0 \cdot 10^{3} \cdot 1{,}6 \cdot 10^{-19}\ \text{J} = 8{,}0 \cdot 10^{-16}\ \text{J}\).</p></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-2">
+              <h4>Tip 2: Enota sestavljene količine</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Sila upora zraka je \(F = \tfrac{1}{2} c_u \rho S v^2\), kjer je \(c_u\) brezdimenzijsko število. Pokažite, da ima desna stran enoto newton.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> sprašujejo po enoti količine iz enačbe ali po tem, katera kombinacija enot je enaka dani enoti.</p><ul class="kljucne"><li>„katera enota je enakovredna …“</li><li>„izrazite z osnovnimi enotami“</li><li>„kakšno enoto ima konstanta“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Za vsako količino v enačbi zapiši enoto (števila in brezdimenzijske koeficiente izpusti).</p><div class="na-nalogi"><p>\([\rho] = \text{kg/m}^3\), \([S] = \text{m}^2\), \([v^2] = \text{m}^2/\text{s}^2\).</p></div></li>
+              <li><p class="korak">Enote zmnoži oziroma deli kot v enačbi in pokrajšaj.</p><div class="na-nalogi"><p>\(\dfrac{\text{kg}}{\text{m}^3} \cdot \text{m}^2 \cdot \dfrac{\text{m}^2}{\text{s}^2} = \dfrac{\text{kg}\,\text{m}}{\text{s}^2}\).</p></div></li>
+              <li><p class="korak">Primerjaj z znano definicijo enote.</p><div class="na-nalogi"><p>Iz \(F = ma\) je \(\text{N} = \text{kg}\,\text{m/s}^2\). Enoti se ujemata.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Izrazite J z osnovnimi enotami.</p><p>\(\text{J} = \text{N}\,\text{m} = \text{kg}\,\text{m}^2\,\text{s}^{-2}\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Kakšno enoto ima konstanta vzmeti \(k\) v \(F = kx\)?</p><p>\(\text{N/m} = \text{kg/s}^2\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Katera enota je enaka W: \(\text{V}\,\text{A}\), \(\text{J}\,\text{s}\) ali \(\text{N/s}\)?</p><p>\(P = UI\), zato \(\text{W} = \text{V}\,\text{A}\).</p></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-3">
+              <h4>Tip 3: Velikostni red in ocena</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Ocenite, koliko kilogramov zraka je v učilnici z merami \(8\ \text{m} \times 6\ \text{m} \times 3\ \text{m}\). Gostota zraka je približno \(1{,}2\ \text{kg/m}^3\). Kakšen je velikostni red rezultata?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> zahtevajo oceno ali velikostni red, podatki so zaokroženi ali jih moraš oceniti sam.</p><ul class="kljucne"><li>„ocenite“</li><li>„velikostni red“</li><li>„približno koliko“</li><li>„katera vrednost je najbolj verjetna“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Zapiši enačbo, ki poveže iskano količino s podatki.</p><div class="na-nalogi"><p>\(m = \rho V\), \(V = abc\).</p></div></li>
+              <li><p class="korak">Manjkajoče podatke oceni z okroglimi vrednostmi v enotah SI.</p><div class="na-nalogi"><p>\(V = 8 \cdot 6 \cdot 3\ \text{m}^3 = 144\ \text{m}^3\).</p></div></li>
+              <li><p class="korak">Izračunaj in zapiši v znanstvenem zapisu.</p><div class="na-nalogi"><p>\(m = 1{,}2 \cdot 144\ \text{kg} \approx 170\ \text{kg} = 1{,}7 \cdot 10^{2}\ \text{kg}\).</p></div></li>
+              <li><p class="korak">Velikostni red je potenca števila 10, ki je rezultatu najbližja.</p><div class="na-nalogi"><p>Reda \(10^{2}\ \text{kg}\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Kakšen je velikostni red premera atoma?</p><p>\(10^{-10}\ \text{m}\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Koliko sekund ima leto (velikostni red)?</p><p>\(365 \cdot 24 \cdot 3600\ \text{s} \approx 3{,}2 \cdot 10^{7}\ \text{s}\), reda \(10^{7}\ \text{s}\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Kolikšna je približno masa odraslega človeka v gramih?</p><p>\(70\ \text{kg} = 7 \cdot 10^{4}\ \text{g}\).</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 2 -->
+        <section class="sklop" id="sklop-2">
+          <header class="sklop-header">
+            <span class="sklop-num">4.1 · 2</span>
+            <h2>Merjenje</h2>
+            <p>Povprečje, absolutna in relativna napaka, zapis rezultata, računanje z napakami, grafi meritev.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <h4>Merjenje in napaka meritve</h4>
+            <p>Meriti pomeni primerjati količino z enoto. Vsaka meritev je obremenjena z napako: zaradi merila (najmanjši razdelek), zaradi postopka (reakcijski čas pri štoparici) in zaradi naključnih vplivov. Zato meritev ponovimo večkrat in rezultat zapišemo kot <strong>povprečje z napako</strong>.</p>
+            <ul>
+              <li><strong>Povprečna vrednost:</strong> \(\bar{x} = \dfrac{x_1 + x_2 + \dots + x_N}{N}\).</li>
+              <li><strong>Absolutna napaka</strong> \(\Delta x\) je največje odstopanje posamezne meritve od povprečja. Ne sme biti manjša od natančnosti merila (pri eni sami meritvi je napaka kar natančnost merila, navadno najmanjši razdelek ali njegova polovica). Ima enoto.</li>
+              <li><strong>Relativna napaka</strong> \(\delta x = \dfrac{\Delta x}{\bar{x}}\) je brez enote, navadno jo zapišemo v odstotkih. Pove, kako natančna je meritev: \(\pm 1\ \text{mm}\) je pri 1 m odlično, pri 5 mm pa slabo.</li>
+              <li><strong>Zapis rezultata:</strong> \(x = (\bar{x} \pm \Delta x)\ \text{enota}\). Napako zaokrožimo na eno ali dve veljavni mesti, povprečje pa na isto decimalko kot napako: \(t = (12{,}5 \pm 0{,}3)\ \text{s}\), ne \(12{,}52 \pm 0{,}3\).</li>
+            </ul>
+            <figure class="slika">
+<svg viewBox="0 0 520 150" role="img" aria-label="Meritve na številski premici" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g1-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g1-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g1-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g1-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g1-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g1-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<line class="s-os" x1="49.4" y1="91.3" x2="470.6" y2="91.3"/>
+<line class="s-k1" x1="260" y1="104.9" x2="260" y2="31.4"/>
+<line class="s-k2" x1="119.6" y1="45.1" x2="400.4" y2="45.1"/>
+<line class="s-k2" x1="119.6" y1="53.2" x2="119.6" y2="36.9"/>
+<line class="s-k2" x1="400.4" y1="53.2" x2="400.4" y2="36.9"/>
+<circle class="s-tocka-2" cx="166.4" cy="83.2" r="4.5"/>
+<circle class="s-tocka-2" cx="306.8" cy="83.2" r="4.5"/>
+<circle class="s-tocka-2" cx="213.2" cy="83.2" r="4.5"/>
+<circle class="s-tocka-2" cx="400.4" cy="83.2" r="4.5"/>
+<circle class="s-tocka-2" cx="213.2" cy="69.6" r="4.5"/>
+<text class="s-os-txt" x="72.8" y="109.3" text-anchor="middle">12,1</text>
+<text class="s-os-txt" x="119.6" y="109.3" text-anchor="middle">12,2</text>
+<text class="s-os-txt" x="166.4" y="109.3" text-anchor="middle">12,3</text>
+<text class="s-os-txt" x="213.2" y="109.3" text-anchor="middle">12,4</text>
+<text class="s-os-txt" x="260" y="109.3" text-anchor="middle">12,5</text>
+<text class="s-os-txt" x="306.8" y="109.3" text-anchor="middle">12,6</text>
+<text class="s-os-txt" x="353.6" y="109.3" text-anchor="middle">12,7</text>
+<text class="s-os-txt" x="400.4" y="109.3" text-anchor="middle">12,8</text>
+<text class="s-os-txt" x="447.2" y="109.3" text-anchor="middle">12,9</text>
+<text class="s-txt-k1" x="260" y="25.4" text-anchor="middle">x̄ = 12,5 s</text>
+<text class="s-txt-k2" x="330.2" y="39.1" text-anchor="start">Δx = 0,3 s</text>
+</svg>
+<figcaption>Pet meritev časa. Povprečje je \(\bar{t} = 12{,}5\ \text{s}\), največje odstopanje od povprečja je \(0{,}3\ \text{s}\), zato \(t = (12{,}5 \pm 0{,}3)\ \text{s}\).</figcaption>
+</figure>
+            <h4>Računanje z napakami <span class="badge-vr">PZ</span></h4>
+            <p>Če količino izračunamo iz izmerjenih količin, se napake prenesejo:</p>
+            <ul>
+              <li>pri <strong>vsoti in razliki</strong> seštejemo <strong>absolutne</strong> napake: \(\Delta(a + b) = \Delta(a - b) = \Delta a + \Delta b\);</li>
+              <li>pri <strong>produktu in kvocientu</strong> seštejemo <strong>relativne</strong> napake: \(\delta(ab) = \delta(a/b) = \delta a + \delta b\);</li>
+              <li>pri <strong>potenci</strong> relativno napako pomnožimo z eksponentom: \(\delta(a^n) = |n|\,\delta a\), npr. \(\delta(\sqrt{a}) = \tfrac{1}{2}\delta a\);</li>
+              <li>množenje s točnim številom (npr. \(\pi\), 2) relativne napake ne spremeni.</li>
+            </ul>
+            <h4>Grafična predstavitev meritev</h4>
+            <p>Na vodoravno os nanesemo količino, ki jo spreminjamo (neodvisna spremenljivka), na navpično pa izmerjeno (odvisna). Osi označimo s količino in enoto, merilo izberemo tako, da točke zapolnijo večino grafa. Skozi točke narišemo <strong>premico (ali gladko krivuljo), ki se jim najbolje prilega</strong>, ne lomljene črte od točke do točke. Točke naj bodo enakomerno nad in pod premico.</p>
+            <p><strong>Strmina</strong> (naklon) premice \(k = \Delta y / \Delta x\) ima enoto (enota \(y\) / enota \(x\)) in pogosto pomeni fizikalno količino: v grafu \(s(t)\) hitrost, v \(v(t)\) pospešek, v \(U(I)\) upor. Odčitamo jo z velikim trikotnikom na narisani premici. <strong>Presečišče</strong> z osjo \(y\) je vrednost \(y\) pri \(x = 0\).</p>
+            <figure class="slika">
+<svg viewBox="0 0 460 320" role="img" aria-label="Graf meritev raztezka vzmeti v odvisnosti od sile" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g2-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g2-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g2-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g2-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g2-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g2-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<path class="s-mreza" d="M26,294V26M84.3,294V26M142.6,294V26M200.9,294V26M259.1,294V26M317.4,294V26M375.7,294V26M434,294V26M26,294H434M26,255.7H434M26,217.4H434M26,179.1H434M26,140.9H434M26,102.6H434M26,64.3H434M26,26H434"/>
+<line class="s-os" x1="26" y1="294" x2="442" y2="294" marker-end="url(#g2-p)"/>
+<line class="s-os" x1="26" y1="294" x2="26" y2="18" marker-end="url(#g2-p)"/>
+<text class="s-os-txt" x="436" y="286" text-anchor="end">F [N]</text>
+<text class="s-os-txt" x="34" y="30">x [cm]</text>
+<line class="s-os" x1="84.3" y1="291" x2="84.3" y2="297"/><text class="s-os-txt" x="84.3" y="309" text-anchor="middle">0,5</text><line class="s-os" x1="142.6" y1="291" x2="142.6" y2="297"/><text class="s-os-txt" x="142.6" y="309" text-anchor="middle">1</text><line class="s-os" x1="200.9" y1="291" x2="200.9" y2="297"/><text class="s-os-txt" x="200.9" y="309" text-anchor="middle">1,5</text><line class="s-os" x1="259.1" y1="291" x2="259.1" y2="297"/><text class="s-os-txt" x="259.1" y="309" text-anchor="middle">2</text><line class="s-os" x1="317.4" y1="291" x2="317.4" y2="297"/><text class="s-os-txt" x="317.4" y="309" text-anchor="middle">2,5</text><line class="s-os" x1="375.7" y1="291" x2="375.7" y2="297"/><text class="s-os-txt" x="375.7" y="309" text-anchor="middle">3</text><line class="s-os" x1="23" y1="255.7" x2="29" y2="255.7"/><text class="s-os-txt" x="20" y="259.7" text-anchor="end">1</text><line class="s-os" x1="23" y1="217.4" x2="29" y2="217.4"/><text class="s-os-txt" x="20" y="221.4" text-anchor="end">2</text><line class="s-os" x1="23" y1="179.1" x2="29" y2="179.1"/><text class="s-os-txt" x="20" y="183.1" text-anchor="end">3</text><line class="s-os" x1="23" y1="140.9" x2="29" y2="140.9"/><text class="s-os-txt" x="20" y="144.9" text-anchor="end">4</text><line class="s-os" x1="23" y1="102.6" x2="29" y2="102.6"/><text class="s-os-txt" x="20" y="106.6" text-anchor="end">5</text><line class="s-os" x1="23" y1="64.3" x2="29" y2="64.3"/><text class="s-os-txt" x="20" y="68.3" text-anchor="end">6</text><text class="s-os-txt" x="20" y="309" text-anchor="end">0</text>
+<line class="s-k2" x1="142.6" y1="217.4" x2="375.7" y2="217.4"/>
+<line class="s-k2" x1="375.7" y1="217.4" x2="375.7" y2="64.3"/>
+<path class="s-k1" d="M26,294L27,293.3L28,292.7L29,292L30,291.4L31,290.7L31.9,290.1L32.9,289.4L33.9,288.8L34.9,288.1L35.9,287.5L36.9,286.8L37.9,286.2L38.9,285.5L39.9,284.9L40.9,284.2L41.9,283.6L42.8,282.9L43.8,282.3L44.8,281.6L45.8,281L46.8,280.3L47.8,279.7L48.8,279L49.8,278.4L50.8,277.7L51.8,277.1L52.8,276.4L53.7,275.8L54.7,275.1L55.7,274.5L56.7,273.8L57.7,273.2L58.7,272.5L59.7,271.9L60.7,271.2L61.7,270.6L62.7,269.9L63.7,269.3L64.6,268.6L65.6,268L66.6,267.3L67.6,266.7L68.6,266L69.6,265.4L70.6,264.7L71.6,264.1L72.6,263.4L73.6,262.8L74.6,262.1L75.5,261.5L76.5,260.8L77.5,260.2L78.5,259.5L79.5,258.9L80.5,258.2L81.5,257.6L82.5,256.9L83.5,256.3L84.5,255.6L85.5,254.9L86.4,254.3L87.4,253.6L88.4,253L89.4,252.3L90.4,251.7L91.4,251L92.4,250.4L93.4,249.7L94.4,249.1L95.4,248.4L96.4,247.8L97.3,247.1L98.3,246.5L99.3,245.8L100.3,245.2L101.3,244.5L102.3,243.9L103.3,243.2L104.3,242.6L105.3,241.9L106.3,241.3L107.3,240.6L108.2,240L109.2,239.3L110.2,238.7L111.2,238L112.2,237.4L113.2,236.7L114.2,236.1L115.2,235.4L116.2,234.8L117.2,234.1L118.1,233.5L119.1,232.8L120.1,232.2L121.1,231.5L122.1,230.9L123.1,230.2L124.1,229.6L125.1,228.9L126.1,228.3L127.1,227.6L128.1,227L129,226.3L130,225.7L131,225L132,224.4L133,223.7L134,223.1L135,222.4L136,221.8L137,221.1L138,220.5L139,219.8L139.9,219.2L140.9,218.5L141.9,217.8L142.9,217.2L143.9,216.5L144.9,215.9L145.9,215.2L146.9,214.6L147.9,213.9L148.9,213.3L149.9,212.6L150.8,212L151.8,211.3L152.8,210.7L153.8,210L154.8,209.4L155.8,208.7L156.8,208.1L157.8,207.4L158.8,206.8L159.8,206.1L160.8,205.5L161.7,204.8L162.7,204.2L163.7,203.5L164.7,202.9L165.7,202.2L166.7,201.6L167.7,200.9L168.7,200.3L169.7,199.6L170.7,199L171.7,198.3L172.6,197.7L173.6,197L174.6,196.4L175.6,195.7L176.6,195.1L177.6,194.4L178.6,193.8L179.6,193.1L180.6,192.5L181.6,191.8L182.6,191.2L183.5,190.5L184.5,189.9L185.5,189.2L186.5,188.6L187.5,187.9L188.5,187.3L189.5,186.6L190.5,186L191.5,185.3L192.5,184.7L193.5,184L194.4,183.4L195.4,182.7L196.4,182.1L197.4,181.4L198.4,180.8L199.4,180.1L200.4,179.4L201.4,178.8L202.4,178.1L203.4,177.5L204.4,176.8L205.3,176.2L206.3,175.5L207.3,174.9L208.3,174.2L209.3,173.6L210.3,172.9L211.3,172.3L212.3,171.6L213.3,171L214.3,170.3L215.3,169.7L216.2,169L217.2,168.4L218.2,167.7L219.2,167.1L220.2,166.4L221.2,165.8L222.2,165.1L223.2,164.5L224.2,163.8L225.2,163.2L226.2,162.5L227.1,161.9L228.1,161.2L229.1,160.6L230.1,159.9L231.1,159.3L232.1,158.6L233.1,158L234.1,157.3L235.1,156.7L236.1,156L237.1,155.4L238,154.7L239,154.1L240,153.4L241,152.8L242,152.1L243,151.5L244,150.8L245,150.2L246,149.5L247,148.9L248,148.2L248.9,147.6L249.9,146.9L250.9,146.3L251.9,145.6L252.9,145L253.9,144.3L254.9,143.7L255.9,143L256.9,142.4L257.9,141.7L258.9,141L259.8,140.4L260.8,139.7L261.8,139.1L262.8,138.4L263.8,137.8L264.8,137.1L265.8,136.5L266.8,135.8L267.8,135.2L268.8,134.5L269.8,133.9L270.7,133.2L271.7,132.6L272.7,131.9L273.7,131.3L274.7,130.6L275.7,130L276.7,129.3L277.7,128.7L278.7,128L279.7,127.4L280.7,126.7L281.6,126.1L282.6,125.4L283.6,124.8L284.6,124.1L285.6,123.5L286.6,122.8L287.6,122.2L288.6,121.5L289.6,120.9L290.6,120.2L291.5,119.6L292.5,118.9L293.5,118.3L294.5,117.6L295.5,117L296.5,116.3L297.5,115.7L298.5,115L299.5,114.4L300.5,113.7L301.5,113.1L302.4,112.4L303.4,111.8L304.4,111.1L305.4,110.5L306.4,109.8L307.4,109.2L308.4,108.5L309.4,107.9L310.4,107.2L311.4,106.6L312.4,105.9L313.3,105.3L314.3,104.6L315.3,103.9L316.3,103.3L317.3,102.6L318.3,102L319.3,101.3L320.3,100.7L321.3,100L322.3,99.4L323.3,98.7L324.2,98.1L325.2,97.4L326.2,96.8L327.2,96.1L328.2,95.5L329.2,94.8L330.2,94.2L331.2,93.5L332.2,92.9L333.2,92.2L334.2,91.6L335.1,90.9L336.1,90.3L337.1,89.6L338.1,89L339.1,88.3L340.1,87.7L341.1,87L342.1,86.4L343.1,85.7L344.1,85.1L345.1,84.4L346,83.8L347,83.1L348,82.5L349,81.8L350,81.2L351,80.5L352,79.9L353,79.2L354,78.6L355,77.9L356,77.3L356.9,76.6L357.9,76L358.9,75.3L359.9,74.7L360.9,74L361.9,73.4L362.9,72.7L363.9,72.1L364.9,71.4L365.9,70.8L366.9,70.1L367.8,69.5L368.8,68.8L369.8,68.2L370.8,67.5L371.8,66.9L372.8,66.2L373.8,65.5L374.8,64.9L375.8,64.2L376.8,63.6L377.8,62.9L378.7,62.3L379.7,61.6L380.7,61L381.7,60.3L382.7,59.7L383.7,59L384.7,58.4L385.7,57.7L386.7,57.1L387.7,56.4L388.7,55.8L389.6,55.1L390.6,54.5L391.6,53.8L392.6,53.2L393.6,52.5L394.6,51.9L395.6,51.2L396.6,50.6L397.6,49.9L398.6,49.3L399.6,48.6L400.5,48L401.5,47.3L402.5,46.7L403.5,46L404.5,45.4L405.5,44.7L406.5,44.1L407.5,43.4L408.5,42.8L409.5,42.1L410.5,41.5L411.4,40.8L412.4,40.2L413.4,39.5L414.4,38.9L415.4,38.2L416.4,37.6L417.4,36.9L418.4,36.3L419.4,35.6L420.4,35L421.4,34.3L422.3,33.7"/>
+<circle class="s-tocka-2" cx="84.3" cy="259.5" r="4"/>
+<circle class="s-tocka-2" cx="142.6" cy="213.6" r="4"/>
+<circle class="s-tocka-2" cx="200.9" cy="183" r="4"/>
+<circle class="s-tocka-2" cx="259.1" cy="133.2" r="4"/>
+<circle class="s-tocka-2" cx="317.4" cy="106.4" r="4"/>
+<circle class="s-tocka-2" cx="375.7" cy="60.5" r="4"/>
+<text class="s-txt-k2" x="259.1" y="233.4" text-anchor="middle">ΔF = 2,0 N</text>
+<text class="s-txt-k2" x="383.7" y="140.9" text-anchor="start">Δx = 4,0 cm</text>
+</svg>
+<figcaption>Merske točke in premica, ki se jim najbolje prilega. Strmino odčitamo z velikim trikotnikom na premici (ne iz dveh merskih točk): \(\text{strmina} = \Delta x / \Delta F = 4{,}0\ \text{cm} / 2{,}0\ \text{N} = 2{,}0\ \text{cm/N}\).</figcaption>
+</figure>
+            <p>Če odvisnost ni linearna, jo <strong>lineariziramo</strong>: narišemo graf, ki je premica. Pri nitnem nihalu je \(t_0 = 2\pi\sqrt{l/g}\), zato je graf \(t_0^2\) v odvisnosti od \(l\) premica s strmino \(4\pi^2/g\). Pri prostem padu je \(s = \tfrac{1}{2}gt^2\), zato je \(s(t^2)\) premica s strmino \(g/2\).</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-4">
+              <h4>Tip 4: Povprečje, absolutna in relativna napaka</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Dijak je petkrat izmeril čas desetih nihajev nihala: \(12{,}3\ \text{s}\), \(12{,}6\ \text{s}\), \(12{,}4\ \text{s}\), \(12{,}8\ \text{s}\), \(12{,}4\ \text{s}\). Zapišite rezultat z absolutno napako in izračunajte relativno napako.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> podanih je več meritev iste količine ali tabela meritev.</p><ul class="kljucne"><li>„izmeril je večkrat“</li><li>„zapišite rezultat z napako“</li><li>„relativna napaka“</li><li>„absolutna napaka“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Izračunaj povprečje.</p><div class="na-nalogi"><p>\(\bar{t} = \dfrac{12{,}3 + 12{,}6 + 12{,}4 + 12{,}8 + 12{,}4}{5}\ \text{s} = \dfrac{62{,}5}{5}\ \text{s} = 12{,}5\ \text{s}\).</p></div></li>
+              <li><p class="korak">Za vsako meritev izračunaj odstopanje od povprečja; največje je absolutna napaka (ne manj kot natančnost merila).</p><div class="na-nalogi"><p>Odstopanja: 0,2; 0,1; 0,1; 0,3; 0,1 s. \(\Delta t = 0{,}3\ \text{s}\).</p></div></li>
+              <li><p class="korak">Relativna napaka je absolutna napaka, deljena s povprečjem.</p><div class="na-nalogi"><p>\(\delta t = \dfrac{0{,}3}{12{,}5} = 0{,}024 = 2{,}4\ \%\).</p></div></li>
+              <li><p class="korak">Zapiši rezultat z enakim številom decimalk pri povprečju in napaki.</p><div class="na-nalogi"><p>\(t = (12{,}5 \pm 0{,}3)\ \text{s}\), \(\delta t = 2{,}4\ \%\). Nihajni čas: \(t_0 = (1{,}25 \pm 0{,}03)\ \text{s}\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Dolžino izmerimo z ravnilom z milimetrskimi razdelki enkrat: 23,4 cm. Zapišite rezultat.</p><p>\(l = (23{,}4 \pm 0{,}1)\ \text{cm}\), \(\delta l = 0{,}4\ \%\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Meritve mase: 51,2 g, 50,8 g, 51,0 g. Rezultat?</p><p>\(\bar{m} = 51{,}0\ \text{g}\), \(m = (51{,}0 \pm 0{,}2)\ \text{g}\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Relativna napaka meritve \(U = 6{,}0\ \text{V}\) je 5 %. Kolikšna je absolutna napaka?</p><p>\(\Delta U = 0{,}05 \cdot 6{,}0\ \text{V} = 0{,}3\ \text{V}\).</p></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-5">
+              <h4>Tip 5: Napaka izračunane količine <span class="badge-vr">PZ</span></h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Izmerili smo maso kocke \(m = (240 \pm 2)\ \text{g}\) in dolžino roba \(a = (4{,}0 \pm 0{,}1)\ \text{cm}\). Izračunajte gostoto z absolutno napako.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> iskana količina se izračuna iz več izmerjenih količin, ki imajo podane napake.</p><ul class="kljucne"><li>„z napako“ pri izračunani količini</li><li>„oceni napako gostote, ploščine, hitrosti“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Zapiši enačbo za iskano količino in izračunaj njeno vrednost.</p><div class="na-nalogi"><p>\(\rho = \dfrac{m}{a^3} = \dfrac{240\ \text{g}}{64\ \text{cm}^3} = 3{,}75\ \text{g/cm}^3\).</p></div></li>
+              <li><p class="korak">Izračunaj relativne napake vhodnih količin.</p><div class="na-nalogi"><p>\(\delta m = 2/240 = 0{,}8\ \%\), \(\delta a = 0{,}1/4{,}0 = 2{,}5\ \%\).</p></div></li>
+              <li><p class="korak">Napake sestavi po pravilih: produkt in kvocient seštevata relativne napake, potenca jih množi z eksponentom, vsota in razlika seštevata absolutne.</p><div class="na-nalogi"><p>\(\delta \rho = \delta m + 3\,\delta a = 0{,}8\ \% + 7{,}5\ \% = 8{,}3\ \%\).</p></div></li>
+              <li><p class="korak">Izračunaj absolutno napako in zapiši rezultat.</p><div class="na-nalogi"><p>\(\Delta \rho = 0{,}083 \cdot 3{,}75 = 0{,}31\ \text{g/cm}^3\), \(\rho = (3{,}8 \pm 0{,}3)\ \text{g/cm}^3\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> \(a = (5{,}0 \pm 0{,}1)\ \text{cm}\), \(b = (3{,}0 \pm 0{,}1)\ \text{cm}\). Koliko je \(a - b\)?</p><p>\((2{,}0 \pm 0{,}2)\ \text{cm}\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Hitrost \(v = s/t\), \(s = (100{,}0 \pm 0{,}5)\ \text{m}\), \(t = (12{,}5 \pm 0{,}2)\ \text{s}\).</p><p>\(v = 8{,}0\ \text{m/s}\), \(\delta v = 0{,}5\ \% + 1{,}6\ \% = 2{,}1\ \%\), \(v = (8{,}0 \pm 0{,}2)\ \text{m/s}\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Polmer kroga ima relativno napako 3 %. Kolikšna je relativna napaka ploščine?</p><p>\(S = \pi r^2\): \(\delta S = 2 \cdot 3\ \% = 6\ \%\).</p></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-6">
+              <h4>Tip 6: Risanje grafa meritev in strmina premice</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Vzmet smo obremenjevali z različnimi silami in merili raztezek: \(F\) [N]: 0,5; 1,0; 1,5; 2,0; 2,5; 3,0, \(x\) [cm]: 0,9; 2,1; 2,9; 4,2; 4,9; 6,1. Narišite graf \(x(F)\) in iz njega določite koeficient vzmeti \(k\) v N/m.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> podana je tabela meritev, zahtevajo graf in količino, ki je strmina ali presečišče.</p><ul class="kljucne"><li>„narišite graf“</li><li>„iz grafa določite“</li><li>„skozi točke narišite premico“</li><li>„naklon, strmina“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Določi, kaj je na kateri osi, in osi označi s količino in enoto. Merilo izberi tako, da točke zapolnijo graf.</p><div class="na-nalogi"><p>Vodoravno \(F\) [N] od 0 do 3,5, navpično \(x\) [cm] od 0 do 7.</p></div></li>
+              <li><p class="korak">Vnesi točke in nariši premico, ki se jim najbolje prilega (točke naj bodo enakomerno nad in pod njo).</p><div class="na-nalogi"><p>Premica gre skoraj skozi izhodišče (glej sliko zgoraj).</p></div></li>
+              <li><p class="korak">Na premici izberi dve oddaljeni točki (ne merskih) in izračunaj strmino z enotami.</p><div class="na-nalogi"><p>Točki \((1{,}0\ \text{N}; 2{,}0\ \text{cm})\) in \((3{,}0\ \text{N}; 6{,}0\ \text{cm})\): strmina \(= \dfrac{4{,}0\ \text{cm}}{2{,}0\ \text{N}} = 2{,}0\ \text{cm/N}\).</p></div></li>
+              <li><p class="korak">Strmino poveži s fizikalno enačbo in izračunaj iskano količino.</p><div class="na-nalogi"><p>\(x = F/k\), zato je strmina \(1/k\): \(k = \dfrac{1}{2{,}0\ \text{cm/N}} = 0{,}50\ \text{N/cm} = 50\ \text{N/m}\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Graf \(U(I)\) za upornik je premica skozi \((0{,}2\ \text{A}; 4{,}0\ \text{V})\) in izhodišče. Kolikšen je upor?</p><p>\(R = \Delta U / \Delta I = 20\ \Omega\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> V grafu \(m(V)\) za tekočino je strmina \(0{,}8\ \text{g/cm}^3\). Kaj pomeni?</p><p>Gostoto tekočine, \(800\ \text{kg/m}^3\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Premica v grafu \(l(T)\) seka navpično os pri 50,0 cm. Kaj pomeni presečišče?</p><p>Dolžino palice pri \(T = 0\) na skali grafa (začetno dolžino).</p></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-7">
+              <h4>Tip 7: Odčitavanje vrednosti iz grafa meritev</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Iz grafa na zgornji sliki določite, kolikšen bi bil raztezek vzmeti pri sili \(2{,}2\ \text{N}\) in pri kolikšni sili bi se vzmet raztegnila za \(5{,}0\ \text{cm}\).</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> podan je graf, sprašujejo po vrednosti, ki ni v tabeli, ali po vrednosti druge količine pri dani prvi.</p><ul class="kljucne"><li>„iz grafa odčitajte“</li><li>„pri kateri vrednosti“</li><li>„kolikšna bi bila“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Preberi osi: katera količina in v kateri enoti, koliko je en razdelek.</p><div class="na-nalogi"><p>En razdelek vodoravno je 0,5 N, navpično 1 cm.</p></div></li>
+              <li><p class="korak">Od dane vrednosti na eni osi pojdi navpično ali vodoravno do <strong>narisane premice</strong> (ne do merske točke).</p><div class="na-nalogi"><p>Pri \(F = 2{,}2\ \text{N}\) je premica na višini \(4{,}4\ \text{cm}\).</p></div></li>
+              <li><p class="korak">Od premice pojdi do druge osi in odčitaj; preveri z enačbo premice, če jo poznaš.</p><div class="na-nalogi"><p>\(x = 2{,}0\ \text{cm/N} \cdot F\): pri \(x = 5{,}0\ \text{cm}\) je \(F = 2{,}5\ \text{N}\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Graf \(t_0^2(l)\) za nitno nihalo ima strmino \(4{,}0\ \text{s}^2/\text{m}\). Kolikšen je \(g\)?</p><p>\(t_0^2 = \dfrac{4\pi^2}{g} l\), \(g = \dfrac{4\pi^2}{4{,}0}\ \text{m/s}^2 = 9{,}9\ \text{m/s}^2\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Kateri graf naj narišemo, da bo pri prostem padu \(s = \tfrac{1}{2}gt^2\) premica?</p><p>\(s\) v odvisnosti od \(t^2\); strmina je \(g/2\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Graf \(v(t)\) gre od \((0; 2\ \text{m/s})\) do \((4\ \text{s}; 10\ \text{m/s})\). Kolikšna je hitrost pri 3 s?</p><p>Strmina \(2\ \text{m/s}^2\): \(v = 2 + 2 \cdot 3 = 8\ \text{m/s}\).</p></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-8">
+              <h4>Tip 8: Zapis rezultata in veljavna mesta</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Kalkulator pokaže za hitrost \(v = 3{,}46410\ \text{m/s}\), napaka je \(\Delta v = 0{,}0832\ \text{m/s}\). Pravilno zapišite rezultat.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> rezultat ima preveč decimalk, ali sprašujejo, kateri zapis je pravilen.</p><ul class="kljucne"><li>„kateri zapis je pravilen“</li><li>„zaokrožite“</li><li>„na koliko mest“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Napako zaokroži na eno veljavno mesto (dve, če je prvo mesto 1).</p><div class="na-nalogi"><p>\(\Delta v = 0{,}08\ \text{m/s}\).</p></div></li>
+              <li><p class="korak">Povprečje zaokroži na isto decimalko kot napako.</p><div class="na-nalogi"><p>\(v = 3{,}46\ \text{m/s}\).</p></div></li>
+              <li><p class="korak">Zapiši v obliki \((\bar{x} \pm \Delta x)\) enota; brez napake rezultat zapiši na toliko veljavnih mest kot najmanj natančen podatek.</p><div class="na-nalogi"><p>\(v = (3{,}46 \pm 0{,}08)\ \text{m/s}\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> \(m = 2{,}3741\ \text{kg} \pm 0{,}05\ \text{kg}\).</p><p>\(m = (2{,}37 \pm 0{,}05)\ \text{kg}\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Koliko veljavnih mest ima \(0{,}00450\ \text{m}\)?</p><p>Tri (4, 5, 0); vodilne ničle ne štejejo.</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> \(s = 12\ \text{m}\), \(t = 7{,}0\ \text{s}\). Hitrost?</p><p>\(v = 1{,}7\ \text{m/s}\) (dve veljavni mesti).</p></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="subsection" id="kljuc">
+          <div class="subsection-head">
+            <h2>Ključ: kateri tip naloge je to?</h2>
+            <p>Poišči besedo iz navodila naloge in skoči na pravi postopek.</p>
+          </div>
+          <div class="info-card">
+            <div class="tabela-wrap">
+              <table class="tabela">
+                <thead><tr><th>V besedilu naloge piše …</th><th>Tip</th></tr></thead>
+                <tbody>
+                  <tr><td>„izrazite v m/s“, g/cm³, km/h, mm², kWh, eV</td><td><a href="#tip-1">Tip 1</a></td></tr>
+                  <tr><td>„katera enota je enaka …“, „izrazite z osnovnimi enotami“</td><td><a href="#tip-2">Tip 2</a></td></tr>
+                  <tr><td>„ocenite“, „velikostni red“</td><td><a href="#tip-3">Tip 3</a></td></tr>
+                  <tr><td>več meritev iste količine, „zapišite z napako“</td><td><a href="#tip-4">Tip 4</a></td></tr>
+                  <tr><td>izračunana količina iz meritev z napakami</td><td><a href="#tip-5">Tip 5</a></td></tr>
+                  <tr><td>tabela meritev, „narišite graf“, „strmina“</td><td><a href="#tip-6">Tip 6</a></td></tr>
+                  <tr><td>„iz grafa odčitajte“, linearizacija</td><td><a href="#tip-7">Tip 7</a></td></tr>
+                  <tr><td>„kateri zapis je pravilen“, zaokroževanje</td><td><a href="#tip-8">Tip 8</a></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>Pogoste napake</h2>
+          </div>
+          <div class="info-card">
+            <ul>
+              <li>Pri pretvarjanju ploščin in prostornin ne potenciraš predpone: \(1\ \text{cm}^2 = 10^{-4}\ \text{m}^2\), ne \(10^{-2}\).</li>
+              <li>Km/h množiš s 3,6 namesto da deliš.</li>
+              <li>Rezultat zapišeš brez enote ali z več decimalkami, kot jih dopušča napaka.</li>
+              <li>Strmino računaš iz dveh merskih točk namesto iz narisane premice.</li>
+              <li>Pri produktu seštevaš absolutne napake namesto relativnih.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>Naslednje poglavje</h2>
+          </div>
+          <div class="link-list">
+            <a class="link-item" href="/views/fizika/snov/premo_krivo_gibanje/premo_krivo_gibanje_razlaga.html">
+              <span class="link-item-text"><strong>4.2 Premo in krivo gibanje</strong><small>Hitrost, pospešek, grafi gibanja, met, kroženje</small></span>
+              <span class="arrow">→</span>
+            </a>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>

@@ -1,0 +1,450 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Astronomija — razlaga in postopki | Piflar.si</title>
+  <meta name="description" content="Astronomija za maturo iz fizike: telesa Osončja, zvezde in galaksije, astronomska enota in svetlobno leto, gibanje planetov in satelitov, Stefanov zakon, temperatura Sonca in zlivanje kot vir energije zvezd.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
+  <link rel="stylesheet" href="/style/snov.css">
+</head>
+<body>
+  <div id="header"></div>
+
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view">
+
+<header class="page-header">
+          <span class="page-eyebrow">Fizika · Snov · 4.19</span>
+          <h1>Astronomija</h1>
+          <p>Zadnje poglavje poveže mehaniko, sevanje in jedrsko fiziko z vesoljem. Tu so telesa Osončja, zvezde in galaksije z razdaljami med njimi, gibanje planetov in satelitov, sevanje zvezd po Stefanovem zakonu in zlivanje jeder, ki zvezdam daje energijo. Pod razlago so vsi tipi nalog, ki se pojavijo pri tem sklopu. Vsebine, označene s <span class="badge-vr">PZ</span>, so posebna znanja iz kataloga.</p>
+          <div class="page-meta">
+            <div class="page-meta-item"><strong>5</strong><span>Podpoglavij</span></div>
+            <div class="page-meta-item"><strong>8</strong><span>Tipov nalog</span></div>
+            <div class="page-meta-item"><strong>~35 min</strong><span>Branja</span></div>
+          </div>
+        </header>
+
+        <div class="matura-formule">
+          <h3>Formule na maturi</h3>
+          <p>Enačbe, ki jih potrebuješ (večina je na listu s konstantami in enačbami, ki je del izpitne pole):</p>
+          <div class="matura-levo">
+            <ul>
+              <li>pot svetlobe: \(s = ct\), \(c = 3{,}00 \cdot 10^8\ \text{m/s}\)</li>
+              <li>gravitacijski zakon <span class="badge-vr">PZ</span>: \(F_g = G\dfrac{m_1 m_2}{r^2}\), \(G = 6{,}67 \cdot 10^{-11}\ \text{Nm}^2/\text{kg}^2\)</li>
+              <li>kroženje <span class="badge-vr">PZ</span>: \(\dfrac{GM}{r^2} = \dfrac{v^2}{r}\), \(v = \dfrac{2\pi r}{t_0}\), torej \(\dfrac{r^3}{t_0^2} = \dfrac{GM}{4\pi^2}\)</li>
+              <li>Stefanov zakon <span class="badge-vr">PZ</span>: \(j = \sigma T^4\), \(P = jS\), \(\sigma = 5{,}67 \cdot 10^{-8}\ \text{W/m}^2\text{K}^4\)</li>
+              <li>gostota toka na razdalji \(r\): \(j = \dfrac{P}{4\pi r^2}\)</li>
+              <li>masa in energija: \(W = mc^2\)</li>
+            </ul>
+          </div>
+          <p class="matura-opomba">\(1\ \text{AE} = 1{,}50 \cdot 10^{11}\ \text{m}\), \(1\ \text{sv. leto} = 9{,}46 \cdot 10^{15}\ \text{m}\), \(1\ \text{leto} = 3{,}16 \cdot 10^7\ \text{s}\). Masa Zemlje \(6{,}0 \cdot 10^{24}\ \text{kg}\), polmer Zemlje \(6370\ \text{km}\), masa Sonca \(2{,}0 \cdot 10^{30}\ \text{kg}\), polmer Sonca \(7{,}0 \cdot 10^8\ \text{m}\).</p>
+        </div>
+
+        <nav class="kazalo" aria-label="Podpoglavja">
+          <h2>Podpoglavja</h2>
+          <ol>
+            <li><a href="#sklop-1"><span class="kazalo-st">1</span> Osončje</a></li>
+            <li><a href="#sklop-2"><span class="kazalo-st">2</span> Objekti v vesolju</a></li>
+            <li><a href="#sklop-3"><span class="kazalo-st">3</span> Gibanje planetov in satelitov <span class="badge-vr">PZ</span></a></li>
+            <li><a href="#sklop-4"><span class="kazalo-st">4</span> Stefanov zakon <span class="badge-vr">PZ</span></a></li>
+            <li><a href="#sklop-5"><span class="kazalo-st">5</span> Zlivanje v zvezdah</a></li>
+            <li><a href="#kljuc"><span class="kazalo-st">?</span> Ključ: kateri tip naloge je to?</a></li>
+          </ol>
+        </nav>
+
+        <!-- SKLOP 1 -->
+        <section class="sklop" id="sklop-1">
+          <header class="sklop-header">
+            <span class="sklop-num">4.19 · 1</span>
+            <h2>Osončje</h2>
+            <p>Sonce, planeti, pritlikavi planeti, lune, asteroidi, kometi in meteorji.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <h4>Sonce in planeti</h4>
+            <p>Osončje sestavljajo Sonce in vsa telesa, ki krožijo okoli njega. <strong>Sonce</strong> je zvezda: krogla iz vročega plina (večinoma vodika in helija), ki seva, ker se v njenem središču zlivajo jedra. V Soncu je več kot 99,8 % mase Osončja.</p>
+            <p>Okoli Sonca kroži osem <strong>planetov</strong>, vsi v isti smeri in skoraj v isti ravnini, po skoraj krožnih tirih (natančneje elipsah). Štirje notranji (Merkur, Venera, Zemlja, Mars) so majhni <strong>kamniti planeti</strong> z veliko gostoto. Štirje zunanji (Jupiter, Saturn, Uran, Neptun) so <strong>plinasti velikani</strong> z majhno gostoto, debelimi atmosferami in mnogimi lunami; vsi imajo tudi obroče, najbolj vidne Saturn.</p>
+            <figure class="slika">
+<svg viewBox="0 0 560 179" role="img" aria-label="Planeti Osončja" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g1-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g1-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g1-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g1-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g1-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g1-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<line class="s-pom" x1="262.7" y1="119.1" x2="262.7" y2="50.1"/>
+<text class="s-txt-b" x="52.6" y="91" text-anchor="middle">Sonce</text>
+<text class="s-txt-muted" x="151.9" y="74.3" text-anchor="middle">Merkur</text>
+<text class="s-txt-muted" x="178.1" y="110.3" text-anchor="middle">Venera</text>
+<text class="s-txt-muted" x="207.6" y="71" text-anchor="middle">Zemlja</text>
+<text class="s-txt-muted" x="235" y="108.1" text-anchor="middle">Mars</text>
+<text class="s-txt-muted" x="307.1" y="51" text-anchor="middle">Jupiter</text>
+<text class="s-txt-muted" x="374.5" y="128" text-anchor="middle">Saturn</text>
+<text class="s-txt-muted" x="430.4" y="62.3" text-anchor="middle">Uran</text>
+<text class="s-txt-muted" x="477.1" y="118.8" text-anchor="middle">Neptun</text>
+<text class="s-txt-k1" x="186.1" y="148.7" text-anchor="middle">kamniti planeti</text>
+<text class="s-txt-k3" x="403.6" y="148.7" text-anchor="middle">plinasti velikani</text>
+<text class="s-txt-muted" x="262.7" y="133.9" text-anchor="middle">pas asteroidov</text>
+<circle class="s-ploskev-2" cx="37.8" cy="87" r="79.1"/>
+<circle class="s-lik" cx="151.9" cy="87" r="5.4"/>
+<circle class="s-lik" cx="178.1" cy="87" r="8.5"/>
+<circle class="s-lik" cx="207.6" cy="87" r="8.7"/>
+<circle class="s-lik" cx="235" cy="87" r="6.3"/>
+<circle class="s-lik-2" cx="307.1" cy="87" r="28.8"/>
+<circle class="s-lik-2" cx="374.5" cy="87" r="26.2"/>
+<circle class="s-lik-2" cx="430.4" cy="87" r="17.3"/>
+<circle class="s-lik-2" cx="477.1" cy="87" r="17.1"/>
+</svg>
+<figcaption>Osem planetov po vrsti od Sonca. Velikosti planetov so med seboj le približno primerljive, razdalje pa sploh niso v merilu: Neptun je od Sonca 30-krat dlje kot Zemlja.</figcaption>
+</figure>
+            <p>Za razdalje v Osončju uporabljamo <strong>astronomsko enoto</strong>, povprečno razdaljo med Zemljo in Soncem: \(1\ \text{AE} = 1{,}50 \cdot 10^{11}\ \text{m}\). Merkur je od Sonca oddaljen 0,39 AE, Jupiter 5,2 AE, Neptun 30 AE. Čim dlje je planet, tem počasneje kroži in tem daljše je njegovo leto.</p>
+            <h4>Manjša telesa</h4>
+            <ul>
+              <li><strong>Lune</strong> (naravni sateliti) krožijo okoli planetov. Zemljina Luna je od Zemlje oddaljena \(3{,}84 \cdot 10^8\ \text{m}\) in jo obkroži v 27,3 dneh.</li>
+              <li><strong>Pritlikavi planeti</strong>, na primer Pluton, so dovolj veliki, da so okrogli, vendar okoli svojega tira niso počistili drugih teles.</li>
+              <li><strong>Asteroidi</strong> so kamnita telesa, večinoma v pasu med Marsom in Jupitrom.</li>
+              <li><strong>Kometi</strong> so iz ledu in prahu in imajo zelo podolgovate tire. Ko se približajo Soncu, led izpareva in nastane rep, ki kaže stran od Sonca.</li>
+              <li><strong>Meteoroidi</strong> so drobna telesa v prostoru. Ko meteoroid pade v atmosfero in zažari, vidimo <strong>meteor</strong> (utrinek); kos, ki pade na tla, je <strong>meteorit</strong>.</li>
+            </ul>
+            <p>Planeti in lune ne svetijo sami; vidimo jih, ker odbijajo sončno svetlobo. Zato ima Luna mene: z Zemlje vidimo različno velik del njene osvetljene polovice.</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-1">
+              <h4>Tip 1: Lastnosti teles v Osončju</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Katera trditev je pravilna? (A) Jupiter je kamniti planet. (B) Kometov rep vedno kaže v smeri gibanja kometa. (C) Mars je od Sonca dlje kot Zemlja in ima daljše leto. (D) Luna sveti, ker je na površju vroča.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> naloga brez računanja sprašuje po vrsti, sestavi, legi ali gibanju teles v Osončju.</p><ul class="kljucne"><li>„planet“</li><li>„komet“, „asteroid“</li><li>„meteor“, „meteorit“</li><li>„katera trditev“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Za vsako telo v nalogi določi, v katero skupino spada (zvezda, kamniti planet, plinasti velikan, luna, pritlikavi planet, asteroid, komet, meteoroid).</p><div class="na-nalogi"><p>Jupiter je plinasti velikan, Mars kamniti planet, Luna naravni satelit.</p></div></li>
+              <li><p class="korak">Spomni se ključnih lastnosti skupine: kje je, iz česa je, ali sveti sama.</p><div class="na-nalogi"><p>Rep kometa piha sončni veter, zato kaže stran od Sonca. Luna odbija sončno svetlobo.</p></div></li>
+              <li><p class="korak">Za gibanje uporabi pravilo: dlje od Sonca pomeni počasnejše kroženje in daljše leto.</p><div class="na-nalogi"><p>Mars je na 1,52 AE, zato je njegovo leto daljše (1,9 zemeljskega leta). Pravilna je trditev C.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Kakšna je razlika med meteorjem in meteoritom?</p><p>Meteor je svetla sled telesa, ki zgori v atmosferi; meteorit je ostanek, ki pade na tla.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Zakaj ima Luna mene?</p><p>Sonce vedno osvetli polovico Lune; med kroženjem Lune z Zemlje vidimo različno velik del te polovice.</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 2 -->
+        <section class="sklop" id="sklop-2">
+          <header class="sklop-header">
+            <span class="sklop-num">4.19 · 2</span>
+            <h2>Objekti v vesolju</h2>
+            <p>Zvezde, galaksije in kopice galaksij; njihove velikosti in razdalje, svetlobno leto.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <h4>Zvezde in galaksije</h4>
+            <p><strong>Zvezde</strong> so krogle iz vročega plina, ki svetijo zaradi zlivanja jeder v središču. Sonce je povprečna zvezda. Zvezde se razlikujejo po masi, velikosti in temperaturi površja, od rdečih (hladnejše, okoli 3000 K) do modrih (vroče, več kot 10 000 K). Zvezde nastanejo v <strong>meglicah</strong>, oblakih plina in prahu.</p>
+            <p>Zvezde so združene v <strong>galaksije</strong>. Naša galaksija, Galaksija ali Rimska cesta, ima okoli \(10^{11}\) zvezd in premer okoli 100 000 svetlobnih let; Sonce je približno na polovici poti od središča do roba. Galaksije so združene v <strong>jate</strong> (kopice) galaksij. Najbližja velika galaksija je Andromeda, oddaljena okoli 2,5 milijona svetlobnih let.</p>
+            <h4>Svetlobno leto</h4>
+            <p>Razdalje med zvezdami so tako velike, da jih merimo s časom, v katerem jih preleti svetloba. <strong>Svetlobno leto</strong> je razdalja, ki jo svetloba prepotuje v enem letu:</p>
+            <p>\[1\ \text{sv. leto} = c \cdot 1\ \text{leto} = 3{,}00 \cdot 10^8\ \tfrac{\text{m}}{\text{s}} \cdot 3{,}16 \cdot 10^7\ \text{s} = 9{,}46 \cdot 10^{15}\ \text{m}.\]</p>
+            <p>Svetlobno leto je enota za razdaljo, ne za čas. Svetloba s Sonca do Zemlje potuje 8,3 minute, z Lune 1,3 s, z najbližje zvezde (Proksime Kentavra) 4,2 leta. Ko gledamo oddaljen objekt, ga vidimo takšnega, kakršen je bil, ko je svetloba odšla od njega.</p>
+            <figure class="slika slika--ozka">
+<svg viewBox="0 0 420 400" role="img" aria-label="Razdalje v vesolju" xmlns="http://www.w3.org/2000/svg"><line class="s-os" x1="150" y1="14" x2="150" y2="380"/><line class="s-os" x1="145" y1="380" x2="155" y2="380"/><text class="s-txt-muted" x="140" y="384" text-anchor="end">10<tspan dy="-6" font-size="0.75em">6</tspan><tspan dy="6"> m</tspan></text><line class="s-os" x1="145" y1="344" x2="155" y2="344"/><text class="s-txt-muted" x="140" y="348" text-anchor="end">10<tspan dy="-6" font-size="0.75em">8</tspan><tspan dy="6"> m</tspan></text><line class="s-os" x1="145" y1="308" x2="155" y2="308"/><text class="s-txt-muted" x="140" y="312" text-anchor="end">10<tspan dy="-6" font-size="0.75em">10</tspan><tspan dy="6"> m</tspan></text><line class="s-os" x1="145" y1="272" x2="155" y2="272"/><text class="s-txt-muted" x="140" y="276" text-anchor="end">10<tspan dy="-6" font-size="0.75em">12</tspan><tspan dy="6"> m</tspan></text><line class="s-os" x1="145" y1="236" x2="155" y2="236"/><text class="s-txt-muted" x="140" y="240" text-anchor="end">10<tspan dy="-6" font-size="0.75em">14</tspan><tspan dy="6"> m</tspan></text><line class="s-os" x1="145" y1="200" x2="155" y2="200"/><text class="s-txt-muted" x="140" y="204" text-anchor="end">10<tspan dy="-6" font-size="0.75em">16</tspan><tspan dy="6"> m</tspan></text><line class="s-os" x1="145" y1="164" x2="155" y2="164"/><text class="s-txt-muted" x="140" y="168" text-anchor="end">10<tspan dy="-6" font-size="0.75em">18</tspan><tspan dy="6"> m</tspan></text><line class="s-os" x1="145" y1="128" x2="155" y2="128"/><text class="s-txt-muted" x="140" y="132" text-anchor="end">10<tspan dy="-6" font-size="0.75em">20</tspan><tspan dy="6"> m</tspan></text><line class="s-os" x1="145" y1="92" x2="155" y2="92"/><text class="s-txt-muted" x="140" y="96" text-anchor="end">10<tspan dy="-6" font-size="0.75em">22</tspan><tspan dy="6"> m</tspan></text><line class="s-os" x1="145" y1="56" x2="155" y2="56"/><text class="s-txt-muted" x="140" y="60" text-anchor="end">10<tspan dy="-6" font-size="0.75em">24</tspan><tspan dy="6"> m</tspan></text><line class="s-os" x1="145" y1="20" x2="155" y2="20"/><text class="s-txt-muted" x="140" y="24" text-anchor="end">10<tspan dy="-6" font-size="0.75em">26</tspan><tspan dy="6"> m</tspan></text><circle class="s-tocka" cx="150" cy="365.6" r="4"/><text class="s-txt-b" x="164" y="369.6">polmer Zemlje</text><circle class="s-tocka" cx="150" cy="333.2" r="4"/><text class="s-txt-b" x="164" y="337.2">Zemlja–Luna</text><circle class="s-tocka" cx="150" cy="286.4" r="4"/><text class="s-txt-b" x="164" y="290.4">1 AE (Zemlja–Sonce)</text><circle class="s-tocka" cx="150" cy="260.3" r="4"/><text class="s-txt-b" x="164" y="264.3">Sonce–Neptun</text><circle class="s-tocka" cx="150" cy="189.2" r="4"/><text class="s-txt-b" x="164" y="193.2">najbližja zvezda (4,2 sv. leta)</text><circle class="s-tocka" cx="150" cy="110.89999999999998" r="4"/><text class="s-txt-b" x="164" y="114.89999999999998">premer Galaksije (10⁵ sv. let)</text><circle class="s-tocka" cx="150" cy="84.80000000000007" r="4"/><text class="s-txt-b" x="164" y="88.80000000000007">galaksija Andromeda</text><circle class="s-tocka" cx="150" cy="20" r="4"/><text class="s-txt-b" x="164" y="24">vidno vesolje</text></svg>
+<figcaption>Razdalje v vesolju na logaritemski lestvici: vsaka oznaka pomeni stokrat večjo razdaljo od prejšnje. Svetlobno leto je okoli \(10^{16}\ \text{m}\).</figcaption>
+</figure>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-2">
+              <h4>Tip 2: Razdalje in čas potovanja svetlobe</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Zvezda Sirij je od nas oddaljena 8,6 svetlobnega leta. Koliko je to v metrih in v astronomskih enotah? Pred koliko leti je odšla svetloba, ki jo danes vidimo?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> razdalja je podana ali iskana v svetlobnih letih, astronomskih enotah ali metrih, ali pa sprašujejo, kako dolgo potuje svetloba (signal).</p><ul class="kljucne"><li>„svetlobno leto“</li><li>„astronomska enota“</li><li>„koliko časa potuje svetloba“</li><li>„signal s sonde“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Pretvori razdaljo v metre: \(1\ \text{sv. leto} = 9{,}46 \cdot 10^{15}\ \text{m}\), \(1\ \text{AE} = 1{,}50 \cdot 10^{11}\ \text{m}\).</p><div class="na-nalogi"><p>\(s = 8{,}6 \cdot 9{,}46 \cdot 10^{15}\ \text{m} = 8{,}1 \cdot 10^{16}\ \text{m}\).</p></div></li>
+              <li><p class="korak">Za drugo enoto deli z njeno vrednostjo v metrih.</p><div class="na-nalogi"><p>\(s = 8{,}1 \cdot 10^{16} / 1{,}50 \cdot 10^{11} = 5{,}4 \cdot 10^5\ \text{AE}\).</p></div></li>
+              <li><p class="korak">Čas potovanja svetlobe je \(t = s/c\). Za razdaljo v svetlobnih letih je to kar število let.</p><div class="na-nalogi"><p>Svetloba je odšla pred 8,6 leta.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Koliko časa potuje radijski signal s sonde pri Jupitru (razdalja do Zemlje 4,2 AE)?</p><p>\(t = 4{,}2 \cdot 1{,}50 \cdot 10^{11} / 3{,}0 \cdot 10^8 = 2100\ \text{s} = 35\ \text{min}\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Koliko svetlobnih minut je Sonce oddaljeno od Zemlje?</p><p>\(1{,}50 \cdot 10^{11}/3{,}0 \cdot 10^8 = 500\ \text{s} = 8{,}3\ \text{min}\).</p></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-3">
+              <h4>Tip 3: Primerjava velikosti in razdalj</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>V modelu je Sonce (polmer \(7{,}0 \cdot 10^8\ \text{m}\)) žoga s polmerom 10 cm. Kako daleč od žoge mora biti v modelu Zemlja in kako velika je?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> sprašujejo, kolikokrat je eno telo večje ali bolj oddaljeno od drugega, ali po velikosti v pomanjšanem modelu.</p><ul class="kljucne"><li>„kolikokrat“</li><li>„v modelu“</li><li>„v merilu“</li><li>„primerjaj velikost“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Zapiši prave vrednosti v isti enoti.</p><div class="na-nalogi"><p>\(R_S = 7{,}0 \cdot 10^8\ \text{m}\), \(R_Z = 6{,}37 \cdot 10^6\ \text{m}\), \(r = 1{,}50 \cdot 10^{11}\ \text{m}\).</p></div></li>
+              <li><p class="korak">Izračunaj merilo kot razmerje med modelom in resničnostjo (ali razmerje dveh resničnih količin).</p><div class="na-nalogi"><p>Merilo \(0{,}10\ \text{m} / 7{,}0 \cdot 10^8\ \text{m} = 1{,}4 \cdot 10^{-10}\).</p></div></li>
+              <li><p class="korak">Vse ostale količine pomnoži z istim merilom.</p><div class="na-nalogi"><p>Razdalja v modelu \(1{,}50 \cdot 10^{11} \cdot 1{,}4 \cdot 10^{-10} = 21\ \text{m}\), polmer Zemlje \(0{,}9\ \text{mm}\): Zemlja je zrno popra 21 m od žoge.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Kolikokrat je najbližja zvezda (4,2 sv. leta) bolj oddaljena od Sonca kot Zemlja?</p><p>\(4{,}2 \cdot 9{,}46 \cdot 10^{15} / 1{,}50 \cdot 10^{11} = 2{,}6 \cdot 10^5\)-krat.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Kolikokrat je premer Galaksije (\(10^5\) sv. let) večji od razdalje do najbližje zvezde?</p><p>Okoli 24 000-krat.</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 3 -->
+        <section class="sklop sklop--visja" id="sklop-3">
+          <header class="sklop-header">
+            <span class="sklop-num">4.19 · 3</span>
+            <h2>Gibanje planetov in satelitov <span class="badge-vr">PZ</span></h2>
+            <p>Gravitacijski zakon, kroženje planetov, lun in umetnih satelitov, obhodni čas in masa osrednjega telesa.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <h4>Gravitacijska sila kot radialna sila</h4>
+            <p>Dve telesi se privlačita z gravitacijsko silo \(F_g = G m_1 m_2/r^2\), kjer je \(r\) razdalja med njunima središčema. Planet z maso \(m\) kroži okoli Sonca z maso \(M\) zato, ker je gravitacijska sila ravno radialna sila, potrebna za kroženje:</p>
+            <figure class="slika slika--ozka">
+<svg viewBox="0 0 300 290" role="img" aria-label="Kroženje satelita" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g2-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g2-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g2-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g2-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g2-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g2-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<line class="s-k3" x1="150" y1="145" x2="220.1" y2="218.7"/>
+<line class="s-k2" x1="221.8" y1="73.2" x2="193.2" y2="101.8" marker-end="url(#g2-k2)"/>
+<text class="s-txt-k2" x="203.5" y="101.5" text-anchor="start">F<tspan dy="4" style="font-size:10px">g</tspan></text>
+<line class="s-k1" x1="221.8" y1="73.2" x2="172.8" y2="24.1" marker-end="url(#g2-k1)"/>
+<text class="s-txt-k1" x="189.3" y="48.7" text-anchor="start">v</text>
+<circle class="s-tocka-2" cx="221.8" cy="73.2" r="5"/>
+<text class="s-txt-b" x="150" y="149" text-anchor="middle">M</text>
+<text class="s-txt-k3" x="198.2" y="172.9" text-anchor="middle">r</text>
+<text class="s-txt-b" x="232.2" y="66.3" text-anchor="start">m</text>
+<circle class="s-ploskev" cx="150" cy="145" r="45.7"/>
+<circle class="s-pom" cx="150" cy="145" r="101.5"/>
+</svg>
+<figcaption>Gravitacijska sila osrednjega telesa kaže proti središču kroženja in je ravno pravšnja radialna sila: \(\frac{GMm}{r^2} = \frac{mv^2}{r}\). Razdalja \(r\) se meri od središča osrednjega telesa.</figcaption>
+</figure>
+            <p>\[G\frac{Mm}{r^2} = \frac{mv^2}{r} \quad\Rightarrow\quad v = \sqrt{\frac{GM}{r}}.\]</p>
+            <p>Masa satelita \(m\) se krajša: hitrost kroženja je odvisna le od mase osrednjega telesa in polmera tira. Bolj oddaljena telesa krožijo počasneje. Pozor, \(r\) je razdalja od <em>središča</em> osrednjega telesa, za satelit nad Zemljo torej \(r = R_Z + h\).</p>
+            <h4>Obhodni čas in tretji Keplerjev zakon</h4>
+            <p>Ko v enačbo vstavimo \(v = 2\pi r/t_0\), dobimo</p>
+            <p>\[\frac{r^3}{t_0^2} = \frac{GM}{4\pi^2}.\]</p>
+            <p>Za vsa telesa, ki krožijo okoli istega osrednjega telesa, je razmerje \(r^3/t_0^2\) enako (tretji Keplerjev zakon). Iz tega lahko primerjamo planete med seboj, ne da bi poznali \(G\) in \(M\): če je planet 4-krat dlje od Sonca, je njegov obhodni čas \(4^{3/2} = 8\)-krat daljši. Če poznamo \(r\) in \(t_0\) lune ali planeta, lahko izračunamo maso osrednjega telesa. Tako so določili maso Sonca in maso Zemlje.</p>
+            <h4>Umetni sateliti</h4>
+            <p>Sateliti nizko nad Zemljo (nekaj sto km) krožijo s hitrostjo okoli 7,7 km/s in Zemljo obkrožijo v okoli 90 minutah. <strong>Geostacionarni satelit</strong> kroži nad ekvatorjem z obhodnim časom en dan, zato je ves čas nad isto točko Zemlje; tak tir je na višini okoli 36 000 km.</p>
+            <p>Tiri planetov so v resnici elipse s Soncem v gorišču, in planet se giblje hitreje, ko je bliže Soncu. Za račune na maturi tire obravnavamo kot krožnice.</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-4">
+              <h4>Tip 4: Hitrost in obhodni čas satelita <span class="badge-vr">PZ</span></h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Mednarodna vesoljska postaja kroži 400 km nad površjem Zemlje. S kolikšno hitrostjo kroži in v kolikšnem času obkroži Zemljo? (\(M_Z = 6{,}0 \cdot 10^{24}\ \text{kg}\), \(R_Z = 6370\ \text{km}\))</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> telo kroži okoli planeta ali zvezde, podana je masa osrednjega telesa in višina ali polmer tira; iščejo hitrost, obhodni čas ali višino.</p><ul class="kljucne"><li>„satelit kroži“</li><li>„na višini“</li><li>„obhodni čas“</li><li>„geostacionarni“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Določi polmer tira od središča osrednjega telesa: \(r = R + h\).</p><div class="na-nalogi"><p>\(r = 6370 + 400 = 6770\ \text{km} = 6{,}77 \cdot 10^6\ \text{m}\).</p></div></li>
+              <li><p class="korak">Izenači gravitacijsko in radialno silo ter izrazi hitrost.</p><div class="na-nalogi"><p>\(v = \sqrt{GM/r} = \sqrt{6{,}67 \cdot 10^{-11} \cdot 6{,}0 \cdot 10^{24}/6{,}77 \cdot 10^6} = 7{,}7 \cdot 10^3\ \text{m/s}\).</p></div></li>
+              <li><p class="korak">Obhodni čas izračunaj iz obsega tira: \(t_0 = 2\pi r/v\). Če je obhodni čas podan, uporabi \(r^3 = GMt_0^2/4\pi^2\).</p><div class="na-nalogi"><p>\(t_0 = 2\pi \cdot 6{,}77 \cdot 10^6/7{,}7 \cdot 10^3 = 5{,}5 \cdot 10^3\ \text{s} = 92\ \text{min}\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Na kolikšni višini kroži geostacionarni satelit (\(t_0 = 24\ \text{h}\))?</p><p>\(r = \sqrt[3]{GMt_0^2/4\pi^2} = 4{,}2 \cdot 10^7\ \text{m}\), \(h = r - R_Z = 3{,}6 \cdot 10^7\ \text{m}\); hitrost \(3{,}1\ \text{km/s}\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Kolikšen je gravitacijski pospešek na tiru vesoljske postaje?</p><p>\(GM/r^2 = 8{,}7\ \text{m/s}^2\). Astronavti so v breztežnem stanju, ker skupaj s postajo prosto padajo, ne zato, ker gravitacije ne bi bilo.</p></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-5">
+              <h4>Tip 5: Masa osrednjega telesa in tretji Keplerjev zakon <span class="badge-vr">PZ</span></h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Zemlja obkroži Sonce v enem letu po tiru s polmerom \(1{,}50 \cdot 10^{11}\ \text{m}\). Izračunaj maso Sonca.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> podana sta polmer tira in obhodni čas telesa, iščejo maso telesa, okoli katerega kroži; ali pa primerjajo obhodne čase in polmere dveh teles okoli istega središča.</p><ul class="kljucne"><li>„izračunaj maso planeta / Sonca“</li><li>„luna planeta kroži“</li><li>„kolikokrat daljše leto“</li><li>„Keplerjev zakon“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Pretvori obhodni čas v sekunde in polmer v metre.</p><div class="na-nalogi"><p>\(t_0 = 3{,}16 \cdot 10^7\ \text{s}\), \(r = 1{,}50 \cdot 10^{11}\ \text{m}\).</p></div></li>
+              <li><p class="korak">Iz \(r^3/t_0^2 = GM/4\pi^2\) izrazi maso.</p><div class="na-nalogi"><p>\(M = \dfrac{4\pi^2 r^3}{G t_0^2}\).</p></div></li>
+              <li><p class="korak">Vstavi in izračunaj. Pri primerjavi dveh teles okoli istega središča namesto tega zapiši \(r_1^3/t_1^2 = r_2^3/t_2^2\).</p><div class="na-nalogi"><p>\(M = \dfrac{4\pi^2 (1{,}50 \cdot 10^{11})^3}{6{,}67 \cdot 10^{-11} (3{,}16 \cdot 10^7)^2} = 2{,}0 \cdot 10^{30}\ \text{kg}\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Luna kroži na razdalji \(3{,}84 \cdot 10^8\ \text{m}\) z obhodnim časom 27,3 dneva. Kolikšna je masa Zemlje?</p><p>\(M = 6{,}0 \cdot 10^{24}\ \text{kg}\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Mars je od Sonca oddaljen 1,52 AE. Koliko traja leto na Marsu?</p><p>\(t_0 = 1{,}52^{3/2}\ \text{leta} = 1{,}9\ \text{leta}\).</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 4 -->
+        <section class="sklop sklop--visja" id="sklop-4">
+          <header class="sklop-header">
+            <span class="sklop-num">4.19 · 4</span>
+            <h2>Stefanov zakon <span class="badge-vr">PZ</span></h2>
+            <p>Sevanje zvezd, izsevana moč, temperatura površja Sonca in gostota svetlobnega toka na Zemlji.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <h4>Gostota izsevanega toka</h4>
+            <p>Vsako telo seva elektromagnetno valovanje, tem močneje, čim višja je njegova temperatura. Za zvezde (in druga črna telesa) velja <strong>Stefanov zakon</strong>: gostota energijskega toka, ki ga seva površje, je</p>
+            <p>\[j = \sigma T^4, \qquad \sigma = 5{,}67 \cdot 10^{-8}\ \frac{\text{W}}{\text{m}^2\text{K}^4}.\]</p>
+            <p>\(T\) je absolutna temperatura površja v kelvinih. Ker je v četrti potenci, dvakrat višja temperatura pomeni 16-krat večjo gostoto toka. Celotna izsevana moč zvezde s polmerom \(R\) je gostota toka, pomnožena s površino krogle:</p>
+            <p>\[P = 4\pi R^2\,\sigma T^4.\]</p>
+            <p>Vroče zvezde ne sevajo le močneje, ampak tudi pri krajših valovnih dolžinah, zato so modre; hladnejše so rdeče. Sonce s temperaturo površja okoli 5800 K seva največ v vidnem delu spektra.</p>
+            <h4>Gostota toka na razdalji \(r\)</h4>
+            <figure class="slika slika--ozka">
+<svg viewBox="0 0 320 274" role="img" aria-label="Gostota svetlobnega toka" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g3-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g3-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g3-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g3-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g3-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g3-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<line class="s-k2" x1="180.6" y1="137" x2="219.5" y2="137" marker-end="url(#g3-k2)"/>
+<line class="s-k2" x1="170.6" y1="112.7" x2="198.1" y2="85.2" marker-end="url(#g3-k2)"/>
+<line class="s-k2" x1="146.3" y1="102.7" x2="146.3" y2="63.8" marker-end="url(#g3-k2)"/>
+<line class="s-k2" x1="122" y1="112.7" x2="94.4" y2="85.2" marker-end="url(#g3-k2)"/>
+<line class="s-k2" x1="111.9" y1="137" x2="73" y2="137" marker-end="url(#g3-k2)"/>
+<line class="s-k2" x1="122" y1="161.3" x2="94.4" y2="188.8" marker-end="url(#g3-k2)"/>
+<line class="s-k2" x1="146.3" y1="171.3" x2="146.3" y2="210.2" marker-end="url(#g3-k2)"/>
+<line class="s-k2" x1="170.6" y1="161.3" x2="198.1" y2="188.8" marker-end="url(#g3-k2)"/>
+<circle class="s-tocka" cx="251.6" cy="137" r="4"/>
+<text class="s-txt-b" x="146.3" y="141" text-anchor="middle">T</text>
+<text class="s-txt-muted" x="146.3" y="175.9" text-anchor="middle">R</text>
+<text class="s-txt-b" x="251.6" y="123.3" text-anchor="start">Zemlja</text>
+<text class="s-txt-muted" x="146.3" y="251.4" text-anchor="middle">krogla s polmerom r</text>
+<circle class="s-ploskev-2" cx="146.3" cy="137" r="27.5"/>
+<circle class="s-pom" cx="146.3" cy="137" r="105.4"/>
+</svg>
+<figcaption>Zvezda s površja seva gostoto toka \(j = \sigma T^4\), skupaj moč \(P = 4\pi R^2 \sigma T^4\). Ta moč se razporedi po vedno večji krogli, zato na razdalji \(r\) gostota toka pada kot \(1/r^2\): \(j = P/4\pi r^2\).</figcaption>
+</figure>
+            <p>Moč, ki jo zvezda izseva, se razporedi po krogli s polmerom \(r\), zato je gostota toka na razdalji \(r\)</p>
+            <p>\[j(r) = \frac{P}{4\pi r^2}.\]</p>
+            <p>Na razdalji Zemlje od Sonca je \(j = 1{,}37\ \text{kW/m}^2\) (solarna konstanta, merjena nad atmosfero). Iz \(j\) na Zemlji, razdalje do Sonca in polmera Sonca lahko izračunamo temperaturo površja Sonca. Ker sta obe gostoti toka sorazmerni z \(1/r^2\), velja \(j_\text{površje}/j_\text{Zemlja} = (r/R)^2\).</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-6">
+              <h4>Tip 6: Izsevana moč zvezde <span class="badge-vr">PZ</span></h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Temperatura površja Sonca je 5800 K, polmer Sonca \(7{,}0 \cdot 10^8\ \text{m}\). Kolikšno moč izseva Sonce in kolikšna je gostota svetlobnega toka na Zemlji, ki je od Sonca oddaljena \(1{,}50 \cdot 10^{11}\ \text{m}\)?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> podana sta temperatura površja in polmer zvezde (ali telesa), iščejo izsevano moč ali gostoto toka blizu ali daleč od nje.</p><ul class="kljucne"><li>„temperatura površja“</li><li>„izseva moč“</li><li>„gostota svetlobnega toka“</li><li>„na razdalji“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Izračunaj gostoto toka na površju po Stefanovem zakonu (temperatura v K).</p><div class="na-nalogi"><p>\(j = \sigma T^4 = 5{,}67 \cdot 10^{-8} \cdot 5800^4 = 6{,}4 \cdot 10^7\ \text{W/m}^2\).</p></div></li>
+              <li><p class="korak">Pomnoži s površino krogle \(4\pi R^2\).</p><div class="na-nalogi"><p>\(P = 4\pi (7{,}0 \cdot 10^8)^2 \cdot 6{,}4 \cdot 10^7 = 3{,}9 \cdot 10^{26}\ \text{W}\).</p></div></li>
+              <li><p class="korak">Za gostoto toka na razdalji \(r\) deli moč s površino krogle s polmerom \(r\).</p><div class="na-nalogi"><p>\(j = 3{,}9 \cdot 10^{26}/4\pi (1{,}50 \cdot 10^{11})^2 = 1{,}4 \cdot 10^3\ \text{W/m}^2\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Zvezda ima enak polmer kot Sonce in dvakrat višjo temperaturo. Kolikokrat večjo moč izseva?</p><p>\(2^4 = 16\)-krat.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Kolikšna je gostota sončnega toka pri Marsu (1,52 AE)?</p><p>\(1{,}37\ \text{kW/m}^2/1{,}52^2 = 590\ \text{W/m}^2\).</p></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-7">
+              <h4>Tip 7: Temperatura površja iz izmerjenega toka <span class="badge-vr">PZ</span></h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Nad atmosfero izmerimo gostoto sončnega toka \(1{,}37\ \text{kW/m}^2\). Zemlja je od Sonca oddaljena \(1{,}50 \cdot 10^{11}\ \text{m}\), polmer Sonca je \(7{,}0 \cdot 10^8\ \text{m}\). Oceni temperaturo površja Sonca.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> podana je izmerjena gostota toka ali moč, iščejo temperaturo površja zvezde ali njen polmer.</p><ul class="kljucne"><li>„oceni temperaturo“</li><li>„solarna konstanta“</li><li>„kolikšen je polmer zvezde“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Izračunaj celotno moč zvezde: \(P = j \cdot 4\pi r^2\).</p><div class="na-nalogi"><p>\(P = 1370 \cdot 4\pi (1{,}50 \cdot 10^{11})^2 = 3{,}9 \cdot 10^{26}\ \text{W}\).</p></div></li>
+              <li><p class="korak">Deli s površino zvezde in dobiš gostoto toka na površju.</p><div class="na-nalogi"><p>\(j_S = P/4\pi R^2 = 6{,}3 \cdot 10^7\ \text{W/m}^2\).</p></div></li>
+              <li><p class="korak">Iz \(j = \sigma T^4\) izrazi temperaturo s četrtim korenom.</p><div class="na-nalogi"><p>\(T = \sqrt[4]{j_S/\sigma} = \sqrt[4]{6{,}3 \cdot 10^7/5{,}67 \cdot 10^{-8}} = 5800\ \text{K}\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Zvezda s temperaturo 3500 K izseva \(4 \cdot 10^{30}\ \text{W}\). Kolikšen je njen polmer?</p><p>\(R = \sqrt{P/4\pi\sigma T^4} = 1{,}9 \cdot 10^{11}\ \text{m}\), okoli 280 polmerov Sonca: rdeča orjakinja.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Kolikšen tok prejme sončni panel s ploščino \(2{,}0\ \text{m}^2\) pravokotno na žarke nad atmosfero?</p><p>\(P = jS = 2{,}7\ \text{kW}\).</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 5 -->
+        <section class="sklop" id="sklop-5">
+          <header class="sklop-header">
+            <span class="sklop-num">4.19 · 5</span>
+            <h2>Zlivanje v zvezdah</h2>
+            <p>Zlivanje vodika v helij kot vir energije zvezd in izguba mase Sonca.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <h4>Od kod zvezdam energija</h4>
+            <p>Sonce seva z močjo \(3{,}9 \cdot 10^{26}\ \text{W}\) že okoli 4,6 milijarde let. Nobena kemijska reakcija ne bi dala toliko energije. Vir je <strong>zlivanje</strong> (fuzija) lahkih jeder. V središču Sonca je temperatura okoli \(1{,}5 \cdot 10^7\ \text{K}\) in gostota zelo velika, zato se protoni zaletavajo dovolj hitro, da premagajo električno odbojno silo in se zlijejo.</p>
+            <figure class="slika">
+<svg viewBox="0 0 460 195" role="img" aria-label="Zlivanje vodika v helij" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g4-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g4-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g4-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g4-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g4-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g4-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<line class="s-k1" x1="124" y1="97.5" x2="245.9" y2="97.5" marker-end="url(#g4-k1)"/>
+<circle class="s-tocka-2" cx="49.8" cy="60.4" r="7"/>
+<circle class="s-tocka-2" cx="86.9" cy="49.8" r="7"/>
+<circle class="s-tocka-2" cx="49.8" cy="134.6" r="7"/>
+<circle class="s-tocka-2" cx="86.9" cy="145.2" r="7"/>
+<circle class="s-tocka-2" cx="304.2" cy="89.6" r="7"/>
+<circle class="s-tocka-2" cx="320.1" cy="105.5" r="7"/>
+<circle class="s-tocka" cx="320.1" cy="89.6" r="7"/>
+<circle class="s-tocka" cx="304.2" cy="105.5" r="7"/>
+<text class="s-txt-b" x="68.4" y="169.1" text-anchor="middle">4 protoni</text>
+<text class="s-txt-muted" x="185" y="86.9" text-anchor="middle">več stopenj</text>
+<text class="s-txt-b" x="312.2" y="132" text-anchor="middle">⁴He</text>
+<text class="s-txt-k3" x="351.9" y="57.8" text-anchor="start">+ 2 pozitrona</text>
+<text class="s-txt-k3" x="351.9" y="84.3" text-anchor="start">+ 2 nevtrina</text>
+<text class="s-txt-k2" x="351.9" y="110.8" text-anchor="start">+ fotoni γ</text>
+<text class="s-txt-k2" x="351.9" y="137.3" text-anchor="start">26,7 MeV</text>
+
+</svg>
+<figcaption>V središču Sonca se pri temperaturi okoli \(1{,}5 \cdot 10^7\ \text{K}\) štirje protoni v več stopnjah zlijejo v jedro helija. Masa helija je za okoli 0,7 % manjša od mase štirih protonov; razlika se sprosti kot energija.</figcaption>
+</figure>
+            <p>V več stopnjah se štirje protoni pretvorijo v jedro helija \({}^4_2\text{He}\), dva pozitrona in dva nevtrina. Skupna sproščena energija je 26,7 MeV na eno nastalo jedro helija. Helij je bolj vezan od vodika (vezavna energija na nukleon je večja, glej <a href="/views/fizika/snov/atomsko_jedro/atomsko_jedro_razlaga.html">4.18</a>), zato je njegova masa manjša od mase štirih protonov.</p>
+            <h4>Sonce izgublja maso</h4>
+            <p>Ker se izsevana energija pri zlivanju sprosti na račun mase, Sonce vsako sekundo izgubi maso</p>
+            <p>\[\frac{\Delta m}{t} = \frac{P}{c^2} = \frac{3{,}9 \cdot 10^{26}\ \text{W}}{(3{,}0 \cdot 10^8\ \text{m/s})^2} = 4{,}3 \cdot 10^9\ \text{kg/s}.\]</p>
+            <p>To je okoli 4 milijone ton na sekundo, a v primerjavi z maso Sonca zanemarljivo: v vsem dosedanjem življenju je Sonce izgubilo manj kot desetinko odstotka mase. Ko zvezdi v središču zmanjka vodika, začne zlivati težje elemente; tako so v zvezdah nastali skoraj vsi elementi, težji od helija, do železa.</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-8">
+              <h4>Tip 8: Energija in masa pri zlivanju v zvezdi</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Sonce izseva moč \(3{,}9 \cdot 10^{26}\ \text{W}\). Koliko mase izgubi vsako sekundo? Koliko jeder helija nastane v sekundi, če se pri nastanku enega sprosti 26,7 MeV?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> podana je moč ali energija, ki jo izseva zvezda, iščejo izgubo mase, število reakcij ali porabo vodika.</p><ul class="kljucne"><li>„koliko mase izgubi Sonce“</li><li>„zlivanje vodika“</li><li>„koliko reakcij na sekundo“</li><li>„vir energije Sonca“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Izgubo mase v času \(t\) izračunaj iz \(W = mc^2\): \(\Delta m = Pt/c^2\).</p><div class="na-nalogi"><p>\(\Delta m = 3{,}9 \cdot 10^{26} \cdot 1/(3{,}0 \cdot 10^8)^2 = 4{,}3 \cdot 10^9\ \text{kg}\) vsako sekundo.</p></div></li>
+              <li><p class="korak">Energijo ene reakcije pretvori iz MeV v J.</p><div class="na-nalogi"><p>\(W_1 = 26{,}7 \cdot 10^6 \cdot 1{,}6 \cdot 10^{-19}\ \text{J} = 4{,}3 \cdot 10^{-12}\ \text{J}\).</p></div></li>
+              <li><p class="korak">Število reakcij v sekundi je moč, deljena z energijo ene reakcije.</p><div class="na-nalogi"><p>\(N/t = 3{,}9 \cdot 10^{26}/4{,}3 \cdot 10^{-12} = 9{,}1 \cdot 10^{37}\ \text{s}^{-1}\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Koliko vodika porabi Sonce v sekundi?</p><p>Za vsako jedro helija štiri protone: \(4 \cdot 9{,}1 \cdot 10^{37} \cdot 1{,}67 \cdot 10^{-27}\ \text{kg} = 6{,}1 \cdot 10^{11}\ \text{kg}\).</p></div>
+              <div class="primer"><p><strong>Primer 2</strong> <span class="badge-vr">PZ</span><strong>:</strong> Iz mas \(4 \cdot m({}^1\text{H}) = 4{,}03132\ \text{u}\) in \(m({}^4\text{He}) = 4{,}00260\ \text{u}\) izračunaj sproščeno energijo.</p><p>\(\Delta m = 0{,}02872\ \text{u}\), \(W = 0{,}02872 \cdot 931{,}5\ \text{MeV} = 26{,}7\ \text{MeV}\).</p></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="subsection" id="kljuc">
+          <div class="subsection-head">
+            <h2>Ključ: kateri tip naloge je to?</h2>
+            <p>Poišči besedo iz navodila naloge in skoči na pravi postopek.</p>
+          </div>
+          <div class="info-card">
+            <div class="tabela-wrap">
+              <table class="tabela">
+                <thead><tr><th>V besedilu naloge piše …</th><th>Tip</th></tr></thead>
+                <tbody>
+                  <tr><td>„planet“, „komet“, „meteorit“, „katera trditev“</td><td><a href="#tip-1">Tip 1</a></td></tr>
+                  <tr><td>„svetlobno leto“, „koliko časa potuje svetloba“</td><td><a href="#tip-2">Tip 2</a></td></tr>
+                  <tr><td>„kolikokrat večje“, „v modelu“, „v merilu“</td><td><a href="#tip-3">Tip 3</a></td></tr>
+                  <tr><td>„satelit kroži na višini“, „geostacionarni“</td><td><a href="#tip-4">Tip 4</a></td></tr>
+                  <tr><td>„izračunaj maso planeta“, „kolikokrat daljše leto“</td><td><a href="#tip-5">Tip 5</a></td></tr>
+                  <tr><td>„temperatura površja“, „izseva moč“</td><td><a href="#tip-6">Tip 6</a></td></tr>
+                  <tr><td>„oceni temperaturo Sonca“, „solarna konstanta“</td><td><a href="#tip-7">Tip 7</a></td></tr>
+                  <tr><td>„koliko mase izgubi Sonce“, „zlivanje“</td><td><a href="#tip-8">Tip 8</a></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>Pogoste napake</h2>
+          </div>
+          <div class="info-card">
+            <ul>
+              <li>Svetlobno leto razumeš kot enoto za čas; je enota za razdaljo.</li>
+              <li>Za polmer tira satelita vzameš višino nad površjem namesto razdalje od središča Zemlje.</li>
+              <li>Obhodni čas vstaviš v dnevih ali urah namesto v sekundah.</li>
+              <li>V Stefanov zakon vstaviš temperaturo v °C ali pozabiš na četrto potenco.</li>
+              <li>Pri gostoti toka na razdalji uporabiš polmer zvezde namesto razdalje (ali obratno).</li>
+              <li>Misliš, da Sonce gori; energijo daje zlivanje jeder, ne gorenje.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>Vsa poglavja</h2>
+          </div>
+          <div class="link-list">
+            <a class="link-item" href="/views/fizika/snov/snov.html">
+              <span class="link-item-text"><strong>Pregled snovi iz fizike</strong><small>Vseh 19 poglavij po maturitetnem katalogu</small></span>
+              <span class="arrow">→</span>
+            </a>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>

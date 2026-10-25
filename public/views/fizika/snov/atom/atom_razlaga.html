@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atom — razlaga in postopki | Piflar.si</title>
+  <meta name="description" content="Atom za maturo iz fizike: velikost atoma, število atomov v snovi, sestava atoma iz periodnega sistema, naboj in masa elektrona, foton, fotoefekt, izstopno delo, energijska stanja, prehodi in črtasti spektri.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
+  <link rel="stylesheet" href="/style/snov.css">
+</head>
+<body>
+  <div id="header"></div>
+
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view">
+
+<header class="page-header">
+          <span class="page-eyebrow">Fizika · Snov · 4.17</span>
+          <h1>Atom</h1>
+          <p>Snov je zgrajena iz atomov z majhnim jedrom in elektroni okoli njega. Svetloba se z atomi izmenjuje v obrokih, fotonih. Tu so velikost in sestava atoma, energija fotona, fotoefekt ter energijska stanja atomov in spektri. Pod razlago so vsi tipi nalog, ki se pojavijo pri tem sklopu. Vsebine, označene s <span class="badge-vr">PZ</span>, so posebna znanja iz kataloga.</p>
+          <div class="page-meta">
+            <div class="page-meta-item"><strong>3</strong><span>Podpoglavja</span></div>
+            <div class="page-meta-item"><strong>6</strong><span>Tipov nalog</span></div>
+            <div class="page-meta-item"><strong>~30 min</strong><span>Branja</span></div>
+          </div>
+        </header>
+
+        <div class="matura-formule">
+          <h3>Formule na maturi</h3>
+          <p>Enačbe, ki jih potrebuješ (večina je na listu s konstantami in enačbami, ki je del izpitne pole):</p>
+          <div class="matura-levo">
+            <ul>
+              <li>število delcev: \(N = \dfrac{m}{M} N_A\), \(N_A = 6{,}02 \cdot 10^{26}\ \text{kmol}^{-1}\)</li>
+              <li>energija fotona: \(W_f = h\nu = \dfrac{hc}{\lambda}\), \(h = 6{,}63 \cdot 10^{-34}\ \text{Js}\)</li>
+              <li>fotoefekt <span class="badge-vr">PZ</span>: \(h\nu = A_i + W_k\), mejna frekvenca \(\nu_m = \dfrac{A_i}{h}\)</li>
+              <li>prehod med stanji: \(h\nu = W_n - W_m\)</li>
+            </ul>
+          </div>
+          <p class="matura-opomba">\(e_0 = 1{,}6 \cdot 10^{-19}\ \text{As}\), \(m_e = 9{,}1 \cdot 10^{-31}\ \text{kg}\), \(1\ \text{eV} = 1{,}6 \cdot 10^{-19}\ \text{J}\). Uporaben približek: \(hc = 1240\ \text{eV nm}\).</p>
+        </div>
+
+        <nav class="kazalo" aria-label="Podpoglavja">
+          <h2>Podpoglavja</h2>
+          <ol>
+            <li><a href="#sklop-1"><span class="kazalo-st">1</span> Atom</a></li>
+            <li><a href="#sklop-2"><span class="kazalo-st">2</span> Foton</a></li>
+            <li><a href="#sklop-3"><span class="kazalo-st">3</span> Energijska stanja atoma</a></li>
+            <li><a href="#kljuc"><span class="kazalo-st">?</span> Ključ: kateri tip naloge je to?</a></li>
+          </ol>
+        </nav>
+
+        <!-- SKLOP 1 -->
+        <section class="sklop" id="sklop-1">
+          <header class="sklop-header">
+            <span class="sklop-num">4.17 · 1</span>
+            <h2>Atom</h2>
+            <p>Velikost atoma, število atomov v snovi, sestava atoma, naboj in masa elektrona.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <h4>Velikost in zgradba</h4>
+            <p>Atomi so veliki približno \(10^{-10}\ \text{m}\) (0,1 nm). V središču je jedro iz protonov in nevtronov, veliko okoli \(10^{-15}\ \text{m}\), v katerem je skoraj vsa masa atoma. Okoli jedra so elektroni. Atom je večinoma prazen prostor.</p>
+            <figure class="slika slika--ozka">
+<svg viewBox="0 0 300 278" role="img" aria-label="Model atoma" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g1-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g1-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g1-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g1-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g1-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g1-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<circle class="s-tocka-2" cx="150" cy="139" r="5"/>
+<circle class="s-tocka" cx="216" cy="139" r="4"/>
+<circle class="s-tocka" cx="103.2" cy="92.3" r="4"/>
+<circle class="s-tocka" cx="183" cy="227" r="4"/>
+<circle class="s-tocka" cx="73" cy="194" r="4"/>
+<text class="s-txt-k2" x="163.8" y="125.3" text-anchor="start">jedro (≈ 10⁻¹⁵ m)</text>
+<text class="s-txt-k1" x="150" y="254.5" text-anchor="middle">elektronski oblak (≈ 10⁻¹⁰ m)</text>
+<circle class="s-ploskev" cx="150" cy="139" r="104.5"/>
+<circle class="s-pom" cx="150" cy="139" r="66"/>
+</svg>
+<figcaption>Atom ima majhno, pozitivno nabito jedro, v katerem je skoraj vsa masa, okoli njega pa so elektroni. Jedro je približno stotisočkrat manjše od atoma (slika ni v merilu).</figcaption>
+</figure>
+            <p>Elektron ima naboj \(-e_0 = -1{,}6 \cdot 10^{-19}\ \text{As}\) in maso \(m_e = 9{,}1 \cdot 10^{-31}\ \text{kg}\), kar je okoli 1840-krat manj od mase protona.</p>
+            <h4>Sestava iz periodnega sistema</h4>
+            <p>Vrstno (atomsko) število \(Z\) pove število protonov v jedru in število elektronov v nevtralnem atomu. Masno število \(A\) je število nukleonov (protonov in nevtronov), zato je nevtronov \(A - Z\). Zapis: \({}^{A}_{Z}\text{X}\), na primer \({}^{56}_{26}\text{Fe}\) ima 26 protonov, 30 nevtronov in 26 elektronov. Ion ima elektronov več ali manj kot protonov.</p>
+            <h4>Število atomov v snovi</h4>
+            <p>Kilomol snovi vsebuje \(N_A = 6{,}02 \cdot 10^{26}\) delcev. Masa kilomola \(M\) v kilogramih je približno enaka relativni atomski (molekulski) masi iz periodnega sistema (za ogljik 12 kg/kmol, za vodo 18 kg/kmol). V masi \(m\) je</p>
+            <p>\[N = \frac{m}{M} N_A\]</p>
+            <p>delcev. Velikost atoma lahko ocenimo tako, da prostornino snovi enakomerno razdelimo med atome: na en atom pride prostornina \(V/N\), rob kocke, ki jo zaseda, je \(\sqrt[3]{V/N}\).</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-1">
+              <h4>Tip 1: Število atomov in velikost atoma</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Koliko atomov je v bakrenem kovancu z maso \(3{,}0\ \text{g}\) (\(M = 63{,}5\ \text{kg/kmol}\))? Oceni velikost atoma bakra, če je gostota bakra \(8900\ \text{kg/m}^3\).</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> podana je masa ali prostornina snovi, sprašujejo po številu atomov (molekul) ali po velikosti atoma oziroma razdalji med njimi.</p><ul class="kljucne"><li>„koliko atomov“</li><li>„koliko molekul“</li><li>„oceni velikost atoma“</li><li>„kilomol“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Iz periodnega sistema odčitaj kilomolsko maso in izračunaj število kilomolov \(m/M\).</p><div class="na-nalogi"><p>\(m/M = 0{,}0030/63{,}5 = 4{,}7 \cdot 10^{-5}\ \text{kmol}\).</p></div></li>
+              <li><p class="korak">Pomnoži z Avogadrovim številom.</p><div class="na-nalogi"><p>\(N = 4{,}7 \cdot 10^{-5} \cdot 6{,}02 \cdot 10^{26} = 2{,}8 \cdot 10^{22}\).</p></div></li>
+              <li><p class="korak">Za velikost izračunaj prostornino na en atom in iz nje rob kocke.</p><div class="na-nalogi"><p>\(V = m/\rho = 3{,}4 \cdot 10^{-7}\ \text{m}^3\); \(V/N = 1{,}2 \cdot 10^{-29}\ \text{m}^3\); \(a = \sqrt[3]{V/N} = 2{,}3 \cdot 10^{-10}\ \text{m}\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Koliko molekul je v 1,0 l vode?</p><p>\(m/M = 1/18\ \text{kmol}\), \(N = 3{,}3 \cdot 10^{25}\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Masa enega atoma helija (\(M = 4\ \text{kg/kmol}\))?</p><p>\(M/N_A = 6{,}6 \cdot 10^{-27}\ \text{kg}\).</p></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-2">
+              <h4>Tip 2: Sestava atoma in iona</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Koliko protonov, nevtronov in elektronov ima ion \({}^{27}_{13}\text{Al}^{3+}\)? Kolikšen je celotni naboj elektronov v tem ionu?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> podan je simbol elementa z masnim in vrstnim številom ali ime elementa, sprašujejo po številu delcev v atomu, ionu ali po naboju.</p><ul class="kljucne"><li>„koliko protonov“</li><li>„koliko nevtronov“</li><li>„ion“</li><li>„iz periodnega sistema“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Število protonov je vrstno število \(Z\).</p><div class="na-nalogi"><p>\(Z = 13\) protonov.</p></div></li>
+              <li><p class="korak">Število nevtronov je \(A - Z\).</p><div class="na-nalogi"><p>\(27 - 13 = 14\) nevtronov.</p></div></li>
+              <li><p class="korak">Elektronov je \(Z\) minus naboj iona (v enotah \(e_0\)).</p><div class="na-nalogi"><p>\(13 - 3 = 10\) elektronov, skupni naboj \(-10 e_0 = -1{,}6 \cdot 10^{-18}\ \text{As}\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Koliko elektronov ima ion \(\text{Cl}^-\) (\(Z = 17\))?</p><p>18.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Kolikokrat je masa protona večja od mase elektrona?</p><p>Okoli 1840-krat.</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 2 -->
+        <section class="sklop" id="sklop-2">
+          <header class="sklop-header">
+            <span class="sklop-num">4.17 · 2</span>
+            <h2>Foton</h2>
+            <p>Energija fotona, fotoefekt in fotocelica; izstopno delo, mejna frekvenca in kinetična energija elektronov <span class="badge-vr">PZ</span>.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <h4>Energija fotona</h4>
+            <p>Svetloba (in vsako elektromagnetno valovanje) prenaša energijo v obrokih, ki jih imenujemo <strong>fotoni</strong>. Energija enega fotona je sorazmerna s frekvenco:</p>
+            <p>\[W_f = h\nu = \frac{hc}{\lambda}, \qquad h = 6{,}63 \cdot 10^{-34}\ \text{Js}.\]</p>
+            <p>Fotoni vidne svetlobe imajo energijo okoli 2 do 3 eV, fotoni UV svetlobe več, rentgenski in gama fotoni pa še mnogo več. Moč svetlobe je število fotonov na sekundo, pomnoženo z energijo enega fotona: \(P = \dfrac{N}{t} h\nu\).</p>
+            <h4>Fotoefekt</h4>
+            <p>Ko na kovino posvetimo s svetlobo dovolj visoke frekvence, iz nje izletijo elektroni. Opažanja, ki jih valovni model svetlobe ne pojasni:</p>
+            <ul>
+              <li>Pod neko mejno frekvenco elektroni ne izletijo, ne glede na to, kako močna je svetloba.</li>
+              <li>Močnejša svetloba izbije več elektronov, njihova največja kinetična energija pa se ne spremeni.</li>
+              <li>Kinetična energija elektronov narašča s frekvenco svetlobe.</li>
+            </ul>
+            <p>Pojasnilo: en foton izbije en elektron in mu preda vso svojo energijo. Na tem temelji <strong>fotocelica</strong>: svetloba izbija elektrone s katode, ti preletijo do anode in v krogu teče tok, sorazmeren z gostoto svetlobnega toka.</p>
+            <div class="slike-vrsta"><figure class="slika">
+<svg viewBox="0 0 300 239" role="img" aria-label="Fotoefekt" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g2-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g2-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g2-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g2-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g2-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g2-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<polygon class="s-lik" points="38.3,210.9 261.7,210.9 261.7,190.6 38.3,190.6"/>
+<line class="s-k1" x1="180.5" y1="188" x2="221.1" y2="119.5" marker-end="url(#g2-k1)"/>
+<line class="s-k1" x1="210.9" y1="188" x2="251.5" y2="139.8" marker-end="url(#g2-k1)"/>
+<circle class="s-tocka" cx="180.5" cy="188" r="4"/>
+<circle class="s-tocka" cx="210.9" cy="188" r="4"/>
+<text class="s-txt-k4" x="78.9" y="25.6" text-anchor="middle">svetloba (fotoni hν)</text>
+<text class="s-txt-k1" x="231.2" y="101.7" text-anchor="middle">elektroni</text>
+<text class="s-txt-b" x="150" y="204.7" text-anchor="middle">kovina</text>
+<path class="s-k4" fill="none" d="M38.3,28.1 L35.4,35.6 L34.9,42.5 L37.9,48.7 L43.4,54.4 L48.9,60.1 L51.9,66.3 L51.4,73.2 L48.5,80.6 L45.5,88 L45,94.9 L48,101.1 L53.5,106.8 L59,112.5 L62,118.7 L61.6,125.6 L58.6,133 L55.7,140.4 L55.2,147.4 L58.2,153.6 L63.7,159.3 L69.2,164.9 L72.2,171.1 L71.7,178.1 L68.8,185.5"/><path class="s-k4" fill="none" d="M78.9,28.1 L76,35.6 L75.5,42.5 L78.5,48.7 L84,54.4 L89.5,60.1 L92.5,66.3 L92,73.2 L89.1,80.6 L86.1,88 L85.6,94.9 L88.7,101.1 L94.2,106.8 L99.6,112.5 L102.7,118.7 L102.2,125.6 L99.2,133 L96.3,140.4 L95.8,147.4 L98.8,153.6 L104.3,159.3 L109.8,164.9 L112.8,171.1 L112.3,178.1 L109.4,185.5"/><path class="s-k4" fill="none" d="M119.5,28.1 L116.6,35.6 L116.1,42.5 L119.1,48.7 L124.6,54.4 L130.1,60.1 L133.1,66.3 L132.6,73.2 L129.7,80.6 L126.7,88 L126.3,94.9 L129.3,101.1 L134.8,106.8 L140.3,112.5 L143.3,118.7 L142.8,125.6 L139.8,133 L136.9,140.4 L136.4,147.4 L139.4,153.6 L144.9,159.3 L150.4,164.9 L153.4,171.1 L153,178.1 L150,185.5"/>
+</svg>
+<figcaption>Fotoni svetlobe izbijajo elektrone iz kovine, če ima vsak foton dovolj energije.</figcaption>
+</figure><figure class="slika">
+<svg viewBox="0 0 320 230" role="img" aria-label="Kinetična energija fotoelektronov" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g3-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g3-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g3-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g3-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g3-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g3-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<path class="s-mreza" d="M26,204V26M48.3,204V26M70.7,204V26M93,204V26M115.3,204V26M137.7,204V26M160,204V26M182.3,204V26M204.7,204V26M227,204V26M249.3,204V26M271.7,204V26M294,204V26M26,204H294M26,178.6H294M26,153.1H294M26,127.7H294M26,102.3H294M26,76.9H294M26,51.4H294M26,26H294"/>
+<line class="s-os" x1="26" y1="127.7" x2="302" y2="127.7" marker-end="url(#g3-p)"/>
+<line class="s-os" x1="26" y1="204" x2="26" y2="18" marker-end="url(#g3-p)"/>
+<text class="s-os-txt" x="296" y="119.7" text-anchor="end">ν</text>
+<text class="s-os-txt" x="34" y="30">kinetična energija</text>
+<path class="s-k1" d="M119.8,127.7L120.2,127.5L120.6,127.2L121,126.9L121.4,126.7L121.8,126.4L122.2,126.2L122.7,125.9L123.1,125.7L123.5,125.4L123.9,125.2L124.3,124.9L124.7,124.7L125.1,124.4L125.5,124.1L125.9,123.9L126.3,123.6L126.7,123.4L127.1,123.1L127.5,122.9L128,122.6L128.4,122.4L128.8,122.1L129.2,121.8L129.6,121.6L130,121.3L130.4,121.1L130.8,120.8L131.2,120.6L131.6,120.3L132,120.1L132.4,119.8L132.8,119.5L133.3,119.3L133.7,119L134.1,118.8L134.5,118.5L134.9,118.3L135.3,118L135.7,117.8L136.1,117.5L136.5,117.2L136.9,117L137.3,116.7L137.7,116.5L138.1,116.2L138.5,116L139,115.7L139.4,115.5L139.8,115.2L140.2,115L140.6,114.7L141,114.4L141.4,114.2L141.8,113.9L142.2,113.7L142.6,113.4L143,113.2L143.4,112.9L143.8,112.7L144.3,112.4L144.7,112.1L145.1,111.9L145.5,111.6L145.9,111.4L146.3,111.1L146.7,110.9L147.1,110.6L147.5,110.4L147.9,110.1L148.3,109.8L148.7,109.6L149.1,109.3L149.6,109.1L150,108.8L150.4,108.6L150.8,108.3L151.2,108.1L151.6,107.8L152,107.6L152.4,107.3L152.8,107L153.2,106.8L153.6,106.5L154,106.3L154.4,106L154.9,105.8L155.3,105.5L155.7,105.3L156.1,105L156.5,104.7L156.9,104.5L157.3,104.2L157.7,104L158.1,103.7L158.5,103.5L158.9,103.2L159.3,103L159.7,102.7L160.2,102.4L160.6,102.2L161,101.9L161.4,101.7L161.8,101.4L162.2,101.2L162.6,100.9L163,100.7L163.4,100.4L163.8,100.1L164.2,99.9L164.6,99.6L165,99.4L165.4,99.1L165.9,98.9L166.3,98.6L166.7,98.4L167.1,98.1L167.5,97.9L167.9,97.6L168.3,97.3L168.7,97.1L169.1,96.8L169.5,96.6L169.9,96.3L170.3,96.1L170.7,95.8L171.2,95.6L171.6,95.3L172,95L172.4,94.8L172.8,94.5L173.2,94.3L173.6,94L174,93.8L174.4,93.5L174.8,93.3L175.2,93L175.6,92.7L176,92.5L176.5,92.2L176.9,92L177.3,91.7L177.7,91.5L178.1,91.2L178.5,91L178.9,90.7L179.3,90.4L179.7,90.2L180.1,89.9L180.5,89.7L180.9,89.4L181.3,89.2L181.8,88.9L182.2,88.7L182.6,88.4L183,88.2L183.4,87.9L183.8,87.6L184.2,87.4L184.6,87.1L185,86.9L185.4,86.6L185.8,86.4L186.2,86.1L186.6,85.9L187.1,85.6L187.5,85.3L187.9,85.1L188.3,84.8L188.7,84.6L189.1,84.3L189.5,84.1L189.9,83.8L190.3,83.6L190.7,83.3L191.1,83L191.5,82.8L191.9,82.5L192.3,82.3L192.8,82L193.2,81.8L193.6,81.5L194,81.3L194.4,81L194.8,80.8L195.2,80.5L195.6,80.2L196,80L196.4,79.7L196.8,79.5L197.2,79.2L197.6,79L198.1,78.7L198.5,78.5L198.9,78.2L199.3,77.9L199.7,77.7L200.1,77.4L200.5,77.2L200.9,76.9L201.3,76.7L201.7,76.4L202.1,76.2L202.5,75.9L202.9,75.6L203.4,75.4L203.8,75.1L204.2,74.9L204.6,74.6L205,74.4L205.4,74.1L205.8,73.9L206.2,73.6L206.6,73.3L207,73.1L207.4,72.8L207.8,72.6L208.2,72.3L208.7,72.1L209.1,71.8L209.5,71.6L209.9,71.3L210.3,71.1L210.7,70.8L211.1,70.5L211.5,70.3L211.9,70L212.3,69.8L212.7,69.5L213.1,69.3L213.5,69L214,68.8L214.4,68.5L214.8,68.2L215.2,68L215.6,67.7L216,67.5L216.4,67.2L216.8,67L217.2,66.7L217.6,66.5L218,66.2L218.4,65.9L218.8,65.7L219.3,65.4L219.7,65.2L220.1,64.9L220.5,64.7L220.9,64.4L221.3,64.2L221.7,63.9L222.1,63.6L222.5,63.4L222.9,63.1L223.3,62.9L223.7,62.6L224.1,62.4L224.5,62.1L225,61.9L225.4,61.6L225.8,61.4L226.2,61.1L226.6,60.8L227,60.6L227.4,60.3L227.8,60.1L228.2,59.8L228.6,59.6L229,59.3L229.4,59.1L229.8,58.8L230.3,58.5L230.7,58.3L231.1,58L231.5,57.8L231.9,57.5L232.3,57.3L232.7,57L233.1,56.8L233.5,56.5L233.9,56.2L234.3,56L234.7,55.7L235.1,55.5L235.6,55.2L236,55L236.4,54.7L236.8,54.5L237.2,54.2L237.6,54L238,53.7L238.4,53.4L238.8,53.2L239.2,52.9L239.6,52.7L240,52.4L240.4,52.2L240.9,51.9L241.3,51.7L241.7,51.4L242.1,51.1L242.5,50.9L242.9,50.6L243.3,50.4L243.7,50.1L244.1,49.9L244.5,49.6L244.9,49.4L245.3,49.1L245.7,48.8L246.2,48.6L246.6,48.3L247,48.1L247.4,47.8L247.8,47.6L248.2,47.3L248.6,47.1L249,46.8L249.4,46.5L249.8,46.3L250.2,46L250.6,45.8L251,45.5L251.4,45.3L251.9,45L252.3,44.8L252.7,44.5L253.1,44.3L253.5,44L253.9,43.7L254.3,43.5L254.7,43.2L255.1,43L255.5,42.7L255.9,42.5L256.3,42.2L256.7,42L257.2,41.7L257.6,41.4L258,41.2L258.4,40.9L258.8,40.7L259.2,40.4L259.6,40.2L260,39.9L260.4,39.7L260.8,39.4L261.2,39.1L261.6,38.9L262,38.6L262.5,38.4L262.9,38.1L263.3,37.9L263.7,37.6L264.1,37.4L264.5,37.1L264.9,36.8L265.3,36.6L265.7,36.3L266.1,36.1L266.5,35.8L266.9,35.6L267.3,35.3L267.8,35.1L268.2,34.8L268.6,34.6L269,34.3L269.4,34L269.8,33.8L270.2,33.5L270.6,33.3L271,33L271.4,32.8L271.8,32.5L272.2,32.3L272.6,32L273.1,31.7L273.5,31.5L273.9,31.2L274.3,31L274.7,30.7L275.1,30.5L275.5,30.2L275.9,30L276.3,29.7L276.7,29.4L277.1,29.2L277.5,28.9L277.9,28.7L278.3,28.4L278.8,28.2L279.2,27.9L279.6,27.7L280,27.4L280.4,27.2L280.8,26.9L281.2,26.6L281.6,26.4L282,26.1L282.4,25.9L282.8,25.6"/>
+<path class="s-asim" d="M26,186.5L26.2,186.3L26.5,186.2L26.7,186L26.9,185.9L27.2,185.7L27.4,185.6L27.6,185.4L27.9,185.3L28.1,185.1L28.3,185L28.6,184.8L28.8,184.7L29,184.5L29.3,184.4L29.5,184.3L29.8,184.1L30,184L30.2,183.8L30.5,183.7L30.7,183.5L30.9,183.4L31.2,183.2L31.4,183.1L31.6,182.9L31.9,182.8L32.1,182.6L32.3,182.5L32.6,182.3L32.8,182.2L33,182L33.3,181.9L33.5,181.8L33.7,181.6L34,181.5L34.2,181.3L34.4,181.2L34.7,181L34.9,180.9L35.1,180.7L35.4,180.6L35.6,180.4L35.8,180.3L36.1,180.1L36.3,180L36.6,179.8L36.8,179.7L37,179.6L37.3,179.4L37.5,179.3L37.7,179.1L38,179L38.2,178.8L38.4,178.7L38.7,178.5L38.9,178.4L39.1,178.2L39.4,178.1L39.6,177.9L39.8,177.8L40.1,177.6L40.3,177.5L40.5,177.3L40.8,177.2L41,177.1L41.2,176.9L41.5,176.8L41.7,176.6L41.9,176.5L42.2,176.3L42.4,176.2L42.6,176L42.9,175.9L43.1,175.7L43.4,175.6L43.6,175.4L43.8,175.3L44.1,175.1L44.3,175L44.5,174.9L44.8,174.7L45,174.6L45.2,174.4L45.5,174.3L45.7,174.1L45.9,174L46.2,173.8L46.4,173.7L46.6,173.5L46.9,173.4L47.1,173.2L47.3,173.1L47.6,172.9L47.8,172.8L48,172.7L48.3,172.5L48.5,172.4L48.7,172.2L49,172.1L49.2,171.9L49.5,171.8L49.7,171.6L49.9,171.5L50.2,171.3L50.4,171.2L50.6,171L50.9,170.9L51.1,170.7L51.3,170.6L51.6,170.4L51.8,170.3L52,170.2L52.3,170L52.5,169.9L52.7,169.7L53,169.6L53.2,169.4L53.4,169.3L53.7,169.1L53.9,169L54.1,168.8L54.4,168.7L54.6,168.5L54.8,168.4L55.1,168.2L55.3,168.1L55.5,168L55.8,167.8L56,167.7L56.3,167.5L56.5,167.4L56.7,167.2L57,167.1L57.2,166.9L57.4,166.8L57.7,166.6L57.9,166.5L58.1,166.3L58.4,166.2L58.6,166L58.8,165.9L59.1,165.7L59.3,165.6L59.5,165.5L59.8,165.3L60,165.2L60.2,165L60.5,164.9L60.7,164.7L60.9,164.6L61.2,164.4L61.4,164.3L61.6,164.1L61.9,164L62.1,163.8L62.3,163.7L62.6,163.5L62.8,163.4L63.1,163.3L63.3,163.1L63.5,163L63.8,162.8L64,162.7L64.2,162.5L64.5,162.4L64.7,162.2L64.9,162.1L65.2,161.9L65.4,161.8L65.6,161.6L65.9,161.5L66.1,161.3L66.3,161.2L66.6,161L66.8,160.9L67,160.8L67.3,160.6L67.5,160.5L67.7,160.3L68,160.2L68.2,160L68.4,159.9L68.7,159.7L68.9,159.6L69.1,159.4L69.4,159.3L69.6,159.1L69.9,159L70.1,158.8L70.3,158.7L70.6,158.6L70.8,158.4L71,158.3L71.3,158.1L71.5,158L71.7,157.8L72,157.7L72.2,157.5L72.4,157.4L72.7,157.2L72.9,157.1L73.1,156.9L73.4,156.8L73.6,156.6L73.8,156.5L74.1,156.4L74.3,156.2L74.5,156.1L74.8,155.9L75,155.8L75.2,155.6L75.5,155.5L75.7,155.3L75.9,155.2L76.2,155L76.4,154.9L76.7,154.7L76.9,154.6L77.1,154.4L77.4,154.3L77.6,154.1L77.8,154L78.1,153.9L78.3,153.7L78.5,153.6L78.8,153.4L79,153.3L79.2,153.1L79.5,153L79.7,152.8L79.9,152.7L80.2,152.5L80.4,152.4L80.6,152.2L80.9,152.1L81.1,151.9L81.3,151.8L81.6,151.7L81.8,151.5L82,151.4L82.3,151.2L82.5,151.1L82.7,150.9L83,150.8L83.2,150.6L83.5,150.5L83.7,150.3L83.9,150.2L84.2,150L84.4,149.9L84.6,149.7L84.9,149.6L85.1,149.4L85.3,149.3L85.6,149.2L85.8,149L86,148.9L86.3,148.7L86.5,148.6L86.7,148.4L87,148.3L87.2,148.1L87.4,148L87.7,147.8L87.9,147.7L88.1,147.5L88.4,147.4L88.6,147.2L88.8,147.1L89.1,147L89.3,146.8L89.5,146.7L89.8,146.5L90,146.4L90.3,146.2L90.5,146.1L90.7,145.9L91,145.8L91.2,145.6L91.4,145.5L91.7,145.3L91.9,145.2L92.1,145L92.4,144.9L92.6,144.7L92.8,144.6L93.1,144.5L93.3,144.3L93.5,144.2L93.8,144L94,143.9L94.2,143.7L94.5,143.6L94.7,143.4L94.9,143.3L95.2,143.1L95.4,143L95.6,142.8L95.9,142.7L96.1,142.5L96.4,142.4L96.6,142.3L96.8,142.1L97.1,142L97.3,141.8L97.5,141.7L97.8,141.5L98,141.4L98.2,141.2L98.5,141.1L98.7,140.9L98.9,140.8L99.2,140.6L99.4,140.5L99.6,140.3L99.9,140.2L100.1,140L100.3,139.9L100.6,139.8L100.8,139.6L101,139.5L101.3,139.3L101.5,139.2L101.7,139L102,138.9L102.2,138.7L102.4,138.6L102.7,138.4L102.9,138.3L103.2,138.1L103.4,138L103.6,137.8L103.9,137.7L104.1,137.6L104.3,137.4L104.6,137.3L104.8,137.1L105,137L105.3,136.8L105.5,136.7L105.7,136.5L106,136.4L106.2,136.2L106.4,136.1L106.7,135.9L106.9,135.8L107.1,135.6L107.4,135.5L107.6,135.4L107.8,135.2L108.1,135.1L108.3,134.9L108.5,134.8L108.8,134.6L109,134.5L109.2,134.3L109.5,134.2L109.7,134L110,133.9L110.2,133.7L110.4,133.6L110.7,133.4L110.9,133.3L111.1,133.1L111.4,133L111.6,132.9L111.8,132.7L112.1,132.6L112.3,132.4L112.5,132.3L112.8,132.1L113,132L113.2,131.8L113.5,131.7L113.7,131.5L113.9,131.4L114.2,131.2L114.4,131.1L114.6,130.9L114.9,130.8L115.1,130.7L115.3,130.5L115.6,130.4L115.8,130.2L116,130.1L116.3,129.9L116.5,129.8L116.8,129.6L117,129.5L117.2,129.3L117.5,129.2L117.7,129L117.9,128.9L118.2,128.7L118.4,128.6L118.6,128.4L118.9,128.3L119.1,128.2L119.3,128L119.6,127.9L119.8,127.7"/>
+<text class="s-txt-k2" x="119.8" y="115" text-anchor="middle">ν<tspan dy="4" style="font-size:10px">m</tspan></text>
+<text class="s-txt-k2" x="32.7" y="186.2" text-anchor="start">−A<tspan dy="4" style="font-size:10px">i</tspan></text>
+<text class="s-txt-k1" x="227" y="92.1" text-anchor="start">strmina h</text>
+</svg>
+<figcaption>Kinetična energija izbitih elektronov narašča linearno s frekvenco: \(W_k = h\nu - A_i\) <span class="badge-vr">PZ</span>. Pod mejno frekvenco \(\nu_m\) elektronov ni.</figcaption>
+</figure></div>
+            <h4>Izstopno delo <span class="badge-vr">PZ</span></h4>
+            <p>Da elektron zapusti kovino, mora opraviti izstopno delo \(A_i\) (nekaj eV, odvisno od kovine). Ostanek energije fotona ima kot kinetično energijo:</p>
+            <p>\[h\nu = A_i + W_k, \qquad \nu_m = \frac{A_i}{h}.\]</p>
+            <p>Kinetično energijo izmerimo z zaporno napetostjo \(U_z\), ki ustavi tudi najhitrejše elektrone: \(W_k = e_0 U_z\).</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-3">
+              <h4>Tip 3: Energija fotona in število fotonov</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Laserski kazalnik oddaja zeleno svetlobo z valovno dolžino \(532\ \text{nm}\) in močjo \(5{,}0\ \text{mW}\). Kolikšna je energija enega fotona v J in eV? Koliko fotonov odda laser v sekundi?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> sprašujejo po energiji fotona ali številu fotonov pri dani moči, ali primerjajo fotone različnih barv.</p><ul class="kljucne"><li>„energija fotona“</li><li>„koliko fotonov na sekundo“</li><li>„valovna dolžina svetlobe“</li><li>„eV“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Izračunaj energijo fotona \(W = hc/\lambda\) (valovna dolžina v metrih).</p><div class="na-nalogi"><p>\(W = \dfrac{6{,}63 \cdot 10^{-34} \cdot 3{,}0 \cdot 10^8}{532 \cdot 10^{-9}}\ \text{J} = 3{,}7 \cdot 10^{-19}\ \text{J}\).</p></div></li>
+              <li><p class="korak">Za eV deli z \(1{,}6 \cdot 10^{-19}\).</p><div class="na-nalogi"><p>\(W = 2{,}3\ \text{eV}\).</p></div></li>
+              <li><p class="korak">Število fotonov na sekundo je moč deljena z energijo enega fotona.</p><div class="na-nalogi"><p>\(N/t = \dfrac{5{,}0 \cdot 10^{-3}}{3{,}7 \cdot 10^{-19}}\ \text{s}^{-1} = 1{,}3 \cdot 10^{16}\ \text{s}^{-1}\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Kateri foton ima večjo energijo: rdeč ali moder?</p><p>Moder (krajša valovna dolžina).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Valovna dolžina fotona z energijo 3,1 eV?</p><p>\(1240/3{,}1 = 400\ \text{nm}\).</p></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-4">
+              <h4>Tip 4: Fotoefekt <span class="badge-vr">PZ</span></h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Izstopno delo cezija je \(2{,}1\ \text{eV}\). Kolikšna je mejna frekvenca? Kolikšno največjo kinetično energijo imajo elektroni, ko cezij osvetlimo s svetlobo valovne dolžine \(400\ \text{nm}\)? Kolikšna zaporna napetost jih ustavi?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> svetloba izbija elektrone iz kovine; sprašujejo po mejni frekvenci, izstopnem delu, kinetični energiji, hitrosti elektronov ali zaporni napetosti.</p><ul class="kljucne"><li>„izstopno delo“</li><li>„fotocelica“</li><li>„mejna frekvenca“</li><li>„zaporna napetost“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Izračunaj mejno frekvenco \(\nu_m = A_i/h\) (izstopno delo v joulih).</p><div class="na-nalogi"><p>\(A_i = 3{,}4 \cdot 10^{-19}\ \text{J}\); \(\nu_m = 5{,}1 \cdot 10^{14}\ \text{Hz}\).</p></div></li>
+              <li><p class="korak">Izračunaj energijo fotona in preveri, ali je večja od izstopnega dela.</p><div class="na-nalogi"><p>\(h c/\lambda = 1240/400 = 3{,}1\ \text{eV} &gt; 2{,}1\ \text{eV}\): elektroni izletijo.</p></div></li>
+              <li><p class="korak">Kinetična energija je razlika; zaporna napetost je \(U_z = W_k/e_0\).</p><div class="na-nalogi"><p>\(W_k = 3{,}1 - 2{,}1 = 1{,}0\ \text{eV}\); \(U_z = 1{,}0\ \text{V}\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Svetlobo istega laserja podvojimo po moči. Kaj se zgodi z \(W_k\) in s tokom fotocelice?</p><p>\(W_k\) ostane, tok se podvoji.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Največja hitrost elektrona z \(W_k = 1{,}0\ \text{eV}\)?</p><p>\(v = \sqrt{2W_k/m_e} = 5{,}9 \cdot 10^5\ \text{m/s}\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Iz grafa \(W_k(\nu)\) kaj pomeni presečišče z osjo \(\nu\)?</p><p>Mejno frekvenco; strmina premice je \(h\).</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 3 -->
+        <section class="sklop" id="sklop-3">
+          <header class="sklop-header">
+            <span class="sklop-num">4.17 · 3</span>
+            <h2>Energijska stanja atoma</h2>
+            <p>Energijska stanja, prehodi med njimi, črtasti emisijski in absorpcijski spektri, valovna dolžina izsevane svetlobe.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <p>Elektroni v atomu imajo lahko le določene (diskretne) energije, imenujemo jih <strong>energijska stanja</strong> ali nivoji. Najnižje je osnovno stanje, višja so vzbujena stanja. Energije so negativne, ker je elektron vezan; za ionizacijo mu moramo dovesti energijo do 0.</p>
+            <figure class="slika slika--ozka">
+<svg viewBox="0 0 420 340" role="img" aria-label="Energijski nivoji vodikovega atoma" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g4-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g4-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g4-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g4-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g4-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g4-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<line class="s-crta" x1="96" y1="305.2" x2="333.5" y2="305.2"/>
+<line class="s-crta" x1="96" y1="176.6" x2="333.5" y2="176.6"/>
+<line class="s-crta" x1="96" y1="133.6" x2="333.5" y2="133.6"/>
+<line class="s-crta" x1="96" y1="112.2" x2="333.5" y2="112.2"/>
+<line class="s-crta" x1="96" y1="99.2" x2="333.5" y2="99.2"/>
+<line class="s-asim" x1="96" y1="47.9" x2="333.5" y2="47.9"/>
+<line class="s-k4" x1="134" y1="176.6" x2="134" y2="305.2" marker-end="url(#g4-k4)"/>
+<text class="s-txt-k4" x="140" y="240.9" text-anchor="start">122 nm (UV)</text>
+<line class="s-k2" x1="191" y1="133.6" x2="191" y2="176.6" marker-end="url(#g4-k2)"/>
+<text class="s-txt-k2" x="185" y="159.1" text-anchor="end">656 nm</text>
+<line class="s-k3" x1="238.5" y1="112.2" x2="238.5" y2="176.6" marker-end="url(#g4-k3)"/>
+<text class="s-txt-k3" x="244.5" y="158.4" text-anchor="start">486 nm</text>
+<line class="s-k1" x1="290.7" y1="305.2" x2="290.7" y2="133.6" marker-end="url(#g4-k1)"/>
+<text class="s-txt-k1" x="296.7" y="249.4" text-anchor="start">absorpcija</text>
+<text class="s-txt-b" x="88.9" y="309.2" text-anchor="end">−13,6 eV</text>
+<text class="s-txt-b" x="88.9" y="180.6" text-anchor="end">−3,4 eV</text>
+<text class="s-txt-b" x="88.9" y="137.6" text-anchor="end">−1,51 eV</text>
+<text class="s-txt-b" x="88.9" y="116.2" text-anchor="end">−0,85 eV</text>
+<text class="s-txt-b" x="88.9" y="103.2" text-anchor="end">−0,54 eV</text>
+<text class="s-txt-muted" x="88.9" y="51.9" text-anchor="end">0</text>
+<text class="s-txt-muted" x="338.2" y="23.5" text-anchor="end">prost elektron</text>
+<text class="s-txt-muted" x="340.6" y="309.2" text-anchor="start">n = 1</text>
+<text class="s-txt-muted" x="340.6" y="180.6" text-anchor="start">n = 2</text>
+<text class="s-txt-muted" x="340.6" y="137.6" text-anchor="start">n = 3</text>
+<text class="s-txt-muted" x="340.6" y="116.2" text-anchor="start">n = 4</text>
+<text class="s-txt-muted" x="340.6" y="103.2" text-anchor="start">n = 5</text>
+</svg>
+<figcaption>Energijska stanja elektrona v vodikovem atomu (\(W_n = -13{,}6\ \text{eV}/n^2\)). Pri prehodu v nižje stanje atom izseva foton z energijo, enako razliki energij; pri absorpciji foton z ravno pravšnjo energijo dvigne elektron v višje stanje. Navpično merilo ni linearno, da so višja stanja razločna.</figcaption>
+</figure>
+            <p>Ko elektron preide iz višjega stanja \(W_n\) v nižje \(W_m\), atom izseva foton z energijo, ki je točno enaka razliki:</p>
+            <p>\[h\nu = \frac{hc}{\lambda} = W_n - W_m.\]</p>
+            <p>Atom lahko tudi absorbira foton, a le takšnega, katerega energija je ravno enaka razliki med dvema stanjema. Atom lahko vzbudimo tudi s trki (v plinski cevi z električnim tokom ali v plamenu).</p>
+            <h4>Spektri</h4>
+            <p>Ker so razlike energij za vsak element drugačne, ima vsak element svoj značilen <strong>črtasti spekter</strong>, po katerem ga prepoznamo (tudi v zvezdah).</p>
+            <ul>
+              <li><strong>Emisijski spekter</strong>: razredčen vroč plin seva le pri določenih valovnih dolžinah; v spektroskopu vidimo svetle črte na temni podlagi.</li>
+              <li><strong>Absorpcijski spekter</strong>: ko bela svetloba prehaja skozi hladnejši plin, ta absorbira iste valovne dolžine; vidimo zvezni spekter s temnimi črtami.</li>
+              <li>Vroča trdna snov ali gost plin (žarilna nitka, Sonce) seva <strong>zvezni</strong> spekter.</li>
+            </ul>
+            <figure class="slika slika--ozka">
+<svg viewBox="0 0 420 150" role="img" aria-label="Emisijski in absorpcijski spekter vodika" xmlns="http://www.w3.org/2000/svg"><defs><linearGradient id="mavrica2" x1="1" x2="0"><stop offset="0" stop-color="#90c"/><stop offset="0.25" stop-color="#22f"/><stop offset="0.45" stop-color="#2bb"/><stop offset="0.6" stop-color="#2b2"/><stop offset="0.75" stop-color="#ee0"/><stop offset="0.85" stop-color="#f80"/><stop offset="1" stop-color="#d00"/></linearGradient></defs><text class="s-txt-b" x="20" y="16">emisijski spekter</text><rect x="20" y="22" width="380" height="34" fill="#111"/><line x1="124" y1="22" x2="124" y2="56" stroke="#e33" stroke-width="3"/><line x1="294" y1="22" x2="294" y2="56" stroke="#2bd" stroke-width="3"/><line x1="346" y1="22" x2="346" y2="56" stroke="#44f" stroke-width="3"/><line x1="370" y1="22" x2="370" y2="56" stroke="#a3f" stroke-width="3"/><text class="s-txt-b" x="20" y="84">absorpcijski spekter</text><rect x="20" y="90" width="380" height="34" fill="url(#mavrica2)"/><line x1="124" y1="90" x2="124" y2="124" stroke="#111" stroke-width="3"/><line x1="294" y1="90" x2="294" y2="124" stroke="#111" stroke-width="3"/><line x1="346" y1="90" x2="346" y2="124" stroke="#111" stroke-width="3"/><line x1="370" y1="90" x2="370" y2="124" stroke="#111" stroke-width="3"/><text class="s-txt-muted" x="20" y="142">760 nm</text><text class="s-txt-muted" x="400" y="142" text-anchor="end">380 nm</text></svg>
+<figcaption>Razredčen vodik, ki sveti, odda svetlobo le pri določenih valovnih dolžinah (svetle črte). Če skozi hladen vodik posvetimo z belo svetlobo, manjkajo ravno te valovne dolžine (temne črte).</figcaption>
+</figure>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-5">
+              <h4>Tip 5: Valovna dolžina pri prehodu med stanji</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Elektron v vodikovem atomu preide iz stanja z energijo \(-1{,}51\ \text{eV}\) v stanje z energijo \(-3{,}40\ \text{eV}\). Kolikšna je valovna dolžina izsevanega fotona? Ali je to vidna svetloba?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> podane so energije stanj (ali diagram nivojev), sprašujejo po energiji, frekvenci ali valovni dolžini izsevanega ali absorbiranega fotona, ali po ionizacijski energiji.</p><ul class="kljucne"><li>„preide iz stanja“</li><li>„energijski nivoji“</li><li>„izseva foton“</li><li>„absorbira“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Izračunaj razliko energij med stanjema (vedno pozitivno).</p><div class="na-nalogi"><p>\(\Delta W = -1{,}51 - (-3{,}40) = 1{,}89\ \text{eV}\).</p></div></li>
+              <li><p class="korak">Izračunaj valovno dolžino \(\lambda = hc/\Delta W\) (ali s \(hc = 1240\ \text{eV nm}\)).</p><div class="na-nalogi"><p>\(\lambda = 1240/1{,}89 = 656\ \text{nm}\).</p></div></li>
+              <li><p class="korak">Umesti v spekter.</p><div class="na-nalogi"><p>Vidna, rdeča svetloba.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Koliko energije potrebujemo za ionizacijo vodika iz osnovnega stanja (\(-13{,}6\ \text{eV}\))?</p><p>13,6 eV.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Ali atom vodika v osnovnem stanju absorbira foton z energijo 5 eV?</p><p>Ne, ni ustrezne razlike med stanji (prvi prehod potrebuje 10,2 eV).</p></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-6">
+              <h4>Tip 6: Število črt in vrste spektrov</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Atomi plina so vzbujeni v tretje stanje (\(n = 3\)). Koliko različnih valovnih dolžin lahko izsevajo, ko se vrnejo v osnovno stanje? Kakšen spekter vidimo, ko skozi hladen plin istega elementa posvetimo z belo svetlobo?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> kvalitativno vprašanje o številu možnih prehodov, vrsti spektra ali prepoznavanju elementa iz spektra.</p><ul class="kljucne"><li>„koliko črt“</li><li>„emisijski ali absorpcijski“</li><li>„zvezni spekter“</li><li>„spektroskop“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Nariši stanja od osnovnega do najvišjega vzbujenega.</p><div class="na-nalogi"><p>Stanja 1, 2, 3.</p></div></li>
+              <li><p class="korak">Preštej vse možne pare stanj (prehode navzdol).</p><div class="na-nalogi"><p>3→2, 3→1, 2→1: tri različne valovne dolžine.</p></div></li>
+              <li><p class="korak">Za vrsto spektra: sevajoč razredčen plin da svetle črte, hladen plin pred belo svetlobo temne črte pri istih valovnih dolžinah.</p><div class="na-nalogi"><p>Absorpcijski spekter: zvezni spekter s temnimi črtami.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Koliko črt, če so atomi vzbujeni do \(n = 4\)?</p><p>6.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Kakšen spekter da žarilna nitka žarnice?</p><p>Zvezni.</p></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="subsection" id="kljuc">
+          <div class="subsection-head">
+            <h2>Ključ: kateri tip naloge je to?</h2>
+            <p>Poišči besedo iz navodila naloge in skoči na pravi postopek.</p>
+          </div>
+          <div class="info-card">
+            <div class="tabela-wrap">
+              <table class="tabela">
+                <thead><tr><th>V besedilu naloge piše …</th><th>Tip</th></tr></thead>
+                <tbody>
+                  <tr><td>„koliko atomov“, „oceni velikost atoma“</td><td><a href="#tip-1">Tip 1</a></td></tr>
+                  <tr><td>„koliko protonov, nevtronov“, „ion“</td><td><a href="#tip-2">Tip 2</a></td></tr>
+                  <tr><td>„energija fotona“, „koliko fotonov“</td><td><a href="#tip-3">Tip 3</a></td></tr>
+                  <tr><td>„izstopno delo“, „fotocelica“, „zaporna napetost“</td><td><a href="#tip-4">Tip 4</a></td></tr>
+                  <tr><td>„preide iz stanja“, „energijski nivoji“</td><td><a href="#tip-5">Tip 5</a></td></tr>
+                  <tr><td>„koliko črt“, „emisijski ali absorpcijski spekter“</td><td><a href="#tip-6">Tip 6</a></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>Pogoste napake</h2>
+          </div>
+          <div class="info-card">
+            <ul>
+              <li>Mešaš eV in J; pred računanjem z \(h\) v Js pretvori eV v J.</li>
+              <li>Pri kilomolski masi pozabiš, da je v kg/kmol (in \(N_A\) na kmol).</li>
+              <li>Misliš, da močnejša svetloba izbije hitrejše elektrone; izbije jih več.</li>
+              <li>Pri prehodih vzameš energijo enega stanja namesto razlike.</li>
+              <li>Valovno dolžino v nm vstaviš brez \(10^{-9}\).</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>Naslednje poglavje</h2>
+          </div>
+          <div class="link-list">
+            <a class="link-item" href="/views/fizika/snov/atomsko_jedro/atomsko_jedro_razlaga.html">
+              <span class="link-item-text"><strong>4.18 Atomsko jedro</strong><small>Nukleoni, vezavna energija, razpadi, jedrske reakcije</small></span>
+              <span class="arrow">→</span>
+            </a>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>

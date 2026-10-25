@@ -1324,6 +1324,19 @@ mjx-container[display="true"] {
 .slika .s-txt-k4 { fill: #B45309; font-weight: 700; }
 .slika .s-txt-muted { fill: #5B6178; }
 .slika .s-txt-b { font-weight: 700; }
+.slika .s-morje { fill: #EAF2FB; stroke: none; }
+.slika .s-kopno { fill: #F3F1EA; stroke: #B9B3A3; stroke-width: 0.6; stroke-linejoin: round; }
+.slika .s-meja { fill: none; stroke: #B9B3A3; stroke-width: 0.6; stroke-linejoin: round; }
+.slika .s-mreza-geo { fill: none; stroke: #C9D6E8; stroke-width: 0.6; stroke-dasharray: 3 3; }
+.slika .s-reka { fill: none; stroke: #3B82F6; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.slika .s-voda { fill: #BFDBFE; stroke: #3B82F6; stroke-width: 1; }
+.slika .s-pou1 { fill: rgba(79, 70, 229, 0.30); stroke: #4F46E5; stroke-width: 0.8; }
+.slika .s-pou2 { fill: rgba(22, 163, 74, 0.30); stroke: #16A34A; stroke-width: 0.8; }
+.slika .s-pou3 { fill: rgba(217, 119, 6, 0.32); stroke: #D97706; stroke-width: 0.8; }
+.slika .s-pou4 { fill: rgba(220, 38, 38, 0.28); stroke: #DC2626; stroke-width: 0.8; }
+.slika .s-pou5 { fill: rgba(14, 165, 233, 0.30); stroke: #0284C7; stroke-width: 0.8; }
+.slika .s-pou6 { fill: rgba(168, 85, 247, 0.28); stroke: #9333EA; stroke-width: 0.8; }
+.slika .s-stolpec { fill: #93C5FD; stroke: #3B82F6; stroke-width: 0.8; }
 
 /* ---------- Ločnica pred vsebinami višje ravni ---------- */
 .raven-locnica {
@@ -1446,6 +1459,14 @@ mjx-container[display="true"] {
 [data-theme="dark"] .slika .s-txt-k3 { fill: #86EFAC; }
 [data-theme="dark"] .slika .s-txt-k4 { fill: #FCD34D; }
 
+[data-theme="dark"] .slika .s-morje { fill: #16233A; }
+[data-theme="dark"] .slika .s-kopno { fill: #252A3C; stroke: #4A5068; }
+[data-theme="dark"] .slika .s-meja { stroke: #4A5068; }
+[data-theme="dark"] .slika .s-mreza-geo { stroke: #2C3A55; }
+[data-theme="dark"] .slika .s-reka { stroke: #60A5FA; }
+[data-theme="dark"] .slika .s-voda { fill: #1E3A5F; stroke: #60A5FA; }
+[data-theme="dark"] .slika .s-stolpec { fill: #1E40AF; stroke: #60A5FA; }
+
 /* Barve, zapisane neposredno v SVG na straneh */
 [data-theme="dark"] .view svg [fill="#171A2E"] { fill: #D5D9E8; }
 [data-theme="dark"] .view svg [style*="fill:#171A2E"] { fill: #D5D9E8 !important; }
@@ -1491,3 +1512,33 @@ mjx-container[display="true"] {
 [data-theme="dark"] .view svg [style*="fill:#FFFFFF"] { fill: #13172A !important; }
 [data-theme="dark"] .view svg [stroke="#FFFFFF"] { stroke: #13172A; }
 [data-theme="dark"] .view svg [style*="stroke:#FFFFFF"] { stroke: #13172A !important; }
+
+/* ---------- Programska koda in značke (informatika) ---------- */
+pre.koda {
+    margin: var(--space-3) 0;
+    padding: var(--space-3) var(--space-4);
+    background: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    overflow-x: auto;
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 13.5px;
+    line-height: 1.55;
+    color: var(--text-primary);
+    text-align: left;
+}
+
+pre.koda code {
+    font: inherit;
+    background: none;
+    padding: 0;
+}
+
+.view code.k {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 0.92em;
+    background: var(--primary-soft);
+    color: var(--primary-dark);
+    padding: 1px 5px;
+    border-radius: 4px;
+}

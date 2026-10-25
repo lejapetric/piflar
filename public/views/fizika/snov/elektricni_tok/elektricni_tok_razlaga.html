@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Električni tok — razlaga in postopki | Piflar.si</title>
+  <meta name="description" content="Električni tok za maturo iz fizike: električna vezja, Kirchhoffova izreka, Ohmov zakon, upor žice, zaporedna in vzporedna vezava, merjenje toka in napetosti, električno delo in moč, izmenična napetost.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
+  <link rel="stylesheet" href="/style/snov.css">
+</head>
+<body>
+  <div id="header"></div>
+
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view">
+
+<header class="page-header">
+          <span class="page-eyebrow">Fizika · Snov · 4.11</span>
+          <h1>Električni tok</h1>
+          <p>Električni tok teče po sklenjenem krogu od vira skozi porabnike in nazaj. Tu so pravila, po katerih se tok in napetost razdelita v vezju, Ohmov zakon, električna moč in izmenična napetost iz omrežja. Pod razlago so vsi tipi nalog, ki se pojavijo pri tem sklopu. Vsebine, označene s <span class="badge-vr">PZ</span>, so posebna znanja iz kataloga.</p>
+          <div class="page-meta">
+            <div class="page-meta-item"><strong>4</strong><span>Podpoglavja</span></div>
+            <div class="page-meta-item"><strong>6</strong><span>Tipov nalog</span></div>
+            <div class="page-meta-item"><strong>~40 min</strong><span>Branja</span></div>
+          </div>
+        </header>
+
+        <div class="matura-formule">
+          <h3>Formule na maturi</h3>
+          <p>Enačbe, ki jih potrebuješ (večina je na listu s konstantami in enačbami, ki je del izpitne pole):</p>
+          <div class="matura-levo">
+            <ul>
+              <li>tok: \(I = \dfrac{e}{t}\); Ohmov zakon: \(U = RI\)</li>
+              <li>upor žice: \(R = \dfrac{\zeta l}{S}\) (\(\zeta\) specifični upor)</li>
+              <li>zaporedno: \(R = R_1 + R_2 + \ldots\); vzporedno: \(\dfrac1R = \dfrac1{R_1} + \dfrac1{R_2} + \ldots\)</li>
+              <li>moč: \(P = UI = RI^2 = \dfrac{U^2}{R}\); delo: \(A = UIt = Pt\)</li>
+              <li>izmenična napetost <span class="badge-vr">PZ</span>: \(U_{ef} = \dfrac{U_0}{\sqrt2}\), \(I_{ef} = \dfrac{I_0}{\sqrt2}\), \(\bar P = U_{ef} I_{ef}\)</li>
+            </ul>
+          </div>
+          <p class="matura-opomba">\(1\ \text{kWh} = 3{,}6 \cdot 10^{6}\ \text{J}\). Upor merimo v ohmih, \(1\ \Omega = 1\ \text{V/A}\).</p>
+        </div>
+
+        <nav class="kazalo" aria-label="Podpoglavja">
+          <h2>Podpoglavja</h2>
+          <ol>
+            <li><a href="#sklop-1"><span class="kazalo-st">1</span> Električna vezja</a></li>
+            <li><a href="#sklop-2"><span class="kazalo-st">2</span> Ohmov zakon</a></li>
+            <li><a href="#sklop-3"><span class="kazalo-st">3</span> Električno delo in moč</a></li>
+            <li><a href="#sklop-4"><span class="kazalo-st">4</span> Izmenična napetost</a></li>
+            <li><a href="#kljuc"><span class="kazalo-st">?</span> Ključ: kateri tip naloge je to?</a></li>
+          </ol>
+        </nav>
+
+        <!-- SKLOP 1 -->
+        <section class="sklop" id="sklop-1">
+          <header class="sklop-header">
+            <span class="sklop-num">4.11 · 1</span>
+            <h2>Električna vezja</h2>
+            <p>Sklenjen električni krog, simboli, Kirchhoffova izreka, merjenje toka in napetosti.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <h4>Sklenjen krog</h4>
+            <p>Tok teče le po <strong>sklenjenem</strong> krogu. Vir (baterija, akumulator, generator) poganja naboj po krogu in mu daje energijo, porabniki (žarnice, upori, motorji) pa to energijo pretvarjajo v toploto, svetlobo ali delo. Dogovorjena smer toka je od pozitivnega pola vira skozi zunanji krog do negativnega pola. V vezjih rišemo vodnike kot ravne črte in elemente s simboli; daljši tanjši krak pri simbolu vira je pozitivni pol.</p>
+            <h4>Prvi Kirchhoffov izrek (razvejišče)</h4>
+            <p>Naboj se v vodniku ne kopiči, zato je vsota tokov, ki pritekajo v razvejišče, enaka vsoti tokov, ki iz njega odtekajo:</p>
+            <p>\[\sum I_{\text{noter}} = \sum I_{\text{ven}}.\]</p>
+            <p>V nerazvejanem delu kroga (zaporedno vezani elementi) teče povsod isti tok.</p>
+            <h4>Drugi Kirchhoffov izrek (zanka)</h4>
+            <p>Ko obidemo katero koli sklenjeno zanko, je vsota napetosti na porabnikih enaka napetosti vira (vsota padcev napetosti v zanki je enaka gonilni napetosti):</p>
+            <p>\[U_{\text{vir}} = U_1 + U_2 + \ldots\]</p>
+            <figure class="slika slika--ozka">
+<svg viewBox="0 0 320 224" role="img" aria-label="Preprosto vezje z virom in dvema upornikoma" xmlns="http://www.w3.org/2000/svg"><line class="s-crta" x1="40" y1="184" x2="40" y2="117"/><line class="s-crta" x1="40" y1="107" x2="40" y2="40"/><line class="s-k2" x1="26" y1="117" x2="54" y2="117" stroke-width="2.5"/><line class="s-k2" x1="33" y1="107" x2="47" y2="107" stroke-width="5"/><text class="s-txt-k2" x="26" y="130" text-anchor="middle" style="font-size:12px">+</text><text class="s-txt-b" x="30" y="116" text-anchor="middle">U</text><line class="s-crta" x1="40" y1="40" x2="100" y2="40"/><line class="s-crta" x1="100" y1="40" x2="140" y2="40"/><line class="s-crta" x1="180" y1="40" x2="220" y2="40"/><polygon class="s-lik-2" points="140,32 180,32 180,48 140,48"/><text class="s-txt-b" x="160" y="26" text-anchor="middle">R<tspan dy="4" style="font-size:10px">1</tspan></text><line class="s-crta" x1="220" y1="40" x2="280" y2="40"/><line class="s-crta" x1="280" y1="40" x2="280" y2="92"/><line class="s-crta" x1="280" y1="132" x2="280" y2="184"/><polygon class="s-lik-2" points="288,92 288,132 272,132 272,92"/><text class="s-txt-b" x="304" y="116" text-anchor="middle">R<tspan dy="4" style="font-size:10px">2</tspan></text><line class="s-crta" x1="280" y1="184" x2="40" y2="184"/><defs><marker id="vzj662d" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker></defs><line class="s-k3" x1="124" y1="67" x2="196" y2="67" marker-end="url(#vzj662d)"/><text class="s-txt-k3" x="160" y="85" text-anchor="middle">I</text></svg>
+<figcaption>Zaporedna vezava: skozi oba upornika teče isti tok, napetost vira se razdeli: \(U = U_1 + U_2\).</figcaption>
+</figure>
+            <p>Elementi, ki so vezani <strong>vzporedno</strong> (med istima točkama), imajo vedno enako napetost.</p>
+            <figure class="slika slika--ozka">
+<svg viewBox="0 0 320 260" role="img" aria-label="Vzporedna vezava dveh upornikov" xmlns="http://www.w3.org/2000/svg"><line class="s-crta" x1="40" y1="220" x2="40" y2="135"/><line class="s-crta" x1="40" y1="125" x2="40" y2="40"/><line class="s-k2" x1="26" y1="135" x2="54" y2="135" stroke-width="2.5"/><line class="s-k2" x1="33" y1="125" x2="47" y2="125" stroke-width="5"/><text class="s-txt-k2" x="26" y="148" text-anchor="middle" style="font-size:12px">+</text><text class="s-txt-b" x="30" y="134" text-anchor="middle">U</text><line class="s-crta" x1="40" y1="40" x2="280" y2="40"/><line class="s-crta" x1="40" y1="220" x2="280" y2="220"/><line class="s-crta" x1="160" y1="40" x2="160" y2="110"/><line class="s-crta" x1="160" y1="150" x2="160" y2="220"/><polygon class="s-lik-2" points="168,110 168,150 152,150 152,110"/><text class="s-txt-b" x="138" y="134" text-anchor="middle">R<tspan dy="4" style="font-size:10px">1</tspan></text><line class="s-crta" x1="280" y1="40" x2="280" y2="110"/><line class="s-crta" x1="280" y1="150" x2="280" y2="220"/><polygon class="s-lik-2" points="288,110 288,150 272,150 272,110"/><text class="s-txt-b" x="304" y="134" text-anchor="middle">R<tspan dy="4" style="font-size:10px">2</tspan></text><circle cx="160" cy="40" r="3.5" class="s-tocka"/><circle cx="160" cy="220" r="3.5" class="s-tocka"/><defs><marker id="vzjmqde" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker></defs><line class="s-k3" x1="76" y1="40" x2="136" y2="40" marker-end="url(#vzjmqde)"/><text class="s-txt-k3" x="106" y="30" text-anchor="middle">I</text><defs><marker id="vzwjtl2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker></defs><line class="s-k3" x1="160" y1="52" x2="160" y2="88" marker-end="url(#vzwjtl2)"/><text class="s-txt-k3" x="138" y="76" text-anchor="middle">I<tspan dy="4" style="font-size:10px">1</tspan></text><defs><marker id="vztlurc" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker></defs><line class="s-k3" x1="196" y1="40" x2="250" y2="40" marker-end="url(#vztlurc)"/><text class="s-txt-k3" x="223" y="30" text-anchor="middle">I<tspan dy="4" style="font-size:10px">2</tspan></text></svg>
+<figcaption>Vzporedna vezava: na obeh upornikih je ista napetost, tok se v razvejišču razdeli: \(I = I_1 + I_2\).</figcaption>
+</figure>
+            <h4>Merjenje toka in napetosti</h4>
+            <p><strong>Ampermeter</strong> meri tok, zato ga vežemo zaporedno, da skozenj teče isti tok kot skozi element; njegov upor je zelo majhen. <strong>Voltmeter</strong> meri napetost med dvema točkama, zato ga vežemo vzporedno; njegov upor je zelo velik, da skozenj ne teče skoraj nič toka.</p>
+            <figure class="slika slika--ozka">
+<svg viewBox="0 0 380 260" role="img" aria-label="Vezava ampermetra in voltmetra" xmlns="http://www.w3.org/2000/svg"><line class="s-crta" x1="40" y1="220" x2="40" y2="135"/><line class="s-crta" x1="40" y1="125" x2="40" y2="40"/><line class="s-k2" x1="26" y1="135" x2="54" y2="135" stroke-width="2.5"/><line class="s-k2" x1="33" y1="125" x2="47" y2="125" stroke-width="5"/><text class="s-txt-k2" x="26" y="148" text-anchor="middle" style="font-size:12px">+</text><text class="s-txt-b" x="30" y="134" text-anchor="middle">U</text><line class="s-crta" x1="40" y1="40" x2="88" y2="40"/><line class="s-crta" x1="88" y1="40" x2="111" y2="40"/><line class="s-crta" x1="137" y1="40" x2="160" y2="40"/><circle cx="124" cy="40" r="13" class="s-lik"/><text class="s-txt-b" x="124" y="45" text-anchor="middle">A</text><line class="s-crta" x1="160" y1="40" x2="280" y2="40"/><line class="s-crta" x1="280" y1="40" x2="280" y2="110"/><line class="s-crta" x1="280" y1="150" x2="280" y2="220"/><polygon class="s-lik-2" points="288,110 288,150 272,150 272,110"/><text class="s-txt-b" x="258" y="134" text-anchor="middle">R</text><line class="s-crta" x1="280" y1="220" x2="40" y2="220"/><line class="s-crta" x1="280" y1="70" x2="340" y2="70"/><line class="s-crta" x1="340" y1="70" x2="340" y2="117"/><line class="s-crta" x1="340" y1="143" x2="340" y2="190"/><circle cx="340" cy="130" r="13" class="s-lik"/><text class="s-txt-b" x="340" y="135" text-anchor="middle">V</text><line class="s-crta" x1="340" y1="190" x2="280" y2="190"/><circle cx="280" cy="70" r="3.5" class="s-tocka"/><circle cx="280" cy="190" r="3.5" class="s-tocka"/></svg>
+<figcaption>Ampermeter vežemo zaporedno z elementom (skozenj mora teči isti tok), voltmeter pa vzporedno (meri napetost med dvema točkama).</figcaption>
+</figure>
+            <h4>Sestavljena vezja <span class="badge-vr">PZ</span></h4>
+            <p>Vezje z več elementi rešujemo po korakih: najprej najdemo dele, ki so vezani čisto zaporedno ali čisto vzporedno, jih nadomestimo z enim upornikom in nadaljujemo, dokler ne ostane en sam nadomestni upor. Nato gremo v obratni smeri in iz skupnega toka izračunamo tokove in napetosti v posameznih vejah, pri tem uporabljamo oba Kirchhoffova izreka.</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-1">
+              <h4>Tip 1: Tokovi in napetosti po Kirchhoffovih izrekih</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Baterija z napetostjo \(9{,}0\ \text{V}\) poganja tok \(0{,}50\ \text{A}\) skozi zaporedno vezani žarnico in upornik. Voltmeter na žarnici kaže \(6{,}0\ \text{V}\). Kolikšna je napetost na uporniku in kolikšen tok teče skozenj? Vzporedno k žarnici nato vežemo še eno vejo, ki ima tok \(0{,}20\ \text{A}\), skupni tok pa se poveča na \(0{,}60\ \text{A}\). Kolikšen tok zdaj teče skozi žarnico?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> podani so nekateri tokovi in napetosti v vezju (ali kazanja merilnikov), sprašujejo po manjkajočih, brez računanja z upori.</p><ul class="kljucne"><li>„ampermeter kaže“</li><li>„voltmeter kaže“</li><li>„razvejišče“</li><li>„kolikšen tok teče v veji“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Ugotovi, kateri elementi so zaporedno (isti tok) in kateri vzporedno (ista napetost).</p><div class="na-nalogi"><p>Žarnica in upornik sta zaporedno, skozi oba teče \(0{,}50\ \text{A}\).</p></div></li>
+              <li><p class="korak">Za zanko zapiši: napetost vira je vsota napetosti na elementih.</p><div class="na-nalogi"><p>\(U_R = 9{,}0 - 6{,}0 = 3{,}0\ \text{V}\), tok \(0{,}50\ \text{A}\).</p></div></li>
+              <li><p class="korak">Za razvejišče zapiši: dotok je enak odtoku.</p><div class="na-nalogi"><p>\(0{,}60 = I_{\check z} + 0{,}20\): \(I_{\check z} = 0{,}40\ \text{A}\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> V razvejišče pritekata 2 A in 3 A, odtekata dve enaki veji. Tok v vsaki?</p><p>2,5 A.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Tri enake žarnice so zaporedno na 12 V. Napetost na eni?</p><p>4 V.</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Kaj pokaže voltmeter, vezan na sklenjeno stikalo?</p><p>Nič (ni napetosti na vodniku brez upora).</p></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-2">
+              <h4>Tip 2: Sestavljeno vezje <span class="badge-vr">PZ</span></h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Upornika \(R_2 = 30\ \Omega\) in \(R_3 = 60\ \Omega\) sta vezana vzporedno, zaporedno k njima pa je \(R_1 = 10\ \Omega\). Vezje priključimo na \(12\ \text{V}\). Kolikšni so tokovi skozi vse upornike?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> vezje ima zaporedne in vzporedne dele hkrati, sprašujejo po tokovih ali napetostih na posameznih elementih.</p><ul class="kljucne"><li>„k njima zaporedno“</li><li>„skozi vsak upornik“</li><li>„nadomestni upor vezja“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Poišči najbolj notranjo čisto zaporedno ali vzporedno skupino in jo nadomesti.</p><div class="na-nalogi"><p>\(\dfrac1{R_{23}} = \dfrac1{30} + \dfrac1{60}\): \(R_{23} = 20\ \Omega\).</p></div></li>
+              <li><p class="korak">Nadaljuj do skupnega nadomestnega upora.</p><div class="na-nalogi"><p>\(R = 10 + 20 = 30\ \Omega\).</p></div></li>
+              <li><p class="korak">Izračunaj skupni tok \(I = U/R\).</p><div class="na-nalogi"><p>\(I = 12/30 = 0{,}40\ \text{A}\); to je tok skozi \(R_1\).</p></div></li>
+              <li><p class="korak">Vrni se nazaj: napetost na vsaki skupini in nato tokovi v vejah.</p><div class="na-nalogi"><p>\(U_{23} = 0{,}40 \cdot 20 = 8{,}0\ \text{V}\); \(I_2 = 8/30 = 0{,}27\ \text{A}\), \(I_3 = 8/60 = 0{,}13\ \text{A}\). Preizkus: \(0{,}27 + 0{,}13 = 0{,}40\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Kaj se zgodi s tokom skozi \(R_1\), če \(R_3\) odstranimo?</p><p>\(R = 40\ \Omega\), tok pade na \(0{,}30\ \text{A}\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Vzporedno vezana enaka upora \(R\), k njima zaporedno še \(R\). Nadomestni upor?</p><p>\(1{,}5R\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Žarnico v vzporedni veji kratko sklenemo z žico. Kaj se zgodi z drugimi vejami?</p><p>Vsa vzporedna skupina ima napetost 0, žarnice v njej ugasnejo.</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 2 -->
+        <section class="sklop" id="sklop-2">
+          <header class="sklop-header">
+            <span class="sklop-num">4.11 · 2</span>
+            <h2>Ohmov zakon</h2>
+            <p>Upor, specifični upor, zaporedna in vzporedna vezava upornikov, karakteristika.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <h4>Upor in Ohmov zakon</h4>
+            <p>Električni upor pove, kolikšna napetost je potrebna za določen tok skozi element:</p>
+            <p>\[R = \frac{U}{I}, \qquad U = RI.\]</p>
+            <p>Enota je ohm, \(1\ \Omega = 1\ \text{V/A}\). Za kovinske vodnike pri stalni temperaturi je upor stalen; tok je sorazmeren z napetostjo (<strong>Ohmov zakon</strong>). Graf \(I(U)\) je tedaj premica skozi izhodišče, njen naklon je \(1/R\).</p>
+            <figure class="slika">
+<svg viewBox="0 0 380 280" role="img" aria-label="Tokovno-napetostna karakteristika" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g1-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g1-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g1-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g1-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g1-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g1-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<path class="s-mreza" d="M26,254V26M76.5,254V26M126.9,254V26M177.4,254V26M227.8,254V26M278.3,254V26M328.8,254V26M26,254H354M26,218.9H354M26,183.8H354M26,148.8H354M26,113.7H354M26,78.6H354M26,43.5H354"/>
+<line class="s-os" x1="26" y1="254" x2="362" y2="254" marker-end="url(#g1-p)"/>
+<line class="s-os" x1="26" y1="254" x2="26" y2="18" marker-end="url(#g1-p)"/>
+<text class="s-os-txt" x="356" y="246" text-anchor="end">U [V]</text>
+<text class="s-os-txt" x="34" y="30">I [A]</text>
+<line class="s-os" x1="76.5" y1="251" x2="76.5" y2="257"/><text class="s-os-txt" x="76.5" y="269" text-anchor="middle">1</text><line class="s-os" x1="126.9" y1="251" x2="126.9" y2="257"/><text class="s-os-txt" x="126.9" y="269" text-anchor="middle">2</text><line class="s-os" x1="177.4" y1="251" x2="177.4" y2="257"/><text class="s-os-txt" x="177.4" y="269" text-anchor="middle">3</text><line class="s-os" x1="227.8" y1="251" x2="227.8" y2="257"/><text class="s-os-txt" x="227.8" y="269" text-anchor="middle">4</text><line class="s-os" x1="278.3" y1="251" x2="278.3" y2="257"/><text class="s-os-txt" x="278.3" y="269" text-anchor="middle">5</text><line class="s-os" x1="328.8" y1="251" x2="328.8" y2="257"/><text class="s-os-txt" x="328.8" y="269" text-anchor="middle">6</text><line class="s-os" x1="23" y1="218.9" x2="29" y2="218.9"/><text class="s-os-txt" x="20" y="222.9" text-anchor="end">0,1</text><line class="s-os" x1="23" y1="183.8" x2="29" y2="183.8"/><text class="s-os-txt" x="20" y="187.8" text-anchor="end">0,2</text><line class="s-os" x1="23" y1="148.8" x2="29" y2="148.8"/><text class="s-os-txt" x="20" y="152.8" text-anchor="end">0,3</text><line class="s-os" x1="23" y1="113.7" x2="29" y2="113.7"/><text class="s-os-txt" x="20" y="117.7" text-anchor="end">0,4</text><line class="s-os" x1="23" y1="78.6" x2="29" y2="78.6"/><text class="s-os-txt" x="20" y="82.6" text-anchor="end">0,5</text><line class="s-os" x1="23" y1="43.5" x2="29" y2="43.5"/><text class="s-os-txt" x="20" y="47.5" text-anchor="end">0,6</text><text class="s-os-txt" x="20" y="269" text-anchor="end">0</text>
+<path class="s-k1" d="M26,254L26.8,253.5L27.6,252.9L28.3,252.4L29.1,251.8L29.9,251.3L30.7,250.7L31.5,250.2L32.3,249.7L33,249.1L33.8,248.6L34.6,248L35.4,247.5L36.2,246.9L37,246.4L37.7,245.8L38.5,245.3L39.3,244.8L40.1,244.2L40.9,243.7L41.6,243.1L42.4,242.6L43.2,242L44,241.5L44.8,241L45.6,240.4L46.3,239.9L47.1,239.3L47.9,238.8L48.7,238.2L49.5,237.7L50.2,237.1L51,236.6L51.8,236.1L52.6,235.5L53.4,235L54.2,234.4L54.9,233.9L55.7,233.3L56.5,232.8L57.3,232.3L58.1,231.7L58.9,231.2L59.6,230.6L60.4,230.1L61.2,229.5L62,229L62.8,228.4L63.5,227.9L64.3,227.4L65.1,226.8L65.9,226.3L66.7,225.7L67.5,225.2L68.2,224.6L69,224.1L69.8,223.6L70.6,223L71.4,222.5L72.1,221.9L72.9,221.4L73.7,220.8L74.5,220.3L75.3,219.7L76.1,219.2L76.8,218.7L77.6,218.1L78.4,217.6L79.2,217L80,216.5L80.8,215.9L81.5,215.4L82.3,214.9L83.1,214.3L83.9,213.8L84.7,213.2L85.4,212.7L86.2,212.1L87,211.6L87.8,211L88.6,210.5L89.4,210L90.1,209.4L90.9,208.9L91.7,208.3L92.5,207.8L93.3,207.2L94,206.7L94.8,206.2L95.6,205.6L96.4,205.1L97.2,204.5L98,204L98.7,203.4L99.5,202.9L100.3,202.3L101.1,201.8L101.9,201.3L102.7,200.7L103.4,200.2L104.2,199.6L105,199.1L105.8,198.5L106.6,198L107.3,197.5L108.1,196.9L108.9,196.4L109.7,195.8L110.5,195.3L111.3,194.7L112,194.2L112.8,193.7L113.6,193.1L114.4,192.6L115.2,192L115.9,191.5L116.7,190.9L117.5,190.4L118.3,189.8L119.1,189.3L119.9,188.8L120.6,188.2L121.4,187.7L122.2,187.1L123,186.6L123.8,186L124.6,185.5L125.3,185L126.1,184.4L126.9,183.9L127.7,183.3L128.5,182.8L129.2,182.2L130,181.7L130.8,181.1L131.6,180.6L132.4,180.1L133.2,179.5L133.9,179L134.7,178.4L135.5,177.9L136.3,177.3L137.1,176.8L137.8,176.3L138.6,175.7L139.4,175.2L140.2,174.6L141,174.1L141.8,173.5L142.5,173L143.3,172.4L144.1,171.9L144.9,171.4L145.7,170.8L146.5,170.3L147.2,169.7L148,169.2L148.8,168.6L149.6,168.1L150.4,167.6L151.1,167L151.9,166.5L152.7,165.9L153.5,165.4L154.3,164.8L155.1,164.3L155.8,163.7L156.6,163.2L157.4,162.7L158.2,162.1L159,161.6L159.7,161L160.5,160.5L161.3,159.9L162.1,159.4L162.9,158.9L163.7,158.3L164.4,157.8L165.2,157.2L166,156.7L166.8,156.1L167.6,155.6L168.4,155L169.1,154.5L169.9,154L170.7,153.4L171.5,152.9L172.3,152.3L173,151.8L173.8,151.2L174.6,150.7L175.4,150.2L176.2,149.6L177,149.1L177.7,148.5L178.5,148L179.3,147.4L180.1,146.9L180.9,146.3L181.6,145.8L182.4,145.3L183.2,144.7L184,144.2L184.8,143.6L185.6,143.1L186.3,142.5L187.1,142L187.9,141.5L188.7,140.9L189.5,140.4L190.3,139.8L191,139.3L191.8,138.7L192.6,138.2L193.4,137.6L194.2,137.1L194.9,136.6L195.7,136L196.5,135.5L197.3,134.9L198.1,134.4L198.9,133.8L199.6,133.3L200.4,132.8L201.2,132.2L202,131.7L202.8,131.1L203.5,130.6L204.3,130L205.1,129.5L205.9,129L206.7,128.4L207.5,127.9L208.2,127.3L209,126.8L209.8,126.2L210.6,125.7L211.4,125.1L212.2,124.6L212.9,124.1L213.7,123.5L214.5,123L215.3,122.4L216.1,121.9L216.8,121.3L217.6,120.8L218.4,120.3L219.2,119.7L220,119.2L220.8,118.6L221.5,118.1L222.3,117.5L223.1,117L223.9,116.4L224.7,115.9L225.4,115.4L226.2,114.8L227,114.3L227.8,113.7L228.6,113.2L229.4,112.6L230.1,112.1L230.9,111.6L231.7,111L232.5,110.5L233.3,109.9L234.1,109.4L234.8,108.8L235.6,108.3L236.4,107.7L237.2,107.2L238,106.7L238.7,106.1L239.5,105.6L240.3,105L241.1,104.5L241.9,103.9L242.7,103.4L243.4,102.9L244.2,102.3L245,101.8L245.8,101.2L246.6,100.7L247.3,100.1L248.1,99.6L248.9,99L249.7,98.5L250.5,98L251.3,97.4L252,96.9L252.8,96.3L253.6,95.8L254.4,95.2L255.2,94.7L256,94.2L256.7,93.6L257.5,93.1L258.3,92.5L259.1,92L259.9,91.4L260.6,90.9L261.4,90.3L262.2,89.8L263,89.3L263.8,88.7L264.6,88.2L265.3,87.6L266.1,87.1L266.9,86.5L267.7,86L268.5,85.5L269.2,84.9L270,84.4L270.8,83.8L271.6,83.3L272.4,82.7L273.2,82.2L273.9,81.6L274.7,81.1L275.5,80.6L276.3,80L277.1,79.5L277.9,78.9L278.6,78.4L279.4,77.8L280.2,77.3L281,76.8L281.8,76.2L282.5,75.7L283.3,75.1L284.1,74.6L284.9,74L285.7,73.5L286.5,73L287.2,72.4L288,71.9L288.8,71.3L289.6,70.8L290.4,70.2L291.2,69.7L291.9,69.1L292.7,68.6L293.5,68.1L294.3,67.5L295.1,67L295.8,66.4L296.6,65.9L297.4,65.3L298.2,64.8L299,64.3L299.8,63.7L300.5,63.2L301.3,62.6L302.1,62.1L302.9,61.5L303.7,61L304.4,60.4L305.2,59.9L306,59.4L306.8,58.8L307.6,58.3L308.4,57.7L309.1,57.2L309.9,56.6L310.7,56.1L311.5,55.6L312.3,55L313.1,54.5L313.8,53.9L314.6,53.4L315.4,52.8L316.2,52.3L317,51.7L317.7,51.2L318.5,50.7L319.3,50.1L320.1,49.6L320.9,49L321.7,48.5L322.4,47.9L323.2,47.4L324,46.9L324.8,46.3L325.6,45.8L326.3,45.2L327.1,44.7L327.9,44.1L328.7,43.6L329.5,43L330.3,42.5L331,42L331.8,41.4L332.6,40.9L333.4,40.3L334.2,39.8L335,39.2L335.7,38.7L336.5,38.2L337.3,37.6L338.1,37.1L338.9,36.5"/>
+<path class="s-k2" d="M26,254L26.8,244.8L27.6,241L28.3,238.1L29.1,235.7L29.9,233.5L30.7,231.5L31.5,229.7L32.3,228.1L33,226.5L33.8,225L34.6,223.6L35.4,222.2L36.2,220.9L37,219.7L37.7,218.5L38.5,217.3L39.3,216.2L40.1,215.1L40.9,214L41.6,213L42.4,212L43.2,211L44,210L44.8,209.1L45.6,208.1L46.3,207.2L47.1,206.3L47.9,205.5L48.7,204.6L49.5,203.8L50.2,202.9L51,202.1L51.8,201.3L52.6,200.5L53.4,199.7L54.2,199L54.9,198.2L55.7,197.5L56.5,196.7L57.3,196L58.1,195.3L58.9,194.6L59.6,193.9L60.4,193.2L61.2,192.5L62,191.8L62.8,191.1L63.5,190.5L64.3,189.8L65.1,189.2L65.9,188.5L66.7,187.9L67.5,187.2L68.2,186.6L69,186L69.8,185.4L70.6,184.8L71.4,184.2L72.1,183.6L72.9,183L73.7,182.4L74.5,181.8L75.3,181.2L76.1,180.6L76.8,180.1L77.6,179.5L78.4,178.9L79.2,178.4L80,177.8L80.8,177.3L81.5,176.7L82.3,176.2L83.1,175.6L83.9,175.1L84.7,174.6L85.4,174.1L86.2,173.5L87,173L87.8,172.5L88.6,172L89.4,171.5L90.1,171L90.9,170.5L91.7,169.9L92.5,169.4L93.3,169L94,168.5L94.8,168L95.6,167.5L96.4,167L97.2,166.5L98,166L98.7,165.6L99.5,165.1L100.3,164.6L101.1,164.1L101.9,163.7L102.7,163.2L103.4,162.8L104.2,162.3L105,161.8L105.8,161.4L106.6,160.9L107.3,160.5L108.1,160L108.9,159.6L109.7,159.1L110.5,158.7L111.3,158.3L112,157.8L112.8,157.4L113.6,156.9L114.4,156.5L115.2,156.1L115.9,155.7L116.7,155.2L117.5,154.8L118.3,154.4L119.1,154L119.9,153.5L120.6,153.1L121.4,152.7L122.2,152.3L123,151.9L123.8,151.5L124.6,151.1L125.3,150.7L126.1,150.2L126.9,149.8L127.7,149.4L128.5,149L129.2,148.6L130,148.2L130.8,147.8L131.6,147.4L132.4,147.1L133.2,146.7L133.9,146.3L134.7,145.9L135.5,145.5L136.3,145.1L137.1,144.7L137.8,144.3L138.6,144L139.4,143.6L140.2,143.2L141,142.8L141.8,142.4L142.5,142.1L143.3,141.7L144.1,141.3L144.9,140.9L145.7,140.6L146.5,140.2L147.2,139.8L148,139.5L148.8,139.1L149.6,138.7L150.4,138.4L151.1,138L151.9,137.6L152.7,137.3L153.5,136.9L154.3,136.6L155.1,136.2L155.8,135.8L156.6,135.5L157.4,135.1L158.2,134.8L159,134.4L159.7,134.1L160.5,133.7L161.3,133.4L162.1,133L162.9,132.7L163.7,132.3L164.4,132L165.2,131.6L166,131.3L166.8,131L167.6,130.6L168.4,130.3L169.1,129.9L169.9,129.6L170.7,129.3L171.5,128.9L172.3,128.6L173,128.3L173.8,127.9L174.6,127.6L175.4,127.3L176.2,126.9L177,126.6L177.7,126.3L178.5,125.9L179.3,125.6L180.1,125.3L180.9,125L181.6,124.6L182.4,124.3L183.2,124L184,123.7L184.8,123.3L185.6,123L186.3,122.7L187.1,122.4L187.9,122.1L188.7,121.7L189.5,121.4L190.3,121.1L191,120.8L191.8,120.5L192.6,120.2L193.4,119.8L194.2,119.5L194.9,119.2L195.7,118.9L196.5,118.6L197.3,118.3L198.1,118L198.9,117.7L199.6,117.4L200.4,117.1L201.2,116.7L202,116.4L202.8,116.1L203.5,115.8L204.3,115.5L205.1,115.2L205.9,114.9L206.7,114.6L207.5,114.3L208.2,114L209,113.7L209.8,113.4L210.6,113.1L211.4,112.8L212.2,112.5L212.9,112.2L213.7,111.9L214.5,111.6L215.3,111.3L216.1,111L216.8,110.7L217.6,110.5L218.4,110.2L219.2,109.9L220,109.6L220.8,109.3L221.5,109L222.3,108.7L223.1,108.4L223.9,108.1L224.7,107.8L225.4,107.6L226.2,107.3L227,107L227.8,106.7L228.6,106.4L229.4,106.1L230.1,105.8L230.9,105.6L231.7,105.3L232.5,105L233.3,104.7L234.1,104.4L234.8,104.1L235.6,103.9L236.4,103.6L237.2,103.3L238,103L238.7,102.8L239.5,102.5L240.3,102.2L241.1,101.9L241.9,101.6L242.7,101.4L243.4,101.1L244.2,100.8L245,100.5L245.8,100.3L246.6,100L247.3,99.7L248.1,99.5L248.9,99.2L249.7,98.9L250.5,98.6L251.3,98.4L252,98.1L252.8,97.8L253.6,97.6L254.4,97.3L255.2,97L256,96.8L256.7,96.5L257.5,96.2L258.3,96L259.1,95.7L259.9,95.4L260.6,95.2L261.4,94.9L262.2,94.6L263,94.4L263.8,94.1L264.6,93.8L265.3,93.6L266.1,93.3L266.9,93.1L267.7,92.8L268.5,92.5L269.2,92.3L270,92L270.8,91.8L271.6,91.5L272.4,91.2L273.2,91L273.9,90.7L274.7,90.5L275.5,90.2L276.3,89.9L277.1,89.7L277.9,89.4L278.6,89.2L279.4,88.9L280.2,88.7L281,88.4L281.8,88.2L282.5,87.9L283.3,87.7L284.1,87.4L284.9,87.2L285.7,86.9L286.5,86.6L287.2,86.4L288,86.1L288.8,85.9L289.6,85.6L290.4,85.4L291.2,85.1L291.9,84.9L292.7,84.7L293.5,84.4L294.3,84.2L295.1,83.9L295.8,83.7L296.6,83.4L297.4,83.2L298.2,82.9L299,82.7L299.8,82.4L300.5,82.2L301.3,81.9L302.1,81.7L302.9,81.5L303.7,81.2L304.4,81L305.2,80.7L306,80.5L306.8,80.2L307.6,80L308.4,79.8L309.1,79.5L309.9,79.3L310.7,79L311.5,78.8L312.3,78.6L313.1,78.3L313.8,78.1L314.6,77.8L315.4,77.6L316.2,77.4L317,77.1L317.7,76.9L318.5,76.6L319.3,76.4L320.1,76.2L320.9,75.9L321.7,75.7L322.4,75.5L323.2,75.2L324,75L324.8,74.8L325.6,74.5L326.3,74.3L327.1,74.1L327.9,73.8L328.7,73.6L329.5,73.4L330.3,73.1L331,72.9L331.8,72.7L332.6,72.4L333.4,72.2L334.2,72L335,71.7L335.7,71.5L336.5,71.3L337.3,71L338.1,70.8L338.9,70.6"/>
+<text class="s-txt-k1" x="288.4" y="43.5" text-anchor="middle">upornik</text>
+<text class="s-txt-k2" x="308.6" y="103.2" text-anchor="middle">žarnica</text>
+</svg>
+<figcaption>Za upornik, za katerega velja Ohmov zakon, je graf \(I(U)\) premica skozi izhodišče in \(R = U/I\) je stalen (tu \(10\ \Omega\)). Nitka žarnice se segreje in njen upor naraste, zato graf zavije navzdol.</figcaption>
+</figure>
+            <h4>Upor žice</h4>
+            <p>Upor žice je sorazmeren z njeno dolžino in obratno sorazmeren s ploščino preseka:</p>
+            <p>\[R = \frac{\zeta l}{S}.\]</p>
+            <p>Specifični upor \(\zeta\) je lastnost snovi (baker \(1{,}7 \cdot 10^{-8}\ \Omega\text{m}\), aluminij \(2{,}8 \cdot 10^{-8}\ \Omega\text{m}\)). Pri kovinah z naraščajočo temperaturo upor narašča. Pri okrogli žici je \(S = \pi d^2/4\).</p>
+            <h4>Zaporedna in vzporedna vezava upornikov</h4>
+            <p><strong>Zaporedno</strong>: isti tok, napetosti se seštejejo, zato se upori seštejejo: \(R = R_1 + R_2\). Nadomestni upor je večji od vsakega posebej. Napetost se razdeli v razmerju uporov: \(U_1 : U_2 = R_1 : R_2\).</p>
+            <p><strong>Vzporedno</strong>: ista napetost, tokovi se seštejejo, zato \(\dfrac1R = \dfrac1{R_1} + \dfrac1{R_2}\). Nadomestni upor je manjši od najmanjšega. Tok se razdeli v obratnem razmerju uporov: več toka teče skozi manjši upor. Za dva upornika je \(R = \dfrac{R_1 R_2}{R_1 + R_2}\), za \(n\) enakih pa \(R/n\).</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-3">
+              <h4>Tip 3: Ohmov zakon in upor žice</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Bakrena žica je dolga \(50\ \text{m}\) in ima premer \(0{,}50\ \text{mm}\) (\(\zeta = 1{,}7 \cdot 10^{-8}\ \Omega\text{m}\)). Kolikšen je njen upor? Kolikšen tok steče, če jo priključimo na \(1{,}5\ \text{V}\)?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> povezava med napetostjo, tokom in uporom ali med dimenzijami žice in uporom; tudi branje upora iz grafa \(I(U)\).</p><ul class="kljucne"><li>„dolžina in presek žice“</li><li>„specifični upor“</li><li>„kolikšen tok steče“</li><li>„graf I(U)“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Izračunaj presek v \(\text{m}^2\) (pazi: premer ali polmer).</p><div class="na-nalogi"><p>\(S = \pi (0{,}50 \cdot 10^{-3})^2 / 4 = 1{,}96 \cdot 10^{-7}\ \text{m}^2\).</p></div></li>
+              <li><p class="korak">Izračunaj upor \(R = \zeta l / S\).</p><div class="na-nalogi"><p>\(R = \dfrac{1{,}7 \cdot 10^{-8} \cdot 50}{1{,}96 \cdot 10^{-7}}\ \Omega = 4{,}3\ \Omega\).</p></div></li>
+              <li><p class="korak">Uporabi Ohmov zakon za manjkajočo količino.</p><div class="na-nalogi"><p>\(I = U/R = 1{,}5/4{,}3 = 0{,}35\ \text{A}\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Žico raztegnemo na dvojno dolžino (prostornina ostane). Kolikokrat se poveča upor?</p><p>Dolžina 2-krat, presek 1/2: upor 4-krat.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Iz grafa: pri 4 V teče 0,2 A. Upor?</p><p>\(20\ \Omega\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Zakaj ima žarnica, ko je hladna, manjši upor kot med svetenjem?</p><p>Upor kovine narašča s temperaturo.</p></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-4">
+              <h4>Tip 4: Zaporedna in vzporedna vezava upornikov</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Upornika \(R_1 = 20\ \Omega\) in \(R_2 = 30\ \Omega\) vežemo najprej zaporedno, nato vzporedno na \(12\ \text{V}\). Kolikšen je v obeh primerih nadomestni upor, skupni tok in napetost na \(R_1\)?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> dva ali več upornikov, vezanih le zaporedno ali le vzporedno, sprašujejo po nadomestnem uporu, tokovih ali razdelitvi napetosti.</p><ul class="kljucne"><li>„zaporedno“</li><li>„vzporedno“</li><li>„nadomestni upor“</li><li>„delilnik napetosti“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Izračunaj nadomestni upor po pravilu za vezavo.</p><div class="na-nalogi"><p>Zaporedno: \(50\ \Omega\). Vzporedno: \(\dfrac{20 \cdot 30}{50} = 12\ \Omega\).</p></div></li>
+              <li><p class="korak">Skupni tok \(I = U/R\).</p><div class="na-nalogi"><p>Zaporedno: \(0{,}24\ \text{A}\). Vzporedno: \(1{,}0\ \text{A}\).</p></div></li>
+              <li><p class="korak">Zaporedno: \(U_1 = R_1 I\). Vzporedno: \(U_1 = U\) in \(I_1 = U/R_1\).</p><div class="na-nalogi"><p>Zaporedno: \(U_1 = 4{,}8\ \text{V}\). Vzporedno: \(U_1 = 12\ \text{V}\), \(I_1 = 0{,}60\ \text{A}\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Štirje upori po \(100\ \Omega\) vzporedno?</p><p>\(25\ \Omega\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Kateri od dveh vzporednih upornikov ima večji tok?</p><p>Tisti z manjšim uporom.</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Kolikšen upor moramo vezati zaporedno z LED (2 V, 20 mA), da jo priključimo na 5 V?</p><p>\(3\ \text{V}/0{,}020\ \text{A} = 150\ \Omega\).</p></div>
+            </div>
+
+          </div>
+        </section>
+
+        <!-- SKLOP 3 -->
+        <section class="sklop" id="sklop-3">
+          <header class="sklop-header">
+            <span class="sklop-num">4.11 · 3</span>
+            <h2>Električno delo in moč</h2>
+            <p>Delo električnega toka, moč porabnika, Joulova toplota, kilovatna ura.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <p>Ko naboj \(e\) preteče skozi porabnik z napetostjo \(U\), električno polje opravi delo \(A = eU\). Ker je \(e = It\), je</p>
+            <p>\[A = UIt, \qquad P = \frac{A}{t} = UI.\]</p>
+            <p>Za upornik z Ohmovim zakonom lahko moč zapišemo tudi kot \(P = RI^2 = U^2/R\). Vse to delo se v uporniku pretvori v toploto (Joulova toplota). Pri žarnici je del energije svetloba, pri motorju mehansko delo.</p>
+            <ul>
+              <li>Napis na porabniku (na primer „230 V, 60 W“) pove moč pri nazivni napetosti. Iz njega izračunaš upor \(R = U^2/P\) in tok \(I = P/U\).</li>
+              <li>Pri zaporedni vezavi (isti tok) se bolj segreje porabnik z <strong>večjim</strong> uporom (\(P = RI^2\)); pri vzporedni vezavi (ista napetost) porabnik z <strong>manjšim</strong> uporom (\(P = U^2/R\)).</li>
+              <li>V atomski in jedrski fiziki energijo pogosto merimo v elektronvoltih: \(1\ \text{eV}\) je delo, ki ga opravi napetost 1 V na osnovnem naboju, \(1\ \text{eV} = 1{,}6 \cdot 10^{-19}\ \text{J}\).</li>
+              <li>Porabljeno energijo elektrodistributerji merijo v kilovatnih urah: \(1\ \text{kWh} = 1000\ \text{W} \cdot 3600\ \text{s} = 3{,}6\ \text{MJ}\).</li>
+              <li>Izkoristek naprave je \(\eta = P_{\text{koristna}}/P_{\text{električna}}\).</li>
+            </ul>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-5">
+              <h4>Tip 5: Moč porabnika in porabljena energija</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Grelnik z napisom „230 V, 2000 W“ deluje 45 minut na dan. Kolikšen tok teče skozenj in kolikšen je njegov upor? Koliko energije porabi v 30 dneh in koliko to stane pri ceni \(0{,}20\ \text{€/kWh}\)?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> nastopa moč (W, kW) ali napis porabnika, sprašujejo po toku, uporu, energiji, ceni ali segrevanju vode.</p><ul class="kljucne"><li>„napis 230 V, 60 W“</li><li>„kWh“</li><li>„koliko stane“</li><li>„kolikšna moč se troši“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Iz napisa izračunaj tok \(I = P/U\) in upor \(R = U^2/P\).</p><div class="na-nalogi"><p>\(I = 2000/230 = 8{,}7\ \text{A}\), \(R = 230^2/2000 = 26\ \Omega\).</p></div></li>
+              <li><p class="korak">Energijo izračunaj z \(A = Pt\); za ceno uporabi kW in ure.</p><div class="na-nalogi"><p>\(t = 30 \cdot 0{,}75\ \text{h} = 22{,}5\ \text{h}\); \(A = 2{,}0\ \text{kW} \cdot 22{,}5\ \text{h} = 45\ \text{kWh}\).</p></div></li>
+              <li><p class="korak">Pomnoži s ceno (ali pretvori v J, če potrebuješ toploto).</p><div class="na-nalogi"><p>\(45 \cdot 0{,}20 = 9{,}0\ \text{€}\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Žarnico „230 V, 60 W“ priključimo na 115 V. Kolikšna je moč (pri stalnem uporu)?</p><p>Četrtina: 15 W.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Grelnik z 2,0 kW segreva 1,0 kg vode od 20 °C do 100 °C. Koliko časa, če gre vsa energija v vodo?</p><p>\(t = mc\Delta T/P = 168\ \text{s}\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Dve žarnici, 40 W in 100 W (za 230 V), vežemo zaporedno. Katera sveti močneje?</p><p>Tista s 40 W, ker ima večji upor in gre skozi obe isti tok.</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 4 -->
+        <section class="sklop sklop--visja" id="sklop-4">
+          <header class="sklop-header">
+            <span class="sklop-num">4.11 · 4</span>
+            <h2>Izmenična napetost <span class="badge-vr">PZ</span></h2>
+            <p>Sinusna napetost in tok, amplituda, frekvenca, efektivna vrednost, povprečna moč.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <p>Generatorji v elektrarnah dajejo <strong>izmenično</strong> napetost, ki se s časom spreminja sinusno:</p>
+            <p>\[U(t) = U_0 \sin(\omega t), \qquad \omega = 2\pi\nu = \frac{2\pi}{t_0}.\]</p>
+            <p>\(U_0\) je amplituda (največja vrednost), \(\nu\) frekvenca in \(t_0\) nihajni čas. V Evropi je frekvenca omrežja \(50\ \text{Hz}\). Skozi upornik teče tok \(I(t) = I_0 \sin(\omega t)\) z \(I_0 = U_0/R\), ki je v fazi z napetostjo.</p>
+            <figure class="slika">
+<svg viewBox="0 0 440 260" role="img" aria-label="Izmenična napetost" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g2-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g2-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g2-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g2-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g2-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g2-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<path class="s-mreza" d="M40,220V40M125.7,220V40M211.4,220V40M297.1,220V40M382.9,220V40M40,220H400M40,197.5H400M40,175H400M40,152.5H400M40,130H400M40,107.5H400M40,85H400M40,62.5H400M40,40H400"/>
+<line class="s-os" x1="40" y1="130" x2="408" y2="130" marker-end="url(#g2-p)"/>
+<line class="s-os" x1="40" y1="220" x2="40" y2="32" marker-end="url(#g2-p)"/>
+<text class="s-os-txt" x="402" y="122" text-anchor="end">t [ms]</text>
+<text class="s-os-txt" x="48" y="44">U [V]</text>
+<line class="s-os" x1="125.7" y1="127" x2="125.7" y2="133"/><text class="s-os-txt" x="125.7" y="145" text-anchor="middle">10</text><line class="s-os" x1="211.4" y1="127" x2="211.4" y2="133"/><text class="s-os-txt" x="211.4" y="145" text-anchor="middle">20</text><line class="s-os" x1="297.1" y1="127" x2="297.1" y2="133"/><text class="s-os-txt" x="297.1" y="145" text-anchor="middle">30</text><line class="s-os" x1="382.9" y1="127" x2="382.9" y2="133"/><text class="s-os-txt" x="382.9" y="145" text-anchor="middle">40</text><line class="s-os" x1="37" y1="220" x2="43" y2="220"/><text class="s-os-txt" x="34" y="224" text-anchor="end">−400</text><line class="s-os" x1="37" y1="197.5" x2="43" y2="197.5"/><text class="s-os-txt" x="34" y="201.5" text-anchor="end">−300</text><line class="s-os" x1="37" y1="175" x2="43" y2="175"/><text class="s-os-txt" x="34" y="179" text-anchor="end">−200</text><line class="s-os" x1="37" y1="152.5" x2="43" y2="152.5"/><text class="s-os-txt" x="34" y="156.5" text-anchor="end">−100</text><line class="s-os" x1="37" y1="107.5" x2="43" y2="107.5"/><text class="s-os-txt" x="34" y="111.5" text-anchor="end">100</text><line class="s-os" x1="37" y1="85" x2="43" y2="85"/><text class="s-os-txt" x="34" y="89" text-anchor="end">200</text><line class="s-os" x1="37" y1="62.5" x2="43" y2="62.5"/><text class="s-os-txt" x="34" y="66.5" text-anchor="end">300</text><text class="s-os-txt" x="34" y="145" text-anchor="end">0</text>
+<line class="s-asim" x1="40" y1="78.3" x2="400" y2="78.3"/>
+<line class="s-k3" x1="82.9" y1="130" x2="82.9" y2="56.9"/>
+<path class="s-k1" d="M40,130L40.9,127.7L41.7,125.4L42.6,123.1L43.4,120.8L44.3,118.6L45.1,116.3L46,114L46.9,111.8L47.7,109.6L48.6,107.4L49.4,105.2L50.3,103.1L51.1,101L52,98.9L52.9,96.8L53.7,94.8L54.6,92.8L55.4,90.8L56.3,88.9L57.1,87L58,85.2L58.9,83.4L59.7,81.6L60.6,79.9L61.4,78.3L62.3,76.7L63.1,75.1L64,73.7L64.9,72.2L65.7,70.8L66.6,69.5L67.4,68.3L68.3,67.1L69.1,65.9L70,64.8L70.9,63.8L71.7,62.9L72.6,62L73.4,61.2L74.3,60.5L75.1,59.8L76,59.2L76.9,58.6L77.7,58.2L78.6,57.8L79.4,57.5L80.3,57.2L81.1,57L82,56.9L82.9,56.9L83.7,56.9L84.6,57L85.4,57.2L86.3,57.5L87.1,57.8L88,58.2L88.9,58.6L89.7,59.2L90.6,59.8L91.4,60.5L92.3,61.2L93.1,62L94,62.9L94.9,63.8L95.7,64.8L96.6,65.9L97.4,67.1L98.3,68.3L99.1,69.5L100,70.8L100.9,72.2L101.7,73.7L102.6,75.1L103.4,76.7L104.3,78.3L105.1,79.9L106,81.6L106.9,83.4L107.7,85.2L108.6,87L109.4,88.9L110.3,90.8L111.1,92.8L112,94.8L112.9,96.8L113.7,98.9L114.6,101L115.4,103.1L116.3,105.2L117.1,107.4L118,109.6L118.9,111.8L119.7,114L120.6,116.3L121.4,118.6L122.3,120.8L123.1,123.1L124,125.4L124.9,127.7L125.7,130L126.6,132.3L127.4,134.6L128.3,136.9L129.1,139.2L130,141.4L130.9,143.7L131.7,146L132.6,148.2L133.4,150.4L134.3,152.6L135.1,154.8L136,156.9L136.9,159L137.7,161.1L138.6,163.2L139.4,165.2L140.3,167.2L141.1,169.2L142,171.1L142.9,173L143.7,174.8L144.6,176.6L145.4,178.4L146.3,180.1L147.1,181.7L148,183.3L148.9,184.9L149.7,186.3L150.6,187.8L151.4,189.2L152.3,190.5L153.1,191.7L154,192.9L154.9,194.1L155.7,195.2L156.6,196.2L157.4,197.1L158.3,198L159.1,198.8L160,199.5L160.9,200.2L161.7,200.8L162.6,201.4L163.4,201.8L164.3,202.2L165.1,202.5L166,202.8L166.9,203L167.7,203.1L168.6,203.1L169.4,203.1L170.3,203L171.1,202.8L172,202.5L172.9,202.2L173.7,201.8L174.6,201.4L175.4,200.8L176.3,200.2L177.1,199.5L178,198.8L178.9,198L179.7,197.1L180.6,196.2L181.4,195.2L182.3,194.1L183.1,192.9L184,191.7L184.9,190.5L185.7,189.2L186.6,187.8L187.4,186.3L188.3,184.9L189.1,183.3L190,181.7L190.9,180.1L191.7,178.4L192.6,176.6L193.4,174.8L194.3,173L195.1,171.1L196,169.2L196.9,167.2L197.7,165.2L198.6,163.2L199.4,161.1L200.3,159L201.1,156.9L202,154.8L202.9,152.6L203.7,150.4L204.6,148.2L205.4,146L206.3,143.7L207.1,141.4L208,139.2L208.9,136.9L209.7,134.6L210.6,132.3L211.4,130L212.3,127.7L213.1,125.4L214,123.1L214.9,120.8L215.7,118.6L216.6,116.3L217.4,114L218.3,111.8L219.1,109.6L220,107.4L220.9,105.2L221.7,103.1L222.6,101L223.4,98.9L224.3,96.8L225.1,94.8L226,92.8L226.9,90.8L227.7,88.9L228.6,87L229.4,85.2L230.3,83.4L231.1,81.6L232,79.9L232.9,78.3L233.7,76.7L234.6,75.1L235.4,73.7L236.3,72.2L237.1,70.8L238,69.5L238.9,68.3L239.7,67.1L240.6,65.9L241.4,64.8L242.3,63.8L243.1,62.9L244,62L244.9,61.2L245.7,60.5L246.6,59.8L247.4,59.2L248.3,58.6L249.1,58.2L250,57.8L250.9,57.5L251.7,57.2L252.6,57L253.4,56.9L254.3,56.9L255.1,56.9L256,57L256.9,57.2L257.7,57.5L258.6,57.8L259.4,58.2L260.3,58.6L261.1,59.2L262,59.8L262.9,60.5L263.7,61.2L264.6,62L265.4,62.9L266.3,63.8L267.1,64.8L268,65.9L268.9,67.1L269.7,68.3L270.6,69.5L271.4,70.8L272.3,72.2L273.1,73.7L274,75.1L274.9,76.7L275.7,78.3L276.6,79.9L277.4,81.6L278.3,83.4L279.1,85.2L280,87L280.9,88.9L281.7,90.8L282.6,92.8L283.4,94.8L284.3,96.8L285.1,98.9L286,101L286.9,103.1L287.7,105.2L288.6,107.4L289.4,109.6L290.3,111.8L291.1,114L292,116.3L292.9,118.6L293.7,120.8L294.6,123.1L295.4,125.4L296.3,127.7L297.1,130L298,132.3L298.9,134.6L299.7,136.9L300.6,139.2L301.4,141.4L302.3,143.7L303.1,146L304,148.2L304.9,150.4L305.7,152.6L306.6,154.8L307.4,156.9L308.3,159L309.1,161.1L310,163.2L310.9,165.2L311.7,167.2L312.6,169.2L313.4,171.1L314.3,173L315.1,174.8L316,176.6L316.9,178.4L317.7,180.1L318.6,181.7L319.4,183.3L320.3,184.9L321.1,186.3L322,187.8L322.9,189.2L323.7,190.5L324.6,191.7L325.4,192.9L326.3,194.1L327.1,195.2L328,196.2L328.9,197.1L329.7,198L330.6,198.8L331.4,199.5L332.3,200.2L333.1,200.8L334,201.4L334.9,201.8L335.7,202.2L336.6,202.5L337.4,202.8L338.3,203L339.1,203.1L340,203.1L340.9,203.1L341.7,203L342.6,202.8L343.4,202.5L344.3,202.2L345.1,201.8L346,201.4L346.9,200.8L347.7,200.2L348.6,199.5L349.4,198.8L350.3,198L351.1,197.1L352,196.2L352.9,195.2L353.7,194.1L354.6,192.9L355.4,191.7L356.3,190.5L357.1,189.2L358,187.8L358.9,186.3L359.7,184.9L360.6,183.3L361.4,181.7L362.3,180.1L363.1,178.4L364,176.6L364.9,174.8L365.7,173L366.6,171.1L367.4,169.2L368.3,167.2L369.1,165.2L370,163.2L370.9,161.1L371.7,159L372.6,156.9L373.4,154.8L374.3,152.6L375.1,150.4L376,148.2L376.9,146L377.7,143.7L378.6,141.4L379.4,139.2L380.3,136.9L381.1,134.6L382,132.3L382.9,130"/>
+<text class="s-txt-k3" x="134.3" y="52.4" text-anchor="start">U<tspan dy="4" style="font-size:10px">0</tspan><tspan dy="-4"> = 325 V</tspan></text>
+<text class="s-txt-k2" x="391.4" y="72.6" text-anchor="end">efektivna 230 V</text>
+</svg>
+<figcaption>Omrežna napetost: amplituda \(U_0 = 325\ \text{V}\), frekvenca \(50\ \text{Hz}\) (nihajni čas 20 ms). Efektivna vrednost \(U_0/\sqrt2 = 230\ \text{V}\) je napetost enosmernega vira, ki bi na uporniku dajal enako povprečno moč.</figcaption>
+</figure>
+            <h4>Efektivna vrednost</h4>
+            <p>Trenutna moč na uporniku \(P = U_0 I_0 \sin^2(\omega t)\) niha med 0 in \(U_0 I_0\); povprečje \(\sin^2\) je \(\tfrac12\), zato je povprečna moč \(\bar P = \tfrac12 U_0 I_0\). Efektivni vrednosti sta tisti, s katerima ima ta enačba obliko kot pri enosmernem toku:</p>
+            <p>\[U_{ef} = \frac{U_0}{\sqrt2}, \qquad I_{ef} = \frac{I_0}{\sqrt2}, \qquad \bar P = U_{ef} I_{ef}.\]</p>
+            <p>Merilniki in napisi na napravah navajajo efektivne vrednosti: „230 V“ v vtičnici pomeni amplitudo \(230 \cdot \sqrt2 = 325\ \text{V}\).</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-6">
+              <h4>Tip 6: Amplituda, efektivna vrednost in povprečna moč <span class="badge-vr">PZ</span></h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Grelnik z uporom \(46\ \Omega\) priključimo na omrežno napetost \(230\ \text{V}\), \(50\ \text{Hz}\). Kolikšna je amplituda napetosti in toka? Kolikšna je povprečna moč in kolikšna največja trenutna moč?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> izmenična ali omrežna napetost, sprašujejo po amplitudi, efektivni vrednosti, povprečni moči ali trenutni vrednosti; lahko je podan graf \(U(t)\).</p><ul class="kljucne"><li>„izmenična napetost“</li><li>„efektivna vrednost“</li><li>„amplituda“</li><li>„50 Hz“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Ugotovi, ali je podana efektivna vrednost ali amplituda (napisi in merilniki so efektivni).</p><div class="na-nalogi"><p>\(U_{ef} = 230\ \text{V}\), \(U_0 = 230\sqrt2 = 325\ \text{V}\).</p></div></li>
+              <li><p class="korak">Tok izračunaj z Ohmovim zakonom za iste vrste vrednosti.</p><div class="na-nalogi"><p>\(I_{ef} = 230/46 = 5{,}0\ \text{A}\), \(I_0 = 7{,}1\ \text{A}\).</p></div></li>
+              <li><p class="korak">Povprečna moč je \(U_{ef} I_{ef}\), največja trenutna \(U_0 I_0 = 2\bar P\).</p><div class="na-nalogi"><p>\(\bar P = 1150\ \text{W}\), \(P_{max} = 2300\ \text{W}\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Iz grafa: amplituda 12 V, en nihaj traja 4 ms. Efektivna napetost in frekvenca?</p><p>\(8{,}5\ \text{V}\), \(250\ \text{Hz}\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Kolikokrat v sekundi pri 50 Hz napetost doseže največjo absolutno vrednost?</p><p>100-krat.</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Kolikšna je trenutna napetost 2,5 ms po prehodu skozi nič navzgor (230 V, 50 Hz)?</p><p>\(325 \sin(\pi/4) = 230\ \text{V}\).</p></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="subsection" id="kljuc">
+          <div class="subsection-head">
+            <h2>Ključ: kateri tip naloge je to?</h2>
+            <p>Poišči besedo iz navodila naloge in skoči na pravi postopek.</p>
+          </div>
+          <div class="info-card">
+            <div class="tabela-wrap">
+              <table class="tabela">
+                <thead><tr><th>V besedilu naloge piše …</th><th>Tip</th></tr></thead>
+                <tbody>
+                  <tr><td>„ampermeter kaže“, „voltmeter kaže“, „razvejišče“</td><td><a href="#tip-1">Tip 1</a></td></tr>
+                  <tr><td>„k vzporedni vezavi zaporedno“, „tok skozi vsak upornik“</td><td><a href="#tip-2">Tip 2</a></td></tr>
+                  <tr><td>„dolžina in presek žice“, „specifični upor“, graf \(I(U)\)</td><td><a href="#tip-3">Tip 3</a></td></tr>
+                  <tr><td>„zaporedno“ ali „vzporedno“, „nadomestni upor“</td><td><a href="#tip-4">Tip 4</a></td></tr>
+                                    <tr><td>„napis 230 V, 60 W“, „kWh“, „koliko stane“</td><td><a href="#tip-5">Tip 5</a></td></tr>
+                  <tr><td>„izmenična napetost“, „efektivna vrednost“, „amplituda“</td><td><a href="#tip-6">Tip 6</a></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>Pogoste napake</h2>
+          </div>
+          <div class="info-card">
+            <ul>
+              <li>Pri vzporedni vezavi pozabiš na koncu obrniti \(1/R\).</li>
+              <li>Pri uporu žice vstaviš premer namesto polmera ali presek v \(\text{mm}^2\).</li>
+              <li>Ampermeter vežeš vzporedno ali voltmeter zaporedno.</li>
+              <li>Pri žarnicah v zaporedni vezavi misliš, da močneje sveti tista z večjo nazivno močjo.</li>
+              <li>Pri izmenični napetosti mešaš amplitudo in efektivno vrednost.</li>
+              <li>Energijo v kWh računaš s časom v sekundah.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>Naslednje poglavje</h2>
+          </div>
+          <div class="link-list">
+            <a class="link-item" href="/views/fizika/snov/magnetno_polje/magnetno_polje_razlaga.html">
+              <span class="link-item-text"><strong>4.12 Magnetno polje</strong><small>Magneti, polje toka, sila na vodnik in naboj, pretok</small></span>
+              <span class="arrow">→</span>
+            </a>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>

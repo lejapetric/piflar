@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Osnove informatike — razlaga in postopki | Piflar.si</title>
+  <meta name="description" content="Osnove informatike za maturo: podatek, informacija in znanje, zvezna in diskretna predstavitev, informacijski sistem in procesi, količina informacije, entitete in atributi, varovanje podatkov in zasebnost ter komuniciranje in povratna zveza.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
+  <link rel="stylesheet" href="/style/snov.css">
+</head>
+<body>
+  <div id="header"></div>
+
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view">
+
+<header class="page-header">
+          <span class="page-eyebrow">Informatika · Snov · 4.1</span>
+          <h1>Osnove informatike</h1>
+          <p>Informatika se ukvarja s podatki in informacijami: kako jih zajamemo, zapišemo, obdelamo in posredujemo ljudem. Tu so temeljni pojmi, na katere se opirajo vsa nadaljnja poglavja, pomen informacij v družbi in njihovo varovanje ter komuniciranje. Pod razlago so vsi tipi nalog, ki se pojavijo pri tem sklopu.</p>
+          <div class="page-meta">
+            <div class="page-meta-item"><strong>3</strong><span>Podpoglavja</span></div>
+            <div class="page-meta-item"><strong>7</strong><span>Tipov nalog</span></div>
+            <div class="page-meta-item"><strong>~30 min</strong><span>Branja</span></div>
+          </div>
+        </header>
+
+        <div class="matura-formule">
+          <h3>Kar moraš znati izračunati</h3>
+          <p>Računanja je pri tem poglavju malo. Na maturi ni lista z enačbami, zato si zveze zapomni:</p>
+          <div class="matura-levo">
+            <ul>
+              <li>količina informacije pri \(n\) enako verjetnih odgovorih: \(I = \log_2 n\) bitov</li>
+              <li>število različnih zapisov z \(k\) biti: \(n = 2^k\)</li>
+              <li>potrebno število bitov: najmanjši \(k\), za katerega je \(2^k \ge n\)</li>
+              <li>\(1\ \text{bajt (B)} = 8\ \text{bitov (b)}\)</li>
+            </ul>
+          </div>
+          <p class="matura-opomba">Uporabne potence: \(2^4 = 16\), \(2^5 = 32\), \(2^6 = 64\), \(2^7 = 128\), \(2^8 = 256\), \(2^{10} = 1024\). Kalkulator brez \(\log_2\): \(\log_2 n = \dfrac{\log n}{\log 2}\).</p>
+        </div>
+
+        <nav class="kazalo" aria-label="Podpoglavja">
+          <h2>Podpoglavja</h2>
+          <ol>
+            <li><a href="#sklop-1"><span class="kazalo-st">1</span> Temeljni pojmi</a></li>
+            <li><a href="#sklop-2"><span class="kazalo-st">2</span> Družbeni vidiki informatike</a></li>
+            <li><a href="#sklop-3"><span class="kazalo-st">3</span> Komuniciranje</a></li>
+            <li><a href="#kljuc"><span class="kazalo-st">?</span> Ključ: kateri tip naloge je to?</a></li>
+          </ol>
+        </nav>
+
+        <!-- SKLOP 1 -->
+        <section class="sklop" id="sklop-1">
+          <header class="sklop-header">
+            <span class="sklop-num">4.1 · 1</span>
+            <h2>Temeljni pojmi</h2>
+            <p>Podatek, informacija, znanje; računalništvo, informatika, kibernetika; zvezna in diskretna predstavitev; informacijski sistem in procesi; količina informacije; entiteta in atribut.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <h4>Podatek, informacija, znanje</h4>
+            <p><strong>Podatek</strong> je zapis o nekem dejstvu (število, beseda, znak, slika), sam po sebi brez pomena. Število 38,6 je podatek. <strong>Informacija</strong> je podatek, ki mu prejemnik pripiše pomen in mu nekaj novega pove: „Janova telesna temperatura je 38,6 °C.“ Isti podatek je za različne ljudi lahko različno pomembna informacija ali pa sploh ne. <strong>Znanje</strong> je sposobnost, da informacije povežemo z izkušnjami, jih razumemo in na njihovi podlagi ukrepamo: „Jan ima vročino, zato naj ostane doma in pije veliko tekočine.“</p>
+            <figure class="slika">
+<svg viewBox="0 0 500 230" role="img" aria-label="Podatek, informacija, znanje" xmlns="http://www.w3.org/2000/svg"><polygon class="s-lik" points="120,150 420,150 460,210 80,210"/><polygon class="s-lik-2" points="170,85 370,85 415,145 125,145"/><polygon class="s-kot" points="270,20 365,80 175,80"/><text class="s-txt-b" x="270" y="178" text-anchor="middle">podatek</text><text class="s-txt-muted" x="270" y="196" text-anchor="middle" style="font-size:12px">„38,6“</text><text class="s-txt-b" x="270" y="112" text-anchor="middle">informacija</text><text class="s-txt-muted" x="270" y="130" text-anchor="middle" style="font-size:12px">„Janova temperatura je 38,6 °C.“</text><text class="s-txt-b" x="270" y="60" text-anchor="middle">znanje</text><text class="s-txt-k4" x="355" y="40" style="font-size:12px">„Jan ima vročino,</text><text class="s-txt-k4" x="355" y="55" style="font-size:12px">ostane doma.“</text><text class="s-txt-muted" x="8" y="152" style="font-size:12px">+ pomen</text><text class="s-txt-muted" x="8" y="80" style="font-size:12px">+ razumevanje,</text><text class="s-txt-muted" x="8" y="95" style="font-size:12px">izkušnje</text></svg>
+<figcaption>Podatek je zapis brez pomena. Ko ga postavimo v okvir in mu damo pomen, postane informacija. Znanje je sposobnost, da informacije povežemo in na njihovi podlagi ravnamo.</figcaption>
+</figure>
+            <p>Informacija je <strong>pomembna</strong>, če je pravočasna, točna, popolna in prejemniku koristna pri odločanju. Kadar nas zasipa več informacij, kot jih zmoremo predelati, ali je med njimi veliko nepomembnih in netočnih, govorimo o <strong>informacijski onesnaženosti</strong> (preobremenjenosti).</p>
+            <h4>Računalništvo, informatika, kibernetika</h4>
+            <ul>
+              <li><strong>Računalništvo</strong> je veda o računalnikih: o njihovi zgradbi, delovanju, programiranju in algoritmih.</li>
+              <li><strong>Informatika</strong> je veda o informacijah: o zbiranju, shranjevanju, obdelavi, prenosu in uporabi informacij, z računalnikom ali brez njega. Računalnik je njeno glavno orodje.</li>
+              <li><strong>Kibernetika</strong> je veda o upravljanju in vodenju sistemov (živih in tehničnih) s pomočjo informacij in povratne zveze, na primer termostat, avtopilot ali uravnavanje telesne temperature.</li>
+            </ul>
+            <h4>Zvezna in diskretna predstavitev</h4>
+            <p>Količina je <strong>zvezna</strong> (analogna), če se spreminja brez preskokov in ima lahko katerokoli vrednost (temperatura zraka, kazalec ure). <strong>Diskretna</strong> (digitalna) predstavitev pozna le končno mnogo vrednosti (prsti na roki, digitalna ura, črke). Računalnik zapisuje vse podatke diskretno, z biti 0 in 1, zato mora zvezne količine (zvok, sliko) najprej <strong>digitalizirati</strong>: v izbranih trenutkih izmeri vrednost in jo zaokroži na eno od končno mnogo stopenj.</p>
+            <div class="slike-vrsta"><figure class="slika">
+<svg viewBox="0 0 260 190" role="img" aria-label="Zvezni signal" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g1-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g1-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g1-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g1-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g1-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g1-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<path class="s-mreza" d="M26,164V26M52,164V26M78,164V26M104,164V26M130,164V26M156,164V26M182,164V26M208,164V26M234,164V26M26,164H234M26,129.5H234M26,95H234M26,60.5H234M26,26H234"/>
+<line class="s-os" x1="26" y1="164" x2="242" y2="164" marker-end="url(#g1-p)"/>
+<line class="s-os" x1="26" y1="164" x2="26" y2="18" marker-end="url(#g1-p)"/>
+<text class="s-os-txt" x="236" y="156" text-anchor="end">t</text>
+<text class="s-os-txt" x="34" y="30">U</text>
+<path class="s-k1" d="M26,95L26.5,93.5L27,92.1L27.6,90.6L28.1,89.1L28.6,87.7L29.1,86.2L29.6,84.8L30.2,83.4L30.7,82L31.2,80.6L31.7,79.2L32.2,77.8L32.8,76.4L33.3,75.1L33.8,73.8L34.3,72.5L34.8,71.2L35.4,70L35.9,68.8L36.4,67.6L36.9,66.4L37.4,65.3L38,64.2L38.5,63.1L39,62L39.5,61L40,60L40.6,59.1L41.1,58.2L41.6,57.3L42.1,56.4L42.6,55.6L43.2,54.9L43.7,54.1L44.2,53.4L44.7,52.8L45.2,52.2L45.8,51.6L46.3,51.1L46.8,50.6L47.3,50.1L47.8,49.7L48.4,49.3L48.9,48.9L49.4,48.6L49.9,48.4L50.4,48.1L51,47.9L51.5,47.8L52,47.7L52.5,47.6L53,47.6L53.6,47.6L54.1,47.6L54.6,47.6L55.1,47.7L55.6,47.9L56.2,48L56.7,48.2L57.2,48.4L57.7,48.7L58.2,49L58.8,49.3L59.3,49.6L59.8,50L60.3,50.4L60.8,50.8L61.4,51.2L61.9,51.7L62.4,52.1L62.9,52.6L63.4,53.1L64,53.7L64.5,54.2L65,54.8L65.5,55.3L66,55.9L66.6,56.5L67.1,57.1L67.6,57.7L68.1,58.3L68.6,58.9L69.2,59.5L69.7,60.2L70.2,60.8L70.7,61.4L71.2,62.1L71.8,62.7L72.3,63.3L72.8,63.9L73.3,64.5L73.8,65.2L74.4,65.8L74.9,66.4L75.4,66.9L75.9,67.5L76.4,68.1L77,68.6L77.5,69.2L78,69.7L78.5,70.2L79,70.7L79.6,71.2L80.1,71.7L80.6,72.2L81.1,72.6L81.6,73L82.2,73.4L82.7,73.8L83.2,74.2L83.7,74.5L84.2,74.9L84.8,75.2L85.3,75.5L85.8,75.8L86.3,76L86.8,76.3L87.4,76.5L87.9,76.7L88.4,76.9L88.9,77.1L89.4,77.2L90,77.4L90.5,77.5L91,77.6L91.5,77.7L92,77.8L92.6,77.8L93.1,77.9L93.6,77.9L94.1,77.9L94.6,77.9L95.2,77.9L95.7,77.9L96.2,77.9L96.7,77.9L97.2,77.8L97.8,77.8L98.3,77.7L98.8,77.7L99.3,77.6L99.8,77.5L100.4,77.5L100.9,77.4L101.4,77.3L101.9,77.3L102.4,77.2L103,77.1L103.5,77.1L104,77L104.5,77L105,76.9L105.6,76.9L106.1,76.9L106.6,76.9L107.1,76.9L107.6,76.9L108.2,76.9L108.7,76.9L109.2,77L109.7,77.1L110.2,77.2L110.8,77.3L111.3,77.4L111.8,77.5L112.3,77.7L112.8,77.9L113.4,78.1L113.9,78.3L114.4,78.6L114.9,78.9L115.4,79.2L116,79.5L116.5,79.9L117,80.2L117.5,80.7L118,81.1L118.6,81.5L119.1,82L119.6,82.6L120.1,83.1L120.6,83.7L121.2,84.3L121.7,84.9L122.2,85.6L122.7,86.2L123.2,87L123.8,87.7L124.3,88.5L124.8,89.3L125.3,90.1L125.8,90.9L126.4,91.8L126.9,92.7L127.4,93.6L127.9,94.6L128.4,95.5L129,96.5L129.5,97.5L130,98.6L130.5,99.6L131,100.7L131.6,101.8L132.1,102.9L132.6,104L133.1,105.2L133.6,106.3L134.2,107.5L134.7,108.7L135.2,109.9L135.7,111.1L136.2,112.3L136.8,113.5L137.3,114.7L137.8,115.9L138.3,117.2L138.8,118.4L139.4,119.6L139.9,120.8L140.4,122.1L140.9,123.3L141.4,124.5L142,125.7L142.5,126.9L143,128.1L143.5,129.3L144,130.4L144.6,131.6L145.1,132.7L145.6,133.8L146.1,134.9L146.6,136L147.2,137.1L147.7,138.1L148.2,139.1L148.7,140.1L149.2,141.1L149.8,142L150.3,142.9L150.8,143.8L151.3,144.6L151.8,145.4L152.4,146.2L152.9,146.9L153.4,147.7L153.9,148.3L154.4,149L155,149.6L155.5,150.1L156,150.6L156.5,151.1L157,151.6L157.6,152L158.1,152.3L158.6,152.6L159.1,152.9L159.6,153.1L160.2,153.3L160.7,153.5L161.2,153.6L161.7,153.6L162.2,153.6L162.8,153.6L163.3,153.5L163.8,153.4L164.3,153.3L164.8,153.1L165.4,152.8L165.9,152.5L166.4,152.2L166.9,151.8L167.4,151.4L168,150.9L168.5,150.4L169,149.9L169.5,149.3L170,148.7L170.6,148.1L171.1,147.4L171.6,146.6L172.1,145.9L172.6,145.1L173.2,144.3L173.7,143.4L174.2,142.5L174.7,141.6L175.2,140.7L175.8,139.7L176.3,138.7L176.8,137.7L177.3,136.6L177.8,135.6L178.4,134.5L178.9,133.4L179.4,132.3L179.9,131.1L180.4,130L181,128.8L181.5,127.6L182,126.4L182.5,125.2L183,124L183.6,122.8L184.1,121.6L184.6,120.3L185.1,119.1L185.6,117.9L186.2,116.7L186.7,115.4L187.2,114.2L187.7,113L188.2,111.8L188.8,110.6L189.3,109.4L189.8,108.2L190.3,107L190.8,105.9L191.4,104.7L191.9,103.6L192.4,102.5L192.9,101.4L193.4,100.3L194,99.2L194.5,98.2L195,97.1L195.5,96.1L196,95.1L196.6,94.2L197.1,93.3L197.6,92.3L198.1,91.5L198.6,90.6L199.2,89.8L199.7,88.9L200.2,88.2L200.7,87.4L201.2,86.7L201.8,86L202.3,85.3L202.8,84.7L203.3,84L203.8,83.4L204.4,82.9L204.9,82.3L205.4,81.8L205.9,81.4L206.4,80.9L207,80.5L207.5,80.1L208,79.7L208.5,79.4L209,79L209.6,78.8L210.1,78.5L210.6,78.2L211.1,78L211.6,77.8L212.2,77.6L212.7,77.5L213.2,77.3L213.7,77.2L214.2,77.1L214.8,77L215.3,77L215.8,76.9L216.3,76.9L216.8,76.9L217.4,76.9L217.9,76.9L218.4,76.9L218.9,76.9L219.4,76.9L220,77L220.5,77L221,77.1L221.5,77.2L222,77.2L222.6,77.3L223.1,77.4L223.6,77.4L224.1,77.5L224.6,77.6L225.2,77.6L225.7,77.7L226.2,77.7L226.7,77.8L227.2,77.8L227.8,77.9L228.3,77.9L228.8,77.9L229.3,77.9L229.8,77.9L230.4,77.9L230.9,77.9L231.4,77.9L231.9,77.8L232.4,77.7L233,77.7L233.5,77.6L234,77.5"/>
+</svg>
+<figcaption>Zvezna predstavitev: količina se spreminja zvezno in ima lahko katerokoli vrednost.</figcaption>
+</figure><figure class="slika">
+<svg viewBox="0 0 260 190" role="img" aria-label="Diskretni signal" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g2-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g2-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g2-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g2-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g2-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g2-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<path class="s-mreza" d="M26,164V26M52,164V26M78,164V26M104,164V26M130,164V26M156,164V26M182,164V26M208,164V26M234,164V26M26,164H234M26,129.5H234M26,95H234M26,60.5H234M26,26H234"/>
+<line class="s-os" x1="26" y1="164" x2="242" y2="164" marker-end="url(#g2-p)"/>
+<line class="s-os" x1="26" y1="164" x2="26" y2="18" marker-end="url(#g2-p)"/>
+<text class="s-os-txt" x="236" y="156" text-anchor="end">t</text>
+<text class="s-os-txt" x="34" y="30">U</text>
+<line class="s-pom" x1="26" y1="164" x2="26" y2="95"/>
+<line class="s-pom" x1="52" y1="164" x2="52" y2="60.5"/>
+<line class="s-pom" x1="78" y1="164" x2="78" y2="60.5"/>
+<line class="s-pom" x1="104" y1="164" x2="104" y2="60.5"/>
+<line class="s-pom" x1="130" y1="164" x2="130" y2="95"/>
+<line class="s-pom" x1="156" y1="164" x2="156" y2="164"/>
+<line class="s-pom" x1="182" y1="164" x2="182" y2="129.5"/>
+<line class="s-pom" x1="208" y1="164" x2="208" y2="95"/>
+<line class="s-pom" x1="234" y1="164" x2="234" y2="60.5"/>
+<circle class="s-tocka" cx="26" cy="95" r="4"/>
+<circle class="s-tocka" cx="52" cy="60.5" r="4"/>
+<circle class="s-tocka" cx="78" cy="60.5" r="4"/>
+<circle class="s-tocka" cx="104" cy="60.5" r="4"/>
+<circle class="s-tocka" cx="130" cy="95" r="4"/>
+<circle class="s-tocka" cx="156" cy="164" r="4"/>
+<circle class="s-tocka" cx="182" cy="129.5" r="4"/>
+<circle class="s-tocka" cx="208" cy="95" r="4"/>
+<circle class="s-tocka" cx="234" cy="60.5" r="4"/>
+</svg>
+<figcaption>Diskretna predstavitev: vrednosti le v izbranih trenutkih, zaokrožene na končno mnogo stopenj. Tako zapisuje računalnik.</figcaption>
+</figure></div>
+            <h4>Informacijska tehnologija, informacijski sistem in procesi</h4>
+            <p><strong>Računalnik</strong> je naprava, ki po navodilih programa sprejema, shranjuje, obdeluje in oddaja podatke. <strong>Informacijska tehnologija</strong> (IT) je skupek naprav, programov in postopkov za delo z informacijami: računalniki, omrežja, telefoni, programska oprema. <strong>Informacijski sistem</strong> je urejena celota ljudi, podatkov, postopkov in tehnologije, ki v neki organizaciji zagotavlja informacije za delo in odločanje (na primer šolski sistem eAsistent ali sistem bančnih računov). V njem potekajo <strong>informacijski procesi</strong>:</p>
+            <figure class="slika">
+<svg viewBox="0 0 460 240" role="img" aria-label="Informacijski procesi" xmlns="http://www.w3.org/2000/svg"><defs><marker id="d1-k1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="d1-k2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="d1-k3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="d1-k4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="d1-crn" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs><polyline class="s-k1" fill="none" points="290,40 320,110" marker-end="url(#d1-k1)"/><polyline class="s-k1" fill="none" points="380,129 330,181" marker-end="url(#d1-k1)"/><polyline class="s-k1" fill="none" points="270,200 190,200" marker-end="url(#d1-k1)"/><polyline class="s-k1" fill="none" points="130,181 80,129" marker-end="url(#d1-k1)"/><polyline class="s-k1" fill="none" points="140,110 170,40" marker-end="url(#d1-k1)"/><rect class="s-lik" x="170" y="21" width="120" height="38" rx="19"/><text class="s-txt-b" x="230" y="44" text-anchor="middle">zajem</text><rect class="s-lik-2" x="320" y="91" width="120" height="38" rx="19"/><text class="s-txt-b" x="380" y="114" text-anchor="middle">shranjevanje</text><rect class="s-lik" x="270" y="181" width="120" height="38" rx="19"/><text class="s-txt-b" x="330" y="204" text-anchor="middle">obdelava</text><rect class="s-lik-2" x="70" y="181" width="120" height="38" rx="19"/><text class="s-txt-b" x="130" y="204" text-anchor="middle">predstavitev</text><rect class="s-lik" x="20" y="91" width="120" height="38" rx="19"/><text class="s-txt-b" x="80" y="114" text-anchor="middle">prenos</text></svg>
+<figcaption>Informacijski procesi: podatke zajamemo, shranimo, obdelamo, predstavimo in prenesemo. Informacijski sistem povezuje ljudi, postopke in tehnologijo, ki te procese izvajajo.</figcaption>
+</figure>
+            <h4>Računalniška in informacijska pismenost</h4>
+            <p><strong>Računalniško pismen</strong> je, kdor zna uporabljati računalnik in programe (urejevalnik besedil, preglednico, splet). <strong>Informacijsko pismen</strong> je, kdor zna prepoznati, kdaj potrebuje informacijo, jo poiskati, kritično ovrednotiti (ali je vir zanesljiv, ali je informacija točna) in jo učinkovito ter etično uporabiti. Informacijska pismenost je širša in ni vezana le na računalnik.</p>
+            <h4>Količina informacije</h4>
+            <p>Informacija zmanjša negotovost. Če je možnih \(n\) enako verjetnih odgovorov, nosi odgovor</p>
+            <p>\[I = \log_2 n \ \text{bitov}\]</p>
+            <p>informacije. En <strong>bit</strong> je količina informacije, ki jo dobimo z odgovorom na vprašanje z dvema enako verjetnima odgovoroma (da ali ne, met kovanca). Vsako vprašanje da/ne prepolovi število možnosti, zato je \(I\) tudi število takih vprašanj, ki jih potrebujemo, da pridemo do odgovora.</p>
+            <figure class="slika">
+<svg viewBox="0 0 460 245" role="img" aria-label="Iskanje z vprašanji da/ne" xmlns="http://www.w3.org/2000/svg"><defs><marker id="d2-k1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="d2-k2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="d2-k3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="d2-k4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="d2-crn" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs><polyline class="s-crta" fill="none" points="195,30 145,95" marker-end="url(#d2-crn)"/><text class="s-txt-muted" x="160" y="62" text-anchor="middle">da</text><polyline class="s-crta" fill="none" points="265,30 315,95" marker-end="url(#d2-crn)"/><text class="s-txt-muted" x="290" y="62" text-anchor="middle">ne</text><polyline class="s-crta" fill="none" points="115,109 57,147" marker-end="url(#d2-crn)"/><polyline class="s-crta" fill="none" points="115,109 172,147" marker-end="url(#d2-crn)"/><polyline class="s-crta" fill="none" points="345,109 287,147" marker-end="url(#d2-crn)"/><polyline class="s-crta" fill="none" points="345,109 402,147" marker-end="url(#d2-crn)"/><polyline class="s-crta" fill="none" points="57,173 28,209" marker-end="url(#d2-crn)"/><polyline class="s-crta" fill="none" points="57,173 85.7,209" marker-end="url(#d2-crn)"/><polyline class="s-crta" fill="none" points="172,173 143.4,209" marker-end="url(#d2-crn)"/><polyline class="s-crta" fill="none" points="172,173 201.1,209" marker-end="url(#d2-crn)"/><polyline class="s-crta" fill="none" points="287,173 258.8,209" marker-end="url(#d2-crn)"/><polyline class="s-crta" fill="none" points="287,173 316.5,209" marker-end="url(#d2-crn)"/><polyline class="s-crta" fill="none" points="402,173 374.2,209" marker-end="url(#d2-crn)"/><polyline class="s-crta" fill="none" points="402,173 431.9,209" marker-end="url(#d2-crn)"/><rect class="s-lik" x="195" y="15" width="70" height="30" rx="15"/><text class="s-txt-b" x="230" y="34" text-anchor="middle">1–8?</text><rect class="s-lik-2" x="85" y="81" width="60" height="28" rx="14"/><text class="s-txt-b" x="115" y="99" text-anchor="middle">1–4</text><rect class="s-lik-2" x="315" y="81" width="60" height="28" rx="14"/><text class="s-txt-b" x="345" y="99" text-anchor="middle">5–8</text><rect class="s-lik" x="32" y="147" width="50" height="26" rx="13"/><text class="s-txt-b" x="57" y="164" text-anchor="middle">1–2</text><rect class="s-lik" x="147" y="147" width="50" height="26" rx="13"/><text class="s-txt-b" x="172" y="164" text-anchor="middle">3–4</text><rect class="s-lik" x="262" y="147" width="50" height="26" rx="13"/><text class="s-txt-b" x="287" y="164" text-anchor="middle">5–6</text><rect class="s-lik" x="377" y="147" width="50" height="26" rx="13"/><text class="s-txt-b" x="402" y="164" text-anchor="middle">7–8</text><rect class="s-kot" x="11" y="209" width="34" height="26" rx="4"/><text class="s-txt-b" x="28" y="226" text-anchor="middle">1</text><rect class="s-kot" x="68.7" y="209" width="34" height="26" rx="4"/><text class="s-txt-b" x="85.7" y="226" text-anchor="middle">2</text><rect class="s-kot" x="126.4" y="209" width="34" height="26" rx="4"/><text class="s-txt-b" x="143.4" y="226" text-anchor="middle">3</text><rect class="s-kot" x="184.1" y="209" width="34" height="26" rx="4"/><text class="s-txt-b" x="201.10000000000002" y="226" text-anchor="middle">4</text><rect class="s-kot" x="241.8" y="209" width="34" height="26" rx="4"/><text class="s-txt-b" x="258.8" y="226" text-anchor="middle">5</text><rect class="s-kot" x="299.5" y="209" width="34" height="26" rx="4"/><text class="s-txt-b" x="316.5" y="226" text-anchor="middle">6</text><rect class="s-kot" x="357.2" y="209" width="34" height="26" rx="4"/><text class="s-txt-b" x="374.20000000000005" y="226" text-anchor="middle">7</text><rect class="s-kot" x="414.9" y="209" width="34" height="26" rx="4"/><text class="s-txt-b" x="431.90000000000003" y="226" text-anchor="middle">8</text><text class="s-txt-muted" x="452" y="34" text-anchor="end" style="font-size:11px">0 vprašanj</text><text class="s-txt-muted" x="452" y="128" text-anchor="end" style="font-size:11px">1</text><text class="s-txt-muted" x="452" y="190" text-anchor="end" style="font-size:11px">2</text></svg>
+<figcaption>Med 8 enako verjetnimi možnostmi pravo najdemo s tremi vprašanji da/ne, saj vsako prepolovi število možnosti. Zato odgovor nosi \(\log_2 8 = 3\) bite informacije.</figcaption>
+</figure>
+            <p>Kadar \(n\) ni potenca števila 2, \(\log_2 n\) ni celo število (met kocke: \(\log_2 6 = 2{,}58\) bita). Za <strong>zapis</strong> enega od \(n\) odgovorov pa potrebujemo celo število bitov, zato zaokrožimo navzgor: za 6 možnosti potrebujemo 3 bite. S \(k\) biti lahko zapišemo \(2^k\) različnih vrednosti.</p>
+            <h4>Entiteta in atribut</h4>
+            <p>Ko podatke opisujemo, jih razdelimo na <strong>entitete</strong> (enote), to so stvari, osebe ali dogodki, o katerih zbiramo podatke (dijak, knjiga, izposoja), in <strong>atribute</strong> (lastnosti), ki entiteto opisujejo (ime, priimek, datum rojstva). Konkretna vrednost atributa (Ana, Novak, 3. 5. 2008) je podatek. Ta delitev je osnova podatkovnih baz (glej <a href="/views/informatika/snov/delo_s_podatki/delo_s_podatki_razlaga.html">4.4</a>).</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-1">
+              <h4>Tip 1: Količina informacije in število bitov</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>V razredu je 32 dijakov. Učitelj naključno izbere enega. Koliko informacije dobimo, ko izvemo, kdo je bil izbran? Koliko bitov potrebujemo za zapis številke dijaka, če jih bo v razredu 33?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> našteto je število enako verjetnih možnosti (izbira, met, žreb, kartice), sprašujejo po količini informacije, po številu vprašanj da/ne ali po številu bitov za zapis.</p><ul class="kljucne"><li>„koliko informacije“</li><li>„enako verjetno“</li><li>„koliko vprašanj da/ne“</li><li>„koliko bitov potrebujemo“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Preštej vse enako verjetne možnosti \(n\).</p><div class="na-nalogi"><p>\(n = 32\).</p></div></li>
+              <li><p class="korak">Količina informacije je \(I = \log_2 n\). Če je \(n\) potenca števila 2, poišči eksponent.</p><div class="na-nalogi"><p>\(32 = 2^5\), zato \(I = 5\) bitov.</p></div></li>
+              <li><p class="korak">Za zapis poišči najmanjši \(k\), da je \(2^k \ge n\) (zaokroži navzgor).</p><div class="na-nalogi"><p>Za 33 dijakov: \(2^5 = 32 &lt; 33\), \(2^6 = 64 \ge 33\), potrebujemo 6 bitov.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Koliko informacije nosi izid meta kocke?</p><p>\(\log_2 6 = 2{,}58\) bita.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Izmed kart (32 v kompletu) izvlečemo eno. Najprej izvemo le njeno barvo (4 enako zastopane barve). Koliko informacije smo dobili in koliko je še manjka?</p><p>\(\log_2 4 = 2\) bita; do celotnih \(\log_2 32 = 5\) bitov manjkajo še 3 biti.</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Koliko različnih znakov lahko zapišemo s 7 biti?</p><p>\(2^7 = 128\) (toliko jih ima osnovna tabela ASCII).</p></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-2">
+              <h4>Tip 2: Podatek, informacija ali znanje; zvezno ali diskretno</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Razvrsti: (a) „1,85“; (b) „Visok si 1,85 m.“; (c) „Ker si visok 1,85 m, boš za posteljo potreboval vsaj 2 m dolgo vzmetnico.“ Ali je višina človeka zvezna ali diskretna količina, in kakšen je njen zapis v računalniku?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> dani so primeri, ki jih je treba uvrstiti med pojme, ali pa naloga zahteva razliko med pojmoma, ponazorjeno s primerom.</p><ul class="kljucne"><li>„razvrsti“</li><li>„razloži razliko“</li><li>„ponazori s primerom“</li><li>„zvezna, diskretna“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Ali ima zapis pomen sam po sebi? Če ne (golo število, znak brez okvira), je podatek.</p><div class="na-nalogi"><p>(a) je podatek.</p></div></li>
+              <li><p class="korak">Če zapis v okviru nekaj pove in zmanjša negotovost, je informacija. Če povezuje informacije in vodi k ravnanju ali sklepu, je znanje.</p><div class="na-nalogi"><p>(b) je informacija, (c) je znanje (sklep na podlagi informacije in izkušnje).</p></div></li>
+              <li><p class="korak">Za zveznost se vprašaj: ali ima količina lahko katerokoli vrednost na intervalu? Zapis v računalniku je vedno diskreten.</p><div class="na-nalogi"><p>Višina je zvezna količina; v računalniku jo zapišemo diskretno, na primer na centimeter natančno.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Ali je število dijakov v razredu zvezna ali diskretna količina?</p><p>Diskretna (le cela števila).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> V čem se razlikujeta računalniška in informacijska pismenost?</p><p>Prva je spretnost uporabe računalnika, druga sposobnost poiskati, ovrednotiti in uporabiti informacije, tudi brez računalnika.</p></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-3">
+              <h4>Tip 3: Entitete in atributi</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Knjižnica vodi podatke o članih (številka izkaznice, ime, naslov), knjigah (ISBN, naslov, avtor) in izposojah. Določi entitete in za vsako navedi atribute. Kaj je v tem primeru „Prešernova 5, Kranj“?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> opisan je neki sistem ali zbirka podatkov, iščejo, o čem se zbirajo podatki (entitete) in katere lastnosti se zapisujejo (atributi).</p><ul class="kljucne"><li>„entiteta, enota“</li><li>„atribut, lastnost“</li><li>„določi, katere podatke“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Poišči samostalnike, o katerih se zbira več podatkov: to so entitete. Tudi dogodek (izposoja, nakup) je entiteta.</p><div class="na-nalogi"><p>Entitete: član, knjiga, izposoja.</p></div></li>
+              <li><p class="korak">Za vsako entiteto naštej lastnosti, ki jo opisujejo.</p><div class="na-nalogi"><p>Član: številka izkaznice, ime, naslov. Knjiga: ISBN, naslov, avtor. Izposoja: član, knjiga, datum izposoje, datum vrnitve.</p></div></li>
+              <li><p class="korak">Konkretna vrednost atributa je podatek.</p><div class="na-nalogi"><p>„Prešernova 5, Kranj“ je vrednost atributa naslov entitete član, torej podatek.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Določi entitete pri spletni trgovini.</p><p>Kupec, izdelek, naročilo (in postavka naročila).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Ali je „barva“ entiteta ali atribut avtomobila?</p><p>Atribut.</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 2 -->
+        <section class="sklop" id="sklop-2">
+          <header class="sklop-header">
+            <span class="sklop-num">4.1 · 2</span>
+            <h2>Družbeni vidiki informatike</h2>
+            <p>Vloga informacije pri odločanju in upravljanju; varovanje in zaščita podatkov ter zasebnost.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <h4>Informacija v sodobni družbi</h4>
+            <p>Sodobno družbo imenujemo <strong>informacijska družba</strong>, ker je večina dela povezana z zbiranjem, obdelavo in posredovanjem informacij. Informacija je osnova za <strong>odločanje</strong>: podjetje se na podlagi podatkov o prodaji odloči, koliko blaga naroči; zdravnik na podlagi izvidov izbere zdravljenje. Kakovost odločitve je odvisna od kakovosti informacije: biti mora pravočasna, točna, popolna in ustrezna. Hitro in učinkovito obveščanje (na primer opozorila pred neurjem, obvestila o zaprtih cestah) lahko reši življenja in prihrani denar.</p>
+            <h4>Varovanje podatkov</h4>
+            <p>Podatke moramo varovati pred <strong>izgubo</strong> (okvara diska, kraja, požar, napaka uporabnika) in pred <strong>zlorabo</strong> (nepooblaščen dostop, spreminjanje). Načini zaščite:</p>
+            <ul>
+              <li><strong>varnostne kopije</strong> na drugem mediju in drugem kraju (tudi v oblaku), redno in samodejno;</li>
+              <li><strong>dostop z gesli</strong> (močno geslo, za vsako storitev drugo) in dvostopenjsko preverjanje;</li>
+              <li><strong>pravice dostopa</strong>: vsak uporabnik vidi in spreminja le podatke, ki jih potrebuje za delo;</li>
+              <li><strong>šifriranje</strong> podatkov na disku in pri prenosu (HTTPS);</li>
+              <li>posodabljanje programov, protivirusni program in požarni zid;</li>
+              <li>neprekinjeno napajanje in fizična zaščita strežnikov.</li>
+            </ul>
+            <h4>Zasebnost in osebni podatki</h4>
+            <p><strong>Osebni podatek</strong> je vsak podatek, ki se nanaša na določeno ali določljivo osebo: ime, naslov, EMŠO, fotografija, lokacija, zdravstveni podatki. Varstvo osebnih podatkov urejata evropska uredba GDPR in slovenski zakon o varstvu osebnih podatkov (ZVOP). Osnovna načela: podatke smemo zbirati le z zakonsko podlago ali s privolitvijo posameznika, le za določen namen in le toliko, kot je nujno; posameznik ima pravico do vpogleda, popravka in izbrisa svojih podatkov. Nadzor izvaja Informacijski pooblaščenec.</p>
+            <p>Na spletu zasebnost ogrožajo objave osebnih podatkov in slik na družbenih omrežjih, sledenje s piškotki, kraja identitete in ribarjenje (lažna sporočila, ki izvabijo gesla). Kar enkrat objavimo, praktično ne moremo več v celoti izbrisati.</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-4">
+              <h4>Tip 4: Presoja varovanja podatkov in zasebnosti</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Fitnes center hrani podatke o članih v preglednici na računalniku pri recepciji, ki ga uporabljajo vsi zaposleni z istim geslom. Za vpis zahteva tudi EMŠO in fotografijo. Oceni ravnanje in predlagaj izboljšave.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> opisan je primer ravnanja s podatki, naloga zahteva oceno tveganj ali predloge za zaščito podatkov in zasebnosti.</p><ul class="kljucne"><li>„oceni ravnanje“</li><li>„kako bi zaščitil“</li><li>„osebni podatki“</li><li>„zasebnost“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Ugotovi, kateri podatki so osebni in ali so za namen res potrebni.</p><div class="na-nalogi"><p>EMŠO za članstvo v fitnesu ni potreben; zbirajo preveč podatkov. Fotografija je smiselna za preverjanje izkaznice, če član privoli.</p></div></li>
+              <li><p class="korak">Preveri zaščito pred izgubo: ali obstajajo varnostne kopije?</p><div class="na-nalogi"><p>Podatki so le na enem računalniku; ob okvari se izgubijo. Potrebne so redne varnostne kopije na drugem mestu.</p></div></li>
+              <li><p class="korak">Preveri zaščito pred zlorabo: gesla, pravice dostopa, šifriranje.</p><div class="na-nalogi"><p>Skupno geslo ne omogoča sledenja, kdo je kaj spremenil. Vsak zaposleni naj ima svoje geslo in le potrebne pravice; disk naj bo šifriran.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Prejmeš e-pošto „banke“, ki zahteva, da prek povezave potrdiš geslo. Kaj storiš?</p><p>Gre za ribarjenje; povezave ne odpreš, gesla ne vpišeš, sporočilo prijaviš banki.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Zakaj je pomembno, da so informacije za odločanje pravočasne?</p><p>Zamujena informacija (na primer o padcu cen) ne more več vplivati na odločitev.</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 3 -->
+        <section class="sklop" id="sklop-3">
+          <header class="sklop-header">
+            <span class="sklop-num">4.1 · 3</span>
+            <h2>Komuniciranje</h2>
+            <p>Pomen in cilji komuniciranja, njegove sestavine, učinkovitost in uspešnost, razmerja in smeri ter povratna zveza.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <h4>Kaj je komuniciranje</h4>
+            <p><strong>Komuniciranje</strong> je izmenjava sporočil (informacij, misli, čustev) med pošiljateljem in prejemnikom. Njegovi cilji so obveščati, prepričati, doseči sodelovanje, vzpostaviti odnos ali usmerjati delo. Brez komuniciranja ni sodelovanja med ljudmi in ne delovanja organizacij.</p>
+            <h4>Sestavine komuniciranja</h4>
+            <figure class="slika slika--siroka">
+<svg viewBox="0 0 520 200" role="img" aria-label="Model komuniciranja" xmlns="http://www.w3.org/2000/svg"><defs><marker id="d3-k1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="d3-k2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="d3-k3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="d3-k4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="d3-crn" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs><polyline class="s-k1" fill="none" points="125,70 195,70" marker-end="url(#d3-k1)"/><polyline class="s-k1" fill="none" points="325,70 395,70" marker-end="url(#d3-k1)"/><polyline class="s-k2" fill="none" points="260,143 260,93" marker-end="url(#d3-k2)" stroke-dasharray="6 4"/><polyline class="s-k3" fill="none" points="450,47 450,18 70,18 70,47" marker-end="url(#d3-k3)"/><text class="s-txt-k3" x="260" y="13" text-anchor="middle">povratna zveza</text><rect class="s-lik" x="15" y="47" width="110" height="46" rx="4"/><text class="s-txt-b" x="70" y="66.5" text-anchor="middle">pošiljatelj</text><text class="s-txt-muted" x="70" y="81.5" text-anchor="middle" style="font-size:12px">zakodira</text><rect class="s-lik-2" x="195" y="47" width="130" height="46" rx="4"/><text class="s-txt-b" x="260" y="66.5" text-anchor="middle">sporočilo</text><text class="s-txt-muted" x="260" y="81.5" text-anchor="middle" style="font-size:12px">po kanalu</text><rect class="s-lik" x="395" y="47" width="110" height="46" rx="4"/><text class="s-txt-b" x="450" y="66.5" text-anchor="middle">prejemnik</text><text class="s-txt-muted" x="450" y="81.5" text-anchor="middle" style="font-size:12px">odkodira</text><rect class="s-kot-4" x="215" y="143" width="90" height="34" rx="17"/><text class="s-txt-b" x="260" y="164" text-anchor="middle">šum</text></svg>
+<figcaption>Sestavine komuniciranja. Pošiljatelj sporočilo zakodira (jezik, slika, znaki), ga pošlje po kanalu (medij), prejemnik ga odkodira. Šum moti prenos. S povratno zvezo pošiljatelj izve, ali je bilo sporočilo pravilno razumljeno.</figcaption>
+</figure>
+            <ul>
+              <li><strong>Pošiljatelj</strong> ima namen in sporočilo zakodira v znake (besede, slike, kretnje).</li>
+              <li><strong>Sporočilo</strong> je vsebina, ki jo prenašamo.</li>
+              <li><strong>Kanal</strong> (medij) je pot sporočila: govor, pismo, telefon, e-pošta, spletna stran.</li>
+              <li><strong>Prejemnik</strong> sporočilo odkodira in ga razume (ali ne).</li>
+              <li><strong>Šum</strong> je vse, kar moti prenos ali razumevanje: hrup, slaba povezava, nejasen jezik, predsodki.</li>
+              <li><strong>Povratna zveza</strong> je odziv prejemnika, iz katerega pošiljatelj izve, ali je sporočilo prišlo in bilo razumljeno. Komuniciranje s povratno zvezo je <strong>dvosmerno</strong>, brez nje <strong>enosmerno</strong> (radio, plakat).</li>
+            </ul>
+            <h4>Učinkovitost in uspešnost</h4>
+            <p>Komuniciranje je <strong>uspešno</strong>, če doseže cilj: prejemnik je sporočilo razumel in ravna v skladu z njim. Komuniciranje je <strong>učinkovito</strong>, če cilj doseže z majhno porabo sredstev (časa, denarja, truda). Plakat, ki ga nihče ne prebere, ni uspešen. Osebni obisk pri vsaki stranki je morda uspešen, a ni učinkovit, ker vzame preveč časa; e-poštno obvestilo je lahko oboje. Na uspešnost vplivajo jasnost sporočila, izbira kanala, ustreznost za prejemnika in povratna zveza.</p>
+            <h4>Razmerja in smeri komuniciranja</h4>
+            <p>Po razmerju med udeleženci ločimo komuniciranje <strong>ena z enim</strong> (pogovor), <strong>ena z mnogimi</strong> (predavanje, množični mediji) in <strong>mnogi z mnogimi</strong> (forum, družbeno omrežje). Po obliki je lahko <strong>formalno</strong> (po uradnih poteh, zapisano) ali <strong>neformalno</strong>. V organizaciji ločimo smeri:</p>
+            <figure class="slika">
+<svg viewBox="0 0 460 210" role="img" aria-label="Smeri komuniciranja v organizaciji" xmlns="http://www.w3.org/2000/svg"><defs><marker id="d4-k1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="d4-k2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="d4-k3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="d4-k4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="d4-crn" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs><polyline class="s-pom" fill="none" points="184,30 166,100"/><polyline class="s-pom" fill="none" points="276,30 294,100"/><polyline class="s-pom" fill="none" points="120,116 60,164"/><polyline class="s-pom" fill="none" points="120,116 180,164"/><polyline class="s-pom" fill="none" points="340,116 340,164"/><polyline class="s-k3" fill="none" points="166,100 294,100" marker-end="url(#d4-k3)" marker-start="url(#d4-k3)"/><text class="s-txt-k3" x="230" y="92" text-anchor="middle">vodoravno</text><polyline class="s-k4" fill="none" points="214,164 300,116" marker-end="url(#d4-k4)"/><text class="s-txt-k4" x="262" y="150" text-anchor="start">diagonalno</text><rect class="s-lik" x="184" y="14" width="92" height="32" rx="4"/><text class="s-txt-b" x="230" y="34" text-anchor="middle">direktor</text><rect class="s-lik" x="74" y="84" width="92" height="32" rx="4"/><text class="s-txt-b" x="120" y="104" text-anchor="middle">vodja A</text><rect class="s-lik" x="294" y="84" width="92" height="32" rx="4"/><text class="s-txt-b" x="340" y="104" text-anchor="middle">vodja B</text><rect class="s-lik" x="14" y="164" width="92" height="32" rx="4"/><text class="s-txt-b" x="60" y="184" text-anchor="middle">delavec</text><rect class="s-lik" x="134" y="164" width="92" height="32" rx="4"/><text class="s-txt-b" x="180" y="184" text-anchor="middle">delavec</text><rect class="s-lik" x="294" y="164" width="92" height="32" rx="4"/><text class="s-txt-b" x="340" y="184" text-anchor="middle">delavec</text><text class="s-txt-k1" x="18" y="70" text-anchor="start">navzdol</text><text class="s-txt-k2" x="18" y="86" text-anchor="start">navzgor</text><line class="s-k1" x1="10" y1="40" x2="10" y2="192"/><polygon points="5,190 15,190 10,200" fill="#4F46E5"/><line class="s-k2" x1="0" y1="200" x2="0" y2="48" transform="translate(4 0)"/><polygon points="-1,50 9,50 4,40" fill="#DC2626"/></svg>
+<figcaption>Navpično komuniciranje poteka med nadrejenimi in podrejenimi (navzdol navodila, navzgor poročila), vodoravno med enakovrednimi, diagonalno med različnimi oddelki in ravnmi.</figcaption>
+</figure>
+            <p>Povratna zveza je bistvena, ker brez nje pošiljatelj ne ve, ali je bil razumljen, in ne more popraviti nesporazuma. V kibernetiki je povratna zveza osnova vodenja: sistem primerja dejansko stanje z želenim in ga popravlja.</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-5">
+              <h4>Tip 5: Sestavine komuniciranja v primeru</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Ravnateljica po šolskem ozvočenju sporoči, da bo pouk naslednji dan odpadel. V enem razredu zaradi hrupa obvestila ne slišijo. Določi sestavine komuniciranja. Ali je komuniciranje enosmerno ali dvosmerno? Kako bi ga izboljšal?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> opisan je primer prenosa sporočila, iščejo pošiljatelja, prejemnika, kanal, šum in povratno zvezo, ali smer komuniciranja.</p><ul class="kljucne"><li>„določi sestavine“</li><li>„kanal, medij“</li><li>„šum“</li><li>„povratna zveza“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Določi pošiljatelja, sporočilo, kanal in prejemnika.</p><div class="na-nalogi"><p>Pošiljatelj ravnateljica, sporočilo „jutri ni pouka“, kanal šolsko ozvočenje, prejemniki dijaki in učitelji.</p></div></li>
+              <li><p class="korak">Poišči šum: vse, kar je motilo prenos ali razumevanje.</p><div class="na-nalogi"><p>Hrup v razredu.</p></div></li>
+              <li><p class="korak">Ugotovi, ali obstaja povratna zveza (enosmerno ali dvosmerno), in predlagaj izboljšavo.</p><div class="na-nalogi"><p>Enosmerno; ravnateljica ne ve, kdo je sporočilo slišal. Izboljšava: obvestilo še po e-pošti oziroma v e-dnevniku, razredniki potrdijo, da so ga prejeli.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Vodja oddelka pošlje direktorju mesečno poročilo. Katera smer komuniciranja je to?</p><p>Navpično navzgor.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Kakšno razmerje komuniciranja je televizijsko poročilo?</p><p>Ena z mnogimi, enosmerno.</p></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-6">
+              <h4>Tip 6: Učinkovitost in uspešnost komuniciranja</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Društvo želi 200 članov obvestiti o spremembi termina srečanja. Primerjaj tri načine: osebni klic vsakemu članu, objavo na oglasni deski v prostorih društva in e-pošto s prošnjo za potrditev. Kateri je najbolj uspešen in kateri najbolj učinkovit?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> primerjajo se različni načini komuniciranja, sprašujejo po uspešnosti (doseženem cilju) in učinkovitosti (porabi sredstev).</p><ul class="kljucne"><li>„uspešnost“</li><li>„učinkovitost“</li><li>„primerjaj načine“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Za vsak način oceni, ali sporočilo zanesljivo pride do vseh prejemnikov (uspešnost).</p><div class="na-nalogi"><p>Klic: skoraj vsi. Oglasna deska: le tisti, ki pridejo v prostore. E-pošta s potrditvijo: večina, za ostale vemo, da sporočila niso potrdili.</p></div></li>
+              <li><p class="korak">Oceni porabo časa in denarja (učinkovitost).</p><div class="na-nalogi"><p>Klic: 200 klicev, več ur dela. Oglasna deska: skoraj nič. E-pošta: nekaj minut.</p></div></li>
+              <li><p class="korak">Izberi in utemelji; pogosto je najboljša kombinacija.</p><div class="na-nalogi"><p>Najbolj uspešen je klic, najbolj učinkovita e-pošta s potrditvijo; klic le tistim, ki niso potrdili, združi obe prednosti.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Plakat je bil izdelan hitro in poceni, a ga nihče ni opazil. Je bilo komuniciranje uspešno ali učinkovito?</p><p>Ni bilo uspešno; brez uspešnosti tudi poceni izvedba nima smisla.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Kako povratna zveza vpliva na uspešnost?</p><p>Pošiljatelj izve za nesporazum in ga lahko popravi.</p></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-7">
+              <h4>Tip 7: Povratna zveza v sistemu vodenja</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Razloži delovanje termostata pri centralnem ogrevanju kot primer povratne zveze. Katere podatke sistem zajema in kaj z njimi stori?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> opisan je sistem, ki se sam uravnava (kibernetika), ali pa naloga sprašuje po pomenu povratne zveze.</p><ul class="kljucne"><li>„kibernetika“</li><li>„samodejno uravnava“</li><li>„povratna zveza“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Določi želeno stanje (cilj) in kako se meri dejansko stanje.</p><div class="na-nalogi"><p>Želena temperatura 21 °C; tipalo meri temperaturo v prostoru.</p></div></li>
+              <li><p class="korak">Opiši primerjavo in odločitev.</p><div class="na-nalogi"><p>Termostat primerja izmerjeno temperaturo z želeno.</p></div></li>
+              <li><p class="korak">Opiši ukrep in to, da ukrep spet vpliva na merjeno stanje (zanka).</p><div class="na-nalogi"><p>Če je prehladno, vklopi peč; ko se prostor segreje, jo izklopi. Izmerjena temperatura je povratna informacija, ki vodi naslednji ukrep.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Navedi primer povratne zveze v človeškem telesu.</p><p>Uravnavanje telesne temperature (potenje, drgetanje) ali ravnotežje pri hoji.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Kaj je povratna zveza pri pouku?</p><p>Vprašanja dijakov, rezultati preverjanj, iz katerih učitelj izve, ali so snov razumeli.</p></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="subsection" id="kljuc">
+          <div class="subsection-head">
+            <h2>Ključ: kateri tip naloge je to?</h2>
+            <p>Poišči besedo iz navodila naloge in skoči na pravi postopek.</p>
+          </div>
+          <div class="info-card">
+            <div class="tabela-wrap">
+              <table class="tabela">
+                <thead><tr><th>V besedilu naloge piše …</th><th>Tip</th></tr></thead>
+                <tbody>
+                  <tr><td>„koliko informacije“, „koliko bitov“, „vprašanja da/ne“</td><td><a href="#tip-1">Tip 1</a></td></tr>
+                  <tr><td>„podatek ali informacija“, „zvezno, diskretno“, „pismenost“</td><td><a href="#tip-2">Tip 2</a></td></tr>
+                  <tr><td>„entiteta“, „atribut“, „katere podatke zbiramo“</td><td><a href="#tip-3">Tip 3</a></td></tr>
+                  <tr><td>„osebni podatki“, „zaščita podatkov“, „zasebnost“</td><td><a href="#tip-4">Tip 4</a></td></tr>
+                  <tr><td>„sestavine komuniciranja“, „šum“, „smer komuniciranja“</td><td><a href="#tip-5">Tip 5</a></td></tr>
+                  <tr><td>„uspešnost“, „učinkovitost“</td><td><a href="#tip-6">Tip 6</a></td></tr>
+                  <tr><td>„kibernetika“, „samodejno uravnava“</td><td><a href="#tip-7">Tip 7</a></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>Pogoste napake</h2>
+          </div>
+          <div class="info-card">
+            <ul>
+              <li>Podatek in informacijo uporabljaš kot sopomenki; informacija je podatek s pomenom za prejemnika.</li>
+              <li>Pri številu bitov za zapis ne zaokrožiš navzgor (za 33 možnosti 5 bitov ni dovolj).</li>
+              <li>Formulo \(\log_2 n\) uporabiš, ko možnosti niso enako verjetne.</li>
+              <li>Mešaš bit (b) in bajt (B).</li>
+              <li>Zameniš uspešnost (dosežen cilj) in učinkovitost (malo porabljenih sredstev).</li>
+              <li>Kot zaščito podatkov navedeš le geslo; pozabiš na varnostne kopije.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>Naslednje poglavje</h2>
+          </div>
+          <div class="link-list">
+            <a class="link-item" href="/views/informatika/snov/informacijska_tehnologija/informacijska_tehnologija_razlaga.html">
+              <span class="link-item-text"><strong>4.2 Informacijska tehnologija</strong><small>Zgradba računalnika, strojna in programska oprema, omrežja</small></span>
+              <span class="arrow">→</span>
+            </a>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>

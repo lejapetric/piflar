@@ -1,0 +1,330 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Temperatura — razlaga in postopki | Piflar.si</title>
+  <meta name="description" content="Temperatura za maturo iz fizike: Kelvinova temperaturna lestvica, linearno in prostorninsko temperaturno raztezanje, splošna plinska enačba, izotermne, izobarne in izohorne spremembe ter diagram p-V.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
+  <link rel="stylesheet" href="/style/snov.css">
+</head>
+<body>
+  <div id="header"></div>
+
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view">
+
+<header class="page-header">
+          <span class="page-eyebrow">Fizika · Snov · 4.8</span>
+          <h1>Temperatura</h1>
+          <p>Temperatura pove, kako hitro se v povprečju gibljejo delci snovi. Ko se snov segreje, se navadno raztegne, pri plinih pa so tlak, prostornina in temperatura povezani s splošno plinsko enačbo. Pod razlago vsakega podpoglavja so vsi tipi nalog, ki se pojavijo pri tem sklopu. Vsebine, označene s <span class="badge-vr">PZ</span>, so posebna znanja iz kataloga.</p>
+          <div class="page-meta">
+            <div class="page-meta-item"><strong>3</strong><span>Podpoglavja</span></div>
+            <div class="page-meta-item"><strong>6</strong><span>Tipov nalog</span></div>
+            <div class="page-meta-item"><strong>~35 min</strong><span>Branja</span></div>
+          </div>
+        </header>
+
+        <div class="matura-formule">
+          <h3>Formule na maturi</h3>
+          <p>Enačbe, ki jih potrebuješ (večina je na listu s konstantami in enačbami, ki je del izpitne pole):</p>
+          <div class="matura-levo">
+            <ul>
+              <li>\(T = t + 273\ \text{K}\), \(\Delta T = \Delta t\)</li>
+              <li>raztezanje: \(\Delta l = \alpha l \Delta T\), \(\Delta V = \beta V \Delta T\)</li>
+              <li>splošna plinska enačba: \(pV = \dfrac{m}{M} R T = n R T\); \(\dfrac{p_1 V_1}{T_1} = \dfrac{p_2 V_2}{T_2}\) (pri stalni masi)</li>
+              <li>\(R = 8{,}31 \cdot 10^{3}\ \text{J/(kmol K)}\), \(N_A = 6{,}02 \cdot 10^{26}\ \text{kmol}^{-1}\), \(N = n N_A\)</li>
+            </ul>
+            <p class="matura-opomba">Konstanti sta podani na kilomol, zato vstavi molsko maso v kg/kmol (kisik \(M = 32\ \text{kg/kmol}\)) in množino v kmol. Temperaturo vedno vstavi v kelvinih.</p>
+          </div>
+        </div>
+
+        <nav class="kazalo" aria-label="Podpoglavja">
+          <h2>Podpoglavja</h2>
+          <ol>
+            <li><a href="#sklop-1"><span class="kazalo-st">1</span> Temperatura</a></li>
+            <li><a href="#sklop-2"><span class="kazalo-st">2</span> Temperaturno raztezanje</a></li>
+            <li><a href="#sklop-3"><span class="kazalo-st">3</span> Splošna plinska enačba</a></li>
+            <li><a href="#kljuc"><span class="kazalo-st">?</span> Ključ: kateri tip naloge je to?</a></li>
+          </ol>
+        </nav>
+
+        <!-- SKLOP 1 -->
+        <section class="sklop" id="sklop-1">
+          <header class="sklop-header">
+            <span class="sklop-num">4.8 · 1</span>
+            <h2>Temperatura</h2>
+            <p>Kelvinova temperaturna lestvica.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <p>Temperaturo merimo s termometrom, ki izkorišča lastnost, ki se s temperaturo spreminja (raztezanje tekočine, upor, napetost). Telesi v stiku se izenačita v temperaturi: to je <strong>toplotno ravnovesje</strong>.</p>
+            <p>V fiziki uporabljamo <strong>Kelvinovo (absolutno) lestvico</strong>. Ničla je pri <strong>absolutni ničli</strong> \(-273\ ^\circ\text{C}\), najnižji možni temperaturi, kjer bi se gibanje delcev ustavilo. Razdelek je enak kot pri Celzijevi lestvici:</p>
+            <p>\[T[\text{K}] = t[^\circ\text{C}] + 273, \qquad \Delta T = \Delta t.\]</p>
+            <p>Negativnih temperatur v kelvinih ni. V vseh enačbah s plini in sevanjem vstavljamo \(T\) v kelvinih; pri razlikah temperatur je vseeno.</p>
+            <figure class="slika slika--ozka">
+<svg viewBox="0 0 420 260" role="img" aria-label="Celzijeva in Kelvinova lestvica" xmlns="http://www.w3.org/2000/svg"><line class="s-os" x1="140" y1="230" x2="140" y2="28.5"/><line class="s-os" x1="280" y1="230" x2="280" y2="28.5"/><text class="s-txt-k1" x="140" y="18" text-anchor="middle">t [°C]</text><text class="s-txt-k3" x="280" y="18" text-anchor="middle">T [K]</text><line class="s-pom" x1="130" y1="230" x2="290" y2="230"/><text class="s-txt-k1" x="128" y="234" text-anchor="end">−273</text><text class="s-txt-k3" x="292" y="234" text-anchor="start">0</text><text class="s-txt-muted" x="210" y="225" text-anchor="middle">absolutna ničla</text><line class="s-pom" x1="130" y1="93.5" x2="290" y2="93.5"/><text class="s-txt-k1" x="128" y="97.5" text-anchor="end">0</text><text class="s-txt-k3" x="292" y="97.5" text-anchor="start">273</text><text class="s-txt-muted" x="210" y="88.5" text-anchor="middle">tališče ledu</text><line class="s-pom" x1="130" y1="43.5" x2="290" y2="43.5"/><text class="s-txt-k1" x="128" y="47.5" text-anchor="end">100</text><text class="s-txt-k3" x="292" y="47.5" text-anchor="start">373</text><text class="s-txt-muted" x="210" y="38.5" text-anchor="middle">vrelišče vode</text></svg>
+<figcaption>Kelvinova lestvica se začne pri absolutni ničli. Razdelek je enak kot pri Celzijevi lestvici, zato je \(\Delta T = \Delta t\).</figcaption>
+</figure>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-1">
+              <h4>Tip 1: Pretvarjanje med °C in K</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Vodo segrejemo z \(20\ ^\circ\text{C}\) na \(80\ ^\circ\text{C}\). Zapišite začetno in končno temperaturo v kelvinih in spremembo temperature. Kolikokrat se poveča absolutna temperatura?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> temperatura je v °C, enačba (plinska, Stefanov zakon) pa zahteva kelvine; ali sprašujejo po razmerju temperatur.</p><ul class="kljucne"><li>„v kelvinih“</li><li>„kolikokrat se poveča temperatura“</li><li>„absolutna temperatura“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Vsaki temperaturi prištej 273.</p><div class="na-nalogi"><p>\(T_1 = 293\ \text{K}\), \(T_2 = 353\ \text{K}\).</p></div></li>
+              <li><p class="korak">Razlika je v obeh lestvicah enaka.</p><div class="na-nalogi"><p>\(\Delta T = 60\ \text{K}\).</p></div></li>
+              <li><p class="korak">Razmerja računaj samo v kelvinih.</p><div class="na-nalogi"><p>\(T_2/T_1 = 353/293 = 1{,}20\), ne \(80/20 = 4\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Koliko je \(-40\ ^\circ\text{C}\) v kelvinih?</p><p>\(233\ \text{K}\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Pri kateri temperaturi v °C je \(T\) dvakrat večja kot pri \(0\ ^\circ\text{C}\)?</p><p>\(546\ \text{K} = 273\ ^\circ\text{C}\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Temperatura se zniža za 15 K. Za koliko °C?</p><p>Za \(15\ ^\circ\text{C}\).</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 2 -->
+        <section class="sklop" id="sklop-2">
+          <header class="sklop-header">
+            <span class="sklop-num">4.8 · 2</span>
+            <h2>Temperaturno raztezanje</h2>
+            <p>Linearna temperaturna razteznost (kvalitativno in kvantitativno), prostorninska razteznost.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <p>Ko snov segrejemo, delci nihajo z večjimi amplitudami in so v povprečju bolj narazen, zato se telo <strong>raztegne</strong>. Pri ohlajanju se skrči. Mostovi imajo dilatacijske reže, tračnice razmike, električni vodi pozimi visijo manj.</p>
+            <p><strong>Bimetalni trak</strong> iz dveh kovin z različno razteznostjo se pri segrevanju ukrivi proti kovini, ki se razteza manj. Uporablja se v termostatih in varovalkah.</p>
+            <div class="slike-vrsta"><figure class="slika">
+<svg viewBox="0 0 260 126" role="img" aria-label="Bimetalni trak pri sobni temperaturi" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g1-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g1-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g1-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g1-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g1-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g1-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<polygon class="s-lik-2" points="34,56.6 226,56.6 226,45.3 34,45.3"/>
+<polygon class="s-lik" points="34,67.8 226,67.8 226,56.6 34,56.6"/>
+<text class="s-txt-k3" x="130" y="34.1" text-anchor="middle">jeklo</text>
+<text class="s-txt-k1" x="130" y="83.9" text-anchor="middle">medenina</text>
+
+</svg>
+<figcaption>Bimetalni trak: medenina in jeklo, zvarjena skupaj.</figcaption>
+</figure><figure class="slika">
+<svg viewBox="0 0 260 196" role="img" aria-label="Segret bimetalni trak se ukrivi" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g2-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g2-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g2-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g2-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g2-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g2-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<polygon class="s-lik" points="34,158.8 40.3,158.7 46.7,158.4 53,158 59.3,157.4 65.6,156.6 71.9,155.6 78.1,154.4 84.3,153.1 90.5,151.6 96.6,149.9 102.7,148 108.7,146 114.7,143.8 120.5,141.4 126.4,138.9 132.1,136.2 137.8,133.3 143.4,130.3 148.8,127.1 154.2,123.8 159.6,120.3 164.8,116.7 169.9,112.9 174.8,109 179.7,104.9 184.5,100.7 189.1,96.4 193.6,91.9 198,87.3 202.3,82.6 210.7,90 206.2,95 201.6,99.8 196.9,104.5 192,109 187,113.4 181.9,117.7 176.7,121.8 171.3,125.8 165.8,129.6 160.3,133.2 154.6,136.7 148.8,140.1 143,143.2 137,146.2 131,149.1 124.9,151.7 118.7,154.2 112.4,156.5 106.1,158.7 99.8,160.6 93.3,162.4 86.9,164 80.3,165.4 73.8,166.6 67.2,167.6 60.6,168.5 54,169.2 47.3,169.6 40.7,169.9 34,170"/>
+<polygon class="s-lik-2" points="34,147.6 40,147.5 46.1,147.3 52.1,146.8 58.1,146.2 64,145.5 70,144.5 75.9,143.4 81.8,142.2 87.7,140.7 93.5,139.1 99.3,137.3 105,135.4 110.6,133.3 116.2,131.1 121.7,128.7 127.2,126.1 132.6,123.4 137.9,120.5 143.1,117.5 148.2,114.3 153.3,111 158.2,107.6 163.1,104 167.8,100.3 172.4,96.4 177,92.4 181.4,88.3 185.7,84.1 189.8,79.7 193.9,75.2 202.3,82.6 198,87.3 193.6,91.9 189.1,96.4 184.5,100.7 179.7,104.9 174.8,109 169.9,112.9 164.8,116.7 159.6,120.3 154.2,123.8 148.8,127.1 143.4,130.3 137.8,133.3 132.1,136.2 126.4,138.9 120.5,141.4 114.7,143.8 108.7,146 102.7,148 96.6,149.9 90.5,151.6 84.3,153.1 78.1,154.4 71.9,155.6 65.6,156.6 59.3,157.4 53,158 46.7,158.4 40.3,158.7 34,158.8"/>
+<text class="s-txt-k2" x="78.8" y="107.6" text-anchor="middle">segret</text>
+
+</svg>
+<figcaption>Pri segrevanju se medenina raztegne bolj, zato je na zunanji strani loka in se trak ukrivi proti jeklu.</figcaption>
+</figure></div>
+            <h4>Linearno raztezanje <span class="badge-vr">PZ</span></h4>
+            <p>Sprememba dolžine je sorazmerna z začetno dolžino in spremembo temperature:</p>
+            <p>\[\Delta l = \alpha\, l\, \Delta T,\]</p>
+            <p>kjer je \(\alpha\) <strong>linearni temperaturni razteznostni koeficient</strong> (enota \(\text{K}^{-1}\)); za jeklo je približno \(1{,}2 \cdot 10^{-5}\ \text{K}^{-1}\).</p>
+            <h4>Prostorninsko raztezanje <span class="badge-vr">PZ</span></h4>
+            <p>Za prostornino velja \(\Delta V = \beta V \Delta T\), kjer je \(\beta\) <strong>prostorninski razteznostni koeficient</strong>. Za trdnine je \(\beta \approx 3\alpha\). Kapljevine se raztezajo bolj od trdnin, zato polna posoda pri segrevanju prekipi. Voda je izjema: med \(0\) in \(4\ ^\circ\text{C}\) se pri segrevanju skrči in ima največjo gostoto pri \(4\ ^\circ\text{C}\); zato jezera zmrzujejo od zgoraj.</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-2">
+              <h4>Tip 2: Linearno raztezanje <span class="badge-vr">PZ</span></h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Jeklena tračnica je pri \(-20\ ^\circ\text{C}\) dolga \(25\ \text{m}\). Za koliko se podaljša, ko se segreje na \(40\ ^\circ\text{C}\)? (\(\alpha = 1{,}2 \cdot 10^{-5}\ \text{K}^{-1}\))</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> palica, žica, tračnica ali most spremeni dolžino zaradi temperature. Kvalitativna vprašanja (bimetal, reže) so za vse.</p><ul class="kljucne"><li>„za koliko se podaljša“</li><li>„razteznostni koeficient“</li><li>„reža med tračnicama“</li><li>„bimetal“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Izračunaj spremembo temperature.</p><div class="na-nalogi"><p>\(\Delta T = 40 - (-20) = 60\ \text{K}\).</p></div></li>
+              <li><p class="korak">Vstavi v \(\Delta l = \alpha l \Delta T\).</p><div class="na-nalogi"><p>\(\Delta l = 1{,}2 \cdot 10^{-5} \cdot 25 \cdot 60\ \text{m} = 0{,}018\ \text{m}\).</p></div></li>
+              <li><p class="korak">Zapiši spremembo ali novo dolžino \(l + \Delta l\).</p><div class="na-nalogi"><p>Podaljša se za \(1{,}8\ \text{cm}\); reža mora biti vsaj tolikšna.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Aluminijasta palica (\(\alpha = 2{,}4 \cdot 10^{-5}\ \text{K}^{-1}\)) dolga 2 m se segreje za 100 K.</p><p>\(\Delta l = 4{,}8\ \text{mm}\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Palica 1,000 m se pri segretju za 50 K podaljša za 0,6 mm. \(\alpha\)?</p><p>\(1{,}2 \cdot 10^{-5}\ \text{K}^{-1}\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Zakaj se kovinski pokrov na kozarcu odvije laže pod vročo vodo?</p><p>Kovina se raztegne bolj kot steklo.</p></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-3">
+              <h4>Tip 3: Prostorninsko raztezanje <span class="badge-vr">PZ</span></h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Posoda je do roba napolnjena z \(1{,}0\ \text{l}\) olja s prostorninskim koeficientom \(7 \cdot 10^{-4}\ \text{K}^{-1}\). Koliko olja izteče, ko ga segrejemo za \(50\ \text{K}\)? Raztezanje posode zanemarimo.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> tekočina ali telo spremeni prostornino ali gostoto zaradi temperature.</p><ul class="kljucne"><li>„koliko izteče“</li><li>„prostorninski koeficient“</li><li>„gostota se spremeni“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Zapiši \(V\), \(\beta\) in \(\Delta T\).</p><div class="na-nalogi"><p>\(V = 1{,}0\ \text{l}\), \(\beta = 7 \cdot 10^{-4}\ \text{K}^{-1}\), \(\Delta T = 50\ \text{K}\).</p></div></li>
+              <li><p class="korak">Izračunaj \(\Delta V = \beta V \Delta T\) (če se razteza tudi posoda, odštej njeno povečanje).</p><div class="na-nalogi"><p>\(\Delta V = 7 \cdot 10^{-4} \cdot 1{,}0 \cdot 50\ \text{l} = 0{,}035\ \text{l}\).</p></div></li>
+              <li><p class="korak">Odgovori na vprašanje.</p><div class="na-nalogi"><p>Izteče \(35\ \text{ml}\) olja.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Za koliko odstotkov se zmanjša gostota olja v nalogi?</p><p>\(\rho \propto 1/V\): za približno 3,4 %.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Jeklo ima \(\alpha = 1{,}2 \cdot 10^{-5}\ \text{K}^{-1}\). \(\beta\)?</p><p>\(3{,}6 \cdot 10^{-5}\ \text{K}^{-1}\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Zakaj ribe pozimi preživijo na dnu jezera?</p><p>Voda s 4 °C je najgostejša in ostane na dnu, led plava na vrhu.</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 3 -->
+        <section class="sklop" id="sklop-3">
+          <header class="sklop-header">
+            <span class="sklop-num">4.8 · 3</span>
+            <h2>Splošna plinska enačba</h2>
+            <p>Plinska enačba, spremembe pri stalni temperaturi, tlaku in prostornini, diagram p-V.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <p>Stanje idealnega plina opišejo tlak \(p\), prostornina \(V\), temperatura \(T\) in množina \(n = m/M\). Povezuje jih <strong>splošna plinska enačba</strong>:</p>
+            <p>\[pV = \frac{m}{M} R T = nRT, \qquad R = 8310\ \frac{\text{J}}{\text{kmol K}}.\]</p>
+            <p>Število molekul je \(N = nN_A\). Pri stalni masi plina velja \(\dfrac{p_1V_1}{T_1} = \dfrac{p_2V_2}{T_2}\). Posebne spremembe:</p>
+            <ul>
+              <li><strong>izotermna</strong> (\(T\) stalna): \(pV = \text{konst.}\) (Boylov zakon), v diagramu \(p\)–\(V\) hiperbola;</li>
+              <li><strong>izobarna</strong> (\(p\) stalen): \(V/T = \text{konst.}\), v diagramu \(p\)–\(V\) vodoravna črta;</li>
+              <li><strong>izohorna</strong> (\(V\) stalna): \(p/T = \text{konst.}\), v diagramu \(p\)–\(V\) navpična črta.</li>
+            </ul>
+            <div class="slike-vrsta"><figure class="slika">
+<svg viewBox="0 0 380 280" role="img" aria-label="Spremembe stanja plina v diagramu p-V" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g3-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g3-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g3-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g3-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g3-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g3-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<path class="s-mreza" d="M26,254V26M80.7,254V26M135.3,254V26M190,254V26M244.7,254V26M299.3,254V26M354,254V26M26,254H354M26,216H354M26,178H354M26,140H354M26,102H354M26,64H354M26,26H354"/>
+<line class="s-os" x1="26" y1="254" x2="362" y2="254" marker-end="url(#g3-p)"/>
+<line class="s-os" x1="26" y1="254" x2="26" y2="18" marker-end="url(#g3-p)"/>
+<text class="s-os-txt" x="356" y="246" text-anchor="end">V</text>
+<text class="s-os-txt" x="34" y="30">p</text>
+<line class="s-k3" x1="272" y1="102" x2="272" y2="203.5"/>
+<path class="s-k1" d="M83.4,36.9L84,39.3L84.7,41.7L85.3,44L86,46.3L86.6,48.5L87.3,50.7L87.9,52.8L88.6,54.9L89.2,56.9L89.9,58.9L90.5,60.9L91.2,62.8L91.8,64.7L92.5,66.5L93.1,68.4L93.8,70.1L94.4,71.9L95.1,73.6L95.7,75.3L96.4,76.9L97,78.5L97.7,80.1L98.3,81.7L99,83.2L99.6,84.7L100.3,86.2L100.9,87.7L101.6,89.1L102.2,90.5L102.9,91.9L103.5,93.2L104.2,94.6L104.8,95.9L105.5,97.2L106.1,98.4L106.8,99.7L107.4,100.9L108.1,102.1L108.7,103.3L109.4,104.5L110,105.6L110.7,106.8L111.3,107.9L112,109L112.6,110.1L113.3,111.2L113.9,112.2L114.6,113.3L115.2,114.3L115.9,115.3L116.5,116.3L117.2,117.3L117.8,118.2L118.5,119.2L119.1,120.1L119.8,121.1L120.4,122L121.1,122.9L121.7,123.8L122.4,124.6L123,125.5L123.6,126.4L124.3,127.2L124.9,128L125.6,128.9L126.2,129.7L126.9,130.5L127.5,131.3L128.2,132L128.8,132.8L129.5,133.6L130.1,134.3L130.8,135.1L131.4,135.8L132.1,136.5L132.7,137.2L133.4,137.9L134,138.6L134.7,139.3L135.3,140L136,140.7L136.6,141.3L137.3,142L137.9,142.6L138.6,143.3L139.2,143.9L139.9,144.5L140.5,145.2L141.2,145.8L141.8,146.4L142.5,147L143.1,147.6L143.8,148.2L144.4,148.7L145.1,149.3L145.7,149.9L146.4,150.5L147,151L147.7,151.6L148.3,152.1L149,152.6L149.6,153.2L150.3,153.7L150.9,154.2L151.6,154.7L152.2,155.2L152.9,155.8L153.5,156.3L154.2,156.7L154.8,157.2L155.5,157.7L156.1,158.2L156.8,158.7L157.4,159.1L158.1,159.6L158.7,160.1L159.4,160.5L160,161L160.7,161.4L161.3,161.9L161.9,162.3L162.6,162.8L163.2,163.2L163.9,163.6L164.5,164L165.2,164.5L165.8,164.9L166.5,165.3L167.1,165.7L167.8,166.1L168.4,166.5L169.1,166.9L169.7,167.3L170.4,167.7L171,168.1L171.7,168.4L172.3,168.8L173,169.2L173.6,169.6L174.3,169.9L174.9,170.3L175.6,170.7L176.2,171L176.9,171.4L177.5,171.7L178.2,172.1L178.8,172.4L179.5,172.8L180.1,173.1L180.8,173.5L181.4,173.8L182.1,174.1L182.7,174.5L183.4,174.8L184,175.1L184.7,175.4L185.3,175.8L186,176.1L186.6,176.4L187.3,176.7L187.9,177L188.6,177.3L189.2,177.6L189.9,177.9L190.5,178.2L191.2,178.5L191.8,178.8L192.5,179.1L193.1,179.4L193.8,179.7L194.4,180L195.1,180.3L195.7,180.6L196.4,180.8L197,181.1L197.7,181.4L198.3,181.7L199,181.9L199.6,182.2L200.3,182.5L200.9,182.7L201.5,183L202.2,183.3L202.8,183.5L203.5,183.8L204.1,184L204.8,184.3L205.4,184.5L206.1,184.8L206.7,185L207.4,185.3L208,185.5L208.7,185.8L209.3,186L210,186.3L210.6,186.5L211.3,186.7L211.9,187L212.6,187.2L213.2,187.4L213.9,187.7L214.5,187.9L215.2,188.1L215.8,188.3L216.5,188.6L217.1,188.8L217.8,189L218.4,189.2L219.1,189.4L219.7,189.7L220.4,189.9L221,190.1L221.7,190.3L222.3,190.5L223,190.7L223.6,190.9L224.3,191.1L224.9,191.3L225.6,191.5L226.2,191.7L226.9,191.9L227.5,192.1L228.2,192.3L228.8,192.5L229.5,192.7L230.1,192.9L230.8,193.1L231.4,193.3L232.1,193.5L232.7,193.7L233.4,193.9L234,194.1L234.7,194.3L235.3,194.5L236,194.6L236.6,194.8L237.3,195L237.9,195.2L238.6,195.4L239.2,195.5L239.8,195.7L240.5,195.9L241.1,196.1L241.8,196.2L242.4,196.4L243.1,196.6L243.7,196.8L244.4,196.9L245,197.1L245.7,197.3L246.3,197.4L247,197.6L247.6,197.8L248.3,197.9L248.9,198.1L249.6,198.3L250.2,198.4L250.9,198.6L251.5,198.7L252.2,198.9L252.8,199.1L253.5,199.2L254.1,199.4L254.8,199.5L255.4,199.7L256.1,199.8L256.7,200L257.4,200.1L258,200.3L258.7,200.4L259.3,200.6L260,200.7L260.6,200.9L261.3,201L261.9,201.2L262.6,201.3L263.2,201.5L263.9,201.6L264.5,201.7L265.2,201.9L265.8,202L266.5,202.2L267.1,202.3L267.8,202.4L268.4,202.6L269.1,202.7L269.7,202.9L270.4,203L271,203.1L271.7,203.3L272.3,203.4L273,203.5L273.6,203.7L274.3,203.8L274.9,203.9L275.6,204.1L276.2,204.2L276.9,204.3L277.5,204.4L278.2,204.6L278.8,204.7L279.4,204.8L280.1,204.9L280.7,205.1L281.4,205.2L282,205.3L282.7,205.4L283.3,205.6L284,205.7L284.6,205.8L285.3,205.9L285.9,206.1L286.6,206.2L287.2,206.3L287.9,206.4L288.5,206.5L289.2,206.6L289.8,206.8L290.5,206.9L291.1,207L291.8,207.1L292.4,207.2L293.1,207.3L293.7,207.4L294.4,207.6L295,207.7L295.7,207.8L296.3,207.9L297,208L297.6,208.1L298.3,208.2L298.9,208.3L299.6,208.4L300.2,208.5L300.9,208.7L301.5,208.8L302.2,208.9L302.8,209L303.5,209.1L304.1,209.2L304.8,209.3L305.4,209.4L306.1,209.5L306.7,209.6L307.4,209.7L308,209.8L308.7,209.9L309.3,210L310,210.1L310.6,210.2L311.3,210.3L311.9,210.4L312.6,210.5L313.2,210.6L313.9,210.7L314.5,210.8L315.2,210.9L315.8,211L316.5,211.1L317.1,211.2L317.7,211.3L318.4,211.4L319,211.5L319.7,211.6L320.3,211.7L321,211.7L321.6,211.8L322.3,211.9L322.9,212L323.6,212.1L324.2,212.2L324.9,212.3L325.5,212.4L326.2,212.5L326.8,212.6L327.5,212.7L328.1,212.7L328.8,212.8L329.4,212.9L330.1,213L330.7,213.1L331.4,213.2L332,213.3L332.7,213.4L333.3,213.4L334,213.5L334.6,213.6L335.3,213.7L335.9,213.8L336.6,213.9L337.2,214L337.9,214L338.5,214.1L339.2,214.2L339.8,214.3L340.5,214.4L341.1,214.4L341.8,214.5L342.4,214.6L343.1,214.7"/>
+<path class="s-k2" d="M108,102L108.4,102L108.8,102L109.2,102L109.6,102L110.1,102L110.5,102L110.9,102L111.3,102L111.7,102L112.1,102L112.5,102L112.9,102L113.3,102L113.7,102L114.2,102L114.6,102L115,102L115.4,102L115.8,102L116.2,102L116.6,102L117,102L117.4,102L117.8,102L118.3,102L118.7,102L119.1,102L119.5,102L119.9,102L120.3,102L120.7,102L121.1,102L121.5,102L121.9,102L122.4,102L122.8,102L123.2,102L123.6,102L124,102L124.4,102L124.8,102L125.2,102L125.6,102L126,102L126.5,102L126.9,102L127.3,102L127.7,102L128.1,102L128.5,102L128.9,102L129.3,102L129.7,102L130.1,102L130.6,102L131,102L131.4,102L131.8,102L132.2,102L132.6,102L133,102L133.4,102L133.8,102L134.2,102L134.6,102L135.1,102L135.5,102L135.9,102L136.3,102L136.7,102L137.1,102L137.5,102L137.9,102L138.3,102L138.8,102L139.2,102L139.6,102L140,102L140.4,102L140.8,102L141.2,102L141.6,102L142,102L142.4,102L142.9,102L143.3,102L143.7,102L144.1,102L144.5,102L144.9,102L145.3,102L145.7,102L146.1,102L146.5,102L147,102L147.4,102L147.8,102L148.2,102L148.6,102L149,102L149.4,102L149.8,102L150.2,102L150.6,102L151.1,102L151.5,102L151.9,102L152.3,102L152.7,102L153.1,102L153.5,102L153.9,102L154.3,102L154.7,102L155.1,102L155.6,102L156,102L156.4,102L156.8,102L157.2,102L157.6,102L158,102L158.4,102L158.8,102L159.3,102L159.7,102L160.1,102L160.5,102L160.9,102L161.3,102L161.7,102L162.1,102L162.5,102L162.9,102L163.4,102L163.8,102L164.2,102L164.6,102L165,102L165.4,102L165.8,102L166.2,102L166.6,102L167,102L167.5,102L167.9,102L168.3,102L168.7,102L169.1,102L169.5,102L169.9,102L170.3,102L170.7,102L171.1,102L171.6,102L172,102L172.4,102L172.8,102L173.2,102L173.6,102L174,102L174.4,102L174.8,102L175.2,102L175.6,102L176.1,102L176.5,102L176.9,102L177.3,102L177.7,102L178.1,102L178.5,102L178.9,102L179.3,102L179.8,102L180.2,102L180.6,102L181,102L181.4,102L181.8,102L182.2,102L182.6,102L183,102L183.4,102L183.9,102L184.3,102L184.7,102L185.1,102L185.5,102L185.9,102L186.3,102L186.7,102L187.1,102L187.5,102L188,102L188.4,102L188.8,102L189.2,102L189.6,102L190,102L190.4,102L190.8,102L191.2,102L191.6,102L192.1,102L192.5,102L192.9,102L193.3,102L193.7,102L194.1,102L194.5,102L194.9,102L195.3,102L195.7,102L196.1,102L196.6,102L197,102L197.4,102L197.8,102L198.2,102L198.6,102L199,102L199.4,102L199.8,102L200.3,102L200.7,102L201.1,102L201.5,102L201.9,102L202.3,102L202.7,102L203.1,102L203.5,102L203.9,102L204.4,102L204.8,102L205.2,102L205.6,102L206,102L206.4,102L206.8,102L207.2,102L207.6,102L208,102L208.5,102L208.9,102L209.3,102L209.7,102L210.1,102L210.5,102L210.9,102L211.3,102L211.7,102L212.1,102L212.6,102L213,102L213.4,102L213.8,102L214.2,102L214.6,102L215,102L215.4,102L215.8,102L216.2,102L216.7,102L217.1,102L217.5,102L217.9,102L218.3,102L218.7,102L219.1,102L219.5,102L219.9,102L220.3,102L220.8,102L221.2,102L221.6,102L222,102L222.4,102L222.8,102L223.2,102L223.6,102L224,102L224.4,102L224.9,102L225.3,102L225.7,102L226.1,102L226.5,102L226.9,102L227.3,102L227.7,102L228.1,102L228.5,102L229,102L229.4,102L229.8,102L230.2,102L230.6,102L231,102L231.4,102L231.8,102L232.2,102L232.6,102L233.1,102L233.5,102L233.9,102L234.3,102L234.7,102L235.1,102L235.5,102L235.9,102L236.3,102L236.7,102L237.2,102L237.6,102L238,102L238.4,102L238.8,102L239.2,102L239.6,102L240,102L240.4,102L240.8,102L241.3,102L241.7,102L242.1,102L242.5,102L242.9,102L243.3,102L243.7,102L244.1,102L244.5,102L244.9,102L245.4,102L245.8,102L246.2,102L246.6,102L247,102L247.4,102L247.8,102L248.2,102L248.6,102L249,102L249.5,102L249.9,102L250.3,102L250.7,102L251.1,102L251.5,102L251.9,102L252.3,102L252.7,102L253.1,102L253.6,102L254,102L254.4,102L254.8,102L255.2,102L255.6,102L256,102L256.4,102L256.8,102L257.2,102L257.7,102L258.1,102L258.5,102L258.9,102L259.3,102L259.7,102L260.1,102L260.5,102L260.9,102L261.3,102L261.8,102L262.2,102L262.6,102L263,102L263.4,102L263.8,102L264.2,102L264.6,102L265,102L265.4,102L265.9,102L266.3,102L266.7,102L267.1,102L267.5,102L267.9,102L268.3,102L268.7,102L269.1,102L269.5,102L270,102L270.4,102L270.8,102L271.2,102L271.6,102L272,102"/>
+<line class="s-k2" x1="146.3" y1="102" x2="211.9" y2="102" marker-end="url(#g3-k2)"/>
+<line class="s-k3" x1="272" y1="140" x2="272" y2="178" marker-end="url(#g3-k3)"/>
+<text class="s-txt-k1" x="321.2" y="193.2" text-anchor="middle">izoterma</text>
+<text class="s-txt-k2" x="190" y="90.6" text-anchor="middle">izobara</text>
+<text class="s-txt-k3" x="282.9" y="143.8" text-anchor="start">izohora</text>
+</svg>
+<figcaption>Izoterma (\(pV\) stalno) je hiperbola, izobara vodoravna, izohora navpična črta.</figcaption>
+</figure><figure class="slika">
+<svg viewBox="0 0 380 280" role="img" aria-label="Izobara v diagramu V-t" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g4-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g4-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g4-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g4-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g4-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g4-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<path class="s-mreza" d="M26,254V26M72.9,254V26M119.7,254V26M166.6,254V26M213.4,254V26M260.3,254V26M307.1,254V26M354,254V26M26,254H354M26,216H354M26,178H354M26,140H354M26,102H354M26,64H354M26,26H354"/>
+<line class="s-os" x1="26" y1="254" x2="362" y2="254" marker-end="url(#g4-p)"/>
+<line class="s-os" x1="166.6" y1="254" x2="166.6" y2="18" marker-end="url(#g4-p)"/>
+<text class="s-os-txt" x="356" y="246" text-anchor="end">t [°C]</text>
+<text class="s-os-txt" x="174.6" y="30">V</text>
+<line class="s-os" x1="26" y1="251" x2="26" y2="257"/><text class="s-os-txt" x="26" y="269" text-anchor="middle">−300</text><line class="s-os" x1="72.9" y1="251" x2="72.9" y2="257"/><text class="s-os-txt" x="72.9" y="269" text-anchor="middle">−200</text><line class="s-os" x1="119.7" y1="251" x2="119.7" y2="257"/><text class="s-os-txt" x="119.7" y="269" text-anchor="middle">−100</text><line class="s-os" x1="213.4" y1="251" x2="213.4" y2="257"/><text class="s-os-txt" x="213.4" y="269" text-anchor="middle">100</text><line class="s-os" x1="260.3" y1="251" x2="260.3" y2="257"/><text class="s-os-txt" x="260.3" y="269" text-anchor="middle">200</text><line class="s-os" x1="307.1" y1="251" x2="307.1" y2="257"/><text class="s-os-txt" x="307.1" y="269" text-anchor="middle">300</text><text class="s-os-txt" x="160.6" y="269" text-anchor="end">0</text>
+<path class="s-k2" d="M166.6,147.8L166.9,147.5L167.3,147.2L167.6,146.9L167.9,146.7L168.3,146.4L168.6,146.1L168.9,145.8L169.3,145.5L169.6,145.2L170,145L170.3,144.7L170.6,144.4L171,144.1L171.3,143.8L171.7,143.6L172,143.3L172.3,143L172.7,142.7L173,142.4L173.4,142.1L173.7,141.9L174,141.6L174.4,141.3L174.7,141L175.1,140.7L175.4,140.4L175.7,140.2L176.1,139.9L176.4,139.6L176.8,139.3L177.1,139L177.4,138.8L177.8,138.5L178.1,138.2L178.5,137.9L178.8,137.6L179.1,137.3L179.5,137.1L179.8,136.8L180.2,136.5L180.5,136.2L180.8,135.9L181.2,135.7L181.5,135.4L181.9,135.1L182.2,134.8L182.5,134.5L182.9,134.2L183.2,134L183.6,133.7L183.9,133.4L184.2,133.1L184.6,132.8L184.9,132.5L185.3,132.3L185.6,132L185.9,131.7L186.3,131.4L186.6,131.1L187,130.9L187.3,130.6L187.6,130.3L188,130L188.3,129.7L188.7,129.4L189,129.2L189.3,128.9L189.7,128.6L190,128.3L190.4,128L190.7,127.8L191,127.5L191.4,127.2L191.7,126.9L192.1,126.6L192.4,126.3L192.7,126.1L193.1,125.8L193.4,125.5L193.7,125.2L194.1,124.9L194.4,124.7L194.8,124.4L195.1,124.1L195.4,123.8L195.8,123.5L196.1,123.2L196.5,123L196.8,122.7L197.1,122.4L197.5,122.1L197.8,121.8L198.2,121.5L198.5,121.3L198.8,121L199.2,120.7L199.5,120.4L199.9,120.1L200.2,119.9L200.5,119.6L200.9,119.3L201.2,119L201.6,118.7L201.9,118.4L202.2,118.2L202.6,117.9L202.9,117.6L203.3,117.3L203.6,117L203.9,116.8L204.3,116.5L204.6,116.2L205,115.9L205.3,115.6L205.6,115.3L206,115.1L206.3,114.8L206.7,114.5L207,114.2L207.3,113.9L207.7,113.6L208,113.4L208.4,113.1L208.7,112.8L209,112.5L209.4,112.2L209.7,112L210.1,111.7L210.4,111.4L210.7,111.1L211.1,110.8L211.4,110.5L211.8,110.3L212.1,110L212.4,109.7L212.8,109.4L213.1,109.1L213.5,108.9L213.8,108.6L214.1,108.3L214.5,108L214.8,107.7L215.2,107.4L215.5,107.2L215.8,106.9L216.2,106.6L216.5,106.3L216.8,106L217.2,105.8L217.5,105.5L217.9,105.2L218.2,104.9L218.5,104.6L218.9,104.3L219.2,104.1L219.6,103.8L219.9,103.5L220.2,103.2L220.6,102.9L220.9,102.6L221.3,102.4L221.6,102.1L221.9,101.8L222.3,101.5L222.6,101.2L223,101L223.3,100.7L223.6,100.4L224,100.1L224.3,99.8L224.7,99.5L225,99.3L225.3,99L225.7,98.7L226,98.4L226.4,98.1L226.7,97.9L227,97.6L227.4,97.3L227.7,97L228.1,96.7L228.4,96.4L228.7,96.2L229.1,95.9L229.4,95.6L229.8,95.3L230.1,95L230.4,94.8L230.8,94.5L231.1,94.2L231.5,93.9L231.8,93.6L232.1,93.3L232.5,93.1L232.8,92.8L233.2,92.5L233.5,92.2L233.8,91.9L234.2,91.6L234.5,91.4L234.9,91.1L235.2,90.8L235.5,90.5L235.9,90.2L236.2,90L236.6,89.7L236.9,89.4L237.2,89.1L237.6,88.8L237.9,88.5L238.3,88.3L238.6,88L238.9,87.7L239.3,87.4L239.6,87.1L239.9,86.9L240.3,86.6L240.6,86.3L241,86L241.3,85.7L241.6,85.4L242,85.2L242.3,84.9L242.7,84.6L243,84.3L243.3,84L243.7,83.7L244,83.5L244.4,83.2L244.7,82.9L245,82.6L245.4,82.3L245.7,82.1L246.1,81.8L246.4,81.5L246.7,81.2L247.1,80.9L247.4,80.6L247.8,80.4L248.1,80.1L248.4,79.8L248.8,79.5L249.1,79.2L249.5,79L249.8,78.7L250.1,78.4L250.5,78.1L250.8,77.8L251.2,77.5L251.5,77.3L251.8,77L252.2,76.7L252.5,76.4L252.9,76.1L253.2,75.9L253.5,75.6L253.9,75.3L254.2,75L254.6,74.7L254.9,74.4L255.2,74.2L255.6,73.9L255.9,73.6L256.3,73.3L256.6,73L256.9,72.7L257.3,72.5L257.6,72.2L258,71.9L258.3,71.6L258.6,71.3L259,71.1L259.3,70.8L259.7,70.5L260,70.2L260.3,69.9L260.7,69.6L261,69.4L261.4,69.1L261.7,68.8L262,68.5L262.4,68.2L262.7,68L263.1,67.7L263.4,67.4L263.7,67.1L264.1,66.8L264.4,66.5L264.7,66.3L265.1,66L265.4,65.7L265.8,65.4L266.1,65.1L266.4,64.8L266.8,64.6L267.1,64.3L267.5,64L267.8,63.7L268.1,63.4L268.5,63.2L268.8,62.9L269.2,62.6L269.5,62.3L269.8,62L270.2,61.7L270.5,61.5L270.9,61.2L271.2,60.9L271.5,60.6L271.9,60.3L272.2,60.1L272.6,59.8L272.9,59.5L273.2,59.2L273.6,58.9L273.9,58.6L274.3,58.4L274.6,58.1L274.9,57.8L275.3,57.5L275.6,57.2L276,57L276.3,56.7L276.6,56.4L277,56.1L277.3,55.8L277.7,55.5L278,55.3L278.3,55L278.7,54.7L279,54.4L279.4,54.1L279.7,53.8L280,53.6L280.4,53.3L280.7,53L281.1,52.7L281.4,52.4L281.7,52.2L282.1,51.9L282.4,51.6L282.8,51.3L283.1,51L283.4,50.7L283.8,50.5L284.1,50.2L284.5,49.9L284.8,49.6L285.1,49.3L285.5,49.1L285.8,48.8L286.2,48.5L286.5,48.2L286.8,47.9L287.2,47.6L287.5,47.4L287.8,47.1L288.2,46.8L288.5,46.5L288.9,46.2L289.2,45.9L289.5,45.7L289.9,45.4L290.2,45.1L290.6,44.8L290.9,44.5L291.2,44.3L291.6,44L291.9,43.7L292.3,43.4L292.6,43.1L292.9,42.8L293.3,42.6L293.6,42.3L294,42L294.3,41.7L294.6,41.4L295,41.2L295.3,40.9L295.7,40.6L296,40.3L296.3,40L296.7,39.7L297,39.5L297.4,39.2L297.7,38.9L298,38.6L298.4,38.3L298.7,38.1L299.1,37.8L299.4,37.5L299.7,37.2L300.1,36.9L300.4,36.6L300.8,36.4L301.1,36.1L301.4,35.8L301.8,35.5L302.1,35.2L302.5,34.9"/>
+<path class="s-asim" d="M38.7,254L39,253.7L39.3,253.5L39.6,253.2L39.9,252.9L40.3,252.7L40.6,252.4L40.9,252.1L41.2,251.9L41.5,251.6L41.8,251.3L42.2,251.1L42.5,250.8L42.8,250.5L43.1,250.3L43.4,250L43.8,249.8L44.1,249.5L44.4,249.2L44.7,249L45,248.7L45.4,248.4L45.7,248.2L46,247.9L46.3,247.6L46.6,247.4L47,247.1L47.3,246.8L47.6,246.6L47.9,246.3L48.2,246L48.6,245.8L48.9,245.5L49.2,245.2L49.5,245L49.8,244.7L50.2,244.4L50.5,244.2L50.8,243.9L51.1,243.6L51.4,243.4L51.8,243.1L52.1,242.8L52.4,242.6L52.7,242.3L53,242.1L53.4,241.8L53.7,241.5L54,241.3L54.3,241L54.6,240.7L55,240.5L55.3,240.2L55.6,239.9L55.9,239.7L56.2,239.4L56.6,239.1L56.9,238.9L57.2,238.6L57.5,238.3L57.8,238.1L58.2,237.8L58.5,237.5L58.8,237.3L59.1,237L59.4,236.7L59.8,236.5L60.1,236.2L60.4,235.9L60.7,235.7L61,235.4L61.4,235.1L61.7,234.9L62,234.6L62.3,234.3L62.6,234.1L63,233.8L63.3,233.6L63.6,233.3L63.9,233L64.2,232.8L64.6,232.5L64.9,232.2L65.2,232L65.5,231.7L65.8,231.4L66.2,231.2L66.5,230.9L66.8,230.6L67.1,230.4L67.4,230.1L67.8,229.8L68.1,229.6L68.4,229.3L68.7,229L69,228.8L69.4,228.5L69.7,228.2L70,228L70.3,227.7L70.6,227.4L71,227.2L71.3,226.9L71.6,226.6L71.9,226.4L72.2,226.1L72.6,225.9L72.9,225.6L73.2,225.3L73.5,225.1L73.8,224.8L74.1,224.5L74.5,224.3L74.8,224L75.1,223.7L75.4,223.5L75.7,223.2L76.1,222.9L76.4,222.7L76.7,222.4L77,222.1L77.3,221.9L77.7,221.6L78,221.3L78.3,221.1L78.6,220.8L78.9,220.5L79.3,220.3L79.6,220L79.9,219.7L80.2,219.5L80.5,219.2L80.9,218.9L81.2,218.7L81.5,218.4L81.8,218.2L82.1,217.9L82.5,217.6L82.8,217.4L83.1,217.1L83.4,216.8L83.7,216.6L84.1,216.3L84.4,216L84.7,215.8L85,215.5L85.3,215.2L85.7,215L86,214.7L86.3,214.4L86.6,214.2L86.9,213.9L87.3,213.6L87.6,213.4L87.9,213.1L88.2,212.8L88.5,212.6L88.9,212.3L89.2,212L89.5,211.8L89.8,211.5L90.1,211.2L90.5,211L90.8,210.7L91.1,210.5L91.4,210.2L91.7,209.9L92.1,209.7L92.4,209.4L92.7,209.1L93,208.9L93.3,208.6L93.7,208.3L94,208.1L94.3,207.8L94.6,207.5L94.9,207.3L95.3,207L95.6,206.7L95.9,206.5L96.2,206.2L96.5,205.9L96.9,205.7L97.2,205.4L97.5,205.1L97.8,204.9L98.1,204.6L98.5,204.3L98.8,204.1L99.1,203.8L99.4,203.5L99.7,203.3L100.1,203L100.4,202.7L100.7,202.5L101,202.2L101.3,202L101.7,201.7L102,201.4L102.3,201.2L102.6,200.9L102.9,200.6L103.3,200.4L103.6,200.1L103.9,199.8L104.2,199.6L104.5,199.3L104.9,199L105.2,198.8L105.5,198.5L105.8,198.2L106.1,198L106.4,197.7L106.8,197.4L107.1,197.2L107.4,196.9L107.7,196.6L108,196.4L108.4,196.1L108.7,195.8L109,195.6L109.3,195.3L109.6,195L110,194.8L110.3,194.5L110.6,194.3L110.9,194L111.2,193.7L111.6,193.5L111.9,193.2L112.2,192.9L112.5,192.7L112.8,192.4L113.2,192.1L113.5,191.9L113.8,191.6L114.1,191.3L114.4,191.1L114.8,190.8L115.1,190.5L115.4,190.3L115.7,190L116,189.7L116.4,189.5L116.7,189.2L117,188.9L117.3,188.7L117.6,188.4L118,188.1L118.3,187.9L118.6,187.6L118.9,187.3L119.2,187.1L119.6,186.8L119.9,186.6L120.2,186.3L120.5,186L120.8,185.8L121.2,185.5L121.5,185.2L121.8,185L122.1,184.7L122.4,184.4L122.8,184.2L123.1,183.9L123.4,183.6L123.7,183.4L124,183.1L124.4,182.8L124.7,182.6L125,182.3L125.3,182L125.6,181.8L126,181.5L126.3,181.2L126.6,181L126.9,180.7L127.2,180.4L127.6,180.2L127.9,179.9L128.2,179.6L128.5,179.4L128.8,179.1L129.2,178.9L129.5,178.6L129.8,178.3L130.1,178.1L130.4,177.8L130.8,177.5L131.1,177.3L131.4,177L131.7,176.7L132,176.5L132.4,176.2L132.7,175.9L133,175.7L133.3,175.4L133.6,175.1L134,174.9L134.3,174.6L134.6,174.3L134.9,174.1L135.2,173.8L135.6,173.5L135.9,173.3L136.2,173L136.5,172.7L136.8,172.5L137.1,172.2L137.5,171.9L137.8,171.7L138.1,171.4L138.4,171.1L138.7,170.9L139.1,170.6L139.4,170.4L139.7,170.1L140,169.8L140.3,169.6L140.7,169.3L141,169L141.3,168.8L141.6,168.5L141.9,168.2L142.3,168L142.6,167.7L142.9,167.4L143.2,167.2L143.5,166.9L143.9,166.6L144.2,166.4L144.5,166.1L144.8,165.8L145.1,165.6L145.5,165.3L145.8,165L146.1,164.8L146.4,164.5L146.7,164.2L147.1,164L147.4,163.7L147.7,163.4L148,163.2L148.3,162.9L148.7,162.7L149,162.4L149.3,162.1L149.6,161.9L149.9,161.6L150.3,161.3L150.6,161.1L150.9,160.8L151.2,160.5L151.5,160.3L151.9,160L152.2,159.7L152.5,159.5L152.8,159.2L153.1,158.9L153.5,158.7L153.8,158.4L154.1,158.1L154.4,157.9L154.7,157.6L155.1,157.3L155.4,157.1L155.7,156.8L156,156.5L156.3,156.3L156.7,156L157,155.7L157.3,155.5L157.6,155.2L157.9,155L158.3,154.7L158.6,154.4L158.9,154.2L159.2,153.9L159.5,153.6L159.9,153.4L160.2,153.1L160.5,152.8L160.8,152.6L161.1,152.3L161.5,152L161.8,151.8L162.1,151.5L162.4,151.2L162.7,151L163.1,150.7L163.4,150.4L163.7,150.2L164,149.9L164.3,149.6L164.7,149.4L165,149.1L165.3,148.8L165.6,148.6L165.9,148.3L166.3,148L166.6,147.8"/>
+<circle class="s-tocka" cx="38.7" cy="254" r="4.5"/>
+<text class="s-txt-b" x="42.7" y="244" text-anchor="start">−273 °C</text>
+</svg>
+<figcaption>Pri stalnem tlaku je prostornina premo sorazmerna s \(T\). Podaljšana premica seka os pri \(-273\ ^\circ\text{C}\).</figcaption>
+</figure></div>
+            <p>V diagramu \(p\)–\(V\) leži vsaka točka na neki izotermi; izoterme pri višji temperaturi so dlje od izhodišča. Ploščina pod krivuljo je delo plina (poglavje 4.6).</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-4">
+              <h4>Tip 4: Splošna plinska enačba (masa, množina, število molekul)</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>V jeklenki s prostornino \(20\ \text{l}\) je kisik (\(M = 32\ \text{kg/kmol}\)) pri tlaku \(150\ \text{bar}\) in temperaturi \(20\ ^\circ\text{C}\). Kolikšna je masa kisika in koliko je molekul?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> plin v enem stanju, iščeš maso, množino, gostoto, število molekul ali eno od količin \(p\), \(V\), \(T\).</p><ul class="kljucne"><li>„jeklenka“</li><li>„koliko molekul“</li><li>„masa plina“</li><li>„gostota plina“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Vse količine pretvori v enote SI, temperaturo v kelvine, \(M\) v kg/kmol.</p><div class="na-nalogi"><p>\(p = 1{,}5 \cdot 10^{7}\ \text{Pa}\), \(V = 0{,}020\ \text{m}^3\), \(T = 293\ \text{K}\).</p></div></li>
+              <li><p class="korak">Iz \(pV = \dfrac{m}{M}RT\) izrazi neznanko.</p><div class="na-nalogi"><p>\(m = \dfrac{pVM}{RT}\).</p></div></li>
+              <li><p class="korak">Izračunaj.</p><div class="na-nalogi"><p>\(m = \dfrac{1{,}5 \cdot 10^{7} \cdot 0{,}020 \cdot 32}{8310 \cdot 293}\ \text{kg} = 3{,}9\ \text{kg}\).</p></div></li>
+              <li><p class="korak">Za število molekul izračunaj množino in pomnoži z \(N_A\).</p><div class="na-nalogi"><p>\(n = 3{,}94/32 = 0{,}123\ \text{kmol}\), \(N = 0{,}123 \cdot 6{,}02 \cdot 10^{26} = 7{,}4 \cdot 10^{25}\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Kolikšno prostornino zavzame 1 kmol plina pri 0 °C in \(1{,}013\ \text{bar}\)?</p><p>\(V = RT/p = 22{,}4\ \text{m}^3\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Gostota zraka (\(M = 29\ \text{kg/kmol}\)) pri 1,0 bar in 20 °C?</p><p>\(\rho = pM/RT = 1{,}2\ \text{kg/m}^3\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Koliko molekul je v 1 g vode (\(M = 18\ \text{kg/kmol}\))?</p><p>\(N = \dfrac{10^{-3}}{18} \cdot 6{,}02 \cdot 10^{26} = 3{,}3 \cdot 10^{22}\).</p></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-5">
+              <h4>Tip 5: Sprememba stanja plina</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>V pnevmatiki je zrak pri \(7\ ^\circ\text{C}\) pod tlakom \(3{,}0\ \text{bar}\). Med vožnjo se segreje na \(42\ ^\circ\text{C}\). Kolikšen je tlak, če se prostornina ne spremeni?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> ista količina plina preide iz enega stanja v drugo.</p><ul class="kljucne"><li>„segrejemo plin“</li><li>„stisnemo pri stalni temperaturi“</li><li>„mehurček se dviga“</li><li>„pri stalnem tlaku“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Zapiši stanji 1 in 2; temperature v kelvinih, tlak absolutni (ne nadtlak).</p><div class="na-nalogi"><p>\(p_1 = 3{,}0\ \text{bar}\), \(T_1 = 280\ \text{K}\), \(T_2 = 315\ \text{K}\), \(V_1 = V_2\).</p></div></li>
+              <li><p class="korak">Ugotovi, katera količina je stalna, in jo pokrajšaj v \(\dfrac{p_1V_1}{T_1} = \dfrac{p_2V_2}{T_2}\).</p><div class="na-nalogi"><p>Izohorna sprememba: \(\dfrac{p_1}{T_1} = \dfrac{p_2}{T_2}\).</p></div></li>
+              <li><p class="korak">Izračunaj neznanko (tlak in prostornino lahko pustiš v istih enotah na obeh straneh).</p><div class="na-nalogi"><p>\(p_2 = 3{,}0 \cdot \dfrac{315}{280}\ \text{bar} = 3{,}4\ \text{bar}\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Mehurček s prostornino \(2{,}0\ \text{cm}^3\) se pri stalni temperaturi dvigne z globine 20 m (\(p = 2{,}96\ \text{bar}\)) na gladino (1,00 bar).</p><p>\(V_2 = 2{,}0 \cdot 2{,}96 = 5{,}9\ \text{cm}^3\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Plin pri stalnem tlaku segrejemo s 27 °C na 127 °C. Kolikokrat se poveča prostornina?</p><p>\(400/300 = 1{,}33\)-krat.</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Iz jeklenke izpustimo polovico plina pri stalni temperaturi. Tlak?</p><p>Pol manjši (\(p \propto m\) pri stalnih \(V\), \(T\)).</p></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-6">
+              <h4>Tip 6: Spremembe v diagramu p-V</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Plin preide iz stanja A (\(1{,}0\ \text{bar}\), \(2{,}0\ \text{l}\), \(300\ \text{K}\)) izobarno v stanje B s prostornino \(4{,}0\ \text{l}\), nato izohorno v stanje C s tlakom \(0{,}50\ \text{bar}\). Narišite spremembi v diagramu \(p\)–\(V\) in določite temperaturi v B in C.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> podan ali zahtevan je diagram \(p\)–\(V\), \(V\)–\(T\) ali \(p\)–\(T\), sprašujejo po vrsti spremembe ali temperaturah v točkah.</p><ul class="kljucne"><li>„diagram p-V“</li><li>„katera sprememba je izotermna“</li><li>„narišite“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Vnesi točke v diagram in jih poveži glede na vrsto spremembe.</p><div class="na-nalogi"><p>A \((2; 1{,}0)\) do B \((4; 1{,}0)\) vodoravno, B do C \((4; 0{,}5)\) navpično.</p></div></li>
+              <li><p class="korak">Za vsak korak zapiši, katera količina je stalna.</p><div class="na-nalogi"><p>A do B: \(p\) stalen, \(V/T\) stalno. B do C: \(V\) stalna, \(p/T\) stalno.</p></div></li>
+              <li><p class="korak">Izračunaj temperature po vrsti.</p><div class="na-nalogi"><p>\(T_B = 300 \cdot 4/2 = 600\ \text{K}\), \(T_C = 600 \cdot 0{,}5/1{,}0 = 300\ \text{K}\).</p></div></li>
+              <li><p class="korak">Preveri s produktom \(pV\): enak produkt pomeni enako temperaturo.</p><div class="na-nalogi"><p>\(p_AV_A = 2{,}0 = p_CV_C\): A in C ležita na isti izotermi.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Kakšna je izobara v diagramu \(V\)–\(T\)?</p><p>Premica skozi izhodišče.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Kakšna je izohora v diagramu \(p\)–\(T\)?</p><p>Premica skozi izhodišče.</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Točka D ima \(pV\) dvakrat večji kot A. Temperatura?</p><p>\(T_D = 2T_A = 600\ \text{K}\).</p></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="subsection" id="kljuc">
+          <div class="subsection-head">
+            <h2>Ključ: kateri tip naloge je to?</h2>
+            <p>Poišči besedo iz navodila naloge in skoči na pravi postopek.</p>
+          </div>
+          <div class="info-card">
+            <div class="tabela-wrap">
+              <table class="tabela">
+                <thead><tr><th>V besedilu naloge piše …</th><th>Tip</th></tr></thead>
+                <tbody>
+                  <tr><td>„v kelvinih“, „kolikokrat večja temperatura“</td><td><a href="#tip-1">Tip 1</a></td></tr>
+                  <tr><td>„podaljša se“, „tračnica“, „bimetal“</td><td><a href="#tip-2">Tip 2</a></td></tr>
+                  <tr><td>„izteče“, „prostorninski koeficient“</td><td><a href="#tip-3">Tip 3</a></td></tr>
+                  <tr><td>„jeklenka“, „masa plina“, „koliko molekul“</td><td><a href="#tip-4">Tip 4</a></td></tr>
+                  <tr><td>„segrejemo plin“, „stisnemo“, „mehurček“</td><td><a href="#tip-5">Tip 5</a></td></tr>
+                  <tr><td>„diagram p-V“, „izoterma“, „narišite“</td><td><a href="#tip-6">Tip 6</a></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>Pogoste napake</h2>
+          </div>
+          <div class="info-card">
+            <ul>
+              <li>V plinsko enačbo vstaviš temperaturo v °C.</li>
+              <li>Molsko maso vstaviš v g/mol, konstanto \(R\) pa na kmol.</li>
+              <li>Pri tlaku pozabiš na zračni tlak (nadtlak ni absolutni tlak).</li>
+              <li>Litre pozabiš pretvoriti v \(\text{m}^3\), ko računaš maso ali število molekul.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>Naslednje poglavje</h2>
+          </div>
+          <div class="link-list">
+            <a class="link-item" href="/views/fizika/snov/notranja_energija_toplota/notranja_energija_toplota_razlaga.html">
+              <span class="link-item-text"><strong>4.9 Notranja energija in toplota</strong><small>Energijski zakon, specifična toplota, prevajanje, sevanje, toplotni stroji</small></span>
+              <span class="arrow">→</span>
+            </a>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>
