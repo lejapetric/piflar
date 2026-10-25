@@ -37,13 +37,13 @@
           <p>Enačbe, ki jih potrebuješ (večina je na listu s konstantami in enačbami, ki je del izpitne pole):</p>
           <div class="matura-levo">
             <ul>
-              <li>premikajoči se vodnik: \(U_i = lvB\)</li>
-              <li>indukcijski zakon: \(U_i = -N\dfrac{\Delta\Phi}{\Delta t}\), \(\Phi = BS\cos\varphi\)</li>
+              <li>premikajoči se vodnik <span class="badge-vr">PZ</span>: \(U_i = lvB\)</li>
+              <li>indukcijski zakon <span class="badge-vr">PZ</span>: \(U_i = -N\dfrac{\Delta\Phi}{\Delta t}\), \(\Phi = BS\cos\varphi\)</li>
               <li>vrteča se tuljava <span class="badge-vr">PZ</span>: \(U_i = NSB\omega\sin(\omega t)\), \(U_0 = NSB\omega\)</li>
               <li>transformator: \(\dfrac{U_1}{U_2} = \dfrac{N_1}{N_2}\), idealni: \(U_1 I_1 = U_2 I_2\)</li>
               <li>samoindukcija <span class="badge-vr">PZ</span>: \(U_i = -L\dfrac{\Delta I}{\Delta t}\), dolga tuljava \(L = \dfrac{\mu_0 N^2 S}{l}\)</li>
               <li>energija tuljave <span class="badge-vr">PZ</span>: \(W_m = \dfrac{LI^2}{2}\)</li>
-              <li>nihajni krog: \(t_0 = 2\pi\sqrt{LC}\)</li>
+              <li>nihajni krog <span class="badge-vr">PZ</span>: \(t_0 = 2\pi\sqrt{LC}\)</li>
             </ul>
           </div>
         </div>
@@ -70,7 +70,7 @@
           <div class="sklop-teorija">
             <h3>Razlaga</h3>
             <h4>Premikajoči se vodnik</h4>
-            <p>Ko se vodnik giblje skozi magnetno polje, deluje na proste elektrone v njem magnetna sila \(evB\). Elektroni se premaknejo na en konec vodnika in med koncema nastane <strong>inducirana napetost</strong>. Za ravni vodnik dolžine \(l\), ki se giblje s hitrostjo \(v\) pravokotno na polje \(B\) in na samega sebe, je</p>
+            <p>Ko se vodnik giblje skozi magnetno polje, deluje na proste elektrone v njem magnetna sila \(evB\). Elektroni se premaknejo na en konec vodnika in med koncema nastane <strong>inducirana napetost</strong>. Enako se zgodi, ko v tuljavo potiskamo magnet ali spreminjamo tok v bližnji tuljavi: napetost se inducira, kadar se polje skozi tuljavo spreminja, in je tem večja, čim hitreje se spreminja. Za ravni vodnik dolžine \(l\), ki se giblje s hitrostjo \(v\) pravokotno na polje \(B\) in na samega sebe, je <span class="badge-vr">PZ</span></p>
             <p>\[U_i = lvB.\]</p>
             <figure class="slika">
 <svg viewBox="0 0 380 232" role="img" aria-label="Palica na tračnicah v magnetnem polju" xmlns="http://www.w3.org/2000/svg">
@@ -91,11 +91,11 @@
 </svg>
 <figcaption>Palica dolžine \(l\) drsi s hitrostjo \(v\) po tračnicah, pravokotno na polje. Ploščina zanke in s tem pretok se večata, inducira se napetost \(U_i = lvB\). Inducirani tok ima tako smer, da sila \(IlB\) na palico zavira gibanje (Lenzovo pravilo).</figcaption>
 </figure>
-            <h4>Splošni indukcijski zakon</h4>
+            <h4>Splošni indukcijski zakon <span class="badge-vr">PZ</span></h4>
             <p>Napetost se inducira vedno, kadar se spreminja magnetni pretok skozi zanko, ne glede na to, ali se spreminja polje, ploščina ali kot. Za tuljavo z \(N\) ovoji je</p>
             <p>\[U_i = -N\frac{\Delta\Phi}{\Delta t}.\]</p>
             <p>Inducirana napetost je tem večja, čim hitreje se pretok spreminja. Če pretok ostaja stalen (tudi če je velik), napetosti ni. Pri palici na tračnicah se ploščina zanke v času \(\Delta t\) poveča za \(lv\Delta t\), zato \(\Delta\Phi/\Delta t = lvB\), kar je ista enačba kot zgoraj.</p>
-            <h4>Lenzovo pravilo</h4>
+            <h4>Lenzovo pravilo <span class="badge-vr">PZ</span></h4>
             <p>Predznak minus v zakonu pove smer: <strong>inducirani tok ima tako smer, da s svojim magnetnim poljem nasprotuje spremembi, ki ga je povzročila</strong>. Če pretok narašča, inducirani tok ustvari polje v nasprotni smeri; če pada, ga podpira. To je posledica ohranitve energije: za inducirani tok moramo opraviti delo, zato nas sila vedno zavira.</p>
             <figure class="slika">
 <svg viewBox="0 0 380 185" role="img" aria-label="Lenzovo pravilo z magnetom in obročem" xmlns="http://www.w3.org/2000/svg">
@@ -142,7 +142,7 @@
             <h3>Tipi nalog v tem sklopu</h3>
 
             <div class="tip-naloge" id="tip-1">
-              <h4>Tip 1: Inducirana napetost na premikajočem se vodniku</h4>
+              <h4>Tip 1: Inducirana napetost na premikajočem se vodniku <span class="badge-vr">PZ</span></h4>
               <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Kovinska palica dolžine \(0{,}50\ \text{m}\) drsi s hitrostjo \(4{,}0\ \text{m/s}\) po vodoravnih tračnicah, ki so na eni strani povezane z upornikom \(2{,}0\ \Omega\). Navpično magnetno polje ima gostoto \(0{,}30\ \text{T}\). Kolikšna napetost se inducira, kolikšen tok teče in s kolikšno silo moramo vleči palico, da se giblje enakomerno?</p></div>
               <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> vodnik (palica, krilo letala, žica) se giblje skozi magnetno polje, sprašujejo po napetosti med konci, toku ali zavorni sili.</p><ul class="kljucne"><li>„palica drsi po tračnicah“</li><li>„med koncema krila“</li><li>„vodnik se giblje v polju“</li></ul></div>
               <h5>Univerzalni postopek</h5><ol class="postopek">
@@ -157,7 +157,7 @@
             </div>
 
             <div class="tip-naloge" id="tip-2">
-              <h4>Tip 2: Indukcijski zakon pri spremembi pretoka</h4>
+              <h4>Tip 2: Indukcijski zakon pri spremembi pretoka <span class="badge-vr">PZ</span></h4>
               <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Tuljava z \(200\) ovoji in ploščino preseka \(10\ \text{cm}^2\) je v polju, vzporednem z njeno osjo. Gostota polja se v \(0{,}050\ \text{s}\) enakomerno poveča z \(0{,}10\ \text{T}\) na \(0{,}35\ \text{T}\). Kolikšna napetost se inducira v tuljavi?</p></div>
               <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> spreminja se polje, ploščina zanke ali kot med zanko in poljem (tudi graf \(B(t)\) ali \(\Phi(t)\)), sprašujejo po inducirani napetosti ali toku.</p><ul class="kljucne"><li>„gostota polja se poveča v času“</li><li>„zanko izvlečemo iz polja“</li><li>„graf B(t)“</li><li>„zasučemo tuljavo“</li></ul></div>
               <h5>Univerzalni postopek</h5><ol class="postopek">
@@ -172,7 +172,7 @@
             </div>
 
             <div class="tip-naloge" id="tip-3">
-              <h4>Tip 3: Smer induciranega toka (Lenzovo pravilo)</h4>
+              <h4>Tip 3: Smer induciranega toka (Lenzovo pravilo) <span class="badge-vr">PZ</span></h4>
               <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Severni pol paličastega magneta približujemo kovinskemu obroču, ki ga gledamo s strani magneta. V kateri smeri teče inducirani tok? Ali obroč magnet privlači ali odbija? Kaj se zgodi, ko magnet odmikamo?</p></div>
               <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> kvalitativno vprašanje o smeri toka ali sile pri približevanju, oddaljevanju, vklopu ali izklopu toka v bližnji tuljavi.</p><ul class="kljucne"><li>„v kateri smeri teče inducirani tok“</li><li>„približujemo magnet“</li><li>„vklopimo stikalo“</li><li>„obroč odskoči“</li></ul></div>
               <h5>Univerzalni postopek</h5><ol class="postopek">
@@ -357,17 +357,18 @@
 </svg>
 <figcaption>V nihajnem krogu niha naboj na kondenzatorju (in napetost \(U_C\)) ter tok skozi tuljavo, zamaknjen za četrt nihaja. Ko je kondenzator poln, je tok nič (vsa energija je v električnem polju); četrt nihaja pozneje je kondenzator prazen in tok največji (vsa energija je v magnetnem polju tuljave).</figcaption>
 </figure>
-            <p>Energija prehaja med električnim poljem kondenzatorja in magnetnim poljem tuljave, podobno kot pri nihalu med potencialno in kinetično energijo. Brez upora velja</p>
+            <p>Energija prehaja med električnim poljem kondenzatorja in magnetnim poljem tuljave, podobno kot pri nihalu med potencialno in kinetično energijo. Brez upora velja <span class="badge-vr">PZ</span></p>
             <p>\[\frac{CU_0^2}{2} = \frac{LI_0^2}{2}.\]</p>
-            <p>Nihajni čas in lastna frekvenca nihajnega kroga sta (Thomsonova enačba)</p>
+            <p>Nihajni čas in lastna frekvenca nihajnega kroga sta (Thomsonova enačba) <span class="badge-vr">PZ</span></p>
             <p>\[t_0 = 2\pi\sqrt{LC}, \qquad \nu_0 = \frac{1}{2\pi\sqrt{LC}}.\]</p>
             <p>Zaradi upora vodnikov se energija pretvarja v toploto in nihanje je dušeno. Nihajni krogi so v radijskih sprejemnikih: z vrtljivim kondenzatorjem nastavimo lastno frekvenco na frekvenco želene postaje (resonanca).</p>
+            <p>Nihajoči tok v anteni ustvarja spremenljivo električno in magnetno polje, ki se širita v prostor s svetlobno hitrostjo: nastane <strong>elektromagnetno valovanje</strong> (radijski valovi). Valovna dolžina je \(\lambda = c/\nu\).</p>
           </div>
           <div class="sklop-naloge">
             <h3>Tipi nalog v tem sklopu</h3>
 
             <div class="tip-naloge" id="tip-8">
-              <h4>Tip 8: Lastna frekvenca in energija nihajnega kroga</h4>
+              <h4>Tip 8: Lastna frekvenca in energija nihajnega kroga <span class="badge-vr">PZ</span></h4>
               <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Nihajni krog ima kondenzator \(20\ \text{nF}\) in tuljavo \(5{,}0\ \text{mH}\). Kolikšna je lastna frekvenca? Kondenzator na začetku nabijemo na \(10\ \text{V}\). Kolikšen je največji tok v krogu?</p></div>
               <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> kondenzator in tuljava v istem krogu, sprašujejo po frekvenci, nihajnem času, največjem toku ali kapaciteti za izbrano frekvenco.</p><ul class="kljucne"><li>„nihajni krog“</li><li>„lastna frekvenca“</li><li>„radijski sprejemnik“</li><li>„LC“</li></ul></div>
               <h5>Univerzalni postopek</h5><ol class="postopek">
