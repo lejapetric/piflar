@@ -67,5 +67,10 @@
   { "predmet": "kemija", "stevilka": "4.17", "slug": "halogenirani_ogljikovodiki", "naslov": "Halogenirani ogljikovodiki", "opis": "Zgradba, lastnosti, substitucija in eliminacija, freoni in ozonska plast." },
   { "predmet": "kemija", "stevilka": "4.18", "slug": "kisikove_spojine", "naslov": "Kisikove organske spojine", "opis": "Alkoholi, fenoli, etri, aldehidi, ketoni, karboksilne kisline, estri, maščobe in ogljikovi hidrati." },
   { "predmet": "kemija", "stevilka": "4.19", "slug": "dusikove_spojine", "naslov": "Dušikove organske spojine", "opis": "Amini, amidi, aminokisline, peptidi in beljakovine." },
-  { "predmet": "kemija", "stevilka": "4.20", "slug": "polimeri", "naslov": "Polimeri", "opis": "Adicijska in kondenzacijska polimerizacija, zgradba verig in lastnosti plastike." }
+  { "predmet": "kemija", "stevilka": "4.20", "slug": "polimeri", "naslov": "Polimeri", "opis": "Adicijska in kondenzacijska polimerizacija, zgradba verig in lastnosti plastike." },
+  { "predmet": "biologija", "stevilka": "4.1", "slug": "zivljenje_na_zemlji", "naslov": "Življenje na Zemlji", "opis": "Biologija kot veda, Lamarck in Darwin, lastnosti živega, organizacijske ravni, razmerje površina/prostornina." },
+  { "predmet": "biologija", "stevilka": "4.2.1", "slug": "celica", "naslov": "Celica, membrane in organeli", "opis": "Prokariontska in evkariontska celica, organske molekule, membrane, osmoza, transport in organeli." },
+  { "predmet": "biologija", "stevilka": "4.2.2", "slug": "encimi_presnova", "naslov": "Encimi, beljakovine in presnova", "opis": "Delovanje encimov in dejavniki, zgradba beljakovin, ATP in celična signalizacija." },
+  { "predmet": "biologija", "stevilka": "4.2.3", "slug": "dihanje_fotosinteza", "naslov": "Celično dihanje, vrenje in fotosinteza", "opis": "Glikoliza, vrenje, Krebsov cikel, dihalna veriga, fotosinteza, omejujoči dejavniki, avtotrofi in heterotrofi." },
+  { "predmet": "biologija", "stevilka": "4.2.4", "slug": "nukleinske_kisline", "naslov": "Nukleinske kisline in sinteza beljakovin", "opis": "DNA in RNA, podvajanje, genski kod, transkripcija, translacija in posledice mutacij." }
 ]
