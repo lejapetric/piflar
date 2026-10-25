@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kemija: raztopine — razlaga in postopki | Piflar.si</title>
+  <meta name="description" content="Raztopine za maturo iz kemije: topnost in topnostne krivulje, masni delež, množinska in masna koncentracija, pretvarjanje koncentracij, redčenje in mešanje raztopin ter hidratacija, z vsemi tipi nalog.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
+  <link rel="stylesheet" href="/style/snov.css">
+</head>
+<body>
+  <div id="header"></div>
+
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view">
+
+<header class="page-header">
+          <span class="page-eyebrow">Kemija · Snov · 4.6</span>
+          <h1>Raztopine</h1>
+          <p>Večina reakcij v laboratoriju in v organizmih poteka v raztopinah. Da lahko z njimi računamo, moramo znati izraziti, koliko snovi je raztopljene: z masnim deležem, množinsko ali masno koncentracijo. Tu so topnost in topnostne krivulje, vse oblike sestave raztopin, redčenje in mešanje ter dogajanje na ravni delcev pri raztapljanju. Pod razlago so vsi tipi nalog.</p>
+          <div class="page-meta">
+            <div class="page-meta-item"><strong>3</strong><span>Podpoglavja</span></div>
+            <div class="page-meta-item"><strong>7</strong><span>Tipov nalog</span></div>
+            <div class="page-meta-item"><strong>~35 min</strong><span>Branja</span></div>
+          </div>
+        </header>
+
+        <div class="matura-formule">
+          <h3>Formule na maturi</h3>
+          <p>Zveze za sestavo raztopin:</p>
+          <div class="matura-levo">
+            <ul>
+              <li>masni delež: \(w = \dfrac{m(\text{topljenec})}{m(\text{raztopina})}\), \(m(\text{raztopina}) = m(\text{topljenec}) + m(\text{topilo})\)</li>
+              <li>množinska koncentracija: \(c = \dfrac{n}{V}\) (mol/L); masna koncentracija: \(\gamma = \dfrac{m}{V}\) (g/L); \(\gamma = c \cdot M\)</li>
+              <li>gostota raztopine: \(\rho = \dfrac{m(\text{raztopina})}{V(\text{raztopina})}\); \(c = \dfrac{w \cdot \rho}{M}\)</li>
+              <li>redčenje: \(c_1 V_1 = c_2 V_2\) oziroma \(w_1 m_1 = w_2 m_2\) (množina ali masa topljenca se ne spremeni)</li>
+              <li>mešanje: \(w = \dfrac{w_1 m_1 + w_2 m_2}{m_1 + m_2}\)</li>
+            </ul>
+          </div>
+          <p class="matura-opomba">Pri \(c = w\rho/M\) mora biti gostota v g/L (1 g/mL = 1000 g/L). Topnost je v tabelah navadno podana v gramih topljenca na 100 g <em>vode</em>, ne raztopine.</p>
+        </div>
+
+        <nav class="kazalo" aria-label="Podpoglavja">
+          <h2>Podpoglavja</h2>
+          <ol>
+            <li><a href="#sklop-1"><span class="kazalo-st">1</span> Raztopine in topnost</a></li>
+            <li><a href="#sklop-2"><span class="kazalo-st">2</span> Sestava raztopin in pretvarjanje koncentracij</a></li>
+            <li><a href="#sklop-3"><span class="kazalo-st">3</span> Raztapljanje na ravni delcev: hidratacija</a></li>
+            <li><a href="#kljuc"><span class="kazalo-st">?</span> Ključ: kateri tip naloge je to?</a></li>
+          </ol>
+        </nav>
+
+        <!-- SKLOP 1 -->
+        <section class="sklop" id="sklop-1">
+          <header class="sklop-header">
+            <span class="sklop-num">4.6 · 1</span>
+            <h2>Raztopine in topnost</h2>
+            <p>Nasičena raztopina in topnostna krivulja.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <p><strong>Raztopina</strong> je homogena zmes: snov, ki je je več, je <strong>topilo</strong> (najpogosteje voda), raztopljena snov je <strong>topljenec</strong>. Topljenec je lahko trdna snov (sol v vodi), tekočina (etanol v vodi) ali plin (kisik, ogljikov dioksid v vodi).</p>
+            <p>V določeni množini topila se pri dani temperaturi raztopi le omejena količina topljenca. Raztopina, ki pri tej temperaturi ne more raztopiti več topljenca, je <strong>nasičena</strong>; v njej je raztopljena snov v ravnotežju z neraztopljeno. Raztopina, ki lahko raztopi še nekaj snovi, je <strong>nenasičena</strong>. <strong>Topnost</strong> je masa topljenca, ki se pri dani temperaturi raztopi v 100 g vode, da nastane nasičena raztopina (lahko tudi v g/L ali mol/L).</p>
+            <figure class="slika slika--siroka">
+<svg viewBox="0 0 520 340" role="img" aria-label="Topnostne krivulje" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g1-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g1-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g1-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g1-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g1-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g1-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<path class="s-mreza" d="M34,306V34M76.6,306V34M119.3,306V34M161.9,306V34M204.6,306V34M247.2,306V34M289.8,306V34M332.5,306V34M375.1,306V34M417.8,306V34M460.4,306V34M34,306H486M34,289.5H486M34,273H486M34,256.5H486M34,240.1H486M34,223.6H486M34,207.1H486M34,190.6H486M34,174.1H486M34,157.6H486M34,141.2H486M34,124.7H486M34,108.2H486M34,91.7H486M34,75.2H486M34,58.7H486M34,42.2H486"/>
+<line class="s-os" x1="34" y1="306" x2="494" y2="306" marker-end="url(#g1-p)"/>
+<line class="s-os" x1="34" y1="306" x2="34" y2="26" marker-end="url(#g1-p)"/>
+<text class="s-os-txt" x="488" y="298" text-anchor="end">t / °C</text>
+<text class="s-os-txt" x="42" y="38">topnost / (g na 100 g vode)</text>
+<line class="s-asim" x1="289.8" y1="306" x2="289.8" y2="124.7"/>
+<line class="s-asim" x1="119.3" y1="306" x2="119.3" y2="253.9"/>
+<path class="s-k1" d="M34,284.1L34.8,283.8L35.6,283.6L36.4,283.4L37.2,283.1L37.9,282.9L38.7,282.7L39.5,282.5L40.3,282.2L41.1,282L41.9,281.8L42.7,281.5L43.5,281.3L44.3,281.1L45,280.8L45.8,280.6L46.6,280.4L47.4,280.1L48.2,279.9L49,279.7L49.8,279.4L50.6,279.2L51.4,279L52.1,278.7L52.9,278.5L53.7,278.3L54.5,278L55.3,277.8L56.1,277.6L56.9,277.4L57.7,277.1L58.5,276.9L59.2,276.7L60,276.4L60.8,276.2L61.6,276L62.4,275.7L63.2,275.5L64,275.3L64.8,275L65.6,274.8L66.3,274.6L67.1,274.3L67.9,274.1L68.7,273.9L69.5,273.6L70.3,273.4L71.1,273.2L71.9,272.9L72.7,272.7L73.4,272.5L74.2,272.3L75,272L75.8,271.8L76.6,271.6L77.4,271.2L78.2,270.9L79,270.6L79.8,270.3L80.5,269.9L81.3,269.6L82.1,269.3L82.9,269L83.7,268.6L84.5,268.3L85.3,268L86.1,267.6L86.9,267.3L87.6,267L88.4,266.7L89.2,266.3L90,266L90.8,265.7L91.6,265.4L92.4,265L93.2,264.7L94,264.4L94.7,264.1L95.5,263.7L96.3,263.4L97.1,263.1L97.9,262.8L98.7,262.4L99.5,262.1L100.3,261.8L101.1,261.4L101.8,261.1L102.6,260.8L103.4,260.5L104.2,260.1L105,259.8L105.8,259.5L106.6,259.2L107.4,258.8L108.2,258.5L108.9,258.2L109.7,257.9L110.5,257.5L111.3,257.2L112.1,256.9L112.9,256.6L113.7,256.2L114.5,255.9L115.3,255.6L116,255.2L116.8,254.9L117.6,254.6L118.4,254.3L119.2,253.9L120,253.5L120.8,253.1L121.6,252.7L122.4,252.2L123.1,251.8L123.9,251.4L124.7,250.9L125.5,250.5L126.3,250.1L127.1,249.6L127.9,249.2L128.7,248.8L129.5,248.3L130.2,247.9L131,247.5L131.8,247L132.6,246.6L133.4,246.2L134.2,245.7L135,245.3L135.8,244.9L136.6,244.4L137.3,244L138.1,243.6L138.9,243.1L139.7,242.7L140.5,242.3L141.3,241.8L142.1,241.4L142.9,241L143.7,240.5L144.4,240.1L145.2,239.7L146,239.2L146.8,238.8L147.6,238.4L148.4,237.9L149.2,237.5L150,237.1L150.8,236.6L151.5,236.2L152.3,235.8L153.1,235.3L153.9,234.9L154.7,234.5L155.5,234L156.3,233.6L157.1,233.2L157.9,232.7L158.6,232.3L159.4,231.9L160.2,231.4L161,231L161.8,230.6L162.6,230L163.4,229.5L164.2,228.9L165,228.4L165.7,227.8L166.5,227.3L167.3,226.7L168.1,226.2L168.9,225.6L169.7,225.1L170.5,224.5L171.3,224L172.1,223.4L172.8,222.9L173.6,222.3L174.4,221.8L175.2,221.2L176,220.7L176.8,220.1L177.6,219.5L178.4,219L179.2,218.4L179.9,217.9L180.7,217.3L181.5,216.8L182.3,216.2L183.1,215.7L183.9,215.1L184.7,214.6L185.5,214L186.3,213.5L187,212.9L187.8,212.4L188.6,211.8L189.4,211.3L190.2,210.7L191,210.2L191.8,209.6L192.6,209.1L193.4,208.5L194.1,208L194.9,207.4L195.7,206.9L196.5,206.3L197.3,205.7L198.1,205.2L198.9,204.6L199.7,204.1L200.5,203.5L201.2,203L202,202.4L202.8,201.9L203.6,201.3L204.4,200.8L205.2,200.1L206,199.5L206.8,198.8L207.6,198.2L208.3,197.5L209.1,196.9L209.9,196.2L210.7,195.5L211.5,194.9L212.3,194.2L213.1,193.6L213.9,192.9L214.7,192.2L215.4,191.6L216.2,190.9L217,190.3L217.8,189.6L218.6,188.9L219.4,188.3L220.2,187.6L221,187L221.8,186.3L222.5,185.7L223.3,185L224.1,184.3L224.9,183.7L225.7,183L226.5,182.4L227.3,181.7L228.1,181L228.9,180.4L229.6,179.7L230.4,179.1L231.2,178.4L232,177.7L232.8,177.1L233.6,176.4L234.4,175.8L235.2,175.1L236,174.5L236.7,173.8L237.5,173.1L238.3,172.5L239.1,171.8L239.9,171.2L240.7,170.5L241.5,169.8L242.3,169.2L243.1,168.5L243.8,167.9L244.6,167.2L245.4,166.6L246.2,165.9L247,165.2L247.8,164.5L248.6,163.8L249.4,163L250.1,162.3L250.9,161.5L251.7,160.8L252.5,160L253.3,159.3L254.1,158.5L254.9,157.8L255.7,157L256.5,156.3L257.2,155.5L258,154.8L258.8,154L259.6,153.3L260.4,152.6L261.2,151.8L262,151.1L262.8,150.3L263.6,149.6L264.3,148.8L265.1,148.1L265.9,147.3L266.7,146.6L267.5,145.8L268.3,145.1L269.1,144.3L269.9,143.6L270.7,142.8L271.4,142.1L272.2,141.3L273,140.6L273.8,139.9L274.6,139.1L275.4,138.4L276.2,137.6L277,136.9L277.8,136.1L278.5,135.4L279.3,134.6L280.1,133.9L280.9,133.1L281.7,132.4L282.5,131.6L283.3,130.9L284.1,130.1L284.9,129.4L285.6,128.6L286.4,127.9L287.2,127.2L288,126.4L288.8,125.7L289.6,124.9L290.4,124.1L291.2,123.2L292,122.4L292.7,121.5L293.5,120.7L294.3,119.8L295.1,119L295.9,118.1L296.7,117.3L297.5,116.4L298.3,115.6L299.1,114.7L299.8,113.8L300.6,113L301.4,112.1L302.2,111.3L303,110.4L303.8,109.6L304.6,108.7L305.4,107.9L306.2,107L306.9,106.2L307.7,105.3L308.5,104.4L309.3,103.6L310.1,102.7L310.9,101.9L311.7,101L312.5,100.2L313.3,99.3L314,98.5L314.8,97.6L315.6,96.8L316.4,95.9L317.2,95.1L318,94.2L318.8,93.3L319.6,92.5L320.4,91.6L321.1,90.8L321.9,89.9L322.7,89.1L323.5,88.2L324.3,87.4L325.1,86.5L325.9,85.7L326.7,84.8L327.5,84L328.2,83.1L329,82.2L329.8,81.4L330.6,80.5L331.4,79.7L332.2,78.8L333,77.9L333.8,77L334.6,76L335.3,75.1L336.1,74.1L336.9,73.2L337.7,72.2L338.5,71.3L339.3,70.4L340.1,69.4L340.9,68.5L341.7,67.5L342.4,66.6L343.2,65.6L344,64.7L344.8,63.7L345.6,62.8L346.4,61.8L347.2,60.9L348,60L348.8,59L349.5,58.1"/>
+<path class="s-k4" d="M34,257.5L35.1,257.4L36.1,257.2L37.2,257.1L38.3,256.9L39.3,256.7L40.4,256.6L41.5,256.4L42.5,256.2L43.6,256.1L44.7,255.9L45.7,255.8L46.8,255.6L47.9,255.4L48.9,255.3L50,255.1L51.1,255L52.1,254.8L53.2,254.6L54.3,254.5L55.3,254.3L56.4,254.2L57.5,254L58.5,253.8L59.6,253.7L60.7,253.5L61.7,253.4L62.8,253.2L63.8,253L64.9,252.9L66,252.7L67,252.6L68.1,252.4L69.2,252.2L70.2,252.1L71.3,251.9L72.4,251.7L73.4,251.6L74.5,251.4L75.6,251.3L76.6,251.1L77.7,250.9L78.8,250.8L79.8,250.6L80.9,250.5L82,250.3L83,250.1L84.1,250L85.2,249.8L86.2,249.7L87.3,249.5L88.4,249.3L89.4,249.2L90.5,249L91.6,248.9L92.6,248.7L93.7,248.5L94.8,248.4L95.8,248.2L96.9,248.1L98,247.9L99,247.7L100.1,247.6L101.2,247.4L102.2,247.2L103.3,247.1L104.4,246.9L105.4,246.8L106.5,246.6L107.6,246.4L108.6,246.3L109.7,246.1L110.8,246L111.8,245.8L112.9,245.6L114,245.5L115,245.3L116.1,245.2L117.2,245L118.2,244.8L119.3,244.7L120.3,244.5L121.4,244.3L122.5,244.2L123.5,244L124.6,243.8L125.7,243.6L126.7,243.5L127.8,243.3L128.9,243.1L129.9,242.9L131,242.8L132.1,242.6L133.1,242.4L134.2,242.3L135.3,242.1L136.3,241.9L137.4,241.7L138.5,241.6L139.5,241.4L140.6,241.2L141.7,241L142.7,240.9L143.8,240.7L144.9,240.5L145.9,240.3L147,240.2L148.1,240L149.1,239.8L150.2,239.7L151.3,239.5L152.3,239.3L153.4,239.1L154.5,239L155.5,238.8L156.6,238.6L157.7,238.4L158.7,238.3L159.8,238.1L160.9,237.9L161.9,237.8L163,237.6L164.1,237.4L165.1,237.2L166.2,237L167.3,236.8L168.3,236.7L169.4,236.5L170.5,236.3L171.5,236.1L172.6,235.9L173.7,235.8L174.7,235.6L175.8,235.4L176.8,235.2L177.9,235L179,234.9L180,234.7L181.1,234.5L182.2,234.3L183.2,234.1L184.3,233.9L185.4,233.8L186.4,233.6L187.5,233.4L188.6,233.2L189.6,233L190.7,232.9L191.8,232.7L192.8,232.5L193.9,232.3L195,232.1L196,232L197.1,231.8L198.2,231.6L199.2,231.4L200.3,231.2L201.4,231L202.4,230.9L203.5,230.7L204.6,230.5L205.6,230.3L206.7,230.1L207.8,229.9L208.8,229.7L209.9,229.6L211,229.4L212,229.2L213.1,229L214.2,228.8L215.2,228.6L216.3,228.4L217.4,228.2L218.4,228L219.5,227.8L220.6,227.7L221.6,227.5L222.7,227.3L223.8,227.1L224.8,226.9L225.9,226.7L227,226.5L228,226.3L229.1,226.1L230.2,225.9L231.2,225.8L232.3,225.6L233.3,225.4L234.4,225.2L235.5,225L236.5,224.8L237.6,224.6L238.7,224.4L239.7,224.2L240.8,224.1L241.9,223.9L242.9,223.7L244,223.5L245.1,223.3L246.1,223.1L247.2,222.9L248.3,222.7L249.3,222.5L250.4,222.3L251.5,222.1L252.5,221.9L253.6,221.7L254.7,221.5L255.7,221.3L256.8,221.1L257.9,220.9L258.9,220.7L260,220.5L261.1,220.3L262.1,220.1L263.2,219.9L264.3,219.8L265.3,219.6L266.4,219.4L267.5,219.2L268.5,219L269.6,218.8L270.7,218.6L271.7,218.4L272.8,218.2L273.9,218L274.9,217.8L276,217.6L277.1,217.4L278.1,217.2L279.2,217L280.3,216.8L281.3,216.6L282.4,216.4L283.5,216.2L284.5,216L285.6,215.8L286.7,215.6L287.7,215.4L288.8,215.2L289.8,215L290.9,214.8L292,214.6L293,214.4L294.1,214.2L295.2,214L296.2,213.8L297.3,213.6L298.4,213.4L299.4,213.1L300.5,212.9L301.6,212.7L302.6,212.5L303.7,212.3L304.8,212.1L305.8,211.9L306.9,211.7L308,211.5L309,211.3L310.1,211.1L311.2,210.9L312.2,210.7L313.3,210.5L314.4,210.3L315.4,210.1L316.5,209.9L317.6,209.6L318.6,209.4L319.7,209.2L320.8,209L321.8,208.8L322.9,208.6L324,208.4L325,208.2L326.1,208L327.2,207.8L328.2,207.6L329.3,207.4L330.4,207.2L331.4,207L332.5,206.8L333.6,206.5L334.6,206.3L335.7,206.1L336.8,205.9L337.8,205.6L338.9,205.4L340,205.2L341,205L342.1,204.8L343.2,204.5L344.2,204.3L345.3,204.1L346.3,203.9L347.4,203.6L348.5,203.4L349.5,203.2L350.6,203L351.7,202.8L352.7,202.5L353.8,202.3L354.9,202.1L355.9,201.9L357,201.6L358.1,201.4L359.1,201.2L360.2,201L361.3,200.8L362.3,200.5L363.4,200.3L364.5,200.1L365.5,199.9L366.6,199.6L367.7,199.4L368.7,199.2L369.8,199L370.9,198.7L371.9,198.5L373,198.3L374.1,198.1L375.1,197.9L376.2,197.6L377.3,197.4L378.3,197.2L379.4,196.9L380.5,196.7L381.5,196.4L382.6,196.2L383.7,196L384.7,195.7L385.8,195.5L386.9,195.3L387.9,195L389,194.8L390.1,194.6L391.1,194.3L392.2,194.1L393.3,193.9L394.3,193.6L395.4,193.4L396.5,193.2L397.5,192.9L398.6,192.7L399.7,192.5L400.7,192.2L401.8,192L402.8,191.8L403.9,191.5L405,191.3L406,191L407.1,190.8L408.2,190.6L409.2,190.3L410.3,190.1L411.4,189.9L412.4,189.6L413.5,189.4L414.6,189.2L415.6,188.9L416.7,188.7L417.8,188.5L418.8,188.2L419.9,188L421,187.7L422,187.5L423.1,187.2L424.2,187L425.2,186.7L426.3,186.5L427.4,186.2L428.4,186L429.5,185.7L430.6,185.5L431.6,185.2L432.7,185L433.8,184.8L434.8,184.5L435.9,184.3L437,184L438,183.8L439.1,183.5L440.2,183.3L441.2,183L442.3,182.8L443.4,182.5L444.4,182.3L445.5,182L446.6,181.8L447.6,181.5L448.7,181.3L449.8,181L450.8,180.8L451.9,180.6L453,180.3L454,180.1L455.1,179.8L456.2,179.6L457.2,179.3L458.3,179.1L459.3,178.8L460.4,178.6"/>
+<path class="s-k3" d="M34,260.5L35.1,260.4L36.1,260.2L37.2,260.1L38.3,259.9L39.3,259.8L40.4,259.7L41.5,259.5L42.5,259.4L43.6,259.2L44.7,259.1L45.7,259L46.8,258.8L47.9,258.7L48.9,258.5L50,258.4L51.1,258.3L52.1,258.1L53.2,258L54.3,257.8L55.3,257.7L56.4,257.6L57.5,257.4L58.5,257.3L59.6,257.1L60.7,257L61.7,256.9L62.8,256.7L63.8,256.6L64.9,256.4L66,256.3L67,256.2L68.1,256L69.2,255.9L70.2,255.7L71.3,255.6L72.4,255.5L73.4,255.3L74.5,255.2L75.6,255L76.6,254.9L77.7,254.8L78.8,254.6L79.8,254.5L80.9,254.4L82,254.3L83,254.2L84.1,254L85.2,253.9L86.2,253.8L87.3,253.7L88.4,253.5L89.4,253.4L90.5,253.3L91.6,253.2L92.6,253L93.7,252.9L94.8,252.8L95.8,252.7L96.9,252.5L98,252.4L99,252.3L100.1,252.2L101.2,252.1L102.2,251.9L103.3,251.8L104.4,251.7L105.4,251.6L106.5,251.4L107.6,251.3L108.6,251.2L109.7,251.1L110.8,250.9L111.8,250.8L112.9,250.7L114,250.6L115,250.4L116.1,250.3L117.2,250.2L118.2,250.1L119.3,250L120.3,249.8L121.4,249.7L122.5,249.6L123.5,249.5L124.6,249.3L125.7,249.2L126.7,249.1L127.8,249L128.9,248.8L129.9,248.7L131,248.6L132.1,248.5L133.1,248.3L134.2,248.2L135.3,248.1L136.3,248L137.4,247.8L138.5,247.7L139.5,247.6L140.6,247.5L141.7,247.4L142.7,247.2L143.8,247.1L144.9,247L145.9,246.9L147,246.7L148.1,246.6L149.1,246.5L150.2,246.4L151.3,246.2L152.3,246.1L153.4,246L154.5,245.9L155.5,245.7L156.6,245.6L157.7,245.5L158.7,245.4L159.8,245.3L160.9,245.1L161.9,245L163,244.9L164.1,244.8L165.1,244.6L166.2,244.5L167.3,244.4L168.3,244.3L169.4,244.1L170.5,244L171.5,243.9L172.6,243.8L173.7,243.6L174.7,243.5L175.8,243.4L176.8,243.3L177.9,243.2L179,243L180,242.9L181.1,242.8L182.2,242.7L183.2,242.5L184.3,242.4L185.4,242.3L186.4,242.2L187.5,242L188.6,241.9L189.6,241.8L190.7,241.7L191.8,241.5L192.8,241.4L193.9,241.3L195,241.2L196,241L197.1,240.9L198.2,240.8L199.2,240.7L200.3,240.6L201.4,240.4L202.4,240.3L203.5,240.2L204.6,240.1L205.6,240L206.7,239.8L207.8,239.7L208.8,239.6L209.9,239.5L211,239.4L212,239.3L213.1,239.2L214.2,239.1L215.2,239L216.3,238.9L217.4,238.8L218.4,238.7L219.5,238.6L220.6,238.5L221.6,238.3L222.7,238.2L223.8,238.1L224.8,238L225.9,237.9L227,237.8L228,237.7L229.1,237.6L230.2,237.5L231.2,237.4L232.3,237.3L233.3,237.2L234.4,237.1L235.5,237L236.5,236.8L237.6,236.7L238.7,236.6L239.7,236.5L240.8,236.4L241.9,236.3L242.9,236.2L244,236.1L245.1,236L246.1,235.9L247.2,235.8L248.3,235.7L249.3,235.5L250.4,235.4L251.5,235.3L252.5,235.2L253.6,235.1L254.7,234.9L255.7,234.8L256.8,234.7L257.9,234.6L258.9,234.5L260,234.3L261.1,234.2L262.1,234.1L263.2,234L264.3,233.9L265.3,233.7L266.4,233.6L267.5,233.5L268.5,233.4L269.6,233.3L270.7,233.1L271.7,233L272.8,232.9L273.9,232.8L274.9,232.7L276,232.5L277.1,232.4L278.1,232.3L279.2,232.2L280.3,232.1L281.3,232L282.4,231.8L283.5,231.7L284.5,231.6L285.6,231.5L286.7,231.4L287.7,231.2L288.8,231.1L289.8,231L290.9,230.9L292,230.8L293,230.6L294.1,230.5L295.2,230.4L296.2,230.3L297.3,230.2L298.4,230.1L299.4,230L300.5,229.8L301.6,229.7L302.6,229.6L303.7,229.5L304.8,229.4L305.8,229.3L306.9,229.1L308,229L309,228.9L310.1,228.8L311.2,228.7L312.2,228.6L313.3,228.5L314.4,228.3L315.4,228.2L316.5,228.1L317.6,228L318.6,227.9L319.7,227.8L320.8,227.6L321.8,227.5L322.9,227.4L324,227.3L325,227.2L326.1,227.1L327.2,227L328.2,226.8L329.3,226.7L330.4,226.6L331.4,226.5L332.5,226.4L333.6,226.3L334.6,226.1L335.7,226L336.8,225.9L337.8,225.8L338.9,225.7L340,225.6L341,225.5L342.1,225.3L343.2,225.2L344.2,225.1L345.3,225L346.3,224.9L347.4,224.8L348.5,224.6L349.5,224.5L350.6,224.4L351.7,224.3L352.7,224.2L353.8,224.1L354.9,224L355.9,223.8L357,223.7L358.1,223.6L359.1,223.5L360.2,223.4L361.3,223.3L362.3,223.1L363.4,223L364.5,222.9L365.5,222.8L366.6,222.7L367.7,222.6L368.7,222.5L369.8,222.3L370.9,222.2L371.9,222.1L373,222L374.1,221.9L375.1,221.8L376.2,221.6L377.3,221.5L378.3,221.4L379.4,221.3L380.5,221.2L381.5,221L382.6,220.9L383.7,220.8L384.7,220.7L385.8,220.6L386.9,220.4L387.9,220.3L389,220.2L390.1,220.1L391.1,220L392.2,219.9L393.3,219.7L394.3,219.6L395.4,219.5L396.5,219.4L397.5,219.3L398.6,219.1L399.7,219L400.7,218.9L401.8,218.8L402.8,218.7L403.9,218.5L405,218.4L406,218.3L407.1,218.2L408.2,218.1L409.2,217.9L410.3,217.8L411.4,217.7L412.4,217.6L413.5,217.5L414.6,217.3L415.6,217.2L416.7,217.1L417.8,217L418.8,216.9L419.9,216.8L421,216.6L422,216.5L423.1,216.4L424.2,216.3L425.2,216.2L426.3,216.1L427.4,216L428.4,215.9L429.5,215.8L430.6,215.6L431.6,215.5L432.7,215.4L433.8,215.3L434.8,215.2L435.9,215.1L437,215L438,214.9L439.1,214.8L440.2,214.6L441.2,214.5L442.3,214.4L443.4,214.3L444.4,214.2L445.5,214.1L446.6,214L447.6,213.9L448.7,213.8L449.8,213.6L450.8,213.5L451.9,213.4L453,213.3L454,213.2L455.1,213.1L456.2,213L457.2,212.9L458.3,212.8L459.3,212.6L460.4,212.5"/>
+<path class="s-k2" d="M34,247.1L35.1,247.1L36.1,247.1L37.2,247.1L38.3,247.1L39.3,247.1L40.4,247.1L41.5,247.1L42.5,247.1L43.6,247.1L44.7,247.1L45.7,247.1L46.8,247.1L47.9,247.1L48.9,247.1L50,247.1L51.1,247.1L52.1,247.1L53.2,247.1L54.3,247.1L55.3,247.1L56.4,247.1L57.5,247.1L58.5,247.1L59.6,247.1L60.7,247L61.7,247L62.8,247L63.8,247L64.9,247L66,247L67,247L68.1,247L69.2,247L70.2,247L71.3,247L72.4,247L73.4,247L74.5,247L75.6,247L76.6,247L77.7,247L78.8,247L79.8,247L80.9,247L82,246.9L83,246.9L84.1,246.9L85.2,246.9L86.2,246.9L87.3,246.9L88.4,246.9L89.4,246.9L90.5,246.9L91.6,246.9L92.6,246.9L93.7,246.9L94.8,246.8L95.8,246.8L96.9,246.8L98,246.8L99,246.8L100.1,246.8L101.2,246.8L102.2,246.8L103.3,246.8L104.4,246.8L105.4,246.8L106.5,246.8L107.6,246.7L108.6,246.7L109.7,246.7L110.8,246.7L111.8,246.7L112.9,246.7L114,246.7L115,246.7L116.1,246.7L117.2,246.7L118.2,246.7L119.3,246.7L120.3,246.6L121.4,246.6L122.5,246.6L123.5,246.6L124.6,246.6L125.7,246.6L126.7,246.6L127.8,246.6L128.9,246.5L129.9,246.5L131,246.5L132.1,246.5L133.1,246.5L134.2,246.5L135.3,246.5L136.3,246.5L137.4,246.4L138.5,246.4L139.5,246.4L140.6,246.4L141.7,246.4L142.7,246.4L143.8,246.4L144.9,246.4L145.9,246.3L147,246.3L148.1,246.3L149.1,246.3L150.2,246.3L151.3,246.3L152.3,246.3L153.4,246.3L154.5,246.2L155.5,246.2L156.6,246.2L157.7,246.2L158.7,246.2L159.8,246.2L160.9,246.2L161.9,246.2L163,246.1L164.1,246.1L165.1,246.1L166.2,246.1L167.3,246.1L168.3,246.1L169.4,246.1L170.5,246.1L171.5,246L172.6,246L173.7,246L174.7,246L175.8,246L176.8,246L177.9,246L179,246L180,245.9L181.1,245.9L182.2,245.9L183.2,245.9L184.3,245.9L185.4,245.9L186.4,245.9L187.5,245.9L188.6,245.9L189.6,245.8L190.7,245.8L191.8,245.8L192.8,245.8L193.9,245.8L195,245.8L196,245.8L197.1,245.8L198.2,245.7L199.2,245.7L200.3,245.7L201.4,245.7L202.4,245.7L203.5,245.7L204.6,245.7L205.6,245.6L206.7,245.6L207.8,245.6L208.8,245.6L209.9,245.6L211,245.6L212,245.6L213.1,245.5L214.2,245.5L215.2,245.5L216.3,245.5L217.4,245.5L218.4,245.5L219.5,245.4L220.6,245.4L221.6,245.4L222.7,245.4L223.8,245.4L224.8,245.4L225.9,245.3L227,245.3L228,245.3L229.1,245.3L230.2,245.3L231.2,245.3L232.3,245.2L233.3,245.2L234.4,245.2L235.5,245.2L236.5,245.2L237.6,245.2L238.7,245.1L239.7,245.1L240.8,245.1L241.9,245.1L242.9,245.1L244,245.1L245.1,245L246.1,245L247.2,245L248.3,245L249.3,245L250.4,245L251.5,245L252.5,244.9L253.6,244.9L254.7,244.9L255.7,244.9L256.8,244.9L257.9,244.9L258.9,244.9L260,244.9L261.1,244.8L262.1,244.8L263.2,244.8L264.3,244.8L265.3,244.8L266.4,244.8L267.5,244.8L268.5,244.8L269.6,244.7L270.7,244.7L271.7,244.7L272.8,244.7L273.9,244.7L274.9,244.7L276,244.7L277.1,244.7L278.1,244.6L279.2,244.6L280.3,244.6L281.3,244.6L282.4,244.6L283.5,244.6L284.5,244.6L285.6,244.6L286.7,244.5L287.7,244.5L288.8,244.5L289.8,244.5L290.9,244.5L292,244.5L293,244.4L294.1,244.4L295.2,244.4L296.2,244.4L297.3,244.4L298.4,244.3L299.4,244.3L300.5,244.3L301.6,244.3L302.6,244.3L303.7,244.2L304.8,244.2L305.8,244.2L306.9,244.2L308,244.2L309,244.1L310.1,244.1L311.2,244.1L312.2,244.1L313.3,244.1L314.4,244L315.4,244L316.5,244L317.6,244L318.6,244L319.7,243.9L320.8,243.9L321.8,243.9L322.9,243.9L324,243.9L325,243.8L326.1,243.8L327.2,243.8L328.2,243.8L329.3,243.7L330.4,243.7L331.4,243.7L332.5,243.7L333.6,243.7L334.6,243.6L335.7,243.6L336.8,243.6L337.8,243.6L338.9,243.5L340,243.5L341,243.5L342.1,243.5L343.2,243.4L344.2,243.4L345.3,243.4L346.3,243.4L347.4,243.3L348.5,243.3L349.5,243.3L350.6,243.3L351.7,243.2L352.7,243.2L353.8,243.2L354.9,243.2L355.9,243.1L357,243.1L358.1,243.1L359.1,243.1L360.2,243L361.3,243L362.3,243L363.4,243L364.5,242.9L365.5,242.9L366.6,242.9L367.7,242.9L368.7,242.8L369.8,242.8L370.9,242.8L371.9,242.8L373,242.7L374.1,242.7L375.1,242.7L376.2,242.7L377.3,242.6L378.3,242.6L379.4,242.6L380.5,242.6L381.5,242.5L382.6,242.5L383.7,242.5L384.7,242.5L385.8,242.5L386.9,242.4L387.9,242.4L389,242.4L390.1,242.4L391.1,242.3L392.2,242.3L393.3,242.3L394.3,242.3L395.4,242.2L396.5,242.2L397.5,242.2L398.6,242.2L399.7,242.1L400.7,242.1L401.8,242.1L402.8,242.1L403.9,242L405,242L406,242L407.1,242L408.2,241.9L409.2,241.9L410.3,241.9L411.4,241.9L412.4,241.8L413.5,241.8L414.6,241.8L415.6,241.8L416.7,241.7L417.8,241.7L418.8,241.7L419.9,241.6L421,241.6L422,241.6L423.1,241.5L424.2,241.5L425.2,241.5L426.3,241.4L427.4,241.4L428.4,241.4L429.5,241.3L430.6,241.3L431.6,241.3L432.7,241.2L433.8,241.2L434.8,241.2L435.9,241.1L437,241.1L438,241.1L439.1,241L440.2,241L441.2,241L442.3,241L443.4,240.9L444.4,240.9L445.5,240.9L446.6,240.8L447.6,240.8L448.7,240.8L449.8,240.7L450.8,240.7L451.9,240.7L453,240.6L454,240.6L455.1,240.6L456.2,240.5L457.2,240.5L458.3,240.5L459.3,240.4L460.4,240.4"/>
+<circle class="s-tocka" cx="289.8" cy="124.7" r="4"/>
+<circle class="s-tocka" cx="119.3" cy="253.9" r="4"/>
+<text class="s-txt-k1" x="349.5" y="58.7" text-anchor="start"><tspan>KNO</tspan><tspan dy="3.5" style="font-size:0.72em">3</tspan><tspan dy="-3.5"></tspan></text>
+<text class="s-txt-k4" x="464.7" y="174.1" text-anchor="end"><tspan>NH</tspan><tspan dy="3.5" style="font-size:0.72em">4</tspan><tspan dy="-3.5">Cl</tspan></text>
+<text class="s-txt-k3" x="464.7" y="207.1" text-anchor="end"><tspan>KCl</tspan></text>
+<text class="s-txt-k2" x="464.7" y="254.9" text-anchor="end"><tspan>NaCl</tspan></text>
+<text class="s-txt-muted" x="34" y="320.8" text-anchor="middle">0</text>
+<text class="s-txt-muted" x="119.3" y="320.8" text-anchor="middle">20</text>
+<text class="s-txt-muted" x="204.6" y="320.8" text-anchor="middle">40</text>
+<text class="s-txt-muted" x="289.8" y="320.8" text-anchor="middle">60</text>
+<text class="s-txt-muted" x="375.1" y="320.8" text-anchor="middle">80</text>
+<text class="s-txt-muted" x="460.4" y="320.8" text-anchor="middle">100</text>
+<text class="s-txt-muted" x="25.5" y="277.2" text-anchor="end">20</text>
+<text class="s-txt-muted" x="25.5" y="244.2" text-anchor="end">40</text>
+<text class="s-txt-muted" x="25.5" y="211.2" text-anchor="end">60</text>
+<text class="s-txt-muted" x="25.5" y="178.2" text-anchor="end">80</text>
+<text class="s-txt-muted" x="25.5" y="145.3" text-anchor="end">100</text>
+<text class="s-txt-muted" x="25.5" y="112.3" text-anchor="end">120</text>
+<text class="s-txt-muted" x="25.5" y="79.3" text-anchor="end">140</text>
+<text class="s-txt-muted" x="25.5" y="46.4" text-anchor="end">160</text>
+</svg>
+<figcaption>Topnost štirih soli v vodi v odvisnosti od temperature. Topnost kalijevega nitrata močno narašča s temperaturo (pri 60 °C 110 g, pri 20 °C le 31,6 g na 100 g vode), topnost natrijevega klorida se skoraj ne spreminja. Točka na krivulji pomeni nasičeno raztopino, točka pod krivuljo nenasičeno.</figcaption>
+</figure>
+            <p>Topnost večine trdnih snovi s temperaturo narašča, zato lahko snov očistimo s <strong>prekristalizacijo</strong>: v vroči vodi pripravimo nasičeno raztopino, jo ohladimo in del snovi se izloči kot kristali. Topnost <strong>plinov</strong> s temperaturo pada (topla gazirana pijača hitreje izgubi <span class="kf">CO<sub>2</sub></span>, v topli vodi je manj kisika za ribe), s tlakom pa narašča.</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-1">
+              <h4>Tip 1: Uporabi topnostno krivuljo</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>V 100 g vode pri 60 °C pripravimo nasičeno raztopino kalijevega nitrata in jo ohladimo na 20 °C. Koliko gramov soli se izloči? Kolikšen je masni delež soli v nasičeni raztopini pri 20 °C?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> podana je topnostna krivulja ali tabela topnosti; sprašujejo, koliko snovi se raztopi ali izloči, ali je raztopina nasičena ali kolikšna je sestava nasičene raztopine.</p><ul class="kljucne"><li>„topnostna krivulja“</li><li>„nasičena raztopina“</li><li>„se izloči“, „kristalizira“</li><li>„pri … °C“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Odčitaj topnost pri obeh temperaturah (g na 100 g vode).</p><div class="na-nalogi"><p>60 °C: 110 g; 20 °C: 31,6 g.</p></div></li>
+              <li><p class="korak">Če vode ni 100 g, obe vrednosti sorazmerno preračunaj.</p><div class="na-nalogi"><p>Vode je 100 g, preračun ni potreben.</p></div></li>
+              <li><p class="korak">Izločena masa je razlika med raztopljeno maso pri višji in pri nižji temperaturi.</p><div class="na-nalogi"><p>\(110 - 31{,}6 = 78{,}4\ \text{g}\) <span class="kf">KNO<sub>3</sub></span> se izloči.</p></div></li>
+              <li><p class="korak">Masni delež nasičene raztopine: topnost deli z maso <em>raztopine</em> (topnost + 100 g).</p><div class="na-nalogi"><p>\(w = \dfrac{31{,}6}{131{,}6} = 0{,}240 = 24{,}0\ \%\)</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Ali je raztopina 50 g <span class="kf">KCl</span> v 100 g vode pri 40 °C nasičena?</p><p>Topnost pri 40 °C je 40 g; 50 g je več, zato se 10 g ne raztopi (nasičena z usedlino).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Zakaj <span class="kf">NaCl</span> ne čistimo s prekristalizacijo iz vode?</p><p>Njegova topnost se s temperaturo skoraj ne spreminja, pri ohlajanju se ga izloči zelo malo.</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 2 -->
+        <section class="sklop" id="sklop-2">
+          <header class="sklop-header">
+            <span class="sklop-num">4.6 · 2</span>
+            <h2>Sestava raztopin in pretvarjanje koncentracij</h2>
+            <p>Masni delež, množinska in masna koncentracija, redčenje in mešanje.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <p>Sestavo raztopine izrazimo na več načinov:</p>
+            <ul>
+              <li><strong>Masni delež</strong> \(w\): masa topljenca na maso raztopine (brez enote ali v %). 10-odstotna raztopina soli ima v 100 g raztopine 10 g soli in 90 g vode.</li>
+              <li><strong>Množinska koncentracija</strong> \(c\): množina topljenca na prostornino raztopine, v mol/L (pogosto zapisano kot M). To je najpogostejši zapis v laboratoriju, ker iz prostornine takoj dobimo množino za reakcijo.</li>
+              <li><strong>Masna koncentracija</strong> \(\gamma\): masa topljenca na prostornino raztopine, v g/L.</li>
+            </ul>
+            <p>Ker je \(w\) vezan na maso raztopine, \(c\) in \(\gamma\) pa na prostornino, za pretvarjanje potrebujemo <strong>gostoto raztopine</strong>. Najzanesljivejša pot je, da vzamemo 1 L raztopine: iz gostote izračunamo njeno maso, iz \(w\) maso topljenca, iz \(M\) množino.</p>
+            <p>Pri <strong>redčenju</strong> dodamo topilo; množina (in masa) topljenca ostaneta enaki, poveča se le prostornina. Zato velja \(c_1 V_1 = c_2 V_2\). Pri <strong>mešanju</strong> dveh raztopin iste snovi seštejemo mase topljenca in mase raztopin (ali množine in prostornine). Pri <strong>koncentriranju</strong> (izparevanju topila) se masa topljenca ohrani, masa raztopine pa zmanjša.</p>
+            <p><strong>Priprava raztopine</strong> z znano koncentracijo: izračunano maso trdne snovi natančno stehtamo, jo raztopimo v manjši količini vode v čaši, prelijemo v merilno bučko, čašo speremo in vodo dolijemo do oznake, nato premešamo.</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-2">
+              <h4>Tip 2: Izračunaj masni delež ali maso za raztopino z danim masnim deležem</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Koliko gramov sladkorja in koliko vode potrebujemo za 250 g raztopine z masnim deležem sladkorja 12,0 %?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> podatki so v masah ali odstotkih, ni prostornin.</p><ul class="kljucne"><li>„masni delež“</li><li>„odstotna raztopina“</li><li>„g raztopine“</li><li>„koliko vode“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Zapiši \(w = m(\text{topljenec})/m(\text{raztopina})\) in vstavi znane količine.</p><div class="na-nalogi"><p>\(0{,}120 = \dfrac{m(\text{sladkor})}{250\ \text{g}}\)</p></div></li>
+              <li><p class="korak">Izračunaj neznano maso.</p><div class="na-nalogi"><p>\(m(\text{sladkor}) = 0{,}120 \cdot 250 = 30{,}0\ \text{g}\)</p></div></li>
+              <li><p class="korak">Masa topila je razlika med maso raztopine in topljenca.</p><div class="na-nalogi"><p>\(m(\text{voda}) = 250 - 30{,}0 = 220\ \text{g}\)</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> 15 g soli raztopimo v 135 g vode. Masni delež?</p><p>\(w = 15/150 = 0{,}10 = 10\ \%\) (deliš z maso raztopine, ne vode).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Koliko <span class="kf">CuSO<sub>4</sub>·5H<sub>2</sub>O</span> potrebujemo za 100 g raztopine z \(w(\text{CuSO}_4) = 0{,}080\)?</p><p>8,00 g <span class="kf">CuSO<sub>4</sub></span> je 0,0501 mol; enako množino hidrata: \(0{,}0501 \cdot 249{,}7 = 12{,}5\ \text{g}\).</p></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-3">
+              <h4>Tip 3: Izračunaj množinsko koncentracijo ali maso za pripravo raztopine</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Koliko gramov natrijevega hidroksida potrebujemo za pripravo 250 mL raztopine s koncentracijo 0,200 mol/L? Opiši postopek priprave.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> nastopata prostornina raztopine in koncentracija v mol/L (ali g/L).</p><ul class="kljucne"><li>„mol/L“, „M“</li><li>„pripravi … mL raztopine“</li><li>„množinska koncentracija“</li><li>„masna koncentracija“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Prostornino pretvori v litre.</p><div class="na-nalogi"><p>\(V = 0{,}250\ \text{L}\)</p></div></li>
+              <li><p class="korak">Izračunaj množino: \(n = c \cdot V\).</p><div class="na-nalogi"><p>\(n = 0{,}200 \cdot 0{,}250 = 0{,}0500\ \text{mol}\)</p></div></li>
+              <li><p class="korak">Pretvori v maso: \(m = n \cdot M\).</p><div class="na-nalogi"><p>\(m = 0{,}0500 \cdot 40{,}0 = 2{,}00\ \text{g}\) NaOH.</p></div></li>
+              <li><p class="korak">Če sprašujejo za postopek: stehtaj, raztopi, prelij v merilno bučko, dopolni do oznake, premešaj.</p><div class="na-nalogi"><p>2,00 g NaOH raztopimo v čaši, prelijemo v 250-mL merilno bučko, dolijemo vodo do oznake in premešamo.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> 5,85 g <span class="kf">NaCl</span> v 500 mL raztopine. Koncentracija?</p><p>\(n = 0{,}100\ \text{mol}\); \(c = 0{,}200\ \text{mol/L}\); \(\gamma = 11{,}7\ \text{g/L}\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Kolikšna je koncentracija ionov <span class="kf">Cl<sup>−</sup></span> v 0,10 M <span class="kf">CaCl<sub>2</sub></span>?</p><p>Vsaka enota da 2 <span class="kf">Cl<sup>−</sup></span>: 0,20 mol/L.</p></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-4">
+              <h4>Tip 4: Pretvori masni delež v množinsko koncentracijo (z gostoto)</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Koncentrirana žveplova(VI) kislina ima masni delež 96,0 % in gostoto 1,84 g/mL. Izračunaj njeno množinsko koncentracijo.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> podana sta masni delež in gostota (ali koncentracija in gostota), iskana je druga oblika sestave.</p><ul class="kljucne"><li>„gostota raztopine“</li><li>„pretvori“</li><li>„koncentrirana kislina“</li><li>„g/mL“ in „%“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Vzemi 1 L (1000 mL) raztopine in z gostoto izračunaj njeno maso.</p><div class="na-nalogi"><p>\(m(\text{raztopina}) = 1000\ \text{mL} \cdot 1{,}84\ \text{g/mL} = 1840\ \text{g}\)</p></div></li>
+              <li><p class="korak">Z masnim deležem izračunaj maso topljenca.</p><div class="na-nalogi"><p>\(m(\text{H}_2\text{SO}_4) = 0{,}960 \cdot 1840 = 1766\ \text{g}\)</p></div></li>
+              <li><p class="korak">Pretvori v množino; to je koncentracija v mol/L, ker si vzel 1 L.</p><div class="na-nalogi"><p>\(n = 1766 / 98{,}1 = 18{,}0\ \text{mol}\) → \(c = 18{,}0\ \text{mol/L}\)</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> 2,00 M <span class="kf">NaOH</span> z gostoto 1,08 g/mL. Masni delež?</p><p>1 L: 1080 g raztopine, 80,0 g NaOH → \(w = 0{,}0741 = 7{,}41\ \%\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> 37-odstotna <span class="kf">HCl</span>, \(\rho = 1{,}19\ \text{g/mL}\): \(c\)?</p><p>\(c = 0{,}37 \cdot 1190 / 36{,}5 = 12\ \text{mol/L}\).</p></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-5">
+              <h4>Tip 5: Redčenje ali koncentriranje raztopine</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Koliko mililitrov 18,0 M žveplove(VI) kisline potrebujemo za pripravo 500 mL 1,00 M raztopine?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> iz bolj koncentrirane raztopine pripravljamo redkejšo (ali izparevamo topilo); topljenca ne dodajamo.</p><ul class="kljucne"><li>„razredčimo“</li><li>„dolijemo vodo“</li><li>„iz … M pripravimo“</li><li>„izparimo vodo“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Zapiši, kaj se ohrani: množina (pri \(c\)) ali masa topljenca (pri \(w\)).</p><div class="na-nalogi"><p>\(c_1 V_1 = c_2 V_2\)</p></div></li>
+              <li><p class="korak">Vstavi znane vrednosti (prostornini v enakih enotah).</p><div class="na-nalogi"><p>\(18{,}0 \cdot V_1 = 1{,}00 \cdot 500\ \text{mL}\)</p></div></li>
+              <li><p class="korak">Izrazi neznano in izračunaj; po potrebi izračunaj še, koliko vode dodamo.</p><div class="na-nalogi"><p>\(V_1 = 27{,}8\ \text{mL}\) koncentrirane kisline, z vodo do 500 mL (kislino v vodo).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Iz 200 g 20-odstotne raztopine izparimo 50 g vode. Nov masni delež?</p><p>Topljenca je 40 g, raztopine 150 g: \(w = 0{,}267\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> 10,0 mL 0,500 M raztopine razredčimo na 250 mL. Nova koncentracija?</p><p>\(c_2 = 0{,}500 \cdot 10{,}0 / 250 = 0{,}0200\ \text{mol/L}\).</p></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-6">
+              <h4>Tip 6: Mešanje dveh raztopin</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Zmešamo 200 g 10,0-odstotne in 300 g 20,0-odstotne raztopine natrijevega klorida. Kolikšen je masni delež soli v nastali raztopini?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> združimo dve raztopini iste snovi z različnima koncentracijama.</p><ul class="kljucne"><li>„zmešamo“</li><li>„združimo raztopini“</li><li>„dodamo … raztopine“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Izračunaj maso (ali množino) topljenca v vsaki raztopini.</p><div class="na-nalogi"><p>\(0{,}100 \cdot 200 = 20{,}0\ \text{g}\) in \(0{,}200 \cdot 300 = 60{,}0\ \text{g}\)</p></div></li>
+              <li><p class="korak">Seštej topljenca in seštej raztopini (pri \(c\): seštej prostornini, če ni drugače podano).</p><div class="na-nalogi"><p>80,0 g soli v 500 g raztopine.</p></div></li>
+              <li><p class="korak">Izračunaj novo sestavo; mora biti med obema začetnima.</p><div class="na-nalogi"><p>\(w = 80{,}0 / 500 = 0{,}160 = 16{,}0\ \%\), res med 10 % in 20 %.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> 100 mL 0,20 M in 300 mL 0,40 M <span class="kf">HCl</span>?</p><p>\(n = 0{,}020 + 0{,}120 = 0{,}140\ \text{mol}\) v 0,400 L: \(c = 0{,}35\ \text{mol/L}\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Ali je mogoče z mešanjem 5- in 10-odstotne raztopine dobiti 12-odstotno?</p><p>Ne, mešanica je vedno med začetnima koncentracijama.</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 3 -->
+        <section class="sklop" id="sklop-3">
+          <header class="sklop-header">
+            <span class="sklop-num">4.6 · 3</span>
+            <h2>Raztapljanje na ravni delcev: hidratacija</h2>
+            <p>Zakaj se nekatere snovi raztapljajo s segrevanjem, druge z ohlajanjem.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <p>Pri raztapljanju ionske snovi v vodi se morajo ioni iz kristalne mreže ločiti, kar zahteva energijo (<strong>mrežna energija</strong>, endotermno). Polarne molekule vode nato obdajo ione: na katione se usmerijo s kisikom (δ−), na anione z vodikom (δ+). Ta proces je <strong>hidratacija</strong>; pri njej se sprosti <strong>hidratacijska energija</strong> (eksotermno). Ionom, obdanim z molekulami vode, rečemo hidratirani ioni, npr. <span class="kf">Na<sup>+</sup>(aq)</span>.</p>
+            <figure class="slika">
+<svg viewBox="0 0 440 215" role="img" aria-label="Hidratirana iona" xmlns="http://www.w3.org/2000/svg"><circle cx="169.2" cy="93.2" r="6.5" fill="#E5E7EB" stroke="#6B7280"/><circle cx="169.2" cy="116.8" r="6.5" fill="#E5E7EB" stroke="#6B7280"/><circle cx="160" cy="105" r="10.5" fill="#FCA5A5" stroke="#DC2626"/><circle cx="149.9" cy="150.4" r="6.5" fill="#E5E7EB" stroke="#6B7280"/><circle cx="129.4" cy="162.2" r="6.5" fill="#E5E7EB" stroke="#6B7280"/><circle cx="135" cy="148.3" r="10.5" fill="#FCA5A5" stroke="#DC2626"/><circle cx="90.6" cy="162.2" r="6.5" fill="#E5E7EB" stroke="#6B7280"/><circle cx="70.1" cy="150.4" r="6.5" fill="#E5E7EB" stroke="#6B7280"/><circle cx="85" cy="148.3" r="10.5" fill="#FCA5A5" stroke="#DC2626"/><circle cx="50.8" cy="116.8" r="6.5" fill="#E5E7EB" stroke="#6B7280"/><circle cx="50.8" cy="93.2" r="6.5" fill="#E5E7EB" stroke="#6B7280"/><circle cx="60" cy="105" r="10.5" fill="#FCA5A5" stroke="#DC2626"/><circle cx="70.1" cy="59.6" r="6.5" fill="#E5E7EB" stroke="#6B7280"/><circle cx="90.6" cy="47.8" r="6.5" fill="#E5E7EB" stroke="#6B7280"/><circle cx="85" cy="61.7" r="10.5" fill="#FCA5A5" stroke="#DC2626"/><circle cx="129.4" cy="47.8" r="6.5" fill="#E5E7EB" stroke="#6B7280"/><circle cx="149.9" cy="59.6" r="6.5" fill="#E5E7EB" stroke="#6B7280"/><circle cx="135" cy="61.7" r="10.5" fill="#FCA5A5" stroke="#DC2626"/><circle cx="110" cy="105" r="20" fill="#C7D2FE" stroke="#4F46E5"/><text x="110" y="110" text-anchor="middle" style="fill:#1E1B4B;font-weight:700" style="font-size:13px">Na⁺</text><circle cx="361.5" cy="142.6" r="6.5" fill="#E5E7EB" stroke="#6B7280"/><circle cx="373.3" cy="122.1" r="6.5" fill="#E5E7EB" stroke="#6B7280"/><circle cx="375.4" cy="137" r="10.5" fill="#FCA5A5" stroke="#DC2626"/><circle cx="308.2" cy="159.8" r="6.5" fill="#E5E7EB" stroke="#6B7280"/><circle cx="331.8" cy="159.8" r="6.5" fill="#E5E7EB" stroke="#6B7280"/><circle cx="320" cy="169" r="10.5" fill="#FCA5A5" stroke="#DC2626"/><circle cx="266.7" cy="122.1" r="6.5" fill="#E5E7EB" stroke="#6B7280"/><circle cx="278.5" cy="142.6" r="6.5" fill="#E5E7EB" stroke="#6B7280"/><circle cx="264.6" cy="137" r="10.5" fill="#FCA5A5" stroke="#DC2626"/><circle cx="278.5" cy="67.4" r="6.5" fill="#E5E7EB" stroke="#6B7280"/><circle cx="266.7" cy="87.9" r="6.5" fill="#E5E7EB" stroke="#6B7280"/><circle cx="264.6" cy="73" r="10.5" fill="#FCA5A5" stroke="#DC2626"/><circle cx="331.8" cy="50.2" r="6.5" fill="#E5E7EB" stroke="#6B7280"/><circle cx="308.2" cy="50.2" r="6.5" fill="#E5E7EB" stroke="#6B7280"/><circle cx="320" cy="41" r="10.5" fill="#FCA5A5" stroke="#DC2626"/><circle cx="373.3" cy="87.9" r="6.5" fill="#E5E7EB" stroke="#6B7280"/><circle cx="361.5" cy="67.4" r="6.5" fill="#E5E7EB" stroke="#6B7280"/><circle cx="375.4" cy="73" r="10.5" fill="#FCA5A5" stroke="#DC2626"/><circle cx="320" cy="105" r="27" fill="#86EFAC" stroke="#16A34A"/><text x="320" y="110" text-anchor="middle" style="fill:#14532D;font-weight:700" style="font-size:13px">Cl⁻</text><text class="s-txt-muted" x="110" y="206" text-anchor="middle" style="font-size:12px">kisik (δ−) proti kationu</text><text class="s-txt-muted" x="320" y="206" text-anchor="middle" style="font-size:12px">vodik (δ+) proti anionu</text></svg>
+<figcaption>Hidratirana iona <span class="kf">Na<sup>+</sup></span> in <span class="kf">Cl<sup>−</sup></span>. Polarne molekule vode obdajo ione in se z njimi povežejo z ion-dipol privlakom; pri tem se sprosti hidratacijska energija.</figcaption>
+</figure>
+            <p>Celotna toplota raztapljanja je vsota obeh prispevkov:</p>
+            <ul>
+              <li>če se pri hidrataciji sprosti več energije, kot je je potrebno za razgradnjo mreže, je raztapljanje <strong>eksotermno</strong> in raztopina se segreje (npr. <span class="kf">NaOH</span>, <span class="kf">CaCl<sub>2</sub></span>, koncentrirana <span class="kf">H<sub>2</sub>SO<sub>4</sub></span>);</li>
+              <li>če je potrebne več energije za mrežo, je raztapljanje <strong>endotermno</strong> in raztopina se ohladi (npr. <span class="kf">NH<sub>4</sub>NO<sub>3</sub></span>, <span class="kf">KNO<sub>3</sub></span>); to izkoriščajo hladilne obloge.</li>
+            </ul>
+            <p>Pri raztapljanju molekulskih snovi (sladkor, etanol) se molekule z vodo povežejo z vodikovimi vezmi. Nepolarne snovi (olje, jod) se v vodi ne raztapljajo, ker ne morejo nadomestiti močnih vodikovih vezi med molekulami vode; raztapljajo se v nepolarnih topilih.</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-7">
+              <h4>Tip 7: Pojasni raztapljanje snovi na ravni delcev</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Pri raztapljanju kalcijevega klorida v vodi se raztopina segreje. Pojasni na ravni delcev, kaj se dogaja, in razloži, zakaj je proces eksotermen.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> sprašujejo, kaj se zgodi z delci pri raztapljanju, zakaj se raztopina segreje ali ohladi, ali naj narišeš hidratiran ion.</p><ul class="kljucne"><li>„hidratacija“</li><li>„na ravni delcev“</li><li>„raztopina se segreje / ohladi“</li><li>„nariši hidratiran ion“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Opiši razpad kristalne mreže na ione (zahteva energijo).</p><div class="na-nalogi"><p>Ioni <span class="kf">Ca<sup>2+</sup></span> in <span class="kf">Cl<sup>−</sup></span> se ločijo iz kristala; za to je potrebna mrežna energija.</p></div></li>
+              <li><p class="korak">Opiši hidratacijo z usmeritvijo molekul vode (sprosti energijo).</p><div class="na-nalogi"><p>Molekule vode se s kisikom usmerijo proti <span class="kf">Ca<sup>2+</sup></span>, z vodikom proti <span class="kf">Cl<sup>−</sup></span>; sprosti se hidratacijska energija.</p></div></li>
+              <li><p class="korak">Primerjaj obe energiji z opaženo spremembo temperature.</p><div class="na-nalogi"><p>Raztopina se segreje: hidratacijska energija je večja od mrežne, raztapljanje je eksotermno (\(\Delta H \lt 0\)).</p></div></li>
+              <li><p class="korak">Zapiši enačbo raztapljanja z (aq).</p><div class="na-nalogi"><p><span class="ke">CaCl<sub>2</sub>(s)&nbsp;→ Ca<sup>2+</sup>(aq) + 2Cl<sup>−</sup>(aq)</span></p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Zakaj se jod ne raztaplja v vodi, raztaplja pa se v heksanu?</p><p>Jod je nepolaren; s heksanom ga povezujejo podobne (disperzijske) sile, vodne molekule pa so med seboj vezane z vodikovimi vezmi.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Kateri ion bolj veže vodo, <span class="kf">Mg<sup>2+</sup></span> ali <span class="kf">Na<sup>+</sup></span>?</p><p><span class="kf">Mg<sup>2+</sup></span>, ker ima večji naboj in manjši polmer (večja hidratacijska energija).</p></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="subsection" id="kljuc">
+          <div class="subsection-head">
+            <h2>Ključ: kateri tip naloge je to?</h2>
+            <p>Poišči besedo iz navodila naloge in skoči na pravi postopek.</p>
+          </div>
+          <div class="info-card">
+            <div class="tabela-wrap">
+              <table class="tabela">
+                <thead><tr><th>V besedilu naloge piše …</th><th>Tip</th></tr></thead>
+                <tbody>
+                  <tr><td>„topnostna krivulja“, „nasičena“, „se izloči“</td><td><a href="#tip-1">Tip 1</a></td></tr>
+                  <tr><td>„masni delež“, „odstotna raztopina“</td><td><a href="#tip-2">Tip 2</a></td></tr>
+                  <tr><td>„mol/L“, „pripravi … mL raztopine“</td><td><a href="#tip-3">Tip 3</a></td></tr>
+                  <tr><td>masni delež in gostota</td><td><a href="#tip-4">Tip 4</a></td></tr>
+                  <tr><td>„razredčimo“, „dolijemo vodo“, „izparimo“</td><td><a href="#tip-5">Tip 5</a></td></tr>
+                  <tr><td>„zmešamo“ dve raztopini</td><td><a href="#tip-6">Tip 6</a></td></tr>
+                  <tr><td>„hidratacija“, „se segreje pri raztapljanju“</td><td><a href="#tip-7">Tip 7</a></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>Pogoste napake</h2>
+          </div>
+          <div class="info-card">
+            <ul>
+              <li>Masni delež računaš glede na maso vode namesto na maso raztopine.</li>
+              <li>Pri \(c = n/V\) vstaviš prostornino topila ali mililitre namesto litrov raztopine.</li>
+              <li>Pri pretvorbi z gostoto pozabiš, da je 1 g/mL = 1000 g/L.</li>
+              <li>Pri redčenju misliš, da se spremeni množina topljenca.</li>
+              <li>Pri hidrataciji obrneš molekule vode: na kation je usmerjen kisik, na anion vodik.</li>
+              <li>Za plin trdiš, da se pri višji temperaturi bolje raztaplja.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>Naslednje poglavje</h2>
+          </div>
+          <div class="link-list">
+            <a class="link-item" href="/views/kemija/snov/hitrost_reakcij/hitrost_reakcij_razlaga.html">
+              <span class="link-item-text"><strong>4.7 Hitrost kemijskih reakcij</strong><small>Povprečna hitrost, dejavniki, katalizatorji in encimi, teorija trkov</small></span>
+              <span class="arrow">→</span>
+            </a>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>

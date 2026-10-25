@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kemija: kemijska reakcija — razlaga in postopki | Piflar.si</title>
+  <meta name="description" content="Kemijska reakcija za maturo iz kemije: urejanje enačb, množinska razmerja, računi z maso, prebitni reaktant, izkoristek, eksotermne in endotermne reakcije, termokemijske enačbe in standardne tvorbene entalpije.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
+  <link rel="stylesheet" href="/style/snov.css">
+</head>
+<body>
+  <div id="header"></div>
+
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view">
+
+<header class="page-header">
+          <span class="page-eyebrow">Kemija · Snov · 4.5</span>
+          <h1>Kemijska reakcija</h1>
+          <p>Pri kemijski reakciji iz reaktantov nastanejo nove snovi, produkti, hkrati pa se izmenja energija z okolico. Kemijska enačba pove oboje: katere snovi reagirajo in v kakšnem množinskem razmerju. Iz nje izračunamo, koliko produkta nastane, kateri reaktant zmanjka in koliko toplote se sprosti. To so najpogostejši računi v 2. izpitni poli. Pod razlago so vsi tipi nalog.</p>
+          <div class="page-meta">
+            <div class="page-meta-item"><strong>3</strong><span>Podpoglavja</span></div>
+            <div class="page-meta-item"><strong>7</strong><span>Tipov nalog</span></div>
+            <div class="page-meta-item"><strong>~40 min</strong><span>Branja</span></div>
+          </div>
+        </header>
+
+        <div class="matura-formule">
+          <h3>Formule na maturi</h3>
+          <p>Zveze, ki jih uporabljaš pri stehiometriji in termokemiji:</p>
+          <div class="matura-levo">
+            <ul>
+              <li>množinsko razmerje iz koeficientov: za \(a\text{A} + b\text{B} \rightarrow c\text{C}\) velja \(\dfrac{n(\text{A})}{a} = \dfrac{n(\text{B})}{b} = \dfrac{n(\text{C})}{c}\)</li>
+              <li>izkoristek: \(\eta = \dfrac{m_{\text{dejanska}}}{m_{\text{teoretična}}} \cdot 100\ \%\)</li>
+              <li>toplota pri reakciji: \(Q = \dfrac{n}{\nu} \cdot |\Delta H|\), kjer je \(\nu\) koeficient snovi v termokemijski enačbi</li>
+              <li>standardna reakcijska entalpija: \(\Delta H_r^\circ = \sum \nu\,\Delta H_f^\circ(\text{produkti}) - \sum \nu\,\Delta H_f^\circ(\text{reaktanti})\)</li>
+              <li>\(\Delta H \lt 0\): eksotermna, \(\Delta H \gt 0\): endotermna reakcija; \(\Delta H_f^\circ\) elementov v standardnem stanju je 0</li>
+            </ul>
+          </div>
+          <p class="matura-opomba">Vse račune iz enačbe delaj prek množine: masa → množina → razmerje iz koeficientov → množina → masa. Mas nikoli ne primerjaj neposredno.</p>
+        </div>
+
+        <nav class="kazalo" aria-label="Podpoglavja">
+          <h2>Podpoglavja</h2>
+          <ol>
+            <li><a href="#sklop-1"><span class="kazalo-st">1</span> Kemijska reakcija in kemijska enačba</a></li>
+            <li><a href="#sklop-2"><span class="kazalo-st">2</span> Množinska razmerja, prebitni reaktant in izkoristek</a></li>
+            <li><a href="#sklop-3"><span class="kazalo-st">3</span> Energija pri reakcijah: entalpija in termokemijske enačbe</a></li>
+            <li><a href="#kljuc"><span class="kazalo-st">?</span> Ključ: kateri tip naloge je to?</a></li>
+          </ol>
+        </nav>
+
+        <!-- SKLOP 1 -->
+        <section class="sklop" id="sklop-1">
+          <header class="sklop-header">
+            <span class="sklop-num">4.5 · 1</span>
+            <h2>Kemijska reakcija in kemijska enačba</h2>
+            <p>Snovna sprememba, zakon o ohranitvi mase, urejanje enačb.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <p><strong>Kemijska reakcija</strong> je proces, pri katerem iz začetnih snovi (<strong>reaktantov</strong>) nastanejo nove snovi z drugačnimi lastnostmi (<strong>produkti</strong>). Na ravni delcev se pretrgajo nekatere vezi in nastanejo nove; atomi se le preuredijo. Reakcijo spoznamo po spremembi barve, nastanku plina ali oborine, spremembi vonja ali po sproščanju oziroma porabi toplote. Pri <strong>fizikalni spremembi</strong> (taljenje, raztapljanje) nove snovi ne nastanejo.</p>
+            <figure class="slika slika--ozka">
+<svg viewBox="0 0 320 180" role="img" aria-label="Reakcija vodika s kisikom na ravni delcev" xmlns="http://www.w3.org/2000/svg"><circle cx="40" cy="60" r="9" fill="#E5E7EB" stroke="#6B7280"/><circle cx="56" cy="60" r="9" fill="#E5E7EB" stroke="#6B7280"/><circle cx="40" cy="110" r="9" fill="#E5E7EB" stroke="#6B7280"/><circle cx="56" cy="110" r="9" fill="#E5E7EB" stroke="#6B7280"/><text class="s-txt-b" x="96" y="90" text-anchor="middle" style="font-size:20px">+</text><circle cx="130" cy="85" r="13" fill="#FCA5A5" stroke="#DC2626"/><circle cx="154" cy="85" r="13" fill="#FCA5A5" stroke="#DC2626"/><text class="s-txt-b" x="205" y="91" text-anchor="middle" style="font-size:20px">→</text><circle cx="262" cy="58" r="13" fill="#FCA5A5" stroke="#DC2626"/><circle cx="247" cy="70" r="9" fill="#E5E7EB" stroke="#6B7280"/><circle cx="277" cy="70" r="9" fill="#E5E7EB" stroke="#6B7280"/><circle cx="262" cy="112" r="13" fill="#FCA5A5" stroke="#DC2626"/><circle cx="247" cy="124" r="9" fill="#E5E7EB" stroke="#6B7280"/><circle cx="277" cy="124" r="9" fill="#E5E7EB" stroke="#6B7280"/><text class="s-txt-b" x="48" y="150" text-anchor="middle" style="font-size:13px"><tspan>2H</tspan><tspan dy="3.5" style="font-size:0.72em">2</tspan><tspan dy="-3.5"></tspan></text><text class="s-txt-b" x="142" y="150" text-anchor="middle" style="font-size:13px"><tspan>O</tspan><tspan dy="3.5" style="font-size:0.72em">2</tspan><tspan dy="-3.5"></tspan></text><text class="s-txt-b" x="262" y="150" text-anchor="middle" style="font-size:13px"><tspan>2H</tspan><tspan dy="3.5" style="font-size:0.72em">2</tspan><tspan dy="-3.5">O</tspan></text><text class="s-txt-muted" x="48" y="170" text-anchor="middle" style="font-size:11px">4 atomi H</text><text class="s-txt-muted" x="142" y="170" text-anchor="middle" style="font-size:11px">2 atoma O</text><text class="s-txt-muted" x="262" y="170" text-anchor="middle" style="font-size:11px">4 atomi H, 2 atoma O</text></svg>
+<figcaption>Pri reakciji se vezi med atomi pretrgajo in nastanejo nove; število atomov vsakega elementa se ohrani, zato se ohrani tudi masa. Koeficienti v enačbi povedo razmerje števila delcev (in množin): 2 : 1 : 2.</figcaption>
+</figure>
+            <p>Ker se atomi ne ustvarijo in ne izginejo, velja <strong>zakon o ohranitvi mase</strong>: skupna masa reaktantov je enaka skupni masi produktov. Zato mora biti v <strong>kemijski enačbi</strong> na obeh straneh enako število atomov vsakega elementa. Enačbo uredimo s <strong>koeficienti</strong> (števili pred formulami); indeksov v formulah ne smemo spreminjati, ker bi s tem spremenili snov.</p>
+            <p>Agregatna stanja označimo v oklepaju: (s) trdno, (l) tekoče, (g) plinasto, (aq) raztopljeno v vodi. Primer: <span class="ke">CaCO<sub>3</sub>(s) + 2HCl(aq)&nbsp;→ CaCl<sub>2</sub>(aq) + H<sub>2</sub>O(l) + CO<sub>2</sub>(g)</span>.</p>
+            <p>Koeficienti povedo razmerje števila delcev in zato tudi <strong>množinsko razmerje</strong>: enačba <span class="ke">N<sub>2</sub> + 3H<sub>2</sub>&nbsp;→ 2NH<sub>3</sub></span> pove, da 1 mol dušika reagira s 3 moli vodika in nastaneta 2 mola amonijaka. Masno razmerje je drugačno, ker imajo snovi različne molske mase.</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-1">
+              <h4>Tip 1: Zapiši in uredi kemijsko enačbo</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Zapiši urejeno enačbo gorenja propana <span class="kf">C<sub>3</sub>H<sub>8</sub></span> v kisiku (nastaneta ogljikov dioksid in voda).</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> reakcija je opisana z besedami ali je enačba neurejena; zahtevajo urejeno enačbo ali vsoto koeficientov.</p><ul class="kljucne"><li>„zapiši urejeno enačbo“</li><li>„uredi enačbo“</li><li>„koeficienti“</li><li>„vsota koeficientov“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Zapiši pravilne formule vseh reaktantov in produktov (elementarni plini so dvoatomni: <span class="kf">H<sub>2</sub></span>, <span class="kf">O<sub>2</sub></span>, <span class="kf">N<sub>2</sub></span>, halogeni).</p><div class="na-nalogi"><p><span class="ke">C<sub>3</sub>H<sub>8</sub> + O<sub>2</sub>&nbsp;→ CO<sub>2</sub> + H<sub>2</sub>O</span></p></div></li>
+              <li><p class="korak">Najprej uredi element, ki se pojavi v najmanj formulah (navadno C, nato H); kisik in vodik, če nastopata kot element, na koncu.</p><div class="na-nalogi"><p>C: 3 <span class="kf">CO<sub>2</sub></span>; H: 8 atomov → 4 <span class="kf">H<sub>2</sub>O</span>.</p></div></li>
+              <li><p class="korak">Preštej atome zadnjega elementa na desni in nastavi koeficient na levi.</p><div class="na-nalogi"><p>O na desni: \(3 \cdot 2 + 4 = 10\) → 5 <span class="kf">O<sub>2</sub></span>.</p></div></li>
+              <li><p class="korak">Preveri vse elemente; če dobiš ulomek, celo enačbo pomnoži, da so koeficienti najmanjša cela števila.</p><div class="na-nalogi"><p><span class="ke">C<sub>3</sub>H<sub>8</sub> + 5O<sub>2</sub>&nbsp;→ 3CO<sub>2</sub> + 4H<sub>2</sub>O</span> (C 3 = 3, H 8 = 8, O 10 = 10).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> <span class="ke">Al + O<sub>2</sub>&nbsp;→ Al<sub>2</sub>O<sub>3</sub></span>?</p><p><span class="ke">4Al + 3O<sub>2</sub>&nbsp;→ 2Al<sub>2</sub>O<sub>3</sub></span> (iz \(2\text{Al} + \tfrac{3}{2}\text{O}_2\) pomnožimo z 2).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Natrij reagira z vodo.</p><p><span class="ke">2Na + 2H<sub>2</sub>O&nbsp;→ 2NaOH + H<sub>2</sub></span>.</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 2 -->
+        <section class="sklop" id="sklop-2">
+          <header class="sklop-header">
+            <span class="sklop-num">4.5 · 2</span>
+            <h2>Množinska razmerja, prebitni reaktant in izkoristek</h2>
+            <p>Stehiometrični računi iz urejene enačbe.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <p><strong>Stehiometrija</strong> je računanje množin in mas snovi, ki sodelujejo v reakciji. Vedno poteka v istih korakih: znano maso pretvorimo v množino, z razmerjem koeficientov izračunamo množino iskane snovi, nato jo pretvorimo v maso (ali prostornino plina, število delcev).</p>
+            <p>\[ m(\text{A}) \xrightarrow{:\,M(\text{A})} n(\text{A}) \xrightarrow{\cdot\, \frac{b}{a}} n(\text{B}) \xrightarrow{\cdot\, M(\text{B})} m(\text{B}) \]</p>
+            <p>Reaktanti pogosto niso v natanko pravem razmerju. Tisti, ki ga zmanjka prvi, je <strong>omejujoči (limitni) reaktant</strong>: le on določa, koliko produkta nastane. Drugega ostane nekaj neporabljenega; to je <strong>prebitni reaktant</strong>. Kateri je omejujoči, ugotovimo tako, da primerjamo dejansko razmerje množin z razmerjem koeficientov.</p>
+            <p>V praksi dobimo manj produkta, kot ga napove račun (stranske reakcije, izgube pri filtriranju, nepopolna reakcija). Razmerje med dejansko in teoretično maso produkta je <strong>izkoristek</strong> reakcije. Če reaktant ni čist, upoštevamo samo njegov čisti del: \(m_{\text{čista}} = w \cdot m_{\text{vzorec}}\).</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-2">
+              <h4>Tip 2: Iz mase ene snovi izračunaj maso druge</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Koliko gramov ogljikovega dioksida nastane pri popolnem gorenju 10,0 g propana? (<span class="ke">C<sub>3</sub>H<sub>8</sub> + 5O<sub>2</sub>&nbsp;→ 3CO<sub>2</sub> + 4H<sub>2</sub>O</span>)</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> podana je masa (množina, prostornina) ene snovi v reakciji, iskana je količina druge snovi.</p><ul class="kljucne"><li>„koliko gramov nastane“</li><li>„koliko je potrebno“</li><li>„zreagira“</li><li>„pri popolni reakciji“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Zapiši urejeno enačbo (Tip 1).</p><div class="na-nalogi"><p><span class="ke">C<sub>3</sub>H<sub>8</sub> + 5O<sub>2</sub>&nbsp;→ 3CO<sub>2</sub> + 4H<sub>2</sub>O</span></p></div></li>
+              <li><p class="korak">Znano snov pretvori v množino.</p><div class="na-nalogi"><p>\(n(\text{C}_3\text{H}_8) = \dfrac{10{,}0}{44{,}1} = 0{,}227\ \text{mol}\)</p></div></li>
+              <li><p class="korak">Z razmerjem koeficientov izračunaj množino iskane snovi.</p><div class="na-nalogi"><p>\(n(\text{CO}_2) = 3 \cdot n(\text{C}_3\text{H}_8) = 0{,}680\ \text{mol}\)</p></div></li>
+              <li><p class="korak">Pretvori v zahtevano količino.</p><div class="na-nalogi"><p>\(m(\text{CO}_2) = 0{,}680 \cdot 44{,}0 = 29{,}9\ \text{g}\)</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Koliko litrov vodika (normalni pogoji) nastane pri reakciji 2,43 g magnezija s klorovodikovo kislino?</p><p><span class="ke">Mg + 2HCl&nbsp;→ MgCl<sub>2</sub> + H<sub>2</sub></span>: \(n(\text{Mg}) = 0{,}100\ \text{mol} = n(\text{H}_2)\); \(V = 2{,}24\ \text{L}\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Koliko gramov 80-odstotnega apnenca potrebujemo za 28,0 g <span class="kf">CaO</span>?</p><p>\(n(\text{CaO}) = 0{,}500\ \text{mol} = n(\text{CaCO}_3)\); 50,0 g čistega, \(50{,}0 / 0{,}80 = 62{,}5\ \text{g}\) apnenca.</p></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-3">
+              <h4>Tip 3: Določi omejujoči reaktant in maso produkta</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>V posodi je 5,00 g vodika in 32,0 g kisika. Plina zreagirata v vodo. Kateri reaktant je v prebitku in koliko ga ostane? Koliko vode nastane?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> podani sta količini <em>dveh</em> reaktantov; sprašujejo, kateri zmanjka, koliko ostane ali koliko produkta nastane.</p><ul class="kljucne"><li>„v prebitku“</li><li>„omejujoči reaktant“</li><li>„koliko ostane“</li><li>podani dve masi reaktantov</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Uredi enačbo in izračunaj množini obeh reaktantov.</p><div class="na-nalogi"><p><span class="ke">2H<sub>2</sub> + O<sub>2</sub>&nbsp;→ 2H<sub>2</sub>O</span>; \(n(\text{H}_2) = 5{,}00/2{,}02 = 2{,}48\ \text{mol}\), \(n(\text{O}_2) = 32{,}0/32{,}0 = 1{,}00\ \text{mol}\).</p></div></li>
+              <li><p class="korak">Izračunaj, koliko drugega reaktanta potrebuješ za prvega, in primerjaj z dejanskim.</p><div class="na-nalogi"><p>Za 1,00 mol <span class="kf">O<sub>2</sub></span> potrebujemo 2,00 mol <span class="kf">H<sub>2</sub></span>; imamo 2,48 mol, vodika je dovolj.</p></div></li>
+              <li><p class="korak">Reaktant, ki ga je premalo, je omejujoči; iz njega računaj produkt.</p><div class="na-nalogi"><p>Omejujoči je kisik: \(n(\text{H}_2\text{O}) = 2 \cdot 1{,}00 = 2{,}00\ \text{mol}\), \(m = 36{,}0\ \text{g}\).</p></div></li>
+              <li><p class="korak">Prebitek: od dejanske množine odštej porabljeno.</p><div class="na-nalogi"><p>\(2{,}48 - 2{,}00 = 0{,}48\ \text{mol}\) <span class="kf">H<sub>2</sub></span>, to je \(0{,}97\ \text{g}\) vodika v prebitku.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> 0,20 mol <span class="kf">N<sub>2</sub></span> in 0,30 mol <span class="kf">H<sub>2</sub></span>: koliko <span class="kf">NH<sub>3</sub></span> lahko nastane?</p><p>Za 0,20 mol <span class="kf">N<sub>2</sub></span> bi rabili 0,60 mol <span class="kf">H<sub>2</sub></span>; omejujoči je vodik: \(n(\text{NH}_3) = \tfrac{2}{3} \cdot 0{,}30 = 0{,}20\ \text{mol}\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Ali lahko omejujoči reaktant določiš s primerjavo mas?</p><p>Ne, primerjati moraš množine glede na koeficiente.</p></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-4">
+              <h4>Tip 4: Izračunaj izkoristek reakcije ali čistost vzorca</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>S segrevanjem 10,0 g kalcijevega karbonata smo dobili 5,04 g kalcijevega oksida. Izračunaj izkoristek reakcije <span class="ke">CaCO<sub>3</sub>&nbsp;→ CaO + CO<sub>2</sub></span>.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> podana je dejansko dobljena masa produkta (ali masa nečistega vzorca), sprašujejo za izkoristek, čistost ali masni delež snovi v vzorcu.</p><ul class="kljucne"><li>„izkoristek“</li><li>„dobili smo“</li><li>„čistost“</li><li>„vzorec vsebuje“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Izračunaj teoretično maso produkta (Tip 2), kot da bi vse zreagiralo.</p><div class="na-nalogi"><p>\(n(\text{CaCO}_3) = 10{,}0/100{,}1 = 0{,}0999\ \text{mol}\); \(m_{\text{teor}}(\text{CaO}) = 0{,}0999 \cdot 56{,}1 = 5{,}60\ \text{g}\).</p></div></li>
+              <li><p class="korak">Deli dejansko maso s teoretično.</p><div class="na-nalogi"><p>\(\eta = \dfrac{5{,}04}{5{,}60} \cdot 100\ \% = 90{,}0\ \%\)</p></div></li>
+              <li><p class="korak">Za čistost obrni račun: iz produkta izračunaj maso čiste snovi in jo deli z maso vzorca.</p><div class="na-nalogi"><p>Če bi bil izkoristek 100 %, bi 5,04 g <span class="kf">CaO</span> pomenilo 9,00 g <span class="kf">CaCO<sub>3</sub></span>, torej 90,0 % čist vzorec.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Teoretično nastane 40 g produkta, izkoristek je 75 %. Koliko ga dobimo?</p><p>\(0{,}75 \cdot 40 = 30\ \text{g}\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> 2,00 g vzorca železa da z kislino 0,0300 mol <span class="kf">H<sub>2</sub></span>. Masni delež Fe?</p><p><span class="ke">Fe + 2HCl&nbsp;→ FeCl<sub>2</sub> + H<sub>2</sub></span>: 0,0300 mol Fe = 1,68 g; \(w = 84\ \%\).</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 3 -->
+        <section class="sklop" id="sklop-3">
+          <header class="sklop-header">
+            <span class="sklop-num">4.5 · 3</span>
+            <h2>Energija pri reakcijah: entalpija in termokemijske enačbe</h2>
+            <p>Eksotermne in endotermne reakcije, \(\Delta H\) in tvorbene entalpije.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <p>Za trganje vezi je treba energijo dovesti, pri nastanku vezi se energija sprosti. Reakcija je <strong>eksotermna</strong>, če se pri nastanku novih vezi sprosti več energije, kot je je bilo potrebne za trganje starih: okolica se segreje. Reakcija je <strong>endotermna</strong>, če je obratno: okolica se ohladi ali moramo snov segrevati.</p>
+            <p>Toploto, ki jo sistem izmenja z okolico pri stalnem tlaku, imenujemo <strong>sprememba entalpije</strong> \(\Delta H\) (enota kJ/mol, kjer se mol nanaša na enačbo, kot je zapisana). Pri eksotermni reakciji je \(\Delta H\) negativna (sistem toploto odda), pri endotermni pozitivna.</p>
+            <div class="slike-vrsta"><figure class="slika">
+<svg viewBox="0 0 330 250" role="img" aria-label="Eksotermna reakcija" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g1-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g1-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g1-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g1-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g1-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g1-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<line class="s-os" x1="26" y1="224" x2="312" y2="224" marker-end="url(#g1-p)"/>
+<line class="s-os" x1="26" y1="224" x2="26" y2="18" marker-end="url(#g1-p)"/>
+<text class="s-os-txt" x="306" y="216" text-anchor="end">potek reakcije</text>
+<text class="s-os-txt" x="34" y="30">H</text>
+<line class="s-asim" x1="53.3" y1="122.3" x2="254.9" y2="122.3"/>
+<path class="s-k1" d="M36.9,122.3L37.4,122.3L37.9,122.3L38.4,122.3L38.9,122.3L39.4,122.3L39.8,122.3L40.3,122.3L40.8,122.3L41.3,122.3L41.8,122.3L42.3,122.3L42.8,122.3L43.3,122.3L43.8,122.3L44.3,122.3L44.8,122.3L45.2,122.3L45.7,122.3L46.2,122.3L46.7,122.3L47.2,122.3L47.7,122.3L48.2,122.3L48.7,122.3L49.2,122.3L49.7,122.3L50.1,122.3L50.6,122.3L51.1,122.3L51.6,122.3L52.1,122.3L52.6,122.3L53.1,122.3L53.6,122.3L54.1,122.3L54.6,122.3L55.1,122.3L55.5,122.3L56,122.3L56.5,122.3L57,122.3L57.5,122.3L58,122.3L58.5,122.3L59,122.3L59.5,122.3L60,122.3L60.5,122.3L60.9,122.3L61.4,122.3L61.9,122.3L62.4,122.3L62.9,122.3L63.4,122.3L63.9,122.3L64.4,122.3L64.9,122.3L65.4,122.3L65.8,122.3L66.3,122.3L66.8,122.3L67.3,122.3L67.8,122.3L68.3,122.2L68.8,122.1L69.3,122L69.8,121.9L70.3,121.8L70.8,121.6L71.2,121.4L71.7,121.2L72.2,121L72.7,120.7L73.2,120.4L73.7,120.1L74.2,119.8L74.7,119.4L75.2,119.1L75.7,118.7L76.1,118.3L76.6,117.8L77.1,117.4L77.6,116.9L78.1,116.4L78.6,115.9L79.1,115.4L79.6,114.8L80.1,114.3L80.6,113.7L81.1,113.1L81.5,112.5L82,111.8L82.5,111.2L83,110.5L83.5,109.9L84,109.2L84.5,108.5L85,107.7L85.5,107L86,106.3L86.5,105.5L86.9,104.8L87.4,104L87.9,103.2L88.4,102.4L88.9,101.6L89.4,100.8L89.9,100L90.4,99.1L90.9,98.3L91.4,97.5L91.8,96.6L92.3,95.8L92.8,94.9L93.3,94L93.8,93.2L94.3,92.3L94.8,91.5L95.3,90.6L95.8,89.7L96.3,88.9L96.8,88L97.2,87.1L97.7,86.3L98.2,85.4L98.7,84.6L99.2,83.7L99.7,82.9L100.2,82L100.7,81.2L101.2,80.4L101.7,79.6L102.2,78.8L102.6,78L103.1,77.2L103.6,76.4L104.1,75.6L104.6,74.8L105.1,74.1L105.6,73.3L106.1,72.6L106.6,71.9L107.1,71.2L107.5,70.5L108,69.8L108.5,69.2L109,68.5L109.5,67.9L110,67.3L110.5,66.7L111,66.1L111.5,65.5L112,65L112.5,64.5L112.9,64L113.4,63.5L113.9,63L114.4,62.6L114.9,62.1L115.4,61.7L115.9,61.3L116.4,61L116.9,60.6L117.4,60.3L117.8,60L118.3,59.7L118.8,59.5L119.3,59.2L119.8,59L120.3,58.8L120.8,58.6L121.3,58.5L121.8,58.4L122.3,58.3L122.8,58.2L123.2,58.1L123.7,58.1L124.2,58.1L124.7,58.1L125.2,58.2L125.7,58.2L126.2,58.3L126.7,58.4L127.2,58.6L127.7,58.7L128.2,58.9L128.6,59.1L129.1,59.4L129.6,59.6L130.1,59.9L130.6,60.2L131.1,60.6L131.6,60.9L132.1,61.3L132.6,61.7L133.1,62.1L133.5,62.6L134,63L134.5,63.5L135,64L135.5,64.6L136,65.1L136.5,65.7L137,66.3L137.5,66.9L138,67.6L138.5,68.3L138.9,68.9L139.4,69.6L139.9,70.4L140.4,71.1L140.9,71.9L141.4,72.7L141.9,73.5L142.4,74.3L142.9,75.1L143.4,76L143.9,76.9L144.3,77.8L144.8,78.7L145.3,79.6L145.8,80.5L146.3,81.5L146.8,82.5L147.3,83.5L147.8,84.5L148.3,85.5L148.8,86.5L149.2,87.6L149.7,88.6L150.2,89.7L150.7,90.8L151.2,91.9L151.7,93L152.2,94.1L152.7,95.2L153.2,96.4L153.7,97.5L154.2,98.7L154.6,99.9L155.1,101L155.6,102.2L156.1,103.4L156.6,104.6L157.1,105.8L157.6,107L158.1,108.2L158.6,109.5L159.1,110.7L159.5,111.9L160,113.2L160.5,114.4L161,115.7L161.5,116.9L162,118.2L162.5,119.4L163,120.7L163.5,121.9L164,123.2L164.5,124.4L164.9,125.7L165.4,126.9L165.9,128.2L166.4,129.4L166.9,130.6L167.4,131.9L167.9,133.1L168.4,134.4L168.9,135.6L169.4,136.8L169.9,138L170.3,139.2L170.8,140.4L171.3,141.6L171.8,142.8L172.3,144L172.8,145.2L173.3,146.4L173.8,147.5L174.3,148.7L174.8,149.8L175.2,150.9L175.7,152L176.2,153.1L176.7,154.2L177.2,155.3L177.7,156.4L178.2,157.4L178.7,158.5L179.2,159.5L179.7,160.5L180.2,161.5L180.6,162.5L181.1,163.5L181.6,164.4L182.1,165.4L182.6,166.3L183.1,167.2L183.6,168.1L184.1,168.9L184.6,169.8L185.1,170.6L185.6,171.4L186,172.2L186.5,173L187,173.8L187.5,174.5L188,175.2L188.5,175.9L189,176.6L189.5,177.3L190,177.9L190.5,178.5L190.9,179.1L191.4,179.7L191.9,180.2L192.4,180.8L192.9,181.3L193.4,181.8L193.9,182.2L194.4,182.7L194.9,183.1L195.4,183.5L195.9,183.9L196.3,184.2L196.8,184.5L197.3,184.8L197.8,185.1L198.3,185.4L198.8,185.6L199.3,185.8L199.8,186L200.3,186.1L200.8,186.2L201.2,186.4L201.7,186.4L202.2,186.5L202.7,186.5L203.2,186.5L203.7,186.5L204.2,186.5L204.7,186.5L205.2,186.5L205.7,186.5L206.2,186.5L206.6,186.5L207.1,186.5L207.6,186.5L208.1,186.5L208.6,186.5L209.1,186.5L209.6,186.5L210.1,186.5L210.6,186.5L211.1,186.5L211.6,186.5L212,186.5L212.5,186.5L213,186.5L213.5,186.5L214,186.5L214.5,186.5L215,186.5L215.5,186.5L216,186.5L216.5,186.5L216.9,186.5L217.4,186.5L217.9,186.5L218.4,186.5L218.9,186.5L219.4,186.5L219.9,186.5L220.4,186.5L220.9,186.5L221.4,186.5L221.9,186.5L222.3,186.5L222.8,186.5L223.3,186.5L223.8,186.5L224.3,186.5L224.8,186.5L225.3,186.5L225.8,186.5L226.3,186.5L226.8,186.5L227.3,186.5L227.7,186.5L228.2,186.5L228.7,186.5L229.2,186.5L229.7,186.5L230.2,186.5L230.7,186.5L231.2,186.5L231.7,186.5L232.2,186.5L232.6,186.5L233.1,186.5"/>
+<line class="s-k2" x1="246.8" y1="122.3" x2="246.8" y2="186.5" marker-end="url(#g1-k2)"/>
+<line class="s-k4" x1="124.1" y1="122.3" x2="124.1" y2="58.1" marker-end="url(#g1-k4)"/>
+<text class="s-txt-b" x="50.5" y="113" text-anchor="middle">reaktanti</text>
+<text class="s-txt-b" x="219.5" y="177.2" text-anchor="middle">produkti</text>
+<text class="s-txt-k2" x="252.2" y="157.1" text-anchor="start">ΔH < 0</text>
+<text class="s-txt-k4" x="118.7" y="90.2" text-anchor="end">Eₐ</text>
+</svg>
+<figcaption><strong>Eksotermna</strong> reakcija: produkti imajo nižjo entalpijo od reaktantov, razlika se sprosti kot toplota v okolico (\(\Delta H \lt 0\)), npr. gorenje.</figcaption>
+</figure><figure class="slika">
+<svg viewBox="0 0 330 250" role="img" aria-label="Endotermna reakcija" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="g2-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="g2-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="g2-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="g2-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="g2-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="g2-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<line class="s-os" x1="26" y1="224" x2="312" y2="224" marker-end="url(#g2-p)"/>
+<line class="s-os" x1="26" y1="224" x2="26" y2="18" marker-end="url(#g2-p)"/>
+<text class="s-os-txt" x="306" y="216" text-anchor="end">potek reakcije</text>
+<text class="s-os-txt" x="34" y="30">H</text>
+<line class="s-asim" x1="53.3" y1="186.5" x2="254.9" y2="186.5"/>
+<path class="s-k1" d="M36.9,186.5L37.4,186.5L37.9,186.5L38.4,186.5L38.9,186.5L39.4,186.5L39.8,186.5L40.3,186.5L40.8,186.5L41.3,186.5L41.8,186.5L42.3,186.5L42.8,186.5L43.3,186.5L43.8,186.5L44.3,186.5L44.8,186.5L45.2,186.5L45.7,186.5L46.2,186.5L46.7,186.5L47.2,186.5L47.7,186.5L48.2,186.5L48.7,186.5L49.2,186.5L49.7,186.5L50.1,186.5L50.6,186.5L51.1,186.5L51.6,186.5L52.1,186.5L52.6,186.5L53.1,186.5L53.6,186.5L54.1,186.5L54.6,186.5L55.1,186.5L55.5,186.5L56,186.5L56.5,186.5L57,186.5L57.5,186.5L58,186.5L58.5,186.5L59,186.5L59.5,186.5L60,186.5L60.5,186.5L60.9,186.5L61.4,186.5L61.9,186.5L62.4,186.5L62.9,186.5L63.4,186.5L63.9,186.5L64.4,186.5L64.9,186.5L65.4,186.5L65.8,186.5L66.3,186.5L66.8,186.5L67.3,186.5L67.8,186.5L68.3,186.3L68.8,186.2L69.3,186L69.8,185.7L70.3,185.4L70.8,185.1L71.2,184.7L71.7,184.3L72.2,183.8L72.7,183.3L73.2,182.7L73.7,182.1L74.2,181.4L74.7,180.8L75.2,180L75.7,179.2L76.1,178.4L76.6,177.5L77.1,176.6L77.6,175.7L78.1,174.7L78.6,173.7L79.1,172.7L79.6,171.6L80.1,170.4L80.6,169.3L81.1,168.1L81.5,166.8L82,165.6L82.5,164.3L83,163L83.5,161.6L84,160.2L84.5,158.8L85,157.4L85.5,155.9L86,154.4L86.5,152.9L86.9,151.4L87.4,149.8L87.9,148.3L88.4,146.7L88.9,145.1L89.4,143.4L89.9,141.8L90.4,140.1L90.9,138.5L91.4,136.8L91.8,135.1L92.3,133.4L92.8,131.7L93.3,130L93.8,128.3L94.3,126.5L94.8,124.8L95.3,123.1L95.8,121.4L96.3,119.6L96.8,117.9L97.2,116.2L97.7,114.5L98.2,112.8L98.7,111L99.2,109.3L99.7,107.7L100.2,106L100.7,104.3L101.2,102.7L101.7,101L102.2,99.4L102.6,97.8L103.1,96.2L103.6,94.6L104.1,93.1L104.6,91.6L105.1,90L105.6,88.6L106.1,87.1L106.6,85.7L107.1,84.3L107.5,82.9L108,81.5L108.5,80.2L109,78.9L109.5,77.7L110,76.4L110.5,75.3L111,74.1L111.5,73L112,71.9L112.5,70.8L112.9,69.8L113.4,68.8L113.9,67.9L114.4,67L114.9,66.1L115.4,65.3L115.9,64.6L116.4,63.8L116.9,63.1L117.4,62.5L117.8,61.9L118.3,61.3L118.8,60.8L119.3,60.3L119.8,59.9L120.3,59.5L120.8,59.2L121.3,58.9L121.8,58.6L122.3,58.4L122.8,58.3L123.2,58.2L123.7,58.1L124.2,58.1L124.7,58.1L125.2,58.1L125.7,58.2L126.2,58.2L126.7,58.3L127.2,58.3L127.7,58.4L128.2,58.5L128.6,58.6L129.1,58.7L129.6,58.8L130.1,58.9L130.6,59.1L131.1,59.2L131.6,59.4L132.1,59.6L132.6,59.8L133.1,59.9L133.5,60.2L134,60.4L134.5,60.6L135,60.8L135.5,61.1L136,61.3L136.5,61.6L137,61.9L137.5,62.2L138,62.5L138.5,62.8L138.9,63.1L139.4,63.4L139.9,63.7L140.4,64.1L140.9,64.4L141.4,64.8L141.9,65.1L142.4,65.5L142.9,65.9L143.4,66.3L143.9,66.7L144.3,67.1L144.8,67.5L145.3,68L145.8,68.4L146.3,68.8L146.8,69.3L147.3,69.7L147.8,70.2L148.3,70.7L148.8,71.1L149.2,71.6L149.7,72.1L150.2,72.6L150.7,73.1L151.2,73.6L151.7,74.1L152.2,74.6L152.7,75.1L153.2,75.6L153.7,76.2L154.2,76.7L154.6,77.2L155.1,77.8L155.6,78.3L156.1,78.9L156.6,79.4L157.1,80L157.6,80.5L158.1,81.1L158.6,81.7L159.1,82.2L159.5,82.8L160,83.3L160.5,83.9L161,84.5L161.5,85.1L162,85.6L162.5,86.2L163,86.8L163.5,87.3L164,87.9L164.5,88.5L164.9,89.1L165.4,89.6L165.9,90.2L166.4,90.8L166.9,91.4L167.4,91.9L167.9,92.5L168.4,93.1L168.9,93.6L169.4,94.2L169.9,94.7L170.3,95.3L170.8,95.8L171.3,96.4L171.8,96.9L172.3,97.5L172.8,98L173.3,98.6L173.8,99.1L174.3,99.6L174.8,100.1L175.2,100.6L175.7,101.2L176.2,101.7L176.7,102.2L177.2,102.7L177.7,103.1L178.2,103.6L178.7,104.1L179.2,104.6L179.7,105L180.2,105.5L180.6,106L181.1,106.4L181.6,106.8L182.1,107.3L182.6,107.7L183.1,108.1L183.6,108.5L184.1,108.9L184.6,109.3L185.1,109.7L185.6,110.1L186,110.4L186.5,110.8L187,111.1L187.5,111.5L188,111.8L188.5,112.1L189,112.4L189.5,112.7L190,113L190.5,113.3L190.9,113.6L191.4,113.8L191.9,114.1L192.4,114.3L192.9,114.6L193.4,114.8L193.9,115L194.4,115.2L194.9,115.4L195.4,115.6L195.9,115.7L196.3,115.9L196.8,116L197.3,116.2L197.8,116.3L198.3,116.4L198.8,116.5L199.3,116.6L199.8,116.7L200.3,116.8L200.8,116.8L201.2,116.9L201.7,116.9L202.2,117L202.7,117L203.2,117L203.7,117L204.2,117L204.7,117L205.2,117L205.7,117L206.2,117L206.6,117L207.1,117L207.6,117L208.1,117L208.6,117L209.1,117L209.6,117L210.1,117L210.6,117L211.1,117L211.6,117L212,117L212.5,117L213,117L213.5,117L214,117L214.5,117L215,117L215.5,117L216,117L216.5,117L216.9,117L217.4,117L217.9,117L218.4,117L218.9,117L219.4,117L219.9,117L220.4,117L220.9,117L221.4,117L221.9,117L222.3,117L222.8,117L223.3,117L223.8,117L224.3,117L224.8,117L225.3,117L225.8,117L226.3,117L226.8,117L227.3,117L227.7,117L228.2,117L228.7,117L229.2,117L229.7,117L230.2,117L230.7,117L231.2,117L231.7,117L232.2,117L232.6,117L233.1,117"/>
+<line class="s-k3" x1="246.8" y1="186.5" x2="246.8" y2="117" marker-end="url(#g2-k3)"/>
+<line class="s-k4" x1="124.1" y1="186.5" x2="124.1" y2="58.1" marker-end="url(#g2-k4)"/>
+<text class="s-txt-b" x="50.5" y="177.2" text-anchor="middle">reaktanti</text>
+<text class="s-txt-b" x="219.5" y="107.6" text-anchor="middle">produkti</text>
+<text class="s-txt-k3" x="252.2" y="154.4" text-anchor="start">ΔH > 0</text>
+<text class="s-txt-k4" x="118.7" y="119.6" text-anchor="end">Eₐ</text>
+</svg>
+<figcaption><strong>Endotermna</strong> reakcija: produkti imajo višjo entalpijo, sistem toploto prejme iz okolice (\(\Delta H \gt 0\)), npr. razkroj apnenca.</figcaption>
+</figure></div>
+            <p>Na energijskem diagramu je \(\Delta H\) razlika med entalpijo produktov in reaktantov. Vrh krivulje je <strong>aktivacijska energija</strong> \(E_a\): energija, ki jo morajo imeti delci, da reakcija steče (več o tem v poglavju o hitrosti reakcij).</p>
+            <p><strong>Termokemijska enačba</strong> je urejena enačba z agregatnimi stanji in vrednostjo \(\Delta H\):</p>
+            <p><span class="ke">2H<sub>2</sub>(g) + O<sub>2</sub>(g)&nbsp;→ 2H<sub>2</sub>O(l)</span> &nbsp; \(\Delta H = -572\ \text{kJ}\)</p>
+            <p>Vrednost velja za množine, kot jih kažejo koeficienti: pri nastanku 2 molov vode se sprosti 572 kJ. Če enačbo pomnožimo, pomnožimo tudi \(\Delta H\); če jo obrnemo, \(\Delta H\) spremeni predznak. Agregatno stanje je pomembno, ker se pri spremembi stanja (npr. kondenzaciji vode) toplota tudi izmenja.</p>
+            <p><strong>Standardna tvorbena entalpija</strong> \(\Delta H_f^\circ\) je sprememba entalpije pri nastanku 1 mola spojine iz elementov v standardnem stanju (25 °C, 100 kPa). Za elemente v standardnem stanju (<span class="kf">O<sub>2</sub>(g)</span>, C(grafit), <span class="kf">Fe(s)</span>) je 0. Iz tvorbenih entalpij izračunamo <strong>standardno reakcijsko entalpijo</strong>: vsota za produkte minus vsota za reaktante, vsaka pomnožena s koeficientom.</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-5">
+              <h4>Tip 5: Prepoznaj eksotermno ali endotermno reakcijo in razberi diagram</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Pri raztapljanju amonijevega nitrata v vodi se raztopina ohladi. Ali je proces eksotermen ali endotermen? Kakšen je predznak \(\Delta H\) in kako bi narisal energijski diagram?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> opisana je sprememba temperature ali podan energijski diagram; sprašujejo za vrsto reakcije, predznak \(\Delta H\) ali aktivacijsko energijo.</p><ul class="kljucne"><li>„se segreje“, „se ohladi“</li><li>„eksotermna“, „endotermna“</li><li>„energijski diagram“</li><li>„aktivacijska energija“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Ugotovi smer toplote: okolica (raztopina, posoda) se segreje → sistem toploto oddaja; okolica se ohladi → sistem toploto jemlje.</p><div class="na-nalogi"><p>Raztopina se ohladi: proces jemlje toploto iz okolice.</p></div></li>
+              <li><p class="korak">Poimenuj in določi predznak.</p><div class="na-nalogi"><p>Endotermen, \(\Delta H \gt 0\).</p></div></li>
+              <li><p class="korak">Pri diagramu: produkti višje od reaktantov = endotermna; \(\Delta H\) = razlika nivojev, \(E_a\) = od reaktantov do vrha.</p><div class="na-nalogi"><p>Produkti (raztopljeni ioni) so na diagramu višje od reaktantov.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Na diagramu so reaktanti pri 200 kJ, vrh pri 350 kJ, produkti pri 50 kJ.</p><p>\(E_a = 150\ \text{kJ}\), \(\Delta H = -150\ \text{kJ}\), eksotermna.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Ali je taljenje ledu endotermno?</p><p>Da, led mora prejeti toploto, da se pretrgajo vodikove vezi v mreži.</p></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-6">
+              <h4>Tip 6: Iz termokemijske enačbe izračunaj toploto</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p><span class="ke">2H<sub>2</sub>(g) + O<sub>2</sub>(g)&nbsp;→ 2H<sub>2</sub>O(l)</span>, \(\Delta H = -572\ \text{kJ}\). Koliko toplote se sprosti pri sežigu 1,00 g vodika?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> podana je termokemijska enačba z \(\Delta H\) in masa ali množina snovi, iskana je toplota (ali masa za dano toploto).</p><ul class="kljucne"><li>„koliko toplote se sprosti“</li><li>„koliko kJ“</li><li>termokemijska enačba z \(\Delta H\)</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Izračunaj množino snovi, ki zreagira.</p><div class="na-nalogi"><p>\(n(\text{H}_2) = 1{,}00/2{,}02 = 0{,}495\ \text{mol}\)</p></div></li>
+              <li><p class="korak">Poišči, za koliko molov te snovi velja \(\Delta H\) (koeficient v enačbi).</p><div class="na-nalogi"><p>572 kJ velja za 2 mola vodika.</p></div></li>
+              <li><p class="korak">Sorazmerno preračunaj in dodaj smer (sprosti ali porabi).</p><div class="na-nalogi"><p>\(Q = \dfrac{0{,}495}{2} \cdot 572 = 142\ \text{kJ}\) se sprosti.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> <span class="ke">CaCO<sub>3</sub>&nbsp;→ CaO + CO<sub>2</sub></span>, \(\Delta H = +178\ \text{kJ}\). Koliko toplote potrebujemo za 1,00 kg apnenca?</p><p>\(n = 9{,}99\ \text{mol}\); \(Q = 9{,}99 \cdot 178 = 1{,}78 \cdot 10^3\ \text{kJ}\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Kolikšna je \(\Delta H\) za <span class="ke">H<sub>2</sub>O(l)&nbsp;→ H<sub>2</sub>(g) + ½O<sub>2</sub>(g)</span>?</p><p>Obrnjena in razpolovljena enačba: \(+286\ \text{kJ}\).</p></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-7">
+              <h4>Tip 7: Izračunaj reakcijsko entalpijo iz tvorbenih entalpij</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Izračunaj standardno reakcijsko entalpijo gorenja metana <span class="ke">CH<sub>4</sub>(g) + 2O<sub>2</sub>(g)&nbsp;→ CO<sub>2</sub>(g) + 2H<sub>2</sub>O(l)</span>. \(\Delta H_f^\circ\): <span class="kf">CH<sub>4</sub></span> −74,8 kJ/mol, <span class="kf">CO<sub>2</sub></span> −393,5 kJ/mol, <span class="kf">H<sub>2</sub>O(l)</span> −285,8 kJ/mol.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> podana je tabela standardnih tvorbenih entalpij in enačba; iskana je \(\Delta H_r^\circ\) (ali neznana tvorbena entalpija).</p><ul class="kljucne"><li>„standardna tvorbena entalpija“</li><li>„\(\Delta H_f^\circ\)“</li><li>„izračunaj \(\Delta H_r^\circ\)“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Za vsak produkt pomnoži \(\Delta H_f^\circ\) s koeficientom in seštej.</p><div class="na-nalogi"><p>\(-393{,}5 + 2 \cdot (-285{,}8) = -965{,}1\ \text{kJ}\)</p></div></li>
+              <li><p class="korak">Enako za reaktante; elementi v standardnem stanju prispevajo 0.</p><div class="na-nalogi"><p>\(-74{,}8 + 2 \cdot 0 = -74{,}8\ \text{kJ}\)</p></div></li>
+              <li><p class="korak">Odštej: produkti minus reaktanti.</p><div class="na-nalogi"><p>\(\Delta H_r^\circ = -965{,}1 - (-74{,}8) = -890{,}3\ \text{kJ}\)</p></div></li>
+              <li><p class="korak">Komentiraj predznak.</p><div class="na-nalogi"><p>Negativna: gorenje metana je eksotermno.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Zakaj je \(\Delta H_f^\circ(\text{O}_2) = 0\)?</p><p>Kisik je element v standardnem stanju; iz samega sebe ga ni treba tvoriti.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> \(\Delta H_r^\circ\) za <span class="ke">CaCO<sub>3</sub>&nbsp;→ CaO + CO<sub>2</sub></span>, če so \(\Delta H_f^\circ\): −1207, −635, −393,5 kJ/mol?</p><p>\((-635 - 393{,}5) - (-1207) = +178{,}5\ \text{kJ}\).</p></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="subsection" id="kljuc">
+          <div class="subsection-head">
+            <h2>Ključ: kateri tip naloge je to?</h2>
+            <p>Poišči besedo iz navodila naloge in skoči na pravi postopek.</p>
+          </div>
+          <div class="info-card">
+            <div class="tabela-wrap">
+              <table class="tabela">
+                <thead><tr><th>V besedilu naloge piše …</th><th>Tip</th></tr></thead>
+                <tbody>
+                  <tr><td>„uredi enačbo“, „zapiši enačbo reakcije“</td><td><a href="#tip-1">Tip 1</a></td></tr>
+                  <tr><td>„koliko gramov nastane“, „koliko je potrebno“</td><td><a href="#tip-2">Tip 2</a></td></tr>
+                  <tr><td>dve masi reaktantov, „v prebitku“, „koliko ostane“</td><td><a href="#tip-3">Tip 3</a></td></tr>
+                  <tr><td>„izkoristek“, „čistost“, „dobili smo“</td><td><a href="#tip-4">Tip 4</a></td></tr>
+                  <tr><td>„se segreje / ohladi“, „energijski diagram“</td><td><a href="#tip-5">Tip 5</a></td></tr>
+                  <tr><td>„koliko toplote“, enačba z \(\Delta H\)</td><td><a href="#tip-6">Tip 6</a></td></tr>
+                  <tr><td>„standardna tvorbena entalpija“</td><td><a href="#tip-7">Tip 7</a></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>Pogoste napake</h2>
+          </div>
+          <div class="info-card">
+            <ul>
+              <li>Enačbo urejaš s spreminjanjem indeksov (<span class="kf">H<sub>2</sub>O<sub>2</sub></span> namesto 2<span class="kf">H<sub>2</sub>O</span>).</li>
+              <li>Mase reaktantov primerjaš neposredno, namesto da primerjaš množine glede na koeficiente.</li>
+              <li>Pri prebitnem reaktantu računaš produkt iz reaktanta v prebitku.</li>
+              <li>Pozabiš, da \(\Delta H\) v termokemijski enačbi velja za množine iz koeficientov, ne za 1 mol vsake snovi.</li>
+              <li>Pri \(\Delta H_r^\circ\) odšteješ v napačnem vrstnem redu (reaktanti minus produkti) ali pozabiš koeficiente.</li>
+              <li>Pri eksotermni reakciji zapišeš pozitiven \(\Delta H\).</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>Naslednje poglavje</h2>
+          </div>
+          <div class="link-list">
+            <a class="link-item" href="/views/kemija/snov/raztopine/raztopine_razlaga.html">
+              <span class="link-item-text"><strong>4.6 Raztopine</strong><small>Topnost, masni delež, množinska in masna koncentracija, redčenje</small></span>
+              <span class="arrow">→</span>
+            </a>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>

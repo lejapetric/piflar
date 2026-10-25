@@ -47,5 +47,11 @@
   { "predmet": "zgodovina", "stevilka": "4.1", "slug": "stari_vek", "naslov": "Stari vek", "opis": "Prazgodovina, Mezopotamija, Egipt, grška in rimska civilizacija, slovenski prostor v antiki." },
   { "predmet": "zgodovina", "stevilka": "4.2", "slug": "srednji_in_novi_vek", "naslov": "Srednji in novi vek", "opis": "Fevdalizem, cerkev, mesta, odkritja, reformacija, absolutizem, Karantanija in slovenski prostor." },
   { "predmet": "zgodovina", "stevilka": "4.3", "slug": "devetnajsto_stoletje", "naslov": "19. stoletje", "opis": "Revolucije, industrializacija, nacionalna gibanja, imperializem, Ilirske province, Zedinjena Slovenija." },
-  { "predmet": "zgodovina", "stevilka": "4.4", "slug": "dvajseto_stoletje", "naslov": "20. stoletje", "opis": "Svetovni vojni, totalitarizmi, hladna vojna, Jugoslavija, osamosvojitev Slovenije." }
+  { "predmet": "zgodovina", "stevilka": "4.4", "slug": "dvajseto_stoletje", "naslov": "20. stoletje", "opis": "Svetovni vojni, totalitarizmi, hladna vojna, Jugoslavija, osamosvojitev Slovenije." },
+  { "predmet": "kemija", "stevilka": "4.1", "slug": "varno_eksperimentalno_delo", "naslov": "Varno eksperimentalno delo", "opis": "Laboratorijski pribor, ločevanje zmesi, spremenljivke, piktogrami, LD50." },
+  { "predmet": "kemija", "stevilka": "4.2", "slug": "delci_snovi", "naslov": "Delci snovi", "opis": "Zgradba atoma, izotopi, elektronska konfiguracija, periodičnost." },
+  { "predmet": "kemija", "stevilka": "4.3", "slug": "kemijske_vezi", "naslov": "Povezovanje delcev", "opis": "Ionska in kovalentna vez, oblika molekul, medmolekulske sile, kristali." },
+  { "predmet": "kemija", "stevilka": "4.4", "slug": "mnozina_snovi", "naslov": "Množina snovi", "opis": "Molska masa, Avogadrova konstanta, empirična formula, plini." },
+  { "predmet": "kemija", "stevilka": "4.5", "slug": "kemijska_reakcija", "naslov": "Kemijska reakcija", "opis": "Urejanje enačb, stehiometrija, prebitni reaktant, entalpija." },
+  { "predmet": "kemija", "stevilka": "4.6", "slug": "raztopine", "naslov": "Raztopine", "opis": "Topnost, masni delež, koncentracija, redčenje, hidratacija." }
 ]
