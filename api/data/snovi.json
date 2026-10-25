@@ -72,5 +72,9 @@
   { "predmet": "biologija", "stevilka": "4.2.1", "slug": "celica", "naslov": "Celica, membrane in organeli", "opis": "Prokariontska in evkariontska celica, organske molekule, membrane, osmoza, transport in organeli." },
   { "predmet": "biologija", "stevilka": "4.2.2", "slug": "encimi_presnova", "naslov": "Encimi, beljakovine in presnova", "opis": "Delovanje encimov in dejavniki, zgradba beljakovin, ATP in celična signalizacija." },
   { "predmet": "biologija", "stevilka": "4.2.3", "slug": "dihanje_fotosinteza", "naslov": "Celično dihanje, vrenje in fotosinteza", "opis": "Glikoliza, vrenje, Krebsov cikel, dihalna veriga, fotosinteza, omejujoči dejavniki, avtotrofi in heterotrofi." },
-  { "predmet": "biologija", "stevilka": "4.2.4", "slug": "nukleinske_kisline", "naslov": "Nukleinske kisline in sinteza beljakovin", "opis": "DNA in RNA, podvajanje, genski kod, transkripcija, translacija in posledice mutacij." }
+  { "predmet": "biologija", "stevilka": "4.2.4", "slug": "nukleinske_kisline", "naslov": "Nukleinske kisline in sinteza beljakovin", "opis": "DNA in RNA, podvajanje, genski kod, transkripcija, translacija in posledice mutacij." },
+  { "predmet": "biologija", "stevilka": "4.3.1", "slug": "celicni_cikel", "naslov": "Celični cikel, mitoza, mejoza in uravnavanje genov", "opis": "Interfaza, mitoza, mejoza, rak, uravnavanje izražanja genov in operon." },
+  { "predmet": "biologija", "stevilka": "4.3.2", "slug": "dedovanje", "naslov": "Mutacije in načini dedovanja", "opis": "Mutacije, biotehnologija, Mendlova pravila, križanja, spolno vezano dedovanje in rodovniki." },
+  { "predmet": "biologija", "stevilka": "4.4.1", "slug": "evolucija", "naslov": "Nastanek življenja in mehanizmi evolucije", "opis": "Nastanek življenja, endosimbioza, naravni izbor, Hardy-Weinberg, speciacija in dokazi evolucije." },
+  { "predmet": "biologija", "stevilka": "4.4.2", "slug": "sistematika", "naslov": "Razvrščanje organizmov in evolucija človeka", "opis": "Taksonomske kategorije, določevalni ključ, kladogram, domene in kraljestva, skupine rastlin in živali, evolucija človeka." }
 ]
