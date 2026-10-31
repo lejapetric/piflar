@@ -446,9 +446,260 @@ async function oznaciIskanje() {
 }
 
 // ============================================================
+// 8. KAZALO STRANI — lepljivo kazalo poglavij in podpoglavij na
+//    straneh z razlago snovi (desni rob; na ozkem zaslonu gumb)
+// ============================================================
+const KAZALO_SPLOSNI = /^(razlaga|tipi nalog( v tem sklopu)?)$/i;
+const KAZALO_IZPUSTI = /^(naslednje|prejšnje) poglavje$/i;
+
+function naslovBesedilo(h) {
+  // Brez oznak (PZ, VR …) in brez formul, ki jih MathJax še ni izrisal.
+  const kopija = h.cloneNode(true);
+  kopija.querySelectorAll("[class^='badge'], [class*=' badge'], script").forEach((el) => el.remove());
+  return kopija.textContent.replace(/\s+/g, " ").trim();
+}
+
+function sidroZa(h, predpona, zasedena) {
+  if (h.id) return h.id;
+  const osnova =
+    predpona +
+    "-" +
+    (zlozi(naslovBesedilo(h)).replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "").slice(0, 48) || "razdelek");
+  let id = osnova;
+  for (let i = 2; zasedena.has(id) || document.getElementById(id); i++) id = `${osnova}-${i}`;
+  zasedena.add(id);
+  h.id = id;
+  return id;
+}
+
+// Zgradi drevo: [{ naslov, sidro, el, otroci: [{ naslov, sidro, el, otroci }] }]
+function drevoKazala(view) {
+  const zasedena = new Set();
+  const poglavja = [];
+  const h2ji = [...view.querySelectorAll("h2")].filter(
+    (h) => !h.closest("nav, .kazalo") && !KAZALO_IZPUSTI.test(naslovBesedilo(h))
+  );
+
+  const formule = view.querySelector(".matura-formule > h3");
+  if (formule && (!h2ji.length || formule.compareDocumentPosition(h2ji[0]) & Node.DOCUMENT_POSITION_FOLLOWING)) {
+    poglavja.push({ naslov: naslovBesedilo(formule), sidro: sidroZa(formule, "uvod", zasedena), el: formule, otroci: [] });
+  }
+
+  h2ji.forEach((h2, i) => {
+    const okvir = h2.closest("section, .sklop, .subsection") ?? h2.parentElement;
+    const cilj = okvir.id ? okvir : h2;
+    const sidro = cilj.id || sidroZa(h2, "razdelek", zasedena);
+    const naslednji = h2ji[i + 1];
+    const otroci = [];
+    let starsh3 = null; // zadnji h3, ki je v kazalu (h4 pod njim gredo en nivo nižje)
+    for (const h of okvir.querySelectorAll("h3, h4")) {
+      if (h.closest("nav, .kazalo, .tip-primeri, .resitev, details")) continue;
+      if (!(h2.compareDocumentPosition(h) & Node.DOCUMENT_POSITION_FOLLOWING)) continue;
+      if (naslednji && !(naslednji.compareDocumentPosition(h) & Node.DOCUMENT_POSITION_PRECEDING)) break;
+      const naslov = naslovBesedilo(h);
+      if (!naslov) continue;
+      if (h.tagName === "H3") {
+        if (/^razlaga$/i.test(naslov)) {
+          starsh3 = null; // h4 pod »Razlaga« so podpoglavja
+          continue;
+        }
+        const tip = KAZALO_SPLOSNI.test(naslov);
+        starsh3 = { naslov: tip ? "Tipi nalog" : naslov, sidro: sidroZa(h, sidro, zasedena), el: h, otroci: [] };
+        otroci.push(starsh3);
+      } else if (starsh3) {
+        starsh3.otroci.push({ naslov, sidro: sidroZa(h, sidro, zasedena), el: h, otroci: [] });
+      } else {
+        otroci.push({ naslov, sidro: sidroZa(h, sidro, zasedena), el: h, otroci: [] });
+      }
+    }
+    poglavja.push({ naslov: naslovBesedilo(h2), sidro, el: cilj, otroci });
+  });
+  return poglavja;
+}
+
+// Drevo preberemo, preden MathJax izriše formule, da naslovi v kazalu
+// obdržijo LaTeX, ki ga MathJax nato izriše še v kazalu.
+function pripraviKazaloStrani() {
+  if (!/\/snov\/[^/]+\/[^/]+_razlaga\.html$/.test(location.pathname)) return null;
+  const view = document.querySelector(".view");
+  if (!view?.parentElement) return null;
+  const poglavja = drevoKazala(view);
+  return poglavja.length >= 2 ? poglavja : null;
+}
+
+function initKazaloStrani(poglavja) {
+  const vsebnik = document.querySelector(".view")?.parentElement;
+  if (!poglavja || !vsebnik) return;
+
+  const aside = document.createElement("aside");
+  aside.className = "stran-kazalo";
+  aside.id = "stranKazalo";
+  aside.setAttribute("aria-label", "Kazalo strani");
+
+  const glava = document.createElement("div");
+  glava.className = "stran-kazalo-glava";
+  const naslov = document.createElement("a");
+  naslov.href = "#";
+  naslov.className = "stran-kazalo-naslov";
+  naslov.textContent = "Na tej strani";
+  naslov.addEventListener("click", (e) => {
+    e.preventDefault();
+    history.replaceState(null, "", location.pathname + location.search);
+    window.scrollTo({ top: 0 });
+    zapriPredal();
+  });
+  const zapri = document.createElement("button");
+  zapri.type = "button";
+  zapri.className = "stran-kazalo-zapri";
+  zapri.setAttribute("aria-label", "Zapri kazalo");
+  zapri.textContent = "×";
+  glava.append(naslov, zapri);
+
+  const povezave = new Map(); // sidro → <a>
+  const elementi = []; // [el, sidro, poglavje-li] v vrstnem redu na strani
+
+  function seznam(vozlisca, nivo, poglavjeLi) {
+    const ol = document.createElement("ol");
+    ol.className = `stran-kazalo-nivo${nivo}`;
+    for (const v of vozlisca) {
+      const li = document.createElement("li");
+      const a = document.createElement("a");
+      a.href = `#${v.sidro}`;
+      a.textContent = v.naslov;
+      povezave.set(v.sidro, a);
+      const pli = poglavjeLi ?? li;
+      elementi.push([v.el, v.sidro, pli]);
+      if (nivo === 1 && v.otroci.length) {
+        const vrstica = document.createElement("div");
+        vrstica.className = "stran-kazalo-vrstica";
+        const gumb = document.createElement("button");
+        gumb.type = "button";
+        gumb.className = "stran-kazalo-razsiri";
+        gumb.setAttribute("aria-expanded", "false");
+        gumb.setAttribute("aria-label", `Pokaži podpoglavja: ${v.naslov}`);
+        gumb.innerHTML =
+          '<svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>';
+        gumb.addEventListener("click", () => {
+          const odprt = !li.classList.contains("odprto");
+          li.classList.toggle("odprto", odprt);
+          gumb.setAttribute("aria-expanded", String(odprt));
+        });
+        vrstica.append(a, gumb);
+        li.append(vrstica, seznam(v.otroci, 2, li));
+      } else {
+        li.append(a);
+        if (v.otroci.length) li.append(seznam(v.otroci, nivo + 1, pli));
+      }
+      ol.append(li);
+    }
+    return ol;
+  }
+
+  const drevo = seznam(poglavja, 1, null);
+  aside.append(glava, drevo);
+  vsebnik.classList.add("view-container--kazalo");
+  vsebnik.append(aside);
+
+  // Gumb za ozke zaslone: kazalo se odpre kot predal z desne
+  const odpri = document.createElement("button");
+  odpri.type = "button";
+  odpri.className = "stran-kazalo-odpri";
+  odpri.setAttribute("aria-controls", "stranKazalo");
+  odpri.setAttribute("aria-expanded", "false");
+  odpri.innerHTML =
+    '<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="8" y1="6" x2="21" y2="6"></line><line x1="8" y1="12" x2="21" y2="12"></line><line x1="8" y1="18" x2="21" y2="18"></line><line x1="3" y1="6" x2="3.01" y2="6"></line><line x1="3" y1="12" x2="3.01" y2="12"></line><line x1="3" y1="18" x2="3.01" y2="18"></line></svg><span>Kazalo</span>';
+  document.body.append(odpri);
+
+  function zapriPredal() {
+    aside.classList.remove("predal-odprt");
+    odpri.setAttribute("aria-expanded", "false");
+  }
+  odpri.addEventListener("click", () => {
+    const odprt = aside.classList.toggle("predal-odprt");
+    odpri.setAttribute("aria-expanded", String(odprt));
+    if (odprt) povezave.get(aktivno)?.scrollIntoView({ block: "center" });
+  });
+  zapri.addEventListener("click", zapriPredal);
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") zapriPredal();
+  });
+  document.addEventListener("click", (e) => {
+    if (aside.classList.contains("predal-odprt") && !aside.contains(e.target) && !odpri.contains(e.target)) zapriPredal();
+  });
+  drevo.addEventListener("click", (e) => {
+    if (e.target.closest("a")) zapriPredal();
+  });
+
+  // Aktivni razdelek: zadnji naslov, ki je že nad tretjino zaslona
+  let aktivno = null;
+  let odprtoSamodejno = null;
+  function osvezi() {
+    const meja = window.innerHeight / 3;
+    let trenutni = elementi[0];
+    for (const e of elementi) {
+      if (e[0].getBoundingClientRect().top <= meja) trenutni = e;
+      else break;
+    }
+    if (!trenutni || trenutni[1] === aktivno) return;
+    povezave.get(aktivno)?.classList.remove("aktivno");
+    povezave.get(aktivno)?.removeAttribute("aria-current");
+    aktivno = trenutni[1];
+    const a = povezave.get(aktivno);
+    a.classList.add("aktivno");
+    a.setAttribute("aria-current", "location");
+
+    drevo.querySelectorAll(".trenutno").forEach((li) => li.classList.remove("trenutno"));
+    const li = trenutni[2];
+    li.classList.add("trenutno");
+    if (odprtoSamodejno && odprtoSamodejno !== li && odprtoSamodejno.dataset.rocno !== "1") {
+      odprtoSamodejno.classList.remove("odprto");
+      odprtoSamodejno.querySelector(".stran-kazalo-razsiri")?.setAttribute("aria-expanded", "false");
+    }
+    if (li.querySelector(".stran-kazalo-razsiri") && !li.classList.contains("odprto")) {
+      li.classList.add("odprto");
+      li.querySelector(".stran-kazalo-razsiri").setAttribute("aria-expanded", "true");
+      odprtoSamodejno = li;
+    }
+
+    // Aktivna povezava naj ostane vidna v kazalu (brez premikanja strani)
+    const okvir = aside.getBoundingClientRect();
+    const r = a.getBoundingClientRect();
+    if (r.top < okvir.top + 40 || r.bottom > okvir.bottom - 16) {
+      aside.scrollTop += r.top - okvir.top - okvir.height / 3;
+    }
+  }
+  drevo.addEventListener("click", (e) => {
+    const gumb = e.target.closest(".stran-kazalo-razsiri");
+    if (gumb) gumb.closest("li").dataset.rocno = gumb.closest("li").classList.contains("odprto") ? "1" : "";
+  });
+
+  let caka = false;
+  window.addEventListener(
+    "scroll",
+    () => {
+      if (caka) return;
+      caka = true;
+      requestAnimationFrame(() => {
+        caka = false;
+        osvezi();
+      });
+    },
+    { passive: true }
+  );
+  window.addEventListener("resize", osvezi, { passive: true });
+  osvezi();
+
+  // Formule v naslovih (\( … \)) izriše MathJax še v kazalu.
+  if (drevo.textContent.includes("\\(")) {
+    poMathJaxu().then(() => window.MathJax?.typesetPromise?.([drevo]).catch(() => {}));
+  }
+}
+
+// ============================================================
 // ZAGON
 // ============================================================
 async function init() {
+  const kazalo = pripraviKazaloStrani();
   loadMathJax();
 
   await Promise.all([
@@ -462,6 +713,7 @@ async function init() {
   initUporabnik();
   initTema();
   initIskanje();
+  initKazaloStrani(kazalo);
   oznaciIskanje();
 }
 
