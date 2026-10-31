@@ -222,6 +222,13 @@ mjx-container[display="true"] {
     color: var(--text-secondary);
 }
 
+.page-header p.page-cas {
+    font-size: var(--text-base, 1rem);
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: var(--space-3);
+}
+
 /* ============================================================
    8. SUBSECTION HEAD
    ============================================================ */
