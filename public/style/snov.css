@@ -1875,3 +1875,258 @@ pre.koda code {
     padding: 1px 5px;
     border-radius: 4px;
 }
+
+/* ============================================================
+   KAZALO STRANI (components.js → initKazaloStrani)
+   Na širokem zaslonu lepljiv stolpec desno od vsebine,
+   na ožjem predal, ki ga odpre gumb »Kazalo« spodaj desno.
+   ============================================================ */
+.view-container--kazalo {
+    max-width: 1480px;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 270px;
+    gap: var(--space-6);
+    align-items: start;
+}
+
+.view-container--kazalo > .view {
+    min-width: 0;
+}
+
+.stran-kazalo {
+    position: sticky;
+    top: calc(var(--header-height) + var(--space-4));
+    max-height: calc(100vh - var(--header-height) - var(--space-6));
+    overflow-y: auto;
+    overscroll-behavior: contain;
+    padding: var(--space-4) var(--space-3) var(--space-4) var(--space-4);
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    font-size: var(--text-sm);
+    scrollbar-width: thin;
+}
+
+.stran-kazalo-glava {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-2);
+    margin-bottom: var(--space-2);
+}
+
+.stran-kazalo-naslov {
+    font-family: var(--font-display);
+    font-size: var(--text-xs);
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+    text-decoration: none;
+}
+
+.stran-kazalo-naslov:hover {
+    color: var(--primary);
+}
+
+.stran-kazalo-zapri {
+    display: none;
+    width: 32px;
+    height: 32px;
+    border: none;
+    border-radius: var(--radius-sm);
+    background: transparent;
+    color: var(--text-secondary);
+    font-size: 22px;
+    line-height: 1;
+    cursor: pointer;
+}
+
+.stran-kazalo-zapri:hover {
+    background: var(--bg-primary);
+    color: var(--text-primary);
+}
+
+.stran-kazalo ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.stran-kazalo li {
+    margin: 0;
+}
+
+.stran-kazalo a {
+    display: block;
+    padding: 5px var(--space-2) 5px var(--space-3);
+    border-left: 2px solid transparent;
+    border-radius: 0 6px 6px 0;
+    color: var(--text-secondary);
+    text-decoration: none;
+    line-height: 1.35;
+    overflow-wrap: anywhere;
+}
+
+.stran-kazalo a:hover {
+    color: var(--text-primary);
+    background: var(--bg-primary);
+}
+
+.stran-kazalo a.aktivno {
+    color: var(--primary);
+    border-left-color: var(--primary);
+    background: var(--primary-soft);
+    font-weight: 600;
+}
+
+.stran-kazalo-nivo1 > li > a,
+.stran-kazalo-vrstica > a {
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.stran-kazalo-nivo1 > li + li {
+    margin-top: 2px;
+}
+
+.stran-kazalo-vrstica {
+    display: flex;
+    align-items: flex-start;
+}
+
+.stran-kazalo-vrstica > a {
+    flex: 1 1 auto;
+    min-width: 0;
+}
+
+.stran-kazalo-razsiri {
+    flex: 0 0 auto;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    margin-top: 1px;
+    border: none;
+    border-radius: 6px;
+    background: transparent;
+    color: var(--text-muted);
+    cursor: pointer;
+}
+
+.stran-kazalo-razsiri:hover {
+    color: var(--text-primary);
+    background: var(--bg-primary);
+}
+
+.stran-kazalo-razsiri svg {
+    transition: transform var(--transition);
+}
+
+.stran-kazalo li.odprto > .stran-kazalo-vrstica .stran-kazalo-razsiri svg {
+    transform: rotate(90deg);
+}
+
+.stran-kazalo-nivo2 {
+    display: none;
+    margin: 2px 0 var(--space-2) var(--space-3) !important;
+    border-left: 1px solid var(--border-color);
+}
+
+.stran-kazalo li.odprto > .stran-kazalo-nivo2 {
+    display: block;
+}
+
+.stran-kazalo-nivo2 a {
+    font-size: 13px;
+    padding-top: 4px;
+    padding-bottom: 4px;
+    margin-left: -1px;
+}
+
+.stran-kazalo-nivo3 {
+    margin-left: var(--space-3) !important;
+}
+
+.stran-kazalo-nivo3 a {
+    font-size: 12.5px;
+    color: var(--text-muted);
+}
+
+.stran-kazalo mjx-container {
+    font-size: 100% !important;
+}
+
+/* Gumb za odpiranje kazala (samo na ožjem zaslonu) */
+.stran-kazalo-odpri {
+    display: none;
+    position: fixed;
+    right: var(--space-4);
+    bottom: var(--space-4);
+    z-index: 950;
+    align-items: center;
+    gap: var(--space-2);
+    padding: 10px 16px;
+    border: 1px solid var(--border-color);
+    border-radius: 999px;
+    background: var(--bg-card);
+    color: var(--text-primary);
+    font: 600 var(--text-sm) var(--font-body);
+    box-shadow: var(--shadow);
+    cursor: pointer;
+}
+
+.stran-kazalo-odpri:hover {
+    color: var(--primary);
+}
+
+@media (max-width: 1180px) {
+    .view-container--kazalo {
+        display: block;
+        max-width: 1200px;
+    }
+
+    .stran-kazalo {
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        z-index: 1050;
+        width: min(340px, 88vw);
+        max-height: none;
+        border-radius: 0;
+        border-width: 0 0 0 1px;
+        box-shadow: var(--shadow-lg);
+        padding: var(--space-4);
+        visibility: hidden;
+        transform: translateX(100%);
+        transition: transform var(--transition), visibility var(--transition);
+    }
+
+    .stran-kazalo.predal-odprt {
+        visibility: visible;
+        transform: translateX(0);
+    }
+
+    .stran-kazalo-zapri {
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .stran-kazalo-odpri {
+        display: inline-flex;
+    }
+}
+
+@media print {
+    .stran-kazalo,
+    .stran-kazalo-odpri {
+        display: none !important;
+    }
+
+    .view-container--kazalo {
+        display: block;
+    }
+}

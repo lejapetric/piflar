@@ -55,6 +55,10 @@ naslov tipa, naloga, kako prepoznaš, univerzalni postopek z rešitvijo naloge p
 imajo `sklop--visja` in oznako `badge-vr`. Grafi, vektorji in liki so inline SVG v `<figure class="slika">`
 (razredi `s-os`, `s-k1` … so v `snov.css`). Na vrhu strani je kazalo, na dnu ključ za prepoznavanje tipov.
 
+Na vsaki strani `…/snov/<poglavje>/<…>_razlaga.html` `components.js` samodejno doda lepljivo kazalo na desnem robu
+(na ožjem zaslonu gumb »Kazalo« spodaj desno). Sestavi ga iz naslovov `h2` (poglavja) ter `h3`/`h4` (podpoglavja;
+`h4` pod »Razlaga« so podpoglavja, `h4` pod »Tipi nalog« so tipi). Naslovom brez `id` ga doda samo; ročno urejanje ni potrebno.
+
 Formule pišeš v LaTeX-u med `\( … \)` (v vrstici) ali `\[ … \]` (samostojno). MathJax se naloži samo na straneh s formulami.
 
 Nova stran se sama pojavi v iskalniku: strežnik prebere vse neprazne strani v `public/views/`
