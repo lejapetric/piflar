@@ -1,0 +1,179 @@
+/* Videz 7 — NAČRT
+   Tehnična risba: IBM Plex Sans in Plex Mono za oznake in številke,
+   ostri robovi, modra glava, kotne oznake, mreža v slikah.
+   Temno: modra risalna podlaga s cian črtami. Kazalo levo. */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+html[data-videz] {
+    --font-display: 'IBM Plex Sans', sans-serif;
+    --font-body: 'IBM Plex Sans', sans-serif;
+    --font-mono: 'IBM Plex Mono', ui-monospace, monospace;
+
+    --primary: #0F62FE;
+    --primary-dark: #0043CE;
+    --primary-light: #78A9FF;
+    --primary-soft: #EDF4FF;
+
+    --text-primary: #161616;
+    --text-secondary: #474E5A;
+    --text-muted: #8D94A0;
+    --bg-primary: #F2F4F8;
+    --bg-card: #FFFFFF;
+    --surface-2: #F2F4F8;
+    --border-color: #D0D6E0;
+
+    --radius-sm: 0;
+    --radius: 0;
+    --radius-lg: 0;
+
+    --sb-bg: #FFFFFF;
+    --sb-border: #D0D6E0;
+    --sb-text: #161616;
+    --sb-text-muted: #474E5A;
+    --sb-hover-bg: #F2F4F8;
+    --sb-active-bg: #EDF4FF;
+    --sb-accent: #0F62FE;
+    --sb-accent-dark: #0043CE;
+
+    --header-bg: #0B1E3F;
+    --g-bg: #FFFFFF;
+    --g-grid: #DCE6F7;
+    --g-axis: #3D4655;
+    --g1: #0F62FE;
+    --g2: #DA1E28;
+    --g3: #198038;
+    --g4: #B28600;
+    --tick: #0F62FE;
+}
+
+html[data-videz][data-theme="dark"] {
+    --primary: #33B1FF;
+    --primary-dark: #82CFFF;
+    --primary-light: #1192E8;
+    --primary-soft: rgba(51, 177, 255, 0.12);
+
+    --text-primary: #E3ECF8;
+    --text-secondary: #A7B6CC;
+    --text-muted: #6F819B;
+    --bg-primary: #081325;
+    --bg-card: #0C1B33;
+    --surface-2: #0A172C;
+    --border-color: #1F3657;
+
+    --sb-bg: #0C1B33;
+    --sb-border: #1F3657;
+    --sb-text: #E3ECF8;
+    --sb-text-muted: #A7B6CC;
+    --sb-hover-bg: #12244A;
+    --sb-active-bg: rgba(51, 177, 255, 0.12);
+    --sb-accent: #33B1FF;
+    --sb-accent-dark: #82CFFF;
+
+    --header-bg: #050D1A;
+    --g-bg: #0A1A33;
+    --g-grid: #16305A;
+    --g-axis: #8FB3E0;
+    --g-line: #E3ECF8;
+    --g1: #33B1FF;
+    --g2: #FF8389;
+    --g3: #6FDC8C;
+    --g4: #F1C21B;
+    --tick: #33B1FF;
+}
+
+html[data-videz] body {
+    background-image:
+        linear-gradient(color-mix(in srgb, var(--primary) 5%, transparent) 1px, transparent 1px),
+        linear-gradient(90deg, color-mix(in srgb, var(--primary) 5%, transparent) 1px, transparent 1px);
+    background-size: 32px 32px;
+    background-attachment: fixed;
+}
+
+/* Glava */
+html[data-videz] .header { border-bottom: 0; }
+html[data-videz] .header-brand { color: #FFFFFF; font-family: var(--font-mono); font-weight: 600; font-size: 17px; letter-spacing: 0; }
+html[data-videz] .header-brand-dot { color: #78A9FF; }
+html[data-videz] .menu-btn { border-radius: 0; background: #0F62FE; }
+html[data-videz] .iskalnik-vnos { border-radius: 0; background: #13294F; border-color: #24406E; color: #FFFFFF; font-family: var(--font-mono); font-size: 13px; }
+html[data-videz] .iskalnik-vnos::placeholder { color: #8EA4C8; }
+html[data-videz] .header-ikona { color: #FFFFFF; background: transparent; border-color: #24406E; border-radius: 0; }
+html[data-videz] .header-link { color: #A6C8FF; font-family: var(--font-mono); font-weight: 500; }
+html[data-videz] .header-date { color: #8EA4C8; font-family: var(--font-mono); }
+
+/* Oznake v mono pisavi */
+html[data-videz] .page-eyebrow,
+html[data-videz] .sklop-num,
+html[data-videz] .tip-naloga-oznaka,
+html[data-videz] .tip-naloge h5,
+html[data-videz] .kazalo-st,
+html[data-videz] .stran-kazalo-naslov,
+html[data-videz] .page-meta-item span,
+html[data-videz] .tip-naloge ol.postopek > li::before,
+html[data-videz] .slika figcaption,
+html[data-videz] .badge-vr {
+    font-family: var(--font-mono);
+    letter-spacing: 0.02em;
+}
+
+/* Kazalo strani levo */
+html[data-videz] .view-container--kazalo { grid-template-columns: 250px minmax(0, 1fr); }
+html[data-videz] .stran-kazalo { order: -1; }
+html[data-videz] .stran-kazalo-naslov::before { content: "// "; color: var(--primary); }
+html[data-videz] .stran-kazalo a { border-radius: 0; }
+
+html[data-videz] .page-eyebrow { background: none; border: 1px solid var(--primary); border-radius: 0; color: var(--primary); }
+html[data-videz] .page-header h1 { font-weight: 600; letter-spacing: -0.02em; font-size: clamp(34px, 5vw, 54px); }
+html[data-videz] .page-meta { border-top: 1px dashed var(--border-color); gap: 0; }
+html[data-videz] .page-meta-item { border: 1px solid var(--border-color); background: var(--bg-card); padding: 10px 18px; margin-right: -1px; }
+html[data-videz] .page-meta-item strong { font-family: var(--font-mono); font-weight: 600; color: var(--primary); }
+
+/* Okvirji s kotnimi oznakami */
+html[data-videz] .matura-formule,
+html[data-videz] .kazalo,
+html[data-videz] .sklop-teorija,
+html[data-videz] .sklop-naloge {
+    position: relative;
+    border-left-width: 1px;
+}
+html[data-videz] .matura-formule::before,
+html[data-videz] .sklop-teorija::before,
+html[data-videz] .sklop-naloge::before,
+html[data-videz] .kazalo::before {
+    content: "";
+    position: absolute;
+    inset: -5px;
+    pointer-events: none;
+    background:
+        linear-gradient(var(--tick), var(--tick)) top left / 12px 2px,
+        linear-gradient(var(--tick), var(--tick)) top left / 2px 12px,
+        linear-gradient(var(--tick), var(--tick)) bottom right / 12px 2px,
+        linear-gradient(var(--tick), var(--tick)) bottom right / 2px 12px;
+    background-repeat: no-repeat;
+}
+html[data-videz] .matura-formule h3,
+html[data-videz] .sklop-teorija > h3,
+html[data-videz] .sklop-naloge > h3 { font-weight: 600; border-bottom: 1px dashed var(--border-color); }
+
+html[data-videz] .sklop-header { border-bottom: 1px solid var(--text-primary); }
+html[data-videz] .sklop-num { color: var(--primary); font-size: 13px; text-transform: none; }
+html[data-videz] .sklop-num::before { content: "["; }
+html[data-videz] .sklop-num::after { content: "]"; }
+html[data-videz] .sklop-header h2 { font-weight: 600; font-size: 30px; letter-spacing: -0.015em; }
+
+html[data-videz] .tip-naloge { border-style: dashed; }
+html[data-videz] .tip-naloge h4 { font-weight: 600; }
+html[data-videz] .tip-naloga { border: 1px solid var(--primary); border-left-width: 4px; background: var(--primary-soft); }
+html[data-videz] .tip-naloga-oznaka::before { content: "> "; }
+html[data-videz] .tip-naloge h5::before { content: "// "; color: var(--primary); }
+html[data-videz] .tip-naloge ol.postopek > li::before { border-radius: 0; background: var(--primary); color: #FFFFFF; content: counter(korak, decimal-leading-zero); width: 28px; font-size: 12px; }
+html[data-videz][data-theme="dark"] .tip-naloge ol.postopek > li::before { color: #081325; }
+html[data-videz] .tip-naloge ol.postopek > li { padding-left: 40px; }
+html[data-videz] .na-nalogi { border-left: 1px dashed var(--primary-light); }
+html[data-videz] .tip-naloge .kljucne li { border-radius: 0; font-family: var(--font-mono); font-size: 12.5px; }
+html[data-videz] .slika {
+    background-image:
+        linear-gradient(var(--g-grid) 1px, transparent 1px),
+        linear-gradient(90deg, var(--g-grid) 1px, transparent 1px);
+    background-size: 16px 16px;
+}
+html[data-videz] .slika figcaption::before { content: "SL. — "; color: var(--primary); }

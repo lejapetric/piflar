@@ -1,0 +1,202 @@
+/* Videz 3 — ZVEZEK / TABLA
+   Svetlo: karirasti zvezek z rdečo robno črto in modrim črnilom.
+   Temno: šolska tabla s kredo. Pisavi Nunito in Patrick Hand (le za oznake). */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Patrick+Hand&display=swap');
+
+html[data-videz] {
+    --font-display: 'Nunito', sans-serif;
+    --font-body: 'Nunito', sans-serif;
+    --font-hand: 'Patrick Hand', 'Comic Sans MS', cursive;
+
+    --primary: #1D4ED8;
+    --primary-dark: #1E3A8A;
+    --primary-light: #93C5FD;
+    --primary-soft: #E6EEFF;
+    --accent: #E11D48;
+
+    --text-primary: #1B2440;
+    --text-secondary: #46506B;
+    --text-muted: #8C93A8;
+    --bg-primary: #FBFAF5;
+    --bg-card: #FFFFFF;
+    --surface-2: #F7F6EF;
+    --border-color: #E3E1D6;
+    --paper-line: rgba(29, 78, 216, 0.08);
+    --margin-line: #F9A8B8;
+
+    --radius-sm: 8px;
+    --radius: 10px;
+
+    --sb-bg: #FFFFFF;
+    --sb-border: #E3E1D6;
+    --sb-text: #1B2440;
+    --sb-text-muted: #46506B;
+    --sb-hover-bg: #F7F6EF;
+    --sb-active-bg: #E6EEFF;
+    --sb-accent: #1D4ED8;
+    --sb-accent-dark: #1E3A8A;
+
+    --g-bg: #FFFFFF;
+    --g-grid: #E3EAF8;
+    --g1: #1D4ED8;
+    --g2: #E11D48;
+    --g3: #059669;
+    --g4: #D97706;
+    --pazi-bg: #FFF9DB;
+    --pazi-fg: #5C3A06;
+    --pazi-border: #FACC15;
+}
+
+html[data-videz][data-theme="dark"] {
+    --primary: #FDE68A;
+    --primary-dark: #FEF3C7;
+    --primary-light: #FCD34D;
+    --primary-soft: rgba(253, 230, 138, 0.12);
+    --accent: #FDA4AF;
+
+    --text-primary: #F1F5EE;
+    --text-secondary: #C3CFC6;
+    --text-muted: #8A9A8F;
+    --bg-primary: #1D2A25;
+    --bg-card: #24332D;
+    --surface-2: #1F2D28;
+    --border-color: #3A4C44;
+    --paper-line: rgba(255, 255, 255, 0.035);
+    --margin-line: rgba(253, 164, 175, 0.45);
+
+    --sb-bg: #24332D;
+    --sb-border: #3A4C44;
+    --sb-text: #F1F5EE;
+    --sb-text-muted: #C3CFC6;
+    --sb-hover-bg: #2B3C35;
+    --sb-active-bg: rgba(253, 230, 138, 0.12);
+    --sb-accent: #FDE68A;
+    --sb-accent-dark: #FEF3C7;
+
+    --g-bg: #22302A;
+    --g-grid: #31433B;
+    --g-axis: #C3CFC6;
+    --g-line: #F1F5EE;
+    --g1: #FDE68A;
+    --g2: #FDA4AF;
+    --g3: #A7F3D0;
+    --g4: #93C5FD;
+    --pazi-bg: rgba(253, 230, 138, 0.08);
+    --pazi-fg: #FDE68A;
+    --pazi-border: #FDE68A;
+}
+
+/* Karirast papir / tabla */
+html[data-videz] body {
+    background-image:
+        linear-gradient(var(--paper-line) 1px, transparent 1px),
+        linear-gradient(90deg, var(--paper-line) 1px, transparent 1px);
+    background-size: 24px 24px;
+    background-attachment: fixed;
+}
+html[data-videz] .header { border-bottom: 2px solid var(--border-color); }
+html[data-videz] .header-brand { font-weight: 900; font-size: 20px; }
+html[data-videz] .header-brand-dot { color: var(--accent); }
+html[data-videz] .iskalnik-vnos { border-radius: 10px; border-width: 2px; }
+
+/* Ročno pisane oznake */
+html[data-videz] .page-eyebrow,
+html[data-videz] .sklop-num,
+html[data-videz] .tip-naloga-oznaka,
+html[data-videz] .tip-naloge h5,
+html[data-videz] .stran-kazalo-naslov,
+html[data-videz] .page-meta-item span {
+    font-family: var(--font-hand);
+    font-weight: 400;
+    text-transform: none;
+    letter-spacing: 0.01em;
+    font-size: 19px;
+}
+html[data-videz] .page-eyebrow { background: none; padding: 0; color: var(--accent); transform: rotate(-1.5deg); }
+html[data-videz] .page-header h1 { font-weight: 900; font-size: clamp(34px, 5vw, 50px); }
+html[data-videz] .page-header h1::after {
+    content: "";
+    display: block;
+    width: 140px;
+    height: 10px;
+    margin-top: 6px;
+    background: var(--primary-light);
+    border-radius: 999px;
+    opacity: 0.7;
+    transform: rotate(-1deg);
+}
+html[data-videz] .page-meta-item strong { font-weight: 900; color: var(--primary); }
+
+/* List zvezka z robno črto */
+html[data-videz] .sklop-teorija,
+html[data-videz] .sklop-naloge,
+html[data-videz] .matura-formule {
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    padding-left: 64px;
+    background:
+        linear-gradient(90deg, transparent 40px, var(--margin-line) 40px, var(--margin-line) 42px, transparent 42px),
+        var(--bg-card);
+    box-shadow: 0 2px 0 var(--border-color), 0 4px 0 -1px var(--bg-card), 0 5px 0 -1px var(--border-color);
+}
+html[data-videz] .matura-formule { border-left: 1px solid var(--border-color); }
+html[data-videz] .sklop-teorija > h3,
+html[data-videz] .sklop-naloge > h3,
+html[data-videz] .matura-formule h3 {
+    font-weight: 900;
+    border-bottom: 0;
+    display: inline-block;
+    background: linear-gradient(transparent 60%, color-mix(in srgb, var(--primary-light) 45%, transparent) 60%);
+    padding: 0 4px;
+}
+html[data-videz][data-theme="dark"] .sklop-teorija > h3,
+html[data-videz][data-theme="dark"] .sklop-naloge > h3,
+html[data-videz][data-theme="dark"] .matura-formule h3 {
+    background: linear-gradient(transparent 62%, rgba(253, 230, 138, 0.22) 62%);
+}
+
+html[data-videz] .kazalo { border: 2px dashed var(--border-color); background: var(--bg-card); }
+html[data-videz] .kazalo h2 { font-weight: 900; }
+html[data-videz] .kazalo .kazalo-st { font-family: var(--font-hand); font-size: 18px; color: var(--accent); }
+html[data-videz] .stran-kazalo { border: 2px solid var(--border-color); }
+html[data-videz] .stran-kazalo-naslov { color: var(--accent); }
+
+html[data-videz] .sklop-header { border-bottom: 2px dashed var(--border-color); }
+html[data-videz] .sklop-num { color: var(--accent); }
+html[data-videz] .sklop-header h2 { font-weight: 900; font-size: 30px; }
+
+html[data-videz] .tip-naloge { border: 2px solid var(--border-color); border-radius: 10px; background: var(--bg-card); }
+html[data-videz] .tip-naloge h4 { font-weight: 800; }
+html[data-videz] .tip-naloga {
+    border: 2px solid var(--primary);
+    border-radius: 4px 14px 6px 12px;
+    background: var(--primary-soft);
+}
+html[data-videz] .tip-naloga-oznaka { color: var(--primary); }
+html[data-videz] .tip-naloge h5 { color: var(--accent); }
+html[data-videz] .tip-naloge ol.postopek > li::before {
+    font-family: var(--font-hand);
+    font-size: 20px;
+    background: none;
+    border: 2px solid var(--accent);
+    color: var(--accent);
+    border-radius: 50% 45% 55% 48%;
+    line-height: 20px;
+}
+html[data-videz] .na-nalogi { border-left: 2px dotted var(--primary-light); }
+html[data-videz] .tip-naloge .kljucne li { background: #FEF9C3; border-color: #FDE68A; color: #713F12; border-radius: 4px; transform: rotate(-0.6deg); }
+html[data-videz][data-theme="dark"] .tip-naloge .kljucne li { background: rgba(253, 230, 138, 0.12); border-color: rgba(253, 230, 138, 0.3); color: #FDE68A; }
+html[data-videz] .slika { border: 2px solid var(--border-color); }
+html[data-videz] .menu-btn { border-radius: 10px; }
+html[data-videz][data-theme="dark"] .menu-btn { color: #1D2A25; }
+
+@media (max-width: 700px) {
+    html[data-videz] .sklop-teorija,
+    html[data-videz] .sklop-naloge,
+    html[data-videz] .matura-formule {
+        padding-left: 36px;
+        background:
+            linear-gradient(90deg, transparent 20px, var(--margin-line) 20px, var(--margin-line) 22px, transparent 22px),
+            var(--bg-card);
+    }
+}
