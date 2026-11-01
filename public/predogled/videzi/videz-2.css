@@ -1,0 +1,181 @@
+/* Videz 2 — SVEŽ
+   Sodobna aplikacija: zelenomodra (teal), mehke sence, zaobljene
+   kartice, naslov strani v barvnem pasu. Pisava Plus Jakarta Sans. */
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+html[data-videz] {
+    --font-display: 'Plus Jakarta Sans', sans-serif;
+    --font-body: 'Plus Jakarta Sans', sans-serif;
+
+    --primary: #0F9488;
+    --primary-dark: #0B6E66;
+    --primary-light: #5EC9BE;
+    --primary-soft: #E3F6F3;
+    --accent: #F59E0B;
+
+    --text-primary: #10231F;
+    --text-secondary: #4D605C;
+    --text-muted: #8A9A97;
+    --bg-primary: #F2F6F5;
+    --bg-card: #FFFFFF;
+    --surface-2: #F4F8F7;
+    --border-color: #E1EAE8;
+
+    --radius-sm: 14px;
+    --radius: 20px;
+    --radius-lg: 26px;
+    --shadow: 0 10px 30px -18px rgba(16, 60, 52, 0.35);
+
+    --sb-bg: #FFFFFF;
+    --sb-border: #E1EAE8;
+    --sb-text: #10231F;
+    --sb-text-muted: #4D605C;
+    --sb-hover-bg: #F2F6F5;
+    --sb-active-bg: #E3F6F3;
+    --sb-accent: #0F9488;
+    --sb-accent-dark: #0B6E66;
+
+    --header-bg: rgba(255, 255, 255, 0.85);
+    --g-bg: #FAFCFC;
+    --g-grid: #E7EFED;
+    --g1: #0F9488;
+    --g2: #E11D48;
+    --g3: #6366F1;
+    --g4: #F59E0B;
+    --hero: #0E7C72;
+}
+
+html[data-videz][data-theme="dark"] {
+    --primary: #2DD4BF;
+    --primary-dark: #99F6E4;
+    --primary-light: #14B8A6;
+    --primary-soft: rgba(45, 212, 191, 0.13);
+
+    --text-primary: #E4F2EF;
+    --text-secondary: #A3B8B3;
+    --text-muted: #6E837E;
+    --bg-primary: #0A1513;
+    --bg-card: #10201D;
+    --surface-2: #0D1A18;
+    --border-color: #1E332F;
+    --shadow: 0 10px 30px -18px rgba(0, 0, 0, 0.8);
+
+    --sb-bg: #10201D;
+    --sb-border: #1E332F;
+    --sb-text: #E4F2EF;
+    --sb-text-muted: #A3B8B3;
+    --sb-hover-bg: #152925;
+    --sb-active-bg: rgba(45, 212, 191, 0.13);
+    --sb-accent: #2DD4BF;
+    --sb-accent-dark: #99F6E4;
+
+    --header-bg: rgba(16, 32, 29, 0.85);
+    --g-bg: #0D1A18;
+    --g-grid: #1B2E2A;
+    --g1: #2DD4BF;
+    --g2: #FB7185;
+    --g3: #A5B4FC;
+    --g4: #FBBF24;
+    --hero: #0C3F3A;
+}
+
+html[data-videz] .header {
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-bottom-color: transparent;
+    box-shadow: 0 1px 0 var(--border-color);
+}
+html[data-videz] .menu-btn { border-radius: 12px; }
+html[data-videz] .header-brand { font-weight: 800; }
+html[data-videz] .iskalnik-vnos { background: var(--surface-2); border-color: transparent; }
+
+/* Naslov strani kot barvni pas */
+html[data-videz] .page-header {
+    max-width: none;
+    background: var(--hero);
+    border-radius: var(--radius-lg);
+    padding: 40px 44px 32px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+}
+html[data-videz] .page-header::after {
+    content: "";
+    position: absolute;
+    right: 24px;
+    bottom: 0;
+    width: 320px;
+    height: 240px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 240' fill='none' stroke='white'%3E%3Cpath d='M20 200H300M160 230V10' stroke-opacity='.35' stroke-width='1.5'/%3E%3Cpath d='M70 20Q160 330 250 20' stroke-opacity='.55' stroke-width='3'/%3E%3Cpath d='M40 20Q160 420 280 20' stroke-opacity='.22' stroke-width='2'/%3E%3Ccircle cx='160' cy='175' r='5' fill='white' fill-opacity='.7' stroke='none'/%3E%3C/svg%3E") no-repeat center / contain;
+    pointer-events: none;
+}
+html[data-videz] .page-header h1,
+html[data-videz] .page-header p,
+html[data-videz] .page-header a { color: #FFFFFF; max-width: 64ch; position: relative; z-index: 1; }
+html[data-videz] .page-header p { opacity: 0.92; max-width: 640px; }
+html[data-videz] .view .page-header a:not([class]) { color: #FFFFFF; text-decoration-color: rgba(255,255,255,.6); }
+html[data-videz] .page-header h1 { max-width: 640px; }
+html[data-videz] .page-eyebrow { background: rgba(255, 255, 255, 0.2); color: #FFFFFF; }
+html[data-videz] .page-meta { border-top-color: rgba(255, 255, 255, 0.25); gap: 12px; position: relative; z-index: 1; }
+html[data-videz] .page-meta-item {
+    background: rgba(255, 255, 255, 0.16);
+    border-radius: 14px;
+    padding: 10px 16px;
+}
+html[data-videz] .page-meta-item strong { color: #FFFFFF; }
+html[data-videz] .page-meta-item span { color: rgba(255, 255, 255, 0.8); }
+
+/* Kartice brez obrob, s senco */
+html[data-videz] .matura-formule,
+html[data-videz] .kazalo,
+html[data-videz] .sklop-teorija,
+html[data-videz] .sklop-naloge,
+html[data-videz] .stran-kazalo {
+    border-color: transparent;
+    box-shadow: var(--shadow);
+}
+html[data-videz] .matura-formule { border-left: 0; }
+html[data-videz] .matura-formule h3,
+html[data-videz] .sklop-teorija > h3,
+html[data-videz] .sklop-naloge > h3 { border-bottom: 0; padding-bottom: 0; }
+html[data-videz] .kazalo .kazalo-st {
+    min-width: 28px;
+    height: 28px;
+    border-radius: 9px;
+    background: var(--primary-soft);
+    display: inline-grid;
+    place-items: center;
+    font-size: 13px;
+}
+html[data-videz] .kazalo a { align-items: center; padding: 6px 4px; border-radius: 10px; border: 0; }
+html[data-videz] .kazalo a:hover { background: var(--surface-2); }
+html[data-videz] .stran-kazalo a { border-left: 0; border-radius: 10px; }
+html[data-videz] .stran-kazalo a.aktivno { background: var(--primary); color: #FFFFFF; }
+html[data-videz][data-theme="dark"] .stran-kazalo a.aktivno { color: #04211D; }
+
+/* Sklop: številka v kapsuli */
+html[data-videz] .sklop-header { border-bottom: 0; }
+html[data-videz] .sklop-num {
+    background: var(--primary);
+    color: #FFFFFF;
+    padding: 4px 12px;
+    border-radius: 999px;
+    letter-spacing: 0.04em;
+}
+html[data-videz][data-theme="dark"] .sklop-num { color: #04211D; }
+html[data-videz] .sklop--visja .sklop-num { background: var(--vr-bg); color: var(--vr-fg); }
+html[data-videz] .sklop-header h2 { font-weight: 800; font-size: 28px; }
+
+html[data-videz] .tip-naloge { border-radius: 16px; background: var(--surface-2); border-color: transparent; }
+html[data-videz] .tip-naloga { background: var(--bg-card); border: 0; box-shadow: inset 4px 0 0 var(--primary); }
+html[data-videz] .prepoznaj { background: var(--bg-card); border-left: 0; }
+html[data-videz] .primer { background: var(--bg-card); }
+html[data-videz] .tip-naloge ol.postopek > li::before { background: var(--primary); color: #FFFFFF; border-radius: 9px; }
+html[data-videz][data-theme="dark"] .tip-naloge ol.postopek > li::before { color: #04211D; }
+html[data-videz] .tip-naloge .kljucne li { background: var(--primary-soft); border-color: transparent; color: var(--primary-dark); }
+html[data-videz] .slika { border: 0; }
+
+@media (max-width: 700px) {
+    html[data-videz] .page-header { padding: 28px 22px 24px; }
+    html[data-videz] .page-header::after { width: 200px; height: 150px; right: 0; opacity: 0.6; }
+}

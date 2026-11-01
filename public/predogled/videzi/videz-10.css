@@ -1,0 +1,207 @@
+/* Videz 10 — IGRIV
+   Otipljiv, »gumbast« videz: kartice s spodnjim robom kot tipke,
+   velike okrogle številke korakov, živahna modra in oranžna.
+   Pisava Nunito v debelejših rezih. */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@500;600;700;800;900&display=swap');
+
+html[data-videz] {
+    --font-display: 'Nunito', sans-serif;
+    --font-body: 'Nunito', sans-serif;
+    --text-base: 16.5px;
+
+    --primary: #2F6BFF;
+    --primary-dark: #1C4FD1;
+    --primary-light: #8CB0FF;
+    --primary-soft: #E6EEFF;
+    --orange: #FF8A1F;
+    --orange-dark: #D96D06;
+    --green: #22B573;
+    --green-dark: #168A56;
+
+    --text-primary: #1D2433;
+    --text-secondary: #4E5871;
+    --text-muted: #949CB0;
+    --bg-primary: #F5F7FB;
+    --bg-card: #FFFFFF;
+    --surface-2: #F5F7FB;
+    --border-color: #E2E7F0;
+    --edge: #D3DAE6;
+
+    --radius-sm: 14px;
+    --radius: 20px;
+
+    --sb-bg: #FFFFFF;
+    --sb-border: #E2E7F0;
+    --sb-text: #1D2433;
+    --sb-text-muted: #4E5871;
+    --sb-hover-bg: #F5F7FB;
+    --sb-active-bg: #E6EEFF;
+    --sb-accent: #2F6BFF;
+    --sb-accent-dark: #1C4FD1;
+
+    --g-bg: #FFFFFF;
+    --g-grid: #EEF1F7;
+    --g1: #2F6BFF;
+    --g2: #F0435A;
+    --g3: #22B573;
+    --g4: #FF8A1F;
+}
+
+html[data-videz][data-theme="dark"] {
+    --primary: #6E97FF;
+    --primary-dark: #A9C1FF;
+    --primary-light: #2F6BFF;
+    --primary-soft: rgba(110, 151, 255, 0.14);
+    --orange: #FF9F45;
+    --orange-dark: #B85A00;
+    --green: #3DD68C;
+    --green-dark: #1B8C57;
+
+    --text-primary: #EDF0F7;
+    --text-secondary: #ADB5C9;
+    --text-muted: #727B92;
+    --bg-primary: #11141C;
+    --bg-card: #1A1F2B;
+    --surface-2: #151924;
+    --border-color: #2A3142;
+    --edge: #0B0D13;
+
+    --sb-bg: #1A1F2B;
+    --sb-border: #2A3142;
+    --sb-text: #EDF0F7;
+    --sb-text-muted: #ADB5C9;
+    --sb-hover-bg: #222837;
+    --sb-active-bg: rgba(110, 151, 255, 0.14);
+    --sb-accent: #6E97FF;
+    --sb-accent-dark: #A9C1FF;
+
+    --g-bg: #161B26;
+    --g-grid: #252C3C;
+    --g1: #6E97FF;
+    --g2: #FF7088;
+    --g3: #3DD68C;
+    --g4: #FF9F45;
+}
+
+html[data-videz] .header { border-bottom: 2px solid var(--border-color); }
+html[data-videz] .header-brand { font-weight: 900; font-size: 22px; letter-spacing: -0.01em; }
+html[data-videz] .header-brand-dot { color: var(--orange); }
+html[data-videz] .menu-btn {
+    border-radius: 12px;
+    box-shadow: 0 4px 0 var(--primary-dark);
+    transform: translateY(-2px);
+}
+html[data-videz] .menu-btn:hover { box-shadow: 0 2px 0 var(--primary-dark); transform: translateY(0); background: var(--primary); }
+html[data-videz][data-theme="dark"] .menu-btn { color: #11141C; }
+html[data-videz] .iskalnik-vnos { border-width: 2px; border-radius: 14px; font-weight: 600; }
+html[data-videz] .header-ikona { border: 2px solid var(--border-color); border-radius: 12px; box-shadow: 0 3px 0 var(--border-color); }
+
+/* Kartica kot tipka */
+html[data-videz] .matura-formule,
+html[data-videz] .kazalo,
+html[data-videz] .sklop-teorija,
+html[data-videz] .sklop-naloge,
+html[data-videz] .stran-kazalo {
+    border: 2px solid var(--border-color);
+    box-shadow: 0 5px 0 var(--edge);
+}
+html[data-videz] .matura-formule { border-left: 2px solid var(--border-color); }
+
+html[data-videz] .page-eyebrow { background: var(--orange); color: #FFFFFF; font-weight: 800; box-shadow: 0 3px 0 var(--orange-dark); }
+html[data-videz][data-theme="dark"] .page-eyebrow { color: #11141C; }
+html[data-videz] .page-header h1 { font-weight: 900; font-size: clamp(36px, 5.5vw, 56px); letter-spacing: -0.02em; }
+html[data-videz] .page-meta { border-top: 0; gap: 12px; }
+html[data-videz] .page-meta-item {
+    background: var(--bg-card);
+    border: 2px solid var(--border-color);
+    box-shadow: 0 4px 0 var(--edge);
+    border-radius: 16px;
+    padding: 12px 18px 10px;
+}
+html[data-videz] .page-meta-item strong { font-weight: 900; font-size: 26px; }
+html[data-videz] .page-meta-item:nth-child(1) strong { color: var(--primary); }
+html[data-videz] .page-meta-item:nth-child(2) strong { color: var(--orange); }
+html[data-videz] .page-meta-item:nth-child(3) strong { color: var(--green); }
+html[data-videz] .page-meta-item span { font-weight: 800; }
+
+html[data-videz] .matura-formule h3,
+html[data-videz] .sklop-teorija > h3,
+html[data-videz] .sklop-naloge > h3,
+html[data-videz] .kazalo h2 { font-weight: 900; border-bottom: 0; padding-bottom: 0; }
+
+/* Kazalo kot pot nivojev */
+html[data-videz] .kazalo ol { gap: 10px 16px; }
+html[data-videz] .kazalo a {
+    align-items: center;
+    gap: 12px;
+    font-weight: 700;
+    font-size: 15px;
+    padding: 6px 0;
+    border: 0;
+}
+html[data-videz] .kazalo .kazalo-st {
+    min-width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: #FFFFFF;
+    display: inline-grid;
+    place-items: center;
+    box-shadow: 0 4px 0 var(--primary-dark);
+    font-weight: 900;
+    font-size: 15px;
+}
+html[data-videz][data-theme="dark"] .kazalo .kazalo-st { color: #11141C; }
+html[data-videz] .kazalo a:hover { color: var(--primary); }
+html[data-videz] .kazalo a:hover .kazalo-st { transform: translateY(2px); box-shadow: 0 2px 0 var(--primary-dark); }
+
+html[data-videz] .stran-kazalo a { border-left: 0; border-radius: 12px; font-weight: 700; }
+html[data-videz] .stran-kazalo a.aktivno { background: var(--primary-soft); border: 2px solid var(--primary-light); }
+html[data-videz] .stran-kazalo-naslov { font-weight: 900; }
+
+html[data-videz] .sklop-header { border-bottom: 0; display: grid; grid-template-columns: auto 1fr; column-gap: 16px; align-items: center; }
+html[data-videz] .sklop-header > :not(.sklop-num) { grid-column: 2; }
+html[data-videz] .sklop-num {
+    grid-row: span 2;
+    margin: 0;
+    padding: 12px 14px;
+    border-radius: 18px;
+    background: var(--orange);
+    color: #FFFFFF;
+    font-weight: 900;
+    font-size: 13px;
+    box-shadow: 0 5px 0 var(--orange-dark);
+    text-align: center;
+    white-space: nowrap;
+    line-height: 1.25;
+}
+html[data-videz][data-theme="dark"] .sklop-num { color: #11141C; }
+html[data-videz] .sklop--visja .sklop-num { background: #FFC83D; color: #4A3200; box-shadow: 0 5px 0 #C99300; }
+html[data-videz] .sklop-header h2 { font-weight: 900; font-size: 30px; margin-bottom: 2px; }
+
+html[data-videz] .tip-naloge { border: 2px solid var(--border-color); border-radius: 18px; }
+html[data-videz] .tip-naloge h4 { font-weight: 900; font-size: 1.25rem; }
+html[data-videz] .tip-naloga { border: 2px solid var(--primary-light); border-radius: 16px; background: var(--primary-soft); }
+html[data-videz] .tip-naloga-oznaka { font-weight: 900; }
+html[data-videz] .prepoznaj { border-left: 0; border-radius: 16px; }
+html[data-videz] .tip-naloge h5 { font-weight: 900; color: var(--orange-dark); }
+html[data-videz][data-theme="dark"] .tip-naloge h5 { color: var(--orange); }
+html[data-videz] .tip-naloge ol.postopek > li { padding-left: 46px; }
+html[data-videz] .tip-naloge ol.postopek > li::before {
+    width: 32px;
+    height: 32px;
+    line-height: 32px;
+    top: -2px;
+    background: var(--green);
+    color: #FFFFFF;
+    font-weight: 900;
+    font-size: 15px;
+    box-shadow: 0 3px 0 var(--green-dark);
+}
+html[data-videz][data-theme="dark"] .tip-naloge ol.postopek > li::before { color: #11141C; }
+html[data-videz] .tip-naloge .korak { font-weight: 800; }
+html[data-videz] .na-nalogi { border-left: 3px solid var(--border-color); border-radius: 2px; }
+html[data-videz] .primer { border: 2px solid var(--border-color); border-radius: 16px; }
+html[data-videz] .tip-naloge .kljucne li { border-width: 2px; font-weight: 700; border-radius: 10px; }
+html[data-videz] .slika { border: 2px solid var(--border-color); border-radius: 18px; }
+html[data-videz] .pazi { border-radius: 14px; border-left-width: 6px; }

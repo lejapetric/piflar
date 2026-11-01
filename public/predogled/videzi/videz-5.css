@@ -1,0 +1,191 @@
+/* Videz 5 — ŠVICARSKI
+   Mednarodni tipografski slog: črno-belo, ena rdeča, mreža,
+   velike številke, brez kartic, ločnice namesto okvirjev. Inter Tight. */
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@500;600;700;800&family=Inter:wght@400;500;600&display=swap');
+
+html[data-videz] {
+    --font-display: 'Inter Tight', 'Inter', sans-serif;
+    --font-body: 'Inter', sans-serif;
+    --text-base: 16px;
+
+    --primary: #E3120B;
+    --primary-dark: #B10D07;
+    --primary-light: #F37B76;
+    --primary-soft: #FDECEB;
+
+    --text-primary: #0A0A0A;
+    --text-secondary: #3D3D3D;
+    --text-muted: #8A8A8A;
+    --bg-primary: #FFFFFF;
+    --bg-card: #FFFFFF;
+    --surface-2: #F4F4F4;
+    --border-color: #E2E2E2;
+    --rule: #0A0A0A;
+
+    --radius-sm: 0;
+    --radius: 0;
+    --radius-lg: 0;
+
+    --sb-bg: #FFFFFF;
+    --sb-border: #0A0A0A;
+    --sb-text: #0A0A0A;
+    --sb-text-muted: #3D3D3D;
+    --sb-hover-bg: #F4F4F4;
+    --sb-active-bg: #F4F4F4;
+    --sb-accent: #E3120B;
+    --sb-accent-dark: #B10D07;
+
+    --g-bg: #FFFFFF;
+    --g-grid: #EEEEEE;
+    --g-axis: #0A0A0A;
+    --g1: #0A0A0A;
+    --g2: #E3120B;
+    --g3: #2563EB;
+    --g4: #8A8A8A;
+    --pazi-bg: #F4F4F4;
+    --pazi-fg: #0A0A0A;
+    --pazi-border: #E3120B;
+    --vr-bg: #0A0A0A;
+    --vr-fg: #FFFFFF;
+    --vr-border: #0A0A0A;
+}
+
+html[data-videz][data-theme="dark"] {
+    --primary: #FF453A;
+    --primary-dark: #FF6B62;
+    --primary-light: #FF453A;
+    --primary-soft: rgba(255, 69, 58, 0.14);
+
+    --text-primary: #F2F2F2;
+    --text-secondary: #B8B8B8;
+    --text-muted: #777777;
+    --bg-primary: #0B0B0B;
+    --bg-card: #0B0B0B;
+    --surface-2: #161616;
+    --border-color: #262626;
+    --rule: #F2F2F2;
+
+    --sb-bg: #0B0B0B;
+    --sb-border: #F2F2F2;
+    --sb-text: #F2F2F2;
+    --sb-text-muted: #B8B8B8;
+    --sb-hover-bg: #161616;
+    --sb-active-bg: #161616;
+    --sb-accent: #FF453A;
+    --sb-accent-dark: #FF6B62;
+
+    --g-bg: #0B0B0B;
+    --g-grid: #1E1E1E;
+    --g-axis: #E5E5E5;
+    --g-line: #F2F2F2;
+    --g1: #F2F2F2;
+    --g2: #FF453A;
+    --g3: #60A5FA;
+    --g4: #9A9A9A;
+    --pazi-bg: #161616;
+    --pazi-fg: #F2F2F2;
+    --pazi-border: #FF453A;
+    --vr-bg: #F2F2F2;
+    --vr-fg: #0B0B0B;
+    --vr-border: #F2F2F2;
+}
+
+html[data-videz] .header { border-bottom: 1px solid var(--rule); }
+html[data-videz] .header-brand { font-weight: 800; letter-spacing: -0.04em; font-size: 20px; }
+html[data-videz] .menu-btn { border-radius: 0; background: var(--text-primary); color: var(--bg-primary); }
+html[data-videz] .menu-btn:hover { background: var(--primary); box-shadow: none; }
+html[data-videz] .iskalnik-vnos { border-radius: 0; border: 0; border-bottom: 1px solid var(--rule); background: transparent; }
+html[data-videz] .header-ikona { border-radius: 0; }
+
+/* Velik naslov po mreži */
+html[data-videz] .page-header { max-width: none; border-bottom: 1px solid var(--rule); padding-bottom: 32px; }
+html[data-videz] .page-eyebrow { background: none; padding: 0; border-radius: 0; color: var(--primary); font-weight: 700; letter-spacing: 0.02em; text-transform: none; font-size: 14px; }
+html[data-videz] .page-header h1 {
+    font-size: clamp(44px, 7vw, 88px);
+    font-weight: 800;
+    letter-spacing: -0.045em;
+    line-height: 0.95;
+    margin: 12px 0 24px;
+}
+html[data-videz] .page-header p { max-width: 58ch; font-size: 19px; }
+html[data-videz] .page-meta { border-top: 0; gap: 0; }
+html[data-videz] .page-meta-item { padding-right: 40px; margin-right: 40px; border-right: 1px solid var(--border-color); }
+html[data-videz] .page-meta-item:last-child { border-right: 0; }
+html[data-videz] .page-meta-item strong { font-size: 40px; font-weight: 800; letter-spacing: -0.04em; }
+
+/* Brez kartic: ločnice */
+html[data-videz] .matura-formule,
+html[data-videz] .kazalo,
+html[data-videz] .sklop-teorija,
+html[data-videz] .sklop-naloge {
+    background: transparent;
+    border: 0;
+    border-top: 1px solid var(--rule);
+    padding-left: 0;
+    padding-right: 0;
+}
+html[data-videz] .matura-formule h3,
+html[data-videz] .sklop-teorija > h3,
+html[data-videz] .sklop-naloge > h3,
+html[data-videz] .kazalo h2 {
+    border: 0;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--primary);
+}
+html[data-videz] .kazalo ol { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 0 32px; }
+html[data-videz] .kazalo a { border-top: 1px solid var(--border-color); border-bottom: 0; padding: 10px 0; flex-direction: column; gap: 2px; font-weight: 500; }
+html[data-videz] .kazalo .kazalo-st { font-size: 24px; font-weight: 800; color: var(--text-primary); letter-spacing: -0.03em; }
+html[data-videz] .kazalo a:hover .kazalo-st { color: var(--primary); }
+
+html[data-videz] .stran-kazalo { background: transparent; border: 0; border-left: 1px solid var(--rule); border-radius: 0; }
+html[data-videz] .stran-kazalo-naslov { color: var(--text-primary); }
+html[data-videz] .stran-kazalo a { border-radius: 0; }
+html[data-videz] .stran-kazalo a.aktivno { background: transparent; color: var(--primary); }
+
+/* Sklop: ogromna številka */
+html[data-videz] .sklop { margin: 96px 0; }
+html[data-videz] .sklop-header {
+    border: 0;
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    column-gap: 24px;
+    align-items: start;
+}
+html[data-videz] .sklop-num {
+    grid-row: span 2;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--primary);
+    letter-spacing: 0;
+    text-transform: none;
+    border-top: 6px solid var(--primary);
+    padding-top: 10px;
+}
+html[data-videz] .sklop-header h2 { font-size: 40px; font-weight: 800; letter-spacing: -0.035em; line-height: 1.05; }
+
+html[data-videz] .tip-naloge { border: 0; border-top: 1px solid var(--border-color); border-radius: 0; padding: 24px 0; }
+html[data-videz] .tip-naloge h4 { font-size: 24px; font-weight: 700; letter-spacing: -0.02em; }
+html[data-videz] .tip-naloga { border: 0; border-left: 6px solid var(--primary); background: var(--surface-2); }
+html[data-videz] .prepoznaj { border-left: 6px solid var(--text-primary); }
+html[data-videz] .tip-naloge h5 { color: var(--text-primary); font-size: 12px; letter-spacing: 0.1em; }
+html[data-videz] .tip-naloge ol.postopek > li::before {
+    border-radius: 0;
+    background: var(--text-primary);
+    color: var(--bg-primary);
+}
+html[data-videz] .na-nalogi { border-left: 1px solid var(--border-color); }
+html[data-videz] .tip-naloge .kljucne li { border-radius: 0; background: transparent; border-color: var(--text-primary); color: var(--text-primary); }
+html[data-videz] .slika { border: 1px solid var(--border-color); }
+html[data-videz] .badge-vr { border-radius: 0; }
+html[data-videz] .footer { border-top: 1px solid var(--rule); }
+
+@media (max-width: 700px) {
+    html[data-videz] .sklop-header { display: block; }
+    html[data-videz] .sklop-header h2 { font-size: 30px; }
+    html[data-videz] .kazalo ol { grid-template-columns: 1fr; }
+    html[data-videz] .page-meta-item { padding-right: 20px; margin-right: 20px; }
+    html[data-videz] .page-meta-item strong { font-size: 28px; }
+}
