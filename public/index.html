@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Piflar.si — Matura iz matematike: razlage, primeri in rešitve</title>
-    <meta name="description" content="Interaktivna učna platforma za maturo iz matematike in fizike. Razlage, rešeni primeri, postopki in vaje za vsa poglavja.">
+    <title>Piflar.si — Priprava na maturo: razlage, tipi nalog in maturitetne pole</title>
+    <meta name="description" content="Priprava na maturo iz matematike, fizike, kemije, biologije, informatike, geografije, zgodovine in slovenščine. Razlage po maturitetnem katalogu, tipi nalog s postopki in maturitetne pole.">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
@@ -25,28 +25,28 @@
         <section class="hero">
             <div class="hero-inner">
                 <div class="hero-text">
-                    <span class="hero-eyebrow">Matura iz matematike in fizike</span>
-                    <h1>Vse za maturo iz <span class="accent">matematike in fizike</span> na enem mestu.</h1>
+                    <span class="hero-eyebrow">Priprava na maturo</span>
+                    <h1>Vse za maturo iz <span class="accent">osmih predmetov</span> na enem mestu.</h1>
                     <p class="hero-lead">
-                        Razlage snovi, rešeni primeri s postopki, interaktivne vaje in nasveti —
-                        vse, kar potrebuješ za uspešno maturo.
+                        Matematika, fizika, kemija, biologija, informatika, geografija, zgodovina in slovenščina:
+                        razlage snovi po maturitetnem katalogu, tipi nalog z rešitvami po korakih in maturitetne pole.
                     </p>
                     <div class="hero-cta">
-                        <a href="#poglavja" class="btn btn-primary">Začni z učenjem</a>
+                        <a href="#predmeti" class="btn btn-primary">Izberi predmet</a>
                         <a href="/views/matematika/matura/matura.html" class="btn btn-secondary">Poglej mature</a>
                     </div>
                     <div class="hero-stats">
                         <div class="hero-stat">
-                            <strong>17</strong>
-                            <span>Poglavij matematike</span>
+                            <strong>8</strong>
+                            <span>Predmetov</span>
                         </div>
                         <div class="hero-stat">
-                            <strong>6</strong>
-                            <span>Poglavij fizike</span>
+                            <strong>117</strong>
+                            <span>Poglavij snovi</span>
                         </div>
                         <div class="hero-stat">
-                            <strong>200+</strong>
-                            <span>Rešenih primerov</span>
+                            <strong>1000</strong>
+                            <span>Tipov nalog s postopki</span>
                         </div>
                     </div>
                 </div>
@@ -56,20 +56,133 @@
                         <span class="hero-preview-dot red"></span>
                         <span class="hero-preview-dot yellow"></span>
                         <span class="hero-preview-dot green"></span>
-                        <span class="hero-preview-title">kvadratna_enacba.txt</span>
+                        <span class="hero-preview-title">iskanje: energija</span>
                     </div>
                     <p style="font-size: var(--text-sm); color: var(--text-secondary); margin-bottom: var(--space-2);">
-                        Reši: <strong>x² − 5x + 6 = 0</strong>
+                        Ena beseda, zadetki iz vseh predmetov:
                     </p>
                     <div class="formula-card">
-                        <code>x = (5 ± √(25 − 24)) / 2</code>
+                        <code>Fizika · Delo in energija</code>
                     </div>
                     <div class="formula-card">
-                        <code>x₁ = 3, &nbsp; x₂ = 2</code>
+                        <code>Biologija · Encimi in presnova</code>
+                    </div>
+                    <div class="formula-card">
+                        <code>Kemija · Kemijska reakcija</code>
                     </div>
                     <p class="hero-preview-note">
-                        Vsak primer ima postopek reševanja po korakih.
+                        Klik na zadetek odpre stran točno na pravem mestu.
                     </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ PREDMETI ============ -->
+        <section class="section" id="predmeti">
+            <div class="section-inner">
+                <div class="section-head">
+                    <h2>Predmeti</h2>
+                    <p>Vsak predmet ima svojo stran s pregledom mature in snov, razdeljeno po maturitetnem katalogu.</p>
+                </div>
+                <div class="chapters">
+                    <a href="/views/matematika/matematika.html" class="chapter-card">
+                        <span class="chapter-num">17 poglavij</span>
+                        <h3>Matematika</h3>
+                        <p>Od logike in množic do funkcij, odvodov, integralov, verjetnosti in statistike. Snov za osnovno in višjo raven.</p>
+                        <div class="chapter-meta"><span>Snov, naloge, matura</span><span class="arrow">→</span></div>
+                    </a>
+                    <a href="/views/fizika/fizika.html" class="chapter-card">
+                        <span class="chapter-num">19 poglavij</span>
+                        <h3>Fizika</h3>
+                        <p>Gibanje, sile, energija, toplota, elektrika, magnetizem, nihanje in valovanje, optika, atom in astronomija.</p>
+                        <div class="chapter-meta"><span>Razlaga + tipi nalog</span><span class="arrow">→</span></div>
+                    </a>
+                    <a href="/views/kemija/kemija.html" class="chapter-card">
+                        <span class="chapter-num">20 poglavij</span>
+                        <h3>Kemija</h3>
+                        <p>Zgradba snovi, kemijske vezi, množina snovi, reakcije, ravnotežja, redoks in organska kemija.</p>
+                        <div class="chapter-meta"><span>Razlaga + tipi nalog</span><span class="arrow">→</span></div>
+                    </a>
+                    <a href="/views/biologija/biologija.html" class="chapter-card">
+                        <span class="chapter-num">18 poglavij</span>
+                        <h3>Biologija</h3>
+                        <p>Celica, presnova, dedovanje, evolucija, rastline, človeško telo, ekosistemi in populacije.</p>
+                        <div class="chapter-meta"><span>Razlaga + tipi nalog</span><span class="arrow">→</span></div>
+                    </a>
+                    <a href="/views/informatika/informatika.html" class="chapter-card">
+                        <span class="chapter-num">4 poglavja</span>
+                        <h3>Informatika</h3>
+                        <p>Informacija, strojna in programska oprema, omrežja, predstavitev podatkov, algoritmi in podatkovne baze.</p>
+                        <div class="chapter-meta"><span>Razlaga + tipi nalog</span><span class="arrow">→</span></div>
+                    </a>
+                    <a href="/views/geografija/geografija.html" class="chapter-card">
+                        <span class="chapter-num">5 poglavij</span>
+                        <h3>Geografija</h3>
+                        <p>Obča geografija, regionalna geografija sveta in Evrope, geografija Slovenije in slovenske pokrajine.</p>
+                        <div class="chapter-meta"><span>Razlaga + tipi nalog</span><span class="arrow">→</span></div>
+                    </a>
+                    <a href="/views/zgodovina/zgodovina.html" class="chapter-card">
+                        <span class="chapter-num">4 poglavja</span>
+                        <h3>Zgodovina</h3>
+                        <p>Stari vek, srednji in novi vek, 19. in 20. stoletje, s poudarkom na slovenskem prostoru.</p>
+                        <div class="chapter-meta"><span>Razlaga + tipi nalog</span><span class="arrow">→</span></div>
+                    </a>
+                    <a href="/views/slovenscina/slovenscina.html" class="chapter-card">
+                        <span class="chapter-num">30 poglavij</span>
+                        <h3>Slovenščina</h3>
+                        <p>Jezik (glasoslovje, oblikoslovje, skladnja, pravopis, besedilo) in književnost od antike do sodobnosti ter esej.</p>
+                        <div class="chapter-meta"><span>Razlaga + tipi nalog</span><span class="arrow">→</span></div>
+                    </a>
+                    <a href="/views/matematika/matura/matura.html" class="chapter-card">
+                        <span class="chapter-num">Matura 2024–2026</span>
+                        <h3>Maturitetne pole</h3>
+                        <p>Pole iz matematike po letih in rokih ter maturitetne naloge, razvrščene po poglavjih snovi. Z rešitvami, postopki in izvozom v PDF.</p>
+                        <div class="chapter-meta"><span>Pole + naloge po snovi</span><span class="arrow">→</span></div>
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============ KAJ NAJDEŠ ============ -->
+        <section class="section">
+            <div class="section-inner">
+                <div class="section-head">
+                    <h2>Kaj najdeš na Piflarju</h2>
+                    <p>Vse, kar potrebuješ za pripravo, od prve razlage do zadnje maturitetne pole.</p>
+                </div>
+                <div class="features">
+                    <div class="feature">
+                        <h3>Razlage po katalogu</h3>
+                        <p>Snov vsakega predmeta je razdeljena tako kot maturitetni katalog, s formulami, slikami in označeno višjo ravnjo.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Tipi nalog s postopki</h3>
+                        <p>Za vsak tip naloge izveš, kako ga prepoznaš, in dobiš univerzalni postopek z rešitvijo po korakih.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Maturitetne pole</h3>
+                        <p>Pole iz matematike po letih in po snovi, z gumboma Rešitev in Postopek pri vsaki nalogi ter PDF z rešitvami ali brez.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Interaktivne naloge</h3>
+                        <p>Pri izbranih poglavjih vpišeš odgovor in stran ga takoj preveri. Prijavljenim beleži napredek, postopek pa pokaže, ko ga potrebuješ.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Iskalnik po vsej snovi</h3>
+                        <p>Iskalnik v glavi išče po vseh predmetih, ne loči velikih črk in strešic ter odpre stran točno na zadetku.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Kazalo na vsaki strani</h3>
+                        <p>Ob vsaki razlagi je lepljivo kazalo poglavij, podpoglavij in tipov nalog, da hitro skočiš, kamor želiš.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Temni način</h3>
+                        <p>Z gumbom z luno ali soncem v glavi preklopiš med svetlo in temno temo. Izbira se zapomni.</p>
+                    </div>
+                    <div class="feature">
+                        <h3>Brezplačna snov</h3>
+                        <p>Razlage in naloge so brezplačne za vse. Paket na strani <a href="/narocnina.html">Naročnina</a> odklene še vse rešene pole.</p>
+                    </div>
                 </div>
             </div>
         </section>
@@ -84,18 +197,18 @@
                 <div class="steps">
                     <div class="step">
                         <span class="step-num">1</span>
-                        <h3>Izberi poglavje</h3>
-                        <p>V meniju izberi snov, ki jo želiš predelati — od logike do statistike in fizike.</p>
+                        <h3>Izberi predmet in poglavje</h3>
+                        <p>Poglavje izbereš v meniju, spodaj na tej strani ali pa ga poiščeš z iskalnikom.</p>
                     </div>
                     <div class="step">
                         <span class="step-num">2</span>
-                        <h3>Beri razlago in primere</h3>
-                        <p>Vsako poglavje vsebuje razlago, formule in rešene primere s postopki.</p>
+                        <h3>Beri razlago in tipe nalog</h3>
+                        <p>Vsako poglavje ima razlago snovi in tipe nalog z rešitvami po korakih.</p>
                     </div>
                     <div class="step">
                         <span class="step-num">3</span>
-                        <h3>Reši naloge in preveri znanje</h3>
-                        <p>Na koncu vsakega poglavja so vaje z rešitvami za samostojno preverjanje.</p>
+                        <h3>Vadi na maturitetnih polah</h3>
+                        <p>Znanje preveri z interaktivnimi nalogami in na pravih maturitetnih polah.</p>
                     </div>
                 </div>
             </div>
@@ -456,7 +569,7 @@
             <div class="section-inner">
                 <div class="section-head">
                     <h2>Kemija — poglavja</h2>
-                    <p>Poglavja po maturitetnem katalogu pokrivajo snov iz kemije.</p>
+                    <p>20 poglavij po maturitetnem katalogu pokriva celotno snov iz kemije.</p>
                 </div>
                 <div class="chapters">
                     <a href="/views/kemija/snov/varno_eksperimentalno_delo/varno_eksperimentalno_delo_razlaga.html" class="chapter-card">
@@ -587,7 +700,7 @@
             <div class="section-inner">
                 <div class="section-head">
                     <h2>Biologija — poglavja</h2>
-                    <p>Poglavja po maturitetnem katalogu pokrivajo snov iz biologije.</p>
+                    <p>18 poglavij po maturitetnem katalogu pokriva celotno snov iz biologije.</p>
                 </div>
                 <div class="chapters">
                     <a href="/views/biologija/snov/zivljenje_na_zemlji/zivljenje_na_zemlji_razlaga.html" class="chapter-card">
@@ -893,39 +1006,11 @@
             </div>
         </section>
 
-        <!-- ============ ZAKAJ PIFLAR ============ -->
-        <section class="section">
-            <div class="section-inner">
-                <div class="section-head">
-                    <h2>Zakaj Piflar.si</h2>
-                    <p>Vse, kar potrebuješ za uspešno maturo.</p>
-                </div>
-                <div class="features">
-                    <div class="feature">
-                        <h3>Brezplačno</h3>
-                        <p>Popolnoma brezplačno za vse dijake. Brez registracije, brez skritih stroškov.</p>
-                    </div>
-                    <div class="feature">
-                        <h3>Rešeni primeri s postopki</h3>
-                        <p>Vsak primer je rešen po korakih, da razumeš postopek in ne le rezultata.</p>
-                    </div>
-                    <div class="feature">
-                        <h3>Interaktivne vaje</h3>
-                        <p>Preveri svoje znanje s kalkulatorji in vajami za vsako poglavje.</p>
-                    </div>
-                    <div class="feature">
-                        <h3>Celotna snov</h3>
-                        <p>17 poglavij matematike in 6 poglavij fizike pokriva celoten učni načrt za maturo.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
         <!-- ============ CTA ============ -->
         <section class="cta-band">
             <h2>Pripravljen na maturo?</h2>
-            <p>Začni z učenjem še danes — izberi poglavje in predelaj snov po korakih.</p>
-            <a href="#poglavja" class="btn btn-primary">Začni z učenjem</a>
+            <p>Začni z učenjem še danes. Izberi predmet in predelaj snov po korakih.</p>
+            <a href="#predmeti" class="btn btn-primary">Izberi predmet</a>
         </section>
 
     </div>

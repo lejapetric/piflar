@@ -1,6 +1,6 @@
 # Piflar.si
 
-Spletna stran z razlagami matematike in fizike za pripravo na maturo.
+Spletna stran z razlagami snovi za pripravo na maturo iz matematike, fizike, kemije, biologije, informatike, geografije, zgodovine in slovenščine.
 
 ## Zagon
 
