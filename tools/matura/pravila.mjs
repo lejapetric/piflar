@@ -76,7 +76,7 @@ export const PRAVILA = [
   { ime: "Obrestno obrestovanje G = G₀ · rⁿ", k: /obrestn\w* obrestovanj/i },
   { ime: "Obrok posojila (sedanja vrednost obrokov)", k: /obrok pri vračanju posojila/i },
   { ime: "Pravilo produkta in pravilo vsote", k: /pravil\w* (produkta|vsote)/i },
-  { ime: "Variacije, permutacije, kombinacije", k: /variacij|permutacij|vrstni red ni pomemben|izberemo \d+ (moš|žen|fant|deklet)/i },
+  { ime: "Variacije, permutacije, kombinacije", k: /variacij|permutacij|(?<!linearn\w* )kombinacij|vrstni red ni pomemben|izberemo \d+ (moš|žen|fant|deklet)/i },
   { ime: "Klasična definicija verjetnosti", k: /ugodn\w* izid/i },
   { ime: "Verjetnost nasprotnega dogodka", k: /nasprotn\w* dogod/i },
   { ime: "Verjetnost neodvisnih dogodkov", k: /neodvisn/i },
