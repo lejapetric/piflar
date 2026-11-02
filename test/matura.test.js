@@ -39,12 +39,14 @@ test("zadnja rešena pola je odklenjena za vse, seznam ne vsebuje rešitev", () 
 });
 
 test("pole leta: spomladanski rok pred jesenskim, z nalogami samo na zahtevo", () => {
-  const { body } = poklici(ctrl.maturaList, { query: { predmet: "matematika", leto: "2026", raven: "osnovna", naloge: "1" } });
-  assert.deepEqual(body.map((p) => p.rok), ["spomladanski", "spomladanski", "jesenski"]);
-  assert.deepEqual(body.slice(0, 2).map((p) => p.stevilka), [1, 2]);
-  assert.ok(body.every((p) => p.leto === 2026 && Array.isArray(p.naloge)));
+  const { body } = poklici(ctrl.maturaList, { query: { predmet: "matematika", leto: "2025", raven: "osnovna", naloge: "1" } });
+  assert.deepEqual(body.map((p) => p.rok), ["spomladanski", "spomladanski", "jesenski", "jesenski"]);
+  assert.deepEqual(body.map((p) => p.stevilka), [1, 2, 1, 2]);
+  assert.ok(body.every((p) => p.leto === 2025 && Array.isArray(p.naloge)));
   assert.equal(body[0].naloge[0].razlaga, undefined); // gost, starejša pola
-  assert.ok(body[2].naloge[0].razlaga); // gost, zadnja rešena pola
+
+  const zadnje = poklici(ctrl.maturaList, { query: { predmet: "matematika", leto: "2026", raven: "osnovna", naloge: "1" } }).body;
+  assert.ok(zadnje.length > 0 && zadnje.every((p) => p.naloge[0].razlaga)); // gost, zadnji rešeni rok
 });
 
 test("naloge po snovi: samo izbrano poglavje, rešitve po pravilih pole", () => {
