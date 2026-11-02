@@ -13,7 +13,7 @@ function poklici(handler, { params = {}, query = {}, uporabnik = null } = {}) {
 }
 
 test("starejša rešena pola je zaklenjena za goste, odklenjena za plačnike", () => {
-  const id = "primer-matematika-osnovna-2024-spomladanski";
+  const id = "matematika-osnovna-2024-spomladanski-1";
   const gost = poklici(ctrl.maturaReadOne, { params: { maturaId: id } });
   assert.equal(gost.body.odklenjena, false);
   assert.equal(gost.body.naloge[0].razlaga, undefined);
@@ -29,7 +29,7 @@ test("starejša rešena pola je zaklenjena za goste, odklenjena za plačnike", (
 });
 
 test("zadnja rešena pola je odklenjena za vse, seznam ne vsebuje rešitev", () => {
-  const zadnja = poklici(ctrl.maturaReadOne, { params: { maturaId: "primer-matematika-osnovna-2026-jesenski" } });
+  const zadnja = poklici(ctrl.maturaReadOne, { params: { maturaId: "matematika-osnovna-2026-spomladanski-1" } });
   assert.equal(zadnja.body.odklenjena, true);
   assert.ok(zadnja.body.naloge[0].razlaga);
 
@@ -39,11 +39,14 @@ test("zadnja rešena pola je odklenjena za vse, seznam ne vsebuje rešitev", () 
 });
 
 test("pole leta: spomladanski rok pred jesenskim, z nalogami samo na zahtevo", () => {
-  const { body } = poklici(ctrl.maturaList, { query: { predmet: "matematika", leto: "2026", raven: "osnovna", naloge: "1" } });
-  assert.deepEqual(body.map((p) => p.rok), ["spomladanski", "jesenski"]);
-  assert.ok(body.every((p) => p.leto === 2026 && Array.isArray(p.naloge)));
+  const { body } = poklici(ctrl.maturaList, { query: { predmet: "matematika", leto: "2025", raven: "osnovna", naloge: "1" } });
+  assert.deepEqual(body.map((p) => p.rok), ["spomladanski", "spomladanski", "jesenski", "jesenski"]);
+  assert.deepEqual(body.map((p) => p.stevilka), [1, 2, 1, 2]);
+  assert.ok(body.every((p) => p.leto === 2025 && Array.isArray(p.naloge)));
   assert.equal(body[0].naloge[0].razlaga, undefined); // gost, starejša pola
-  assert.ok(body[1].naloge[0].razlaga); // gost, zadnja rešena pola
+
+  const zadnje = poklici(ctrl.maturaList, { query: { predmet: "matematika", leto: "2026", raven: "osnovna", naloge: "1" } }).body;
+  assert.ok(zadnje.length > 0 && zadnje.every((p) => p.naloge[0].razlaga)); // gost, zadnji rešeni rok
 });
 
 test("naloge po snovi: samo izbrano poglavje, rešitve po pravilih pole", () => {
@@ -62,4 +65,11 @@ test("naloge po snovi: samo izbrano poglavje, rešitve po pravilih pole", () => 
   });
   assert.ok(placnik.body.length > gost.body.length);
   assert.ok(placnik.body.every((n) => n.odklenjena && n.razlaga));
+});
+
+test("vse izpitne pole zadnjega rešenega roka so javne", async () => {
+  const { javneResenePole } = await import("../api/utils/dostop.js");
+  const pola = (id, stevilka) => ({ id, predmet: "matematika", raven: "osnovna", leto: 2027, rok: "spomladanski", stevilka, naloge: [{ razlaga: "x" }] });
+  const javne = javneResenePole([pola("a", 1), pola("b", 2), { ...pola("c", 1), leto: 2025 }]);
+  assert.deepEqual([...javne].sort(), ["a", "b"]);
 });

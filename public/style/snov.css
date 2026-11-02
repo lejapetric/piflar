@@ -1519,10 +1519,58 @@ mjx-container[display="true"] {
     gap: var(--space-3);
 }
 
+.mn-kot {
+    display: flex;
+    flex-shrink: 0;
+    flex-wrap: wrap;
+    align-items: baseline;
+    justify-content: flex-end;
+    gap: var(--space-1) var(--space-3);
+}
+
+.mn-snov {
+    font-size: var(--text-xs);
+    font-weight: 600;
+    color: var(--primary-dark, var(--primary));
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.mn-snov:hover {
+    text-decoration: underline;
+}
+
+.mn-tabela {
+    border-collapse: collapse;
+    margin: var(--space-2) 0 var(--space-3);
+}
+
+.mn-tabela th,
+.mn-tabela td {
+    border: 1px solid var(--border, currentColor);
+    padding: 0.3rem 0.7rem;
+    text-align: center;
+}
+
+.mn-tabela th {
+    text-align: left;
+    font-weight: 600;
+}
+
+@media print {
+    .mn-snov { display: none; }
+}
+
 .mn-tocke {
     flex-shrink: 0;
     font-size: var(--text-xs);
     font-weight: 700;
+    color: var(--text-secondary);
+}
+
+.mn-navodilo {
+    margin-top: var(--space-1);
+    font-size: var(--text-sm);
     color: var(--text-secondary);
 }
 
@@ -2136,4 +2184,496 @@ pre.koda code {
     .view-container--kazalo {
         display: block;
     }
+}
+
+/* ============================================================
+   MATURITETNA POLA: naloga na listu, kot na pravi poli
+   (list je vedno bel papir, tudi v temnem načinu)
+   ============================================================ */
+.pola-stran {
+    --papir: #FFFFFF;
+    --papir-crta: #1A1A1A;
+    --papir-tekst: #111111;
+    --crnilo: #1D3C9E;
+    --kom: #7A7F87;
+    margin-top: var(--space-5);
+}
+
+.pola-vrh {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-2) var(--space-3);
+    margin-bottom: var(--space-2);
+}
+
+.pola-oznaka {
+    font-weight: 700;
+    color: var(--text-secondary);
+    font-size: var(--text-sm);
+}
+
+.pola-vrh-desno {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-2) var(--space-3);
+}
+
+.pola-list {
+    position: relative;
+    max-width: 820px;
+    min-height: 560px;
+    margin: 0 auto;
+    padding: 56px 52px 48px;
+    background: var(--papir);
+    color: var(--papir-tekst);
+    border: 1px solid #D5D7DB;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    line-height: 1.5;
+    /* vogalne oznake kot na poli */
+    background-image:
+        linear-gradient(var(--papir-crta), var(--papir-crta)), linear-gradient(var(--papir-crta), var(--papir-crta)),
+        linear-gradient(var(--papir-crta), var(--papir-crta)), linear-gradient(var(--papir-crta), var(--papir-crta)),
+        linear-gradient(var(--papir-crta), var(--papir-crta)), linear-gradient(var(--papir-crta), var(--papir-crta)),
+        linear-gradient(var(--papir-crta), var(--papir-crta)), linear-gradient(var(--papir-crta), var(--papir-crta));
+    background-repeat: no-repeat;
+    background-size: 28px 4px, 4px 28px, 28px 4px, 4px 28px, 28px 4px, 4px 28px, 28px 4px, 4px 28px;
+    background-position:
+        14px 14px, 14px 14px,
+        calc(100% - 14px) 14px, calc(100% - 14px) 14px,
+        14px calc(100% - 14px), 14px calc(100% - 14px),
+        calc(100% - 14px) calc(100% - 14px), calc(100% - 14px) calc(100% - 14px);
+}
+
+.pola-st-strani {
+    position: absolute;
+    top: 22px;
+    right: 56px;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.pola-del {
+    margin: 0 0 14px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--papir-tekst);
+}
+
+.pola-okvir {
+    border: 1px solid var(--papir-crta);
+    padding: 16px 18px 18px;
+}
+
+.pola-besedilo {
+    display: flex;
+    gap: 14px;
+}
+
+.pola-st {
+    flex-shrink: 0;
+}
+
+.pola-besedilo > div {
+    flex: 1;
+    min-width: 0;
+}
+
+.pola-tocke {
+    margin: 6px 0 0;
+    text-align: right;
+    font-style: italic;
+    font-size: 14px;
+}
+
+.pola-prostor {
+    min-height: 240px;
+    margin-top: 8px;
+}
+
+.pola-prostor-velik {
+    min-height: 420px;
+}
+
+.pola-list .mn-tabela th,
+.pola-list .mn-tabela td {
+    border-color: #777777;
+}
+
+.pola-list .mn-graf {
+    color: var(--papir-tekst);
+}
+
+.pola-stran[data-prikaz="resitev"] .mreza-prazna,
+.pola-stran[data-prikaz="postopek"] .mreza-prazna {
+    display: none !important;
+}
+
+.pola-risba polyline {
+    stroke: #444444;
+}
+
+.pola-list .mn-zaklep {
+    color: #555555;
+}
+
+/* Rokopis: rešitev, kot bi jo napisal dijak */
+.rokopis {
+    font-family: "Kalam", "Comic Sans MS", cursive;
+    font-size: 21px;
+    line-height: 1.55;
+    color: var(--crnilo, #1D3C9E);
+    padding: 4px 0 0 30px;
+}
+
+.rokopis p {
+    margin: 0 0 4px;
+}
+
+/* Korak: rokopis levo, siv komentar desno (na telefonu pod njim) */
+.rokopis .rk-korak {
+    display: grid;
+    grid-template-columns: minmax(0, 1.6fr) minmax(170px, 1fr);
+    gap: 2px 28px;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.rokopis .rk-naslov {
+    grid-template-columns: 1fr;
+    margin-top: 6px;
+}
+
+.rokopis .rk-kom {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-style: italic;
+    line-height: 1.4;
+    color: var(--kom, #7A7F87);
+}
+
+.rokopis .rk-sam {
+    margin: 0 0 10px;
+}
+
+.rokopis .rk-odg {
+    display: inline-block;
+    padding: 0 6px;
+    border-bottom: 3px double currentColor;
+}
+
+.rokopis .rk-slika {
+    margin: 6px 0 10px;
+    color: var(--crnilo, #1D3C9E);
+}
+
+.rokopis .rk-slika polyline,
+.rokopis .rk-slika polygon {
+    stroke: currentColor;
+}
+
+.rokopis .rk-slika circle[fill^="var"] {
+    fill: currentColor;
+    stroke: currentColor;
+}
+
+.rokopis sup,
+.rokopis sub {
+    font-size: 0.65em;
+}
+
+.rokopis .ul {
+    display: inline-flex;
+    flex-direction: column;
+    vertical-align: middle;
+    text-align: center;
+    line-height: 1.15;
+    margin: 0 0.15em;
+}
+
+.rokopis .ul > span:first-child {
+    border-bottom: 1.5px solid currentColor;
+    padding: 0 0.2em;
+}
+
+.rokopis .ul.brez > span:first-child {
+    border-bottom: 0;
+}
+
+.rokopis .koren {
+    white-space: nowrap;
+}
+
+.rokopis .koren .pod {
+    border-top: 1.5px solid currentColor;
+    padding: 0 0.1em;
+}
+
+.rokopis .kn {
+    margin-right: -0.35em;
+    vertical-align: 0.8em;
+}
+
+.rokopis .lim {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    vertical-align: middle;
+    line-height: 1;
+}
+
+.rokopis .lim small {
+    font-size: 0.6em;
+}
+
+.rokopis .int,
+.rokopis .meja {
+    display: inline-flex;
+    align-items: center;
+}
+
+.rokopis .int {
+    font-size: 1.3em;
+}
+
+.rokopis .int .meje,
+.rokopis .meja {
+    flex-direction: column;
+    font-size: 0.55em;
+    line-height: 1.1;
+}
+
+.rokopis .meja {
+    flex-direction: row;
+    font-size: 1em;
+}
+
+.rokopis .meja sup,
+.rokopis .meja sub {
+    display: block;
+}
+
+.rokopis .meja > sup,
+.rokopis .meja > sub {
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.rokopis .sistem {
+    display: inline-flex;
+    align-items: center;
+    vertical-align: middle;
+}
+
+.rokopis .zav {
+    font-size: 2.4em;
+    line-height: 1;
+    margin-right: 0.15em;
+}
+
+.rokopis .vrst {
+    display: inline-flex;
+    flex-direction: column;
+    line-height: 1.3;
+}
+
+.rokopis .horner {
+    border-collapse: collapse;
+    margin: 4px 0 8px;
+}
+
+.rokopis .horner td {
+    padding: 0 12px;
+    text-align: right;
+    min-width: 2em;
+}
+
+.rokopis .horner .hx {
+    border-right: 1.5px solid currentColor;
+}
+
+.rokopis .horner .hv td {
+    border-top: 1.5px solid currentColor;
+}
+
+.rokopis .horner .ost {
+    border: 1.5px solid currentColor;
+}
+
+/* Na strani poglavja (izven lista) rokopis sledi temi */
+.naloga-postopek .rokopis {
+    --crnilo: #1D3C9E;
+    padding-left: 0;
+}
+
+[data-theme="dark"] .naloga-postopek .rokopis {
+    --crnilo: #9DB4FF;
+    --kom: #A0A6AF;
+}
+
+@media (max-width: 700px) {
+    .pola-list {
+        padding: 44px 18px 32px;
+        min-height: 0;
+    }
+
+    .pola-st-strani {
+        right: 22px;
+    }
+
+    .pola-okvir {
+        padding: 12px;
+    }
+
+    .rokopis {
+        font-size: 18px;
+        padding-left: 4px;
+        overflow-x: auto;
+    }
+
+    .rokopis .rk-korak {
+        grid-template-columns: 1fr;
+        margin-bottom: 12px;
+    }
+}
+
+@media print {
+    .pola-vrh {
+        display: none !important;
+    }
+
+    .pola-stran {
+        break-after: page;
+        margin: 0;
+    }
+
+    .pola-list {
+        box-shadow: none;
+        border: 0;
+        max-width: none;
+        min-height: 26cm;
+    }
+}
+
+.pola-stran [hidden] {
+    display: none !important;
+}
+
+/* Roki in zložene pole na strani leta */
+.matura-rok + .matura-rok {
+    margin-top: var(--space-6);
+}
+
+.matura-rok-naslov {
+    font-family: var(--font-display);
+    font-size: var(--text-2xl);
+    margin: var(--space-5) 0 var(--space-3);
+}
+
+details.matura-pola {
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg, 12px);
+    background: var(--bg-card, var(--surface, transparent));
+    margin-top: var(--space-3);
+}
+
+details.matura-pola + details.matura-pola {
+    margin-top: var(--space-3);
+}
+
+.matura-pola-povzetek {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-4) var(--space-5);
+    cursor: pointer;
+    list-style: none;
+}
+
+.matura-pola-povzetek::-webkit-details-marker {
+    display: none;
+}
+
+.matura-pola-naslov {
+    flex: 1 1 260px;
+    min-width: 0;
+}
+
+.matura-pola-naslov h3 {
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: var(--text-lg);
+}
+
+.matura-pola-naslov p {
+    margin: 2px 0 0;
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+}
+
+.matura-pola-prenosi {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+}
+
+.matura-pola-puscica {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    transition: transform 0.2s;
+}
+
+details.matura-pola[open] .matura-pola-puscica {
+    transform: rotate(180deg);
+}
+
+.matura-pola-vsebina {
+    padding: 0 var(--space-5) var(--space-5);
+}
+
+@media (max-width: 600px) {
+    .matura-pola-povzetek,
+    .matura-pola-vsebina {
+        padding-left: var(--space-3);
+        padding-right: var(--space-3);
+    }
+}
+
+@media print {
+    html.tisk-ena .matura-pola:not(.tisk-izbrana),
+    html.tisk-ena .matura-rok-naslov,
+    .matura-pola-prenosi,
+    .matura-pola-puscica {
+        display: none !important;
+    }
+
+    details.matura-pola {
+        border: 0;
+    }
+
+    .matura-pola-vsebina {
+        padding: 0;
+    }
+}
+
+/* vektor v rokopisu in komentarjih: puščica nad črko */
+.vek {
+    position: relative;
+    display: inline-block;
+}
+
+.vek::after {
+    content: "→";
+    position: absolute;
+    left: 50%;
+    top: -0.62em;
+    transform: translateX(-50%);
+    font-size: 0.7em;
+    line-height: 1;
 }
