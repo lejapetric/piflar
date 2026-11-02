@@ -93,6 +93,12 @@ function nastaviPrikaz(kartica, prikaz) {
   const postopek = kartica.querySelector(".mn-postopek");
   if (resitev) resitev.hidden = !prikaz;
   if (postopek) postopek.hidden = prikaz !== "postopek";
+  if (kartica.classList.contains("pola-stran")) {
+    kartica.querySelectorAll(".mn-resitev").forEach((e) => e.toggleAttribute("hidden", !prikaz));
+    const g = kartica.querySelector(".pola-gumb");
+    if (g) g.textContent = prikaz ? "Skrij rešitev" : "Prikaži rešitev";
+    return;
+  }
   const [gResitev, gPostopek] = kartica.querySelectorAll(".naloga-akcije button");
   if (gResitev) gResitev.textContent = prikaz ? "Skrij rešitev" : "Rešitev";
   if (gPostopek) gPostopek.textContent = prikaz === "postopek" ? "Skrij postopek" : "Postopek";
@@ -165,27 +171,85 @@ function renderNaloga(naloga, { naslov, vir }) {
 }
 
 // ------------------------------------------------------------
+// Naloga na listu, kot na pravi maturitetni poli: okvir, točke, prostor
+// za reševanje. Rešitev se izpiše v prostor za reševanje kot rokopis.
+// ------------------------------------------------------------
+const DELI = { A: "A) KRATKE NALOGE", B: "B) KRAJŠE STRUKTURIRANE NALOGE" };
+
+function renderList(naloga, { pola, stran, skupaj, prviVDelu }) {
+  const kartica = el("article", "mn-naloga pola-stran");
+  kartica.id = `${pola.id}-${naloga.id}`;
+  const del = /^[AB]/.test(naloga.id) ? naloga.id[0] : null;
+  const st = del ? naloga.id.slice(1) : naloga.id;
+
+  const vrh = el("div", "pola-vrh");
+  vrh.append(el("span", "pola-oznaka", `Naloga ${naloga.id}`));
+  const desno = el("div", "pola-vrh-desno");
+  const snov = povezavaSnov(naloga);
+  if (snov) desno.append(snov);
+  const g = gumb("Prikaži rešitev", "btn btn-secondary pola-gumb");
+  desno.append(g);
+  vrh.append(desno);
+
+  const list = el("div", "pola-list");
+  list.append(el("span", "pola-st-strani", `${stran}/${skupaj}`));
+  if (del && prviVDelu) list.append(el("h3", "pola-del", DELI[del]));
+
+  const okvir = el("div", "pola-okvir");
+  const besedilo = el("div", "pola-besedilo");
+  besedilo.append(el("span", "pola-st", `${st}.`), el("div", "", naloga.besedilo ?? ""));
+  okvir.append(besedilo);
+  if (naloga.tocke) okvir.append(el("p", "pola-tocke", `(${tocke(naloga.tocke)})`));
+
+  const prostor = el("div", `pola-prostor${del === "B" ? " pola-prostor-velik" : ""}`);
+  if (naloga.odklenjena && naloga.razlaga) {
+    prostor.append(el("div", "mn-resitev pola-resitev", naloga.razlaga));
+  } else {
+    const zaklep = zaklenjeno(naloga);
+    zaklep.classList.add("mn-resitev");
+    prostor.append(zaklep);
+  }
+  okvir.append(prostor);
+  // Graf iz rešitve narišemo v prazen koordinatni sistem iz besedila, kot na poli
+  const mreza = besedilo.querySelector(".mn-graf.mreza");
+  const risba = prostor.querySelector(".mn-graf.v-mrezo");
+  if (mreza && risba) {
+    risba.classList.add("mn-resitev", "pola-risba");
+    mreza.classList.add("mreza-prazna");
+    mreza.after(risba);
+  }
+  list.append(okvir);
+  kartica.append(vrh, list);
+
+  g.addEventListener("click", () => nastaviPrikaz(kartica, kartica.dataset.prikaz ? "" : "resitev"));
+  nastaviPrikaz(kartica, "");
+  return kartica;
+}
+
+// ------------------------------------------------------------
 // Orodja na vrhu: vse rešitve, vsi postopki, PDF
 // (naslovPdf je funkcija, ker se naslov spremeni z izbiro ravni)
 // ------------------------------------------------------------
-function orodja(naslovPdf) {
+function orodja(naslovPdf, { samoResitve = false } = {}) {
   const vrstica = el("div", "matura-orodja");
   const levo = el("div", "matura-orodja-skupina");
   const desno = el("div", "matura-orodja-skupina");
 
-  const gResitve = gumb("Pokaži vse rešitve");
+  const imeVse = samoResitve ? "Prikaži vse rešitve" : "Pokaži vse rešitve";
+  const gResitve = gumb(imeVse);
   const gPostopki = gumb("Pokaži vse postopke");
   const kartice = () => koren.querySelectorAll(".mn-naloga");
   let stanje = "";
   function vse(prikaz) {
     stanje = stanje === prikaz ? "" : prikaz;
     kartice().forEach((k) => nastaviPrikaz(k, stanje));
-    gResitve.textContent = stanje === "resitev" ? "Skrij vse rešitve" : "Pokaži vse rešitve";
+    gResitve.textContent = stanje === "resitev" ? "Skrij vse rešitve" : imeVse;
     gPostopki.textContent = stanje === "postopek" ? "Skrij vse postopke" : "Pokaži vse postopke";
   }
   gResitve.addEventListener("click", () => vse("resitev"));
   gPostopki.addEventListener("click", () => vse("postopek"));
-  levo.append(gResitve, gPostopki);
+  levo.append(gResitve);
+  if (!samoResitve) levo.append(gPostopki);
 
   const gPdf = gumb("PDF brez rešitev", "btn btn-primary");
   const gPdfResitve = gumb("PDF z rešitvami", "btn btn-primary");
@@ -274,9 +338,17 @@ function renderPola(pola) {
   sekcija.append(glava);
 
   if (!pola.naloge.length) sekcija.append(el("p", "mn-prazno", "Naloge te pole še vnašamo."));
-  for (const naloga of pola.naloge) {
-    sekcija.append(renderNaloga({ ...naloga, odklenjena: pola.odklenjena, resena: pola.resena, pdf: pola.pdf }, { naslov: `Naloga ${naloga.id}` }));
-  }
+  let prejDel = null;
+  pola.naloge.forEach((naloga, i) => {
+    const del = naloga.id[0];
+    sekcija.append(
+      renderList(
+        { ...naloga, odklenjena: pola.odklenjena, resena: pola.resena, pdf: pola.pdf },
+        { pola, stran: i + 1, skupaj: pola.naloge.length, prviVDelu: del !== prejDel }
+      )
+    );
+    prejDel = del;
+  });
   if (pola.vir) sekcija.append(el("p", "mn-avtor", pola.vir));
   return sekcija;
 }
@@ -312,7 +384,7 @@ async function stranPole() {
     typeset(vsebina);
   }
 
-  const vrstica = orodja(() => `Matura${leto ? ` ${leto}` : ""}, ${predmet}, ${RAVNI[raven].toLowerCase()}`);
+  const vrstica = orodja(() => `Matura${leto ? ` ${leto}` : ""}, ${predmet}, ${RAVNI[raven].toLowerCase()}`, { samoResitve: true });
 
   koren.replaceChildren(
     izbiraRavni(ravni.map((r) => [r, RAVNI[r]]), raven, (r) => {
