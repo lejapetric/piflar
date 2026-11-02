@@ -83,7 +83,7 @@ export const PRAVILA = [
   { ime: "Aritmetična sredina in mediana", k: /median|tehtan\w* aritmetičn|vsota vseh podatkov/i },
   { ime: "Prostornina in površina teles", k: /prostornin\w* (valja|stožca|piramide|kocke|kvadra)|plašč|osnovn\w* ploskev krat|prostornina se ohrani|osni presek/i },
   { ime: "Ploščine likov", k: /ploščin\w* (trapeza|paralelograma|pravokotnika|šestkotnika|kroga|enakostraničn|pravokotnega|šestih)|polovica produkta katet|višina trapeza/i },
-  { ime: "Asimptote racionalne funkcije", k: /asimptot/i },
+  { ime: "Asimptote racionalne funkcije", k: /asimptot(?![^.]*hiperbol)/i },
   { ime: "Ničle in poli racionalne funkcije", k: /števec je 0|imenovalec je 0|imenovalec[^.]*= 0/i },
   { ime: "Matematična indukcija", k: /indukcij/i },
   { ime: "Operacije z množicami", k: /skupni elementi|ki niso v|(?<!osni )presek|unij|potenčn\w* množic|kartezičn/i },
