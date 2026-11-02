@@ -29,7 +29,7 @@ test("starejša rešena pola je zaklenjena za goste, odklenjena za plačnike", (
 });
 
 test("zadnja rešena pola je odklenjena za vse, seznam ne vsebuje rešitev", () => {
-  const zadnja = poklici(ctrl.maturaReadOne, { params: { maturaId: "primer-matematika-osnovna-2026-jesenski" } });
+  const zadnja = poklici(ctrl.maturaReadOne, { params: { maturaId: "matematika-osnovna-2026-spomladanski-1" } });
   assert.equal(zadnja.body.odklenjena, true);
   assert.ok(zadnja.body.naloge[0].razlaga);
 
