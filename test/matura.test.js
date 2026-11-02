@@ -13,7 +13,7 @@ function poklici(handler, { params = {}, query = {}, uporabnik = null } = {}) {
 }
 
 test("starejša rešena pola je zaklenjena za goste, odklenjena za plačnike", () => {
-  const id = "primer-matematika-osnovna-2024-spomladanski";
+  const id = "matematika-osnovna-2024-spomladanski-1";
   const gost = poklici(ctrl.maturaReadOne, { params: { maturaId: id } });
   assert.equal(gost.body.odklenjena, false);
   assert.equal(gost.body.naloge[0].razlaga, undefined);

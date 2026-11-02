@@ -69,7 +69,7 @@ test("registracija, prijava, dostop glede na paket, odjava", async () => {
   assert.equal((await get("/jaz")).status, 401);
   assert.equal((await (await get("/jaz", piskotek)).json()).ime, "Ana");
 
-  const zaklenjena = "/matura/primer-matematika-osnovna-2024-spomladanski";
+  const zaklenjena = "/matura/matematika-osnovna-2024-spomladanski-1";
   assert.equal((await (await get(zaklenjena, piskotek)).json()).odklenjena, false);
   baza[0].paket = "osnovni";
   assert.equal((await (await get(zaklenjena, piskotek)).json()).odklenjena, true);
