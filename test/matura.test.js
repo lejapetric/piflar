@@ -40,10 +40,11 @@ test("zadnja rešena pola je odklenjena za vse, seznam ne vsebuje rešitev", () 
 
 test("pole leta: spomladanski rok pred jesenskim, z nalogami samo na zahtevo", () => {
   const { body } = poklici(ctrl.maturaList, { query: { predmet: "matematika", leto: "2026", raven: "osnovna", naloge: "1" } });
-  assert.deepEqual(body.map((p) => p.rok), ["spomladanski", "jesenski"]);
+  assert.deepEqual(body.map((p) => p.rok), ["spomladanski", "spomladanski", "jesenski"]);
+  assert.deepEqual(body.slice(0, 2).map((p) => p.stevilka), [1, 2]);
   assert.ok(body.every((p) => p.leto === 2026 && Array.isArray(p.naloge)));
   assert.equal(body[0].naloge[0].razlaga, undefined); // gost, starejša pola
-  assert.ok(body[1].naloge[0].razlaga); // gost, zadnja rešena pola
+  assert.ok(body[2].naloge[0].razlaga); // gost, zadnja rešena pola
 });
 
 test("naloge po snovi: samo izbrano poglavje, rešitve po pravilih pole", () => {
@@ -62,4 +63,11 @@ test("naloge po snovi: samo izbrano poglavje, rešitve po pravilih pole", () => 
   });
   assert.ok(placnik.body.length > gost.body.length);
   assert.ok(placnik.body.every((n) => n.odklenjena && n.razlaga));
+});
+
+test("vse izpitne pole zadnjega rešenega roka so javne", async () => {
+  const { javneResenePole } = await import("../api/utils/dostop.js");
+  const pola = (id, stevilka) => ({ id, predmet: "matematika", raven: "osnovna", leto: 2027, rok: "spomladanski", stevilka, naloge: [{ razlaga: "x" }] });
+  const javne = javneResenePole([pola("a", 1), pola("b", 2), { ...pola("c", 1), leto: 2025 }]);
+  assert.deepEqual([...javne].sort(), ["a", "b"]);
 });

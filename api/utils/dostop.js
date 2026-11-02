@@ -25,15 +25,17 @@ export function imaPolniDostop(uporabnik, predmet, zdaj = new Date()) {
 const jeResena = (pola) => (pola.naloge ?? []).some((n) => n.razlaga);
 const vrstniRed = (pola) => pola.leto * 10 + (pola.rok === "jesenski" ? 1 : 0);
 
-// Id-ji rešenih pol, ki so javne: najnovejša rešena pola za vsak predmet + raven
+// Id-ji rešenih pol, ki so javne: najnovejši rešeni rok za vsak predmet + raven
+// (vse izpitne pole tega roka, npr. pola 1 in pola 2)
 export function javneResenePole(pole) {
   const najnovejse = new Map();
   for (const pola of pole.filter(jeResena)) {
     const kljuc = `${pola.predmet}|${pola.raven}`;
-    const trenutna = najnovejse.get(kljuc);
-    if (!trenutna || vrstniRed(pola) > vrstniRed(trenutna)) najnovejse.set(kljuc, pola);
+    najnovejse.set(kljuc, Math.max(najnovejse.get(kljuc) ?? -Infinity, vrstniRed(pola)));
   }
-  return new Set([...najnovejse.values()].map((p) => p.id));
+  return new Set(
+    pole.filter((p) => jeResena(p) && vrstniRed(p) === najnovejse.get(`${p.predmet}|${p.raven}`)).map((p) => p.id)
+  );
 }
 
 export function lahkoVidiResitve(uporabnik, pola, javne, zdaj = new Date()) {

@@ -71,6 +71,16 @@ function povezava(href, besedilo, razred) {
 
 const tocke = (t) => (t === 1 ? "1 točka" : t === 2 ? "2 točki" : t <= 4 ? `${t} točke` : `${t} točk`);
 const steviloNalog = (n) => (n === 1 ? "1 naloga" : n === 2 ? "2 nalogi" : n === 3 || n === 4 ? `${n} naloge` : `${n} nalog`);
+// Povezava do razlage snovi: naloga.snov (točna podstran) ali razlaga poglavja
+let SNOVI = {};
+const urlSnovi = (slug) => `/views/${predmet}/snov/${slug}/${slug}_razlaga.html`;
+function povezavaSnov(naloga) {
+  const slug = [naloga.poglavje ?? []].flat()[0];
+  if (!slug) return null;
+  const a = povezava(naloga.snov ?? urlSnovi(slug), `Snov: ${SNOVI[slug]?.naslov ?? "razlaga"} ↗`, "mn-snov");
+  a.title = "Odpri razlago snovi za to nalogo";
+  return a;
+}
 const imeRoka = (pola) => `${pola.leto}, ${ROKI[pola.rok]?.toLowerCase() ?? pola.rok}`;
 
 // ------------------------------------------------------------
@@ -101,7 +111,11 @@ function renderNaloga(naloga, { naslov, vir }) {
 
   const glava = el("div", "mn-glava");
   glava.append(el("h3", "naloga-naslov", naslov));
-  if (naloga.tocke) glava.append(el("span", "mn-tocke", tocke(naloga.tocke)));
+  const kot = el("div", "mn-kot");
+  if (naloga.tocke) kot.append(el("span", "mn-tocke", tocke(naloga.tocke)));
+  const snov = povezavaSnov(naloga);
+  if (snov) kot.append(snov);
+  glava.append(kot);
   kartica.append(glava);
   if (vir) {
     const p = naloga.pola;
@@ -256,6 +270,7 @@ function renderPola(pola) {
     opis.append(a);
   }
   glava.append(opis);
+  if (pola.navodilo) glava.append(el("p", "mn-navodilo", pola.navodilo));
   sekcija.append(glava);
 
   if (!pola.naloge.length) sekcija.append(el("p", "mn-prazno", "Naloge te pole še vnašamo."));
@@ -268,7 +283,11 @@ function renderPola(pola) {
 
 async function stranPole() {
   const leto = parametri.get("leto");
-  const pole = await api(`/api/matura?predmet=${predmet}&naloge=1${leto ? `&leto=${encodeURIComponent(leto)}` : ""}`);
+  const [pole, snovi] = await Promise.all([
+    api(`/api/matura?predmet=${predmet}&naloge=1${leto ? `&leto=${encodeURIComponent(leto)}` : ""}`),
+    api(`/api/snovi?predmet=${predmet}`).catch(() => []),
+  ]);
+  SNOVI = Object.fromEntries(snovi.map((s) => [s.slug, s]));
   if (leto) {
     document.querySelector(".page-header h1").textContent = `Matura ${leto}`;
     document.title = `Matura ${leto}: maturitetne pole | Piflar.si`;
@@ -333,6 +352,7 @@ async function stranLeta() {
 // ------------------------------------------------------------
 async function stranSnov() {
   const snovi = await api(`/api/snovi?predmet=${predmet}`);
+  SNOVI = Object.fromEntries(snovi.map((s) => [s.slug, s]));
   const poglavje = snovi.find((s) => s.slug === parametri.get("poglavje"));
   const sklop = SKLOPI[parametri.get("sklop")] ? Number(parametri.get("sklop")) : null;
   const izbrana = poglavje ? [poglavje] : sklop ? snovi.filter((s) => s.sklop === sklop) : snovi;
@@ -345,7 +365,7 @@ async function stranSnov() {
   const opis = document.querySelector(".page-header p");
   if (poglavje && opis) {
     opis.textContent = `Naloge iz preteklih matur, ki preverjajo poglavje ${poglavje.naslov.toLowerCase()}. `;
-    opis.append(povezava(poglavje.url, "Preberi razlago poglavja"), ".");
+    opis.append(povezava(urlSnovi(poglavje.slug), "Preberi razlago poglavja"), ".");
   }
 
   const naloge = await api(`/api/matura/naloge?predmet=${predmet}&poglavje=${izbrana.map((s) => s.slug).join(",")}`);
