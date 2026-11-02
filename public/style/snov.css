@@ -2335,22 +2335,35 @@ pre.koda code {
     margin: 0 0 4px;
 }
 
-.rokopis .rk-kom {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: 13.5px;
-    font-style: italic;
-    color: var(--kom, #7A7F87);
-    margin: 0 0 8px;
+/* Korak: rokopis levo, siv komentar desno (na telefonu pod njim) */
+.rokopis .rk-korak {
+    display: grid;
+    grid-template-columns: minmax(0, 1.6fr) minmax(170px, 1fr);
+    gap: 2px 28px;
+    align-items: center;
+    margin-bottom: 8px;
 }
 
-.rokopis .rk-kom::before {
-    content: "→ ";
+.rokopis .rk-naslov {
+    grid-template-columns: 1fr;
+    margin-top: 6px;
+}
+
+.rokopis .rk-kom {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-style: italic;
+    line-height: 1.4;
+    color: var(--kom, #7A7F87);
+}
+
+.rokopis .rk-sam {
+    margin: 0 0 10px;
 }
 
 .rokopis .rk-odg {
-    display: table;
+    display: inline-block;
     padding: 0 6px;
-    margin: 2px 0 10px;
     border-bottom: 3px double currentColor;
 }
 
@@ -2522,6 +2535,11 @@ pre.koda code {
         padding-left: 4px;
         overflow-x: auto;
     }
+
+    .rokopis .rk-korak {
+        grid-template-columns: 1fr;
+        margin-bottom: 12px;
+    }
 }
 
 @media print {
@@ -2544,4 +2562,102 @@ pre.koda code {
 
 .pola-stran [hidden] {
     display: none !important;
+}
+
+/* Roki in zložene pole na strani leta */
+.matura-rok + .matura-rok {
+    margin-top: var(--space-6);
+}
+
+.matura-rok-naslov {
+    font-family: var(--font-display);
+    font-size: var(--text-2xl);
+    margin: var(--space-5) 0 var(--space-3);
+}
+
+details.matura-pola {
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg, 12px);
+    background: var(--bg-card, var(--surface, transparent));
+    margin-top: var(--space-3);
+}
+
+details.matura-pola + details.matura-pola {
+    margin-top: var(--space-3);
+}
+
+.matura-pola-povzetek {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-3);
+    padding: var(--space-4) var(--space-5);
+    cursor: pointer;
+    list-style: none;
+}
+
+.matura-pola-povzetek::-webkit-details-marker {
+    display: none;
+}
+
+.matura-pola-naslov {
+    flex: 1 1 260px;
+    min-width: 0;
+}
+
+.matura-pola-naslov h3 {
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: var(--text-lg);
+}
+
+.matura-pola-naslov p {
+    margin: 2px 0 0;
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+}
+
+.matura-pola-prenosi {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+}
+
+.matura-pola-puscica {
+    font-size: 1.2rem;
+    color: var(--text-secondary);
+    transition: transform 0.2s;
+}
+
+details.matura-pola[open] .matura-pola-puscica {
+    transform: rotate(180deg);
+}
+
+.matura-pola-vsebina {
+    padding: 0 var(--space-5) var(--space-5);
+}
+
+@media (max-width: 600px) {
+    .matura-pola-povzetek,
+    .matura-pola-vsebina {
+        padding-left: var(--space-3);
+        padding-right: var(--space-3);
+    }
+}
+
+@media print {
+    html.tisk-ena .matura-pola:not(.tisk-izbrana),
+    html.tisk-ena .matura-rok-naslov,
+    .matura-pola-prenosi,
+    .matura-pola-puscica {
+        display: none !important;
+    }
+
+    details.matura-pola {
+        border: 0;
+    }
+
+    .matura-pola-vsebina {
+        padding: 0;
+    }
 }
