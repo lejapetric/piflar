@@ -174,12 +174,12 @@ function renderNaloga(naloga, { naslov, vir }) {
 // Naloga na listu, kot na pravi maturitetni poli: okvir, točke, prostor
 // za reševanje. Rešitev se izpiše v prostor za reševanje kot rokopis.
 // ------------------------------------------------------------
-const DELI = { A: "A) KRATKE NALOGE", B: "B) KRAJŠE STRUKTURIRANE NALOGE" };
+const DELI = { A: "A) KRATKE NALOGE", B: "B) KRAJŠE STRUKTURIRANE NALOGE", C: "C) STRUKTURIRANE NALOGE" };
 
 function renderList(naloga, { pola, stran, skupaj, prviVDelu }) {
   const kartica = el("article", "mn-naloga pola-stran");
   kartica.id = `${pola.id}-${naloga.id}`;
-  const del = /^[AB]/.test(naloga.id) ? naloga.id[0] : null;
+  const del = /^[ABC]\d/.test(naloga.id) ? naloga.id[0] : null;
   const st = del ? naloga.id.slice(1) : naloga.id;
 
   const vrh = el("div", "pola-vrh");
@@ -201,7 +201,7 @@ function renderList(naloga, { pola, stran, skupaj, prviVDelu }) {
   okvir.append(besedilo);
   if (naloga.tocke) okvir.append(el("p", "pola-tocke", `(${tocke(naloga.tocke)})`));
 
-  const prostor = el("div", `pola-prostor${del === "B" ? " pola-prostor-velik" : ""}`);
+  const prostor = el("div", `pola-prostor${del === "B" || del === "C" ? " pola-prostor-velik" : ""}`);
   if (naloga.odklenjena && naloga.razlaga) {
     prostor.append(el("div", "mn-resitev pola-resitev", naloga.razlaga));
   } else {
