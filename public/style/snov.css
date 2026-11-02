@@ -2661,3 +2661,19 @@ details.matura-pola[open] .matura-pola-puscica {
         padding: 0;
     }
 }
+
+/* vektor v rokopisu in komentarjih: puščica nad črko */
+.vek {
+    position: relative;
+    display: inline-block;
+}
+
+.vek::after {
+    content: "→";
+    position: absolute;
+    left: 50%;
+    top: -0.62em;
+    transform: translateX(-50%);
+    font-size: 0.7em;
+    line-height: 1;
+}
