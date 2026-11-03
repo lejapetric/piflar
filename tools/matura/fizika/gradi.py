@@ -131,6 +131,7 @@ PRAVILA = {
 }
 
 SUP = str.maketrans({"-": "−"})
+TOCKE_STRUKTURIRANE = 15  # točke ene strukturirane naloge (kemija jih spremeni)
 
 
 def oblikuj(s):
@@ -286,7 +287,7 @@ def S(naslov, poglavja, uvod, deli, slika=None):
 
 
 def strukturirana(st, s):
-    besedilo = [f'<p class="pola-naslov-naloge"><strong>{s["naslov"]}</strong></p>']
+    besedilo = [f'<p class="pola-naslov-naloge"><strong>{s["naslov"]}</strong></p>'] if s["naslov"] else []
     if s["uvod"]:
         besedilo.append(f"<p>{oblikuj(s['uvod'])}</p>")
     if s["slika"]:
@@ -314,7 +315,7 @@ def strukturirana(st, s):
         rezultati.append(f"<strong>{oznaka}</strong> {oblikuj(r)}")
         koraki.append(f'<div class="rk-korak rk-naslov"><div class="rk-v">{oznaka}</div></div>')
         koraki += rokopis(d["k"], ze)
-    assert skupaj == 15, f"naloga {st} {s['naslov']}: {skupaj} točk"
+    assert skupaj == TOCKE_STRUKTURIRANE, f"naloga {st} {s['naslov']}: {skupaj} točk"
     return {
         "poglavje": s["poglavja"],
         "tocke": skupaj,

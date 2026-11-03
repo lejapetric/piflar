@@ -29,11 +29,16 @@ const SKLOPI_PREDMETA = {
     4: "Nihanje, valovanje in optika",
     5: "Moderna fizika in astronomija",
   },
+  kemija: {
+    1: "Splošna kemija",
+    2: "Anorganska kemija",
+    3: "Organska kemija",
+  },
 };
 const SKLOPI = SKLOPI_PREDMETA[predmet] ?? {};
-// Fizika ima eno samo raven ("enotna"): izbire ravni in oznake ravni takrat ne prikažemo
+// Fizika in kemija imata eno samo raven ("enotna"): izbire ravni in oznake ravni takrat ne prikažemo
 const RAVNI = { osnovna: "Osnovna raven", visja: "Višja raven", enotna: "Splošna matura" };
-const ENA_RAVEN = predmet === "fizika";
+const ENA_RAVEN = predmet === "fizika" || predmet === "kemija";
 const imeRavni = (raven) => (raven === "enotna" ? "" : RAVNI[raven]?.toLowerCase() ?? raven);
 const ROKI = { predmaturitetni: "Predmaturitetni preizkus", spomladanski: "Spomladanski rok", jesenski: "Jesenski rok" };
 
