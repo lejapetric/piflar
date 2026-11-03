@@ -26,8 +26,8 @@
           <h1>Informacijska tehnologija</h1>
           <p>Informacijska tehnologija so naprave in programi, s katerimi delamo z informacijami. Tu so njen razvoj in vpliv na življenje in zdravje, zgradba in delovanje računalnika, izbira strojne opreme, vrste programov in licenc, zaščita pred vsiljivci ter računalniška omrežja z internetom. Pod razlago so vsi tipi nalog, ki se pojavijo pri tem sklopu.</p>
           <div class="page-meta">
-            <div class="page-meta-item"><strong>5</strong><span>Podpoglavij</span></div>
-            <div class="page-meta-item"><strong>9</strong><span>Tipov nalog</span></div>
+            <div class="page-meta-item"><strong>8</strong><span>Podpoglavij</span></div>
+            <div class="page-meta-item"><strong>15</strong><span>Tipov nalog</span></div>
             <div class="page-meta-item"><strong>~40 min</strong><span>Branja</span></div>
           </div>
         </header>
@@ -55,6 +55,9 @@
             <li><a href="#sklop-3"><span class="kazalo-st">3</span> Strojna oprema računalnika</a></li>
             <li><a href="#sklop-4"><span class="kazalo-st">4</span> Programska oprema računalnika</a></li>
             <li><a href="#sklop-5"><span class="kazalo-st">5</span> Računalniška omrežja</a></li>
+            <li><a href="#sklop-6"><span class="kazalo-st">6</span> Naslovi, plasti in protokoli v omrežju</a></li>
+            <li><a href="#sklop-7"><span class="kazalo-st">7</span> Varnost v omrežju</a></li>
+            <li><a href="#sklop-8"><span class="kazalo-st">8</span> Pomnilniška hierarhija in operacijski sistem</a></li>
             <li><a href="#kljuc"><span class="kazalo-st">?</span> Ključ: kateri tip naloge je to?</a></li>
           </ol>
         </nav>
@@ -410,6 +413,210 @@
           </div>
         </section>
 
+        <!-- SKLOP 6 -->
+        <section class="sklop" id="sklop-6">
+          <header class="sklop-header">
+            <span class="sklop-num">4.2 · 6</span>
+            <h2>Naslovi, plasti in protokoli v omrežju</h2>
+            <p>Paketi, plasti TCP/IP, naslovi IP in MAC, vrata, DNS, topologije, stikalo in usmerjevalnik ter najcenejše povezano omrežje.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <h4>Paketi in plasti</h4>
+            <p>Podatke po omrežju prenašamo v <strong>paketih</strong> omejene dolžine. Vsak paket ima <strong>glavo</strong> (naslov pošiljatelja in prejemnika, zaporedno številko, vrata, kontrolno vsoto) in <strong>vsebino</strong>. Naloge so razdeljene po plasteh; vsaka plast uporablja storitve spodnje:</p>
+            <div class="tabela-wrap"><table class="tabela"><thead><tr><th>Plast</th><th>Naloga</th><th>Primeri</th></tr></thead><tbody>
+              <tr><td>aplikacijska</td><td>storitve za uporabnika</td><td>HTTP, HTTPS, SMTP, IMAP, POP3, FTP, DNS, SSH</td></tr>
+              <tr><td>prenosna</td><td>razdeli podatke na pakete, jih oštevilči, zagotovi pravi vrstni red in ponovno pošlje izgubljene (TCP) ali pošilja brez potrjevanja (UDP); vrata določijo program</td><td>TCP, UDP</td></tr>
+              <tr><td>omrežna</td><td>naslavljanje in usmerjanje paketov med omrežji</td><td>IP (IPv4, IPv6)</td></tr>
+              <tr><td>povezavna in fizična</td><td>prenos v krajevnem omrežju, signal po mediju</td><td>Ethernet, Wi-Fi, naslov MAC; baker (UTP), optika, radijski valovi</td></tr>
+            </tbody></table></div>
+            <p>TCP podatke razbije na pakete in vsakemu da <strong>zaporedno številko</strong>; prejemnik jih po njej uredi, ker lahko paketi potujejo po različnih poteh in prispejo v drugem vrstnem redu. Prejem potrdi, manjkajoče pakete pošiljatelj pošlje znova.</p>
+            <h4>Naslovi</h4>
+            <ul>
+              <li><strong>Naslov IPv4</strong>: 32 bitov, zapisan kot štiri desetiška števila od 0 do 255, ločena s piko (192.168.1.20). Naslovi 1.2.3.4.5 (pet delov) ali 10.0.0.256 (256 &gt; 255) niso veljavni. Vseh je \(2^{32} \approx 4{,}3\) milijarde, premalo za vse naprave.</li>
+              <li><strong>Naslov IPv6</strong>: 128 bitov, osem skupin po štiri šestnajstiške števke, ločenih z dvopičjem. Krajšanje: v vsaki skupini izpustimo vodilne ničle (0DEC → DEC, 0012 → 12, 0000 → 0), <em>eno</em> najdaljše zaporedje skupin samih ničel pa nadomestimo z <code class="k">::</code>. Primer: 3202:0000:0000:0000:0DEC:0000:0000:0012 → <strong>3202::DEC:0:0:12</strong>. Dvopičja <code class="k">::</code> ne smemo uporabiti dvakrat, ker ne bi vedeli, koliko ničel pomeni vsako.</li>
+              <li><strong>Naslov MAC</strong>: 48 bitov, šest parov šestnajstiških števk, ločenih z dvopičjem ali vezajem (00:1A:2B:3C:4D:5E). Proizvajalec ga vpiše v omrežno kartico; uporablja se le znotraj krajevnega omrežja.</li>
+              <li><strong>Vrata</strong> (port, število od 0 do 65535) povedo, kateremu programu na računalniku je paket namenjen: HTTP 80, HTTPS 443, SMTP 25, SSH 22, DNS 53. V naslovu URL vrat navadno ne pišemo, ker brskalnik uporabi privzeta vrata protokola (<code class="k">http://stran.si</code> = <code class="k">http://stran.si:80</code>).</li>
+              <li><strong>DNS</strong> prevede domensko ime (www.ric.si) v naslov IP; ljudje si zapomnimo imena, naprave potrebujejo številke.</li>
+            </ul>
+            <h4>Topologije in povezovalne naprave</h4>
+            <div class="tabela-wrap"><table class="tabela"><thead><tr><th>Topologija</th><th>Prednost</th><th>Slabost</th></tr></thead><tbody>
+              <tr><td><strong>zvezda</strong> (vse naprave na stikalo)</td><td>okvara enega kabla izklopi le eno napravo; enostavno dodajanje</td><td>okvara osrednjega stikala izklopi vse; veliko kabla</td></tr>
+              <tr><td><strong>vodilo</strong> (vse na en kabel)</td><td>malo kabla, poceni pri nekaj napravah</td><td>prekinitev kabla ustavi vse; trki pri hkratnem pošiljanju</td></tr>
+              <tr><td><strong>obroč</strong></td><td>enakomerna obremenitev</td><td>ena prekinitev prekine obroč (če ni dvojnega)</td></tr>
+              <tr><td><strong>drevo</strong> (povezane zvezde)</td><td>dobro za več prostorov ali nadstropij, razširljivo</td><td>okvara višjega vozlišča izklopi vso vejo</td></tr>
+              <tr><td><strong>mreža</strong> (več poti)</td><td>zanesljiva: ob okvari povezave paket gre po drugi poti</td><td>draga, veliko povezav</td></tr>
+            </tbody></table></div>
+            <p><strong>Stikalo</strong> (switch) povezuje naprave v istem krajevnem omrežju in pošlje okvir le na vrata, kjer je naprava z naslovom MAC prejemnika. <strong>Usmerjevalnik</strong> (router) povezuje različna omrežja (učilnice, šolo z internetom) in pakete na podlagi naslova IP usmerja po najboljši poti. <strong>Dostopna točka</strong> poveže brezžične naprave. Naprave v vozliščih interneta so usmerjevalniki; mediji med njimi so bakreni kabel, optično vlakno in radijske povezave.</p>
+            <h4>Najcenejše povezano omrežje</h4>
+            <p>Ko moramo povezati vse hiše z najmanjšo ceno (vsaka hiša je dosegljiva, krogov ne potrebujemo), iščemo <strong>najcenejše vpeto drevo</strong>. Kruskalov postopek: povezave uredi po ceni naraščajoče in jih po vrsti dodajaj, razen če bi povezava zaprla krog; končaj, ko imaš \(n - 1\) povezav za \(n\) hiš.</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-10">
+              <h4>Tip 10: Naslovi IP, MAC in vrata</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>a) Zapiši naslov 2001:0DB8:0000:0000:0000:00A0:0000:0001 na najkrajši način. b) Kateri od naslovov 10.1.300.4, 172.16.0.1, 1.2.3 je veljaven IPv4? c) Zakaj v URL navadno ne pišemo vrat?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> v nalogi je naslov s pikami (IPv4), z dvopičji in šestnajstiškimi števkami (IPv6, MAC) ali število vrat.</p><ul class="kljucne"><li>„najkrajši zapis naslova IPv6“</li><li>„veljaven naslov“</li><li>„naslov MAC“</li><li>„vrata“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">IPv6: v vsaki skupini odstrani vodilne ničle.</p><div class="na-nalogi"><p>2001:DB8:0:0:0:A0:0:1.</p></div></li>
+              <li><p class="korak">Najdaljše zaporedje skupin 0 (le eno) zamenjaj z <code class="k">::</code>.</p><div class="na-nalogi"><p>Tri ničle zapored: <strong>2001:DB8::A0:0:1</strong>.</p></div></li>
+              <li><p class="korak">IPv4: preveri, da so štirje deli in vsak od 0 do 255.</p><div class="na-nalogi"><p>10.1.300.4 ne (300), 1.2.3 ne (trije deli), 172.16.0.1 da.</p></div></li>
+              <li><p class="korak">Vrata: privzeta vrata protokola brskalnik doda sam.</p><div class="na-nalogi"><p>Za https je to 443, zato ga ne pišemo; napišemo ga le, če strežnik posluša na drugih vratih (<code class="k">:8080</code>).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Kateri podatki morajo biti v paketu, da ga omrežje dostavi pravemu programu?</p><p>Naslov IP prejemnika (in pošiljatelja za odgovor) ter vrata ciljnega programa; za pravi vrstni red še zaporedna številka.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Napiši funkcijo, ki preveri, ali je niz naslov MAC oblike XX:XX:XX:XX:XX:XX.</p>
+<pre class="koda"><code>def preveriMAC(niz):
+    deli = niz.split(":")
+    if len(deli) != 6:
+        return False
+    for d in deli:
+        if len(d) != 2:
+            return False
+        for z in d.upper():
+            if z not in "0123456789ABCDEF":
+                return False
+    return True</code></pre></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-11">
+              <h4>Tip 11: Topologija, naprave in najcenejše omrežje</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Šola želi z kabli povezati računalnike v učilnici, učilnice med seboj in šolo z internetom. Predlagaj topologijo za učilnico, njeno največjo slabost in napravo za povezavo učilnic z internetom.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> opisana je postavitev omrežja; sprašujejo po topologiji, prednostih in slabostih, napravi ali po najcenejši povezavi vseh točk.</p><ul class="kljucne"><li>„topologija“</li><li>„stikalo“</li><li>„usmerjevalnik“</li><li>„najceneje povezati“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Izberi topologijo glede na število naprav, zanesljivost in ceno.</p><div class="na-nalogi"><p>Učilnica: zvezda s stikalom; okvara enega kabla izklopi le en računalnik, dodajanje je preprosto.</p></div></li>
+              <li><p class="korak">Navedi kritično točko izbrane topologije.</p><div class="na-nalogi"><p>Če odpove stikalo, so brez omrežja vsi računalniki v učilnici.</p></div></li>
+              <li><p class="korak">Za povezavo različnih omrežij izberi usmerjevalnik, znotraj omrežja stikalo.</p><div class="na-nalogi"><p>Stikala učilnic povežemo v drevo, na vrhu je usmerjevalnik, ki pakete pošilja med omrežji in v internet glede na naslov IP.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Hiše A, B, C, D; cene povezav AB 4, AC 1, BC 2, BD 5, CD 3. Najcenejše omrežje?</p><p>Po vrsti: AC 1, BC 2, CD 3 (tri povezave za štiri hiše, brez kroga). Cena 6.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Kdaj je vodilo boljše od zvezde?</p><p>Pri nekaj napravah na kratki razdalji, ko je pomembna nizka cena in malo kabla.</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 7 -->
+        <section class="sklop" id="sklop-7">
+          <header class="sklop-header">
+            <span class="sklop-num">4.2 · 7</span>
+            <h2>Varnost v omrežju</h2>
+            <p>Šifriranje s simetričnim in asimetričnim ključem, digitalni podpis, HTTPS, identifikacija, overjanje, avtorizacija in večstopenjsko preverjanje.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <h4>Zakaj šifriramo</h4>
+            <p>Promet v omrežju lahko prestreže vsak, ki je na poti (odprto brezžično omrežje, usmerjevalnik). <strong>Šifriranje</strong> sporočilo s ključem pretvori v nerazumljiv zapis; prebere ga le, kdor ima ključ za dešifriranje. Prestreženo šifrirano sporočilo napadalcu ne pove vsebine, lahko pa ga poskusi poslati znova (napad s ponovitvijo), zato sporočila vsebujejo še čas ali enkratno številko.</p>
+            <p>Zapis v kodi QR ali črtni kodi <strong>ni šifriranje</strong>: prebere ga vsaka aplikacija. Gesla in kode PIN ne zapisujemo poleg naslova banke; če ga že moramo zapisati, ga zapišemo spremenjenega po pravilu, ki ga poznamo samo mi.</p>
+            <h4>Simetrično in asimetrično šifriranje</h4>
+            <ul>
+              <li><strong>Simetrično</strong>: isti ključ šifrira in dešifrira (AES). Hitro, a težava je, kako ključ varno izmenjati.</li>
+              <li><strong>Asimetrično</strong> (javni ključ): vsak ima par ključev. <strong>Javni ključ</strong> objavi, <strong>zasebni ključ</strong> skrbno varuje. Kar zašifriramo z javnim ključem prejemnika, odklene le njegov zasebni ključ.</li>
+              <li><strong>Digitalni podpis</strong>: pošiljatelj povzetek dokumenta zašifrira s svojim <em>zasebnim</em> ključem; vsak lahko z njegovim <em>javnim</em> ključem preveri, da je podpis njegov in da dokument ni bil spremenjen. Kdor bi „podpisoval z javnim ključem“, bi delal napako: javni ključ ima vsak, zato tak podpis ne dokazuje ničesar.</li>
+              <li><strong>Digitalno potrdilo</strong> (certifikat) izda overitelj in potrjuje, da javni ključ res pripada določeni osebi ali strežniku.</li>
+            </ul>
+            <p><strong>HTTPS</strong> (HTTP prek TLS): brskalnik najprej preveri potrdilo strežnika (banke), nato si z asimetričnim šifriranjem izmenjata <strong>simetrični ključ seje</strong>, s katerim šifrirata ves nadaljnji promet. Zato je bančništvo varno tudi v nešifriranem brezžičnem omrežju, če naslov začne s https in je potrdilo veljavno.</p>
+            <h4>Identifikacija, overjanje, avtorizacija</h4>
+            <ul>
+              <li><strong>Identifikacija</strong>: uporabnik pove, kdo je (uporabniško ime, številka kartice).</li>
+              <li><strong>Overjanje</strong> (avtentikacija): sistem preveri, da je res on, s tem, kar <em>ve</em> (geslo, PIN), kar <em>ima</em> (telefon, kartica, ključek) ali kar <em>je</em> (prstni odtis, obraz).</li>
+              <li><strong>Avtorizacija</strong>: sistem določi, kaj sme overjeni uporabnik početi (pravice dostopa do virov in storitev).</li>
+              <li><strong>Večstopenjsko (2-faktorsko) preverjanje</strong> je del overjanja: zahteva dva različna dokaza (geslo in koda v telefonu); ukradeno geslo samo ne zadošča.</li>
+            </ul>
+            <p>Drugi ukrepi: požarni zid (nadzira promet med omrežjem in računalnikom), protivirusni program, posodobitve, šifriranje brezžičnega omrežja (WPA2/WPA3), VPN, varnostne kopije. Pri digitalni forenziki zaseženo napravo ne vklapljamo in ne spreminjamo podatkov; naredimo bitno kopijo diska in analiziramo kopijo.</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-12">
+              <h4>Tip 12: Šifriranje, ključi in digitalni podpis</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Peter je v nešifriranem brezžičnem omrežju restavracije. Želi preveriti stanje na bančnem računu. Kaj mora najprej izmenjati z banko in zakaj? Kateri protokol naj uporabi?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> govora je o prestrezanju sporočil, varni komunikaciji, ključih, podpisovanju dokumentov ali potrdilih.</p><ul class="kljucne"><li>„šifrirano, nešifrirano“</li><li>„javni, zasebni ključ“</li><li>„digitalni podpis“</li><li>„HTTPS“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Ugotovi, kaj je treba zaščititi: zaupnost (nihče ne bere), celovitost (nihče ne spremeni) ali izvor (kdo je poslal).</p><div class="na-nalogi"><p>Zaupnost gesla in podatkov o računu ter to, da res govori z banko.</p></div></li>
+              <li><p class="korak">Za zaupnost izberi šifriranje; ključ izmenjaj z asimetričnim šifriranjem.</p><div class="na-nalogi"><p>Najprej z banko izmenja (prek njenega javnega ključa) simetrični ključ seje, da je ves nadaljnji promet šifriran in ga prisluškovalec ne razume.</p></div></li>
+              <li><p class="korak">Poimenuj protokol ali ukrep.</p><div class="na-nalogi"><p>HTTPS (TLS); brskalnik preveri potrdilo banke.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Župan podpisuje dokumente s svojim javnim ključem. Je to prav?</p><p>Ne. Podpisuje se z zasebnim ključem, ki ga ima samo on; prejemniki podpis preverijo z njegovim javnim ključem.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Napadalec prestreže šifrirano nakazilo. Si lahko kako pomaga?</p><p>Vsebine ne prebere, lahko pa sporočilo pošlje znova (ponovitev); proti temu sporočilo vsebuje čas ali enkratno številko.</p></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-13">
+              <h4>Tip 13: Identifikacija, overjanje in avtorizacija</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Ob vsakem koraku prijave v spletno učilnico določi, ali gre za identifikacijo, overjanje ali avtorizacijo: vpis uporabniškega imena, vpis gesla, koda SMS, dostop le do svojih predmetov.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> našteti so koraki prijave ali varnostni ukrepi, ki jih je treba razvrstiti.</p><ul class="kljucne"><li>„identifikacija“</li><li>„overjanje“</li><li>„pravice dostopa“</li><li>„preverjanje v dveh korakih“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Kdo si? → identifikacija.</p><div class="na-nalogi"><p>Uporabniško ime.</p></div></li>
+              <li><p class="korak">Dokaži, da si to ti (znanje, posest, biometrija) → overjanje.</p><div class="na-nalogi"><p>Geslo (znanje) in koda SMS (posest telefona): dvofaktorsko overjanje.</p></div></li>
+              <li><p class="korak">Kaj smeš? → avtorizacija.</p><div class="na-nalogi"><p>Dostop le do svojih predmetov.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Kam spada preverjanje v dveh korakih?</p><p>K overjanju; preverja istovetnost z dvema neodvisnima dokazoma.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Policist najde vklopljen prenosnik osumljenca. Kaj stori?</p><p>Ne brska po njem; po navodilih forenzikov ga zavaruje (ne spreminja podatkov), analizira se bitna kopija diska.</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 8 -->
+        <section class="sklop" id="sklop-8">
+          <header class="sklop-header">
+            <span class="sklop-num">4.2 · 8</span>
+            <h2>Pomnilniška hierarhija in operacijski sistem</h2>
+            <p>Registri, predpomnilnik, glavni pomnilnik in trajni pomnilniki; ozko grlo zmogljivosti; operacijski sistem, gonilniki in vrsta za tiskanje.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <h4>Pomnilniška hierarhija</h4>
+            <p>Hitri pomnilnik je drag in majhen, počasni pa poceni in velik. Zato je pomnilnik v računalniku organiziran v hierarhijo: bolj ko je raven blizu procesorja, hitrejša in manjša je.</p>
+            <div class="tabela-wrap"><table class="tabela"><thead><tr><th>Raven</th><th>Velikost</th><th>Čas dostopa</th><th>Lastnost</th></tr></thead><tbody>
+              <tr><td>registri (v CPE)</td><td>nekaj sto bajtov</td><td>&lt; 1 ns</td><td>operandi in rezultat trenutnega ukaza</td></tr>
+              <tr><td>predpomnilnik (L1, L2, L3, SRAM)</td><td>KB do nekaj deset MB</td><td>1–10 ns</td><td>kopija nedavno in pogosto uporabljenih podatkov</td></tr>
+              <tr><td>glavni pomnilnik (RAM, DRAM)</td><td>GB</td><td>~ 50–100 ns</td><td>izgubi vsebino ob izklopu; DRAM je treba nenehno <strong>osveževati</strong></td></tr>
+              <tr><td>trajni pomnilnik (SSD, trdi disk)</td><td>sto GB do TB</td><td>µs (SSD) do ms (disk)</td><td>ohrani podatke brez napajanja</td></tr>
+              <tr><td>zunanji in arhivski (ključek USB, trak, oblak)</td><td>praktično neomejeno</td><td>ms do s</td><td>prenosljivost, varnostne kopije</td></tr>
+            </tbody></table></div>
+            <p>Predpomnilnik pospeši program, ker ima <strong>krajši čas dostopa</strong> kot glavni pomnilnik, programi pa večkrat zaporedoma uporabljajo iste ali sosednje podatke. Če program in njegovi podatki (na primer 4 kB spremenljivk) v celoti prostorsko ustrezajo predpomnilniku, procesor skoraj ne čaka na RAM.</p>
+            <p><strong>Ozko grlo</strong>: če program obdeluje več podatkov, kot jih gre v RAM (150 GB genoma pri 8 GB RAM), jih mora ves čas brati z diska, ki je tisočkrat počasnejši; kritičen je premajhen glavni pomnilnik, ne frekvenca procesorja. Zmogljivost računalnika ni odvisna le od procesorja (takta, števila jeder), ampak od vseh enot skupaj.</p>
+            <h4>Registri in izvajanje ukaza</h4>
+            <p>CPE ima <strong>programski števec</strong> (naslov naslednjega ukaza), <strong>ukazni register</strong> (trenutni ukaz), splošne registre (R0, R1, …) za operande in rezultate ter <strong>aritmetično-logično enoto</strong>, ki računa. Krmilna enota najprej prevzame ukaz iz pomnilnika na naslovu iz programskega števca, ga dekodira, ALE izvede operacijo, rezultat se zapiše v register ali pomnilnik, programski števec pa se poveča.</p>
+            <h4>Operacijski sistem in gonilniki</h4>
+            <p><strong>Operacijski sistem</strong> (Windows, Linux, macOS, Android) je sistemska programska oprema, ki upravlja strojno opremo in <strong>dodeljuje vire</strong> (procesorski čas, pomnilnik, naprave, datoteke) programom, ki tečejo hkrati. Za vsako napravo ima <strong>gonilnik</strong>, program, ki zna neposredno komunicirati z napravo (tiskalnikom, grafično kartico). Če dva programa hkrati tiskata, OS dokumente uvrsti v <strong>vrsto za tiskanje</strong> (spooling) in jih pošilja enega za drugim, da se strani ne pomešajo.</p>
+            <p>Datoteka ima ime in <strong>podaljšek</strong> (končnico), ki namiguje na vrsto zapisa (.jpg, .docx, .zip), a ga lahko poljubno spremenimo, zato ne zagotavlja, kaj je v njej (na primer, ali je zgoščena). PDF je standard za zapis dokumenta, ki je na vseh napravah videti enako (za tiskanje in arhiviranje), DOCX pa urejen dokument za nadaljnje urejanje.</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-14">
+              <h4>Tip 14: Hierarhija pomnilnika in ozko grlo</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Program 2024-krat pregleda 150 GB podatkov. Računalnik: 2,5 GHz procesor, 8 GB RAM, 16 MB predpomnilnika, 500 GB SSD. Katera komponenta je kritična in zakaj?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> podana je konfiguracija ali seznam pomnilnikov; urediti jih je treba po hitrosti in velikosti ali poiskati ozko grlo.</p><ul class="kljucne"><li>„pomnilniška hierarhija“</li><li>„predpomnilnik“</li><li>„kritična komponenta“</li><li>„osveževati“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Primerjaj količino podatkov z velikostjo vsake ravni.</p><div class="na-nalogi"><p>150 GB ne gre v 8 GB RAM, gre pa na 500 GB SSD.</p></div></li>
+              <li><p class="korak">Ugotovi, s katere ravni se podatki dejansko berejo, in njeno hitrost.</p><div class="na-nalogi"><p>Pri vsakem pregledu se vse bere s SSD, ki je veliko počasnejši od RAM.</p></div></li>
+              <li><p class="korak">Poimenuj kritično komponento in utemelji.</p><div class="na-nalogi"><p>Premajhen glavni pomnilnik (RAM); hitrejši procesor ne bi pomagal, ker čaka na podatke.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Kateri pomnilnik je treba nenehno osveževati?</p><p>Dinamični RAM (DRAM).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Uredi od najhitrejšega: disk, register, RAM, predpomnilnik.</p><p>Register, predpomnilnik, RAM, disk.</p></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-15">
+              <h4>Tip 15: Naloge operacijskega sistema</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Na računalniku hkrati tečeta dva programa, ki tiskata vsak svoj dokument. Kako operacijski sistem prepreči, da bi se strani pomešale? Kako se imenuje program, ki neposredno komunicira s tiskalnikom?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> sprašujejo, kdo dodeljuje vire, upravlja naprave ali kaj se zgodi, ko več programov hkrati uporablja isto napravo.</p><ul class="kljucne"><li>„dodeljevanje virov“</li><li>„gonilnik“</li><li>„hkrati“</li><li>„operacijski sistem“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Poimenuj vir, za katerega programa tekmujeta.</p><div class="na-nalogi"><p>Tiskalnik.</p></div></li>
+              <li><p class="korak">Opiši, kako ga OS dodeli.</p><div class="na-nalogi"><p>Dokumente shrani v vrsto za tiskanje in jih tiskalniku pošlje po vrsti, celega enega in nato drugega.</p></div></li>
+              <li><p class="korak">Poimenuj programsko opremo za napravo.</p><div class="na-nalogi"><p>Gonilnik tiskalnika.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Kako imenujemo programsko opremo, ki skrbi za dodeljevanje virov?</p><p>Operacijski sistem.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Ali podaljšek .zip zagotavlja, da je datoteka zgoščena?</p><p>Ne, podaljšek je le del imena in ga lahko spremenimo; vsebina je lahko kaj drugega.</p></div>
+            </div>
+          </div>
+        </section>
+
         <section class="subsection" id="kljuc">
           <div class="subsection-head">
             <h2>Ključ: kateri tip naloge je to?</h2>
@@ -429,6 +636,12 @@
                   <tr><td>„virus“, „trojanski konj“, „zaščita pred vsiljivci“</td><td><a href="#tip-7">Tip 7</a></td></tr>
                   <tr><td>„poveži v omrežje“, „stikalo, usmerjevalnik“, „topologija“</td><td><a href="#tip-8">Tip 8</a></td></tr>
                   <tr><td>„storitve interneta“, „FTP, HTTP, SMTP“, „DNS“</td><td><a href="#tip-9">Tip 9</a></td></tr>
+                <tr><td>„naslov IPv4/IPv6“, „naslov MAC“, „vrata“, „okrajšaj naslov“</td><td><a href="#tip-10">Tip 10</a></td></tr>
+                  <tr><td>„topologija“, „stikalo, usmerjevalnik“, „najcenejše omrežje“</td><td><a href="#tip-11">Tip 11</a></td></tr>
+                <tr><td>„šifriranje“, „javni in zasebni ključ“, „digitalni podpis“, „HTTPS“</td><td><a href="#tip-12">Tip 12</a></td></tr>
+                  <tr><td>„identifikacija“, „overjanje“, „avtorizacija“, „2-faktorsko“</td><td><a href="#tip-13">Tip 13</a></td></tr>
+                <tr><td>„pomnilniška hierarhija“, „predpomnilnik“, „osveževati“, „register“</td><td><a href="#tip-14">Tip 14</a></td></tr>
+                  <tr><td>„operacijski sistem“, „gonilnik“, „dodeljevanje virov“, „vrsta za tiskanje“</td><td><a href="#tip-15">Tip 15</a></td></tr>
                 </tbody>
               </table>
             </div>

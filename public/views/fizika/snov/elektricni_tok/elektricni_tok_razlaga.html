@@ -26,8 +26,8 @@
           <h1>Električni tok</h1>
           <p>Električni tok teče po sklenjenem krogu od vira skozi porabnike in nazaj. Tu so pravila, po katerih se tok in napetost razdelita v vezju, Ohmov zakon, električna moč in izmenična napetost iz omrežja. Pod razlago so vsi tipi nalog, ki se pojavijo pri tem sklopu. Vsebine, označene s <span class="badge-vr">PZ</span>, so posebna znanja iz kataloga.</p>
           <div class="page-meta">
-            <div class="page-meta-item"><strong>4</strong><span>Podpoglavja</span></div>
-            <div class="page-meta-item"><strong>6</strong><span>Tipov nalog</span></div>
+            <div class="page-meta-item"><strong>5</strong><span>Podpoglavij</span></div>
+            <div class="page-meta-item"><strong>7</strong><span>Tipov nalog</span></div>
             <div class="page-meta-item"><strong>~40 min</strong><span>Branja</span></div>
           </div>
         </header>
@@ -54,6 +54,7 @@
             <li><a href="#sklop-2"><span class="kazalo-st">2</span> Ohmov zakon</a></li>
             <li><a href="#sklop-3"><span class="kazalo-st">3</span> Električno delo in moč</a></li>
             <li><a href="#sklop-4"><span class="kazalo-st">4</span> Izmenična napetost</a></li>
+            <li><a href="#sklop-5"><span class="kazalo-st">5</span> Gonilna napetost in notranji upor vira</a></li>
             <li><a href="#kljuc"><span class="kazalo-st">?</span> Ključ: kateri tip naloge je to?</a></li>
           </ol>
         </nav>
@@ -297,6 +298,39 @@
           </div>
         </section>
 
+        <!-- SKLOP 5 -->
+        <section class="sklop" id="sklop-5">
+          <header class="sklop-header">
+            <span class="sklop-num">4.11 · 5</span>
+            <h2>Gonilna napetost in notranji upor vira</h2>
+            <p>Realni vir napetosti: gonilna napetost, notranji upor, napetost na sponkah in tok kratkega stika.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <h4>Realna baterija</h4>
+            <p>Baterija ali generator ima <strong>gonilno napetost</strong> \(U_g\) (napetost, ki jo izmerimo, ko vir ni obremenjen) in <strong>notranji upor</strong> \(R_n\). Notranji upor je kot upornik, vezan zaporedno z idealnim virom, zato tok skozenj teče tudi, ko priključimo zunanji upornik \(R\):</p>
+            <p>\[I = \frac{U_g}{R + R_n}, \qquad U_s = U_g - I R_n = I R.\]</p>
+            <p>\(U_s\) je <strong>napetost na sponkah</strong>; čim večji je tok, tem manjša je, ker se del napetosti „porabi“ na notranjem uporu (baterija se pri velikem toku tudi greje). Pri <strong>kratkem stiku</strong> (\(R = 0\)) teče največji tok \(I_k = U_g/R_n\). Moč na zunanjem uporniku je \(P = I^2 R\); moč, ki se sprosti v viru, je \(I^2 R_n\).</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-7">
+              <h4>Tip 7: Tok in napetost pri viru z notranjim uporom</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Baterija ima gonilno napetost \(9{,}0\ \text{V}\) in notranji upor \(1{,}0\ \Omega\). Nanjo priključimo upornik \(8{,}0\ \Omega\). Kolikšen tok teče in kolikšna je napetost na sponkah?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> v nalogi sta podana gonilna napetost in notranji upor ali pa se napetost vira ob obremenitvi zmanjša.</p><ul class="kljucne"><li>„notranji upor“</li><li>„gonilna napetost“</li><li>„napetost na sponkah“</li><li>„kratek stik“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Notranji in zunanji upor seštej (vezana sta zaporedno).</p><div class="na-nalogi"><p>\(R + R_n = 9{,}0\ \Omega\).</p></div></li>
+              <li><p class="korak">Tok izračunaj iz gonilne napetosti.</p><div class="na-nalogi"><p>\(I = 9{,}0\ \text{V}/9{,}0\ \Omega = 1{,}0\ \text{A}\).</p></div></li>
+              <li><p class="korak">Napetost na sponkah je padec napetosti na zunanjem uporniku.</p><div class="na-nalogi"><p>\(U_s = IR = 8{,}0\ \text{V}\) (\(1{,}0\ \text{V}\) je na notranjem uporu).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Kolikšen je tok kratkega stika te baterije?</p><p>\(I_k = 9{,}0\ \text{V}/1{,}0\ \Omega = 9{,}0\ \text{A}\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Brez obremenitve kaže voltmeter \(4{,}5\ \text{V}\), pri toku \(0{,}50\ \text{A}\) pa \(4{,}0\ \text{V}\). Kolikšen je notranji upor?</p><p>\(R_n = (4{,}5 - 4{,}0)\ \text{V}/0{,}50\ \text{A} = 1{,}0\ \Omega\).</p></div>
+            </div>
+          </div>
+        </section>
+
         <section class="subsection" id="kljuc">
           <div class="subsection-head">
             <h2>Ključ: kateri tip naloge je to?</h2>
@@ -313,6 +347,7 @@
                   <tr><td>„zaporedno“ ali „vzporedno“, „nadomestni upor“</td><td><a href="#tip-4">Tip 4</a></td></tr>
                                     <tr><td>„napis 230 V, 60 W“, „kWh“, „koliko stane“</td><td><a href="#tip-5">Tip 5</a></td></tr>
                   <tr><td>„izmenična napetost“, „efektivna vrednost“, „amplituda“</td><td><a href="#tip-6">Tip 6</a></td></tr>
+                <tr><td>„notranji upor“, „gonilna napetost“, „napetost na sponkah“, „kratek stik“</td><td><a href="#tip-7">Tip 7</a></td></tr>
                 </tbody>
               </table>
             </div>

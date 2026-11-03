@@ -26,8 +26,8 @@
           <h1>Ravnotežja v vodnih raztopinah</h1>
           <p>Kisline in baze so povsod: v želodcu, v kisu, v čistilih, v dežju. Po Brønstedu je kislina snov, ki odda proton, baza pa snov, ki ga sprejme. Iz tega izpeljemo moč kislin in baz, lestvico pH, delovanje indikatorjev in titracijo, s katero določimo koncentracijo raztopine. Na koncu so ionske reakcije in to, zakaj so raztopine nekaterih soli kisle ali bazične. To je eno najobsežnejših poglavij na maturi. Pod razlago so vsi tipi nalog.</p>
           <div class="page-meta">
-            <div class="page-meta-item"><strong>6</strong><span>Podpoglavij</span></div>
-            <div class="page-meta-item"><strong>8</strong><span>Tipov nalog</span></div>
+            <div class="page-meta-item"><strong>8</strong><span>Podpoglavij</span></div>
+            <div class="page-meta-item"><strong>11</strong><span>Tipov nalog</span></div>
             <div class="page-meta-item"><strong>~50 min</strong><span>Branja</span></div>
           </div>
         </header>
@@ -56,6 +56,8 @@
             <li><a href="#sklop-4"><span class="kazalo-st">4</span> Indikatorji in kislinsko-bazne titracije</a></li>
             <li><a href="#sklop-5"><span class="kazalo-st">5</span> Ionske reakcije</a></li>
             <li><a href="#sklop-6"><span class="kazalo-st">6</span> Protoliza ionov soli</a></li>
+            <li><a href="#sklop-7"><span class="kazalo-st">7</span> pH šibkih kislin in baz</a></li>
+            <li><a href="#sklop-8"><span class="kazalo-st">8</span> Pufri</a></li>
             <li><a href="#kljuc"><span class="kazalo-st">?</span> Ključ: kateri tip naloge je to?</a></li>
           </ol>
         </nav>
@@ -382,6 +384,99 @@
           </div>
         </section>
 
+        <!-- SKLOP 7 -->
+        <section class="sklop" id="sklop-7">
+          <header class="sklop-header">
+            <span class="sklop-num">4.9 · 7</span>
+            <h2>pH šibkih kislin in baz</h2>
+            <p>Koncentracija oksonijevih ionov iz \(K_a\), \(K_a\) iz pH, stopnja protolize, pH raztopin soli ter pH po mešanju kisline in baze.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <h4>Šibka kislina</h4>
+            <p>Šibka kislina HA se protolizira le delno: <span class="ke">HA + H<sub>2</sub>O ⇌ H<sub>3</sub>O<sup>+</sup> + A<sup>−</sup></span>. Če je začetna koncentracija \(c\) in nastane \(x\) mol/L oksonijevih ionov, je \([\text{H}_3\text{O}^+] = [\text{A}^-] = x\) in \([\text{HA}] = c - x\). Ker je kislina šibka, je \(x\) majhen v primerjavi s \(c\), zato \(c - x \approx c\):</p>
+            <p>\[K_a = \frac{x^2}{c - x} \approx \frac{x^2}{c} \quad\Rightarrow\quad [\text{H}_3\text{O}^+] = \sqrt{K_a\, c}.\]</p>
+            <p><strong>Stopnja protolize</strong> je delež protoliziranih molekul: \(\alpha = \dfrac{[\text{H}_3\text{O}^+]}{c}\). Šibka kislina ima pri isti koncentraciji višji pH kot močna. Obratno iz izmerjenega pH izračunamo \(K_a = \dfrac{[\text{H}_3\text{O}^+]^2}{c - [\text{H}_3\text{O}^+]}\).</p>
+            <h4>Šibka baza in raztopine soli</h4>
+            <p>Za šibko bazo (NH<sub>3</sub>, amini) enako: \([\text{OH}^-] = \sqrt{K_b\, c}\), nato pOH in \(\text{pH} = 14 - \text{pOH}\). Ion soli, ki je konjugirana kislina šibke baze (NH<sub>4</sub><sup>+</sup>), ima \(K_a = K_w/K_b\); ion, ki je konjugirana baza šibke kisline (CH<sub>3</sub>COO<sup>−</sup>, F<sup>−</sup>, ClO<sup>−</sup>), ima \(K_b = K_w/K_a\). Z njima izračunamo pH raztopine soli po istih formulah.</p>
+            <h4>Mešanje močne kisline in močne baze</h4>
+            <p>Najprej izračunaj množini, nato <span class="ke">H<sub>3</sub>O<sup>+</sup> + OH<sup>−</sup>&nbsp;→ 2H<sub>2</sub>O</span> porabi enako množino obeh. Tisto, česar je več, ostane v <strong>prebitku</strong>; koncentracijo dobiš tako, da preostalo množino deliš s <strong>skupno</strong> prostornino obeh raztopin.</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-9">
+              <h4>Tip 9: pH šibke kisline ali baze iz konstante</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Raztopina etanojske kisline ima koncentracijo \(0{,}10\ \text{mol/L}\), \(K_a = 1{,}8 \cdot 10^{-5}\). Izračunaj \([\text{H}_3\text{O}^+]\), pH in stopnjo protolize.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> podana sta koncentracija in \(K_a\) ali \(K_b\) (ali pH, iz katerega iščejo konstanto).</p><ul class="kljucne"><li>„šibka kislina“</li><li>„\(K_a\), \(K_b\)“</li><li>„stopnja protolize“</li><li>„delež protoliziranih molekul“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Zapiši enačbo protolize.</p><div class="na-nalogi"><p><span class="ke">CH<sub>3</sub>COOH + H<sub>2</sub>O ⇌ CH<sub>3</sub>COO<sup>−</sup> + H<sub>3</sub>O<sup>+</sup></span></p></div></li>
+              <li><p class="korak">\([\text{H}_3\text{O}^+] = \sqrt{K_a c}\) (za bazo \([\text{OH}^-] = \sqrt{K_b c}\)).</p><div class="na-nalogi"><p>\(\sqrt{1{,}8 \cdot 10^{-5} \cdot 0{,}10} = 1{,}3 \cdot 10^{-3}\ \text{mol/L}\).</p></div></li>
+              <li><p class="korak">Izračunaj pH (pri bazi najprej pOH).</p><div class="na-nalogi"><p>\(\text{pH} = -\log(1{,}34 \cdot 10^{-3}) = 2{,}87\).</p></div></li>
+              <li><p class="korak">Stopnja protolize je \([\text{H}_3\text{O}^+]/c\).</p><div class="na-nalogi"><p>\(\alpha = 1{,}34 \cdot 10^{-3}/0{,}10 = 1{,}3\ \%\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Šibka kislina HA (\(0{,}050\ \text{mol/L}\)) ima pH 3,00. Izračunaj \(K_a\).</p><p>\([\text{H}_3\text{O}^+] = 1{,}0 \cdot 10^{-3}\), \(K_a = \dfrac{(1{,}0 \cdot 10^{-3})^2}{0{,}049} = 2{,}0 \cdot 10^{-5}\); protoliziranih je 2,0 %.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> pH raztopine NH<sub>4</sub>Cl (\(0{,}10\ \text{mol/L}\)), \(K_b(\text{NH}_3) = 1{,}8 \cdot 10^{-5}\)?</p><p>\(K_a = 10^{-14}/1{,}8 \cdot 10^{-5} = 5{,}6 \cdot 10^{-10}\), \([\text{H}_3\text{O}^+] = \sqrt{5{,}6 \cdot 10^{-11}} = 7{,}5 \cdot 10^{-6}\), pH = 5,13.</p></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-10">
+              <h4>Tip 10: pH po mešanju kisline in baze</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Zmešamo \(40{,}0\ \text{mL}\) NaOH (\(0{,}150\ \text{mol/L}\)) in \(60{,}0\ \text{mL}\) HCl (\(0{,}150\ \text{mol/L}\)). Katera snov je v prebitku in kolikšen je pH?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> zmešamo dve raztopini (kislino in bazo) z znanima prostorninama in koncentracijama.</p><ul class="kljucne"><li>„zmešamo“</li><li>„v prebitku“</li><li>„pH po mešanju“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Izračunaj množini \(n = cV\).</p><div class="na-nalogi"><p>\(n(\text{NaOH}) = 6{,}00 \cdot 10^{-3}\ \text{mol}\), \(n(\text{HCl}) = 9{,}00 \cdot 10^{-3}\ \text{mol}\).</p></div></li>
+              <li><p class="korak">Odštej manjšo od večje (pri razmerju 1 : 1).</p><div class="na-nalogi"><p>V prebitku HCl: \(3{,}00 \cdot 10^{-3}\ \text{mol}\).</p></div></li>
+              <li><p class="korak">Deli s skupno prostornino in izračunaj pH (ali pOH).</p><div class="na-nalogi"><p>\([\text{H}_3\text{O}^+] = 3{,}00 \cdot 10^{-3}/0{,}100 = 0{,}0300\ \text{mol/L}\), pH = 1,52.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> 100 mL NaOH (0,10 mol/L) in 100 mL HCl (0,080 mol/L)?</p><p>V prebitku \(2{,}0 \cdot 10^{-3}\ \text{mol}\) OH<sup>−</sup> v 0,200 L: \([\text{OH}^-] = 0{,}010\), pOH = 2,00, pH = 12,00.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Raztopina A ima pH 2, raztopina B pH 4. Kje je več H<sub>3</sub>O<sup>+</sup>?</p><p>V A, 100-krat več (vsaka enota pH je faktor 10).</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 8 -->
+        <section class="sklop" id="sklop-8">
+          <header class="sklop-header">
+            <span class="sklop-num">4.9 · 8</span>
+            <h2>Pufri</h2>
+            <p>Sestava pufrske raztopine, kako se upira spremembi pH, izračun pH pufra in reakcije z dodano kislino ali bazo.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <h4>Kaj je pufer</h4>
+            <p><strong>Pufer</strong> (pufrska raztopina) je zmes <strong>šibke kisline in njene konjugirane baze</strong> (CH<sub>3</sub>COOH in CH<sub>3</sub>COONa) ali šibke baze in njene konjugirane kisline (NH<sub>3</sub> in NH<sub>4</sub>Cl). Ob dodatku majhne količine kisline ali baze se pH skoraj ne spremeni, ker:</p>
+            <ul>
+              <li>dodano kislino porabi bazična komponenta: <span class="ke">CH<sub>3</sub>COO<sup>−</sup> + H<sub>3</sub>O<sup>+</sup>&nbsp;→ CH<sub>3</sub>COOH + H<sub>2</sub>O</span> (pri amonijevem pufru <span class="ke">NH<sub>3</sub> + H<sub>3</sub>O<sup>+</sup>&nbsp;→ NH<sub>4</sub><sup>+</sup> + H<sub>2</sub>O</span>);</li>
+              <li>dodano bazo porabi kislinska komponenta: <span class="ke">CH<sub>3</sub>COOH + OH<sup>−</sup>&nbsp;→ CH<sub>3</sub>COO<sup>−</sup> + H<sub>2</sub>O</span> (<span class="ke">NH<sub>4</sub><sup>+</sup> + OH<sup>−</sup>&nbsp;→ NH<sub>3</sub> + H<sub>2</sub>O</span>).</li>
+            </ul>
+            <p>Pufri so v krvi (H<sub>2</sub>CO<sub>3</sub>/HCO<sub>3</sub><sup>−</sup>, pH okoli 7,4), v živilih, šamponih in pri umerjanju pH-metra.</p>
+            <h4>pH pufra</h4>
+            <p>Iz izraza za \(K_a\) sledi (kislina in konjugirana baza sta v pufru obe v velikih koncentracijah, zato ju vstavimo kar z začetnima koncentracijama):</p>
+            <p>\[[\text{H}_3\text{O}^+] = K_a \frac{c(\text{kislina})}{c(\text{konjugirana baza})}, \qquad [\text{OH}^-] = K_b \frac{c(\text{baza})}{c(\text{konjugirana kislina})}.\]</p>
+            <p>Pri enakih koncentracijah obeh komponent je \([\text{H}_3\text{O}^+] = K_a\), torej \(\text{pH} = \text{p}K_a\). Ker sta komponenti v isti raztopini, lahko namesto koncentracij vstaviš tudi množini.</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-11">
+              <h4>Tip 11: Sestava, pH in delovanje pufra</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Pufer pripravimo iz \(0{,}20\ \text{mol}\) NH<sub>3</sub> in \(0{,}10\ \text{mol}\) NH<sub>4</sub>Cl v \(1{,}0\ \text{L}\). \(K_b(\text{NH}_3) = 1{,}8 \cdot 10^{-5}\). Izračunaj pH in zapiši reakcijo pufra z dodano kislino.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> v raztopini sta šibka kislina (baza) in njena sol, ali pa sprašujejo, kaj je pufer.</p><ul class="kljucne"><li>„pufer“</li><li>„šibka kislina in njena sol“</li><li>„dodamo malo kisline“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Določi obe komponenti para.</p><div class="na-nalogi"><p>Baza NH<sub>3</sub>, konjugirana kislina NH<sub>4</sub><sup>+</sup>.</p></div></li>
+              <li><p class="korak">Vstavi v enačbo za pufer.</p><div class="na-nalogi"><p>\([\text{OH}^-] = 1{,}8 \cdot 10^{-5} \cdot \dfrac{0{,}20}{0{,}10} = 3{,}6 \cdot 10^{-5}\ \text{mol/L}\).</p></div></li>
+              <li><p class="korak">Izračunaj pH.</p><div class="na-nalogi"><p>pOH = 4,44, pH = 9,56.</p></div></li>
+              <li><p class="korak">Reakcija z dodano kislino: bazična komponenta + H<sub>3</sub>O<sup>+</sup>.</p><div class="na-nalogi"><p><span class="ke">NH<sub>3</sub> + H<sub>3</sub>O<sup>+</sup>&nbsp;→ NH<sub>4</sub><sup>+</sup> + H<sub>2</sub>O</span></p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> pH pufra iz etanojske kisline in natrijevega etanoata, obe \(0{,}10\ \text{mol/L}\), \(K_a = 1{,}8 \cdot 10^{-5}\)?</p><p>pH = pK<sub>a</sub> = 4,74.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Ali je zmes HCl in NaCl pufer?</p><p>Ne; HCl je močna kislina, Cl<sup>−</sup> pa ne reagira z dodano kislino.</p></div>
+            </div>
+          </div>
+        </section>
+
         <section class="subsection" id="kljuc">
           <div class="subsection-head">
             <h2>Ključ: kateri tip naloge je to?</h2>
@@ -400,6 +495,9 @@
                   <tr><td>„indikator“, „titracijska krivulja“, „barva“</td><td><a href="#tip-6">Tip 6</a></td></tr>
                   <tr><td>„ionska enačba“, „oborina“, „ioni opazovalci“</td><td><a href="#tip-7">Tip 7</a></td></tr>
                   <tr><td>„raztopina soli“, „protoliza iona“</td><td><a href="#tip-8">Tip 8</a></td></tr>
+                <tr><td>„K_a“ in „izračunaj [H₃O⁺], pH“, „stopnja protolize“</td><td><a href="#tip-9">Tip 9</a></td></tr>
+                  <tr><td>„zmešamo kislino in bazo“, „katera je v prebitku“, „pH po mešanju“</td><td><a href="#tip-10">Tip 10</a></td></tr>
+                <tr><td>„pufer“, „šibka kislina in njena sol“, „reakcija pufra z dodano kislino“</td><td><a href="#tip-11">Tip 11</a></td></tr>
                 </tbody>
               </table>
             </div>
