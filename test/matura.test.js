@@ -134,3 +134,24 @@ test("z izklopljenim zaklepom (ZAKLEP ni 1) gost vidi rešitve vseh rešenih pol
     process.env.ZAKLEP = "1";
   }
 });
+
+test("informatika: 12 pol, zadnji rok je javen, starejši zaklenjen (informatika ni v osnovnem paketu)", () => {
+  const seznam = poklici(ctrl.maturaList, { query: { predmet: "informatika" } });
+  assert.equal(seznam.body.length, 12);
+  assert.ok(seznam.body.every((p) => p.raven === "enotna"));
+
+  const javna = poklici(ctrl.maturaReadOne, { params: { maturaId: "informatika-2026-spomladanski-2" } });
+  assert.equal(javna.body.odklenjena, true);
+  assert.equal(javna.body.naloge.length, 6);
+  assert.equal(javna.body.naloge.reduce((s, n) => s + n.tocke, 0), 44);
+
+  const id = "informatika-2024-spomladanski-1";
+  const gost = poklici(ctrl.maturaReadOne, { params: { maturaId: id } });
+  assert.equal(gost.body.odklenjena, false);
+  assert.equal(gost.body.naloge.length, 15);
+  assert.equal(gost.body.naloge[0].razlaga, undefined);
+  const premium = poklici(ctrl.maturaReadOne, { params: { maturaId: id }, uporabnik: { paket: "premium" } });
+  assert.equal(premium.body.odklenjena, true);
+  assert.ok(premium.body.naloge[0].razlaga);
+  assert.ok(premium.body.naloge.every((n) => n.snov && n.tema?.length));
+});
