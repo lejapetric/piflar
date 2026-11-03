@@ -10,6 +10,7 @@ export const snovi = readJSON("./snovi.json").map((snov) => ({
   url: `/views/${snov.predmet}/snov/${snov.slug}/${snov.slug}_razlaga.html`,
 }));
 
-export const matura = readJSON("./matura.json");
+// Pole vseh predmetov: matura.json (matematika) in matura-<predmet>.json
+export const matura = [...readJSON("./matura.json"), ...readJSON("./matura-fizika.json"), ...readJSON("./matura-kemija.json")];
 
 export const naloge = readJSON("./naloge.json");
