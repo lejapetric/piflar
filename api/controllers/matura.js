@@ -47,7 +47,10 @@ const maturaNaloge = (req, res) => {
   const naloge = [];
   for (const pola of filtriraj(razvrscene, req.query)) {
     const odklenjena = lahkoVidiResitve(req.uporabnik, pola, javne);
-    const vir = { id: pola.id, leto: pola.leto, rok: pola.rok, raven: pola.raven, pdf: pola.pdf ?? null, vir: pola.vir };
+    const vir = {
+      id: pola.id, leto: pola.leto, rok: pola.rok, raven: pola.raven, stevilka: pola.stevilka,
+      izvedba: pola.izvedba, pdf: pola.pdf ?? null, vir: pola.vir,
+    };
     for (const naloga of pola.naloge ?? []) {
       if (izbrana && !poglavjaNaloge(naloga).some((p) => izbrana.has(p))) continue;
       naloge.push({ ...prikazNaloge(naloga, odklenjena), resena: Boolean(naloga.razlaga), odklenjena, pola: vir });
