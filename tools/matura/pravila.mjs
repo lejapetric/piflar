@@ -6,7 +6,7 @@
 //   v:  (neobvezno) regularni izraz za rokopis koraka
 export const PRAVILA = [
   // ---------- na listu s formulami ----------
-  { ime: "Evklidov in višinski izrek", k: /evklid|višinsk\w* izrek/i, or: true, vr: true },
+  { ime: "Evklidov in višinski izrek", k: /evklid(?!\w* algorit)|višinsk\w* izrek/i, or: true, vr: true },
   { ime: "Heronova formula", k: /heron/i, or: true, vr: true },
   { ime: "Polmer trikotniku včrtanega kroga (r = S/s)", k: /polmer včrtan\w* (krožnice|kroga)/i, or: true, vr: true },
   { ime: "Površina in prostornina krogle", k: /(površin|prostornin)\w* krogl/i, or: true, vr: true },
@@ -91,7 +91,7 @@ export const PRAVILA = [
   { ime: "Odstotki", k: /odstot|\d ?% pomeni|faktor 1,|množenje z (1|0),/i },
   { ime: "Reševanje sistema enačb", k: /sistem\w* (enačb|treh)|iz (prve|druge|tretje) enačbe|vstavimo v (drugo|prvo|tretjo)|seštejemo (vse|enačb)|drugo enačbo delimo/i },
   { ime: "Reševanje neenačb", k: /neenača/i },
-  { ime: "Periodična decimalna števila", k: /perioda/i },
+  { ime: "Periodična decimalna števila", k: /perioda(?! (sinus|kosinus|tangens|kotangens))/i },
   { ime: "Razcep na prafaktorje, največji skupni delitelj", k: /prafaktor|skupn\w* delitelj/i },
   { ime: "Razmerja", k: /razmerj/i },
   { ime: "Zrcaljenje točk", k: /zrcaljenj/i },

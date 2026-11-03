@@ -6,8 +6,8 @@ import { javneResenePole, lahkoVidiResitve, jeResena } from "../utils/dostop.js"
 
 const javne = javneResenePole(matura);
 
-// Vrstni red: novejša leta najprej, v letu spomladanski rok pred jesenskim
-const ROKI = ["spomladanski", "jesenski"];
+// Vrstni red: novejša leta najprej, v letu predmaturitetni preizkus, nato spomladanski in jesenski rok
+const ROKI = ["predmaturitetni", "spomladanski", "jesenski"];
 const poVrsti = (a, b) => b.leto - a.leto || ROKI.indexOf(a.rok) - ROKI.indexOf(b.rok);
 const razvrscene = [...matura].sort(poVrsti);
 

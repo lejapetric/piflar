@@ -22,7 +22,7 @@ const SKLOPI = {
   4: "Analiza, kombinatorika in statistika",
 };
 const RAVNI = { osnovna: "Osnovna raven", visja: "Višja raven" };
-const ROKI = { spomladanski: "Spomladanski rok", jesenski: "Jesenski rok" };
+const ROKI = { predmaturitetni: "Predmaturitetni preizkus", spomladanski: "Spomladanski rok", jesenski: "Jesenski rok" };
 
 // ------------------------------------------------------------
 // Pomočniki (enaki kot v naloge.js)

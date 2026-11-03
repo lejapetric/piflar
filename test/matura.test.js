@@ -49,6 +49,11 @@ test("pole leta: spomladanski rok pred jesenskim, z nalogami samo na zahtevo", (
   assert.ok(zadnje.length > 0 && zadnje.every((p) => p.naloge[0].razlaga)); // gost, zadnji rešeni rok
 });
 
+test("leto 2021: predmaturitetni preizkus pred spomladanskim in jesenskim rokom", () => {
+  const { body } = poklici(ctrl.maturaList, { query: { predmet: "matematika", leto: "2021", raven: "osnovna" } });
+  assert.deepEqual(body.map((p) => p.rok), ["predmaturitetni", "predmaturitetni", "spomladanski", "spomladanski", "jesenski", "jesenski"]);
+});
+
 test("naloge po snovi: samo izbrano poglavje, rešitve po pravilih pole", () => {
   const gost = poklici(ctrl.maturaNaloge, { query: { predmet: "matematika", poglavje: "diferencialni_racun" } });
   assert.ok(gost.body.length > 1);
