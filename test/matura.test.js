@@ -49,6 +49,11 @@ test("pole leta: spomladanski rok pred jesenskim, z nalogami samo na zahtevo", (
   assert.ok(zadnje.length > 0 && zadnje.every((p) => p.naloge[0].razlaga)); // gost, zadnji rešeni rok
 });
 
+test("leto 2021: predmaturitetni preizkus pred spomladanskim in jesenskim rokom", () => {
+  const { body } = poklici(ctrl.maturaList, { query: { predmet: "matematika", leto: "2021", raven: "osnovna" } });
+  assert.deepEqual(body.map((p) => p.rok), ["predmaturitetni", "predmaturitetni", "spomladanski", "spomladanski", "jesenski", "jesenski"]);
+});
+
 test("naloge po snovi: samo izbrano poglavje, rešitve po pravilih pole", () => {
   const gost = poklici(ctrl.maturaNaloge, { query: { predmet: "matematika", poglavje: "diferencialni_racun" } });
   assert.ok(gost.body.length > 1);
@@ -72,4 +77,44 @@ test("vse izpitne pole zadnjega rešenega roka so javne", async () => {
   const pola = (id, stevilka) => ({ id, predmet: "matematika", raven: "osnovna", leto: 2027, rok: "spomladanski", stevilka, naloge: [{ razlaga: "x" }] });
   const javne = javneResenePole([pola("a", 1), pola("b", 2), { ...pola("c", 1), leto: 2025 }]);
   assert.deepEqual([...javne].sort(), ["a", "b"]);
+});
+
+test("fizika: 36 pol, zadnji rok je javen, starejši zaklenjen (fizika ni v osnovnem paketu)", () => {
+  const seznam = poklici(ctrl.maturaList, { query: { predmet: "fizika" } });
+  assert.equal(seznam.body.length, 36);
+  assert.ok(seznam.body.every((p) => p.raven === "enotna"));
+
+  const javna = poklici(ctrl.maturaReadOne, { params: { maturaId: "fizika-2025-jesenski-2-2" } });
+  assert.equal(javna.body.odklenjena, true);
+  assert.equal(javna.body.naloge.length, 6);
+
+  const id = "fizika-2020-spomladanski-1";
+  const gost = poklici(ctrl.maturaReadOne, { params: { maturaId: id } });
+  assert.equal(gost.body.odklenjena, false);
+  assert.equal(gost.body.naloge.length, 35);
+  const osnovni = poklici(ctrl.maturaReadOne, { params: { maturaId: id }, uporabnik: { paket: "osnovni" } });
+  assert.equal(osnovni.body.odklenjena, false);
+  const premium = poklici(ctrl.maturaReadOne, { params: { maturaId: id }, uporabnik: { paket: "premium" } });
+  assert.equal(premium.body.odklenjena, true);
+  assert.ok(premium.body.naloge[0].razlaga);
+});
+
+test("kemija: 36 pol, zadnji rok je javen, starejši zaklenjen (kemija ni v osnovnem paketu)", () => {
+  const seznam = poklici(ctrl.maturaList, { query: { predmet: "kemija" } });
+  assert.equal(seznam.body.length, 36);
+  assert.ok(seznam.body.every((p) => p.raven === "enotna"));
+
+  const javna = poklici(ctrl.maturaReadOne, { params: { maturaId: "kemija-2025-jesenski-2-2" } });
+  assert.equal(javna.body.odklenjena, true);
+  assert.equal(javna.body.naloge.length, 15);
+
+  const id = "kemija-2020-spomladanski-1";
+  const gost = poklici(ctrl.maturaReadOne, { params: { maturaId: id } });
+  assert.equal(gost.body.odklenjena, false);
+  assert.equal(gost.body.naloge.length, 35);
+  const osnovni = poklici(ctrl.maturaReadOne, { params: { maturaId: id }, uporabnik: { paket: "osnovni" } });
+  assert.equal(osnovni.body.odklenjena, false);
+  const premium = poklici(ctrl.maturaReadOne, { params: { maturaId: id }, uporabnik: { paket: "premium" } });
+  assert.equal(premium.body.odklenjena, true);
+  assert.ok(premium.body.naloge[0].razlaga);
 });

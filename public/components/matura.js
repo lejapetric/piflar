@@ -15,14 +15,32 @@ const parametri = new URLSearchParams(location.search);
 const predmet = koren?.dataset.predmet ?? "matematika";
 const OSNOVA = `/views/${predmet}/matura`;
 
-const SKLOPI = {
-  1: "Logika in množice",
-  2: "Algebra in funkcije",
-  3: "Geometrija in vektorji",
-  4: "Analiza, kombinatorika in statistika",
+const SKLOPI_PREDMETA = {
+  matematika: {
+    1: "Logika in množice",
+    2: "Algebra in funkcije",
+    3: "Geometrija in vektorji",
+    4: "Analiza, kombinatorika in statistika",
+  },
+  fizika: {
+    1: "Mehanika",
+    2: "Toplota",
+    3: "Elektrika in magnetizem",
+    4: "Nihanje, valovanje in optika",
+    5: "Moderna fizika in astronomija",
+  },
+  kemija: {
+    1: "Splošna kemija",
+    2: "Anorganska kemija",
+    3: "Organska kemija",
+  },
 };
-const RAVNI = { osnovna: "Osnovna raven", visja: "Višja raven" };
-const ROKI = { spomladanski: "Spomladanski rok", jesenski: "Jesenski rok" };
+const SKLOPI = SKLOPI_PREDMETA[predmet] ?? {};
+// Fizika in kemija imata eno samo raven ("enotna"): izbire ravni in oznake ravni takrat ne prikažemo
+const RAVNI = { osnovna: "Osnovna raven", visja: "Višja raven", enotna: "Splošna matura" };
+const ENA_RAVEN = predmet === "fizika" || predmet === "kemija";
+const imeRavni = (raven) => (raven === "enotna" ? "" : RAVNI[raven]?.toLowerCase() ?? raven);
+const ROKI = { predmaturitetni: "Predmaturitetni preizkus", spomladanski: "Spomladanski rok", jesenski: "Jesenski rok" };
 
 // ------------------------------------------------------------
 // Pomočniki (enaki kot v naloge.js)
@@ -81,7 +99,8 @@ function povezavaSnov(naloga) {
   a.title = "Odpri razlago snovi za to nalogo";
   return a;
 }
-const imeRoka = (pola) => `${pola.leto}, ${ROKI[pola.rok]?.toLowerCase() ?? pola.rok}`;
+const imeRoka = (pola) =>
+  `${pola.leto}, ${ROKI[pola.rok]?.toLowerCase() ?? pola.rok}${pola.izvedba > 1 ? ` (${pola.izvedba}. izpitni dan)` : ""}`;
 
 // ------------------------------------------------------------
 // Ena naloga: besedilo, gumba Rešitev in Postopek
@@ -129,7 +148,8 @@ function renderNaloga(naloga, { naslov, vir }) {
   kartica.append(glava);
   if (vir) {
     const p = naloga.pola;
-    kartica.append(el("p", "mn-vir", `Matura ${imeRoka(p)}, ${RAVNI[p.raven]?.toLowerCase() ?? p.raven}, naloga ${naloga.id}`));
+    const kje = [`Matura ${imeRoka(p)}`, imeRavni(p.raven), p.stevilka ? `izpitna pola ${p.stevilka}` : "", `naloga ${naloga.id}`];
+    kartica.append(el("p", "mn-vir", kje.filter(Boolean).join(", ")));
   }
 
   if (naloga.besedilo) {
@@ -181,7 +201,7 @@ function renderNaloga(naloga, { naslov, vir }) {
 const DELI = { A: "A) KRATKE NALOGE", B: "B) KRAJŠE STRUKTURIRANE NALOGE", C: "C) STRUKTURIRANE NALOGE" };
 
 function renderList(naloga, { pola, stran, skupaj, prviVDelu }) {
-  const kartica = el("article", "mn-naloga pola-stran");
+  const kartica = el("article", `mn-naloga pola-stran${naloga.tip === "izbirna" ? " pola-stran-izbirna" : ""}`);
   kartica.id = `${pola.id}-${naloga.id}`;
   const del = /^[ABC]\d/.test(naloga.id) ? naloga.id[0] : null;
   const st = del ? naloga.id.slice(1) : naloga.id;
@@ -206,7 +226,8 @@ function renderList(naloga, { pola, stran, skupaj, prviVDelu }) {
   okvir.append(besedilo);
   if (naloga.tocke) okvir.append(el("p", "pola-tocke", `(${tocke(naloga.tocke)})`));
 
-  const prostor = el("div", `pola-prostor${del === "B" || del === "C" ? " pola-prostor-velik" : ""}`);
+  const velikost = naloga.tip === "izbirna" ? " pola-prostor-mali" : del === "B" || del === "C" || naloga.tocke >= 10 ? " pola-prostor-velik" : "";
+  const prostor = el("div", `pola-prostor${velikost}`);
   if (naloga.odklenjena && naloga.razlaga) {
     if (naloga.rezultat) {
       const rez = el("div", "mn-rez pola-rezultat");
@@ -351,8 +372,9 @@ function renderPola(pola, naslovPdf) {
 
   const povzetek = el("summary", "matura-pola-povzetek");
   const levo = el("div", "matura-pola-naslov");
-  levo.append(el("h3", "", pola.stevilka ? `Izpitna pola ${pola.stevilka}` : ROKI[pola.rok]));
-  const opis = el("p", "", `${RAVNI[pola.raven]} · ${steviloNalog(pola.naloge.length)}`);
+  const ime = pola.stevilka ? `Izpitna pola ${pola.stevilka}` : ROKI[pola.rok];
+  levo.append(el("h3", "", pola.izvedba > 1 ? `${ime} · ${pola.izvedba}. izpitni dan` : ime));
+  const opis = el("p", "", [pola.raven === "enotna" ? "" : RAVNI[pola.raven], pola.datum ?? "", steviloNalog(pola.naloge.length)].filter(Boolean).join(" · "));
   if (pola.navodilo) opis.append(` · ${pola.navodilo}`);
   levo.append(opis);
 
@@ -438,7 +460,10 @@ async function stranPole() {
     const izbrane = pole.filter((p) => p.raven === raven);
     const leta = [...new Set(izbrane.map((p) => p.leto))];
     vsebina.replaceChildren();
-    const naslovPdf = (p) => `Matura ${p.leto}, ${ROKI[p.rok].toLowerCase()}, ${RAVNI[p.raven].toLowerCase()}, izpitna pola ${p.stevilka ?? ""}`.trim();
+    const naslovPdf = (p) =>
+      [`Matura ${p.leto}`, `${ROKI[p.rok].toLowerCase()}${p.izvedba > 1 ? ` (${p.izvedba}. izpitni dan)` : ""}`, imeRavni(p.raven), `izpitna pola ${p.stevilka ?? ""}`.trim()]
+        .filter(Boolean)
+        .join(", ");
     for (const l of leta) {
       if (!leto) vsebina.append(el("h2", "matura-leto", `Matura ${l}`));
       for (const rok of Object.keys(ROKI)) {
@@ -453,16 +478,13 @@ async function stranPole() {
     typeset(vsebina);
   }
 
-  const vrstica = orodja(() => `Matura${leto ? ` ${leto}` : ""}, ${predmet}, ${RAVNI[raven].toLowerCase()}`, { brezPrikaza: true });
+  const vrstica = orodja(() => [`Matura${leto ? ` ${leto}` : ""}`, predmet, imeRavni(raven)].filter(Boolean).join(", "), { brezPrikaza: true });
 
-  koren.replaceChildren(
-    izbiraRavni(ravni.map((r) => [r, RAVNI[r]]), raven, (r) => {
-      raven = r;
-      izrisi();
-    }),
-    vrstica,
-    vsebina
-  );
+  const izbira = izbiraRavni(ravni.map((r) => [r, RAVNI[r]]), raven, (r) => {
+    raven = r;
+    izrisi();
+  });
+  koren.replaceChildren(...(ravni.length > 1 ? [izbira] : []), vrstica, vsebina);
   izrisi();
   await poIzrisu(vsebina);
 }
@@ -477,11 +499,11 @@ async function stranLeta() {
   for (const leto of leta) {
     const vLetu = pole.filter((p) => p.leto === leto);
     const roki = [...new Set(vLetu.map((p) => ROKI[p.rok]))].join(", ");
-    const ravni = [...new Set(vLetu.map((p) => RAVNI[p.raven].replace(" raven", "")))].join(" in ");
+    const ravni = ENA_RAVEN ? "" : ` · ${[...new Set(vLetu.map((p) => RAVNI[p.raven].replace(" raven", "")))].join(" in ")} raven`;
     const a = el("a", "link-item");
     a.href = `${OSNOVA}/pole/leto.html?leto=${leto}`;
     a.innerHTML = `<span class="link-item-text"><strong>Matura ${leto}</strong><small></small></span><span class="arrow">→</span>`;
-    a.querySelector("small").textContent = `${roki} · ${ravni} raven`;
+    a.querySelector("small").textContent = `${roki}${ravni}`;
     seznam.append(a);
   }
   if (!leta.length) seznam.append(el("p", "mn-prazno", "Pole še pripravljamo."));
@@ -530,14 +552,11 @@ async function stranSnov() {
 
   const vrstica = orodja(() => `Maturitetne naloge, ${naslov}${raven ? `, ${RAVNI[raven].toLowerCase()}` : ""}`);
 
-  koren.replaceChildren(
-    izbiraRavni(ravni, raven, (r) => {
-      raven = r;
-      izrisi();
-    }),
-    vrstica,
-    vsebina
-  );
+  const izbira = izbiraRavni(ravni, raven, (r) => {
+    raven = r;
+    izrisi();
+  });
+  koren.replaceChildren(...(ENA_RAVEN ? [] : [izbira]), vrstica, vsebina);
   izrisi();
   await poIzrisu(vsebina);
 }

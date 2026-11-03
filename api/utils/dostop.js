@@ -23,7 +23,8 @@ export function imaPolniDostop(uporabnik, predmet, zdaj = new Date()) {
 }
 
 const jeResena = (pola) => (pola.naloge ?? []).some((n) => n.razlaga);
-const vrstniRed = (pola) => pola.leto * 10 + (pola.rok === "jesenski" ? 1 : 0);
+const ROK_RED = { predmaturitetni: -1, spomladanski: 0, jesenski: 1 };
+const vrstniRed = (pola) => pola.leto * 10 + (ROK_RED[pola.rok] ?? 0);
 
 // Id-ji rešenih pol, ki so javne: najnovejši rešeni rok za vsak predmet + raven
 // (vse izpitne pole tega roka, npr. pola 1 in pola 2)
