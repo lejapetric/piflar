@@ -19,8 +19,17 @@ app.post("/api/placila/webhook", express.raw({ type: "application/json" }), ctrl
 // API
 app.use("/api", express.json(), apiRouter);
 
-// Statične datoteke iz public/ (v produkciji jih brskalnik predpomni 1 dan)
-app.use(express.static(publicDir, { maxAge: isProduction ? "1d" : 0 }));
+// Statične datoteke iz public/. Strani, skripte, slogi in podatki (HTML, JS, CSS, JSON) se
+// spreminjajo z vsako objavo, zato jih brskalnik vsakič preveri (no-cache z ETag, 304, če se niso
+// spremenili). Sicer bi po objavi še en dan kazal star meni in stare skripte. Slike in pisave
+// predpomni 1 dan.
+const VEDNO_PREVERI = /\.(html|js|mjs|css|json)$/;
+app.use(express.static(publicDir, {
+  maxAge: isProduction ? "1d" : 0,
+  setHeaders(res, pot) {
+    if (VEDNO_PREVERI.test(pot)) res.setHeader("Cache-Control", "no-cache");
+  },
+}));
 
 // Vse ostalo: stran ne obstaja
 app.use((req, res) => {
