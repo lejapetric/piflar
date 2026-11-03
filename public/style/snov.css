@@ -2790,3 +2790,175 @@ details.matura-pola[open] .matura-pola-puscica {
 @media print {
     .rokopis .rk-list { border: 1px solid currentColor; background: none; }
 }
+
+/* ---------- Maturitetne pole iz informatike (tools/matura/informatika/gradi.py) ---------- */
+.pola-list pre.koda {
+    background: #F5F6F8;
+    border-color: #C9CCD1;
+    color: #111111;
+}
+
+.naloga-besedilo pre.koda,
+.pola-besedilo pre.koda {
+    max-width: 100%;
+}
+
+/* program v rešitvi: rokopis z enakomerno širokimi črkami */
+.rokopis .rk-koda .rk-v {
+    min-width: 0;
+}
+
+.rokopis pre.koda {
+    margin: 2px 0;
+    padding: 6px 10px;
+    background: transparent;
+    border: 1px dashed currentColor;
+    border-color: color-mix(in srgb, currentColor 35%, transparent);
+    color: var(--crnilo, #1D3C9E);
+    font-size: 14px;
+    line-height: 1.45;
+}
+
+.pola-rezultat-vsebina pre.koda,
+.naloga-rezultat pre.koda {
+    display: block;
+    margin: 4px 0;
+    font-size: 13px;
+}
+
+/* preglednica: črke stolpcev in številke vrstic */
+.mn-preglednica-ovoj {
+    max-width: 100%;
+    overflow-x: auto;
+}
+
+.mn-preglednica {
+    font-size: 13px;
+}
+
+.mn-preglednica th {
+    background: color-mix(in srgb, currentColor 8%, transparent);
+    text-align: center;
+    font-weight: 600;
+    min-width: 1.8em;
+}
+
+.mn-preglednica td {
+    font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    font-size: 12.5px;
+    text-align: left;
+    white-space: nowrap;
+    min-width: 2.2em;
+}
+
+/* več slik (ali programov) v eni vrsti z napisi */
+.in-vrsta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.6rem 1.2rem;
+    margin: 0.5rem 0;
+}
+
+.in-vrsta figure {
+    margin: 0;
+    min-width: 0;
+}
+
+.in-vrsta figcaption {
+    font-weight: 700;
+    font-size: 0.9em;
+    text-align: center;
+}
+
+.in-vrsta pre.koda {
+    margin: 0 0 0.3rem;
+}
+
+/* entitete diagrama E-R */
+.in-er {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin: 0.5rem 0;
+}
+
+.in-entiteta {
+    border: 1.5px solid currentColor;
+    border-radius: 4px;
+    min-width: 9rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+.in-entiteta strong {
+    display: block;
+    padding: 0.25rem 0.6rem;
+    border-bottom: 1.5px solid currentColor;
+    text-align: center;
+}
+
+.in-entiteta ul {
+    list-style: none;
+    margin: 0;
+    padding: 0.3rem 0.6rem;
+}
+
+.in-entiteta small {
+    font-size: 0.75em;
+    opacity: 0.75;
+}
+
+.in-razmerja {
+    margin: 0.3rem 0 0;
+    padding-left: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+}
+
+.mn-teme {
+    margin: 0.2rem 0 0.4rem;
+    padding-left: 1.1rem;
+    font-size: 0.93em;
+}
+
+/* izris kode HTML v rešitvi (kot v brskalniku) */
+.in-izris {
+    margin: 4px 0 8px;
+    padding: 10px 16px;
+    border: 1px solid #C9CCD1;
+    border-radius: 4px;
+    background: #FFFFFF;
+    color: #111111;
+    font-family: "Times New Roman", Times, serif;
+    font-size: 15px;
+    line-height: 1.35;
+}
+
+.in-izris h1 { font-size: 1.7em; margin: 0.3em 0; }
+.in-izris h2 { font-size: 1.3em; margin: 0.4em 0; }
+.in-izris ul { list-style: disc; padding-left: 1.6em; margin: 0.3em 0; }
+.in-izris ol { list-style: decimal; padding-left: 1.6em; margin: 0.3em 0; }
+.in-izris ul ul { list-style: circle; }
+.in-izris table { border-collapse: collapse; }
+.in-izris td, .in-izris th { border: 1px solid #555555; padding: 2px 6px; }
+
+/* dolge formule in naslovi v rokopisu se prelomijo, namesto da segajo v komentar */
+.rokopis .rk-v {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+
+/* dolgi naslovi in koda v besedilu naloge se na ozkem zaslonu prelomijo */
+.view code.k {
+    overflow-wrap: anywhere;
+}
+
+/* na papirju pole ostane koda v besedilu temna tudi v temnem načinu */
+[data-theme="dark"] .pola-list code.k {
+    background: #EEF0F6;
+    color: #1A1A1A;
+}
+.rokopis code.k {
+    background: transparent;
+    color: inherit;
+}

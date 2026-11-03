@@ -34,11 +34,17 @@ const SKLOPI_PREDMETA = {
     2: "Anorganska kemija",
     3: "Organska kemija",
   },
+  informatika: {
+    1: "Osnove informatike",
+    2: "Informacijska tehnologija",
+    3: "Predstavitev informacije",
+    4: "Delo s podatki",
+  },
 };
 const SKLOPI = SKLOPI_PREDMETA[predmet] ?? {};
-// Fizika in kemija imata eno samo raven ("enotna"): izbire ravni in oznake ravni takrat ne prikažemo
+// Fizika, kemija in informatika imajo eno samo raven ("enotna"): izbire ravni in oznake ravni takrat ne prikažemo
 const RAVNI = { osnovna: "Osnovna raven", visja: "Višja raven", enotna: "Splošna matura" };
-const ENA_RAVEN = predmet === "fizika" || predmet === "kemija";
+const ENA_RAVEN = ["fizika", "kemija", "informatika"].includes(predmet);
 const imeRavni = (raven) => (raven === "enotna" ? "" : RAVNI[raven]?.toLowerCase() ?? raven);
 const ROKI = { predmaturitetni: "Predmaturitetni preizkus", spomladanski: "Spomladanski rok", jesenski: "Jesenski rok" };
 
@@ -95,7 +101,7 @@ const urlSnovi = (slug) => `/views/${predmet}/snov/${slug}/${slug}_razlaga.html`
 function povezavaSnov(naloga) {
   const slug = [naloga.poglavje ?? []].flat()[0];
   if (!slug) return null;
-  const a = povezava(naloga.snov ?? urlSnovi(slug), `Snov: ${SNOVI[slug]?.naslov ?? "razlaga"} ↗`, "mn-snov");
+  const a = povezava(naloga.snov ?? urlSnovi(slug), `Snov: ${naloga.snovNaslov ?? SNOVI[slug]?.naslov ?? "razlaga"} ↗`, "mn-snov");
   a.title = "Odpri razlago snovi za to nalogo";
   return a;
 }
@@ -519,19 +525,25 @@ async function stranSnov() {
   const poglavje = snovi.find((s) => s.slug === parametri.get("poglavje"));
   const sklop = SKLOPI[parametri.get("sklop")] ? Number(parametri.get("sklop")) : null;
   const izbrana = poglavje ? [poglavje] : sklop ? snovi.filter((s) => s.sklop === sklop) : snovi;
+  // Poglavje, razdeljeno na teme (podpoglavja), npr. informatika: ?poglavje=delo_s_podatki&tema=programiranje
+  const teme = poglavje?.teme ?? [];
+  const tema = teme.find((t) => t.id === parametri.get("tema"));
 
   let naslov = "Vse maturitetne naloge";
-  if (poglavje) naslov = `${poglavje.stevilka} ${poglavje.naslov}`;
+  if (tema) naslov = tema.naslov;
+  else if (poglavje) naslov = `${poglavje.stevilka} ${poglavje.naslov}`;
   else if (sklop) naslov = `${sklop}. ${SKLOPI[sklop]}`;
   document.querySelector(".page-header h1").textContent = naslov;
-  document.title = `${poglavje?.naslov ?? naslov}: maturitetne naloge | Piflar.si`;
+  document.title = `${tema?.naslov ?? poglavje?.naslov ?? naslov}: maturitetne naloge | Piflar.si`;
   const opis = document.querySelector(".page-header p");
   if (poglavje && opis) {
-    opis.textContent = `Naloge iz preteklih matur, ki preverjajo poglavje ${poglavje.naslov.toLowerCase()}. `;
-    opis.append(povezava(urlSnovi(poglavje.slug), "Preberi razlago poglavja"), ".");
+    const ime = tema ? `podpoglavje ${tema.naslov.toLowerCase()} (${poglavje.naslov})` : `poglavje ${poglavje.naslov.toLowerCase()}`;
+    opis.textContent = `Naloge iz preteklih matur, ki preverjajo ${ime}. `;
+    opis.append(povezava(tema ? `${urlSnovi(poglavje.slug)}#sklop-${tema.sklop}` : urlSnovi(poglavje.slug), "Preberi razlago"), ".");
   }
 
-  const naloge = await api(`/api/matura/naloge?predmet=${predmet}&poglavje=${izbrana.map((s) => s.slug).join(",")}`);
+  let naloge = await api(`/api/matura/naloge?predmet=${predmet}&poglavje=${izbrana.map((s) => s.slug).join(",")}`);
+  if (tema) naloge = naloge.filter((n) => [n.tema ?? []].flat().includes(tema.id));
   const ravni = [["", "Vse ravni"], ["osnovna", "Osnovna"], ["visja", "Višja"]];
   let raven = RAVNI[parametri.get("raven")] ? parametri.get("raven") : "";
   const vsebina = el("div", "matura-vsebina");
@@ -539,11 +551,19 @@ async function stranSnov() {
   function izrisi() {
     vsebina.replaceChildren();
     const izbrane = naloge.filter((n) => !raven || n.pola.raven === raven);
-    // Pri sklopu ali vseh nalogah so naloge razdeljene po poglavjih
-    const skupine = poglavje ? [[null, izbrane]] : izbrana.map((s) => [s, izbrane.filter((n) => [n.poglavje].flat().includes(s.slug))]);
+    // Pri sklopu ali vseh nalogah so naloge razdeljene po poglavjih, pri poglavju s temami po temah
+    // (naloga je pod prvo temo tega poglavja, ki jo preverja)
+    const prvaTema = (n) => [n.tema ?? []].flat().find((id) => teme.some((t) => t.id === id));
+    const skupine = tema
+      ? [[null, izbrane]]
+      : poglavje && teme.length
+        ? teme.map((t) => [{ stevilka: "", naslov: t.naslov }, izbrane.filter((n) => prvaTema(n) === t.id)])
+        : poglavje
+          ? [[null, izbrane]]
+          : izbrana.map((s) => [s, izbrane.filter((n) => [n.poglavje].flat().includes(s.slug))]);
     for (const [s, seznam] of skupine) {
       if (!seznam.length) continue;
-      if (s) vsebina.append(el("h2", "matura-leto", `${s.stevilka} ${s.naslov}`));
+      if (s) vsebina.append(el("h2", "matura-leto", `${s.stevilka} ${s.naslov}`.trim()));
       seznam.forEach((n, i) => vsebina.append(renderNaloga(n, { naslov: `Naloga ${i + 1}`, vir: true })));
     }
     if (!vsebina.hasChildNodes()) vsebina.append(el("p", "mn-prazno", "Za to izbiro še ni maturitetnih nalog."));
@@ -593,6 +613,18 @@ async function stranSklopi() {
       const li = el("li");
       li.append(povezava(`${strani}?poglavje=${s.slug}`, `${s.stevilka} ${s.naslov}`));
       li.append(el("span", "mn-stevec", ` · ${steviloNalog(stevilo(s.slug))}`));
+      if (s.teme?.length) {
+        const podseznam = el("ul", "mn-teme");
+        for (const t of s.teme) {
+          const n = naloge.filter((x) => [x.poglavje].flat().includes(s.slug) && [x.tema ?? []].flat().includes(t.id)).length;
+          if (!n) continue;
+          const pli = el("li");
+          pli.append(povezava(`${strani}?poglavje=${s.slug}&tema=${t.id}`, t.naslov));
+          pli.append(el("span", "mn-stevec", ` · ${steviloNalog(n)}`));
+          podseznam.append(pli);
+        }
+        li.append(podseznam);
+      }
       ul.append(li);
     }
     kartica.append(ul, prenosi(`sklop=${st}`, "Vse naloge sklopa:"));
