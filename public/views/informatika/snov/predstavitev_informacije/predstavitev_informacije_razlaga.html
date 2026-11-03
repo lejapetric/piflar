@@ -26,8 +26,8 @@
           <h1>Predstavitev informacije</h1>
           <p>Ista informacija je lahko zapisana z besedilom, sliko, zvokom ali videom. Tu je, kako računalnik zapiše vsako od teh oblik, koliko prostora zapis potrebuje, kako ga zgostimo in kako informacijo kakovostno predstavimo v dokumentu, na prosojnicah in na spletu. Pod razlago so vsi tipi nalog, ki se pojavijo pri tem sklopu.</p>
           <div class="page-meta">
-            <div class="page-meta-item"><strong>7</strong><span>Podpoglavij</span></div>
-            <div class="page-meta-item"><strong>13</strong><span>Tipov nalog</span></div>
+            <div class="page-meta-item"><strong>9</strong><span>Podpoglavij</span></div>
+            <div class="page-meta-item"><strong>17</strong><span>Tipov nalog</span></div>
             <div class="page-meta-item"><strong>~60 min</strong><span>Branja</span></div>
           </div>
         </header>
@@ -58,6 +58,8 @@
             <li><a href="#sklop-5"><span class="kazalo-st">5</span> Gibljiva slika</a></li>
             <li><a href="#sklop-6"><span class="kazalo-st">6</span> Računalniške prosojnice</a></li>
             <li><a href="#sklop-7"><span class="kazalo-st">7</span> Predstavitev na svetovnem spletu</a></li>
+            <li><a href="#sklop-8"><span class="kazalo-st">8</span> Zapis števil v računalniku</a></li>
+            <li><a href="#sklop-9"><span class="kazalo-st">9</span> HTML v praksi: poti, obrazci, večpredstavnost</a></li>
             <li><a href="#kljuc"><span class="kazalo-st">?</span> Ključ: kateri tip naloge je to?</a></li>
           </ol>
         </nav>
@@ -603,6 +605,168 @@
           </div>
         </section>
 
+        <!-- SKLOP 8 -->
+        <section class="sklop" id="sklop-8">
+          <header class="sklop-header">
+            <span class="sklop-num">4.3 · 8</span>
+            <h2>Zapis števil v računalniku</h2>
+            <p>Nepredznačena in predznačena cela števila, dvojiški komplement, prekoračitev obsega, zapis s stalno in plavajočo vejico ter napake zaokroževanja.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <h4>Cela števila v registru s \(k\) biti</h4>
+            <p>Register ima stalno število bitov \(k\) (8, 16, 32, 64). Isti biti pomenijo različno število glede na to, kako jih razlagamo; zato za odgovor na vprašanje „katero število je 10101110?“ potrebujemo podatek o zapisu.</p>
+            <ul>
+              <li><strong>Nepredznačeno</strong>: vrednost je navadni dvojiški zapis; obseg od \(0\) do \(2^k - 1\). Osembitni register 10101110 = \(128 + 32 + 8 + 4 + 2 = 174\).</li>
+              <li><strong>Predznak in absolutna vrednost</strong>: skrajno levi bit je predznak (0 = +, 1 = −), ostali biti absolutna vrednost. Težava: dve ničli (+0 in −0).</li>
+              <li><strong>Dvojiški komplement</strong> (tako računajo procesorji): skrajno levi bit ima vrednost \(-2^{k-1}\), ostali običajne pozitivne vrednosti. Obseg je od \(-2^{k-1}\) do \(2^{k-1} - 1\) (pri 8 bitih od −128 do 127). 10101110 = \(-128 + 46 = -82\).</li>
+            </ul>
+            <p><strong>Kako zapišeš −x v dvojiškem komplementu</strong>: zapiši \(x\) s \(k\) biti, obrni vse bite (0 ↔ 1) in prištej 1. Za −5 v 8 bitih: 00000101 → 11111010 → <strong>11111011</strong>. Preverba: \(-128 + 123 = -5\).</p>
+            <div class="tabela-wrap"><table class="tabela"><thead><tr><th>3-bitni zapis</th><th>nepredznačeno</th><th>predznak + abs. vrednost</th><th>dvojiški komplement</th></tr></thead><tbody>
+              <tr><td>000</td><td>0</td><td>+0</td><td>0</td></tr>
+              <tr><td>001</td><td>1</td><td>1</td><td>1</td></tr>
+              <tr><td>010</td><td>2</td><td>2</td><td>2</td></tr>
+              <tr><td>011</td><td>3</td><td>3</td><td>3</td></tr>
+              <tr><td>100</td><td>4</td><td>−0</td><td>−4</td></tr>
+              <tr><td>101</td><td>5</td><td>−1</td><td>−3</td></tr>
+              <tr><td>110</td><td>6</td><td>−2</td><td>−2</td></tr>
+              <tr><td>111</td><td>7</td><td>−3</td><td>−1</td></tr>
+            </tbody></table></div>
+            <p><strong>Prekoračitev</strong>: če rezultat ne gre v \(k\) bitov, se odvečni biti izgubijo. Pri 8-bitnem nepredznačenem seštevanju \(200 + 100 = 300 = 256 + 44\) dobimo 44; pri dvojiškem komplementu \(127 + 1\) da −128.</p>
+            <h4>Stalna in plavajoča vejica</h4>
+            <ul>
+              <li><strong>Stalna vejica</strong>: dogovorimo se, koliko bitov je za vejico. Pri 8 bitih s 4 biti za vejico je 0110,1000 = \(6{,}5\). Natančnost je ves čas enaka (\(2^{-4}\)), obseg pa majhen. Primerno za denar v centih, meritve v znanem obsegu.</li>
+              <li><strong>Plavajoča vejica</strong>: število zapišemo kot \(\pm m \cdot 2^e\) (predznak, mantisa, eksponent), podobno kot znanstveni zapis. Obseg je ogromen (od \(10^{-308}\) do \(10^{308}\) pri 64 bitih), a mantisa ima le okoli 16 desetiških mest.</li>
+            </ul>
+            <p>Posledice: decimalnega števila 0,1 ni mogoče natančno zapisati dvojiško (je periodično), zato v Pythonu <code class="k">0.1 + 0.2</code> da <code class="k">0.30000000000000004</code>. Če seštejemo zelo veliko in zelo majhno število (<code class="k">1e17 + 1</code>), se majhno izgubi, ker zanj ni dovolj mest v mantisi. Števil s plavajočo vejico zato ne primerjamo z <code class="k">==</code>, ampak preverimo, ali je razlika dovolj majhna. Cela števila (<code class="k">int</code>) so v Pythonu natančna in poljubno velika.</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-14">
+              <h4>Tip 14: Predznačena števila in dvojiški komplement</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Osembitni register vsebuje 10101110. a) Katero število je to nepredznačeno? b) Katero v dvojiškem komplementu? c) Zapiši −20 v osembitnem dvojiškem komplementu.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> podan je zapis z določenim številom bitov; sprašujejo po vrednosti, obsegu ali zapisu negativnega števila.</p><ul class="kljucne"><li>„k-bitni register“</li><li>„predznačeno“</li><li>„dvojiški komplement“</li><li>„najmanjše, največje število“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Seštej vrednosti enic: 128, 64, 32, 16, 8, 4, 2, 1.</p><div class="na-nalogi"><p>\(128 + 32 + 8 + 4 + 2 = 174\).</p></div></li>
+              <li><p class="korak">V dvojiškem komplementu ima levi bit vrednost \(-2^{k-1}\).</p><div class="na-nalogi"><p>\(-128 + 32 + 8 + 4 + 2 = -82\) (ali \(174 - 256\)).</p></div></li>
+              <li><p class="korak">Za −x: zapiši x, obrni bite, prištej 1.</p><div class="na-nalogi"><p>20 = 00010100 → 11101011 → <strong>11101100</strong>. Preverba: \(-128 + 64 + 32 + 8 + 4 = -20\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Kateri obseg ima 16-bitni predznačeni zapis v dvojiškem komplementu?</p><p>Od \(-2^{15} = -32\,768\) do \(2^{15} - 1 = 32\,767\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Senzor meri odmik gladine od 0 cm v obe smeri od −100 do +100 cm na 1 cm natančno. Koliko bitov potrebujemo?</p><p>201 vrednost, \(2^8 = 256 \ge 201\), torej 8 bitov (dvojiški komplement pokrije −128 do 127).</p></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-15">
+              <h4>Tip 15: Stalna in plavajoča vejica, napake zaokroževanja</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Program izpiše <code class="k">x = 1e17</code>, <code class="k">y = 1</code>, <code class="k">print(x + y - x)</code> in dobi 0. Zakaj ne 1? Kaj bi se zgodilo pri <code class="k">x = 10**17</code> (celo število)?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> računalnik vrne „napačen“ rezultat pri decimalnih ali zelo velikih številih, ali pa sprašujejo po prednostih stalne oziroma plavajoče vejice.</p><ul class="kljucne"><li>„plavajoča vejica“</li><li>„stalna vejica“</li><li>„nepričakovan rezultat“</li><li>„natančnost“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Ugotovi, ali gre za realno število (plavajoča vejica) ali celo število.</p><div class="na-nalogi"><p><code class="k">1e17</code> je realno število (float).</p></div></li>
+              <li><p class="korak">Primerjaj velikosti: mantisa ima okoli 16 mest; manjše število se izgubi, če je za več kot toliko redov manjše.</p><div class="na-nalogi"><p>\(10^{17} + 1\) bi potreboval 18 mest, enica se zaokroži stran; \(x + y = x\), zato je razlika 0.</p></div></li>
+              <li><p class="korak">Predlagaj rešitev: cela števila, stalna vejica ali drug vrstni red računanja.</p><div class="na-nalogi"><p>S celim številom <code class="k">10**17</code> je rezultat natančno 1.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Koliko je 0101,1100 v zapisu s stalno vejico (4 biti za vejico)?</p><p>\(5 + 0{,}5 + 0{,}25 = 5{,}75\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Zakaj je pogoj <code class="k">0.1 + 0.2 == 0.3</code> neresničen?</p><p>0,1 in 0,2 dvojiško nista zapisani natančno; vsota se od 0,3 razlikuje v zadnjem mestu. Primerjamo z <code class="k">abs(a - b) &lt; 1e-9</code>.</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 9 -->
+        <section class="sklop" id="sklop-9">
+          <header class="sklop-header">
+            <span class="sklop-num">4.3 · 9</span>
+            <h2>HTML v praksi: poti, obrazci, večpredstavnost</h2>
+            <p>Relativni in absolutni naslovi datotek, povezava slogovne datoteke, vgrajevanje slik in videa, obrazci, spustni meni ter razlika med HTML in XML.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <h4>Naslovi datotek v spletnem projektu</h4>
+            <p>Ko stran uporabi drugo datoteko (sliko, slog, video, drugo stran), napišemo njen naslov v atribut <code class="k">src</code> ali <code class="k">href</code>.</p>
+            <ul>
+              <li><strong>Relativni (odvisni) naslov</strong> je pot od mape, v kateri je <em>trenutna stran</em>. <code class="k">slika.jpg</code> je v isti mapi, <code class="k">slike/slika.jpg</code> v podmapi slike, <code class="k">../</code> pomeni eno mapo višje, <code class="k">../../</code> dve. Ostane pravilen, če celoten projekt prestavimo drugam (na drug disk, na strežnik), zato ga uporabljamo znotraj projekta.</li>
+              <li><strong>Absolutni (neodvisni) naslov</strong> je celotna pot od korena: <code class="k">https://sola.si/projekt/css/style.css</code> ali <code class="k">/projekt/css/style.css</code> (od korena strežnika) ali <code class="k">file:///C:/projekt/css/style.css</code> (na disku). Ne glede na to, kje je stran, kaže vedno na isto mesto; ko projekt premaknemo, se pokvari.</li>
+            </ul>
+            <div class="tabela-wrap"><table class="tabela"><thead><tr><th>Mape projekta</th><th>Iz projekt/strani/sestavek/index.html</th></tr></thead><tbody>
+              <tr><td>projekt/css/style.css</td><td><code class="k">../../css/style.css</code></td></tr>
+              <tr><td>projekt/dodatki/video/predstavitev.mp4</td><td><code class="k">../../dodatki/video/predstavitev.mp4</code></td></tr>
+              <tr><td>projekt/strani/slika.png</td><td><code class="k">../slika.png</code></td></tr>
+              <tr><td><code class="k">../../logo.gif</code> kaže na</td><td>projekt/logo.gif (dve mapi višje od sestavek)</td></tr>
+            </tbody></table></div>
+            <p>Postopek: od mape trenutne strani pojdi z <code class="k">../</code> navzgor do skupnega prednika obeh datotek, nato navzdol po imenih map do datoteke. Pri URL brez imena datoteke (<code class="k">https://sola.si/html/</code>) strežnik vrne privzeto datoteko <code class="k">index.html</code> v tej mapi.</p>
+            <h4>Slog, slika, video, zvok</h4>
+<pre class="koda"><code>&lt;head&gt;
+  &lt;link rel="stylesheet" href="../../css/style.css"&gt;   &lt;!-- slog CSS --&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;img src="slike/sola.jpg" alt="Stavba šole" width="400"&gt;
+  &lt;video controls src="../../dodatki/video/predstavitev.mp4"&gt;&lt;/video&gt;
+  &lt;audio controls src="zvok/himna.mp3"&gt;&lt;/audio&gt;
+  &lt;a href="https://www.ric.si" target="_blank"&gt;RIC&lt;/a&gt;
+&lt;/body&gt;</code></pre>
+            <p>Pogoste napake v kodi: vsebina zunaj <code class="k">&lt;body&gt;</code> (naslov v <code class="k">&lt;title&gt;</code> je le v zavihku, ne na strani; za naslov na strani potrebujemo <code class="k">&lt;h1&gt;</code> v telesu), značka ni zaprta ali je zaprta v napačnem vrstnem redu (<code class="k">&lt;b&gt;&lt;i&gt;…&lt;/b&gt;&lt;/i&gt;</code>), seznam ali tabela znotraj naslova <code class="k">&lt;h2&gt;</code>, napačna pot do datoteke.</p>
+            <h4>Obrazec in spustni meni</h4>
+<pre class="koda"><code>&lt;form action="prijava.php" method="post"&gt;
+  &lt;label&gt;Ime: &lt;input type="text" name="ime"&gt;&lt;/label&gt;&lt;br&gt;
+  &lt;label&gt;Geslo: &lt;input type="password" name="geslo"&gt;&lt;/label&gt;&lt;br&gt;
+  &lt;label&gt;&lt;input type="checkbox" name="novice"&gt; Želim novice&lt;/label&gt;&lt;br&gt;
+  Spol: &lt;input type="radio" name="spol" value="z"&gt; ž
+        &lt;input type="radio" name="spol" value="m"&gt; m&lt;br&gt;
+  Letnik: &lt;select name="letnik"&gt;
+    &lt;option value="1"&gt;1. letnik&lt;/option&gt;
+    &lt;option value="4" selected&gt;4. letnik&lt;/option&gt;
+  &lt;/select&gt;&lt;br&gt;
+  &lt;textarea name="sporocilo" rows="3"&gt;&lt;/textarea&gt;&lt;br&gt;
+  &lt;input type="submit" value="Pošlji"&gt;
+&lt;/form&gt;</code></pre>
+            <p><code class="k">type</code> določa vrsto polja (text, password, email, number, date, checkbox, radio, submit); izbirni gumbi z istim <code class="k">name</code> tvorijo skupino, kjer je izbran le eden. <strong>Spustni meni</strong> za navigacijo je pogosto seznam povezav: <code class="k">&lt;ul&gt;&lt;li&gt;&lt;a href="…"&gt;…&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;</code>, ki ga CSS prikaže kot meni; povezave v njem morajo imeti pravilne relativne poti za stran, na kateri je meni.</p>
+            <h4>HTML in XML</h4>
+            <p>HTML (HyperText Markup Language) ima vnaprej določene značke za prikaz strani v brskalniku. XML (eXtensible Markup Language) je jezik za zapis in prenos <strong>podatkov</strong>: „razširljiv“ pomeni, da značke (in njihovo zgradbo) določimo sami, npr. <code class="k">&lt;knjiga&gt;&lt;naslov&gt;Butalci&lt;/naslov&gt;&lt;/knjiga&gt;</code>. XML je strožji: vsaka značka mora biti zaprta, razlikuje velike in male črke, ima en korenski element.</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-16">
+              <h4>Tip 16: Relativni in absolutni naslov datoteke</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Projekt ima mape projekt/strani/sestavek (v njej index.html), projekt/css (style.css) in projekt/dodatki/video (predstavitev.mp4). Dopolni <code class="k">&lt;link href="…"&gt;</code> in <code class="k">&lt;video src="…"&gt;</code> tako, da deluje tudi, ko projekt premaknemo. V kateri mapi je <code class="k">../../logo.gif</code>?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> narisano je drevo map; sprašujejo po poti do datoteke, po tem, kam kaže dana pot, ali kaj ostane pravilno, ko projekt premaknemo.</p><ul class="kljucne"><li>„drevesna struktura map“</li><li>„relativni (odvisni) naslov“</li><li>„absolutni (neodvisni) naslov“</li><li>„ne glede na premik“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Poišči mapo trenutne strani in mapo ciljne datoteke ter njuno najnižjo skupno mapo.</p><div class="na-nalogi"><p>Stran: projekt/strani/sestavek. Slog: projekt/css. Skupna mapa: projekt.</p></div></li>
+              <li><p class="korak">Za vsak korak navzgor do skupne mape napiši <code class="k">../</code>.</p><div class="na-nalogi"><p>sestavek → strani → projekt: <code class="k">../../</code>.</p></div></li>
+              <li><p class="korak">Dodaj pot navzdol do datoteke.</p><div class="na-nalogi"><p><code class="k">../../css/style.css</code> in <code class="k">../../dodatki/video/predstavitev.mp4</code>.</p></div></li>
+              <li><p class="korak">Pri dani poti hodi obratno: vsak <code class="k">../</code> je ena mapa višje od trenutne strani.</p><div class="na-nalogi"><p>Iz sestavek dve mapi višje: logo.gif je v mapi <strong>projekt</strong>.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Absolutni naslov slike na strežniku sola.si v mapi /projekt/slike?</p><p><code class="k">https://sola.si/projekt/slike/slika1.jpg</code>; ostane pravilen, če stran premaknemo, ne pa, če premaknemo sliko.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Katera datoteka se odpre pri <code class="k">https://gimnazija.si/predstavitev/</code>?</p><p>index.html v mapi predstavitev.</p></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-17">
+              <h4>Tip 17: Dopolni ali popravi kodo HTML (obrazec, meni, večpredstavnost)</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Na sliki je prijavni obrazec: polje za uporabniško ime, polje za geslo (skrito), izbira letnika iz spustnega seznama in gumb Prijava. Napiši kodo HTML.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> podana je slika strani in nepopolna koda, ali pa koda, ki se ne prikaže pravilno.</p><ul class="kljucne"><li>„dopolnite kodo“</li><li>„obrazec“</li><li>„spustni meni“</li><li>„kaj prikaže brskalnik“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Za vsak element na sliki izberi značko (in pri <code class="k">input</code> pravi <code class="k">type</code>).</p><div class="na-nalogi"><p>Ime: <code class="k">input type="text"</code>; geslo: <code class="k">type="password"</code>; letnik: <code class="k">select</code> z <code class="k">option</code>; gumb: <code class="k">type="submit"</code>.</p></div></li>
+              <li><p class="korak">Ovij vse v <code class="k">&lt;form&gt;</code> in vsakemu polju daj <code class="k">name</code>.</p><div class="na-nalogi">
+<pre class="koda"><code>&lt;form action="prijava.php" method="post"&gt;
+  Uporabnik: &lt;input type="text" name="uporabnik"&gt;&lt;br&gt;
+  Geslo: &lt;input type="password" name="geslo"&gt;&lt;br&gt;
+  Letnik: &lt;select name="letnik"&gt;
+    &lt;option&gt;1&lt;/option&gt;&lt;option&gt;2&lt;/option&gt;
+    &lt;option&gt;3&lt;/option&gt;&lt;option&gt;4&lt;/option&gt;
+  &lt;/select&gt;&lt;br&gt;
+  &lt;input type="submit" value="Prijava"&gt;
+&lt;/form&gt;</code></pre></div></li>
+              <li><p class="korak">Preveri zapiranje značk, gnezdenje in poti.</p><div class="na-nalogi"><p>Vsaka odprta značka (razen praznih <code class="k">input</code>, <code class="k">br</code>, <code class="k">img</code>) je zaprta v obratnem vrstnem redu.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Naslov strani je le v <code class="k">&lt;title&gt;</code>, na strani pa se ne prikaže. Popravek?</p><p>V <code class="k">&lt;body&gt;</code> dodaj <code class="k">&lt;h1&gt;Izdelki dijakov&lt;/h1&gt;</code>; seznama ne gnezdi v <code class="k">&lt;h2&gt;</code>.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Zapiši neokrajšani imeni HTML in XML. Kaj v XML razširjamo?</p><p>HyperText Markup Language, eXtensible Markup Language; razširjamo nabor značk (sami določimo značke in zgradbo podatkov).</p></div>
+            </div>
+          </div>
+        </section>
+
         <section class="subsection" id="kljuc">
           <div class="subsection-head">
             <h2>Ključ: kateri tip naloge je to?</h2>
@@ -626,6 +790,10 @@
                   <tr><td>„prosojnica“, „vodilna prosojnica“</td><td><a href="#tip-11">Tip 11</a></td></tr>
                   <tr><td>„koda HTML“, „značka“</td><td><a href="#tip-12">Tip 12</a></td></tr>
                   <tr><td>„URL“, „zanesljiv vir“, „avtorske pravice“</td><td><a href="#tip-13">Tip 13</a></td></tr>
+                <tr><td>„predznačeno število“, „dvojiški komplement“, „k-bitni register“</td><td><a href="#tip-14">Tip 14</a></td></tr>
+                  <tr><td>„stalna, plavajoča vejica“, „nepričakovana vsota“, „prekoračitev“</td><td><a href="#tip-15">Tip 15</a></td></tr>
+                <tr><td>„relativni, absolutni naslov“, „drevesna struktura map“, „../“</td><td><a href="#tip-16">Tip 16</a></td></tr>
+                  <tr><td>„obrazec“, „spustni meni“, „vgradi video“, „poveži slog CSS“, „XML“</td><td><a href="#tip-17">Tip 17</a></td></tr>
                 </tbody>
               </table>
             </div>

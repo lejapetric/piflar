@@ -26,8 +26,8 @@
           <h1>Osnove informatike</h1>
           <p>Informatika se ukvarja s podatki in informacijami: kako jih zajamemo, zapišemo, obdelamo in posredujemo ljudem. Tu so temeljni pojmi, na katere se opirajo vsa nadaljnja poglavja, pomen informacij v družbi in njihovo varovanje ter komuniciranje. Pod razlago so vsi tipi nalog, ki se pojavijo pri tem sklopu.</p>
           <div class="page-meta">
-            <div class="page-meta-item"><strong>3</strong><span>Podpoglavja</span></div>
-            <div class="page-meta-item"><strong>7</strong><span>Tipov nalog</span></div>
+            <div class="page-meta-item"><strong>4</strong><span>Podpoglavja</span></div>
+            <div class="page-meta-item"><strong>9</strong><span>Tipov nalog</span></div>
             <div class="page-meta-item"><strong>~30 min</strong><span>Branja</span></div>
           </div>
         </header>
@@ -52,6 +52,7 @@
             <li><a href="#sklop-1"><span class="kazalo-st">1</span> Temeljni pojmi</a></li>
             <li><a href="#sklop-2"><span class="kazalo-st">2</span> Družbeni vidiki informatike</a></li>
             <li><a href="#sklop-3"><span class="kazalo-st">3</span> Komuniciranje</a></li>
+            <li><a href="#sklop-4"><span class="kazalo-st">4</span> Kode in kodiranje</a></li>
             <li><a href="#kljuc"><span class="kazalo-st">?</span> Ključ: kateri tip naloge je to?</a></li>
           </ol>
         </nav>
@@ -313,6 +314,77 @@
           </div>
         </section>
 
+        <!-- SKLOP 4 -->
+        <section class="sklop" id="sklop-4">
+          <header class="sklop-header">
+            <span class="sklop-num">4.1 · 4</span>
+            <h2>Kode in kodiranje</h2>
+            <p>Kode enake in različne dolžine, pravilo predpone, zapis z najmanj biti ter krajšanje zaporedij s četami (RLE).</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <h4>Koda enake dolžine</h4>
+            <p><strong>Kodiranje</strong> je pravilo, ki vsakemu znaku (barvi, stanju, odgovoru) priredi zaporedje bitov, <strong>kodo</strong>. Če ima vsak znak kodo z enakim številom bitov \(k\), lahko z njimi zapišemo največ \(2^k\) različnih znakov. Za \(n\) znakov potrebujemo najmanjši \(k\), za katerega je \(2^k \ge n\).</p>
+            <ul>
+              <li>4 jakosti svetlobe lučke: \(2^2 = 4\), zadostujeta 2 bita (00, 01, 10, 11).</li>
+              <li>177 stojnic: \(2^7 = 128 &lt; 177 \le 256 = 2^8\), potrebujemo 8 bitov.</li>
+              <li>Niz \(m\) neodvisnih znakov z \(k\) biti zasede \(m \cdot k\) bitov. Prikazovalnik s 16 lučkami po 2 bita in 7 slik: \(7 \cdot 16 \cdot 2 = 224\) bitov.</li>
+            </ul>
+            <h4>Koda različne dolžine in pravilo predpone</h4>
+            <p>Če so nekateri znaki pogostejši, jim damo krajše kode, redkejšim pa daljše; povprečno porabimo manj bitov (tako deluje Huffmanovo kodiranje). Da lahko zaporedje bitov <strong>enolično preberemo brez ločil</strong>, mora veljati <strong>pravilo predpone</strong>: nobena koda ni začetek (predpona) druge kode.</p>
+            <div class="tabela-wrap"><table class="tabela"><thead><tr><th>Znak</th><th>Pravilna koda</th><th>Napačna koda</th></tr></thead><tbody>
+              <tr><td>A (pogost)</td><td>0</td><td>0</td></tr>
+              <tr><td>B</td><td>10</td><td>01</td></tr>
+              <tr><td>C</td><td>110</td><td>1</td></tr>
+              <tr><td>D</td><td>111</td><td>10</td></tr>
+            </tbody></table></div>
+            <p>Pri napačni kodi je 0 predpona kode 01 in 1 predpona kode 10: zaporedje 010 lahko pomeni ABA... ali AD ali BA. Pri pravilni kodi beremo od leve in takoj, ko prepoznamo kodo, zapišemo znak: 0110100 → 0|110|10|0 → ACBA.</p>
+            <p>Povprečna dolžina kode: \(\bar{k} = \sum p_i k_i\), kjer je \(p_i\) delež (verjetnost) znaka. Pri enako pogostih znakih koda različne dolžine ne prihrani nič. Štiri enako pogoste črke (A, C, G, T v genomu) zapišemo z 2 bitoma namesto z 8-bitno kodo ASCII, kar zmanjša zapis na četrtino.</p>
+            <h4>Čete (RLE, kodiranje ponovitev)</h4>
+            <p><strong>Četa</strong> je zaporedje enakih zaporednih vrednosti. Namesto vsake vrednosti zapišemo pare <em>dolžina × vrednost</em>: 0, 0, 2, 2, 2, 3 → 2 × 0, 3 × 2, 1 × 3. Zapis je krajši le, če so čete dolge (risbe z velikimi enobarvnimi ploskvami, faks, ikone); pri fotografijah ali pri zaporedju brez ponovitev je lahko celo daljši, ker vsak par zahteva bite za dolžino in za vrednost. To je stiskanje <strong>brez izgub</strong>.</p>
+            <p>Velikost: če ima zapis \(m\) čet, dolžino zapišemo s \(k_d\) biti in vrednost s \(k_v\) biti, je velikost \(m(k_d + k_v)\) bitov.</p>
+<pre class="koda"><code>def cete(tab):
+    i = 0
+    while i &lt; len(tab):
+        j = i
+        while j &lt; len(tab) and tab[j] == tab[i]:
+            j += 1                     # konec čete
+        print(j - i, "x", tab[i])
+        i = j</code></pre>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-8">
+              <h4>Tip 8: Kodna tabela in število bitov</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Sporočila vsebujejo le znake A, B, C, D, E, F. a) Najmanj koliko bitov potrebujemo za kodo enake dolžine? b) Sestavi kodo različne dolžine, ki ustreza pravilu predpone, če je A najpogostejši. c) Dekodiraj 0101100 v svoji kodi.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> sestaviti je treba kode za znake, preveriti, ali je zapis enoličen, ali izračunati, koliko bitov porabi sporočilo.</p><ul class="kljucne"><li>„kodna tabela“</li><li>„koda enake dolžine“</li><li>„nobena koda ni predpona“</li><li>„enolično dekodiramo“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Preštej znake in poišči najmanjši \(k\) z \(2^k \ge n\).</p><div class="na-nalogi"><p>6 znakov: \(2^2 = 4 &lt; 6 \le 8 = 2^3\), torej 3 biti (A = 000, B = 001, …, F = 101).</p></div></li>
+              <li><p class="korak">Za kodo različne dolžine daj najkrajšo kodo najpogostejšemu znaku in preveri, da nobena koda ni začetek druge.</p><div class="na-nalogi"><p>A = 0, B = 10, C = 110, D = 1110, E = 11110, F = 11111. Vsaka koda razen zadnjih se konča z 0, zato nobena ni predpona druge.</p></div></li>
+              <li><p class="korak">Dekodiraj od leve: ko se začetek ujema s kodo, jo odreži.</p><div class="na-nalogi"><p>0|10|110|0 → A B C A.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Ali je koda {0, 01, 11} enolična?</p><p>Ne, 0 je predpona kode 01; zaporedje 011 je lahko 0|11 ali 01|1 (nedokončano).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> 4000 žrebanj ene od 52 kart, vsako zapisano z enakim številom bitov. Koliko bitov?</p><p>\(2^6 = 64 \ge 52\), 6 bitov na žrebanje, skupaj \(24\,000\) bitov = 3000 B.</p></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-9">
+              <h4>Tip 9: Zapis s četami (RLE)</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Vrstica slike ima barve 3, 3, 3, 3, 0, 0, 1, 3, 3, 3, 3, 3 (4 barve). Zapiši jo s četami in primerjaj velikost z navadnim zapisom, če dolžino čete zapišemo s 4 biti.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> v besedilu je zaporedje z veliko ponovitvami, zahtevajo krajši zapis s pari dolžina × vrednost ali oceno prihranka.</p><ul class="kljucne"><li>„četa“</li><li>„ponavljanje“</li><li>„okrajšani ukaz“</li><li>„stisni brez izgub“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Razdeli zaporedje na čete enakih zaporednih vrednosti.</p><div class="na-nalogi"><p>3333 | 00 | 1 | 33333 → 4 × 3, 2 × 0, 1 × 1, 5 × 3.</p></div></li>
+              <li><p class="korak">Izračunaj velikost navadnega zapisa: število vrednosti × biti za vrednost.</p><div class="na-nalogi"><p>12 vrednosti × 2 bita = 24 bitov.</p></div></li>
+              <li><p class="korak">Izračunaj velikost zapisa s četami: število čet × (biti za dolžino + biti za vrednost).</p><div class="na-nalogi"><p>4 čete × (4 + 2) = 24 bitov; prihranka ni, ker so čete kratke. Pri daljših četah (na primer 100 enakih pik) bi bil zapis precej krajši.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Kdaj je zapis s četami daljši od navadnega?</p><p>Ko se sosednje vrednosti skoraj nikoli ne ponovijo (vsaka četa ima dolžino 1), saj vsakemu podatku dodamo še dolžino.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Kaj izpiše <code class="k">cete([0,0,2,2,2,1])</code>?</p><p>2 x 0, 3 x 2, 1 x 1 (vsako v svoji vrstici).</p></div>
+            </div>
+          </div>
+        </section>
+
         <section class="subsection" id="kljuc">
           <div class="subsection-head">
             <h2>Ključ: kateri tip naloge je to?</h2>
@@ -330,6 +402,8 @@
                   <tr><td>„sestavine komuniciranja“, „šum“, „smer komuniciranja“</td><td><a href="#tip-5">Tip 5</a></td></tr>
                   <tr><td>„uspešnost“, „učinkovitost“</td><td><a href="#tip-6">Tip 6</a></td></tr>
                   <tr><td>„kibernetika“, „samodejno uravnava“</td><td><a href="#tip-7">Tip 7</a></td></tr>
+                <tr><td>„kodna tabela“, „koda enake dolžine“, „nobena koda ni predpona“</td><td><a href="#tip-8">Tip 8</a></td></tr>
+                  <tr><td>„četa“, „ponavljanje“, „okrajšan zapis“, „stisni zaporedje“</td><td><a href="#tip-9">Tip 9</a></td></tr>
                 </tbody>
               </table>
             </div>

@@ -26,8 +26,8 @@
           <h1>Kemijska reakcija</h1>
           <p>Pri kemijski reakciji iz reaktantov nastanejo nove snovi, produkti, hkrati pa se izmenja energija z okolico. Kemijska enačba pove oboje: katere snovi reagirajo in v kakšnem množinskem razmerju. Iz nje izračunamo, koliko produkta nastane, kateri reaktant zmanjka in koliko toplote se sprosti. To so najpogostejši računi v 2. izpitni poli. Pod razlago so vsi tipi nalog.</p>
           <div class="page-meta">
-            <div class="page-meta-item"><strong>3</strong><span>Podpoglavja</span></div>
-            <div class="page-meta-item"><strong>7</strong><span>Tipov nalog</span></div>
+            <div class="page-meta-item"><strong>4</strong><span>Podpoglavja</span></div>
+            <div class="page-meta-item"><strong>9</strong><span>Tipov nalog</span></div>
             <div class="page-meta-item"><strong>~40 min</strong><span>Branja</span></div>
           </div>
         </header>
@@ -53,6 +53,7 @@
             <li><a href="#sklop-1"><span class="kazalo-st">1</span> Kemijska reakcija in kemijska enačba</a></li>
             <li><a href="#sklop-2"><span class="kazalo-st">2</span> Množinska razmerja, prebitni reaktant in izkoristek</a></li>
             <li><a href="#sklop-3"><span class="kazalo-st">3</span> Energija pri reakcijah: entalpija in termokemijske enačbe</a></li>
+            <li><a href="#sklop-4"><span class="kazalo-st">4</span> Vezne energije in Hessov zakon</a></li>
             <li><a href="#kljuc"><span class="kazalo-st">?</span> Ključ: kateri tip naloge je to?</a></li>
           </ol>
         </nav>
@@ -259,6 +260,62 @@
           </div>
         </section>
 
+        <!-- SKLOP 4 -->
+        <section class="sklop" id="sklop-4">
+          <header class="sklop-header">
+            <span class="sklop-num">4.5 · 4</span>
+            <h2>Vezne energije in Hessov zakon</h2>
+            <p>Reakcijska entalpija iz povprečnih veznih energij in iz drugih termokemijskih enačb (Hessov zakon).</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <h4>Reakcijska entalpija iz veznih energij</h4>
+            <p><strong>Vezna energija</strong> je energija, ki jo moramo dovesti, da v plinastem stanju pretrgamo 1 mol določenih vezi (H–H: 436 kJ/mol). Pri reakciji se vezi v reaktantih pretrgajo (energijo porabimo), v produktih nastanejo nove (energija se sprosti):</p>
+            <p>\[\Delta H_r = \sum E(\text{pretrgane vezi}) - \sum E(\text{nastale vezi}).\]</p>
+            <p>Pozor na vrstni red: tu je <em>reaktanti minus produkti</em>, obratno kot pri tvorbenih entalpijah. Vsako vez preštej s koeficientom (2 HBr imata dve vezi H–Br; molekula CH<sub>4</sub> ima štiri vezi C–H). Vezi, ki se med reakcijo ne spremenijo, lahko izpustiš na obeh straneh. Ker so tabelirane vezne energije <strong>povprečne</strong> (vez C–H v različnih molekulah ni čisto enaka) in veljajo za pline, je tako izračunana \(\Delta H_r\) le <strong>približna</strong>.</p>
+            <h4>Hessov zakon</h4>
+            <p>Reakcijska entalpija je odvisna le od začetnega in končnega stanja, ne od poti. Če reakcijo lahko zapišemo kot vsoto drugih reakcij, je njena \(\Delta H\) vsota njihovih entalpij. Pri tem:</p>
+            <ul>
+              <li>če enačbo <strong>obrnemo</strong>, \(\Delta H\) spremeni predznak;</li>
+              <li>če enačbo <strong>pomnožimo</strong> s številom, \(\Delta H\) pomnožimo z istim številom;</li>
+              <li>snovi, ki se pojavijo na obeh straneh vsote, se okrajšajo.</li>
+            </ul>
+            <p>Tako izračunamo entalpijo reakcije, ki je ne moremo izmeriti neposredno, na primer nastanek CO iz ogljika (vedno nastane še nekaj CO<sub>2</sub>).</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-8">
+              <h4>Tip 8: Reakcijska entalpija iz veznih energij</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Izračunaj \(\Delta H_r\) za hidrogeniranje etena <span class="ke">CH<sub>2</sub>=CH<sub>2</sub>(g) + H<sub>2</sub>(g)&nbsp;→ CH<sub>3</sub>–CH<sub>3</sub>(g)</span>. Vezne energije: C–H 413, C–C 348, C=C 614, H–H 436 kJ/mol.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> podana je tabela veznih energij in enačba reakcije plinov.</p><ul class="kljucne"><li>„vezne energije“</li><li>„povprečne vezne energije“</li><li>„kJ/mol za vez“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Nariši strukturni formuli in preštej vezi v reaktantih.</p><div class="na-nalogi"><p>Eten: 1 C=C, 4 C–H; vodik: 1 H–H.</p></div></li>
+              <li><p class="korak">Preštej vezi v produktih.</p><div class="na-nalogi"><p>Etan: 1 C–C, 6 C–H.</p></div></li>
+              <li><p class="korak">Seštej energije pretrganih in nastalih vezi (štiri C–H se ne spremenijo, lahko jih izpustiš).</p><div class="na-nalogi"><p>Pretrgane: \(614 + 436 = 1050\ \text{kJ}\). Nastale: \(348 + 2 \cdot 413 = 1174\ \text{kJ}\).</p></div></li>
+              <li><p class="korak">\(\Delta H_r\) = pretrgane − nastale.</p><div class="na-nalogi"><p>\(\Delta H_r = 1050 - 1174 = -124\ \text{kJ}\); reakcija je eksotermna.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> \(\Delta H_r\) za <span class="ke">H<sub>2</sub> + Br<sub>2</sub>&nbsp;→ 2HBr</span>, če so H–H 436, Br–Br 193, H–Br 366 kJ/mol?</p><p>\((436 + 193) - 2 \cdot 366 = -103\ \text{kJ}\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Zakaj se tako izračunana vrednost razlikuje od izmerjene?</p><p>Vezne energije so povprečne vrednosti iz različnih molekul in veljajo za plinasto stanje.</p></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-9">
+              <h4>Tip 9: Hessov zakon</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Dano: <span class="ke">C(s) + O<sub>2</sub>(g)&nbsp;→ CO<sub>2</sub>(g)</span>, \(\Delta H_1 = -394\ \text{kJ}\); <span class="ke">CO(g) + ½O<sub>2</sub>(g)&nbsp;→ CO<sub>2</sub>(g)</span>, \(\Delta H_2 = -283\ \text{kJ}\). Izračunaj \(\Delta H\) za <span class="ke">C(s) + ½O<sub>2</sub>(g)&nbsp;→ CO(g)</span>.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> podanih je več termokemijskih enačb, iščejo entalpijo tretje reakcije.</p><ul class="kljucne"><li>„dani sta enačbi“</li><li>„izračunaj ΔH reakcije“</li><li>„Hessov zakon“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Poišči snovi iskane enačbe v danih enačbah in ugotovi, na kateri strani morajo biti.</p><div class="na-nalogi"><p>C je reaktant (kot v prvi enačbi), CO produkt (v drugi je reaktant, zato jo obrnemo).</p></div></li>
+              <li><p class="korak">Obrni ali pomnoži enačbe in ustrezno spremeni \(\Delta H\).</p><div class="na-nalogi"><p>Obrnjena druga: <span class="ke">CO<sub>2</sub>&nbsp;→ CO + ½O<sub>2</sub></span>, \(+283\ \text{kJ}\).</p></div></li>
+              <li><p class="korak">Seštej enačbe in entalpije; preveri, da se vmesne snovi okrajšajo.</p><div class="na-nalogi"><p>CO<sub>2</sub> se okrajša, od O<sub>2</sub> ostane ½. \(\Delta H = -394 + 283 = -111\ \text{kJ}\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Kako se spremeni \(\Delta H\), če enačbo pomnožimo z 2?</p><p>Podvoji se.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Koliko toplote se sprosti pri gorenju 0,50 mol C v CO<sub>2</sub>?</p><p>\(Q = 0{,}50 \cdot 394\ \text{kJ} = 197\ \text{kJ}\).</p></div>
+            </div>
+          </div>
+        </section>
+
         <section class="subsection" id="kljuc">
           <div class="subsection-head">
             <h2>Ključ: kateri tip naloge je to?</h2>
@@ -276,6 +333,8 @@
                   <tr><td>„se segreje / ohladi“, „energijski diagram“</td><td><a href="#tip-5">Tip 5</a></td></tr>
                   <tr><td>„koliko toplote“, enačba z \(\Delta H\)</td><td><a href="#tip-6">Tip 6</a></td></tr>
                   <tr><td>„standardna tvorbena entalpija“</td><td><a href="#tip-7">Tip 7</a></td></tr>
+                <tr><td>„vezne energije“, „povprečne vezne energije“, „pretrgane in nastale vezi“</td><td><a href="#tip-8">Tip 8</a></td></tr>
+                  <tr><td>„dani sta termokemijski enačbi“, „izračunaj ΔH tretje reakcije“, „Hessov zakon“</td><td><a href="#tip-9">Tip 9</a></td></tr>
                 </tbody>
               </table>
             </div>

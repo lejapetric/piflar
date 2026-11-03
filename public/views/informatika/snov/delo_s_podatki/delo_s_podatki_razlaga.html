@@ -26,8 +26,8 @@
           <h1>Delo s podatki</h1>
           <p>Podatke obdelujemo s programi, ki jih zapišemo kot algoritme, hranimo jih v podatkovnih bazah, računamo z njimi v preglednicah in na njihovi podlagi odločamo. To poglavje prinese največ nalog s postopki: sledenje algoritmom, pisanje programov, načrtovanje tabel, formule in odločitvene modele. Pod razlago so vsi tipi nalog, ki se pojavijo pri tem sklopu.</p>
           <div class="page-meta">
-            <div class="page-meta-item"><strong>7</strong><span>Podpoglavij</span></div>
-            <div class="page-meta-item"><strong>14</strong><span>Tipov nalog</span></div>
+            <div class="page-meta-item"><strong>11</strong><span>Podpoglavij</span></div>
+            <div class="page-meta-item"><strong>22</strong><span>Tipov nalog</span></div>
             <div class="page-meta-item"><strong>~70 min</strong><span>Branja</span></div>
           </div>
         </header>
@@ -56,6 +56,10 @@
             <li><a href="#sklop-5"><span class="kazalo-st">5</span> Podatkovna baza</a></li>
             <li><a href="#sklop-6"><span class="kazalo-st">6</span> Preglednica</a></li>
             <li><a href="#sklop-7"><span class="kazalo-st">7</span> Tehnologije znanja in odločanje</a></li>
+            <li><a href="#sklop-8"><span class="kazalo-st">8</span> Python: funkcije, seznami in nizi</a></li>
+            <li><a href="#sklop-9"><span class="kazalo-st">9</span> Diagram E-R iz opisa</a></li>
+            <li><a href="#sklop-10"><span class="kazalo-st">10</span> Funkcije v preglednicah</a></li>
+            <li><a href="#sklop-11"><span class="kazalo-st">11</span> Odločitveno drevo in pravila</a></li>
             <li><a href="#kljuc"><span class="kazalo-st">?</span> Ključ: kateri tip naloge je to?</a></li>
           </ol>
         </nav>
@@ -601,6 +605,307 @@ print(vsota)</code></pre></div>
           </div>
         </section>
 
+        <!-- SKLOP 8 -->
+        <section class="sklop" id="sklop-8">
+          <header class="sklop-header">
+            <span class="sklop-num">4.4 · 8</span>
+            <h2>Python: funkcije, seznami in nizi</h2>
+            <p>Funkcije s parametri in vrnjeno vrednostjo, seznami (tabele) in indeksi, zanke čez sezname, nizi, ord in chr, rezine ter učinkovitost programa.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <h4>Funkcija</h4>
+            <p>Na maturi skoraj vsaka programska naloga zahteva <strong>funkcijo</strong>: dobi <strong>parametre</strong>, nekaj izračuna in rezultat <strong>vrne</strong> z <code class="k">return</code> (ali ga izpiše s <code class="k">print</code>, če tako piše v nalogi). <code class="k">return</code> takoj konča funkcijo; funkcija brez njega vrne <code class="k">None</code>.</p>
+<pre class="koda"><code>def povprecje(rezultati):          # parameter: seznam števil
+    if len(rezultati) == 0:
+        return 0
+    return sum(rezultati) / len(rezultati)
+
+def uvrsceni(rezultati, dovoljen_cas):
+    st = 0
+    for r in rezultati:
+        if r &lt;= dovoljen_cas:
+            st += 1
+    return st
+
+print(povprecje([52.1, 49.8, 55.0]))   # klic funkcije
+print(uvrsceni([52.1, 49.8, 55.0], 53))</code></pre>
+            <p>Gnezdeni klici se računajo od znotraj navzven: pri <code class="k">produkt(ostanek(11, 4), vsota(-4, 5, 0))</code> najprej izračunamo <code class="k">ostanek(11, 4) = 3</code> in <code class="k">vsota(-4, 5, 0) = 1</code>, nato <code class="k">produkt(3, 1) = 3</code>.</p>
+            <h4>Seznami (tabele)</h4>
+            <div class="tabela-wrap"><table class="tabela"><thead><tr><th>Zapis</th><th>Pomen</th><th>Za <code class="k">t = [6, 9, 4, 7]</code></th></tr></thead><tbody>
+              <tr><td><code class="k">t[0]</code>, <code class="k">t[-1]</code></td><td>prvi, zadnji element (indeksi od 0)</td><td>6, 7</td></tr>
+              <tr><td><code class="k">len(t)</code></td><td>število elementov</td><td>4</td></tr>
+              <tr><td><code class="k">t[1:3]</code></td><td>rezina od indeksa 1 (vključno) do 3 (izključno)</td><td>[9, 4]</td></tr>
+              <tr><td><code class="k">sum(t)</code>, <code class="k">max(t)</code>, <code class="k">min(t)</code></td><td>vsota, največji, najmanjši</td><td>26, 9, 4</td></tr>
+              <tr><td><code class="k">t.append(5)</code></td><td>doda element na konec</td><td>[6, 9, 4, 7, 5]</td></tr>
+              <tr><td><code class="k">t.index(9)</code>, <code class="k">9 in t</code></td><td>indeks elementa, ali je v seznamu</td><td>1, True</td></tr>
+              <tr><td><code class="k">sorted(t)</code>, <code class="k">t.sort()</code></td><td>urejen nov seznam, uredi na mestu</td><td>[4, 6, 7, 9]</td></tr>
+            </tbody></table></div>
+<pre class="koda"><code>for x in t:                 # čez vrednosti
+    print(x)
+for i in range(len(t)):     # čez indekse (ko potrebuješ i ali sosede)
+    print(i, t[i])
+for i in range(1, len(t)):  # primerjava s prejšnjim elementom
+    if t[i] &gt; t[i - 1]:
+        print("raste pri", i)</code></pre>
+            <h4>Nizi, ord in chr</h4>
+            <p>Niz je zaporedje znakov; indeksiramo ga in režemo kot seznam (<code class="k">"BUTALE"[1:4]</code> = <code class="k">"UTA"</code>), ne moremo pa spremeniti posameznega znaka, ampak sestavimo nov niz. Uporabno: <code class="k">len(s)</code>, <code class="k">s.upper()</code>, <code class="k">s.lower()</code>, <code class="k">s.split(":")</code>, <code class="k">s.count("A")</code>, <code class="k">s1 + s2</code>, <code class="k">str(5)</code>, <code class="k">int("42")</code>.</p>
+            <p><code class="k">ord(znak)</code> vrne kodo znaka v kodni tabeli (ASCII, Unicode), <code class="k">chr(koda)</code> znak s to kodo. Velike črke A–Z imajo kode 65–90, male a–z kode 97–122; razlika med malo in veliko črko je vedno 32. Zato <code class="k">chr(ord("c") - 32)</code> = <code class="k">"C"</code>, črka za 3 mesta naprej je <code class="k">chr(ord(c) + 3)</code>.</p>
+<pre class="koda"><code>def VelikeCrke(crka):
+    if "a" &lt;= crka &lt;= "z":
+        return chr(ord(crka) - 32)
+    return crka</code></pre>
+            <h4>Učinkovitost: vnaprej izračunane vsote</h4>
+            <p>Če moramo večkrat sešteti del seznama (od i-tega do j-tega elementa), vsakič seštevanje traja sorazmerno z dolžino dela. Bolje enkrat izračunamo <strong>kumulativne vsote</strong> <code class="k">skupno[k]</code> = vsota prvih k+1 elementov; nato je vsota od indeksa \(i\) do \(j\) le ena odšteta razlika <code class="k">skupno[j] - skupno[i-1]</code>.</p>
+<pre class="koda"><code>def izracunaj_skupno(meritve):
+    skupno = []
+    s = 0
+    for m in meritve:          # en sam prehod: n korakov
+        s += m
+        skupno.append(s)
+    return skupno
+# meritve = [6, 9, 4, 7, 4, 5, 3, 1] → skupno = [6, 15, 19, 26, 30, 35, 38, 39]
+# dež od konca 3. do konca 7. minute: skupno[6] - skupno[2] = 38 - 19 = 19</code></pre>
+            <p>Splošno pravilo učinkovitosti: izogibaj se ponavljanju istega računanja v zanki; zanka v zanki čez \(n\) elementov pomeni okoli \(n^2\) korakov, ena zanka okoli \(n\).</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-15">
+              <h4>Tip 15: Napiši funkcijo nad seznamom</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Napiši funkcijo <code class="k">VrsticniGrafikon(meritve)</code>, ki za vsako vrednost izpiše toliko pik, kot je vrednost manj ena, in nato zvezdico. Za [3, 1] izpiše <code class="k">..*</code> in <code class="k">*</code>.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> podana je glava funkcije in seznam kot parameter; funkcija naj vrne ali izpiše rezultat za vsak element ali za ves seznam.</p><ul class="kljucne"><li>„napišite funkcijo“</li><li>„kot parameter dobi tabelo“</li><li>„vrne“</li><li>„izpiše“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Razberi parametre in ali naj funkcija <em>vrne</em> ali <em>izpiše</em>.</p><div class="na-nalogi"><p>Parameter je seznam; funkcija izpisuje.</p></div></li>
+              <li><p class="korak">Izberi zanko čez elemente in zapiši, kaj se zgodi z enim elementom (preizkusi na primeru iz besedila).</p><div class="na-nalogi"><p>Za vrednost 12: 11 pik in zvezdica.</p></div></li>
+              <li><p class="korak">Zapiši kodo, pazi na zamike in robne primere.</p><div class="na-nalogi">
+<pre class="koda"><code>def VrsticniGrafikon(meritve):
+    for m in meritve:
+        for i in range(m - 1):
+            print(".", end="")
+        print("*")</code></pre></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Funkcija, ki vrne indeks najmanjšega elementa.</p>
+<pre class="koda"><code>def najmanjsi(t):
+    k = 0
+    for i in range(1, len(t)):
+        if t[i] &lt; t[k]:
+            k = i
+    return k</code></pre></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Funkcija <code class="k">kolicina_dezja(i, j)</code>, ki sešteje meritve od i-te do j-te minute (minute štejemo od 1).</p>
+<pre class="koda"><code>def kolicina_dezja(i, j):
+    return sum(meritve[i - 1:j])</code></pre></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-16">
+              <h4>Tip 16: Delo z nizi, ord in chr</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>A ima kodo 65, a kodo 97. a) Zapiši kode B, C, b, c dvojiško. b) Napiši funkcijo, ki vrne niz z vsemi malimi črkami spremenjenimi v velike, ostale znake pa pusti.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> obdelati je treba besedilo znak za znakom, šifrirati ali preveriti zapis (naslov, kodo).</p><ul class="kljucne"><li>„ord, chr“</li><li>„črka“</li><li>„niz, podniz“</li><li>„preveri, ali je zapis veljaven“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Kode zaporednih črk se povečujejo za 1; mala = velika + 32.</p><div class="na-nalogi"><p>B = 66 = 01000010, C = 67 = 01000011, b = 98 = 01100010, c = 99 = 01100011.</p></div></li>
+              <li><p class="korak">Pojdi čez niz z zanko in sestavljaj nov niz.</p><div class="na-nalogi">
+<pre class="koda"><code>def velike(niz):
+    nov = ""
+    for z in niz:
+        if "a" &lt;= z &lt;= "z":
+            nov += chr(ord(z) - 32)
+        else:
+            nov += z
+    return nov</code></pre></div></li>
+              <li><p class="korak">Preizkusi na primeru z različnimi znaki.</p><div class="na-nalogi"><p><code class="k">velike("Ab3c")</code> → <code class="k">"AB3C"</code>.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Kaj vrne <code class="k">"BUTALE"[2:5]</code>?</p><p><code class="k">"TAL"</code> (indeksi 2, 3, 4).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Koliko je pojavitev posamezne črke v „MIHECMANCA“ v abecednem vrstnem redu?</p>
+<pre class="koda"><code>s = "MIHECMANCA"
+for c in sorted(set(s)):
+    print(c, s.count(c))     # A 2, C 2, E 1, H 1, I 1, M 2, N 1</code></pre></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-17">
+              <h4>Tip 17: Učinkovitejši program (kumulativne vsote)</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Meritve dežja po minutah: [6, 9, 4, 7, 4, 5, 3, 1]. Dopolni tabelo skupno = [6, 15, 19, 26, _, _, _, _], napiši učinkovito funkcijo <code class="k">izracunaj_skupno</code> in funkcijo, ki z enim odštevanjem vrne dež med i-to in j-to minuto.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> isti račun se ponavlja velikokrat, naloga zahteva „čim bolj učinkovito“ rešitev ali vnaprej naračunane odgovore.</p><ul class="kljucne"><li>„čim bolj učinkovito“</li><li>„vnaprej naračuna“</li><li>„le z enim odštevanjem“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Vsak naslednji element je prejšnja vsota plus nova meritev.</p><div class="na-nalogi"><p>26 + 4 = 30, 30 + 5 = 35, 35 + 3 = 38, 38 + 1 = 39.</p></div></li>
+              <li><p class="korak">Funkcijo zapiši z enim prehodom (brez ponovnega seštevanja od začetka).</p><div class="na-nalogi"><p>Glej <code class="k">izracunaj_skupno</code> zgoraj: ena zanka, n seštevanj.</p></div></li>
+              <li><p class="korak">Vsota od i-te do j-te minute je razlika dveh vnaprej izračunanih vsot.</p><div class="na-nalogi">
+<pre class="koda"><code>def kolicina_dezja_2(i, j):      # minute od 1 naprej
+    if i == 1:
+        return skupno[j - 1]
+    return skupno[j - 1] - skupno[i - 2]</code></pre></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Koliko dežja je padlo od konca 3. do konca 7. minute?</p><p>Meritve 4., 5., 6. in 7. minute: \(7 + 4 + 5 + 3 = 19\) (= 38 − 19).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Zakaj je dvojna zanka za iskanje para z vsoto 10 počasna pri milijon elementih?</p><p>Pregleda okoli \(n^2 = 10^{12}\) parov; z urejenim seznamom ali množico obiskanih vrednosti zadošča okoli \(n\) korakov.</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 9 -->
+        <section class="sklop" id="sklop-9">
+          <header class="sklop-header">
+            <span class="sklop-num">4.4 · 9</span>
+            <h2>Diagram E-R iz opisa</h2>
+            <p>Od besedilnega opisa do modela: entitete, atributi, razmerja in njihova števnost, razrešitev N : M, primarni, sestavljeni in tuji ključi ter odprava podvajanja.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <h4>Branje opisa</h4>
+            <p>V opisu sistema so <strong>samostalniki</strong> kandidati za entitete (tečaj, predavatelj, udeleženec) ali atribute (ime, cena, datum), <strong>glagoli</strong> pa za razmerja (vodi, se vpiše, kupi). Atribut opisuje entiteto in ima eno vrednost; če ima „atribut“ svoje lastnosti ali se ponavlja, je verjetno samostojna entiteta.</p>
+            <h4>Števnost razmerja</h4>
+            <p>Za vsako razmerje se vprašaš dvakrat: „s koliko B je lahko povezan en A?“ in „s koliko A je lahko povezan en B?“.</p>
+            <ul>
+              <li><strong>1 : 1</strong>: oseba in osebna izkaznica.</li>
+              <li><strong>1 : N</strong>: en predavatelj vodi več razpisanih tečajev, razpisani tečaj vodi en predavatelj. Tuji ključ (ID predavatelja) dodamo entiteti na strani N (razpisani tečaj).</li>
+              <li><strong>M : N</strong>: udeleženec gre na več tečajev, na tečaju je več udeležencev. V relacijski bazi ga <strong>razrešimo z vmesno entiteto</strong> (Vpis), ki ima tuja ključa obeh entitet in atribute samega razmerja (ocena, datum vpisa). Iz M : N nastaneta dve razmerji 1 : N.</li>
+            </ul>
+            <p>Na diagramu števnost zapišemo ob koncu povezave (1, N, M) ali z vrančjo nogo (razvejan konec pomeni „več“). Primarni ključ podčrtamo ali označimo s PK, tuje ključe s FK.</p>
+            <h4>Primarni in sestavljeni ključ</h4>
+            <p><strong>Primarni ključ</strong> enolično določa vsak zapis tabele; z njim zapis poiščemo in nanj kažemo s tujimi ključi iz drugih tabel. <strong>Sestavljeni ključ</strong> je primarni ključ iz dveh ali več atributov, kadar posamezen atribut ni enoličen, kombinacija pa je: v vmesni tabeli Vpis je (ID udeleženca, ID razpisanega tečaja) enolično, ker se isti udeleženec na isti razpis vpiše le enkrat. Če sta dva predstavnika entitete enaka v vseh atributih (dva enaka stola), dodamo umetni ključ (inventarna številka).</p>
+            <h4>Podvajanje</h4>
+            <p>Če se podatek o entiteti ponavlja v drugi tabeli (naslov kupca pri vsaki prodaji), ga odstranimo in ga dosežemo prek tujega ključa. Podvajanje povzroča neskladja (kupec spremeni naslov, popravimo le nekaj vrstic) in porablja prostor. <strong>Metamodel</strong> (metazapis) baze opisuje njeno zgradbo: tabele, polja, tipe, ključe in razmerja, ne pa podatkov samih.</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-18">
+              <h4>Tip 18: Nariši ali dopolni diagram E-R</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Izobraževalni center: tečaj (ime, cena, stopnja izobrazbe, trajanje) se lahko večkrat razpiše (datum začetka, lokacija, ur na dan). Razpisani tečaj vodi vedno isti predavatelj (priimek, ime, naslov, področje), en predavatelj vodi več razpisov. Udeleženec (priimek, ime, izobrazba, rojstvo, naslov) gre na več razpisanih tečajev in dobi oceno. Določi razmerja, števnosti, primarne in tuje ključe.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> daljši besedilni opis sistema in zahteva po diagramu E-R, števnostih ali ključih.</p><ul class="kljucne"><li>„diagram E-R“</li><li>„števnost“</li><li>„primarni, tuji ključ“</li><li>„razrešite N : M“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Izpiši entitete z atributi.</p><div class="na-nalogi"><p>Tečaj, RazpisaniTečaj, Predavatelj, Udeleženec.</p></div></li>
+              <li><p class="korak">Za vsak par, ki ga opis povezuje, določi števnost z dvema vprašanjema.</p><div class="na-nalogi"><p>Tečaj 1 : N RazpisaniTečaj; Predavatelj 1 : N RazpisaniTečaj; Udeleženec M : N RazpisaniTečaj.</p></div></li>
+              <li><p class="korak">Razreši M : N z vmesno entiteto in vanjo prestavi atribute razmerja.</p><div class="na-nalogi"><p>Vpis (IDudeleženca FK, IDrazpisa FK, ocena); Udeleženec 1 : N Vpis, RazpisaniTečaj 1 : N Vpis.</p></div></li>
+              <li><p class="korak">Vsaki entiteti dodaj primarni ključ, na strani N pa tuji ključ.</p><div class="na-nalogi"><p>PK: IDtečaja, IDrazpisa, IDpredavatelja, IDudeleženca, v Vpisu sestavljeni (IDudeleženca, IDrazpisa). FK v RazpisaniTečaj: IDtečaja, IDpredavatelja.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Pacient in zdravnik: pacient obišče več zdravnikov, zdravnik pregleda več pacientov.</p><p>M : N; vmesna entiteta Pregled (IDpacienta FK, IDzdravnika FK, datum, diagnoza).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Cesta in križišče: na križišče je priključenih več cest, cesta poteka skozi več križišč.</p><p>M : N; vmesna tabela Priključek (IDceste, IDkrižišča).</p></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-19">
+              <h4>Tip 19: Sestavljeni ključ in podvajanje</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>V tabeli Prodaja so atributi IDkupca, IDizdelka, datum, količina, pošta_stranke in naslov. Zakaj bi želeli sestavljen primarni ključ? Kaj je narobe s pošto in naslovom?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> sprašujejo, zakaj ali kdaj uporabimo sestavljeni ključ, kateri atributi so odveč ali kaj pove metamodel.</p><ul class="kljucne"><li>„sestavljeni ključ“</li><li>„podvojen“</li><li>„enolično določa“</li><li>„metamodel“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Poišči najmanjšo kombinacijo atributov, ki je enolična za vsak zapis.</p><div class="na-nalogi"><p>Isti kupec isti izdelek kupi večkrat, a ne istega dne v istem zapisu: (IDkupca, IDizdelka, datum).</p></div></li>
+              <li><p class="korak">Utemelji: brez umetnega ključa, tuji ključi že obstajajo.</p><div class="na-nalogi"><p>Sestavljeni ključ prepreči dvojni vnos iste prodaje in ne potrebuje dodatnega polja.</p></div></li>
+              <li><p class="korak">Atribute, ki opisujejo drugo entiteto, prestavi tja.</p><div class="na-nalogi"><p>Pošta in naslov opisujeta kupca, sta že v tabeli Kupci; v Prodaji ju odstranimo in ju dobimo prek IDkupca.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Kaj določa primarni ključ in za kaj ga uporabljamo?</p><p>Enolično določa zapis; uporabljamo ga za iskanje zapisa, za indeks in za povezovanje tabel (nanj kaže tuji ključ).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Kakšna je povezava med primarnim in sestavljenim ključem?</p><p>Sestavljeni ključ je primarni ključ, ki ga sestavlja več atributov.</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 10 -->
+        <section class="sklop" id="sklop-10">
+          <header class="sklop-header">
+            <span class="sklop-num">4.4 · 10</span>
+            <h2>Funkcije v preglednicah</h2>
+            <p>Statistične, pogojne in besedilne funkcije, obsegi in unije obsegov, absolutni naslovi pri kopiranju ter formule, ki se sklicujejo na druge formule.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <h4>Pregled funkcij</h4>
+            <div class="tabela-wrap"><table class="tabela"><thead><tr><th>Funkcija</th><th>Vrne</th></tr></thead><tbody>
+              <tr><td><code class="k">SUM</code>, <code class="k">AVERAGE</code>, <code class="k">MIN</code>, <code class="k">MAX</code></td><td>vsoto, povprečje, najmanjšo, največjo vrednost (prazne celice in besedilo izpusti)</td></tr>
+              <tr><td><code class="k">COUNT(obseg)</code></td><td>število celic s števili</td></tr>
+              <tr><td><code class="k">COUNTA(obseg)</code>, <code class="k">COUNTBLANK(obseg)</code></td><td>število nepraznih, praznih celic</td></tr>
+              <tr><td><code class="k">COUNTIF(obseg; pogoj)</code></td><td>število celic, ki ustrezajo pogoju: <code class="k">5</code>, <code class="k">"&lt;2"</code>, <code class="k">"&gt;="&amp;E2</code>, <code class="k">"DA"</code></td></tr>
+              <tr><td><code class="k">SUMIF(obseg; pogoj; obseg_vsote)</code></td><td>vsoto tistih celic iz obseg_vsote, pri katerih ustreza pogoj</td></tr>
+              <tr><td><code class="k">IF(pogoj; če_res; če_ne)</code></td><td>eno od dveh vrednosti; lahko gnezdimo: <code class="k">IF(B2&gt;=90;5;IF(B2&gt;=50;2;1))</code></td></tr>
+              <tr><td><code class="k">AND(…)</code>, <code class="k">OR(…)</code></td><td>sestavljen pogoj</td></tr>
+              <tr><td><code class="k">ROUND(x; d)</code></td><td>zaokroži na d decimalk</td></tr>
+              <tr><td><code class="k">LEFT(b; n)</code>, <code class="k">RIGHT(b; n)</code>, <code class="k">MID(b; začetek; n)</code>, <code class="k">LEN(b)</code></td><td>prvih n, zadnjih n znakov, n znakov od mesta začetek, dolžino besedila</td></tr>
+              <tr><td><code class="k">&amp;</code> ali <code class="k">CONCATENATE</code></td><td>združi besedila: <code class="k">="Koda: "&amp;A2</code></td></tr>
+            </tbody></table></div>
+            <h4>Obsegi in unija</h4>
+            <p><code class="k">D3:D5</code> je obseg od D3 do D5. Podpičje loči več argumentov: <code class="k">SUM(D3:D5;C4:E4)</code> sešteje oba obsega, celico D4, ki je v obeh, pa <strong>dvakrat</strong>. Zato je lahko vsota „nepričakovano“ večja. Pri <code class="k">MIN</code> in <code class="k">MAX</code> dvojna celica ne vpliva na rezultat.</p>
+            <h4>Kopiranje in absolutni naslovi</h4>
+            <p>Pred kopiranjem formule vprašaj: kateri del se mora premikati in kateri ostati? Celico s stalnim podatkom (stopnja DDV v E2, popust v B1) zakleni z <code class="k">$E$2</code>; obseg, ki je za vse vrstice isti, tudi: <code class="k">=COUNTIF($C$4:$H$9;5)</code>. Pri kopiranju v desno se spreminjajo stolpci, navzdol vrstice; <code class="k">$C4</code> zaklene le stolpec, <code class="k">C$4</code> le vrstico.</p>
+            <h4>Formule, ki se sklicujejo na druge celice s formulo</h4>
+            <p>Ko formulo z relativnim naslovom kopiramo navzgor ali navzdol, se sklic premika skupaj z njo. Primer: v B6 je <code class="k">=IF(A6&gt;10;A6;A6+B7)</code> in v A6 je 1. Kopija v B5 je <code class="k">=IF(A5&gt;10;A5;A5+B6)</code>. Ker so A2 do A5 tudi 1, dobimo od spodaj navzgor: B6 = 1 + B7 (prazna = 0) = 1, B5 = 1 + 1 = 2, …, B2 = 5. Pri takih nalogah računaj od celice, ki ne odvisi od nobene druge, proti iskani.</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-20">
+              <h4>Tip 20: Pogojne in statistične funkcije</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>V C4:H9 so ocene (vsaka vrstica predmet, vsak stolpec ocenjevanje). a) V I4 povprečna ocena predmeta (kopiramo navzdol). b) V J4 število ocen predmeta. c) V C10 število petic pri ocenjevanju (kopiramo v desno). d) V C11 število negativnih ocen vseh predmetov.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> sprašujejo po formuli, ki nekaj prešteje, sešteje ali povpreči, pogosto s pogojem in za kopiranje.</p><ul class="kljucne"><li>„koliko celic“</li><li>„če velja … izpiše“</li><li>„sešteje tiste“</li><li>„da jo bo lahko kopiral“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Izberi funkcijo: štetje s pogojem COUNTIF, vsota s pogojem SUMIF, izbira med vrednostma IF.</p><div class="na-nalogi"><p>a) AVERAGE, b) COUNT, c) in d) COUNTIF.</p></div></li>
+              <li><p class="korak">Zapiši obseg za prvo celico in pogoj (kot besedilo v narekovajih, če vsebuje primerjavo).</p><div class="na-nalogi"><p>a) <code class="k">=AVERAGE(C4:H4)</code>, b) <code class="k">=COUNT(C4:H4)</code>, c) <code class="k">=COUNTIF(C4:C9;5)</code>, d) <code class="k">=COUNTIF(C4:H9;1)</code>.</p></div></li>
+              <li><p class="korak">Premisli kopiranje in zakleni, kar se ne sme premikati.</p><div class="na-nalogi"><p>a) do c) kopiramo, obsegi se morajo premikati, $ ni potreben. d) je ena sama celica.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> V F5 izpiši „DA“, če je zaloga v D5 manjša od 3, sicer „NE“.</p><p><code class="k">=IF(D5&lt;3;"DA";"NE")</code></p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Seštej prodajne cene (F6:F15) artiklov, ki imajo rok uporabe v E6:E15 krajši od 30 dni.</p><p><code class="k">=SUMIF(E6:E15;"&lt;30";F6:F15)</code></p></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-21">
+              <h4>Tip 21: Besedilne funkcije in sestavljanje besedila</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Stara koda artikla je v A6 (na primer OVS1234), ime v B6. Nova koda naj bo prva dva znaka stare kode in zadnja dva znaka. V H6 naj piše „Nova koda artikla Ovseni kosmiči je OV34.“.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> iz besedila je treba izrezati del (začetek, konec, sredino) ali sestaviti stavek iz vsebine celic.</p><ul class="kljucne"><li>„prvi znaki“</li><li>„zadnji znak“</li><li>„sestavljena iz“</li><li>„izpiše besedilo“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Za vsak del izberi LEFT, RIGHT ali MID (z začetnim mestom in dolžino).</p><div class="na-nalogi"><p><code class="k">LEFT(A6;2)</code> = OV, <code class="k">RIGHT(A6;2)</code> = 34.</p></div></li>
+              <li><p class="korak">Dele združi z <code class="k">&amp;</code>, stalno besedilo zapiši v narekovajih.</p><div class="na-nalogi"><p>Nova koda v G6: <code class="k">=LEFT(A6;2)&amp;RIGHT(A6;2)</code>.</p></div></li>
+              <li><p class="korak">Za stavek dodaj presledke in ločila v narekovajih.</p><div class="na-nalogi"><p><code class="k">="Nova koda artikla "&amp;B6&amp;" je "&amp;G6&amp;"."</code></p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Drugi in zadnji znak kode v A6?</p><p><code class="k">=MID(A6;2;1)&amp;RIGHT(A6;1)</code></p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Zakaj <code class="k">SUM(D3:D5;C4:E4)</code> vrne več od vsote vseh petih različnih celic?</p><p>Celica D4 je v obeh obsegih in je prišteta dvakrat.</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 11 -->
+        <section class="sklop" id="sklop-11">
+          <header class="sklop-header">
+            <span class="sklop-num">4.4 · 11</span>
+            <h2>Odločitveno drevo in pravila</h2>
+            <p>Cilji, kriteriji in njihova struktura v drevesu, merske lestvice, izločitveni kriterij, tabele odločitvenih pravil in občutljivost modela.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <h4>Od ciljev do drevesa kriterijev</h4>
+            <p>Najprej zapišemo <strong>cilje</strong> odločanja (kaj želimo doseči: varna družina, nizki stroški, udobje). Iz njih izpeljemo <strong>kriterije</strong>, merljive lastnosti variant (cena, poraba, število sedežev, prtljažnik, varnost). Kriterije <strong>strukturiramo v drevo</strong>: listi so osnovni kriteriji, ki jih ocenimo neposredno, notranja vozlišča so sestavljeni kriteriji (Stroški = nakup + poraba + vzdrževanje), koren je skupna ocena.</p>
+            <h4>Merske lestvice in funkcije koristnosti</h4>
+            <p>Vsak kriterij ima <strong>mersko lestvico</strong>: številsko (cena v €) ali opisno (nizka, srednja, visoka; ne / da). <strong>Funkcija koristnosti</strong> ali <strong>tabela odločitvenih pravil</strong> pove, kako se ocene podkriterijev združijo v oceno nadrejenega kriterija. Pri opisnih lestvicah je to tabela, ki za vsako kombinacijo vrednosti podkriterijev določi vrednost nad njimi. Število pravil v tabeli je produkt velikosti lestvic podkriterijev (dva kriterija s 3 in 4 vrednostmi: 12 pravil).</p>
+            <h4>Izločitveni kriterij in občutljivost</h4>
+            <p><strong>Izločitveni kriterij</strong> je tak, da ena njegova vrednost varianto izloči ne glede na vse druge: pri izbiri živali za družino z alergikom je „ima dlako = da“ vedno nesprejemljivo. V tabeli pravil to pokažemo tako, da je pri tej vrednosti rezultat vedno „neprimerno“, ne glede na ostale stolpce.</p>
+            <p><strong>Občutljivost</strong> modela (koliko variant loči) povečamo z več vrednostmi na merskih lestvicah, z dodatnimi kriteriji ali s podrobnejšimi pravili. Rezultate variant pogosto primerjamo na <strong>radarskem (polarnem) grafikonu</strong>, kjer ima vsak kriterij svojo os.</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-22">
+              <h4>Tip 22: Drevo kriterijev in izločitveni kriterij</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Družina s tremi otroki, od katerih je eden alergičen na dlako, izbira domačo žival. Določi cilje, vsaj pet kriterijev, nariši drevo kriterijev, določi izločitveni kriterij in ga utemelji s tabelo pravil.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> opisan je realen odločitveni problem; zahtevajo cilje, kriterije, drevo, lestvice ali pravila.</p><ul class="kljucne"><li>„cilji odločanja“</li><li>„drevo kriterijev“</li><li>„izločitveni kriterij“</li><li>„tabela odločitvenih pravil“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Zapiši tri cilje.</p><div class="na-nalogi"><p>Zdravje družine, primernost za otroke, nizki stroški.</p></div></li>
+              <li><p class="korak">Iz ciljev izpelji merljive kriterije in jih združi v drevo.</p><div class="na-nalogi"><p>Zdravje: dlaka (da/ne), higiena (slaba/dobra). Otroci: prijaznost (nizka/srednja/visoka), nevarnost (da/ne). Stroški: nakup (€), hrana na mesec (€). Koren: Primernost živali.</p></div></li>
+              <li><p class="korak">Poišči kriterij, katerega ena vrednost vedno izloči varianto.</p><div class="na-nalogi"><p>Dlaka = da.</p></div></li>
+              <li><p class="korak">S tabelo pravil pokaži, da je pri tej vrednosti rezultat vedno najslabši.</p><div class="na-nalogi">
+            <div class="tabela-wrap"><table class="tabela"><thead><tr><th>dlaka</th><th>higiena</th><th>Zdravje</th></tr></thead><tbody>
+              <tr><td>da</td><td>slaba</td><td>neprimerno</td></tr>
+              <tr><td>da</td><td>dobra</td><td>neprimerno</td></tr>
+              <tr><td>ne</td><td>slaba</td><td>sprejemljivo</td></tr>
+              <tr><td>ne</td><td>dobra</td><td>primerno</td></tr>
+            </tbody></table></div></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Koliko pravil ima tabela za kriterij z dvema podkriterijema s 3 in 4 vrednostmi?</p><p>\(3 \cdot 4 = 12\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Kako povečaš občutljivost modela za izbiro avtomobila?</p><p>Lestvico porabe razdeliš iz dveh na pet vrednosti in dodaš kriterij varnosti.</p></div>
+            </div>
+          </div>
+        </section>
+
         <section class="subsection" id="kljuc">
           <div class="subsection-head">
             <h2>Ključ: kateri tip naloge je to?</h2>
@@ -625,6 +930,14 @@ print(vsota)</code></pre></div>
                   <tr><td>„kaj če“, „iskanje cilja“</td><td><a href="#tip-12">Tip 12</a></td></tr>
                   <tr><td>„kateri grafikon“, „preglednica ali baza“</td><td><a href="#tip-13">Tip 13</a></td></tr>
                   <tr><td>„kriteriji, uteži“, „odločitveni model“</td><td><a href="#tip-14">Tip 14</a></td></tr>
+                <tr><td>„napišite funkcijo“, „ki kot parameter dobi tabelo“, „vrne“</td><td><a href="#tip-15">Tip 15</a></td></tr>
+                  <tr><td>„ord“, „chr“, „podniz“, „velike črke“, „niz“</td><td><a href="#tip-16">Tip 16</a></td></tr>
+                  <tr><td>„čim bolj učinkovito“, „vnaprej naračunaj“, „skupno“</td><td><a href="#tip-17">Tip 17</a></td></tr>
+                <tr><td>„diagram E-R“, „števnost“, „razrešite N:M“, „tuji ključi“</td><td><a href="#tip-18">Tip 18</a></td></tr>
+                  <tr><td>„sestavljeni ključ“, „podvojeni atributi“, „metamodel“</td><td><a href="#tip-19">Tip 19</a></td></tr>
+                <tr><td>„IF“, „COUNTIF“, „SUMIF“, „formula, ki jo lahko kopiramo“</td><td><a href="#tip-20">Tip 20</a></td></tr>
+                  <tr><td>„LEFT, RIGHT, MID“, „sestavi besedilo“, „nova koda“</td><td><a href="#tip-21">Tip 21</a></td></tr>
+                <tr><td>„drevo kriterijev“, „izločitveni kriterij“, „odločitvena pravila“, „merska lestvica“</td><td><a href="#tip-22">Tip 22</a></td></tr>
                 </tbody>
               </table>
             </div>

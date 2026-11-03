@@ -26,8 +26,8 @@
           <h1>Tekočine</h1>
           <p>Tekočina (kapljevina ali plin) pritiska na vse ploskve, ki se jih dotika, in tlak narašča z globino. Iz razlike tlakov nastane vzgon, ki odloča, ali telo plava ali potone. Pod razlago so vsi tipi nalog, ki se pojavijo pri tem sklopu. Vsebine, označene s <span class="badge-vr">PZ</span>, so posebna znanja iz kataloga.</p>
           <div class="page-meta">
-            <div class="page-meta-item"><strong>1</strong><span>Podpoglavje</span></div>
-            <div class="page-meta-item"><strong>4</strong><span>Tipi nalog</span></div>
+            <div class="page-meta-item"><strong>2</strong><span>Podpoglavji</span></div>
+            <div class="page-meta-item"><strong>5</strong><span>Tipov nalog</span></div>
             <div class="page-meta-item"><strong>~25 min</strong><span>Branja</span></div>
           </div>
         </header>
@@ -48,6 +48,7 @@
           <h2>Podpoglavja</h2>
           <ol>
             <li><a href="#sklop-1"><span class="kazalo-st">1</span> Tlak in vzgon</a></li>
+            <li><a href="#sklop-2"><span class="kazalo-st">2</span> Pascalov zakon in hidravlične naprave</a></li>
             <li><a href="#kljuc"><span class="kazalo-st">?</span> Ključ: kateri tip naloge je to?</a></li>
           </ol>
         </nav>
@@ -209,6 +210,39 @@
           </div>
         </section>
 
+        <!-- SKLOP 2 -->
+        <section class="sklop" id="sklop-2">
+          <header class="sklop-header">
+            <span class="sklop-num">4.7 · 2</span>
+            <h2>Pascalov zakon in hidravlične naprave</h2>
+            <p>Prenos tlaka v zaprti tekočini, hidravlična stiskalnica, dvigalka in zavore.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <h4>Pascalov zakon</h4>
+            <p>Tlak, s katerim od zunaj pritisnemo na zaprto tekočino, se prenese enako na vse dele tekočine in na vse stene posode. Pri hidravlični napravi sta dva bata s površinama \(S_1\) (mali) in \(S_2\) (veliki); tlak pod njima je enak:</p>
+            <p>\[p = \frac{F_1}{S_1} = \frac{F_2}{S_2} \quad\Rightarrow\quad F_2 = F_1 \frac{S_2}{S_1}.\]</p>
+            <p>Sila se poveča v razmerju površin, energije pa ne dobimo zastonj: tekočina je nestisljiva, zato je izpodrinjena prostornina enaka, \(S_1 s_1 = S_2 s_2\); mali bat se premakne za toliko več, kolikokrat je sila manjša, in delo \(F_1 s_1 = F_2 s_2\) je enako. Primeri: hidravlična dvigalka v avtomehanični delavnici, stiskalnica, zavore v avtomobilu, bager.</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-5">
+              <h4>Tip 5: Sila na batih hidravlične naprave</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Mali bat hidravlične dvigalke ima površino \(2{,}0\ \text{cm}^2\), veliki \(200\ \text{cm}^2\). S kolikšno silo moramo pritiskati na mali bat, da dvignemo avto s težo \(12\ \text{kN}\)? Za koliko moramo premakniti mali bat, da se avto dvigne za \(1{,}0\ \text{cm}\)?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> dva bata različnih površin, povezana s tekočino.</p><ul class="kljucne"><li>„hidravlična“</li><li>„mali bat, veliki bat“</li><li>„stiskalnica, dvigalka“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Izračunaj razmerje površin (enote se okrajšajo).</p><div class="na-nalogi"><p>\(S_2/S_1 = 100\).</p></div></li>
+              <li><p class="korak">Sila na manjšem batu je tolikokrat manjša.</p><div class="na-nalogi"><p>\(F_1 = 12\ \text{kN}/100 = 120\ \text{N}\).</p></div></li>
+              <li><p class="korak">Pot je obratno sorazmerna s silo (enaka prostornina).</p><div class="na-nalogi"><p>\(s_1 = 100 \cdot 1{,}0\ \text{cm} = 1{,}0\ \text{m}\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Bata imata površini \(2{,}0\ \text{cm}^2\) in \(100\ \text{cm}^2\). Na mali deluje sila \(50\ \text{N}\). Sila na velikem?</p><p>\(F_2 = 50\ \text{N} \cdot 50 = 2{,}5\ \text{kN}\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Ali hidravlična dvigalka zmanjša opravljeno delo?</p><p>Ne; zmanjša potrebno silo, pot pa se ustrezno podaljša.</p></div>
+            </div>
+          </div>
+        </section>
+
         <section class="subsection" id="kljuc">
           <div class="subsection-head">
             <h2>Ključ: kateri tip naloge je to?</h2>
@@ -223,6 +257,7 @@
                   <tr><td>„U-cev“, „razlika gladin“, „manometer“</td><td><a href="#tip-2">Tip 2</a></td></tr>
                   <tr><td>„potopimo“, „silomer v vodi“, „vzgon“</td><td><a href="#tip-3">Tip 3</a></td></tr>
                   <tr><td>„plava“, „kolikšen del gleda iz vode“</td><td><a href="#tip-4">Tip 4</a></td></tr>
+                <tr><td>„hidravlična stiskalnica, dvigalka“, „mali in veliki bat“</td><td><a href="#tip-5">Tip 5</a></td></tr>
                 </tbody>
               </table>
             </div>

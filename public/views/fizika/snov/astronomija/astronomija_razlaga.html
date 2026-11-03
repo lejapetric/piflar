@@ -26,8 +26,8 @@
           <h1>Astronomija</h1>
           <p>Zadnje poglavje poveže mehaniko, sevanje in jedrsko fiziko z vesoljem. Tu so telesa Osončja, zvezde in galaksije z razdaljami med njimi, gibanje planetov in satelitov, sevanje zvezd po Stefanovem zakonu in zlivanje jeder, ki zvezdam daje energijo. Pod razlago so vsi tipi nalog, ki se pojavijo pri tem sklopu. Vsebine, označene s <span class="badge-vr">PZ</span>, so posebna znanja iz kataloga.</p>
           <div class="page-meta">
-            <div class="page-meta-item"><strong>5</strong><span>Podpoglavij</span></div>
-            <div class="page-meta-item"><strong>8</strong><span>Tipov nalog</span></div>
+            <div class="page-meta-item"><strong>7</strong><span>Podpoglavij</span></div>
+            <div class="page-meta-item"><strong>11</strong><span>Tipov nalog</span></div>
             <div class="page-meta-item"><strong>~35 min</strong><span>Branja</span></div>
           </div>
         </header>
@@ -56,6 +56,8 @@
             <li><a href="#sklop-3"><span class="kazalo-st">3</span> Gibanje planetov in satelitov <span class="badge-vr">PZ</span></a></li>
             <li><a href="#sklop-4"><span class="kazalo-st">4</span> Stefanov zakon <span class="badge-vr">PZ</span></a></li>
             <li><a href="#sklop-5"><span class="kazalo-st">5</span> Zlivanje v zvezdah</a></li>
+            <li><a href="#sklop-6"><span class="kazalo-st">6</span> Wienov zakon in barva zvezd</a></li>
+            <li><a href="#sklop-7"><span class="kazalo-st">7</span> Razvoj zvezd in širjenje vesolja</a></li>
             <li><a href="#kljuc"><span class="kazalo-st">?</span> Ključ: kateri tip naloge je to?</a></li>
           </ol>
         </nav>
@@ -388,6 +390,96 @@
           </div>
         </section>
 
+        <!-- SKLOP 6 -->
+        <section class="sklop" id="sklop-6">
+          <header class="sklop-header">
+            <span class="sklop-num">4.19 · 6</span>
+            <h2>Wienov zakon in barva zvezd</h2>
+            <p>Valovna dolžina, pri kateri telo najmočneje seva, temperatura površja in barva zvezde.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <h4>Wienov zakon</h4>
+            <p>Segreto telo seva valovanje vseh valovnih dolžin, a ne enako močno. Valovna dolžina, pri kateri je sevanje najmočnejše, je obratno sorazmerna z absolutno temperaturo:</p>
+            <p>\[\lambda_{\max}\, T = k_W, \qquad k_W = 2{,}9 \cdot 10^{-3}\ \text{m K}.\]</p>
+            <p>Enačbe ni na listu z enačbami (konstanto navadno dajo v nalogi). Toplejše telo seva najmočneje pri krajših valovnih dolžinah. Sonce (\(T \approx 5800\ \text{K}\)) najmočneje seva pri okoli \(500\ \text{nm}\), sredi vidne svetlobe; človeško telo (\(310\ \text{K}\)) pri okoli \(9\ \mu\text{m}\) v infrardečem.</p>
+            <div class="tabela-wrap"><table class="tabela"><thead><tr><th>Temperatura površja</th><th>\(\lambda_{\max}\)</th><th>Barva zvezde</th></tr></thead><tbody>
+              <tr><td>3000–3500 K</td><td>~ 900 nm (IR)</td><td>rdečkasta</td></tr>
+              <tr><td>~ 5800 K</td><td>~ 500 nm</td><td>rumenkasto bela (Sonce)</td></tr>
+              <tr><td>~ 10 000 K</td><td>~ 290 nm (UV)</td><td>modrikasto bela (Sirij)</td></tr>
+            </tbody></table></div>
+            <p>Wienov zakon pogosto kombiniramo s Stefanovim: iz barve (\(\lambda_{\max}\)) dobimo \(T\), iz \(T\) pa gostoto izsevanega toka \(j = \sigma T^4\) in moč \(P = 4\pi R^2 \sigma T^4\).</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-9">
+              <h4>Tip 9: Temperatura iz valovne dolžine najmočnejšega sevanja</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Zvezda najmočneje seva pri valovni dolžini \(486\ \text{nm}\). Kolikšna je temperatura njenega površja? Kolikšna je gostota izsevanega toka?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> dana je valovna dolžina največjega sevanja ali temperatura, iščejo drugo ali barvo telesa.</p><ul class="kljucne"><li>„najmočneje seva“</li><li>„Wienova konstanta“</li><li>„barva zvezde“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Zapiši \(\lambda_{\max} T = 2{,}9 \cdot 10^{-3}\ \text{m K}\) in izrazi iskano.</p><div class="na-nalogi"><p>\(T = \dfrac{2{,}9 \cdot 10^{-3}\ \text{m K}}{486 \cdot 10^{-9}\ \text{m}} = 6{,}0 \cdot 10^{3}\ \text{K}\).</p></div></li>
+              <li><p class="korak">Za tok ali moč uporabi Stefanov zakon.</p><div class="na-nalogi"><p>\(j = 5{,}67 \cdot 10^{-8} \cdot (6000)^4\ \text{W m}^{-2} = 7{,}3 \cdot 10^{7}\ \text{W m}^{-2}\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Zvezda ima površje s temperaturo \(3500\ \text{K}\). Pri kateri valovni dolžini najmočneje seva in kakšne barve je?</p><p>\(\lambda_{\max} = 830\ \text{nm}\), v infrardečem; v vidnem delu prevladuje rdeča, zvezda je rdečkasta.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Kako se spremeni \(\lambda_{\max}\), če se temperatura podvoji?</p><p>Razpolovi se.</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 7 -->
+        <section class="sklop" id="sklop-7">
+          <header class="sklop-header">
+            <span class="sklop-num">4.19 · 7</span>
+            <h2>Razvoj zvezd in širjenje vesolja</h2>
+            <p>Življenjska pot zvezd glede na maso, supernova, nevtronske zvezde in črne luknje; rdeči premik, Hubblov zakon in starost vesolja.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <h4>Življenjska pot zvezde</h4>
+            <p>Zvezda nastane, ko se oblak plina in prahu (meglica) zaradi gravitacije skrči in se jedro segreje toliko, da se začne <strong>zlivanje vodika v helij</strong>. Večino življenja je zvezda v ravnovesju: gravitacija jo stiska, tlak vročega plina jo razpira. Kaj se zgodi, ko v jedru zmanjka vodika, je odvisno od mase:</p>
+            <div class="tabela-wrap"><table class="tabela"><thead><tr><th>Zvezda</th><th>Potek</th><th>Konec</th></tr></thead><tbody>
+              <tr><td>podobna Soncu</td><td>jedro se skrči in segreje, zunanje plasti se napihnejo: <strong>rdeča orjakinja</strong>; odvrže plasti v planetarno meglico</td><td><strong>bela pritlikavka</strong> (vroča, velika kot Zemlja), ki počasi ugaša</td></tr>
+              <tr><td>masivna (več kot ~ 8 mas Sonca)</td><td>rdeča nadorjakinja, zlivanje do železa, nato zrušenje jedra in eksplozija <strong>supernove</strong> (za kratek čas svetla kot cela galaksija)</td><td><strong>nevtronska zvezda</strong> ali pri največjih masah <strong>črna luknja</strong></td></tr>
+            </tbody></table></div>
+            <p>Bolj masivne zvezde so toplejše, svetlejše in živijo krajši čas, ker gorivo porabljajo veliko hitreje. Sonce je staro okoli 4,6 milijarde let in bo v tej fazi ostalo še približno toliko. Elementi, težji od helija, nastajajo v zvezdah, najtežji pri supernovah; snov v nas je bila nekoč v zvezdah.</p>
+            <h4>Rdeči premik in Hubblov zakon</h4>
+            <p>Spektralne črte v svetlobi oddaljenih galaksij so premaknjene proti daljšim valovnim dolžinam (<strong>rdeči premik</strong>), torej se galaksije od nas oddaljujejo (podobno kot pri Dopplerjevem pojavu). Hubble je ugotovil, da je hitrost oddaljevanja sorazmerna z razdaljo:</p>
+            <p>\[v = H_0\, r, \qquad H_0 \approx 70\ \frac{\text{km/s}}{\text{Mpc}}.\]</p>
+            <p>\(1\ \text{Mpc}\) (megaparsek) \(\approx 3{,}26 \cdot 10^{6}\) svetlobnih let \(\approx 3{,}1 \cdot 10^{22}\ \text{m}\). Hubblov zakon ne pomeni, da smo v središču: vesolje se <strong>širi</strong>, razdalje med vsemi galaksijami se povečujejo. Če štejemo nazaj, je bila vsa snov nekoč zgoščena (veliki pok). Starost vesolja je približno \(1/H_0 \approx 14\) milijard let; natančneje \(13{,}8\) milijarde let (ocena tudi iz sevanja ozadja).</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-10">
+              <h4>Tip 10: Razvojne stopnje zvezd</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Kaj se zgodi z zvezdo, podobno Soncu, ko v njenem jedru zmanjka vodika? Kaj je supernova?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> izbirno vprašanje o nastanku, razvoju ali koncu zvezde.</p><ul class="kljucne"><li>„supernova“</li><li>„rdeča orjakinja“</li><li>„bela pritlikavka“</li><li>„črna luknja“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Ugotovi maso zvezde (kot Sonce ali mnogo večja).</p><div class="na-nalogi"><p>Podobna Soncu.</p></div></li>
+              <li><p class="korak">Poišči stopnjo v razvoju.</p><div class="na-nalogi"><p>Napihne se v rdečo orjakinjo, nato postane bela pritlikavka. Supernova je eksplozija masivne zvezde ob koncu življenja.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Iz česa nastane zvezda?</p><p>Iz oblaka plina in prahu, ki se zaradi gravitacije skrči.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Katera zvezda živi dlje: z maso 10 Sonc ali z maso pol Sonca?</p><p>Z maso pol Sonca; manj masivne zvezde porabljajo gorivo počasneje.</p></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-11">
+              <h4>Tip 11: Hubblov zakon in rdeči premik</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Galaksija je od nas oddaljena \(100\ \text{Mpc}\). S kolikšno hitrostjo se oddaljuje, če je Hubblova konstanta \(70\ \text{km s}^{-1}\,\text{Mpc}^{-1}\)? Kaj pove rdeči premik?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> oddaljene galaksije, hitrost oddaljevanja, Hubblova konstanta, starost vesolja.</p><ul class="kljucne"><li>„rdeči premik“</li><li>„Hubblova konstanta“</li><li>„Mpc“</li><li>„starost vesolja“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Zapiši \(v = H_0 r\) z enotami, ki se okrajšajo.</p><div class="na-nalogi"><p>\(v = 70\ \dfrac{\text{km/s}}{\text{Mpc}} \cdot 100\ \text{Mpc} = 7000\ \text{km/s}\).</p></div></li>
+              <li><p class="korak">Kvalitativno: rdeči premik pomeni oddaljevanje; večja razdalja, večja hitrost.</p><div class="na-nalogi"><p>Galaksije se od nas oddaljujejo, ker se vesolje širi.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Koliko je staro vesolje?</p><p>Okoli 13,8 milijarde let (Osončje 4,6 milijarde let).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Galaksija se oddaljuje s hitrostjo \(14\,000\ \text{km/s}\). Kako daleč je?</p><p>\(r = v/H_0 = 200\ \text{Mpc}\).</p></div>
+            </div>
+          </div>
+        </section>
+
         <section class="subsection" id="kljuc">
           <div class="subsection-head">
             <h2>Ključ: kateri tip naloge je to?</h2>
@@ -406,6 +498,9 @@
                   <tr><td>„temperatura površja“, „izseva moč“</td><td><a href="#tip-6">Tip 6</a></td></tr>
                   <tr><td>„oceni temperaturo Sonca“, „solarna konstanta“</td><td><a href="#tip-7">Tip 7</a></td></tr>
                   <tr><td>„koliko mase izgubi Sonce“, „zlivanje“</td><td><a href="#tip-8">Tip 8</a></td></tr>
+                <tr><td>„najmočneje seva pri valovni dolžini“, „Wienova konstanta“, „barva zvezde“</td><td><a href="#tip-9">Tip 9</a></td></tr>
+                <tr><td>„supernova“, „rdeča orjakinja“, „bela pritlikavka“, „črna luknja“</td><td><a href="#tip-10">Tip 10</a></td></tr>
+                  <tr><td>„rdeči premik“, „Hubblova konstanta“, „Mpc“, „starost vesolja“</td><td><a href="#tip-11">Tip 11</a></td></tr>
                 </tbody>
               </table>
             </div>
