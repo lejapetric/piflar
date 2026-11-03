@@ -2,6 +2,9 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import ctrl from "../api/controllers/matura.js";
 
+// Ti testi preverjajo pravila zaklepa, zato ga vklopimo (privzeto je začasno izklopljen).
+process.env.ZAKLEP = "1";
+
 function poklici(handler, { params = {}, query = {}, uporabnik = null } = {}) {
   let status, body;
   const res = {
@@ -117,4 +120,17 @@ test("kemija: 36 pol, zadnji rok je javen, starejši zaklenjen (kemija ni v osno
   const premium = poklici(ctrl.maturaReadOne, { params: { maturaId: id }, uporabnik: { paket: "premium" } });
   assert.equal(premium.body.odklenjena, true);
   assert.ok(premium.body.naloge[0].razlaga);
+});
+
+test("z izklopljenim zaklepom (ZAKLEP ni 1) gost vidi rešitve vseh rešenih pol", () => {
+  process.env.ZAKLEP = "0";
+  try {
+    const gost = poklici(ctrl.maturaReadOne, { params: { maturaId: "matematika-osnovna-2024-spomladanski-1" } });
+    assert.equal(gost.body.odklenjena, true);
+    assert.ok(gost.body.naloge[0].razlaga);
+    const naloge = poklici(ctrl.maturaNaloge, { query: { predmet: "matematika" } });
+    assert.ok(naloge.body.filter((n) => n.resena).every((n) => n.odklenjena && n.razlaga));
+  } finally {
+    process.env.ZAKLEP = "1";
+  }
 });
