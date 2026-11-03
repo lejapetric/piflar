@@ -2419,7 +2419,9 @@ pre.koda code {
     font-size: 0.65em;
 }
 
-.rokopis .ul {
+.rokopis .ul,
+.pola-besedilo .ul,
+.naloga-besedilo .ul {
     display: inline-flex;
     flex-direction: column;
     vertical-align: middle;
@@ -2428,12 +2430,16 @@ pre.koda code {
     margin: 0 0.15em;
 }
 
-.rokopis .ul > span:first-child {
+.rokopis .ul > span:first-child,
+.pola-besedilo .ul > span:first-child,
+.naloga-besedilo .ul > span:first-child {
     border-bottom: 1.5px solid currentColor;
     padding: 0 0.2em;
 }
 
-.rokopis .ul.brez > span:first-child {
+.rokopis .ul.brez > span:first-child,
+.pola-besedilo .ul.brez > span:first-child,
+.naloga-besedilo .ul.brez > span:first-child {
     border-bottom: 0;
 }
 

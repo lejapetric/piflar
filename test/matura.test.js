@@ -98,3 +98,23 @@ test("fizika: 36 pol, zadnji rok je javen, starejši zaklenjen (fizika ni v osno
   assert.equal(premium.body.odklenjena, true);
   assert.ok(premium.body.naloge[0].razlaga);
 });
+
+test("kemija: 36 pol, zadnji rok je javen, starejši zaklenjen (kemija ni v osnovnem paketu)", () => {
+  const seznam = poklici(ctrl.maturaList, { query: { predmet: "kemija" } });
+  assert.equal(seznam.body.length, 36);
+  assert.ok(seznam.body.every((p) => p.raven === "enotna"));
+
+  const javna = poklici(ctrl.maturaReadOne, { params: { maturaId: "kemija-2025-jesenski-2-2" } });
+  assert.equal(javna.body.odklenjena, true);
+  assert.equal(javna.body.naloge.length, 15);
+
+  const id = "kemija-2020-spomladanski-1";
+  const gost = poklici(ctrl.maturaReadOne, { params: { maturaId: id } });
+  assert.equal(gost.body.odklenjena, false);
+  assert.equal(gost.body.naloge.length, 35);
+  const osnovni = poklici(ctrl.maturaReadOne, { params: { maturaId: id }, uporabnik: { paket: "osnovni" } });
+  assert.equal(osnovni.body.odklenjena, false);
+  const premium = poklici(ctrl.maturaReadOne, { params: { maturaId: id }, uporabnik: { paket: "premium" } });
+  assert.equal(premium.body.odklenjena, true);
+  assert.ok(premium.body.naloge[0].razlaga);
+});
