@@ -94,9 +94,13 @@ function nastaviPrikaz(kartica, prikaz) {
   if (resitev) resitev.hidden = !prikaz;
   if (postopek) postopek.hidden = prikaz !== "postopek";
   if (kartica.classList.contains("pola-stran")) {
-    kartica.querySelectorAll(".mn-resitev").forEach((e) => e.toggleAttribute("hidden", !prikaz));
-    const g = kartica.querySelector(".pola-gumb");
-    if (g) g.textContent = prikaz ? "Skrij rešitev" : "Prikaži rešitev";
+    kartica.querySelectorAll(".mn-rez").forEach((e) => e.toggleAttribute("hidden", prikaz !== "resitev"));
+    kartica.querySelectorAll(".mn-post").forEach((e) => e.toggleAttribute("hidden", prikaz !== "postopek"));
+    kartica.querySelectorAll(".pola-risba").forEach((e) => e.toggleAttribute("hidden", !prikaz));
+    const gR = kartica.querySelector(".pola-gumb-resitev");
+    const gP = kartica.querySelector(".pola-gumb-postopek");
+    if (gR) gR.textContent = prikaz === "resitev" ? "Skrij rešitev" : "Prikaži rešitev";
+    if (gP) gP.textContent = prikaz === "postopek" ? "Skrij postopek" : "Prikaži postopek";
     return;
   }
   const [gResitev, gPostopek] = kartica.querySelectorAll(".naloga-akcije button");
@@ -187,8 +191,9 @@ function renderList(naloga, { pola, stran, skupaj, prviVDelu }) {
   const desno = el("div", "pola-vrh-desno");
   const snov = povezavaSnov(naloga);
   if (snov) desno.append(snov);
-  const g = gumb("Prikaži rešitev", "btn btn-secondary pola-gumb");
-  desno.append(g);
+  const gR = gumb("Prikaži rešitev", "btn btn-secondary pola-gumb pola-gumb-resitev");
+  const gP = gumb("Prikaži postopek", "btn btn-secondary pola-gumb pola-gumb-postopek");
+  desno.append(gR, gP);
   vrh.append(desno);
 
   const list = el("div", "pola-list");
@@ -203,25 +208,33 @@ function renderList(naloga, { pola, stran, skupaj, prviVDelu }) {
 
   const prostor = el("div", `pola-prostor${del === "B" || del === "C" ? " pola-prostor-velik" : ""}`);
   if (naloga.odklenjena && naloga.razlaga) {
-    prostor.append(el("div", "mn-resitev pola-resitev", naloga.razlaga));
+    if (naloga.rezultat) {
+      const rez = el("div", "mn-rez pola-rezultat");
+      rez.append(el("span", "pola-rezultat-oznaka", "Rešitev:"), el("span", "pola-rezultat-vsebina", naloga.rezultat));
+      prostor.append(rez);
+    }
+    prostor.append(el("div", "mn-post pola-resitev", naloga.razlaga));
   } else {
     const zaklep = zaklenjeno(naloga);
-    zaklep.classList.add("mn-resitev");
-    prostor.append(zaklep);
+    zaklep.classList.add("mn-rez");
+    const zaklep2 = zaklenjeno(naloga);
+    zaklep2.classList.add("mn-post");
+    prostor.append(zaklep, zaklep2);
   }
   okvir.append(prostor);
   // Graf iz rešitve narišemo v prazen koordinatni sistem iz besedila, kot na poli
   const mreza = besedilo.querySelector(".mn-graf.mreza");
   const risba = prostor.querySelector(".mn-graf.v-mrezo");
   if (mreza && risba) {
-    risba.classList.add("mn-resitev", "pola-risba");
+    risba.classList.add("pola-risba");
     mreza.classList.add("mreza-prazna");
     mreza.after(risba);
   }
   list.append(okvir);
   kartica.append(vrh, list);
 
-  g.addEventListener("click", () => nastaviPrikaz(kartica, kartica.dataset.prikaz ? "" : "resitev"));
+  gR.addEventListener("click", () => nastaviPrikaz(kartica, kartica.dataset.prikaz === "resitev" ? "" : "resitev"));
+  gP.addEventListener("click", () => nastaviPrikaz(kartica, kartica.dataset.prikaz === "postopek" ? "" : "postopek"));
   nastaviPrikaz(kartica, "");
   return kartica;
 }
@@ -230,7 +243,7 @@ function renderList(naloga, { pola, stran, skupaj, prviVDelu }) {
 // Orodja na vrhu: vse rešitve, vsi postopki, PDF
 // (naslovPdf je funkcija, ker se naslov spremeni z izbiro ravni)
 // ------------------------------------------------------------
-function orodja(naslovPdf, { samoResitve = false } = {}) {
+function orodja(naslovPdf, { samoResitve = false, brezPrikaza = false } = {}) {
   const vrstica = el("div", "matura-orodja");
   const levo = el("div", "matura-orodja-skupina");
   const desno = el("div", "matura-orodja-skupina");
@@ -249,8 +262,8 @@ function orodja(naslovPdf, { samoResitve = false } = {}) {
   }
   gResitve.addEventListener("click", () => vse("resitev"));
   gPostopki.addEventListener("click", () => vse("postopek"));
-  levo.append(gResitve);
-  if (!samoResitve) levo.append(gPostopki);
+  if (!brezPrikaza) levo.append(gResitve);
+  if (!samoResitve && !brezPrikaza) levo.append(gPostopki);
 
   const gPdf = gumb("PDF brez rešitev", "btn btn-primary");
   const gPdfResitve = gumb("PDF z rešitvami", "btn btn-primary");
@@ -344,6 +357,26 @@ function renderPola(pola, naslovPdf) {
   levo.append(opis);
 
   const desno = el("div", "matura-pola-prenosi");
+  const prikazPole = el("div", "matura-pola-prikaz");
+  const gRes = gumb("Prikaži rešitve", "btn btn-secondary");
+  const gPost = gumb("Prikaži postopke", "btn btn-secondary");
+  function prikaziPolo(prikaz) {
+    const novo = sekcija.dataset.prikaz === prikaz ? "" : prikaz;
+    sekcija.dataset.prikaz = novo;
+    if (novo) sekcija.open = true;
+    sekcija.querySelectorAll(".mn-naloga").forEach((k) => nastaviPrikaz(k, novo));
+    gRes.textContent = novo === "resitev" ? "Skrij rešitve" : "Prikaži rešitve";
+    gPost.textContent = novo === "postopek" ? "Skrij postopke" : "Prikaži postopke";
+  }
+  for (const [g, prikaz] of [[gRes, "resitev"], [gPost, "postopek"]]) {
+    g.addEventListener("click", (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+      prikaziPolo(prikaz);
+    });
+    prikazPole.append(g);
+  }
+  desno.append(prikazPole);
   for (const [z, ime] of [[false, "PDF brez rešitev"], [true, "PDF z rešitvami"]]) {
     const g = gumb(ime, "btn btn-secondary");
     g.addEventListener("click", (e) => {
@@ -420,7 +453,7 @@ async function stranPole() {
     typeset(vsebina);
   }
 
-  const vrstica = orodja(() => `Matura${leto ? ` ${leto}` : ""}, ${predmet}, ${RAVNI[raven].toLowerCase()}`, { samoResitve: true });
+  const vrstica = orodja(() => `Matura${leto ? ` ${leto}` : ""}, ${predmet}, ${RAVNI[raven].toLowerCase()}`, { brezPrikaza: true });
 
   koren.replaceChildren(
     izbiraRavni(ravni.map((r) => [r, RAVNI[r]]), raven, (r) => {
