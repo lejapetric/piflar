@@ -5,6 +5,7 @@ import assert from "node:assert/strict";
 import mongoose from "mongoose";
 
 process.env.JWT_SECRET = "testna-skrivnost";
+process.env.ZAKLEP = "1";
 const { default: app } = await import("../app.js");
 const { default: Uporabnik } = await import("../api/models/uporabnik.js");
 const { default: Napredek } = await import("../api/models/napredek.js");

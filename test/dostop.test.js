@@ -2,6 +2,9 @@ import { test } from "node:test";
 import assert from "node:assert/strict";
 import { imaPolniDostop, javneResenePole, lahkoVidiResitve } from "../api/utils/dostop.js";
 
+// Ti testi preverjajo pravila zaklepa, zato ga vklopimo (privzeto je začasno izklopljen).
+process.env.ZAKLEP = "1";
+
 const zdaj = new Date("2026-10-24");
 const pola = (id, predmet, raven, leto, resena = true, rok = "spomladanski") => ({
   id, predmet, raven, leto, rok, naloge: resena ? [{ razlaga: "…" }] : [{}],

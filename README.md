@@ -13,6 +13,7 @@ npm start       # produkcija
 Stran teče na <http://localhost:3000>. Nastavitve so v `.env` (glej `.env.example`):
 `PORT`, `MONGODB_URI` (npr. brezplačni MongoDB Atlas) in `JWT_SECRET`.
 Brez `MONGODB_URI` stran deluje, le prijava ni na voljo.
+Zaklep rešitev starejših pol je začasno izklopljen (vsi vidijo vse); vklopiš ga z `ZAKLEP=1` v `.env`.
 
 `npm test` zažene teste (preverjanje odgovorov, pravila dostopa, prijava).
 

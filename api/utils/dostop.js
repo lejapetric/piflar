@@ -5,6 +5,9 @@
 //                 pole in zadnja rešena pola za vsak predmet in raven
 //   osnovni:      vse za predmete v PAKET_OSNOVNI
 //   premium:      vse za vse predmete
+//
+// ZAČASNO: dokler prijava in plačila ne delujejo, je zaklep izklopljen in vsi
+// vidijo vse rešitve. Zaklep vklopiš z ZAKLEP=1 v .env (in ponovnim zagonom).
 
 export const PREDMETI = ["matematika", "fizika", "anglescina", "slovenscina"];
 export const PAKETI = ["brezplacno", "osnovni", "premium"];
@@ -39,7 +42,12 @@ export function javneResenePole(pole) {
   );
 }
 
+// Ali je zaklep plačljivih rešitev vklopljen? Bere se ob vsakem klicu, da ga
+// lahko testi vklopijo/izklopijo.
+export const zaklepVklopljen = () => process.env.ZAKLEP === "1";
+
 export function lahkoVidiResitve(uporabnik, pola, javne, zdaj = new Date()) {
+  if (!zaklepVklopljen()) return true;
   return javne.has(pola.id) || imaPolniDostop(uporabnik, pola.predmet, zdaj);
 }
 
