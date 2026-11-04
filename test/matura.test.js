@@ -155,3 +155,32 @@ test("informatika: 12 pol, zadnji rok je javen, starejši zaklenjen (informatika
   assert.ok(premium.body.naloge[0].razlaga);
   assert.ok(premium.body.naloge.every((n) => n.snov && n.tema?.length));
 });
+
+test("slovenščina: 34 pol (esej + razčlemba), pola 2 s prilogo, zadnji rok javen, starejši zaklenjen", () => {
+  const seznam = poklici(ctrl.maturaList, { query: { predmet: "slovenscina" } });
+  assert.equal(seznam.body.length, 34);
+  assert.ok(seznam.body.every((p) => p.raven === "enotna"));
+
+  const esej = poklici(ctrl.maturaReadOne, { params: { maturaId: "slovenscina-2026-spomladanski-1" } });
+  assert.equal(esej.body.odklenjena, true);
+  assert.ok(esej.body.naloge.every((n) => n.tocke === 50 && n.tip === "esej"));
+  assert.ok(esej.body.naloge.some((n) => n.id === "2"));
+
+  for (const leto of [2018, 2022, 2026]) {
+    const pola = poklici(ctrl.maturaReadOne, { params: { maturaId: `slovenscina-${leto}-spomladanski-2` }, uporabnik: { paket: "premium" } });
+    assert.ok(pola.body.priloga.length > 500);
+    assert.equal(pola.body.naloge.reduce((s, n) => s + n.tocke, 0), leto === 2018 ? 120 : 90);
+    assert.ok(pola.body.naloge.every((n) => n.razlaga && n.snov && n.tema?.length));
+  }
+
+  const id = "slovenscina-2024-spomladanski-2";
+  const gost = poklici(ctrl.maturaReadOne, { params: { maturaId: id } });
+  assert.equal(gost.body.odklenjena, false);
+  assert.equal(gost.body.naloge[0].razlaga, undefined);
+  const osnovni = poklici(ctrl.maturaReadOne, { params: { maturaId: id }, uporabnik: { paket: "osnovni" } });
+  assert.equal(osnovni.body.odklenjena, true);
+
+  const naloge = poklici(ctrl.maturaNaloge, { query: { predmet: "slovenscina", poglavje: "esej" }, uporabnik: { paket: "premium" } });
+  assert.equal(naloge.body.length, 36);
+  assert.ok(naloge.body.every((n) => n.snov.startsWith("/views/slovenscina/snov/esej/esej_razlaga.html#dela-")));
+});
