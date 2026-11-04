@@ -53,7 +53,9 @@ const maturaNaloge = (req, res) => {
     };
     for (const naloga of pola.naloge ?? []) {
       if (izbrana && !poglavjaNaloge(naloga).some((p) => izbrana.has(p))) continue;
-      naloge.push({ ...prikazNaloge(naloga, odklenjena), resena: Boolean(naloga.razlaga), odklenjena, pola: vir });
+      // Naloga, ki potrebuje celotno izhodiščno besedilo (slovenščina, pola 2), dobi tudi prilogo pole
+      const pola_ = naloga.priloga && pola.priloga ? { ...vir, priloga: pola.priloga } : vir;
+      naloge.push({ ...prikazNaloge(naloga, odklenjena), resena: Boolean(naloga.razlaga), odklenjena, pola: pola_ });
     }
   }
   res.status(200).json(naloge);

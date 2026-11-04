@@ -39,12 +39,16 @@ const SKLOPI_PREDMETA = {
     2: "Informacijska tehnologija",
     3: "Predstavitev informacije",
     4: "Delo s podatki",
+  },  slovenscina: {
+    1: "Jezik",
+    2: "Književnost",
+    3: "Esej",
   },
 };
 const SKLOPI = SKLOPI_PREDMETA[predmet] ?? {};
-// Fizika, kemija in informatika imajo eno samo raven ("enotna"): izbire ravni in oznake ravni takrat ne prikažemo
+// Fizika, kemija, informatika in slovenščina imajo eno samo raven ("enotna"): izbire ravni in oznake ravni takrat ne prikažemo
 const RAVNI = { osnovna: "Osnovna raven", visja: "Višja raven", enotna: "Splošna matura" };
-const ENA_RAVEN = ["fizika", "kemija", "informatika"].includes(predmet);
+const ENA_RAVEN = ["fizika", "kemija", "informatika", "slovenscina"].includes(predmet);
 const imeRavni = (raven) => (raven === "enotna" ? "" : RAVNI[raven]?.toLowerCase() ?? raven);
 const ROKI = { predmaturitetni: "Predmaturitetni preizkus", spomladanski: "Spomladanski rok", jesenski: "Jesenski rok" };
 
@@ -158,6 +162,11 @@ function renderNaloga(naloga, { naslov, vir }) {
     kartica.append(el("p", "mn-vir", kje.filter(Boolean).join(", ")));
   }
 
+  if (naloga.pola?.priloga) {
+    const priloga = el("details", "mn-priloga");
+    priloga.append(el("summary", "", "Izhodiščno besedilo"), el("div", "", naloga.pola.priloga));
+    kartica.append(priloga);
+  }
   if (naloga.besedilo) {
     kartica.append(el("div", "naloga-besedilo", naloga.besedilo));
   } else {
@@ -426,6 +435,12 @@ function renderPola(pola, naslovPdf) {
 
   const vsebina = el("div", "matura-pola-vsebina");
   if (!pola.naloge.length) vsebina.append(el("p", "mn-prazno", "Naloge te pole še vnašamo."));
+  // Izhodiščno besedilo (priloga), npr. slovenščina, izpitna pola 2
+  if (pola.priloga) {
+    const list = el("div", "pola-list pola-priloga");
+    list.append(el("div", "", pola.priloga));
+    vsebina.append(list);
+  }
   let prejDel = null;
   pola.naloge.forEach((naloga, i) => {
     const del = naloga.id[0];
