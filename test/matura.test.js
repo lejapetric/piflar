@@ -122,6 +122,26 @@ test("kemija: 36 pol, zadnji rok je javen, starejši zaklenjen (kemija ni v osno
   assert.ok(premium.body.naloge[0].razlaga);
 });
 
+test("biologija: 32 pol, zadnji rok je javen, starejši zaklenjen (biologija ni v osnovnem paketu)", () => {
+  const seznam = poklici(ctrl.maturaList, { query: { predmet: "biologija" } });
+  assert.equal(seznam.body.length, 32);
+  assert.ok(seznam.body.every((p) => p.raven === "enotna"));
+
+  const javna = poklici(ctrl.maturaReadOne, { params: { maturaId: "biologija-2025-jesenski-2-2" } });
+  assert.equal(javna.body.odklenjena, true);
+  assert.equal(javna.body.naloge.length, 7);
+
+  const id = "biologija-2021-spomladanski-1";
+  const gost = poklici(ctrl.maturaReadOne, { params: { maturaId: id } });
+  assert.equal(gost.body.odklenjena, false);
+  assert.equal(gost.body.naloge.length, 40);
+  const osnovni = poklici(ctrl.maturaReadOne, { params: { maturaId: id }, uporabnik: { paket: "osnovni" } });
+  assert.equal(osnovni.body.odklenjena, false);
+  const premium = poklici(ctrl.maturaReadOne, { params: { maturaId: id }, uporabnik: { paket: "premium" } });
+  assert.equal(premium.body.odklenjena, true);
+  assert.ok(premium.body.naloge[0].razlaga);
+});
+
 test("z izklopljenim zaklepom (ZAKLEP ni 1) gost vidi rešitve vseh rešenih pol", () => {
   process.env.ZAKLEP = "0";
   try {

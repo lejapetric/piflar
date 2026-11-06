@@ -6639,5 +6639,675 @@
     "razlaga": "<div class=\"rokopis\"><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">7.1.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Absorbanca na y osi, koncentracija na x osi, točke povežemo s premico.</span></div><div class=\"rk-kom\">Točka za osi, točka za premico.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">7.2.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Odčitamo koncentracijo pri izmerjeni absorbanci.</span></div><div class=\"rk-kom\">Interpolacija.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">7.3.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Oseba ima verjetno sladkorno bolezen.</span></div><div class=\"rk-kom\">Normalno 3,6–6,1.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">7.4.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Ker hrana poveča glukozo.</span></div><div class=\"rk-kom\">Primerljivost.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">7.5.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Nadzorovana.</span></div><div class=\"rk-kom\">Konstantna.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">7.6.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">pH.</span></div><div class=\"rk-kom\">Spreminjamo.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">7.7.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Jodovica ostane modra, škrob se ni razgradil.</span></div><div class=\"rk-kom\">Ostal je škrob.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">7.8.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Spremeni se oblika aktivnega mesta.</span></div><div class=\"rk-kom\">Denaturacija.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">7.9.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Barva hitreje izgine.</span></div><div class=\"rk-kom\">Hitrejša razgradnja.</div></div></div>"
    }
   ]
+ },
+ {
+  "id": "biologija-2020-jesenski-2-2",
+  "predmet": "biologija",
+  "raven": "enotna",
+  "leto": 2020,
+  "rok": "jesenski",
+  "izvedba": 2,
+  "datum": "avgust 2020",
+  "pdf": null,
+  "stevilka": 2,
+  "naslov": "Biologija, jesenski rok 2020, 2. izpitni dan, izpitna pola 2 (vadbena pola Piflar.si)",
+  "navodilo": "90 minut, 7 strukturiranih nalog po 10 točk. V delu A (naloge 1–5) izberi in reši 3, v delu B (nalogi 6 in 7) izberi in reši 1 (40 točk). Dovoljeno je računalo.",
+  "vir": "Vadbena pola Piflar.si. Zgradba, vrsta nalog in točkovanje sledijo uradni poli splošne mature (jesenski rok 2020, 2. izpitni dan, izpitna pola 2), besedila in podatki pa so naši. Uradne pole izdaja Državni izpitni center (RIC), ki ima nanje vse avtorske pravice.",
+  "naloge": [
+   {
+    "id": "1",
+    "poglavje": [
+     "dihanje_fotosinteza",
+     "celica",
+     "nukleinske_kisline"
+    ],
+    "tocke": 10,
+    "besedilo": "<p class=\"pola-naslov-naloge\"><strong>Del A · Del A · Presnova glukoze v jetrih</strong></p><p>V jetrnih celicah se glukoza oksidira do CO<sub>2</sub> in vode. Pri tem nastajajo tudi reaktivne kisikove spojine.</p><p class=\"pola-vprasanje\"><strong>1.1.</strong> V katerih delih celice poteka popolna oksidacija glukoze? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>1.2.</strong> Skozi katere membrane gre CO<sub>2</sub> iz matriksa mitohondrija v medcelični prostor? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>1.3.</strong> Kako CO<sub>2</sub> preide skozi plazmalemo? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>1.4.</strong> Ali se vsa energija glukoze shrani v ATP? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>1.5.</strong> Kaj nastane v mišici pri anaerobni razgradnji glukoze? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>1.6.</strong> Kateri organel razgrajuje vodikov peroksid? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>1.7.</strong> Kdaj v interfazi je DNA najbolj občutljiva za poškodbe? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>1.8.</strong> Kje v živalski celici poteka sinteza DNA in kje beljakovin? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>1.9.</strong> Encim A nastaja le v celicah tankega črevesa. Ali gen A obstaja tudi v jetrnih celicah? Utemelji. <em>(2 točki)</em></p>",
+    "rezultat": "<strong>1.1.</strong> V citosolu (glikoliza) in v mitohondrijih (Krebsov cikel, dihalna veriga).<br><strong>1.2.</strong> Notranja in zunanja membrana mitohondrija ter plazmalema.<br><strong>1.3.</strong> Z difuzijo.<br><strong>1.4.</strong> Ne, večina se sprosti kot toplota.<br><strong>1.5.</strong> Mlečna kislina (laktat).<br><strong>1.6.</strong> Peroksisom (s katalazo).<br><strong>1.7.</strong> Med podvojevanjem v fazi S.<br><strong>1.8.</strong> DNA v jedru (in mitohondrijih), beljakovine na ribosomih.<br><strong>1.9.</strong> Da, vse telesne celice imajo enake gene, a v jetrih se gen ne izraža.",
+    "razlaga": "<div class=\"rokopis\"><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">1.1.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">V citosolu (glikoliza) in v mitohondrijih (Krebsov cikel, dihalna veriga).</span></div><div class=\"rk-kom\">Oboje za točko.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">1.2.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Notranja in zunanja membrana mitohondrija ter plazmalema.</span></div><div class=\"rk-kom\">Tri membrane.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">1.3.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Z difuzijo.</span></div><div class=\"rk-kom\">Majhna nepolarna molekula.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">1.4.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Ne, večina se sprosti kot toplota.</span></div><div class=\"rk-kom\">Izkoristek okoli 40 %.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">1.5.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Mlečna kislina (laktat).</span></div><div class=\"rk-kom\">Malo ATP.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">1.6.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Peroksisom (s katalazo).</span></div><div class=\"rk-kom\">Varuje celico.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">1.7.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Med podvojevanjem v fazi S.</span></div><div class=\"rk-kom\">Razprta vijačnica.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">1.8.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">DNA v jedru (in mitohondrijih), beljakovine na ribosomih.</span></div><div class=\"rk-kom\">Oboje za točko.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">1.9.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Da, vse telesne celice imajo enake gene, a v jetrih se gen ne izraža.</span></div><div class=\"rk-kom\">Točka za odgovor, točka za utemeljitev.</div></div></div>"
+   },
+   {
+    "id": "2",
+    "poglavje": [
+     "celicni_cikel",
+     "dedovanje"
+    ],
+    "tocke": 10,
+    "besedilo": "<p class=\"pola-naslov-naloge\"><strong>Del A · Del A · Matične celice in dedovanje</strong></p><p>Raziskovalci so gojili matične celice in spremljali število celičnih ciklov. Porfirija je redka dedna bolezen.</p><p class=\"pola-vprasanje\"><strong>2.1.</strong> Katero tkivo je stalni vir matičnih celic pri odraslem? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>2.2.</strong> V kateri fazi se količina DNA podvoji? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>2.3.</strong> Kdaj se količina DNA prepolovi? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>2.4.</strong> V gojišče so vnesli 1000 celic. Koliko jih je po treh ciklih? <em>(2 točki)</em></p><p class=\"pola-vprasanje\"><strong>2.5.</strong> Kaj so ciklini? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>2.6.</strong> Zakaj kolhicin ustavi celice v metafazi? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>2.7.</strong> Zakaj so matične celice bolj občutljive za mutacije? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>2.8.</strong> Porfirija se pojavlja v vsaki generaciji pri obeh spolih. Kako se deduje? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>2.9.</strong> Andrej je heterozigot, Tina zdrava. Verjetnost bolnega otroka? <em>(1 točka)</em></p>",
+    "rezultat": "<strong>2.1.</strong> Rdeči kostni mozeg.<br><strong>2.2.</strong> V fazi S.<br><strong>2.3.</strong> Ob delitvi celice (citokineza po mitozi).<br><strong>2.4.</strong> 8000.<br><strong>2.5.</strong> Beljakovine, ki uravnavajo prehod celic med fazami cikla.<br><strong>2.6.</strong> Prepreči nastanek delitvenega vretena.<br><strong>2.7.</strong> Ker se pogosto delijo in podvajajo DNA.<br><strong>2.8.</strong> Avtosomno dominantno.<br><strong>2.9.</strong> 50 %.",
+    "razlaga": "<div class=\"rokopis\"><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">2.1.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Rdeči kostni mozeg.</span></div><div class=\"rk-kom\">Krvne celice.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">2.2.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">V fazi S.</span></div><div class=\"rk-kom\">Podvojevanje.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">2.3.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Ob delitvi celice (citokineza po mitozi).</span></div><div class=\"rk-kom\">Dve hčerinski celici.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">2.4.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">8000.</span></div><div class=\"rk-kom\">1000 × 2<sup>3</sup>. Točka za postopek, točka za rezultat.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">2.5.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Beljakovine, ki uravnavajo prehod celic med fazami cikla.</span></div><div class=\"rk-kom\">Kontrolne točke.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">2.6.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Prepreči nastanek delitvenega vretena.</span></div><div class=\"rk-kom\">Kromosomi so dobro vidni.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">2.7.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Ker se pogosto delijo in podvajajo DNA.</span></div><div class=\"rk-kom\">Več priložnosti za napake.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">2.8.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Avtosomno dominantno.</span></div><div class=\"rk-kom\">Ne preskakuje generacij.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">2.9.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">50 %.</span></div><div class=\"rk-kom\">Pp × pp.</div></div></div>"
+   },
+   {
+    "id": "3",
+    "poglavje": [
+     "bakterije_glive",
+     "dihala_prebava_izlocala"
+    ],
+    "tocke": 10,
+    "besedilo": "<p class=\"pola-naslov-naloge\"><strong>Del A · Del A · Bakterije v vsakdanu</strong></p><p>Bakterije najdemo v črevesju, na brisačah in v hrani.</p><p class=\"pola-vprasanje\"><strong>3.1.</strong> Po čem na sliki prepoznaš fotoavtotrofno bakterijo? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>3.2.</strong> Zakaj nekatere bakterije ob kisiku propadejo? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>3.3.</strong> Kaj črevesne bakterije dajejo človeku? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>3.4.</strong> Zakaj brisače v kopalnici smrdijo? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>3.5.</strong> Kako se bakterije namnožijo? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>3.6.</strong> Katera struktura sodeluje pri konjugaciji? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>3.7.</strong> Kaj je pomen konjugacije? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>3.8.</strong> Kako se z bakteriofagi prenese odpornost? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>3.9.</strong> Kako sol ali sladkor konzervira hrano? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>3.10.</strong> Kaj v prebavilih uničuje mikroorganizme? <em>(1 točka)</em></p>",
+    "rezultat": "<strong>3.1.</strong> Po membranah s fotosinteznimi barvili.<br><strong>3.2.</strong> So obligatno anaerobne, kisik jim škodi.<br><strong>3.3.</strong> Vitamina K in B ter pomoč pri prebavi.<br><strong>3.4.</strong> Bakterije razgrajujejo organske snovi in sproščajo hlapne snovi.<br><strong>3.5.</strong> Z delitvijo na dvoje.<br><strong>3.6.</strong> Pilus (spolni pilus).<br><strong>3.7.</strong> Prenos genov, npr. za odpornost na antibiotike.<br><strong>3.8.</strong> Fag prenese del DNA iz ene bakterije v drugo (transdukcija).<br><strong>3.9.</strong> Ustvari hipertonično okolje, bakterijam se izsuši.<br><strong>3.10.</strong> Želodčna kislina.",
+    "razlaga": "<div class=\"rokopis\"><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">3.1.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Po membranah s fotosinteznimi barvili.</span></div><div class=\"rk-kom\">Tilakoidam podobne.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">3.2.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">So obligatno anaerobne, kisik jim škodi.</span></div><div class=\"rk-kom\">Anaerobi.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">3.3.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Vitamina K in B ter pomoč pri prebavi.</span></div><div class=\"rk-kom\">Mutualizem.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">3.4.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Bakterije razgrajujejo organske snovi in sproščajo hlapne snovi.</span></div><div class=\"rk-kom\">Presnovni produkti.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">3.5.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Z delitvijo na dvoje.</span></div><div class=\"rk-kom\">Nespolno.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">3.6.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Pilus (spolni pilus).</span></div><div class=\"rk-kom\">Mostiček.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">3.7.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Prenos genov, npr. za odpornost na antibiotike.</span></div><div class=\"rk-kom\">Genska raznolikost.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">3.8.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Fag prenese del DNA iz ene bakterije v drugo (transdukcija).</span></div><div class=\"rk-kom\">Virus kot prenašalec.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">3.9.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Ustvari hipertonično okolje, bakterijam se izsuši.</span></div><div class=\"rk-kom\">Osmoza.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">3.10.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Želodčna kislina.</span></div><div class=\"rk-kom\">Nizek pH.</div></div></div>"
+   },
+   {
+    "id": "4",
+    "poglavje": [
+     "kri_imunost",
+     "regulacija",
+     "dihala_prebava_izlocala"
+    ],
+    "tocke": 10,
+    "besedilo": "<p class=\"pola-naslov-naloge\"><strong>Del A · Del A · Tkiva in avtoimunske bolezni</strong></p><p>Pri avtoimunskih boleznih imunski sistem napade lastne celice.</p><p class=\"pola-vprasanje\"><strong>4.1.</strong> Kaj je tkivo? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>4.2.</strong> Navedi organ in tkivo, ki ga gradi. <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>4.3.</strong> Zakaj inzulin izdelujejo le β-celice? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>4.4.</strong> Kateri organ je okvarjen pri sladkorni bolezni tipa 1? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>4.5.</strong> Pri bazedovki protitelesa spodbujajo ščitnico. Kaj je posledica? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>4.6.</strong> Kaj je mielinska ovojnica? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>4.7.</strong> Kako poškodba mielina vpliva na prevajanje impulzov? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>4.8.</strong> Kaj se poškoduje pri celiakiji? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>4.9.</strong> Kakšna je prehrana bolnikov s celiakijo? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>4.10.</strong> Zakaj je bolje uporabiti lastne matične celice? <em>(1 točka)</em></p>",
+    "rezultat": "<strong>4.1.</strong> Skupina podobnih celic z enako nalogo.<br><strong>4.2.</strong> Srce in srčna mišičnina.<br><strong>4.3.</strong> Le v njih se izraža gen za inzulin.<br><strong>4.4.</strong> Trebušna slinavka.<br><strong>4.5.</strong> Preveč tiroksina, pospešena presnova.<br><strong>4.6.</strong> Izolacijska plast okoli aksona.<br><strong>4.7.</strong> Impulzi potujejo počasneje.<br><strong>4.8.</strong> Črevesne resice, zato je slabše vsrkavanje.<br><strong>4.9.</strong> Brez glutena.<br><strong>4.10.</strong> Ne pride do zavrnitve.",
+    "razlaga": "<div class=\"rokopis\"><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">4.1.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Skupina podobnih celic z enako nalogo.</span></div><div class=\"rk-kom\">Z medceličnino.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">4.2.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Srce in srčna mišičnina.</span></div><div class=\"rk-kom\">Vsak pravilen par.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">4.3.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Le v njih se izraža gen za inzulin.</span></div><div class=\"rk-kom\">Diferenciacija.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">4.4.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Trebušna slinavka.</span></div><div class=\"rk-kom\">Uničene β-celice.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">4.5.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Preveč tiroksina, pospešena presnova.</span></div><div class=\"rk-kom\">Hipertiroza.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">4.6.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Izolacijska plast okoli aksona.</span></div><div class=\"rk-kom\">Schwannove celice.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">4.7.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Impulzi potujejo počasneje.</span></div><div class=\"rk-kom\">Ni preskakovanja.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">4.8.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Črevesne resice, zato je slabše vsrkavanje.</span></div><div class=\"rk-kom\">Gluten.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">4.9.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Brez glutena.</span></div><div class=\"rk-kom\">Pšenica, ječmen, rž.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">4.10.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Ne pride do zavrnitve.</span></div><div class=\"rk-kom\">Enaki antigeni.</div></div></div>"
+   },
+   {
+    "id": "5",
+    "poglavje": [
+     "evolucija",
+     "sistematika",
+     "ekosistemi",
+     "populacije"
+    ],
+    "tocke": 10,
+    "besedilo": "<p class=\"pola-naslov-naloge\"><strong>Del A · Del A · Škorec</strong></p><p>Navadni škorec (<i>Sturnus vulgaris</i>) je ptica pevka in selivka. V Severni Ameriki je invazivna vrsta.</p><p class=\"pola-vprasanje\"><strong>5.1.</strong> Navedi dve značilnosti ptic, ki jih nimajo plazilci. <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>5.2.</strong> Kako se imenuje rod škorca? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>5.3.</strong> Zakaj se škorci selijo? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>5.4.</strong> Kako ptice najdejo pot? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>5.5.</strong> Napiši verigo, v kateri je škorec terciarni potrošnik. <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>5.6.</strong> Kakšen je odnos med škorcem in pršico na jablani? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>5.7.</strong> Zakaj akaricidi lahko povečajo škodo? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>5.8.</strong> Zakaj se je 120 škorcev v Ameriki tako razmnožilo? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>5.9.</strong> Kaj je ozko grlo pri ustanovitveni populaciji? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>5.10.</strong> V kakšnem odnosu so škorci z avtohtonimi pticami? <em>(1 točka)</em></p>",
+    "rezultat": "<strong>5.1.</strong> Perje in stalna telesna temperatura.<br><strong>5.2.</strong> <i>Sturnus</i>.<br><strong>5.3.</strong> Pozimi primanjkuje hrane.<br><strong>5.4.</strong> Po Soncu, zvezdah in magnetnem polju.<br><strong>5.5.</strong> Rastlina → listna uš → pajek → škorec.<br><strong>5.6.</strong> Plenilstvo.<br><strong>5.7.</strong> Ubijejo tudi plenilce pršic.<br><strong>5.8.</strong> Ni bilo naravnih sovražnikov in je bilo dovolj hrane.<br><strong>5.9.</strong> Malo osebkov ima malo genske raznolikosti.<br><strong>5.10.</strong> Tekmovanje za gnezda in hrano.",
+    "razlaga": "<div class=\"rokopis\"><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">5.1.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Perje in stalna telesna temperatura.</span></div><div class=\"rk-kom\">Tudi votle kosti.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">5.2.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\"><i>Sturnus</i>.</span></div><div class=\"rk-kom\">Prvi del imena.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">5.3.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Pozimi primanjkuje hrane.</span></div><div class=\"rk-kom\">Žuželke.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">5.4.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Po Soncu, zvezdah in magnetnem polju.</span></div><div class=\"rk-kom\">Orientacija.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">5.5.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Rastlina → listna uš → pajek → škorec.</span></div><div class=\"rk-kom\">Štirje členi.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">5.6.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Plenilstvo.</span></div><div class=\"rk-kom\">Škorec je pršice.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">5.7.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Ubijejo tudi plenilce pršic.</span></div><div class=\"rk-kom\">Pršice postanejo odporne.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">5.8.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Ni bilo naravnih sovražnikov in je bilo dovolj hrane.</span></div><div class=\"rk-kom\">Eksponentna rast.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">5.9.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Malo osebkov ima malo genske raznolikosti.</span></div><div class=\"rk-kom\">Učinek ustanovitelja.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">5.10.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Tekmovanje za gnezda in hrano.</span></div><div class=\"rk-kom\">Kompeticija.</div></div></div>"
+   },
+   {
+    "id": "6",
+    "poglavje": [
+     "raziskovanje",
+     "dihanje_fotosinteza",
+     "bakterije_glive"
+    ],
+    "tocke": 10,
+    "besedilo": "<p class=\"pola-naslov-naloge\"><strong>Del B · Del B · Kvasovke in kisik</strong></p><p>Dijaki so v serijo epruvet z različno količino glukoze dodali kvasovke. V serijo A so vpihovali zrak, serija B je bila brez zraka. Po 24 urah so prešteli kvasovke.</p><p class=\"pola-vprasanje\"><strong>6.1.</strong> Kakšen diagram narišeš za število kvasovk v obeh serijah? <em>(2 točki)</em></p><p class=\"pola-vprasanje\"><strong>6.2.</strong> Kaj je odvisna spremenljivka? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>6.3.</strong> Naštej dve nadzorovani spremenljivki. <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>6.4.</strong> Kateri epruveti sta kontrola? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>6.5.</strong> V 2A je 60 milijonov celic, v 2B 15 milijonov. Kolikokrat hitreje rastejo na zraku? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>6.6.</strong> Zakaj kvasovke rastejo hitreje na zraku? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>6.7.</strong> Kaj nastane v epruvetah B? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>6.8.</strong> Zakaj se pri veliki količini glukoze rast ustavi? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>6.9.</strong> Kako bi preverili vpliv izvlečka listov na rast kvasovk? <em>(1 točka)</em></p>",
+    "rezultat": "<strong>6.1.</strong> Črtni diagram z dvema krivuljama.<br><strong>6.2.</strong> Število kvasovk.<br><strong>6.3.</strong> Temperatura in volumen raztopine.<br><strong>6.4.</strong> Epruveti brez glukoze.<br><strong>6.5.</strong> 4-krat.<br><strong>6.6.</strong> Aerobno dihanje da več ATP.<br><strong>6.7.</strong> Etanol in CO<sub>2</sub>.<br><strong>6.8.</strong> Visoka koncentracija etanola ali hipertonično okolje zavre kvasovke.<br><strong>6.9.</strong> Dodali izvleček v eno serijo, drugo brez njega, vse drugo enako.",
+    "razlaga": "<div class=\"rokopis\"><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">6.1.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Črtni diagram z dvema krivuljama.</span></div><div class=\"rk-kom\">Točka za osi, točka za krivulji.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">6.2.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Število kvasovk.</span></div><div class=\"rk-kom\">Merimo jo.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">6.3.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Temperatura in volumen raztopine.</span></div><div class=\"rk-kom\">Tudi čas.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">6.4.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Epruveti brez glukoze.</span></div><div class=\"rk-kom\">Ni substrata.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">6.5.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">4-krat.</span></div><div class=\"rk-kom\">60 / 15.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">6.6.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Aerobno dihanje da več ATP.</span></div><div class=\"rk-kom\">Več energije za rast.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">6.7.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Etanol in CO<sub>2</sub>.</span></div><div class=\"rk-kom\">Alkoholno vrenje.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">6.8.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Visoka koncentracija etanola ali hipertonično okolje zavre kvasovke.</span></div><div class=\"rk-kom\">Omejitev.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">6.9.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Dodali izvleček v eno serijo, drugo brez njega, vse drugo enako.</span></div><div class=\"rk-kom\">Ena spremenljivka.</div></div></div>"
+   },
+   {
+    "id": "7",
+    "poglavje": [
+     "raziskovanje",
+     "encimi_presnova",
+     "dihala_prebava_izlocala"
+    ],
+    "tocke": 10,
+    "besedilo": "<p class=\"pola-naslov-naloge\"><strong>Del B · Del B · Prebava škroba</strong></p><p>Dijaki so preverjali hipotezo, da slina vsebuje encim, ki razgrajuje škrob. Uporabili so jodovico in dializno cevko.</p><p class=\"pola-vprasanje\"><strong>7.1.</strong> Kaj dokaže epruveta s slino in jodovico? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>7.2.</strong> Po 20 minutah je v epruveti s škrobom in slino modra barva izginila. Kaj sklepaš? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>7.3.</strong> Kaj je neodvisna in kaj odvisna spremenljivka? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>7.4.</strong> Kakšen diagram prikaže hitrost razgradnje glede na količino sline? <em>(2 točki)</em></p><p class=\"pola-vprasanje\"><strong>7.5.</strong> Kateri dejavnik mora biti enak? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>7.6.</strong> Zakaj skozi dializno cevko ne preide škrob? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>7.7.</strong> Kaj preide skozi cevko po delovanju sline? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>7.8.</strong> S katerim testom dokažeš maltozo? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>7.9.</strong> Kateri del prebavil je model dializna cevka? <em>(1 točka)</em></p>",
+    "rezultat": "<strong>7.1.</strong> Da slina ne vsebuje škroba.<br><strong>7.2.</strong> Škrob se je razgradil.<br><strong>7.3.</strong> Neodvisna je količina sline, odvisna čas razbarvanja.<br><strong>7.4.</strong> Stolpčni diagram.<br><strong>7.5.</strong> Temperatura.<br><strong>7.6.</strong> Molekule škroba so prevelike.<br><strong>7.7.</strong> Maltoza (sladkor).<br><strong>7.8.</strong> S Fehlingovim reagentom.<br><strong>7.9.</strong> Tanko črevo.",
+    "razlaga": "<div class=\"rokopis\"><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">7.1.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Da slina ne vsebuje škroba.</span></div><div class=\"rk-kom\">Kontrola.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">7.2.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Škrob se je razgradil.</span></div><div class=\"rk-kom\">Amilaza.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">7.3.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Neodvisna je količina sline, odvisna čas razbarvanja.</span></div><div class=\"rk-kom\">Oboje za točko.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">7.4.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Stolpčni diagram.</span></div><div class=\"rk-kom\">Točka za osi, točka za stolpce.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">7.5.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Temperatura.</span></div><div class=\"rk-kom\">Tudi pH.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">7.6.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Molekule škroba so prevelike.</span></div><div class=\"rk-kom\">Polprepustna membrana.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">7.7.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Maltoza (sladkor).</span></div><div class=\"rk-kom\">Manjše molekule.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">7.8.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">S Fehlingovim reagentom.</span></div><div class=\"rk-kom\">Opečnato rdeča barva.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">7.9.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Tanko črevo.</span></div><div class=\"rk-kom\">Vsrkavanje.</div></div></div>"
+   }
+  ]
+ },
+ {
+  "id": "biologija-2019-spomladanski-2",
+  "predmet": "biologija",
+  "raven": "enotna",
+  "leto": 2019,
+  "rok": "spomladanski",
+  "izvedba": 1,
+  "datum": "petek, 31. maj 2019",
+  "pdf": null,
+  "stevilka": 2,
+  "naslov": "Biologija, spomladanski rok 2019, izpitna pola 2 (vadbena pola Piflar.si)",
+  "navodilo": "90 minut, 7 strukturiranih nalog po 10 točk. V delu A (naloge 1–5) izberi in reši 3, v delu B (nalogi 6 in 7) izberi in reši 1 (40 točk). Dovoljeno je računalo.",
+  "vir": "Vadbena pola Piflar.si. Zgradba, vrsta nalog in točkovanje sledijo uradni poli splošne mature (spomladanski rok 2019, izpitna pola 2), besedila in podatki pa so naši. Uradne pole izdaja Državni izpitni center (RIC), ki ima nanje vse avtorske pravice.",
+  "naloge": [
+   {
+    "id": "1",
+    "poglavje": [
+     "celica",
+     "regulacija",
+     "dihanje_fotosinteza"
+    ],
+    "tocke": 10,
+    "besedilo": "<p class=\"pola-naslov-naloge\"><strong>Del A · Del A · Celična membrana in signali</strong></p><p>Slika prikazuje del celične membrane z beljakovinami, receptorji in fosfolipidi ter različne načine sporazumevanja med celicami.</p><p class=\"pola-vprasanje\"><strong>1.1.</strong> Katere molekule gradijo osnovo membrane? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>1.2.</strong> Katere molekule gradijo kanale in receptorje? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>1.3.</strong> Kateri del fosfolipida je hidrofoben? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>1.4.</strong> Kaj je vloga receptorja? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>1.5.</strong> Navedi primer celic, ki se sporazumevajo z živčnimi prenašalci. <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>1.6.</strong> V katerem organelu nastajajo mešički za izločanje? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>1.7.</strong> Zakaj črpalka Na<sup>+</sup>/K<sup>+</sup> porablja ATP? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>1.8.</strong> Kje nastaja ATP za črpalko? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>1.9.</strong> Kateri hormoni ne potrebujejo receptorjev na membrani? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>1.10.</strong> Kateri način sporazumevanja je najpočasnejši? <em>(1 točka)</em></p>",
+    "rezultat": "<strong>1.1.</strong> Fosfolipidi.<br><strong>1.2.</strong> Beljakovine.<br><strong>1.3.</strong> Repa iz maščobnih kislin.<br><strong>1.4.</strong> Veže signalno molekulo in sproži odziv celice.<br><strong>1.5.</strong> Nevroni (acetilholin).<br><strong>1.6.</strong> V Golgijevem aparatu.<br><strong>1.7.</strong> Ker prenaša ione proti gradientu.<br><strong>1.8.</strong> Večinoma v mitohondrijih.<br><strong>1.9.</strong> Steroidni, ki preidejo skozi membrano.<br><strong>1.10.</strong> Hormonski, prek krvi.",
+    "razlaga": "<div class=\"rokopis\"><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">1.1.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Fosfolipidi.</span></div><div class=\"rk-kom\">Dvosloj.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">1.2.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Beljakovine.</span></div><div class=\"rk-kom\">Membranske beljakovine.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">1.3.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Repa iz maščobnih kislin.</span></div><div class=\"rk-kom\">Glava je hidrofilna.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">1.4.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Veže signalno molekulo in sproži odziv celice.</span></div><div class=\"rk-kom\">Specifičnost.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">1.5.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Nevroni (acetilholin).</span></div><div class=\"rk-kom\">Sinapsa.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">1.6.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">V Golgijevem aparatu.</span></div><div class=\"rk-kom\">Eksocitoza.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">1.7.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Ker prenaša ione proti gradientu.</span></div><div class=\"rk-kom\">Aktivni transport.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">1.8.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Večinoma v mitohondrijih.</span></div><div class=\"rk-kom\">Tudi v citosolu.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">1.9.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Steroidni, ki preidejo skozi membrano.</span></div><div class=\"rk-kom\">Receptor v citoplazmi.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">1.10.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Hormonski, prek krvi.</span></div><div class=\"rk-kom\">Daljša pot.</div></div></div>"
+   },
+   {
+    "id": "2",
+    "poglavje": [
+     "dedovanje",
+     "nukleinske_kisline",
+     "evolucija"
+    ],
+    "tocke": 10,
+    "besedilo": "<p class=\"pola-naslov-naloge\"><strong>Del A · Del A · Dedovanje barve kožuha pri psih</strong></p><p>Barvo labradorcev določata gena B (črna/rjava) in E (receptor, ki omogoča nalaganje temnega pigmenta).</p><p class=\"pola-vprasanje\"><strong>2.1.</strong> Kako je človek vzredil pse želene barve? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>2.2.</strong> Kaj se zgodi, ko mutacija zamenja kodon za aminokislino s stop kodonom? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>2.3.</strong> Zakaj se signalna molekula ne veže na tak receptor? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>2.4.</strong> Kakšen je genotip rjavega psa z delujočim receptorjem? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>2.5.</strong> Kakšen je genotip rumenega labradorca? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>2.6.</strong> Križamo BbEe × BbEe. Kolikšen delež potomcev bo rjavih? <em>(2 točki)</em></p><p class=\"pola-vprasanje\"><strong>2.7.</strong> Bolezen samojedov se pojavlja skoraj le pri samcih. Na katerem kromosomu je gen? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>2.8.</strong> Kako se deduje bolezen mrežnice, če imajo zdravi starši bolne mladiče? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>2.9.</strong> Zakaj pri čistopasemskih psih pogosto pride do dednih bolezni? <em>(1 točka)</em></p>",
+    "rezultat": "<strong>2.1.</strong> Z umetnim izborom: za razmnoževanje je izbiral pse želene barve.<br><strong>2.2.</strong> Beljakovina je skrajšana in ne deluje.<br><strong>2.3.</strong> Ker se spremeni oblika receptorja.<br><strong>2.4.</strong> bbE_ (bbEE ali bbEe).<br><strong>2.5.</strong> __ee.<br><strong>2.6.</strong> 3/16.<br><strong>2.7.</strong> Na kromosomu X.<br><strong>2.8.</strong> Recesivno.<br><strong>2.9.</strong> Parjenje v sorodstvu poveča delež recesivnih homozigotov.",
+    "razlaga": "<div class=\"rokopis\"><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">2.1.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Z umetnim izborom: za razmnoževanje je izbiral pse želene barve.</span></div><div class=\"rk-kom\">Več generacij.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">2.2.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Beljakovina je skrajšana in ne deluje.</span></div><div class=\"rk-kom\">Nesmiselna mutacija.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">2.3.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Ker se spremeni oblika receptorja.</span></div><div class=\"rk-kom\">Ni vezavnega mesta.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">2.4.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">bbE_ (bbEE ali bbEe).</span></div><div class=\"rk-kom\">Recesivni homozigot za B.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">2.5.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">__ee.</span></div><div class=\"rk-kom\">Ni delujočega receptorja.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">2.6.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">3/16.</span></div><div class=\"rk-kom\">bb je 1/4, E_ je 3/4. Točka za postopek, točka za rezultat.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">2.7.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Na kromosomu X.</span></div><div class=\"rk-kom\">Spolno vezano.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">2.8.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Recesivno.</span></div><div class=\"rk-kom\">Prenašalci.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">2.9.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Parjenje v sorodstvu poveča delež recesivnih homozigotov.</span></div><div class=\"rk-kom\">Malo raznolikosti.</div></div></div>"
+   },
+   {
+    "id": "3",
+    "poglavje": [
+     "rastline",
+     "dihanje_fotosinteza",
+     "populacije"
+    ],
+    "tocke": 10,
+    "besedilo": "<p class=\"pola-naslov-naloge\"><strong>Del A · Del A · Mlade rastline in voda</strong></p><p>Mlade rastline v podrasti imajo velike liste. Izgubljajo veliko vode, ogrožajo jih tudi zajedavci.</p><p class=\"pola-vprasanje\"><strong>3.1.</strong> Zakaj imajo rastline v podrasti velike liste? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>3.2.</strong> S katerim tokom rastlina nadomesti izgubljeno vodo? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>3.3.</strong> Kateri organi sodelujejo pri nadomeščanju vode? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>3.4.</strong> Kaj se zgodi z listom, če vode ne nadomesti? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>3.5.</strong> Zakaj se ob pomanjkanju vode prekine izmenjava plinov? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>3.6.</strong> Zakaj se zato upočasni fotosinteza? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>3.7.</strong> Kako se listne uši hranijo? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>3.8.</strong> Kako lahko zajedavce zatiramo biološko? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>3.9.</strong> Kje v cvetu nastaja pelod? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>3.10.</strong> Kje nastaja jajčna celica? <em>(1 točka)</em></p>",
+    "rezultat": "<strong>3.1.</strong> Da prestrežejo več svetlobe.<br><strong>3.2.</strong> S transpiracijskim tokom po ksilemu.<br><strong>3.3.</strong> Korenina, steblo in list.<br><strong>3.4.</strong> Se pregreje in ovene.<br><strong>3.5.</strong> Ker se zaprejo listne reže.<br><strong>3.6.</strong> Ker v list ne pride CO<sub>2</sub>.<br><strong>3.7.</strong> Z bodalom sesajo sok iz floema.<br><strong>3.8.</strong> Z naravnimi plenilci, npr. polonicami.<br><strong>3.9.</strong> V prašnicah.<br><strong>3.10.</strong> V semenski zasnovi v plodnici.",
+    "razlaga": "<div class=\"rokopis\"><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">3.1.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Da prestrežejo več svetlobe.</span></div><div class=\"rk-kom\">Senca.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">3.2.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">S transpiracijskim tokom po ksilemu.</span></div><div class=\"rk-kom\">Od korenin do listov.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">3.3.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Korenina, steblo in list.</span></div><div class=\"rk-kom\">Vsi trije.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">3.4.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Se pregreje in ovene.</span></div><div class=\"rk-kom\">Ni hlajenja.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">3.5.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Ker se zaprejo listne reže.</span></div><div class=\"rk-kom\">Zmanjšanje izgube vode.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">3.6.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Ker v list ne pride CO<sub>2</sub>.</span></div><div class=\"rk-kom\">Omejitveni dejavnik.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">3.7.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Z bodalom sesajo sok iz floema.</span></div><div class=\"rk-kom\">Sladkorji.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">3.8.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Z naravnimi plenilci, npr. polonicami.</span></div><div class=\"rk-kom\">Brez pesticidov.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">3.9.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">V prašnicah.</span></div><div class=\"rk-kom\">Moške spolne celice.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">3.10.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">V semenski zasnovi v plodnici.</span></div><div class=\"rk-kom\">Ženske spolne celice.</div></div></div>"
+   },
+   {
+    "id": "4",
+    "poglavje": [
+     "regulacija",
+     "kri_imunost",
+     "gibanje_razmnozevanje",
+     "evolucija"
+    ],
+    "tocke": 10,
+    "besedilo": "<p class=\"pola-naslov-naloge\"><strong>Del A · Del A · Koža in termoregulacija</strong></p><p>Koža varuje telo in sodeluje pri uravnavanju telesne temperature.</p><p class=\"pola-vprasanje\"><strong>4.1.</strong> Katera struktura usnjice je zgrajena iz krovnega tkiva? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>4.2.</strong> Zakaj je stik med povrhnjico in usnjico naguban? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>4.3.</strong> Pri vitiligu izginejo melanociti. Zakaj je ta koža bolj občutljiva na sonce? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>4.4.</strong> Zakaj se v vroči in vlažni zraku slabše ohlajamo? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>4.5.</strong> Zakaj se pijani ljudje v mrazu hitreje podhladijo? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>4.6.</strong> Zakaj so opekline nevarne? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>4.7.</strong> Kaj naredijo poikilotermne živali pozimi? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>4.8.</strong> Zakaj kokoši v hladnem rastejo počasneje? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>4.9.</strong> Kako se ptica zaščiti pred mrazom? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>4.10.</strong> Kaj pomeni, da sta perje in noht homologna? <em>(1 točka)</em></p>",
+    "rezultat": "<strong>4.1.</strong> Znojnica ali lasni mešiček.<br><strong>4.2.</strong> Poveča površino za prehod hranil iz žil v povrhnjico.<br><strong>4.3.</strong> Nima melanina, ki varuje pred UV.<br><strong>4.4.</strong> Znoj slabo izhlapeva.<br><strong>4.5.</strong> Alkohol razširi žile v koži in poveča izgubo toplote.<br><strong>4.6.</strong> Izguba vode in nevarnost okužb.<br><strong>4.7.</strong> Otrpnejo in mirujejo.<br><strong>4.8.</strong> Veliko energije porabijo za vzdrževanje temperature.<br><strong>4.9.</strong> Našopiri perje in zadrži plast zraka.<br><strong>4.10.</strong> Imata skupen evolucijski izvor iz povrhnjice.",
+    "razlaga": "<div class=\"rokopis\"><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">4.1.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Znojnica ali lasni mešiček.</span></div><div class=\"rk-kom\">Epitelij.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">4.2.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Poveča površino za prehod hranil iz žil v povrhnjico.</span></div><div class=\"rk-kom\">Povrhnjica nima žil.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">4.3.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Nima melanina, ki varuje pred UV.</span></div><div class=\"rk-kom\">Opekline.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">4.4.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Znoj slabo izhlapeva.</span></div><div class=\"rk-kom\">Ni hlajenja z izhlapevanjem.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">4.5.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Alkohol razširi žile v koži in poveča izgubo toplote.</span></div><div class=\"rk-kom\">Vazodilatacija.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">4.6.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Izguba vode in nevarnost okužb.</span></div><div class=\"rk-kom\">Ni zaščite.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">4.7.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Otrpnejo in mirujejo.</span></div><div class=\"rk-kom\">Zimska otrplost.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">4.8.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Veliko energije porabijo za vzdrževanje temperature.</span></div><div class=\"rk-kom\">Manj za rast.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">4.9.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Našopiri perje in zadrži plast zraka.</span></div><div class=\"rk-kom\">Izolacija.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">4.10.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Imata skupen evolucijski izvor iz povrhnjice.</span></div><div class=\"rk-kom\">Keratin.</div></div></div>"
+   },
+   {
+    "id": "5",
+    "poglavje": [
+     "ekosistemi",
+     "populacije"
+    ],
+    "tocke": 10,
+    "besedilo": "<p class=\"pola-naslov-naloge\"><strong>Del A · Del A · Prehranjevalne verige in populacije</strong></p><p>Shemi prikazujeta prehranjevalni verigi v jezeru in rast populacije gosenic.</p><p class=\"pola-vprasanje\"><strong>5.1.</strong> Zakaj je alg v verigi brez rib manj? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>5.2.</strong> Kateri dejavnik omogoča primarno produkcijo? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>5.3.</strong> Gosenica poje liste s 200 J, 100 J izloči, 70 J porabi za dihanje. Koliko energije gre v rast? <em>(2 točki)</em></p><p class=\"pola-vprasanje\"><strong>5.4.</strong> Kaj se zgodi z energijo, ki jo gosenica porabi za dihanje? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>5.5.</strong> Kdaj populacija raste eksponentno? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>5.6.</strong> Zakaj taka rast v naravi ni dolgoročna? Navedi dva vzroka. <em>(2 točki)</em></p><p class=\"pola-vprasanje\"><strong>5.7.</strong> Zakaj je številčna piramida lahko obrnjena? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>5.8.</strong> Na katerih geografskih širinah je največja vrstna raznolikost? <em>(1 točka)</em></p>",
+    "rezultat": "<strong>5.1.</strong> Ker jih zooplankton bolj objeda, saj ni rib, ki bi ga plenile.<br><strong>5.2.</strong> Svetloba.<br><strong>5.3.</strong> 30 J.<br><strong>5.4.</strong> Sprosti se kot toplota in je ekosistem ne more ponovno uporabiti.<br><strong>5.5.</strong> Ko ni omejitev (dovolj hrane, ni plenilcev).<br><strong>5.6.</strong> Zmanjka hrane in prostora, poveča se število plenilcev in bolezni.<br><strong>5.7.</strong> Eno drevo hrani veliko žuželk.<br><strong>5.8.</strong> Okoli ekvatorja (tropi).",
+    "razlaga": "<div class=\"rokopis\"><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">5.1.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Ker jih zooplankton bolj objeda, saj ni rib, ki bi ga plenile.</span></div><div class=\"rk-kom\">Trofična kaskada.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">5.2.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Svetloba.</span></div><div class=\"rk-kom\">Fotosinteza.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">5.3.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">30 J.</span></div><div class=\"rk-kom\">200 − 100 − 70. Točka za postopek, točka za rezultat.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">5.4.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Sprosti se kot toplota in je ekosistem ne more ponovno uporabiti.</span></div><div class=\"rk-kom\">Pretok energije.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">5.5.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Ko ni omejitev (dovolj hrane, ni plenilcev).</span></div><div class=\"rk-kom\">J-krivulja.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">5.6.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Zmanjka hrane in prostora, poveča se število plenilcev in bolezni.</span></div><div class=\"rk-kom\">Točka za vsakega.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">5.7.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Eno drevo hrani veliko žuželk.</span></div><div class=\"rk-kom\">Velikost osebkov.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">5.8.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Okoli ekvatorja (tropi).</span></div><div class=\"rk-kom\">Toplo in vlažno.</div></div></div>"
+   },
+   {
+    "id": "6",
+    "poglavje": [
+     "raziskovanje",
+     "rastline",
+     "dihanje_fotosinteza"
+    ],
+    "tocke": 10,
+    "besedilo": "<p class=\"pola-naslov-naloge\"><strong>Del B · Del B · Sončni in senčni listi</strong></p><p>Dijaki so merili osvetljenost in površino sončnih in senčnih listov trdoleske ter naredili škrobni test.</p><p class=\"pola-vprasanje\"><strong>6.1.</strong> Osvetljenost sončnih listov je bila 12 000, 15 000 in 18 000 luksov. Izračunaj povprečje. <em>(2 točki)</em></p><p class=\"pola-vprasanje\"><strong>6.2.</strong> Senčni listi imajo povprečno 3000 luksov. Kolikokrat so sončni bolj osvetljeni? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>6.3.</strong> Napiši hipotezo o površini in osvetljenosti. <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>6.4.</strong> Zakaj lahko v obeh listih nastane podobno glukoze? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>6.5.</strong> Kakšen je škrobni test lista, ki je bil 2 dni v temi? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>6.6.</strong> Zakaj v listu iz teme ni škroba? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>6.7.</strong> Kakšen bi bil kontrolni poskus? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>6.8.</strong> Zakaj so listi nameščeni navzkrižno? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>6.9.</strong> Zakaj je treba meriti več listov? <em>(1 točka)</em></p>",
+    "rezultat": "<strong>6.1.</strong> 15 000 luksov.<br><strong>6.2.</strong> 5-krat.<br><strong>6.3.</strong> Senčni listi imajo večjo površino, ker so manj osvetljeni.<br><strong>6.4.</strong> Senčni list večjo površino nadomesti manjšo osvetljenost.<br><strong>6.5.</strong> Negativen (−).<br><strong>6.6.</strong> Porabil se je za dihanje, nov ni nastal.<br><strong>6.7.</strong> List, ki je bil na svetlobi.<br><strong>6.8.</strong> Da se med seboj ne zasenčijo.<br><strong>6.9.</strong> Za zanesljivost.",
+    "razlaga": "<div class=\"rokopis\"><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">6.1.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">15 000 luksov.</span></div><div class=\"rk-kom\">Vsota / 3. Točka za postopek, točka za rezultat.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">6.2.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">5-krat.</span></div><div class=\"rk-kom\">15 000 / 3000.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">6.3.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Senčni listi imajo večjo površino, ker so manj osvetljeni.</span></div><div class=\"rk-kom\">Prilagoditev.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">6.4.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Senčni list večjo površino nadomesti manjšo osvetljenost.</span></div><div class=\"rk-kom\">Kompenzacija.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">6.5.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Negativen (−).</span></div><div class=\"rk-kom\">Ni fotosinteze.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">6.6.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Porabil se je za dihanje, nov ni nastal.</span></div><div class=\"rk-kom\">Razgradnja.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">6.7.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">List, ki je bil na svetlobi.</span></div><div class=\"rk-kom\">Pozitiven test.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">6.8.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Da se med seboj ne zasenčijo.</span></div><div class=\"rk-kom\">Več svetlobe.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">6.9.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Za zanesljivost.</span></div><div class=\"rk-kom\">Povprečje.</div></div></div>"
+   },
+   {
+    "id": "7",
+    "poglavje": [
+     "raziskovanje",
+     "bakterije_glive",
+     "nukleinske_kisline"
+    ],
+    "tocke": 10,
+    "besedilo": "<p class=\"pola-naslov-naloge\"><strong>Del B · Del B · Mutageni in antibiotiki</strong></p><p>Dijaki so z bakterijami, ki ne morejo izdelati alanina, preverjali, ali spojina X povzroča mutacije. Nato so testirali antibiotik.</p><p class=\"pola-vprasanje\"><strong>7.1.</strong> Na gojišču brez alanina so z X bakterije zrasle, brez X pa ne. Kaj sklepaš? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>7.2.</strong> Zakaj je bil potreben kontrolni poskus brez spojine X? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>7.3.</strong> Ali je hipoteza potrjena? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>7.4.</strong> Kakšen diagram narišeš za koncentracijo antibiotika glede na čas? <em>(2 točki)</em></p><p class=\"pola-vprasanje\"><strong>7.5.</strong> Navedi dve nadzorovani spremenljivki. <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>7.6.</strong> Kaj je inhibicijska cona na antibiogramu? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>7.7.</strong> Kaj pomeni, da na antibiogramu B ni cone? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>7.8.</strong> Zakaj je nevarno pretirano jemanje antibiotikov? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>7.9.</strong> Zakaj morajo biti vsa gojišča sterilna? <em>(1 točka)</em></p>",
+    "rezultat": "<strong>7.1.</strong> Spojina X je povzročila mutacijo, ki je obnovila sintezo alanina.<br><strong>7.2.</strong> Da izključimo naključne mutacije.<br><strong>7.3.</strong> Da, ker so bakterije zrasle le s spojino X.<br><strong>7.4.</strong> Črtni diagram s časom na x osi.<br><strong>7.5.</strong> Temperatura in vrsta gojišča.<br><strong>7.6.</strong> Območje okoli antibiotika, kjer bakterije ne rastejo.<br><strong>7.7.</strong> Bakterije so odporne na antibiotik.<br><strong>7.8.</strong> Spodbuja nastanek odpornih bakterij.<br><strong>7.9.</strong> Da ne zrastejo druge bakterije.",
+    "razlaga": "<div class=\"rokopis\"><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">7.1.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Spojina X je povzročila mutacijo, ki je obnovila sintezo alanina.</span></div><div class=\"rk-kom\">Povratna mutacija.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">7.2.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Da izključimo naključne mutacije.</span></div><div class=\"rk-kom\">Primerjava.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">7.3.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Da, ker so bakterije zrasle le s spojino X.</span></div><div class=\"rk-kom\">Utemeljitev z rezultati.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">7.4.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Črtni diagram s časom na x osi.</span></div><div class=\"rk-kom\">Točka za osi, točka za krivuljo.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">7.5.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Temperatura in vrsta gojišča.</span></div><div class=\"rk-kom\">Tudi čas.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">7.6.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Območje okoli antibiotika, kjer bakterije ne rastejo.</span></div><div class=\"rk-kom\">Občutljivost.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">7.7.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Bakterije so odporne na antibiotik.</span></div><div class=\"rk-kom\">Rezistenca.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">7.8.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Spodbuja nastanek odpornih bakterij.</span></div><div class=\"rk-kom\">Naravni izbor.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">7.9.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Da ne zrastejo druge bakterije.</span></div><div class=\"rk-kom\">Kontaminacija.</div></div></div>"
+   }
+  ]
+ },
+ {
+  "id": "biologija-2018-spomladanski-1",
+  "predmet": "biologija",
+  "raven": "enotna",
+  "leto": 2018,
+  "rok": "spomladanski",
+  "izvedba": 1,
+  "datum": "četrtek, 31. maj 2018",
+  "pdf": null,
+  "stevilka": 1,
+  "naslov": "Biologija, spomladanski rok 2018, izpitna pola 1 (vadbena pola Piflar.si)",
+  "navodilo": "90 minut, 40 nalog izbirnega tipa, vsaka je vredna 1 točko (40 točk). Dovoljeno je računalo.",
+  "vir": "Vadbena pola Piflar.si. Zgradba, vrsta nalog in točkovanje sledijo uradni poli splošne mature (spomladanski rok 2018, izpitna pola 1), besedila in podatki pa so naši. Uradne pole izdaja Državni izpitni center (RIC), ki ima nanje vse avtorske pravice.",
+  "naloge": [
+   {
+    "id": "1",
+    "poglavje": "zivljenje_na_zemlji",
+    "tocke": 1,
+    "tip": "izbirna",
+    "besedilo": "Katere lastnosti imajo vsa živa bitja?<ol class=\"pola-izbire\"><li><span class=\"izbira-crka\">A</span><span>Spolno razmnoževanje.</span></li><li><span class=\"izbira-crka\">B</span><span>Fotosinteza in gibanje.</span></li><li><span class=\"izbira-crka\">C</span><span>Celična stena in jedro.</span></li><li><span class=\"izbira-crka\">D</span><span>Presnova, rast, razmnoževanje in odzivanje na dražljaje.</span></li></ol>",
+    "rezultat": "<strong>D</strong> &nbsp; Presnova, rast, razmnoževanje in odzivanje na dražljaje.",
+    "razlaga": "<div class=\"rokopis\"><div class=\"rk-kom rk-sam\">Fotosinteza in jedro nista značilni za vse.</div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">D</span></div><div class=\"rk-kom\"></div></div></div>"
+   },
+   {
+    "id": "2",
+    "poglavje": "bakterije_glive",
+    "tocke": 1,
+    "tip": "izbirna",
+    "besedilo": "Celice imajo celično steno, krožno DNA v citoplazmi in fotosintezna barvila na uvihkih membrane. Katere so to?<ol class=\"pola-izbire\"><li><span class=\"izbira-crka\">A</span><span>Kvasovke.</span></li><li><span class=\"izbira-crka\">B</span><span>Celice listov.</span></li><li><span class=\"izbira-crka\">C</span><span>Cianobakterije.</span></li><li><span class=\"izbira-crka\">D</span><span>Amebe.</span></li></ol>",
+    "rezultat": "<strong>C</strong> &nbsp; Cianobakterije.",
+    "razlaga": "<div class=\"rokopis\"><div class=\"rk-kom rk-sam\">Prokariontska celica s fotosintezo.</div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">C</span></div><div class=\"rk-kom\"></div></div></div>"
+   },
+   {
+    "id": "3",
+    "poglavje": "celica",
+    "tocke": 1,
+    "tip": "izbirna",
+    "besedilo": "Kateri delci prehajajo skozi plazmalemo le s pomočjo beljakovin?<ol class=\"pola-izbire\"><li><span class=\"izbira-crka\">A</span><span>Glukoza in ioni.</span></li><li><span class=\"izbira-crka\">B</span><span>Kisik in CO<sub>2</sub>.</span></li><li><span class=\"izbira-crka\">C</span><span>Dušik.</span></li><li><span class=\"izbira-crka\">D</span><span>Majhne nepolarne molekule.</span></li></ol>",
+    "rezultat": "<strong>A</strong> &nbsp; Glukoza in ioni.",
+    "razlaga": "<div class=\"rokopis\"><div class=\"rk-kom rk-sam\">Polarne in nabite molekule ne gredo skozi lipidni dvosloj.</div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">A</span></div><div class=\"rk-kom\"></div></div></div>"
+   },
+   {
+    "id": "4",
+    "poglavje": "celica",
+    "tocke": 1,
+    "tip": "izbirna",
+    "besedilo": "Kakšna je pot membranske beljakovine od sinteze do membrane?<ol class=\"pola-izbire\"><li><span class=\"izbira-crka\">A</span><span>Lizosom → ER → plazmalema.</span></li><li><span class=\"izbira-crka\">B</span><span>Jedro → plazmalema.</span></li><li><span class=\"izbira-crka\">C</span><span>Ribosom na zrnatem ER → ER → Golgijev aparat → mešiček → plazmalema.</span></li><li><span class=\"izbira-crka\">D</span><span>Mitohondrij → Golgijev aparat.</span></li></ol>",
+    "rezultat": "<strong>C</strong> &nbsp; Ribosom na zrnatem ER → ER → Golgijev aparat → mešiček → plazmalema.",
+    "razlaga": "<div class=\"rokopis\"><div class=\"rk-kom rk-sam\">Pot izločanja.</div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">C</span></div><div class=\"rk-kom\"></div></div></div>"
+   },
+   {
+    "id": "5",
+    "poglavje": "celica",
+    "tocke": 1,
+    "tip": "izbirna",
+    "besedilo": "Katere strukture rastlinske celice ne bi našli v živalski celici?<ol class=\"pola-izbire\"><li><span class=\"izbira-crka\">A</span><span>Jedra.</span></li><li><span class=\"izbira-crka\">B</span><span>Mitohondrijev.</span></li><li><span class=\"izbira-crka\">C</span><span>Ribosomov.</span></li><li><span class=\"izbira-crka\">D</span><span>Celične stene, kloroplastov in velike vakuole.</span></li></ol>",
+    "rezultat": "<strong>D</strong> &nbsp; Celične stene, kloroplastov in velike vakuole.",
+    "razlaga": "<div class=\"rokopis\"><div class=\"rk-kom rk-sam\">Značilnosti rastlinskih celic.</div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">D</span></div><div class=\"rk-kom\"></div></div></div>"
+   },
+   {
+    "id": "6",
+    "poglavje": "encimi_presnova",
+    "tocke": 1,
+    "tip": "izbirna",
+    "besedilo": "Škrobovici smo dodali amilazo in pustili čez noč. Kaj pokaže test z jodovico?<ol class=\"pola-izbire\"><li><span class=\"izbira-crka\">A</span><span>Modro obarvanje, ker je škrob ostal.</span></li><li><span class=\"izbira-crka\">B</span><span>Raztopina se ne obarva modro, ker je škrob razgrajen.</span></li><li><span class=\"izbira-crka\">C</span><span>Rdeče obarvanje.</span></li><li><span class=\"izbira-crka\">D</span><span>Amilaza se obarva.</span></li></ol>",
+    "rezultat": "<strong>B</strong> &nbsp; Raztopina se ne obarva modro, ker je škrob razgrajen.",
+    "razlaga": "<div class=\"rokopis\"><div class=\"rk-kom rk-sam\">Nastala je maltoza.</div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">B</span></div><div class=\"rk-kom\"></div></div></div>"
+   },
+   {
+    "id": "7",
+    "poglavje": "encimi_presnova",
+    "tocke": 1,
+    "tip": "izbirna",
+    "besedilo": "Saharoza se v tankem črevesu razgradi. Zakaj se celuloza ne?<ol class=\"pola-izbire\"><li><span class=\"izbira-crka\">A</span><span>Celuloza je premajhna.</span></li><li><span class=\"izbira-crka\">B</span><span>Nimamo encima, ki bi razgradil njene vezi.</span></li><li><span class=\"izbira-crka\">C</span><span>Celuloza je beljakovina.</span></li><li><span class=\"izbira-crka\">D</span><span>Celulozo razgradi želodčna kislina.</span></li></ol>",
+    "rezultat": "<strong>B</strong> &nbsp; Nimamo encima, ki bi razgradil njene vezi.",
+    "razlaga": "<div class=\"rokopis\"><div class=\"rk-kom rk-sam\">Encimi so specifični za vrsto vezi.</div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">B</span></div><div class=\"rk-kom\"></div></div></div>"
+   },
+   {
+    "id": "8",
+    "poglavje": "dihanje_fotosinteza",
+    "tocke": 1,
+    "tip": "izbirna",
+    "besedilo": "Kaj velja za glikolizo in Krebsov cikel?<ol class=\"pola-izbire\"><li><span class=\"izbira-crka\">A</span><span>V obeh nastajata ATP in NADH.</span></li><li><span class=\"izbira-crka\">B</span><span>Oba potekata v mitohondriju.</span></li><li><span class=\"izbira-crka\">C</span><span>V obeh nastaja CO<sub>2</sub>.</span></li><li><span class=\"izbira-crka\">D</span><span>Oba potrebujeta kisik neposredno.</span></li></ol>",
+    "rezultat": "<strong>A</strong> &nbsp; V obeh nastajata ATP in NADH.",
+    "razlaga": "<div class=\"rokopis\"><div class=\"rk-kom rk-sam\">Glikoliza poteka v citosolu, CO<sub>2</sub> pa nastaja le v Krebsovem ciklu.</div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">A</span></div><div class=\"rk-kom\"></div></div></div>"
+   },
+   {
+    "id": "9",
+    "poglavje": "dihanje_fotosinteza",
+    "tocke": 1,
+    "tip": "izbirna",
+    "besedilo": "Kaj bi se zgodilo, če v kloroplast ne bi prišlo dovolj vode?<ol class=\"pola-izbire\"><li><span class=\"izbira-crka\">A</span><span>Nič.</span></li><li><span class=\"izbira-crka\">B</span><span>Nastalo bi več ATP.</span></li><li><span class=\"izbira-crka\">C</span><span>Nastalo bi več glukoze.</span></li><li><span class=\"izbira-crka\">D</span><span>Nastalo bi manj kisika, ATP in NADPH.</span></li></ol>",
+    "rezultat": "<strong>D</strong> &nbsp; Nastalo bi manj kisika, ATP in NADPH.",
+    "razlaga": "<div class=\"rokopis\"><div class=\"rk-kom rk-sam\">Fotoliza vode daje elektrone.</div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">D</span></div><div class=\"rk-kom\"></div></div></div>"
+   },
+   {
+    "id": "10",
+    "poglavje": "celica",
+    "tocke": 1,
+    "tip": "izbirna",
+    "besedilo": "Kateri par organela in procesa je pravilen?<ol class=\"pola-izbire\"><li><span class=\"izbira-crka\">A</span><span>Ribosom – sinteza lipidov.</span></li><li><span class=\"izbira-crka\">B</span><span>Lizosom – razgradnja celičnih delov.</span></li><li><span class=\"izbira-crka\">C</span><span>Mitohondrij – fotosinteza.</span></li><li><span class=\"izbira-crka\">D</span><span>Jedrce – celično dihanje.</span></li></ol>",
+    "rezultat": "<strong>B</strong> &nbsp; Lizosom – razgradnja celičnih delov.",
+    "razlaga": "<div class=\"rokopis\"><div class=\"rk-kom rk-sam\">Jedrce tvori ribosome.</div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">B</span></div><div class=\"rk-kom\"></div></div></div>"
+   },
+   {
+    "id": "11",
+    "poglavje": "nukleinske_kisline",
+    "tocke": 1,
+    "tip": "izbirna",
+    "besedilo": "Bakterije s težkim dušikom <sup>15</sup>N smo prenesli na gojišče z lahkim <sup>14</sup>N. Kakšna je DNA po eni delitvi?<ol class=\"pola-izbire\"><li><span class=\"izbira-crka\">A</span><span>Polovica je težka, polovica lahka.</span></li><li><span class=\"izbira-crka\">B</span><span>Vsaka molekula ima eno težko in eno lahko verigo.</span></li><li><span class=\"izbira-crka\">C</span><span>Vsa je lahka.</span></li><li><span class=\"izbira-crka\">D</span><span>Vsa je težka.</span></li></ol>",
+    "rezultat": "<strong>B</strong> &nbsp; Vsaka molekula ima eno težko in eno lahko verigo.",
+    "razlaga": "<div class=\"rokopis\"><div class=\"rk-kom rk-sam\">Semikonservativno podvojevanje.</div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">B</span></div><div class=\"rk-kom\"></div></div></div>"
+   },
+   {
+    "id": "12",
+    "poglavje": "nukleinske_kisline",
+    "tocke": 1,
+    "tip": "izbirna",
+    "besedilo": "Peptid ima 9 aminokislin. Koliko nukleotidov ima njegov zapis v mRNA brez stop kodona?<ol class=\"pola-izbire\"><li><span class=\"izbira-crka\">A</span><span>9.</span></li><li><span class=\"izbira-crka\">B</span><span>27.</span></li><li><span class=\"izbira-crka\">C</span><span>18.</span></li><li><span class=\"izbira-crka\">D</span><span>3.</span></li></ol>",
+    "rezultat": "<strong>B</strong> &nbsp; 27.",
+    "razlaga": "<div class=\"rokopis\"><div class=\"rk-kom rk-sam\">Tri baze za aminokislino.</div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">B</span></div><div class=\"rk-kom\"></div></div></div>"
+   },
+   {
+    "id": "13",
+    "poglavje": "celicni_cikel",
+    "tocke": 1,
+    "tip": "izbirna",
+    "besedilo": "Kaj se zgodi na kontrolni točki pred mitozo?<ol class=\"pola-izbire\"><li><span class=\"izbira-crka\">A</span><span>Celica izgubi jedro.</span></li><li><span class=\"izbira-crka\">B</span><span>Celica podvoji DNA.</span></li><li><span class=\"izbira-crka\">C</span><span>Celica se razdeli.</span></li><li><span class=\"izbira-crka\">D</span><span>Celica preveri, ali je DNA pravilno podvojena.</span></li></ol>",
+    "rezultat": "<strong>D</strong> &nbsp; Celica preveri, ali je DNA pravilno podvojena.",
+    "razlaga": "<div class=\"rokopis\"><div class=\"rk-kom rk-sam\">Kontrolna točka G2/M.</div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">D</span></div><div class=\"rk-kom\"></div></div></div>"
+   },
+   {
+    "id": "14",
+    "poglavje": "dedovanje",
+    "tocke": 1,
+    "tip": "izbirna",
+    "besedilo": "Rdečecvetno rastlino smo križali z belo (rr). Polovica potomcev je bila belih. Kakšen je genotip rdeče rastline?<ol class=\"pola-izbire\"><li><span class=\"izbira-crka\">A</span><span>rr.</span></li><li><span class=\"izbira-crka\">B</span><span>RR.</span></li><li><span class=\"izbira-crka\">C</span><span>Rr.</span></li><li><span class=\"izbira-crka\">D</span><span>Ne moremo ugotoviti.</span></li></ol>",
+    "rezultat": "<strong>C</strong> &nbsp; Rr.",
+    "razlaga": "<div class=\"rokopis\"><div class=\"rk-kom rk-sam\">Testno križanje.</div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">C</span></div><div class=\"rk-kom\"></div></div></div>"
+   },
+   {
+    "id": "15",
+    "poglavje": "nukleinske_kisline",
+    "tocke": 1,
+    "tip": "izbirna",
+    "besedilo": "Kaj se zgodi v operonu lac, ko laktoze ni?<ol class=\"pola-izbire\"><li><span class=\"izbira-crka\">A</span><span>Laktoza se veže na represor.</span></li><li><span class=\"izbira-crka\">B</span><span>Geni se prepisujejo.</span></li><li><span class=\"izbira-crka\">C</span><span>Represor se veže na operator in prepis se ne zgodi.</span></li><li><span class=\"izbira-crka\">D</span><span>RNA-polimeraza se veže na operator.</span></li></ol>",
+    "rezultat": "<strong>C</strong> &nbsp; Represor se veže na operator in prepis se ne zgodi.",
+    "razlaga": "<div class=\"rokopis\"><div class=\"rk-kom rk-sam\">Inducibilni operon je izklopljen.</div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">C</span></div><div class=\"rk-kom\"></div></div></div>"
+   },
+   {
+    "id": "16",
+    "poglavje": "dedovanje",
+    "tocke": 1,
+    "tip": "izbirna",
+    "besedilo": "V mejozi I pri očetu (aa) se kromosoma nista ločila. Kaj velja za semenčico?<ol class=\"pola-izbire\"><li><span class=\"izbira-crka\">A</span><span>Je triploidna.</span></li><li><span class=\"izbira-crka\">B</span><span>Ima normalno število kromosomov.</span></li><li><span class=\"izbira-crka\">C</span><span>Ima en kromosom preveč ali enega premalo.</span></li><li><span class=\"izbira-crka\">D</span><span>Nima kromosomov.</span></li></ol>",
+    "rezultat": "<strong>C</strong> &nbsp; Ima en kromosom preveč ali enega premalo.",
+    "razlaga": "<div class=\"rokopis\"><div class=\"rk-kom rk-sam\">Nerazdružitev daje aneuploidijo.</div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">C</span></div><div class=\"rk-kom\"></div></div></div>"
+   },
+   {
+    "id": "17",
+    "poglavje": "evolucija",
+    "tocke": 1,
+    "tip": "izbirna",
+    "besedilo": "Katerega plina v prvotni atmosferi skoraj ni bilo?<ol class=\"pola-izbire\"><li><span class=\"izbira-crka\">A</span><span>Dušika.</span></li><li><span class=\"izbira-crka\">B</span><span>Vodne pare.</span></li><li><span class=\"izbira-crka\">C</span><span>Ogljikovega dioksida.</span></li><li><span class=\"izbira-crka\">D</span><span>Kisika.</span></li></ol>",
+    "rezultat": "<strong>D</strong> &nbsp; Kisika.",
+    "razlaga": "<div class=\"rokopis\"><div class=\"rk-kom rk-sam\">Kisik so sprostile cianobakterije.</div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">D</span></div><div class=\"rk-kom\"></div></div></div>"
+   },
+   {
+    "id": "18",
+    "poglavje": "evolucija",
+    "tocke": 1,
+    "tip": "izbirna",
+    "besedilo": "Katera trditev o evoluciji je napačna?<ol class=\"pola-izbire\"><li><span class=\"izbira-crka\">A</span><span>Osebki se razlikujejo.</span></li><li><span class=\"izbira-crka\">B</span><span>Osebki med življenjem pridobijo lastnosti, ki jih prenesejo na potomce.</span></li><li><span class=\"izbira-crka\">C</span><span>Preživijo bolje prilagojeni.</span></li><li><span class=\"izbira-crka\">D</span><span>Rodi se več potomcev, kot jih preživi.</span></li></ol>",
+    "rezultat": "<strong>B</strong> &nbsp; Osebki med življenjem pridobijo lastnosti, ki jih prenesejo na potomce.",
+    "razlaga": "<div class=\"rokopis\"><div class=\"rk-kom rk-sam\">To je Lamarckova zamisel.</div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">B</span></div><div class=\"rk-kom\"></div></div></div>"
+   },
+   {
+    "id": "19",
+    "poglavje": "evolucija",
+    "tocke": 1,
+    "tip": "izbirna",
+    "besedilo": "Kaj določa biološki koncept vrste?<ol class=\"pola-izbire\"><li><span class=\"izbira-crka\">A</span><span>Osebki se plodijo med seboj in imajo plodne potomce.</span></li><li><span class=\"izbira-crka\">B</span><span>Osebki so si podobni po videzu.</span></li><li><span class=\"izbira-crka\">C</span><span>Osebki živijo na istem območju.</span></li><li><span class=\"izbira-crka\">D</span><span>Osebki imajo isto hrano.</span></li></ol>",
+    "rezultat": "<strong>A</strong> &nbsp; Osebki se plodijo med seboj in imajo plodne potomce.",
+    "razlaga": "<div class=\"rokopis\"><div class=\"rk-kom rk-sam\">Razmnoževalna izolacija.</div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">A</span></div><div class=\"rk-kom\"></div></div></div>"
+   },
+   {
+    "id": "20",
+    "poglavje": "sistematika",
+    "tocke": 1,
+    "tip": "izbirna",
+    "besedilo": "Kaj pomeni, da imata vrsti skupnega prednika na drevesu blizu konca vej?<ol class=\"pola-izbire\"><li><span class=\"izbira-crka\">A</span><span>Nista sorodni.</span></li><li><span class=\"izbira-crka\">B</span><span>Sta tesno sorodni.</span></li><li><span class=\"izbira-crka\">C</span><span>Sta isti vrsti.</span></li><li><span class=\"izbira-crka\">D</span><span>Ena je prednik druge.</span></li></ol>",
+    "rezultat": "<strong>B</strong> &nbsp; Sta tesno sorodni.",
+    "razlaga": "<div class=\"rokopis\"><div class=\"rk-kom rk-sam\">Nedavna razcepitev.</div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">B</span></div><div class=\"rk-kom\"></div></div></div>"
+   },
+   {
+    "id": "21",
+    "poglavje": "sistematika",
+    "tocke": 1,
+    "tip": "izbirna",
+    "besedilo": "Zaporedja DNA istega gena pri štirih vrstah se razlikujejo. Kateri vrsti sta najbolj sorodni?<ol class=\"pola-izbire\"><li><span class=\"izbira-crka\">A</span><span>Tisti z najmanj razlikami.</span></li><li><span class=\"izbira-crka\">B</span><span>Tisti z največ razlikami.</span></li><li><span class=\"izbira-crka\">C</span><span>Vse so enako sorodne.</span></li><li><span class=\"izbira-crka\">D</span><span>Iz zaporedij ne moremo sklepati.</span></li></ol>",
+    "rezultat": "<strong>A</strong> &nbsp; Tisti z najmanj razlikami.",
+    "razlaga": "<div class=\"rokopis\"><div class=\"rk-kom rk-sam\">Molekularna filogenija.</div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">A</span></div><div class=\"rk-kom\"></div></div></div>"
+   },
+   {
+    "id": "22",
+    "poglavje": "bakterije_glive",
+    "tocke": 1,
+    "tip": "izbirna",
+    "besedilo": "Zakaj se med ne pokvari?<ol class=\"pola-izbire\"><li><span class=\"izbira-crka\">A</span><span>Ker vsebuje antibiotike.</span></li><li><span class=\"izbira-crka\">B</span><span>Zaradi velike koncentracije sladkorja, ki mikroorganizmom odvzema vodo.</span></li><li><span class=\"izbira-crka\">C</span><span>Ker je kisel.</span></li><li><span class=\"izbira-crka\">D</span><span>Ker je v kozarcu.</span></li></ol>",
+    "rezultat": "<strong>B</strong> &nbsp; Zaradi velike koncentracije sladkorja, ki mikroorganizmom odvzema vodo.",
+    "razlaga": "<div class=\"rokopis\"><div class=\"rk-kom rk-sam\">Hipertonično okolje.</div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">B</span></div><div class=\"rk-kom\"></div></div></div>"
+   },
+   {
+    "id": "23",
+    "poglavje": "bakterije_glive",
+    "tocke": 1,
+    "tip": "izbirna",
+    "besedilo": "Kaj je skupno bakterijam in glivam?<ol class=\"pola-izbire\"><li><span class=\"izbira-crka\">A</span><span>Fotosintetizirajo.</span></li><li><span class=\"izbira-crka\">B</span><span>Imajo hitinsko steno.</span></li><li><span class=\"izbira-crka\">C</span><span>Imajo jedro.</span></li><li><span class=\"izbira-crka\">D</span><span>Imajo celično steno in se lahko hranijo z razkrajanjem.</span></li></ol>",
+    "rezultat": "<strong>D</strong> &nbsp; Imajo celično steno in se lahko hranijo z razkrajanjem.",
+    "razlaga": "<div class=\"rokopis\"><div class=\"rk-kom rk-sam\">Bakterije imajo peptidoglikan, glive hitin.</div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">D</span></div><div class=\"rk-kom\"></div></div></div>"
+   },
+   {
+    "id": "24",
+    "poglavje": "rastline",
+    "tocke": 1,
+    "tip": "izbirna",
+    "besedilo": "Katera struktura uravnava transpiracijo?<ol class=\"pola-izbire\"><li><span class=\"izbira-crka\">A</span><span>Listne reže z zapiralkama.</span></li><li><span class=\"izbira-crka\">B</span><span>Ksilem.</span></li><li><span class=\"izbira-crka\">C</span><span>Kutikula.</span></li><li><span class=\"izbira-crka\">D</span><span>Stebričasto tkivo.</span></li></ol>",
+    "rezultat": "<strong>A</strong> &nbsp; Listne reže z zapiralkama.",
+    "razlaga": "<div class=\"rokopis\"><div class=\"rk-kom rk-sam\">Odpirajo in zapirajo reže.</div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">A</span></div><div class=\"rk-kom\"></div></div></div>"
+   },
+   {
+    "id": "25",
+    "poglavje": "rastline",
+    "tocke": 1,
+    "tip": "izbirna",
+    "besedilo": "Kaj v subarktičnem pasu poleti najbolj omejuje rast rastlin?<ol class=\"pola-izbire\"><li><span class=\"izbira-crka\">A</span><span>Pomanjkanje svetlobe.</span></li><li><span class=\"izbira-crka\">B</span><span>Nizka temperatura.</span></li><li><span class=\"izbira-crka\">C</span><span>Pomanjkanje CO<sub>2</sub>.</span></li><li><span class=\"izbira-crka\">D</span><span>Preveč dežja.</span></li></ol>",
+    "rezultat": "<strong>B</strong> &nbsp; Nizka temperatura.",
+    "razlaga": "<div class=\"rokopis\"><div class=\"rk-kom rk-sam\">Poleti je dolg dan.</div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">B</span></div><div class=\"rk-kom\"></div></div></div>"
+   },
+   {
+    "id": "26",
+    "poglavje": "rastline",
+    "tocke": 1,
+    "tip": "izbirna",
+    "besedilo": "Kako se rastline branijo pred bakterijami in glivami?<ol class=\"pola-izbire\"><li><span class=\"izbira-crka\">A</span><span>Z limfociti.</span></li><li><span class=\"izbira-crka\">B</span><span>S protitelesi.</span></li><li><span class=\"izbira-crka\">C</span><span>S kutikulo, celično steno in obrambnimi snovmi.</span></li><li><span class=\"izbira-crka\">D</span><span>S cepivi.</span></li></ol>",
+    "rezultat": "<strong>C</strong> &nbsp; S kutikulo, celično steno in obrambnimi snovmi.",
+    "razlaga": "<div class=\"rokopis\"><div class=\"rk-kom rk-sam\">Rastline nimajo specifične imunosti kot živali.</div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">C</span></div><div class=\"rk-kom\"></div></div></div>"
+   },
+   {
+    "id": "27",
+    "poglavje": "dihala_prebava_izlocala",
+    "tocke": 1,
+    "tip": "izbirna",
+    "besedilo": "Katera tkiva gradijo želodec?<ol class=\"pola-izbire\"><li><span class=\"izbira-crka\">A</span><span>Krovno, vezivno, mišično in živčno.</span></li><li><span class=\"izbira-crka\">B</span><span>Le mišično.</span></li><li><span class=\"izbira-crka\">C</span><span>Krovno in kostno.</span></li><li><span class=\"izbira-crka\">D</span><span>Le vezivno.</span></li></ol>",
+    "rezultat": "<strong>A</strong> &nbsp; Krovno, vezivno, mišično in živčno.",
+    "razlaga": "<div class=\"rokopis\"><div class=\"rk-kom rk-sam\">Organ gradi več tkiv.</div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">A</span></div><div class=\"rk-kom\"></div></div></div>"
+   },
+   {
+    "id": "28",
+    "poglavje": "kri_imunost",
+    "tocke": 1,
+    "tip": "izbirna",
+    "besedilo": "Koliko kapilarnih prepletov preide eritrocit od ledvične vene do levega prekata?<ol class=\"pola-izbire\"><li><span class=\"izbira-crka\">A</span><span>Enega (pljučnega).</span></li><li><span class=\"izbira-crka\">B</span><span>Nobenega.</span></li><li><span class=\"izbira-crka\">C</span><span>Dva.</span></li><li><span class=\"izbira-crka\">D</span><span>Tri.</span></li></ol>",
+    "rezultat": "<strong>A</strong> &nbsp; Enega (pljučnega).",
+    "razlaga": "<div class=\"rokopis\"><div class=\"rk-kom rk-sam\">Ledvična vena → srce → pljuča → srce.</div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">A</span></div><div class=\"rk-kom\"></div></div></div>"
+   },
+   {
+    "id": "29",
+    "poglavje": "kri_imunost",
+    "tocke": 1,
+    "tip": "izbirna",
+    "besedilo": "Zakaj je sekundarni imunski odziv hitrejši in močnejši?<ol class=\"pola-izbire\"><li><span class=\"izbira-crka\">A</span><span>Ker telo ne prepozna antigena.</span></li><li><span class=\"izbira-crka\">B</span><span>Ker je antigen šibkejši.</span></li><li><span class=\"izbira-crka\">C</span><span>Ker ni limfocitov.</span></li><li><span class=\"izbira-crka\">D</span><span>Zaradi spominskih celic.</span></li></ol>",
+    "rezultat": "<strong>D</strong> &nbsp; Zaradi spominskih celic.",
+    "razlaga": "<div class=\"rokopis\"><div class=\"rk-kom rk-sam\">Načelo cepljenja.</div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">D</span></div><div class=\"rk-kom\"></div></div></div>"
+   },
+   {
+    "id": "30",
+    "poglavje": "dihala_prebava_izlocala",
+    "tocke": 1,
+    "tip": "izbirna",
+    "besedilo": "Zakaj morajo vodne živali imeti učinkovitejše izmenjevanje plinov?<ol class=\"pola-izbire\"><li><span class=\"izbira-crka\">A</span><span>V vodi je manj kisika kot v zraku.</span></li><li><span class=\"izbira-crka\">B</span><span>Voda ima več kisika.</span></li><li><span class=\"izbira-crka\">C</span><span>Ker se več gibljejo.</span></li><li><span class=\"izbira-crka\">D</span><span>Ker so manjše.</span></li></ol>",
+    "rezultat": "<strong>A</strong> &nbsp; V vodi je manj kisika kot v zraku.",
+    "razlaga": "<div class=\"rokopis\"><div class=\"rk-kom rk-sam\">Škrge in protitok.</div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">A</span></div><div class=\"rk-kom\"></div></div></div>"
+   },
+   {
+    "id": "31",
+    "poglavje": "regulacija",
+    "tocke": 1,
+    "tip": "izbirna",
+    "besedilo": "Kaj velja za kri v jetrni veni po obroku?<ol class=\"pola-izbire\"><li><span class=\"izbira-crka\">A</span><span>Inzulina ni.</span></li><li><span class=\"izbira-crka\">B</span><span>Glukoze je več.</span></li><li><span class=\"izbira-crka\">C</span><span>Glukoze je manj kot v portalni veni, ker jo jetra shranijo.</span></li><li><span class=\"izbira-crka\">D</span><span>Glukoze ni.</span></li></ol>",
+    "rezultat": "<strong>C</strong> &nbsp; Glukoze je manj kot v portalni veni, ker jo jetra shranijo.",
+    "razlaga": "<div class=\"rokopis\"><div class=\"rk-kom rk-sam\">Jetra uravnavajo glukozo.</div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">C</span></div><div class=\"rk-kom\"></div></div></div>"
+   },
+   {
+    "id": "32",
+    "poglavje": "regulacija",
+    "tocke": 1,
+    "tip": "izbirna",
+    "besedilo": "Pri kateri bolezni notranjega ušesa se pojavi vrtoglavica?<ol class=\"pola-izbire\"><li><span class=\"izbira-crka\">A</span><span>Ko je poškodovan nos.</span></li><li><span class=\"izbira-crka\">B</span><span>Ko je poškodovan bobnič.</span></li><li><span class=\"izbira-crka\">C</span><span>Ko je poškodovana mrežnica.</span></li><li><span class=\"izbira-crka\">D</span><span>Ko je motena funkcija ravnotežnega organa.</span></li></ol>",
+    "rezultat": "<strong>D</strong> &nbsp; Ko je motena funkcija ravnotežnega organa.",
+    "razlaga": "<div class=\"rokopis\"><div class=\"rk-kom rk-sam\">Polkrožni kanali.</div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">D</span></div><div class=\"rk-kom\"></div></div></div>"
+   },
+   {
+    "id": "33",
+    "poglavje": "regulacija",
+    "tocke": 1,
+    "tip": "izbirna",
+    "besedilo": "Kaj se zgodi v motorični ploščici?<ol class=\"pola-izbire\"><li><span class=\"izbira-crka\">A</span><span>Nevron prejme signal od mišice.</span></li><li><span class=\"izbira-crka\">B</span><span>Mišica izloči acetilholin.</span></li><li><span class=\"izbira-crka\">C</span><span>Acetilholin se veže na receptorje mišične celice in sproži krčenje.</span></li><li><span class=\"izbira-crka\">D</span><span>Ni prenašalcev.</span></li></ol>",
+    "rezultat": "<strong>C</strong> &nbsp; Acetilholin se veže na receptorje mišične celice in sproži krčenje.",
+    "razlaga": "<div class=\"rokopis\"><div class=\"rk-kom rk-sam\">Kemična sinapsa.</div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">C</span></div><div class=\"rk-kom\"></div></div></div>"
+   },
+   {
+    "id": "34",
+    "poglavje": "gibanje_razmnozevanje",
+    "tocke": 1,
+    "tip": "izbirna",
+    "besedilo": "Kaj je vloga posteljice?<ol class=\"pola-izbire\"><li><span class=\"izbira-crka\">A</span><span>Dihanje ploda z zrakom.</span></li><li><span class=\"izbira-crka\">B</span><span>Prebava hrane ploda.</span></li><li><span class=\"izbira-crka\">C</span><span>Tvorba krvi.</span></li><li><span class=\"izbira-crka\">D</span><span>Izmenjava snovi med materjo in plodom in izločanje hormonov.</span></li></ol>",
+    "rezultat": "<strong>D</strong> &nbsp; Izmenjava snovi med materjo in plodom in izločanje hormonov.",
+    "razlaga": "<div class=\"rokopis\"><div class=\"rk-kom rk-sam\">Ni mešanja krvi.</div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">D</span></div><div class=\"rk-kom\"></div></div></div>"
+   },
+   {
+    "id": "35",
+    "poglavje": "gibanje_razmnozevanje",
+    "tocke": 1,
+    "tip": "izbirna",
+    "besedilo": "Kdaj je nespolno razmnoževanje prednost?<ol class=\"pola-izbire\"><li><span class=\"izbira-crka\">A</span><span>V stalnem okolju, kjer so starši dobro prilagojeni.</span></li><li><span class=\"izbira-crka\">B</span><span>V spremenljivem okolju.</span></li><li><span class=\"izbira-crka\">C</span><span>Ko je veliko bolezni.</span></li><li><span class=\"izbira-crka\">D</span><span>Ko je malo hrane.</span></li></ol>",
+    "rezultat": "<strong>A</strong> &nbsp; V stalnem okolju, kjer so starši dobro prilagojeni.",
+    "razlaga": "<div class=\"rokopis\"><div class=\"rk-kom rk-sam\">Hitro in brez partnerja.</div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">A</span></div><div class=\"rk-kom\"></div></div></div>"
+   },
+   {
+    "id": "36",
+    "poglavje": "ekosistemi",
+    "tocke": 1,
+    "tip": "izbirna",
+    "besedilo": "Kaj se zgodi ob odstranitvi plenilcev na vrhu verige?<ol class=\"pola-izbire\"><li><span class=\"izbira-crka\">A</span><span>Rastlinojedci izumrejo.</span></li><li><span class=\"izbira-crka\">B</span><span>Število rastlin se poveča.</span></li><li><span class=\"izbira-crka\">C</span><span>Nič.</span></li><li><span class=\"izbira-crka\">D</span><span>Število rastlinojedcev se poveča in rastline so preveč objedene.</span></li></ol>",
+    "rezultat": "<strong>D</strong> &nbsp; Število rastlinojedcev se poveča in rastline so preveč objedene.",
+    "razlaga": "<div class=\"rokopis\"><div class=\"rk-kom rk-sam\">Trofična kaskada.</div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">D</span></div><div class=\"rk-kom\"></div></div></div>"
+   },
+   {
+    "id": "37",
+    "poglavje": "ekosistemi",
+    "tocke": 1,
+    "tip": "izbirna",
+    "besedilo": "Koliko sončne energije proizvajalci shranijo v organske snovi?<ol class=\"pola-izbire\"><li><span class=\"izbira-crka\">A</span><span>Majhen del (nekaj odstotkov).</span></li><li><span class=\"izbira-crka\">B</span><span>Vso.</span></li><li><span class=\"izbira-crka\">C</span><span>Polovico.</span></li><li><span class=\"izbira-crka\">D</span><span>Nič.</span></li></ol>",
+    "rezultat": "<strong>A</strong> &nbsp; Majhen del (nekaj odstotkov).",
+    "razlaga": "<div class=\"rokopis\"><div class=\"rk-kom rk-sam\">Večina se odbije ali izgubi kot toplota.</div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">A</span></div><div class=\"rk-kom\"></div></div></div>"
+   },
+   {
+    "id": "38",
+    "poglavje": "ekosistemi",
+    "tocke": 1,
+    "tip": "izbirna",
+    "besedilo": "Kateri proces v kroženju dušika opravljajo rastline?<ol class=\"pola-izbire\"><li><span class=\"izbira-crka\">A</span><span>Denitrifikacijo.</span></li><li><span class=\"izbira-crka\">B</span><span>Vezavo N<sub>2</sub>.</span></li><li><span class=\"izbira-crka\">C</span><span>Sprejem nitratov in sintezo beljakovin.</span></li><li><span class=\"izbira-crka\">D</span><span>Nitrifikacijo.</span></li></ol>",
+    "rezultat": "<strong>C</strong> &nbsp; Sprejem nitratov in sintezo beljakovin.",
+    "razlaga": "<div class=\"rokopis\"><div class=\"rk-kom rk-sam\">Bakterije opravljajo druge procese.</div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">C</span></div><div class=\"rk-kom\"></div></div></div>"
+   },
+   {
+    "id": "39",
+    "poglavje": "populacije",
+    "tocke": 1,
+    "tip": "izbirna",
+    "besedilo": "Muha cece prenaša povzročitelja spalne bolezni. Kakšen je odnos med muho in antilopo?<ol class=\"pola-izbire\"><li><span class=\"izbira-crka\">A</span><span>Mutualizem.</span></li><li><span class=\"izbira-crka\">B</span><span>Zajedavstvo.</span></li><li><span class=\"izbira-crka\">C</span><span>Komenzalizem.</span></li><li><span class=\"izbira-crka\">D</span><span>Plenilstvo.</span></li></ol>",
+    "rezultat": "<strong>B</strong> &nbsp; Zajedavstvo.",
+    "razlaga": "<div class=\"rokopis\"><div class=\"rk-kom rk-sam\">Muha se hrani s krvjo.</div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">B</span></div><div class=\"rk-kom\"></div></div></div>"
+   },
+   {
+    "id": "40",
+    "poglavje": "populacije",
+    "tocke": 1,
+    "tip": "izbirna",
+    "besedilo": "Katere vrste so najbolj ogrožene zaradi človekovih posegov?<ol class=\"pola-izbire\"><li><span class=\"izbira-crka\">A</span><span>Vrste s široko nišo.</span></li><li><span class=\"izbira-crka\">B</span><span>Vrste z veliko populacijo.</span></li><li><span class=\"izbira-crka\">C</span><span>Vrste z majhno populacijo in ozko ekološko nišo.</span></li><li><span class=\"izbira-crka\">D</span><span>Vrste z veliko potomci.</span></li></ol>",
+    "rezultat": "<strong>C</strong> &nbsp; Vrste z majhno populacijo in ozko ekološko nišo.",
+    "razlaga": "<div class=\"rokopis\"><div class=\"rk-kom rk-sam\">Specialisti.</div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">C</span></div><div class=\"rk-kom\"></div></div></div>"
+   }
+  ]
+ },
+ {
+  "id": "biologija-2018-jesenski-2-2",
+  "predmet": "biologija",
+  "raven": "enotna",
+  "leto": 2018,
+  "rok": "jesenski",
+  "izvedba": 2,
+  "datum": "četrtek, 30. avgust 2018",
+  "pdf": null,
+  "stevilka": 2,
+  "naslov": "Biologija, jesenski rok 2018, 2. izpitni dan, izpitna pola 2 (vadbena pola Piflar.si)",
+  "navodilo": "90 minut, 7 strukturiranih nalog po 10 točk. V delu A (naloge 1–5) izberi in reši 3, v delu B (nalogi 6 in 7) izberi in reši 1 (40 točk). Dovoljeno je računalo.",
+  "vir": "Vadbena pola Piflar.si. Zgradba, vrsta nalog in točkovanje sledijo uradni poli splošne mature (jesenski rok 2018, 2. izpitni dan, izpitna pola 2), besedila in podatki pa so naši. Uradne pole izdaja Državni izpitni center (RIC), ki ima nanje vse avtorske pravice.",
+  "naloge": [
+   {
+    "id": "1",
+    "poglavje": [
+     "celica",
+     "kri_imunost",
+     "dihanje_fotosinteza"
+    ],
+    "tocke": 10,
+    "besedilo": "<p class=\"pola-naslov-naloge\"><strong>Del A · Del A · Živalska celica in imunost</strong></p><p>Slika prikazuje živalsko celico ter matično celico kostnega mozga, iz katere nastajajo krvne celice.</p><p class=\"pola-vprasanje\"><strong>1.1.</strong> Kateri organeli imajo dvojno membrano? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>1.2.</strong> Zakaj imajo krvne celice, ki nastanejo iz iste matične celice, različne naloge? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>1.3.</strong> Kaj prepoznajo limfociti B? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>1.4.</strong> Kaj je vloga limfocitov B ob okužbi z virusom? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>1.5.</strong> V katero kraljestvo spadajo organizmi s takimi celicami? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>1.6.</strong> Kaj mora potekati v enoceličarjih, da ob kisiku izkoristijo glukozo? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>1.7.</strong> Kako glukoza vstopi v celico? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>1.8.</strong> Za kaj celica porablja ATP? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>1.9.</strong> Zakaj ioni Na<sup>+</sup> in K<sup>+</sup> ne prehajajo neposredno skozi lipidni dvosloj? <em>(2 točki)</em></p>",
+    "rezultat": "<strong>1.1.</strong> Jedro in mitohondriji.<br><strong>1.2.</strong> Izražajo različne gene.<br><strong>1.3.</strong> Antigene.<br><strong>1.4.</strong> Tvorijo protitelesa in spominske celice.<br><strong>1.5.</strong> Živali.<br><strong>1.6.</strong> Celično dihanje v mitohondrijih.<br><strong>1.7.</strong> S pospešeno difuzijo s prenašalci.<br><strong>1.8.</strong> Za aktivni transport, sintezo snovi in gibanje.<br><strong>1.9.</strong> So nabiti in obdani z vodo, zato potrebujejo kanale ali črpalke.",
+    "razlaga": "<div class=\"rokopis\"><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">1.1.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Jedro in mitohondriji.</span></div><div class=\"rk-kom\">Oboje za točko.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">1.2.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Izražajo različne gene.</span></div><div class=\"rk-kom\">Diferenciacija.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">1.3.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Antigene.</span></div><div class=\"rk-kom\">S protitelesi na površini.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">1.4.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Tvorijo protitelesa in spominske celice.</span></div><div class=\"rk-kom\">Plazmatke.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">1.5.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Živali.</span></div><div class=\"rk-kom\">Ni celične stene.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">1.6.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Celično dihanje v mitohondrijih.</span></div><div class=\"rk-kom\">Aerobno.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">1.7.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">S pospešeno difuzijo s prenašalci.</span></div><div class=\"rk-kom\">Ali aktivno.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">1.8.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Za aktivni transport, sintezo snovi in gibanje.</span></div><div class=\"rk-kom\">Delo.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">1.9.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">So nabiti in obdani z vodo, zato potrebujejo kanale ali črpalke.</span></div><div class=\"rk-kom\">Točka za naboj, točka za beljakovine.</div></div></div>"
+   },
+   {
+    "id": "2",
+    "poglavje": [
+     "nukleinske_kisline"
+    ],
+    "tocke": 10,
+    "besedilo": "<p class=\"pola-naslov-naloge\"><strong>Del A · Del A · Sinteza beljakovin in operoni</strong></p><p>Prokariontska celica ima ribosome in krožno DNA. Triptofanski operon omogoča izdelavo triptofana.</p><p class=\"pola-vprasanje\"><strong>2.1.</strong> Katere strukture sodelujejo pri sintezi beljakovin v bakteriji? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>2.2.</strong> Kaj je vloga tRNA? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>2.3.</strong> Po čem se ribonukleotid razlikuje od deoksiribonukleotida? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>2.4.</strong> Kaj je operator? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>2.5.</strong> Kaj kodirajo regulacijski geni? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>2.6.</strong> Kako triptofan ustavi svojo sintezo? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>2.7.</strong> Kje pri evkariontih poteka transkripcija in kje translacija? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>2.8.</strong> Po čem se zrela mRNA razlikuje od pre-mRNA? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>2.9.</strong> Kako mutacija v transkripcijskem faktorju vpliva na izražanje genov? <em>(2 točki)</em></p>",
+    "rezultat": "<strong>2.1.</strong> DNA (nukleoid) in ribosomi.<br><strong>2.2.</strong> Prinaša aminokisline na ribosom.<br><strong>2.3.</strong> Ima ribozo in namesto timina uracil.<br><strong>2.4.</strong> Del DNA, kamor se veže represor.<br><strong>2.5.</strong> Represorje.<br><strong>2.6.</strong> Veže se na represor, ki se aktivira in veže na operator.<br><strong>2.7.</strong> V jedru in na ribosomih v citoplazmi.<br><strong>2.8.</strong> Nima intronov.<br><strong>2.9.</strong> Faktor se ne veže na DNA, zato se geni ne prepisujejo ali pa se prepisujejo prekomerno.",
+    "razlaga": "<div class=\"rokopis\"><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">2.1.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">DNA (nukleoid) in ribosomi.</span></div><div class=\"rk-kom\">Oboje za točko.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">2.2.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Prinaša aminokisline na ribosom.</span></div><div class=\"rk-kom\">Antikodon.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">2.3.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Ima ribozo in namesto timina uracil.</span></div><div class=\"rk-kom\">Sladkor in baza.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">2.4.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Del DNA, kamor se veže represor.</span></div><div class=\"rk-kom\">Stikalo.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">2.5.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Represorje.</span></div><div class=\"rk-kom\">Regulacijske beljakovine.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">2.6.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Veže se na represor, ki se aktivira in veže na operator.</span></div><div class=\"rk-kom\">Represibilni operon.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">2.7.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">V jedru in na ribosomih v citoplazmi.</span></div><div class=\"rk-kom\">Ločeno.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">2.8.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Nima intronov.</span></div><div class=\"rk-kom\">Krajša.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">2.9.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Faktor se ne veže na DNA, zato se geni ne prepisujejo ali pa se prepisujejo prekomerno.</span></div><div class=\"rk-kom\">Točka za vzrok, točka za posledico.</div></div></div>"
+   },
+   {
+    "id": "3",
+    "poglavje": [
+     "bakterije_glive",
+     "sistematika"
+    ],
+    "tocke": 10,
+    "besedilo": "<p class=\"pola-naslov-naloge\"><strong>Del A · Del A · Glive</strong></p><p>Goban, plesni, kvasovke in lišaji so različne oblike gliv.</p><p class=\"pola-vprasanje\"><strong>3.1.</strong> Kateri del glive omogoča prebavo zunaj telesa? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>3.2.</strong> Katere celice nastajajo v trosnjaku? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>3.3.</strong> Po čem prepoznaš glivno celico? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>3.4.</strong> Kateri značilnosti sta skupni glivam in rastlinam? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>3.5.</strong> Kakšen je odnos med plesnijo <i>Penicillium</i> in bakterijami? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>3.6.</strong> Kateri organizmi gradijo lišaj? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>3.7.</strong> Kaj nastane pri kvašenju testa? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>3.8.</strong> Kakšen odnos ima gliva na koži z ljudmi? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>3.9.</strong> Zakaj gliva bolje uspeva v vlažni koži? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>3.10.</strong> Zakaj slana voda uniči glive? <em>(1 točka)</em></p>",
+    "rezultat": "<strong>3.1.</strong> Podgobje (hife).<br><strong>3.2.</strong> Trosi.<br><strong>3.3.</strong> Celična stena, jedro, ni kloroplastov.<br><strong>3.4.</strong> Celična stena in negibljivost.<br><strong>3.5.</strong> Antibioza: plesen izloča penicilin, ki zavira bakterije.<br><strong>3.6.</strong> Gliva in alga ali cianobakterija.<br><strong>3.7.</strong> CO<sub>2</sub>, ki dvigne testo.<br><strong>3.8.</strong> Zajedavstvo.<br><strong>3.9.</strong> Potrebuje vlago in toploto.<br><strong>3.10.</strong> Hipertonična raztopina jim odvzame vodo.",
+    "razlaga": "<div class=\"rokopis\"><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">3.1.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Podgobje (hife).</span></div><div class=\"rk-kom\">Izloča encime.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">3.2.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Trosi.</span></div><div class=\"rk-kom\">Razmnoževanje.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">3.3.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Celična stena, jedro, ni kloroplastov.</span></div><div class=\"rk-kom\">Heterotrof.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">3.4.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Celična stena in negibljivost.</span></div><div class=\"rk-kom\">Zato so jih uvrščali med rastline.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">3.5.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Antibioza: plesen izloča penicilin, ki zavira bakterije.</span></div><div class=\"rk-kom\">Tekmovanje.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">3.6.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Gliva in alga ali cianobakterija.</span></div><div class=\"rk-kom\">Sožitje.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">3.7.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">CO<sub>2</sub>, ki dvigne testo.</span></div><div class=\"rk-kom\">Alkoholno vrenje.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">3.8.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Zajedavstvo.</span></div><div class=\"rk-kom\">Glivična okužba.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">3.9.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Potrebuje vlago in toploto.</span></div><div class=\"rk-kom\">Pogoji rasti.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">3.10.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Hipertonična raztopina jim odvzame vodo.</span></div><div class=\"rk-kom\">Osmoza.</div></div></div>"
+   },
+   {
+    "id": "4",
+    "poglavje": [
+     "regulacija",
+     "dihala_prebava_izlocala",
+     "kri_imunost"
+    ],
+    "tocke": 10,
+    "besedilo": "<p class=\"pola-naslov-naloge\"><strong>Del A · Del A · ADH in nikotin</strong></p><p>Antidiuretični hormon (ADH) uravnava količino vode v telesu. Nikotin poveča njegovo izločanje.</p><p class=\"pola-vprasanje\"><strong>4.1.</strong> Kje se izloča ADH? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>4.2.</strong> Kje v ledvicah ADH poveča vračanje vode? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>4.3.</strong> Kako nikotin vpliva na količino seča? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>4.4.</strong> Opiši pot nikotina od pljuč do možganov. <em>(2 točki)</em></p><p class=\"pola-vprasanje\"><strong>4.5.</strong> Kako se spreminja tlak v pljučih ob izdihu? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>4.6.</strong> Kje vstopijo v kri aminokisline za ADH? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>4.7.</strong> Kaj nastane pri razgradnji ADH v jetrih? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>4.8.</strong> Zakaj pri nekaterih bolnikih ADH ne deluje, čeprav ga je dovolj? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>4.9.</strong> Zakaj ADH ne jemljemo v tabletah? <em>(1 točka)</em></p>",
+    "rezultat": "<strong>4.1.</strong> V zadnjem režnju hipofize.<br><strong>4.2.</strong> V zbiralcih.<br><strong>4.3.</strong> Seča je manj.<br><strong>4.4.</strong> Pljučne kapilare → pljučne vene → levi preddvor → levi prekat → aorta → karotidna arterija → možgani.<br><strong>4.5.</strong> Se poveča.<br><strong>4.6.</strong> V tankem črevesu.<br><strong>4.7.</strong> Aminokisline, ki jih celice ponovno uporabijo.<br><strong>4.8.</strong> Imajo okvarjene receptorje v ledvicah.<br><strong>4.9.</strong> Je beljakovina, ki bi se v prebavilih razgradila.",
+    "razlaga": "<div class=\"rokopis\"><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">4.1.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">V zadnjem režnju hipofize.</span></div><div class=\"rk-kom\">Nastaja v hipotalamusu.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">4.2.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">V zbiralcih.</span></div><div class=\"rk-kom\">Akvaporini.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">4.3.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Seča je manj.</span></div><div class=\"rk-kom\">Več ADH.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">4.4.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Pljučne kapilare → pljučne vene → levi preddvor → levi prekat → aorta → karotidna arterija → možgani.</span></div><div class=\"rk-kom\">Dve točki za celoto.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">4.5.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Se poveča.</span></div><div class=\"rk-kom\">Prepona se sprosti.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">4.6.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">V tankem črevesu.</span></div><div class=\"rk-kom\">Resice.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">4.7.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Aminokisline, ki jih celice ponovno uporabijo.</span></div><div class=\"rk-kom\">Sinteza beljakovin.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">4.8.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Imajo okvarjene receptorje v ledvicah.</span></div><div class=\"rk-kom\">Receptor.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">4.9.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Je beljakovina, ki bi se v prebavilih razgradila.</span></div><div class=\"rk-kom\">Proteaze.</div></div></div>"
+   },
+   {
+    "id": "5",
+    "poglavje": [
+     "ekosistemi",
+     "populacije"
+    ],
+    "tocke": 10,
+    "besedilo": "<p class=\"pola-naslov-naloge\"><strong>Del A · Del A · Jame</strong></p><p>V jamah ni svetlobe. Prehranjevalna piramida jame se začne z organskimi snovmi s površja.</p><p class=\"pola-vprasanje\"><strong>5.1.</strong> Po čem se jamska piramida razlikuje od površinske? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>5.2.</strong> Kaj je vloga mikroorganizmov v jami? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>5.3.</strong> Zakaj netopirji niso prave jamske živali? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>5.4.</strong> Katerih organov jamske živali pogosto nimajo? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>5.5.</strong> Kje so abiotski dejavniki najstabilnejši? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>5.6.</strong> Kateri organizmi živijo ob vhodu v jamo? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>5.7.</strong> Katera čutila uporabljajo jamske živali? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>5.8.</strong> Kako se spremeni rastje proti notranjosti jame? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>5.9.</strong> Kateri avtotrofi živijo globoko v jamah? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>5.10.</strong> Zakaj so jamske živali zelo ranljive? <em>(1 točka)</em></p>",
+    "rezultat": "<strong>5.1.</strong> Na dnu ni proizvajalcev, ampak organske snovi s površja.<br><strong>5.2.</strong> Razkrajajo organske snovi in so hrana drugim.<br><strong>5.3.</strong> Hranijo se zunaj jame.<br><strong>5.4.</strong> Oči in pigmenta.<br><strong>5.5.</strong> Globoko v jami.<br><strong>5.6.</strong> Organizmi, ki živijo tudi na površju.<br><strong>5.7.</strong> Tip, vonj in zaznavanje tresljajev.<br><strong>5.8.</strong> Cvetnice zamenjajo mahovi in alge.<br><strong>5.9.</strong> Kemoavtotrofne bakterije.<br><strong>5.10.</strong> So endemične, majhne populacije, počasi se razmnožujejo.",
+    "razlaga": "<div class=\"rokopis\"><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">5.1.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Na dnu ni proizvajalcev, ampak organske snovi s površja.</span></div><div class=\"rk-kom\">Ni fotosinteze.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">5.2.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Razkrajajo organske snovi in so hrana drugim.</span></div><div class=\"rk-kom\">Biofilm.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">5.3.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Hranijo se zunaj jame.</span></div><div class=\"rk-kom\">Jamo uporabljajo le za počitek.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">5.4.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Oči in pigmenta.</span></div><div class=\"rk-kom\">Redukcija.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">5.5.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Globoko v jami.</span></div><div class=\"rk-kom\">Ni vpliva površja.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">5.6.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Organizmi, ki živijo tudi na površju.</span></div><div class=\"rk-kom\">Prehodno območje.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">5.7.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Tip, vonj in zaznavanje tresljajev.</span></div><div class=\"rk-kom\">Ni vida.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">5.8.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Cvetnice zamenjajo mahovi in alge.</span></div><div class=\"rk-kom\">Manj svetlobe.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">5.9.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Kemoavtotrofne bakterije.</span></div><div class=\"rk-kom\">Kemosinteza.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">5.10.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">So endemične, majhne populacije, počasi se razmnožujejo.</span></div><div class=\"rk-kom\">Onesnaženje vode.</div></div></div>"
+   },
+   {
+    "id": "6",
+    "poglavje": [
+     "raziskovanje",
+     "dihanje_fotosinteza"
+    ],
+    "tocke": 10,
+    "besedilo": "<p class=\"pola-naslov-naloge\"><strong>Del B · Del B · Alkoholno vrenje v jabolčnem soku</strong></p><p>Dijaki so v erlenmajerice z jabolčnim sokom dodali različne količine kvasovk in na vrat napeli balone.</p><p class=\"pola-vprasanje\"><strong>6.1.</strong> Opiši en kontrolni poskus. <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>6.2.</strong> Zakaj so namestili balone? Navedi dva razloga. <em>(2 točki)</em></p><p class=\"pola-vprasanje\"><strong>6.3.</strong> Kakšen graf prikaže spreminjanje obsega balonov s časom? <em>(2 točki)</em></p><p class=\"pola-vprasanje\"><strong>6.4.</strong> Kako veš, kdaj se je vrenje ustavilo? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>6.5.</strong> Ali več kvasovk pomeni hitrejše vrenje? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>6.6.</strong> Zakaj več soka pomeni več CO<sub>2</sub>? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>6.7.</strong> Pri katerem procesu poleg vrenja nastaja CO<sub>2</sub>? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>6.8.</strong> Kako dokažeš CO<sub>2</sub>? <em>(1 točka)</em></p>",
+    "rezultat": "<strong>6.1.</strong> Sok brez kvasovk.<br><strong>6.2.</strong> Da zbirajo CO<sub>2</sub> in preprečijo vstop kisika.<br><strong>6.3.</strong> Črtni graf, čas na x osi, obseg na y osi.<br><strong>6.4.</strong> Ko se obseg balona ne povečuje več.<br><strong>6.5.</strong> Da, če se balon hitreje napihne.<br><strong>6.6.</strong> Ker je več sladkorja.<br><strong>6.7.</strong> Pri aerobnem dihanju.<br><strong>6.8.</strong> Z apnico, ki se pooblači.",
+    "razlaga": "<div class=\"rokopis\"><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">6.1.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Sok brez kvasovk.</span></div><div class=\"rk-kom\">Brez organizma.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">6.2.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Da zbirajo CO<sub>2</sub> in preprečijo vstop kisika.</span></div><div class=\"rk-kom\">Točka za vsakega.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">6.3.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Črtni graf, čas na x osi, obseg na y osi.</span></div><div class=\"rk-kom\">Točka za osi, točka za krivulje.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">6.4.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Ko se obseg balona ne povečuje več.</span></div><div class=\"rk-kom\">Ni več CO<sub>2</sub>.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">6.5.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Da, če se balon hitreje napihne.</span></div><div class=\"rk-kom\">Utemeljitev z rezultati.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">6.6.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Ker je več sladkorja.</span></div><div class=\"rk-kom\">Substrat.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">6.7.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Pri aerobnem dihanju.</span></div><div class=\"rk-kom\">Krebsov cikel.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">6.8.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Z apnico, ki se pooblači.</span></div><div class=\"rk-kom\">Kalcijev karbonat.</div></div></div>"
+   },
+   {
+    "id": "7",
+    "poglavje": [
+     "raziskovanje",
+     "bakterije_glive",
+     "kri_imunost"
+    ],
+    "tocke": 10,
+    "besedilo": "<p class=\"pola-naslov-naloge\"><strong>Del B · Del B · Antibiogram</strong></p><p>Mikrobiologi so testirali pet antibiotikov na isti bakterijski sev in merili premer inhibicijskih con.</p><p class=\"pola-vprasanje\"><strong>7.1.</strong> Bakterije rastejo le na dnu epruvete. V kakšnem okolju živijo? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>7.2.</strong> Kateri antibiotik je najučinkovitejši? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>7.3.</strong> Kakšen diagram prikaže premere con? <em>(2 točki)</em></p><p class=\"pola-vprasanje\"><strong>7.4.</strong> Kako bi pripravil kontrolni poskus? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>7.5.</strong> Kaj je odvisna spremenljivka? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>7.6.</strong> Kaj je neodvisna spremenljivka? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>7.7.</strong> Na novem antibiotiku so zrasle posamezne kolonije znotraj cone. Kaj to pomeni? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>7.8.</strong> Zakaj kombinacije antibiotikov zmanjšajo odpornost? <em>(1 točka)</em></p><p class=\"pola-vprasanje\"><strong>7.9.</strong> Zakaj antibiotiki ne delujejo na viruse? <em>(1 točka)</em></p>",
+    "rezultat": "<strong>7.1.</strong> V anaerobnem.<br><strong>7.2.</strong> Tisti z največjo inhibicijsko cono.<br><strong>7.3.</strong> Stolpčni diagram.<br><strong>7.4.</strong> Disk brez antibiotika (namočen v vodi).<br><strong>7.5.</strong> Premer inhibicijske cone.<br><strong>7.6.</strong> Vrsta antibiotika.<br><strong>7.7.</strong> Nekatere bakterije so odporne.<br><strong>7.8.</strong> Malo verjetno je, da bi bila bakterija odporna na vse hkrati.<br><strong>7.9.</strong> Virusi nimajo celične zgradbe in lastne presnove.",
+    "razlaga": "<div class=\"rokopis\"><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">7.1.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">V anaerobnem.</span></div><div class=\"rk-kom\">Kisik jim škodi.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">7.2.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Tisti z največjo inhibicijsko cono.</span></div><div class=\"rk-kom\">Premer.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">7.3.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Stolpčni diagram.</span></div><div class=\"rk-kom\">Točka za osi, točka za stolpce.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">7.4.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Disk brez antibiotika (namočen v vodi).</span></div><div class=\"rk-kom\">Primerjava.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">7.5.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Premer inhibicijske cone.</span></div><div class=\"rk-kom\">Merimo.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">7.6.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Vrsta antibiotika.</span></div><div class=\"rk-kom\">Spreminjamo.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">7.7.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Nekatere bakterije so odporne.</span></div><div class=\"rk-kom\">Mutacija.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">7.8.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Malo verjetno je, da bi bila bakterija odporna na vse hkrati.</span></div><div class=\"rk-kom\">Dve mutaciji.</div></div><div class=\"rk-korak rk-naslov\"><div class=\"rk-v\">7.9.</div></div><div class=\"rk-korak\"><div class=\"rk-v\"><span class=\"rk-odg\">Virusi nimajo celične zgradbe in lastne presnove.</span></div><div class=\"rk-kom\">Ni tarče.</div></div></div>"
+   }
+  ]
  }
 ]
