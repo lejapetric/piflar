@@ -34,6 +34,12 @@ const SKLOPI_PREDMETA = {
     2: "Anorganska kemija",
     3: "Organska kemija",
   },
+  biologija: {
+    1: "Celica in molekule življenja",
+    2: "Genetika in evolucija",
+    3: "Zgradba in delovanje organizmov",
+    4: "Ekologija in raziskovanje",
+  },
   informatika: {
     1: "Osnove informatike",
     2: "Informacijska tehnologija",
@@ -46,9 +52,9 @@ const SKLOPI_PREDMETA = {
   },
 };
 const SKLOPI = SKLOPI_PREDMETA[predmet] ?? {};
-// Fizika, kemija, informatika in slovenščina imajo eno samo raven ("enotna"): izbire ravni in oznake ravni takrat ne prikažemo
+// Fizika, kemija, biologija, informatika in slovenščina imajo eno samo raven ("enotna"): izbire ravni in oznake ravni takrat ne prikažemo
 const RAVNI = { osnovna: "Osnovna raven", visja: "Višja raven", enotna: "Splošna matura" };
-const ENA_RAVEN = ["fizika", "kemija", "informatika", "slovenscina"].includes(predmet);
+const ENA_RAVEN = ["fizika", "kemija", "biologija", "informatika", "slovenscina"].includes(predmet);
 const imeRavni = (raven) => (raven === "enotna" ? "" : RAVNI[raven]?.toLowerCase() ?? raven);
 const ROKI = { predmaturitetni: "Predmaturitetni preizkus", spomladanski: "Spomladanski rok", jesenski: "Jesenski rok" };
 
