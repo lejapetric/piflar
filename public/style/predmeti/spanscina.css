@@ -22,8 +22,6 @@ html[data-predmet="spanscina"] {
     --bg-card: #FFFFFF;
     --surface-2: #F1F4F9;
     --border-color: #D9E1EC;
-    --vzorec: radial-gradient(circle at 50% 50%, transparent 9px, rgba(28, 86, 163, 0.07) 9px 10.5px, transparent 10.5px), radial-gradient(circle at 0 0, rgba(28, 86, 163, 0.06) 5px, transparent 5.5px);
-    --vzorec-velikost: 36px 36px;
     --motiv: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' fill='none' stroke='black' stroke-width='4.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='100' cy='100' r='34'/%3E%3Ccircle cx='100' cy='100' r='20' stroke-width='3'/%3E%3Cpath d='M100 16v28M100 156v28M16 100h28M156 100h28M41 41l20 20M139 139l20 20M41 159l20-20M139 61l20-20'/%3E%3Cpath d='M70 26l8 20M130 26l-8 20M26 70l20 8M26 130l20-8M174 70l-20 8M174 130l-20-8M70 174l8-20M130 174l-8-20' stroke-width='3'/%3E%3C/svg%3E");
     --motiv-barva: rgba(217, 154, 6, 0.4);
     --trak: #D99A06;
@@ -61,7 +59,6 @@ html[data-predmet="spanscina"][data-theme="dark"] {
     --bg-card: #162033;
     --surface-2: #131C2D;
     --border-color: #26334B;
-    --vzorec: radial-gradient(circle at 50% 50%, transparent 9px, rgba(132, 174, 234, 0.07) 9px 10.5px, transparent 10.5px), radial-gradient(circle at 0 0, rgba(132, 174, 234, 0.05) 5px, transparent 5.5px);
     --motiv-barva: rgba(242, 190, 69, 0.36);
     --trak: #F2BE45;
     --g-bg: #131C2D;

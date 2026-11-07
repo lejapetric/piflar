@@ -23,9 +23,6 @@ html[data-predmet="geografija"] {
     --surface-2: #F5F2E9;
     --border-color: #E0DACB;
     --papir: #F3F0E6;
-    --okras: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 400' fill='none' stroke='black' stroke-width='1.4'%3E%3Cpath d='M200 120c60-10 110 30 100 80s-70 70-120 55-70-60-50-95 40-35 70-40z'/%3E%3Cpath d='M200 90c80-14 140 36 128 104s-92 96-158 74-92-80-64-128 54-44 94-50z'/%3E%3Cpath d='M198 60c96-18 170 44 156 128s-110 118-190 92-110-98-76-156 64-54 110-64z'/%3E%3Cpath d='M205 155c30-4 52 14 46 36s-34 32-58 24-30-28-20-44 18-14 32-16z'/%3E%3Cpath d='M20 380c40-30 90-20 120 5M260 30c30 20 80 25 120 0M0 30c30 10 60 40 50 80'/%3E%3C/svg%3E");
-    --okras-barva: rgba(185, 119, 43, 0.14);
-    --okras-velikost: 420px;
     --motiv: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' fill='none' stroke='black' stroke-width='4' stroke-linejoin='round'%3E%3Ccircle cx='100' cy='100' r='78'/%3E%3Ccircle cx='100' cy='100' r='66' stroke-width='2'/%3E%3Cpath d='M100 12l14 74 74 14-74 14-14 74-14-74-74-14 74-14z'/%3E%3Cpath d='M100 12l-14 74 14 14zM188 100l-74-14-14 14zM100 188l14-74-14-14zM12 100l74 14 14-14z' fill='black'/%3E%3Cpath d='M100 46l8 46 46 8-46 8-8 46-8-46-46-8 46-8z' transform='rotate(45 100 100)' stroke-width='2.5'/%3E%3C/svg%3E");
     --motiv-barva: rgba(31, 106, 138, 0.28);
     --trak: #1F6A8A;
@@ -63,7 +60,6 @@ html[data-predmet="geografija"][data-theme="dark"] {
     --surface-2: #131D20;
     --border-color: #253539;
     --papir: #10181A;
-    --okras-barva: rgba(227, 166, 91, 0.07);
     --motiv-barva: rgba(107, 195, 230, 0.3);
     --trak: #6BC3E6;
     --g-bg: #141E21;

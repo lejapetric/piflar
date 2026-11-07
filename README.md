@@ -43,7 +43,8 @@ public/
     style.css              globalni stil
     snov.css               skupni stil vseh strani z razlago snovi
     predmeti/              videz po predmetih: osnova.css + <predmet>.css (barve, pisave,
-                           vzorec ozadja in motiv za svetli in temni način); naslovnica
+                           motiv za svetli in temni način; ozadje enobarvno, karirasto
+                           le pri matematiki in fiziki); naslovnica
                            in ostale splošne strani ostanejo v osnovnem slogu
   views/<predmet>/snov/<poglavje>/<poglavje>_razlaga.html
 ```

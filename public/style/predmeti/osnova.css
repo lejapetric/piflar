@@ -7,15 +7,14 @@
    Vsak <predmet>.css nastavi le spremenljivke spodaj (za svetli in
    temni način) in po potrebi nekaj posebnosti:
      --papir            barva ozadja strani
-     --vzorec           ozadje strani (mreža, črte …), lahko none
-     --vzorec-velikost  velikost ponavljanja vzorca
-     --okras            SVG (url) za razpršen okras čez ozadje, lahko none
-     --okras-barva      barva okrasa (okras je maska)
-     --okras-velikost   velikost ponavljanja okrasa
+     --vzorec           mreža na ozadju strani; upošteva se samo pri
+                        matematiki in fiziki (karirast zvezek), drugje
+                        je ozadje enobarvno
+     --vzorec-velikost  velikost ponavljanja mreže
      --motiv            SVG (url) za motiv v glavi strani
      --motiv-barva      barva motiva
-     --list             ozadje kartic (razlaga, naloge, uvod)
-     --list-vzorec      dodatek na karticah (npr. robna črta), lahko none
+     --list             ozadje kartic (razlaga, naloge, uvod); vedno
+                        enobarvno, da se besedilo dobro bere
      --list-zamik       levi odmik besedila na karticah (zaradi robne črte)
      --trak             barvni trak na vrhu glave
      --font-oznake      pisava za majhne oznake (nadnaslovi, številke)
@@ -27,13 +26,9 @@ html[data-predmet] {
     --papir: var(--bg-primary);
     --vzorec: none;
     --vzorec-velikost: auto;
-    --okras: none;
-    --okras-barva: transparent;
-    --okras-velikost: 240px;
     --motiv: none;
     --motiv-barva: var(--primary);
     --list: var(--bg-card);
-    --list-vzorec: none;
     --list-zamik: var(--space-6);
     --trak: var(--primary);
     --font-oznake: var(--font-body);
@@ -76,24 +71,52 @@ html[data-predmet][data-theme="dark"] {
     --vr-border: rgba(245, 158, 11, 0.35);
 }
 
-/* ---------- Ozadje strani ---------- */
+/* ---------- Ozadje strani: enobarvno ---------- */
 html[data-predmet] body {
     font-family: var(--font-body);
-    background-color: var(--papir);
+    background: var(--papir);
+}
+
+/* Matematika in fizika: karirast zvezek. Mreža je le na ozadju strani,
+   besedilo, ki leži neposredno na njem, dobi enobarvno podlago. */
+html[data-predmet="matematika"] body,
+html[data-predmet="fizika"] body {
     background-image: var(--vzorec);
     background-size: var(--vzorec-velikost);
     background-attachment: fixed;
 }
 
-html[data-predmet] body::after {
-    content: "";
-    position: fixed;
-    inset: 0;
-    z-index: -1;
-    pointer-events: none;
-    background-color: var(--okras-barva);
-    -webkit-mask: var(--okras) repeat 0 0 / var(--okras-velikost);
-    mask: var(--okras) repeat 0 0 / var(--okras-velikost);
+html[data-predmet="matematika"] .page-header,
+html[data-predmet="fizika"] .page-header,
+html[data-predmet="matematika"] .subsection-head,
+html[data-predmet="fizika"] .subsection-head,
+html[data-predmet="matematika"] .sklop-header,
+html[data-predmet="fizika"] .sklop-header,
+html[data-predmet="matematika"] .view > p,
+html[data-predmet="fizika"] .view > p,
+html[data-predmet="matematika"] .subsection > p,
+html[data-predmet="fizika"] .subsection > p {
+    background-color: var(--papir);
+    border-radius: var(--radius-sm);
+}
+
+html[data-predmet="matematika"] .page-header,
+html[data-predmet="fizika"] .page-header {
+    padding: var(--space-5) 220px var(--space-5) var(--space-5);
+}
+
+html[data-predmet="matematika"] .subsection-head,
+html[data-predmet="fizika"] .subsection-head,
+html[data-predmet="matematika"] .sklop-header,
+html[data-predmet="fizika"] .sklop-header {
+    padding: var(--space-3) var(--space-4);
+}
+
+html[data-predmet="matematika"] .view > p,
+html[data-predmet="fizika"] .view > p,
+html[data-predmet="matematika"] .subsection > p,
+html[data-predmet="fizika"] .subsection > p {
+    padding: var(--space-2) var(--space-4);
 }
 
 /* ---------- Glava: barvni trak predmeta ---------- */
@@ -150,7 +173,7 @@ html[data-predmet] .sklop-naloge,
 html[data-predmet] .intro-card,
 html[data-predmet] .matura-formule {
     background-color: var(--list);
-    background-image: var(--list-vzorec);
+    background-image: none;
     padding-left: var(--list-zamik);
 }
 
@@ -221,6 +244,8 @@ html[data-predmet] .slika .s-kot-4 { fill: color-mix(in srgb, var(--g2) 13%, tra
 /* ---------- Ožji zasloni ---------- */
 @media (max-width: 760px) {
     html[data-predmet] .page-header { padding-right: 0; }
+    html[data-predmet="matematika"] .page-header,
+    html[data-predmet="fizika"] .page-header { padding-right: var(--space-4); }
     html[data-predmet] .page-header::after {
         width: 96px;
         height: 96px;

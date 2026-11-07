@@ -21,8 +21,6 @@ html[data-predmet="francoscina"] {
     --bg-card: #FFFCF6;
     --surface-2: #F4EFE5;
     --border-color: #E4DCCB;
-    --vzorec: repeating-linear-gradient(90deg, rgba(36, 65, 143, 0.012) 0 28px, transparent 28px 56px);
-    --vzorec-velikost: auto;
     --motiv: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' fill='none' stroke='black' stroke-width='4.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M100 14v18M92 32h16l-2 30h-12z'/%3E%3Cpath d='M94 62c-4 40-16 70-38 98M106 62c4 40 16 70 38 98'/%3E%3Cpath d='M84 96h32M70 128h60'/%3E%3Cpath d='M44 186c6-24 20-38 56-40 36 2 50 16 56 40'/%3E%3Cpath d='M74 186c2-14 12-22 26-22s24 8 26 22'/%3E%3Cpath d='M30 186h140'/%3E%3C/svg%3E");
     --motiv-barva: rgba(36, 65, 143, 0.24);
     --trak: #C33B3F;
@@ -59,7 +57,6 @@ html[data-predmet="francoscina"][data-theme="dark"] {
     --bg-card: #1A2035;
     --surface-2: #161B2F;
     --border-color: #2B3350;
-    --vzorec: repeating-linear-gradient(90deg, rgba(157, 178, 236, 0.012) 0 28px, transparent 28px 56px);
     --motiv-barva: rgba(232, 196, 120, 0.32);
     --trak: #E8C478;
     --g-bg: #161B2F;

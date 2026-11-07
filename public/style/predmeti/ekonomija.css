@@ -20,9 +20,6 @@ html[data-predmet="ekonomija"] {
     --bg-card: #FCFDFB;
     --surface-2: #EEF3EC;
     --border-color: #D3DFD3;
-    --vzorec: linear-gradient(90deg, rgba(22, 112, 74, 0.07) 1px, transparent 1px), linear-gradient(rgba(22, 112, 74, 0.05) 1px, transparent 1px);
-    --vzorec-velikost: 120px 28px;
-    --list-vzorec: linear-gradient(90deg, transparent calc(100% - 92px), rgba(184, 50, 42, 0.18) calc(100% - 92px), rgba(184, 50, 42, 0.18) calc(100% - 91px), transparent calc(100% - 91px));
     --motiv: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' fill='none' stroke='black' stroke-width='4.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M24 180h156M24 180V24'/%3E%3Crect x='40' y='130' width='22' height='50'/%3E%3Crect x='76' y='104' width='22' height='76'/%3E%3Crect x='112' y='80' width='22' height='100'/%3E%3Crect x='148' y='50' width='22' height='130'/%3E%3Cpath d='M36 112l38-30 34 18 60-62' stroke-width='3.5'/%3E%3Cpath d='M148 36h22v22' stroke-width='3.5'/%3E%3C/svg%3E");
     --motiv-barva: rgba(22, 112, 74, 0.26);
     --trak: #16704A;
@@ -59,8 +56,6 @@ html[data-predmet="ekonomija"][data-theme="dark"] {
     --bg-card: #131F18;
     --surface-2: #101A14;
     --border-color: #223529;
-    --vzorec: linear-gradient(90deg, rgba(82, 209, 147, 0.05) 1px, transparent 1px), linear-gradient(rgba(82, 209, 147, 0.035) 1px, transparent 1px);
-    --list-vzorec: linear-gradient(90deg, transparent calc(100% - 92px), rgba(242, 120, 110, 0.18) calc(100% - 92px), rgba(242, 120, 110, 0.18) calc(100% - 91px), transparent calc(100% - 91px));
     --motiv-barva: rgba(82, 209, 147, 0.3);
     --trak: #52D193;
     --g-bg: #101A14;
