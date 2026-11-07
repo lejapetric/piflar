@@ -271,7 +271,8 @@ def diagram(vozlisca, povezave, sirina=520, visina=300, oznaka="Shema", okvir=Tr
         ax, ay, bx, by = rob(a, b)
         d.append(f'<line class="s-crta" style="stroke-width:1.2" x1="{ax:.1f}" y1="{ay:.1f}" x2="{bx:.1f}" y2="{by:.1f}" marker-end="url(#{mi})"/>')
         if len(p) > 2:
-            d.append(_besedilo((ax + bx) / 2 + 4, (ay + by) / 2 - 3, p[2], "s-txt-muted", "start", 10))
+            vod = abs(by - ay) < 4
+            d.append(_besedilo((ax + bx) / 2 + (0 if vod else 5), (ay + by) / 2 - (5 if vod else -3), p[2], "s-txt-muted", "middle" if vod else "start", 10))
     for k, v in vozlisca.items():
         x, y, s = v[:3]
         razred = v[3] if len(v) > 3 else "s-lik"

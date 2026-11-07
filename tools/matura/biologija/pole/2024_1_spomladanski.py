@@ -19,7 +19,7 @@ POLA1 = [
     M("encimi_presnova", "Shema prikazuje presnovno pot. Končni produkt presnovne poti se veže na prvi encim poti in ga zavre. Kako imenujemo ta pojav?",
       ["Denaturacija.", "Povratna (negativna) inhibicija.", "Kompetitivna aktivacija.", "Hidroliza."], "B",
       "Ko je produkta dovolj, se njegovo nastajanje ustavi; to varčuje s snovmi in energijo.",
-      slika=fig(diagram({"a": (50, 40, "snov A"), "b": (170, 40, "snov B"), "c": (290, 40, "snov C"), "d": (410, 40, "končni\nprodukt D", "s-pou3")}, [("a", "b", "encim 1"), ("b", "c", "encim 2"), ("c", "d", "encim 3")], sirina=470, visina=80, oznaka="Presnovna pot") .replace("</svg>", '<path class="s-k2" d="M410,62 C410,100 60,100 60,64" style="stroke-dasharray:5 4"/><text class="s-txt-k2" x="235" y="98" text-anchor="middle" style="font-size:11px">zavira encim 1</text></svg>').replace('viewBox="0 0 470 80"', 'viewBox="0 0 470 110"'))),
+      slika=fig(diagram({"a": (50, 40, "snov A"), "b": (170, 40, "snov B"), "c": (290, 40, "snov C"), "d": (410, 40, "končni\nprodukt D", "s-pou3")}, [("a", "b", "encim 1"), ("b", "c", "encim 2"), ("c", "d", "encim 3")], sirina=470, visina=80, oznaka="Presnovna pot") .replace("</svg>", '<path class="s-k2" d="M425,62 C425,100 45,100 45,58" style="stroke-dasharray:5 4"/><text class="s-txt-k2" x="235" y="106" text-anchor="middle" style="font-size:11px">zavira encim 1</text></svg>').replace('viewBox="0 0 470 80"', 'viewBox="0 0 470 110"'))),
     M("dihanje_fotosinteza", "Kje v jetrni celici nastaja ATP?",
       ["Samo v jedru.", "V citosolu in mitohondrijih.", "Samo v ribosomih.", "V Golgijevem aparatu."], "B",
       "Glikoliza poteka v citosolu, Krebsov cikel in dihalna veriga v mitohondrijih."),
