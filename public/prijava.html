@@ -187,7 +187,13 @@
         }).catch(() => null);
         gumb.disabled = false;
         if (res?.ok && registracija) {
+          const telo = await res.json().catch(() => null);
           pokaziPoslano(podatki.email.trim());
+          if (telo?.poslano === false) {
+            const el = document.getElementById("poslanoSporocilo");
+            el.classList.remove("uspeh");
+            el.textContent = "Račun je ustvarjen, a e-pošte trenutno ni bilo mogoče poslati. Poskusi Pošlji znova čez nekaj minut.";
+          }
           return;
         }
         if (res?.ok) {
