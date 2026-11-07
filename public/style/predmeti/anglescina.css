@@ -1,0 +1,97 @@
+/* Angleščina — LETALSKA POŠTA
+   Kremast pisemski papir, mornarsko modra in pisemsko rdeča, rob letalske pošte
+   (rdeče-modre poševne proge) pod naslovi, poštni žig in ura stolpa v glavi.
+   Temni način: nočni London, temno modra z rdečimi poudarki. Libre Baskerville + Source Sans 3. */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Source+Sans+3:wght@400;500;600;700&display=swap');
+
+html[data-predmet="anglescina"] {
+    --font-display: 'Libre Baskerville', Georgia, serif;
+    --font-body: 'Source Sans 3', 'Inter', sans-serif;
+    --font-oznake: 'Source Sans 3', sans-serif;
+    --primary: #1F3A68;
+    --primary-dark: #142849;
+    --primary-light: #8EA3C8;
+    --primary-soft: #E5EAF3;
+    --rdeca: #B3261E;
+    --text-primary: #1B2233;
+    --text-secondary: #4A5468;
+    --text-muted: #8790A3;
+    --bg-primary: #F6F3EC;
+    --bg-card: #FFFDF8;
+    --surface-2: #F3EFE6;
+    --border-color: #E2DCCD;
+    --vzorec: radial-gradient(circle at 1px 1px, rgba(31, 58, 104, 0.08) 1px, transparent 1.5px);
+    --vzorec-velikost: 22px 22px;
+    --motiv: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' fill='none' stroke='black' stroke-width='4.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M82 186V70l18-30 18 30v116'/%3E%3Cpath d='M74 186h52M82 70h36M90 40h20M100 40V18'/%3E%3Ccircle cx='100' cy='92' r='13'/%3E%3Cpath d='M100 84v8l6 4'/%3E%3Cpath d='M82 120h36M82 150h36M92 120v66M108 120v66'/%3E%3Ccircle cx='160' cy='54' r='26' stroke-width='3'/%3E%3Ccircle cx='160' cy='54' r='19' stroke-width='2'/%3E%3Cpath d='M126 44c10 6 20-6 30 0s20-6 30 0M126 64c10 6 20-6 30 0s20-6 30 0' stroke-width='3'/%3E%3C/svg%3E");
+    --motiv-barva: rgba(31, 58, 104, 0.26);
+    --trak: #B3261E;
+    --g-bg: #FFFDF8;
+    --g-grid: #EEE9DD;
+    --g1: #1F3A68;
+    --g2: #B3261E;
+    --g3: #2E7D4F;
+    --g4: #B7791F;
+    --radius-sm: 3px;
+    --radius: 5px;
+    --papir: #F6F3EC;
+    --list: #FFFDF8;
+    --sb-bg: #FFFDF8;
+    --sb-border: #E2DCCD;
+    --sb-text: #1B2233;
+    --sb-text-muted: #4A5468;
+    --sb-hover-bg: #F3EFE6;
+    --sb-active-bg: #E5EAF3;
+    --sb-accent: #1F3A68;
+    --sb-accent-dark: #142849;
+}
+
+html[data-predmet="anglescina"][data-theme="dark"] {
+    --primary: #93B0E6;
+    --primary-dark: #C3D3F2;
+    --primary-light: #4A6CA8;
+    --primary-soft: rgba(147, 176, 230, 0.13);
+    --rdeca: #F07A72;
+    --text-primary: #E4E8F1;
+    --text-secondary: #AAB2C4;
+    --text-muted: #6F788C;
+    --bg-primary: #121826;
+    --bg-card: #192132;
+    --surface-2: #161D2C;
+    --border-color: #2A3448;
+    --vzorec: radial-gradient(circle at 1px 1px, rgba(147, 176, 230, 0.08) 1px, transparent 1.5px);
+    --motiv-barva: rgba(147, 176, 230, 0.3);
+    --trak: #F07A72;
+    --g-bg: #161D2C;
+    --g-grid: #273046;
+    --g-axis: #AAB2C4;
+    --g-line: #E4E8F1;
+    --g1: #93B0E6;
+    --g2: #F07A72;
+    --g3: #7FCB9B;
+    --g4: #E8B562;
+    --papir: #121826;
+    --list: #192132;
+    --sb-bg: #192132;
+    --sb-border: #2A3448;
+    --sb-text: #E4E8F1;
+    --sb-text-muted: #AAB2C4;
+    --sb-hover-bg: #161D2C;
+    --sb-active-bg: rgba(147, 176, 230, 0.13);
+    --sb-accent: #93B0E6;
+    --sb-accent-dark: #C3D3F2;
+}
+
+html[data-predmet="anglescina"] .page-eyebrow { background: none; padding: 0 0 8px; border-radius: 0; color: var(--rdeca); letter-spacing: 0.16em; border-bottom: 4px solid transparent; border-image: repeating-linear-gradient(-45deg, var(--rdeca) 0 8px, transparent 8px 13px, var(--primary) 13px 21px, transparent 21px 26px) 4; }
+html[data-predmet="anglescina"] .page-header h1 { font-weight: 700; letter-spacing: -0.01em; }
+html[data-predmet="anglescina"] .page-meta-item strong { font-family: var(--font-display); color: var(--primary); }
+html[data-predmet="anglescina"] .sklop-num { color: var(--rdeca); letter-spacing: 0.12em; }
+html[data-predmet="anglescina"] .sklop-header h2, html[data-predmet="anglescina"] .subsection-head h2 { font-weight: 700; letter-spacing: -0.01em; }
+html[data-predmet="anglescina"] .sklop-header { border-bottom: 4px solid transparent; border-image: repeating-linear-gradient(-45deg, var(--rdeca) 0 8px, transparent 8px 13px, var(--primary) 13px 21px, transparent 21px 26px) 4; }
+html[data-predmet="anglescina"] .sklop-teorija, html[data-predmet="anglescina"] .sklop-naloge, html[data-predmet="anglescina"] .intro-card, html[data-predmet="anglescina"] .matura-formule { box-shadow: 0 1px 0 var(--border-color), 0 10px 24px -18px rgba(20, 30, 60, 0.35); }
+html[data-predmet="anglescina"] .tip-naloga { border-left-color: var(--rdeca); }
+html[data-predmet="anglescina"] .tip-naloga-oznaka, html[data-predmet="anglescina"] .tip-naloge h5 { color: var(--rdeca); letter-spacing: 0.1em; }
+html[data-predmet="anglescina"] .tip-naloge ol.postopek > li::before { background: var(--primary); color: #fff; border-radius: 2px; }
+html[data-predmet="anglescina"][data-theme="dark"] .tip-naloge ol.postopek > li::before { color: #121826; }
+html[data-predmet="anglescina"] .kazalo .kazalo-st { color: var(--rdeca); font-family: var(--font-display); }
+html[data-predmet="anglescina"] .tabela em, html[data-predmet="anglescina"] .primer em, html[data-predmet="anglescina"] .tip-naloga em { color: var(--primary); font-style: italic; }
+html[data-predmet="anglescina"][data-theme="dark"] .menu-btn { color: #121826; }
