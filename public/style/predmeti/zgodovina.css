@@ -1,6 +1,6 @@
 /* Zgodovina — PERGAMENT
    Rjavo-rumen papir s tonom starega lista, sepija in zlato, serifne pisave,
-   rimske kapitele za oznake, steber v glavi strani.
+   rimske kapitele za oznake, peščena ura v glavi strani.
    Temni način: temno usnje z zlatimi poudarki. EB Garamond + Crimson Pro + Cinzel. */
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500;600;700&family=Crimson+Pro:wght@400;500;600&family=Cinzel:wght@600;700&display=swap');
 
@@ -24,7 +24,7 @@ html[data-predmet="zgodovina"] {
     --papir: #EFE3C8;
     --vzorec: radial-gradient(ellipse at 15% 10%, rgba(255, 250, 235, 0.7), transparent 55%), radial-gradient(ellipse at 85% 90%, rgba(150, 110, 50, 0.12), transparent 60%);
     --vzorec-velikost: 100% 100%;
-    --motiv: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' fill='none' stroke='black' stroke-width='4.5' stroke-linejoin='round'%3E%3Cpath d='M50 30h100l-8 14H58z'/%3E%3Cpath d='M60 44c-10 0-14 10-6 14M140 44c10 0 14 10 6 14'/%3E%3Cpath d='M62 58h76v6H62z'/%3E%3Cpath d='M68 64v104M84 64v104M100 64v104M116 64v104M132 64v104'/%3E%3Cpath d='M58 168h84v10H58zM48 178h104v12H48z'/%3E%3C/svg%3E");
+    --motiv: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' fill='none' stroke='black' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'%3E %3Cpath d='M50 22h100M50 178h100'/%3E%3Cpath d='M58 22v8c0 30 32 46 32 70s-32 40-32 70v8M142 22v8c0 30-32 46-32 70s32 40 32 70v8'/%3E %3Cpath d='M74 60h52c-6 16-26 24-26 40-0-16-20-24-26-40z' fill='black' stroke-width='2'/%3E%3Cpath d='M100 104v40' stroke-width='2.5' stroke-dasharray='3 6'/%3E%3Cpath d='M70 170c6-14 18-22 30-22s24 8 30 22z' fill='black' stroke-width='2'/%3E %3Cpath d='M40 22v156M160 22v156' stroke-width='3'/%3E%3C/svg%3E");
     --motiv-barva: rgba(138, 90, 33, 0.28);
     --trak: #8A5A21;
     --g-bg: #FCF7EA;

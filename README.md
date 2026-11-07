@@ -1,6 +1,6 @@
 # Piflar.si
 
-Spletna stran z razlagami snovi za pripravo na maturo iz matematike, fizike, kemije, biologije, informatike, geografije, zgodovine in slovenščine.
+Spletna stran z razlagami snovi za pripravo na maturo iz predmetov splošne gimnazije: matematika, fizika, kemija, biologija, informatika, geografija, zgodovina, slovenščina, angleščina, nemščina, francoščina, italijanščina, španščina, psihologija, sociologija, filozofija, ekonomija, glasba in umetnostna zgodovina.
 
 ## Zagon
 
@@ -70,6 +70,15 @@ Nova stran se sama pojavi v iskalniku: strežnik prebere vse neprazne strani v `
 (besedilo znotraj `.view`, brez formul, SVG in kazala). Zadetek vodi na najbližji element z `id`
 (`sklop-N`, `tip-N`), zato naj imajo sklopi in tipi nalog `id`. Poglavje se prebere iz `page-eyebrow`
 in `<h1>`. V razvoju se indeks osveži vsakih 5 s, v produkciji ob zagonu.
+
+## Predmeti v pripravi
+
+Angleščina, nemščina, francoščina, italijanščina, španščina, psihologija, sociologija, filozofija, ekonomija,
+glasba in umetnostna zgodovina imajo zaenkrat stran predmeta (`<predmet>.html`), pregled snovi (`snov/snov.html`)
+s seznamom vseh tem in po eno stran z razlago. Teme brez strani so v `snov.html` označene z
+`link-item link-item--pripravi` (»V pripravi«) in niso povezave; v meniju so le teme s stranjo.
+Ko dodaš novo razlago, temo v `snov.html` in `<predmet>.html` spremeni v povezavo (`<a class="link-item">`)
+in jo dodaj v meni. Vse teme so že v `snovi.json`.
 
 ## Temni način in iskanje
 
