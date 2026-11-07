@@ -1,0 +1,150 @@
+/* ============================================================
+   public/predogled/videzi/osnova.css
+   Skupna osnova predlogov videza. Naloži se samo, ko je vklopljen
+   predogled (?videz=N, glej components/tema.js). Barve, ki so v
+   style.css in snov.css zapisane kot fiksne vrednosti (slike, »Pazi«,
+   oznaka VR …), tu prevede v spremenljivke, ki jih nato nastavi
+   vsak videz-N.css za svetli in temni način.
+   Vsi izbirniki imajo predpono html[data-videz], da prevladajo nad
+   obstoječim slogom ne glede na vrstni red nalaganja.
+   ============================================================ */
+
+html[data-videz] {
+    --font-mono: 'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+    --header-bg: var(--bg-card);
+    --surface-2: var(--bg-primary);
+    --heading-color: var(--text-primary);
+
+    /* slike (inline SVG) */
+    --g-bg: #FBFBFE;
+    --g-grid: #ECEEF6;
+    --g-axis: #5B6178;
+    --g-line: #171A2E;
+    --g-pom: #94A0B8;
+    --g1: var(--primary);
+    --g2: #DC2626;
+    --g3: #16A34A;
+    --g4: #D97706;
+
+    /* opozorila in oznake */
+    --pazi-bg: #FFFBEB;
+    --pazi-fg: #78350F;
+    --pazi-border: var(--warning);
+    --vr-bg: #FEF3C7;
+    --vr-fg: #92400E;
+    --vr-border: #FDE68A;
+}
+
+html[data-videz][data-theme="dark"] {
+    --g-bg: #13172A;
+    --g-grid: #262B42;
+    --g-axis: #8D94AE;
+    --g-line: #D5D9E8;
+    --g-pom: #6B7390;
+    --g2: #F87171;
+    --g3: #4ADE80;
+    --g4: #FBBF24;
+    --pazi-bg: rgba(245, 158, 11, 0.09);
+    --pazi-fg: #FDE68A;
+    --vr-bg: rgba(245, 158, 11, 0.14);
+    --vr-fg: #FCD34D;
+    --vr-border: rgba(245, 158, 11, 0.35);
+}
+
+html[data-videz] body {
+    font-family: var(--font-body);
+    background-color: var(--bg-primary);
+}
+
+html[data-videz] h1,
+html[data-videz] h2,
+html[data-videz] h3,
+html[data-videz] h4 {
+    color: var(--heading-color);
+}
+
+html[data-videz] .header {
+    background: var(--header-bg);
+}
+
+html[data-videz] ::selection {
+    background: color-mix(in srgb, var(--primary) 28%, transparent);
+    color: inherit;
+}
+
+html[data-videz] .page-header a,
+html[data-videz] .view a:not([class]) {
+    color: var(--primary);
+}
+
+/* ---------- Ozadja manjših polj ---------- */
+html[data-videz] .primer,
+html[data-videz] .prepoznaj {
+    background: var(--surface-2);
+}
+
+/* ---------- Pazi in višja raven ---------- */
+html[data-videz] .pazi {
+    background: var(--pazi-bg);
+    border-left-color: var(--pazi-border);
+}
+html[data-videz] .pazi,
+html[data-videz] .pazi strong,
+html[data-videz] .pazi li {
+    color: var(--pazi-fg);
+}
+html[data-videz] .badge-vr {
+    color: var(--vr-fg);
+    background: var(--vr-bg);
+    border-color: var(--vr-border);
+}
+html[data-videz] .sklop--visja .sklop-header { border-bottom-color: var(--vr-border); }
+html[data-videz] .sklop--visja .sklop-num { color: var(--vr-fg); }
+html[data-videz] .tabela td.poudarek { background: var(--vr-bg); }
+
+/* ---------- Slike ---------- */
+html[data-videz] .slika { background: var(--g-bg); }
+html[data-videz] .slika text { stroke: var(--g-bg); fill: var(--text-primary); }
+html[data-videz] .slika .s-mreza { stroke: var(--g-grid); }
+html[data-videz] .slika .s-os { stroke: var(--g-axis); }
+html[data-videz] .slika .s-os-txt,
+html[data-videz] .slika .s-txt-muted { fill: var(--g-axis); }
+html[data-videz] .slika .s-pom { stroke: var(--g-pom); }
+html[data-videz] .slika .s-crta { stroke: var(--g-line); }
+html[data-videz] .slika .s-k1,
+html[data-videz] .slika .s-asim-1 { stroke: var(--g1); }
+html[data-videz] .slika .s-k2,
+html[data-videz] .slika .s-asim { stroke: var(--g2); }
+html[data-videz] .slika .s-k3 { stroke: var(--g3); }
+html[data-videz] .slika .s-k4 { stroke: var(--g4); }
+html[data-videz] .slika .s-txt-k1 { fill: var(--g1); }
+html[data-videz] .slika .s-txt-k2 { fill: var(--g2); }
+html[data-videz] .slika .s-txt-k3 { fill: var(--g3); }
+html[data-videz] .slika .s-txt-k4 { fill: var(--g4); }
+html[data-videz] .slika .s-tocka { fill: var(--g1); stroke: var(--g-bg); }
+html[data-videz] .slika .s-tocka-2 { fill: var(--g2); stroke: var(--g-bg); }
+html[data-videz] .slika .s-prazna { fill: var(--g-bg); stroke: var(--g1); }
+html[data-videz] .slika .s-ploskev { fill: color-mix(in srgb, var(--g1) 18%, transparent); }
+html[data-videz] .slika .s-ploskev-2 { fill: color-mix(in srgb, var(--g2) 16%, transparent); }
+html[data-videz] .slika .s-lik { fill: color-mix(in srgb, var(--g1) 9%, transparent); stroke: var(--g1); }
+html[data-videz] .slika .s-lik-2 { fill: color-mix(in srgb, var(--g3) 9%, transparent); stroke: var(--g3); }
+html[data-videz] .slika .s-kot { fill: color-mix(in srgb, var(--g4) 16%, transparent); stroke: var(--g4); }
+html[data-videz] .slika .s-kot-2 { fill: color-mix(in srgb, var(--g3) 15%, transparent); stroke: var(--g3); }
+html[data-videz] .slika .s-kot-3 { fill: color-mix(in srgb, var(--g1) 15%, transparent); stroke: var(--g1); }
+html[data-videz] .slika .s-kot-4 { fill: color-mix(in srgb, var(--g2) 13%, transparent); stroke: var(--g2); }
+
+/* ---------- Značka predogleda (samo zunaj primerjalne strani) ---------- */
+.videz-znacka {
+    position: fixed;
+    left: 16px;
+    bottom: 16px;
+    z-index: 2000;
+    padding: 8px 14px;
+    border-radius: 999px;
+    background: #111827;
+    color: #FFFFFF !important;
+    font: 600 13px/1.2 system-ui, sans-serif;
+    text-decoration: none;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
+}
+.videz-znacka:hover { background: #374151; }

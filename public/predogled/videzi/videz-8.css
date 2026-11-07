@@ -1,0 +1,173 @@
+/* Videz 8 — TOPLO
+   Prijazen in topel: kremno ozadje, koralna in globoka zelena,
+   mehki serifni naslovi Fraunces, DM Sans za besedilo, kapsule. */
+@import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=DM+Sans:opsz,wght@9..40,400;9..40,500;9..40,600;9..40,700&display=swap');
+
+html[data-videz] {
+    --font-display: 'Fraunces', Georgia, serif;
+    --font-body: 'DM Sans', sans-serif;
+    --text-base: 16.5px;
+
+    --primary: #D9480F;
+    --primary-dark: #A8380B;
+    --primary-light: #F4A07A;
+    --primary-soft: #FDEBDF;
+    --forest: #1F5F4A;
+    --forest-soft: #E3F0EA;
+
+    --text-primary: #2A1E17;
+    --text-secondary: #5C4C42;
+    --text-muted: #9C8B80;
+    --bg-primary: #FBF5EE;
+    --bg-card: #FFFDFA;
+    --surface-2: #F7EFE6;
+    --border-color: #EEE2D6;
+
+    --radius-sm: 14px;
+    --radius: 22px;
+    --radius-lg: 28px;
+
+    --sb-bg: #FFFDFA;
+    --sb-border: #EEE2D6;
+    --sb-text: #2A1E17;
+    --sb-text-muted: #5C4C42;
+    --sb-hover-bg: #FBF5EE;
+    --sb-active-bg: #FDEBDF;
+    --sb-accent: #D9480F;
+    --sb-accent-dark: #A8380B;
+
+    --g-bg: #FFFDFA;
+    --g-grid: #F3EAE0;
+    --g-axis: #6B5A4F;
+    --g1: #D9480F;
+    --g2: #1F5F4A;
+    --g3: #2B6CB0;
+    --g4: #B7791F;
+    --pazi-bg: #FFF4D6;
+    --pazi-fg: #5A3E05;
+}
+
+html[data-videz][data-theme="dark"] {
+    --primary: #FF8F5E;
+    --primary-dark: #FFB896;
+    --primary-light: #D9480F;
+    --primary-soft: rgba(255, 143, 94, 0.13);
+    --forest: #7BD3AE;
+    --forest-soft: rgba(123, 211, 174, 0.1);
+
+    --text-primary: #F7ECE3;
+    --text-secondary: #C9B8AB;
+    --text-muted: #8F7E72;
+    --bg-primary: #1A1411;
+    --bg-card: #231B17;
+    --surface-2: #1E1714;
+    --border-color: #3A2E27;
+
+    --sb-bg: #231B17;
+    --sb-border: #3A2E27;
+    --sb-text: #F7ECE3;
+    --sb-text-muted: #C9B8AB;
+    --sb-hover-bg: #2C221D;
+    --sb-active-bg: rgba(255, 143, 94, 0.13);
+    --sb-accent: #FF8F5E;
+    --sb-accent-dark: #FFB896;
+
+    --g-bg: #1F1814;
+    --g-grid: #33281F;
+    --g-axis: #B9A698;
+    --g-line: #F7ECE3;
+    --g1: #FF8F5E;
+    --g2: #7BD3AE;
+    --g3: #8AB8FF;
+    --g4: #F2C46B;
+    --pazi-bg: rgba(242, 196, 107, 0.08);
+    --pazi-fg: #F5D9A0;
+}
+
+html[data-videz] .header { border-bottom: 1px solid var(--border-color); }
+html[data-videz] .header-brand { font-family: var(--font-display); font-weight: 700; font-size: 22px; letter-spacing: -0.01em; }
+html[data-videz] .menu-btn { border-radius: 999px; }
+html[data-videz][data-theme="dark"] .menu-btn { color: #1A1411; }
+
+html[data-videz] .page-header { max-width: 760px; }
+html[data-videz] .page-eyebrow { background: var(--forest-soft); color: var(--forest); font-weight: 600; }
+html[data-videz] .page-header h1 {
+    font-weight: 600;
+    font-size: clamp(38px, 5.5vw, 62px);
+    letter-spacing: -0.02em;
+    line-height: 1.05;
+    font-variation-settings: "SOFT" 100;
+}
+html[data-videz] .page-header h1::first-letter { color: var(--primary); }
+html[data-videz] .page-meta { border-top: 0; gap: 10px; }
+html[data-videz] .page-meta-item {
+    flex-direction: row;
+    align-items: baseline;
+    gap: 8px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    padding: 10px 18px;
+    border-radius: 999px;
+}
+html[data-videz] .page-meta-item strong { font-family: var(--font-display); color: var(--primary); }
+html[data-videz] .page-meta-item span { text-transform: none; letter-spacing: 0; font-size: 14px; color: var(--text-secondary); }
+
+html[data-videz] .matura-formule { border-left: 1px solid var(--border-color); background: var(--forest-soft); border-color: transparent; }
+html[data-videz] .matura-formule h3 { color: var(--forest); border-bottom-color: color-mix(in srgb, var(--forest) 25%, transparent); }
+html[data-videz] .matura-formule h3,
+html[data-videz] .sklop-teorija > h3,
+html[data-videz] .sklop-naloge > h3,
+html[data-videz] .kazalo h2 { font-weight: 600; font-size: 1.45rem; }
+html[data-videz] .sklop-teorija > h3,
+html[data-videz] .sklop-naloge > h3 { border-bottom: 0; padding-bottom: 0; }
+
+html[data-videz] .kazalo { padding: 28px 32px; }
+html[data-videz] .kazalo ol { gap: 8px 16px; }
+html[data-videz] .kazalo a {
+    background: var(--surface-2);
+    border-radius: 14px;
+    padding: 10px 14px;
+    border: 0;
+    align-items: center;
+}
+html[data-videz] .kazalo a:hover { background: var(--primary-soft); }
+html[data-videz] .kazalo .kazalo-st {
+    min-width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: #FFFFFF;
+    display: inline-grid;
+    place-items: center;
+    font-size: 13px;
+}
+html[data-videz][data-theme="dark"] .kazalo .kazalo-st { color: #1A1411; }
+
+html[data-videz] .stran-kazalo a { border-left: 0; border-radius: 12px; }
+html[data-videz] .stran-kazalo a.aktivno { background: var(--primary-soft); }
+html[data-videz] .stran-kazalo-naslov { font-family: var(--font-display); text-transform: none; letter-spacing: 0; font-size: 17px; color: var(--text-primary); }
+
+html[data-videz] .sklop-header { border-bottom: 0; text-align: left; }
+html[data-videz] .sklop-num {
+    background: var(--primary-soft);
+    color: var(--primary-dark);
+    border-radius: 999px;
+    padding: 5px 12px;
+    text-transform: none;
+    letter-spacing: 0.02em;
+}
+html[data-videz] .sklop-header h2 { font-weight: 600; font-size: 34px; letter-spacing: -0.015em; line-height: 1.15; }
+
+html[data-videz] .tip-naloge { border-radius: 18px; background: var(--bg-card); }
+html[data-videz] .tip-naloge h4 { font-weight: 600; font-size: 1.3rem; }
+html[data-videz] .tip-naloga { border: 0; background: var(--primary-soft); border-radius: 16px; }
+html[data-videz] .tip-naloga-oznaka { color: var(--primary-dark); }
+html[data-videz] .prepoznaj { border-left: 0; border-radius: 16px; background: var(--forest-soft); }
+html[data-videz] .tip-naloge .prepoznaj strong { color: var(--forest); }
+html[data-videz] .tip-naloge h5 { text-transform: none; letter-spacing: 0; font-family: var(--font-display); font-size: 1.05rem; color: var(--forest); font-weight: 600; }
+html[data-videz] .tip-naloge ol.postopek > li::before { background: var(--primary); color: #FFFFFF; }
+html[data-videz][data-theme="dark"] .tip-naloge ol.postopek > li::before { color: #1A1411; }
+html[data-videz] .na-nalogi { border-left: 2px solid var(--border-color); }
+html[data-videz] .primer { border-radius: 16px; }
+html[data-videz] .slika { border-radius: 18px; }
+html[data-videz] .pazi { border-radius: 16px; border-left: 0; }

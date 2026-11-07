@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="robots" content="noindex">
+  <title>Predlogi videza | Piflar.si</title>
+  <style>
+    :root {
+      --bg: #F4F4F5; --card: #FFFFFF; --text: #18181B; --muted: #71717A;
+      --line: #E4E4E7; --active: #18181B; --active-text: #FFFFFF;
+    }
+    :root[data-ui="dark"] {
+      --bg: #0C0C0E; --card: #18181B; --text: #F4F4F5; --muted: #A1A1AA;
+      --line: #27272A; --active: #F4F4F5; --active-text: #18181B;
+    }
+    * { box-sizing: border-box; margin: 0; }
+    html, body { height: 100%; }
+    body {
+      display: flex; flex-direction: column;
+      font: 14px/1.4 system-ui, -apple-system, "Segoe UI", sans-serif;
+      background: var(--bg); color: var(--text);
+    }
+    .vrstica {
+      display: flex; align-items: center; gap: 12px; flex-wrap: wrap;
+      padding: 10px 16px; background: var(--card); border-bottom: 1px solid var(--line);
+    }
+    .naslov { font-weight: 700; white-space: nowrap; margin-right: 4px; }
+    .videzi { display: flex; gap: 4px; flex-wrap: wrap; flex: 1 1 auto; }
+    button, .gumb {
+      font: inherit; color: var(--text); background: transparent;
+      border: 1px solid var(--line); border-radius: 8px;
+      padding: 6px 10px; cursor: pointer; text-decoration: none; white-space: nowrap;
+    }
+    button:hover, .gumb:hover { border-color: var(--muted); }
+    button[aria-pressed="true"] { background: var(--active); color: var(--active-text); border-color: var(--active); }
+    button .st { opacity: 0.6; margin-right: 4px; font-variant-numeric: tabular-nums; }
+    .desno { display: flex; gap: 6px; align-items: center; }
+    .opis {
+      padding: 8px 16px; color: var(--muted); background: var(--card);
+      border-bottom: 1px solid var(--line); font-size: 13px;
+    }
+    .opis strong { color: var(--text); }
+    .okvir { flex: 1 1 auto; display: flex; justify-content: center; padding: 0; }
+    iframe { width: 100%; height: 100%; border: 0; background: #FFFFFF; transition: width 0.25s; }
+    .okvir.telefon { padding: 16px 0; }
+    .okvir.telefon iframe { width: 390px; border-radius: 18px; box-shadow: 0 0 0 1px var(--line), 0 20px 50px -20px rgba(0,0,0,.4); }
+    kbd { font: 12px ui-monospace, monospace; border: 1px solid var(--line); border-radius: 4px; padding: 0 4px; }
+  </style>
+</head>
+<body>
+  <div class="vrstica">
+    <span class="naslov">Predlogi videza</span>
+    <div class="videzi" id="videzi" role="group" aria-label="Izberi videz"></div>
+    <div class="desno">
+      <button id="svetlo" type="button" aria-pressed="true">Svetlo</button>
+      <button id="temno" type="button" aria-pressed="false">Temno</button>
+      <button id="telefon" type="button" aria-pressed="false" title="Ožji zaslon, kot na telefonu">Telefon</button>
+      <a id="zavihek" class="gumb" target="_blank" rel="noopener" title="Odpri v novem zavihku; videz velja za vse strani v tem zavihku">Odpri ↗</a>
+    </div>
+  </div>
+  <div class="opis" id="opis"></div>
+  <div class="okvir" id="okvir">
+    <iframe id="stran" title="Predogled strani"></iframe>
+  </div>
+
+  <script>
+    const STRAN = "/views/matematika/snov/funkcije/kvadratna_razlaga.html";
+    const VIDEZI = [
+      ["Sedanji", "Trenutni videz strani, za primerjavo."],
+      ["Akademski", "Kot dober učbenik: serifni naslovi, papirnato ozadje, mornarsko modra in bordo, kazalo levo."],
+      ["Svež", "Sodobna aplikacija: zelenomodra, mehke sence, naslov strani v barvnem pasu z narisano parabolo."],
+      ["Zvezek", "Svetlo karirast zvezek z robno črto, temno šolska tabla s kredo. Ročno pisane le oznake."],
+      ["Pogumen", "Debele obrobe, trde sence, rumena in roza. Najbolj drzen, izstopa med dijaki."],
+      ["Švicarski", "Črno-belo z eno rdečo, velika tipografija, brez kartic, ločnice in mreža."],
+      ["Revija", "Kot poljudnoznanstvena revija: temna glava, oranžen poudarek, naslov sklopa levo ob besedilu."],
+      ["Načrt", "Tehnična risba: mono pisava za oznake, ostri robovi, mreža v slikah, temno kot modra risalna podlaga."],
+      ["Toplo", "Prijazno in toplo: kremno ozadje, koralna in zelena, mehki serifni naslovi, zaobljene oblike."],
+      ["Barvne oznake", "Vsaka vrsta vsebine ima svojo barvo (razlaga, naloge, primeri, formule). Pisava Lexend za lažje branje."],
+      ["Igriv", "Otipljive kartice kot tipke, okrogle številke korakov, živahna modra, oranžna in zelena."]
+    ];
+
+    const $ = (id) => document.getElementById(id);
+    const iframe = $("stran");
+    let videz = Number((location.hash.match(/\d+/) || [1])[0]);
+    if (!(videz >= 0 && videz <= 10)) videz = 1;
+    let tema = "light";
+    try { tema = localStorage.getItem("piflar-tema") === "dark" ? "dark" : "light"; } catch (e) {}
+
+    VIDEZI.forEach(([ime], i) => {
+      const b = document.createElement("button");
+      b.type = "button";
+      b.innerHTML = `<span class="st">${i}</span>${ime}`;
+      b.addEventListener("click", () => izberi(i));
+      $("videzi").appendChild(b);
+    });
+
+    function izberi(i) {
+      videz = i;
+      history.replaceState(null, "", "#" + i);
+      [...$("videzi").children].forEach((b, k) => b.setAttribute("aria-pressed", String(k === i)));
+      $("opis").innerHTML = `<strong>${i}. ${VIDEZI[i][0]}</strong> · ${VIDEZI[i][1]} &nbsp; <kbd>←</kbd> <kbd>→</kbd> za naslednji predlog`;
+      const url = `${STRAN}?videz=${i}`;
+      $("zavihek").href = url;
+      // ohrani mesto na strani pri preklopu videza
+      let y = 0;
+      try { y = iframe.contentWindow.scrollY || 0; } catch (e) {}
+      iframe.onload = () => { try { iframe.contentWindow.scrollTo(0, y); } catch (e) {} };
+      iframe.src = url;
+    }
+
+    function nastaviTemo(t) {
+      tema = t;
+      try { localStorage.setItem("piflar-tema", t); } catch (e) {}
+      document.documentElement.dataset.ui = t;
+      $("svetlo").setAttribute("aria-pressed", String(t === "light"));
+      $("temno").setAttribute("aria-pressed", String(t === "dark"));
+      try { iframe.contentDocument.documentElement.dataset.theme = t; } catch (e) {}
+    }
+
+    $("svetlo").addEventListener("click", () => nastaviTemo("light"));
+    $("temno").addEventListener("click", () => nastaviTemo("dark"));
+    $("telefon").addEventListener("click", (e) => {
+      const on = $("okvir").classList.toggle("telefon");
+      e.currentTarget.setAttribute("aria-pressed", String(on));
+    });
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowRight") izberi((videz + 1) % VIDEZI.length);
+      if (e.key === "ArrowLeft") izberi((videz + VIDEZI.length - 1) % VIDEZI.length);
+    });
+
+    nastaviTemo(tema);
+    izberi(videz);
+  </script>
+</body>
+</html>
