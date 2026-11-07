@@ -11,6 +11,6 @@ export const snovi = readJSON("./snovi.json").map((snov) => ({
 }));
 
 // Pole vseh predmetov: matura.json (matematika) in matura-<predmet>.json
-export const matura = [...readJSON("./matura.json"), ...readJSON("./matura-fizika.json"), ...readJSON("./matura-kemija.json"), ...readJSON("./matura-informatika.json"), ...readJSON("./matura-slovenscina.json")];
+export const matura = [...readJSON("./matura.json"), ...readJSON("./matura-fizika.json"), ...readJSON("./matura-kemija.json"), ...readJSON("./matura-biologija.json"), ...readJSON("./matura-informatika.json"), ...readJSON("./matura-slovenscina.json")];
 
 export const naloge = readJSON("./naloge.json");
