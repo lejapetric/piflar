@@ -38,9 +38,13 @@ public/
   iskanje.html             vsi zadetki iskanja (components/iskanje.js)
   components/              header, sidebar, footer + components.js (naloži jih na vsaki strani)
                            tema.js v <head> nastavi temni/svetli način pred izrisom
+                           in na straneh /views/<predmet>/ naloži videz predmeta
   style/
     style.css              globalni stil
     snov.css               skupni stil vseh strani z razlago snovi
+    predmeti/              videz po predmetih: osnova.css + <predmet>.css (barve, pisave,
+                           vzorec ozadja in motiv za svetli in temni način); naslovnica
+                           in ostale splošne strani ostanejo v osnovnem slogu
   views/<predmet>/snov/<poglavje>/<poglavje>_razlaga.html
 ```
 

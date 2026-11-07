@@ -1,0 +1,104 @@
+/* Kemija — LABORATORIJ
+   Hladno belo-zelenomodro ozadje s šestkotno mrežo (kot benzenovi obroči),
+   petrolejska in vijolična za reakcije, bučka in obroč v glavi strani.
+   Temni način: temen laboratorij. Manrope + JetBrains Mono za oznake. */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=JetBrains+Mono:wght@500;600&display=swap');
+
+html[data-predmet="kemija"] {
+    --font-display: 'Manrope', sans-serif;
+    --font-body: 'Manrope', sans-serif;
+    --font-oznake: 'JetBrains Mono', ui-monospace, monospace;
+    --primary: #0B7285;
+    --primary-dark: #095566;
+    --primary-light: #7CC7D4;
+    --primary-soft: #DFF3F6;
+    --reakcija: #9C36B5;
+    --text-primary: #10242A;
+    --text-secondary: #435A61;
+    --text-muted: #83979D;
+    --bg-primary: #F1F7F8;
+    --bg-card: #FFFFFF;
+    --surface-2: #F0F7F8;
+    --border-color: #D6E6E9;
+    --papir: #F1F7F8;
+    --okras: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 104 180' fill='none' stroke='black' stroke-width='1.5'%3E%3Cpath d='M52 0l52 30v60l-52 30L0 90V30z M52 120v60 M0 90l-52 30 M104 90l52 30'/%3E%3C/svg%3E");
+    --okras-barva: rgba(11, 114, 133, 0.09);
+    --okras-velikost: 52px 90px;
+    --motiv: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' fill='none' stroke='black' stroke-width='5' stroke-linejoin='round' stroke-linecap='round'%3E%3Cpath d='M62 20l40 23v46l-40 23-40-23V43z'/%3E%3Cpath d='M62 34l28 16v32M34 50l28-16M34 82V50' stroke-width='3.5'/%3E%3Cpath d='M102 43l26-15M62 112v22'/%3E%3Cpath d='M135 95v35l-30 52a8 8 0 0 0 7 12h66a8 8 0 0 0 7-12l-30-52V95'/%3E%3Cpath d='M128 95h44'/%3E%3Cpath d='M117 160h66' stroke-width='3.5'/%3E%3Ccircle cx='140' cy='176' r='4' fill='black'/%3E%3Ccircle cx='160' cy='170' r='3' fill='black'/%3E%3C/svg%3E");
+    --motiv-barva: rgba(11, 114, 133, 0.28);
+    --trak: #0B7285;
+    --g-bg: #FFFFFF;
+    --g-grid: #E3EEF0;
+    --g1: #0B7285;
+    --g2: #9C36B5;
+    --g3: #E8590C;
+    --g4: #2F9E44;
+    --radius-sm: 10px;
+    --radius: 14px;
+    --sb-bg: #FFFFFF;
+    --sb-border: #D6E6E9;
+    --sb-text: #10242A;
+    --sb-text-muted: #435A61;
+    --sb-hover-bg: #F0F7F8;
+    --sb-active-bg: #DFF3F6;
+    --sb-accent: #0B7285;
+    --sb-accent-dark: #095566;
+    --list: #FFFFFF;
+}
+
+html[data-predmet="kemija"][data-theme="dark"] {
+    --primary: #4FD1E0;
+    --primary-dark: #9BE7F0;
+    --primary-light: #1C9AAD;
+    --primary-soft: rgba(79, 209, 224, 0.12);
+    --reakcija: #D59BF0;
+    --text-primary: #E1EEF0;
+    --text-secondary: #A1B7BC;
+    --text-muted: #6A8187;
+    --bg-primary: #0A1619;
+    --bg-card: #102127;
+    --surface-2: #0D1B20;
+    --border-color: #1F363D;
+    --papir: #0A1619;
+    --okras-barva: rgba(79, 209, 224, 0.06);
+    --motiv-barva: rgba(79, 209, 224, 0.3);
+    --trak: #4FD1E0;
+    --g-bg: #0E1D22;
+    --g-grid: #1C3238;
+    --g-axis: #A1B7BC;
+    --g-line: #E1EEF0;
+    --g1: #4FD1E0;
+    --g2: #D59BF0;
+    --g3: #FF9A5A;
+    --g4: #7EE29A;
+    --sb-bg: #102127;
+    --sb-border: #1F363D;
+    --sb-text: #E1EEF0;
+    --sb-text-muted: #A1B7BC;
+    --sb-hover-bg: #0D1B20;
+    --sb-active-bg: rgba(79, 209, 224, 0.12);
+    --sb-accent: #4FD1E0;
+    --sb-accent-dark: #9BE7F0;
+    --list: #102127;
+}
+
+html[data-predmet="kemija"] .page-eyebrow { font-size: 12px; background: var(--primary-soft); color: var(--primary-dark); border-radius: 6px; }
+html[data-predmet="kemija"] .page-header h1 { font-weight: 800; letter-spacing: -0.03em; }
+html[data-predmet="kemija"] .page-meta-item strong { color: var(--primary); font-weight: 800; }
+html[data-predmet="kemija"] .sklop-num { color: var(--reakcija); font-size: 12px; }
+html[data-predmet="kemija"] .sklop-header h2, html[data-predmet="kemija"] .subsection-head h2 { font-weight: 800; letter-spacing: -0.02em; }
+html[data-predmet="kemija"] .sklop-header { border-bottom: 2px solid var(--primary-soft); }
+html[data-predmet="kemija"] .sklop-teorija, html[data-predmet="kemija"] .sklop-naloge, html[data-predmet="kemija"] .intro-card, html[data-predmet="kemija"] .matura-formule { border-top: 3px solid var(--primary); }
+html[data-predmet="kemija"] .matura-formule { border-left: 1px solid var(--border-color); border-top-color: var(--reakcija); }
+html[data-predmet="kemija"] .sklop-teorija > h3, html[data-predmet="kemija"] .sklop-naloge > h3 { border-bottom-style: dashed; }
+html[data-predmet="kemija"] .tip-naloga { border-left-color: var(--reakcija); background: color-mix(in srgb, var(--reakcija) 6%, var(--list)); }
+html[data-predmet="kemija"] .tip-naloga-oznaka { color: var(--reakcija); font-size: 11.5px; }
+html[data-predmet="kemija"] .tip-naloge h5 { font-family: var(--font-oznake); font-size: 12px; color: var(--primary); }
+html[data-predmet="kemija"] .tip-naloge ol.postopek > li::before {
+    font-family: var(--font-oznake); background: var(--primary); color: #FFFFFF;
+    clip-path: polygon(25% 3%, 75% 3%, 100% 50%, 75% 97%, 25% 97%, 0 50%); border-radius: 0;
+}
+html[data-predmet="kemija"][data-theme="dark"] .tip-naloge ol.postopek > li::before { color: #0A1619; }
+html[data-predmet="kemija"] .kazalo .kazalo-st { font-family: var(--font-oznake); }
+html[data-predmet="kemija"] .tip-naloge .kljucne li { font-family: var(--font-oznake); font-size: 12.5px; border-radius: 6px; }
+html[data-predmet="kemija"][data-theme="dark"] .menu-btn { color: #0A1619; }

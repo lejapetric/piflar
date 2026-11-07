@@ -1,0 +1,115 @@
+/* Matematika — KARIRAST ZVEZEK
+   Bel papir z 5-milimetrskimi karami, rdeča robna črta, modro črnilo.
+   Temni način: šolska tabla s kredo. Nunito, oznake v ročni pisavi.
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Patrick+Hand&display=swap');
+
+html[data-predmet="matematika"] {
+    --font-display: 'Nunito', sans-serif;
+    --font-body: 'Nunito', sans-serif;
+    --font-oznake: 'Patrick Hand', 'Comic Sans MS', cursive;
+    --primary: #1D4ED8;
+    --primary-dark: #1E3A8A;
+    --primary-light: #93C5FD;
+    --primary-soft: #E6EEFF;
+    --rdeca: #E11D48;
+    --text-primary: #1B2440;
+    --text-secondary: #46506B;
+    --text-muted: #8C93A8;
+    --bg-primary: #FBFBF8;
+    --bg-card: #FFFFFF;
+    --surface-2: #F6F7FB;
+    --border-color: #DFE3EC;
+    --papir: #FBFBF8;
+    --vzorec: linear-gradient(rgba(37, 99, 235, 0.09) 1px, transparent 1px), linear-gradient(90deg, rgba(37, 99, 235, 0.09) 1px, transparent 1px);
+    --vzorec-velikost: 22px 22px;
+    --list-vzorec: linear-gradient(90deg, transparent 38px, #F9A8B8 38px, #F9A8B8 40px, transparent 40px);
+    --list-zamik: 60px;
+    --motiv: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' fill='none' stroke='black' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 150H185M60 190V15'/%3E%3Cpath d='M178 143l7 7-7 7M53 22l7-7 7 7'/%3E%3Cpath d='M25 30Q80 250 150 30' stroke-width='6'/%3E%3Ccircle cx='87' cy='138' r='6' fill='black'/%3E%3Cpath d='M120 175l40-60 25 60z' stroke-width='4'/%3E%3Cpath d='M150 175a12 12 0 0 0-6-10' stroke-width='3'/%3E%3C/svg%3E");
+    --motiv-barva: rgba(29, 78, 216, 0.22);
+    --trak: #1D4ED8;
+    --g-bg: #FFFFFF;
+    --g-grid: #E3EAF8;
+    --g1: #1D4ED8;
+    --g2: #E11D48;
+    --g3: #059669;
+    --g4: #D97706;
+    --radius-sm: 8px;
+    --radius: 10px;
+    --sb-bg: #FFFFFF;
+    --sb-border: #DFE3EC;
+    --sb-text: #1B2440;
+    --sb-text-muted: #46506B;
+    --sb-hover-bg: #F6F7FB;
+    --sb-active-bg: #E6EEFF;
+    --sb-accent: #1D4ED8;
+    --sb-accent-dark: #1E3A8A;
+    --list: #FFFFFF;
+}
+
+html[data-predmet="matematika"][data-theme="dark"] {
+    --primary: #FDE68A;
+    --primary-dark: #FEF3C7;
+    --primary-light: #FCD34D;
+    --primary-soft: rgba(253, 230, 138, 0.12);
+    --rdeca: #FDA4AF;
+    --text-primary: #F1F5EE;
+    --text-secondary: #C3CFC6;
+    --text-muted: #8A9A8F;
+    --bg-primary: #1D2A25;
+    --bg-card: #24332D;
+    --surface-2: #1F2D28;
+    --border-color: #3A4C44;
+    --papir: #1D2A25;
+    --vzorec: linear-gradient(rgba(255, 255, 255, 0.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255, 255, 255, 0.035) 1px, transparent 1px);
+    --list-vzorec: linear-gradient(90deg, transparent 38px, rgba(253, 164, 175, 0.4) 38px, rgba(253, 164, 175, 0.4) 40px, transparent 40px);
+    --motiv-barva: rgba(253, 230, 138, 0.28);
+    --trak: #FDE68A;
+    --g-bg: #22302A;
+    --g-grid: #31433B;
+    --g-axis: #C3CFC6;
+    --g-line: #F1F5EE;
+    --g1: #FDE68A;
+    --g2: #FDA4AF;
+    --g3: #A7F3D0;
+    --g4: #93C5FD;
+    --pazi-bg: rgba(253, 230, 138, 0.08);
+    --pazi-fg: #FDE68A;
+    --pazi-border: #FDE68A;
+    --sb-bg: #24332D;
+    --sb-border: #3A4C44;
+    --sb-text: #F1F5EE;
+    --sb-text-muted: #C3CFC6;
+    --sb-hover-bg: #1F2D28;
+    --sb-active-bg: rgba(253, 230, 138, 0.12);
+    --sb-accent: #FDE68A;
+    --sb-accent-dark: #FEF3C7;
+    --list: #24332D;
+}
+
+html[data-predmet="matematika"] .page-eyebrow { background: none; padding: 0; color: var(--rdeca); font-size: 19px; letter-spacing: 0.01em; text-transform: none; }
+html[data-predmet="matematika"] .page-header h1 { font-weight: 900; }
+html[data-predmet="matematika"] .page-header h1::after {
+    content: ""; display: block; width: 130px; height: 9px; margin-top: 8px;
+    background: var(--primary-light); border-radius: 999px; opacity: 0.7; transform: rotate(-1deg);
+}
+html[data-predmet="matematika"] .page-meta-item strong { color: var(--primary); font-weight: 900; }
+html[data-predmet="matematika"] .page-meta-item span { text-transform: none; letter-spacing: 0; font-size: 16px; }
+html[data-predmet="matematika"] .sklop-num { color: var(--rdeca); font-size: 18px; letter-spacing: 0; text-transform: none; }
+html[data-predmet="matematika"] .sklop-header { border-bottom: 2px dashed var(--border-color); }
+html[data-predmet="matematika"] .sklop-header h2, html[data-predmet="matematika"] .subsection-head h2 { font-weight: 900; }
+html[data-predmet="matematika"] .sklop-teorija > h3, html[data-predmet="matematika"] .sklop-naloge > h3, html[data-predmet="matematika"] .matura-formule h3 {
+    display: inline-block; border-bottom: 0; padding: 0 4px; font-weight: 900;
+    background: linear-gradient(transparent 60%, color-mix(in srgb, var(--primary-light) 45%, transparent) 60%);
+}
+html[data-predmet="matematika"][data-theme="dark"] .sklop-teorija > h3, html[data-predmet="matematika"][data-theme="dark"] .sklop-naloge > h3, html[data-predmet="matematika"][data-theme="dark"] .matura-formule h3 { background: linear-gradient(transparent 62%, rgba(253, 230, 138, 0.22) 62%); }
+html[data-predmet="matematika"] .matura-formule { border-left: 1px solid var(--border-color); }
+html[data-predmet="matematika"] .tip-naloga { border: 2px solid var(--primary); border-radius: 4px 14px 6px 12px; background: var(--primary-soft); }
+html[data-predmet="matematika"] .tip-naloga-oznaka { font-size: 17px; letter-spacing: 0; text-transform: none; }
+html[data-predmet="matematika"] .tip-naloge ol.postopek > li::before {
+    font-family: var(--font-oznake); font-size: 19px; line-height: 20px;
+    background: none; border: 2px solid var(--rdeca); color: var(--rdeca); border-radius: 50% 45% 55% 48%;
+}
+html[data-predmet="matematika"] .na-nalogi { border-left: 2px dotted var(--primary-light); }
+html[data-predmet="matematika"] .kazalo .kazalo-st { font-family: var(--font-oznake); color: var(--rdeca); font-size: 18px; }
+html[data-predmet="matematika"] .stran-kazalo-naslov { color: var(--rdeca); font-size: 17px; letter-spacing: 0; text-transform: none; }
+html[data-predmet="matematika"][data-theme="dark"] .menu-btn { color: #1D2A25; }

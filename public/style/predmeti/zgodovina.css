@@ -1,0 +1,122 @@
+/* Zgodovina — PERGAMENT
+   Rjavo-rumen papir s tonom starega lista, sepija in zlato, serifne pisave,
+   rimske kapitele za oznake, steber v glavi strani.
+   Temni način: temno usnje z zlatimi poudarki. EB Garamond + Crimson Pro + Cinzel. */
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500;600;700&family=Crimson+Pro:wght@400;500;600&family=Cinzel:wght@600;700&display=swap');
+
+html[data-predmet="zgodovina"] {
+    --font-display: 'EB Garamond', Georgia, serif;
+    --font-body: 'Crimson Pro', Georgia, serif;
+    --font-oznake: 'Cinzel', Georgia, serif;
+    --text-base: 18px;
+    --primary: #8A5A21;
+    --primary-dark: #6A4316;
+    --primary-light: #C9A266;
+    --primary-soft: #F1E4C6;
+    --zlato: #B7862A;
+    --text-primary: #2E2013;
+    --text-secondary: #5A4630;
+    --text-muted: #9A8466;
+    --bg-primary: #EFE3C8;
+    --bg-card: #FAF3E1;
+    --surface-2: #F3E8CE;
+    --border-color: #DCC9A2;
+    --papir: #EFE3C8;
+    --vzorec: radial-gradient(ellipse at 15% 10%, rgba(255, 250, 235, 0.7), transparent 55%), radial-gradient(ellipse at 85% 90%, rgba(150, 110, 50, 0.12), transparent 60%);
+    --vzorec-velikost: 100% 100%;
+    --motiv: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' fill='none' stroke='black' stroke-width='4.5' stroke-linejoin='round'%3E%3Cpath d='M50 30h100l-8 14H58z'/%3E%3Cpath d='M60 44c-10 0-14 10-6 14M140 44c10 0 14 10 6 14'/%3E%3Cpath d='M62 58h76v6H62z'/%3E%3Cpath d='M68 64v104M84 64v104M100 64v104M116 64v104M132 64v104'/%3E%3Cpath d='M58 168h84v10H58zM48 178h104v12H48z'/%3E%3C/svg%3E");
+    --motiv-barva: rgba(138, 90, 33, 0.28);
+    --trak: #8A5A21;
+    --g-bg: #FCF7EA;
+    --g-grid: #EADDC0;
+    --g-axis: #6B5638;
+    --g-line: #2E2013;
+    --g1: #8A5A21;
+    --g2: #A3271F;
+    --g3: #3F6B3A;
+    --g4: #2F5A8A;
+    --pazi-bg: #F6E7C4;
+    --pazi-fg: #5A3A0C;
+    --pazi-border: #B7862A;
+    --radius-sm: 3px;
+    --radius: 4px;
+    --sb-bg: #FAF3E1;
+    --sb-border: #DCC9A2;
+    --sb-text: #2E2013;
+    --sb-text-muted: #5A4630;
+    --sb-hover-bg: #F3E8CE;
+    --sb-active-bg: #F1E4C6;
+    --sb-accent: #8A5A21;
+    --sb-accent-dark: #6A4316;
+    --list: #FAF3E1;
+}
+
+html[data-predmet="zgodovina"][data-theme="dark"] {
+    --primary: #D9A84E;
+    --primary-dark: #F0CB86;
+    --primary-light: #9C7430;
+    --primary-soft: rgba(217, 168, 78, 0.13);
+    --zlato: #E6BC62;
+    --text-primary: #EFE2C8;
+    --text-secondary: #C2AF8E;
+    --text-muted: #8B7A60;
+    --bg-primary: #1C150F;
+    --bg-card: #261D15;
+    --surface-2: #211912;
+    --border-color: #3D3022;
+    --papir: #1C150F;
+    --vzorec: radial-gradient(ellipse at 15% 10%, rgba(217, 168, 78, 0.06), transparent 55%), radial-gradient(ellipse at 85% 90%, rgba(0, 0, 0, 0.35), transparent 60%);
+    --motiv-barva: rgba(217, 168, 78, 0.3);
+    --trak: #D9A84E;
+    --g-bg: #221A12;
+    --g-grid: #3A2E20;
+    --g-axis: #C2AF8E;
+    --g-line: #EFE2C8;
+    --g1: #E6BC62;
+    --g2: #E77C6E;
+    --g3: #9CC48A;
+    --g4: #8FB5E8;
+    --pazi-bg: rgba(217, 168, 78, 0.08);
+    --pazi-fg: #F0CB86;
+    --pazi-border: #D9A84E;
+    --sb-bg: #261D15;
+    --sb-border: #3D3022;
+    --sb-text: #EFE2C8;
+    --sb-text-muted: #C2AF8E;
+    --sb-hover-bg: #211912;
+    --sb-active-bg: rgba(217, 168, 78, 0.13);
+    --sb-accent: #D9A84E;
+    --sb-accent-dark: #F0CB86;
+    --list: #261D15;
+}
+
+html[data-predmet="zgodovina"] .page-eyebrow { background: none; padding: 0 0 6px; border-radius: 0; color: var(--primary); letter-spacing: 0.14em; border-bottom: 1px solid var(--zlato); }
+html[data-predmet="zgodovina"] .page-header h1 { font-weight: 600; letter-spacing: -0.01em; font-size: clamp(36px, 5vw, 54px); }
+html[data-predmet="zgodovina"] .page-meta-item strong { font-family: var(--font-display); color: var(--primary); font-size: 28px; }
+html[data-predmet="zgodovina"] .page-meta-item span { letter-spacing: 0.08em; }
+html[data-predmet="zgodovina"] .sklop-num { color: var(--zlato); letter-spacing: 0.12em; }
+html[data-predmet="zgodovina"] .sklop-header { border-bottom: 0; text-align: center; padding-bottom: 0; }
+html[data-predmet="zgodovina"] .sklop-header h2, html[data-predmet="zgodovina"] .subsection-head h2 { font-weight: 600; font-size: 32px; letter-spacing: -0.005em; }
+html[data-predmet="zgodovina"] .sklop-header::after {
+    content: "\2766"; display: block; margin: var(--space-2) auto 0; color: var(--zlato); font-size: 20px; line-height: 1;
+    background: linear-gradient(var(--zlato), var(--zlato)) left 50% / 40% 1px no-repeat, linear-gradient(var(--zlato), var(--zlato)) right 50% / 40% 1px no-repeat;
+}
+html[data-predmet="zgodovina"] .sklop-teorija, html[data-predmet="zgodovina"] .sklop-naloge, html[data-predmet="zgodovina"] .intro-card, html[data-predmet="zgodovina"] .matura-formule, html[data-predmet="zgodovina"] .info-card, html[data-predmet="zgodovina"] .kazalo, html[data-predmet="zgodovina"] .external-links {
+    border: 1px solid var(--border-color);
+    box-shadow: inset 0 0 0 4px var(--list), inset 0 0 0 5px var(--border-color);
+}
+html[data-predmet="zgodovina"] .matura-formule, html[data-predmet="zgodovina"] .intro-card { border-left: 1px solid var(--border-color); }
+html[data-predmet="zgodovina"] .sklop-teorija > h3, html[data-predmet="zgodovina"] .sklop-naloge > h3, html[data-predmet="zgodovina"] .matura-formule h3 { font-weight: 600; font-size: 1.5rem; border-bottom-color: var(--zlato); }
+html[data-predmet="zgodovina"] .tip-naloga { border-left-color: var(--zlato); background: var(--surface-2); }
+html[data-predmet="zgodovina"] .tip-naloga-oznaka { color: var(--primary); letter-spacing: 0.1em; }
+html[data-predmet="zgodovina"] .tip-naloge h4 { font-weight: 600; font-size: 1.3rem; }
+html[data-predmet="zgodovina"] .tip-naloge h5 { font-family: var(--font-oznake); color: var(--primary); letter-spacing: 0.1em; }
+html[data-predmet="zgodovina"] .tip-naloge ol.postopek > li::before {
+    content: counter(korak, upper-roman); font-family: var(--font-display); font-weight: 700;
+    background: none; color: var(--zlato); border: 1px solid var(--zlato); border-radius: 0; width: 28px;
+}
+html[data-predmet="zgodovina"] .tip-naloge ol.postopek > li { padding-left: 40px; }
+html[data-predmet="zgodovina"] .kazalo .kazalo-st { font-family: var(--font-display); color: var(--zlato); }
+html[data-predmet="zgodovina"] .slika figcaption { font-style: italic; }
+html[data-predmet="zgodovina"] .link-item .arrow { color: var(--zlato); }
+html[data-predmet="zgodovina"][data-theme="dark"] .menu-btn { color: #1C150F; }
