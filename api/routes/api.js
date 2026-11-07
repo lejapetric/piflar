@@ -4,6 +4,7 @@ import ctrlSnovi from "../controllers/snovi.js";
 import ctrlMatura from "../controllers/matura.js";
 import ctrlNaloge from "../controllers/naloge.js";
 import ctrlAvt from "../controllers/avtentikacija.js";
+import ctrlProfil from "../controllers/profil.js";
 import ctrlPlacila from "../controllers/placila.js";
 import ctrlIskanje from "../controllers/iskanje.js";
 import { naloziUporabnika, zahtevajPrijavo, zahtevajBazo } from "../middleware/uporabnik.js";
@@ -14,9 +15,14 @@ router.use(naloziUporabnika);
 
 // UPORABNIKI
 router.post("/registracija", zahtevajBazo, ctrlAvt.registracija);
+router.post("/potrdi-email", zahtevajBazo, ctrlAvt.potrdiEmail);
+router.post("/potrdi-email/ponovno", zahtevajBazo, ctrlAvt.ponovnoPotrditev);
 router.post("/prijava", zahtevajBazo, ctrlAvt.prijava);
 router.post("/odjava", ctrlAvt.odjava);
 router.get("/jaz", zahtevajPrijavo, ctrlAvt.jaz);
+router.patch("/jaz", zahtevajPrijavo, ctrlProfil.posodobi);
+router.post("/jaz/geslo", zahtevajPrijavo, ctrlProfil.spremeniGeslo);
+router.delete("/jaz", zahtevajPrijavo, ctrlProfil.izbrisi);
 
 // PLAČILA (webhook je v app.js)
 router.get("/placila/cenik", ctrlPlacila.cenikGet);

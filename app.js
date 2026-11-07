@@ -17,7 +17,8 @@ app.disable("x-powered-by");
 app.post("/api/placila/webhook", express.raw({ type: "application/json" }), ctrlPlacila.webhook);
 
 // API
-app.use("/api", express.json(), apiRouter);
+// 200 kB: profilna slika (pomanjšana v brskalniku) pride kot data URL
+app.use("/api", express.json({ limit: "200kb" }), apiRouter);
 
 // Statične datoteke iz public/. Strani, skripte, slogi in podatki (HTML, JS, CSS, JSON) se
 // spreminjajo z vsako objavo, zato jih brskalnik vsakič preveri (no-cache z ETag, 304, če se niso

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nastavitve | Piflar.si</title>
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
+</head>
+<body>
+  <div id="header"></div>
+
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view racun">
+        <header class="page-header">
+          <span class="page-eyebrow">Račun</span>
+          <h1>Nastavitve</h1>
+        </header>
+
+        <div id="nastavitve" hidden>
+          <section class="racun-kartica">
+            <h2>Videz</h2>
+            <div class="prijava-polje">
+              <span>Tema</span>
+              <div class="racun-izbira" role="radiogroup" aria-label="Tema">
+                <label><input type="radio" name="tema" value="light"><span>Svetla</span></label>
+                <label><input type="radio" name="tema" value="dark"><span>Temna</span></label>
+                <label><input type="radio" name="tema" value="sistem"><span>Kot sistem</span></label>
+              </div>
+            </div>
+            <label class="prijava-polje"><span>Jezik</span>
+              <select name="jezik">
+                <option value="sl" selected>Slovenščina</option>
+                <option value="en" disabled>English (kmalu)</option>
+              </select></label>
+          </section>
+
+          <section class="racun-kartica">
+            <h2>Obvestila po e-pošti</h2>
+            <label class="racun-stikalo">
+              <span>Opomniki pred maturo<small>Kratek opomnik, kaj ponoviti, ko se matura bliža.</small></span>
+              <input type="checkbox" name="opomniki">
+            </label>
+            <label class="racun-stikalo">
+              <span>Novosti na Piflarju<small>Nova snov, nove rešene pole in posebne ponudbe.</small></span>
+              <input type="checkbox" name="novice">
+            </label>
+            <p id="obvestilaSporocilo" class="prijava-sporocilo uspeh" role="status"></p>
+          </section>
+
+          <form id="geslo" class="racun-kartica" novalidate>
+            <h2>Sprememba gesla</h2>
+            <label class="prijava-polje"><span>Trenutno geslo</span>
+              <input name="staro" type="password" autocomplete="current-password" maxlength="200"></label>
+            <div class="prijava-polja-vrsta">
+              <label class="prijava-polje"><span>Novo geslo</span>
+                <input name="novo" type="password" autocomplete="new-password" maxlength="200"></label>
+              <label class="prijava-polje"><span>Potrdi novo geslo</span>
+                <input name="novo2" type="password" autocomplete="new-password" maxlength="200"></label>
+            </div>
+            <p class="prijava-pravila">Geslo mora imeti vsaj 8 znakov, 1 veliko tiskano črko in 1 številko.</p>
+            <p id="gesloSporocilo" class="prijava-sporocilo" role="status"></p>
+            <div class="racun-gumbi"><button type="submit" class="btn btn-primary">Spremeni geslo</button></div>
+          </form>
+
+          <form id="izbris" class="racun-kartica racun-kartica--nevarno" novalidate>
+            <h2>Izbris računa</h2>
+            <p>Izbriše tvoj račun, profil in napredek pri nalogah. Tega ni mogoče razveljaviti. Plačano naročnino najprej prekliči v razdelku Naročnina.</p>
+            <label class="prijava-polje"><span>Za potrditev vpiši geslo</span>
+              <input name="geslo" type="password" autocomplete="current-password" maxlength="200"></label>
+            <p id="izbrisSporocilo" class="prijava-sporocilo" role="alert"></p>
+            <div class="racun-gumbi"><button type="submit" class="btn btn-nevarno">Izbriši račun</button></div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+
+  <script src="/components/components.js"></script>
+  <script src="/components/racun.js" data-stran="nastavitve" defer></script>
+</body>
+</html>

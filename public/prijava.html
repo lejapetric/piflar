@@ -27,25 +27,58 @@
         </header>
 
         <form id="obrazec" class="prijava-obrazec" novalidate>
-          <label class="prijava-polje" id="poljeIme" hidden>
-            <span>Ime</span>
-            <input name="ime" type="text" autocomplete="name" maxlength="100">
+          <div class="prijava-polja-vrsta" data-registracija hidden>
+            <label class="prijava-polje">
+              <span>Ime</span>
+              <input name="ime" type="text" autocomplete="given-name" maxlength="100">
+            </label>
+            <label class="prijava-polje">
+              <span>Priimek</span>
+              <input name="priimek" type="text" autocomplete="family-name" maxlength="100">
+            </label>
+          </div>
+          <label class="prijava-polje" data-registracija hidden>
+            <span>Starost <span class="prijava-neobvezno">(neobvezno)</span></span>
+            <input name="starost" type="number" inputmode="numeric" min="10" max="120">
           </label>
           <label class="prijava-polje">
             <span>E-naslov</span>
-            <input name="email" type="email" autocomplete="email" required maxlength="254">
+            <input name="email" type="email" autocomplete="email" required maxlength="254" placeholder="ime@gmail.com">
           </label>
           <label class="prijava-polje">
             <span>Geslo</span>
             <input name="geslo" type="password" autocomplete="current-password" required minlength="8" maxlength="200">
           </label>
+          <label class="prijava-polje" data-registracija hidden>
+            <span>Potrdi geslo</span>
+            <input name="geslo2" type="password" autocomplete="new-password" maxlength="200">
+          </label>
+          <ul id="pravila" class="prijava-pravila" data-registracija hidden aria-live="polite">
+            <li data-pravilo="dolzina">Vsaj 8 znakov</li>
+            <li data-pravilo="velika">Vsaj 1 velika tiskana črka</li>
+            <li data-pravilo="stevilka">Vsaj 1 številka</li>
+          </ul>
           <p id="sporocilo" class="prijava-sporocilo" role="alert"></p>
+          <button type="button" id="ponovno" class="btn btn-secondary" hidden>Pošlji novo povezavo</button>
           <button type="submit" id="potrdi" class="btn btn-primary">Prijava</button>
           <p class="prijava-preklop">
             <span id="preklopBesedilo">Še nimaš računa?</span>
             <button type="button" id="preklop" class="header-link">Registriraj se</button>
           </p>
         </form>
+
+        <section id="poslano" class="prijava-poslano" hidden aria-live="polite">
+          <span class="prijava-poslano-ikona">
+            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M3 7l9 6 9-6"></path>
+            </svg>
+          </span>
+          <h2>Preveri e-pošto</h2>
+          <p>Na <strong id="poslanoEmail"></strong> smo poslali povezavo. Klikni gumb <strong>Potrdi e-naslov</strong> v sporočilu in prijavljen(a) boš.</p>
+          <p class="prijava-pravila">Ni sporočila? Poglej v mapo z neželeno pošto ali promocije.</p>
+          <p id="poslanoSporocilo" class="prijava-sporocilo uspeh" role="status"></p>
+          <button type="button" id="poslanoPonovno" class="btn btn-secondary">Pošlji znova</button>
+        </section>
 
       </div>
     </div>
@@ -58,18 +91,30 @@
     (() => {
       const form = document.getElementById("obrazec");
       const sporocilo = document.getElementById("sporocilo");
+      const ponovno = document.getElementById("ponovno");
+      const PRAVILA = {
+        dolzina: (g) => g.length >= 8,
+        velika: (g) => /\p{Lu}/u.test(g),
+        stevilka: (g) => /\d/.test(g),
+      };
       let registracija = location.hash === "#registracija";
 
       function nastaviNacin() {
         document.getElementById("naslov").textContent = registracija ? "Registracija" : "Prijava";
-        document.getElementById("potrdi").textContent = registracija ? "Ustvari račun" : "Prijava";
-        document.getElementById("poljeIme").hidden = !registracija;
-        form.ime.required = registracija;
+        document.getElementById("potrdi").textContent = registracija ? "Registriraj se" : "Prijava";
+        document.querySelectorAll("[data-registracija]").forEach((el) => (el.hidden = !registracija));
         form.geslo.autocomplete = registracija ? "new-password" : "current-password";
         document.getElementById("preklopBesedilo").textContent = registracija ? "Že imaš račun?" : "Še nimaš računa?";
         document.getElementById("preklop").textContent = registracija ? "Prijavi se" : "Registriraj se";
         sporocilo.textContent = "";
+        ponovno.hidden = true;
       }
+
+      function preveriPravila() {
+        for (const [ime, pogoj] of Object.entries(PRAVILA))
+          document.querySelector(`[data-pravilo="${ime}"]`).classList.toggle("izpolnjeno", pogoj(form.geslo.value));
+      }
+      form.geslo.addEventListener("input", preveriPravila);
 
       document.getElementById("preklop").addEventListener("click", () => {
         registracija = !registracija;
@@ -77,16 +122,74 @@
         nastaviNacin();
       });
 
+      const posljiPonovno = (email) =>
+        fetch("/api/potrdi-email/ponovno", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ email }),
+        }).catch(() => null);
+
+      function pokaziPoslano(email) {
+        document.getElementById("poslanoEmail").textContent = email;
+        form.hidden = true;
+        document.getElementById("poslano").hidden = false;
+        document.getElementById("naslov").textContent = "Skoraj končano";
+      }
+
+      document.getElementById("poslanoPonovno").addEventListener("click", async (e) => {
+        e.target.disabled = true;
+        const res = await posljiPonovno(document.getElementById("poslanoEmail").textContent);
+        document.getElementById("poslanoSporocilo").textContent = res?.ok
+          ? "Poslali smo novo povezavo."
+          : "Pošiljanje ni uspelo, poskusi znova.";
+        setTimeout(() => (e.target.disabled = false), 30000);
+      });
+
+      ponovno.addEventListener("click", async () => {
+        ponovno.disabled = true;
+        const res = await posljiPonovno(form.email.value);
+        if (res?.ok) pokaziPoslano(form.email.value.trim());
+        else sporocilo.textContent = "Pošiljanje ni uspelo, poskusi znova.";
+        ponovno.disabled = false;
+      });
+
+      function napakaObrazca(p) {
+        if (!p.ime.trim() || !p.priimek.trim()) return "Vpiši ime in priimek.";
+        if (!p.email.trim()) return "Vpiši e-naslov.";
+        if (!Object.values(PRAVILA).every((pogoj) => pogoj(p.geslo)))
+          return "Geslo mora imeti vsaj 8 znakov, 1 veliko tiskano črko in 1 številko.";
+        if (p.geslo !== p.geslo2) return "Gesli se ne ujemata.";
+        return null;
+      }
+
       form.addEventListener("submit", async (e) => {
         e.preventDefault();
         const podatki = Object.fromEntries(new FormData(form));
-        if (!registracija) delete podatki.ime;
         sporocilo.textContent = "";
+        ponovno.hidden = true;
+        if (registracija) {
+          const napaka = napakaObrazca(podatki);
+          if (napaka) {
+            sporocilo.textContent = napaka;
+            return;
+          }
+          delete podatki.geslo2;
+          if (!podatki.starost) delete podatki.starost;
+        } else {
+          for (const k of ["ime", "priimek", "starost", "geslo2"]) delete podatki[k];
+        }
+        const gumb = document.getElementById("potrdi");
+        gumb.disabled = true;
         const res = await fetch(registracija ? "/api/registracija" : "/api/prijava", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(podatki),
         }).catch(() => null);
+        gumb.disabled = false;
+        if (res?.ok && registracija) {
+          pokaziPoslano(podatki.email.trim());
+          return;
+        }
         if (res?.ok) {
           // Vrni se samo na stran na tej domeni
           const naprej = new URLSearchParams(location.search).get("naprej");
@@ -95,6 +198,7 @@
         }
         const napaka = await res?.json().catch(() => null);
         sporocilo.textContent = napaka?.message || "Povezava s strežnikom ni uspela.";
+        ponovno.hidden = !napaka?.potrditev;
       });
 
       nastaviNacin();

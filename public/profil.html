@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Uredi podatke | Piflar.si</title>
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
+</head>
+<body>
+  <div id="header"></div>
+
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view racun">
+        <header class="page-header">
+          <span class="page-eyebrow">Račun</span>
+          <h1>Uredi podatke</h1>
+          <p>Podatki o šoli nam pomagajo prilagoditi snov in opomnike tvojemu letniku in maturi.</p>
+        </header>
+
+        <form id="profil" class="racun-obrazec" novalidate hidden>
+          <section class="racun-kartica">
+            <h2>Profilna slika</h2>
+            <div class="racun-slika">
+              <span id="slikaPredogled"></span>
+              <div class="racun-slika-gumbi">
+                <label class="btn btn-secondary">
+                  Naloži sliko
+                  <input id="slikaVnos" type="file" accept="image/png,image/jpeg,image/webp" hidden>
+                </label>
+                <button type="button" id="slikaOdstrani" class="btn btn-secondary">Odstrani</button>
+              </div>
+            </div>
+            <p>Brez slike je v krogcu prikazana začetnica imena in priimka.</p>
+          </section>
+
+          <section class="racun-kartica">
+            <h2>Osebni podatki</h2>
+            <div class="prijava-polja-vrsta">
+              <label class="prijava-polje"><span>Ime</span>
+                <input name="ime" type="text" autocomplete="given-name" maxlength="100" required></label>
+              <label class="prijava-polje"><span>Priimek</span>
+                <input name="priimek" type="text" autocomplete="family-name" maxlength="100" required></label>
+            </div>
+            <div class="prijava-polja-vrsta">
+              <label class="prijava-polje"><span>Starost <span class="prijava-neobvezno">(neobvezno)</span></span>
+                <input name="starost" type="number" inputmode="numeric" min="10" max="120"></label>
+              <label class="prijava-polje"><span>E-naslov</span>
+                <input name="email" type="email" disabled>
+                <small>E-naslova zaenkrat ni mogoče spremeniti.</small></label>
+            </div>
+          </section>
+
+          <section class="racun-kartica">
+            <h2>Šola</h2>
+            <div class="prijava-polje">
+              <span>Vrsta šole</span>
+              <div class="racun-izbira" role="radiogroup" aria-label="Vrsta šole">
+                <label><input type="radio" name="tipSole" value="gimnazija"><span>Gimnazija</span></label>
+                <label title="Snov za poklicno maturo bo dodana kmalu"><input type="radio" name="tipSole" value="srednja_strokovna"><span>Srednja strokovna šola</span></label>
+              </div>
+              <small id="tipSoleOpomba" hidden>Snov za poklicno maturo pripravljamo. Do takrat vidiš snov splošne mature.</small>
+            </div>
+            <label class="prijava-polje"><span>Ime šole <span class="prijava-neobvezno">(neobvezno)</span></span>
+              <input name="sola" type="text" maxlength="120" placeholder="npr. Gimnazija Bežigrad"></label>
+            <div class="prijava-polja-vrsta">
+              <label class="prijava-polje"><span>Letnik</span>
+                <select name="letnik">
+                  <option value="">Izberi</option>
+                  <option value="1">1. letnik</option>
+                  <option value="2">2. letnik</option>
+                  <option value="3">3. letnik</option>
+                  <option value="4">4. letnik</option>
+                </select></label>
+              <label class="prijava-polje"><span>Leto mature</span>
+                <select name="letoMature" id="letoMature"><option value="">Izberi</option></select></label>
+            </div>
+            <div class="prijava-polje">
+              <span>Raven matematike na maturi</span>
+              <div class="racun-izbira" role="radiogroup" aria-label="Raven matematike">
+                <label><input type="radio" name="ravenMatematike" value="osnovna"><span>Osnovna</span></label>
+                <label><input type="radio" name="ravenMatematike" value="visja"><span>Višja</span></label>
+                <label><input type="radio" name="ravenMatematike" value=""><span>Še ne vem</span></label>
+              </div>
+            </div>
+          </section>
+
+          <p id="sporocilo" class="prijava-sporocilo" role="status"></p>
+          <div class="racun-gumbi">
+            <button type="submit" class="btn btn-primary">Shrani spremembe</button>
+            <a href="/" class="btn btn-secondary">Prekliči</a>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+
+  <script src="/components/components.js"></script>
+  <script src="/components/racun.js" data-stran="profil" defer></script>
+</body>
+</html>

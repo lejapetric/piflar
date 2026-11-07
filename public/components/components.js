@@ -180,27 +180,146 @@ function initHeader() {
 }
 
 // ============================================================
-// 5. PRIJAVLJEN UPORABNIK V HEADERJU
+// 5. PRIJAVLJEN UPORABNIK V HEADERJU — krogec z inicialkami ali sliko
+//    in spustni meni (podatki, naročnina, uredi podatke, nastavitve, odjava)
 // ============================================================
+const NAZIVI_PAKETOV = { osnovni: "Osnovni", premium: "Premium" };
+const NAZIVI_SOL = { gimnazija: "Gimnazija", srednja_strokovna: "Srednja strokovna šola" };
+
+function inicialke(u) {
+  const crka = (s) => (s ?? "").trim().charAt(0).toUpperCase();
+  return crka(u.ime) + crka(u.priimek) || "?";
+}
+
+// Krogec s sliko ali inicialkami; uporabljata ga glava in stran Uredi podatke
+function avatar(u, razred = "") {
+  const el = document.createElement("span");
+  el.className = `avatar ${razred}`.trim();
+  el.setAttribute("aria-hidden", "true");
+  if (u.slika) {
+    const img = document.createElement("img");
+    img.src = u.slika;
+    img.alt = "";
+    el.appendChild(img);
+  } else {
+    el.textContent = inicialke(u);
+  }
+  return el;
+}
+window.piflarAvatar = avatar;
+
+// Plačan paket, ki še velja, sicer null
+function veljavenPaket(u) {
+  if (!NAZIVI_PAKETOV[u.paket]) return null;
+  if (u.paketVelja && new Date(u.paketVelja) <= new Date()) return null;
+  return {
+    naziv: NAZIVI_PAKETOV[u.paket],
+    velja: u.paketVelja ? new Date(u.paketVelja).toLocaleDateString("sl-SI") : null,
+  };
+}
+
+const IKONE_MENIJA = {
+  profil: '<path d="M20 21a8 8 0 0 0-16 0"></path><circle cx="12" cy="8" r="4"></circle>',
+  nastavitve: '<circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"></path>',
+  narocnina: '<path d="M12 2l3 6.5 7 .9-5.1 4.8 1.3 7L12 17.8 5.8 21.2l1.3-7L2 9.4l7-.9z"></path>',
+  odjava: '<path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><path d="M16 17l5-5-5-5"></path><path d="M21 12H9"></path>',
+};
+const ikona = (ime) =>
+  `<svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${IKONE_MENIJA[ime]}</svg>`;
+
 async function initUporabnik() {
   const el = document.getElementById("uporabnik");
   if (!el) return;
   const res = await fetch("/api/jaz").catch(() => null);
   if (!res?.ok) return; // gost: ostane povezava "Prijava"
-  const uporabnik = await res.json();
+  const u = await res.json();
+  izrisiUporabnika(el, u);
+  // Stran Uredi podatke ob shranjevanju osveži krogec v glavi
+  window.addEventListener("piflar:uporabnik", (e) => izrisiUporabnika(el, e.detail));
+}
 
-  const ime = document.createElement("span");
-  ime.className = "header-ime";
-  ime.textContent = uporabnik.ime;
-  const odjava = document.createElement("button");
-  odjava.type = "button";
-  odjava.className = "header-link";
-  odjava.textContent = "Odjava";
-  odjava.addEventListener("click", async () => {
-    await fetch("/api/odjava", { method: "POST" });
-    window.location.reload();
+function izrisiUporabnika(el, u) {
+  document.getElementById("headerNarocnina")?.setAttribute("hidden", "");
+  const polnoIme = [u.ime, u.priimek].filter(Boolean).join(" ");
+
+  const gumb = document.createElement("button");
+  gumb.type = "button";
+  gumb.className = "uporabnik-gumb";
+  gumb.setAttribute("aria-haspopup", "menu");
+  gumb.setAttribute("aria-expanded", "false");
+  gumb.setAttribute("aria-controls", "uporabnikMeni");
+  gumb.setAttribute("aria-label", `Račun: ${polnoIme}`);
+  gumb.appendChild(avatar(u));
+
+  const meni = document.createElement("div");
+  meni.id = "uporabnikMeni";
+  meni.className = "uporabnik-meni";
+  meni.hidden = true;
+
+  const glava = document.createElement("div");
+  glava.className = "uporabnik-meni-glava";
+  glava.appendChild(avatar(u, "avatar--velik"));
+  const podatki = document.createElement("div");
+  podatki.className = "uporabnik-meni-podatki";
+  const imeEl = document.createElement("strong");
+  imeEl.textContent = polnoIme;
+  const emailEl = document.createElement("span");
+  emailEl.textContent = u.email;
+  podatki.append(imeEl, emailEl);
+  const sola = [NAZIVI_SOL[u.tipSole], u.letnik && `${u.letnik}. letnik`].filter(Boolean).join(" · ");
+  if (sola) {
+    const solaEl = document.createElement("span");
+    solaEl.className = "uporabnik-meni-sola";
+    solaEl.textContent = sola;
+    podatki.appendChild(solaEl);
+  }
+  glava.appendChild(podatki);
+  meni.appendChild(glava);
+
+  const paket = veljavenPaket(u);
+  if (paket) {
+    const p = document.createElement("div");
+    p.className = "uporabnik-meni-paket";
+    p.innerHTML = ikona("narocnina");
+    const t = document.createElement("span");
+    t.textContent = `Paket ${paket.naziv}` + (paket.velja ? `, velja do ${paket.velja}` : "");
+    p.appendChild(t);
+    meni.appendChild(p);
+  }
+
+  const seznam = document.createElement("nav");
+  seznam.className = "uporabnik-meni-seznam";
+  seznam.innerHTML = `
+    <a href="/profil.html" class="uporabnik-meni-vrstica" role="menuitem">${ikona("profil")}Uredi podatke</a>
+    <a href="/nastavitve.html" class="uporabnik-meni-vrstica" role="menuitem">${ikona("nastavitve")}Nastavitve</a>
+    <a href="/narocnina.html" class="btn btn-primary uporabnik-meni-narocnina" role="menuitem">${ikona("narocnina")}${paket ? "Spremeni naročnino" : "Naročnina in paketi"}</a>
+    <button type="button" class="uporabnik-meni-vrstica uporabnik-meni-odjava" role="menuitem">${ikona("odjava")}Odjava</button>`;
+  meni.appendChild(seznam);
+
+  function odpri(odprt) {
+    meni.hidden = !odprt;
+    gumb.setAttribute("aria-expanded", String(odprt));
+    if (odprt) meni.querySelector("a")?.focus({ preventScroll: true });
+  }
+  gumb.addEventListener("click", (e) => {
+    e.stopPropagation();
+    odpri(meni.hidden);
   });
-  el.replaceChildren(ime, odjava);
+  document.addEventListener("click", (e) => {
+    if (!meni.hidden && !el.contains(e.target)) odpri(false);
+  });
+  el.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && !meni.hidden) {
+      odpri(false);
+      gumb.focus();
+    }
+  });
+  seznam.querySelector(".uporabnik-meni-odjava").addEventListener("click", async () => {
+    await fetch("/api/odjava", { method: "POST" }).catch(() => null);
+    window.location.href = "/";
+  });
+
+  el.replaceChildren(gumb, meni);
 }
 
 // ============================================================

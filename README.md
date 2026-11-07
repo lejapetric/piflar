@@ -11,7 +11,8 @@ npm start       # produkcija
 ```
 
 Stran teče na <http://localhost:3000>. Nastavitve so v `.env` (glej `.env.example`):
-`PORT`, `MONGODB_URI` (npr. brezplačni MongoDB Atlas) in `JWT_SECRET`.
+`PORT`, `MONGODB_URI` (npr. brezplačni MongoDB Atlas), `JWT_SECRET` ter za e-pošto
+`RESEND_API_KEY` in `EPOSTA_POSILJATELJ` (brez ključa se povezava za potrditev izpiše v konzolo).
 Brez `MONGODB_URI` stran deluje, le prijava ni na voljo.
 Zaklep rešitev starejših pol je začasno izklopljen (vsi vidijo vse); vklopiš ga z `ZAKLEP=1` v `.env`.
 
@@ -25,7 +26,8 @@ app.js                     Express: statične strani iz public/, API pod /api, 4
 api/
   routes/api.js            seznam API poti
   controllers/             snovi, naloge, matura, avtentikacija
-  models/uporabnik.js      uporabnik v MongoDB (paket, geslo kot bcrypt hash)
+  models/uporabnik.js      uporabnik v MongoDB (profil, nastavitve, paket, geslo kot bcrypt hash)
+  utils/eposta.js          pošiljanje e-pošte (Resend), sporočilo za potrditev e-naslova
   models/napredek.js       napredek pri nalogah (en zapis na uporabnika in nalogo)
   data/                    snovi.json, naloge.json, matura.json (+ index.js, ki jih prebere ob zagonu)
   middleware/              prijavljen uporabnik, obravnava napak
@@ -151,6 +153,19 @@ zato se sama pojavi na strani poglavja:
 Besedila nalog RIC so avtorsko zaščitena: brez dovoljenja RIC pusti `besedilo` prazno in v `pdf`
 povezavo na uradno polo na ric.si. Novo leto dodaš v `matura.json` in kot povezavo v `sidebar.html`.
 
+## Račun
+
+- **Registracija** (`/prijava.html#registracija`): ime, priimek, starost (neobvezno), e-naslov, geslo in potrditev
+  gesla. Geslo: vsaj 8 znakov, 1 velika tiskana črka in 1 številka (preveri tudi strežnik).
+- Po registraciji dobi uporabnik e-pošto z gumbom **Potrdi e-naslov** (povezava `/potrdi.html?zeton=…`, velja 24 ur).
+  Klik potrdi e-naslov, ga prijavi in odpre naslovnico. Do potrditve prijava vrne 403 in ponudi novo povezavo.
+  Računi, ustvarjeni pred to spremembo, veljajo za potrjene.
+- **Glava**: prijavljen uporabnik vidi krogec z inicialkami (ali profilno sliko). Klik odpre meni s podatki,
+  plačanim paketom (če ga ima), Uredi podatke, Nastavitve, gumbom Naročnina in Odjava.
+- **Uredi podatke** (`/profil.html`): slika (v brskalniku obrezana na 256 × 256 px), ime, priimek, starost,
+  vrsta šole (gimnazija; srednja strokovna je pripravljena za kasneje), ime šole, letnik, leto mature, raven matematike.
+- **Nastavitve** (`/nastavitve.html`): tema (svetla, temna, kot sistem), jezik, e-obvestila, sprememba gesla, izbris računa.
+
 ## Dostop
 
 | Paket | Kaj vidi |
@@ -188,10 +203,15 @@ Prijava se hrani v piškotku `httpOnly` (7 dni), zato je JavaScript na strani ne
 | `GET /api/matura?predmet=matematika&raven=osnovna&leto=2026` | seznam pol (`resena`, `odklenjena`), z `&naloge=1` tudi naloge |
 | `GET /api/matura/naloge?predmet=matematika&poglavje=diferencialni_racun` | naloge iz vseh pol za poglavja (več ločiš z vejico) |
 | `GET /api/matura/:id` | pola z nalogami; rešitve samo, če je `odklenjena` |
-| `POST /api/registracija` | `{ ime, email, geslo }` |
+| `POST /api/registracija` | `{ ime, priimek, starost?, email, geslo }` → pošlje e-pošto za potrditev |
+| `POST /api/potrdi-email` | `{ zeton }` → potrdi e-naslov in prijavi |
+| `POST /api/potrdi-email/ponovno` | `{ email }` → nova povezava za potrditev |
 | `POST /api/prijava` | `{ email, geslo }` |
 | `POST /api/odjava` | odjava |
 | `GET /api/jaz` | prijavljen uporabnik |
+| `PATCH /api/jaz` | uredi profil in nastavitve |
+| `POST /api/jaz/geslo` | `{ staro, novo }` |
+| `DELETE /api/jaz` | `{ geslo }` → izbriše račun in napredek |
 | `GET /api/placila/cenik` | cene paketov iz Stripe |
 | `POST /api/placila/checkout` | `{ paket, obdobje }` → `{ url }` za plačilo |
 | `POST /api/placila/portal` | `{ url }` za upravljanje naročnine |
