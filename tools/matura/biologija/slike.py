@@ -188,7 +188,7 @@ def rodovnik(generacije, poroke, otroci, puscica=None, legenda=("zdrav", "bolan"
     puscica: (generacija, i) oseba, označena s puščico."""
     r = 11
     L, T, dy = 44, 26, 74
-    sir = max(len(g) for g in generacije) * razmik + L + 150
+    sir = max(420, max(len(g) for g in generacije) * razmik + L + 170)
     vis = T + dy * (len(generacije) - 1) + 50
     X = lambda i: L + 20 + i * razmik
     Yg = lambda g: T + g * dy
@@ -293,8 +293,8 @@ def veriga(clenovi, oznaka="Shema", sirina=None, navpicno=False):
         sir = sirina or 300
         voz = {i: (sir / 2, 24 + i * 52, c) for i, c in enumerate(clenovi)}
         return diagram(voz, [(i, i + 1) for i in range(n - 1)], sir, 24 + (n - 1) * 52 + 30, oznaka)
-    dolz = max(len(max(str(c).split("\n"), key=len)) for c in clenovi) * 6.4 + 36
-    sir = sirina or int(n * dolz + 20)
+    dolz = max(len(max(str(c).split("\n"), key=len)) for c in clenovi) * 6.4 + 46
+    sir = max(sirina or 0, int(n * dolz + 20))
     korak = (sir - 20) / n
     voz = {i: (10 + korak * (i + 0.5), 40, c) for i, c in enumerate(clenovi)}
     return diagram(voz, [(i, i + 1) for i in range(n - 1)], sir, 84, oznaka)
