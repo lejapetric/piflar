@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Potrditev e-naslova | Piflar.si</title>
+  <meta name="robots" content="noindex">
+  <meta name="referrer" content="no-referrer">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
+</head>
+<body>
+  <div id="header"></div>
+
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view prijava">
+        <header class="page-header">
+          <span class="page-eyebrow">Račun</span>
+          <h1 id="naslov">Potrjujem e-naslov …</h1>
+        </header>
+        <section id="napaka" class="prijava-poslano" hidden>
+          <p id="sporocilo" class="prijava-sporocilo" role="alert"></p>
+          <a href="/prijava.html" class="btn btn-primary">Na prijavo</a>
+        </section>
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+
+  <script src="/components/components.js"></script>
+  <script>
+    (async () => {
+      // Žeton odstranimo iz naslova, da ne ostane v zgodovini brskalnika
+      const zeton = new URLSearchParams(location.search).get("zeton");
+      history.replaceState(null, "", location.pathname);
+      const res = zeton
+        ? await fetch("/api/potrdi-email", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ zeton }),
+          }).catch(() => null)
+        : null;
+      if (res?.ok) {
+        location.replace("/");
+        return;
+      }
+      const napaka = await res?.json().catch(() => null);
+      document.getElementById("naslov").textContent = "Potrditev ni uspela";
+      document.getElementById("sporocilo").textContent =
+        napaka?.message || "Povezava ni veljavna. Prijavi se in zahtevaj novo povezavo.";
+      document.getElementById("napaka").hidden = false;
+    })();
+  </script>
+</body>
+</html>
