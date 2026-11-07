@@ -76,12 +76,16 @@ in `<h1>`. V razvoju se indeks osveži vsakih 5 s, v produkciji ob zagonu.
 
 ## Predmeti v pripravi
 
-Angleščina, nemščina, francoščina, italijanščina, španščina, psihologija, sociologija, filozofija, ekonomija,
+Angleščina, nemščina, francoščina, italijanščina, španščina, psihologija, sociologija, ekonomija,
 glasba in umetnostna zgodovina imajo zaenkrat stran predmeta (`<predmet>.html`), pregled snovi (`snov/snov.html`)
 s seznamom vseh tem in po eno stran z razlago. Teme brez strani so v `snov.html` označene z
 `link-item link-item--pripravi` (»V pripravi«) in niso povezave; v meniju so le teme s stranjo.
 Ko dodaš novo razlago, temo v `snov.html` in `<predmet>.html` spremeni v povezavo (`<a class="link-item">`)
 in jo dodaj v meni. Vse teme so že v `snovi.json`.
+
+Filozofija je v celoti napisana po katalogu M-FIL-2024 (13 strani): uvod s temeljnimi pojmi, štiri besedila
+za komentar (Platon, Aristotel, Descartes, Nietzsche), pet tem za esej in strani za komentar, esej in seminarsko nalogo.
+Strani besedil imajo sklope po glavnih problemih iz kataloga, strani tem po vsebinah in pojmovnik vseh pojmov iz kataloga.
 
 ## Temni način in iskanje
 
