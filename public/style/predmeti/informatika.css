@@ -22,8 +22,6 @@ html[data-predmet="informatika"] {
     --surface-2: #F4F5F8;
     --border-color: #DFE2E8;
     --papir: #F5F6F8;
-    --vzorec: radial-gradient(circle, rgba(36, 88, 211, 0.16) 1px, transparent 1.4px);
-    --vzorec-velikost: 18px 18px;
     --motiv: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' fill='none' stroke='black' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M62 52L22 92l40 40M138 52l40 40-40 40M114 36L86 148'/%3E%3Cpath d='M30 172h40l12-12h36' stroke-width='3.5'/%3E%3Ccircle cx='124' cy='160' r='6' stroke-width='3.5'/%3E%3Cpath d='M150 182h-30' stroke-width='3.5'/%3E%3Ccircle cx='156' cy='182' r='6' stroke-width='3.5'/%3E%3C/svg%3E");
     --motiv-barva: rgba(36, 88, 211, 0.24);
     --trak: #2458D3;
@@ -61,7 +59,6 @@ html[data-predmet="informatika"][data-theme="dark"] {
     --surface-2: #171A23;
     --border-color: #2A2F3D;
     --papir: #14161E;
-    --vzorec: radial-gradient(circle, rgba(122, 162, 247, 0.11) 1px, transparent 1.4px);
     --motiv-barva: rgba(122, 162, 247, 0.28);
     --trak: #7AA2F7;
     --g-bg: #181B24;

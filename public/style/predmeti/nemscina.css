@@ -23,9 +23,6 @@ html[data-predmet="nemscina"] {
     --bg-card: #FFFFFF;
     --surface-2: #F6F4EE;
     --border-color: #151515;
-    --okras: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 220 220' fill='none' stroke='black' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='40' cy='40' r='14'/%3E%3Crect x='130' y='110' width='26' height='26'/%3E%3Cpath d='M60 150l16-28 16 28z'/%3E%3C/svg%3E");
-    --okras-barva: rgba(21, 21, 21, 0.07);
-    --okras-velikost: 260px;
     --motiv: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' fill='black'%3E%3Ccircle cx='72' cy='78' r='46'/%3E%3Crect x='96' y='96' width='80' height='80'/%3E%3Cpath d='M24 186l40-70 40 70z'/%3E%3Crect x='118' y='22' width='12' height='60'/%3E%3C/svg%3E");
     --motiv-barva: rgba(200, 40, 30, 0.22);
     --trak: #151515;
@@ -65,7 +62,6 @@ html[data-predmet="nemscina"][data-theme="dark"] {
     --bg-card: #222222;
     --surface-2: #1E1E1E;
     --border-color: #ECEAE4;
-    --okras-barva: rgba(236, 234, 228, 0.06);
     --motiv-barva: rgba(242, 88, 77, 0.3);
     --trak: #F2C443;
     --g-bg: #1E1E1E;

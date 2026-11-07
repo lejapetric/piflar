@@ -21,8 +21,6 @@ html[data-predmet="umetnostna_zgodovina"] {
     --bg-card: #FFFEFB;
     --surface-2: #F3EFE8;
     --border-color: #E1DAD0;
-    --vzorec: repeating-linear-gradient(0deg, rgba(90, 70, 50, 0.025) 0 1px, transparent 1px 3px), repeating-linear-gradient(90deg, rgba(90, 70, 50, 0.025) 0 1px, transparent 1px 3px);
-    --vzorec-velikost: auto;
     --motiv: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' fill='none' stroke='black' stroke-width='4.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M100 20v18M60 186l30-60M140 186l-30-60M100 150v36'/%3E%3Crect x='46' y='38' width='108' height='88'/%3E%3Crect x='58' y='50' width='84' height='64' stroke-width='3'/%3E%3Cpath d='M62 108l24-26 18 18 12-12 22 20' stroke-width='3'/%3E%3Ccircle cx='122' cy='66' r='7' stroke-width='3'/%3E%3Cpath d='M40 126h120'/%3E%3C/svg%3E");
     --motiv-barva: rgba(154, 67, 23, 0.26);
     --trak: #9A4317;
@@ -60,8 +58,6 @@ html[data-predmet="umetnostna_zgodovina"][data-theme="dark"] {
     --bg-card: #1D1A17;
     --surface-2: #181614;
     --border-color: #332E29;
-    --vzorec: radial-gradient(ellipse 60% 45% at 50% 0%, rgba(255, 240, 210, 0.07), transparent 70%);
-    --vzorec-velikost: 100% 100%;
     --motiv-barva: rgba(201, 165, 107, 0.32);
     --trak: #C9A56B;
     --g-bg: #181614;

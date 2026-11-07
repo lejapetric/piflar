@@ -20,9 +20,6 @@ html[data-predmet="sociologija"] {
     --bg-card: #FFFFFF;
     --surface-2: #EFF5F4;
     --border-color: #D8E4E2;
-    --okras: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' fill='none' stroke='black' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M30 40L90 70L150 30M90 70L70 140L150 160M90 70L150 160M30 40L20 120L70 140M150 30L180 100L150 160'/%3E%3Ccircle cx='30' cy='40' r='4' fill='black'/%3E%3Ccircle cx='90' cy='70' r='6' fill='black'/%3E%3Ccircle cx='150' cy='30' r='4' fill='black'/%3E%3Ccircle cx='70' cy='140' r='5' fill='black'/%3E%3Ccircle cx='150' cy='160' r='5' fill='black'/%3E%3Ccircle cx='20' cy='120' r='3' fill='black'/%3E%3Ccircle cx='180' cy='100' r='4' fill='black'/%3E%3C/svg%3E");
-    --okras-barva: rgba(14, 111, 104, 0.08);
-    --okras-velikost: 300px;
     --motiv: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' fill='none' stroke='black' stroke-width='4.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='100' cy='52' r='18'/%3E%3Cpath d='M70 110c4-20 16-32 30-32s26 12 30 32'/%3E%3Ccircle cx='40' cy='106' r='14'/%3E%3Cpath d='M16 156c4-16 12-26 24-26s20 10 24 26'/%3E%3Ccircle cx='160' cy='106' r='14'/%3E%3Cpath d='M136 156c4-16 12-26 24-26s20 10 24 26'/%3E%3Cpath d='M58 98l26-24M142 98l-26-24M54 120h92' stroke-width='3' stroke-dasharray='6 7'/%3E%3Cpath d='M60 186h80' stroke-width='3'/%3E%3C/svg%3E");
     --motiv-barva: rgba(14, 111, 104, 0.26);
     --trak: #0E6F68;
@@ -59,7 +56,6 @@ html[data-predmet="sociologija"][data-theme="dark"] {
     --bg-card: #152324;
     --surface-2: #121E1F;
     --border-color: #243739;
-    --okras-barva: rgba(94, 207, 196, 0.08);
     --motiv-barva: rgba(94, 207, 196, 0.3);
     --trak: #5ECFC4;
     --g-bg: #121E1F;

@@ -21,8 +21,6 @@ html[data-predmet="glasba"] {
     --bg-card: #FFFCF5;
     --surface-2: #F4EFE4;
     --border-color: #E3D9C8;
-    --vzorec: repeating-linear-gradient(to bottom, transparent 0 60px, rgba(35, 26, 29, 0.09) 60px 61px, transparent 61px 68px, rgba(35, 26, 29, 0.09) 68px 69px, transparent 69px 76px, rgba(35, 26, 29, 0.09) 76px 77px, transparent 77px 84px, rgba(35, 26, 29, 0.09) 84px 85px, transparent 85px 92px, rgba(35, 26, 29, 0.09) 92px 93px, transparent 93px 120px);
-    --vzorec-velikost: auto;
     --motiv: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cg fill='none' stroke='black' stroke-width='2'%3E%3Cpath d='M10 70h180M10 90h180M10 110h180M10 130h180M10 150h180'/%3E%3C/g%3E%3Cg fill='black'%3E%3Cellipse cx='62' cy='150' rx='15' ry='11' transform='rotate(-20 62 150)'/%3E%3Cellipse cx='132' cy='130' rx='15' ry='11' transform='rotate(-20 132 130)'/%3E%3Crect x='72' y='44' width='5' height='104'/%3E%3Crect x='142' y='24' width='5' height='104'/%3E%3Cpath d='M72 44L147 24v16L72 60z'/%3E%3C/g%3E%3C/svg%3E");
     --motiv-barva: rgba(122, 31, 61, 0.26);
     --trak: #7A1F3D;
@@ -59,7 +57,6 @@ html[data-predmet="glasba"][data-theme="dark"] {
     --bg-card: #1B181B;
     --surface-2: #171417;
     --border-color: #322C30;
-    --vzorec: repeating-linear-gradient(to bottom, transparent 0 60px, rgba(224, 182, 85, 0.07) 60px 61px, transparent 61px 68px, rgba(224, 182, 85, 0.07) 68px 69px, transparent 69px 76px, rgba(224, 182, 85, 0.07) 76px 77px, transparent 77px 84px, rgba(224, 182, 85, 0.07) 84px 85px, transparent 85px 92px, rgba(224, 182, 85, 0.07) 92px 93px, transparent 93px 120px);
     --motiv-barva: rgba(224, 182, 85, 0.32);
     --trak: #E0B655;
     --g-bg: #171417;
