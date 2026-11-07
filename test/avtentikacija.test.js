@@ -84,7 +84,12 @@ test("registracija, potrditev e-naslova, prijava, dostop glede na paket, odjava"
   assert.equal(eposta.zadnjaEposta.za, "ana@primer.si");
   assert.match(eposta.zadnjaEposta.html, /Potrdi e-naslov/);
 
-  assert.equal((await post("/registracija", { ime: "Ana", priimek: "Novak", email: "ana@primer.si", geslo })).status, 409);
+  // Ponovna registracija nepotrjenega e-naslova pošlje novo povezavo (stara ne velja več)
+  const prvi = zetonIzEposte();
+  const ponovna = await post("/registracija", { ime: "Ana", priimek: "Novak", starost: "18", email: "ana@primer.si", geslo });
+  assert.equal(ponovna.status, 201);
+  assert.equal(baza.length, 1);
+  assert.notEqual(zetonIzEposte(), prvi);
   assert.equal((await post("/prijava", { email: "ana@primer.si", geslo: "napacno123" })).status, 401);
   const nepotrjen = await post("/prijava", { email: "ana@primer.si", geslo });
   assert.equal(nepotrjen.status, 403);
@@ -105,6 +110,7 @@ test("registracija, potrditev e-naslova, prijava, dostop glede na paket, odjava"
   assert.match(potrditev.headers.get("set-cookie"), /HttpOnly/i);
   assert.equal((await (await get("/jaz", piskotekIz(potrditev))).json()).priimek, "Novak");
 
+  assert.equal((await post("/registracija", { ime: "Ana", priimek: "Novak", email: "ana@primer.si", geslo })).status, 409);
   const prijava = await post("/prijava", { email: "ana@primer.si", geslo });
   assert.equal(prijava.status, 200);
   const piskotek = piskotekIz(prijava);
@@ -177,4 +183,26 @@ test("star račun brez polja emailPotrjen se lahko prijavi", async () => {
   await star.nastaviGeslo("staro123");
   baza.push(star);
   assert.equal((await post("/prijava", { email: "star@primer.si", geslo: "staro123" })).status, 200);
+});
+
+test("napaka pri pošiljanju e-pošte ne podre registracije", async () => {
+  const fetchPrej = globalThis.fetch;
+  process.env.RESEND_API_KEY = "re_test";
+  globalThis.fetch = async (u, o) =>
+    String(u).startsWith("https://api.resend.com")
+      ? new Response('{"message":"You can only send testing emails to your own email address"}', { status: 403 })
+      : fetchPrej(u, o);
+  const napakePrej = console.error;
+  const izpis = [];
+  console.error = (...a) => izpis.push(a.join(" "));
+  try {
+    const res = await post("/registracija", { ime: "Eva", priimek: "Zupan", email: "eva@primer.si", geslo: "Geslo1234" });
+    assert.equal(res.status, 201);
+    assert.equal((await res.json()).poslano, false);
+    assert.match(izpis.join("\n"), /403[\s\S]*potrdi\.html\?zeton=/);
+  } finally {
+    globalThis.fetch = fetchPrej;
+    console.error = napakePrej;
+    delete process.env.RESEND_API_KEY;
+  }
 });

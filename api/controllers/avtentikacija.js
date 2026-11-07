@@ -19,16 +19,29 @@ export function napakaGesla(geslo) {
 const javniUrl = (req) => process.env.JAVNI_URL || `${req.protocol}://${req.get("host")}`;
 const hash = (zeton) => crypto.createHash("sha256").update(zeton).digest("hex");
 
+// Shrani nov žeton in pošlje e-pošto. Napaka pri pošiljanju (npr. Resend zavrne pošiljatelja)
+// ne podre registracije: izpiše se v konzolo strežnika skupaj s povezavo, vrne pa false.
 async function posljiNovoPotrditev(req, uporabnik) {
   const zeton = crypto.randomBytes(32).toString("base64url");
   uporabnik.potrditevHash = hash(zeton);
   uporabnik.potrditevVelja = new Date(Date.now() + POTRDITEV_VELJA_MS);
   await uporabnik.save();
-  await posljiPotrditev(uporabnik, `${javniUrl(req)}/potrdi.html?zeton=${zeton}`);
+  const povezava = `${javniUrl(req)}/potrdi.html?zeton=${zeton}`;
+  try {
+    return await posljiPotrditev(uporabnik, povezava);
+  } catch (err) {
+    console.error(
+      `E-pošte za potrditev (${uporabnik.email}) ni bilo mogoče poslati: ${err.message}\n` +
+        `Povezava za potrditev: ${povezava}`
+    );
+    return false;
+  }
 }
 
 // POST /api/registracija  { ime, priimek, starost?, email, geslo }
 // Račun se ustvari nepotrjen; prijava je mogoča šele po kliku na povezavo v e-pošti.
+// Če nepotrjen račun s tem e-naslovom že obstaja, se podatki in geslo prepišejo in
+// pošlje se nova povezava (npr. ko prva e-pošta ni prišla).
 const registracija = async (req, res) => {
   const { ime, priimek, starost, email, geslo } = req.body ?? {};
   if ([ime, priimek, email].some((v) => typeof v !== "string" || !v.trim()))
@@ -43,16 +56,21 @@ const registracija = async (req, res) => {
       return res.status(400).json({ message: "Starost ni veljavna." });
   }
 
-  const uporabnik = new Uporabnik({ ime, priimek, starost: leta, email, emailPotrjen: false });
+  const obstojec = await Uporabnik.findOne({ email: email.toLowerCase().trim() });
+  if (obstojec && obstojec.emailPotrjen !== false)
+    return res.status(409).json({ message: "Uporabnik s tem e-naslovom že obstaja." });
+  const uporabnik = obstojec ?? new Uporabnik({ email, emailPotrjen: false });
+  Object.assign(uporabnik, { ime, priimek, starost: leta });
   await uporabnik.nastaviGeslo(geslo);
+  let poslano;
   try {
-    await posljiNovoPotrditev(req, uporabnik);
+    poslano = await posljiNovoPotrditev(req, uporabnik);
   } catch (err) {
     if (err.code === 11000)
       return res.status(409).json({ message: "Uporabnik s tem e-naslovom že obstaja." });
     throw err;
   }
-  res.status(201).json({ email: uporabnik.email, potrditev: true });
+  res.status(201).json({ email: uporabnik.email, potrditev: true, poslano });
 };
 
 // POST /api/potrdi-email  { zeton }  → potrdi e-naslov in prijavi uporabnika
