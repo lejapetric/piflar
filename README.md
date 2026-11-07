@@ -76,7 +76,7 @@ in `<h1>`. V razvoju se indeks osveži vsakih 5 s, v produkciji ob zagonu.
 
 ## Predmeti v pripravi
 
-Angleščina, nemščina, francoščina, italijanščina, španščina, psihologija, sociologija, filozofija, ekonomija,
+Angleščina, nemščina, francoščina, italijanščina, španščina, sociologija, filozofija, ekonomija,
 glasba in umetnostna zgodovina imajo zaenkrat stran predmeta (`<predmet>.html`), pregled snovi (`snov/snov.html`)
 s seznamom vseh tem in po eno stran z razlago. Teme brez strani so v `snov.html` označene z
 `link-item link-item--pripravi` (»V pripravi«) in niso povezave; v meniju so le teme s stranjo.
