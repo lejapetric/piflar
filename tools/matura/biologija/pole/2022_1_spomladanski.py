@@ -264,7 +264,7 @@ POLA2 = [
     S("Raziskovanje izvlečkov japonskega dresnika", ["raziskovanje", "bakterije_glive", "rastline"],
       "Dijaki so iz listov in korenik dresnika z različnimi topili pripravili izvlečke in preverili, ali zavirajo rast bakterij in gliv (premer cone brez rasti okoli diska).",
       [P(None, tabela(["Izvleček", "Bakterija 1 (mm)", "Bakterija 2 (mm)", "Gliva (mm)"], [["Kontrola (topilo)", "0", "0", "0"], ["Etanolni, korenika", "14", "9", "12"], ["Vodni, korenika", "3", "0", "0"], ["Etanolni, list", "8", "0", "4"]])),
-       P(None, "", slika=fig(stolpci(["kontrola", "etanolni,\nkorenika", "vodni,\nkorenika", "etanolni,\nlist"], [("bakterija 1", [0, 14, 3, 8]), ("bakterija 2", [0, 9, 0, 0]), ("gliva", [0, 12, 0, 4])], "izvleček", "premer cone [mm]", ymax=16), "Premer con brez rasti okoli diskov z izvlečki.")),
+       P(None, "", slika=fig(stolpci(["kontrola", "etanolni,\nkorenika", "vodni,\nkorenika", "etanolni,\nlist"], [("bakterija 1", [0, 14, 3, 8]), ("bakterija 2", [0, 9, 0, 0]), ("gliva", [0, 12, 0, 4])], "", "premer cone [mm]", ymax=16), "Premer con brez rasti okoli diskov z izvlečki.")),
        P(1, "Kaj je neodvisna spremenljivka?",
          "Vrsta izvlečka (topilo, del rastline).", "Spreminjali so jo."),
        P(1, "Kaj so nanesli na kontrolni disk?",
