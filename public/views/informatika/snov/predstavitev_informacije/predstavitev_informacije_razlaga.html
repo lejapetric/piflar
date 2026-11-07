@@ -98,7 +98,9 @@
             <p>Z zgoščevanjem zmanjšamo velikost zapisa, da potrebuje manj prostora in se hitreje prenese. <strong>Brezizgubno</strong> zgoščevanje (ZIP, PNG, FLAC) omogoča natančno obnovo izvirnika; izkorišča ponavljanja. Najpreprostejši primer je kodiranje ponovitev (RLE): zaporedje <code class="k">AAAAABBBCCCCCCCC</code> zapišemo kot <code class="k">5A3B8C</code>. <strong>Izgubno</strong> zgoščevanje (JPEG, MP3, MP4) zavrže podrobnosti, ki jih človek slabo zazna; zapis je mnogo manjši, izvirnika pa ne moremo več obnoviti. Besedil in programov nikoli ne stiskamo izgubno.</p>
             <h4>Standardi in prenosljivost</h4>
             <p><strong>Standard</strong> je dogovorjeno pravilo o zapisu ali postopku (ASCII, Unicode, JPEG, HTML, PDF). Standardi omogočajo <strong>prenosljivost</strong>: podatke lahko odpremo v drugem programu, na drugem operacijskem sistemu ali napravi. Odprti standardi (ODF, PNG, HTML) so javno opisani in jih lahko uporablja vsak, kar zmanjša odvisnost od enega proizvajalca.</p>
-          </div>
+          <h4>Koliko bitov potrebujemo za znak</h4>
+<p>Če ima abeceda \(N\) različnih znakov, za zapis enega znaka potrebujemo najmanj \(k\) bitov, kjer je \(2^k \ge N\). Primer z mature: zapis DNA ima le štiri znake A, C, G in T, zato zadoščata <strong>2 bita na nukleotid</strong> (00, 01, 10, 11). Z ASCII-črkami (8 bitov na znak) je zapis 16 milijard nukleotidov velik 16 GB, z 2 bitoma pa le 4 GB, kar je 4-krat manj in lahko gre v delovni pomnilnik. Za 26 črk potrebujemo 5 bitov (\(2^5 = 32\)), za 10 števk 4 bite.</p>
+            </div>
           <div class="sklop-naloge">
             <h3>Tipi nalog v tem sklopu</h3>
 
@@ -564,7 +566,22 @@
                 </tbody>
               </table>
             </div>
-          </div>
+          <h4>Tabele v HTML</h4>
+<p>Tabelo zapišemo z oznako <code>&lt;table&gt;</code>. Vsako vrstico obdamo z <code>&lt;tr&gt;</code> (table row), celice v njej pa z <code>&lt;td&gt;</code> (table data) ali, za naslovne celice, z <code>&lt;th&gt;</code> (table header; brskalnik jih izpiše krepko in na sredini). Tabela se gradi <strong>po vrsticah</strong>: v vsaki vrstici morajo celice skupaj pokriti enako število stolpcev. Atribut <code>border="1"</code> nariše obrobe. Celico čez več stolpcev razširimo z <code>colspan="2"</code>, čez več vrstic z <code>rowspan="2"</code>; v vrsticah, ki jih celica prekrije, te celice ne pišemo še enkrat. V celico lahko postavimo karkoli: seznam, sliko, povezavo, prelom vrstice <code>&lt;br&gt;</code>.</p>
+<pre><code>&lt;table border="1"&gt;
+  &lt;tr&gt; &lt;th colspan="2"&gt;Jedilnik tedna&lt;/th&gt; &lt;/tr&gt;
+  &lt;tr&gt;
+    &lt;td&gt; &lt;ul&gt; &lt;li&gt;ponedeljek: ričet&lt;/li&gt; &lt;li&gt;torek: testenine&lt;/li&gt; &lt;li&gt;sreda: pica&lt;/li&gt; &lt;/ul&gt; &lt;/td&gt;
+    &lt;td&gt; &lt;img src="kosilo.jpg" alt="Fotografija kosila"&gt; &lt;/td&gt;
+  &lt;/tr&gt;
+  &lt;tr&gt; &lt;td colspan="2"&gt;Spletna stran šole: &lt;a href="https://www.sola.si"&gt;www.sola.si&lt;/a&gt;&lt;/td&gt; &lt;/tr&gt;
+&lt;/table&gt;</code></pre>
+<figure class="slika slika--siroka">
+<svg viewBox="0 0 560 160" role="img" aria-label="Tabela HTML z združenimi celicami" xmlns="http://www.w3.org/2000/svg"><rect class="s-lik" x="10" y="10" width="300" height="34"/><text class="s-txt-b" x="160" y="31" text-anchor="middle" style="font-size:12px">Jedilnik tedna</text><rect class="s-ps" x="10" y="44" width="150" height="70"/><text class="" x="85" y="68" text-anchor="middle" style="font-size:12px">• ponedeljek: ričet</text><text class="" x="85" y="83" text-anchor="middle" style="font-size:12px">• torek: testenine</text><text class="" x="85" y="98" text-anchor="middle" style="font-size:12px">• sreda: pica</text><rect class="s-ps" x="160" y="44" width="150" height="70"/><text class="" x="235" y="83" text-anchor="middle" style="font-size:12px">[slika kosila]</text><rect class="s-ps" x="10" y="114" width="300" height="34"/><text class="" x="160" y="135" text-anchor="middle" style="font-size:12px">Spletna stran šole: www.sola.si</text><text class="s-txt-k1" x="330" y="30" text-anchor="start" style="font-size:11px">vrstica 1: &lt;th colspan="2"&gt;</text><text class="s-txt-k3" x="330" y="84" text-anchor="start" style="font-size:11px">vrstica 2: dve celici &lt;td&gt;</text><text class="s-txt-k1" x="330" y="135" text-anchor="start" style="font-size:11px">vrstica 3: &lt;td colspan="2"&gt;</text></svg>
+<figcaption>Tako brskalnik izriše tabelo iz zgornje kode: atribut border="1" nariše obrobe, colspan="2" razširi celico čez dva stolpca, celica &lt;th&gt; je krepka in sredinsko poravnana.</figcaption>
+</figure>
+<p>Postopek pri nalogi »dopolni kodo«: (1) preštej stolpce v najširši vrstici; (2) za vsako vrstico napiši <code>&lt;tr&gt;</code> in toliko celic, da je vsota stolpcev (s <code>colspan</code>) enaka; (3) preveri, da je vsaka oznaka zaprta v obratnem vrstnem redu, kot je bila odprta. Povezavo na e-poštni naslov zapišemo z <code>&lt;a href="mailto:kuharica@sola.si"&gt;</code>.</p>
+            </div>
           <div class="sklop-naloge">
             <h3>Tipi nalog v tem sklopu</h3>
 
