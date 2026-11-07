@@ -15,6 +15,7 @@ import glob, json, os, random, runpy, sys
 KOREN = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, os.path.join(KOREN, "..", "fizika"))
 import gradi as g  # noqa: E402
+import slike  # noqa: E402
 
 IZHOD = os.path.join(KOREN, "..", "..", "..", "api", "data", "matura-biologija.json")
 
@@ -51,7 +52,8 @@ VIR = ("Vadbena pola Piflar.si. Zgradba, vrsta nalog in točkovanje sledijo urad
 
 
 def zgradi(pot):
-    ns = runpy.run_path(pot, init_globals={"M": M, "S": S, "P": P, "tabela": g.tabela, "graf": g.graf})
+    ns = runpy.run_path(pot, init_globals={"M": M, "S": S, "P": P, "tabela": g.tabela, "graf": g.graf,
+                                         **{k: v for k, v in vars(slike).items() if not k.startswith("_") and callable(v)}})
     leto, rok, izvedba, datum = ns["LETO"], ns["ROK"], ns.get("IZVEDBA", 1), ns["DATUM"]
     pripona = "" if izvedba == 1 else f"-{izvedba}"
     opis_roka = f"{rok} rok {leto}" + (f", {izvedba}. izpitni dan" if izvedba > 1 else "")
