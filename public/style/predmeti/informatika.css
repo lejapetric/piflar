@@ -1,0 +1,111 @@
+/* Informatika — UREJEVALNIK KODE
+   Svetla podlaga s pikčasto mrežo, oznake v pisavi za kodo kot komentarji,
+   modra in jantarna kot sintaksno barvanje, oklepaji </> v glavi strani.
+   Temni način: temna tema urejevalnika. IBM Plex Sans + IBM Plex Mono. */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500;600&display=swap');
+
+html[data-predmet="informatika"] {
+    --font-display: 'IBM Plex Sans', sans-serif;
+    --font-body: 'IBM Plex Sans', sans-serif;
+    --font-oznake: 'IBM Plex Mono', ui-monospace, monospace;
+    --primary: #2458D3;
+    --primary-dark: #1A41A0;
+    --primary-light: #8EAAF0;
+    --primary-soft: #E6EDFC;
+    --jantar: #B26B00;
+    --niz: #1F8A4C;
+    --text-primary: #1A1F2B;
+    --text-secondary: #4A5263;
+    --text-muted: #8A91A0;
+    --bg-primary: #F5F6F8;
+    --bg-card: #FFFFFF;
+    --surface-2: #F4F5F8;
+    --border-color: #DFE2E8;
+    --papir: #F5F6F8;
+    --vzorec: radial-gradient(circle, rgba(36, 88, 211, 0.16) 1px, transparent 1.4px);
+    --vzorec-velikost: 18px 18px;
+    --motiv: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' fill='none' stroke='black' stroke-width='6' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M62 52L22 92l40 40M138 52l40 40-40 40M114 36L86 148'/%3E%3Cpath d='M30 172h40l12-12h36' stroke-width='3.5'/%3E%3Ccircle cx='124' cy='160' r='6' stroke-width='3.5'/%3E%3Cpath d='M150 182h-30' stroke-width='3.5'/%3E%3Ccircle cx='156' cy='182' r='6' stroke-width='3.5'/%3E%3C/svg%3E");
+    --motiv-barva: rgba(36, 88, 211, 0.24);
+    --trak: #2458D3;
+    --g-bg: #FFFFFF;
+    --g-grid: #ECEEF3;
+    --g1: #2458D3;
+    --g2: #D6336C;
+    --g3: #1F8A4C;
+    --g4: #B26B00;
+    --radius-sm: 6px;
+    --radius: 8px;
+    --sb-bg: #FFFFFF;
+    --sb-border: #DFE2E8;
+    --sb-text: #1A1F2B;
+    --sb-text-muted: #4A5263;
+    --sb-hover-bg: #F4F5F8;
+    --sb-active-bg: #E6EDFC;
+    --sb-accent: #2458D3;
+    --sb-accent-dark: #1A41A0;
+    --list: #FFFFFF;
+}
+
+html[data-predmet="informatika"][data-theme="dark"] {
+    --primary: #7AA2F7;
+    --primary-dark: #B4C9FA;
+    --primary-light: #3E66C9;
+    --primary-soft: rgba(122, 162, 247, 0.13);
+    --jantar: #E0AF68;
+    --niz: #9ECE6A;
+    --text-primary: #DDE2EE;
+    --text-secondary: #A3AABB;
+    --text-muted: #6B7387;
+    --bg-primary: #14161E;
+    --bg-card: #1B1E28;
+    --surface-2: #171A23;
+    --border-color: #2A2F3D;
+    --papir: #14161E;
+    --vzorec: radial-gradient(circle, rgba(122, 162, 247, 0.11) 1px, transparent 1.4px);
+    --motiv-barva: rgba(122, 162, 247, 0.28);
+    --trak: #7AA2F7;
+    --g-bg: #181B24;
+    --g-grid: #272B38;
+    --g-axis: #A3AABB;
+    --g-line: #DDE2EE;
+    --g1: #7AA2F7;
+    --g2: #F7768E;
+    --g3: #9ECE6A;
+    --g4: #E0AF68;
+    --sb-bg: #1B1E28;
+    --sb-border: #2A2F3D;
+    --sb-text: #DDE2EE;
+    --sb-text-muted: #A3AABB;
+    --sb-hover-bg: #171A23;
+    --sb-active-bg: rgba(122, 162, 247, 0.13);
+    --sb-accent: #7AA2F7;
+    --sb-accent-dark: #B4C9FA;
+    --list: #1B1E28;
+}
+
+html[data-predmet="informatika"] .page-eyebrow { background: none; padding: 0; color: var(--text-muted); text-transform: none; letter-spacing: 0; font-size: 13px; }
+html[data-predmet="informatika"] .page-eyebrow::before { content: "// "; color: var(--niz); }
+html[data-predmet="informatika"] .page-header h1 { font-weight: 600; letter-spacing: -0.02em; }
+html[data-predmet="informatika"] .page-header h1::after { content: "_"; color: var(--primary); font-weight: 400; animation: utripa 1.1s steps(1) infinite; }
+@keyframes utripa { 50% { opacity: 0; } }
+html[data-predmet="informatika"] .page-meta-item strong { font-family: var(--font-oznake); font-weight: 600; color: var(--primary); }
+html[data-predmet="informatika"] .page-meta-item span { text-transform: none; letter-spacing: 0; }
+html[data-predmet="informatika"] .sklop-num { color: var(--jantar); text-transform: none; letter-spacing: 0; }
+html[data-predmet="informatika"] .sklop-num::before { content: "#"; margin-right: 2px; }
+html[data-predmet="informatika"] .sklop-header h2, html[data-predmet="informatika"] .subsection-head h2 { font-weight: 600; letter-spacing: -0.015em; }
+html[data-predmet="informatika"] .sklop-teorija > h3::before, html[data-predmet="informatika"] .sklop-naloge > h3::before, html[data-predmet="informatika"] .matura-formule h3::before, html[data-predmet="informatika"] .intro-card h3::before {
+    content: "> "; font-family: var(--font-oznake); color: var(--niz); font-weight: 500;
+}
+html[data-predmet="informatika"] .sklop-teorija > h3, html[data-predmet="informatika"] .sklop-naloge > h3 { font-weight: 600; }
+html[data-predmet="informatika"] .tip-naloga { border-left-color: var(--jantar); }
+html[data-predmet="informatika"] .tip-naloga-oznaka { color: var(--jantar); text-transform: none; letter-spacing: 0; }
+html[data-predmet="informatika"] .tip-naloga-oznaka::before { content: "/* "; }
+html[data-predmet="informatika"] .tip-naloga-oznaka::after { content: " */"; }
+html[data-predmet="informatika"] .tip-naloge h5 { font-family: var(--font-oznake); text-transform: none; letter-spacing: 0; color: var(--niz); }
+html[data-predmet="informatika"] .tip-naloge h5::before { content: "// "; }
+html[data-predmet="informatika"] .tip-naloge ol.postopek > li::before { font-family: var(--font-oznake); background: var(--surface-2); color: var(--text-muted); border: 1px solid var(--border-color); border-radius: 4px; }
+html[data-predmet="informatika"] .kazalo .kazalo-st { font-family: var(--font-oznake); color: var(--jantar); }
+html[data-predmet="informatika"] .tip-naloge .kljucne li { font-family: var(--font-oznake); font-size: 12.5px; border-radius: 4px; color: var(--niz); }
+html[data-predmet="informatika"] code, html[data-predmet="informatika"] pre { font-family: var(--font-oznake); }
+html[data-predmet="informatika"][data-theme="dark"] .menu-btn { color: #14161E; }
+@media (prefers-reduced-motion: reduce) { html[data-predmet="informatika"] .page-header h1::after { animation: none; } }

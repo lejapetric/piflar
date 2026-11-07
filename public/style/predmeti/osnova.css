@@ -1,0 +1,241 @@
+/* ============================================================
+   public/style/predmeti/osnova.css
+   Skupna osnova videza po predmetih. Naloži jo components/tema.js
+   na vseh straneh pod /views/<predmet>/ (skupaj s <predmet>.css).
+   Naslovnica, iskanje, prijava, naročnina … ostanejo v osnovnem slogu.
+
+   Vsak <predmet>.css nastavi le spremenljivke spodaj (za svetli in
+   temni način) in po potrebi nekaj posebnosti:
+     --papir            barva ozadja strani
+     --vzorec           ozadje strani (mreža, črte …), lahko none
+     --vzorec-velikost  velikost ponavljanja vzorca
+     --okras            SVG (url) za razpršen okras čez ozadje, lahko none
+     --okras-barva      barva okrasa (okras je maska)
+     --okras-velikost   velikost ponavljanja okrasa
+     --motiv            SVG (url) za motiv v glavi strani
+     --motiv-barva      barva motiva
+     --list             ozadje kartic (razlaga, naloge, uvod)
+     --list-vzorec      dodatek na karticah (npr. robna črta), lahko none
+     --list-zamik       levi odmik besedila na karticah (zaradi robne črte)
+     --trak             barvni trak na vrhu glave
+     --font-oznake      pisava za majhne oznake (nadnaslovi, številke)
+   Izbirniki imajo predpono html[data-predmet], da prevladajo nad
+   style.css in snov.css ne glede na vrstni red nalaganja.
+   ============================================================ */
+
+html[data-predmet] {
+    --papir: var(--bg-primary);
+    --vzorec: none;
+    --vzorec-velikost: auto;
+    --okras: none;
+    --okras-barva: transparent;
+    --okras-velikost: 240px;
+    --motiv: none;
+    --motiv-barva: var(--primary);
+    --list: var(--bg-card);
+    --list-vzorec: none;
+    --list-zamik: var(--space-6);
+    --trak: var(--primary);
+    --font-oznake: var(--font-body);
+    --surface-2: var(--bg-primary);
+
+    /* slike (inline SVG) */
+    --g-bg: #FFFFFF;
+    --g-grid: #ECEEF6;
+    --g-axis: #5B6178;
+    --g-line: #171A2E;
+    --g-pom: #94A0B8;
+    --g1: var(--primary);
+    --g2: #DC2626;
+    --g3: #16A34A;
+    --g4: #D97706;
+
+    /* opozorila in oznake */
+    --pazi-bg: #FFFBEB;
+    --pazi-fg: #78350F;
+    --pazi-border: #D97706;
+    --vr-bg: #FEF3C7;
+    --vr-fg: #92400E;
+    --vr-border: #FDE68A;
+}
+
+html[data-predmet][data-theme="dark"] {
+    --g-bg: #13172A;
+    --g-grid: #262B42;
+    --g-axis: #8D94AE;
+    --g-line: #D5D9E8;
+    --g-pom: #6B7390;
+    --g2: #F87171;
+    --g3: #4ADE80;
+    --g4: #FBBF24;
+    --pazi-bg: rgba(245, 158, 11, 0.09);
+    --pazi-fg: #FDE68A;
+    --pazi-border: #F59E0B;
+    --vr-bg: rgba(245, 158, 11, 0.14);
+    --vr-fg: #FCD34D;
+    --vr-border: rgba(245, 158, 11, 0.35);
+}
+
+/* ---------- Ozadje strani ---------- */
+html[data-predmet] body {
+    font-family: var(--font-body);
+    background-color: var(--papir);
+    background-image: var(--vzorec);
+    background-size: var(--vzorec-velikost);
+    background-attachment: fixed;
+}
+
+html[data-predmet] body::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    z-index: -1;
+    pointer-events: none;
+    background-color: var(--okras-barva);
+    -webkit-mask: var(--okras) repeat 0 0 / var(--okras-velikost);
+    mask: var(--okras) repeat 0 0 / var(--okras-velikost);
+}
+
+/* ---------- Glava: barvni trak predmeta ---------- */
+html[data-predmet] .header {
+    box-shadow: inset 0 3px 0 var(--trak);
+}
+
+html[data-predmet] ::selection {
+    background: color-mix(in srgb, var(--primary) 28%, transparent);
+    color: inherit;
+}
+
+/* ---------- Glava strani z motivom predmeta ---------- */
+html[data-predmet] .page-header {
+    position: relative;
+    max-width: none;
+    padding-right: 220px;
+}
+
+html[data-predmet] .page-header > * {
+    max-width: 68ch;
+}
+
+html[data-predmet] .page-header::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 50%;
+    width: 190px;
+    height: 190px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    background-color: var(--motiv-barva);
+    -webkit-mask: var(--motiv) no-repeat center / contain;
+    mask: var(--motiv) no-repeat center / contain;
+}
+
+html[data-predmet] .page-eyebrow,
+html[data-predmet] .sklop-num,
+html[data-predmet] .tip-naloga-oznaka,
+html[data-predmet] .stran-kazalo-naslov,
+html[data-predmet] .page-meta-item span,
+html[data-predmet] .kazalo .kazalo-skupina {
+    font-family: var(--font-oznake);
+}
+
+html[data-predmet] .view a:not([class]) {
+    color: var(--primary);
+}
+
+/* ---------- Kartice kot listi ---------- */
+html[data-predmet] .sklop-teorija,
+html[data-predmet] .sklop-naloge,
+html[data-predmet] .intro-card,
+html[data-predmet] .matura-formule {
+    background-color: var(--list);
+    background-image: var(--list-vzorec);
+    padding-left: var(--list-zamik);
+}
+
+html[data-predmet] .info-card,
+html[data-predmet] .kazalo,
+html[data-predmet] .external-links,
+html[data-predmet] .stran-kazalo,
+html[data-predmet] .link-item,
+html[data-predmet] .tip-naloge,
+html[data-predmet] .sklop-nadnaslov {
+    background-color: var(--list);
+}
+
+html[data-predmet] .primer,
+html[data-predmet] .prepoznaj {
+    background: var(--surface-2);
+}
+
+/* ---------- Pazi in višja raven ---------- */
+html[data-predmet] .pazi {
+    background: var(--pazi-bg);
+    border-left-color: var(--pazi-border);
+}
+html[data-predmet] .pazi,
+html[data-predmet] .pazi strong,
+html[data-predmet] .pazi li {
+    color: var(--pazi-fg);
+}
+html[data-predmet] .badge-vr {
+    color: var(--vr-fg);
+    background: var(--vr-bg);
+    border-color: var(--vr-border);
+}
+html[data-predmet] .sklop--visja .sklop-header { border-bottom-color: var(--vr-border); }
+html[data-predmet] .sklop--visja .sklop-num { color: var(--vr-fg); }
+html[data-predmet] .tabela td.poudarek { background: var(--vr-bg); }
+
+/* ---------- Slike ---------- */
+html[data-predmet] .slika { background: var(--g-bg); }
+html[data-predmet] .slika text { stroke: var(--g-bg); fill: var(--text-primary); }
+html[data-predmet] .slika .s-mreza { stroke: var(--g-grid); }
+html[data-predmet] .slika .s-os { stroke: var(--g-axis); }
+html[data-predmet] .slika .s-os-txt,
+html[data-predmet] .slika .s-txt-muted { fill: var(--g-axis); }
+html[data-predmet] .slika .s-pom { stroke: var(--g-pom); }
+html[data-predmet] .slika .s-crta { stroke: var(--g-line); }
+html[data-predmet] .slika .s-k1 { stroke: var(--g1); }
+html[data-predmet] .slika .s-k2,
+html[data-predmet] .slika .s-asim { stroke: var(--g2); }
+html[data-predmet] .slika .s-k3 { stroke: var(--g3); }
+html[data-predmet] .slika .s-k4 { stroke: var(--g4); }
+html[data-predmet] .slika .s-txt-k1 { fill: var(--g1); }
+html[data-predmet] .slika .s-txt-k2 { fill: var(--g2); }
+html[data-predmet] .slika .s-txt-k3 { fill: var(--g3); }
+html[data-predmet] .slika .s-txt-k4 { fill: var(--g4); }
+html[data-predmet] .slika .s-tocka { fill: var(--g1); stroke: var(--g-bg); }
+html[data-predmet] .slika .s-tocka-2 { fill: var(--g2); stroke: var(--g-bg); }
+html[data-predmet] .slika .s-prazna { fill: var(--g-bg); stroke: var(--g1); }
+html[data-predmet] .slika .s-ploskev { fill: color-mix(in srgb, var(--g1) 18%, transparent); }
+html[data-predmet] .slika .s-ploskev-2 { fill: color-mix(in srgb, var(--g2) 16%, transparent); }
+html[data-predmet] .slika .s-lik { fill: color-mix(in srgb, var(--g1) 9%, transparent); stroke: var(--g1); }
+html[data-predmet] .slika .s-lik-2 { fill: color-mix(in srgb, var(--g3) 9%, transparent); stroke: var(--g3); }
+html[data-predmet] .slika .s-kot { fill: color-mix(in srgb, var(--g4) 16%, transparent); stroke: var(--g4); }
+html[data-predmet] .slika .s-kot-2 { fill: color-mix(in srgb, var(--g3) 15%, transparent); stroke: var(--g3); }
+html[data-predmet] .slika .s-kot-3 { fill: color-mix(in srgb, var(--g1) 15%, transparent); stroke: var(--g1); }
+html[data-predmet] .slika .s-kot-4 { fill: color-mix(in srgb, var(--g2) 13%, transparent); stroke: var(--g2); }
+
+/* ---------- Ožji zasloni ---------- */
+@media (max-width: 760px) {
+    html[data-predmet] .page-header { padding-right: 0; }
+    html[data-predmet] .page-header::after {
+        width: 96px;
+        height: 96px;
+        top: 0;
+        transform: none;
+        opacity: 0.5;
+    }
+    html[data-predmet] .sklop-teorija,
+    html[data-predmet] .sklop-naloge,
+    html[data-predmet] .intro-card,
+    html[data-predmet] .matura-formule {
+        padding-left: max(var(--space-4), calc(var(--list-zamik) - 24px));
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html[data-predmet] body { background-attachment: scroll; }
+}

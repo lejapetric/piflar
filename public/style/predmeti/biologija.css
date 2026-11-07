@@ -1,0 +1,114 @@
+/* Biologija — ZELIŠČNI ZVEZEK
+   Mehko zeleno ozadje z razpršenimi listi, mahovno zelena in jagodno
+   rdeča za poudarke, praprot v glavi strani. Young Serif + Figtree.
+   Temni način: gozd ponoči. */
+@import url('https://fonts.googleapis.com/css2?family=Young+Serif&family=Figtree:wght@400;500;600;700&display=swap');
+
+html[data-predmet="biologija"] {
+    --font-display: 'Young Serif', Georgia, serif;
+    --font-body: 'Figtree', sans-serif;
+    --font-oznake: 'Figtree', sans-serif;
+    --primary: #2E7D4F;
+    --primary-dark: #1F5C39;
+    --primary-light: #8CC7A0;
+    --primary-soft: #E3F2E7;
+    --jagoda: #B4235A;
+    --text-primary: #16261C;
+    --text-secondary: #45584B;
+    --text-muted: #869889;
+    --bg-primary: #F1F6EE;
+    --bg-card: #FFFFFF;
+    --surface-2: #F2F7F0;
+    --border-color: #DCE8DA;
+    --papir: #F1F6EE;
+    --okras: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 240 240' fill='black'%3E%3Cpath transform='translate(40 60) rotate(-30)' d='M0 0C8-12 26-14 38-6C28 4 10 7 0 0Z'/%3E%3Cpath transform='translate(170 40) rotate(40)' d='M0 0C8-12 26-14 38-6C28 4 10 7 0 0Z'/%3E%3Cpath transform='translate(140 170) rotate(-70)' d='M0 0C8-12 26-14 38-6C28 4 10 7 0 0Z'/%3E%3Cpath transform='translate(30 190) rotate(15)' d='M0 0C6-9 20-11 29-5C21 3 8 5 0 0Z'/%3E%3Cpath transform='translate(100 110) rotate(120)' d='M0 0C6-9 20-11 29-5C21 3 8 5 0 0Z'/%3E%3C/svg%3E");
+    --okras-barva: rgba(46, 125, 79, 0.07);
+    --okras-velikost: 260px;
+    --motiv: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' fill='black'%3E%3Cpath d='M40 190C70 140 105 95 165 20' fill='none' stroke='black' stroke-width='5' stroke-linecap='round'/%3E%3Cpath transform='translate(58 160) rotate(-110)' d='M0 0C10-14 30-16 44-8C32 4 12 8 0 0Z'/%3E%3Cpath transform='translate(62 158) rotate(-20)' d='M0 0C10-14 30-16 44-8C32 4 12 8 0 0Z'/%3E%3Cpath transform='translate(80 133) rotate(-115)' d='M0 0C10-14 30-16 44-8C32 4 12 8 0 0Z'/%3E%3Cpath transform='translate(84 131) rotate(-25)' d='M0 0C10-14 30-16 44-8C32 4 12 8 0 0Z'/%3E%3Cpath transform='translate(102 106) rotate(-118)' d='M0 0C10-14 30-16 44-8C32 4 12 8 0 0Z'/%3E%3Cpath transform='translate(106 104) rotate(-30)' d='M0 0C10-14 30-16 44-8C32 4 12 8 0 0Z'/%3E%3Cpath transform='translate(124 80) rotate(-120)' d='M0 0C10-14 30-16 44-8C32 4 12 8 0 0Z'/%3E%3Cpath transform='translate(128 78) rotate(-35)' d='M0 0C10-14 30-16 44-8C32 4 12 8 0 0Z'/%3E%3Cpath transform='translate(146 55) rotate(-122)' d='M0 0C10-14 30-16 44-8C32 4 12 8 0 0Z'/%3E%3Cpath transform='translate(150 52) rotate(-40)' d='M0 0C10-14 30-16 44-8C32 4 12 8 0 0Z'/%3E%3Cpath d='M165 20c4 10 2 20-6 26' fill='none' stroke='black' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E");
+    --motiv-barva: rgba(46, 125, 79, 0.3);
+    --trak: #2E7D4F;
+    --g-bg: #FFFFFF;
+    --g-grid: #E6EFE4;
+    --g1: #2E7D4F;
+    --g2: #B4235A;
+    --g3: #2563EB;
+    --g4: #C77C02;
+    --radius-sm: 14px;
+    --radius: 20px;
+    --sb-bg: #FFFFFF;
+    --sb-border: #DCE8DA;
+    --sb-text: #16261C;
+    --sb-text-muted: #45584B;
+    --sb-hover-bg: #F2F7F0;
+    --sb-active-bg: #E3F2E7;
+    --sb-accent: #2E7D4F;
+    --sb-accent-dark: #1F5C39;
+    --list: #FFFFFF;
+}
+
+html[data-predmet="biologija"][data-theme="dark"] {
+    --primary: #7CCB97;
+    --primary-dark: #B2E3C1;
+    --primary-light: #3E9D62;
+    --primary-soft: rgba(124, 203, 151, 0.12);
+    --jagoda: #F47AA6;
+    --text-primary: #E5F0E7;
+    --text-secondary: #A9BEAE;
+    --text-muted: #6F8576;
+    --bg-primary: #0E1912;
+    --bg-card: #15241A;
+    --surface-2: #111E16;
+    --border-color: #24392B;
+    --papir: #0E1912;
+    --okras-barva: rgba(124, 203, 151, 0.05);
+    --motiv-barva: rgba(124, 203, 151, 0.3);
+    --trak: #7CCB97;
+    --g-bg: #122017;
+    --g-grid: #203427;
+    --g-axis: #A9BEAE;
+    --g-line: #E5F0E7;
+    --g1: #7CCB97;
+    --g2: #F47AA6;
+    --g3: #8AB4FF;
+    --g4: #F2C14E;
+    --sb-bg: #15241A;
+    --sb-border: #24392B;
+    --sb-text: #E5F0E7;
+    --sb-text-muted: #A9BEAE;
+    --sb-hover-bg: #111E16;
+    --sb-active-bg: rgba(124, 203, 151, 0.12);
+    --sb-accent: #7CCB97;
+    --sb-accent-dark: #B2E3C1;
+    --list: #15241A;
+}
+
+html[data-predmet="biologija"] .page-eyebrow { background: var(--primary-soft); color: var(--primary-dark); }
+html[data-predmet="biologija"] .page-header h1, html[data-predmet="biologija"] .sklop-header h2, html[data-predmet="biologija"] .subsection-head h2 { font-weight: 400; letter-spacing: -0.01em; }
+html[data-predmet="biologija"] .sklop-teorija > h3, html[data-predmet="biologija"] .sklop-naloge > h3, html[data-predmet="biologija"] .matura-formule h3, html[data-predmet="biologija"] .intro-card h3, html[data-predmet="biologija"] .info-card h3 { font-weight: 400; }
+html[data-predmet="biologija"] .page-meta-item strong { font-family: var(--font-display); font-weight: 400; color: var(--primary); }
+html[data-predmet="biologija"] .sklop-num { color: var(--jagoda); }
+html[data-predmet="biologija"] .sklop-header { border-bottom: 0; padding-bottom: 0; }
+html[data-predmet="biologija"] .sklop-header::after {
+    content: ""; display: block; height: 14px; margin-top: var(--space-3);
+    background:
+        radial-gradient(circle at 7px 7px, var(--primary-light) 3px, transparent 3.5px) 0 0 / 22px 14px repeat-x,
+        linear-gradient(var(--border-color), var(--border-color)) 0 50% / 100% 2px no-repeat;
+}
+html[data-predmet="biologija"] .sklop-teorija, html[data-predmet="biologija"] .sklop-naloge, html[data-predmet="biologija"] .intro-card { border-color: transparent; box-shadow: 0 10px 30px -22px rgba(22, 60, 35, 0.45); }
+html[data-predmet="biologija"] .sklop-teorija > h3, html[data-predmet="biologija"] .sklop-naloge > h3 { border-bottom: 0; color: var(--primary-dark); }
+html[data-predmet="biologija"] .sklop-teorija > h3::before, html[data-predmet="biologija"] .sklop-naloge > h3::before {
+    content: ""; display: inline-block; width: 18px; height: 18px; margin-right: 10px; vertical-align: -2px;
+    background: var(--primary); border-radius: 0 70% 0 70%;
+}
+html[data-predmet="biologija"] .tip-naloge { border-color: var(--border-color); border-radius: 16px; }
+html[data-predmet="biologija"] .tip-naloga { border: 0; border-radius: 0 16px 16px 16px; background: var(--primary-soft); }
+html[data-predmet="biologija"] .prepoznaj { border-left: 0; border-radius: 16px; }
+html[data-predmet="biologija"] .tip-naloge ol.postopek > li::before { background: var(--primary); color: #FFFFFF; border-radius: 0 50% 50% 50%; }
+html[data-predmet="biologija"][data-theme="dark"] .tip-naloge ol.postopek > li::before { color: #0E1912; }
+html[data-predmet="biologija"] .na-nalogi { border-left-color: var(--primary-light); }
+html[data-predmet="biologija"] .link-item { border-radius: 16px; }
+html[data-predmet="biologija"] .link-item:hover { border-color: var(--primary); }
+html[data-predmet="biologija"] .kazalo .kazalo-st { color: var(--jagoda); }
+html[data-predmet="biologija"] .matura-formule { border-left-color: var(--jagoda); }
+html[data-predmet="biologija"] .slika { border-radius: 16px; }
+html[data-predmet="biologija"][data-theme="dark"] .menu-btn { color: #0E1912; }

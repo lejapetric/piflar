@@ -1,0 +1,113 @@
+/* Fizika — MODER KARIRAST ZVEZEK
+   Svetlo modri papir z izrazitejšo modro mrežo, temno modra platnica
+   kot trak in glava kartic, oranžna za poudarke (vektorji, sile).
+   Temni način: modra risalna podlaga s cian mrežo. Archivo + IBM Plex Mono za oznake. */
+@import url('https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@500;600&display=swap');
+
+html[data-predmet="fizika"] {
+    --font-display: 'Archivo', sans-serif;
+    --font-body: 'Archivo', sans-serif;
+    --font-oznake: 'IBM Plex Mono', ui-monospace, monospace;
+    --primary: #1E4FB8;
+    --primary-dark: #173C8C;
+    --primary-light: #8FB0EC;
+    --primary-soft: #E1EAFA;
+    --oranzna: #E8590C;
+    --platnica: #1B3A7A;
+    --text-primary: #14213D;
+    --text-secondary: #41506E;
+    --text-muted: #8592AB;
+    --bg-primary: #EAF1FB;
+    --bg-card: #F7FAFE;
+    --surface-2: #EEF3FB;
+    --border-color: #CCD9EE;
+    --papir: #EAF1FB;
+    --vzorec: linear-gradient(rgba(30, 79, 184, 0.13) 1px, transparent 1px), linear-gradient(90deg, rgba(30, 79, 184, 0.13) 1px, transparent 1px);
+    --vzorec-velikost: 20px 20px;
+    --list-vzorec: linear-gradient(rgba(30, 79, 184, 0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(30, 79, 184, 0.06) 1px, transparent 1px);
+    --motiv: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' fill='none' stroke='black' stroke-width='4.5' stroke-linecap='round'%3E%3Cellipse cx='100' cy='92' rx='80' ry='28'/%3E%3Cellipse cx='100' cy='92' rx='80' ry='28' transform='rotate(60 100 92)'/%3E%3Cellipse cx='100' cy='92' rx='80' ry='28' transform='rotate(-60 100 92)'/%3E%3Ccircle cx='100' cy='92' r='10' fill='black'/%3E%3Cpath d='M15 182c12-22 24-22 36 0s24 22 36 0 24-22 36 0 24 22 36 0 24-22 36 0' stroke-width='5'/%3E%3C/svg%3E");
+    --motiv-barva: rgba(30, 79, 184, 0.24);
+    --trak: #1B3A7A;
+    --g-bg: #FFFFFF;
+    --g-grid: #DCE6F7;
+    --g1: #1E4FB8;
+    --g2: #E8590C;
+    --g3: #0F8A5F;
+    --g4: #9333EA;
+    --radius-sm: 6px;
+    --radius: 8px;
+    --sb-bg: #F7FAFE;
+    --sb-border: #CCD9EE;
+    --sb-text: #14213D;
+    --sb-text-muted: #41506E;
+    --sb-hover-bg: #EEF3FB;
+    --sb-active-bg: #E1EAFA;
+    --sb-accent: #1E4FB8;
+    --sb-accent-dark: #173C8C;
+    --list: #F7FAFE;
+}
+
+html[data-predmet="fizika"][data-theme="dark"] {
+    --primary: #5CB8FF;
+    --primary-dark: #A3D6FF;
+    --primary-light: #2F86D6;
+    --primary-soft: rgba(92, 184, 255, 0.12);
+    --oranzna: #FF9A5A;
+    --platnica: #0A1830;
+    --text-primary: #E2ECF9;
+    --text-secondary: #A5B7D1;
+    --text-muted: #6E83A3;
+    --bg-primary: #0A1A33;
+    --bg-card: #0F2244;
+    --surface-2: #0C1D3A;
+    --border-color: #1F3A66;
+    --papir: #0A1A33;
+    --vzorec: linear-gradient(rgba(92, 184, 255, 0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(92, 184, 255, 0.07) 1px, transparent 1px);
+    --list-vzorec: linear-gradient(rgba(92, 184, 255, 0.04) 1px, transparent 1px), linear-gradient(90deg, rgba(92, 184, 255, 0.04) 1px, transparent 1px);
+    --motiv-barva: rgba(92, 184, 255, 0.3);
+    --trak: #5CB8FF;
+    --g-bg: #0C1F3E;
+    --g-grid: #1A3560;
+    --g-axis: #9DB8DE;
+    --g-line: #E2ECF9;
+    --g1: #5CB8FF;
+    --g2: #FF9A5A;
+    --g3: #5EE0A0;
+    --g4: #D0A2FF;
+    --sb-bg: #0F2244;
+    --sb-border: #1F3A66;
+    --sb-text: #E2ECF9;
+    --sb-text-muted: #A5B7D1;
+    --sb-hover-bg: #0C1D3A;
+    --sb-active-bg: rgba(92, 184, 255, 0.12);
+    --sb-accent: #5CB8FF;
+    --sb-accent-dark: #A3D6FF;
+    --list: #0F2244;
+}
+
+html[data-predmet="fizika"] .sklop-teorija, html[data-predmet="fizika"] .sklop-naloge, html[data-predmet="fizika"] .intro-card, html[data-predmet="fizika"] .matura-formule { background-size: 20px 20px; }
+html[data-predmet="fizika"] .page-eyebrow { background: var(--platnica); color: #FFFFFF; border-radius: 4px; letter-spacing: 0.04em; }
+html[data-predmet="fizika"][data-theme="dark"] .page-eyebrow { background: var(--primary-soft); color: var(--primary); }
+html[data-predmet="fizika"] .page-header h1 { font-weight: 800; letter-spacing: -0.025em; }
+html[data-predmet="fizika"] .page-meta-item strong { color: var(--primary); }
+html[data-predmet="fizika"] .sklop-num { color: var(--oranzna); letter-spacing: 0.02em; }
+html[data-predmet="fizika"] .sklop-header { border-bottom: 2px solid var(--platnica); }
+html[data-predmet="fizika"][data-theme="dark"] .sklop-header { border-bottom-color: var(--border-color); }
+html[data-predmet="fizika"] .sklop-header h2, html[data-predmet="fizika"] .subsection-head h2 { font-weight: 800; letter-spacing: -0.02em; }
+html[data-predmet="fizika"] .sklop-teorija > h3, html[data-predmet="fizika"] .sklop-naloge > h3 {
+    margin: calc(-1 * var(--space-5)) calc(-1 * var(--space-6)) var(--space-4);
+    padding: 12px var(--space-6); border-bottom: 0;
+    background: var(--platnica); color: #FFFFFF; border-radius: var(--radius) var(--radius) 0 0;
+    font-size: 1.1rem; letter-spacing: 0.01em;
+}
+html[data-predmet="fizika"][data-theme="dark"] .sklop-teorija > h3, html[data-predmet="fizika"][data-theme="dark"] .sklop-naloge > h3 { background: #12305E; color: var(--text-primary); }
+html[data-predmet="fizika"] .matura-formule { border-left-color: var(--oranzna); }
+html[data-predmet="fizika"] .tip-naloga { border-left-color: var(--oranzna); background: var(--bg-card); }
+html[data-predmet="fizika"] .tip-naloga-oznaka { color: var(--oranzna); }
+html[data-predmet="fizika"] .tip-naloge h5 { font-family: var(--font-oznake); color: var(--primary); }
+html[data-predmet="fizika"] .tip-naloge ol.postopek > li::before { font-family: var(--font-oznake); background: var(--primary); color: #FFFFFF; border-radius: 4px; }
+html[data-predmet="fizika"][data-theme="dark"] .tip-naloge ol.postopek > li::before { color: #0A1A33; }
+html[data-predmet="fizika"] .kazalo .kazalo-st { font-family: var(--font-oznake); color: var(--oranzna); }
+html[data-predmet="fizika"] .link-item .arrow { color: var(--oranzna); }
+html[data-predmet="fizika"] .menu-btn { background: var(--platnica); }
+html[data-predmet="fizika"][data-theme="dark"] .menu-btn { background: var(--primary); color: #0A1A33; }

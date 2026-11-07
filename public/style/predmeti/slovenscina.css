@@ -1,0 +1,102 @@
+/* Slovenščina — ČRTAST ZVEZEK IN KNJIGA
+   Kremast črtast papir, bordo rdeča in črnilo, serifna pisava za branje,
+   pero in narekovaji v glavi strani.
+   Temni način: večerno branje (temno vinsko rdeča). Literata + Libre Caslon Display. */
+@import url('https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400;7..72,500;7..72,600;7..72,700&family=Libre+Caslon+Display&display=swap');
+
+html[data-predmet="slovenscina"] {
+    --font-display: 'Libre Caslon Display', Georgia, serif;
+    --font-body: 'Literata', Georgia, serif;
+    --font-oznake: 'Literata', Georgia, serif;
+    --text-base: 16.5px;
+    --primary: #9B1C31;
+    --primary-dark: #741424;
+    --primary-light: #D88A97;
+    --primary-soft: #F8E6E8;
+    --crnilo: #23395B;
+    --text-primary: #221A1C;
+    --text-secondary: #54474A;
+    --text-muted: #978A8D;
+    --bg-primary: #FAF7F2;
+    --bg-card: #FFFEFB;
+    --surface-2: #F7F2EB;
+    --border-color: #E8DFD6;
+    --papir: #FAF7F2;
+    --list-vzorec: repeating-linear-gradient(transparent 0 31px, rgba(35, 57, 91, 0.08) 31px 32px);
+    --motiv: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' fill='none' stroke='black' stroke-width='4.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M178 18C120 30 78 78 58 150c30-18 70-40 98-84 10-16 18-32 22-48z'/%3E%3Cpath d='M58 150L40 182'/%3E%3Cpath d='M120 60c-18 22-36 46-50 74' stroke-width='3'/%3E%3Cpath d='M150 44l-22 4M140 70l-28 2M122 96l-30 2' stroke-width='3'/%3E%3Cpath d='M22 120c0-12 8-18 16-18M22 120c0 6 4 10 10 10M44 120c0-12 8-18 16-18M44 120c0 6 4 10 10 10' stroke-width='5'/%3E%3C/svg%3E");
+    --motiv-barva: rgba(155, 28, 49, 0.26);
+    --trak: #9B1C31;
+    --g-bg: #FFFEFB;
+    --g-grid: #EEE7DE;
+    --g1: #9B1C31;
+    --g2: #23395B;
+    --g3: #3F7A4A;
+    --g4: #B5782B;
+    --radius-sm: 4px;
+    --radius: 6px;
+    --sb-bg: #FFFEFB;
+    --sb-border: #E8DFD6;
+    --sb-text: #221A1C;
+    --sb-text-muted: #54474A;
+    --sb-hover-bg: #F7F2EB;
+    --sb-active-bg: #F8E6E8;
+    --sb-accent: #9B1C31;
+    --sb-accent-dark: #741424;
+    --list: #FFFEFB;
+}
+
+html[data-predmet="slovenscina"][data-theme="dark"] {
+    --primary: #F08A9B;
+    --primary-dark: #F7BAC4;
+    --primary-light: #B3485B;
+    --primary-soft: rgba(240, 138, 155, 0.12);
+    --crnilo: #9DB6E0;
+    --text-primary: #F0E6E7;
+    --text-secondary: #C2B2B5;
+    --text-muted: #8A7A7D;
+    --bg-primary: #181214;
+    --bg-card: #21181B;
+    --surface-2: #1C1518;
+    --border-color: #382A2F;
+    --papir: #181214;
+    --list-vzorec: repeating-linear-gradient(transparent 0 31px, rgba(240, 138, 155, 0.06) 31px 32px);
+    --motiv-barva: rgba(240, 138, 155, 0.28);
+    --trak: #F08A9B;
+    --g-bg: #1E1619;
+    --g-grid: #33272B;
+    --g-axis: #C2B2B5;
+    --g-line: #F0E6E7;
+    --g1: #F08A9B;
+    --g2: #9DB6E0;
+    --g3: #97CC9F;
+    --g4: #E6B36A;
+    --sb-bg: #21181B;
+    --sb-border: #382A2F;
+    --sb-text: #F0E6E7;
+    --sb-text-muted: #C2B2B5;
+    --sb-hover-bg: #1C1518;
+    --sb-active-bg: rgba(240, 138, 155, 0.12);
+    --sb-accent: #F08A9B;
+    --sb-accent-dark: #F7BAC4;
+    --list: #21181B;
+}
+
+html[data-predmet="slovenscina"] .page-eyebrow { background: none; padding: 0; color: var(--primary); font-style: italic; text-transform: none; letter-spacing: 0; font-size: 15px; }
+html[data-predmet="slovenscina"] .page-header h1 { font-weight: 400; font-size: clamp(38px, 5.5vw, 60px); letter-spacing: -0.01em; }
+html[data-predmet="slovenscina"] .sklop-header h2, html[data-predmet="slovenscina"] .subsection-head h2 { font-weight: 400; font-size: 32px; letter-spacing: -0.005em; }
+html[data-predmet="slovenscina"] .sklop-teorija > h3, html[data-predmet="slovenscina"] .sklop-naloge > h3, html[data-predmet="slovenscina"] .matura-formule h3, html[data-predmet="slovenscina"] .intro-card h3, html[data-predmet="slovenscina"] .info-card h3, html[data-predmet="slovenscina"] .kazalo h2 { font-weight: 400; font-size: 1.45rem; }
+html[data-predmet="slovenscina"] .page-meta-item strong { font-family: var(--font-display); font-weight: 400; color: var(--primary); font-size: 28px; }
+html[data-predmet="slovenscina"] .page-meta-item span { text-transform: none; letter-spacing: 0; font-style: italic; font-size: 14px; }
+html[data-predmet="slovenscina"] .sklop-num { color: var(--primary); font-style: italic; text-transform: none; letter-spacing: 0; font-size: 15px; }
+html[data-predmet="slovenscina"] .sklop-header { border-bottom: 1px solid var(--text-primary); }
+html[data-predmet="slovenscina"] .sklop-teorija, html[data-predmet="slovenscina"] .sklop-naloge, html[data-predmet="slovenscina"] .intro-card, html[data-predmet="slovenscina"] .matura-formule { background-position: 0 14px; border-left: 1px solid var(--border-color); box-shadow: inset 3px 0 0 var(--primary-soft); }
+html[data-predmet="slovenscina"] .sklop-teorija > h3, html[data-predmet="slovenscina"] .sklop-naloge > h3 { border-bottom-color: var(--primary-light); }
+html[data-predmet="slovenscina"] .tip-naloga { border-left-color: var(--crnilo); background: var(--surface-2); }
+html[data-predmet="slovenscina"] .tip-naloga-oznaka { color: var(--crnilo); font-style: italic; text-transform: none; letter-spacing: 0; font-size: 14px; }
+html[data-predmet="slovenscina"] .tip-naloge h5 { font-style: italic; text-transform: none; letter-spacing: 0; color: var(--primary); font-size: 15px; }
+html[data-predmet="slovenscina"] .tip-naloge ol.postopek > li::before { background: none; color: var(--primary); font-family: var(--font-display); font-size: 18px; border-bottom: 1px solid var(--primary-light); border-radius: 0; }
+html[data-predmet="slovenscina"] .kazalo .kazalo-st { font-family: var(--font-display); color: var(--primary); font-size: 17px; }
+html[data-predmet="slovenscina"] .stran-kazalo-naslov { font-style: italic; text-transform: none; letter-spacing: 0; font-size: 14px; color: var(--primary); }
+html[data-predmet="slovenscina"] .tip-naloge .kljucne li { font-style: italic; border-radius: 4px; }
+html[data-predmet="slovenscina"] .navedek { border-left-color: var(--primary); }
+html[data-predmet="slovenscina"][data-theme="dark"] .menu-btn { color: #181214; }
