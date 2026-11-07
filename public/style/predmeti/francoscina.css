@@ -1,0 +1,98 @@
+/* Francoščina — PARIŠKA KAVARNA
+   Kremasta podlaga s komaj vidnimi navpičnimi progami kavarniške markize, modra in rdeča
+   trikolora, elegantna serifna pisava, Eifflov stolp v glavi.
+   Temni način: Pariz ponoči, temno modra z zlatimi lučmi. Playfair Display + Lora. */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Lora:wght@400;500;600&display=swap');
+
+html[data-predmet="francoscina"] {
+    --font-display: 'Playfair Display', Georgia, serif;
+    --font-body: 'Lora', Georgia, serif;
+    --font-oznake: 'Lora', Georgia, serif;
+    --text-base: 16.5px;
+    --primary: #24418F;
+    --primary-dark: #182E68;
+    --primary-light: #90A3D6;
+    --primary-soft: #E6EAF5;
+    --rouge: #C33B3F;
+    --text-primary: #1E2233;
+    --text-secondary: #50566A;
+    --text-muted: #8E93A3;
+    --bg-primary: #F8F4EC;
+    --bg-card: #FFFCF6;
+    --surface-2: #F4EFE5;
+    --border-color: #E4DCCB;
+    --vzorec: repeating-linear-gradient(90deg, rgba(36, 65, 143, 0.035) 0 28px, transparent 28px 56px);
+    --vzorec-velikost: auto;
+    --motiv: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' fill='none' stroke='black' stroke-width='4.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M100 14v18M92 32h16l-2 30h-12z'/%3E%3Cpath d='M94 62c-4 40-16 70-38 98M106 62c4 40 16 70 38 98'/%3E%3Cpath d='M84 96h32M70 128h60'/%3E%3Cpath d='M44 186c6-24 20-38 56-40 36 2 50 16 56 40'/%3E%3Cpath d='M74 186c2-14 12-22 26-22s24 8 26 22'/%3E%3Cpath d='M30 186h140'/%3E%3C/svg%3E");
+    --motiv-barva: rgba(36, 65, 143, 0.24);
+    --trak: #C33B3F;
+    --g-bg: #FFFCF6;
+    --g-grid: #EEE8DB;
+    --g1: #24418F;
+    --g2: #C33B3F;
+    --g3: #3C7A55;
+    --g4: #B98A2E;
+    --radius-sm: 4px;
+    --radius: 6px;
+    --papir: #F8F4EC;
+    --list: #FFFCF6;
+    --sb-bg: #FFFCF6;
+    --sb-border: #E4DCCB;
+    --sb-text: #1E2233;
+    --sb-text-muted: #50566A;
+    --sb-hover-bg: #F4EFE5;
+    --sb-active-bg: #E6EAF5;
+    --sb-accent: #24418F;
+    --sb-accent-dark: #182E68;
+}
+
+html[data-predmet="francoscina"][data-theme="dark"] {
+    --primary: #9DB2EC;
+    --primary-dark: #CAD6F6;
+    --primary-light: #4E66AC;
+    --primary-soft: rgba(157, 178, 236, 0.13);
+    --rouge: #F08A8C;
+    --text-primary: #ECE7DC;
+    --text-secondary: #B9B4A8;
+    --text-muted: #7D796F;
+    --bg-primary: #121729;
+    --bg-card: #1A2035;
+    --surface-2: #161B2F;
+    --border-color: #2B3350;
+    --vzorec: repeating-linear-gradient(90deg, rgba(157, 178, 236, 0.03) 0 28px, transparent 28px 56px);
+    --motiv-barva: rgba(232, 196, 120, 0.32);
+    --trak: #E8C478;
+    --g-bg: #161B2F;
+    --g-grid: #283050;
+    --g-axis: #B9B4A8;
+    --g-line: #ECE7DC;
+    --g1: #9DB2EC;
+    --g2: #F08A8C;
+    --g3: #8FCBA5;
+    --g4: #E8C478;
+    --papir: #121729;
+    --list: #1A2035;
+    --sb-bg: #1A2035;
+    --sb-border: #2B3350;
+    --sb-text: #ECE7DC;
+    --sb-text-muted: #B9B4A8;
+    --sb-hover-bg: #161B2F;
+    --sb-active-bg: rgba(157, 178, 236, 0.13);
+    --sb-accent: #9DB2EC;
+    --sb-accent-dark: #CAD6F6;
+}
+
+html[data-predmet="francoscina"] .page-eyebrow { background: none; padding: 0; color: var(--rouge); font-style: italic; text-transform: none; letter-spacing: 0.02em; font-size: 15px; }
+html[data-predmet="francoscina"] .page-eyebrow::before { content: ''; display: inline-block; width: 30px; height: 4px; margin-right: 10px; vertical-align: middle; background: linear-gradient(90deg, var(--primary) 0 33%, var(--bg-card) 33% 66%, var(--rouge) 66%); box-shadow: 0 0 0 1px var(--border-color); }
+html[data-predmet="francoscina"] .page-header h1 { font-weight: 700; font-style: italic; letter-spacing: -0.01em; }
+html[data-predmet="francoscina"] .page-meta-item strong { font-family: var(--font-display); color: var(--primary); }
+html[data-predmet="francoscina"] .sklop-num { color: var(--rouge); font-style: italic; text-transform: none; letter-spacing: 0.04em; }
+html[data-predmet="francoscina"] .sklop-header h2, html[data-predmet="francoscina"] .subsection-head h2 { font-weight: 700; }
+html[data-predmet="francoscina"] .sklop-header { border-bottom: 1px solid var(--border-color); box-shadow: 0 3px 0 -1px var(--bg-primary), 0 4px 0 -1px var(--border-color); }
+html[data-predmet="francoscina"] .sklop-teorija > h3, html[data-predmet="francoscina"] .sklop-naloge > h3, html[data-predmet="francoscina"] .matura-formule h3 { font-style: italic; font-weight: 600; }
+html[data-predmet="francoscina"] .tip-naloga { border-left-color: var(--rouge); }
+html[data-predmet="francoscina"] .tip-naloga-oznaka, html[data-predmet="francoscina"] .tip-naloge h5 { color: var(--rouge); font-style: italic; text-transform: none; letter-spacing: 0.02em; }
+html[data-predmet="francoscina"] .tip-naloge ol.postopek > li::before { background: none; color: var(--primary); border: 1.5px solid var(--primary); font-family: var(--font-display); font-style: italic; }
+html[data-predmet="francoscina"] .kazalo .kazalo-st { color: var(--rouge); font-family: var(--font-display); font-style: italic; }
+html[data-predmet="francoscina"] .tabela th { font-family: var(--font-display); font-style: italic; }
+html[data-predmet="francoscina"][data-theme="dark"] .menu-btn { color: #121729; }

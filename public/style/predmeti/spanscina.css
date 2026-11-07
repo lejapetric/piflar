@@ -1,0 +1,100 @@
+/* Španščina — AZULEJOS
+   Bela podlaga z modrimi ploščicami azulejo (krožni vzorec), kobaltno modra in žafranasto
+   rumena, sonce z žarki v glavi, topla humanistična pisava.
+   Temni način: andaluzijska noč, temno modra s toplimi poudarki. Alegreya + Alegreya Sans. */
+@import url('https://fonts.googleapis.com/css2?family=Alegreya:wght@600;700;800&family=Alegreya+Sans:wght@400;500;700&display=swap');
+
+html[data-predmet="spanscina"] {
+    --font-display: 'Alegreya', Georgia, serif;
+    --font-body: 'Alegreya Sans', 'Inter', sans-serif;
+    --font-oznake: 'Alegreya Sans', sans-serif;
+    --text-base: 16.5px;
+    --primary: #1C56A3;
+    --primary-dark: #123D78;
+    --primary-light: #8DB0E0;
+    --primary-soft: #E4EDF8;
+    --zafran: #D99A06;
+    --rdeca: #B8322A;
+    --text-primary: #1A2333;
+    --text-secondary: #4B566A;
+    --text-muted: #8A93A5;
+    --bg-primary: #F5F7FA;
+    --bg-card: #FFFFFF;
+    --surface-2: #F1F4F9;
+    --border-color: #D9E1EC;
+    --vzorec: radial-gradient(circle at 50% 50%, transparent 9px, rgba(28, 86, 163, 0.07) 9px 10.5px, transparent 10.5px), radial-gradient(circle at 0 0, rgba(28, 86, 163, 0.06) 5px, transparent 5.5px);
+    --vzorec-velikost: 36px 36px;
+    --motiv: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' fill='none' stroke='black' stroke-width='4.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='100' cy='100' r='34'/%3E%3Ccircle cx='100' cy='100' r='20' stroke-width='3'/%3E%3Cpath d='M100 16v28M100 156v28M16 100h28M156 100h28M41 41l20 20M139 139l20 20M41 159l20-20M139 61l20-20'/%3E%3Cpath d='M70 26l8 20M130 26l-8 20M26 70l20 8M26 130l20-8M174 70l-20 8M174 130l-20-8M70 174l8-20M130 174l-8-20' stroke-width='3'/%3E%3C/svg%3E");
+    --motiv-barva: rgba(217, 154, 6, 0.4);
+    --trak: #D99A06;
+    --g-bg: #FFFFFF;
+    --g-grid: #E8EDF5;
+    --g1: #1C56A3;
+    --g2: #B8322A;
+    --g3: #2E7D4F;
+    --g4: #D99A06;
+    --radius-sm: 4px;
+    --radius: 8px;
+    --papir: #F5F7FA;
+    --list: #FFFFFF;
+    --sb-bg: #FFFFFF;
+    --sb-border: #D9E1EC;
+    --sb-text: #1A2333;
+    --sb-text-muted: #4B566A;
+    --sb-hover-bg: #F1F4F9;
+    --sb-active-bg: #E4EDF8;
+    --sb-accent: #1C56A3;
+    --sb-accent-dark: #123D78;
+}
+
+html[data-predmet="spanscina"][data-theme="dark"] {
+    --primary: #84AEEA;
+    --primary-dark: #BCD3F4;
+    --primary-light: #3B69A8;
+    --primary-soft: rgba(132, 174, 234, 0.13);
+    --zafran: #F2BE45;
+    --rdeca: #F08079;
+    --text-primary: #E6EAF2;
+    --text-secondary: #A9B2C3;
+    --text-muted: #6E7789;
+    --bg-primary: #0F1726;
+    --bg-card: #162033;
+    --surface-2: #131C2D;
+    --border-color: #26334B;
+    --vzorec: radial-gradient(circle at 50% 50%, transparent 9px, rgba(132, 174, 234, 0.07) 9px 10.5px, transparent 10.5px), radial-gradient(circle at 0 0, rgba(132, 174, 234, 0.05) 5px, transparent 5.5px);
+    --motiv-barva: rgba(242, 190, 69, 0.36);
+    --trak: #F2BE45;
+    --g-bg: #131C2D;
+    --g-grid: #24304A;
+    --g-axis: #A9B2C3;
+    --g-line: #E6EAF2;
+    --g1: #84AEEA;
+    --g2: #F08079;
+    --g3: #7FCB9B;
+    --g4: #F2BE45;
+    --papir: #0F1726;
+    --list: #162033;
+    --sb-bg: #162033;
+    --sb-border: #26334B;
+    --sb-text: #E6EAF2;
+    --sb-text-muted: #A9B2C3;
+    --sb-hover-bg: #131C2D;
+    --sb-active-bg: rgba(132, 174, 234, 0.13);
+    --sb-accent: #84AEEA;
+    --sb-accent-dark: #BCD3F4;
+}
+
+html[data-predmet="spanscina"] .page-eyebrow { background: var(--primary); color: #fff; border-radius: 3px; }
+html[data-predmet="spanscina"][data-theme="dark"] .page-eyebrow { color: #0F1726; }
+html[data-predmet="spanscina"] .page-header h1 { font-weight: 800; letter-spacing: -0.01em; }
+html[data-predmet="spanscina"] .page-meta-item strong { font-family: var(--font-display); color: var(--zafran); font-weight: 800; }
+html[data-predmet="spanscina"] .sklop-num { color: var(--zafran); font-weight: 700; }
+html[data-predmet="spanscina"] .sklop-header h2, html[data-predmet="spanscina"] .subsection-head h2 { font-weight: 800; }
+html[data-predmet="spanscina"] .sklop-header { border-bottom: 6px solid transparent; border-image: repeating-linear-gradient(90deg, var(--primary) 0 12px, var(--bg-card) 12px 16px, var(--zafran) 16px 28px, var(--bg-card) 28px 32px) 6; }
+html[data-predmet="spanscina"] .sklop-teorija, html[data-predmet="spanscina"] .sklop-naloge, html[data-predmet="spanscina"] .intro-card, html[data-predmet="spanscina"] .matura-formule { border: 1px solid var(--border-color); outline: 3px solid var(--primary-soft); outline-offset: -8px; }
+html[data-predmet="spanscina"] .tip-naloga { border-left-color: var(--zafran); }
+html[data-predmet="spanscina"] .tip-naloga-oznaka, html[data-predmet="spanscina"] .tip-naloge h5 { color: var(--primary); font-weight: 700; }
+html[data-predmet="spanscina"] .tip-naloge ol.postopek > li::before { background: var(--primary); color: #fff; border-radius: 3px; transform: rotate(45deg) scale(0.86); }
+html[data-predmet="spanscina"][data-theme="dark"] .tip-naloge ol.postopek > li::before { color: #0F1726; }
+html[data-predmet="spanscina"] .kazalo .kazalo-st { color: var(--zafran); font-weight: 800; }
+html[data-predmet="spanscina"][data-theme="dark"] .menu-btn { color: #0F1726; }

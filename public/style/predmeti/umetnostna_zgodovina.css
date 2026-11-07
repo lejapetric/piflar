@@ -1,0 +1,102 @@
+/* Umetnostna zgodovina — GALERIJA
+   Topla bela stena galerije s platneno teksturo, žgana siena in oglje, kartice kot slike
+   v okvirju s paspartujem, štafelaj s sliko v glavi. Temni način: galerija ponoči, reflektorji.
+   DM Serif Display + DM Sans. */
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:wght@400;500;600;700&display=swap');
+
+html[data-predmet="umetnostna_zgodovina"] {
+    --font-display: 'DM Serif Display', Georgia, serif;
+    --font-body: 'DM Sans', 'Inter', sans-serif;
+    --font-oznake: 'DM Sans', sans-serif;
+    --primary: #9A4317;
+    --primary-dark: #74300E;
+    --primary-light: #DDA182;
+    --primary-soft: #F5E7DD;
+    --oglje: #2E2A27;
+    --okvir: #B08D57;
+    --text-primary: #2A2522;
+    --text-secondary: #5B534D;
+    --text-muted: #9A918A;
+    --bg-primary: #F5F2EC;
+    --bg-card: #FFFEFB;
+    --surface-2: #F3EFE8;
+    --border-color: #E1DAD0;
+    --vzorec: repeating-linear-gradient(0deg, rgba(90, 70, 50, 0.025) 0 1px, transparent 1px 3px), repeating-linear-gradient(90deg, rgba(90, 70, 50, 0.025) 0 1px, transparent 1px 3px);
+    --vzorec-velikost: auto;
+    --motiv: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' fill='none' stroke='black' stroke-width='4.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M100 20v18M60 186l30-60M140 186l-30-60M100 150v36'/%3E%3Crect x='46' y='38' width='108' height='88'/%3E%3Crect x='58' y='50' width='84' height='64' stroke-width='3'/%3E%3Cpath d='M62 108l24-26 18 18 12-12 22 20' stroke-width='3'/%3E%3Ccircle cx='122' cy='66' r='7' stroke-width='3'/%3E%3Cpath d='M40 126h120'/%3E%3C/svg%3E");
+    --motiv-barva: rgba(154, 67, 23, 0.26);
+    --trak: #9A4317;
+    --g-bg: #FFFEFB;
+    --g-grid: #EEE8DF;
+    --g1: #9A4317;
+    --g2: #2F5D8A;
+    --g3: #4A7A4E;
+    --g4: #B08D57;
+    --radius-sm: 0px;
+    --radius: 0px;
+    --papir: #F5F2EC;
+    --list: #FFFEFB;
+    --sb-bg: #FFFEFB;
+    --sb-border: #E1DAD0;
+    --sb-text: #2A2522;
+    --sb-text-muted: #5B534D;
+    --sb-hover-bg: #F3EFE8;
+    --sb-active-bg: #F5E7DD;
+    --sb-accent: #9A4317;
+    --sb-accent-dark: #74300E;
+}
+
+html[data-predmet="umetnostna_zgodovina"][data-theme="dark"] {
+    --primary: #E99A6C;
+    --primary-dark: #F4C3A6;
+    --primary-light: #8E4720;
+    --primary-soft: rgba(233, 154, 108, 0.12);
+    --oglje: #EDE6DD;
+    --okvir: #C9A56B;
+    --text-primary: #EDE6DD;
+    --text-secondary: #B8AEA4;
+    --text-muted: #7E756D;
+    --bg-primary: #141210;
+    --bg-card: #1D1A17;
+    --surface-2: #181614;
+    --border-color: #332E29;
+    --vzorec: radial-gradient(ellipse 60% 45% at 50% 0%, rgba(255, 240, 210, 0.07), transparent 70%);
+    --vzorec-velikost: 100% 100%;
+    --motiv-barva: rgba(201, 165, 107, 0.32);
+    --trak: #C9A56B;
+    --g-bg: #181614;
+    --g-grid: #2E2925;
+    --g-axis: #B8AEA4;
+    --g-line: #EDE6DD;
+    --g1: #E99A6C;
+    --g2: #8FB7EA;
+    --g3: #9CC79E;
+    --g4: #C9A56B;
+    --papir: #141210;
+    --list: #1D1A17;
+    --sb-bg: #1D1A17;
+    --sb-border: #332E29;
+    --sb-text: #EDE6DD;
+    --sb-text-muted: #B8AEA4;
+    --sb-hover-bg: #181614;
+    --sb-active-bg: rgba(233, 154, 108, 0.12);
+    --sb-accent: #E99A6C;
+    --sb-accent-dark: #F4C3A6;
+}
+
+html[data-predmet="umetnostna_zgodovina"] .page-eyebrow { background: none; padding: 0; color: var(--text-muted); letter-spacing: 0.2em; font-weight: 600; font-size: 12px; }
+html[data-predmet="umetnostna_zgodovina"] .page-header h1 { font-weight: 400; letter-spacing: -0.01em; font-size: clamp(38px, 5vw, 58px); }
+html[data-predmet="umetnostna_zgodovina"] .page-meta-item strong { font-family: var(--font-display); font-weight: 400; color: var(--primary); font-size: 30px; }
+html[data-predmet="umetnostna_zgodovina"] .sklop-teorija, html[data-predmet="umetnostna_zgodovina"] .sklop-naloge, html[data-predmet="umetnostna_zgodovina"] .intro-card, html[data-predmet="umetnostna_zgodovina"] .matura-formule { border: 10px solid var(--okvir); outline: 1px solid var(--border-color); box-shadow: inset 0 0 0 14px var(--list), inset 0 0 0 15px var(--border-color), 0 18px 30px -22px rgba(0, 0, 0, 0.5); padding: calc(var(--space-6) + 6px); }
+html[data-predmet="umetnostna_zgodovina"][data-theme="dark"] .sklop-teorija, html[data-predmet="umetnostna_zgodovina"][data-theme="dark"] .sklop-naloge, html[data-predmet="umetnostna_zgodovina"][data-theme="dark"] .intro-card, html[data-predmet="umetnostna_zgodovina"][data-theme="dark"] .matura-formule { border-color: #5A4A32; }
+html[data-predmet="umetnostna_zgodovina"] .sklop-num { color: var(--primary); letter-spacing: 0.18em; font-weight: 600; }
+html[data-predmet="umetnostna_zgodovina"] .sklop-header { border-bottom: 0; }
+html[data-predmet="umetnostna_zgodovina"] .sklop-header h2, html[data-predmet="umetnostna_zgodovina"] .subsection-head h2 { font-weight: 400; font-size: 34px; }
+html[data-predmet="umetnostna_zgodovina"] .sklop-header > p { font-style: italic; }
+html[data-predmet="umetnostna_zgodovina"] .sklop-teorija > h3, html[data-predmet="umetnostna_zgodovina"] .sklop-naloge > h3, html[data-predmet="umetnostna_zgodovina"] .matura-formule h3 { font-family: var(--font-display); font-weight: 400; font-size: 1.55rem; }
+html[data-predmet="umetnostna_zgodovina"] .tip-naloga { border-left-color: var(--primary); }
+html[data-predmet="umetnostna_zgodovina"] .tip-naloga-oznaka, html[data-predmet="umetnostna_zgodovina"] .tip-naloge h5 { color: var(--text-muted); letter-spacing: 0.18em; font-weight: 600; }
+html[data-predmet="umetnostna_zgodovina"] .tip-naloge ol.postopek > li::before { background: none; color: var(--primary); font-family: var(--font-display); font-weight: 400; font-size: 18px; border-bottom: 1px solid var(--primary); border-radius: 0; }
+html[data-predmet="umetnostna_zgodovina"] .kazalo .kazalo-st { color: var(--primary); font-family: var(--font-display); }
+html[data-predmet="umetnostna_zgodovina"] .link-item { border-left: 4px solid var(--okvir); }
+html[data-predmet="umetnostna_zgodovina"][data-theme="dark"] .menu-btn { color: #141210; }

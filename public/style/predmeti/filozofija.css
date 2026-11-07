@@ -1,0 +1,98 @@
+/* Filozofija — MARMOR IN SOVA
+   Bela marmornata podlaga z rahlimi žilami, škrilasto modra in bron, klasična serifna
+   pisava, Minervina sova v glavi. Temni način: nočno nebo nad Akropolo, temno škrilasta z bronom.
+   Cormorant Garamond + Spectral. */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Spectral:wght@400;500;600&display=swap');
+
+html[data-predmet="filozofija"] {
+    --font-display: 'Cormorant Garamond', Georgia, serif;
+    --font-body: 'Spectral', Georgia, serif;
+    --font-oznake: 'Cormorant Garamond', Georgia, serif;
+    --text-base: 17px;
+    --primary: #3A4A6B;
+    --primary-dark: #28344D;
+    --primary-light: #9EAAC2;
+    --primary-soft: #E8EBF1;
+    --bron: #9A6B2F;
+    --text-primary: #23262D;
+    --text-secondary: #535864;
+    --text-muted: #90949E;
+    --bg-primary: #F2F1EE;
+    --bg-card: #FCFBF9;
+    --surface-2: #F1F0EC;
+    --border-color: #DCDAD3;
+    --vzorec: linear-gradient(115deg, transparent 40%, rgba(120, 120, 130, 0.06) 41%, transparent 43%), linear-gradient(160deg, transparent 62%, rgba(120, 120, 130, 0.05) 63%, transparent 64.5%), linear-gradient(75deg, transparent 22%, rgba(154, 107, 47, 0.04) 23%, transparent 24%);
+    --vzorec-velikost: 100% 100%;
+    --motiv: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' fill='none' stroke='black' stroke-width='4.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M60 50c10-14 26-22 40-22s30 8 40 22l-6 18c8 12 12 26 12 42 0 40-20 70-46 70s-46-30-46-70c0-16 4-30 12-42z'/%3E%3Ccircle cx='80' cy='86' r='14'/%3E%3Ccircle cx='120' cy='86' r='14'/%3E%3Ccircle cx='80' cy='86' r='4' fill='black'/%3E%3Ccircle cx='120' cy='86' r='4' fill='black'/%3E%3Cpath d='M94 104l6 10 6-10'/%3E%3Cpath d='M80 136c6 4 14 6 20 6s14-2 20-6M84 154c5 3 10 4 16 4s11-1 16-4' stroke-width='3'/%3E%3Cpath d='M40 186h120M74 180v6M126 180v6'/%3E%3C/svg%3E");
+    --motiv-barva: rgba(58, 74, 107, 0.26);
+    --trak: #9A6B2F;
+    --g-bg: #FCFBF9;
+    --g-grid: #ECEAE4;
+    --g1: #3A4A6B;
+    --g2: #A33B2E;
+    --g3: #4A7A4E;
+    --g4: #9A6B2F;
+    --radius-sm: 2px;
+    --radius: 3px;
+    --papir: #F2F1EE;
+    --list: #FCFBF9;
+    --sb-bg: #FCFBF9;
+    --sb-border: #DCDAD3;
+    --sb-text: #23262D;
+    --sb-text-muted: #535864;
+    --sb-hover-bg: #F1F0EC;
+    --sb-active-bg: #E8EBF1;
+    --sb-accent: #3A4A6B;
+    --sb-accent-dark: #28344D;
+}
+
+html[data-predmet="filozofija"][data-theme="dark"] {
+    --primary: #A9B8D9;
+    --primary-dark: #D0DAEE;
+    --primary-light: #55668D;
+    --primary-soft: rgba(169, 184, 217, 0.12);
+    --bron: #D6A55E;
+    --text-primary: #E8E8EA;
+    --text-secondary: #B2B4BB;
+    --text-muted: #787B84;
+    --bg-primary: #15171D;
+    --bg-card: #1D2028;
+    --surface-2: #191C23;
+    --border-color: #30343F;
+    --vzorec: linear-gradient(115deg, transparent 40%, rgba(200, 200, 215, 0.04) 41%, transparent 43%), linear-gradient(160deg, transparent 62%, rgba(200, 200, 215, 0.03) 63%, transparent 64.5%), linear-gradient(75deg, transparent 22%, rgba(214, 165, 94, 0.04) 23%, transparent 24%);
+    --motiv-barva: rgba(214, 165, 94, 0.3);
+    --trak: #D6A55E;
+    --g-bg: #191C23;
+    --g-grid: #2C303A;
+    --g-axis: #B2B4BB;
+    --g-line: #E8E8EA;
+    --g1: #A9B8D9;
+    --g2: #E88C7E;
+    --g3: #9CC79E;
+    --g4: #D6A55E;
+    --papir: #15171D;
+    --list: #1D2028;
+    --sb-bg: #1D2028;
+    --sb-border: #30343F;
+    --sb-text: #E8E8EA;
+    --sb-text-muted: #B2B4BB;
+    --sb-hover-bg: #191C23;
+    --sb-active-bg: rgba(169, 184, 217, 0.12);
+    --sb-accent: #A9B8D9;
+    --sb-accent-dark: #D0DAEE;
+}
+
+html[data-predmet="filozofija"] .page-eyebrow { background: none; padding: 0; color: var(--bron); letter-spacing: 0.24em; font-weight: 700; font-size: 13px; }
+html[data-predmet="filozofija"] .page-header h1 { font-weight: 600; font-size: clamp(38px, 5vw, 58px); letter-spacing: -0.005em; }
+html[data-predmet="filozofija"] .page-meta-item strong { font-family: var(--font-display); color: var(--primary); font-size: 30px; font-weight: 600; }
+html[data-predmet="filozofija"] .sklop-num { color: var(--bron); letter-spacing: 0.2em; font-weight: 700; }
+html[data-predmet="filozofija"] .sklop-header { text-align: center; border-bottom: 0; }
+html[data-predmet="filozofija"] .sklop-header::after { content: ''; display: block; height: 10px; margin: var(--space-2) auto 0; width: 60%; background: linear-gradient(var(--bron), var(--bron)) top / 100% 1px no-repeat, linear-gradient(var(--bron), var(--bron)) bottom / 100% 1px no-repeat; }
+html[data-predmet="filozofija"] .sklop-header h2, html[data-predmet="filozofija"] .subsection-head h2 { font-weight: 600; font-size: 34px; }
+html[data-predmet="filozofija"] .sklop-teorija > h3, html[data-predmet="filozofija"] .sklop-naloge > h3, html[data-predmet="filozofija"] .matura-formule h3 { font-family: var(--font-display); font-weight: 700; font-size: 1.55rem; }
+html[data-predmet="filozofija"] .tip-naloga { border-left-color: var(--bron); }
+html[data-predmet="filozofija"] .tip-naloga-oznaka, html[data-predmet="filozofija"] .tip-naloge h5 { color: var(--bron); letter-spacing: 0.16em; font-weight: 700; }
+html[data-predmet="filozofija"] .tip-naloge ol.postopek > li::before { content: counter(korak, upper-roman); background: none; color: var(--primary); border: 1px solid var(--primary); border-radius: 0; font-family: var(--font-display); font-weight: 700; width: 30px; }
+html[data-predmet="filozofija"] .tip-naloge ol.postopek > li { padding-left: 42px; }
+html[data-predmet="filozofija"] .kazalo .kazalo-st { color: var(--bron); font-family: var(--font-display); font-weight: 700; }
+html[data-predmet="filozofija"][data-theme="dark"] .menu-btn { color: #15171D; }

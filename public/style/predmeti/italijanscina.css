@@ -1,0 +1,98 @@
+/* Italijanščina — MAJOLIKA
+   Topel papir z vzorcem keramičnih ploščic (poševna mreža), terakota in olivno zelena,
+   limona z listi v glavi, mehka serifna pisava za naslove.
+   Temni način: toskanski večer, temno rjava s terakoto. Cormorant + Mulish. */
+@import url('https://fonts.googleapis.com/css2?family=Cormorant:wght@600;700&family=Mulish:wght@400;500;600;700&display=swap');
+
+html[data-predmet="italijanscina"] {
+    --font-display: 'Cormorant', Georgia, serif;
+    --font-body: 'Mulish', 'Inter', sans-serif;
+    --font-oznake: 'Mulish', sans-serif;
+    --primary: #A84A27;
+    --primary-dark: #813518;
+    --primary-light: #E0A68C;
+    --primary-soft: #F6E6DC;
+    --oliva: #5F6E27;
+    --limona: #E3B505;
+    --text-primary: #2C221C;
+    --text-secondary: #5C4F45;
+    --text-muted: #9A8C80;
+    --bg-primary: #F7EFE3;
+    --bg-card: #FFFBF4;
+    --surface-2: #F5ECDF;
+    --border-color: #E5D6C2;
+    --vzorec: linear-gradient(45deg, rgba(168, 74, 39, 0.05) 1px, transparent 1px), linear-gradient(-45deg, rgba(95, 110, 39, 0.05) 1px, transparent 1px);
+    --vzorec-velikost: 34px 34px;
+    --motiv: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' fill='none' stroke='black' stroke-width='4.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M58 128c-16-30 4-70 46-74 42-2 62 34 50 66-10 30-56 46-96 8z'/%3E%3Cpath d='M150 70c10-6 16-14 18-22M40 130c-8 6-14 10-22 10'/%3E%3Cpath d='M104 54c-6-16-2-30 10-40 4 16 0 30-10 40zM110 50c14-12 30-14 46-6-14 12-30 12-46 6z'/%3E%3Cpath d='M80 96c10-6 26-6 34 2' stroke-width='3'/%3E%3C/svg%3E");
+    --motiv-barva: rgba(168, 74, 39, 0.26);
+    --trak: #A84A27;
+    --g-bg: #FFFBF4;
+    --g-grid: #EFE4D4;
+    --g1: #A84A27;
+    --g2: #2F5D8A;
+    --g3: #5F6E27;
+    --g4: #C99500;
+    --radius-sm: 6px;
+    --radius: 10px;
+    --papir: #F7EFE3;
+    --list: #FFFBF4;
+    --sb-bg: #FFFBF4;
+    --sb-border: #E5D6C2;
+    --sb-text: #2C221C;
+    --sb-text-muted: #5C4F45;
+    --sb-hover-bg: #F5ECDF;
+    --sb-active-bg: #F6E6DC;
+    --sb-accent: #A84A27;
+    --sb-accent-dark: #813518;
+}
+
+html[data-predmet="italijanscina"][data-theme="dark"] {
+    --primary: #E8936E;
+    --primary-dark: #F4BBA2;
+    --primary-light: #8C452A;
+    --primary-soft: rgba(232, 147, 110, 0.13);
+    --oliva: #B4C474;
+    --limona: #F2CE4B;
+    --text-primary: #F0E6DA;
+    --text-secondary: #BFB1A2;
+    --text-muted: #85786C;
+    --bg-primary: #1E1712;
+    --bg-card: #271E18;
+    --surface-2: #221A14;
+    --border-color: #3D3027;
+    --vzorec: linear-gradient(45deg, rgba(232, 147, 110, 0.05) 1px, transparent 1px), linear-gradient(-45deg, rgba(180, 196, 116, 0.05) 1px, transparent 1px);
+    --motiv-barva: rgba(242, 206, 75, 0.3);
+    --trak: #E8936E;
+    --g-bg: #221A14;
+    --g-grid: #3A2D24;
+    --g-axis: #BFB1A2;
+    --g-line: #F0E6DA;
+    --g1: #E8936E;
+    --g2: #86B2DE;
+    --g3: #B4C474;
+    --g4: #F2CE4B;
+    --papir: #1E1712;
+    --list: #271E18;
+    --sb-bg: #271E18;
+    --sb-border: #3D3027;
+    --sb-text: #F0E6DA;
+    --sb-text-muted: #BFB1A2;
+    --sb-hover-bg: #221A14;
+    --sb-active-bg: rgba(232, 147, 110, 0.13);
+    --sb-accent: #E8936E;
+    --sb-accent-dark: #F4BBA2;
+}
+
+html[data-predmet="italijanscina"] .page-eyebrow { background: var(--primary-soft); color: var(--primary-dark); border-radius: 999px; }
+html[data-predmet="italijanscina"] .page-header h1 { font-weight: 700; font-size: clamp(38px, 5vw, 56px); letter-spacing: -0.01em; }
+html[data-predmet="italijanscina"] .page-meta-item strong { font-family: var(--font-display); color: var(--primary); font-size: 30px; }
+html[data-predmet="italijanscina"] .sklop-num { color: var(--oliva); }
+html[data-predmet="italijanscina"] .sklop-header h2, html[data-predmet="italijanscina"] .subsection-head h2 { font-weight: 700; font-size: 34px; }
+html[data-predmet="italijanscina"] .sklop-header { border-bottom: 3px dotted var(--primary-light); }
+html[data-predmet="italijanscina"] .sklop-teorija, html[data-predmet="italijanscina"] .sklop-naloge, html[data-predmet="italijanscina"] .intro-card, html[data-predmet="italijanscina"] .matura-formule { border-top: 4px solid var(--primary); }
+html[data-predmet="italijanscina"] .sklop-teorija > h3, html[data-predmet="italijanscina"] .sklop-naloge > h3, html[data-predmet="italijanscina"] .matura-formule h3 { font-family: var(--font-display); font-weight: 700; font-size: 1.6rem; }
+html[data-predmet="italijanscina"] .tip-naloga { border-left-color: var(--oliva); }
+html[data-predmet="italijanscina"] .tip-naloga-oznaka, html[data-predmet="italijanscina"] .tip-naloge h5 { color: var(--oliva); }
+html[data-predmet="italijanscina"] .tip-naloge ol.postopek > li::before { background: var(--limona); color: #2C221C; }
+html[data-predmet="italijanscina"] .kazalo .kazalo-st { color: var(--primary); font-family: var(--font-display); font-weight: 700; }
+html[data-predmet="italijanscina"][data-theme="dark"] .menu-btn { color: #1E1712; }
