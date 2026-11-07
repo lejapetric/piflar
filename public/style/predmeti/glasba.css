@@ -1,0 +1,97 @@
+/* Glasba — NOTNI PAPIR
+   Kremast notni papir s petčrtnim črtovjem, globoka vinsko rdeča in zlata, elegantna
+   kontrastna serifna pisava, note z vezajem v glavi. Temni način: koncertna dvorana, črna z zlatom.
+   Bodoni Moda + Source Serif 4. */
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,600;0,6..96,700;1,6..96,600&family=Source+Serif+4:wght@400;500;600&display=swap');
+
+html[data-predmet="glasba"] {
+    --font-display: 'Bodoni Moda', Georgia, serif;
+    --font-body: 'Source Serif 4', Georgia, serif;
+    --font-oznake: 'Source Serif 4', Georgia, serif;
+    --text-base: 16.5px;
+    --primary: #7A1F3D;
+    --primary-dark: #5A142C;
+    --primary-light: #D198AB;
+    --primary-soft: #F5E6EB;
+    --zlato: #A67C1E;
+    --text-primary: #231A1D;
+    --text-secondary: #584A4F;
+    --text-muted: #998A8F;
+    --bg-primary: #F7F3EA;
+    --bg-card: #FFFCF5;
+    --surface-2: #F4EFE4;
+    --border-color: #E3D9C8;
+    --vzorec: repeating-linear-gradient(to bottom, transparent 0 60px, rgba(35, 26, 29, 0.09) 60px 61px, transparent 61px 68px, rgba(35, 26, 29, 0.09) 68px 69px, transparent 69px 76px, rgba(35, 26, 29, 0.09) 76px 77px, transparent 77px 84px, rgba(35, 26, 29, 0.09) 84px 85px, transparent 85px 92px, rgba(35, 26, 29, 0.09) 92px 93px, transparent 93px 120px);
+    --vzorec-velikost: auto;
+    --motiv: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cg fill='none' stroke='black' stroke-width='2'%3E%3Cpath d='M10 70h180M10 90h180M10 110h180M10 130h180M10 150h180'/%3E%3C/g%3E%3Cg fill='black'%3E%3Cellipse cx='62' cy='150' rx='15' ry='11' transform='rotate(-20 62 150)'/%3E%3Cellipse cx='132' cy='130' rx='15' ry='11' transform='rotate(-20 132 130)'/%3E%3Crect x='72' y='44' width='5' height='104'/%3E%3Crect x='142' y='24' width='5' height='104'/%3E%3Cpath d='M72 44L147 24v16L72 60z'/%3E%3C/g%3E%3C/svg%3E");
+    --motiv-barva: rgba(122, 31, 61, 0.26);
+    --trak: #7A1F3D;
+    --g-bg: #FFFCF5;
+    --g-grid: #EFE7D8;
+    --g1: #7A1F3D;
+    --g2: #2F5D8A;
+    --g3: #3C7A55;
+    --g4: #A67C1E;
+    --radius-sm: 3px;
+    --radius: 4px;
+    --papir: #F7F3EA;
+    --list: #FFFCF5;
+    --sb-bg: #FFFCF5;
+    --sb-border: #E3D9C8;
+    --sb-text: #231A1D;
+    --sb-text-muted: #584A4F;
+    --sb-hover-bg: #F4EFE4;
+    --sb-active-bg: #F5E6EB;
+    --sb-accent: #7A1F3D;
+    --sb-accent-dark: #5A142C;
+}
+
+html[data-predmet="glasba"][data-theme="dark"] {
+    --primary: #E58AA7;
+    --primary-dark: #F3BACB;
+    --primary-light: #8E3555;
+    --primary-soft: rgba(229, 138, 167, 0.12);
+    --zlato: #E0B655;
+    --text-primary: #EFE8E0;
+    --text-secondary: #BBB0A8;
+    --text-muted: #80766F;
+    --bg-primary: #121012;
+    --bg-card: #1B181B;
+    --surface-2: #171417;
+    --border-color: #322C30;
+    --vzorec: repeating-linear-gradient(to bottom, transparent 0 60px, rgba(224, 182, 85, 0.07) 60px 61px, transparent 61px 68px, rgba(224, 182, 85, 0.07) 68px 69px, transparent 69px 76px, rgba(224, 182, 85, 0.07) 76px 77px, transparent 77px 84px, rgba(224, 182, 85, 0.07) 84px 85px, transparent 85px 92px, rgba(224, 182, 85, 0.07) 92px 93px, transparent 93px 120px);
+    --motiv-barva: rgba(224, 182, 85, 0.32);
+    --trak: #E0B655;
+    --g-bg: #171417;
+    --g-grid: #2C272B;
+    --g-axis: #BBB0A8;
+    --g-line: #EFE8E0;
+    --g1: #E58AA7;
+    --g2: #8FB7EA;
+    --g3: #9CC79E;
+    --g4: #E0B655;
+    --papir: #121012;
+    --list: #1B181B;
+    --sb-bg: #1B181B;
+    --sb-border: #322C30;
+    --sb-text: #EFE8E0;
+    --sb-text-muted: #BBB0A8;
+    --sb-hover-bg: #171417;
+    --sb-active-bg: rgba(229, 138, 167, 0.12);
+    --sb-accent: #E58AA7;
+    --sb-accent-dark: #F3BACB;
+}
+
+html[data-predmet="glasba"] .page-eyebrow { background: none; padding: 0; color: var(--zlato); font-style: italic; text-transform: none; letter-spacing: 0.04em; font-size: 15px; }
+html[data-predmet="glasba"] .page-eyebrow::before { content: '\266A  '; color: var(--primary); font-style: normal; }
+html[data-predmet="glasba"] .page-header h1 { font-weight: 700; letter-spacing: -0.01em; font-size: clamp(36px, 5vw, 54px); }
+html[data-predmet="glasba"] .page-meta-item strong { font-family: var(--font-display); color: var(--primary); }
+html[data-predmet="glasba"] .sklop-num { color: var(--zlato); font-style: italic; text-transform: none; letter-spacing: 0.04em; }
+html[data-predmet="glasba"] .sklop-header { border-bottom: 0; padding-bottom: 14px; background: repeating-linear-gradient(to bottom, var(--border-color) 0 1px, transparent 1px 4px) bottom / 100% 13px no-repeat; }
+html[data-predmet="glasba"] .sklop-header h2, html[data-predmet="glasba"] .subsection-head h2 { font-weight: 700; }
+html[data-predmet="glasba"] .sklop-teorija > h3, html[data-predmet="glasba"] .sklop-naloge > h3, html[data-predmet="glasba"] .matura-formule h3 { font-family: var(--font-display); font-weight: 600; font-style: italic; }
+html[data-predmet="glasba"] .tip-naloga { border-left-color: var(--zlato); }
+html[data-predmet="glasba"] .tip-naloga-oznaka, html[data-predmet="glasba"] .tip-naloge h5 { color: var(--primary); font-style: italic; text-transform: none; letter-spacing: 0.02em; }
+html[data-predmet="glasba"] .tip-naloge ol.postopek > li::before { background: var(--primary); color: var(--bg-card); border-radius: 50% 50% 50% 50% / 42% 42% 58% 58%; transform: rotate(-20deg); }
+html[data-predmet="glasba"] .kazalo .kazalo-st { color: var(--zlato); font-family: var(--font-display); }
+html[data-predmet="glasba"][data-theme="dark"] .menu-btn { color: #121012; }

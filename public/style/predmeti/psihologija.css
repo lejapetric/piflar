@@ -1,0 +1,97 @@
+/* Psihologija — MEHKI OBLAKI MISLI
+   Svetlo sivkasta podlaga z mehkimi barvnimi madeži, sivka in breskev, močno zaobljene
+   kartice, glava v profilu s spiralo misli. Temni način: sanjsko vijolična noč. Nunito. */
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&display=swap');
+
+html[data-predmet="psihologija"] {
+    --font-display: 'Nunito', 'Inter', sans-serif;
+    --font-body: 'Nunito', 'Inter', sans-serif;
+    --font-oznake: 'Nunito', sans-serif;
+    --text-base: 16px;
+    --primary: #6A4CA8;
+    --primary-dark: #4F3584;
+    --primary-light: #B9A6E2;
+    --primary-soft: #EEE8F8;
+    --breskev: #E9875F;
+    --text-primary: #26213A;
+    --text-secondary: #58526C;
+    --text-muted: #9792A8;
+    --bg-primary: #F7F5FB;
+    --bg-card: #FFFFFF;
+    --surface-2: #F4F1FA;
+    --border-color: #E4DEF0;
+    --vzorec: radial-gradient(ellipse 40% 30% at 12% 18%, rgba(106, 76, 168, 0.10), transparent 70%), radial-gradient(ellipse 35% 28% at 88% 70%, rgba(233, 135, 95, 0.10), transparent 70%), radial-gradient(ellipse 30% 25% at 50% 100%, rgba(80, 160, 180, 0.08), transparent 70%);
+    --vzorec-velikost: 100% 100%;
+    --motiv: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' fill='none' stroke='black' stroke-width='4.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M128 184v-30c26-8 42-30 42-60 0-44-34-76-76-76S22 46 22 86c0 18 6 30 14 40l-8 22 22 4v14c0 10 8 18 18 18h22'/%3E%3Cpath d='M96 92c0-6 6-10 12-8s8 10 4 16-14 8-22 4-12-14-8-24 18-18 30-14 20 16 16 28'/%3E%3C/svg%3E");
+    --motiv-barva: rgba(106, 76, 168, 0.26);
+    --trak: #6A4CA8;
+    --g-bg: #FFFFFF;
+    --g-grid: #EEEAF6;
+    --g1: #6A4CA8;
+    --g2: #E9875F;
+    --g3: #2F8F86;
+    --g4: #C98A1A;
+    --radius-sm: 12px;
+    --radius: 18px;
+    --papir: #F7F5FB;
+    --list: #FFFFFF;
+    --sb-bg: #FFFFFF;
+    --sb-border: #E4DEF0;
+    --sb-text: #26213A;
+    --sb-text-muted: #58526C;
+    --sb-hover-bg: #F4F1FA;
+    --sb-active-bg: #EEE8F8;
+    --sb-accent: #6A4CA8;
+    --sb-accent-dark: #4F3584;
+}
+
+html[data-predmet="psihologija"][data-theme="dark"] {
+    --primary: #B49BF0;
+    --primary-dark: #D6C8F8;
+    --primary-light: #6A50AE;
+    --primary-soft: rgba(180, 155, 240, 0.14);
+    --breskev: #F4A886;
+    --text-primary: #ECE8F6;
+    --text-secondary: #B3ACC8;
+    --text-muted: #787290;
+    --bg-primary: #16131F;
+    --bg-card: #1F1A2C;
+    --surface-2: #1A1626;
+    --border-color: #332C46;
+    --vzorec: radial-gradient(ellipse 40% 30% at 12% 18%, rgba(180, 155, 240, 0.10), transparent 70%), radial-gradient(ellipse 35% 28% at 88% 70%, rgba(244, 168, 134, 0.07), transparent 70%), radial-gradient(ellipse 30% 25% at 50% 100%, rgba(100, 190, 200, 0.06), transparent 70%);
+    --motiv-barva: rgba(180, 155, 240, 0.3);
+    --trak: #B49BF0;
+    --g-bg: #1A1626;
+    --g-grid: #2D2740;
+    --g-axis: #B3ACC8;
+    --g-line: #ECE8F6;
+    --g1: #B49BF0;
+    --g2: #F4A886;
+    --g3: #7FD1C6;
+    --g4: #EBC26A;
+    --papir: #16131F;
+    --list: #1F1A2C;
+    --sb-bg: #1F1A2C;
+    --sb-border: #332C46;
+    --sb-text: #ECE8F6;
+    --sb-text-muted: #B3ACC8;
+    --sb-hover-bg: #1A1626;
+    --sb-active-bg: rgba(180, 155, 240, 0.14);
+    --sb-accent: #B49BF0;
+    --sb-accent-dark: #D6C8F8;
+}
+
+html[data-predmet="psihologija"] .page-eyebrow { background: var(--primary-soft); color: var(--primary); border-radius: 999px; text-transform: none; letter-spacing: 0.02em; font-weight: 700; }
+html[data-predmet="psihologija"] .page-header h1 { font-weight: 800; letter-spacing: -0.02em; }
+html[data-predmet="psihologija"] .page-meta-item strong { color: var(--primary); font-weight: 800; }
+html[data-predmet="psihologija"] .sklop-teorija, html[data-predmet="psihologija"] .sklop-naloge, html[data-predmet="psihologija"] .intro-card, html[data-predmet="psihologija"] .matura-formule, html[data-predmet="psihologija"] .info-card, html[data-predmet="psihologija"] .kazalo, html[data-predmet="psihologija"] .external-links, html[data-predmet="psihologija"] .link-item, html[data-predmet="psihologija"] .tip-naloge { border-radius: 20px; }
+html[data-predmet="psihologija"] .sklop-num { color: var(--breskev); text-transform: none; letter-spacing: 0.02em; font-weight: 800; }
+html[data-predmet="psihologija"] .sklop-header h2, html[data-predmet="psihologija"] .subsection-head h2 { font-weight: 800; letter-spacing: -0.015em; }
+html[data-predmet="psihologija"] .sklop-header { border-bottom: 0; }
+html[data-predmet="psihologija"] .sklop-header::after { content: ''; display: block; height: 6px; width: 90px; margin-top: var(--space-2); border-radius: 999px; background: linear-gradient(90deg, var(--primary), var(--breskev)); }
+html[data-predmet="psihologija"] .tip-naloga, html[data-predmet="psihologija"] .primer, html[data-predmet="psihologija"] .prepoznaj { border-radius: 14px; }
+html[data-predmet="psihologija"] .tip-naloga { border-left-color: var(--breskev); }
+html[data-predmet="psihologija"] .tip-naloga-oznaka, html[data-predmet="psihologija"] .tip-naloge h5 { color: var(--primary); text-transform: none; letter-spacing: 0.02em; font-weight: 800; }
+html[data-predmet="psihologija"] .tip-naloge ol.postopek > li::before { background: linear-gradient(135deg, var(--primary), var(--breskev)); color: #fff; }
+html[data-predmet="psihologija"] .kazalo .kazalo-st { color: var(--breskev); font-weight: 800; }
+html[data-predmet="psihologija"][data-theme="dark"] .menu-btn { color: #16131F; }

@@ -1699,6 +1699,29 @@ input:focus-visible {
     transform: translateX(4px);
 }
 
+/* Tema brez strani z razlago (še v pripravi): ni povezava */
+.link-item--pripravi {
+    cursor: default;
+    opacity: 0.72;
+}
+
+.link-item--pripravi:hover {
+    border-color: var(--border-color);
+    box-shadow: none;
+    transform: none;
+}
+
+.link-item-oznaka {
+    flex-shrink: 0;
+    font-size: var(--text-xs);
+    font-weight: 600;
+    color: var(--text-muted);
+    border: 1px solid var(--border-color);
+    border-radius: 999px;
+    padding: 2px 10px;
+    white-space: nowrap;
+}
+
 .note-band {
     display: flex;
     gap: var(--space-4);

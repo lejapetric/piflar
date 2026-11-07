@@ -19,7 +19,7 @@
 // document.write, da se slog naloži pred izrisom (brez utripa).
 (function () {
   var m = location.pathname.match(
-    /^\/views\/(biologija|fizika|geografija|informatika|kemija|matematika|slovenscina|zgodovina)\//
+    /^\/views\/(biologija|fizika|geografija|informatika|kemija|matematika|slovenscina|zgodovina|anglescina|nemscina|francoscina|italijanscina|spanscina|psihologija|sociologija|filozofija|ekonomija|glasba|umetnostna_zgodovina)\//
   );
   if (!m) return;
   document.documentElement.dataset.predmet = m[1];
