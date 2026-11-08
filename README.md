@@ -83,6 +83,15 @@ s seznamom vseh tem in po eno stran z razlago. Teme brez strani so v `snov.html`
 Ko dodaš novo razlago, temo v `snov.html` in `<predmet>.html` spremeni v povezavo (`<a class="link-item">`)
 in jo dodaj v meni. Vse teme so že v `snovi.json`.
 
+## Tuji jeziki
+
+Angleščina (M-ANG-2018), nemščina (M-NEM-2024), španščina (M-SPA-2023) in italijanščina (M-ITT-2026)
+imajo vso snov po predmetnih izpitnih katalogih RIC. Vsak jezik ima stran o zgradbi izpita in merilih,
+teme za jezikovne strukture (pola 1B, pisanje in govor) ter teme za spretnosti (branje in poslušanje,
+pisni sestavki, ustni izpit). Strani imajo isto zgradbo kot druge razlage: »Kar moraš znati«, sklope
+z razlago in tipi nalog, ključ in pogoste napake. Snov za višjo raven je označena z `sklop--visja`.
+Španščina šteje teme od 0 (zgradba izpita), da se zadnja vrstica v `snovi.json` ni spremenila.
+
 ## Temni način in iskanje
 
 - Stikalo z luno/soncem v glavi preklaplja `data-theme` na `<html>`; izbira se shrani v `localStorage`,
