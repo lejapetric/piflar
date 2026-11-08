@@ -76,12 +76,15 @@ in `<h1>`. V razvoju se indeks osveži vsakih 5 s, v produkciji ob zagonu.
 
 ## Predmeti v pripravi
 
-Angleščina, nemščina, francoščina, italijanščina, španščina, sociologija, filozofija, ekonomija,
+Angleščina, nemščina, francoščina, italijanščina, španščina, filozofija, ekonomija,
 glasba in umetnostna zgodovina imajo zaenkrat stran predmeta (`<predmet>.html`), pregled snovi (`snov/snov.html`)
 s seznamom vseh tem in po eno stran z razlago. Teme brez strani so v `snov.html` označene z
 `link-item link-item--pripravi` (»V pripravi«) in niso povezave; v meniju so le teme s stranjo.
 Ko dodaš novo razlago, temo v `snov.html` in `<predmet>.html` spremeni v povezavo (`<a class="link-item">`)
 in jo dodaj v meni. Vse teme so že v `snovi.json`.
+
+Sociologija ima vseh 14 poglavij predmetnega izpitnega kataloga RIC (4.1 do 4.14), vsako na svoji strani.
+Razdelki s posebnim znanjem za seminarsko nalogo imajo `sklop--visja` in oznako `badge-vr` z besedilom »Seminarska«.
 
 ## Temni način in iskanje
 
@@ -91,6 +94,15 @@ in jo dodaj v meni. Vse teme so že v `snovi.json`.
 - Iskalnik v glavi med tipkanjem pokaže predloge z odlomkom in poglavjem. Klik odpre stran na izbranem
   mestu (`?isci=…&k=…#sidro`, beseda je obarvana), Enter odpre `/iskanje.html?q=…` z vsemi zadetki.
   Iskanje ne loči velikih črk in strešic (`krozn` najde `krožnica`).
+
+## Tuji jeziki
+
+Angleščina (M-ANG-2018), nemščina (M-NEM-2024), španščina (M-SPA-2023) in italijanščina (M-ITT-2026)
+imajo vso snov po predmetnih izpitnih katalogih RIC. Vsak jezik ima stran o zgradbi izpita in merilih,
+teme za jezikovne strukture (pola 1B, pisanje in govor) ter teme za spretnosti (branje in poslušanje,
+pisni sestavki, ustni izpit). Strani imajo isto zgradbo kot druge razlage: »Kar moraš znati«, sklope
+z razlago in tipi nalog, ključ in pogoste napake. Snov za višjo raven je označena z `sklop--visja`.
+Španščina šteje teme od 0 (zgradba izpita), da se zadnja vrstica v `snovi.json` ni spremenila.
 
 ## Interaktivne naloge
 
