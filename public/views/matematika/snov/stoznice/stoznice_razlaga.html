@@ -27,7 +27,7 @@
           <p>Stožnice so krivulje, ki nastanejo, ko stožec presekamo z ravnino: krožnica, elipsa, hiperbola in parabola. V koordinatnem sistemu jih opišemo z enačbami drugega reda. Pod razlago vsakega podpoglavja so vsi tipi nalog, ki se pojavijo pri tem sklopu.</p>
           <div class="page-meta">
             <div class="page-meta-item"><strong>7</strong><span>Podpoglavij</span></div>
-            <div class="page-meta-item"><strong>17</strong><span>Tipov nalog</span></div>
+            <div class="page-meta-item"><strong>18</strong><span>Tipov nalog</span></div>
             <div class="page-meta-item"><strong>~60 min</strong><span>Branja</span></div>
           </div>
         </header>
@@ -239,6 +239,12 @@
 </svg>
 <figcaption>Premica \(y = x + 1\) seka krožnico \(x^2 + y^2 = 25\) v dveh točkah, zato je sekanta.</figcaption>
 </figure>
+                      <h4>Koncentrične krožnice in dolžina tetive</h4>
+            <p>Krožnice z istim središčem in različnimi polmeri so <strong>koncentrične</strong>: njihove enačbe se razlikujejo le v desni strani, npr. \(x^2 + y^2 = 4\) in \(x^2 + y^2 = 9\). Območje med njima je <strong>krožni kolobar</strong>.</p>
+            <p>Del sekante znotraj krožnice je <strong>tetiva</strong>. Njeno dolžino dobimo kot razdaljo med presečiščema ali brez presečišč: če je \(d\) razdalja središča od premice, je dolžina tetive \(2\sqrt{r^2 - d^2}\).</p>
+            <h4>Neenačbe in deli stožnic</h4>
+            <p>Če v enačbi stožnice znak \(=\) zamenjamo z neenačajem, dobimo <strong>območje</strong>. Pri krožnici in elipsi je \(&lt;\) notranjost, \(&gt;\) zunanjost; robno krivuljo narišemo polno, če je v neenačbi tudi enačaj, sicer črtkano. Kateri del velja, najhitreje preverimo z eno testno točko (npr. središčem). Presek več neenačb je presek območij.</p>
+            <p>Iz enačbe stožnice lahko izrazimo \(y\) in dobimo funkcijo, ki opisuje le del krivulje: \(y = \sqrt{r^2 - x^2}\) je zgornja polkrožnica z \(D_f = [-r, r]\), \(y = -\sqrt{r^2 - x^2}\) spodnja. Definicijsko območje dobimo iz pogoja, da je izraz pod korenom nenegativen.</p>
           </div>
           <div class="sklop-naloge">
             <h3>Tipi nalog v tem sklopu</h3>
@@ -283,6 +289,19 @@
               <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> \(x^2 + y^2 = 10\), \(y = 3x - 10\)</p><p>\(10x^2 - 60x + 90 = 0\), \(x = 3\) dvojna: tangenta v \((3, -1)\).</p></div>
               <div class="primer"><p><strong>Primer 2:</strong> \(x^2 + y^2 = 4\), \(y = x + 5\)</p><p>\(2x^2 + 10x + 21 = 0\), \(D = -68 &lt; 0\): mimobežnica.</p></div>
               <div class="primer"><p><strong>Primer 3:</strong> \(x^2 + y^2 - 4x = 0\), \(y = x\)</p><p>\(2x^2 - 4x = 0\): \((0, 0)\) in \((2, 2)\).</p></div>
+            </div>
+            <div class="tip-naloge" id="tip-6">
+              <h4>Tip 6: Območje, podano z neenačbo s stožnico</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Narišite množico točk \(\{(x, y);\ x^2 + y^2 \le 9,\ y \ge x^2 - 3\}\).</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> v nalogi je enačba stožnice z neenačajem, pogosto več pogojev hkrati, ali funkcija s korenom iz kvadratnega izraza.</p><ul class="kljucne"><li>„narišite množico točk“ z \(\le\), \(\ge\)</li><li>„notranjost krožnice“, „kolobar“</li><li>\(y = \sqrt{9 - x^2}\), „definicijsko območje“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Vsako neenačbo spremeni v enačbo in nariši robno krivuljo (polno pri \(\le\), \(\ge\)).</p><div class="na-nalogi"><p>Krožnica \(x^2 + y^2 = 9\) (središče \(O\), \(r = 3\)) in parabola \(y = x^2 - 3\) (teme \((0, -3)\)).</p></div></li>
+              <li><p class="korak">S testno točko ugotovi, katera stran krivulje ustreza neenačbi.</p><div class="na-nalogi"><p>\(O(0, 0)\): \(0 \le 9\) drži (notranjost krožnice); \(0 \ge -3\) drži (nad parabolo).</p></div></li>
+              <li><p class="korak">Pobarvaj presek območij in označi presečišča robov.</p><div class="na-nalogi"><p>Del kroga nad parabolo. Presečišča: \(y + 3 + y^2 = 9\), \(y = 2\) (\(x = \pm\sqrt{5}\)) in \(y = -3\) (\(x = 0\)).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> \(1 &lt; x^2 + y^2 &lt; 4\).</p><p>Kolobar med koncentričnima krožnicama s polmeroma 1 in 2, oba roba črtkana.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> \(D_f\) za \(f(x) = \sqrt{16 - x^2}\).</p><p>\(16 - x^2 \ge 0\): \(D_f = [-4, 4]\). Graf je zgornja polkrožnica s polmerom 4.</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Dolžina tetive, ki jo premica \(y = 3\) odreže na krožnici \(x^2 + y^2 = 25\).</p><p>\(d = 3\): \(2\sqrt{25 - 9} = 8\).</p></div>
             </div>
           </div>
         </section>
@@ -360,8 +379,8 @@
           </div>
           <div class="sklop-naloge">
             <h3>Tipi nalog v tem sklopu</h3>
-            <div class="tip-naloge" id="tip-6">
-              <h4>Tip 6: Podatki elipse iz enačbe</h4>
+            <div class="tip-naloge" id="tip-7">
+              <h4>Tip 7: Podatki elipse iz enačbe</h4>
               <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Za elipso \(9x^2 + 25y^2 = 225\) določite polosi, gorišči, temena in numerično ekscentričnost.</p></div>
               <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> dana je enačba elipse, sprašujejo po podatkih ali skici.</p><ul class="kljucne"><li>„polosi“</li><li>„gorišči“</li><li>„ekscentričnost“</li><li>„narišite elipso“</li></ul></div>
               <h5>Univerzalni postopek</h5><ol class="postopek">
@@ -374,8 +393,8 @@
               <div class="primer"><p><strong>Primer 2:</strong> \(\frac{x^2}{169} + \frac{y^2}{144} = 1\)</p><p>\(e = 5\), \(F(\pm 5, 0)\), \(\varepsilon = \frac{5}{13}\).</p></div>
               <div class="primer"><p><strong>Primer 3:</strong> \(\frac{(x - 1)^2}{25} + \frac{(y + 2)^2}{9} = 1\)</p><p>\(S(1, -2)\), \(e = 4\): \(F_1(-3, -2)\), \(F_2(5, -2)\).</p></div>
             </div>
-            <div class="tip-naloge" id="tip-7">
-              <h4>Tip 7: Enačba elipse iz podatkov</h4>
+            <div class="tip-naloge" id="tip-8">
+              <h4>Tip 8: Enačba elipse iz podatkov</h4>
               <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Elipsa v središčni legi ima gorišči \(F(\pm 3, 0)\) in gre skozi točko \(T(0, 4)\). Zapišite njeno enačbo.</p></div>
               <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> poznamo nekaj podatkov (gorišča, temena, točke, \(\varepsilon\)), iščemo enačbo.</p><ul class="kljucne"><li>„zapišite enačbo elipse“</li><li>„gre skozi točko“</li><li>„numerična ekscentričnost je“</li></ul></div>
               <h5>Univerzalni postopek</h5><ol class="postopek">
@@ -463,8 +482,8 @@
           </div>
           <div class="sklop-naloge">
             <h3>Tipi nalog v tem sklopu</h3>
-            <div class="tip-naloge" id="tip-8">
-              <h4>Tip 8: Podatki hiperbole iz enačbe</h4>
+            <div class="tip-naloge" id="tip-9">
+              <h4>Tip 9: Podatki hiperbole iz enačbe</h4>
               <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Za hiperbolo \(9x^2 - 16y^2 = 144\) določite polosi, temeni, gorišči, ekscentričnost in asimptoti.</p></div>
               <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> dana je enačba z razliko kvadratov.</p><ul class="kljucne"><li>„asimptoti hiperbole“</li><li>„gorišči“, „temeni“</li><li>„narišite hiperbolo“</li></ul></div>
               <h5>Univerzalni postopek</h5><ol class="postopek">
@@ -477,8 +496,8 @@
               <div class="primer"><p><strong>Primer 2:</strong> \(4y^2 - x^2 = 36\)</p><p>\(-\frac{x^2}{36} + \frac{y^2}{9} = 1\): realna os \(y\), temeni \((0, \pm 3)\), \(e = 3\sqrt{5}\), \(F(0, \pm 3\sqrt{5})\), asimptoti \(y = \pm\frac{1}{2}x\).</p></div>
               <div class="primer"><p><strong>Primer 3:</strong> \(\frac{x^2}{25} - \frac{y^2}{144} = 1\)</p><p>\(e = 13\), \(\varepsilon = \frac{13}{5}\), asimptoti \(y = \pm\frac{12}{5}x\).</p></div>
             </div>
-            <div class="tip-naloge" id="tip-9">
-              <h4>Tip 9: Enačba hiperbole iz podatkov</h4>
+            <div class="tip-naloge" id="tip-10">
+              <h4>Tip 10: Enačba hiperbole iz podatkov</h4>
               <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Hiperbola v središčni legi ima gorišči \(F(\pm 5, 0)\) in asimptoti \(y = \pm\frac{4}{3}x\). Zapišite njeno enačbo.</p></div>
               <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> dani so gorišči, temeni, asimptoti ali točka, iščemo enačbo.</p><ul class="kljucne"><li>„zapišite enačbo hiperbole“</li><li>„asimptoti sta“</li><li>„enakoosna hiperbola“</li></ul></div>
               <h5>Univerzalni postopek</h5><ol class="postopek">
@@ -491,8 +510,8 @@
               <div class="primer"><p><strong>Primer 2:</strong> \(a = 3\), \(\varepsilon = \frac{5}{3}\), realna os \(x\).</p><p>\(e = 5\), \(b = 4\): \(\frac{x^2}{9} - \frac{y^2}{16} = 1\).</p></div>
               <div class="primer"><p><strong>Primer 3:</strong> Enakoosna, realna os \(x\), skozi \((5, 4)\).</p><p>\(x^2 - y^2 = a^2 = 9\).</p></div>
             </div>
-            <div class="tip-naloge" id="tip-10">
-              <h4>Tip 10: Presečišča dveh stožnic v središčni legi</h4>
+            <div class="tip-naloge" id="tip-11">
+              <h4>Tip 11: Presečišča dveh stožnic v središčni legi</h4>
               <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Izračunajte presečišča elipse \(x^2 + 4y^2 = 20\) in hiperbole \(x^2 - y^2 = 5\).</p></div>
               <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> dani sta dve stožnici, iščemo skupne točke.</p><ul class="kljucne"><li>„presečišča stožnic“</li><li>„skupne točke krožnice in parabole“</li></ul></div>
               <h5>Univerzalni postopek</h5><ol class="postopek">
@@ -548,8 +567,8 @@
           </div>
           <div class="sklop-naloge">
             <h3>Tipi nalog v tem sklopu</h3>
-            <div class="tip-naloge" id="tip-11">
-              <h4>Tip 11: Gorišče in vodnica parabole</h4>
+            <div class="tip-naloge" id="tip-12">
+              <h4>Tip 12: Gorišče in vodnica parabole</h4>
               <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Za parabolo \(y^2 = 12x\) določite gorišče in vodnico ter jo narišite.</p></div>
               <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> samo ena spremenljivka je na kvadrat.</p><ul class="kljucne"><li>„gorišče parabole“</li><li>„vodnica“</li><li>„parameter p“</li></ul></div>
               <h5>Univerzalni postopek</h5><ol class="postopek">
@@ -562,8 +581,8 @@
               <div class="primer"><p><strong>Primer 2:</strong> \(x^2 = 4y\)</p><p>\(p = 2\), \(G(0, 1)\), vodnica \(y = -1\).</p></div>
               <div class="primer"><p><strong>Primer 3:</strong> \(y = \frac{1}{8}x^2\)</p><p>\(x^2 = 8y\): \(G(0, 2)\), vodnica \(y = -2\).</p></div>
             </div>
-            <div class="tip-naloge" id="tip-12">
-              <h4>Tip 12: Enačba parabole iz podatkov</h4>
+            <div class="tip-naloge" id="tip-13">
+              <h4>Tip 13: Enačba parabole iz podatkov</h4>
               <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Parabola v temenski legi ima za os simetrije os \(x\) in gre skozi točko \(T(2, -4)\). Zapišite njeno enačbo, gorišče in vodnico.</p></div>
               <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> dano je gorišče, vodnica ali točka parabole s temenom v izhodišču.</p><ul class="kljucne"><li>„zapišite enačbo parabole“</li><li>„gorišče je v“</li><li>„vodnica je“</li></ul></div>
               <h5>Univerzalni postopek</h5><ol class="postopek">
@@ -576,8 +595,8 @@
               <div class="primer"><p><strong>Primer 2:</strong> Vodnica \(y = 5\).</p><p>\(x^2 = 2py\), \(-\frac{p}{2} = 5\), \(p = -10\): \(x^2 = -20y\).</p></div>
               <div class="primer"><p><strong>Primer 3:</strong> Os \(x\), skozi \((3, 3)\).</p><p>\(9 = 6p\), \(p = \frac{3}{2}\): \(y^2 = 3x\).</p></div>
             </div>
-            <div class="tip-naloge" id="tip-13">
-              <h4>Tip 13: Problemska naloga s stožnico <span class="badge-vr">VR</span></h4>
+            <div class="tip-naloge" id="tip-14">
+              <h4>Tip 14: Problemska naloga s stožnico <span class="badge-vr">VR</span></h4>
               <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Satelitska antena ima obliko paraboloida s premerom 80 cm in globino 10 cm. Kako daleč od temena mora biti sprejemnik, da bo v gorišču?</p></div>
               <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> opisan je predmet iz vsakdanjega življenja v obliki stožnice.</p><ul class="kljucne"><li>„antena“, „žaromet“, „lok mostu“</li><li>„obok“, „tir planeta“</li></ul></div>
               <h5>Univerzalni postopek</h5><ol class="postopek">
@@ -648,8 +667,8 @@
           </div>
           <div class="sklop-naloge">
             <h3>Tipi nalog v tem sklopu</h3>
-            <div class="tip-naloge" id="tip-14">
-              <h4>Tip 14: Premaknjena hiperbola <span class="badge-vr">VR</span></h4>
+            <div class="tip-naloge" id="tip-15">
+              <h4>Tip 15: Premaknjena hiperbola <span class="badge-vr">VR</span></h4>
               <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Določite središče, temeni, gorišči in asimptoti hiperbole \(9x^2 - 4y^2 - 18x - 16y - 43 = 0\).</p></div>
               <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> koeficienta pri \(x^2\) in \(y^2\) imata nasprotna predznaka, v enačbi so tudi linearni členi.</p><ul class="kljucne"><li>„središče hiperbole“</li><li>„asimptoti“ pri razviti enačbi</li></ul></div>
               <h5>Univerzalni postopek</h5><ol class="postopek">
@@ -662,8 +681,8 @@
               <div class="primer"><p><strong>Primer 2:</strong> \(x^2 - 4x - y^2 = 0\)</p><p>\((x - 2)^2 - y^2 = 4\): \(S(2, 0)\), \(a = b = 2\), asimptoti \(y = \pm(x - 2)\).</p></div>
               <div class="primer"><p><strong>Primer 3:</strong> \(-\frac{(x - 1)^2}{9} + \frac{(y - 2)^2}{16} = 1\)</p><p>Realna os navpična: temeni \((1, 6)\), \((1, -2)\), \(e = 5\), gorišči \((1, 7)\), \((1, -3)\).</p></div>
             </div>
-            <div class="tip-naloge" id="tip-15">
-              <h4>Tip 15: Premaknjena parabola <span class="badge-vr">VR</span></h4>
+            <div class="tip-naloge" id="tip-16">
+              <h4>Tip 16: Premaknjena parabola <span class="badge-vr">VR</span></h4>
               <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Določite teme, gorišče in vodnico parabole \(y^2 - 2y - 4x - 7 = 0\).</p></div>
               <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> le ena spremenljivka je na kvadrat, v enačbi so tudi linearni členi.</p><ul class="kljucne"><li>„teme parabole“</li><li>„gorišče in vodnica“ pri razviti enačbi</li></ul></div>
               <h5>Univerzalni postopek</h5><ol class="postopek">
@@ -735,8 +754,8 @@
           </div>
           <div class="sklop-naloge">
             <h3>Tipi nalog v tem sklopu</h3>
-            <div class="tip-naloge" id="tip-16">
-              <h4>Tip 16: Tangenta v dani točki stožnice <span class="badge-vr">VR</span></h4>
+            <div class="tip-naloge" id="tip-17">
+              <h4>Tip 17: Tangenta v dani točki stožnice <span class="badge-vr">VR</span></h4>
               <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Zapišite enačbo tangente na elipso \(x^2 + 4y^2 = 8\) v točki \(T(2, y_0)\), \(y_0 &gt; 0\).</p></div>
               <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> dana je točka, ki leži na stožnici.</p><ul class="kljucne"><li>„tangenta v točki“</li><li>„dotikališče je“</li></ul></div>
               <h5>Univerzalni postopek</h5><ol class="postopek">
@@ -749,8 +768,8 @@
               <div class="primer"><p><strong>Primer 2:</strong> Parabola \(y^2 = 8x\), \(T(2, 4)\)</p><p>\(p = 4\): \(4y = 4(x + 2)\), \(y = x + 2\).</p></div>
               <div class="primer"><p><strong>Primer 3:</strong> Hiperbola \(\frac{x^2}{4} - \frac{y^2}{3} = 1\), \(T(4, 3)\)</p><p>\(\frac{4x}{4} - \frac{3y}{3} = 1\): \(x - y = 1\).</p></div>
             </div>
-            <div class="tip-naloge" id="tip-17">
-              <h4>Tip 17: Tangenta z dano smerjo ali iz dane točke <span class="badge-vr">VR</span></h4>
+            <div class="tip-naloge" id="tip-18">
+              <h4>Tip 18: Tangenta z dano smerjo ali iz dane točke <span class="badge-vr">VR</span></h4>
               <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Določite tangenti na krožnico \(x^2 + y^2 = 20\), ki sta vzporedni premici \(y = 2x\).</p></div>
               <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> poznamo smerni koeficient tangente ali točko zunaj stožnice.</p><ul class="kljucne"><li>„tangenta, vzporedna premici“</li><li>„tangenti iz točke“</li><li>„pravokotna na premico“</li></ul></div>
               <h5>Univerzalni postopek</h5><ol class="postopek">
@@ -781,18 +800,19 @@
                   <tr><td>„zapišite enačbo krožnice“, „premer AB“</td><td><a href="#tip-3">Tip 3</a></td></tr>
                   <tr><td>„središče in polmer“ pri razviti enačbi</td><td><a href="#tip-4">Tip 4</a></td></tr>
                   <tr><td>krožnica in premica: „presečišča“, „lega“</td><td><a href="#tip-5">Tip 5</a></td></tr>
-                  <tr><td>„polosi“, „gorišči elipse“, „ekscentričnost“</td><td><a href="#tip-6">Tip 6</a></td></tr>
-                  <tr><td>„zapišite enačbo elipse“</td><td><a href="#tip-7">Tip 7</a></td></tr>
-                  <tr><td>„asimptoti“, „gorišči hiperbole“</td><td><a href="#tip-8">Tip 8</a></td></tr>
-                  <tr><td>„zapišite enačbo hiperbole“</td><td><a href="#tip-9">Tip 9</a></td></tr>
-                  <tr><td>„presečišča stožnic“</td><td><a href="#tip-10">Tip 10</a></td></tr>
-                  <tr><td>„gorišče in vodnica parabole“</td><td><a href="#tip-11">Tip 11</a></td></tr>
-                  <tr><td>„zapišite enačbo parabole“</td><td><a href="#tip-12">Tip 12</a></td></tr>
-                  <tr><td>antena, lok mostu, obok</td><td><a href="#tip-13">Tip 13</a></td></tr>
-                  <tr><td>hiperbola z linearnimi členi, „središče hiperbole“</td><td><a href="#tip-14">Tip 14</a></td></tr>
-                  <tr><td>parabola z linearnimi členi, „teme parabole“</td><td><a href="#tip-15">Tip 15</a></td></tr>
-                  <tr><td>„tangenta v točki“</td><td><a href="#tip-16">Tip 16</a></td></tr>
-                  <tr><td>„tangenta, vzporedna premici“, „tangenti iz točke“</td><td><a href="#tip-17">Tip 17</a></td></tr>
+                  <tr><td>„narišite množico točk“ z neenačbo, polkrožnica, tetiva</td><td><a href="#tip-6">Tip 6</a></td></tr>
+                  <tr><td>„polosi“, „gorišči elipse“, „ekscentričnost“</td><td><a href="#tip-7">Tip 7</a></td></tr>
+                  <tr><td>„zapišite enačbo elipse“</td><td><a href="#tip-8">Tip 8</a></td></tr>
+                  <tr><td>„asimptoti“, „gorišči hiperbole“</td><td><a href="#tip-9">Tip 9</a></td></tr>
+                  <tr><td>„zapišite enačbo hiperbole“</td><td><a href="#tip-10">Tip 10</a></td></tr>
+                  <tr><td>„presečišča stožnic“</td><td><a href="#tip-11">Tip 11</a></td></tr>
+                  <tr><td>„gorišče in vodnica parabole“</td><td><a href="#tip-12">Tip 12</a></td></tr>
+                  <tr><td>„zapišite enačbo parabole“</td><td><a href="#tip-13">Tip 13</a></td></tr>
+                  <tr><td>antena, lok mostu, obok</td><td><a href="#tip-14">Tip 14</a></td></tr>
+                  <tr><td>hiperbola z linearnimi členi, „središče hiperbole“</td><td><a href="#tip-15">Tip 15</a></td></tr>
+                  <tr><td>parabola z linearnimi členi, „teme parabole“</td><td><a href="#tip-16">Tip 16</a></td></tr>
+                  <tr><td>„tangenta v točki“</td><td><a href="#tip-17">Tip 17</a></td></tr>
+                  <tr><td>„tangenta, vzporedna premici“, „tangenti iz točke“</td><td><a href="#tip-18">Tip 18</a></td></tr>
                 </tbody>
               </table>
             </div>
