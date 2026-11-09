@@ -27,7 +27,7 @@
           <p>Integriranje je obratna operacija odvajanja. Z določenim integralom izračunamo ploščine likov z ukrivljenimi robovi, prostornine vrtenin in skupno spremembo količine, ko poznamo njeno hitrost. Pod razlago vsakega podpoglavja so vsi tipi nalog, ki se pojavijo pri tem sklopu.</p>
           <div class="page-meta">
             <div class="page-meta-item"><strong>9</strong><span>Podpoglavij</span></div>
-            <div class="page-meta-item"><strong>12</strong><span>Tipov nalog</span></div>
+            <div class="page-meta-item"><strong>13</strong><span>Tipov nalog</span></div>
             <div class="page-meta-item"><strong>~60 min</strong><span>Branja</span></div>
           </div>
         </header>
@@ -457,6 +457,16 @@
 </svg>
 <figcaption>Ko lik pod \(y = \sqrt{x}\) zavrtimo okoli osi \(x\), je vsak prerez krog s ploščino \(\pi f(x)^2\). Vsota prerezov je \(V = \pi\int_a^b f(x)^2\,dx\).</figcaption>
 </figure>
+                      <h4>Določeni integral v fiziki</h4>
+            <ul>
+              <li><strong>Pot</strong> iz hitrosti: \(s = \int_{t_1}^{t_2} v(t)\,\mathrm{d}t\) (ploščina pod grafom \(v(t)\)); hitrost iz pospeška: \(v(t_2) - v(t_1) = \int_{t_1}^{t_2} a(t)\,\mathrm{d}t\).</li>
+              <li><strong>Delo</strong> spremenljive sile na premi poti: \(A = \int_{x_1}^{x_2} F(x)\,\mathrm{d}x\). Za vzmet \(F = kx\) dobimo \(A = \frac{1}{2}k x^2\).</li>
+              <li><strong>Povprečna vrednost</strong> funkcije na \([a, b]\): \(\bar f = \frac{1}{b - a}\int_a^b f(x)\,\mathrm{d}x\) (npr. povprečna hitrost, povprečna temperatura).</li>
+            </ul>
+            <h4>Trapezna metoda</h4>
+            <p>Kadar integrala ne znamo izračunati natančno (ali poznamo le tabelo vrednosti), ga ocenimo numerično. Interval \([a, b]\) razdelimo na \(n\) enakih delov širine \(h = \frac{b - a}{n}\) in ploščino pod grafom nadomestimo z vsoto ploščin trapezov:</p>
+            <p>\[ \int_a^b f(x)\,\mathrm{d}x \approx \frac{h}{2}\big(f(x_0) + 2f(x_1) + 2f(x_2) + \ldots + 2f(x_{n-1}) + f(x_n)\big). \]</p>
+            <p>Krajišči štejemo enkrat, notranje točke dvakrat, ker pripadajo dvema sosednjima trapezoma. Večji \(n\) da boljši približek. Pri konveksni funkciji je ocena prevelika, pri konkavni premajhna.</p>
           </div>
           <div class="sklop-naloge">
             <h3>Tipi nalog v tem sklopu</h3>
@@ -515,6 +525,19 @@
               <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Pretok \(q(t) = 2t + 1\) L/min. Koliko vode priteče v 5 minutah?</p><p>\(\int_0^5(2t + 1)\,dt = 30\) L.</p></div>
               <div class="primer"><p><strong>Primer 2:</strong> Povprečna temperatura \(T(t) = 10 + 6\sin\frac{\pi t}{12}\) na \([0, 12]\)</p><p>\(\frac{1}{12}\int_0^{12} T\,dt = 10 + \frac{12}{\pi} \approx 13{,}8\) °C.</p></div>
             </div>
+            <div class="tip-naloge" id="tip-13">
+              <h4>Tip 13: Trapezna metoda</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>S trapezno metodo pri \(n = 4\) ocenite \(\int_0^2 x^2\,\mathrm{d}x\) in rezultat primerjajte s točno vrednostjo.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> naloga zahteva približek integrala z danim številom delov ali so podatki podani v tabeli.</p><ul class="kljucne"><li>„s trapezno metodo“</li><li>„razdelite interval na \(n\) delov“</li><li>tabela meritev in „ocenite ploščino / pot“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Izračunaj širino \(h = \frac{b - a}{n}\) in delilne točke.</p><div class="na-nalogi"><p>\(h = \frac{2}{4} = 0{,}5\): \(x = 0;\ 0{,}5;\ 1;\ 1{,}5;\ 2\).</p></div></li>
+              <li><p class="korak">Izračunaj vrednosti funkcije v delilnih točkah.</p><div class="na-nalogi"><p>\(0;\ 0{,}25;\ 1;\ 2{,}25;\ 4\).</p></div></li>
+              <li><p class="korak">Vstavi v formulo (krajišči enkrat, notranje točke dvakrat).</p><div class="na-nalogi"><p>\(\frac{0{,}5}{2}(0 + 2\cdot 0{,}25 + 2\cdot 1 + 2\cdot 2{,}25 + 4) = 0{,}25\cdot 11 = 2{,}75\). Točno: \(\frac{8}{3} \approx 2{,}67\); ocena je prevelika, ker je \(x^2\) konveksna.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Avto ima ob \(t = 0, 10, 20\) s hitrost \(0, 12, 20\ \mathrm{m/s}\). Ocenite prevoženo pot.</p><p>\(h = 10\): \(5(0 + 24 + 20) = 220\ \mathrm{m}\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Delo pri raztegu vzmeti s \(k = 200\ \mathrm{N/m}\) za 0,1 m.</p><p>\(A = \int_0^{0{,}1} 200x\,\mathrm{d}x = 100\cdot 0{,}01 = 1\ \mathrm{J}\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> \(v(t) = 3t^2\ \mathrm{m/s}\). Pot v prvih 2 s.</p><p>\(\int_0^2 3t^2\,\mathrm{d}t = 8\ \mathrm{m}\).</p></div>
+            </div>
           </div>
         </section>
 
@@ -540,6 +563,7 @@
                   <tr><td>„ploščina lika med krivuljama“</td><td><a href="#tip-10">Tip 10</a></td></tr>
                   <tr><td>„zavrtimo okoli osi“</td><td><a href="#tip-11">Tip 11</a></td></tr>
                   <tr><td>hitrost, pretok, povprečna vrednost</td><td><a href="#tip-12">Tip 12</a></td></tr>
+                  <tr><td>„s trapezno metodo“, tabela meritev, „ocenite“</td><td><a href="#tip-13">Tip 13</a></td></tr>
                 </tbody>
               </table>
             </div>
