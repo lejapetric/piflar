@@ -40,7 +40,7 @@ export function pomeni(serija, ime, pari, { tez = 1, n } = {}) {
   serija(ime, N, (r, i) => {
     const [t, s] = r.izberi(pari), obrni = i % 2 === 1;
     const druge = r.premesaj(pari.filter(([x]) => x !== t)).slice(0, 3);
-    if (obrni) return izbira({ r, tezavnost: tez + 1, besedilo: `Kako se reče »${s}«?`, pravilna: t, napacne: druge.map(([x]) => x), postopek: `<p>${s} = <em>${t}</em></p>` });
+    if (obrni) return izbira({ r, tezavnost: Math.min(4, tez + 1), ...(tez + 1 >= 4 ? { raven: "visja" } : {}), besedilo: `Kako se reče »${s}«?`, pravilna: t, napacne: druge.map(([x]) => x), postopek: `<p>${s} = <em>${t}</em></p>` });
     return izbira({ r, tezavnost: tez, besedilo: `Kaj pomeni <em>${t}</em>?`, pravilna: s, napacne: druge.map(([, y]) => y), postopek: `<p><em>${t}</em> = ${s}</p>` });
   });
 }
