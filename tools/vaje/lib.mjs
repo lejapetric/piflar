@@ -122,7 +122,7 @@ export function vprasanja(z, poglavje, seznam, { seme = poglavje } = {}) {
       postopek: razlaga.startsWith("<") ? razlaga : `<p>${razlaga}</p>`,
     };
     if (pravilna && typeof pravilna === "object" && pravilna.vpis) {
-      z.dodaj(poglavje, besedilo({ ...skupno, sprejemljivi: pravilna.vpis, rezultat: pravilna.vpis[0], namig: pravilna.namig }));
+      z.dodaj(poglavje, besedilo({ ...skupno, sprejemljivi: brezStresic(pravilna.vpis), rezultat: pravilna.vpis[0], namig: pravilna.namig }));
     } else {
       z.dodaj(poglavje, izbira({ ...skupno, pravilna, napacne, r }));
     }
@@ -150,4 +150,52 @@ export function zbirka(predmet) {
       });
     },
   };
+}
+
+// Pojmovnik: iz seznama [pojem, opis, { vpis?: ["drug zapis"], brezVpisa?: true }]
+// sestavi štiri vrste nalog za vsak pojem (napačne možnosti so drugi pojmi iste snovi):
+//   lahka:  Kaj pomeni pojem X?             (izbira opisa)
+//   srednja: Kateri pojem ustreza opisu?    (izbira pojma)
+//   srednja: Ali trditev drži?              (Da/Ne, pol pravilnih, pol zamenjanih opisov)
+//   težka:  Vpiši pojem, ki ga opisuje …    (vpis, le za kratke pojme)
+// sprejmemo tudi zapis brez šumnikov (tezisce = težišče)
+const brezStresic = (a) => [...new Set(a.flatMap((x) => [x, x.normalize("NFD").replace(/[\u0300-\u036f]/g, "")]))];
+export function pojmovnik(z, poglavje, seznam, { seme = poglavje, uvod = "pojem" } = {}) {
+  const r = rng(`${z.predmet}-${seme}-pojmi`);
+  const n = seznam.length;
+  if (n < 4) throw new Error(`${poglavje}: pojmovnik potrebuje vsaj 4 pojme`);
+  const drugi = (i, k) => r.premesaj(seznam.map((_, j) => j).filter((j) => j !== i)).slice(0, k);
+  const malo = (s) => s.charAt(0).toLowerCase() + s.slice(1);
+  seznam.forEach(([pojem, opis], i) => {
+    const razlaga = `<p><strong>${pojem}</strong>: ${malo(opis)}</p>`;
+    z.dodaj(poglavje, izbira({ r, tezavnost: 1, besedilo: `Kaj pomeni ${uvod} <strong>${pojem}</strong>?`, pravilna: opis, napacne: drugi(i, 3).map((j) => seznam[j][1]), postopek: razlaga }));
+  });
+  seznam.forEach(([pojem, opis], i) => {
+    z.dodaj(poglavje, izbira({ r, tezavnost: 2, besedilo: `Kateri ${uvod} ustreza opisu: »${opis.replace(/\.$/, "")}«?`, pravilna: pojem, napacne: drugi(i, 3).map((j) => seznam[j][0]), postopek: razlaga(pojem, opis) }));
+  });
+  seznam.forEach(([pojem, opis], i) => {
+    const drzi = i % 2 === 0;
+    const j = drugi(i, 1)[0];
+    const trditev = drzi ? opis : seznam[j][1];
+    z.dodaj(poglavje, izbira({ r, tezavnost: 2, besedilo: `Ali trditev drži? <em>${pojem}</em> — ${malo(trditev)}`, pravilna: drzi ? "Da" : "Ne", napacne: [drzi ? "Ne" : "Da"], postopek: drzi ? razlaga(pojem, opis) : `<p>Ne drži. Opis velja za pojem <strong>${seznam[j][0]}</strong>.</p>${razlaga(pojem, opis)}` }));
+  });
+  seznam.forEach(([pojem, opis, o = {}]) => {
+    const kratek = pojem.split(/\s+/).length <= 3 && !/[(<\\]/.test(pojem);
+    if (o.brezVpisa || (!kratek && !o.vpis)) return;
+    z.dodaj(poglavje, besedilo({ tezavnost: 3, besedilo: `Vpiši ${uvod}, ki ga opisuje: »${opis.replace(/\.$/, "")}«`, sprejemljivi: brezStresic([pojem.replace(/<[^>]+>/g, ""), ...(o.vpis ?? [])]), rezultat: pojem, namig: `Začne se na »${pojem.replace(/<[^>]+>/g, "").slice(0, 2)}…«`, postopek: razlaga(pojem, opis) }));
+  });
+  function razlaga(p, o) { return `<p><strong>${p}</strong>: ${malo(o)}</p>`; }
+}
+
+// Število v znanstvenem zapisu (LaTeX), npr. 3{,}2 \cdot 10^{-5}; majhna/zmerna števila ostanejo navadna
+export function sci(x, d = 3) {
+  if (x === 0) return "0";
+  const e = Math.floor(Math.log10(Math.abs(x)));
+  if (e >= -2 && e <= 4) return L(Number(x.toPrecision(d)), 6);
+  const m = x / 10 ** e;
+  return `${L(Number(m.toPrecision(d)), 6)} \\cdot 10^{${e}}`;
+}
+// Fizikalna naloga z vpisom števila: toleranca 1 % (ali 2 %, če je tako podano)
+export function kolicina({ vrednost, enota, tol = 0.01, ...n }) {
+  return stevilo({ ...n, vrednost, enota, toleranca: Math.abs(vrednost) * tol || 1e-9 });
 }
