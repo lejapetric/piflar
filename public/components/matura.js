@@ -165,7 +165,16 @@ function renderNaloga(naloga, { naslov, vir }) {
   if (vir) {
     const p = naloga.pola;
     const kje = [`Matura ${imeRoka(p)}`, imeRavni(p.raven), p.stevilka ? `izpitna pola ${p.stevilka}` : "", `naloga ${naloga.id}`];
-    kartica.append(el("p", "mn-vir", kje.filter(Boolean).join(", ")));
+    // Povezava na isto nalogo v celotni poli (stran leta odpre polo in skoči na nalogo)
+    const vrstica = el("p", "mn-vir", `${kje.filter(Boolean).join(", ")} · `);
+    const vPoli = povezava(
+      `${OSNOVA}/pole/leto.html?leto=${p.leto}${ENA_RAVEN ? "" : `&raven=${p.raven}`}#${p.id}-${naloga.id}`,
+      "Odpri v poli ↗",
+      "mn-v-poli"
+    );
+    vPoli.title = "Odpri to nalogo v celotni maturitetni poli";
+    vrstica.append(vPoli);
+    kartica.append(vrstica);
   }
 
   if (naloga.pola?.priloga) {
@@ -514,6 +523,12 @@ async function stranPole() {
   koren.replaceChildren(...(ravni.length > 1 ? [izbira] : []), vrstica, vsebina);
   izrisi();
   await poIzrisu(vsebina);
+  // Povezava z naloge po snovi (#<pola>-<naloga>): pola je že odprta, skoči na nalogo
+  const cilj = location.hash && document.getElementById(decodeURIComponent(location.hash.slice(1)));
+  if (cilj) {
+    cilj.scrollIntoView({ block: "start" });
+    cilj.classList.add("mn-izbrana");
+  }
 }
 
 // ------------------------------------------------------------

@@ -166,6 +166,11 @@ zato se sama pojavi na strani poglavja:
 }
 ```
 
+Na vsaki strani z razlago (`…/snov/<slug>/<slug>_razlaga.html`) `components.js` pod glavo doda povezavo
+»Maturitetne naloge iz te snovi« na `po_snovi/naloge.html?poglavje=<slug>`, če ima snov vsaj eno nalogo
+(število vrne `GET /api/matura/stevilo?predmet=…`). Naloge na strani snovi se ne prepisujejo: berejo se iz istih pol,
+vsaka ima povezavo »Odpri v poli«, ki odpre polo na strani leta in skoči na nalogo (`#<id pole>-<id naloge>`).
+
 Besedila nalog RIC so avtorsko zaščitena: brez dovoljenja RIC pusti `besedilo` prazno in v `pdf`
 povezavo na uradno polo na ric.si. Novo leto dodaš v `matura.json` in kot povezavo v `sidebar.html`.
 

@@ -815,6 +815,46 @@ function initKazaloStrani(poglavja) {
 }
 
 // ============================================================
+// POVEZAVA NA MATURITETNE NALOGE IZ SNOVI
+// ============================================================
+// Na strani z razlago (/views/<predmet>/snov/<slug>/<slug>_razlaga.html) pod glavo doda
+// povezavo na stran z vsemi maturitetnimi nalogami iz te snovi, če jih predmet ima.
+const steviloNalogBesedilo = (n) =>
+  n === 1 ? "1 naloga" : n === 2 ? "2 nalogi" : n === 3 || n === 4 ? `${n} naloge` : `${n} nalog`;
+
+async function initMaturaPovezava() {
+  const m = location.pathname.match(/^\/views\/([^/]+)\/snov\/([^/]+)\/\2_razlaga\.html$/);
+  const glava = document.querySelector(".view .page-header");
+  if (!m || !glava) return;
+  const [, predmet, slug] = m;
+  let stevilo;
+  try {
+    const odg = await fetch(`/api/matura/stevilo?predmet=${encodeURIComponent(predmet)}`);
+    if (!odg.ok) return;
+    stevilo = (await odg.json())[slug];
+  } catch {
+    return;
+  }
+  if (!stevilo) return;
+  const naslov = glava.querySelector("h1")?.textContent.trim() ?? "";
+  const a = document.createElement("a");
+  a.className = "link-item matura-povezava";
+  a.href = `/views/${predmet}/matura/po_snovi/naloge.html?poglavje=${encodeURIComponent(slug)}`;
+  const besedilo = document.createElement("span");
+  besedilo.className = "link-item-text";
+  const krepko = document.createElement("strong");
+  krepko.textContent = "Maturitetne naloge iz te snovi";
+  const opis = document.createElement("small");
+  opis.textContent = `${steviloNalogBesedilo(stevilo)} iz preteklih pol${naslov ? `: ${naslov}` : ""}`;
+  besedilo.append(krepko, opis);
+  const puscica = document.createElement("span");
+  puscica.className = "arrow";
+  puscica.textContent = "→";
+  a.append(besedilo, puscica);
+  glava.after(a);
+}
+
+// ============================================================
 // ZAGON
 // ============================================================
 async function init() {
@@ -833,6 +873,7 @@ async function init() {
   initTema();
   initIskanje();
   initKazaloStrani(kazalo);
+  initMaturaPovezava();
   oznaciIskanje();
 }
 

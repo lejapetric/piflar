@@ -1577,6 +1577,24 @@ mjx-container[display="true"] {
     color: var(--text-muted);
 }
 
+.mn-v-poli {
+    color: var(--primary);
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.mn-v-poli:hover {
+    text-decoration: underline;
+}
+
+/* Naloga, na katero vodi povezava »Odpri v poli« */
+.mn-izbrana {
+    outline: 3px solid var(--primary);
+    outline-offset: 4px;
+    scroll-margin-top: 90px;
+}
+
 .mn-naloga .naloga-akcije {
     display: flex;
     gap: var(--space-2);

@@ -61,6 +61,18 @@ const maturaNaloge = (req, res) => {
   res.status(200).json(naloge);
 };
 
+// GET /api/matura/stevilo?predmet=fizika → { nihanje: 42, … }
+// Koliko maturitetnih nalog je v vsakem poglavju (za povezavo na straneh z razlago).
+const maturaStevilo = (req, res) => {
+  const stevilo = {};
+  for (const pola of filtriraj(razvrscene, req.query)) {
+    for (const naloga of pola.naloge ?? []) {
+      for (const slug of new Set(poglavjaNaloge(naloga))) stevilo[slug] = (stevilo[slug] ?? 0) + 1;
+    }
+  }
+  res.status(200).json(stevilo);
+};
+
 // GET /api/matura/:maturaId
 const maturaReadOne = (req, res) => {
   const pola = matura.find((p) => p.id === req.params.maturaId);
@@ -68,4 +80,4 @@ const maturaReadOne = (req, res) => {
   res.status(200).json(prikazPole(pola, req.uporabnik, true));
 };
 
-export default { maturaList, maturaNaloge, maturaReadOne };
+export default { maturaList, maturaNaloge, maturaStevilo, maturaReadOne };
