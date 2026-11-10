@@ -129,6 +129,11 @@ export function vprasanja(z, poglavje, seznam, { seme = poglavje } = {}) {
   }
 }
 
+// {,} je decimalna vejica v LaTeX-u; zunaj \( … \) jo zamenjamo z navadno vejico
+export function popraviVejice(html) {
+  return String(html).split(/(\\\(.*?\\\))/s).map((del, i) => (i % 2 ? del : del.replaceAll("{,}", ","))).join("");
+}
+
 // Zbirka nalog enega predmeta
 export function zbirka(predmet) {
   const naloge = [];
@@ -139,6 +144,8 @@ export function zbirka(predmet) {
     dodaj(poglavje, naloga) {
       for (const k of ["besedilo", "odgovor", "rezultat", "postopek", "tezavnost"])
         if (naloga[k] === undefined || naloga[k] === "") throw new Error(`${predmet}/${poglavje}: manjka ${k} (${naloga.besedilo})`);
+      for (const k of ["besedilo", "rezultat", "postopek", "namig"]) if (typeof naloga[k] === "string") naloga[k] = popraviVejice(naloga[k]);
+      if (naloga.moznosti) naloga.moznosti = naloga.moznosti.map(popraviVejice);
       stevci[poglavje] = (stevci[poglavje] ?? 0) + 1;
       naloge.push({
         id: `${predmet}-${poglavje}-v${stevci[poglavje]}`,
