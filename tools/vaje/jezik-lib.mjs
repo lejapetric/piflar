@@ -1,6 +1,7 @@
 // Skupne predloge za tuje jezike.
 import { izbira, besedilo } from "./lib.mjs";
 
+
 // Vrzeli: [poved z ___, pravilno (niz ali [niz, ...sprejemljive]), [napačne], razlaga, težavnost=2, "visja"?]
 // Vsaka postavka da izbirno nalogo in nalogo z vpisom (težavnost +1).
 export function vrzeli(serija, ime, postavke) {
