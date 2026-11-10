@@ -24,6 +24,12 @@ export function literarneSerije(serija, { dela, osebe = [], vrste }) {
     if (tuja.length < 3) return null;
     return izbira({ r, tezavnost: 2, besedilo: `Katero delo je napisal(a) ${a}?`, pravilna: `<em>${d}</em>`, napacne: tuja, postopek: `<p>${a}: <em>${d}</em>.</p>` });
   });
+  if (avtorji.length >= 3 && vs.length >= 2) serija("trojica", 10, (r) => {
+    const [d, a, v] = r.izberi(dela);
+    const tuj = r.premesaj(avtorji.filter((x) => x !== a)), tv = r.premesaj(vs.filter((x) => x !== v));
+    const nap = [`${tuj[0]} – ${v}`, `${a} – ${tv[0]}`, `${tuj[1]} – ${tv[tv.length > 1 ? 1 : 0]}`];
+    return izbira({ r, tezavnost: 4, raven: "visja", besedilo: `Kateri par avtor – literarna vrsta je pravilen za delo <em>${d}</em>?`, pravilna: `${a} – ${v}`, napacne: nap, postopek: `<p><em>${d}</em>: ${a}, ${v}.</p>` });
+  });
   if (osebe.length >= 4) serija("oseba", Math.min(osebe.length * 2, 12), (r, i) => {
     const [o, opis] = r.izberi(osebe);
     if (i % 2) return izbira({ r, tezavnost: 2, besedilo: `Kaj velja za avtorja ${o}?`, pravilna: veliko(opis), napacne: r.premesaj(osebe.filter(([x]) => x !== o)).slice(0, 3).map(([, y]) => veliko(y)), postopek: `<p>${o}: ${opis}.</p>` });
