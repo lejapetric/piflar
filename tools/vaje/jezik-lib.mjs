@@ -52,3 +52,26 @@ export function odlomki(serija, ime, seznam) {
     return izbira({ r, tezavnost: rav === "visja" ? 4 : tez, ...(rav === "visja" ? { raven: "visja" } : {}), besedilo: `<blockquote>${seznam[k].besedilo}</blockquote>${v}`, pravilna: prav, napacne: nap, postopek: `<p>Pravilno: ${prav}</p>` });
   });
 }
+
+// Vprašanja o shemi maturitetnega izpita iz tujega jezika (podatki s strani »Izpit«).
+export function izpitShema(serija, { t3A, t3B }) {
+  const V = [
+    ["Koliko časa traja pola 1A (bralno razumevanje)?", "35 minut", ["25 minut", "20 minut", "60 minut"]],
+    ["Koliko časa traja pola 1B (poznavanje in raba jezika)?", "25 minut", ["35 minut", "30 minut", "60 minut"]],
+    ["Koliko časa traja pola 2 (slušno razumevanje)?", "do 20 minut", ["35 minut", "60 minut", "10 minut"]],
+    ["Koliko časa traja krajši pisni sestavek (3A)?", "30 minut", ["60 minut", "20 minut", "45 minut"]],
+    ["Koliko časa traja daljši pisni sestavek (3B)?", "60 minut", ["30 minut", "90 minut", "45 minut"]],
+    ["Koliko časa traja ustni izpit?", "do 20 minut", ["60 minut", "5 minut", "45 minut"]],
+    ["Koliko minut prekinitve je po poli 1?", "10 minut", ["30 minut", "5 minut", "ni prekinitve"]],
+    ["Koliko minut odmora je po poli 2?", "30 minut", ["10 minut", "60 minut", "ni odmora"]],
+    ["Kakšen delež ocene prinese ustni izpit?", "20 %", ["10 %", "35 %", "50 %"]],
+    ["Kakšen delež ocene prinese krajši pisni sestavek (3A)?", "10 %", ["20 %", "15 %", "30 %"]],
+    ["Koliko točk največ prinese krajši pisni sestavek (3A)?", String(t3A), [12, 25, 30, 18, 15, 20].filter((x) => x !== t3A).slice(0, 3).map(String)],
+    ["Koliko točk največ prinese daljši pisni sestavek (3B)?", t3B, ["10", "40", "30"]],
+    ["Kaj piše kandidat višje ravni v poli 3B?", "sestavek na temo iz književnosti", ["pismo prijatelju", "poročilo", "povzetek"]],
+  ];
+  serija("shema", V.length, (r, i) => {
+    const [v, odg, nap] = V[i];
+    return izbira({ r, tezavnost: 1, besedilo: v, pravilna: odg, napacne: nap, postopek: `<p>${odg}.</p>` });
+  });
+}
