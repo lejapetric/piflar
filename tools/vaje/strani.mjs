@@ -1,6 +1,6 @@
-// tools/vaje/strani.mjs — za vsako snov z razlago naredi stran z nalogami za vajo:
+// tools/vaje/strani.mjs — za vsako snov z nalogami naredi stran z nalogami za vajo:
 // public/views/<predmet>/snov/<slug>/<slug>_naloge.html (naslov je enak kot pri snovi).
-import { readFileSync, writeFileSync, existsSync } from "node:fs";
+import { readFileSync, writeFileSync, existsSync, mkdirSync } from "node:fs";
 
 const koren = new URL("../../", import.meta.url);
 const snovi = JSON.parse(readFileSync(new URL("api/data/snovi.json", koren)));
@@ -10,9 +10,12 @@ let st = 0;
 for (const s of snovi) {
   const mapa = `public/views/${s.predmet}/snov/${s.slug}/`;
   const razlaga = new URL(`${mapa}${s.slug}_razlaga.html`, koren);
-  if (!existsSync(razlaga)) continue;
-  const html = readFileSync(razlaga, "utf8");
-  const predmet = (html.match(/<span class="page-eyebrow">([^·<]+)/)?.[1] ?? s.predmet).trim();
+  const imaRazlago = existsSync(razlaga);
+  if (!imaRazlago && !existsSync(new URL(`tools/vaje/${s.predmet}/${s.slug}.mjs`, koren))) continue;
+  const glavna = new URL(`public/views/${s.predmet}/${s.predmet}.html`, koren);
+  const html = imaRazlago ? readFileSync(razlaga, "utf8") : "";
+  const predmet = (html.match(/<span class="page-eyebrow">([^·<]+)/)?.[1] ?? (existsSync(glavna) ? readFileSync(glavna, "utf8").match(/<title>([^|<]+)/)?.[1] : null) ?? s.predmet).trim();
+  mkdirSync(new URL(mapa, koren), { recursive: true });
   const naslov = esc(s.naslov);
   const stran = `<!DOCTYPE html>
 <html lang="sl">
@@ -52,9 +55,9 @@ for (const s of snovi) {
 
         <div class="note-band">
           <p>
-            <strong>Nasvet:</strong> Najprej predelaj
+            ${imaRazlago ? `<strong>Nasvet:</strong> Najprej predelaj
             <a href="/views/${s.predmet}/snov/${s.slug}/${s.slug}_razlaga.html">razlago snovi</a>,
-            nato rešuj naloge brez pogledovanja v postopek. Naloge z oznako Višja raven so za višjo raven mature.
+            nato rešuj naloge brez pogledovanja v postopek.` : `<strong>Nasvet:</strong> Razlaga te snovi je še v pripravi. Rešuj naloge brez pogledovanja v postopek; ob vsaki napaki preberi postopek in nalogo reši še enkrat.`} Naloge z oznako Višja raven so za višjo raven mature.
           </p>
         </div>
 
