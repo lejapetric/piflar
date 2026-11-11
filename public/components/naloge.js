@@ -283,47 +283,99 @@ async function init() {
 // ============================================================
 const NA_STRAN = 20;
 
-// Izbira z gumbi »Vse« + posamezne vrednosti (privzeto Vse).
+// Spustni seznam z izbiro več možnosti: »Vse« + posamezne vrednosti (privzeto Vse).
 // Klik na vrednost, ko je izbrano Vse, izbere samo njo; naslednji kliki dodajajo in odvzemajo.
+let odprtSeznam = null;
+document.addEventListener("click", (e) => {
+  if (odprtSeznam && !odprtSeznam.contains(e.target)) odprtSeznam.zapri();
+});
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape" && odprtSeznam) {
+    const gumb = odprtSeznam.querySelector(".naloge-spustni-gumb");
+    odprtSeznam.zapri();
+    gumb.focus();
+  }
+});
+
 function izbirnik(naslov, moznosti, izbrane, ob) {
-  const skupina = el("div", "naloge-izbirnik");
-  skupina.append(el("span", "naloge-izbirnik-naslov", naslov));
-  const gumbi = el("div", "naloge-filter-gumbi");
-  gumbi.setAttribute("role", "group");
-  gumbi.setAttribute("aria-label", naslov);
-  const vse = gumb("Vse", "naloge-filter-gumb");
+  const id = `spustni-${naslov.normalize("NFD").replace(/[^a-z]/gi, "").toLowerCase()}`;
+  const skupina = el("div", "naloge-izbirnik naloge-spustni");
+  const oznaka = el("label", "naloge-izbirnik-naslov", naslov);
+  oznaka.htmlFor = `${id}-gumb`;
+  const gumbSeznam = el("button", "naloge-spustni-gumb");
+  gumbSeznam.type = "button";
+  gumbSeznam.id = `${id}-gumb`;
+  gumbSeznam.setAttribute("aria-expanded", "false");
+  gumbSeznam.setAttribute("aria-controls", id);
+  const povzetek = el("span", "naloge-spustni-povzetek");
+  gumbSeznam.append(povzetek, el("span", "naloge-spustni-puscica", "▾"));
+  const plosca = el("div", "naloge-spustni-plosca");
+  plosca.id = id;
+  plosca.hidden = true;
+  plosca.setAttribute("role", "group");
+  plosca.setAttribute("aria-label", naslov);
+
+  const vrstica = (ime) => {
+    const l = el("label", "naloge-spustni-moznost");
+    const cb = el("input");
+    cb.type = "checkbox";
+    const besedilo = el("span", "naloge-spustni-ime", ime);
+    const st = el("span", "naloge-spustni-st");
+    l.append(cb, besedilo, st);
+    return { l, cb, st };
+  };
+  const vse = vrstica("Vse");
+  vse.l.classList.add("naloge-spustni-moznost--vse");
+  vse.cb.addEventListener("change", () => {
+    izbrane.clear();
+    osvezi();
+    ob();
+  });
   const posamezni = moznosti.map(([vrednost, ime]) => {
-    const b = gumb(ime, "naloge-filter-gumb");
-    b.dataset.vrednost = vrednost;
-    b.addEventListener("click", () => {
+    const v = vrstica(ime);
+    v.cb.addEventListener("change", () => {
       if (izbrane.has(vrednost)) izbrane.delete(vrednost);
       else izbrane.add(vrednost);
       if (izbrane.size === moznosti.length) izbrane.clear();
       osvezi();
       ob();
     });
-    return b;
+    return { ...v, vrednost };
   });
-  vse.addEventListener("click", () => {
-    izbrane.clear();
-    osvezi();
-    ob();
+  plosca.append(vse.l, ...posamezni.map((v) => v.l));
+  skupina.append(oznaka, gumbSeznam, plosca);
+
+  skupina.zapri = () => {
+    plosca.hidden = true;
+    gumbSeznam.setAttribute("aria-expanded", "false");
+    skupina.classList.remove("odprt");
+    if (odprtSeznam === skupina) odprtSeznam = null;
+  };
+  gumbSeznam.addEventListener("click", () => {
+    if (!plosca.hidden) return skupina.zapri();
+    odprtSeznam?.zapri();
+    plosca.hidden = false;
+    gumbSeznam.setAttribute("aria-expanded", "true");
+    skupina.classList.add("odprt");
+    odprtSeznam = skupina;
   });
-  gumbi.append(vse, ...posamezni);
-  skupina.append(gumbi);
+
   function osvezi() {
-    vse.setAttribute("aria-pressed", izbrane.size === 0);
-    for (const b of posamezni) b.setAttribute("aria-pressed", izbrane.has(b.dataset.vrednost));
+    vse.cb.checked = izbrane.size === 0;
+    for (const v of posamezni) v.cb.checked = izbrane.has(v.vrednost);
+    const imena = moznosti.filter(([vr]) => izbrane.has(vr)).map(([, ime]) => ime);
+    povzetek.textContent = !imena.length ? "Vse" : imena.length <= 2 ? imena.join(", ") : `${imena[0]} in še ${imena.length - 1}`;
+    gumbSeznam.title = imena.length ? imena.join(", ") : "Vse";
   }
   osvezi();
   // Števila ob imenih (koliko nalog ustreza ostalim filtrom)
   skupina.stevila = (stevila, skupaj) => {
-    vse.textContent = `Vse (${skupaj})`;
-    posamezni.forEach((b, i) => {
-      const n = stevila[b.dataset.vrednost] ?? 0;
-      b.textContent = `${moznosti[i][1]} (${n})`;
-      b.classList.toggle("naloge-filter-gumb--prazen", n === 0);
-    });
+    vse.st.textContent = skupaj;
+    for (const v of posamezni) {
+      const n = stevila[v.vrednost] ?? 0;
+      v.st.textContent = n;
+      v.l.classList.toggle("naloge-spustni-moznost--prazna", n === 0);
+    }
   };
   return skupina;
 }
@@ -403,7 +455,9 @@ async function initRazdelek(predmet) {
     });
     red.append(sel);
     dodatno.append(oznakaVisja, red);
-    filtri.append(fSnov, fTez, dodatno);
+    const izbira = el("div", "naloge-filtri-izbira");
+    izbira.append(fSnov, fTez);
+    filtri.append(izbira, dodatno);
 
     const povzetek = el("p", "naloge-povzetek");
     povzetek.setAttribute("role", "status");

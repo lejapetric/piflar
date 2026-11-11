@@ -171,7 +171,7 @@ nalogami iz `tools/vaje/matematika/`, zato se id-ji obstoječih nalog (in s tem 
 ### Razdelek Naloge
 
 Poleg Snovi in Mature ima predmet razdelek Naloge (`public/views/<predmet>/naloge/naloge.html`, zaenkrat matematika):
-vse naloge za vajo predmeta na eni strani s filtrom po snovi in težavnosti (privzeto je izbrano vse), stikalom za
+vse naloge za vajo predmeta na eni strani s spustnima seznamoma za snov in težavnost (izbereš lahko več možnosti, privzeto je izbrano vse), stikalom za
 višjo raven in vrstnim redom (od lažjih do težjih ali premešano). Naloge se prikazujejo po 20, z gumbom Pokaži več.
 Stran potrebuje samo `<div id="naloge" data-predmet="matematika" data-math></div>` brez `data-poglavje`
 in `naloge.js`. Izbira se zapiše v naslov strani (`?snov=funkcije,stoznice&tezavnost=3,4&visja=0&vrstni=nakljucno`),
