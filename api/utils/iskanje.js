@@ -196,7 +196,8 @@ async function htmlDatoteke(mapa) {
   for (const v of vnosi) {
     const pot = join(mapa, v.name);
     if (v.isDirectory()) out.push(...(await htmlDatoteke(pot)));
-    else if (v.name.endsWith(".html")) out.push(pot);
+    // strani z nalogami za vajo imajo besedilo v API-ju, ne v HTML-ju, in bi le podvajale zadetke snovi
+    else if (v.name.endsWith(".html") && !v.name.endsWith("_naloge.html")) out.push(pot);
   }
   return out;
 }
