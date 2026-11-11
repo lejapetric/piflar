@@ -135,6 +135,36 @@ Stran z nalogami potrebuje samo `<div id="naloge" data-poglavje="…" data-math>
 in `<script src="/components/naloge.js" defer></script>` (glej `mnozice_naloge.html`).
 `npm test` preveri preverjanje odgovorov in veljavnost `naloge.json`.
 
+### Naloge za vajo po snoveh
+
+Vsaka snov vsakega predmeta ima vsaj 50 izvirnih nalog za vajo (skupaj okoli 19.000),
+od lahkih do zelo težkih. Naloge niso prepisane iz maturitetnih pol.
+
+- Težavnost 1–4 (lahka, srednja, težka, zelo težka) je izpisana v kotu naloge,
+  naloge z `"raven": "visja"` imajo oznako Višja raven.
+- Tip `izbira` (`moznosti` + `pravilna` kot črka A, B, C …) ali vpis (`stevilo`, `besedilo`).
+- Vsaka naloga ima `rezultat` in `postopek` (gumba Prikaži rezultat in Prikaži postopek).
+
+Naloge nastanejo iz generatorjev v `tools/vaje/<predmet>/<slug>.mjs` (ena datoteka na snov).
+Vsaka datoteka izvozi `default({ serija, pojmi, vprasanja })`:
+
+- `serija(ime, n, (r, i) => naloga)` naredi `n` nalog z naključnimi, a ponovljivimi podatki;
+  enaka besedila se izločijo,
+- `pojmi([[pojem, opis], …])` iz pojmovnika naredi naloge »kaj pomeni«, »kateri pojem«, »ali drži« in vpis,
+- `vprasanja([[težavnost, vprašanje, pravilno | { vpis: [...] }, [napačne], razlaga, "visja"?], …])`.
+
+Skupne predloge so v `tools/vaje/lib.mjs` (`kolicina`, `izbira`, `besedilo`), `jezik-lib.mjs`
+(vrzeli, spregatve, bralni odlomki za tuje jezike), `zgodovina-lib.mjs`, `slovenscina-lib.mjs`,
+`glasba-lib.mjs`, `kemija-lib.mjs` ter spregatve v `fr-glagoli.mjs`, `it-glagoli.mjs` in `es-glagoli.mjs`.
+
+```bash
+node tools/vaje/gradi.mjs biologija   # zapiše api/data/vaje/biologija.json in izpiše število nalog po snoveh
+node tools/vaje/strani.mjs            # naredi <slug>_naloge.html za vsako snov z nalogami
+```
+
+Snovi, ki še nimajo razlage, imajo na seznamu snovi in v stranskem meniju povezavo na naloge.
+`test/vaje.test.js` preveri shemo nalog, da je pravilni odgovor sprejet in da ima vsaka snov vsaj 50 nalog.
+
 ## Matura
 
 Poglavje Matura (`public/views/matematika/matura/`) ima dve podpoglavji:

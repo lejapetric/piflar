@@ -1,0 +1,208 @@
+// tools/vaje/lib.mjs
+// Pomočniki za pisanje nalog za vajo. Vsak predmet je v predmeti/<predmet>.mjs in
+// izvozi funkcijo (z) => { … }, ki z z.dodaj(poglavje, naloga) doda naloge.
+// gradi.mjs jih zapiše v api/data/vaje/<predmet>.json.
+//
+// Naloga: { besedilo, odgovor, rezultat, postopek, tezavnost: 1–4, raven: "osnovna" | "visja",
+//           moznosti? (izbirna), namig?, povezave? }
+
+// ---------- naključnost (ponovljiva: isto seme → iste naloge) ----------
+export function rng(seme) {
+  let h = 1779033703 ^ seme.length;
+  for (let i = 0; i < seme.length; i++) h = Math.imul(h ^ seme.charCodeAt(i), 3432918353), (h = (h << 13) | (h >>> 19));
+  let a = h >>> 0;
+  const r = () => {
+    a = (a + 0x6d2b79f5) >>> 0;
+    let t = a;
+    t = Math.imul(t ^ (t >>> 15), t | 1);
+    t ^= t + Math.imul(t ^ (t >>> 7), t | 61);
+    return ((t ^ (t >>> 14)) >>> 0) / 4294967296;
+  };
+  r.int = (od, do_) => od + Math.floor(r() * (do_ - od + 1));
+  r.izberi = (seznam) => seznam[Math.floor(r() * seznam.length)];
+  r.premesaj = (seznam) => {
+    const s = [...seznam];
+    for (let i = s.length - 1; i > 0; i--) {
+      const j = Math.floor(r() * (i + 1));
+      [s[i], s[j]] = [s[j], s[i]];
+    }
+    return s;
+  };
+  r.nenic = (od, do_) => {
+    let x = 0;
+    while (x === 0) x = r.int(od, do_);
+    return x;
+  };
+  return r;
+}
+
+// ---------- števila ----------
+export const zaokrozi = (x, d = 2) => Math.round(x * 10 ** d) / 10 ** d;
+// besedilo: 3,5 · −2 (minus kot −)
+export function T(x, d = 3) {
+  const z = zaokrozi(x, d);
+  const s = String(Math.abs(z)).replace(".", ",");
+  return (z < 0 ? "−" : "") + s;
+}
+// LaTeX: 3{,}5
+export const L = (x, d = 3) => T(x, d).replace("−", "-").replace(",", "{,}");
+// ulomek v LaTeX-u (okrajšan)
+export const gcd = (a, b) => (b === 0 ? Math.abs(a) : gcd(b, a % b));
+export function ulomek(s, i) {
+  if (i < 0) (s = -s), (i = -i);
+  const g = gcd(s, i) || 1;
+  s /= g;
+  i /= g;
+  if (i === 1) return `${s}`;
+  return `${s < 0 ? "-" : ""}\\frac{${Math.abs(s)}}{${i}}`;
+}
+// predznak za člen: +3, -3 (LaTeX)
+export const clen = (k, x = "", prvi = false) => {
+  if (k === 0) return "";
+  const a = Math.abs(k);
+  const kk = x && a === 1 ? "" : `${a}`;
+  if (prvi) return `${k < 0 ? "-" : ""}${kk}${x}`;
+  return ` ${k < 0 ? "-" : "+"} ${kk}${x}`;
+};
+// polinom ax^2 + bx + c v LaTeX
+export function polinom(koef, x = "x") {
+  const n = koef.length - 1;
+  let s = "";
+  koef.forEach((k, i) => {
+    const st = n - i;
+    const pot = st === 0 ? "" : st === 1 ? x : `${x}^{${st}}`;
+    if (k === 0) return;
+    if (st === 0) s += s ? ` ${k < 0 ? "-" : "+"} ${Math.abs(k)}` : `${k}`;
+    else s += clen(k, pot, s === "");
+  });
+  return s || "0";
+}
+
+// ---------- vrste nalog ----------
+const CRKE = "ABCDEFGH";
+
+export function stevilo({ vrednost, toleranca, enota, ...n }) {
+  const tol = toleranca ?? (Number.isInteger(vrednost) ? 1e-9 : Math.max(Math.abs(vrednost) * 0.01, 0.005));
+  return { ...n, odgovor: { tip: "stevilo", vrednost, toleranca: tol, ...(enota ? { enota } : {}) } };
+}
+
+export function besedilo({ sprejemljivi, ...n }) {
+  return { ...n, odgovor: { tip: "besedilo", sprejemljivi } };
+}
+
+export function mnozica({ elementi, ...n }) {
+  return { ...n, odgovor: { tip: "mnozica", elementi: elementi.map(String) } };
+}
+
+// Izbirna naloga: pravilna + napačne, vrstni red premeša r (ponovljivo)
+export function izbira({ pravilna, napacne, r, rezultat, ...n }) {
+  // Da/Ne in pravilna/nepravilna ostaneta v stalnem vrstnem redu, ostalo se premeša
+  const dve = napacne.length === 1 && /^(Da|Ne|pravilna|nepravilna)\b/.test(pravilna);
+  const moznosti = dve ? [pravilna, ...napacne].sort((a, b) => /^(Da|pravilna)/.test(b) - /^(Da|pravilna)/.test(a)) : r.premesaj([pravilna, ...napacne]);
+  if (new Set(moznosti).size !== moznosti.length) throw new Error(`Podvojena možnost: ${n.besedilo}`);
+  const crka = CRKE[moznosti.indexOf(pravilna)];
+  return {
+    ...n,
+    moznosti,
+    odgovor: { tip: "izbira", pravilna: crka },
+    rezultat: rezultat ?? `<strong>${crka}</strong> &nbsp; ${pravilna}`,
+  };
+}
+
+// Strnjen zapis vprašanj za teoretične predmete:
+// [težavnost, vprašanje, pravilni odgovor, [napačni …], razlaga, "visja"?]
+// Če je tretji element { vpis: ["odgovor", "drug zapis"] }, je naloga z vpisom besedila.
+export function vprasanja(z, poglavje, seznam, { seme = poglavje } = {}) {
+  const r = rng(`${z.predmet}-${seme}`);
+  for (const [tezavnost, vpr, pravilna, napacne, razlaga, raven] of seznam) {
+    const skupno = {
+      tezavnost,
+      raven: raven === "visja" ? "visja" : "osnovna",
+      besedilo: vpr,
+      postopek: razlaga.startsWith("<") ? razlaga : `<p>${razlaga}</p>`,
+    };
+    if (pravilna && typeof pravilna === "object" && pravilna.vpis) {
+      z.dodaj(poglavje, besedilo({ ...skupno, sprejemljivi: brezStresic(pravilna.vpis), rezultat: pravilna.vpis[0], namig: pravilna.namig }));
+    } else {
+      z.dodaj(poglavje, izbira({ ...skupno, pravilna, napacne, r }));
+    }
+  }
+}
+
+// {,} je decimalna vejica v LaTeX-u; zunaj \( … \) jo zamenjamo z navadno vejico
+export function popraviVejice(html) {
+  return String(html).split(/(\\\(.*?\\\))/s).map((del, i) => (i % 2 ? del : del.replaceAll("{,}", ","))).join("");
+}
+
+// Zbirka nalog enega predmeta
+export function zbirka(predmet) {
+  const naloge = [];
+  const stevci = {};
+  return {
+    predmet,
+    naloge,
+    dodaj(poglavje, naloga) {
+      for (const k of ["besedilo", "odgovor", "rezultat", "postopek", "tezavnost"])
+        if (naloga[k] === undefined || naloga[k] === "") throw new Error(`${predmet}/${poglavje}: manjka ${k} (${naloga.besedilo})`);
+      for (const k of ["besedilo", "rezultat", "postopek", "namig"]) if (typeof naloga[k] === "string") naloga[k] = popraviVejice(naloga[k]);
+      if (naloga.moznosti) naloga.moznosti = naloga.moznosti.map(popraviVejice);
+      stevci[poglavje] = (stevci[poglavje] ?? 0) + 1;
+      naloge.push({
+        id: `${predmet}-${poglavje}-v${stevci[poglavje]}`,
+        predmet,
+        poglavje,
+        tezavnost: naloga.tezavnost,
+        raven: naloga.raven ?? "osnovna",
+        ...naloga,
+      });
+    },
+  };
+}
+
+// Pojmovnik: iz seznama [pojem, opis, { vpis?: ["drug zapis"], brezVpisa?: true }]
+// sestavi štiri vrste nalog za vsak pojem (napačne možnosti so drugi pojmi iste snovi):
+//   lahka:  Kaj pomeni pojem X?             (izbira opisa)
+//   srednja: Kateri pojem ustreza opisu?    (izbira pojma)
+//   srednja: Ali trditev drži?              (Da/Ne, pol pravilnih, pol zamenjanih opisov)
+//   težka:  Vpiši pojem, ki ga opisuje …    (vpis, le za kratke pojme)
+// sprejmemo tudi zapis brez šumnikov (tezisce = težišče)
+const brezStresic = (a) => [...new Set(a.flatMap((x) => [x, x.normalize("NFD").replace(/[\u0300-\u036f]/g, "")]))];
+export function pojmovnik(z, poglavje, seznam, { seme = poglavje, uvod = "pojem" } = {}) {
+  const r = rng(`${z.predmet}-${seme}-pojmi`);
+  const n = seznam.length;
+  if (n < 4) throw new Error(`${poglavje}: pojmovnik potrebuje vsaj 4 pojme`);
+  const drugi = (i, k) => r.premesaj(seznam.map((_, j) => j).filter((j) => j !== i)).slice(0, k);
+  const malo = (s) => s.charAt(0).toLowerCase() + s.slice(1);
+  seznam.forEach(([pojem, opis], i) => {
+    const razlaga = `<p><strong>${pojem}</strong>: ${malo(opis)}</p>`;
+    z.dodaj(poglavje, izbira({ r, tezavnost: 1, besedilo: `Kaj pomeni ${uvod} <strong>${pojem}</strong>?`, pravilna: opis, napacne: drugi(i, 3).map((j) => seznam[j][1]), postopek: razlaga }));
+  });
+  seznam.forEach(([pojem, opis], i) => {
+    z.dodaj(poglavje, izbira({ r, tezavnost: 2, besedilo: `Kateri ${uvod} ustreza opisu: »${opis.replace(/\.$/, "")}«?`, pravilna: pojem, napacne: drugi(i, 3).map((j) => seznam[j][0]), postopek: razlaga(pojem, opis) }));
+  });
+  seznam.forEach(([pojem, opis], i) => {
+    const drzi = i % 2 === 0;
+    const j = drugi(i, 1)[0];
+    const trditev = drzi ? opis : seznam[j][1];
+    z.dodaj(poglavje, izbira({ r, tezavnost: 2, besedilo: `Ali trditev drži? <em>${pojem}</em> — ${malo(trditev)}`, pravilna: drzi ? "Da" : "Ne", napacne: [drzi ? "Ne" : "Da"], postopek: drzi ? razlaga(pojem, opis) : `<p>Ne drži. Opis velja za pojem <strong>${seznam[j][0]}</strong>.</p>${razlaga(pojem, opis)}` }));
+  });
+  seznam.forEach(([pojem, opis, o = {}]) => {
+    const kratek = pojem.split(/\s+/).length <= 3 && !/[(<\\]/.test(pojem);
+    if (o.brezVpisa || (!kratek && !o.vpis)) return;
+    z.dodaj(poglavje, besedilo({ tezavnost: 3, besedilo: `Vpiši ${uvod}, ki ga opisuje: »${opis.replace(/\.$/, "")}«`, sprejemljivi: brezStresic([pojem.replace(/<[^>]+>/g, ""), ...(o.vpis ?? [])]), rezultat: pojem, namig: `Začne se na »${pojem.replace(/<[^>]+>/g, "").slice(0, 2)}…«`, postopek: razlaga(pojem, opis) }));
+  });
+  function razlaga(p, o) { return `<p><strong>${p}</strong>: ${malo(o)}</p>`; }
+}
+
+// Število v znanstvenem zapisu (LaTeX), npr. 3{,}2 \cdot 10^{-5}; majhna/zmerna števila ostanejo navadna
+export function sci(x, d = 3) {
+  if (x === 0) return "0";
+  const e = Math.floor(Math.log10(Math.abs(x)));
+  if (e >= -2 && e <= 4) return L(Number(x.toPrecision(d)), 6);
+  const m = x / 10 ** e;
+  return `${L(Number(m.toPrecision(d)), 6)} \\cdot 10^{${e}}`;
+}
+// Fizikalna naloga z vpisom števila: toleranca 1 % (ali 2 %, če je tako podano)
+export function kolicina({ vrednost, enota, tol = 0.01, ...n }) {
+  return stevilo({ ...n, vrednost, enota, toleranca: Math.abs(vrednost) * tol || 1e-9 });
+}

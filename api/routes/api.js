@@ -35,6 +35,7 @@ router.get("/snovi/:slug", ctrlSnovi.snovReadOne);
 
 // NALOGE (interaktivne)
 router.get("/naloge", ctrlNaloge.nalogeList);
+router.get("/naloge/stevilo", ctrlNaloge.nalogeStevilo);
 router.get("/naloge/:id", ctrlNaloge.nalogaReadOne);
 router.post("/naloge/:id/odgovor", ctrlNaloge.nalogaPreveri);
 router.get("/naloge/:id/postopek", ctrlNaloge.nalogaPostopek);

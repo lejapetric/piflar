@@ -851,6 +851,45 @@ async function initMaturaPovezava() {
   puscica.className = "arrow";
   puscica.textContent = "→";
   a.append(besedilo, puscica);
+  (document.querySelector(".naloge-povezava") ?? glava).after(a);
+}
+
+// ============================================================
+// POVEZAVA NA NALOGE ZA VAJO
+// ============================================================
+// Na strani z razlago (/views/<predmet>/snov/<slug>/<slug>_razlaga.html) pod glavo doda
+// povezavo na <slug>_naloge.html, če ima snov naloge za vajo.
+const besediloStevilaVaj = (n) =>
+  n === 1 ? "1 naloga" : n === 2 ? "2 nalogi" : n === 3 || n === 4 ? `${n} naloge` : `${n} nalog`;
+
+async function initNalogePovezava() {
+  const m = location.pathname.match(/^\/views\/([^/]+)\/snov\/([^/]+)\/\2_razlaga\.html$/);
+  const glava = document.querySelector(".view .page-header");
+  if (!m || !glava) return;
+  const [, predmet, slug] = m;
+  let stevilo;
+  try {
+    const odg = await fetch(`/api/naloge/stevilo?predmet=${encodeURIComponent(predmet)}`);
+    if (!odg.ok) return;
+    stevilo = (await odg.json())[slug];
+  } catch {
+    return;
+  }
+  if (!stevilo) return;
+  const a = document.createElement("a");
+  a.className = "link-item naloge-povezava";
+  a.href = `/views/${predmet}/snov/${slug}/${slug}_naloge.html`;
+  const besedilo = document.createElement("span");
+  besedilo.className = "link-item-text";
+  const krepko = document.createElement("strong");
+  krepko.textContent = "Naloge za vajo";
+  const opis = document.createElement("small");
+  opis.textContent = `${besediloStevilaVaj(stevilo)}, od lahkih do zelo težkih, z rezultati in postopki`;
+  besedilo.append(krepko, opis);
+  const puscica = document.createElement("span");
+  puscica.className = "arrow";
+  puscica.textContent = "→";
+  a.append(besedilo, puscica);
   glava.after(a);
 }
 
@@ -874,6 +913,7 @@ async function init() {
   initIskanje();
   initKazaloStrani(kazalo);
   initMaturaPovezava();
+  initNalogePovezava();
   oznaciIskanje();
 }
 

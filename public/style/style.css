@@ -1669,8 +1669,9 @@ input:focus-visible {
     transform: translateY(-2px);
 }
 
-/* Povezava z razlage snovi na maturitetne naloge iz te snovi (components.js) */
-.matura-povezava {
+/* Povezavi z razlage snovi na maturitetne naloge in na naloge za vajo (components.js) */
+.matura-povezava,
+.naloge-povezava {
     margin: 0 0 var(--space-6);
     border-left: 4px solid var(--primary);
 }
