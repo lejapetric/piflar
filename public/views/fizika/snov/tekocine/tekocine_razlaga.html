@@ -26,8 +26,8 @@
           <h1>Tekočine</h1>
           <p>Tekočina (kapljevina ali plin) pritiska na vse ploskve, ki se jih dotika, in tlak narašča z globino. Iz razlike tlakov nastane vzgon, ki odloča, ali telo plava ali potone. Pod razlago so vsi tipi nalog, ki se pojavijo pri tem sklopu. Vsebine, označene s <span class="badge-vr">PZ</span>, so posebna znanja iz kataloga.</p>
           <div class="page-meta">
-            <div class="page-meta-item"><strong>2</strong><span>Podpoglavji</span></div>
-            <div class="page-meta-item"><strong>5</strong><span>Tipov nalog</span></div>
+            <div class="page-meta-item"><strong>3</strong><span>Podpoglavja</span></div>
+            <div class="page-meta-item"><strong>6</strong><span>Tipov nalog</span></div>
             <div class="page-meta-item"><strong>~25 min</strong><span>Branja</span></div>
           </div>
         </header>
@@ -49,6 +49,7 @@
           <ol>
             <li><a href="#sklop-1"><span class="kazalo-st">1</span> Tlak in vzgon</a></li>
             <li><a href="#sklop-2"><span class="kazalo-st">2</span> Pascalov zakon in hidravlične naprave</a></li>
+            <li><a href="#sklop-3"><span class="kazalo-st">3</span> Gibanje tekočin <span class="badge-vr">Razširitev</span></a></li>
             <li><a href="#kljuc"><span class="kazalo-st">?</span> Ključ: kateri tip naloge je to?</a></li>
           </ol>
         </nav>
@@ -243,6 +244,45 @@
           </div>
         </section>
 
+        <!-- SKLOP 3 -->
+        <section class="sklop" id="sklop-3">
+          <header class="sklop-header">
+            <span class="sklop-num">4.7 · 3</span>
+            <h2>Gibanje tekočin <span class="badge-vr">Razširitev</span></h2>
+            <p>Kontinuitetna in Bernoullijeva enačba, viskoznost, površinska napetost.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <p>Tega sklopa izpitni katalog ne zahteva posebej, pride pa prav pri razumevanju letenja, pršenja in pretakanja.</p>
+            <h4>Kontinuitetna enačba</h4>
+            <p>Pri stacionarnem toku nestisljive tekočine skozi cev mora skozi vsak presek v enakem času steči enaka prostornina. <strong>Prostorninski tok</strong> \(\Phi_V = \frac{V}{t} = S v\) je zato povsod enak:</p>
+            <p>\[ S_1 v_1 = S_2 v_2. \]</p>
+            <p>Kjer je cev ožja, teče tekočina hitreje (stisnjena cev pri zalivanju).</p>
+            <h4>Bernoullijeva enačba</h4>
+            <p>Za tok brez trenja ob toku velja energijski zakon na enoto prostornine:</p>
+            <p>\[ p + \tfrac{1}{2}\rho v^2 + \rho g h = \text{konst.} \]</p>
+            <p>Kjer tekočina teče hitreje, je tlak manjši. Na tem temeljijo vzgon na krilo letala, razpršilnik in vodna črpalka na curek. Iz enačbe sledi tudi hitrost iztekanja iz odprtine na globini \(h\) pod gladino: \(v = \sqrt{2gh}\) (Torricellijev izrek), enako kot pri prostem padu z višine \(h\).</p>
+            <h4>Viskoznost in površinska napetost</h4>
+            <p><strong>Viskoznost</strong> je notranje trenje tekočine: sosednje plasti, ki se gibljejo z različnima hitrostma, se zavirajo. Med (gosta) je zelo viskozen, voda malo. Pri majhnih hitrostih je upor na kroglico sorazmeren s hitrostjo, zato kroglica v olju hitro doseže stalno končno hitrost.</p>
+            <p><strong>Površinska napetost</strong> \(\gamma = \frac{F}{l}\) (enota N/m) opisuje, da se površina kapljevine vede kot napeta opna: molekule na površini vleče le navznoter. Zato so kapljice okrogle, vodni drsalci hodijo po vodi in se voda v ozki cevki (kapilari) dvigne.</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-6">
+              <h4>Tip 6: Kontinuitetna in Bernoullijeva enačba <span class="badge-vr">Razširitev</span></h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Voda teče po vodoravni cevi s presekom \(4\ \text{cm^2}\) s hitrostjo \(2\ \text{m/s}\). Cev se zoži na \(1\ \text{cm^2}\). Kolikšna je hitrost v ožjem delu in za koliko je tam tlak manjši? (\(\rho = 1000\ \text{kg/m^3}\))</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> tekočina teče skozi cev, ki spremeni presek ali višino, ali izteka iz posode.</p><ul class="kljucne"><li>„cev se zoži“</li><li>„pretok“, „prostorninski tok“</li><li>„iztekanje“, „razlika tlakov“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Iz kontinuitetne enačbe izračunaj neznano hitrost.</p><div class="na-nalogi"><p>\(v_2 = v_1\frac{S_1}{S_2} = 2 \cdot 4 = 8\ \text{m/s}\).</p></div></li>
+              <li><p class="korak">Zapiši Bernoullijevo enačbo (pri vodoravni cevi člen \(\rho g h\) odpade).</p><div class="na-nalogi"><p>\(p_1 - p_2 = \frac{1}{2}\rho(v_2^2 - v_1^2)\).</p></div></li>
+              <li><p class="korak">Vstavi in izračunaj.</p><div class="na-nalogi"><p>\(\frac{1}{2}\cdot 1000 \cdot (64 - 4) = 30\,000\ \text{Pa} = 30\ \text{kPa}\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Iz odprtine 1,25 m pod gladino izteka voda. S kolikšno hitrostjo?</p><p>\(v = \sqrt{2gh} = \sqrt{2 \cdot 9{,}8 \cdot 1{,}25} \approx 4{,}9\ \text{m/s}\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Prostorninski tok skozi cev s presekom \(3\ \text{cm^2}\) pri hitrosti \(2\ \text{m/s}\).</p><p>\(\Phi_V = Sv = 3\cdot 10^{-4} \cdot 2 = 6\cdot 10^{-4}\ \text{m^3/s}\) (0,6 litra na sekundo).</p></div>
+            </div>
+          </div>
+        </section>
+
         <section class="subsection" id="kljuc">
           <div class="subsection-head">
             <h2>Ključ: kateri tip naloge je to?</h2>
@@ -258,6 +298,7 @@
                   <tr><td>„potopimo“, „silomer v vodi“, „vzgon“</td><td><a href="#tip-3">Tip 3</a></td></tr>
                   <tr><td>„plava“, „kolikšen del gleda iz vode“</td><td><a href="#tip-4">Tip 4</a></td></tr>
                 <tr><td>„hidravlična stiskalnica, dvigalka“, „mali in veliki bat“</td><td><a href="#tip-5">Tip 5</a></td></tr>
+                <tr><td>„cev se zoži“, „iztekanje“, „pretok“</td><td><a href="#tip-6">Tip 6</a></td></tr>
                 </tbody>
               </table>
             </div>

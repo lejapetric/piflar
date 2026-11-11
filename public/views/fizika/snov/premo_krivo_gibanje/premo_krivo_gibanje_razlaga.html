@@ -27,7 +27,7 @@
           <p>Kinematika opisuje, kako se telo giblje, ne da bi spraševala, zakaj. Vse naloge se vrtijo okoli treh količin (lega, hitrost, pospešek), štirih enačb in treh grafov. Pod razlago vsakega podpoglavja so vsi tipi nalog, ki se pojavijo pri tem sklopu. Vsebine, označene s <span class="badge-vr">PZ</span>, so posebna znanja iz kataloga.</p>
           <div class="page-meta">
             <div class="page-meta-item"><strong>3</strong><span>Podpoglavja</span></div>
-            <div class="page-meta-item"><strong>10</strong><span>Tipov nalog</span></div>
+            <div class="page-meta-item"><strong>11</strong><span>Tipov nalog</span></div>
             <div class="page-meta-item"><strong>~55 min</strong><span>Branja</span></div>
           </div>
         </header>
@@ -165,6 +165,10 @@
 </svg>
 <figcaption>Graf \(v(t)\): premik je ploščina pod grafom (\(20 + 20 + 10 = 50\ \text{m}\)), pospešek je strmina posameznega odseka.</figcaption>
 </figure>
+                      <h4>Poševni met</h4>
+            <p>Telo vržemo s hitrostjo \(v_0\) pod kotom \(\alpha\) glede na vodoravnico. Gibanje razstavimo na dve neodvisni gibanji: vodoravno je enakomerno s hitrostjo \(v_0\cos\alpha\), navpično je navpični met z začetno hitrostjo \(v_0\sin\alpha\) in pospeškom \(g\) navzdol.</p>
+            <p>\[ x = v_0\cos\alpha\, t, \qquad y = v_0\sin\alpha\, t - \tfrac{1}{2}g t^2. \]</p>
+            <p>V najvišji točki je navpična komponenta hitrosti nič: \(t_{vrh} = \frac{v_0\sin\alpha}{g}\), višina \(h = \frac{v_0^2\sin^2\alpha}{2g}\). Če telo pade na isto višino, kot je bilo vrženo, je čas leta \(2t_{vrh}\) in domet \(D = \frac{v_0^2\sin 2\alpha}{g}\), ki je največji pri \(45^\circ\). Kota \(\alpha\) in \(90^\circ - \alpha\) dasta enak domet. Zračni upor tu zanemarimo.</p>
           </div>
           <div class="sklop-naloge">
             <h3>Tipi nalog v tem sklopu</h3>
@@ -357,6 +361,18 @@
               <div class="primer"><p><strong>Primer 2:</strong> Kroglica z višine 0,80 m pade 1,6 m daleč. Začetna hitrost?</p><p>\(t = 0{,}40\ \text{s}\), \(v_0 = 4{,}0\ \text{m/s}\).</p></div>
               <div class="primer"><p><strong>Primer 3:</strong> Dve krogli z iste višine: eno spustimo, drugo vržemo vodoravno. Katera pade prej?</p><p>Hkrati, ker je navpično gibanje enako.</p></div>
             </div>
+            <div class="tip-naloge" id="tip-10">
+              <h4>Tip 10: Poševni met <span class="badge-vr">Razširitev</span></h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Žogo brcnemo s hitrostjo \(20\ \text{m/s}\) pod kotom \(30^\circ\) glede na tla. Kako visoko se dvigne in kako daleč pade? (\(g = 9{,}8\ \text{m/s^2}\))</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> telo ima začetno hitrost pod kotom glede na vodoravnico (ne vodoravno, ne navpično).</p><ul class="kljucne"><li>„pod kotom“</li><li>„domet“, „največja višina“</li><li>„izstrelek“, „žoga“, „krogla“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Razstavi začetno hitrost na komponenti.</p><div class="na-nalogi"><p>\(v_x = 20\cos 30^\circ = 17{,}3\ \text{m/s}\), \(v_y = 20\sin 30^\circ = 10\ \text{m/s}\).</p></div></li>
+              <li><p class="korak">Iz navpičnega gibanja izračunaj čas do vrha in višino.</p><div class="na-nalogi"><p>\(t_{vrh} = \frac{10}{9{,}8} = 1{,}02\ \text{s}\), \(h = \frac{v_y^2}{2g} = \frac{100}{19{,}6} = 5{,}1\ \text{m}\).</p></div></li>
+              <li><p class="korak">Čas leta pomnoži z vodoravno hitrostjo.</p><div class="na-nalogi"><p>\(t = 2{,}04\ \text{s}\), \(D = 17{,}3 \cdot 2{,}04 = 35\ \text{m}\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Pri katerem kotu je domet največji?</p><p>Pri \(45^\circ\), \(D_{max} = \frac{v_0^2}{g}\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Hitrost v najvišji točki pri \(v_0 = 20\ \text{m/s}\), \(\alpha = 60^\circ\).</p><p>Ostane le vodoravna komponenta: \(20\cos 60^\circ = 10\ \text{m/s}\).</p></div>
+            </div>
           </div>
         </section>
 
@@ -403,12 +419,14 @@
 <svg viewBox="0 0 320 292" role="img" aria-label="Sile v navpični krožni zanki" xmlns="http://www.w3.org/2000/svg"><circle class="s-crta" cx="160" cy="130" r="90" style="fill:none"/><circle class="s-pou1" cx="160" cy="40" r="10"/><circle class="s-pou1" cx="160" cy="220" r="10"/><defs><marker id="dp-premo_-3-1-bp21" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#DC2626"/></marker></defs><line class="s-k2" style="stroke-width:1.6" x1="160" y1="48" x2="160" y2="92" marker-end="url(#dp-premo_-3-1-bp21)"/><text class="s-txt-k2" x="168" y="80" text-anchor="start" style="font-size:11px">F_g</text><defs><marker id="dp-premo_-3-1-bp22" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#4F46E5"/></marker></defs><line class="s-k1" style="stroke-width:1.6" x1="150" y1="48" x2="150" y2="78" marker-end="url(#dp-premo_-3-1-bp22)"/><text class="s-txt-k1" x="142" y="72" text-anchor="end" style="font-size:11px">F_N</text><text class="s-txt-b" x="160" y="20" text-anchor="middle" style="font-size:11px">vrh: F_g + F_N = mv²/r</text><defs><marker id="dp-premo_-3-1-bp23" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#4F46E5"/></marker></defs><line class="s-k1" style="stroke-width:1.6" x1="150" y1="212" x2="150" y2="160" marker-end="url(#dp-premo_-3-1-bp23)"/><text class="s-txt-k1" x="142" y="182" text-anchor="end" style="font-size:11px">F_N</text><defs><marker id="dp-premo_-3-1-bp24" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#DC2626"/></marker></defs><line class="s-k2" style="stroke-width:1.6" x1="170" y1="228" x2="170" y2="262" marker-end="url(#dp-premo_-3-1-bp24)"/><text class="s-txt-k2" x="178" y="256" text-anchor="start" style="font-size:11px">F_g</text><text class="s-txt-b" x="160" y="284" text-anchor="middle" style="font-size:11px">dno: F_N − F_g = mv²/r</text><defs><marker id="dp-premo_-3-1-bp25" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 z" fill="#5B6178"/></marker></defs><line class="s-crta" style="stroke-width:1" x1="160" y1="130" x2="160" y2="50" marker-end="url(#dp-premo_-3-1-bp25)"/><text class="s-txt-muted" x="166" y="135" text-anchor="start" style="font-size:11px">r</text></svg>
 <figcaption>Sile na voziček v navpični zanki. Na vrhu kažeta obe sili proti središču; voziček ostane na tirnici, dokler je \(F_N \ge 0\), torej pri \(v \ge \sqrt{gr}\). Na dnu tirnica deluje z največjo silo.</figcaption>
 </figure>
-            </div>
+                        <h4>Neenakomerno kroženje</h4>
+            <p>Če se velikost obodne hitrosti spreminja, ima telo poleg radialnega pospeška \(a_r = \frac{v^2}{r}\) (proti središču) še <strong>tangentni pospešek</strong> \(a_t = \frac{\Delta v}{\Delta t}\) v smeri tangente. Komponenti sta pravokotni, zato je celotni pospešek \(a = \sqrt{a_r^2 + a_t^2}\). Spreminjanje kotne hitrosti opiše <strong>kotni pospešek</strong> \(\alpha = \frac{\Delta\omega}{\Delta t}\), pri čemer je \(a_t = \alpha r\). Pri enakomerno pospešenem kroženju veljajo enake enačbe kot pri premem gibanju: \(\omega = \omega_0 + \alpha t\), \(\varphi = \omega_0 t + \frac{1}{2}\alpha t^2\).</p>
+          </div>
           <div class="sklop-naloge">
             <h3>Tipi nalog v tem sklopu</h3>
 
-            <div class="tip-naloge" id="tip-10">
-              <h4>Tip 10: Obodna hitrost in radialni pospešek</h4>
+            <div class="tip-naloge" id="tip-11">
+              <h4>Tip 11: Obodna hitrost in radialni pospešek</h4>
               <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Boben pralnega stroja s polmerom \(0{,}25\ \text{m}\) se pri ožemanju zavrti \(1200\)-krat na minuto. Kolikšna sta obhodni čas in obodna hitrost perila in kolikšen je radialni pospešek?</p></div>
               <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> telo kroži, podano je število obratov, obhodni čas ali hitrost.</p><ul class="kljucne"><li>„obratov na minuto“</li><li>„kroži“, „vrti se“</li><li>„radialni / centripetalni pospešek“</li></ul></div>
               <h5>Univerzalni postopek</h5><ol class="postopek">
@@ -443,7 +461,8 @@
                   <tr><td>„narišite graf“, „kateri graf ustreza“</td><td><a href="#tip-7">Tip 7</a></td></tr>
                   <tr><td>„reka teče“, „veter“, premik v dveh smereh</td><td><a href="#tip-8">Tip 8</a></td></tr>
                   <tr><td>„vodoravno vržemo“, „domet“</td><td><a href="#tip-9">Tip 9</a></td></tr>
-                  <tr><td>„obratov na minuto“, „kroži“</td><td><a href="#tip-10">Tip 10</a></td></tr>
+                  <tr><td>„pod kotom“, „domet“, „največja višina“</td><td><a href="#tip-10">Tip 10</a></td></tr>
+                  <tr><td>„obratov na minuto“, „kroži“</td><td><a href="#tip-11">Tip 11</a></td></tr>
                 </tbody>
               </table>
             </div>

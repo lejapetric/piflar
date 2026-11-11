@@ -27,7 +27,7 @@
           <p>Splošni del poglavja: kaj je funkcija, njene lastnosti, sestavljanje in obračanje funkcij, premiki in raztegi grafov, limita in zveznost. Posamezne vrste funkcij (4.10.1–4.10.9) imajo vsaka svojo stran, povezave so spodaj. Pod razlago vsakega podpoglavja so vsi tipi nalog, ki se pojavijo pri tem sklopu.</p>
           <div class="page-meta">
             <div class="page-meta-item"><strong>10</strong><span>Podpoglavij</span></div>
-            <div class="page-meta-item"><strong>16</strong><span>Tipov nalog</span></div>
+            <div class="page-meta-item"><strong>17</strong><span>Tipov nalog</span></div>
             <div class="page-meta-item"><strong>~60 min</strong><span>Branja</span></div>
           </div>
         </header>
@@ -574,6 +574,10 @@
 <figcaption>\(y = x^2 - 2|x| - 3\): desni del grafa obdržimo in ga prezrcalimo čez os \(y\).</figcaption>
 </figure></div>
             <p>Za splošne izraze z absolutno vrednostjo (npr. \(|x - 1| + |x + 2|\)) uporabimo definicijo: na intervalih med ničlami izrazov v absolutnih vrednostih zapišemo predpis brez absolutnih vrednosti in narišemo po delih.</p>
+                      <h4>Zlepki (funkcije, podane po delih)</h4>
+            <p><strong>Zlepek</strong> je funkcija, ki ima na različnih delih definicijskega območja različen predpis, npr.</p>
+            <p>\[ f(x) = \begin{cases} x + 2, &amp; x &lt; 0 \\ x^2, &amp; 0 \le x \le 2 \\ 4, &amp; x &gt; 2 \end{cases} \]</p>
+            <p>Graf narišemo po kosih: vsak predpis narišemo samo nad njegovim intervalom. Na mejah označimo, kateri kos točko vsebuje: polna pika pomeni, da robna točka pripada grafu, prazen krožec, da ne. Če se kosa na meji ne stikata, ima graf skok (funkcija tam ni zvezna). Tudi absolutna vrednost je zlepek: \(|x - 1| = 1 - x\) za \(x &lt; 1\) in \(x - 1\) za \(x \ge 1\). Funkcijo z več absolutnimi vrednostmi zato narišemo tako, da os \(x\) razdelimo z ničlami izrazov v absolutnih vrednostih in na vsakem intervalu zapišemo predpis brez absolutnih vrednosti.</p>
           </div>
           <div class="sklop-naloge">
             <h3>Tipi nalog v tem sklopu</h3>
@@ -617,6 +621,19 @@
               <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Narišite \(f(x) = |x^2 - 4|\).</p><p>Parabolo \(x^2 - 4\) narišemo, del med \(-2\) in \(2\) prezrcalimo navzgor; tam je vrh \((0, 4)\).</p></div>
               <div class="primer"><p><strong>Primer 2:</strong> Zapišite \(f(x) = |2x - 4|\) po delih.</p><p>\(x &lt; 2\): \(-2x + 4\); \(x \ge 2\): \(2x - 4\). Teme \((2, 0)\).</p></div>
               <div class="primer"><p><strong>Primer 3:</strong> Narišite \(f(x) = x^2 - 4|x|\).</p><p>Za \(x \ge 0\) je \(x^2 - 4x\), ta del prezrcalimo čez os \(y\). Ničle \(0, \pm 4\), minima v \((\pm 2, -4)\).</p></div>
+            </div>
+            <div class="tip-naloge" id="tip-11">
+              <h4>Tip 11: Nariši zlepek ali funkcijo z več absolutnimi vrednostmi</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Narišite graf funkcije \(f(x) = |x + 1| + |x - 2|\) in določite njeno zalogo vrednosti.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> funkcija je podana z več predpisi za različne intervale (zavita oklepaja) ali ima dve ali več absolutnih vrednosti.</p><ul class="kljucne"><li>„funkcija je podana s predpisom“ in zavit oklepaj</li><li>\(|x + 1| + |x - 2|\)</li><li>„ali je funkcija zvezna“, „skok“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Določi meje kosov: pri absolutnih vrednostih so to ničle izrazov v njih.</p><div class="na-nalogi"><p>\(x = -1\) in \(x = 2\) razdelita os na tri intervale.</p></div></li>
+              <li><p class="korak">Na vsakem intervalu zapiši predpis brez absolutnih vrednosti.</p><div class="na-nalogi"><p>\(x &lt; -1\): \(-2x + 1\); \(-1 \le x \le 2\): \(3\); \(x &gt; 2\): \(2x - 1\).</p></div></li>
+              <li><p class="korak">Nariši vsak kos le nad njegovim intervalom, označi robne točke in odčitaj lastnosti.</p><div class="na-nalogi"><p>Graf je padajoča premica do \((-1, 3)\), vodoravna daljica do \((2, 3)\) in naraščajoča premica naprej. \(Z_f = [3, \infty)\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> \(f(x) = x\) za \(x &lt; 1\), \(f(x) = 3\) za \(x \ge 1\).</p><p>Pri \(x = 1\) prazen krožec v \((1, 1)\) in polna pika v \((1, 3)\): skok, funkcija ni zvezna.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> \(f(x) = |x| - |x - 2|\).</p><p>\(x &lt; 0\): \(-2\); \(0 \le x \le 2\): \(2x - 2\); \(x &gt; 2\): \(2\). \(Z_f = [-2, 2]\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> \(f(x) = |x^2 - 4|\).</p><p>Parabola \(x^2 - 4\), del med ničlama \(-2\) in \(2\) prezrcalimo čez os \(x\) (teme v \((0, 4)\)).</p></div>
             </div>
           </div>
         </section>
@@ -688,8 +705,8 @@
           </div>
           <div class="sklop-naloge">
             <h3>Tipi nalog v tem sklopu</h3>
-            <div class="tip-naloge" id="tip-11">
-              <h4>Tip 11: Limita v točki (0/0)</h4>
+            <div class="tip-naloge" id="tip-12">
+              <h4>Tip 12: Limita v točki (0/0)</h4>
               <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Izračunajte \(\lim\limits_{x \to 3} \dfrac{x^2 - 9}{x^2 - x - 6}\).</p></div>
               <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> \(x\) gre proti številu, po vstavitvi dobiš \(\frac{0}{0}\).</p><ul class="kljucne"><li>„\(\lim_{x \to 2}\)“</li><li>„izračunajte limito“</li></ul></div>
               <h5>Univerzalni postopek</h5><ol class="postopek">
@@ -702,8 +719,8 @@
               <div class="primer"><p><strong>Primer 2:</strong> \(\lim\limits_{x \to 4} \dfrac{\sqrt{x} - 2}{x - 4}\).</p><p>\(x - 4 = (\sqrt{x} - 2)(\sqrt{x} + 2)\): \(\dfrac{1}{\sqrt{x} + 2} \to \dfrac{1}{4}\).</p></div>
               <div class="primer"><p><strong>Primer 3:</strong> \(\lim\limits_{x \to 2} \dfrac{x^3 - 8}{x - 2}\).</p><p>\(x^2 + 2x + 4 \to 12\).</p></div>
             </div>
-            <div class="tip-naloge" id="tip-12">
-              <h4>Tip 12: Limita v neskončnosti in asimptote</h4>
+            <div class="tip-naloge" id="tip-13">
+              <h4>Tip 13: Limita v neskončnosti in asimptote</h4>
               <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Izračunajte \(\lim\limits_{x \to \infty} \dfrac{3x^2 - x}{2x^2 + 5}\) in zapišite vodoravno asimptoto.</p></div>
               <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> \(x \to \infty\) ali \(x \to -\infty\), iščejo vodoravno asimptoto.</p><ul class="kljucne"><li>„\(\lim_{x \to \infty}\)“</li><li>„vodoravna asimptota“</li><li>„obnašanje v neskončnosti“</li></ul></div>
               <h5>Univerzalni postopek</h5><ol class="postopek">
@@ -750,8 +767,8 @@
           </div>
           <div class="sklop-naloge">
             <h3>Tipi nalog v tem sklopu</h3>
-            <div class="tip-naloge" id="tip-13">
-              <h4>Tip 13: Limita s \(\frac{\sin x}{x}\) ali z \(e\)</h4>
+            <div class="tip-naloge" id="tip-14">
+              <h4>Tip 14: Limita s \(\frac{\sin x}{x}\) ali z \(e\)</h4>
               <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Izračunajte \(\lim\limits_{x \to 0} \dfrac{\sin 5x}{2x}\).</p></div>
               <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> \(x \to 0\) in sinus ali tangens v števcu; ali izraz oblike \(\left(1 + \frac{a}{n}\right)^{n}\).</p><ul class="kljucne"><li>„\(\lim_{x \to 0} \frac{\sin 3x}{x}\)“</li><li>„\(\left(1 + \frac{2}{n}\right)^n\)“</li></ul></div>
               <h5>Univerzalni postopek</h5><ol class="postopek">
@@ -823,8 +840,8 @@
           </div>
           <div class="sklop-naloge">
             <h3>Tipi nalog v tem sklopu</h3>
-            <div class="tip-naloge" id="tip-14">
-              <h4>Tip 14: Zveznost funkcije, podane po delih (parameter)</h4>
+            <div class="tip-naloge" id="tip-15">
+              <h4>Tip 15: Zveznost funkcije, podane po delih (parameter)</h4>
               <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Za kateri \(a\) je funkcija \(f(x) = \begin{cases} x^2 + a, &amp; x &lt; 1 \\ 3x - 1, &amp; x \ge 1 \end{cases}\) zvezna?</p></div>
               <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> predpis z zavitim oklepajem (en predpis za \(x &lt; a\), drug za \(x \ge a\)) in parameter.</p><ul class="kljucne"><li>„določite \(a\), da bo funkcija zvezna“</li><li>„ali je funkcija zvezna v točki“</li></ul></div>
               <h5>Univerzalni postopek</h5><ol class="postopek">
@@ -858,8 +875,8 @@
           </div>
           <div class="sklop-naloge">
             <h3>Tipi nalog v tem sklopu</h3>
-            <div class="tip-naloge" id="tip-15">
-              <h4>Tip 15: Utemelji obstoj ničle</h4>
+            <div class="tip-naloge" id="tip-16">
+              <h4>Tip 16: Utemelji obstoj ničle</h4>
               <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Utemeljite, da ima enačba \(x^3 = x + 1\) rešitev na intervalu \([1, 2]\).</p></div>
               <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> „utemeljite, da ima enačba rešitev na intervalu“; ničle ni treba izračunati.</p><ul class="kljucne"><li>„utemeljite, da ima vsaj eno ničlo“</li><li>„na intervalu \([a, b]\)“</li></ul></div>
               <h5>Univerzalni postopek</h5><ol class="postopek">
@@ -914,8 +931,8 @@
           </div>
           <div class="sklop-naloge">
             <h3>Tipi nalog v tem sklopu</h3>
-            <div class="tip-naloge" id="tip-16">
-              <h4>Tip 16: Ničla na dano natančnost</h4>
+            <div class="tip-naloge" id="tip-17">
+              <h4>Tip 17: Ničla na dano natančnost</h4>
               <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Z bisekcijo v treh korakih omejite ničlo funkcije \(f(x) = x^3 - x - 1\) na intervalu \([1, 2]\).</p></div>
               <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> „na dve decimalki natančno“, „z bisekcijo“, „z računalom poiščite“.</p><ul class="kljucne"><li>„bisekcija“</li><li>„na … decimalk natančno“</li><li>„presečišče krivulj“</li></ul></div>
               <h5>Univerzalni postopek</h5><ol class="postopek">
@@ -951,12 +968,13 @@
                   <tr><td>„narišite s pomočjo premikov“</td><td><a href="#tip-8">Tip 8</a></td></tr>
                   <tr><td>„zapišite predpis funkcije na sliki“</td><td><a href="#tip-9">Tip 9</a></td></tr>
                   <tr><td>absolutna vrednost v predpisu</td><td><a href="#tip-10">Tip 10</a></td></tr>
-                  <tr><td>\(\lim_{x \to a}\), dobiš \(\frac{0}{0}\)</td><td><a href="#tip-11">Tip 11</a></td></tr>
-                  <tr><td>\(\lim_{x \to \infty}\), „asimptota“</td><td><a href="#tip-12">Tip 12</a></td></tr>
-                  <tr><td>\(\frac{\sin kx}{x}\), \(\left(1 + \frac{a}{n}\right)^n\)</td><td><a href="#tip-13">Tip 13</a></td></tr>
-                  <tr><td>„določite \(a\), da bo zvezna“</td><td><a href="#tip-14">Tip 14</a></td></tr>
-                  <tr><td>„utemeljite, da ima ničlo“</td><td><a href="#tip-15">Tip 15</a></td></tr>
-                  <tr><td>„bisekcija“, „na dve decimalki“</td><td><a href="#tip-16">Tip 16</a></td></tr>
+                  <tr><td>zavit oklepaj s predpisi, \(|x + 1| + |x - 2|\)</td><td><a href="#tip-11">Tip 11</a></td></tr>
+                  <tr><td>\(\lim_{x \to a}\), dobiš \(\frac{0}{0}\)</td><td><a href="#tip-12">Tip 12</a></td></tr>
+                  <tr><td>\(\lim_{x \to \infty}\), „asimptota“</td><td><a href="#tip-13">Tip 13</a></td></tr>
+                  <tr><td>\(\frac{\sin kx}{x}\), \(\left(1 + \frac{a}{n}\right)^n\)</td><td><a href="#tip-14">Tip 14</a></td></tr>
+                  <tr><td>„določite \(a\), da bo zvezna“</td><td><a href="#tip-15">Tip 15</a></td></tr>
+                  <tr><td>„utemeljite, da ima ničlo“</td><td><a href="#tip-16">Tip 16</a></td></tr>
+                  <tr><td>„bisekcija“, „na dve decimalki“</td><td><a href="#tip-17">Tip 17</a></td></tr>
                 </tbody>
               </table>
             </div>

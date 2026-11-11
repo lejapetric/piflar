@@ -27,7 +27,7 @@
           <p>Odvod meri, kako hitro se vrednost funkcije spreminja. Z njim določimo tangento na graf, intervale naraščanja in padanja, ekstreme in rešimo probleme, kjer iščemo največjo ali najmanjšo vrednost. Pod razlago vsakega podpoglavja so vsi tipi nalog, ki se pojavijo pri tem sklopu.</p>
           <div class="page-meta">
             <div class="page-meta-item"><strong>9</strong><span>Podpoglavij</span></div>
-            <div class="page-meta-item"><strong>12</strong><span>Tipov nalog</span></div>
+            <div class="page-meta-item"><strong>13</strong><span>Tipov nalog</span></div>
             <div class="page-meta-item"><strong>~70 min</strong><span>Branja</span></div>
           </div>
         </header>
@@ -226,6 +226,10 @@
 </svg>
 <figcaption>Tangenta in normala na \(y = x^3 - 2x\) v točki \(T(1, -1)\): \(k_t = f'(1) = 1\), \(k_n = -1\).</figcaption>
 </figure>
+                      <h4>Diferencial in približno računanje</h4>
+            <p>Blizu točke \(x_0\) se graf odvedljive funkcije skoraj ujema s tangento. Zato je za majhen prirastek \(\Delta x\)</p>
+            <p>\[ f(x_0 + \Delta x) \approx f(x_0) + f'(x_0)\,\Delta x. \]</p>
+            <p>Izraz \(\mathrm{d}y = f'(x_0)\,\mathrm{d}x\) imenujemo <strong>diferencial</strong> funkcije: to je sprememba vrednosti na tangenti, medtem ko je \(\Delta y = f(x_0 + \Delta x) - f(x_0)\) prava sprememba na grafu. Čim manjši je \(\Delta x\), tem bolj se ujemata. Tako ocenimo vrednosti, kot sta \(\sqrt{4{,}1}\) ali \(\sin 31^\circ\), in vpliv merske napake na izračunano količino.</p>
           </div>
           <div class="sklop-naloge">
             <h3>Tipi nalog v tem sklopu</h3>
@@ -255,6 +259,19 @@
               </ol>
               <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Pod katerim kotom \(y = x^2 - 4\) seka os \(x\) v \(x = 2\)?</p><p>\(\tan \varphi = f'(2) = 4\), \(\varphi \approx 75{,}96^\circ\).</p></div>
               <div class="primer"><p><strong>Primer 2:</strong> \(y = x^2\) in \(y = 2 - x^2\) v \((1, 1)\)</p><p>\(k_1 = 2\), \(k_2 = -2\): \(\tan \varphi = \frac{4}{3}\), \(\varphi \approx 53{,}13^\circ\).</p></div>
+            </div>
+            <div class="tip-naloge" id="tip-6">
+              <h4>Tip 6: Približna vrednost z diferencialom</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Z diferencialom ocenite \(\sqrt{4{,}1}\).</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> iščeš približno vrednost funkcije v točki, ki je blizu »lepe« točke, ali oceno spremembe količine pri majhni spremembi podatka.</p><ul class="kljucne"><li>„z diferencialom ocenite“</li><li>„približno izračunajte“ \(\sqrt{9{,}02}\), \(\ln 1{,}05\)</li><li>„za koliko se približno spremeni“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Izberi funkcijo, lepo točko \(x_0\) in prirastek \(\Delta x\).</p><div class="na-nalogi"><p>\(f(x) = \sqrt{x}\), \(x_0 = 4\), \(\Delta x = 0{,}1\).</p></div></li>
+              <li><p class="korak">Izračunaj \(f(x_0)\) in \(f'(x_0)\).</p><div class="na-nalogi"><p>\(f(4) = 2\), \(f'(x) = \frac{1}{2\sqrt{x}}\), \(f'(4) = \frac{1}{4}\).</p></div></li>
+              <li><p class="korak">Vstavi v \(f(x_0 + \Delta x) \approx f(x_0) + f'(x_0)\Delta x\).</p><div class="na-nalogi"><p>\(\sqrt{4{,}1} \approx 2 + \frac{1}{4}\cdot 0{,}1 = 2{,}025\) (točno \(2{,}0248\ldots\)).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> \(\ln 1{,}05\).</p><p>\(x_0 = 1\), \(f'(1) = 1\): \(\ln 1{,}05 \approx 0 + 0{,}05 = 0{,}05\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Polmer krogle zraste s 5 cm na 5,1 cm. Za koliko približno zraste prostornina?</p><p>\(V = \frac{4}{3}\pi r^3\), \(\mathrm{d}V = 4\pi r^2\,\mathrm{d}r = 4\pi\cdot 25\cdot 0{,}1 = 10\pi \approx 31{,}4\ \mathrm{cm}^3\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> \(\sin 31^\circ\).</p><p>\(x_0 = \frac{\pi}{6}\), \(\Delta x = \frac{\pi}{180}\): \(\frac{1}{2} + \frac{\sqrt{3}}{2}\cdot\frac{\pi}{180} \approx 0{,}5151\).</p></div>
             </div>
           </div>
         </section>
@@ -315,8 +332,8 @@
           </div>
           <div class="sklop-naloge">
             <h3>Tipi nalog v tem sklopu</h3>
-            <div class="tip-naloge" id="tip-6">
-              <h4>Tip 6: Intervali naraščanja in padanja ter ekstremi</h4>
+            <div class="tip-naloge" id="tip-7">
+              <h4>Tip 7: Intervali naraščanja in padanja ter ekstremi</h4>
               <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Določite intervale naraščanja in padanja ter lokalne ekstreme funkcije \(f(x) = x^3 - 3x^2 - 9x + 5\).</p></div>
               <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> sprašujejo, kje funkcija narašča ali pada, ali po ekstremih.</p><ul class="kljucne"><li>„intervali naraščanja“</li><li>„lokalni ekstremi“</li><li>„stacionarne točke“</li></ul></div>
               <h5>Univerzalni postopek</h5><ol class="postopek">
@@ -329,8 +346,8 @@
               <div class="primer"><p><strong>Primer 2:</strong> \(f(x) = x + \frac{4}{x}\)</p><p>\(f' = 1 - \frac{4}{x^2}\): maksimum \((-2, -4)\), minimum \((2, 4)\).</p></div>
               <div class="primer"><p><strong>Primer 3:</strong> \(f(x) = x^3\)</p><p>\(f' = 3x^2 \ge 0\): povsod narašča, stacionarna točka 0 ni ekstrem.</p></div>
             </div>
-            <div class="tip-naloge" id="tip-7">
-              <h4>Tip 7: Analiza funkcije in skica grafa z odvodom</h4>
+            <div class="tip-naloge" id="tip-8">
+              <h4>Tip 8: Analiza funkcije in skica grafa z odvodom</h4>
               <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Analizirajte funkcijo \(f(x) = x^4 - 2x^2\) in narišite njen graf.</p></div>
               <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> zahtevajo celotno obravnavo in graf.</p><ul class="kljucne"><li>„analizirajte funkcijo“</li><li>„narišite graf“</li><li>„ničle, ekstremi, obnašanje“</li></ul></div>
               <h5>Univerzalni postopek</h5><ol class="postopek">
@@ -364,8 +381,8 @@
           </div>
           <div class="sklop-naloge">
             <h3>Tipi nalog v tem sklopu</h3>
-            <div class="tip-naloge" id="tip-8">
-              <h4>Tip 8: Ekstrem z drugim odvodom <span class="badge-vr">VR</span></h4>
+            <div class="tip-naloge" id="tip-9">
+              <h4>Tip 9: Ekstrem z drugim odvodom <span class="badge-vr">VR</span></h4>
               <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Z drugim odvodom določite vrsto ekstremov funkcije \(f(x) = x^3 - 6x^2 + 9x + 1\).</p></div>
               <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> omenjen je drugi odvod, pospešek ali preverjanje vrste ekstrema.</p><ul class="kljucne"><li>„drugi odvod“</li><li>„pospešek“</li><li>„z drugim odvodom preverite“</li></ul></div>
               <h5>Univerzalni postopek</h5><ol class="postopek">
@@ -417,8 +434,8 @@
           </div>
           <div class="sklop-naloge">
             <h3>Tipi nalog v tem sklopu</h3>
-            <div class="tip-naloge" id="tip-9">
-              <h4>Tip 9: Konveksnost, konkavnost in prevoj <span class="badge-vr">VR</span></h4>
+            <div class="tip-naloge" id="tip-10">
+              <h4>Tip 10: Konveksnost, konkavnost in prevoj <span class="badge-vr">VR</span></h4>
               <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Določite intervale konveksnosti in konkavnosti ter prevoj funkcije \(f(x) = x^3 - 3x^2 + 1\).</p></div>
               <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> „konveksna“, „konkavna“, „prevoj“.</p><ul class="kljucne"><li>„prevojna točka“</li><li>„kje je funkcija konveksna“</li></ul></div>
               <h5>Univerzalni postopek</h5><ol class="postopek">
@@ -490,8 +507,8 @@
           </div>
           <div class="sklop-naloge">
             <h3>Tipi nalog v tem sklopu</h3>
-            <div class="tip-naloge" id="tip-10">
-              <h4>Tip 10: Zveznost in odvedljivost odsekoma podane funkcije <span class="badge-vr">VR</span></h4>
+            <div class="tip-naloge" id="tip-11">
+              <h4>Tip 11: Zveznost in odvedljivost odsekoma podane funkcije <span class="badge-vr">VR</span></h4>
               <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Funkcija je podana z \(f(x) = x^2\) za \(x \le 1\) in \(f(x) = ax + b\) za \(x &gt; 1\). Določite \(a\) in \(b\), da bo \(f\) odvedljiva.</p></div>
               <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> funkcija je sestavljena iz več predpisov ali ima absolutno vrednost.</p><ul class="kljucne"><li>„določite parametra, da bo zvezna in odvedljiva“</li><li>„ali je funkcija odvedljiva v“</li><li>„iz grafa ugotovite, kje ni odvedljiva“</li></ul></div>
               <h5>Univerzalni postopek</h5><ol class="postopek">
@@ -545,8 +562,8 @@
           </div>
           <div class="sklop-naloge">
             <h3>Tipi nalog v tem sklopu</h3>
-            <div class="tip-naloge" id="tip-11">
-              <h4>Tip 11: Ekstremalni problem</h4>
+            <div class="tip-naloge" id="tip-12">
+              <h4>Tip 12: Ekstremalni problem</h4>
               <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Iz kvadratnega kosa pločevine s stranico 12 cm v vogalih izrežemo enake kvadratke in zapognemo škatlo brez pokrova. Kolikšna naj bo stranica izrezanih kvadratkov, da bo prostornina največja?</p></div>
               <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> „največji“, „najmanjši“, „optimalen“ v geometrijski ali številski situaciji.</p><ul class="kljucne"><li>„največja prostornina“</li><li>„najmanjša razdalja“</li><li>„največja ploščina“</li></ul></div>
               <h5>Univerzalni postopek</h5><ol class="postopek">
@@ -580,8 +597,8 @@
           </div>
           <div class="sklop-naloge">
             <h3>Tipi nalog v tem sklopu</h3>
-            <div class="tip-naloge" id="tip-12">
-              <h4>Tip 12: Realen ekstremalni problem <span class="badge-vr">VR</span></h4>
+            <div class="tip-naloge" id="tip-13">
+              <h4>Tip 13: Realen ekstremalni problem <span class="badge-vr">VR</span></h4>
               <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Pločevinka v obliki valja naj ima prostornino 1 liter. Kolikšna naj bosta polmer in višina, da porabimo najmanj pločevine?</p></div>
               <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> realna situacija z merskimi enotami, iščemo optimum.</p><ul class="kljucne"><li>„najmanj materiala“</li><li>„največji dobiček“</li><li>„največja višina“, „hitrost“</li></ul></div>
               <h5>Univerzalni postopek</h5><ol class="postopek">
@@ -611,13 +628,14 @@
                   <tr><td>krivulja z \(x\) in \(y\) skupaj, „implicitno“</td><td><a href="#tip-3">Tip 3</a></td></tr>
                   <tr><td>„tangenta“, „normala“</td><td><a href="#tip-4">Tip 4</a></td></tr>
                   <tr><td>„pod kolikšnim kotom se sekata“</td><td><a href="#tip-5">Tip 5</a></td></tr>
-                  <tr><td>„intervali naraščanja“, „ekstremi“</td><td><a href="#tip-6">Tip 6</a></td></tr>
-                  <tr><td>„analizirajte funkcijo in narišite graf“</td><td><a href="#tip-7">Tip 7</a></td></tr>
-                  <tr><td>„drugi odvod“, „pospešek“</td><td><a href="#tip-8">Tip 8</a></td></tr>
-                  <tr><td>„prevoj“, „konveksna“, „konkavna“</td><td><a href="#tip-9">Tip 9</a></td></tr>
-                  <tr><td>odsekoma podana funkcija, „odvedljiva“</td><td><a href="#tip-10">Tip 10</a></td></tr>
-                  <tr><td>„največja prostornina“, „najmanjša razdalja“</td><td><a href="#tip-11">Tip 11</a></td></tr>
-                  <tr><td>realni problem: pločevinka, dobiček, met</td><td><a href="#tip-12">Tip 12</a></td></tr>
+                  <tr><td>„z diferencialom ocenite“, „približno izračunajte“</td><td><a href="#tip-6">Tip 6</a></td></tr>
+                  <tr><td>„intervali naraščanja“, „ekstremi“</td><td><a href="#tip-7">Tip 7</a></td></tr>
+                  <tr><td>„analizirajte funkcijo in narišite graf“</td><td><a href="#tip-8">Tip 8</a></td></tr>
+                  <tr><td>„drugi odvod“, „pospešek“</td><td><a href="#tip-9">Tip 9</a></td></tr>
+                  <tr><td>„prevoj“, „konveksna“, „konkavna“</td><td><a href="#tip-10">Tip 10</a></td></tr>
+                  <tr><td>odsekoma podana funkcija, „odvedljiva“</td><td><a href="#tip-11">Tip 11</a></td></tr>
+                  <tr><td>„največja prostornina“, „najmanjša razdalja“</td><td><a href="#tip-12">Tip 12</a></td></tr>
+                  <tr><td>realni problem: pločevinka, dobiček, met</td><td><a href="#tip-13">Tip 13</a></td></tr>
                 </tbody>
               </table>
             </div>

@@ -27,7 +27,7 @@
           <p>Sinus, kosinus in tangens povezujejo kote z razmerji dolžin. Na enotski krožnici jih razširimo na poljubne kote, kar nam da periodične funkcije za opis nihanja. Pod razlago vsakega podpoglavja so vsi tipi nalog, ki se pojavijo pri tem sklopu.</p>
           <div class="page-meta">
             <div class="page-meta-item"><strong>11</strong><span>Podpoglavij</span></div>
-            <div class="page-meta-item"><strong>15</strong><span>Tipov nalog</span></div>
+            <div class="page-meta-item"><strong>18</strong><span>Tipov nalog</span></div>
             <div class="page-meta-item"><strong>~75 min</strong><span>Branja</span></div>
           </div>
         </header>
@@ -340,6 +340,13 @@
 </svg>
 <figcaption>\(f(x) = 2\sin\left(2x - \frac{\pi}{3}\right) = 2\sin\left(2\left(x - \frac{\pi}{6}\right)\right)\): amplituda 2, perioda \(\pi\), premik za \(\frac{\pi}{6}\) v desno. Sivo: \(\sin x\).</figcaption>
 </figure>
+                      <h4>Graf z absolutno vrednostjo</h4>
+            <p>Absolutna vrednost lahko stoji na dveh mestih in da dva različna grafa:</p>
+            <ul>
+              <li>\(y = |\sin x|\): dele grafa pod osjo \(x\) prezrcalimo navzgor. Funkcija je nenegativna, \(Z_f = [0, 1]\), perioda se razpolovi na \(\pi\).</li>
+              <li>\(y = \sin|x|\): nariši \(\sin x\) za \(x \ge 0\) in ta del prezrcali čez os \(y\). Funkcija je soda in ni periodična.</li>
+              <li>Pri \(y = |\cos x|\) je perioda prav tako \(\pi\), \(\cos|x| = \cos x\) pa je kar enak kosinusu, ker je kosinus sod.</li>
+            </ul>
           </div>
           <div class="sklop-naloge">
             <h3>Tipi nalog v tem sklopu</h3>
@@ -395,6 +402,20 @@
             </div>
             <p>Z adicijskimi izreki izračunamo natančne vrednosti za kote, ki so vsote ali razlike posebnih kotov (\(75^\circ = 45^\circ + 30^\circ\), \(15^\circ = 45^\circ - 30^\circ\)).</p>
             <div class="pazi"><strong>Pazi:</strong> \(\sin(x + y) \ne \sin x + \sin y\) in \(\sin 2x \ne 2\sin x\).</div>
+            <h4>Vsota \(a\sin x + b\cos x\) kot ena funkcija</h4>
+            <p>Izraz, v katerem nastopata sinus in kosinus istega kota, lahko z adicijskim izrekom zapišemo kot en sam sinus s premikom:</p>
+            <div class="formula-grid">
+              <div class="formula-card">\(a\sin x + b\cos x = R\sin(x + \varphi)\), \(R = \sqrt{a^2 + b^2}\)</div>
+              <div class="formula-card">\(\cos \varphi = \dfrac{a}{R}\), \(\sin \varphi = \dfrac{b}{R}\)</div>
+            </div>
+            <p>Zakaj velja: \(R\sin(x + \varphi) = R\cos\varphi \sin x + R\sin\varphi \cos x\), zato mora biti \(R\cos\varphi = a\) in \(R\sin\varphi = b\). Tako takoj vidimo amplitudo \(R\), največjo in najmanjšo vrednost (\(\pm R\)) ter premik grafa. Primer: \(\sin x + \cos x = \sqrt{2}\sin\left(x + \frac{\pi}{4}\right)\).</p>
+            <h4>Zasuk točke okoli izhodišča</h4>
+            <p>Točko \(T(x, y)\) zasučemo okoli izhodišča za kot \(\varphi\) (pozitivno je v nasprotni smeri urinega kazalca). Če je \(T\) na razdalji \(r\) pod kotom \(\alpha\), je \(x = r\cos\alpha\), \(y = r\sin\alpha\), zasukana točka pa leži pod kotom \(\alpha + \varphi\). Z adicijskima izrekoma dobimo:</p>
+            <div class="formula-grid">
+              <div class="formula-card">\(x' = x\cos\varphi - y\sin\varphi\)</div>
+              <div class="formula-card">\(y' = x\sin\varphi + y\cos\varphi\)</div>
+            </div>
+            <p>Razdalja do izhodišča se pri zasuku ne spremeni. Pri zasuku za \(90^\circ\) dobimo preprosto \((x, y) \to (-y, x)\).</p>
           </div>
           <div class="sklop-naloge">
             <h3>Tipi nalog v tem sklopu</h3>
@@ -424,6 +445,32 @@
               <div class="primer"><p><strong>Primer 2:</strong> Natančno \(\cos 15^\circ\) s polovičnim kotom.</p><p>\(\cos^2 15^\circ = \frac{1 + \cos 30^\circ}{2} = \frac{2 + \sqrt{3}}{4}\): \(\cos 15^\circ = \frac{\sqrt{2 + \sqrt{3}}}{2}\).</p></div>
               <div class="primer"><p><strong>Primer 3:</strong> Če je \(\sin x\cos x = \frac{1}{4}\), koliko je \(\sin 2x\)?</p><p>\(\frac{1}{2}\).</p></div>
             </div>
+            <div class="tip-naloge" id="tip-9">
+              <h4>Tip 9: Zapiši \(a\sin x + b\cos x\) z eno funkcijo</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Zapišite \(f(x) = \sqrt{3}\sin x + \cos x\) v obliki \(R\sin(x + \varphi)\), določite največjo vrednost funkcije in njene ničle.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> v predpisu ali enačbi sta sinus in kosinus istega kota, oba na prvo potenco.</p><ul class="kljucne"><li>„zapišite v obliki \(R\sin(x + \varphi)\)“</li><li>„največja vrednost“ izraza \(a\sin x + b\cos x\)</li><li>\(\sin x + \cos x = 1\)</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Izračunaj \(R = \sqrt{a^2 + b^2}\).</p><div class="na-nalogi"><p>\(R = \sqrt{3 + 1} = 2\).</p></div></li>
+              <li><p class="korak">Iz \(\cos\varphi = \frac{a}{R}\) in \(\sin\varphi = \frac{b}{R}\) določi \(\varphi\) (pazi na kvadrant).</p><div class="na-nalogi"><p>\(\cos\varphi = \frac{\sqrt{3}}{2}\), \(\sin\varphi = \frac{1}{2}\): \(\varphi = \frac{\pi}{6}\).</p></div></li>
+              <li><p class="korak">Zapiši funkcijo in odčitaj, kar zahteva naloga.</p><div class="na-nalogi"><p>\(f(x) = 2\sin\left(x + \frac{\pi}{6}\right)\). Največja vrednost je 2. Ničle: \(x + \frac{\pi}{6} = k\pi\), \(x = -\frac{\pi}{6} + k\pi\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> \(\sin x - \cos x\).</p><p>\(R = \sqrt{2}\), \(\cos\varphi = \frac{\sqrt{2}}{2}\), \(\sin\varphi = -\frac{\sqrt{2}}{2}\): \(\sqrt{2}\sin\left(x - \frac{\pi}{4}\right)\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Rešite \(\sin x + \cos x = 1\).</p><p>\(\sqrt{2}\sin\left(x + \frac{\pi}{4}\right) = 1\), \(\sin\left(x + \frac{\pi}{4}\right) = \frac{\sqrt{2}}{2}\): \(x = 2k\pi\) ali \(x = \frac{\pi}{2} + 2k\pi\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Največja vrednost \(3\sin x + 4\cos x\).</p><p>\(R = 5\), torej največja vrednost 5, najmanjša \(-5\).</p></div>
+            </div>
+            <div class="tip-naloge" id="tip-10">
+              <h4>Tip 10: Zasuk točke okoli izhodišča</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Točko \(T(4, 2)\) zasučemo okoli izhodišča za \(60^\circ\) v pozitivni smeri. Izračunajte koordinate zasukane točke.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> v nalogi je zasuk (vrtenje) točke ali lika okoli koordinatnega izhodišča za dani kot.</p><ul class="kljucne"><li>„zasučemo za kot \(\varphi\)“</li><li>„zavrtimo okoli izhodišča“</li><li>„v nasprotni smeri urinega kazalca“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Določi kot zasuka s predznakom (v smeri urinega kazalca je negativen).</p><div class="na-nalogi"><p>\(\varphi = 60^\circ\): \(\cos\varphi = \frac{1}{2}\), \(\sin\varphi = \frac{\sqrt{3}}{2}\).</p></div></li>
+              <li><p class="korak">Vstavi v \(x' = x\cos\varphi - y\sin\varphi\), \(y' = x\sin\varphi + y\cos\varphi\).</p><div class="na-nalogi"><p>\(x' = 4\cdot\frac{1}{2} - 2\cdot\frac{\sqrt{3}}{2} = 2 - \sqrt{3}\), \(y' = 4\cdot\frac{\sqrt{3}}{2} + 2\cdot\frac{1}{2} = 2\sqrt{3} + 1\).</p></div></li>
+              <li><p class="korak">Preveri, da se razdalja do izhodišča ni spremenila.</p><div class="na-nalogi"><p>\(|OT|^2 = 20\), \(|OT'|^2 = (2 - \sqrt{3})^2 + (2\sqrt{3} + 1)^2 = 7 - 4\sqrt{3} + 13 + 4\sqrt{3} = 20\). Drži.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> \(T(3, 0)\) zasučemo za \(90^\circ\).</p><p>\((x, y) \to (-y, x)\): \(T'(0, 3)\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> \(T(1, 1)\) zasučemo za \(45^\circ\).</p><p>\(x' = \frac{\sqrt{2}}{2} - \frac{\sqrt{2}}{2} = 0\), \(y' = \sqrt{2}\): \(T'(0, \sqrt{2})\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> \(T(2, 0)\) zasučemo za \(-30^\circ\) (v smeri urinega kazalca).</p><p>\(T'(2\cos 30^\circ, -2\sin 30^\circ) = (\sqrt{3}, -1)\).</p></div>
+            </div>
           </div>
         </section>
 
@@ -441,8 +488,8 @@
           </div>
           <div class="sklop-naloge">
             <h3>Tipi nalog v tem sklopu</h3>
-            <div class="tip-naloge" id="tip-9">
-              <h4>Tip 9: Problemska naloga s kotnimi funkcijami</h4>
+            <div class="tip-naloge" id="tip-11">
+              <h4>Tip 11: Problemska naloga s kotnimi funkcijami</h4>
               <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Iz točke na tleh vidimo vrh stolpa pod višinskim kotom \(30^\circ\). Ko se stolpu približamo za 50 m, ga vidimo pod kotom \(45^\circ\). Kako visok je stolp?</p></div>
               <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> besedilo z višinskimi ali globinskimi koti, sencami, nakloni, dolžinami v telesih.</p><ul class="kljucne"><li>„pod kotom“</li><li>„višinski kot“</li><li>„naklon“</li><li>„kot med diagonalo in ploskvijo“</li></ul></div>
               <h5>Univerzalni postopek</h5><ol class="postopek">
@@ -484,8 +531,8 @@
           </div>
           <div class="sklop-naloge">
             <h3>Tipi nalog v tem sklopu</h3>
-            <div class="tip-naloge" id="tip-10">
-              <h4>Tip 10: Faktorizacija in razčlenitev produkta <span class="badge-vr">VR</span></h4>
+            <div class="tip-naloge" id="tip-12">
+              <h4>Tip 12: Faktorizacija in razčlenitev produkta <span class="badge-vr">VR</span></h4>
               <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Natančno izračunajte \(\sin 75^\circ + \sin 15^\circ\).</p></div>
               <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> vsota ali razlika sinusov ali kosinusov (pogosto v enačbi), ali produkt kotnih funkcij različnih kotov.</p><ul class="kljucne"><li>\(\sin 3x + \sin x\)</li><li>„zapišite kot produkt“</li><li>„zapišite kot vsoto“</li></ul></div>
               <h5>Univerzalni postopek</h5><ol class="postopek">
@@ -524,8 +571,8 @@
           </div>
           <div class="sklop-naloge">
             <h3>Tipi nalog v tem sklopu</h3>
-            <div class="tip-naloge" id="tip-11">
-              <h4>Tip 11: Vrednosti krožnih funkcij</h4>
+            <div class="tip-naloge" id="tip-13">
+              <h4>Tip 13: Vrednosti krožnih funkcij</h4>
               <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Izračunajte \(\arcsin\left(-\frac{1}{2}\right) + \arccos\left(-\frac{\sqrt{2}}{2}\right)\).</p></div>
               <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> v nalogi je \(\arcsin\), \(\arccos\) ali \(\arctan\) posebne vrednosti, ali kombinacija s kotno funkcijo.</p><ul class="kljucne"><li>\(\arcsin\), \(\arccos\), \(\arctan\)</li><li>\(\sin(\arccos x)\)</li></ul></div>
               <h5>Univerzalni postopek</h5><ol class="postopek">
@@ -596,8 +643,8 @@
           </div>
           <div class="sklop-naloge">
             <h3>Tipi nalog v tem sklopu</h3>
-            <div class="tip-naloge" id="tip-12">
-              <h4>Tip 12: Lastnosti krožne funkcije s premiki <span class="badge-vr">VR</span></h4>
+            <div class="tip-naloge" id="tip-14">
+              <h4>Tip 14: Lastnosti krožne funkcije s premiki <span class="badge-vr">VR</span></h4>
               <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Določite definicijsko območje, zalogo vrednosti in ničlo funkcije \(f(x) = \arcsin(2x - 1)\).</p></div>
               <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> krožna funkcija z izrazom v argumentu ali s koeficientom pred njo.</p><ul class="kljucne"><li>„definicijsko območje“ z \(\arcsin\) ali \(\arccos\)</li><li>„zaloga vrednosti“</li></ul></div>
               <h5>Univerzalni postopek</h5><ol class="postopek">
@@ -648,11 +695,15 @@
 </figure>
             <p>Pri \(|a| &gt; 1\) enačbi \(\sin x = a\) in \(\cos x = a\) nimata rešitve. Če je argument \(bx + c\), najprej rešimo za argument, nato izrazimo \(x\) (pri tem se deli tudi perioda: \(\frac{2k\pi}{b}\)).</p>
             <p>Zahtevnejše enačbe prevedemo na osnovne: z zvezo \(\sin^2 x + \cos^2 x = 1\) na eno funkcijo (pogosto kvadratna enačba), z razcepom (izpostavljanje, dvojni koti, faktorizacija) ali z deljenjem s \(\cos x\) (homogena enačba \(\to \tan x\)).</p>
+                      <h4>Homogena enačba</h4>
+            <p>Enačba je <strong>homogena</strong>, kadar ima vsak člen enako skupno stopnjo v \(\sin x\) in \(\cos x\), npr. \(a\sin^2 x + b\sin x\cos x + c\cos^2 x = 0\). Ker \(\cos x = 0\) ni rešitev (takrat bi moral biti tudi \(\sin x = 0\)), lahko delimo s \(\cos^2 x\) in dobimo kvadratno enačbo za \(\tan x\). Če je na desni konstanta \(d \ne 0\), jo prej zapišemo kot \(d(\sin^2 x + \cos^2 x)\), da postane enačba homogena.</p>
+            <h4>Koliko rešitev ima enačba na intervalu</h4>
+            <p>Osnovna enačba \(\sin x = a\) ali \(\cos x = a\) ima pri \(|a| &lt; 1\) v eni periodi \(2\pi\) dve rešitvi, pri \(a = \pm 1\) eno, pri \(|a| &gt; 1\) nobene. Enačba \(\tan x = a\) ima v vsaki periodi \(\pi\) natanko eno rešitev. Če je argument \(bx\), je perioda \(b\)-krat krajša, zato je rešitev na istem intervalu \(b\)-krat več. Rešitve na intervalu vedno poiščemo tako, da v splošno rešitev vstavljamo \(k = 0, \pm 1, \pm 2, \ldots\) in obdržimo tiste, ki padejo v interval.</p>
           </div>
           <div class="sklop-naloge">
             <h3>Tipi nalog v tem sklopu</h3>
-            <div class="tip-naloge" id="tip-13">
-              <h4>Tip 13: Osnovna trigonometrijska enačba</h4>
+            <div class="tip-naloge" id="tip-15">
+              <h4>Tip 15: Osnovna trigonometrijska enačba</h4>
               <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Rešite enačbo \(2\sin x - 1 = 0\) na intervalu \([0, 2\pi]\) in zapišite tudi vse rešitve.</p></div>
               <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> enačba, ki se po preureditvi glasi \(\sin(\ldots) = a\), \(\cos(\ldots) = a\) ali \(\tan(\ldots) = a\).</p><ul class="kljucne"><li>„rešite enačbo“ s \(\sin\), \(\cos\), \(\tan\)</li><li>„na intervalu \([0, 2\pi]\)“</li><li>„vse rešitve“</li></ul></div>
               <h5>Univerzalni postopek</h5><ol class="postopek">
@@ -664,8 +715,8 @@
               <div class="primer"><p><strong>Primer 2:</strong> \(\tan x = \sqrt{3}\).</p><p>\(x = \frac{\pi}{3} + k\pi\).</p></div>
               <div class="primer"><p><strong>Primer 3:</strong> \(\sin 2x = 1\).</p><p>\(2x = \frac{\pi}{2} + 2k\pi\): \(x = \frac{\pi}{4} + k\pi\).</p></div>
             </div>
-            <div class="tip-naloge" id="tip-14">
-              <h4>Tip 14: Trigonometrijska enačba, ki se prevede na osnovne</h4>
+            <div class="tip-naloge" id="tip-16">
+              <h4>Tip 16: Trigonometrijska enačba, ki se prevede na osnovne</h4>
               <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Rešite enačbo \(2\cos^2 x - \cos x - 1 = 0\).</p></div>
               <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> v enačbi nastopa kvadrat kotne funkcije, več različnih funkcij ali dvojni kot.</p><ul class="kljucne"><li>\(\cos^2 x\) in \(\cos x\)</li><li>\(\sin 2x = \cos x\)</li><li>\(\sin^2 x\) in \(\cos x\) v isti enačbi</li></ul></div>
               <h5>Univerzalni postopek</h5><ol class="postopek">
@@ -676,6 +727,19 @@
               <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> \(2\sin^2 x + 3\cos x = 0\).</p><p>\(2\cos^2 x - 3\cos x - 2 = 0\): \(\cos x = -\frac{1}{2}\) (\(2\) zavržemo), \(x = \pm\frac{2\pi}{3} + 2k\pi\).</p></div>
               <div class="primer"><p><strong>Primer 2:</strong> \(\sin 2x = \cos x\).</p><p>\(\cos x(2\sin x - 1) = 0\): \(x = \frac{\pi}{2} + k\pi\), \(\frac{\pi}{6} + 2k\pi\), \(\frac{5\pi}{6} + 2k\pi\).</p></div>
               <div class="primer"><p><strong>Primer 3:</strong> \(\sin x = \sqrt{3}\cos x\).</p><p>Delimo s \(\cos x\): \(\tan x = \sqrt{3}\), \(x = \frac{\pi}{3} + k\pi\).</p></div>
+            </div>
+            <div class="tip-naloge" id="tip-17">
+              <h4>Tip 17: Homogena trigonometrijska enačba</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Rešite enačbo \(\sin^2 x - 4\sin x\cos x + 3\cos^2 x = 0\).</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> vsi členi so iste stopnje v \(\sin x\) in \(\cos x\) (npr. \(\sin^2 x\), \(\sin x\cos x\), \(\cos^2 x\)), morda je na desni konstanta.</p><ul class="kljucne"><li>\(\sin^2 x\), \(\sin x\cos x\) in \(\cos^2 x\) v isti enačbi</li><li>\(a\sin x = b\cos x\)</li><li>\(\sin^2 x + \sin x\cos x = 1\)</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Če je na desni konstanta \(d\), jo zamenjaj z \(d(\sin^2 x + \cos^2 x)\) in vse prenesi na levo.</p><div class="na-nalogi"><p>Desna stran je že 0.</p></div></li>
+              <li><p class="korak">Deli s \(\cos^2 x\) (ali s \(\cos x\) pri prvi stopnji) in uvedi \(t = \tan x\).</p><div class="na-nalogi"><p>\(\tan^2 x - 4\tan x + 3 = 0\): \((t - 1)(t - 3) = 0\).</p></div></li>
+              <li><p class="korak">Reši osnovne enačbe za tangens.</p><div class="na-nalogi"><p>\(\tan x = 1\): \(x = \frac{\pi}{4} + k\pi\); \(\tan x = 3\): \(x = \arctan 3 + k\pi\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> \(\sin^2 x + \sin x\cos x = 1\).</p><p>\(\sin^2 x + \sin x\cos x = \sin^2 x + \cos^2 x\): \(\cos x(\sin x - \cos x) = 0\). Tu \(\cos x\) lahko je 0, zato izpostavimo: \(x = \frac{\pi}{2} + k\pi\) ali \(x = \frac{\pi}{4} + k\pi\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> \(\sqrt{3}\sin x - \cos x = 0\).</p><p>\(\tan x = \frac{1}{\sqrt{3}}\): \(x = \frac{\pi}{6} + k\pi\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Koliko rešitev ima \(\sin 3x = \frac{1}{2}\) na \([0, 2\pi)\)?</p><p>Perioda je \(\frac{2\pi}{3}\), na \([0, 2\pi)\) so tri periode, v vsaki dve rešitvi: skupaj 6.</p></div>
             </div>
           </div>
         </section>
@@ -717,8 +781,8 @@
           </div>
           <div class="sklop-naloge">
             <h3>Tipi nalog v tem sklopu</h3>
-            <div class="tip-naloge" id="tip-15">
-              <h4>Tip 15: Periodični model <span class="badge-vr">VR</span></h4>
+            <div class="tip-naloge" id="tip-18">
+              <h4>Tip 18: Periodični model <span class="badge-vr">VR</span></h4>
               <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Temperatura čez dan je \(T(t) = 15 + 8\sin\left(\frac{\pi}{12}(t - 9)\right)\) (\(t\) v urah, \(T\) v °C). Kdaj je najtopleje in kdaj je temperatura \(19\,^\circ\mathrm{C}\)?</p></div>
               <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> besedilo s periodičnim pojavom in modelom \(A\sin(\omega t + \varphi) + d\) (ali s podatki, iz katerih ga sestaviš).</p><ul class="kljucne"><li>„nihanje“</li><li>„izmenični tok“</li><li>„plima“</li><li>„perioda, amplituda, frekvenca“</li></ul></div>
               <h5>Univerzalni postopek</h5><ol class="postopek">
@@ -752,13 +816,16 @@
                   <tr><td>„zapišite predpis“ iz grafa kotne funkcije</td><td><a href="#tip-6">Tip 6</a></td></tr>
                   <tr><td>\(\sin 75^\circ\), \(\cos(\alpha + \beta)\)</td><td><a href="#tip-7">Tip 7</a></td></tr>
                   <tr><td>\(\sin 2\alpha\), \(\cos 2\alpha\), polovični kot</td><td><a href="#tip-8">Tip 8</a></td></tr>
-                  <tr><td>„višinski kot“, „naklon“, kot v telesu</td><td><a href="#tip-9">Tip 9</a></td></tr>
-                  <tr><td>\(\sin 3x + \sin x\), „zapišite kot produkt“</td><td><a href="#tip-10">Tip 10</a></td></tr>
-                  <tr><td>\(\arcsin\), \(\arccos\), \(\arctan\) vrednosti</td><td><a href="#tip-11">Tip 11</a></td></tr>
-                  <tr><td>\(D_f\), \(Z_f\) krožne funkcije</td><td><a href="#tip-12">Tip 12</a></td></tr>
-                  <tr><td>\(\sin x = a\), \(\cos(\ldots) = a\)</td><td><a href="#tip-13">Tip 13</a></td></tr>
-                  <tr><td>kvadrat kotne funkcije, dvojni kot v enačbi</td><td><a href="#tip-14">Tip 14</a></td></tr>
-                  <tr><td>nihanje, izmenični tok, plima, temperatura</td><td><a href="#tip-15">Tip 15</a></td></tr>
+                  <tr><td>\(a\sin x + b\cos x\), „v obliki \(R\sin(x + \varphi)\)“</td><td><a href="#tip-9">Tip 9</a></td></tr>
+                  <tr><td>„zasuk točke okoli izhodišča“</td><td><a href="#tip-10">Tip 10</a></td></tr>
+                  <tr><td>„višinski kot“, „naklon“, kot v telesu</td><td><a href="#tip-11">Tip 11</a></td></tr>
+                  <tr><td>\(\sin 3x + \sin x\), „zapišite kot produkt“</td><td><a href="#tip-12">Tip 12</a></td></tr>
+                  <tr><td>\(\arcsin\), \(\arccos\), \(\arctan\) vrednosti</td><td><a href="#tip-13">Tip 13</a></td></tr>
+                  <tr><td>\(D_f\), \(Z_f\) krožne funkcije</td><td><a href="#tip-14">Tip 14</a></td></tr>
+                  <tr><td>\(\sin x = a\), \(\cos(\ldots) = a\)</td><td><a href="#tip-15">Tip 15</a></td></tr>
+                  <tr><td>kvadrat kotne funkcije, dvojni kot v enačbi</td><td><a href="#tip-16">Tip 16</a></td></tr>
+                  <tr><td>\(\sin^2 x\), \(\sin x\cos x\), \(\cos^2 x\) v isti enačbi</td><td><a href="#tip-17">Tip 17</a></td></tr>
+                  <tr><td>nihanje, izmenični tok, plima, temperatura</td><td><a href="#tip-18">Tip 18</a></td></tr>
                 </tbody>
               </table>
             </div>

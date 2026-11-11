@@ -27,7 +27,7 @@
           <p>Sila je merilo za medsebojni vpliv dveh teles. Na tej strani so sile, ko telo miruje (statika): kako sile sestavljamo, kdaj so v ravnovesju, kako delujejo vzmet, trenje in tlak ter kdaj se telo ne zavrti. Pod razlago vsakega podpoglavja so vsi tipi nalog, ki se pojavijo pri tem sklopu. Vsebine, označene s <span class="badge-vr">PZ</span>, so posebna znanja iz kataloga.</p>
           <div class="page-meta">
             <div class="page-meta-item"><strong>7</strong><span>Podpoglavij</span></div>
-            <div class="page-meta-item"><strong>10</strong><span>Tipov nalog</span></div>
+            <div class="page-meta-item"><strong>11</strong><span>Tipov nalog</span></div>
             <div class="page-meta-item"><strong>~60 min</strong><span>Branja</span></div>
           </div>
         </header>
@@ -322,6 +322,10 @@
 <figcaption>Do meje prožnosti je sila sorazmerna raztezku (\(F = kx\)), strmina grafa \(F(x)\) je koeficient vzmeti \(k\). Tu je \(k = 0{,}5\ \text{N/cm} = 50\ \text{N/m}\).</figcaption>
 </figure>
             <p><strong>Vzmet kot merilnik sil</strong> (vzmetna tehtnica, silomer): ker je raztezek sorazmeren s silo, lahko skalo umerimo v newtonih. Na obešeno utež deluje vzmet s silo \(F = kx = mg\), zato iz raztezka določimo težo.</p>
+                      <h4>Deformacija trdnin: napetost in prožnostni modul</h4>
+            <p>Hookov zakon \(F = kx\) velja za dano vzmet. Za žico ali palico iz neke snovi je bolj uporabno, da silo delimo s presekom in raztezek z dolžino. <strong>Natezna napetost</strong> je \(\sigma = \frac{F}{S}\), <strong>relativni raztezek</strong> \(\varepsilon = \frac{\Delta l}{l}\). V prožnem območju sta sorazmerna:</p>
+            <p>\[ \sigma = E\,\varepsilon \quad\Rightarrow\quad \Delta l = \frac{F\,l}{E\,S}. \]</p>
+            <p>\(E\) je <strong>prožnostni (Youngov) modul</strong> snovi (za jeklo okoli \(2\cdot 10^{11}' + U('Pa') + '\)). Debelejša žica se raztegne manj, daljša bolj. Nad mejo prožnosti se snov trajno deformira, pri natezni trdnosti se pretrga.</p>
           </div>
           <div class="sklop-naloge">
             <h3>Tipi nalog v tem sklopu</h3>
@@ -340,6 +344,17 @@
               <div class="primer"><p><strong>Primer 1:</strong> Vzmet je neobremenjena dolga 15 cm, z utežjo 18 cm. Raztezek?</p><p>3 cm (ne 18 cm).</p></div>
               <div class="primer"><p><strong>Primer 2:</strong> Kolikšno silo potrebujemo, da vzmet s \(k = 200\ \text{N/m}\) stisnemo za 5 cm?</p><p>\(10\ \text{N}\).</p></div>
               <div class="primer"><p><strong>Primer 3:</strong> Silomer kaže 3,0 N pri raztezku 6 cm. Kaj pokaže pri 4 cm?</p><p>2,0 N.</p></div>
+            </div>
+            <div class="tip-naloge" id="tip-7">
+              <h4>Tip 7: Raztezek žice (prožnostni modul) <span class="badge-vr">Razširitev</span></h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Na jekleno žico z dolžino \(2\ \text{m}\) in presekom \(1\ \text{mm^2}\) obesimo utež z maso \(10\ \text{kg}\). Za koliko se žica podaljša? (\(E = 2\cdot 10^{11}\ \text{Pa}\))</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> v nalogi so podani snov (prožnostni modul), dolžina in presek žice ali palice.</p><ul class="kljucne"><li>„prožnostni modul“</li><li>„presek žice“</li><li>„napetost v žici“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Izračunaj silo in napetost.</p><div class="na-nalogi"><p>\(F = mg = 98\ \text{N}\), \(\sigma = \frac{98}{10^{-6}} = 9{,}8\cdot 10^{7}\ \text{Pa}\).</p></div></li>
+              <li><p class="korak">Iz \(\sigma = E\varepsilon\) izračunaj relativni raztezek.</p><div class="na-nalogi"><p>\(\varepsilon = \frac{9{,}8\cdot 10^7}{2\cdot 10^{11}} = 4{,}9\cdot 10^{-4}\).</p></div></li>
+              <li><p class="korak">Pomnoži z dolžino.</p><div class="na-nalogi"><p>\(\Delta l = 4{,}9\cdot 10^{-4} \cdot 2 = 0{,}98\ \text{mm}\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Kako se spremeni raztezek, če vzamemo žico z dvakrat večjim premerom?</p><p>Presek je 4-krat večji, raztezek 4-krat manjši.</p></div>
             </div>
           </div>
         </section>
@@ -381,8 +396,8 @@
           <div class="sklop-naloge">
             <h3>Tipi nalog v tem sklopu</h3>
 
-            <div class="tip-naloge" id="tip-7">
-              <h4>Tip 7: Trenje in lepenje</h4>
+            <div class="tip-naloge" id="tip-8">
+              <h4>Tip 8: Trenje in lepenje</h4>
               <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Zaboj z maso \(40\ \text{kg}\) stoji na tleh. Koeficient lepenja je \(0{,}50\), koeficient trenja \(0{,}30\). S kolikšno vodoravno silo ga premaknemo in s kolikšno ga nato enakomerno vlečemo? Kolikšna je sila lepenja, če ga potiskamo s \(150\ \text{N}\)?</p></div>
               <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> telo drsi ali bi lahko zdrsnilo po podlagi; podan je koeficient trenja ali lepenja.</p><ul class="kljucne"><li>„koeficient trenja“</li><li>„najmanjša sila, da se premakne“</li><li>„enakomerno vlečemo“</li><li>„ali se premakne“</li></ul></div>
               <h5>Univerzalni postopek</h5><ol class="postopek">
@@ -415,8 +430,8 @@
           <div class="sklop-naloge">
             <h3>Tipi nalog v tem sklopu</h3>
 
-            <div class="tip-naloge" id="tip-8">
-              <h4>Tip 8: Tlak trdnega telesa na podlago</h4>
+            <div class="tip-naloge" id="tip-9">
+              <h4>Tip 9: Tlak trdnega telesa na podlago</h4>
               <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Smučar z maso \(60\ \text{kg}\) stoji na dveh smučeh, vsaka je dolga \(1{,}6\ \text{m}\) in široka \(10\ \text{cm}\). Kolikšen je tlak na sneg? Kolikšen je tlak, ko stoji v čevljih s skupno ploščino podplatov \(500\ \text{cm}^2\)?</p></div>
               <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> sila deluje na ploskev, sprašujejo po tlaku ali ploščini, ki zdrži dani tlak.</p><ul class="kljucne"><li>„tlak na podlago“</li><li>„ploščina“</li><li>„pogreza se“</li></ul></div>
               <h5>Univerzalni postopek</h5><ol class="postopek">
@@ -491,8 +506,8 @@
           <div class="sklop-naloge">
             <h3>Tipi nalog v tem sklopu</h3>
 
-            <div class="tip-naloge" id="tip-9">
-              <h4>Tip 9: Ravnovesje navorov (vzvod, gugalnica)</h4>
+            <div class="tip-naloge" id="tip-10">
+              <h4>Tip 10: Ravnovesje navorov (vzvod, gugalnica)</h4>
               <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Oče z maso \(80\ \text{kg}\) sedi na gugalnici \(1{,}2\ \text{m}\) od osi. Kako daleč od osi na drugi strani mora sedeti otrok z maso \(30\ \text{kg}\), da je gugalnica v ravnovesju?</p></div>
               <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> telo se lahko vrti okoli osi (vzvod, gugalnica, ključ, vrata), sprašujejo po sili ali razdalji za ravnovesje.</p><ul class="kljucne"><li>„vzvod“, „gugalnica“, „ročica“</li><li>„os“</li><li>„navor“</li></ul></div>
               <h5>Univerzalni postopek</h5><ol class="postopek">
@@ -506,8 +521,8 @@
               <div class="primer"><p><strong>Primer 3:</strong> Na vzvodu je 30 N na 0,40 m od osi. Kolikšna sila na 0,30 m na drugi strani ga uravnovesi?</p><p>40 N.</p></div>
             </div>
 
-            <div class="tip-naloge" id="tip-10">
-              <h4>Tip 10: Sile podpor (ravnovesje sil in navorov)</h4>
+            <div class="tip-naloge" id="tip-11">
+              <h4>Tip 11: Sile podpor (ravnovesje sil in navorov)</h4>
               <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Homogena deska z dolžino \(4{,}0\ \text{m}\) in maso \(20\ \text{kg}\) leži na dveh podporah na krajiščih. Človek z maso \(60\ \text{kg}\) stoji \(1{,}0\ \text{m}\) od levega krajišča. S kolikšnima silama delujeta podpori?</p></div>
               <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> palica, deska ali most je podprt v dveh točkah ali vpet, sprašujejo po silah podpor.</p><ul class="kljucne"><li>„podprta na krajiščih“</li><li>„s kolikšno silo deluje podpora“</li><li>„homogena palica“</li></ul></div>
               <h5>Univerzalni postopek</h5><ol class="postopek">
@@ -540,10 +555,11 @@
                   <tr><td>„klanec z naklonom“</td><td><a href="#tip-4">Tip 4</a></td></tr>
                   <tr><td>„narišite sile na …“, „notranje, zunanje“</td><td><a href="#tip-5">Tip 5</a></td></tr>
                   <tr><td>„vzmet“, „raztezek“, „silomer“</td><td><a href="#tip-6">Tip 6</a></td></tr>
-                  <tr><td>„koeficient trenja / lepenja“, „premaknemo“</td><td><a href="#tip-7">Tip 7</a></td></tr>
-                  <tr><td>„tlak na podlago“, „ploščina“</td><td><a href="#tip-8">Tip 8</a></td></tr>
-                  <tr><td>„vzvod“, „gugalnica“, „ključ“, „navor“</td><td><a href="#tip-9">Tip 9</a></td></tr>
-                  <tr><td>„podprta na krajiščih“, „sila podpore“, „težišče“</td><td><a href="#tip-10">Tip 10</a></td></tr>
+                  <tr><td>„prožnostni modul“, „presek žice“</td><td><a href="#tip-7">Tip 7</a></td></tr>
+                  <tr><td>„koeficient trenja / lepenja“, „premaknemo“</td><td><a href="#tip-8">Tip 8</a></td></tr>
+                  <tr><td>„tlak na podlago“, „ploščina“</td><td><a href="#tip-9">Tip 9</a></td></tr>
+                  <tr><td>„vzvod“, „gugalnica“, „ključ“, „navor“</td><td><a href="#tip-10">Tip 10</a></td></tr>
+                  <tr><td>„podprta na krajiščih“, „sila podpore“, „težišče“</td><td><a href="#tip-11">Tip 11</a></td></tr>
                 </tbody>
               </table>
             </div>

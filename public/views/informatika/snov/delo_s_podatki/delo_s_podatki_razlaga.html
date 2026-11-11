@@ -829,6 +829,21 @@ for c in sorted(set(s)):
             <p>Pred kopiranjem formule vprašaj: kateri del se mora premikati in kateri ostati? Celico s stalnim podatkom (stopnja DDV v E2, popust v B1) zakleni z <code class="k">$E$2</code>; obseg, ki je za vse vrstice isti, tudi: <code class="k">=COUNTIF($C$4:$H$9;5)</code>. Pri kopiranju v desno se spreminjajo stolpci, navzdol vrstice; <code class="k">$C4</code> zaklene le stolpec, <code class="k">C$4</code> le vrstico.</p>
             <h4>Formule, ki se sklicujejo na druge celice s formulo</h4>
             <p>Ko formulo z relativnim naslovom kopiramo navzgor ali navzdol, se sklic premika skupaj z njo. Primer: v B6 je <code class="k">=IF(A6&gt;10;A6;A6+B7)</code> in v A6 je 1. Kopija v B5 je <code class="k">=IF(A5&gt;10;A5;A5+B6)</code>. Ker so A2 do A5 tudi 1, dobimo od spodaj navzgor: B6 = 1 + B7 (prazna = 0) = 1, B5 = 1 + 1 = 2, …, B2 = 5. Pri takih nalogah računaj od celice, ki ne odvisi od nobene druge, proti iskani.</p>
+                      <h4>Datum in čas <span class="badge-vr">Razširitev</span></h4>
+            <p>Preglednica hrani datum kot <strong>zaporedno število dni</strong> (v Excelu je 1. 1. 1900 dan 1), čas pa kot <strong>del dneva</strong> (12:00 je 0,5). Zato lahko z datumi računamo: <code class="k">=B2-A2</code> da število dni med datumoma, <code class="k">=A2+30</code> datum čez 30 dni. Razlika časov <code class="k">=B2-A2</code> da del dneva; v ure jo pretvorimo z množenjem s 24.</p>
+            <div class="tabela-wrap"><table class="tabela"><thead><tr><th>Funkcija</th><th>Vrne</th></tr></thead><tbody>
+              <tr><td><code class="k">TODAY()</code>, <code class="k">NOW()</code></td><td>današnji datum, datum in trenutni čas (spremenita se ob vsakem preračunu)</td></tr>
+              <tr><td><code class="k">DAY</code>, <code class="k">MONTH</code>, <code class="k">YEAR(datum)</code></td><td>dan, mesec, leto iz datuma</td></tr>
+              <tr><td><code class="k">DATE(leto; mesec; dan)</code></td><td>datum iz treh števil</td></tr>
+              <tr><td><code class="k">WEEKDAY(datum; 2)</code></td><td>dan v tednu (1 = ponedeljek … 7 = nedelja)</td></tr>
+              <tr><td><code class="k">HOUR</code>, <code class="k">MINUTE</code>, <code class="k">TIME(ure; minute; sekunde)</code></td><td>deli časa, čas iz treh števil</td></tr>
+            </tbody></table></div>
+            <p>Primer: starost v letih iz rojstnega datuma v A2: <code class="k">=INT((TODAY()-A2)/365,25)</code>.</p>
+            <h4>Oblikovanje in preverjanje vnosa <span class="badge-vr">Razširitev</span></h4>
+            <p><strong>Oblika celice</strong> spremeni le prikaz, ne vrednosti: 0,256 kot odstotek pokaže 25,6 %, v formulah pa še vedno nastopa 0,256. Oblike po meri sestavimo iz znakov: <code class="k">0</code> (obvezna števka), <code class="k">#</code> (neobvezna števka), <code class="k">0,00</code> (dve decimalki), <code class="k"># ##0 "€"</code> (ločilo tisočic in enota), <code class="k">dd.mm.llll</code> za datum. <strong>Pogojno oblikovanje</strong> obarva celice, ki izpolnjujejo pogoj (npr. ocene pod 2 rdeče).</p>
+            <p><strong>Preverjanje veljavnosti</strong> (Data Validation) omeji, kaj lahko uporabnik vpiše v celico: le cela števila med 1 in 5, datum po določenem dnevu ali vrednost s spustnega seznama. Tako preprečimo napake pri vnosu, še preden nastanejo.</p>
+            <h4>Imena celic in sklici na druge liste <span class="badge-vr">Razširitev</span></h4>
+            <p>Celici ali obsegu lahko damo <strong>ime</strong> (npr. <code class="k">DDV</code> za celico s stopnjo davka). Formula <code class="k">=B2*DDV</code> je bolj berljiva, ime pa se pri kopiranju obnaša kot absolutni naslov. Na celico na drugem delovnem listu se sklicujemo z imenom lista in klicajem: <code class="k">=Cenik!B3</code>, na obseg <code class="k">=SUM(Januar!C2:C31)</code>. Če ime lista vsebuje presledek, ga damo v enojne narekovaje: <code class="k">='Prodaja 2025'!A1</code>.</p>
           </div>
           <div class="sklop-naloge">
             <h3>Tipi nalog v tem sklopu</h3>
