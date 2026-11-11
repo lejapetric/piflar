@@ -1,0 +1,21 @@
+const x = String.raw;
+export default [
+  { t: 4, b: x`Izračunaj kot med vektorjema \(\vec a = (1, 2, 2)\) in \(\vec b = (2, -1, 2)\) (v stopinjah, na dve decimalki).`, v: Math.acos(4 / 9) * 180 / Math.PI, tol: 0.006,
+    rez: x`\(\varphi \approx 63{,}61^\circ\)`, post: x`<p>\(\vec a \cdot \vec b = 2 - 2 + 4 = 4\), \(|\vec a| = |\vec b| = 3\).</p><p>\(\cos\varphi = \frac{4}{9}\), \(\varphi \approx 63{,}61^\circ\)</p>` },
+  { t: 4, raven: "visja", b: x`Izračunaj ploščino trikotnika z oglišči \(A(1, 0, 0)\), \(B(0, 2, 0)\) in \(C(0, 0, 3)\).`, v: 3.5, tol: 1e-6,
+    rez: x`\(S = \frac72\)`, post: x`<p>\(\vec{AB} = (-1, 2, 0)\), \(\vec{AC} = (-1, 0, 3)\).</p><p>\(\vec{AB} \times \vec{AC} = (6, 3, 2)\), \(|\vec{AB} \times \vec{AC}| = \sqrt{36 + 9 + 4} = 7\).</p><p>\(S = \frac72\)</p>` },
+  { t: 4, raven: "visja", b: x`Izračunaj prostornino paralelepipeda, ki ga napenjajo vektorji \(\vec a = (1, 0, 1)\), \(\vec b = (2, 1, 0)\) in \(\vec c = (0, 1, 3)\).`, v: 5,
+    rez: x`\(V = 5\)`, post: x`<p>Mešani produkt: \((\vec a \times \vec b) \cdot \vec c\). \(\vec a \times \vec b = (0 \cdot 0 - 1 \cdot 1,\ 1 \cdot 2 - 1 \cdot 0,\ 1 \cdot 1 - 0 \cdot 2) = (-1, 2, 1)\).</p><p>\((-1, 2, 1) \cdot (0, 1, 3) = 0 + 2 + 3 = 5\), \(V = 5\)</p>` },
+  { t: 4, b: x`Za katero vrednost \(m\) sta vektorja \((2, m, -1)\) in \((m, 3, 4)\) pravokotna?`, v: 0.8, tol: 1e-6, namig: "Decimalno število vpiši z vejico.",
+    rez: x`\(m = 0{,}8\)`, post: x`<p>Skalarni produkt mora biti \(0\): \(2m + 3m - 4 = 0\), \(m = \frac45 = 0{,}8\).</p>` },
+  { t: 4, b: x`Izračunaj dolžino pravokotne projekcije vektorja \(\vec a = (2, 1, 2)\) na vektor \(\vec b = (1, 2, 2)\).`, v: 8 / 3, tol: 1e-6, namig: "Ulomek vpiši kot 5/3.",
+    rez: x`\(\frac83\)`, post: x`<p>Dolžina projekcije je \(\frac{\vec a \cdot \vec b}{|\vec b|} = \frac{2 + 2 + 4}{3} = \frac83\).</p>` },
+  { t: 4, b: x`Za vektorja velja \(|\vec a| = 2\), \(|\vec b| = 3\) in \(\angle(\vec a, \vec b) = 60^\circ\). Izračunaj \(|2\vec a - \vec b|\) (na dve decimalki).`, v: Math.sqrt(13), tol: 0.006,
+    rez: x`\(\sqrt{13} \approx 3{,}61\)`, post: x`<p>\(\vec a \cdot \vec b = 2 \cdot 3 \cdot \frac12 = 3\).</p><p>\(|2\vec a - \vec b|^2 = 4|\vec a|^2 - 4\vec a \cdot \vec b + |\vec b|^2 = 16 - 12 + 9 = 13\)</p>` },
+  { t: 4, b: x`Točke \(A(1, 2, 3)\), \(B(3, 6, 7)\) in \(C(x, 10, 11)\) ležijo na isti premici. Koliko je \(x\)?`, v: 5,
+    rez: x`\(x = 5\)`, post: x`<p>\(\vec{AB} = (2, 4, 4)\), \(\vec{AC} = (x - 1, 8, 8)\). Kolinearnost: \(\vec{AC} = 2\vec{AB}\).</p><p>\(x - 1 = 4\), \(x = 5\)</p>` },
+  { t: 4, b: x`Paralelogram \(ABCD\) ima oglišča \(A(1, 1)\), \(B(5, 2)\) in \(D(2, 4)\). Izračunaj njegovo ploščino.`, v: 11,
+    rez: x`\(S = 11\)`, post: x`<p>\(\vec{AB} = (4, 1)\), \(\vec{AD} = (1, 3)\).</p><p>\(S = |4 \cdot 3 - 1 \cdot 1| = 11\)</p>` },
+  { t: 4, b: x`Kolikšen ostri kot oklepata telesni diagonali kocke? (V stopinjah, na dve decimalki.)`, v: Math.acos(1 / 3) * 180 / Math.PI, tol: 0.006,
+    rez: x`\(\varphi \approx 70{,}53^\circ\)`, post: x`<p>V kocki z robom 1 sta telesni diagonali na primer \((1, 1, 1)\) in \((-1, 1, 1)\).</p><p>\(\cos\varphi = \frac{-1 + 1 + 1}{3} = \frac13\), \(\varphi \approx 70{,}53^\circ\)</p>` },
+];

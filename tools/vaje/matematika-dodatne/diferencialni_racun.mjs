@@ -1,0 +1,20 @@
+const x = String.raw;
+export default [
+  { t: 1, b: x`Funkcija je \(f(x) = x^2\). Izračunaj \(f'(3)\).`, v: 6, rez: x`\(f'(3) = 6\)`, post: x`<p>\(f'(x) = 2x\), \(f'(3) = 6\)</p>` },
+  { t: 1, b: x`Kateri je odvod funkcije \(f(x) = 5x + 2\)?`, p: x`\(f'(x) = 5\)`, n: [x`\(f'(x) = 5x\)`, x`\(f'(x) = 7\)`, x`\(f'(x) = 2\)`], post: x`<p>Odvod \(5x\) je \(5\), odvod konstante \(2\) je \(0\).</p>` },
+  { t: 1, b: x`Koliko je odvod konstantne funkcije \(f(x) = 7\)?`, v: 0, rez: x`\(f'(x) = 0\)`, post: x`<p>Konstanta se ne spreminja, zato je njen odvod \(0\).</p>` },
+  { t: 1, b: x`Funkcija je \(f(x) = x^3\). Izračunaj \(f'(2)\).`, v: 12, rez: x`\(f'(2) = 12\)`, post: x`<p>\(f'(x) = 3x^2\), \(f'(2) = 3 \cdot 4 = 12\)</p>` },
+  { t: 1, b: x`Kateri je odvod funkcije \(\sin x\)?`, p: x`\(\cos x\)`, n: [x`\(-\cos x\)`, x`\(-\sin x\)`, x`\(\tan x\)`], post: x`<p>\((\sin x)' = \cos x\)</p>` },
+  { t: 4, b: x`Pravokotniku je ena stranica na abscisni osi, zgornji oglišči pa ležita na paraboli \(y = 12 - x^2\). Kolikšna je največja možna ploščina pravokotnika?`, v: 32,
+    rez: x`\(S_{\max} = 32\)`, post: x`<p>Oglišči \((\pm x, 12 - x^2)\), ploščina \(S(x) = 2x(12 - x^2) = 24x - 2x^3\), \(0 < x < \sqrt{12}\).</p><p>\(S'(x) = 24 - 6x^2 = 0\), \(x = 2\). \(S(2) = 4 \cdot 8 = 32\).</p>` },
+  { t: 4, b: x`Tangenta na graf \(f(x) = x^3 - 3x\) v točki z absciso \(x_0 = 2\) seka ordinatno os. V kateri točki? (Vpiši ordinato.)`, v: -16,
+    rez: x`\(N(0, -16)\)`, post: x`<p>\(f(2) = 2\), \(f'(x) = 3x^2 - 3\), \(f'(2) = 9\).</p><p>Tangenta: \(y - 2 = 9(x - 2)\), \(y = 9x - 16\), začetna vrednost \(-16\).</p>` },
+  { t: 4, raven: "visja", b: x`Določi največjo vrednost funkcije \(f(x) = x\,e^{-x}\) (na tri decimalke).`, v: 1 / Math.E, tol: 0.0006,
+    rez: x`\(f(1) = \frac1e \approx 0{,}368\)`, post: x`<p>\(f'(x) = e^{-x} - x e^{-x} = e^{-x}(1 - x)\), ničla \(x = 1\). Levo je \(f' > 0\), desno \(f' < 0\), zato je tam maksimum.</p><p>\(f(1) = e^{-1} \approx 0{,}368\)</p>` },
+  { t: 4, b: x`Zaprta pločevinka v obliki valja ima prostornino \(2\pi\ \mathrm{dm^3}\). Kolikšna naj bo višina (v dm), da porabimo najmanj pločevine?`, v: 2,
+    rez: x`\(v = 2\ \mathrm{dm}\)`, post: x`<p>\(\pi r^2 v = 2\pi\), \(v = \frac{2}{r^2}\). Površina \(P(r) = 2\pi r^2 + 2\pi r v = 2\pi r^2 + \frac{4\pi}{r}\).</p><p>\(P'(r) = 4\pi r - \frac{4\pi}{r^2} = 0\), \(r = 1\), \(v = 2\).</p>` },
+  { t: 4, raven: "visja", b: x`Pod kolikšnim kotom se sekata krivulji \(y = x^2\) in \(y = \sqrt{x}\) v točki \((1, 1)\)? (V stopinjah, na dve decimalki.)`, v: Math.atan(0.75) * 180 / Math.PI, tol: 0.006,
+    rez: x`\(\varphi \approx 36{,}87^\circ\)`, post: x`<p>Smerna koeficienta tangent: \(k_1 = 2x = 2\), \(k_2 = \frac{1}{2\sqrt x} = \frac12\).</p><p>\(\tan\varphi = \left|\frac{k_1 - k_2}{1 + k_1 k_2}\right| = \frac{1{,}5}{2} = 0{,}75\), \(\varphi \approx 36{,}87^\circ\)</p>` },
+  { t: 4, raven: "visja", b: x`Funkcija \(f(x) = \ln(x^2 + 1)\) ima dve prevojni točki. Kolikšna je pozitivna abscisa prevoja?`, v: 1,
+    rez: x`\(x = 1\)`, post: x`<p>\(f'(x) = \frac{2x}{x^2 + 1}\), \(f''(x) = \frac{2(x^2 + 1) - 4x^2}{(x^2 + 1)^2} = \frac{2(1 - x^2)}{(x^2 + 1)^2}\).</p><p>\(f'' = 0\) pri \(x = \pm 1\) in tam spremeni predznak. Pozitivna abscisa: \(1\).</p>` },
+];

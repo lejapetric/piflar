@@ -163,6 +163,20 @@ node tools/vaje/strani.mjs            # naredi <slug>_naloge.html za vsako snov 
 ```
 
 Snovi, ki še nimajo razlage, imajo na seznamu snovi in v stranskem meniju povezavo na naloge.
+
+Matematika ima poleg nalog iz predlog še ročno napisane dodatne naloge v `tools/vaje/matematika-dodatne/<slug>.mjs`
+(čisto osnovne in zelo težke sestavljene naloge v več korakih, vsaka snov ima vsaj 14 zelo težkih). Dodajo se za
+nalogami iz `tools/vaje/matematika/`, zato se id-ji obstoječih nalog (in s tem napredek uporabnikov) ne spremenijo.
+
+### Razdelek Naloge
+
+Poleg Snovi in Mature ima predmet razdelek Naloge (`public/views/<predmet>/naloge/naloge.html`, zaenkrat matematika):
+vse naloge za vajo predmeta na eni strani s spustnima seznamoma za snov in težavnost (izbereš lahko več možnosti, privzeto je izbrano vse), stikalom za
+višjo raven in vrstnim redom (od lažjih do težjih ali premešano). Naloge se prikazujejo po 20, z gumbom Pokaži več.
+Stran potrebuje samo `<div id="naloge" data-predmet="matematika" data-math></div>` brez `data-poglavje`
+in `naloge.js`. Izbira se zapiše v naslov strani (`?snov=funkcije,stoznice&tezavnost=3,4&visja=0&vrstni=nakljucno`),
+zato povezave v stranskem meniju vodijo naravnost na naloge posamezne snovi. Za nov predmet kopiraj stran,
+spremeni `data-predmet` in dodaj razdelek v `sidebar.html` ter povezavo na stran predmeta.
 `test/vaje.test.js` preveri shemo nalog, da je pravilni odgovor sprejet in da ima vsaka snov vsaj 50 nalog.
 
 ## Matura
