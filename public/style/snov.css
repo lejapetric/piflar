@@ -1746,6 +1746,168 @@ mjx-container[display="true"] {
     color: var(--text-muted);
 }
 
+/* Odgovor pri maturitetni nalogi (matura.js, obrazecOdgovora) */
+.mn-navodilo {
+    margin: var(--space-3) 0 var(--space-2);
+    font-size: var(--text-xs);
+    color: var(--text-muted);
+}
+
+.naloga-besedilo .pola-izbire li.izbira-klik {
+    cursor: pointer;
+    padding: 0.35rem 0.6rem;
+    margin-left: -0.6rem;
+    border: 1px solid transparent;
+    border-radius: var(--radius-sm);
+    transition: background var(--transition), border-color var(--transition);
+}
+
+.naloga-besedilo .pola-izbire li.izbira-klik:hover,
+.naloga-besedilo .pola-izbire li.izbira-klik:focus-visible {
+    background: var(--bg-primary);
+    border-color: var(--border-color);
+    outline: none;
+}
+
+.naloga-besedilo .pola-izbire li.izbira-klik.izbira-izbrana {
+    border-color: var(--primary);
+}
+
+.naloga-besedilo .pola-izbire li.izbira-klik.izbira-pravilna {
+    border-color: var(--success);
+    background: color-mix(in srgb, var(--success) 12%, transparent);
+}
+
+.naloga-besedilo .pola-izbire li.izbira-klik.izbira-napacna {
+    border-color: var(--danger);
+    background: color-mix(in srgb, var(--danger) 10%, transparent);
+}
+
+.mn-odgovor {
+    display: grid;
+    gap: var(--space-2);
+    margin: var(--space-3) 0;
+}
+
+.mn-odgovor-vrstica {
+    display: grid;
+    grid-template-columns: 3.2rem minmax(0, 1fr);
+    gap: var(--space-1) var(--space-3);
+    align-items: start;
+}
+
+.mn-odgovor-oznaka {
+    padding-top: 0.5rem;
+    font-size: var(--text-sm);
+    font-weight: 700;
+    color: var(--text-secondary);
+}
+
+.mn-odgovor-polje {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    min-width: 0;
+}
+
+.mn-vnos {
+    flex: 1;
+    min-width: 0;
+    max-width: 32rem;
+    padding: 0.45rem 0.65rem;
+    font: inherit;
+    font-size: var(--text-sm);
+    color: var(--text-primary);
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    resize: vertical;
+}
+
+input.mn-vnos {
+    max-width: 12rem;
+}
+
+.mn-vnos:focus {
+    outline: 2px solid var(--primary);
+    outline-offset: 1px;
+}
+
+.mn-pravilno .mn-vnos { border-color: var(--success); }
+.mn-napacno .mn-vnos { border-color: var(--danger); }
+
+.mn-enota {
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+    white-space: nowrap;
+}
+
+.mn-odgovor-povratno {
+    grid-column: 2;
+    font-size: var(--text-sm);
+}
+
+.mn-odgovor-povratno:empty {
+    display: none;
+}
+
+.mn-pravilno .mn-znak { color: var(--success); font-weight: 600; }
+.mn-napacno .mn-znak { color: var(--danger); font-weight: 600; }
+
+.mn-primerjaj {
+    padding: 0.4rem 0.65rem;
+    border-left: 3px solid var(--success);
+    background: var(--bg-primary);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+}
+
+.mn-primerjaj > span:first-child {
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.mn-preveri {
+    justify-self: start;
+    margin-top: var(--space-1);
+}
+
+@media (max-width: 600px) {
+    .mn-odgovor-vrstica {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .mn-odgovor-povratno {
+        grid-column: 1;
+    }
+}
+
+@media print {
+    .mn-odgovor,
+    .mn-navodilo,
+    .mn-preveri,
+    .naloga-status {
+        display: none !important;
+    }
+}
+
+.mn-v-poli {
+    color: var(--primary);
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.mn-v-poli:hover {
+    text-decoration: underline;
+}
+
+/* Naloga, na katero vodi povezava »Odpri v poli« */
+.mn-izbrana {
+    outline: 3px solid var(--primary);
+    outline-offset: 4px;
+    scroll-margin-top: 90px;
+}
+
 .mn-naloga .naloga-akcije {
     display: flex;
     gap: var(--space-2);

@@ -75,8 +75,8 @@ async function mathjaxPripravljen() {
   await typeset(koren);
 }
 
-async function api(url) {
-  const res = await fetch(url);
+async function api(url, options) {
+  const res = await fetch(url, options);
   const data = await res.json().catch(() => ({}));
   if (!res.ok) throw new Error(data.message || "Napaka na strežniku.");
   return data;
@@ -139,8 +139,8 @@ function nastaviPrikaz(kartica, prikaz) {
     return;
   }
   const [gResitev, gPostopek] = kartica.querySelectorAll(".naloga-akcije button");
-  if (gResitev) gResitev.textContent = prikaz ? "Skrij rešitev" : "Rešitev";
-  if (gPostopek) gPostopek.textContent = prikaz === "postopek" ? "Skrij postopek" : "Postopek";
+  if (gResitev) gResitev.textContent = prikaz ? "Skrij rezultat" : "Prikaži rezultat";
+  if (gPostopek) gPostopek.textContent = prikaz === "postopek" ? "Skrij postopek" : "Prikaži postopek";
 }
 
 function zaklenjeno(naloga) {
@@ -148,6 +148,159 @@ function zaklenjeno(naloga) {
   const p = el("p", "mn-zaklep", "Rešitve te pole so na voljo s paketom. ");
   p.append(povezava("/narocnina.html", "Odkleni rešitve"));
   return p;
+}
+
+// ------------------------------------------------------------
+// Odgovor dijaka: izbira (A–D) ali vpis po delih (2.1., 2.2. …)
+// ------------------------------------------------------------
+async function preveri(naloga, odgovor) {
+  return api("/api/matura/odgovor", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ pola: naloga.pola.id, naloga: naloga.id, odgovor }),
+  });
+}
+
+function nastaviStatus(status, razred, besedilo) {
+  status.className = `naloga-status ${razred}`.trim();
+  status.textContent = besedilo;
+}
+
+function obrazecOdgovora(naloga, kartica) {
+  const status = el("p", "naloga-status");
+  status.setAttribute("role", "status");
+  const oblika = naloga.odgovor;
+
+  if (oblika.tip === "izbira") {
+    const moznosti = [...kartica.querySelectorAll(".naloga-besedilo .pola-izbire > li")];
+    if (!moznosti.length) return [];
+    const crka = (li) => li.querySelector(".izbira-crka")?.textContent.trim();
+    const navodilo = el("p", "mn-navodilo", oblika.vec ? "Izberi vse pravilne odgovore in klikni Preveri." : "Klikni odgovor, ki se ti zdi pravilen.");
+    const ponastavi = () => moznosti.forEach((li) => li.classList.remove("izbira-pravilna", "izbira-napacna"));
+
+    async function oddaj(izbrane, kliknjena) {
+      nastaviStatus(status, "", "Preverjam …");
+      try {
+        const { pravilno } = await preveri(naloga, izbrane);
+        ponastavi();
+        for (const li of oblika.vec ? moznosti.filter((m) => m.classList.contains("izbira-izbrana")) : [kliknjena]) {
+          li.classList.add(pravilno ? "izbira-pravilna" : "izbira-napacna");
+        }
+        if (pravilno) kartica.classList.add("naloga--resena");
+        nastaviStatus(status, pravilno ? "pravilno" : "napacno", pravilno ? "Pravilno!" : "Žal ni pravilno. Poskusi znova ali si oglej postopek.");
+      } catch (err) {
+        nastaviStatus(status, "napacno", err.message);
+      }
+    }
+
+    for (const li of moznosti) {
+      li.classList.add("izbira-klik");
+      li.tabIndex = 0;
+      li.setAttribute("role", oblika.vec ? "checkbox" : "button");
+      const izberi = () => {
+        if (oblika.vec) {
+          li.classList.toggle("izbira-izbrana");
+          li.setAttribute("aria-checked", li.classList.contains("izbira-izbrana"));
+          ponastavi();
+          nastaviStatus(status, "", "");
+        } else {
+          moznosti.forEach((m) => m.classList.toggle("izbira-izbrana", m === li));
+          oddaj(crka(li), li);
+        }
+      };
+      li.addEventListener("click", izberi);
+      li.addEventListener("keydown", (e) => {
+        if (e.key === "Enter" || e.key === " ") {
+          e.preventDefault();
+          izberi();
+        }
+      });
+    }
+    const deli = [navodilo];
+    if (oblika.vec) {
+      const g = gumb("Preveri", "btn btn-primary mn-preveri");
+      g.addEventListener("click", () => {
+        const izbrane = moznosti.filter((m) => m.classList.contains("izbira-izbrana")).map(crka);
+        if (!izbrane.length) return nastaviStatus(status, "napacno", "Izberi vsaj en odgovor.");
+        oddaj(izbrane);
+      });
+      deli.push(g);
+    }
+    return [...deli, status];
+  }
+
+  // Esej se piše na papir, zato ga ne vpisujemo
+  if (oblika.tip === "esej") return [];
+
+  const obrazec = el("form", "naloga-odgovor mn-odgovor");
+  obrazec.noValidate = true;
+  const navodila = [];
+  if (oblika.deli.some((d) => d.enota)) navodila.push("Pri številskih odgovorih vpiši samo število v enoti ob polju (npr. 3,5 ali 2,1·10^-3).");
+  else if (oblika.deli.some((d) => d.stevilo)) navodila.push("Številski rezultat vpiši kot število ali ulomek (npr. 3,5 ali 7/2).");
+  if (oblika.deli.some((d) => !d.stevilo && !d.crka)) navodila.push("Pri ostalih vpiši svoj odgovor in ga po preverjanju primerjaj z rešitvijo.");
+  obrazec.append(el("p", "mn-navodilo", navodila.join(" ")));
+  const vrstice = oblika.deli.map((d, i) => {
+    const vrstica = el("div", "mn-odgovor-vrstica");
+    const id = `odg-${naloga.pola.id}-${naloga.id}-${i}`;
+    const oznaka = el("label", "mn-odgovor-oznaka", d.oznaka || "Odgovor");
+    oznaka.htmlFor = id;
+    const vnos = d.stevilo || d.crka ? el("input", "mn-vnos") : el("textarea", "mn-vnos");
+    vnos.id = id;
+    vnos.autocomplete = "off";
+    vnos.maxLength = 2000;
+    if (vnos.tagName === "TEXTAREA") vnos.rows = 1;
+    if (d.stevilo) vnos.inputMode = "decimal";
+    if (d.crka) vnos.placeholder = "A, B, C …";
+    const polje = el("div", "mn-odgovor-polje");
+    polje.append(vnos);
+    if (d.enota) {
+      const enota = el("span", "mn-enota");
+      enota.textContent = d.enota.replace(/\^(-?\d+)/g, (_, e) => e.replace("-", "⁻").replace(/\d/g, (c) => "⁰¹²³⁴⁵⁶⁷⁸⁹"[c]));
+      polje.append(enota);
+    }
+    const povratno = el("div", "mn-odgovor-povratno");
+    vrstica.append(oznaka, polje, povratno);
+    obrazec.append(vrstica);
+    return { vnos, povratno, vrstica };
+  });
+  const gPreveri = el("button", "btn btn-primary mn-preveri", "Preveri");
+  gPreveri.type = "submit";
+  obrazec.append(gPreveri, status);
+
+  obrazec.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    nastaviStatus(status, "", "Preverjam …");
+    try {
+      const odg = await preveri(naloga, vrstice.map((v) => v.vnos.value));
+      odg.deli.forEach((d, i) => {
+        const { povratno, vrstica } = vrstice[i];
+        vrstica.classList.remove("mn-pravilno", "mn-napacno");
+        povratno.replaceChildren();
+        if (d.pravilno === true) {
+          vrstica.classList.add("mn-pravilno");
+          povratno.append(el("span", "mn-znak", "✓ Pravilno"));
+        } else if (d.pravilno === false) {
+          vrstica.classList.add("mn-napacno");
+          povratno.append(el("span", "mn-znak", "✗ Ni pravilno"));
+        } else {
+          povratno.append(el("div", "mn-primerjaj", `<span>Rešitev:</span> ${d.rezultat}`));
+        }
+      });
+      typeset(obrazec);
+      const samodejni = odg.deli.filter((d) => d.pravilno !== null);
+      if (odg.pravilno === true) {
+        kartica.classList.add("naloga--resena");
+        nastaviStatus(status, "pravilno", "Vse pravilno!");
+      } else if (samodejni.some((d) => !d.pravilno)) {
+        nastaviStatus(status, "napacno", "Nekaj ni pravilno. Popravi označene odgovore ali si oglej postopek.");
+      } else {
+        nastaviStatus(status, "", "Primerjaj svoje odgovore z rešitvijo pod vsakim poljem.");
+      }
+    } catch (err) {
+      nastaviStatus(status, "napacno", err.message);
+    }
+  });
+  return [obrazec];
 }
 
 function renderNaloga(naloga, { naslov, vir }) {
@@ -165,7 +318,16 @@ function renderNaloga(naloga, { naslov, vir }) {
   if (vir) {
     const p = naloga.pola;
     const kje = [`Matura ${imeRoka(p)}`, imeRavni(p.raven), p.stevilka ? `izpitna pola ${p.stevilka}` : "", `naloga ${naloga.id}`];
-    kartica.append(el("p", "mn-vir", kje.filter(Boolean).join(", ")));
+    // Povezava na isto nalogo v celotni poli (stran leta odpre polo in skoči na nalogo)
+    const vrstica = el("p", "mn-vir", `${kje.filter(Boolean).join(", ")} · `);
+    const vPoli = povezava(
+      `${OSNOVA}/pole/leto.html?leto=${p.leto}${ENA_RAVEN ? "" : `&raven=${p.raven}`}#${p.id}-${naloga.id}`,
+      "Odpri v poli ↗",
+      "mn-v-poli"
+    );
+    vPoli.title = "Odpri to nalogo v celotni maturitetni poli";
+    vrstica.append(vPoli);
+    kartica.append(vrstica);
   }
 
   if (naloga.pola?.priloga) {
@@ -189,9 +351,12 @@ function renderNaloga(naloga, { naslov, vir }) {
     kartica.append(p);
   }
 
+  // Dijak izbere ali vpiše odgovor, strežnik ga preveri
+  if (naloga.odklenjena && naloga.odgovor) kartica.append(...obrazecOdgovora(naloga, kartica));
+
   const akcije = el("div", "naloga-akcije");
-  const gResitev = gumb("Rešitev");
-  const gPostopek = gumb("Postopek");
+  const gResitev = gumb("Prikaži rezultat");
+  const gPostopek = gumb("Prikaži postopek");
   akcije.append(gResitev, gPostopek);
   kartica.append(akcije);
 
@@ -199,7 +364,7 @@ function renderNaloga(naloga, { naslov, vir }) {
     const postopek = el("div", "naloga-postopek mn-postopek");
     postopek.append(el("h4", "", "Postopek"), el("div", "", naloga.razlaga ?? ""));
     const resitev = el("div", "naloga-postopek mn-resitev");
-    resitev.append(el("p", "naloga-rezultat", `<strong>Rešitev:</strong> ${naloga.rezultat}`));
+    resitev.append(el("p", "naloga-rezultat", `<strong>Rezultat:</strong> ${naloga.rezultat}`));
     kartica.append(postopek, resitev);
   } else {
     const zaklep = zaklenjeno(naloga);
@@ -514,6 +679,12 @@ async function stranPole() {
   koren.replaceChildren(...(ravni.length > 1 ? [izbira] : []), vrstica, vsebina);
   izrisi();
   await poIzrisu(vsebina);
+  // Povezava z naloge po snovi (#<pola>-<naloga>): pola je že odprta, skoči na nalogo
+  const cilj = location.hash && document.getElementById(decodeURIComponent(location.hash.slice(1)));
+  if (cilj) {
+    cilj.scrollIntoView({ block: "start" });
+    cilj.classList.add("mn-izbrana");
+  }
 }
 
 // ------------------------------------------------------------

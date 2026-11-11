@@ -196,6 +196,22 @@ zato se sama pojavi na strani poglavja:
 }
 ```
 
+Na vsaki strani z razlago (`…/snov/<slug>/<slug>_razlaga.html`) `components.js` pod glavo doda povezavo
+»Maturitetne naloge iz te snovi« na `po_snovi/naloge.html?poglavje=<slug>`, če ima snov vsaj eno nalogo
+(število vrne `GET /api/matura/stevilo?predmet=…`). Naloge na strani snovi se ne prepisujejo: berejo se iz istih pol,
+vsaka ima povezavo »Odpri v poli«, ki odpre polo na strani leta in skoči na nalogo (`#<id pole>-<id naloge>`).
+
+Na straneh nalog po snovi dijak odgovor tudi odda (`POST /api/matura/odgovor`, `api/utils/matura-odgovor.js`).
+Pravilni odgovor se ne vpisuje posebej, prebere se iz `rezultat`:
+
+- **izbirna naloga** (`<ol class="pola-izbire">`, rezultat je črka ali npr. »B in D«): dijak klikne odgovor, strežnik ga preveri;
+- **ostale naloge**: rezultat se razdeli na dele (2.1., 2.2. …), za vsak del je polje. Del, ki je eno samo število
+  (»h ≈ 10 m«, »\(x = \dfrac{7}{2}\)«), preveri strežnik (toleranca je zaokroževanje zadnje števke, pri fiziki in kemiji vsaj 1 %;
+  enota je napisana ob polju). Pri besedilnih delih in delih z več vrednostmi dijak po oddaji vidi rešitev tega dela in jo primerja s svojo;
+- **esej** nima polja.
+
+Gumba pri vsaki nalogi sta Prikaži rezultat in Prikaži postopek. Odgovor lahko preveri samo, kdor sme videti rešitve pole.
+
 Besedila nalog RIC so avtorsko zaščitena: brez dovoljenja RIC pusti `besedilo` prazno in v `pdf`
 povezavo na uradno polo na ric.si. Novo leto dodaš v `matura.json` in kot povezavo v `sidebar.html`.
 

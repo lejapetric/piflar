@@ -204,3 +204,13 @@ test("slovenščina: 34 pol (esej + razčlemba), pola 2 s prilogo, zadnji rok ja
   assert.equal(naloge.body.length, 36);
   assert.ok(naloge.body.every((n) => n.snov.startsWith("/views/slovenscina/snov/esej/esej_razlaga.html#dela-")));
 });
+
+test("število nalog po snovi se ujema s stranjo poglavja (naloga v več snoveh šteje pri vsaki)", () => {
+  const { status, body } = poklici(ctrl.maturaStevilo, { query: { predmet: "fizika" } });
+  assert.equal(status, 200);
+  for (const slug of ["nihanje", "indukcija"]) {
+    const naloge = poklici(ctrl.maturaNaloge, { query: { predmet: "fizika", poglavje: slug } }).body;
+    assert.equal(body[slug], naloge.length);
+  }
+  assert.deepEqual(poklici(ctrl.maturaStevilo, { query: { predmet: "zgodovina" } }).body, {});
+});

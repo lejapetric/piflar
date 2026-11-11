@@ -3,6 +3,7 @@
 // poli vsakega predmeta in ravni, pri ostalih pa samo plačnikom tega predmeta.
 import { matura } from "../data/index.js";
 import { javneResenePole, lahkoVidiResitve, jeResena } from "../utils/dostop.js";
+import { oblikaOdgovora, preveriMaturitetni } from "../utils/matura-odgovor.js";
 
 const javne = javneResenePole(matura);
 
@@ -55,10 +56,42 @@ const maturaNaloge = (req, res) => {
       if (izbrana && !poglavjaNaloge(naloga).some((p) => izbrana.has(p))) continue;
       // Naloga, ki potrebuje celotno izhodiščno besedilo (slovenščina, pola 2), dobi tudi prilogo pole
       const pola_ = naloga.priloga && pola.priloga ? { ...vir, priloga: pola.priloga } : vir;
-      naloge.push({ ...prikazNaloge(naloga, odklenjena), resena: Boolean(naloga.razlaga), odklenjena, pola: pola_ });
+      naloge.push({
+        ...prikazNaloge(naloga, odklenjena), resena: Boolean(naloga.razlaga), odklenjena, pola: pola_,
+        odgovor: naloga.rezultat ? oblikaOdgovora(naloga, pola.predmet) : null,
+      });
     }
   }
   res.status(200).json(naloge);
+};
+
+// GET /api/matura/stevilo?predmet=fizika → { nihanje: 42, … }
+// Koliko maturitetnih nalog je v vsakem poglavju (za povezavo na straneh z razlago).
+const maturaStevilo = (req, res) => {
+  const stevilo = {};
+  for (const pola of filtriraj(razvrscene, req.query)) {
+    for (const naloga of pola.naloge ?? []) {
+      for (const slug of new Set(poglavjaNaloge(naloga))) stevilo[slug] = (stevilo[slug] ?? 0) + 1;
+    }
+  }
+  res.status(200).json(stevilo);
+};
+
+// POST /api/matura/odgovor  { "pola": "fizika-2025-spomladanski-1", "naloga": "26", "odgovor": "B" }
+// Izbirna naloga: odgovor je črka (ali seznam črk). Ostale: seznam odgovorov po delih (2.1., 2.2. …).
+// Številske dele preveri strežnik, pri ostalih vrne rešitev dela, da jo dijak primerja s svojo.
+const maturaOdgovor = (req, res) => {
+  const { pola: polaId, naloga: nalogaId, odgovor } = req.body ?? {};
+  const pola = matura.find((p) => p.id === polaId);
+  const naloga = pola?.naloge?.find((n) => n.id === String(nalogaId));
+  if (!naloga || !naloga.rezultat) return res.status(404).json({ message: "Naloga ne obstaja." });
+  if (!lahkoVidiResitve(req.uporabnik, pola, javne))
+    return res.status(403).json({ message: "Rešitve te pole so na voljo s paketom." });
+  const vneseni = [odgovor ?? []].flat();
+  if (vneseni.length > 30 || vneseni.some((v) => typeof v !== "string" || v.length > 2000))
+    return res.status(400).json({ message: "Odgovor ni veljaven." });
+  if (vneseni.every((v) => v.trim() === "")) return res.status(400).json({ message: "Vpiši ali izberi odgovor." });
+  res.status(200).json(preveriMaturitetni(naloga, pola.predmet, odgovor));
 };
 
 // GET /api/matura/:maturaId
@@ -68,4 +101,4 @@ const maturaReadOne = (req, res) => {
   res.status(200).json(prikazPole(pola, req.uporabnik, true));
 };
 
-export default { maturaList, maturaNaloge, maturaReadOne };
+export default { maturaList, maturaNaloge, maturaStevilo, maturaOdgovor, maturaReadOne };
