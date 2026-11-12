@@ -1,0 +1,18 @@
+export default [
+  { t: 4, b: "Rezultati testa so 4, 6, 6, 8, 11. Kolikšna je aritmetična sredina?", v: 7, rez: "7",
+    post: "<p>(4 + 6 + 6 + 8 + 11) / 5 = 35 / 5 = 7. Mediana je 6, modus 6.</p>" },
+  { t: 4, b: "Rezultati so 2, 4, 4, 4, 5, 5, 7, 9. Kolikšen je standardni odklon populacije?", v: 2, rez: "2",
+    post: "<p>M = 5. Kvadrati odklonov: 9, 1, 1, 1, 0, 0, 4, 16 = 32; varianca 32/8 = 4; SD = 2.</p>" },
+  { t: 4, b: "IQ ima povprečje 100 in standardni odklon 15. Kolikšen je z-rezultat osebe z IQ 130?", v: 2, rez: "z = 2",
+    post: "<p>z = (130 − 100) / 15 = 2. Pri normalni porazdelitvi ima višji rezultat le okoli 2,3 % ljudi.</p>" },
+  { t: 4, b: "Približno kolikšen odstotek ljudi ima pri normalni porazdelitvi rezultat med M − 1 SD in M + 1 SD?", v: 68, tol: 1, enota: "%", rez: "≈ 68 %",
+    post: "<p>Pravilo 68–95–99,7: ±1 SD ≈ 68 %, ±2 SD ≈ 95 %, ±3 SD ≈ 99,7 %.</p>" },
+  { t: 4, b: "Korelacija med časom učenja in oceno je r = 0,6. Kolikšen delež variance ocen pojasni čas učenja?", v: 36, enota: "%", tol: 0.5, rez: "36 %",
+    post: "<p>Koeficient determinacije r² = 0,36, torej 36 %. Korelacija ne dokazuje vzročnosti.</p>" },
+  { t: 4, b: "Raziskava pokaže, da otroci, ki več gledajo nasilne risanke, kažejo več agresivnosti (r = 0,4). Kaj lahko sklepamo?", p: "med spremenljivkama je zmerna pozitivna povezanost, vzročnosti pa ne moremo sklepati", n: ["gledanje risank povzroča agresivnost", "agresivnost povzroča gledanje risank", "med spremenljivkama ni povezanosti"],
+    post: "<p>Korelacija lahko izhaja iz tretje spremenljivke (npr. vzgoja) ali obratne smeri vpliva. Vzročnost preverjamo z eksperimentom.</p>" },
+  { t: 4, b: "Pri katerem rezultatu je porazdelitev desno asimetrična (pozitivno)?", p: "aritmetična sredina je večja od mediane, ker ima nekaj zelo visokih vrednosti", n: ["aritmetična sredina je manjša od mediane", "sredina, mediana in modus so enaki", "porazdelitev je simetrična"],
+    post: "<p>Pri dohodkih nekaj zelo visokih plač potegne sredino navzgor; mediana je zato boljša mera.</p>" },
+  { t: 4, b: "Razlika med skupinama je statistično pomembna pri p < 0,05. Kaj to pomeni?", p: "verjetnost, da bi tako razliko dobili naključno, če v populaciji razlike ni, je manj kot 5 %", n: ["razlika je zagotovo velika in pomembna v praksi", "hipoteza je 95-odstotno pravilna", "5 % udeležencev je imelo napačne odgovore"],
+    post: "<p>Statistična pomembnost ne pove velikosti učinka. Velikost meri npr. Cohenov d.</p>" },
+];

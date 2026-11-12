@@ -1,0 +1,16 @@
+export default [
+  { t: 4, b: "Kaj opisuje Webrov zakon?", p: "najmanjša zaznavna razlika je stalen delež izhodiščne jakosti dražljaja", n: ["absolutni prag je enak za vse dražljaje", "zaznava je neodvisna od jakosti", "zaznavna razlika je vedno enaka v absolutnih enotah"],
+    post: "<p>Če pri 100 g zaznamo razliko 2 g, pri 1000 g potrebujemo 20 g.</p>" },
+  { t: 4, b: "Kaj je razlika med procesiranjem od spodaj navzgor in od zgoraj navzdol?", p: "od spodaj navzgor gradi zaznavo iz čutnih podatkov, od zgoraj navzdol jo usmerjajo pričakovanja in znanje", n: ["ni razlike", "od zgoraj navzdol je le pri vidu", "od spodaj navzgor je le pri sluhu"],
+    post: "<p>Primer od zgoraj navzdol: preberemo besedo z manjkajočo črko, ker jo pričakujemo.</p>" },
+  { t: 4, b: "Kaj je stalnost velikosti v zaznavanju?", p: "predmet zaznavamo kot enako velik, čeprav je njegova slika na mrežnici manjša, ko se oddalji", n: ["predmeti se zdijo manjši, ko se oddaljijo", "predmeti spreminjajo barvo", "zaznava velikosti je odvisna le od svetlobe"],
+    post: "<p>Možgani upoštevajo oddaljenost. Amesova soba to stalnost zavede.</p>" },
+  { t: 4, b: "Katero geštaltistično načelo pojasni, da prekinjeno črto vidimo kot sklenjen krog?", p: "zaprtost", n: ["bližina", "podobnost", "figura in ozadje"],
+    post: "<p>Načela geštalta: bližina, podobnost, zaprtost, kontinuiteta, figura–ozadje.</p>" },
+  { t: 4, b: "Kaj je selektivna pozornost (učinek koktajl zabave)?", p: "v hrupu sledimo enemu pogovoru, a vseeno zaznamo svoje ime iz drugega pogovora", n: ["ne slišimo nobenega pogovora", "slišimo vse pogovore enako", "pozornost ni omejena"],
+    post: "<p>Cherry je to raziskoval z dihotičnim poslušanjem. Neopazovani kanal se delno obdeluje.</p>" },
+  { t: 4, b: "Kaj je slepota zaradi nepozornosti (gorila poskus)?", p: "ko je pozornost usmerjena v nalogo, lahko spregledamo nepričakovan, očiten dogodek", n: ["okvara vidnega živca", "slepota za barve", "slepota v temi"],
+    post: "<p>Simons in Chabris: polovica opazovalcev med štetjem podaj ni opazila osebe v kostumu gorile.</p>" },
+  { t: 4, b: "Katera globinska znaka sta binokularna?", p: "binokularna disparatnost in konvergenca oči", n: ["perspektiva in prekrivanje", "gradient teksture in velikost", "senca in višina v vidnem polju"],
+    post: "<p>Binokularni znaki zahtevajo obe očesi. Drugi navedeni so monokularni.</p>" },
+];

@@ -1,0 +1,16 @@
+export default [
+  { t: 4, b: "Kako se razlikujeta James-Langejeva in Cannon-Bardova teorija čustev?", p: "James-Lange: telesni odziv je vzrok čustva; Cannon-Bard: telesni odziv in čustvo nastaneta hkrati in neodvisno", n: ["obe trdita, da čustvo povzroči telesni odziv", "James-Lange: čustvo nastane hkrati, Cannon-Bard: telesni odziv prvi", "obe zanikata telesne odzive"],
+    post: "<p>James: »Žalostni smo, ker jočemo.« Cannon je opozoril, da so telesni odzivi pri različnih čustvih podobni in prepočasni.</p>" },
+  { t: 4, b: "Kaj je ključni dodatek Schachter-Singerjeve dvofaktorske teorije čustev?", p: "čustvo nastane iz telesnega vzburjenja in kognitivne interpretacije (oznake) tega vzburjenja", n: ["čustvo je le telesni odziv", "čustvo je le misel brez vzburjenja", "čustva so prirojena in se ne spreminjajo"],
+    post: "<p>V poskusu z adrenalinom so neobveščeni udeleženci svoje vzburjenje pripisali veselemu ali jeznemu sodelavcu.</p>" },
+  { t: 4, b: "Kaj je značilno za temeljna čustva po Ekmanu?", p: "so univerzalna, prepoznana v vseh kulturah po obraznih izrazih (npr. veselje, žalost, strah, jeza, gnus, presenečenje)", n: ["so naučena in različna v vsaki kulturi", "jih kažejo le odrasli", "jih je mogoče prepoznati le po glasu"],
+    post: "<p>Ekman je raziskoval tudi pri plemenu Fore na Novi Gvineji, ki ni poznalo zahodnih medijev.</p>" },
+  { t: 4, b: "Katera možganska struktura je ključna pri hitrem odzivu strahu?", p: "amigdala", n: ["mali možgani", "Brocovo središče", "okcipitalni reženj"],
+    post: "<p>LeDoux: kratka pot talamus → amigdala omogoči odziv pred zavestnim prepoznanjem; dolga pot prek skorje omogoči oceno.</p>" },
+  { t: 4, b: "Kaj opisuje Yerkes-Dodsonov zakon?", p: "uspešnost je največja pri srednji ravni vzburjenja; pri zahtevnih nalogah je optimum nižji", n: ["več vzburjenja vedno pomeni boljšo uspešnost", "vzburjenje ne vpliva na uspešnost", "uspešnost je največja pri najnižjem vzburjenju"],
+    post: "<p>Odnos ima obliko obrnjene črke U. Prevelika trema na izpitu zato poslabša rezultat.</p>" },
+  { t: 4, b: "Kaj je čustvena inteligentnost (Salovey, Mayer, Goleman)?", p: "zmožnost zaznavanja, razumevanja, uravnavanja in uporabe lastnih in tujih čustev", n: ["inteligentnost, merjena z IQ testi", "nagnjenost k močnim čustvom", "potlačevanje čustev"],
+    post: "<p>Goleman jo je populariziral; raziskovalci se razhajajo, ali gre za samostojno sposobnost.</p>" },
+  { t: 4, b: "Kaj pomeni Lazarusova kognitivna ocena pri stresu?", p: "doživljanje stresa je odvisno od tega, kako ocenimo grožnjo (primarna ocena) in svoje možnosti spoprijemanja (sekundarna ocena)", n: ["stres je odvisen le od dogodka", "stres je vedno škodljiv", "stres je enak pri vseh ljudeh"],
+    post: "<p>Isti izpit je za enega izziv, za drugega grožnja.</p>" },
+];

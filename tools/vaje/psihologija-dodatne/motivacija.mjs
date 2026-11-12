@@ -1,0 +1,16 @@
+export default [
+  { t: 4, b: "Kaj je učinek prekomerne upravičenosti?", p: "zunanja nagrada za dejavnost, ki nas notranje zanima, lahko zmanjša notranjo motivacijo", n: ["nagrada vedno poveča motivacijo", "kazen poveča notranjo motivacijo", "notranja motivacija ni odvisna od nagrad"],
+    post: "<p>Lepper in sodelavci: otroci, nagrajeni za risanje, so pozneje manj risali sami od sebe.</p>" },
+  { t: 4, b: "Katere tri temeljne potrebe navaja teorija samodoločenosti (Deci, Ryan)?", p: "avtonomija, kompetentnost, povezanost", n: ["hrana, voda, spanje", "moč, denar, slava", "varnost, ljubezen, spoštovanje"],
+    post: "<p>Ko so potrebe zadovoljene, se krepi notranja motivacija in dobro počutje.</p>" },
+  { t: 4, b: "Kaj je značilno za Maslowo hierarhijo potreb?", p: "višje potrebe (spoštovanje, samoaktualizacija) postanejo pomembne, ko so v veliki meri zadovoljene nižje (fiziološke, varnost)", n: ["vse potrebe so enako pomembne hkrati", "samoaktualizacija je najnižja potreba", "potrebe se ne spreminjajo"],
+    post: "<p>Kritika: hierarhija ni toga, ljudje včasih žrtvujejo nižje potrebe za višje.</p>" },
+  { t: 4, b: "Kaj je homeostaza v razlagi bioloških motivov?", p: "težnja organizma, da ohranja stalno notranje okolje; odklon sproži potrebo in nagon", n: ["težnja k vedno višjemu vzburjenju", "naučena navada", "družbena norma"],
+    post: "<p>Teorija redukcije nagona (Hull): žeja sproži pitje, ki zmanjša nagon.</p>" },
+  { t: 4, b: "Kaj je motiv dosežka (McClelland)?", p: "težnja, da dosežemo standard odličnosti; osebe z visokim motivom izbirajo srednje težke naloge", n: ["težnja po izogibanju vsem nalogam", "želja po moči nad drugimi", "potreba po pripadnosti"],
+    post: "<p>Prelahke naloge ne prinesejo zadovoljstva, pretežke pa vodijo v neuspeh.</p>" },
+  { t: 4, b: "Kaj je konflikt približevanje–izogibanje (Lewin)?", p: "isti cilj ima hkrati privlačne in odbijajoče lastnosti", n: ["izbira med dvema privlačnima ciljema", "izbira med dvema neprijetnima ciljema", "ni konflikta"],
+    post: "<p>Primer: zanima te zahtevna smer, a se bojiš neuspeha. Bližje ko je cilj, močnejše postane izogibanje.</p>" },
+  { t: 4, b: "Kaj opisuje Weinerjeva atribucijska teorija motivacije?", p: "motivacijo pojasnjuje s tem, kako si razlagamo uspeh ali neuspeh: notranje/zunanje, stalno/spremenljivo, obvladljivo/neobvladljivo", n: ["motivacija je odvisna le od nagrade", "motivacija je prirojena", "vsi uspeh pripisujejo sreči"],
+    post: "<p>Če neuspeh pripišemo premalo truda (notranje, spremenljivo), bomo bolj motivirani kot pri pripisu sposobnosti.</p>" },
+];

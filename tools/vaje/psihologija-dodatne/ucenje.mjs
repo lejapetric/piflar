@@ -1,0 +1,16 @@
+export default [
+  { t: 4, b: "Pri Pavlovu je pes po pogojevanju slinil ob zvoku zvonca. Kaj je pogojni dražljaj in kaj brezpogojni?", p: "pogojni dražljaj je zvonec, brezpogojni hrana", n: ["pogojni je hrana, brezpogojni zvonec", "pogojni je slinjenje, brezpogojni zvonec", "oba sta zvonec"],
+    post: "<p>Slinjenje ob hrani je brezpogojni odziv, slinjenje ob zvoncu pogojni odziv.</p>" },
+  { t: 4, b: "Kaj je negativna okrepitev?", p: "odstranitev neprijetnega dražljaja, ki poveča verjetnost vedenja", n: ["kazen, ki zmanjša vedenje", "nagrada, ki zmanjša vedenje", "dodajanje neprijetnega dražljaja"],
+    post: "<p>Primer: pripneš pas, da preneha piskanje. Negativna okrepitev ni kazen.</p>" },
+  { t: 4, b: "Kateri urnik okrepitve vodi do vedenja, ki je najbolj odporno proti ugašanju?", p: "spremenljivo razmerje (npr. igralni avtomati)", n: ["stalna okrepitev vsakega odziva", "stalni interval", "brez okrepitve"],
+    post: "<p>Pri spremenljivem razmerju ne vemo, kdaj bo nagrada, zato vedenje vztraja dolgo po prenehanju okrepitev.</p>" },
+  { t: 4, b: "Kaj je pokazal Bandurov poskus z lutko Bobo?", p: "otroci so posnemali agresivno vedenje modela, ki so ga opazovali, brez neposredne okrepitve", n: ["otroci se ne učijo z opazovanjem", "agresivnost je le prirojena", "otroci posnemajo le starše"],
+    post: "<p>Učenje z opazovanjem: pozornost, zapomnitev, izvedba, motivacija. Če je bil model kaznovan, so ga manj posnemali.</p>" },
+  { t: 4, b: "Kaj je naučena nemoč (Seligman)?", p: "po ponavljajočih se neobvladljivih neprijetnostih organizem neha poskušati, tudi ko bi se lahko izognil", n: ["naučena spretnost", "pozabljanje", "nagrajeno vedenje"],
+    post: "<p>Psi, ki se niso mogli izogniti šoku, pozneje niso preskočili ovire, čeprav bi lahko. Povezava z depresijo.</p>" },
+  { t: 4, b: "Kaj je latentno učenje (Tolman)?", p: "učenje, ki poteka brez okrepitve in se pokaže šele, ko se pojavi nagrada", n: ["učenje s kaznijo", "učenje le s ponavljanjem", "učenje, ki se nikoli ne pokaže"],
+    post: "<p>Podgane, ki so labirint raziskovale brez hrane, so ga hitro prehodile, ko je bila hrana uvedena: oblikovale so kognitivni zemljevid.</p>" },
+  { t: 4, b: "Kaj je spontana obnovitev pri klasičnem pogojevanju?", p: "ponoven pojav ugaslega pogojnega odziva po premoru", n: ["popolna izguba odziva", "posplošitev na podobne dražljaje", "razlikovanje dražljajev"],
+    post: "<p>Ugašanje ne izbriše povezave v celoti, le zavre jo.</p>" },
+];

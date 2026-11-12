@@ -1,0 +1,16 @@
+export default [
+  { t: 4, b: "Kaj je temeljna napaka pripisovanja?", p: "težnja, da vedenje drugih pripisujemo njihovim notranjim lastnostim, premalo pa upoštevamo okoliščine", n: ["težnja, da svoje uspehe pripisujemo sreči", "težnja, da drugim vedno pripisujemo dobre namene", "napaka pri štetju udeležencev"],
+    post: "<p>Pri sebi pogosteje navajamo okoliščine (učinek akter–opazovalec). Pogostejša je v individualističnih kulturah.</p>" },
+  { t: 4, b: "Kaj je samopotrjujoča se napoved?", p: "pričakovanje o drugi osebi spremeni naše vedenje tako, da oseba res začne ravnati v skladu s pričakovanjem", n: ["napoved, ki se nikoli ne uresniči", "napoved vremena", "oseba sama sebi napove uspeh"],
+    post: "<p>Rosenthal in Jacobson (Pigmalion v razredu): učenci, za katere so učitelji pričakovali napredek, so res napredovali.</p>" },
+  { t: 4, b: "Kateri dejavnik je po raziskavah zelo pomemben za nastanek prijateljstva?", p: "bližina in pogostost stikov ter podobnost stališč", n: ["popolna različnost", "čim manj stikov", "le fizična privlačnost"],
+    post: "<p>Učinek zgolj izpostavljenosti (Zajonc): kar pogosto srečujemo, nam postane bolj všeč.</p>" },
+  { t: 4, b: "Kaj je haloefekt (učinek svetniškega sija)?", p: "ena pozitivna lastnost (npr. privlačnost) vpliva na to, da osebi pripišemo še druge pozitivne lastnosti", n: ["negativen prvi vtis je vedno pravilen", "ljudje so do tujcev prijaznejši", "osebe z več prijatelji so bolj zadovoljne"],
+    post: "<p>Privlačnim osebam pogosto pripišemo inteligentnost in poštenost brez razloga.</p>" },
+  { t: 4, b: "Kaj je Sternbergov trikotnik ljubezni?", p: "ljubezen sestavljajo intimnost, strast in zavezanost; popolna ljubezen vsebuje vse tri", n: ["ljubezen sestavljajo le strast, ljubosumje in navada", "ljubezen ima tri faze: zaljubljenost, poroka, ločitev", "trikotnik med tremi partnerji"],
+    post: "<p>Primeri: romantična ljubezen (intimnost + strast), prazna ljubezen (le zavezanost).</p>" },
+  { t: 4, b: "Kaj opisuje teorija socialne izmenjave pri odnosih?", p: "odnos ohranjamo, dokler so nagrade večje od stroškov in ni boljše alternative", n: ["odnosi so vedno nesebični", "odnos je odvisen le od usode", "odnose ohranjamo ne glede na stroške"],
+    post: "<p>Teorija pravičnosti dodaja: pomembno je, da je razmerje dajanja in prejemanja uravnoteženo.</p>" },
+  { t: 4, b: "Kaj pravi kontaktna hipoteza (Allport) o zmanjšanju predsodkov?", p: "stik med skupinama zmanjša predsodke, če imata enak položaj, skupen cilj, sodelujeta in je stik podprt", n: ["vsak stik vedno zmanjša predsodke", "stik vedno poveča predsodke", "predsodkov ni mogoče zmanjšati"],
+    post: "<p>Sherifov poskus v Robbers Cave: šele skupni nadrejeni cilji so zmanjšali sovražnost med skupinama.</p>" },
+];
