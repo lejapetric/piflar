@@ -1,0 +1,16 @@
+export default [
+  { t: 4, b: "Kakšna je po Nietzscheju razlika med moralo gospodarjev in moralo sužnjev?", p: "gospodarji vrednotijo dobro iz lastne moči, sužnji iz resentimenta označijo močne kot zle in sebe kot dobre", n: ["gospodarji so dobri, sužnji zli", "obe sta enaki, različna je le družbena vloga", "morala sužnjev temelji na moči, gospodarjev na ponižnosti"],
+    post: "<p>Prva razprava Genealogije: »dobro–slabo« (gospodarji) in »dobro–zlo« (sužnji).</p>" },
+  { t: 4, b: "Kaj je resentiment?", p: "zamera nemočnih, ki ne morejo delovati, zato se maščujejo v domišljiji z novimi vrednotami", n: ["odpuščanje sovražnikom", "aristokratska samozavest", "znanstvena nepristranskost"],
+    post: "<p>Iz resentimenta nastane »upor sužnjev v morali«, ki ga Nietzsche povezuje z judovsko-krščansko tradicijo.</p>" },
+  { t: 4, b: "Kako Nietzsche razlaga izvor slabe vesti?", p: "nagoni, ki se ne morejo sprostiti navzven (zaradi družbe), se obrnejo navznoter proti človeku samemu", n: ["izvira iz božjega glasu", "je prirojena moralna zmožnost", "nastane iz razumskega spoznanja dolžnosti"],
+    post: "<p>Druga razprava: ponotranjenje nagonov. Povezuje jo tudi z odnosom upnik–dolžnik (Schuld = krivda in dolg).</p>" },
+  { t: 4, b: "Kaj je asketski ideal po Nietzscheju (tretja razprava)?", p: "zanikanje življenja, ki mu da smisel trpljenju; človek raje hoče nič kot da nič ne hoče", n: ["popolna izpolnitev nagonov", "znanstveni pozitivizem", "ideal gospodarske morale"],
+    post: "<p>Asketski ideal služi duhovniku kot oblast nad trpečimi. Nietzsche ga vidi tudi v znanstveni volji do resnice.</p>" },
+  { t: 4, b: "Kaj pomeni genealoška metoda pri Nietzscheju?", p: "raziskovanje zgodovinskega izvora moralnih pojmov, da se pokaže, da niso večni ali naravni", n: ["dokazovanje, da so moralne vrednote večne", "raziskovanje rodoslovja plemiških družin", "logična analiza moralnih sodb"],
+    post: "<p>Genealogija razkrije, da so vrednote nastale iz razmerij moči. Tako jih lahko prevrednotimo.</p>" },
+  { t: 4, b: "Kako Nietzsche razume »voljo do moči«?", p: "kot temeljno silo vsega živega, težnjo k rasti, samopotrjevanju in preseganju", n: ["kot željo po politični oblasti nad drugimi", "kot voljo do preživetja za vsako ceno", "kot moralno dolžnost"],
+    post: "<p>Nietzsche zavrača darvinistični poudarek na samoohranitvi: življenje hoče več kot le preživeti.</p>" },
+  { t: 4, b: "Zakaj Nietzsche kritizira »angleške psihologe« morale?", p: "ker izvor pojma dobro iščejo v koristnosti nesebičnih dejanj, kar je zgodovinsko napačno", n: ["ker zagovarjajo moralo gospodarjev", "ker zanikajo obstoj morale", "ker so bili verni"],
+    post: "<p>Po Nietzscheju so »dobri« sprva sebe imenovali plemeniti, ne prejemniki koristi.</p>" },
+];

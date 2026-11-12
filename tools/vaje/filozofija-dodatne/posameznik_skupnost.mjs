@@ -1,0 +1,18 @@
+export default [
+  { t: 4, b: "Kakšna je razlika med Hobbesovim in Lockovim naravnim stanjem?", p: "pri Hobbesu je vojna vseh proti vsem, pri Locku vladajo naravni zakon in naravne pravice (življenje, svoboda, lastnina)", n: ["pri obeh je mir in harmonija", "pri Hobbesu so pravice, pri Locku vojna", "oba zanikata naravno stanje"],
+    post: "<p>Hobbes zato zagovarja absolutnega suverena (Leviatan), Locke omejeno oblast z pravico do upora.</p>" },
+  { t: 4, b: "Kaj je po Rousseauju obča volja (volonté générale)?", p: "volja skupnosti, ki teži k skupnemu dobremu in ni le seštevek zasebnih interesov", n: ["volja večine na volitvah", "volja vladarja", "seštevek zasebnih volj"],
+    post: "<p>Rousseau loči obče voljo od volje vseh (volonté de tous), ki je vsota zasebnih interesov.</p>" },
+  { t: 4, b: "Kaj je Rawlsova »tančica nevednosti«?", p: "miselni preizkus, v katerem izbiramo načela pravičnosti, ne da bi vedeli, kakšen položaj bomo imeli v družbi", n: ["nevednost državljanov o zakonih", "skrivanje informacij v vladi", "zahteva, da filozofi ne poznajo zgodovine"],
+    post: "<p>Iz izvornega položaja Rawls izpelje enako svobodo za vse in načelo razlike (neenakosti le v korist najslabše stoječih).</p>" },
+  { t: 4, b: "Kaj je Aristotel mislil z izrekom, da je človek »zoon politikon«?", p: "da je človek po naravi družbeno bitje, ki se uresniči šele v skupnosti (polis)", n: ["da je človek rojen politik", "da se človek najbolje razvije sam", "da je država umetna in nenaravna"],
+    post: "<p>Kdor živi zunaj skupnosti, je »bodisi žival bodisi bog«. Država je po naravi pred posameznikom.</p>" },
+  { t: 4, b: "Kakšno je načelo škode pri J. S. Millu?", p: "oblast sme omejiti svobodo posameznika le zato, da prepreči škodo drugim", n: ["oblast sme omejiti svobodo za dobro posameznika samega", "svoboda je vedno neomejena", "večina vedno odloča o zasebnem življenju"],
+    post: "<p>O svobodi (1859): nad samim seboj je posameznik suveren. Mill svari tudi pred tiranijo večine.</p>" },
+  { t: 4, b: "Kaj je pozitivna in kaj negativna svoboda (Berlin)?", p: "negativna: odsotnost zunanjih ovir; pozitivna: možnost samouresničevanja in samoodločanja", n: ["pozitivna je dobra, negativna slaba", "negativna je svoboda zločina, pozitivna dobrota", "obe sta enaki"],
+    post: "<p>Isaiah Berlin (Dva pojma svobode, 1958). Pozitivna svoboda je lahko zlorabljena za prisilo »v imenu prave volje«.</p>" },
+  { t: 4, b: "Kako Marx razume odtujitev dela?", p: "delavec je odtujen od izdelka, procesa dela, svojega človeškega bistva in drugih ljudi", n: ["delavec je odtujen samo od plače", "odtujitev je naraven in nujen del dela", "odtujitev doživljajo le lastniki kapitala"],
+    post: "<p>Ekonomsko-filozofski rokopisi (1844). Vzrok vidi v zasebni lasti proizvajalnih sredstev.</p>" },
+  { t: 4, b: "Kaj je družbena pogodba v Hobbesovi filozofiji?", p: "dogovor, s katerim ljudje predajo svoje naravne pravice suverenu v zameno za varnost", n: ["dogovor med kraljem in cerkvijo", "pisna ustava države", "dogovor, ki ga lahko vsak kadarkoli prekliče"],
+    post: "<p>Pri Hobbesu je strah pred nasilno smrtjo glavni motiv; suveren je nad pogodbo.</p>" },
+];

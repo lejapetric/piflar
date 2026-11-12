@@ -1,0 +1,18 @@
+export default [
+  { t: 4, b: "Kaj je prvi korak pri komentiranju filozofskega besedila?", p: "prepoznati osrednjo tezo in avtorjev problem", n: ["oceniti, ali se strinjaš z avtorjem", "našteti vse avtorjeve knjige", "prepisati besedilo"],
+    post: "<p>Najprej razumevanje: kaj avtor trdi in zakaj. Šele nato rekonstrukcija argumenta in kritična ocena.</p>" },
+  { t: 4, b: "Kaj pomeni rekonstruirati argument v besedilu?", p: "izluščiti premise in sklep ter pokazati, kako sklep sledi iz premis", n: ["napisati povzetek vsebine", "poiskati avtorjev življenjepis", "navesti protiargumente drugih filozofov"],
+    post: "<p>Rekonstrukcija pogosto razkrije skrite (implicitne) premise.</p>" },
+  { t: 4, b: "Kaj je principle of charity (načelo dobrohotnosti) pri razlagi besedila?", p: "avtorjevo stališče razlagamo v najmočnejši možni obliki, preden ga kritiziramo", n: ["avtorja vedno pohvalimo", "besedilo razlagamo tako, da ga je najlažje zavrniti", "upoštevamo le avtorjeve zasebne namene"],
+    post: "<p>Kritika slamnatega moža ni prepričljiva. Najprej najboljša različica, nato kritika.</p>" },
+  { t: 4, b: "Kakšna je razlika med veljavnostjo in pravilnostjo (utemeljenostjo) argumenta?", p: "argument je veljaven, če sklep sledi iz premis; utemeljen je, če je veljaven in so premise resnične", n: ["sta isto", "veljaven je, če so premise resnične", "utemeljen je, če ima veliko premis"],
+    post: "<p>»Vsi ptiči letijo, pingvin je ptič, torej pingvin leti« je veljaven, a neutemeljen argument.</p>" },
+  { t: 4, b: "Avtor trdi: <em>»Ker večina ljudi verjame v X, je X resničen.«</em> Katero zmoto zagreši?", p: "argumentum ad populum (sklicevanje na množico)", n: ["ad hominem", "slamnati mož", "zdrs po strmini"],
+    post: "<p>Število zagovornikov ne dokazuje resničnosti trditve.</p>" },
+  { t: 4, b: "Kaj je argumentum ad hominem?", p: "zavrnitev trditve z napadom na osebo, ne na njene razloge", n: ["sklicevanje na avtoriteto", "krožno sklepanje", "napačna analogija"],
+    post: "<p>»Tega ne verjemi, saj je on kadilec.« Lastnosti osebe ne spremenijo veljavnosti argumenta.</p>" },
+  { t: 4, b: "Kaj je petitio principii (krožni argument)?", p: "argument, ki v premisah že predpostavi sklep, ki naj bi ga dokazal", n: ["argument iz analogije", "argument iz izkušnje", "argument, ki zavrne vse premise"],
+    post: "<p>»Sveto pismo je resnično, ker je božja beseda, kar piše v Svetem pismu.«</p>" },
+  { t: 4, b: "Kako v komentarju besedila oblikuješ lastno kritično stališče?", p: "presodiš premise in sklepanje, navedeš protiprimer ali drugo stališče in utemeljiš svojo presojo", n: ["napišeš, da se strinjaš ali ne, brez razlogov", "ponoviš avtorjevo tezo z drugimi besedami", "napišeš, kaj je avtor jedel"],
+    post: "<p>Kritika mora biti argumentirana, ne le izraz okusa.</p>" },
+];

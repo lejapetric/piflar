@@ -1,0 +1,16 @@
+export default [
+  { t: 4, b: "Kaj je problem razmerja duha in telesa pri Descartesu?", p: "če sta duh (misleča substanca) in telo (razsežna substanca) popolnoma različni, ni jasno, kako vplivata drug na drugega", n: ["Descartes je trdil, da duh ne obstaja", "Descartes je zanikal obstoj telesa", "Descartes je trdil, da sta duh in telo ista substanca"],
+    post: "<p>Descartes je stik umestil v češeriko (epifizo), kar ni rešilo problema. Spinoza je predlagal eno samo substanco.</p>" },
+  { t: 4, b: "Kaj je materializem v ontologiji?", p: "nazor, da je vse, kar obstaja, materialno, tudi duševni pojavi pa so posledica materialnih procesov", n: ["prepričanje, da je denar najpomembnejši", "nazor, da obstajajo le ideje", "nazor, da obstajata dve enakovredni substanci"],
+    post: "<p>Primeri: Demokrit (atomi), francoski razsvetljenci, sodobni fizikalizem. Nasprotje je idealizem.</p>" },
+  { t: 4, b: "Kako Aristotel kritizira Platonovo teorijo idej?", p: "oblika ne obstaja ločeno od stvari, temveč je v stvareh samih kot njihovo bistvo", n: ["ideje so pomembnejše od stvari", "stvari ne obstajajo", "oblika je le iluzija"],
+    post: "<p>Argument tretjega človeka: če potrebujemo idejo za podobnost med stvarmi, potrebujemo novo idejo za podobnost med idejo in stvarmi itd.</p>" },
+  { t: 4, b: "Kaj so po Aristotelu štirje vzroki?", p: "snovni, oblikovni, dejavni (gibalni) in smotrni", n: ["zemlja, voda, zrak in ogenj", "Bog, duša, svet in človek", "prostor, čas, gibanje, snov"],
+    post: "<p>Pri kipu: bron (snovni), oblika (oblikovni), kipar (dejavni), namen (smotrni).</p>" },
+  { t: 4, b: "Kaj je Heraklitova trditev »Vse teče« (panta rhei) v nasprotju s Parmenidom?", p: "Heraklit vidi bistvo v nenehnem spreminjanju, Parmenid trdi, da je bivajoče nespremenljivo in je spreminjanje videz", n: ["oba trdita, da se nič ne spreminja", "Parmenid zagovarja spreminjanje, Heraklit stalnost", "oba sta atomista"],
+    post: "<p>»V isto reko ne moreš stopiti dvakrat.« Parmenid: »Bivajoče je, nebivajočega ni.«</p>" },
+  { t: 4, b: "Kaj je ontološki dokaz za obstoj Boga (Anzelm)?", p: "Bog je bitje, od katerega ni mogoče misliti večjega; če bi obstajal le v mišljenju, bi lahko mislili večje, zato mora obstajati", n: ["iz gibanja sklepamo na prvega gibalca", "iz reda v naravi sklepamo na načrtovalca", "iz moralnega zakona sklepamo na zakonodajalca"],
+    post: "<p>Kant je dokaz zavrnil: obstoj ni realni predikat. Drugi navedeni so kozmološki, teleološki in moralni dokaz.</p>" },
+  { t: 4, b: "Kaj je determinizem in zakaj je problem za svobodno voljo?", p: "nazor, da je vsak dogodek določen s predhodnimi vzroki; če velja, se zdi, da bi lahko ravnali le tako, kot smo", n: ["nazor, da je vse naključje", "nazor, da ljudje vedno izbirajo dobro", "nazor, da ni vzrokov"],
+    post: "<p>Kompatibilisti (npr. Hume) menijo, da sta svoboda in determinizem združljiva; libertarianci zanikajo determinizem.</p>" },
+];
