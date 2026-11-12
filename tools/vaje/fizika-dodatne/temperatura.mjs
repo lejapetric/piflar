@@ -1,0 +1,14 @@
+import { T } from "../lib.mjs";
+const x = String.raw;
+export default [
+  { t: 4, b: x`Jeklena tračnica je dolga \(25\ \mathrm{m}\) pri \(0\ ^\circ\mathrm{C}\). Kolikšna mora biti reža med tračnicama (v mm), da se pri \(40\ ^\circ\mathrm{C}\) ravno dotakneta? (\(\alpha = 1{,}2 \cdot 10^{-5}\ \mathrm{K^{-1}}\))`, v: 25 * 1.2e-5 * 40 * 1000, enota: "mm",
+    rez: x`\(12\ \mathrm{mm}\)`, post: x`<p>\(\Delta l = \alpha l \Delta T = 1{,}2 \cdot 10^{-5} \cdot 25 \cdot 40 = 0{,}012\ \mathrm{m}\)</p>` },
+  { t: 4, b: x`V jeklenki s prostornino \(20\ \mathrm{L}\) je kisik pri tlaku \(150\ \mathrm{bar}\) in temperaturi \(20\ ^\circ\mathrm{C}\). Kolikšna je masa kisika? (\(M = 32\ \mathrm{g/mol}\), \(R = 8{,}31\ \mathrm{J/(mol\,K)}\); v kg.)`, v: (150e5 * 0.02 * 0.032) / (8.31 * 293), enota: "kg",
+    rez: x`\(m \approx ${T((150e5 * 0.02 * 0.032) / (8.31 * 293), 2)}\ \mathrm{kg}\)`, post: x`<p>\(n = \frac{pV}{RT} = \frac{1{,}5 \cdot 10^7 \cdot 0{,}02}{8{,}31 \cdot 293} \approx ${T((150e5 * 0.02) / (8.31 * 293), 0)}\ \mathrm{mol}\).</p><p>\(m = nM \approx ${T((150e5 * 0.02 * 0.032) / (8.31 * 293), 2)}\ \mathrm{kg}\)</p>` },
+  { t: 4, b: x`Mehurček zraka se dvigne z dna jezera, globokega \(20\ \mathrm{m}\), na gladino. Temperatura na dnu je \(4\ ^\circ\mathrm{C}\), na gladini \(20\ ^\circ\mathrm{C}\), zračni tlak \(100\ \mathrm{kPa}\). Kolikokrat se poveča prostornina mehurčka? (\(g = 9{,}81\ \mathrm{m/s^2}\))`, v: ((100e3 + 1000 * 9.81 * 20) / 100e3) * (293 / 277), tol: 0.02,
+    rez: x`\(\approx ${T(((100e3 + 1000 * 9.81 * 20) / 100e3) * (293 / 277), 2)}\)-krat`, post: x`<p>Tlak na dnu: \(p_1 = 100 + \rho g h/1000 = 100 + 196{,}2 = 296{,}2\ \mathrm{kPa}\).</p><p>\(\frac{V_2}{V_1} = \frac{p_1}{p_2}\cdot\frac{T_2}{T_1} = 2{,}962 \cdot \frac{293}{277} \approx ${T(((100e3 + 1000 * 9.81 * 20) / 100e3) * (293 / 277), 2)}\)</p>` },
+  { t: 4, raven: "visja", b: x`Kolikšna je povprečna kvadratična hitrost molekul dušika (\(M = 28\ \mathrm{g/mol}\)) pri \(27\ ^\circ\mathrm{C}\)? (\(R = 8{,}31\ \mathrm{J/(mol\,K)}\))`, v: Math.sqrt((3 * 8.31 * 300) / 0.028), enota: "m/s",
+    rez: x`\(v \approx ${T(Math.sqrt((3 * 8.31 * 300) / 0.028), 0)}\ \mathrm{m/s}\)`, post: x`<p>\(\frac12 m_0 \overline{v^2} = \frac32 kT\) da \(v = \sqrt{\frac{3RT}{M}} = \sqrt{\frac{3 \cdot 8{,}31 \cdot 300}{0{,}028}} \approx ${T(Math.sqrt((3 * 8.31 * 300) / 0.028), 0)}\ \mathrm{m/s}\)</p>` },
+  { t: 4, b: x`Steklenica je odprta pri \(27\ ^\circ\mathrm{C}\). Do katere temperature (v °C) jo moramo segreti, da iz nje uide tretjina zraka?`, v: 450 - 273, enota: "°C",
+    rez: x`\(177\ ^\circ\mathrm{C}\)`, post: x`<p>Tlak in prostornina ostaneta enaka, zato \(nT = \text{konst.}\). Ostaneta \(\frac23\) zraka: \(T_2 = \frac32 T_1 = \frac32 \cdot 300 = 450\ \mathrm{K}\).</p><p>\(t_2 = 177\ ^\circ\mathrm{C}\)</p>` },
+];
