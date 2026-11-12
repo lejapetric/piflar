@@ -165,9 +165,9 @@ node tools/vaje/strani.mjs            # naredi <slug>_naloge.html za vsako snov 
 Snovi, ki še nimajo razlage, imajo na seznamu snovi in v stranskem meniju povezavo na naloge.
 
 Predmeti imajo lahko poleg nalog iz predlog še ročno napisane dodatne naloge v `tools/vaje/<predmet>-dodatne/<slug>.mjs`
-(zaenkrat matematika, fizika in kemija; zapis je opisan v `tools/vaje/matematika-dodatne/README.md`). Pri matematiki so to
-čisto osnovne in zelo težke sestavljene naloge v več korakih (vsaka snov ima vsaj 14 zelo težkih), pri fiziki in kemiji zelo težke
-naloge (vsaka snov ima vsaj 11 oziroma 10). Dodajo se za nalogami iz `tools/vaje/<predmet>/`, zato se id-ji obstoječih nalog (in s tem napredek uporabnikov) ne spremenijo.
+(zapis je opisan v `tools/vaje/matematika-dodatne/README.md`). Pri matematiki so to
+čisto osnovne in zelo težke sestavljene naloge v več korakih (vsaka snov ima vsaj 14 zelo težkih), pri fiziki, kemiji in biologiji
+zelo težke naloge (vsaka snov ima vsaj 10). Dodajo se za nalogami iz `tools/vaje/<predmet>/`, zato se id-ji obstoječih nalog (in s tem napredek uporabnikov) ne spremenijo.
 
 ### Razdelek Naloge
 
