@@ -1,0 +1,16 @@
+export default [
+  { t: 4, b: "Kaj je skriti kurikulum?", p: "nenapisane norme in vrednote, ki se jih učenci naučijo v šoli (npr. poslušnost, točnost)", n: ["učni načrt, ki ga ne objavijo", "izbirni predmeti", "domače naloge"],
+    post: "<p>Bowles in Gintis: šola pripravlja na hierarhijo v kapitalističnem delu.</p>" },
+  { t: 4, b: "Kaj je po Bourdieuju kulturni kapital in kako vpliva na šolski uspeh?", p: "znanje, okus in jezik, ki jih otroci prinesejo iz družine; šola jih nagradi, zato reproducira neenakosti", n: ["denar za šolnino", "število šol v kraju", "IQ učenca"],
+    post: "<p>Otroci iz izobraženih družin imajo prednost, ki jo šola prikaže kot »nadarjenost«.</p>" },
+  { t: 4, b: "Kako funkcionalisti razumejo vlogo šole?", p: "šola prenaša vrednote, socializira in razporeja ljudi po sposobnostih v poklice (meritokracija)", n: ["šola le reproducira neenakosti", "šola nima družbene funkcije", "šola zavira socializacijo"],
+    post: "<p>Durkheim, Parsons, Davis in Moore. Kritiki dvomijo v resnično meritokracijo.</p>" },
+  { t: 4, b: "Kaj je učinek Pigmaliona v šoli?", p: "pričakovanja učiteljev vplivajo na uspeh učencev", n: ["učenci se učijo le od vrstnikov", "šola nima vpliva", "boljše ocene dobijo starejši učenci"],
+    post: "<p>Rosenthal in Jacobson (1968). Povezava z označevanjem učencev.</p>" },
+  { t: 4, b: "Kaj je inflacija diplom?", p: "z naraščanjem števila diplomantov se zmanjšuje vrednost izobrazbe na trgu dela", n: ["naraščanje šolnin", "zmanjševanje števila diplomantov", "naraščanje plač diplomantov"],
+    post: "<p>Za ista delovna mesta se zahteva vse višja izobrazba (Collins: kredencializem).</p>" },
+  { t: 4, b: "Kakšen je glavni očitek Illicha šolskemu sistemu?", p: "šola uči odvisnosti od institucij in zamenjuje učenje z dosežkom potrdil (»razšolanje družbe«)", n: ["šola je premalo stroga", "šola uči preveč predmetov", "šola je predraga"],
+    post: "<p>Ivan Illich: Razšolanje družbe (1971).</p>" },
+  { t: 4, b: "Zakaj imajo otroci delavskih družin v povprečju nižje izobraževalne dosežke (Bernstein)?", p: "ker uporabljajo omejeni jezikovni kod, šola pa vrednoti razdelani kod srednjega sloja", n: ["ker so manj inteligentni", "ker nimajo šol", "ker jim šola prepove napredovanje"],
+    post: "<p>Bernstein: omejeni in razdelani kod. Razlaga je kulturna, ne biološka.</p>" },
+];

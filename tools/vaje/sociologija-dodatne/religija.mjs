@@ -1,0 +1,16 @@
+export default [
+  { t: 4, b: "Kako Durkheim razlaga religijo?", p: "kot sistem verovanj in obredov o svetem, ki povezuje skupnost; religija je čaščenje družbe same", n: ["kot opij ljudstva", "kot prevaro duhovnikov", "kot osebno izkušnjo brez družbene vloge"],
+    post: "<p>Elementarne oblike religioznega življenja (1912): totemizem avstralskih staroselcev.</p>" },
+  { t: 4, b: "Kaj je Weber pokazal v delu Protestantska etika in duh kapitalizma?", p: "da je kalvinistična etika (delo, varčnost, askeza) prispevala k nastanku kapitalističnega duha", n: ["da religija zavira gospodarstvo", "da je kapitalizem nastal iz katolištva", "da religija ni povezana z ekonomijo"],
+    post: "<p>Nauk o predestinaciji je ustvaril skrb za znamenja izvoljenosti, kar se je kazalo v poklicnem uspehu.</p>" },
+  { t: 4, b: "Kaj je sekularizacija?", p: "upadanje družbenega vpliva religije v javnem življenju, institucijah in prepričanjih ljudi", n: ["širjenje religije", "ustanavljanje novih cerkva", "združitev države in cerkve"],
+    post: "<p>Teza je sporna: v ZDA in mnogih delih sveta religija ostaja močna; nekateri govorijo o »verovanju brez pripadanja« (Davie).</p>" },
+  { t: 4, b: "Kakšna je razlika med cerkvijo in sekto (Troeltsch)?", p: "cerkev je velika, vključujoča in povezana z družbo; sekta je majhna, izključujoča in v napetosti z družbo", n: ["sekta je vedno nevarna, cerkev nikoli", "ni razlike", "cerkev je majhna, sekta velika"],
+    post: "<p>Sekte se lahko razvijejo v denominacije (npr. metodisti).</p>" },
+  { t: 4, b: "Kaj je Marx mislil z izrekom, da je religija »opij ljudstva«?", p: "religija tolaži zatirane z obljubo onstranske sreče in jih odvrača od upora proti izkoriščanju", n: ["religija je droga, ki jo je treba prepovedati", "religija je vir revolucije", "religija je najvišja vrednota"],
+    post: "<p>Religija je »vzdih zatirane kreature«: hkrati izraz trpljenja in protest proti njemu.</p>" },
+  { t: 4, b: "Kaj je civilna religija (Bellah)?", p: "skupek simbolov in obredov, ki dajejo naciji sveti pomen (zastava, himna, prazniki)", n: ["uradna državna vera", "religija brez boga", "zasebna vera"],
+    post: "<p>Primer: ameriška prisega zastavi in praznik zahvalni dan.</p>" },
+  { t: 4, b: "Kaj je fundamentalizem v sociologiji religije?", p: "odziv na modernizacijo z vračanjem k dobesednemu razumevanju svetih besedil in tradicionalnim vrednotam", n: ["sodobno, liberalno razumevanje vere", "zavračanje vseh religij", "znanstveni pristop k religiji"],
+    post: "<p>Pojavlja se v različnih religijah kot reakcija na sekularizacijo in globalizacijo.</p>" },
+];

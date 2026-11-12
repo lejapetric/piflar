@@ -1,0 +1,16 @@
+export default [
+  { t: 4, b: "Kaj je družba tveganja (Beck)?", p: "moderna družba, ki se ukvarja s tveganji, ki jih je sama ustvarila (jedrska energija, podnebne spremembe)", n: ["družba, ki igra igre na srečo", "tradicionalna družba", "družba brez tveganj"],
+    post: "<p>Ulrich Beck (1986), kmalu po Černobilu. Tveganja ne poznajo meja.</p>" },
+  { t: 4, b: "Kaj je glokalizacija?", p: "prilagajanje globalnih izdelkov in idej lokalnim razmeram", n: ["popolna globalna enotnost", "zavrnitev globalizacije", "lokalna proizvodnja brez izvoza"],
+    post: "<p>Robertson; primer: lokalni meniji svetovnih verig hitre prehrane.</p>" },
+  { t: 4, b: "Kaj je Wallersteinova teorija svetovnih sistemov?", p: "svet je razdeljen na jedro, polperiferijo in periferijo, med katerimi poteka neenaka menjava", n: ["vse države so enako razvite", "svet ima enoten sistem brez neenakosti", "periferija izkorišča jedro"],
+    post: "<p>Jedro črpa surovine in poceni delo iz periferije.</p>" },
+  { t: 4, b: "Kaj je Baumanova »tekoča modernost«?", p: "stanje, v katerem so odnosi, identitete in institucije nestalni in se nenehno spreminjajo", n: ["obdobje brez sprememb", "obdobje industrializacije", "družba vodnih poti"],
+    post: "<p>Zygmunt Bauman (2000): trdna modernost je prešla v tekočo.</p>" },
+  { t: 4, b: "Kaj je demografsko staranje in kakšne so njegove posledice?", p: "naraščanje deleža starejših zaradi nizke rodnosti in daljše življenjske dobe; pritisk na pokojnine in zdravstvo", n: ["upadanje deleža starejših", "rast rodnosti", "brez posledic"],
+    post: "<p>Razmerje med delovno aktivnimi in upokojenci se zmanjšuje.</p>" },
+  { t: 4, b: "Kaj je družba nadzora (Foucault, Panoptikum)?", p: "moč deluje s stalno možnostjo nadzora, zato ljudje sami nadzorujejo svoje vedenje", n: ["družba brez policije", "neposredno fizično nasilje oblasti", "demokratični nadzor volivcev"],
+    post: "<p>Benthamov Panoptikum: zaporniki ne vedo, kdaj jih opazujejo. Sodobna razširitev: digitalni nadzor.</p>" },
+  { t: 4, b: "Kaj je potisni in kaj privlačni dejavnik migracij?", p: "potisni žene ljudi iz izvorne države (vojna, revščina), privlačni jih vleče v ciljno (delo, varnost)", n: ["oba sta v ciljni državi", "potisni je v ciljni, privlačni v izvorni", "oba sta le ekonomska"],
+    post: "<p>Leejev model migracij vključuje še ovire in osebne dejavnike.</p>" },
+];

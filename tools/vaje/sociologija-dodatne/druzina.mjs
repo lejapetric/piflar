@@ -1,0 +1,16 @@
+export default [
+  { t: 4, b: "Kaj je jedrna in kaj razširjena družina?", p: "jedrna: starša in otroci; razširjena: več generacij ali sorodnikov skupaj", n: ["jedrna: več generacij; razširjena: le par", "obe sta enaki", "jedrna: le otroci"],
+    post: "<p>Parsons: z industrializacijo je prevladala jedrna družina, ki je mobilnejša.</p>" },
+  { t: 4, b: "Kako funkcionalisti (Parsons) razumejo vlogo družine?", p: "primarna socializacija otrok in stabilizacija osebnosti odraslih", n: ["družina je vir zatiranja žensk", "družina nima funkcij", "družina je le ekonomska enota"],
+    post: "<p>Feministke kritizirajo, da je Parsons delitev vlog (instrumentalna/ekspresivna) videl kot naravno.</p>" },
+  { t: 4, b: "Kaj pomeni »dvojna obremenitev« žensk?", p: "zaposlene ženske opravljajo še večino gospodinjskega in skrbstvenega dela", n: ["ženske imajo dve službi", "ženske plačujejo dvojne davke", "ženske imajo dva otroka"],
+    post: "<p>Hochschild: »druga izmena«. Delitev dela se spreminja počasneje kot zaposlenost žensk.</p>" },
+  { t: 4, b: "Kateri trend je značilen za družino v sodobnih evropskih družbah?", p: "upadanje rodnosti, poznejše starševstvo, več zunajzakonskih skupnosti in enostarševskih družin", n: ["naraščanje rodnosti in zgodnje poroke", "izginjanje ločitev", "vrnitev k razširjeni družini kot prevladujoči"],
+    post: "<p>Pluralizacija družinskih oblik in individualizacija (Beck).</p>" },
+  { t: 4, b: "Kakšna je marksistična kritika družine?", p: "družina reproducira kapitalizem: vzgaja delavce, prenaša lastnino in ohranja brezplačno delo žensk", n: ["družina je osnova enakosti", "družina ruši kapitalizem", "družina nima vpliva na ekonomijo"],
+    post: "<p>Engels: Izvor družine, zasebne lastnine in države (1884).</p>" },
+  { t: 4, b: "Kaj je primarna socializacija in kdo je njen glavni nosilec?", p: "zgodnje učenje temeljnih norm, jezika in vrednot, glavni nosilec je družina", n: ["učenje poklica, nosilec je podjetje", "vzgoja v šoli, nosilec je država", "učenje v vrstniški skupini v odraslosti"],
+    post: "<p>Sekundarna socializacija poteka v šoli, med vrstniki, prek medijev in na delovnem mestu.</p>" },
+  { t: 4, b: "Kaj pomeni »čista razmerja« (Giddens)?", p: "odnosi, ki obstajajo zaradi čustvenega zadovoljstva partnerjev in trajajo, dokler to zadovoljstvo traja", n: ["razmerja brez konfliktov", "razmerja, urejena s pogodbo", "razmerja med sorodniki"],
+    post: "<p>Giddens: Preobrazba intimnosti (1992). Zato so razmerja bolj enakopravna, a manj stabilna.</p>" },
+];

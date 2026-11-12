@@ -1,0 +1,16 @@
+export default [
+  { t: 4, b: "Kaj je taylorizem?", p: "znanstveno upravljanje dela: razdelitev dela na preproste, merjene gibe za večjo učinkovitost", n: ["samoupravljanje delavcev", "delo od doma", "skrajšanje delovnega časa"],
+    post: "<p>F. W. Taylor (1911). Kritika: razčlovečenje in odtujitev dela.</p>" },
+  { t: 4, b: "Kaj je fordizem in kaj postfordizem?", p: "fordizem: množična serijska proizvodnja na tekočem traku; postfordizem: prilagodljiva proizvodnja, manjše serije, prožno delo", n: ["fordizem: obrtna proizvodnja; postfordizem: tekoči trak", "oba pomenita kmetijstvo", "ni razlike"],
+    post: "<p>Postfordizem spremlja prekarnost in pomen storitev.</p>" },
+  { t: 4, b: "Kaj je prekarnost dela?", p: "negotova zaposlitev: začasne pogodbe, nizka socialna varnost in nepredvidljiv dohodek", n: ["stalna zaposlitev za nedoločen čas", "delo v javnem sektorju", "visoko plačano delo"],
+    post: "<p>Standing: prekariat kot nov razred.</p>" },
+  { t: 4, b: "Kaj je Veblen mislil s »potrošnjo na ogled« (conspicuous consumption)?", p: "nakupovanje dragih dobrin, da pokažemo družbeni položaj", n: ["varčevanje", "nakup nujnih dobrin", "potrošnja v skrivnosti"],
+    post: "<p>Teorija brezdelnega razreda (1899). Prosti čas in potrošnja kot simbol statusa.</p>" },
+  { t: 4, b: "Kaj je McDonaldizacija družbe (Ritzer)?", p: "širjenje načel hitre prehrane (učinkovitost, izračunljivost, predvidljivost, nadzor) v druga področja življenja", n: ["širjenje ameriške hrane", "povečanje števila restavracij", "zmanjšanje racionalnosti"],
+    post: "<p>Nadaljevanje Webrove racionalizacije; kritika: »železna kletka« racionalnosti.</p>" },
+  { t: 4, b: "Zakaj Marx meni, da je delavec v kapitalizmu izkoriščan?", p: "ker ustvari večjo vrednost, kot jo dobi v plači; presežna vrednost pripade kapitalistu", n: ["ker dela premalo", "ker nima dela", "ker sam določa plačo"],
+    post: "<p>Teorija presežne vrednosti v Kapitalu.</p>" },
+  { t: 4, b: "Kako se je v postindustrijski družbi spremenila zgradba zaposlenosti?", p: "večina ljudi dela v storitvenem sektorju, narašča pomen znanja in informacij", n: ["večina dela v kmetijstvu", "večina dela v industriji", "delo ni več potrebno"],
+    post: "<p>Bell: postindustrijska družba (1973).</p>" },
+];

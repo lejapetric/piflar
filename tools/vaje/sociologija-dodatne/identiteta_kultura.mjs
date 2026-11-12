@@ -1,0 +1,16 @@
+export default [
+  { t: 4, b: "Kaj je etnocentrizem?", p: "presojanje drugih kultur z merili lastne kulture, ki jo štejemo za boljšo", n: ["spoštovanje vseh kultur", "preučevanje etničnih skupin", "zavračanje lastne kulture"],
+    post: "<p>Nasprotje je kulturni relativizem: kulturo razumemo v njenem kontekstu.</p>" },
+  { t: 4, b: "Kaj je subkultura in kaj kontrakultura?", p: "subkultura ima posebne norme znotraj širše kulture, kontrakultura pa ji odkrito nasprotuje", n: ["obe sta enaki", "subkultura nasprotuje, kontrakultura sprejema", "obe pomenita množično kulturo"],
+    post: "<p>Primer kontrakulture: hipijevsko gibanje 60. let.</p>" },
+  { t: 4, b: "Kaj je Anderson mislil z »zamišljenimi skupnostmi«?", p: "nacija je skupnost ljudi, ki se večinoma ne poznajo, a se doživljajo kot povezani, k čemur je prispeval tisk", n: ["nacije so izmišljene in ne obstajajo", "skupnosti na spletu", "vasi z izmišljenimi imeni"],
+    post: "<p>Benedict Anderson (1983): tiskani kapitalizem omogoči nastanek nacionalne zavesti.</p>" },
+  { t: 4, b: "Kaj je kulturni šok?", p: "občutek zmedenosti in tesnobe ob stiku z neznano kulturo", n: ["navdušenje nad tujo kulturo", "zavrnitev lastne kulture", "nenadna sprememba mode"],
+    post: "<p>Pogoste faze: navdušenje, šok, prilagajanje, sprejetje.</p>" },
+  { t: 4, b: "Kaj je hibridna identiteta?", p: "identiteta, ki združuje elemente več kultur, npr. pri otrocih priseljencev", n: ["identiteta brez kulture", "dvojno državljanstvo", "identiteta le ene kulture"],
+    post: "<p>Stuart Hall in Homi Bhabha sta poudarila, da so identitete v globalizaciji tekoče in mešane.</p>" },
+  { t: 4, b: "Kaj je asimilacija in kaj integracija priseljencev?", p: "asimilacija: priseljenci opustijo svojo kulturo in prevzamejo večinsko; integracija: sodelujejo v družbi in ohranijo del svoje kulture", n: ["sta enaki", "asimilacija ohrani kulturo, integracija jo izbriše", "obe pomenita izgon"],
+    post: "<p>Berryjev model akulturacije: asimilacija, integracija, separacija, marginalizacija.</p>" },
+  { t: 4, b: "Kaj je Goffmanova dramaturška perspektiva?", p: "vsakdanje življenje je kot gledališče, v katerem igramo vloge in upravljamo vtis na odprtem in v zaodrju", n: ["preučevanje gledališča", "teorija o drami v književnosti", "zavračanje vlog"],
+    post: "<p>Predstavljanje sebe v vsakdanjem življenju (1959).</p>" },
+];

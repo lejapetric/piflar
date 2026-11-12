@@ -1,0 +1,16 @@
+export default [
+  { t: 4, b: "Kaj je Kuhnova paradigma?", p: "skupek teorij, metod in predpostavk, ki jih sprejema znanstvena skupnost; ob krizi pride do znanstvene revolucije", n: ["en sam poskus", "enotna znanstvena metoda za vse čase", "znanstveni članek"],
+    post: "<p>Thomas Kuhn: Struktura znanstvenih revolucij (1962). Primer: prehod od Ptolemaja h Koperniku.</p>" },
+  { t: 4, b: "Kaj je Mertonov etos znanosti?", p: "norme univerzalizma, skupnosti znanja, nepristranskosti in organiziranega skepticizma", n: ["tekmovanje za denar", "zaupanje avtoritetam", "skrivanje rezultatov"],
+    post: "<p>Kratica CUDOS: communism, universalism, disinterestedness, organized scepticism.</p>" },
+  { t: 4, b: "Kaj je Ostromova pokazala o upravljanju skupnih virov (npr. ribolovnih območij)?", p: "da jih lokalne skupnosti lahko trajno upravljajo z lastnimi pravili in nadzorom, brez države ali privatizacije", n: ["da skupni viri vedno propadejo", "da je edina rešitev privatizacija", "da mora vse urediti država"],
+    post: "<p>Elinor Ostrom je za to prejela Nobelovo nagrado za ekonomijo (2009). Ugotovitve nasprotujejo Hardinovi »tragediji skupnega«.</p>" },
+  { t: 4, b: "Kaj je trajnostni razvoj (Brundtlandino poročilo)?", p: "razvoj, ki zadovolji potrebe sedanjosti, ne da bi ogrozil možnosti prihodnjih generacij", n: ["razvoj z največjo možno rastjo", "zaustavitev razvoja", "razvoj le v revnih državah"],
+    post: "<p>Naša skupna prihodnost (1987). Trije stebri: okoljski, ekonomski, družbeni.</p>" },
+  { t: 4, b: "Kaj je okoljska pravičnost?", p: "okoljska bremena (onesnaženje, odlagališča) niso enakomerno porazdeljena; pogosteje prizadenejo revne in manjšine", n: ["vsi so enako izpostavljeni onesnaženju", "zakon o varstvu okolja", "pravica živali"],
+    post: "<p>Gibanje je nastalo v ZDA v 80. letih.</p>" },
+  { t: 4, b: "Kaj je ekološka modernizacija?", p: "pristop, ki meni, da lahko tehnologija in reforme združijo gospodarsko rast in varstvo okolja", n: ["zahteva po vrnitvi v predindustrijsko družbo", "zanikanje okoljskih problemov", "ukinitev industrije"],
+    post: "<p>Kritiki menijo, da tehnološke rešitve ne zadostujejo brez spremembe potrošnje.</p>" },
+  { t: 4, b: "Kaj je Latourjeva teorija akterja-omrežja?", p: "znanstveno dejstvo nastane v omrežju ljudi, naprav in predmetov, ki vsi delujejo kot akterji", n: ["znanost je delo posameznih genijev", "predmeti nimajo vloge v znanosti", "znanost je neodvisna od družbe"],
+    post: "<p>Laboratorijsko življenje (Latour in Woolgar, 1979).</p>" },
+];
