@@ -1,0 +1,18 @@
+export default [
+  { t: 4, b: "Zakaj so egipčanske figure upodobljene z glavo in nogami v profilu, trupom in očesom pa od spredaj?", p: "ker so upodobili vsak del v njegovem najbolj prepoznavnem pogledu, po ustaljenem kanonu", n: ["ker niso znali risati", "ker so slikali po modelu iz ogledala", "ker je bila to zapoved grškega vladarja"],
+    post: "<p>Egipčanska umetnost je služila večnosti in pravilu (kanon), ne naravnemu videzu. Velikost figure je določal pomen.</p>" },
+  { t: 4, b: "Kaj je zigurat?", p: "mezopotamski stopničasti tempelj z svetiščem na vrhu", n: ["egipčanska grobnica z ravnimi stranicami", "grški tempelj s stebri", "prazgodovinski kamniti krog"],
+    post: "<p>Zigurati (npr. v Uru) so iz opeke, svetišče na vrhu je bilo bivališče boga.</p>" },
+  { t: 4, b: "Kateri je pravilen razvoj egipčanskih grobnic?", p: "mastaba → stopničasta piramida (Džoser) → prava piramida (Giza)", n: ["prava piramida → mastaba → stopničasta piramida", "stopničasta piramida → zigurat → mastaba", "skalni grob → mastaba → zigurat"],
+    post: "<p>Imhotep je za Džoserja zložil več mastab; v 4. dinastiji nastanejo piramide v Gizi. V Novem kraljestvu se uveljavijo skalni grobovi (Dolina kraljev).</p>" },
+  { t: 4, b: "Kaj je značilno za umetnost Amarnskega obdobja (Ehnaton)?", p: "odmik od togega kanona: podolgovati obrazi, intimni prizori kraljeve družine", n: ["popolna ohranitev kanona Starega kraljestva", "prve stopničaste piramide", "uvedba linearne perspektive"],
+    post: "<p>Z verskim preobratom k Atonu se spremeni tudi likovni izraz; primer je Nefretitin doprsni kip.</p>" },
+  { t: 4, b: "Zakaj so jamske poslikave (Altamira, Lascaux) večinoma globoko v jamah in ne pri vhodu?", p: "verjetno so imele obredni ali magični pomen in niso bile bivalni okras", n: ["ker je bila tam najboljša svetloba", "ker so v globini živeli", "ker so jih tja prenesli pozneje"],
+    post: "<p>Prizori živali v temnih delih jam se povezujejo z lovsko magijo ali obredi. Bivališča so bila pri vhodu.</p>" },
+  { t: 4, b: "Kateri najdbi s slovenskih tal sodita v prazgodovino?", p: "piščal iz Divjih bab in vače situla", n: ["Brižinski spomeniki in Stiški rokopis", "freske v Hrastovljah in Turnišču", "Plečnikove Žale in NUK"],
+    post: "<p>Piščal iz Divjih bab je stara okoli 60 000 let (neandertalec), Vaška situla je iz halštatskega obdobja (okoli 500 pr. n. št.).</p>" },
+  { t: 4, b: "Kaj je menhir?", p: "posamezen pokončno postavljen velik kamen iz megalitske dobe", n: ["kamnita miza iz več kamnov (dolmen)", "mezopotamska klinopisna ploščica", "egipčanski obelisk z napisom"],
+    post: "<p>Megaliti: menhir (pokončen kamen), dolmen (kamnita miza), kromleh (krog kamnov, npr. Stonehenge).</p>" },
+  { t: 4, b: "Zakaj je velikost figur na egipčanskih reliefih različna?", p: "zaradi pomenske perspektive: pomembnejši (faraon) je upodobljen večji", n: ["zaradi linearne perspektive: bližji so večji", "zaradi pomanjkanja prostora", "ker so različni avtorji uporabljali različna merila"],
+    post: "<p>Pomenska (hierarhična) perspektiva velikost določa po družbenem ali verskem pomenu.</p>" },
+];

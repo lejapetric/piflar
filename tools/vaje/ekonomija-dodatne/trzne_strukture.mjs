@@ -1,0 +1,16 @@
+export default [
+  { t: 4, b: "Monopolist ima mejne stroške 20 € in se sooča s krivuljo povpraševanja \\(P = 100 - 2Q\\). Pri kateri količini maksimira dobiček?", v: 20, rez: "Q = 20",
+    post: "<p>Mejni prihodek \\(MR = 100 - 4Q\\). Pogoj \\(MR = MC\\): \\(100 - 4Q = 20\\), \\(Q = 20\\). Cena \\(P = 100 - 40 = 60\\) €.</p>" },
+  { t: 4, b: "Pri popolni konkurenci je tržna cena 50 €, podjetje pa ima povprečne skupne stroške 55 € in povprečne variabilne stroške 45 €. Kaj naj stori kratkoročno?", p: "naj proizvaja, ker cena pokrije variabilne stroške in del fiksnih", n: ["naj takoj preneha proizvajati", "naj dvigne ceno na 55 €", "naj proizvaja, ker ima dobiček"],
+    post: "<p>Kratkoročno je meja zaprtja povprečni variabilni strošek. Ker je \\(P > AVC\\), proizvodnja zmanjša izgubo; dolgoročno, če se nič ne spremeni, izstopi.</p>" },
+  { t: 4, b: "Kaj je značilno za oligopol?", p: "malo velikih ponudnikov, ki so medsebojno odvisni pri odločanju o cenah", n: ["veliko majhnih ponudnikov z enakim izdelkom", "en sam ponudnik brez nadomestkov", "veliko ponudnikov z različnimi izdelki in prostim vstopom"],
+    post: "<p>Pri oligopolu vsako podjetje pri odločitvah upošteva odziv tekmecev (npr. cenovne vojne, kartel).</p>" },
+  { t: 4, b: "Zakaj podjetje pri popolni konkurenci dolgoročno nima ekonomskega dobička?", p: "ker dobiček privabi nova podjetja, ponudba se poveča in cena pade do minimuma povprečnih stroškov", n: ["ker država obdavči ves dobiček", "ker so cene zakonsko določene", "ker podjetja ne smejo prodati več kot določeno količino"],
+    post: "<p>Prost vstop: dokler je \\(P > ATC\\), vstopajo nova podjetja. Ravnovesje je pri \\(P = \\min ATC\\).</p>" },
+  { t: 4, b: "Monopolist s krivuljo povpraševanja \\(P = 100 - 2Q\\) in mejnimi stroški 20 € (brez fiksnih stroškov) proizvede 20 enot. Kolikšen je njegov dobiček?", v: 800, enota: "€", rez: "800 €",
+    post: "<p>\\(P = 60\\) €, dobiček \\((60 - 20) \\cdot 20 = 800\\) €.</p>" },
+  { t: 4, b: "Kaj je naravni monopol?", p: "panoga, v kateri zaradi visokih fiksnih stroškov eno podjetje oskrbuje trg ceneje kot več podjetij", n: ["monopol, ki ga podeli država s patentom", "podjetje, ki prodaja naravne izdelke", "kartel več podjetij"],
+    post: "<p>Primeri so vodovod, električno omrežje in železnica: povprečni stroški padajo v celotnem obsegu povpraševanja.</p>" },
+  { t: 4, b: "Kaj je cenovna diskriminacija?", p: "prodaja istega izdelka različnim skupinam kupcev po različnih cenah, ki niso posledica razlik v stroških", n: ["prepoved prodaje določenim kupcem", "znižanje cene vsem kupcem hkrati", "določanje cene s strani države"],
+    post: "<p>Primeri so študentski popusti in cene letalskih vozovnic. Podjetje mora imeti tržno moč in ločiti skupine kupcev.</p>" },
+];

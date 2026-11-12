@@ -1,0 +1,18 @@
+export default [
+  { t: 4, b: "Na sliki so vzporedne črte, ki se stekajo v eno točko na obzorju. Kateri likovni postopek je to in kdaj se je uveljavil?", p: "linearna (centralna) perspektiva, v zgodnji renesansi (Brunelleschi, Alberti)", n: ["zračna perspektiva, v romaniki", "obrnjena perspektiva, v baroku", "pomenska perspektiva, v impresionizmu"],
+    post: "<p>Centralna perspektiva z izginjajočo točko je v 15. stoletju v Firencah teoretično utemeljena. Pomenska perspektiva (velikost po pomenu) je značilna za srednji vek.</p>" },
+  { t: 4, b: "Kaj je kontrapost?", p: "postavitev figure, pri kateri teža sloni na eni nogi, zato sta boki in rame nagnjeni v nasprotnih smereh", n: ["kontrast svetlobe in sence na sliki", "simetrična frontalna postavitev figure", "slikanje dveh prizorov na isti sliki"],
+    post: "<p>Kontrapost so razvili Grki v klasiki (Poliklet, Doriforos) in ga je obudila renesansa (Donatello, Michelangelov David).</p>" },
+  { t: 4, b: "Na sliki so ostri prehodi med močno osvetljenimi in temnimi deli, ozadje je skoraj črno. Kako imenujemo ta postopek in kateri slikar je zanj značilen?", p: "chiaroscuro oziroma tenebrizem, Caravaggio", n: ["sfumato, Leonardo da Vinci", "pointilizem, Seurat", "impasto, Monet"],
+    post: "<p>Caravaggio je v začetku 17. stoletja z dramatično svetlobo vplival na baročno slikarstvo. Sfumato pomeni mehke, zabrisane prehode.</p>" },
+  { t: 4, b: "Kaj pomeni ikonografska analiza umetnine?", p: "razlaga vsebine, simbolov in motivov ter njihovega pomena v času nastanka", n: ["merjenje dimenzij in materiala", "določanje cene umetnine", "opis samo barv in kompozicije"],
+    post: "<p>Ikonografija prepoznava teme in atribute (npr. ključ = sv. Peter). Ikonologija (Panofsky) jih postavi v širši kulturni kontekst.</p>" },
+  { t: 4, b: "Kaj je sfumato?", p: "mehki, zabrisani prehodi med barvami in obrisi brez ostrih črt", n: ["slikanje na moker omet", "tehnika z debelimi nanosi barve", "zlata podlaga v srednjeveškem slikarstvu"],
+    post: "<p>Leonardo da Vinci je s tankimi plastmi lazure dosegel meglen prehod (Mona Lisa). Slikanje na moker omet je fresko.</p>" },
+  { t: 4, b: "Kakšna je razlika med freskom in secco slikarstvom?", p: "freska se slika na moker omet in se veže z njim, secco na suh omet z vezivom", n: ["freska je oljna slika na platnu, secco tempera na lesu", "freska se slika na steklo, secco na papir", "ni razlike, gre za sinonima"],
+    post: "<p>Pri freski se pigmenti vežejo s kalcijevim karbonatom ometa in so obstojni. Secco se lahko lušči (npr. Leonardova Zadnja večerja).</p>" },
+  { t: 4, b: "Kip je oblikovan tako, da ga lahko gledamo z vseh strani. Kako imenujemo tak kip?", p: "kip v polni plastiki (prostostoječ)", n: ["relief", "visoki relief", "intarzija"],
+    post: "<p>Relief je vezan na ozadje (nizki, visoki). Kip v polni plastiki stoji samostojno v prostoru.</p>" },
+  { t: 4, b: "Kateri par slogovnih značilnosti pravilno primerja renesanso in barok?", p: "renesansa: mir, ravnovesje, jasne meje; barok: gibanje, diagonale, dramatična svetloba", n: ["renesansa: diagonale in drama; barok: mir in simetrija", "obe obdobji: ploskovitost in zlata ozadja", "renesansa: abstrakcija; barok: pomenska perspektiva"],
+    post: "<p>Wölfflinova primerjava: renesansa je linearna in zaprta, barok je slikovit, odprt in dinamičen.</p>" },
+];

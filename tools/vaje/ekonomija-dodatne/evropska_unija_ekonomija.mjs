@@ -1,0 +1,18 @@
+export default [
+  { t: 4, b: "Katera je glavna naloga Evropske centralne banke?", p: "ohranjanje stabilnosti cen v evrskem območju (inflacija blizu 2 % na srednji rok)", n: ["določanje davčnih stopenj v državah članicah", "odobravanje državnih proračunov", "zagotavljanje polne zaposlenosti s posojili podjetjem"],
+    post: "<p>ECB vodi enotno denarno politiko evrskega območja. Njen prvi cilj je stabilnost cen. Davčna politika ostaja v pristojnosti držav.</p>" },
+  { t: 4, b: "Zakaj država v evrskem območju ne more sama razvrednotiti valute, da bi spodbudila izvoz?", p: "ker nima lastne valute in denarne politike, ki ju vodi ECB za vse članice", n: ["ker to prepoveduje Svetovna trgovinska organizacija", "ker ima evro fiksen tečaj do dolarja", "ker izvoz v EU ni dovoljen"],
+    post: "<p>Z vstopom v evrsko območje država preda denarno politiko in tečajni instrument ECB. Prilagaja se lahko le s fiskalno politiko ter s plačami in cenami.</p>" },
+  { t: 4, b: "Kaj so maastrichtski konvergenčni kriteriji za proračunski primanjkljaj in javni dolg?", p: "primanjkljaj največ 3 % BDP, javni dolg največ 60 % BDP", n: ["primanjkljaj največ 1 % BDP, dolg največ 100 % BDP", "primanjkljaj največ 10 % BDP, dolg največ 30 % BDP", "primanjkljaj ni omejen, dolg največ 60 % BDP"],
+    post: "<p>Za vstop v evrsko območje (in v Paktu za stabilnost in rast) veljata meji 3 % BDP za primanjkljaj in 60 % BDP za dolg.</p>" },
+  { t: 4, b: "Katere so štiri temeljne svoboščine notranjega trga EU?", p: "prost pretok blaga, storitev, kapitala in oseb", n: ["prost pretok blaga, enotna davčna stopnja, enotne plače in skupni proračun", "skupna vojska, skupna valuta, skupna policija, skupni jezik", "prost pretok blaga in oseb ter skupna zunanja in kmetijska politika"],
+    post: "<p>Notranji trg temelji na prostem pretoku blaga, storitev, kapitala in oseb.</p>" },
+  { t: 4, b: "Država ima BDP 60 mrd €, javni dolg 45 mrd € in primanjkljaj 2,4 mrd €. Ali izpolnjuje maastrichtska kriterija?", p: "ne izpolnjuje nobenega: dolg je 75 % BDP, primanjkljaj 4 % BDP", n: ["da, oba kriterija sta izpolnjena", "izpolnjuje le kriterij dolga", "izpolnjuje le kriterij primanjkljaja"],
+    post: "<p>Dolg 45/60 = 75 % BDP (nad 60 %), primanjkljaj 2,4/60 = 4 % BDP (nad 3 %). Ne izpolnjuje nobenega.</p>" },
+  { t: 4, b: "Kaj je carinska unija?", p: "območje brez carin med članicami in s skupno carinsko tarifo do tretjih držav", n: ["območje brez carin, kjer vsaka članica sama določa carine do tretjih držav", "območje s skupno valuto", "dogovor o skupni davčni politiki"],
+    post: "<p>Pri območju proste trgovine vsaka članica sama določa carine do tretjih držav. Carinska unija (kot EU) ima skupno zunanjo tarifo.</p>" },
+  { t: 4, b: "Iz katerega vira EU financira največji del svojega proračuna?", p: "iz prispevkov držav članic na podlagi bruto nacionalnega dohodka", n: ["iz dobička ECB", "iz davka na dohodek, ki ga plačujejo vsi državljani EU neposredno Bruslju", "iz posojil Mednarodnega denarnega sklada"],
+    post: "<p>Največji del lastnih virov so prispevki po BND. Drugi viri so carine in delež DDV.</p>" },
+  { t: 4, b: "Kakšen je glavni ekonomski argument proti skupni valuti za zelo različna gospodarstva?", p: "enotna obrestna mera ne ustreza hkrati državam v recesiji in tistim v razcvetu (asimetrični šoki)", n: ["skupna valuta vedno povzroči hiperinflacijo", "skupna valuta prepove trgovino med državami", "skupna valuta poveča transakcijske stroške"],
+    post: "<p>Teorija optimalnega valutnega območja: pri asimetričnih šokih ena denarna politika ne ustreza vsem, prilagoditev pa mora potekati prek plač, mobilnosti dela ali fiskalnih transferjev.</p>" },
+];
