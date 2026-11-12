@@ -1,0 +1,18 @@
+export default [
+  { t: 4, b: "V katerem stavku so vejice pravilno postavljene?", p: "Ko je prišel domov, je ugotovil, da je pozabil ključe, ki jih je pustil v službi.", n: ["Ko je prišel domov je ugotovil, da je pozabil ključe, ki jih je pustil v službi.", "Ko je prišel domov, je ugotovil da je pozabil ključe ki jih je pustil v službi.", "Ko je prišel, domov je ugotovil, da je pozabil, ključe ki jih je pustil v službi."],
+    post: "<p>Vejica loči vse odvisnike od nadrednega stavka: časovni (<em>Ko …</em>), predmetni (<em>da …</em>) in prilastkovi (<em>ki …</em>).</p>" },
+  { t: 4, b: "Kateri zapis imen je pravilen?", p: "Na Gorenjskem smo obiskali Blejsko jezero in Triglavski narodni park.", n: ["Na gorenjskem smo obiskali blejsko jezero in Triglavski Narodni Park.", "Na Gorenjskem smo obiskali blejsko Jezero in triglavski narodni park.", "Na gorenjskem smo obiskali Blejsko Jezero in Triglavski Narodni park."],
+    post: "<p>Pokrajinsko ime <em>Gorenjska</em> pišemo z veliko. Pri zemljepisnih imenih je velika le prva beseda (<em>Blejsko jezero</em>); pri stvarnih imenih tudi (<em>Triglavski narodni park</em>).</p>" },
+  { t: 4, b: "Kateri stavek je pravilno zapisan?", p: "Rekel je: »Jutri pridem,« in odšel.", n: ["Rekel je »Jutri pridem« in odšel.", "Rekel je: »jutri pridem.« in odšel.", "Rekel je: »Jutri pridem«, in odšel."],
+    post: "<p>Pri premem govoru z napovedjo pred njim stoji dvopičje, premi govor se začne z veliko. Vejica, ki se nanaša na premi govor, stoji pred zaključnim narekovajem.</p>" },
+  { t: 4, b: "Kateri zapis predlogov s/z in k/h je pravilen?", p: "s prijateljem, z Zalo, k mami, h Gregorju", n: ["z prijateljem, s Zalo, h mami, k Gregorju", "s prijateljem, s Zalo, k mami, k Gregorju", "z prijateljem, z Zalo, h mami, h Gregorju"],
+    post: "<p><em>s</em> pred nezvenečimi soglasniki (p, t, k, s, š, c, č, f, h), <em>z</em> drugod; <em>h</em> pred k in g, <em>k</em> drugod.</p>" },
+  { t: 4, b: "Kateri stavek ima pravilno zapisane števnike?", p: "Na 3. strani je 25 slik, na tretji pa pet.", n: ["Na 3 strani je 25. slik, na tretji pa pet.", "Na 3.-ji strani je 25 slik, na 3. pa pet.", "Na tretji. strani je 25 slik, na 3 pa pet."],
+    post: "<p>Vrstilni števnik zapisan s številko ima piko (<em>3. stran</em>), glavni ne. Končnic za številko ne pišemo.</p>" },
+  { t: 4, b: "Kateri zapis s pravilnimi ločili je pravilen?", p: "Ne vem, ali bo prišel; vem pa, da se bo oglasil.", n: ["Ne vem ali bo prišel, vem pa da se bo oglasil.", "Ne vem, ali bo prišel, vem, pa, da se bo oglasil.", "Ne vem ali, bo prišel; vem pa da, se bo oglasil."],
+    post: "<p>Odvisnik z <em>ali</em> in <em>da</em> ločimo z vejico. Podpičje loči dva samostojna, a tesno povezana stavka.</p>" },
+  { t: 4, b: "Kateri zapis prevzete besede ali imena je v skladu s slovenskim pravopisom?", p: "Shakespearov sonet, Rousseaujeva misel", n: ["Shakespearjev sonet, Rousseauova misel", "Shakespeareov sonet, Rousseaujova misel", "Šekspirov sonet, Rusojeva misel"],
+    post: "<p>Pri <em>Shakespeare</em> se nemi -e izpusti: <em>Shakespearov</em>. Pri <em>Rousseau</em> se izgovarja končni samoglasnik, zato vrinemo -j-: <em>Rousseaujev</em>.</p>" },
+  { t: 4, b: "Kateri zapis glede pisanja skupaj in narazen je pravilen?", p: "nikakor ne, kdorkoli, pol ure, po moje", n: ["nikakorne, kdor koli, polure, pomoje", "nikakor ne, kdor-koli, pol-ure, po-moje", "nikakorne, kdorkoli, pol ure, pomoje"],
+    post: "<p>Skupaj pišemo zloženke kot <em>kdorkoli</em>. Narazen pišemo <em>nikakor ne</em>, <em>pol ure</em> in prislovno zvezo <em>po moje</em>.</p>" },
+];

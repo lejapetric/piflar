@@ -1,0 +1,18 @@
+export default [
+  { t: 4, b: "Katera značilnost ločuje ljudsko slovstvo od umetnega?", p: "nastalo je in se ohranjalo ustno, avtor ni znan, obstaja v več različicah", n: ["napisal ga je znan avtor", "obstaja le v eni zapisani različici", "vedno je v prozi"],
+    post: "<p>Ljudsko slovstvo se je prenašalo ustno in se spreminjalo, zato obstajajo različice (variante).</p>" },
+  { t: 4, b: "Kdo je izdajal zbirko Slovenske pesmi krajnskiga naroda (1839–1844), pri kateri je sodeloval tudi Prešeren?", p: "Emil Korytko", n: ["Primož Trubar", "Valentin Vodnik", "Fran Levstik"],
+    post: "<p>Poljski izgnanec Emil Korytko je v Ljubljani zbiral ljudske pesmi. Prešeren mu je pomagal in nekatere pesmi tudi priredil.</p>" },
+  { t: 4, b: "Kateri motiv je osrednji v ljudski baladi Lepa Vida?", p: "hrepenenje po boljšem življenju in nesreča, ki sledi odhodu od doma", n: ["boj z Turki", "zmaga nad velikanom", "šaljivo zbadanje med sosedi"],
+    post: "<p>Vida zapusti moža in otroka, odpluje s tujim mornarjem v Španijo in nato hrepeni po domu. Motiv je pozneje obdeloval Prešeren, Cankar in drugi.</p>" },
+  { t: 4, b: "Kaj je značilno za ljudsko pravljico glede na pripovedko?", p: "pravljica se dogaja v nedoločenem času in prostoru, nadnaravno je samoumevno; pripovedka je vezana na kraj ali osebo", n: ["pravljica je vedno resnična", "pripovedka nima nadnaravnih bitij", "pravljica je v verzih, pripovedka v prozi"],
+    post: "<p>Pravljica: »Nekoč je živel …«, srečen konec, čarobni predmeti. Pripovedka (npr. o Kralju Matjažu) je povezana s konkretnim krajem ali zgodovinsko osebo.</p>" },
+  { t: 4, b: "Katera ljudska pesem opisuje dvoboj slovenskega junaka s tujcem, v katerem zmaga Lambergar?", p: "Pegam in Lambergar", n: ["Lepa Vida", "Rošlin in Verjanko", "Desetnica"],
+    post: "<p>Kristof Lambergar premaga Pegama na dvoru cesarja na Dunaju. Pesem ima epske prvine.</p>" },
+  { t: 4, b: "O čem govori ljudska pesem Desetnica?", p: "deseta hči je po izročilu obsojena na potovanje po svetu, zato mora zapustiti dom", n: ["o deseti vojni s Turki", "o desetih bratih, ki se vrnejo iz vojske", "o deseti zapovedi"],
+    post: "<p>Po verovanju je moral deseti otrok (desetnica) oditi z doma.</p>" },
+  { t: 4, b: "Katera slogovna značilnost je pogosta v ljudskih pesmih?", p: "ponavljanje, stalni pridevki in pomanjševalnice", n: ["prosti verz brez ritma", "zahtevne metafore in ironija", "sonetna oblika"],
+    post: "<p>Primeri: <em>bela Ljubljana</em>, <em>zeleni travnik</em>, <em>ljuba ljubica</em>. Ponavljanje je pomagalo pri pomnjenju.</p>" },
+  { t: 4, b: "V kateri skupini so samo ljudske literarne zvrsti?", p: "uganka, pregovor, balada, pravljica", n: ["sonet, gazela, uganka, pregovor", "roman, novela, pravljica, uganka", "esej, feljton, pregovor, balada"],
+    post: "<p>Sonet, gazela, roman, novela, esej in feljton so zvrsti umetne književnosti.</p>" },
+];
