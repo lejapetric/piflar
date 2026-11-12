@@ -1,0 +1,18 @@
+export default [
+  { t: 4, b: "Kakšna je razlika med baziliko in centralno stavbo v zgodnjekrščanski arhitekturi?", p: "bazilika je vzdolžna z ladjami in apsido, centralna stavba ima tloris kroga ali mnogokotnika okoli središča", n: ["bazilika ima kupolo, centralna stavba pa je brez strehe", "bazilika je grobnica, centralna stavba pa tempelj", "ni razlike"],
+    post: "<p>Bazilike (npr. Santa Sabina) so služile skupnemu bogoslužju. Centralne stavbe so bile krstilnice in mavzoleji (npr. Santa Costanza).</p>" },
+  { t: 4, b: "Zakaj ima romanska cerkev debele zidove in majhna okna?", p: "zidovi morajo nositi težke kamnite oboke, zato veliki odprtini oslabita zid", n: ["ker so želeli temen prostor za skrivanje relikvij", "ker steklo še ni bilo izumljeno", "ker so gradili iz lesa"],
+    post: "<p>Banjasti in križni oboki pritiskajo na stene. Rešitev gotike so rebra, oporniki in oporni loki, ki omogočijo velika okna.</p>" },
+  { t: 4, b: "Kaj je timpanon na romanskem portalu?", p: "polkrožna ploskev nad vrati, pogosto z reliefom Kristusa ali poslednje sodbe", n: ["stolp ob fasadi", "okroglo okno nad portalom", "steber ob vratih"],
+    post: "<p>Timpanon (npr. Autun, Vézelay) je pripovedoval vernikom svetopisemske zgodbe. Okroglo okno je rozeta.</p>" },
+  { t: 4, b: "Kaj je značilno za bizantinske mozaike (npr. Ravenna, San Vitale)?", p: "zlato ozadje, frontalne in toge figure, poudarjena duhovnost namesto prostora", n: ["linearna perspektiva in naraven prostor", "oljne barve na platnu", "samo geometrični vzorci brez figur"],
+    post: "<p>Zlato ozadje simbolizira nebeški prostor; figure so ploskovite, kar izraža vzvišenost.</p>" },
+  { t: 4, b: "Kateri romanski spomenik je na Slovenskem?", p: "rotunda v Selu pri Moravskih Toplicah", n: ["Plečnikova cerkev v Bogojini", "cerkev sv. Jakoba v Ljubljani", "Ptujska Gora"],
+    post: "<p>Rotunda v Selu (13. stoletje) je primer romanske centralne stavbe. Ptujska Gora je gotska.</p>" },
+  { t: 4, b: "Kaj je kripta?", p: "prostor pod korom cerkve, pogosto za relikvije in grobove", n: ["zvonik", "hodnik okoli samostanskega dvorišča", "prečna ladja"],
+    post: "<p>Pod dvignjenim korom romanskih cerkva je kripta. Hodnik okoli dvorišča je križni hodnik, prečna ladja je transept.</p>" },
+  { t: 4, b: "Zakaj so zgodnji kristjani uporabljali simbole, kot sta riba in Kristusov monogram?", p: "zaradi preganjanja so svojo vero izražali s skritimi znamenji", n: ["ker niso znali upodabljati ljudi", "ker so to zahtevali rimski cesarji", "ker so bili to znaki cehov"],
+    post: "<p>Grška beseda ICHTHYS (riba) je akronim za »Jezus Kristus, Božji Sin, Odrešenik«. Simboli so pogosti v katakombah.</p>" },
+  { t: 4, b: "Kateri par pravilno poveže obdobje in tip oboka?", p: "romanika: banjasti in križni obok; gotika: rebrasti obok s šilastim lokom", n: ["romanika: rebrasti obok; gotika: banjasti", "romanika: kupola na pendantivih; gotika: raven lesen strop", "romanika in gotika: le raven strop"],
+    post: "<p>Šilast lok in rebra preneseta težo na stebre in oporni sistem, kar omogoči višje stavbe z velikimi okni.</p>" },
+];

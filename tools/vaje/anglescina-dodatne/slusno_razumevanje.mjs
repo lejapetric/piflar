@@ -1,0 +1,18 @@
+export default [
+  { t: 4, b: "Govorec v posnetku reče: <em>“I wouldn't say the lecture was a waste of time, but I could have spent the afternoon more wisely.”</em> Kaj meni o predavanju?", p: "Ni bilo povsem brez koristi, a ni bilo vredno njegovega časa.", n: ["Bilo je odlično in zelo koristno.", "Bilo je popolnoma nekoristno.", "Predavanja se ni udeležil."],
+    post: "<p>Litota <em>I wouldn't say … a waste of time</em> omili kritiko, <em>could have spent … more wisely</em> pa pove, da ni bilo vredno časa.</p>" },
+  { t: 4, b: "<em>“The train due to arrive at platform four at 9:15 is now expected at 9:40. We apologise for the delay.”</em> Koliko minut zamude ima vlak?", v: 25, rez: "25 minut",
+    post: "<p><em>due to arrive at 9:15</em> = po voznem redu ob 9.15; <em>now expected at 9:40</em> = zdaj pričakovan ob 9.40. Razlika je 25 minut.</p>" },
+  { t: 4, b: "<em>“Had I known the tickets would sell out so quickly, I'd have booked them the moment they went on sale.”</em> Kaj se je zgodilo?", p: "Vstopnic ni kupil pravočasno in so jih razprodali.", n: ["Vstopnice je kupil takoj, ko so bile na voljo.", "Vstopnice še niso v prodaji.", "Vstopnice so mu podarili."],
+    post: "<p>Tretji pogojnik z inverzijo (<em>Had I known …, I'd have booked</em>) opisuje neuresničeno preteklo možnost: ni vedel in ni kupil.</p>" },
+  { t: 4, b: "<em>“It's not that I don't trust him; it's just that he's let us down before.”</em> Kakšen je govorčev odnos?", p: "Previden je, ker ga je ta oseba že razočarala.", n: ["Popolnoma mu zaupa.", "Nikoli ga ni srečal.", "Hvaležen mu je za pomoč."],
+    post: "<p><em>let somebody down</em> = razočarati, pustiti na cedilu. Stavek omili nezaupanje, a ga ne zanika.</p>" },
+  { t: 4, b: "<em>“Prices went up by ten percent in January and then fell by ten percent in June.”</em> Kakšna je cena junija v primerjavi z začetno?", p: "za 1 % nižja", n: ["enaka", "za 1 % višja", "za 10 % nižja"],
+    post: "<p>1,10 · 0,90 = 0,99, torej 1 % nižja od začetne cene.</p>" },
+  { t: 4, b: "<em>“You needn't have brought an umbrella; the forecast says it'll be sunny all day.”</em> Kaj pomeni stavek?", p: "Dežnik je prinesel, a ga ni bilo treba.", n: ["Dežnika ni prinesel, ker ga ni potreboval.", "Moral bi prinesti dežnik.", "Dežnik mora prinesti jutri."],
+    post: "<p><em>needn't have + deležnik</em> pomeni, da je nekdo nekaj naredil po nepotrebnem. <em>didn't need to</em> bi le povedal, da ni bilo treba.</p>" },
+  { t: 4, b: "<em>“I'd rather you didn't mention this to anyone until it's official.”</em> Kaj govorec želi?", p: "Naj sogovornik zaenkrat nikomur ne pove.", n: ["Naj sogovornik takoj obvesti vse.", "Sam bo obvestil vse.", "Novica je že uradna."],
+    post: "<p><em>I'd rather you + preteklik</em> izraža vljudno željo o vedenju drugega: raje bi videl, da ne poveš.</p>" },
+  { t: 4, b: "<em>“The museum is open daily except Mondays, but on public holidays it closes two hours early, at 4 p.m.”</em> Kdaj se muzej običajno zapre?", p: "ob 18.00", n: ["ob 16.00", "ob 14.00", "ob ponedeljkih ob 16.00"],
+    post: "<p>Na praznike se zapre dve uri prej, ob 16.00, torej je običajni čas zapiranja 18.00. Ob ponedeljkih je zaprt.</p>" },
+];
