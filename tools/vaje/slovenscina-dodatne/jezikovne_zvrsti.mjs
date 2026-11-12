@@ -1,0 +1,18 @@
+export default [
+  { t: 4, b: "<em>»Glej, kok je fajn, k sva šla na kavo.«</em> Katerim zvrstem pripada izrek?", p: "neknjižni pogovorni jezik (pokrajinski pogovorni), govorjeni prenosnik, neuradni položaj", n: ["knjižni zborni jezik, uradni položaj", "narečje, pisni prenosnik", "knjižni pogovorni jezik"],
+    post: "<p><em>kok</em>, <em>fajn</em>, <em>k</em> niso knjižni; izrek je značilen za neuradni govorjeni pogovor, kjer se mešajo pokrajinske značilnosti.</p>" },
+  { t: 4, b: "Kakšna je razlika med knjižnim zbornim in knjižnim pogovornim jezikom?", p: "oba sta knjižna; pogovorni dovoljuje sproščenejšo izgovorjavo in nekatere pogovorne oblike", n: ["pogovorni ni knjižen", "zborni se uporablja le doma", "ni razlike"],
+    post: "<p>Knjižni pogovorni jezik se uporablja v manj uradnih govornih položajih (npr. pogovor z učiteljem), zborni v javnem govoru (radio, predavanje).</p>" },
+  { t: 4, b: "Katero besedilo spada v publicistično funkcijsko zvrst?", p: "komentar v časopisu", n: ["prošnja za službo", "znanstveni članek", "zakon o volitvah"],
+    post: "<p>Funkcijske zvrsti: praktičnosporazumevalna (prošnja), strokovna (članek), publicistična (komentar, poročilo, intervju), umetnostna. Zakon spada v uradovalno (praktično).</p>" },
+  { t: 4, b: "Kaj so socialne zvrsti neknjižnega jezika?", p: "narečja, pokrajinski pogovorni jeziki, interesne govorice in slengi", n: ["poročilo, komentar, intervju", "pesem, roman, drama", "zborni in pogovorni jezik"],
+    post: "<p>Socialne zvrsti delimo na knjižne (zborni, pogovorni) in neknjižne (pokrajinski pogovorni, narečja, interesne govorice: sleng, žargon, argo).</p>" },
+  { t: 4, b: "<em>»Pacient ima akutni apendicitis, potrebna je urgentna laparoskopija.«</em> Kaj je značilno za ta izrek?", p: "strokovna zvrst s strokovnimi izrazi (termini), ki jih splošni naslovnik morda ne razume", n: ["sleng mladostnikov", "umetnostno besedilo z metaforami", "narečni govor"],
+    post: "<p>Termini (<em>apendicitis</em>, <em>laparoskopija</em>) so enopomenski in stilno nevtralni, značilni za strokovno zvrst; razumljivo bi bilo »vnetje slepiča«.</p>" },
+  { t: 4, b: "Zakaj je slovenščina narečno tako razčlenjena, čeprav jo govori razmeroma malo ljudi?", p: "zaradi razgibanega reliefa, dolgotrajne politične razdrobljenosti in stikov z različnimi sosednjimi jeziki", n: ["ker je bila knjižna norma uvedena šele v 20. stoletju", "ker so narečja nastala iz različnih neslovanskih jezikov", "ker se narečja razlikujejo le po zapisu"],
+    post: "<p>Gore in reke so ločevale skupnosti, ozemlje je bilo razdeljeno med dežele, vplivali so romanski, germanski in madžarski sosedje. Nastalo je sedem narečnih skupin z več kot 40 narečji.</p>" },
+  { t: 4, b: "Kaj pomeni, da je besedilo zaznamovano s prenosnikom?", p: "da so v njem značilnosti govorjenega ali pisnega prenosnika (npr. mašila v govoru)", n: ["da ga je napisal znan avtor", "da je napisano v narečju", "da vsebuje grafične elemente"],
+    post: "<p>Govorjeno besedilo ima mašila, ponavljanja, nedokončane stavke, pisno pa je bolj urejeno in zgoščeno.</p>" },
+  { t: 4, b: "Kateri izraz spada v sleng in kateri v žargon?", p: "»fajn žur« je sleng, »bremza« (pri voznikih) je žargon", n: ["oba sta knjižna", "»fajn žur« je žargon, »bremza« je sleng", "oba sta narečna"],
+    post: "<p>Sleng je govorica mladih (izraža pripadnost), žargon je poklicna ali interesna govorica (avtomehaniki, glasbeniki …).</p>" },
+];

@@ -1,0 +1,18 @@
+export default [
+  { t: 4, b: "V katerem paru gre za homonima (enakozvočnici z nepovezanima pomenoma)?", p: "<em>kot</em> (geometrijski) – <em>kot</em> (veznik)", n: ["<em>glava</em> (del telesa) – <em>glava</em> (vodja)", "<em>velik</em> – <em>ogromen</em>", "<em>vroč</em> – <em>mrzel</em>"],
+    post: "<p>Homonimi imajo enako obliko in nepovezan pomen. <em>glava</em> v obeh pomenih je večpomenka (prenesen pomen), <em>velik/ogromen</em> sopomenki, <em>vroč/mrzel</em> protipomenki.</p>" },
+  { t: 4, b: "Kaj je frazem in kateri primer je frazem?", p: "ustaljena besedna zveza s prenesenim pomenom, npr. <em>imeti maslo na glavi</em>", n: ["vsaka zveza pridevnika in samostalnika, npr. <em>lepa hiša</em>", "tujka, npr. <em>computer</em>", "skrajšana beseda, npr. <em>NUK</em>"],
+    post: "<p><em>Imeti maslo na glavi</em> = biti kriv. Frazemi so ustaljeni in pomensko celoviti.</p>" },
+  { t: 4, b: "Katera beseda je nadpomenka ostalim trem?", p: "<em>glasbilo</em>", n: ["<em>violina</em>", "<em>klavir</em>", "<em>flavta</em>"],
+    post: "<p>Nadpomenka (hiperonim) zajema podpomenke (hiponime). <em>violina</em>, <em>klavir</em>, <em>flavta</em> so vrste glasbil.</p>" },
+  { t: 4, b: "Katera beseda je slovenski ustreznik za tujko <em>kompjuter</em>, ki jo jezikovni priročniki odsvetujejo?", p: "<em>računalnik</em>", n: ["<em>komputer</em>", "<em>kompjuteraš</em>", "<em>digitalnik</em>"],
+    post: "<p>Kjer imamo ustaljeno domačo besedo, ima prednost: <em>računalnik</em>.</p>" },
+  { t: 4, b: "Kaj je evfemizem in kateri primer je evfemizem?", p: "olepšava: <em>preminil je</em> namesto <em>umrl je</em>", n: ["pretiravanje: <em>tisočkrat sem ti rekel</em>", "kletvica", "zaničljivka: <em>bajta</em>"],
+    post: "<p>Evfemizem omili neprijetno resničnost. Pretiravanje je hiperbola, zaničljivke so slabšalne besede.</p>" },
+  { t: 4, b: "Kateri par vsebuje knjižno in neknjižno sopomenko z istim pomenom?", p: "<em>zavora</em> – <em>bremza</em>", n: ["<em>hiša</em> – <em>stavba</em>", "<em>dobro</em> – <em>slabo</em>", "<em>pes</em> – <em>mačka</em>"],
+    post: "<p><em>Bremza</em> je germanizem, neknjižen; knjižni izraz je <em>zavora</em>.</p>" },
+  { t: 4, b: "Kaj je značilno za besedo <em>mamica</em> glede na <em>mama</em>?", p: "je manjšalnica oziroma ljubkovalnica, zato je čustveno zaznamovana", n: ["je slabšalnica", "je strokovni izraz", "je arhaizem"],
+    post: "<p>Pripona <em>-ica</em> tvori manjšalnice, ki so pogosto ljubkovalne. Čustveno nezaznamovana je <em>mama</em>.</p>" },
+  { t: 4, b: "Kaj je neologizem in kaj arhaizem?", p: "neologizem je nova beseda (npr. <em>zgoščenka</em> ob nastanku), arhaizem zastarela beseda (npr. <em>kosilo</em> v pomenu zajtrk)", n: ["oba sta tujki", "neologizem je zastarela, arhaizem nova beseda", "oba sta narečni besedi"],
+    post: "<p>Neologizmi nastajajo za nove pojme; arhaizmi so izrazi, ki jih ne rabimo več ali so spremenili pomen (pri Trubarju <em>kosilo</em> = zajtrk).</p>" },
+];

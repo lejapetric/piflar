@@ -1,0 +1,16 @@
+export default [
+  { t: 4, b: "Koliko verzov ima sonet in kakšna je zgradba Sonetnega venca?", p: "14 verzov; venec ima 15 sonetov, zadnji (magistrale) je sestavljen iz prvih verzov prejšnjih 14", n: ["14 verzov; venec ima 14 sonetov brez magistrala", "12 verzov; venec ima 15 sonetov", "14 verzov; venec ima 7 sonetov in akrostih Julija"],
+    post: "<p>Zadnji verz vsakega soneta je prvi verz naslednjega. Magistrale ima akrostih PRIMICOVI JULJI.</p>" },
+  { t: 4, b: "Katera kitična oblika je uporabljena v Krstu pri Savici (Uvod in Krst)?", p: "Uvod v tercinah, Krst v stancah", n: ["Uvod v stancah, Krst v tercinah", "oba dela v sonetih", "oba dela v gazelah"],
+    post: "<p>Uvod (Črtomirov boj) je v tercinah (kot Dantejeva Božanska komedija), Krst (srečanje z Bogomilo) v stancah (oktavah).</p>" },
+  { t: 4, b: "Kako se v Krstu pri Savici razreši spor med Črtomirom in Bogomilo?", p: "Črtomir se iz ljubezni do Bogomile pokristjani in odide za duhovnika v Oglej, ona ostane nuna", n: ["poročita se in odideta v Bohinj", "Črtomir pade v boju z Valjhunom", "Bogomila se odreče veri in odide s Črtomirom"],
+    post: "<p>Ljubezen se izpolni le v onostranstvu; Črtomir sprejme krst, a se odpove zemeljski sreči. To je tragični romantični razkol med idealom in resničnostjo.</p>" },
+  { t: 4, b: "Kaj je gazela kot pesniška oblika, ki jo je Prešeren prenesel v slovenščino?", p: "orientalska oblika z dvovrstičnicami, kjer se prvi dve vrstici rimata, potem se rima ponavlja v vsaki drugi", n: ["italijanska oblika s 14 verzi", "trivrstična kitica z verižno rimo", "ljudska pesem z refrenom"],
+    post: "<p>Prešernove Gazele (1833) imajo rimo aa ba ca da … Izvirajo iz perzijske lirike, Prešeren jih pozna prek nemške romantike.</p>" },
+  { t: 4, b: "Kaj je značilno za Prešernovo Zdravljico?", p: "napisana je kot napitnica in oblikovana kot kelih (likovna pesem); sedma kitica je slovenska himna", n: ["je ljubezenski sonet Juliji", "je ep o pokristjanjevanju", "je balada o povodnem možu"],
+    post: "<p>Zdravljica (1844) je oblikovana kot čaša. Zaradi cenzure je izšla v celoti šele 1848.</p>" },
+  { t: 4, b: "Kateri je osrednji motiv Soneta nesreče?", p: "bivanjski obup: zemeljsko življenje je hudo, edina rešitev je smrt", n: ["veselje nad naravo", "domoljubni poziv k uporu", "hvalnica ljubljeni Juliji"],
+    post: "<p>Soneti nesreče izražajo bivanjski obup; v sonetu »Življenje ječa, čas v nji rabelj hudi« pesnik vidi rešitev šele v smrti.</p>" },
+  { t: 4, b: "V kateri pesmi Prešeren obravnava razmerje pesnika do družbe in ugotavlja, da je pesnik nerazumljen?", p: "Glosa", n: ["Povodni mož", "Zdravljica", "Turjaška Rozamunda"],
+    post: "<p>V Glosi pesnik ugotavlja, da nima sreče ne pri ženskah ne pri oblasti; pesniško poslanstvo pa ga drži pokonci.</p>" },
+];

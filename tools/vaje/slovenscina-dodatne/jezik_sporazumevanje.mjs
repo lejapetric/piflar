@@ -1,0 +1,18 @@
+export default [
+  { t: 4, b: "Katera izjava o jeziku kot sistemu znakov je pravilna?", p: "zveza med izrazom in pomenom jezikovnega znaka je dogovorna (arbitrarna)", n: ["vsaka beseda zveni kot stvar, ki jo poimenuje", "pomen besede se nikoli ne spreminja", "jezik je sestavljen samo iz zapisanih znakov"],
+    post: "<p>De Saussure: znak sestavljata označevalec in označenec, njuna zveza je arbitrarna. Zato ima ista stvar v različnih jezikih različna imena.</p>" },
+  { t: 4, b: "Sporočevalec reče: <em>»Tukaj je pa res vroče.«</em> in s tem želi, da naslovnik odpre okno. Za kakšno govorno dejanje gre?", p: "posredno govorno dejanje (poziv, izražen s trditvijo)", n: ["neposredno vprašanje", "izjava brez namena", "neposreden ukaz"],
+    post: "<p>Oblika je pripovedna (trditev), namen pa poziv. Pri posrednih govornih dejanjih se oblika in sporočevalni namen ne ujemata.</p>" },
+  { t: 4, b: "Katera vloga jezika prevladuje v stavku <em>»Halo, me slišiš?«</em> na začetku telefonskega pogovora?", p: "fatična (vzpostavljanje stika)", n: ["poetska", "metajezikovna", "sporočanjska (referencialna)"],
+    post: "<p>Jakobson: fatična vloga preverja ali vzdržuje stik med sogovorcema. Metajezikovna govori o jeziku, poetska poudarja obliko sporočila.</p>" },
+  { t: 4, b: "Kaj pomeni, da je slovenščina »uradni jezik« na celotnem ozemlju RS, italijanščina in madžarščina pa tudi na narodnostno mešanih območjih?", p: "na teh območjih sta uradna oba jezika, ki se uporabljata enakopravno v javnem življenju", n: ["italijanščina in madžarščina se smeta uporabljati le doma", "na teh območjih slovenščina ni uradni jezik", "manjšinska jezika sta uradna po vsej Sloveniji"],
+    post: "<p>Ustava RS (11. člen): uradni jezik je slovenščina; na območjih avtohtonih skupnosti sta uradna tudi italijanščina oziroma madžarščina.</p>" },
+  { t: 4, b: "V katerem primeru gre za metajezikovno rabo jezika?", p: "»Beseda <em>miza</em> je samostalnik ženskega spola.«", n: ["»Miza je pogrnjena.«", "»Pridi k mizi!«", "»Kako lepa miza!«"],
+    post: "<p>Metajezikovna vloga: jezik govori o jeziku. V drugih primerih beseda poimenuje predmet.</p>" },
+  { t: 4, b: "Kaj je jezikovna zmožnost in kaj sporazumevalna zmožnost?", p: "jezikovna: znanje slovnice in besedja; sporazumevalna: tudi primerna raba glede na okoliščine", n: ["sta sinonima", "jezikovna: raba v okoliščinah; sporazumevalna: znanje slovnice", "jezikovna: le pisanje; sporazumevalna: le govorjenje"],
+    post: "<p>Sporazumevalna zmožnost obsega jezikovno, pa tudi pragmatično, kulturno in stvarno znanje ter motivacijo.</p>" },
+  { t: 4, b: "Zakaj je dvojina pomembna posebnost slovenščine med slovanskimi jeziki?", p: "slovenščina jo je ohranila kot živo slovnično število, večina slovanskih jezikov pa jo je izgubila", n: ["slovenščina je edini jezik na svetu z dvojino", "dvojina se uporablja le v pesništvu", "dvojina je nastala šele v 20. stoletju"],
+    post: "<p>Dvojino imata med slovanskimi jeziki še lužiška srbščina (zgornja in spodnja). Poznajo jo tudi drugi jeziki (npr. arabščina).</p>" },
+  { t: 4, b: "Kateri dejavnik sporazumevanja manjka, če pošiljatelj pošlje e-pošto na napačen naslov?", p: "naslovnik (sporočilo ne pride do prejemnika)", n: ["sporočevalec", "prenosnik", "jezik"],
+    post: "<p>Sporočevalec in prenosnik (e-pošta) sta, jezik tudi; manjka naslovnik, ki bi sporočilo sprejel in razumel.</p>" },
+];

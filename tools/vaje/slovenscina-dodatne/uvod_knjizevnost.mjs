@@ -1,0 +1,18 @@
+export default [
+  { t: 4, b: "<em>»Sinje morje je vriskalo, ko je sonce zašlo.«</em> Katera pesniška figura je v tem verzu?", p: "poosebitev (morje vriska kot človek)", n: ["primera", "ukras (okrasni pridevek) brez druge figure", "anafora"],
+    post: "<p>Poosebitev (personifikacija) neživemu pripiše človeške lastnosti. <em>Sinje</em> je okrasni pridevek, a glavna figura je poosebitev.</p>" },
+  { t: 4, b: "Verz ima enajst zlogov, naglašeni so 2., 4., 6., 8. in 10. zlog. Kateri metrum je to?", p: "petstopični jamb (laški enajsterec)", n: ["petstopični trohej", "šeststopični daktil", "štiristopični anapest"],
+    post: "<p>Nenaglašen-naglašen zlog je jamb; pet stopic in še nenaglašen zlog na koncu da enajsterec, značilen za Prešernove sonete.</p>" },
+  { t: 4, b: "Kaj je oksimoron?", p: "zveza nasprotujočih si pojmov, npr. <em>živi mrtvec</em>, <em>zgovorni molk</em>", n: ["ponavljanje besede na začetku verzov", "pretiravanje", "nagovor odsotne osebe"],
+    post: "<p>Oksimoron združi protislovna pojma v nov pomen. Ponavljanje na začetku verzov je anafora, pretiravanje hiperbola, nagovor apostrofa.</p>" },
+  { t: 4, b: "Kakšna je razlika med pripovedovalcem v prvi osebi in vsevednim pripovedovalcem?", p: "prvoosebni je oseba v zgodbi z omejenim pogledom, vsevedni stoji zunaj in pozna misli vseh oseb", n: ["prvoosebni je vedno avtor sam", "vsevedni pripoveduje vedno v prvi osebi", "ni razlike"],
+    post: "<p>Pripovedovalca ne enačimo z avtorjem. Vsevedni (avktorialni) pripovedovalec ve več kot osebe.</p>" },
+  { t: 4, b: "Kaj je katarza v tragediji (po Aristotelu)?", p: "očiščenje gledalca strahu in sočutja ob doživljanju tragične usode junaka", n: ["vrh dramskega dogajanja", "srečni konec komedije", "uvodni prizor drame"],
+    post: "<p>Aristotel (Poetika): tragedija z vzbujanjem strahu in sočutja doseže njuno očiščenje. Vrh dogajanja je klimaks.</p>" },
+  { t: 4, b: "Kateri je pravilen vrstni red dejanj v klasični zgradbi drame (Freytag)?", p: "zasnova – zaplet – vrh – razplet – razsnova", n: ["vrh – zasnova – zaplet – razsnova – razplet", "zaplet – zasnova – razplet – vrh – razsnova", "zasnova – vrh – zaplet – razsnova – razplet"],
+    post: "<p>Petdejanska zgradba: ekspozicija, zaplet, vrh, razplet (peripetija), razsnova (katastrofa ali srečni konec).</p>" },
+  { t: 4, b: "Kaj je sinekdoha in kateri primer jo vsebuje?", p: "del namesto celote ali obratno, npr. <em>Pod streho smo.</em> (streha = hiša)", n: ["primera z <em>kot</em>, npr. <em>bel kot sneg</em>", "zvočno slikanje, npr. <em>žvrgoli</em>", "vprašanje brez pričakovanega odgovora"],
+    post: "<p>Sinekdoha je vrsta metonimije (pars pro toto). Zvočno slikanje je onomatopeja, vprašanje retorično vprašanje.</p>" },
+  { t: 4, b: "V kateri literarni vrsti je glavni namen vzbujanje smeha s kritiko človeških slabosti?", p: "komedija oziroma satira", n: ["tragedija", "elegija", "himna"],
+    post: "<p>Komedija in satira z zabavo razkrivata slabosti. Elegija je žalostinka, himna slavilna pesem.</p>" },
+];

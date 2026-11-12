@@ -1,0 +1,18 @@
+export default [
+  { t: 4, b: "Katera oblika je pravilna v mestniku dvojine: <em>o ___ (dve hiši)</em>?", p: "o hišah", n: ["o hišema", "o hiših", "o hišama"],
+    post: "<p>V mestniku in rodilniku se dvojina ujema z množino: <em>o (dveh) hišah</em>.</p>" },
+  { t: 4, b: "Katera oblika je pravilna: <em>Bil sem pri ___ (Andrej), ki je kupil ___ (nov avto)</em>?", p: "Andreju, nov avto", n: ["Andreji, novega avta", "Andreju, novega avta", "Andreji, nov avto"],
+    post: "<p>Mestnik: <em>pri Andreju</em>. Neživ moški samostalnik ima tožilnik enak imenovalniku: <em>kupil nov avto</em>. Živ bi imel <em>novega psa</em>.</p>" },
+  { t: 4, b: "Katera glagolska oblika je pravilna za dvojino ženskega spola: <em>Sestri ___ (iti) v kino.</em>", p: "sta šli", n: ["sta šla", "so šle", "sta šle"],
+    post: "<p>Opisni deležnik v dvojini ženskega spola ima končnico <em>-i</em>: <em>sta šli</em>. <em>Sta šla</em> je moški spol.</p>" },
+  { t: 4, b: "Katera oblika primernika je pravilna?", p: "<em>dober – boljši</em>, <em>slab – slabši</em>, <em>visok – višji</em>", n: ["<em>dober – bolj dober</em>, <em>slab – slabejši</em>, <em>visok – visokejši</em>", "<em>dober – dobrejši</em>, <em>slab – bolj slab</em>, <em>visok – visokši</em>", "<em>dober – boljši</em>, <em>slab – slabejši</em>, <em>visok – visokši</em>"],
+    post: "<p>Pri <em>dober</em> je primernik nepravilen (<em>boljši</em>); <em>slabši</em> s pripono <em>-ši</em>, <em>višji</em> z glasovno premeno (s → š).</p>" },
+  { t: 4, b: "Katera oblika je pravilna: <em>Ne poznam tega ___ (dekle).</em>", p: "dekleta", n: ["dekle", "dekla", "deklete"],
+    post: "<p><em>dekle</em> je srednjega spola s podaljšavo osnove s <em>-t-</em>: <em>dekle, dekleta, dekletu</em>. Zanikanje zahteva rodilnik.</p>" },
+  { t: 4, b: "Katera oblika velelnika je pravilna za 2. osebo množine glagola <em>reči</em>?", p: "recite", n: ["rečite", "rečte", "recete"],
+    post: "<p><em>reči – rečem</em>, velelnik <em>reci, recimo, recite</em> (č → c pred -i).</p>" },
+  { t: 4, b: "Kateri glagolski vid ima glagol <em>skočiti</em> in kakšen je njegov par?", p: "dovršni, par je nedovršni <em>skakati</em>", n: ["nedovršni, par je dovršni <em>skakati</em>", "dvovidski, nima para", "dovršni, par je dovršni <em>poskočiti</em>"],
+    post: "<p>Dovršni glagol izraža končano dejanje, nedovršni trajajoče ali ponavljajoče se. <em>Poskočiti</em> je prav tako dovršen.</p>" },
+  { t: 4, b: "Katera oblika je pravilna: <em>Videl sem ___ (ti) in ___ (on).</em>", p: "tebe in njega", n: ["te in ga", "ti in on", "tebi in njemu"],
+    post: "<p>Tožilnik osebnega zaimka: dolgi obliki <em>tebe</em>, <em>njega</em> rabimo pri poudarku in v priredni zvezi; kratki <em>te</em>, <em>ga</em> ne moreta stati v zvezi z <em>in</em>.</p>" },
+];

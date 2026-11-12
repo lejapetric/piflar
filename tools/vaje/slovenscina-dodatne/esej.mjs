@@ -1,0 +1,18 @@
+export default [
+  { t: 4, b: "Kaj mora vsebovati uvod maturitetnega eseja?", p: "predstavitev teme oziroma problema, umestitev del in napoved, kaj bo esej obravnaval", n: ["podroben povzetek vsebine obeh del", "osebno mnenje o avtorju brez povezave s temo", "sklepne ugotovitve"],
+    post: "<p>Uvod pripelje do problema, ki ga zastavlja naslov teme. Povzemanje vsebine ni namen eseja; sklepne ugotovitve sodijo v zaključek.</p>" },
+  { t: 4, b: "Katera trditev najbolje opiše razliko med povzemanjem in razlaganjem v eseju?", p: "povzemanje ponovi dogajanje, razlaganje pojasni pomen dogajanja za temo in ga podpre z navedki", n: ["povzemanje je zaželeno v vseh odstavkih", "razlaganje je enako kot obnova", "navedki niso dovoljeni"],
+    post: "<p>Ocenjevalci cenijo interpretacijo in utemeljevanje; obnova sama ne dokazuje razumevanja.</p>" },
+  { t: 4, b: "Kako pravilno navedemo citat iz besedila v eseju?", p: "v narekovajih, z ustrezno povezavo s svojim besedilom in kratko razlago pomena", n: ["brez narekovajev, da ne moti besedila", "samo kot dolg odstavek brez razlage", "citatov v eseju ne uporabljamo"],
+    post: "<p>Citat podpre trditev, a ga je treba razložiti in vključiti v misel.</p>" },
+  { t: 4, b: "Tema eseja zahteva primerjavo dveh literarnih oseb. Katera zgradba je najprimernejša?", p: "po vidikih primerjave (npr. odnos do družbe, razvoj), pri vsakem vidiku obe osebi", n: ["najprej vse o prvi osebi, nato vse o drugi brez povezave", "le opis prve osebe", "le seznam lastnosti v alinejah"],
+    post: "<p>Primerjava po vidikih pokaže podobnosti in razlike, kar je jedro naloge.</p>" },
+  { t: 4, b: "Katera izjava je primerna za zaključek eseja?", p: "povzame bistvene ugotovitve in jih poveže s temo, morda z lastnim pogledom", n: ["uvede nov argument, ki ga ni bilo v jedru", "ponovi uvod dobesedno", "povzame vsebino obeh del"],
+    post: "<p>Zaključek ne prinaša novih trditev, temveč zaokroži razpravo.</p>" },
+  { t: 4, b: "Zakaj je pomembna povezanost (koherenca) odstavkov v eseju?", p: "ker morajo trditve slediti logično, z ustreznimi povezovalci, da je razmišljanje jasno", n: ["ker mora biti vsak odstavek enako dolg", "ker esej ne sme imeti odstavkov", "ker ocenjevalec bere samo prvi in zadnji odstavek"],
+    post: "<p>Povezovalci kot <em>zato</em>, <em>nasprotno</em>, <em>poleg tega</em> pokažejo razmerja med mislimi.</p>" },
+  { t: 4, b: "Katera trditev o slogu maturitetnega eseja je pravilna?", p: "esej je napisan v knjižnem jeziku, v strokovnem a osebno obarvanem slogu", n: ["dovoljen je sleng, če je zanimiv", "pisati je treba izključno v prvi osebi množine", "esej je zapis v alinejah"],
+    post: "<p>Pričakuje se knjižna, slogovno ustrezna raba z literarnovednim izrazjem.</p>" },
+  { t: 4, b: "Kako ravnaš, če tema eseja sprašuje o motivu, ki se v enem delu pojavi le posredno?", p: "pojasniš, kako se motiv kaže posredno, in to podpreš z dogodki ali navedki", n: ["motiv izpustiš", "napišeš, da tega v delu ni", "pišeš o drugem motivu"],
+    post: "<p>Ocenjuje se, ali kandidat temo razume in jo zna utemeljiti tudi pri manj očitnih mestih.</p>" },
+];
