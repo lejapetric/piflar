@@ -1,0 +1,16 @@
+export default [
+  { t: 4, b: "Kaj je glavna razlika med racionalizmom in empirizmom?", p: "racionalizem vidi vir spoznanja v razumu (prirojene ideje), empirizem v izkustvu (tabula rasa)", n: ["racionalizem zanika razum, empirizem izkušnjo", "oba trdita, da spoznanje ni mogoče", "empirizem verjame v prirojene ideje"],
+    post: "<p>Racionalisti: Descartes, Spinoza, Leibniz. Empiristi: Locke, Berkeley, Hume. Kant ju poskuša združiti.</p>" },
+  { t: 4, b: "Kaj je Kantov »kopernikanski obrat« v teoriji spoznanja?", p: "ne ravna se spoznanje po predmetih, ampak predmeti (kot pojavi) po oblikah našega spoznanja", n: ["Zemlja se vrti okoli Sonca", "spoznanje izhaja izključno iz izkušnje", "stvari same na sebi so popolnoma spoznavne"],
+    post: "<p>Prostor, čas in kategorije so apriorne oblike. Stvari na sebi (noumen) ne spoznamo.</p>" },
+  { t: 4, b: "Kaj pokažejo Gettierjevi primeri o klasični opredelitvi znanja?", p: "primeri, kjer imamo upravičeno resnično prepričanje, a ne znanja, ker je resničnost naključna", n: ["dokaz, da znanje ni mogoče", "dokaz obstoja Boga", "problem razmerja med dušo in telesom"],
+    post: "<p>Gettier (1963) je pokazal, da klasična opredelitev znanja kot upravičenega resničnega prepričanja ne zadošča.</p>" },
+  { t: 4, b: "Zakaj Hume trdi, da vzročnosti ne zaznamo neposredno?", p: "ker zaznavamo le zaporedje dogodkov, nujno zvezo pa dodamo iz navade", n: ["ker vzroki ne obstajajo", "ker je vzročnost prirojena ideja", "ker se dogodki nikoli ne ponovijo"],
+    post: "<p>Biljardni krogli: vidimo le, da gibanju prve sledi gibanje druge. Pričakovanje izhaja iz navade.</p>" },
+  { t: 4, b: "Kaj je Lockova razlika med primarnimi in sekundarnimi kakovostmi?", p: "primarne (oblika, velikost, gibanje) so v predmetu, sekundarne (barva, okus) so učinki v zaznavajočem", n: ["primarne so v nas, sekundarne v predmetu", "obe so v predmetu", "obe sta prirojeni ideji"],
+    post: "<p>Berkeley je to razliko zavrnil: tudi primarne kakovosti so le zaznave (esse est percipi).</p>" },
+  { t: 4, b: "Kaj pomeni Berkeleyjev rek <em>esse est percipi</em>?", p: "biti pomeni biti zaznan; materija neodvisno od zaznave ne obstaja", n: ["obstaja le materija", "čutila nas vedno varajo", "le Bog ne obstaja"],
+    post: "<p>Berkeley je imaterialist: stvari obstajajo kot ideje v umu, tudi ko jih ne zaznavamo mi, jih zaznava Bog.</p>" },
+  { t: 4, b: "Zakaj je skepticizem, ki trdi »ničesar ne moremo vedeti«, samospodbijajoč?", p: "ker trditev sama zahteva vedenje, da ničesar ne moremo vedeti", n: ["ker so vsi skeptiki lagali", "ker je skepticizem prepovedan", "ker čutila nikoli ne varajo"],
+    post: "<p>Antični pironisti so se zato vzdržali sodbe (epohe), namesto da bi trdili nespoznavnost.</p>" },
+];

@@ -1,0 +1,18 @@
+export default [
+  { t: 4, b: "Kaj je osrednji del filozofskega eseja?", p: "jasna teza, ki jo utemeljimo z argumenti in pretehtamo ugovore", n: ["opis zgodovine filozofije", "zbirka citatov brez razlage", "osebna zgodba brez argumentov"],
+    post: "<p>Esej je argumentirano razmišljanje o problemu, ne obnova snovi.</p>" },
+  { t: 4, b: "Zakaj je v eseju pomembno obravnavati ugovore svojemu stališču?", p: "ker pokažemo, da smo razmislili o šibkih točkah, in s tem okrepimo svojo tezo", n: ["ker je treba na koncu prevzeti nasprotno stališče", "ker je esej brez ugovorov prekratek", "ker ugovori nadomestijo argumente"],
+    post: "<p>Dober esej predvidi najmočnejše ugovore in nanje odgovori.</p>" },
+  { t: 4, b: "Kako je najbolje začeti filozofski esej?", p: "z jasno opredelitvijo problema in ključnih pojmov ter napovedjo teze", n: ["z dolgim citatom brez razlage", "s pripovedjo o avtorjevem življenju", "z zaključkom"],
+    post: "<p>Pojmi naj bodo jasno opredeljeni, da se izognemo dvoumnosti (npr. »svoboda« v različnih pomenih).</p>" },
+  { t: 4, b: "Katera napaka pogosto oslabi filozofski esej?", p: "dvoumna raba ključnega pojma (ekvivokacija), ki spreminja pomen med argumenti", n: ["uporaba primerov", "jasna struktura", "navajanje filozofov"],
+    post: "<p>Primer: »zakon« kot pravna norma in kot naravni zakon.</p>" },
+  { t: 4, b: "Kakšna je vloga miselnega poskusa v filozofskem eseju?", p: "z namišljenim primerom preizkusimo, ali teorija zdrži v mejnem primeru", n: ["je okras brez argumentativne vrednosti", "nadomesti potrebo po utemeljitvi", "je vedno resničen dogodek"],
+    post: "<p>Primeri: Gygesov prstan, Rawlsova tančica nevednosti, problem vagona.</p>" },
+  { t: 4, b: "Kaj naj vsebuje zaključek filozofskega eseja?", p: "povzetek argumentacije, potrditev ali omilitev teze in morda odprta vprašanja", n: ["nov argument brez razlage", "dobesedno ponovitev uvoda", "le citat"],
+    post: "<p>Zaključek pokaže, kaj smo dosegli in česa ne.</p>" },
+  { t: 4, b: "Kako uporabiti filozofa kot avtoriteto v eseju, da ne zagrešiš zmote?", p: "predstaviš njegove razloge in jih presodiš, ne le navedeš, da je nekaj trdil", n: ["napišeš, da je trditev resnična, ker jo je rekel Platon", "filozofov ne omenjaš", "navedeš le ime filozofa"],
+    post: "<p>Sklicevanje na avtoriteto brez razlogov je zmota (ad verecundiam).</p>" },
+  { t: 4, b: "Tema eseja je »Ali je laž kdaj upravičena?«. Katera teza je najbolj filozofsko obdelana?", p: "Laž je upravičena le, kadar je edino sredstvo za zaščito življenja, kar pokažem s primerjavo Kanta in utilitarizma.", n: ["Laž je slaba, ker so me tako naučili.", "Laž je včasih dobra, včasih slaba.", "O laži so pisali mnogi filozofi."],
+    post: "<p>Dobra teza je jasna, sporna in napove način utemeljevanja.</p>" },
+];

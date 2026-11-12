@@ -166,7 +166,7 @@ Snovi, ki še nimajo razlage, imajo na seznamu snovi in v stranskem meniju povez
 
 Predmeti imajo lahko poleg nalog iz predlog še ročno napisane dodatne naloge v `tools/vaje/<predmet>-dodatne/<slug>.mjs`
 (zapis je opisan v `tools/vaje/matematika-dodatne/README.md`). Pri matematiki so to
-čisto osnovne in zelo težke sestavljene naloge v več korakih (vsaka snov ima vsaj 14 zelo težkih), pri fiziki, kemiji, biologiji, geografiji, informatiki, nemščini, glasbi, angleščini, ekonomiji, umetnostni zgodovini in slovenščini
+čisto osnovne in zelo težke sestavljene naloge v več korakih (vsaka snov ima vsaj 14 zelo težkih), pri fiziki, kemiji, biologiji, geografiji, informatiki, nemščini, glasbi, angleščini, ekonomiji, umetnostni zgodovini, slovenščini in filozofiji
 zelo težke naloge (vsaka snov ima vsaj 10). Dodajo se za nalogami iz `tools/vaje/<predmet>/`, zato se id-ji obstoječih nalog (in s tem napredek uporabnikov) ne spremenijo.
 
 ### Razdelek Naloge

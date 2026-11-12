@@ -1,0 +1,18 @@
+export default [
+  { t: 4, b: "Kaj je raziskovalno vprašanje v filozofski seminarski nalogi?", p: "natančno zastavljeno vprašanje, na katero naloga odgovori z analizo besedil in argumentov", n: ["naslov naloge", "seznam literature", "povzetek vsebine knjige"],
+    post: "<p>Primer: »Ali je Descartesov cogito res neodvisen od jezika?« Preširoko vprašanje (»Kaj je resnica?«) ni primerno.</p>" },
+  { t: 4, b: "Kako pravilno navajamo vire v seminarski nalogi?", p: "dosledno po izbranem slogu (npr. APA ali Chicago), z avtorjem, letnico, naslovom in stranjo navedka", n: ["dovolj je navesti le spletno stran", "vira ni treba navajati, če ga povzamemo", "vir navedemo le v uvodu"],
+    post: "<p>Tudi parafraza zahteva navedbo vira, sicer gre za plagiat.</p>" },
+  { t: 4, b: "Kaj je plagiat?", p: "predstavljanje tujih misli ali besedila kot svojih, brez navedbe vira", n: ["navajanje citatov", "uporaba primarne literature", "uporaba sekundarne literature"],
+    post: "<p>Plagiat je kršitev akademske poštenosti, tudi če je besedilo delno preoblikovano.</p>" },
+  { t: 4, b: "Kakšna je razlika med primarnim in sekundarnim virom v filozofiji?", p: "primarni je izvirno delo filozofa (npr. Kantova Kritika čistega uma), sekundarni je razlaga drugih avtorjev", n: ["primarni je najnovejši članek, sekundarni najstarejši", "primarni je učbenik, sekundarni enciklopedija", "ni razlike"],
+    post: "<p>Seminarska naloga naj temelji na primarnih virih, sekundarni pomagajo pri razlagi.</p>" },
+  { t: 4, b: "Zakaj je Wikipedija nezadosten vir za filozofsko seminarsko nalogo?", p: "ker ni preverjen strokovni vir; uporabimo jo lahko le za orientacijo in nato preverimo v primarnih in strokovnih virih", n: ["ker je prepovedana zakonsko", "ker je napisana le v angleščini", "ker ne vsebuje filozofskih tem"],
+    post: "<p>Boljši pregledni viri so npr. Stanford Encyclopedia of Philosophy.</p>" },
+  { t: 4, b: "Kako je smiselno sestaviti seminarsko nalogo?", p: "uvod z vprašanjem, jedro z analizo in argumenti, zaključek z odgovorom in seznam virov", n: ["le jedro brez uvoda", "le seznam citatov", "zaključek pred jedrom"],
+    post: "<p>Uvod pove, kaj in kako bomo raziskovali; zaključek odgovori na raziskovalno vprašanje.</p>" },
+  { t: 4, b: "Kaj je povzetek (abstrakt) seminarske naloge?", p: "kratek pregled vprašanja, metode in glavnih ugotovitev na začetku naloge", n: ["dolg uvod", "seznam virov", "osebna zahvala"],
+    post: "<p>Abstrakt bralcu hitro pove, o čem je naloga in kaj ugotovi.</p>" },
+  { t: 4, b: "Kako ravnaš z navedkom, ki je daljši od treh vrstic?", p: "ga zapišeš kot samostojen odstavek z zamikom, brez narekovajev, in navedeš vir", n: ["ga zapišeš v narekovajih v isti vrstici", "ga ne navedeš", "ga zapišeš z velikimi tiskanimi črkami"],
+    post: "<p>Daljši navedki (blokovni) so zamaknjeni; krajši v narekovajih znotraj besedila.</p>" },
+];

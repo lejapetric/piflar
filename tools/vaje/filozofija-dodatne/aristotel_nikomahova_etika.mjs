@@ -1,0 +1,16 @@
+export default [
+  { t: 4, b: "Kaj je po Aristotelu vrlina (arete) značaja?", p: "ustaljena drža, ki izbira sredino med dvema skrajnostma (prebitkom in pomanjkanjem)", n: ["prirojena lastnost, ki je ni mogoče pridobiti", "skrajnost, ki presega druge", "znanje o dobrem, ki samo po sebi zagotavlja pravilno ravnanje"],
+    post: "<p>Etične vrline pridobimo z navado (ethos). Pogum je sredina med strahopetnostjo in predrznostjo.</p>" },
+  { t: 4, b: "Kaj je po Aristotelu najvišje dobro, h kateremu stremijo vsa dejanja?", p: "srečnost (evdajmonija) kot dejavnost duše v skladu z vrlino", n: ["užitek", "bogastvo", "čast"],
+    post: "<p>Užitek, bogastvo in čast so sredstva ali nepopolni cilji. Evdajmonija je cilj zaradi sebe same.</p>" },
+  { t: 4, b: "Zakaj Aristotel trdi, da »ena lastovka ne prinese pomladi«?", p: "ker srečnost zahteva vrlo dejavnost skozi celo življenje, ne en sam dober dan ali dejanje", n: ["ker so živali nesposobne vrline", "ker je pomlad simbol užitka", "ker je sreča odvisna le od naključja"],
+    post: "<p>Srečnost je stalna dejavnost v »celotnem življenju«, zato ni mogoče biti srečen za kratek čas.</p>" },
+  { t: 4, b: "Kakšna je razlika med dianoetičnimi in etičnimi vrlinami?", p: "dianoetične so vrline razuma (modrost, preudarnost) in se jih učimo s poukom; etične so vrline značaja in jih pridobimo z navado", n: ["dianoetične so prirojene, etične pa nemogoče pridobiti", "etične so vrline razuma, dianoetične pa značaja", "ni razlike"],
+    post: "<p>Preudarnost (phronesis) povezuje obe vrsti: prepozna pravo sredino v konkretnem položaju.</p>" },
+  { t: 4, b: "Katera oblika življenja je po Aristotelu najsrečnejša v strogem smislu?", p: "teoretično (kontemplativno) življenje, ker je umska dejavnost najvišja in najbolj samozadostna", n: ["življenje užitkov", "politično življenje za čast", "pridobitniško življenje"],
+    post: "<p>V X. knjigi Aristotel hvali bios theoretikos; politično življenje je srečno v drugotnem smislu.</p>" },
+  { t: 4, b: "Kaj je po Aristotelu pogoj, da je dejanje prostovoljno in ga lahko moralno presojamo?", p: "da izvira iz delujočega in ga ta izvede z vedenjem o okoliščinah, brez zunanje prisile", n: ["da je dejanje uspešno", "da ga odobri večina", "da je delujoči srečen"],
+    post: "<p>Dejanja iz prisile ali nevednosti o okoliščinah so neprostovoljna in zanje ne zaslužimo hvale ali graje.</p>" },
+  { t: 4, b: "Katera je po Aristotelu sredina pri ravnanju z denarjem?", p: "radodarnost, med zapravljivostjo in skopostjo", n: ["skopost, med radodarnostjo in revščino", "bogastvo, med revščino in varčnostjo", "zapravljivost, med radodarnostjo in skopostjo"],
+    post: "<p>Sredina ni aritmetična, temveč »za nas«: primerna osebi in okoliščinam.</p>" },
+];

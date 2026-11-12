@@ -1,0 +1,16 @@
+export default [
+  { t: 4, b: "Na kateri premisi temelji kozmološki dokaz za obstoj Boga (Tomaž Akvinski)?", p: "vsaka stvar ima vzrok, neskončna vrsta vzrokov ni mogoča, zato obstaja prvi vzrok", n: ["Bog je najpopolnejše mislivo bitje", "v naravi je red, ki kaže na načrt", "moralni zakon zahteva zakonodajalca"],
+    post: "<p>Tomaževih »pet poti« vključuje dokaz iz gibanja, vzročnosti in kontingence. Kritika: zakaj se veriga ne bi mogla končati v nečem drugem kot Bogu?</p>" },
+  { t: 4, b: "Kaj je problem zla (teodiceja)?", p: "kako je lahko svet z zlom združljiv z vsemogočnim, vsevednim in vsedobrim Bogom", n: ["kako Bog kaznuje zle ljudi", "zakaj ljudje ne verjamejo v Boga", "zakaj obstajajo različne religije"],
+    post: "<p>Epikurejska dilema: če Bog hoče in ne more odpraviti zla, ni vsemogočen; če more in noče, ni dober. Leibniz: to je najboljši mogoči svet.</p>" },
+  { t: 4, b: "Kaj je Pascalova stava?", p: "racionalno je verjeti v Boga, ker je pri veri možen neskončen dobiček in le končna izguba", n: ["dokaz, da Bog ne obstaja", "trditev, da razum dokaže Boga", "zahteva, da verujemo le, kar vidimo"],
+    post: "<p>Kritika: ali je mogoče verjeti zaradi koristi; katerega boga izbrati.</p>" },
+  { t: 4, b: "Kako Feuerbach razloži religijo?", p: "človek projicira svoje bistvo (ljubezen, modrost) v Boga in se s tem odtuji od sebe", n: ["religija je božje razodetje", "religija je opij ljudstva, ki ga uvaja država", "religija je nujna za moralo"],
+    post: "<p>Feuerbach: »Teologija je antropologija.« Marx je to nadaljeval v kritiki religije kot »opija ljudstva«.</p>" },
+  { t: 4, b: "Kaj je teleološki dokaz in kakšna je Humova kritika?", p: "iz reda v naravi sklepamo na razumnega oblikovalca; Hume: analogija s človeškimi izdelki je šibka, red bi lahko imel drug izvor", n: ["iz pojma Boga sklepamo na obstoj; Hume: obstoj ni predikat", "iz morale sklepamo na Boga; Hume: morala ne obstaja", "iz gibanja sklepamo na gibalca; Hume: gibanje je večno"],
+    post: "<p>Paleyjeva ura na travi je znana različica. Darwinova teorija ponudi naravno razlago prilagojenosti.</p>" },
+  { t: 4, b: "Kaj je fideizem?", p: "nazor, da vera ne potrebuje razumske utemeljitve in je razumu lahko celo nasprotna", n: ["nazor, da razum dokaže vse verske resnice", "nazor, da Bog ne obstaja", "nazor, da so vse religije enake"],
+    post: "<p>Tertulijan (»Verjamem, ker je absurdno«) in Kierkegaard (skok vere) sta znana fideista.</p>" },
+  { t: 4, b: "Kaj pomeni Nietzschejev izrek »Bog je mrtev«?", p: "v moderni kulturi vera v Boga izgublja moč kot temelj vrednot, kar vodi v nihilizem", n: ["Bog je fizično umrl", "Nietzsche je dokazal neobstoj Boga z logiko", "Nietzsche je pozival k obnovi krščanstva"],
+    post: "<p>Vesela znanost: norec oznanja Božjo smrt. Naloga je prevrednotenje vrednot.</p>" },
+];
