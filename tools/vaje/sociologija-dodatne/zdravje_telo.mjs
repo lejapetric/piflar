@@ -1,0 +1,16 @@
+export default [
+  { t: 4, b: "Kaj je Parsonsova »vloga bolnika«?", p: "družbeno pričakovano vedenje bolnika: oproščen je obveznosti, a mora želeti ozdraveti in poiskati pomoč", n: ["bolnik nima nobenih obveznosti", "bolnik mora delati naprej", "bolnik sam določi zdravljenje"],
+    post: "<p>Funkcionalistični pogled: bolezen je odklon, ki ga družba nadzoruje.</p>" },
+  { t: 4, b: "Kaj je medikalizacija?", p: "proces, v katerem vsakdanje pojave (žalost, porod, staranje) začnemo obravnavati kot zdravstvene težave", n: ["izumljanje zdravil", "zmanjšanje zdravstvenih storitev", "zdravljenje z zelišči"],
+    post: "<p>Illich in Conrad sta kritizirala vse večjo moč medicine nad življenjem.</p>" },
+  { t: 4, b: "Zakaj je zdravje povezano s socialnim slojem?", p: "nižji sloji imajo slabše delovne razmere, prehrano, več stresa in slabši dostop do zdravstva", n: ["ker so geni nižjih slojev slabši", "povezave ni", "ker višji sloji več delajo"],
+    post: "<p>Black Report (1980) v Veliki Britaniji je pokazal velike razlike v umrljivosti med sloji.</p>" },
+  { t: 4, b: "Kaj je stigma (Goffman)?", p: "lastnost, ki osebo v očeh drugih razvrednoti in jo izključi (npr. duševna bolezen)", n: ["znamenje uspeha", "zdravniška diagnoza", "telesna poškodba brez družbenega pomena"],
+    post: "<p>Goffman: Stigma (1963). Stigma vpliva na identiteto in vedenje.</p>" },
+  { t: 4, b: "Kako sociologi razumejo telo kot družbeni konstrukt?", p: "pomen, ideali lepote in ravnanje s telesom so oblikovani z družbo in kulturo", n: ["telo je le biološko", "telo ni povezano z identiteto", "vse kulture imajo iste ideale lepote"],
+    post: "<p>Primeri: različni ideali telesa v zgodovini, vpliv medijev na samopodobo.</p>" },
+  { t: 4, b: "Kaj je epidemiološki prehod?", p: "premik od prevladujočih nalezljivih bolezni k kroničnim nenalezljivim boleznim (srce, rak) z razvojem družbe", n: ["širjenje epidemij", "izumrtje bolezni", "povečanje umrljivosti dojenčkov"],
+    post: "<p>Omran (1971). Povezan je z demografskim prehodom.</p>" },
+  { t: 4, b: "Kaj je Foucaultov pojem biomoči?", p: "oblast, ki upravlja življenje prebivalstva (zdravje, rodnost, higiena) in disciplinira telesa", n: ["fizična moč posameznika", "biološka teorija zdravja", "moč zdravnikov nad bolniki v posameznem primeru"],
+    post: "<p>Država vodi statistiko rojstev in smrti, cepljenja in zdravstvene programe.</p>" },
+];

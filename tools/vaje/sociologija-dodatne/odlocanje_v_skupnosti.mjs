@@ -1,0 +1,16 @@
+export default [
+  { t: 4, b: "Katere tri tipe legitimne oblasti razlikuje Weber?", p: "tradicionalno, karizmatično in racionalno-legalno", n: ["demokratično, avtoritarno in totalitarno", "zakonodajno, izvršno in sodno", "monarhično, aristokratsko in demokratično"],
+    post: "<p>Moderna država temelji predvsem na racionalno-legalni oblasti in birokraciji.</p>" },
+  { t: 4, b: "Kaj je po Webru birokracija in kakšna je njena slaba stran?", p: "racionalna organizacija s hierarhijo, pravili in strokovnostjo; slaba stran je toga »železna kletka«, ki omejuje svobodo", n: ["neformalna skupina prijateljev; slaba stran je neučinkovitost", "oblast karizmatičnega vodje; slaba stran je nestalnost", "volilni sistem; slaba stran je nizka udeležba"],
+    post: "<p>Birokracija je tehnično najučinkovitejša oblika upravljanja, a vodi v razčaranje sveta in razosebljenost.</p>" },
+  { t: 4, b: "Kaj je civilna družba?", p: "področje prostovoljnih združenj, gibanj in nevladnih organizacij med državo, trgom in družino", n: ["vsi državljani države", "vojska in policija", "politične stranke v parlamentu"],
+    post: "<p>Pomembna za demokracijo, ker omogoča sodelovanje in nadzor oblasti.</p>" },
+  { t: 4, b: "Kaj je Gramscijeva hegemonija?", p: "oblast vladajočega razreda, ki temelji na soglasju, doseženem s kulturo in idejami, ne le na sili", n: ["neposredna vojaška oblast", "oblast večine", "mednarodna prevlada"],
+    post: "<p>Šola, mediji in cerkev širijo ideje, ki jih ljudje sprejmejo kot zdravo pamet.</p>" },
+  { t: 4, b: "Kaj je teorija elit (Mills)?", p: "v ZDA odloča povezana elita gospodarstva, politike in vojske (power elite)", n: ["odločajo vsi volivci enako", "odloča le predsednik", "elite nimajo vpliva"],
+    post: "<p>Nasprotje pluralizma (Dahl), ki vidi tekmovanje več interesnih skupin.</p>" },
+  { t: 4, b: "Kaj je volilna abstinenca in zakaj je problem za demokracijo?", p: "neudeležba na volitvah; problem, ker odločitve odražajo voljo manjšega in pogosto drugačnega dela prebivalstva", n: ["prepoved volitev", "glasovanje za več strank", "ni problem"],
+    post: "<p>Mladi in manj izobraženi pogosteje ne volijo, zato so njihovi interesi slabše zastopani.</p>" },
+  { t: 4, b: "Kaj so nova družbena gibanja?", p: "gibanja od 60. let, ki se borijo za identiteto, okolje, mir in pravice manjšin, ne le za ekonomske interese", n: ["delavska gibanja 19. stoletja", "politične stranke", "verska gibanja srednjega veka"],
+    post: "<p>Primeri: okoljevarstveno, feministično, mirovno gibanje.</p>" },
+];

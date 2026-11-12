@@ -1,0 +1,16 @@
+export default [
+  { t: 4, b: "Kakšna je razlika med kvantitativnim in kvalitativnim raziskovanjem v sociologiji?", p: "kvantitativno meri in šteje (ankete, statistika), kvalitativno poglobljeno razume pomene (intervjuji, opazovanje)", n: ["kvantitativno je vedno boljše", "kvalitativno uporablja le števila", "ni razlike"],
+    post: "<p>Pogosto se kombinirata (mešane metode).</p>" },
+  { t: 4, b: "Kaj je udeleženo opazovanje in kakšna je njegova težava?", p: "raziskovalec sodeluje v življenju skupine; težava: lahko spremeni vedenje skupine ali izgubi objektivnost", n: ["opazovanje z razdalje; težava: preveč podatkov", "anketa; težava: kratkost", "eksperiment; težava: preveč nadzora"],
+    post: "<p>Primer: Whyte, Street Corner Society. Prikrito opazovanje odpira etična vprašanja.</p>" },
+  { t: 4, b: "V anketi je odzivnost 20 %. Zakaj je to problem?", p: "ker se tisti, ki odgovorijo, lahko sistematično razlikujejo od drugih, kar popači rezultate", n: ["ker je vzorec prevelik", "ker je odzivnost previsoka", "ni problema"],
+    post: "<p>Pristranskost zaradi neodgovora (non-response bias).</p>" },
+  { t: 4, b: "Kaj je operacionalizacija pojma?", p: "določitev merljivih kazalnikov za abstrakten pojem (npr. revščina kot dohodek pod pragom)", n: ["izbira teme raziskave", "objava rezultatov", "statistična obdelava"],
+    post: "<p>Različne operacionalizacije istega pojma lahko vodijo do različnih rezultatov.</p>" },
+  { t: 4, b: "Raziskovalec iz podatkov, da imajo občine z več cerkvami več kaznivih dejanj, sklepa, da cerkve povzročajo kriminal. Katero napako dela?", p: "spregleda tretjo spremenljivko (velikost prebivalstva), ki vpliva na obe", n: ["vzorec je reprezentativen", "napake ni, sklep je pravilen", "uporablja kvalitativno metodo"],
+    post: "<p>Navidezna (lažna) korelacija: večje občine imajo več cerkva in več kaznivih dejanj.</p>" },
+  { t: 4, b: "Zakaj je ekološka zmota pri razlagi statistike nevarna?", p: "ker iz podatkov o skupinah (npr. regijah) napačno sklepamo o posameznikih v njih", n: ["ker podatki o okolju niso zanesljivi", "ker so vzorci premajhni", "ker posameznikov ni mogoče anketirati"],
+    post: "<p>Če ima regija z več priseljenci višjo pismenost, to še ne pomeni, da so priseljenci bolj pismeni.</p>" },
+  { t: 4, b: "Zakaj Durkheimova študija Samomor velja za klasičen primer sociološke metode?", p: "ker je s statistiko pokazal, da so stopnje samomora povezane z družbeno integracijo, ne le z osebnimi razlogi", n: ["ker je intervjuval žrtve", "ker je izvedel eksperiment", "ker je zanikal statistiko"],
+    post: "<p>Protestanti so imeli višje stopnje kot katoliki, poročeni nižje kot samski. Tipi: egoistični, altruistični, anomični, fatalistični.</p>" },
+];

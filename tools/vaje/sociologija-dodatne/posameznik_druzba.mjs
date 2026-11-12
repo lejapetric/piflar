@@ -1,0 +1,16 @@
+export default [
+  { t: 4, b: "Kaj je Durkheim mislil s »socialnimi dejstvi«?", p: "načine delovanja, mišljenja in čutenja, ki so zunanji posamezniku in nanj delujejo s prisilo", n: ["osebna prepričanja posameznika", "statistične napake", "naravne zakonitosti"],
+    post: "<p>Durkheim: socialna dejstva je treba obravnavati kot stvari. Primer so norme, jezik, pravo.</p>" },
+  { t: 4, b: "Kakšna je razlika med Webrovim in Durkheimovim pristopom k sociologiji?", p: "Weber poudarja razumevanje smisla, ki ga posamezniki pripisujejo delovanju; Durkheim poudarja zunanja socialna dejstva", n: ["oba zanikata vlogo posameznika", "Weber preučuje le ekonomijo, Durkheim le religijo", "ni razlike"],
+    post: "<p>Webrova metoda je verstehen (razumevanje). Durkheim je bližje pozitivizmu.</p>" },
+  { t: 4, b: "Kaj je sociološka imaginacija (C. W. Mills)?", p: "zmožnost povezati osebne težave z javnimi družbenimi vprašanji in zgodovino", n: ["sposobnost predvidevanja prihodnosti", "domišljijsko pisanje", "razumevanje lastne psihe"],
+    post: "<p>Brezposelnost posameznika je osebna težava; če je brez dela milijon ljudi, je to javno vprašanje.</p>" },
+  { t: 4, b: "Kakšna je razlika med statusom, pridobljenim z rojstvom, in doseženim statusom?", p: "pripisani status (spol, poreklo) dobimo brez lastnega prispevka, doseženi (poklic, izobrazba) z lastnimi dejanji", n: ["oba sta prirojena", "doseženi status je vedno višji", "pripisanega lahko poljubno spremenimo"],
+    post: "<p>V modernih družbah narašča pomen doseženega statusa, a pripisani še vedno vpliva na priložnosti.</p>" },
+  { t: 4, b: "Kaj je konflikt vlog?", p: "nasprotujoča si pričakovanja dveh ali več vlog, ki jih ima ista oseba", n: ["konflikt med dvema osebama", "neznanje o vlogi", "vloga v gledališču"],
+    post: "<p>Primer: zaposlena mati ima nasprotujoča si pričakovanja službe in družine.</p>" },
+  { t: 4, b: "Kaj je Meadov »jaz« (I) in »mene« (me)?", p: "»I« je spontani, ustvarjalni del sebstva, »me« je ponotranjen pogled drugih in družbenih pričakovanj", n: ["»I« je telo, »me« je duša", "oba sta prirojena", "»I« je družbeni, »me« je biološki del"],
+    post: "<p>Simbolni interakcionizem: sebstvo nastane v interakciji, ko se naučimo zavzeti vlogo posplošenega drugega.</p>" },
+  { t: 4, b: "Kaj pomeni Cooleyjev »zrcalni jaz«?", p: "sliko o sebi oblikujemo po tem, kako mislimo, da nas vidijo in ocenjujejo drugi", n: ["opazovanje sebe v ogledalu", "prirojena samopodoba", "dejanska ocena drugih"],
+    post: "<p>Tri faze: predstavljamo si, kako nas vidijo; kako nas presojajo; in to doživljamo kot ponos ali sram.</p>" },
+];

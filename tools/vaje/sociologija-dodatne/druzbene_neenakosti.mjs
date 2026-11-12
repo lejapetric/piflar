@@ -1,0 +1,16 @@
+export default [
+  { t: 4, b: "Kakšna je razlika med Marxovim in Webrovim pojmovanjem razredov?", p: "Marx: razred določa odnos do proizvajalnih sredstev; Weber: poleg razreda (trg) še status (ugled) in stranka (moč)", n: ["oba upoštevata le dohodek", "Weber zanika razrede", "Marx poudarja status, Weber lastnino"],
+    post: "<p>Weber je neenakosti razumel večdimenzionalno.</p>" },
+  { t: 4, b: "Kaj trdi funkcionalistična teorija stratifikacije (Davis in Moore)?", p: "neenakost je nujna, ker z višjimi nagradami privabi najsposobnejše na najpomembnejše položaje", n: ["neenakost je vedno krivična", "neenakost je posledica naključja", "vse položaje je treba enako plačati"],
+    post: "<p>Tumin je kritiziral: kako izmerimo pomembnost; dediščina omejuje priložnosti.</p>" },
+  { t: 4, b: "Kaj je medgeneracijska socialna mobilnost?", p: "sprememba družbenega položaja otrok v primerjavi s starši", n: ["sprememba položaja v življenju posameznika", "selitev v drugo državo", "sprememba poklica brez spremembe statusa"],
+    post: "<p>Znotrajgeneracijska mobilnost je sprememba med življenjem posameznika.</p>" },
+  { t: 4, b: "Kaj meri Ginijev koeficient?", p: "neenakost porazdelitve dohodka: 0 popolna enakost, 1 (ali 100) popolna neenakost", n: ["povprečni dohodek", "stopnjo brezposelnosti", "rast BDP"],
+    post: "<p>Slovenija ima enega najnižjih Ginijevih koeficientov v EU (okoli 0,23–0,25).</p>" },
+  { t: 4, b: "Kakšna je razlika med absolutno in relativno revščino?", p: "absolutna: pomanjkanje osnovnih dobrin za preživetje; relativna: dohodek pod pragom glede na povprečje družbe", n: ["sta enaki", "absolutna se meri glede na mediano", "relativna pomeni lakoto"],
+    post: "<p>V EU je prag tveganja revščine 60 % mediane ekvivalentnega dohodka.</p>" },
+  { t: 4, b: "Kaj je stekleni strop?", p: "nevidne ovire, ki ženskam in manjšinam preprečujejo napredovanje na najvišje položaje", n: ["omejitev plač", "zakon o enakopravnosti", "tip arhitekture"],
+    post: "<p>Kljub formalni enakosti so ženske na vodilnih položajih podzastopane.</p>" },
+  { t: 4, b: "Kaj je intersekcionalnost?", p: "pristop, ki upošteva, kako se različne oblike neenakosti (spol, rasa, razred) prepletajo in krepijo", n: ["preučevanje križišč v mestih", "teorija, da je pomemben le razred", "teorija, da je pomemben le spol"],
+    post: "<p>Kimberlé Crenshaw (1989): izkušnje temnopolte ženske niso le vsota izkušenj ženske in temnopoltega moškega.</p>" },
+];

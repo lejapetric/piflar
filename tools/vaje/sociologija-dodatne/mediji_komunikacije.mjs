@@ -1,0 +1,16 @@
+export default [
+  { t: 4, b: "Kaj je postavljanje dnevnega reda (agenda setting)?", p: "mediji ne povedo, kaj mislimo, ampak o čem razmišljamo, z izbiro tem in njihovim poudarkom", n: ["mediji neposredno določijo mnenja", "mediji nimajo vpliva", "mediji objavijo urnik oddaj"],
+    post: "<p>McCombs in Shaw (1972): teme, ki jih mediji izpostavijo, javnost doživlja kot najpomembnejše.</p>" },
+  { t: 4, b: "Kaj je McLuhan mislil z izrekom »medij je sporočilo«?", p: "da sama oblika medija spreminja način mišljenja in družbo, ne le vsebina", n: ["da je vsebina nepomembna", "da so mediji vedno lažnivi", "da so sporočila vedno kratka"],
+    post: "<p>Tisk je spodbudil linearno mišljenje, televizija drugačno zaznavanje. Pojem »globalna vas«.</p>" },
+  { t: 4, b: "Kaj je moralna panika (Cohen)?", p: "pretiran medijski in javni odziv na skupino ali pojav, ki ga predstavijo kot grožnjo družbenim vrednotam", n: ["upravičen strah pred nevarnostjo", "panika na borzi", "zavrnitev medijev"],
+    post: "<p>Cohen: Folk Devils and Moral Panics (mods in rockerji, 1960). Mediji ustvarijo »ljudske hudiče«.</p>" },
+  { t: 4, b: "Kaj je informacijski mehurček (filter bubble)?", p: "algoritmi nam kažejo vsebine, ki ustrezajo našim preferencam, zato redko srečamo drugačna mnenja", n: ["mehurček v kodi", "dostop do vseh informacij", "zaščita pred virusi"],
+    post: "<p>Pariser (2011). Povezan je s polarizacijo in odmevnimi komorami.</p>" },
+  { t: 4, b: "Kakšna je kritika kulturne industrije (Adorno, Horkheimer)?", p: "množična kultura je standardizirana, ustvarja lažne potrebe in pasivne potrošnike", n: ["množična kultura je vedno osvobajajoča", "kultura nima vpliva na družbo", "mediji spodbujajo kritično mišljenje"],
+    post: "<p>Frankfurtska šola: Dialektika razsvetljenstva (1944).</p>" },
+  { t: 4, b: "Kaj je teorija uporabe in zadovoljitve?", p: "občinstvo je dejavno in izbira medije za zadovoljitev svojih potreb (informiranje, zabava, identiteta)", n: ["občinstvo je pasivno", "mediji neposredno vbrizgajo sporočila", "ljudje izbirajo medije naključno"],
+    post: "<p>Nasprotje modela injekcijske igle, ki je predpostavljal pasivno občinstvo.</p>" },
+  { t: 4, b: "Kaj je digitalni razkorak?", p: "neenak dostop do digitalnih tehnologij in znanja za njihovo uporabo med skupinami", n: ["razlika med starimi in novimi računalniki", "razkorak v hitrosti interneta med državami brez vpliva na družbo", "razlika med spletnimi stranmi"],
+    post: "<p>Razkorak poteka po dohodku, starosti, izobrazbi in regiji.</p>" },
+];
