@@ -1,0 +1,18 @@
+export default [
+  { t: 4, b: "Skladba ima zgradbo A B A C A B A. Katera oblika je to?", p: "sonatni rondo (rondo z zgradbo ABACABA)", n: ["tridelna pesemska oblika", "tema z variacijami", "fuga"],
+    post: "<p>Glavna tema A se vrača med epizodami; simetrična zgradba ABACABA je značilna za sonatni rondo, pogost v finalih klasicističnih sonat.</p>" },
+  { t: 4, b: "Kateri je pravilen vrstni red delov sonatne oblike?", p: "ekspozicija – izpeljava – repriza (lahko s kodo)", n: ["izpeljava – ekspozicija – repriza", "uvod – tema – variacije – finale", "ekspozicija – repriza – izpeljava"],
+    post: "<p>V ekspoziciji se predstavita temi, v izpeljavi se predelujeta, v reprizi se vrneta v glavnem tonalnem načinu.</p>" },
+  { t: 4, b: "V kateri tonaliteti se v ekspoziciji sonatne oblike durovega stavka običajno pojavi druga tema?", p: "v dominantni tonaliteti (npr. G-dur v stavku v C-duru)", n: ["v isti tonaliteti kot prva", "v subdominanti (F-dur v stavku v C-duru)", "v istoimenskem molu (c-mol)"],
+    post: "<p>V durovem stavku druga tema v ekspoziciji zazveni v dominanti, v reprizi pa v osnovni tonaliteti.</p>" },
+  { t: 4, b: "Kaj je značilno za fugo?", p: "tema (subjekt) vstopa zaporedno v vseh glasovih, odgovor zazveni v dominanti", n: ["vsi glasovi pojejo isto melodijo hkrati", "skladba je sestavljena iz več samostojnih plesov", "tema se vrača med kontrastnimi epizodami kot pri rondu"],
+    post: "<p>Fuga je polifona oblika. Subjektu sledi odgovor na dominanti, nato kontrasubjekt, vmesni deli in izpeljave.</p>" },
+  { t: 4, b: "Kaj je pasakalja (ali čakona)?", p: "variacije nad ponavljajočim se basovskim motivom (basso ostinato)", n: ["počasen uvod v opero", "pesem v kitični obliki", "virtuozni samostojni del za solista v koncertu"],
+    post: "<p>Pri pasakalji ali čakoni se kratek basovski model ponavlja, nad njim pa se zgornji glasovi spreminjajo.</p>" },
+  { t: 4, b: "Klasicistični solistični koncert ima pogosto kadenco. Kaj je to?", p: "virtuozni solistični odsek brez orkestra, navadno pred koncem stavka", n: ["zaključni akord vsega orkestra", "počasni drugi stavek koncerta", "uvodni orkestrski del pred vstopom solista"],
+    post: "<p>V kadenci solist sam improvizira ali igra zapisan odsek, preden orkester sklene stavek. Beseda kadenca pomeni tudi harmonski sklep.</p>" },
+  { t: 4, b: "Kateri je tipičen vrstni red stavkov klasicistične simfonije?", p: "hitri (sonatna oblika) – počasni – menuet – hitri finale", n: ["počasni – hitri – počasni – hitri", "menuet – hitri – počasni – rondo", "uvertura – arija – recitativ – zbor"],
+    post: "<p>Štiristavčna simfonija (Haydn, Mozart): hitri prvi stavek, počasni drugi, menuet s triom in hitri finale (pogosto rondo ali sonatna oblika).</p>" },
+  { t: 4, b: "Pesem ima zgradbo, pri kateri ima vsaka kitica drugačno glasbo, ki sledi besedilu. Kako se imenuje?", p: "prekomponirana pesem", n: ["kitična pesem", "tridelna pesemska oblika ABA", "rondo"],
+    post: "<p>Pri prekomponirani pesmi (durchkomponiert, npr. Schubertov Vilinski kralj) se glasba spreminja z vsebino. Pri kitični se ponavlja.</p>" },
+];

@@ -1,0 +1,18 @@
+export default [
+  { t: 4, b: "Klarinet v B zaigra zapisani ton c². Kateri ton dejansko zazveni?", p: "b¹ (veliko sekundo niže)", n: ["c² (enako)", "d² (veliko sekundo više)", "es² (malo terco više)"],
+    post: "<p>Klarinet v B je transponirajoče glasbilo: zveni veliko sekundo niže, kot je zapisano.</p>" },
+  { t: 4, b: "Rog v F zaigra zapisani ton c². Kateri ton zazveni?", p: "f¹ (čisto kvinto niže)", n: ["c² (enako)", "f² (čisto kvarto više)", "g¹ (čisto kvarto niže)"],
+    post: "<p>Rog v F zveni čisto kvinto niže, kot je zapisano.</p>" },
+  { t: 4, b: "Katera zasedba je pravilno opisan godalni kvartet?", p: "dve violini, viola, violončelo", n: ["violina, viola, violončelo, kontrabas", "dve violini, dve violi", "violina, violončelo, klavir, kontrabas"],
+    post: "<p>Godalni kvartet: 1. in 2. violina, viola, violončelo. Kontrabas sodi v godalni kvintet (npr. Schubertov kvintet Postrv) ali orkester.</p>" },
+  { t: 4, b: "Pri katerem glasbilu ton nastane z nihanjem jezička, ki udarja ob ustnik (enojni jeziček)?", p: "klarinet in saksofon", n: ["oboa in fagot", "flavta in pikolo", "trobenta in pozavna"],
+    post: "<p>Klarinet in saksofon imata enojni jeziček, oboa in fagot dvojnega, flavta nima jezička (rob), trobila pa zvenijo z nihanjem ustnic.</p>" },
+  { t: 4, b: "Zakaj ima pozavna poteg (cug)?", p: "s spreminjanjem dolžine cevi spreminja višino osnovnega tona in s tem vrsto alikvotnih tonov", n: ["z njim uravnava glasnost", "z njim spreminja barvo zvoka iz trobil v pihala", "z njim izklopi ustnik"],
+    post: "<p>Daljša cev da nižji osnovni ton. Z ustnicami igralec izbira alikvote, s potegom pa premika celotno vrsto. Druga trobila to delajo z ventili.</p>" },
+  { t: 4, b: "V katero skupino po Hornbostel-Sachsovi razvrstitvi spada klavir?", p: "kordofoni (strunska glasbila)", n: ["idiofoni", "membranofoni", "aerofoni"],
+    post: "<p>Pri klavirju zvok nastane z nihanjem strun, po katerih udarjajo kladivca, zato je kordofon, čeprav ga pogosto štejemo tudi med glasbila s tipkami.</p>" },
+  { t: 4, b: "Katera glasbila sedijo pri običajni postavitvi simfoničnega orkestra najbližje dirigentu na levi in katera povsem zadaj?", p: "spredaj prve violine, zadaj tolkala", n: ["spredaj tolkala, zadaj violine", "spredaj trobila, zadaj godala", "spredaj kontrabasi, zadaj flavte"],
+    post: "<p>Običajna postavitev: godala spredaj (prve violine levo od dirigenta), za njimi pihala, nato trobila, tolkala povsem zadaj.</p>" },
+  { t: 4, b: "Kateri ton je najnižji, ki ga zaigra violina na prazni struni?", p: "g (mali g)", n: ["c (mali c)", "d¹", "e²"],
+    post: "<p>Violina ima strune g, d¹, a¹, e². Viola ima c, g, d¹, a¹; violončelo C, G, d, a.</p>" },
+];
