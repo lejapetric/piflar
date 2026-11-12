@@ -1,0 +1,16 @@
+export default [
+  { t: 4, b: "<em>«Aunque llovía a cántaros, no suspendieron el concierto, lo cual sorprendió a todos.»</em> Kaj se je zgodilo?", p: "Koncert je potekal kljub močnemu dežju, kar je vse presenetilo.", n: ["Koncert so odpovedali zaradi dežja.", "Ni deževalo, zato je bil koncert.", "Koncert so prestavili na drug dan."],
+    post: "<p><em>llover a cántaros</em> = liti kot iz škafa; <em>no suspendieron</em> = niso odpovedali; <em>lo cual</em> = kar.</p>" },
+  { t: 4, b: "<em>«Si hubiera sabido que venías, habría preparado algo de cenar.»</em> Kaj pomeni stavek?", p: "Ni vedel, da prideš, zato ni pripravil večerje.", n: ["Vedel je, da prideš, in pripravil večerjo.", "Večerjo bo pripravil jutri.", "Ne mara kuhati."],
+    post: "<p>Pogojnik preteklosti (<em>pluscuamperfecto de subjuntivo + condicional compuesto</em>) izraža neuresničen pogoj v preteklosti.</p>" },
+  { t: 4, b: "<em>«No es que no quiera ayudarte, es que ahora mismo no puedo.»</em> Kakšen je odnos govorca?", p: "Želi pomagati, a trenutno ne more.", n: ["Noče pomagati.", "Že je pomagal.", "Bo pomagal takoj."],
+    post: "<p><em>No es que + subjuntivo</em> zanika domnevni vzrok: ne gre za to, da noče.</p>" },
+  { t: 4, b: "<em>«El número de turistas ha aumentado un 20 % respecto al año pasado, cuando llegaron 50.000.»</em> Koliko turistov je prišlo letos?", v: 60000, rez: "60 000",
+    post: "<p>50 000 · 1,2 = 60 000. <em>respecto al año pasado</em> = v primerjavi s prejšnjim letom.</p>" },
+  { t: 4, b: "<em>«Por mucho que estudie, nunca saca buenas notas en matemáticas.»</em> Kaj drži?", p: "Kljub veliko učenju ne dobi dobrih ocen pri matematiki.", n: ["Ne uči se, zato ima slabe ocene.", "Ima dobre ocene, ker se veliko uči.", "Matematike se ne uči več."],
+    post: "<p><em>Por mucho que + subjuntivo</em> = čeprav še tako, ne glede na to, koliko.</p>" },
+  { t: 4, b: "<em>«Me extraña que no haya llamado; suele ser muy puntual.»</em> Kaj govorec čuti?", p: "Čudi se, da ni poklical, ker je ponavadi točen.", n: ["Vesel je, da ni poklical.", "Pričakoval je, da ne bo klical.", "Jezen je, ker vedno zamuja."],
+    post: "<p><em>Me extraña que + subjuntivo</em> = čudi me, da; <em>suele ser</em> = ponavadi je.</p>" },
+  { t: 4, b: "<em>«Llevamos tres horas esperando el tren, que todavía no ha llegado.»</em> Kaj drži?", p: "Čakajo že tri ure in vlaka še ni.", n: ["Vlak je prišel pred tremi urami.", "Čez tri ure bodo šli na vlak.", "Vlak zamuja eno uro."],
+    post: "<p><em>llevar + čas + gerundio</em> izraža trajanje do zdaj: že tri ure čakamo.</p>" },
+];

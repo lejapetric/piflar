@@ -1,0 +1,16 @@
+export default [
+  { t: 4, b: "<em>« Bien qu'il ait beaucoup travaillé, il n'a pas réussi son examen. »</em> Kaj drži?", p: "Čeprav se je veliko učil, izpita ni opravil.", n: ["Izpit je opravil, ker se je veliko učil.", "Ni se učil, zato ni opravil.", "Izpit bo opravljal jutri."],
+    post: "<p><em>Bien que + subjonctif</em> = čeprav.</p>" },
+  { t: 4, b: "<em>« S'il avait pris le train de 8 heures, il ne serait pas arrivé en retard. »</em> Kaj se je zgodilo?", p: "Ni ujel vlaka ob 8h in je prišel prepozno.", n: ["Ujel je vlak ob 8h in prišel pravočasno.", "Vlaka ob 8h ni bilo.", "Prišel bo jutri."],
+    post: "<p><em>Plus-que-parfait + conditionnel passé</em> izraža neuresničeno preteklo možnost.</p>" },
+  { t: 4, b: "<em>« Il ne se passe pas un jour sans qu'elle pense à son pays natal. »</em> Kaj pomeni stavek?", p: "Vsak dan misli na domovino.", n: ["Na domovino nikoli ne misli.", "Na domovino misli le ob praznikih.", "Domovine ne pogreša."],
+    post: "<p>Dvojno zanikanje (<em>pas un jour sans que</em>) pomeni trditev: vsak dan.</p>" },
+  { t: 4, b: "<em>« Le magasin, fermé depuis trois mois pour travaux, rouvrira ses portes lundi prochain. »</em> Kaj drži?", p: "Trgovina je bila tri mesece zaprta zaradi prenove in se bo odprla naslednji ponedeljek.", n: ["Trgovina se bo zaprla za tri mesece.", "Trgovina je odprta vsak ponedeljek.", "Trgovina se je ta ponedeljek zaprla za vedno."],
+    post: "<p><em>rouvrir ses portes</em> = ponovno odpreti; <em>pour travaux</em> = zaradi del.</p>" },
+  { t: 4, b: "<em>« Je n'ai pas pu m'empêcher de rire quand il est tombé. »</em> Kaj pomeni stavek?", p: "Nisem se mogel zadržati smeha, ko je padel.", n: ["Nisem se smejal, ko je padel.", "Pomagal sem mu vstati.", "Padel sem od smeha."],
+    post: "<p><em>ne pas pouvoir s'empêcher de</em> = ne moči se zadržati.</p>" },
+  { t: 4, b: "<em>« Plus on lit, plus on a envie de lire. »</em> Kaj pomeni stavek?", p: "Več ko beremo, bolj si želimo brati.", n: ["Manj ko beremo, več vemo.", "Branje je dolgočasno.", "Beremo le, ko imamo čas."],
+    post: "<p><em>Plus … plus</em> = čim več … tem več.</p>" },
+  { t: 4, b: "<em>« Elle aurait dû partir plus tôt, mais elle a préféré attendre ses amis. »</em> Kaj drži?", p: "Morala bi oditi prej, a je raje počakala prijatelje.", n: ["Odšla je zgodaj brez prijateljev.", "Prijatelji so jo čakali.", "Ni hotela čakati."],
+    post: "<p><em>aurait dû + infinitif</em> = morala bi (pa ni).</p>" },
+];
