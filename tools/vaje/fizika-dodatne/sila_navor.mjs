@@ -1,0 +1,18 @@
+import { T } from "../lib.mjs";
+const x = String.raw, g = 9.81;
+const F1 = 50 * g / (2 * Math.sin(10 * Math.PI / 180));
+const Fv = 20 * g * (Math.sin(Math.PI / 6) + 0.3 * Math.cos(Math.PI / 6));
+export default [
+  { t: 4, b: x`Na sredini vrvi, napete med dvema stebroma, visi svetilka z maso \(50\ \mathrm{kg}\). Vsaka polovica vrvi oklepa z vodoravnico kot \(10^\circ\). Kolikšna je sila v vrvi? (\(g = 9{,}81\ \mathrm{m/s^2}\))`, v: F1, enota: "N",
+    rez: x`\(F \approx ${T(F1, 0)}\ \mathrm{N}\)`, post: x`<p>Navpični komponenti obeh polovic nosita težo: \(2F\sin 10^\circ = mg\).</p><p>\(F = \frac{50 \cdot 9{,}81}{2\sin 10^\circ} \approx ${T(F1, 0)}\ \mathrm{N}\) (skoraj trikrat več od teže!)</p>` },
+  { t: 4, b: x`Zaboj z maso \(20\ \mathrm{kg}\) vlečemo enakomerno po klancu z naklonom \(30^\circ\) navzgor s silo, vzporedno s klancem. Koeficient trenja je \(0{,}3\). Kolikšna je potrebna sila? (\(g = 9{,}81\ \mathrm{m/s^2}\))`, v: Fv, enota: "N",
+    rez: x`\(F \approx ${T(Fv, 0)}\ \mathrm{N}\)`, post: x`<p>Dolinska komponenta teže: \(mg\sin 30^\circ = ${T(20 * g * 0.5, 1)}\ \mathrm{N}\). Trenje: \(k_t mg\cos 30^\circ = ${T(0.3 * 20 * g * Math.cos(Math.PI / 6), 1)}\ \mathrm{N}\).</p><p>\(F = ${T(Fv, 0)}\ \mathrm{N}\)</p>` },
+  { t: 4, b: x`Homogena deska dolžine \(4\ \mathrm{m}\) in mase \(30\ \mathrm{kg}\) leži na dveh podporah: ena je na levem koncu, druga \(1\ \mathrm{m}\) od desnega konca. Najmanj kako daleč od desnega konca deske lahko stoji otrok z maso \(40\ \mathrm{kg}\), da se deska ne prevrne?`, v: 0.25, enota: "m", tol: 0.005,
+    rez: x`\(0{,}25\ \mathrm{m}\) od desnega konca`, post: x`<p>Na meji prevrnitve leva podpora ne nosi ničesar. Navori okoli desne podpore: teža deske ima ročico \(1\ \mathrm{m}\) (težišče je na sredini, \(2\ \mathrm{m}\) od levega konca), otrok pa ročico \(d\) na drugi strani.</p><p>\(30g \cdot 1 = 40g \cdot d\), \(d = 0{,}75\ \mathrm{m}\) desno od podpore, torej \(1 - 0{,}75 = 0{,}25\ \mathrm{m}\) od desnega konca.</p>` },
+  { t: 4, b: x`Lestev dolžine \(5\ \mathrm{m}\) in mase \(12\ \mathrm{kg}\) je naslonjena na gladko steno, spodnji konec je \(3\ \mathrm{m}\) od stene. S kolikšno silo stena deluje na lestev? (\(g = 9{,}81\ \mathrm{m/s^2}\))`, v: (12 * g * 1.5) / 4, enota: "N",
+    rez: x`\(F_s \approx ${T((12 * g * 1.5) / 4, 1)}\ \mathrm{N}\)`, post: x`<p>Višina zgornjega konca: \(\sqrt{25 - 9} = 4\ \mathrm{m}\). Gladka stena deluje vodoravno.</p><p>Navori okoli spodnjega konca: \(F_s \cdot 4 = mg \cdot 1{,}5\) (teža prijemlje na sredini, ročica je polovica od 3 m).</p><p>\(F_s = \frac{12 \cdot 9{,}81 \cdot 1{,}5}{4} \approx ${T((12 * g * 1.5) / 4, 1)}\ \mathrm{N}\)</p>` },
+  { t: 4, b: x`Dve sili, \(6\ \mathrm{N}\) in \(8\ \mathrm{N}\), delujeta na isto točko in oklepata kot \(60^\circ\). Kolikšna je velikost rezultante?`, v: Math.sqrt(36 + 64 + 2 * 6 * 8 * 0.5), enota: "N",
+    rez: x`\(F \approx ${T(Math.sqrt(148), 2)}\ \mathrm{N}\)`, post: x`<p>Kosinusni izrek za vsoto vektorjev: \(F^2 = F_1^2 + F_2^2 + 2F_1F_2\cos 60^\circ = 36 + 64 + 48 = 148\).</p><p>\(F \approx 12{,}17\ \mathrm{N}\)</p>` },
+  { t: 4, b: x`Vzmet s koeficientom \(200\ \mathrm{N/m}\) in vzmet s koeficientom \(300\ \mathrm{N/m}\) zaporedno povežemo in nanju obesimo utež z maso \(3\ \mathrm{kg}\). Za koliko centimetrov se skupaj raztegneta? (\(g = 9{,}81\ \mathrm{m/s^2}\))`, v: (3 * g / 120) * 100, enota: "cm",
+    rez: x`\(x \approx ${T((3 * g / 120) * 100, 1)}\ \mathrm{cm}\)`, post: x`<p>Zaporedna vezava: \(\frac{1}{k} = \frac{1}{200} + \frac{1}{300}\), \(k = 120\ \mathrm{N/m}\).</p><p>\(x = \frac{mg}{k} = \frac{29{,}43}{120} \approx 0{,}245\ \mathrm{m}\)</p>` },
+];

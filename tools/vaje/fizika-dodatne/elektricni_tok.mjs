@@ -1,0 +1,16 @@
+import { T } from "../lib.mjs";
+const x = String.raw;
+export default [
+  { t: 4, b: x`Baterija z gonilno napetostjo \(12\ \mathrm{V}\) in notranjim uporom \(0{,}5\ \mathrm{\Omega}\) poganja tok skozi zunanji upor \(5{,}5\ \mathrm{\Omega}\). Kolikšna je napetost na sponkah baterije?`, v: 11, enota: "V",
+    rez: x`\(U = 11\ \mathrm{V}\)`, post: x`<p>\(I = \frac{U_g}{R + R_n} = \frac{12}{6} = 2\ \mathrm{A}\).</p><p>\(U = U_g - IR_n = 12 - 1 = 11\ \mathrm{V}\)</p>` },
+  { t: 4, b: x`Upori \(4\ \mathrm{\Omega}\), \(6\ \mathrm{\Omega}\) in \(12\ \mathrm{\Omega}\) so vzporedno vezani, temu pa je zaporedno dodan upor \(3\ \mathrm{\Omega}\). Vezje priključimo na \(10\ \mathrm{V}\). Kolikšen tok teče skozi upor \(12\ \mathrm{\Omega}\)?`, v: 1 / 3, enota: "A", tol: 0.005, namig: "Vpiši decimalno število ali ulomek.",
+    rez: x`\(I \approx 0{,}33\ \mathrm{A}\)`, post: x`<p>Vzporedni del: \(\frac1R = \frac14 + \frac16 + \frac{1}{12} = \frac12\), \(R = 2\ \mathrm{\Omega}\). Skupaj \(5\ \mathrm{\Omega}\), \(I = 2\ \mathrm{A}\).</p><p>Napetost na vzporednem delu: \(2 \cdot 2 = 4\ \mathrm{V}\). \(I_{12} = \frac{4}{12} = \frac13\ \mathrm{A}\)</p>` },
+  { t: 4, b: x`Pri kolikšnem zunanjem uporu dobi porabnik največjo moč iz vira z gonilno napetostjo \(9\ \mathrm{V}\) in notranjim uporom \(1{,}5\ \mathrm{\Omega}\)? Kolikšna je ta moč? (Vpiši moč v W.)`, v: 81 / 6, enota: "W",
+    rez: x`\(R = 1{,}5\ \mathrm{\Omega}\), \(P = 13{,}5\ \mathrm{W}\)`, post: x`<p>Moč je največja, ko je zunanji upor enak notranjemu: \(R = 1{,}5\ \mathrm{\Omega}\).</p><p>\(I = \frac{9}{3} = 3\ \mathrm{A}\), \(P = I^2R = 9 \cdot 1{,}5 = 13{,}5\ \mathrm{W}\)</p>` },
+  { t: 4, b: x`Grelnik vode z močjo \(2\ \mathrm{kW}\) segreje \(1{,}5\ \mathrm{L}\) vode z \(20\ ^\circ\mathrm{C}\) do vrelišča. Koliko časa traja, če gre v vodo \(90\,\%\) energije? (\(c = 4200\ \mathrm{J/(kg\,K)}\); v s.)`, v: (1.5 * 4200 * 80) / (2000 * 0.9), enota: "s",
+    rez: x`\(t = 280\ \mathrm{s}\)`, post: x`<p>\(Q = mc\Delta T = 1{,}5 \cdot 4200 \cdot 80 = 504\ \mathrm{kJ}\).</p><p>\(t = \frac{Q}{\eta P} = \frac{504\,000}{1800} = 280\ \mathrm{s}\)</p>` },
+  { t: 4, b: x`Bakrena žica je dolga \(50\ \mathrm{m}\) in ima presek \(0{,}5\ \mathrm{mm^2}\). Kolikšen je njen upor? (\(\zeta_{Cu} = 1{,}7 \cdot 10^{-8}\ \mathrm{\Omega m}\))`, v: (1.7e-8 * 50) / 0.5e-6, enota: "Ω",
+    rez: x`\(R = 1{,}7\ \mathrm{\Omega}\)`, post: x`<p>\(R = \frac{\zeta l}{S} = \frac{1{,}7 \cdot 10^{-8} \cdot 50}{5 \cdot 10^{-7}} = 1{,}7\ \mathrm{\Omega}\)</p>` },
+  { t: 4, b: x`Dve žarnici, \(60\ \mathrm{W}\) in \(100\ \mathrm{W}\) (obe za \(230\ \mathrm{V}\)), vežemo zaporedno na \(230\ \mathrm{V}\). Kolikšna je moč \(60\)-vatne žarnice? (Upora žarnic se ne spreminjata.)`, v: (() => { const R1 = 230 ** 2 / 60, R2 = 230 ** 2 / 100, I = 230 / (R1 + R2); return I * I * R1; })(), enota: "W",
+    rez: x`\(P_1 \approx ${T((() => { const R1 = 230 ** 2 / 60, R2 = 230 ** 2 / 100, I = 230 / (R1 + R2); return I * I * R1; })(), 1)}\ \mathrm{W}\)`, post: x`<p>\(R_1 = \frac{U^2}{P_1} \approx 882\ \mathrm{\Omega}\), \(R_2 \approx 529\ \mathrm{\Omega}\). Tok: \(I = \frac{230}{1411} \approx 0{,}163\ \mathrm{A}\).</p><p>\(P_1 = I^2R_1 \approx 23{,}4\ \mathrm{W}\); šibkejša žarnica sveti močneje kot stotica (\(14{,}1\ \mathrm{W}\)).</p>` },
+];
