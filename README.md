@@ -170,13 +170,19 @@ nalogami iz `tools/vaje/matematika/`, zato se id-ji obstoječih nalog (in s tem 
 
 ### Razdelek Naloge
 
-Poleg Snovi in Mature ima predmet razdelek Naloge (`public/views/<predmet>/naloge/naloge.html`, zaenkrat matematika):
+Poleg Snovi in Mature ima vsak predmet z nalogami za vajo razdelek Naloge (`public/views/<predmet>/naloge/naloge.html`):
 vse naloge za vajo predmeta na eni strani s spustnima seznamoma za snov in težavnost (izbereš lahko več možnosti, privzeto je izbrano vse), stikalom za
 višjo raven in vrstnim redom (od lažjih do težjih ali premešano). Naloge se prikazujejo po 20, z gumbom Pokaži več.
 Stran potrebuje samo `<div id="naloge" data-predmet="matematika" data-math></div>` brez `data-poglavje`
 in `naloge.js`. Izbira se zapiše v naslov strani (`?snov=funkcije,stoznice&tezavnost=3,4&visja=0&vrstni=nakljucno`),
-zato povezave v stranskem meniju vodijo naravnost na naloge posamezne snovi. Za nov predmet kopiraj stran,
-spremeni `data-predmet` in dodaj razdelek v `sidebar.html` ter povezavo na stran predmeta.
+zato povezave v stranskem meniju vodijo naravnost na naloge posamezne snovi.
+
+```bash
+node tools/vaje/razdelki.mjs   # stran razdelka za vsak predmet, skupina Naloge v meniju in povezava na strani predmeta
+```
+
+Skripta stran vsakič prepiše, skupino v meniju in povezavo na strani predmeta pa doda le, če ju še ni
+(ko dodaš novo snov, njeno povezavo v skupino Naloge v meniju dodaj ročno).
 `test/vaje.test.js` preveri shemo nalog, da je pravilni odgovor sprejet in da ima vsaka snov vsaj 50 nalog.
 
 ## Matura
