@@ -1,0 +1,18 @@
+export default [
+  { t: 4, b: "Kateri so pet velikih faktorjev osebnosti (Big Five)?", p: "odprtost, vestnost, ekstravertnost, sprejemljivost, nevroticizem", n: ["ekstravertnost, introvertnost, inteligentnost, čustvenost, moč", "id, ego, superego, libido, nezavedno", "melanholik, kolerik, sangvinik, flegmatik, optimist"],
+    post: "<p>Kratica OCEAN. Model je empirično najbolj podprt sodoben opis osebnosti.</p>" },
+  { t: 4, b: "Kako Eysenck opiše temperament v svojem modelu?", p: "z dimenzijama ekstravertnost–introvertnost in nevroticizem–čustvena stabilnost (pozneje še psihoticizem)", n: ["s petimi faktorji OCEAN", "s štirimi telesnimi sokovi", "s strukturo id–ego–superego"],
+    post: "<p>Kombinacije dimenzij ustrezajo antičnim temperamentom (npr. ekstravertni in nestabilni = kolerik).</p>" },
+  { t: 4, b: "Kaj je značilno za osebnostno lastnost v psihologiji?", p: "razmeroma trajna in stalna nagnjenost k določenemu vedenju v različnih okoliščinah", n: ["trenutno razpoloženje", "naučena spretnost", "fizična značilnost"],
+    post: "<p>Lastnosti so bolj stabilne kot stanja (npr. anksioznost kot lastnost proti anksioznosti kot stanju).</p>" },
+  { t: 4, b: "Kaj je temperament?", p: "prirojena, biološko pogojena plat osebnosti, ki določa čustveno odzivnost in raven aktivnosti", n: ["moralna plat osebnosti", "naučene navade", "inteligentnost"],
+    post: "<p>Temperament se pokaže že pri dojenčkih (Thomas in Chess: lahki, težavni in počasni otroci).</p>" },
+  { t: 4, b: "Kaj je značaj (karakter) osebnosti?", p: "vrednostno obarvana plat osebnosti, ki se kaže v odnosu do sebe, drugih, dela in vrednot", n: ["prirojena biološka plat", "telesna zgradba", "inteligentnost"],
+    post: "<p>Značaj se oblikuje z vzgojo in izkušnjami, temperament je bolj prirojen.</p>" },
+  { t: 4, b: "Zakaj imajo projekcijski testi (npr. Rorschach) nižjo zanesljivost kot vprašalniki?", p: "ker razlaga odgovorov temelji na presoji ocenjevalca in različni ocenjevalci lahko pridejo do različnih sklepov", n: ["ker so prekratki", "ker jih rešujejo le otroci", "ker merijo le inteligentnost"],
+    post: "<p>Vprašalniki (npr. NEO-PI) imajo standardizirano točkovanje, a so dovzetni za socialno zaželene odgovore.</p>" },
+  { t: 4, b: "Kaj je socialno zaželeno odgovarjanje pri vprašalnikih osebnosti?", p: "težnja, da udeleženec odgovarja tako, da se prikaže v boljši luči", n: ["odgovarjanje po naključju", "vedno odgovarjanje z »ne«", "pomoč drugim pri reševanju"],
+    post: "<p>Zato vprašalniki vsebujejo lestvice laži ali kontrolna vprašanja.</p>" },
+  { t: 4, b: "Kaj kažejo raziskave dvojčkov o dednosti osebnostnih lastnosti?", p: "približno polovica razlik v lastnostih je povezana z genetskimi razlikami, preostanek z okoljem", n: ["osebnost je v celoti dedna", "dednost ne vpliva na osebnost", "le skupno družinsko okolje pojasni osebnost"],
+    post: "<p>Enojajčni dvojčki, vzgajani ločeno, so si v lastnostih podobni. Skupno družinsko okolje pojasni presenetljivo malo.</p>" },
+];

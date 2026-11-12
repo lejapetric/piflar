@@ -1,0 +1,16 @@
+export default [
+  { t: 4, b: "Kaj je zanesljivost testa?", p: "dosledno merjenje: pri ponovitvi ali različnih ocenjevalcih dobimo podobne rezultate", n: ["test meri to, kar naj bi meril", "test je kratek", "test je enak za vse starosti"],
+    post: "<p>Zanesljivost je pogoj za veljavnost, a je ne zagotavlja: tehtnica, ki vedno kaže 2 kg preveč, je zanesljiva, a ne veljavna.</p>" },
+  { t: 4, b: "Kaj je veljavnost testa?", p: "test meri tisto, kar naj bi meril", n: ["dosledno merjenje", "hitro reševanje", "veliko vprašanj"],
+    post: "<p>Vrste veljavnosti: vsebinska, kriterijska, konstruktna.</p>" },
+  { t: 4, b: "Zakaj je pomembno, da je test standardiziran?", p: "ker se izvaja in točkuje enako za vse, rezultati pa se primerjajo z normami reprezentativnega vzorca", n: ["ker je tako krajši", "ker ga lahko reši vsak brez navodil", "ker ne potrebuje norm"],
+    post: "<p>Brez norm ne vemo, ali je rezultat visok ali nizek.</p>" },
+  { t: 4, b: "Kakšna je težava z vprašanjem v anketi: <em>»Ali se strinjate, da so pametni ljudje proti kajenju?«</em>", p: "je sugestivno (nakazuje odgovor) in nejasno", n: ["je preveč nevtralno", "je odprtega tipa", "ni težave"],
+    post: "<p>Sugestivna vprašanja popačijo odgovore. Boljše: »Kakšno je vaše mnenje o kajenju?«</p>" },
+  { t: 4, b: "Kaj je reprezentativni vzorec?", p: "vzorec, ki po pomembnih lastnostih odraža populacijo, na katero želimo posplošiti", n: ["največji možni vzorec", "vzorec prostovoljcev", "vzorec samo študentov"],
+    post: "<p>Vzorec prostovoljcev ali študentov psihologije je pristranski. Pomaga naključno ali stratificirano vzorčenje.</p>" },
+  { t: 4, b: "Kaj je prednost strukturiranega intervjuja pred nestrukturiranim?", p: "vsi dobijo enaka vprašanja, zato so odgovori primerljivi in intervju je bolj zanesljiv", n: ["omogoča globlje sledenje temam, ki jih odpre sogovornik", "ne zahteva priprave", "traja dlje"],
+    post: "<p>Nestrukturirani intervju je prožnejši in globlji, a manj primerljiv.</p>" },
+  { t: 4, b: "Kaj je študija primera in kakšna je njena omejitev?", p: "poglobljena raziskava enega posameznika ali skupine; rezultatov ne moremo posplošiti", n: ["raziskava velikega vzorca; je predraga", "eksperiment z dvema skupinama; ni nadzora", "anketa; nima omejitev"],
+    post: "<p>Znan primer je Phineas Gage. Študije primera dajejo hipoteze za nadaljnje raziskave.</p>" },
+];

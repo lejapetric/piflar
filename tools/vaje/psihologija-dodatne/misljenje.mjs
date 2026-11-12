@@ -1,0 +1,16 @@
+export default [
+  { t: 4, b: "Kaj je hevristika razpoložljivosti (Tversky, Kahneman)?", p: "verjetnost dogodka ocenimo po tem, kako hitro se spomnimo primerov, zato precenimo odmevne dogodke", n: ["natančen izračun verjetnosti", "reševanje problema s preizkušanjem", "težnja, da sprejmemo prvo rešitev"],
+    post: "<p>Ljudje po poročilih o letalskih nesrečah precenijo nevarnost letenja v primerjavi z vožnjo z avtom.</p>" },
+  { t: 4, b: "Kaj je potrditvena pristranskost?", p: "težnja, da iščemo in sprejemamo informacije, ki potrjujejo naša prepričanja, in prezremo nasprotne", n: ["težnja, da spremenimo mnenje ob vsakem dokazu", "težnja, da ovržemo lastne hipoteze", "težnja, da verjamemo zadnji informaciji"],
+    post: "<p>Wasonova naloga s štirimi kartami pokaže, da ljudje redko iščejo primere, ki bi pravilo ovrgli.</p>" },
+  { t: 4, b: "Kaj je funkcionalna fiksacija (Duncker)?", p: "težava, da predmet vidimo le v njegovi običajni rabi, kar ovira reševanje problema", n: ["sposobnost, da predmet vidimo na nov način", "fiksacija pogleda na eno točko", "nagnjenost k ponavljanju napak"],
+    post: "<p>Problem sveče: škatlico z žebljički je treba uporabiti kot podstavek, a ljudje jo vidijo le kot embalažo.</p>" },
+  { t: 4, b: "Kaj je učinek okvirjanja (framing)?", p: "ista informacija, predstavljena kot dobiček ali izguba, vpliva na drugačno odločitev", n: ["odločitve so vedno enake ne glede na predstavitev", "ljudje izbirajo slike v okvirjih", "odločitve so odvisne le od verjetnosti"],
+    post: "<p>»90 % preživetja« zveni bolje kot »10 % umrljivosti«, čeprav je isto.</p>" },
+  { t: 4, b: "Kaj je divergentno mišljenje?", p: "iskanje več različnih rešitev za odprt problem; povezano je z ustvarjalnostjo", n: ["iskanje ene pravilne rešitve", "logično sklepanje iz premis", "pomnjenje podatkov"],
+    post: "<p>Guilford: konvergentno mišljenje išče en odgovor (testi IQ), divergentno več (npr. »Kako lahko uporabiš opeko?«).</p>" },
+  { t: 4, b: "Kaj je zmota hazarderja?", p: "prepričanje, da je po nizu enakih izidov nasprotni izid verjetnejši, čeprav so dogodki neodvisni", n: ["prepričanje, da se sreča vedno ponavlja", "pravilna ocena verjetnosti", "nagnjenost k izogibanju tveganju"],
+    post: "<p>Po petih grbih je verjetnost cifre še vedno 1/2.</p>" },
+  { t: 4, b: "Kaj je hevristika sidranja?", p: "pri oceni se preveč oprimemo začetne vrednosti in se od nje premalo oddaljimo", n: ["natančna ocena brez vpliva začetnih podatkov", "pozabljanje začetnih informacij", "iskanje več rešitev"],
+    post: "<p>Pri pogajanjih prva ponujena cena močno vpliva na končno ceno.</p>" },
+];

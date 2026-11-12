@@ -1,0 +1,18 @@
+export default [
+  { t: 4, b: "Raziskovalec preverja, ali glasba izboljša koncentracijo. Ena skupina se uči ob glasbi, druga v tišini. Katera je neodvisna spremenljivka?", p: "prisotnost glasbe", n: ["koncentracija", "število udeležencev", "starost udeležencev"],
+    post: "<p>Neodvisno spremenljivko raziskovalec spreminja; odvisno (koncentracijo) meri.</p>" },
+  { t: 4, b: "Zakaj je naključna razporeditev udeležencev v skupine pri eksperimentu ključna?", p: "ker izenači skupine po drugih lastnostih, tako da je razlika lahko le posledica neodvisne spremenljivke", n: ["ker je hitrejša", "ker zmanjša število udeležencev", "ker zagotovi, da so vsi udeleženci prostovoljci"],
+    post: "<p>Brez randomizacije bi motilne spremenljivke (npr. motivacija) lahko pojasnile razliko.</p>" },
+  { t: 4, b: "Kaj je placebo učinek in kako ga nadzorujemo?", p: "izboljšanje zaradi pričakovanj; nadzorujemo ga s kontrolno skupino, ki dobi neučinkovito sredstvo", n: ["učinek zdravila; nadzorujemo ga z višjim odmerkom", "učinek eksperimentatorja; nadzorujemo ga z več vprašalniki", "učinek naključja; nadzorujemo ga s ponovitvijo"],
+    post: "<p>Dvojno slepi poskus: ne udeleženci ne izvajalci ne vedo, kdo dobi pravo zdravilo.</p>" },
+  { t: 4, b: "Kaj je učinek eksperimentatorja (Rosenthal)?", p: "pričakovanja raziskovalca nezavedno vplivajo na vedenje udeležencev ali na beleženje rezultatov", n: ["udeleženci posnemajo raziskovalca", "raziskovalec je zavestno goljufal", "vpliv vremena na rezultate"],
+    post: "<p>Rosenthal je to pokazal že pri podganah in učiteljih (Pigmalionov učinek). Rešitev je dvojno slepi postopek.</p>" },
+  { t: 4, b: "Kaj je prednost longitudinalne raziskave pred presečno?", p: "spremlja iste osebe skozi čas in zato loči razvojne spremembe od razlik med generacijami", n: ["je hitrejša in cenejša", "ne zahteva ponovnega merjenja", "nima osipa udeležencev"],
+    post: "<p>Presečna primerja različne starostne skupine hkrati in je zato občutljiva za kohortne učinke. Longitudinalna ima osip.</p>" },
+  { t: 4, b: "Kaj je notranja veljavnost eksperimenta?", p: "gotovost, da je sprememba odvisne spremenljivke res posledica neodvisne in ne motečih dejavnikov", n: ["posplošljivost rezultatov na druge ljudi", "zanesljivost merskega instrumenta", "število ponovitev raziskave"],
+    post: "<p>Zunanja veljavnost je posplošljivost na druge okoliščine in ljudi. Laboratorijski poskusi imajo pogosto visoko notranjo, a nižjo zunanjo veljavnost.</p>" },
+  { t: 4, b: "Zakaj je opazovanje v naravnem okolju pogosto manj zanesljivo kot laboratorijski eksperiment?", p: "ker ne moremo nadzorovati motečih spremenljivk in je opazovalec lahko pristranski", n: ["ker v naravi ljudje ne kažejo vedenja", "ker je prepovedano", "ker ne omogoča opisa vedenja"],
+    post: "<p>Prednost naravnega opazovanja je ekološka veljavnost. Pristranskost zmanjšamo z več opazovalci in jasnimi kategorijami.</p>" },
+  { t: 4, b: "Katera etična načela mora upoštevati psihološka raziskava?", p: "informirana privolitev, prostovoljnost, zaupnost, pravica do odstopa in pojasnilo po raziskavi", n: ["le zaupnost podatkov", "le plačilo udeležencem", "nobenih, če je raziskava koristna"],
+    post: "<p>Milgramove in Zimbardove raziskave so sprožile strožja etična pravila.</p>" },
+];

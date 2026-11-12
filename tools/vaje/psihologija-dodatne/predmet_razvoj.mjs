@@ -1,0 +1,18 @@
+export default [
+  { t: 4, b: "Katera je glavna razlika med strukturalizmom (Wundt) in funkcionalizmom (James)?", p: "strukturalizem razčlenjuje zavest na elemente z introspekcijo, funkcionalizem preučuje, čemu zavest služi pri prilagajanju", n: ["strukturalizem preučuje le vedenje, funkcionalizem le nezavedno", "oba zavračata zavest", "funkcionalizem je nastal pred strukturalizmom v Leipzigu"],
+    post: "<p>Wundt je leta 1879 v Leipzigu ustanovil prvi psihološki laboratorij. James je pod vplivom Darwina.</p>" },
+  { t: 4, b: "Zakaj je behaviorizem (Watson) zavrnil introspekcijo?", p: "ker ni objektivna in je ni mogoče preveriti; psihologija naj preučuje le opazljivo vedenje", n: ["ker je preveč draga", "ker zahteva laboratorij", "ker preučuje le živali"],
+    post: "<p>Watson (1913): psihologija kot naravoslovna znanost o vedenju. Skinner je behaviorizem razvil naprej.</p>" },
+  { t: 4, b: "Kaj je značilno za kognitivno psihologijo, ki se je uveljavila v 60. letih 20. stoletja?", p: "preučuje notranje duševne procese (zaznavanje, spomin, mišljenje), pogosto s primerjavo z obdelavo informacij v računalniku", n: ["preučuje le nezavedne konflikte", "zavrača vse notranje procese", "temelji izključno na sanjah"],
+    post: "<p>Kognitivna revolucija je odgovor na omejitve behaviorizma (npr. Chomskyjeva kritika Skinnerja).</p>" },
+  { t: 4, b: "Kateri pristop poudarja svobodno voljo, osebno rast in samoaktualizacijo?", p: "humanistični (Maslow, Rogers)", n: ["behavioristični", "psihoanalitični", "biološki"],
+    post: "<p>Humanistična psihologija je »tretja sila« ob behaviorizmu in psihoanalizi.</p>" },
+  { t: 4, b: "Kako bi biološka psihologija pojasnila depresijo?", p: "z neravnovesjem nevrotransmiterjev, genetsko nagnjenostjo in delovanjem možganskih struktur", n: ["z nezavednimi konflikti iz otroštva", "z napačnimi miselnimi vzorci", "z nagrajevanjem pasivnega vedenja"],
+    post: "<p>Drugi pristopi ponudijo drugačne razlage: psihoanaliza (konflikti), kognitivni (negativne misli), behavioristični (pomanjkanje okrepitev).</p>" },
+  { t: 4, b: "Kaj je biopsihosocialni model?", p: "razlaga duševnih pojavov s hkratnim upoštevanjem bioloških, psiholoških in socialnih dejavnikov", n: ["model, ki upošteva le gene", "model, ki zavrača biologijo", "model, ki se uporablja le v ekonomiji"],
+    post: "<p>Model (Engel, 1977) je prevladujoč v zdravstveni in klinični psihologiji.</p>" },
+  { t: 4, b: "Kaj je evolucijska psihologija?", p: "pristop, ki duševne procese razlaga kot prilagoditve, ki so se razvile z naravnim izborom", n: ["veda o razvoju otrok", "zgodovina psihologije", "veda o duševnih motnjah"],
+    post: "<p>Primer: strah pred kačami kot prilagoditev. Kritika: težko preverljive razlage za nazaj.</p>" },
+  { t: 4, b: "Katera izjava o razmerju psihologije in psihiatrije je pravilna?", p: "psihiater je zdravnik, ki lahko predpisuje zdravila; psiholog ima izobrazbo iz psihologije in uporablja psihološke metode", n: ["oba sta zdravnika", "psiholog lahko predpisuje zdravila, psihiater ne", "ni razlike"],
+    post: "<p>Pri zdravljenju pogosto sodelujeta: psihoterapija in zdravila.</p>" },
+];

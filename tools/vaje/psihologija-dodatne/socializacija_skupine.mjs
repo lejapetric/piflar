@@ -1,0 +1,16 @@
+export default [
+  { t: 4, b: "Kaj je pokazal Aschev poskus konformnosti?", p: "približno tretjina odgovorov je bila napačnih, ker so udeleženci sledili napačnemu soglasju skupine", n: ["ljudje se nikoli ne podrejajo skupini", "vsi udeleženci so vedno sledili skupini", "skupina ne vpliva na zaznavanje"],
+    post: "<p>Pri oceni dolžine črt se je okoli 75 % udeležencev vsaj enkrat prilagodilo. Že en zaveznik je konformnost močno zmanjšal.</p>" },
+  { t: 4, b: "Kaj je pokazal Milgramov poskus?", p: "večina udeležencev je na ukaz avtoritete dajala navidezne električne šoke do najvišje ravni", n: ["udeleženci so takoj zavrnili ukaze", "ljudje se ne podrejajo avtoriteti", "šoki so bili resnični"],
+    post: "<p>Okoli 65 % je šlo do 450 V. Poslušnost je padla, ko je bila avtoriteta oddaljena ali je bil ob njih upornik.</p>" },
+  { t: 4, b: "Kaj je socialno lenarjenje?", p: "posamezniki se v skupini manj trudijo, kadar njihov prispevek ni prepoznaven", n: ["skupina vedno poveča trud posameznika", "posamezniki delajo bolje sami", "lenarjenje v prostem času"],
+    post: "<p>Ringelmann: pri vlečenju vrvi je posameznik v večji skupini vlekel manj. Prepoznaven prispevek to zmanjša.</p>" },
+  { t: 4, b: "Kaj je skupinsko mišljenje (Janis)?", p: "težnja kohezivne skupine, da zaradi soglasja zanemari kritično presojo in alternative", n: ["ustvarjalno skupinsko reševanje problemov", "glasovanje večine", "razprava z ugovori"],
+    post: "<p>Primer je odločitev za invazijo v Prašičjem zalivu (1961). Preprečimo ga s hudičevim odvetnikom in zunanjimi strokovnjaki.</p>" },
+  { t: 4, b: "Kaj je učinek prisotnosti drugih (bystander effect)?", p: "več ko je prič, manjša je verjetnost, da bo posameznik pomagal, zaradi razpršitve odgovornosti", n: ["več prič vedno poveča pomoč", "priče vedno pomagajo", "pomoč ni odvisna od števila prič"],
+    post: "<p>Darley in Latané po primeru Kitty Genovese. Pomaga, če neposredno nagovorimo eno osebo.</p>" },
+  { t: 4, b: "Kaj je skupinska polarizacija?", p: "po razpravi v skupini postanejo stališča članov skrajnejša v smeri, v katero so se že nagibali", n: ["stališča postanejo zmernejša", "člani se razdelijo v dve skupini", "skupina zavrne vse odločitve"],
+    post: "<p>Pojav pojasni tudi radikalizacijo v zaprtih spletnih skupnostih.</p>" },
+  { t: 4, b: "Kaj je pokazal Zimbardov zaporniški poskus in kakšna je glavna kritika?", p: "da vloge in okoliščine močno vplivajo na vedenje; kritika: vodja je spodbujal vedenje in poskus je bil etično sporen", n: ["da ljudje nikoli ne sprejmejo vlog", "da so paznike izbrali po agresivnosti", "da je bil poskus popolnoma nadzorovan"],
+    post: "<p>Poskus (1971) so prekinili po šestih dneh. Kasnejše analize kažejo na vpliv navodil raziskovalcev.</p>" },
+];
