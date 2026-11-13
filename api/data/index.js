@@ -11,7 +11,7 @@ export const snovi = readJSON("./snovi.json").map((snov) => ({
 }));
 
 // Pole vseh predmetov: matura.json (matematika) in matura-<predmet>.json
-export const matura = [...readJSON("./matura.json"), ...readJSON("./matura-fizika.json"), ...readJSON("./matura-kemija.json"), ...readJSON("./matura-biologija.json"), ...readJSON("./matura-informatika.json"), ...readJSON("./matura-slovenscina.json")];
+export const matura = [...readJSON("./matura.json"), ...readJSON("./matura-fizika.json"), ...readJSON("./matura-kemija.json"), ...readJSON("./matura-biologija.json"), ...readJSON("./matura-informatika.json"), ...readJSON("./matura-slovenscina.json"), ...readJSON("./matura-anglescina.json")];
 
 // Naloge za vajo: naloge.json (prve naloge množic) in vaje/<predmet>.json (tools/vaje/gradi.mjs).
 // Vsaka naloga ima predmet, poglavje, težavnost 1–4 (lahka … zelo težka) in raven (osnovna / visja).
