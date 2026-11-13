@@ -64,12 +64,4 @@ const nalogaPostopek = async (req, res) => {
   res.status(200).json({ rezultat: naloga.rezultat, postopek: naloga.postopek });
 };
 
-// GET /api/napredek?poglavje=mnozice  (samo prijavljeni)
-const napredekList = async (req, res) => {
-  const filter = { uporabnik: req.uporabnik._id };
-  if (req.query.poglavje) filter.poglavje = String(req.query.poglavje);
-  const zapisi = await Napredek.find(filter).select("-_id naloga poglavje poskusi reseno resenoOb postopekOgledan").lean();
-  res.status(200).json(zapisi);
-};
-
-export default { nalogeList, nalogeStevilo, nalogaReadOne, nalogaPreveri, nalogaPostopek, napredekList };
+export default { nalogeList, nalogeStevilo, nalogaReadOne, nalogaPreveri, nalogaPostopek };

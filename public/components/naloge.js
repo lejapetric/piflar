@@ -4,10 +4,29 @@
 // rezultat in postopek se naložita na zahtevo.
 // Brez data-poglavje je to razdelek »Naloge« predmeta: vse naloge predmeta s filtrom po snovi
 // in težavnosti (?snov=funkcije,mnozice&tezavnost=3,4&visja=0&vrstni=nakljucno).
+// Prijavljeni lahko filtrira še po stanju (?stanje=neuspesno, uspesno ali nereseno):
+// tako ponovi naloge, ki jih ni rešil, ali pregleda uspešno rešene (stran Moje naloge).
 
 const container = document.getElementById("naloge");
 
 const TEZAVNOSTI = { 1: "Lahka", 2: "Srednja", 3: "Težka", 4: "Zelo težka" };
+const STANJA = { neuspesno: "Neuspešne", uspesno: "Uspešne", nereseno: "Še nereševane" };
+
+// Stanje nalog prijavljenega uporabnika (id → "uspesno" | "neuspesno"); gost ima prazno
+const napredek = new Map();
+
+// Oznaka na kartici: zelena za uspešno rešeno, rdeča za neuspešen zadnji poskus
+function oznaciStanje(card, stanje) {
+  card.classList.toggle("naloga--resena", stanje === "uspesno");
+  card.classList.toggle("naloga--neuspesna", stanje === "neuspesno");
+}
+
+async function naloziNapredek(predmet) {
+  const res = await fetch(`/api/napredek?${new URLSearchParams({ vir: "vaja", ...(predmet ? { predmet } : {}) })}`).catch(() => null);
+  if (!res?.ok) return false;
+  for (const z of await res.json()) if (z.stanje) napredek.set(z.naloga, z.stanje);
+  return true;
+}
 
 // Formule v vsebini, ki je bila dodana po nalaganju strani
 function typeset(el) {
@@ -50,7 +69,9 @@ function nastaviStatus(status, razred, besedilo) {
 }
 
 function oznaciRezultat(card, status, pravilno) {
-  if (pravilno) card.classList.add("naloga--resena");
+  const stanje = pravilno ? "uspesno" : "neuspesno";
+  napredek.set(card.id, stanje);
+  oznaciStanje(card, stanje);
   nastaviStatus(
     status,
     pravilno ? "pravilno" : "napacno",
@@ -247,12 +268,12 @@ function filter(kartice) {
   return vrstica;
 }
 
-// Prijavljenemu uporabniku označi že rešene naloge (gost dobi 401 in ne vidi ničesar)
-async function oznaciNapredek(poglavje) {
-  const res = await fetch(`/api/napredek?poglavje=${encodeURIComponent(poglavje)}`).catch(() => null);
-  if (!res?.ok) return;
-  for (const zapis of await res.json()) {
-    if (zapis.reseno) document.getElementById(zapis.naloga)?.classList.add("naloga--resena");
+// Prijavljenemu uporabniku označi uspešno in neuspešno rešene naloge (gost dobi 401 in ne vidi ničesar)
+async function oznaciNapredek(predmet) {
+  if (!(await naloziNapredek(predmet))) return;
+  for (const [id, stanje] of napredek) {
+    const card = document.getElementById(id);
+    if (card?.classList.contains("naloga")) oznaciStanje(card, stanje);
   }
 }
 
@@ -272,7 +293,7 @@ async function init() {
     seznam.append(...kartice);
     container.replaceChildren(filter(kartice), seznam);
     typeset(container);
-    oznaciNapredek(poglavje);
+    oznaciNapredek(predmet);
   } catch (err) {
     container.textContent = `Nalog ni bilo mogoče naložiti: ${err.message}`;
   }
@@ -399,9 +420,10 @@ function premesaj(seznam, seme) {
 
 async function initRazdelek(predmet) {
   try {
-    const [naloge, snovi] = await Promise.all([
+    const [naloge, snovi, prijavljen] = await Promise.all([
       api(`/api/naloge?${new URLSearchParams({ predmet })}`),
       api(`/api/snovi?${new URLSearchParams({ predmet })}`),
+      naloziNapredek(predmet),
     ]);
     if (!naloge.length) {
       container.textContent = "Naloge za ta predmet so še v pripravi.";
@@ -420,11 +442,12 @@ async function initRazdelek(predmet) {
     const izbraneTez = new Set(seznamIz("tezavnost", Object.keys(TEZAVNOSTI)));
     if (izbraneSnovi.size === snoviZNalogami.length) izbraneSnovi.clear();
     if (izbraneTez.size === 4) izbraneTez.clear();
+    const izbranaStanja = new Set(prijavljen ? seznamIz("stanje", Object.keys(STANJA)) : []);
+    if (izbranaStanja.size === 3) izbranaStanja.clear();
     let visja = q.get("visja") !== "0";
     let nakljucno = q.get("vrstni") === "nakljucno";
     let seme = Math.floor(Math.random() * 2 ** 31);
 
-    const resene = new Set();
     let prikazanih = 0;
     let izbrane = [];
 
@@ -432,6 +455,7 @@ async function initRazdelek(predmet) {
     const fSnov = izbirnik("Snov", snoviZNalogami.map((s) => [s.slug, s.naslov]), izbraneSnovi, uporabi);
     fSnov.classList.add("naloge-izbirnik--snov");
     const fTez = izbirnik("Težavnost", Object.entries(TEZAVNOSTI), izbraneTez, uporabi);
+    const fStanje = prijavljen ? izbirnik("Moje reševanje", Object.entries(STANJA), izbranaStanja, uporabi) : null;
 
     const dodatno = el("div", "naloge-filter");
     const oznakaVisja = el("label", "naloge-filter-visja");
@@ -456,7 +480,7 @@ async function initRazdelek(predmet) {
     red.append(sel);
     dodatno.append(oznakaVisja, red);
     const izbira = el("div", "naloge-filtri-izbira");
-    izbira.append(fSnov, fTez);
+    izbira.append(fSnov, fTez, ...(fStanje ? [fStanje] : []));
     filtri.append(izbira, dodatno);
 
     const povzetek = el("p", "naloge-povzetek");
@@ -469,12 +493,15 @@ async function initRazdelek(predmet) {
     const ustrezaSnov = (n) => !izbraneSnovi.size || izbraneSnovi.has(n.poglavje);
     const ustrezaTez = (n) => !izbraneTez.size || izbraneTez.has(String(n.tezavnost ?? 1));
     const ustrezaRaven = (n) => visja || n.raven !== "visja";
+    const stanjeNaloge = (n) => napredek.get(n.id) ?? "nereseno";
+    const ustrezaStanje = (n) => !izbranaStanja.size || izbranaStanja.has(stanjeNaloge(n));
 
     function zapisiNaslov() {
       const p = new URLSearchParams();
       if (izbraneSnovi.size) p.set("snov", [...izbraneSnovi].join(","));
       if (izbraneTez.size) p.set("tezavnost", [...izbraneTez].sort().join(","));
       if (!visja) p.set("visja", "0");
+      if (izbranaStanja.size) p.set("stanje", [...izbranaStanja].join(","));
       if (nakljucno) p.set("vrstni", "nakljucno");
       const s = p.toString().replaceAll("%2C", ",");
       history.replaceState(null, "", location.pathname + (s ? `?${s}` : "") + location.hash);
@@ -483,7 +510,7 @@ async function initRazdelek(predmet) {
     function pokazi(koliko) {
       const nove = izbrane.slice(prikazanih, prikazanih + koliko).map((n, i) => {
         const k = renderNaloga(n, prikazanih + i, poSlugu.get(n.poglavje));
-        if (resene.has(n.id)) k.classList.add("naloga--resena");
+        oznaciStanje(k, napredek.get(n.id));
         return k;
       });
       prikazanih += nove.length;
@@ -497,22 +524,30 @@ async function initRazdelek(predmet) {
     function uporabi() {
       const stSnovi = {};
       const stTez = {};
+      const stStanj = {};
       let vSnovi = 0;
       let vTez = 0;
+      let vStanj = 0;
+      const pristej = (st, k) => (st[k] = (st[k] ?? 0) + 1);
       for (const n of naloge) {
         if (!ustrezaRaven(n)) continue;
-        if (ustrezaTez(n)) (stSnovi[n.poglavje] = (stSnovi[n.poglavje] ?? 0) + 1), vSnovi++;
-        if (ustrezaSnov(n)) (stTez[n.tezavnost ?? 1] = (stTez[n.tezavnost ?? 1] ?? 0) + 1), vTez++;
+        const s = ustrezaSnov(n), t = ustrezaTez(n), z = ustrezaStanje(n);
+        if (t && z) pristej(stSnovi, n.poglavje), vSnovi++;
+        if (s && z) pristej(stTez, n.tezavnost ?? 1), vTez++;
+        if (s && t) pristej(stStanj, stanjeNaloge(n)), vStanj++;
       }
       fSnov.stevila(stSnovi, vSnovi);
       fTez.stevila(stTez, vTez);
+      fStanje?.stevila(stStanj, vStanj);
 
-      izbrane = naloge.filter((n) => ustrezaSnov(n) && ustrezaTez(n) && ustrezaRaven(n));
+      izbrane = naloge.filter((n) => ustrezaSnov(n) && ustrezaTez(n) && ustrezaRaven(n) && ustrezaStanje(n));
       if (nakljucno) izbrane = premesaj(izbrane, seme);
       const st = izbrane.length;
       povzetek.textContent = st
         ? `${besediloSt(st)} ustreza izbiri.`
-        : "Nobena naloga ne ustreza izbiri. Izberi še kakšno snov ali težavnost.";
+        : izbranaStanja.size
+          ? "Nobena naloga ne ustreza izbiri. Izberi še kakšno snov ali drugo stanje reševanja."
+          : "Nobena naloga ne ustreza izbiri. Izberi še kakšno snov ali težavnost.";
       prikazanih = 0;
       seznam.replaceChildren();
       pokazi(NA_STRAN);
@@ -520,13 +555,6 @@ async function initRazdelek(predmet) {
     }
 
     uporabi();
-
-    // Prijavljenemu uporabniku označi že rešene naloge
-    const res = await fetch("/api/napredek").catch(() => null);
-    if (res?.ok) {
-      for (const zapis of await res.json()) if (zapis.reseno) resene.add(zapis.naloga);
-      for (const id of resene) document.getElementById(id)?.classList.add("naloga--resena");
-    }
   } catch (err) {
     container.textContent = `Nalog ni bilo mogoče naložiti: ${err.message}`;
   }

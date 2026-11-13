@@ -181,7 +181,7 @@ function initHeader() {
 
 // ============================================================
 // 5. PRIJAVLJEN UPORABNIK V HEADERJU — krogec z inicialkami ali sliko
-//    in spustni meni (podatki, naročnina, uredi podatke, nastavitve, odjava)
+//    in spustni meni (podatki, naročnina, moje naloge, uredi podatke, nastavitve, odjava)
 // ============================================================
 const NAZIVI_PAKETOV = { osnovni: "Osnovni", premium: "Premium" };
 const NAZIVI_SOL = { gimnazija: "Gimnazija", srednja_strokovna: "Srednja strokovna šola" };
@@ -220,6 +220,7 @@ function veljavenPaket(u) {
 
 const IKONE_MENIJA = {
   profil: '<path d="M20 21a8 8 0 0 0-16 0"></path><circle cx="12" cy="8" r="4"></circle>',
+  naloge: '<path d="M9 11l3 3 8-8"></path><path d="M20 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>',
   nastavitve: '<circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"></path>',
   narocnina: '<path d="M12 2l3 6.5 7 .9-5.1 4.8 1.3 7L12 17.8 5.8 21.2l1.3-7L2 9.4l7-.9z"></path>',
   odjava: '<path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"></path><path d="M16 17l5-5-5-5"></path><path d="M21 12H9"></path>',
@@ -290,6 +291,7 @@ function izrisiUporabnika(el, u) {
   const seznam = document.createElement("nav");
   seznam.className = "uporabnik-meni-seznam";
   seznam.innerHTML = `
+    <a href="/napredek.html" class="uporabnik-meni-vrstica" role="menuitem">${ikona("naloge")}Moje naloge</a>
     <a href="/profil.html" class="uporabnik-meni-vrstica" role="menuitem">${ikona("profil")}Uredi podatke</a>
     <a href="/nastavitve.html" class="uporabnik-meni-vrstica" role="menuitem">${ikona("nastavitve")}Nastavitve</a>
     <a href="/narocnina.html" class="btn btn-primary uporabnik-meni-narocnina" role="menuitem">${ikona("narocnina")}${paket ? "Spremeni naročnino" : "Naročnina in paketi"}</a>
