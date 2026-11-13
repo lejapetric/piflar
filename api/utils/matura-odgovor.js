@@ -37,6 +37,15 @@ function razdeliRezultat(rezultat) {
         return m ? { oznaka: m[1], rezultat: m[2].trim() } : { oznaka: "", rezultat: kos.trim() };
       });
   }
+  // tuji jeziki: "<strong>1.</strong> which / that<br><strong>2.</strong> …" (postavke naloge)
+  if (/^<strong>\s*\d+\.\s*<\/strong>/.test(r)) {
+    return r
+      .split(/<br\s*\/?>\s*(?=<strong>\s*\d+\.\s*<\/strong>)/)
+      .map((kos) => {
+        const m = kos.match(/^<strong>\s*(\d+\.)\s*<\/strong>\s*([\s\S]*)$/);
+        return m ? { oznaka: m[1], rezultat: m[2].trim() } : { oznaka: "", rezultat: kos.trim() };
+      });
+  }
   // matematika: "3.1. \(m = 3\) &nbsp; 3.2. \(m < -1\)"
   if (/^\d+\.\d+\.\s/.test(r)) {
     const deli = [];
@@ -132,6 +141,37 @@ export function steviloIzRezultata(html, { predmet } = {}) {
   return { vrednost, toleranca, enota };
 }
 
+// "which / that" → ["which", "that"]; "will do / 'll do" → ["will do", "'ll do"]
+const normaliziraj = (niz) =>
+  String(niz)
+    .replace(/<[^>]+>/g, "")
+    .replace(/&amp;/g, "&")
+    .replace(/[‘’ʼ`]/g, "'")
+    .replace(/\s+/g, " ")
+    .replace(/[.!]+$/, "")
+    .trim()
+    .toLowerCase();
+function sprejemljive(rezultat) {
+  return String(rezultat).split(/\s+\/\s+/).map(normaliziraj).filter(Boolean);
+}
+// "won't" = "will not", "doesn't" = "does not" …
+const brezKrajsav = (niz) =>
+  niz
+    .replace(/\bwon't\b/g, "will not")
+    .replace(/\bcan't\b/g, "cannot")
+    .replace(/n't\b/g, " not")
+    .replace(/'ll\b/g, " will")
+    .replace(/'ve\b/g, " have")
+    .replace(/'d\b/g, " would")
+    .replace(/'re\b/g, " are")
+    .replace(/\s+/g, " ")
+    .trim();
+export function enakaBeseda(vnos, sprejete) {
+  const v = normaliziraj(vnos);
+  if (!v) return false;
+  return sprejete.some((s) => s === v || brezKrajsav(s) === brezKrajsav(v));
+}
+
 const predpomnilnik = new WeakMap();
 
 export function odgovorNaloge(naloga, predmet) {
@@ -142,6 +182,8 @@ export function odgovorNaloge(naloga, predmet) {
   else if (naloga.tip === "esej") odgovor = { tip: "esej", deli: [{ oznaka: "", rezultat: naloga.rezultat }] };
   else {
     const deli = razdeliRezultat(naloga.rezultat).map((d) => {
+      // tuji jeziki: vrzel, črka ali T/F; sprejemljive rešitve so ločene s » / «
+      if (naloga.preverjanje === "tocno") return { ...d, besede: sprejemljive(d.rezultat) };
       // del izbirne podnaloge (13.1. B)
       if (/class="pola-izbire"/.test(naloga.besedilo ?? "") && /^[A-F]$/.test(d.rezultat)) return { ...d, crka: d.rezultat };
       const stevilo = steviloIzRezultata(d.rezultat, { predmet });
@@ -163,6 +205,7 @@ export function oblikaOdgovora(naloga, predmet) {
       oznaka: d.oznaka,
       ...(d.stevilo ? { stevilo: true, enota: d.stevilo.enota } : {}),
       ...(d.crka ? { crka: true } : {}),
+      ...(d.besede ? { beseda: true } : {}),
     })),
   };
 }
@@ -198,11 +241,14 @@ export function preveriMaturitetni(naloga, predmet, odgovori) {
   const deli = o.deli.map((d, i) => {
     const vnos = String(vneseni[i] ?? "");
     let pravilno = null;
-    if (d.crka) pravilno = vnos.trim().toUpperCase() === d.crka;
+    if (d.besede) pravilno = enakaBeseda(vnos, d.besede);
+    else if (d.crka) pravilno = vnos.trim().toUpperCase() === d.crka;
     else if (d.stevilo) {
       const x = parseVnos(vnos);
       pravilno = Number.isFinite(x) && Math.abs(x - d.stevilo.vrednost) <= d.stevilo.toleranca;
     }
+    // prazna vrzel pri tujih jezikih: ni ne pravilna ne napačna, rešitve ne izdamo
+    if (d.besede && !vnos.trim()) return { oznaka: d.oznaka, pravilno: false, prazno: true };
     return { oznaka: d.oznaka, pravilno, rezultat: d.rezultat };
   });
   const preverjeni = deli.filter((d) => d.pravilno !== null);

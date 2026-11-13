@@ -214,3 +214,28 @@ test("število nalog po snovi se ujema s stranjo poglavja (naloga v več snoveh 
   }
   assert.deepEqual(poklici(ctrl.maturaStevilo, { query: { predmet: "zgodovina" } }).body, {});
 });
+
+test("angleščina: 36 pol na dveh ravneh, pola 1 z delom A in B, pola 2 s posnetki, zadnji rok javen", () => {
+  const seznam = poklici(ctrl.maturaList, { query: { predmet: "anglescina" } });
+  assert.equal(seznam.body.length, 36);
+  assert.deepEqual([...new Set(seznam.body.map((p) => p.raven))].sort(), ["osnovna", "visja"]);
+
+  for (const raven of ["osnovna", "visja"]) {
+    const p1 = poklici(ctrl.maturaReadOne, { params: { maturaId: `anglescina-${raven}-2026-spomladanski-1` } }).body;
+    assert.equal(p1.odklenjena, true);
+    assert.deepEqual(p1.naloge.map((n) => n.id), ["A1", "A2", "B1", "B2"]);
+    assert.equal(p1.naloge.reduce((s, n) => s + n.tocke, 0), 50);
+    assert.ok(p1.naloge.every((n) => n.oznaka));
+    assert.ok(p1.naloge.filter((n) => n.preverjanje === "tocno").length >= 3);
+
+    const p2 = poklici(ctrl.maturaReadOne, { params: { maturaId: `anglescina-${raven}-2026-spomladanski-2` } }).body;
+    assert.ok(p2.naloge.every((n) => n.besedilo.includes("ang-poslusaj") && n.besedilo.includes("ang-transkript")));
+  }
+
+  const id = "anglescina-visja-2024-jesenski-1";
+  const gost = poklici(ctrl.maturaReadOne, { params: { maturaId: id } });
+  assert.equal(gost.body.odklenjena, false);
+  assert.equal(gost.body.naloge[0].rezultat, undefined);
+  const osnovni = poklici(ctrl.maturaReadOne, { params: { maturaId: id }, uporabnik: { paket: "osnovni" } });
+  assert.equal(osnovni.body.odklenjena, true);
+});

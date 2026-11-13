@@ -51,6 +51,11 @@ const SKLOPI_PREDMETA = {
     2: "Književnost",
     3: "Esej",
   },
+  anglescina: {
+    1: "Poznavanje in raba jezika",
+    2: "Bralno in slušno razumevanje",
+    3: "Pisno sporočanje",
+  },
 };
 const SKLOPI = SKLOPI_PREDMETA[predmet] ?? {};
 // Fizika, kemija, biologija, informatika in slovenščina imajo eno samo raven ("enotna"): izbire ravni in oznake ravni takrat ne prikažemo
@@ -263,20 +268,25 @@ function obrazecOdgovora(naloga, kartica) {
   const navodila = [];
   if (oblika.deli.some((d) => d.enota)) navodila.push("Pri številskih odgovorih vpiši samo število v enoti ob polju (npr. 3,5 ali 2,1·10^-3).");
   else if (oblika.deli.some((d) => d.stevilo)) navodila.push("Številski rezultat vpiši kot število ali ulomek (npr. 3,5 ali 7/2).");
-  if (oblika.deli.some((d) => !d.stevilo && !d.crka)) navodila.push("Pri ostalih vpiši svoj odgovor in ga po preverjanju primerjaj z rešitvijo.");
+  if (oblika.deli.some((d) => d.beseda)) navodila.push("Vpiši odgovor za vsako vrzel ali postavko (besedo, obliko glagola ali črko), strežnik ga preveri.");
+  else if (oblika.deli.some((d) => !d.stevilo && !d.crka)) navodila.push("Pri ostalih vpiši svoj odgovor in ga po preverjanju primerjaj z rešitvijo.");
   obrazec.append(el("p", "mn-navodilo", navodila.join(" ")));
   const vrstice = oblika.deli.map((d, i) => {
     const vrstica = el("div", "mn-odgovor-vrstica");
     const id = `odg-${naloga.pola.id}-${naloga.id}-${i}`;
     const oznaka = el("label", "mn-odgovor-oznaka", d.oznaka || "Odgovor");
     oznaka.htmlFor = id;
-    const vnos = d.stevilo || d.crka ? el("input", "mn-vnos") : el("textarea", "mn-vnos");
+    const vnos = d.stevilo || d.crka || d.beseda ? el("input", "mn-vnos") : el("textarea", "mn-vnos");
     vnos.id = id;
     vnos.autocomplete = "off";
     vnos.maxLength = 2000;
     if (vnos.tagName === "TEXTAREA") vnos.rows = 1;
     if (d.stevilo) vnos.inputMode = "decimal";
     if (d.crka) vnos.placeholder = "A, B, C …";
+    if (d.beseda) {
+      vnos.spellcheck = false;
+      vnos.setAttribute("autocapitalize", "off");
+    }
     const polje = el("div", "mn-odgovor-polje");
     polje.append(vnos);
     if (d.enota) {
@@ -302,7 +312,9 @@ function obrazecOdgovora(naloga, kartica) {
         const { povratno, vrstica } = vrstice[i];
         vrstica.classList.remove("mn-pravilno", "mn-napacno");
         povratno.replaceChildren();
-        if (d.pravilno === true) {
+        if (d.prazno) {
+          povratno.append(el("span", "mn-znak mn-brez", "Brez odgovora"));
+        } else if (d.pravilno === true) {
           vrstica.classList.add("mn-pravilno");
           povratno.append(el("span", "mn-znak", "✓ Pravilno"));
         } else if (d.pravilno === false) {
@@ -317,6 +329,8 @@ function obrazecOdgovora(naloga, kartica) {
       if (odg.pravilno === true) {
         zabeleziStanje(naloga, kartica, true);
         nastaviStatus(status, "pravilno", "Vse pravilno!");
+      } else if (odg.deli.some((d) => d.prazno) && !odg.deli.some((d) => d.pravilno === false && !d.prazno)) {
+        nastaviStatus(status, "", "Vpisani odgovori so pravilni. Izpolni še prazna polja.");
       } else if (samodejni.some((d) => !d.pravilno)) {
         zabeleziStanje(naloga, kartica, false);
         nastaviStatus(status, "napacno", "Nekaj ni pravilno. Popravi označene odgovore ali si oglej postopek.");
@@ -421,7 +435,7 @@ function renderList(naloga, { pola, stran, skupaj, prviVDelu }) {
   const st = del ? naloga.id.slice(1) : naloga.id;
 
   const vrh = el("div", "pola-vrh");
-  vrh.append(el("span", "pola-oznaka", `Naloga ${naloga.id}`));
+  vrh.append(el("span", "pola-oznaka", naloga.oznaka ?? `Naloga ${naloga.id}`));
   const desno = el("div", "pola-vrh-desno");
   const snov = povezavaSnov(naloga);
   if (snov) desno.append(snov);
@@ -432,7 +446,7 @@ function renderList(naloga, { pola, stran, skupaj, prviVDelu }) {
 
   const list = el("div", "pola-list");
   list.append(el("span", "pola-st-strani", `${stran}/${skupaj}`));
-  if (del && prviVDelu) list.append(el("h3", "pola-del", DELI[del]));
+  if (del && prviVDelu) list.append(el("h3", "pola-del", pola.deli?.[del] ?? DELI[del]));
 
   const okvir = el("div", "pola-okvir");
   const besedilo = el("div", "pola-besedilo");
@@ -787,7 +801,7 @@ async function stranSnov() {
     for (const [s, seznam] of skupine) {
       if (!seznam.length) continue;
       if (s) vsebina.append(el("h2", "matura-leto", `${s.stevilka} ${s.naslov}`.trim()));
-      seznam.forEach((n, i) => vsebina.append(renderNaloga(n, { naslov: `Naloga ${i + 1}`, vir: true })));
+      seznam.forEach((n, i) => vsebina.append(renderNaloga(n, { naslov: n.oznaka ? `Naloga ${i + 1} · ${n.oznaka}` : `Naloga ${i + 1}`, vir: true })));
     }
     if (!vsebina.hasChildNodes())
       vsebina.append(el("p", "mn-prazno", stanje === "neuspesno"
@@ -873,6 +887,64 @@ async function stranSklopi() {
   vse.append(prenosi("", ""));
   koren.replaceChildren(mreza, vse);
 }
+
+// ------------------------------------------------------------
+// Poslušanje (tuji jeziki, izpitna pola 2): posnetek prebere bralnik v brskalniku
+// ------------------------------------------------------------
+function glasJezika(jezik) {
+  const glasovi = window.speechSynthesis?.getVoices() ?? [];
+  return glasovi.find((g) => g.lang === jezik) ?? glasovi.find((g) => g.lang?.startsWith(jezik.slice(0, 2)));
+}
+
+function poslusaj(gumbPoslusaj) {
+  const sinteza = window.speechSynthesis;
+  const posnetek = gumbPoslusaj.closest(".ang-posnetek");
+  if (!sinteza || !posnetek) {
+    gumbPoslusaj.disabled = true;
+    gumbPoslusaj.textContent = "Brskalnik ne podpira bralnika";
+    return;
+  }
+  const vsi = document.querySelectorAll(".ang-poslusaj");
+  if (gumbPoslusaj.dataset.predvaja === "1") {
+    sinteza.cancel();
+    gumbPoslusaj.dataset.predvaja = "";
+    gumbPoslusaj.textContent = "▶ Poslušaj posnetek";
+    return;
+  }
+  sinteza.cancel();
+  // Vloge v intervjuju (»Interviewer:«) bralnik izpusti, vsak odstavek je svoja izjava
+  const odstavki = [...posnetek.querySelectorAll(".ang-govor p")].map((p) => p.textContent.replace(/^[A-Z][\w .'-]{0,30}:\s*/, ""));
+  const glas = glasJezika("en-GB");
+  odstavki.forEach((besedilo, i) => {
+    const izjava = new SpeechSynthesisUtterance(besedilo);
+    izjava.lang = "en-GB";
+    if (glas) izjava.voice = glas;
+    izjava.rate = 0.95;
+    if (i === 0) {
+      izjava.onstart = () => {
+        vsi.forEach((g) => {
+          g.dataset.predvaja = "";
+          g.textContent = "▶ Poslušaj posnetek";
+        });
+        gumbPoslusaj.dataset.predvaja = "1";
+        gumbPoslusaj.textContent = "■ Ustavi posnetek";
+      };
+    }
+    if (i === odstavki.length - 1) {
+      izjava.onend = izjava.onerror = () => {
+        gumbPoslusaj.dataset.predvaja = "";
+        gumbPoslusaj.textContent = "▶ Poslušaj posnetek";
+      };
+    }
+    sinteza.speak(izjava);
+  });
+}
+
+document.addEventListener("click", (e) => {
+  const g = e.target.closest?.(".ang-poslusaj");
+  if (g) poslusaj(g);
+});
+window.speechSynthesis?.getVoices();
 
 const NACINI = { leta: stranLeta, pole: stranPole, sklopi: stranSklopi, snov: stranSnov };
 
