@@ -1853,6 +1853,7 @@ input.mn-vnos {
 
 .mn-pravilno .mn-znak { color: var(--success); font-weight: 600; }
 .mn-napacno .mn-znak { color: var(--danger); font-weight: 600; }
+.mn-znak.mn-brez { color: var(--text-muted); font-weight: 500; }
 
 .mn-primerjaj {
     padding: 0.4rem 0.65rem;
@@ -3587,5 +3588,168 @@ details.matura-pola[open] .matura-pola-puscica {
 @media (max-width: 600px) {
     .naloge-filtri-izbira {
         grid-template-columns: 1fr;
+    }
+}
+
+/* ============================================================
+   MATURA: TUJI JEZIKI (angleščina) – besedila, vrzeli, posnetki
+   Barve iz currentColor: enako na belem listu pole in v temni kartici po snovi
+   ============================================================ */
+.ang-navodilo {
+    margin: 0 0 12px;
+}
+
+.ang-besedilo {
+    margin: 0 0 16px;
+    padding: 14px 16px;
+    border: 1px solid color-mix(in srgb, currentColor 22%, transparent);
+    border-radius: 6px;
+    line-height: 1.6;
+}
+
+.ang-besedilo p {
+    margin: 0 0 10px;
+}
+
+.ang-naslov {
+    margin: 0 0 6px;
+    font-size: 1.05em;
+}
+
+.ang-podnaslov {
+    margin: 0 0 12px;
+    font-style: italic;
+}
+
+.ang-vir {
+    margin: 8px 0 0;
+    font-size: 0.85em;
+    font-style: italic;
+    opacity: 0.8;
+}
+
+.ang-vrzel {
+    display: inline-block;
+    min-width: 4.5em;
+    padding: 0 4px;
+    border-bottom: 1px solid currentColor;
+    font-weight: 700;
+    text-align: center;
+}
+
+.ang-beseda {
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+.ang-odstavek {
+    margin: 12px 0 0;
+}
+
+.ang-odstavek h5 {
+    margin: 0 0 4px;
+    font-size: 1em;
+}
+
+.ang-crka {
+    display: inline-block;
+    min-width: 1.6em;
+    font-weight: 700;
+}
+
+.ang-vprasanja,
+.ang-deli {
+    list-style: none;
+    margin: 0 0 12px;
+    padding: 0;
+}
+
+.ang-vprasanja li,
+.ang-deli li {
+    display: flex;
+    gap: 8px;
+    margin: 0 0 8px;
+}
+
+.ang-st {
+    flex: 0 0 2em;
+    font-weight: 700;
+}
+
+.ang-primer {
+    opacity: 0.85;
+}
+
+.ang-primer-odg,
+.ang-primer-vrstica em {
+    font-family: "Kalam", "Comic Sans MS", cursive;
+    color: var(--crnilo, #1D3C9E);
+    font-style: normal;
+}
+
+.ang-mc .ang-moznost {
+    display: block;
+    margin-left: 4px;
+}
+
+.ang-tf {
+    margin-left: 6px;
+    font-size: 0.85em;
+    font-weight: 700;
+    white-space: nowrap;
+    opacity: 0.7;
+}
+
+.ang-glava {
+    margin: 10px 0 0;
+    padding: 8px 12px;
+    border: 1px dashed color-mix(in srgb, currentColor 35%, transparent);
+    border-radius: 6px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9em;
+}
+
+.ang-delo {
+    font-style: italic;
+}
+
+.ang-posnetek {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 8px 12px;
+    margin: 0 0 14px;
+}
+
+.ang-posnetek-opis {
+    font-size: 0.85em;
+    opacity: 0.8;
+}
+
+.ang-transkript {
+    flex-basis: 100%;
+    padding: 8px 12px;
+    border: 1px solid color-mix(in srgb, currentColor 22%, transparent);
+    border-radius: 6px;
+}
+
+.ang-transkript summary {
+    cursor: pointer;
+    font-weight: 600;
+}
+
+.ang-govor {
+    margin-top: 8px;
+    line-height: 1.6;
+}
+
+@media print {
+    .ang-poslusaj,
+    .ang-posnetek-opis {
+        display: none;
+    }
+
+    .ang-transkript:not([open]) {
+        display: none;
     }
 }

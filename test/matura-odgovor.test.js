@@ -61,3 +61,23 @@ test("vsaka naloga v polah ima odgovor, izbirne imajo pravilno črko", () => {
   }
   assert.ok(izbirnih > 1800);
 });
+
+test("tuji jeziki: vrzeli preveri strežnik natančno, prazna vrzel ne izda rešitve", () => {
+  const pola = matura.find((p) => p.id === "anglescina-osnovna-2024-jesenski-1");
+  const naloga = pola.naloge.find((n) => n.id === "B2");
+  const vnos = Array(15).fill("");
+  vnos[0] = " Arrived ";
+  vnos[2] = "had already gone";
+  vnos[4] = "didn't belong";
+  vnos[5] = "do not belong";
+  const r = preveriMaturitetni(naloga, "anglescina", vnos);
+  assert.equal(r.pravilno, false);
+  assert.equal(r.deli.length, 15);
+  assert.equal(r.deli[0].pravilno, true);
+  assert.equal(r.deli[2].pravilno, true);
+  assert.equal(r.deli[4].pravilno, true);
+  assert.equal(r.deli[5].pravilno, false);
+  assert.ok(r.deli[5].rezultat.includes("contained"));
+  assert.equal(r.deli[1].prazno, true);
+  assert.equal(r.deli[1].rezultat, undefined);
+});

@@ -229,12 +229,21 @@ Pravilni odgovor se ne vpisuje posebej, prebere se iz `rezultat`:
 - **ostale naloge**: rezultat se razdeli na dele (2.1., 2.2. …), za vsak del je polje. Del, ki je eno samo število
   (»h ≈ 10 m«, »\(x = \dfrac{7}{2}\)«), preveri strežnik (toleranca je zaokroževanje zadnje števke, pri fiziki in kemiji vsaj 1 %;
   enota je napisana ob polju). Pri besedilnih delih in delih z več vrednostmi dijak po oddaji vidi rešitev tega dela in jo primerja s svojo;
-- **esej** nima polja.
+- **esej** nima polja;
+- **tuji jeziki** (`"preverjanje": "tocno"`, rezultat v obliki `<strong>1.</strong> enjoyment<br><strong>2.</strong> …`):
+  vsaka vrzel ima polje, strežnik jo primerja z rešitvijo (brez razlike v velikih črkah, ločilih in krajšavah
+  don't/do not; več sprejetih rešitev loči » / «). Prazne vrzeli ne štejejo kot napačne in ne izdajo rešitve.
 
 Gumba pri vsaki nalogi sta Prikaži rezultat in Prikaži postopek. Odgovor lahko preveri samo, kdor sme videti rešitve pole.
 
 Besedila nalog RIC so avtorsko zaščitena: brez dovoljenja RIC pusti `besedilo` prazno in v `pdf`
 povezavo na uradno polo na ric.si. Novo leto dodaš v `matura.json` in kot povezavo v `sidebar.html`.
+
+**Angleščina** (`api/data/matura-anglescina.json`) ima vadbene pole Piflar.si, ki sledijo zgradbi uradnih pol
+(osnovna in višja raven, pola 1 bralno razumevanje in raba jezika, pola 2 slušno razumevanje, pola 3 pisno sporočanje),
+besedila pa so naša. Ustvari jih `python3 tools/matura/anglescina/gradi.py` iz datotek v `tools/matura/anglescina/pole/`
+(ena datoteka na izpitni dan). Naloge imajo `oznaka` (»Task 1: Short answers«), pola ima `deli` (imena delov A, B).
+Posnetke pole 2 prebere bralnik v brskalniku (gumb `.ang-poslusaj`, Web Speech API), prepis je v `.ang-transkript`.
 
 ## Račun
 
