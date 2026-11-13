@@ -4,6 +4,7 @@
 import { matura } from "../data/index.js";
 import { javneResenePole, lahkoVidiResitve, jeResena } from "../utils/dostop.js";
 import { oblikaOdgovora, preveriMaturitetni } from "../utils/matura-odgovor.js";
+import Napredek from "../models/napredek.js";
 
 const javne = javneResenePole(matura);
 
@@ -80,7 +81,9 @@ const maturaStevilo = (req, res) => {
 // POST /api/matura/odgovor  { "pola": "fizika-2025-spomladanski-1", "naloga": "26", "odgovor": "B" }
 // Izbirna naloga: odgovor je črka (ali seznam črk). Ostale: seznam odgovorov po delih (2.1., 2.2. …).
 // Številske dele preveri strežnik, pri ostalih vrne rešitev dela, da jo dijak primerja s svojo.
-const maturaOdgovor = (req, res) => {
+// Prijavljenemu se poskus shrani v napredek, ko je jasno, ali je uspešen: vse pravilno ali
+// vsaj en samodejno preverjen del napačen. Če mora dele primerjati sam, se ne shrani.
+const maturaOdgovor = async (req, res) => {
   const { pola: polaId, naloga: nalogaId, odgovor } = req.body ?? {};
   const pola = matura.find((p) => p.id === polaId);
   const naloga = pola?.naloge?.find((n) => n.id === String(nalogaId));
@@ -91,7 +94,13 @@ const maturaOdgovor = (req, res) => {
   if (vneseni.length > 30 || vneseni.some((v) => typeof v !== "string" || v.length > 2000))
     return res.status(400).json({ message: "Odgovor ni veljaven." });
   if (vneseni.every((v) => v.trim() === "")) return res.status(400).json({ message: "Vpiši ali izberi odgovor." });
-  res.status(200).json(preveriMaturitetni(naloga, pola.predmet, odgovor));
+  const rezultat = preveriMaturitetni(naloga, pola.predmet, odgovor);
+  const uspeh = rezultat.pravilno ?? (rezultat.deli?.some((d) => d.pravilno === false) ? false : null);
+  if (req.uporabnik && uspeh !== null) {
+    const zapis = { id: `${pola.id}-${naloga.id}`, vir: "matura", predmet: pola.predmet, poglavje: naloga.poglavje };
+    if ([zapis.poglavje ?? []].flat().length) await Napredek.zabeleziPoskus(req.uporabnik._id, zapis, uspeh);
+  }
+  res.status(200).json(rezultat);
 };
 
 // GET /api/matura/:maturaId

@@ -3020,3 +3020,138 @@ mjx-container[jax="CHTML"][display="true"] {
     min-width: 0;
     width: 100%;
 }
+
+/* ============================================================
+   MOJE NALOGE (napredek.html, components/napredek.js)
+   ============================================================ */
+.napredek {
+    max-width: 860px;
+    margin: 0 auto;
+}
+
+.napredek-povzetek {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: var(--space-3);
+    margin-bottom: var(--space-5);
+}
+
+.napredek-ploscica {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+    padding: var(--space-4);
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+}
+
+.napredek-ploscica strong {
+    font-family: var(--font-display);
+    font-size: var(--text-2xl);
+    line-height: 1.1;
+}
+
+.napredek-ploscica span {
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+}
+
+.napredek-ploscica--uspesno strong { color: var(--success); }
+.napredek-ploscica--neuspesno strong { color: var(--danger); }
+
+.napredek-skupaj {
+    display: grid;
+    gap: var(--space-2);
+}
+
+.napredek-vir {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-2) var(--space-4);
+}
+
+.napredek-vir-ime {
+    min-width: 150px;
+    font-size: var(--text-sm);
+    font-weight: 600;
+}
+
+.napredek-stevci {
+    display: inline-flex;
+    gap: var(--space-3);
+    font-size: var(--text-sm);
+    font-weight: 700;
+    font-variant-numeric: tabular-nums;
+}
+
+.napredek-st--uspesno { color: var(--success); }
+.napredek-st--neuspesno { color: var(--danger); }
+
+.napredek-gumbi {
+    display: inline-flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    margin-left: auto;
+}
+
+.napredek-gumb {
+    padding: 6px 12px;
+    text-decoration: none;
+    font-size: var(--text-sm);
+}
+
+.napredek-snovi {
+    border-top: 1px solid var(--border-color);
+    padding-top: var(--space-3);
+}
+
+.napredek-snovi summary {
+    cursor: pointer;
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+
+.napredek-snov {
+    display: grid;
+    gap: var(--space-2);
+    padding: var(--space-3) 0;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.napredek-snov:last-child {
+    border-bottom: none;
+}
+
+.napredek-snov-naslov {
+    font-size: var(--text-base);
+    font-weight: 600;
+}
+
+.napredek-snov-naslov a {
+    color: var(--text-primary);
+    text-decoration: none;
+}
+
+.napredek-snov-naslov a:hover {
+    color: var(--primary);
+}
+
+@media (max-width: 600px) {
+    .napredek-povzetek {
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: var(--space-2);
+    }
+    .napredek-ploscica {
+        padding: var(--space-3);
+    }
+    .napredek-ploscica strong {
+        font-size: var(--text-xl);
+    }
+    .napredek-gumbi {
+        margin-left: 0;
+        width: 100%;
+    }
+}

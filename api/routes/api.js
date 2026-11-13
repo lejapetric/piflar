@@ -6,6 +6,7 @@ import ctrlNaloge from "../controllers/naloge.js";
 import ctrlAvt from "../controllers/avtentikacija.js";
 import ctrlProfil from "../controllers/profil.js";
 import ctrlPlacila from "../controllers/placila.js";
+import ctrlNapredek from "../controllers/napredek.js";
 import ctrlIskanje from "../controllers/iskanje.js";
 import { naloziUporabnika, zahtevajPrijavo, zahtevajBazo } from "../middleware/uporabnik.js";
 
@@ -39,7 +40,9 @@ router.get("/naloge/stevilo", ctrlNaloge.nalogeStevilo);
 router.get("/naloge/:id", ctrlNaloge.nalogaReadOne);
 router.post("/naloge/:id/odgovor", ctrlNaloge.nalogaPreveri);
 router.get("/naloge/:id/postopek", ctrlNaloge.nalogaPostopek);
-router.get("/napredek", zahtevajPrijavo, ctrlNaloge.napredekList);
+
+// NAPREDEK (rešene naloge po predmetih in snoveh)
+router.get("/napredek", zahtevajPrijavo, ctrlNapredek.napredekList);
 
 // ISKANJE PO SNOVI
 router.get("/iskanje", ctrlIskanje.iskanje);

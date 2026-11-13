@@ -8,6 +8,7 @@
 //   data-nacin="snov"     naloge enega poglavja (?poglavje=…) ali sklopa (?sklop=4), brez obojega vse
 //
 // ?raven=osnovna|visja izbere raven, ?tisk=brez|resitve po izrisu odpre tisk (Shrani kot PDF).
+// Prijavljeni na strani »snov« izbere še ?stanje=neuspesno|uspesno|nereseno (stran Moje naloge).
 // Rešitve pošlje strežnik samo, če je pola odklenjena (api/utils/dostop.js).
 
 const koren = document.getElementById("matura");
@@ -153,6 +154,31 @@ function zaklenjeno(naloga) {
 // ------------------------------------------------------------
 // Odgovor dijaka: izbira (A–D) ali vpis po delih (2.1., 2.2. …)
 // ------------------------------------------------------------
+// ------------------------------------------------------------
+// Napredek prijavljenega: "<pola>-<naloga>" → "uspesno" | "neuspesno" (gost: prazno)
+// ------------------------------------------------------------
+const napredek = new Map();
+let prijavljen = false;
+const kljuc = (naloga) => `${naloga.pola.id}-${naloga.id}`;
+
+async function naloziNapredek() {
+  const res = await fetch(`/api/napredek?vir=matura&predmet=${predmet}`).catch(() => null);
+  if (!res?.ok) return;
+  prijavljen = true;
+  for (const z of await res.json()) if (z.stanje) napredek.set(z.naloga, z.stanje);
+}
+
+function oznaciStanje(kartica, stanje) {
+  kartica.classList.toggle("naloga--resena", stanje === "uspesno");
+  kartica.classList.toggle("naloga--neuspesna", stanje === "neuspesno");
+}
+
+function zabeleziStanje(naloga, kartica, pravilno) {
+  const stanje = pravilno ? "uspesno" : "neuspesno";
+  napredek.set(kljuc(naloga), stanje);
+  oznaciStanje(kartica, stanje);
+}
+
 async function preveri(naloga, odgovor) {
   return api("/api/matura/odgovor", {
     method: "POST",
@@ -186,7 +212,7 @@ function obrazecOdgovora(naloga, kartica) {
         for (const li of oblika.vec ? moznosti.filter((m) => m.classList.contains("izbira-izbrana")) : [kliknjena]) {
           li.classList.add(pravilno ? "izbira-pravilna" : "izbira-napacna");
         }
-        if (pravilno) kartica.classList.add("naloga--resena");
+        zabeleziStanje(naloga, kartica, pravilno);
         nastaviStatus(status, pravilno ? "pravilno" : "napacno", pravilno ? "Pravilno!" : "Žal ni pravilno. Poskusi znova ali si oglej postopek.");
       } catch (err) {
         nastaviStatus(status, "napacno", err.message);
@@ -289,9 +315,10 @@ function obrazecOdgovora(naloga, kartica) {
       typeset(obrazec);
       const samodejni = odg.deli.filter((d) => d.pravilno !== null);
       if (odg.pravilno === true) {
-        kartica.classList.add("naloga--resena");
+        zabeleziStanje(naloga, kartica, true);
         nastaviStatus(status, "pravilno", "Vse pravilno!");
       } else if (samodejni.some((d) => !d.pravilno)) {
+        zabeleziStanje(naloga, kartica, false);
         nastaviStatus(status, "napacno", "Nekaj ni pravilno. Popravi označene odgovore ali si oglej postopek.");
       } else {
         nastaviStatus(status, "", "Primerjaj svoje odgovore z rešitvijo pod vsakim poljem.");
@@ -353,6 +380,7 @@ function renderNaloga(naloga, { naslov, vir }) {
 
   // Dijak izbere ali vpiše odgovor, strežnik ga preveri
   if (naloga.odklenjena && naloga.odgovor) kartica.append(...obrazecOdgovora(naloga, kartica));
+  if (naloga.pola) oznaciStanje(kartica, napredek.get(kljuc(naloga)));
 
   const akcije = el("div", "naloga-akcije");
   const gResitev = gumb("Prikaži rezultat");
@@ -518,19 +546,19 @@ async function natisni(zResitvami, naslovPdf, sekcija = null) {
   window.print();
 }
 
-// Izbira ravni (osnovna / višja / vse); izbira se zapiše v naslov strani
-function izbiraRavni(ravni, izbrana, obIzbiri) {
+// Izbira ravni (osnovna / višja / vse); izbira se zapiše v naslov strani (?raven=…)
+function izbiraRavni(ravni, izbrana, obIzbiri, { parameter = "raven", oznaka = "Raven" } = {}) {
   const skupina = el("div", "matura-ravni");
   skupina.setAttribute("role", "group");
-  skupina.setAttribute("aria-label", "Raven");
+  skupina.setAttribute("aria-label", oznaka);
   for (const [vrednost, ime] of ravni) {
     const b = gumb(ime, "matura-raven");
     b.setAttribute("aria-pressed", String(vrednost === izbrana));
     b.addEventListener("click", () => {
       skupina.querySelectorAll("button").forEach((x) => x.setAttribute("aria-pressed", String(x === b)));
       const url = new URL(location.href);
-      if (vrednost) url.searchParams.set("raven", vrednost);
-      else url.searchParams.delete("raven");
+      if (vrednost) url.searchParams.set(parameter, vrednost);
+      else url.searchParams.delete(parameter);
       history.replaceState(null, "", url);
       obIzbiri(vrednost);
     });
@@ -738,11 +766,14 @@ async function stranSnov() {
   if (tema) naloge = naloge.filter((n) => [n.tema ?? []].flat().includes(tema.id));
   const ravni = [["", "Vse ravni"], ["osnovna", "Osnovna"], ["visja", "Višja"]];
   let raven = RAVNI[parametri.get("raven")] ? parametri.get("raven") : "";
+  const STANJA = { neuspesno: "Neuspešne", uspesno: "Uspešne", nereseno: "Še nereševane" };
+  let stanje = prijavljen && STANJA[parametri.get("stanje")] ? parametri.get("stanje") : "";
+  const stanjeNaloge = (n) => napredek.get(kljuc(n)) ?? "nereseno";
   const vsebina = el("div", "matura-vsebina");
 
   function izrisi() {
     vsebina.replaceChildren();
-    const izbrane = naloge.filter((n) => !raven || n.pola.raven === raven);
+    const izbrane = naloge.filter((n) => (!raven || n.pola.raven === raven) && (!stanje || stanjeNaloge(n) === stanje));
     // Pri sklopu ali vseh nalogah so naloge razdeljene po poglavjih, pri poglavju s temami po temah
     // (naloga je pod prvo temo tega poglavja, ki jo preverja)
     const prvaTema = (n) => [n.tema ?? []].flat().find((id) => teme.some((t) => t.id === id));
@@ -758,7 +789,10 @@ async function stranSnov() {
       if (s) vsebina.append(el("h2", "matura-leto", `${s.stevilka} ${s.naslov}`.trim()));
       seznam.forEach((n, i) => vsebina.append(renderNaloga(n, { naslov: `Naloga ${i + 1}`, vir: true })));
     }
-    if (!vsebina.hasChildNodes()) vsebina.append(el("p", "mn-prazno", "Za to izbiro še ni maturitetnih nalog."));
+    if (!vsebina.hasChildNodes())
+      vsebina.append(el("p", "mn-prazno", stanje === "neuspesno"
+        ? "Tu ni nobene neuspešno rešene naloge. Odlično!"
+        : stanje ? "Nobena naloga ne ustreza izbiri." : "Za to izbiro še ni maturitetnih nalog."));
     typeset(vsebina);
   }
 
@@ -768,7 +802,17 @@ async function stranSnov() {
     raven = r;
     izrisi();
   });
-  koren.replaceChildren(...(ENA_RAVEN ? [] : [izbira]), vrstica, vsebina);
+  const izbire = ENA_RAVEN ? [] : [izbira];
+  if (prijavljen) {
+    const moznosti = [["", "Vse naloge"], ...Object.entries(STANJA)];
+    const izbiraStanja = izbiraRavni(moznosti, stanje, (s) => {
+      stanje = s;
+      izrisi();
+    }, { parameter: "stanje", oznaka: "Moje reševanje" });
+    izbiraStanja.classList.add("matura-stanje");
+    izbire.push(izbiraStanja);
+  }
+  koren.replaceChildren(...izbire, vrstica, vsebina);
   izrisi();
   await poIzrisu(vsebina);
 }
@@ -835,6 +879,7 @@ const NACINI = { leta: stranLeta, pole: stranPole, sklopi: stranSklopi, snov: st
 async function init() {
   if (!koren) return;
   try {
+    if (koren.dataset.nacin === "snov") await naloziNapredek();
     await NACINI[koren.dataset.nacin]?.();
   } catch (err) {
     koren.textContent = `Vsebine ni bilo mogoče naložiti: ${err.message}`;

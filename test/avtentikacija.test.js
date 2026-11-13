@@ -30,13 +30,13 @@ Uporabnik.deleteOne = async (q) => {
 const napredek = [];
 Napredek.updateOne = async (filter, posodobitev) => {
   let z = napredek.find((n) => String(n.uporabnik) === String(filter.uporabnik) && n.naloga === filter.naloga);
-  if (!z) napredek.push((z = { ...filter, ...posodobitev.$setOnInsert, poskusi: 0, reseno: false }));
-  z.poskusi += posodobitev.$inc?.poskusi ?? 0;
+  if (!z) napredek.push((z = { ...filter, ...posodobitev.$setOnInsert, poskusi: 0, napacni: 0, reseno: false }));
+  for (const [k, v] of Object.entries(posodobitev.$inc ?? {})) z[k] += v;
   Object.assign(z, posodobitev.$set);
   if (posodobitev.$min && !z.resenoOb) Object.assign(z, posodobitev.$min);
 };
 Napredek.find = (filter) => {
-  const v = napredek.filter((n) => String(n.uporabnik) === String(filter.uporabnik) && (!filter.poglavje || n.poglavje === filter.poglavje));
+  const v = napredek.filter((n) => String(n.uporabnik) === String(filter.uporabnik));
   return { select: () => ({ lean: async () => v }) };
 };
 Napredek.deleteMany = async (q) => {
@@ -135,6 +135,42 @@ test("registracija, potrditev e-naslova, prijava, dostop glede na paket, odjava"
   assert.equal(zapisi[0].naloga, "mnozice-2");
   assert.equal(zapisi[0].poskusi, 2);
   assert.equal(zapisi[0].reseno, true);
+  assert.equal(zapisi[0].stanje, "uspesno", "zadnji poskus je bil pravilen");
+  assert.equal(zapisi[0].napacni, 1);
+  assert.equal(zapisi[0].predmet, "matematika");
+  assert.equal(zapisi[0].vir, "vaja");
+
+  // Neuspešna naloga: zadnji odgovor napačen; filter po stanju in predmetu
+  await post("/naloge/mnozice-1/odgovor", { odgovor: "1, 2" }, piskotek);
+  const neuspesne = await (await get("/napredek?stanje=neuspesno&predmet=matematika", piskotek)).json();
+  assert.deepEqual(neuspesne.map((z) => z.naloga), ["mnozice-1"]);
+  assert.equal((await (await get("/napredek?stanje=uspesno", piskotek)).json()).length, 1);
+  assert.equal((await (await get("/napredek?predmet=fizika", piskotek)).json()).length, 0);
+  // Ponovni poskus, ki uspe, nalogo premakne med uspešne
+  await post("/naloge/mnozice-1/odgovor", { odgovor: "4, 5" }, piskotek);
+  assert.equal((await (await get("/napredek?stanje=neuspesno", piskotek)).json()).length, 0);
+
+  // Maturitetna izbirna naloga: napačen odgovor je neuspešen, pravilen uspešen
+  const mat = await (await get("/matura/naloge?predmet=fizika", piskotek)).json();
+  const izbirna = mat.find((n) => n.odklenjena && n.odgovor?.tip === "izbira" && !n.odgovor.vec);
+  assert.ok(izbirna, "odklenjena izbirna naloga iz fizike");
+  const kljuc = `${izbirna.pola.id}-${izbirna.id}`;
+  const crke = [];
+  for (const c of "ABCDE") {
+    const r = await (await post("/matura/odgovor", { pola: izbirna.pola.id, naloga: izbirna.id, odgovor: c }, piskotek)).json();
+    crke.push(r.pravilno);
+    if (r.pravilno) break;
+  }
+  assert.ok(crke.at(-1), "ena od črk je pravilna");
+  let mz = (await (await get("/napredek?vir=matura", piskotek)).json()).find((z) => z.naloga === kljuc);
+  assert.equal(mz.predmet, "fizika");
+  assert.equal(mz.stanje, "uspesno");
+  assert.equal(mz.poskusi, crke.length);
+  assert.ok(mz.poglavja.length >= 1);
+  const napacna = "ABCDE"[crke.length - 1] === "A" ? "B" : "A";
+  await post("/matura/odgovor", { pola: izbirna.pola.id, naloga: izbirna.id, odgovor: napacna }, piskotek);
+  mz = (await (await get(`/napredek?vir=matura&poglavje=${mz.poglavja[0]}`, piskotek)).json()).find((z) => z.naloga === kljuc);
+  assert.equal(mz.stanje, "neuspesno");
 
   const odjava = await post("/odjava", {}, piskotek);
   assert.equal(odjava.status, 204);

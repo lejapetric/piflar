@@ -28,7 +28,8 @@ api/
   controllers/             snovi, naloge, matura, avtentikacija
   models/uporabnik.js      uporabnik v MongoDB (profil, nastavitve, paket, geslo kot bcrypt hash)
   utils/eposta.js          pošiljanje e-pošte (Resend), sporočilo za potrditev e-naslova
-  models/napredek.js       napredek pri nalogah (en zapis na uporabnika in nalogo)
+  models/napredek.js       napredek pri nalogah (en zapis na uporabnika in nalogo: vaja ali maturitetna,
+                           predmet, snovi, zadnji poskus uspešen/neuspešen); GET /api/napredek
   data/                    snovi.json, naloge.json, matura.json (+ index.js, ki jih prebere ob zagonu)
   middleware/              prijavljen uporabnik, obravnava napak
   utils/dostop.js          pravila, kdo sme videti kaj
@@ -38,6 +39,8 @@ public/
   index.html               naslovnica
   404.html                 stran ne obstaja / še v pripravi
   iskanje.html             vsi zadetki iskanja (components/iskanje.js)
+  napredek.html            Moje naloge: uspešne in neuspešne naloge po predmetih in snoveh
+                           (components/napredek.js); povezave odprejo naloge s ?stanje=neuspesno|uspesno
   components/              header, sidebar, footer + components.js (naloži jih na vsaki strani)
                            tema.js v <head> nastavi temni/svetli način pred izrisom
                            in na straneh /views/<predmet>/ naloži videz predmeta
