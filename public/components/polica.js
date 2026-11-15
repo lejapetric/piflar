@@ -31,7 +31,14 @@
   };
   var OBVEZNI = ["slovenscina", "matematika", "anglescina"];
   var VISINE = [312, 296, 324, 288, 306, 318, 292, 330, 300, 284];
-  var SVETLOST = [1, 0.93, 1.06, 0.9, 1.1];
+  // Odtenki barve predmeta za knjige poglavij: + primeša belo, - črno (v %).
+  // Sosednje knjige se opazno razlikujejo.
+  var ODTENKI = [0, -28, 18, -14, 30, -36, 8, -20, 24, -8];
+  function odtenek(barva, i) {
+    var o = ODTENKI[i % ODTENKI.length];
+    if (!o || !(window.CSS && CSS.supports("color", "color-mix(in oklab, red, white 10%)"))) return barva;
+    return "color-mix(in oklab, " + barva + ", " + (o > 0 ? "white " : "black ") + Math.abs(o) + "%)";
+  }
   var STEVILKA = /^(\d+(?:\.\d+)*)\.?\s+(.+)$/;
   var PRESKOK = 3; // razmik med knjigami (px), enak kot gap v tabla.css
   var mirno = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -134,7 +141,7 @@
     var skupaj = predmeti.reduce(function (s, k) { return s + sirina(k) + PRESKOK; }, 0);
     // če skoraj gre v eno vrsto, knjige malo stanjšaj
     var faktor = 1;
-    if (!telefon && skupaj > prostor && skupaj * 0.86 <= prostor) faktor = prostor / skupaj;
+    if (!telefon && skupaj > prostor && skupaj * 0.78 <= prostor) faktor = prostor / skupaj;
     predmeti.forEach(function (k) {
       if (k.classList.contains("knjiga")) {
         k.style.setProperty("--sirina", Math.floor(+k.dataset.sirina * faktor) + "px");
@@ -251,8 +258,7 @@
       znak: predmet,
       naslov: m ? m[2] : besedilo(a, "strong"),
       opis: besedilo(a, "small"),
-      barva: BARVA[predmet] || "#2F55D4",
-      svetlost: SVETLOST[i % SVETLOST.length]
+      barva: odtenek(BARVA[predmet] || "#2F55D4", i)
     };
   }
 
@@ -291,8 +297,7 @@
           naslov: naslov,
           znak: slug,
           opis: besedilo(a, "p"),
-          barva: BARVA[slug] || "#2F55D4",
-          svetlost: jePredmet(a) ? null : SVETLOST[i % SVETLOST.length]
+          barva: jePredmet(a) ? (BARVA[slug] || "#2F55D4") : odtenek(BARVA[slug] || "#2F55D4", i)
         }, i));
         if (obvezni.length && a === obvezni[obvezni.length - 1]) predmeti.push(el("span", "polica-razmik"));
       });
@@ -362,8 +367,7 @@
           naslov: naslov.replace(/^Maturitetne naloge po snovi$/, "Naloge po snovi"),
           znak: predmet,
           opis: besedilo(a, "small") || besedilo(a.closest(".link-item") || a, "small"),
-          barva: BARVA[predmet] || "#2F55D4",
-          svetlost: [0.78, 0.86, 0.95, 1.04][i % 4],
+          barva: odtenek(BARVA[predmet] || "#2F55D4", i + 1),
           sirina: 92,
           visina: [324, 306, 316, 296][i % 4]
         }, i));
