@@ -28,3 +28,24 @@
       '<link rel="stylesheet" href="/style/predmeti/' + m[1] + '.css">'
   );
 })();
+
+// Videz »Tabla in polica« (preizkus): privzeto vklopljen. Primerjava s
+// starim videzom: ?videz=osnovni (izbira se zapomni), nazaj z ?videz=tabla.
+(function () {
+  var videz = null;
+  try {
+    var q = new URLSearchParams(location.search).get("videz");
+    if (q === "osnovni" || q === "tabla") localStorage.setItem("piflar-videz", q);
+    videz = localStorage.getItem("piflar-videz");
+  } catch (e) {
+    /* zasebno okno */
+  }
+  if (videz !== "osnovni") videz = "tabla";
+  document.documentElement.dataset.videz = videz;
+  if (videz !== "tabla") return;
+  document.write(
+    '<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700;800&family=Gaegu:wght@400;700&family=Barlow+Condensed:wght@600;700;800&display=swap">' +
+      '<link rel="stylesheet" href="/style/tabla.css">' +
+      '<script src="/components/polica.js" defer></scr' + 'ipt>'
+  );
+})();
