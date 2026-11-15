@@ -213,14 +213,15 @@ html[data-videz="tabla"][data-predmet] .page-header::before {
 html[data-videz="tabla"] .hero {
     background: var(--bg-primary);
     border-bottom: 0;
-    padding: var(--space-6) var(--space-5) var(--space-5);
+    padding: 28px var(--space-5) 0;
     overflow: visible;
 }
 html[data-videz="tabla"] .hero-inner {
     max-width: 1240px;
     grid-template-columns: 1fr;
-    padding: 48px 56px 52px;
-    min-height: 520px;
+    padding: 30px 420px 34px 48px;
+    min-height: 0;
+    margin-bottom: 36px;
 }
 html[data-videz="tabla"] .hero-text {
     max-width: 780px;
@@ -228,11 +229,11 @@ html[data-videz="tabla"] .hero-text {
     z-index: 1;
 }
 html[data-videz="tabla"] .hero h1 {
-    font-size: clamp(44px, 7vw, 96px);
-    line-height: 0.92;
+    font-size: clamp(34px, 4.2vw, 58px);
+    line-height: 0.98;
     font-weight: 800;
-    letter-spacing: -0.055em;
-    margin: 14px 0 22px;
+    letter-spacing: -0.05em;
+    margin: 10px 0 14px;
 }
 html[data-videz="tabla"] .hero h1 .accent {
     color: inherit;
@@ -240,8 +241,20 @@ html[data-videz="tabla"] .hero h1 .accent {
     -webkit-text-fill-color: currentColor;
 }
 html[data-videz="tabla"] .hero-lead {
-    font-size: 18px;
-    max-width: 34em;
+    font-size: 16px;
+    max-width: 40em;
+    margin-bottom: 0;
+}
+/* naslovnica: krajša tabla, da je polica predmetov vidna brez drsenja */
+html[data-videz="tabla"] .hero-cta,
+html[data-videz="tabla"] .hero-stats {
+    display: none;
+}
+html[data-videz="tabla"] #predmeti {
+    padding-top: 0;
+}
+html[data-videz="tabla"] #predmeti .section-head {
+    display: none;
 }
 html[data-videz="tabla"] .hero-stats {
     border-top: 2px dashed var(--border-color);
@@ -259,10 +272,10 @@ html[data-videz="tabla"] .hero-preview {
 html[data-videz="tabla"] .hero-inner::after {
     content: "";
     position: absolute;
-    right: 56px;
-    bottom: 56px;
-    width: 340px;
-    height: 220px;
+    right: 48px;
+    bottom: 26px;
+    width: 300px;
+    height: 180px;
     background-color: var(--primary);
     -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 420 260' fill='none' stroke='black' stroke-width='3' stroke-linecap='round'%3E%3Cpath d='M20 230 L400 230 M60 250 L60 10'/%3E%3Cpath d='M90 30 Q170 330 300 40'/%3E%3Ccircle cx='196' cy='183' r='6' fill='black'/%3E%3Cpath d='M196 183 L196 230' stroke-dasharray='6 8'/%3E%3Cpath d='M318 18 q-6 -4 -10 2 l-4 22 M300 30 h14 M326 14 q-8 12 0 26 M352 14 q8 12 0 26 M332 22 l12 14 M344 22 l-12 14' stroke-width='2.5'/%3E%3C/svg%3E") no-repeat center / contain;
     mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 420 260' fill='none' stroke='black' stroke-width='3' stroke-linecap='round'%3E%3Cpath d='M20 230 L400 230 M60 250 L60 10'/%3E%3Cpath d='M90 30 Q170 330 300 40'/%3E%3Ccircle cx='196' cy='183' r='6' fill='black'/%3E%3Cpath d='M196 183 L196 230' stroke-dasharray='6 8'/%3E%3Cpath d='M318 18 q-6 -4 -10 2 l-4 22 M300 30 h14 M326 14 q-8 12 0 26 M352 14 q8 12 0 26 M332 22 l12 14 M344 22 l-12 14' stroke-width='2.5'/%3E%3C/svg%3E") no-repeat center / contain;
@@ -354,29 +367,34 @@ html[data-videz="tabla"][data-predmet] .pazi {
 /* ============================================================
    Knjižna polica
    ============================================================ */
+html[data-videz="tabla"] .polica-ovoj {
+    margin: 8px 0 44px;
+    position: relative;
+}
 html[data-videz="tabla"] .polica {
     position: relative;
     display: flex !important;
     align-items: flex-end;
     gap: 3px;
     flex-wrap: nowrap;
-    overflow-x: auto;
-    overflow-y: hidden;
-    padding: 84px 26px 0;
+    overflow: visible;
+    padding: 46px 26px 0;
     margin: 0;
     border-radius: 6px 6px 0 0;
     background: linear-gradient(180deg, var(--polica-ozadje-2), var(--polica-ozadje) 22%);
     box-shadow: inset 0 22px 30px -18px rgba(0, 0, 0, 0.35), inset 0 -40px 40px -30px rgba(0, 0, 0, 0.18);
-    scrollbar-width: thin;
     grid-template-columns: none;
 }
 html[data-videz="tabla"] .polica-deska {
     height: 20px;
-    margin-bottom: 40px;
+    margin-bottom: 0;
     background: linear-gradient(180deg, var(--polica-deska-2) 0, var(--polica-deska) 35%);
     border-radius: 0 0 4px 4px;
     position: relative;
     box-shadow: 0 16px 22px -10px rgba(0, 0, 0, 0.45);
+}
+html[data-videz="tabla"] .polica-deska + .polica {
+    border-radius: 0;
 }
 html[data-videz="tabla"] .polica-deska::before {
     content: "";
@@ -386,6 +404,22 @@ html[data-videz="tabla"] .polica-deska::before {
     top: 0;
     height: 1px;
     background: rgba(255, 255, 255, 0.18);
+}
+/* medeninasta tablica z imenom police */
+html[data-videz="tabla"] .polica-tablica {
+    position: absolute;
+    left: 50%;
+    top: 3px;
+    transform: translateX(-50%);
+    padding: 1px 14px;
+    font: 700 10.5px/14px var(--font-hrbet);
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: #3A2A12;
+    background: linear-gradient(180deg, #E9D08A, #B8913F 60%, #9C7A2E);
+    border-radius: 2px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.35) inset, 0 1px 2px rgba(0, 0, 0, 0.5);
+    white-space: nowrap;
 }
 html[data-videz="tabla"] .polica::after {
     content: "";
@@ -406,7 +440,7 @@ html[data-videz="tabla"] .polica > .knjiga {
     height: var(--visina, 300px);
     min-height: 0;
     margin: 0;
-    padding: 12px 0 10px;
+    padding: 12px 0 12px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -422,17 +456,48 @@ html[data-videz="tabla"] .polica > .knjiga {
         var(--barva, #2F55D4);
     box-shadow: 3px 0 3px -1px rgba(0, 0, 0, 0.35), inset 0 2px 0 rgba(255, 255, 255, 0.22), inset 0 -2px 0 rgba(0, 0, 0, 0.25);
     filter: brightness(var(--svetlost, 1)) saturate(1.12);
-    transition: transform 0.25s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.25s;
-    overflow: visible;
+    transform-origin: 50% 100%;
+    transition: transform 0.45s cubic-bezier(0.2, 0.8, 0.2, 1), box-shadow 0.45s cubic-bezier(0.2, 0.8, 0.2, 1), filter 0.35s;
 }
-html[data-videz="tabla"] .polica > .knjiga:hover,
-html[data-videz="tabla"] .polica > .knjiga:focus-visible {
-    transform: translateY(-22px);
-    box-shadow: 0 22px 30px -12px rgba(0, 0, 0, 0.45), inset 0 2px 0 rgba(255, 255, 255, 0.22);
+/* izbrana knjiga: izvlečena iz police in nagnjena, ostale potemnijo */
+html[data-videz="tabla"] .ima-izbiro .polica > .knjiga:not(.izbrana) {
+    filter: brightness(calc(var(--svetlost, 1) * 0.62)) saturate(0.55);
+}
+html[data-videz="tabla"] .polica > .knjiga.izbrana {
+    z-index: 3;
+    transform: translateY(-30px) rotate(-3deg) scale(1.06);
+    filter: brightness(calc(var(--svetlost, 1) * 1.08)) saturate(1.2);
+    box-shadow: 10px 22px 26px -10px rgba(0, 0, 0, 0.55), inset 0 2px 0 rgba(255, 255, 255, 0.3), inset 0 -2px 0 rgba(0, 0, 0, 0.25);
     outline: none;
 }
+/* kredna puščica nad izbrano knjigo */
+html[data-videz="tabla"] .polica > .knjiga::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: -40px;
+    width: 26px;
+    height: 30px;
+    margin-left: -13px;
+    background-color: var(--rdeca);
+    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 30' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M13 2 C12 10 14 17 13 26 M5 18 L13 27 L21 17'/%3E%3C/svg%3E") no-repeat center / contain;
+    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 30' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M13 2 C12 10 14 17 13 26 M5 18 L13 27 L21 17'/%3E%3C/svg%3E") no-repeat center / contain;
+    transform: translateY(-8px) scale(0.6);
+    opacity: 0;
+    transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.2s;
+    pointer-events: none;
+}
+html[data-videz="tabla"] .polica > .knjiga.izbrana::after {
+    opacity: 1;
+    transform: rotate(3deg);
+}
+html[data-videz="tabla"] .polica > .knjiga:focus-visible {
+    outline: 3px solid var(--rdeca);
+    outline-offset: 3px;
+}
 @media (prefers-reduced-motion: reduce) {
-    html[data-videz="tabla"] .polica > .knjiga { transition: none; }
+    html[data-videz="tabla"] .polica > .knjiga,
+    html[data-videz="tabla"] .polica > .knjiga::after { transition: none; }
 }
 html[data-videz="tabla"] .polica > .knjiga::before {
     content: "";
@@ -469,75 +534,107 @@ html[data-videz="tabla"] .polica > .knjiga--dolga .knjiga-naslov {
     letter-spacing: 0.05em;
     max-width: calc(100% - 10px);
 }
+/* knjižnična nalepka s kratico: papir, dvojna črta v barvi knjige */
 html[data-videz="tabla"] .knjiga-nalepka {
-    width: calc(100% - 12px);
+    width: calc(100% - 14px);
+    max-width: 52px;
+    padding: 6px 0 5px 0.14em;
     text-align: center;
-    font: 800 18px/1.35 var(--font-hrbet);
-    letter-spacing: 0.04em;
-    background: rgba(0, 0, 0, 0.28);
-    border: 1px solid rgba(255, 255, 255, 0.25);
+    font: 800 17px/1 var(--font-hrbet);
+    letter-spacing: 0.14em;
+    color: var(--barva, #2F55D4);
+    background: #F5EFDF;
     border-radius: 2px;
-    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.3);
-    padding: 2px 0;
+    box-shadow: inset 0 0 0 2px #F5EFDF, inset 0 0 0 3px var(--barva, #2F55D4), 0 1px 2px rgba(0, 0, 0, 0.35);
+    white-space: nowrap;
+    overflow: hidden;
 }
-html[data-videz="tabla"] .knjiga-nalepka small {
-    display: block;
-    font: 600 10px/1.2 var(--font-hrbet);
-    letter-spacing: 0.08em;
-    opacity: 0.85;
-}
-/* opis iz kartice se pokaže kot listek nad knjigo */
-html[data-videz="tabla"] .knjiga-listek {
-    position: absolute;
-    bottom: calc(100% + 12px);
-    left: 50%;
-    transform: translateX(-50%);
-    width: max-content;
-    max-width: 240px;
-    padding: 8px 12px;
-    background: var(--text-primary);
-    color: var(--bg-primary);
-    font: 500 13px/1.35 var(--font-body);
-    border-radius: 6px;
-    text-align: left;
-    white-space: normal;
-    opacity: 0;
-    pointer-events: none;
-    transition: opacity 0.15s;
-    z-index: 5;
-}
-html[data-videz="tabla"] .polica > .knjiga:hover .knjiga-listek,
-html[data-videz="tabla"] .polica > .knjiga:focus-visible .knjiga-listek {
-    opacity: 1;
-}
-html[data-videz="tabla"] .polica > .knjiga > :not(.knjiga-oznaka):not(.knjiga-naslov):not(.knjiga-nalepka):not(.knjiga-listek) {
+html[data-videz="tabla"] .polica > .knjiga > :not(.knjiga-oznaka):not(.knjiga-naslov):not(.knjiga-nalepka) {
     display: none !important;
+}
+/* mape z maturitetnimi polami: širše, z izrezom za prst */
+html[data-videz="tabla"] .polica > .knjiga--mapa {
+    border-radius: 4px;
+}
+html[data-videz="tabla"] .polica > .knjiga--mapa .knjiga-naslov {
+    font-size: 20px;
+}
+html[data-videz="tabla"] .polica > .knjiga--mapa .knjiga-nalepka {
+    max-width: 60px;
+    font-size: 19px;
+}
+html[data-videz="tabla"] .polica > .knjiga--mapa .knjiga-oznaka {
+    font-size: 12px;
+    padding: 3px 8px;
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 2px;
+    opacity: 1;
 }
 html[data-videz="tabla"] .polica-razmik {
     width: 18px;
     flex: none;
 }
-/* polica ne potrebuje okvirja seznama, v katerem je bila */
-html[data-videz="tabla"] .polica-ovoj {
-    margin: 8px 0 0;
+
+/* napis pod polico: ime in opis izbrane knjige */
+html[data-videz="tabla"] .polica-napis {
+    position: relative;
+    overflow: hidden;
+    height: 48px;
+    margin-top: 12px;
+}
+html[data-videz="tabla"] .polica-napis-vrsta {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: baseline;
+    gap: 12px;
+    padding: 10px 4px 0;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+html[data-videz="tabla"] .polica-napis-vrsta strong {
+    font: 800 20px/1.2 var(--font-body);
+    letter-spacing: -0.02em;
+    color: var(--text-primary);
+}
+html[data-videz="tabla"] .polica-napis-vrsta span {
+    font-size: 15px;
+    color: var(--text-secondary);
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+html[data-videz="tabla"] .polica-napis-vrsta.je-namig span {
+    font: 700 22px/1.2 var(--font-roka);
+    color: var(--text-muted);
+}
+html[data-videz="tabla"] .polica-napis-odpri {
+    margin-left: auto;
+    flex: none;
+    font: 700 22px/1.2 var(--font-roka);
+    color: var(--rdeca);
+}
+
+/* stran predmeta: police takoj pod tablo */
+html[data-videz="tabla"] .police-predmeta {
+    margin: 0 0 12px;
+}
+html[data-videz="tabla"] .subsection.na-polici {
+    display: none;
 }
 
 /* ---------- Telefon ---------- */
 @media (max-width: 820px) {
     html[data-videz="tabla"] .hero {
-        padding: var(--space-4) var(--space-3);
+        padding: var(--space-3) var(--space-3) 0;
     }
     html[data-videz="tabla"] .hero-inner {
-        padding: 28px 22px 200px;
+        padding: 22px 20px 24px;
         border-width: 8px;
         min-height: 0;
     }
     html[data-videz="tabla"] .hero-inner::after {
-        left: 22px;
-        right: auto;
-        bottom: 24px;
-        width: calc(100% - 44px);
-        height: 160px;
+        display: none;
     }
     html[data-videz="tabla"] .page-header,
     html[data-videz="tabla"][data-predmet] .page-header {
@@ -552,9 +649,22 @@ html[data-videz="tabla"] .polica-ovoj {
         left: 40px;
     }
     html[data-videz="tabla"] .polica {
-        padding: 64px 12px 0;
+        padding: 50px 12px 0;
+        overflow-x: auto;
+        overflow-y: hidden;
+        scrollbar-width: thin;
     }
-    html[data-videz="tabla"] .knjiga-listek {
+    html[data-videz="tabla"] .polica > .knjiga::after {
+        display: none;
+    }
+    html[data-videz="tabla"] .polica > .knjiga {
+        height: calc(var(--visina, 300px) * 0.78);
+    }
+    html[data-videz="tabla"] .knjiga-naslov {
+        max-height: calc(var(--visina, 300px) * 0.78 - 100px);
+    }
+    html[data-videz="tabla"] .polica-napis-vrsta span:not(:first-child),
+    html[data-videz="tabla"] .polica-napis-vrsta strong + span {
         display: none;
     }
 }
@@ -562,4 +672,17 @@ html[data-videz="tabla"] .polica-ovoj {
 html[data-videz="tabla"] .btn-primary,
 html[data-videz="tabla"] .btn-secondary {
     text-decoration: none;
+}
+
+/* kratka polica (matura): široka toliko, kolikor je knjig */
+html[data-videz="tabla"] .polica--ozka .polica-vrste {
+    width: max-content;
+    max-width: 100%;
+}
+html[data-videz="tabla"] .polica--ozka .polica {
+    padding-right: 34px;
+}
+html[data-videz="tabla"] .knjiga-nalepka {
+    letter-spacing: 0.1em;
+    padding-left: 0.1em;
 }
