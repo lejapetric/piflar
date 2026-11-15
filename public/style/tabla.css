@@ -470,34 +470,12 @@ html[data-videz="tabla"] .polica > .knjiga.izbrana {
     box-shadow: 10px 22px 26px -10px rgba(0, 0, 0, 0.55), inset 0 2px 0 rgba(255, 255, 255, 0.3), inset 0 -2px 0 rgba(0, 0, 0, 0.25);
     outline: none;
 }
-/* kredna puščica nad izbrano knjigo */
-html[data-videz="tabla"] .polica > .knjiga::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    top: -40px;
-    width: 26px;
-    height: 30px;
-    margin-left: -13px;
-    background-color: var(--rdeca);
-    -webkit-mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 30' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M13 2 C12 10 14 17 13 26 M5 18 L13 27 L21 17'/%3E%3C/svg%3E") no-repeat center / contain;
-    mask: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26 30' fill='none' stroke='black' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M13 2 C12 10 14 17 13 26 M5 18 L13 27 L21 17'/%3E%3C/svg%3E") no-repeat center / contain;
-    transform: translateY(-8px) scale(0.6);
-    opacity: 0;
-    transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.2s;
-    pointer-events: none;
-}
-html[data-videz="tabla"] .polica > .knjiga.izbrana::after {
-    opacity: 1;
-    transform: rotate(3deg);
-}
 html[data-videz="tabla"] .polica > .knjiga:focus-visible {
     outline: 3px solid var(--rdeca);
     outline-offset: 3px;
 }
 @media (prefers-reduced-motion: reduce) {
-    html[data-videz="tabla"] .polica > .knjiga,
-    html[data-videz="tabla"] .polica > .knjiga::after { transition: none; }
+    html[data-videz="tabla"] .polica > .knjiga { transition: none; }
 }
 html[data-videz="tabla"] .polica > .knjiga::before {
     content: "";
@@ -508,7 +486,7 @@ html[data-videz="tabla"] .polica > .knjiga::before {
     border-bottom: 1.5px solid rgba(255, 255, 255, 0.55);
 }
 html[data-videz="tabla"] .knjiga-oznaka {
-    font: 700 11px/1 var(--font-hrbet);
+    font: 700 12.5px/1 var(--font-hrbet);
     letter-spacing: 0.12em;
     text-transform: uppercase;
     opacity: 0.85;
@@ -534,20 +512,24 @@ html[data-videz="tabla"] .polica > .knjiga--dolga .knjiga-naslov {
     letter-spacing: 0.05em;
     max-width: calc(100% - 10px);
 }
-/* knjižnična nalepka s kratico: papir, dvojna črta v barvi knjige */
+/* knjižnična nalepka z znakom predmeta: papir, dvojna črta v barvi knjige */
 html[data-videz="tabla"] .knjiga-nalepka {
+    position: relative;
+    flex: none;
     width: calc(100% - 14px);
-    max-width: 52px;
-    padding: 6px 0 5px 0.14em;
-    text-align: center;
-    font: 800 17px/1 var(--font-hrbet);
-    letter-spacing: 0.14em;
-    color: var(--barva, #2F55D4);
+    max-width: 46px;
+    aspect-ratio: 1 / 1;
     background: #F5EFDF;
-    border-radius: 2px;
+    border-radius: 3px;
     box-shadow: inset 0 0 0 2px #F5EFDF, inset 0 0 0 3px var(--barva, #2F55D4), 0 1px 2px rgba(0, 0, 0, 0.35);
-    white-space: nowrap;
-    overflow: hidden;
+}
+html[data-videz="tabla"] .knjiga-nalepka::before {
+    content: "";
+    position: absolute;
+    inset: 6px;
+    background-color: var(--barva, #2F55D4);
+    -webkit-mask: var(--znak, none) no-repeat center / contain;
+    mask: var(--znak, none) no-repeat center / contain;
 }
 html[data-videz="tabla"] .polica > .knjiga > :not(.knjiga-oznaka):not(.knjiga-naslov):not(.knjiga-nalepka) {
     display: none !important;
@@ -560,8 +542,7 @@ html[data-videz="tabla"] .polica > .knjiga--mapa .knjiga-naslov {
     font-size: 20px;
 }
 html[data-videz="tabla"] .polica > .knjiga--mapa .knjiga-nalepka {
-    max-width: 60px;
-    font-size: 19px;
+    max-width: 58px;
 }
 html[data-videz="tabla"] .polica > .knjiga--mapa .knjiga-oznaka {
     font-size: 12px;
@@ -654,9 +635,6 @@ html[data-videz="tabla"] .subsection.na-polici {
         overflow-y: hidden;
         scrollbar-width: thin;
     }
-    html[data-videz="tabla"] .polica > .knjiga::after {
-        display: none;
-    }
     html[data-videz="tabla"] .polica > .knjiga {
         height: calc(var(--visina, 300px) * 0.78);
     }
@@ -682,7 +660,24 @@ html[data-videz="tabla"] .polica--ozka .polica-vrste {
 html[data-videz="tabla"] .polica--ozka .polica {
     padding-right: 34px;
 }
-html[data-videz="tabla"] .knjiga-nalepka {
-    letter-spacing: 0.1em;
-    padding-left: 0.1em;
-}
+
+/* ---------- Znaki predmetov na nalepkah knjig (iz style/predmeti/*.css, debelejša črta) ---------- */
+html[data-videz="tabla"] .knjiga[data-znak="anglescina"] { --znak: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' fill='none' stroke='black' stroke-width='8.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M82 186V70l18-30 18 30v116'/%3E%3Cpath d='M74 186h52M82 70h36M90 40h20M100 40V18'/%3E%3Ccircle cx='100' cy='92' r='13'/%3E%3Cpath d='M100 84v8l6 4'/%3E%3Cpath d='M82 120h36M82 150h36M92 120v66M108 120v66'/%3E%3Ccircle cx='160' cy='54' r='26' stroke-width='5.7'/%3E%3Ccircle cx='160' cy='54' r='19' stroke-width='3.8'/%3E%3Cpath d='M126 44c10 6 20-6 30 0s20-6 30 0M126 64c10 6 20-6 30 0s20-6 30 0' stroke-width='5.7'/%3E%3C/svg%3E"); }
+html[data-videz="tabla"] .knjiga[data-znak="biologija"] { --znak: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' fill='black'%3E%3Cpath d='M40 190C70 140 105 95 165 20' fill='none' stroke='black' stroke-width='9.5' stroke-linecap='round'/%3E%3Cpath transform='translate(58 160) rotate(-110)' d='M0 0C10-14 30-16 44-8C32 4 12 8 0 0Z'/%3E%3Cpath transform='translate(62 158) rotate(-20)' d='M0 0C10-14 30-16 44-8C32 4 12 8 0 0Z'/%3E%3Cpath transform='translate(80 133) rotate(-115)' d='M0 0C10-14 30-16 44-8C32 4 12 8 0 0Z'/%3E%3Cpath transform='translate(84 131) rotate(-25)' d='M0 0C10-14 30-16 44-8C32 4 12 8 0 0Z'/%3E%3Cpath transform='translate(102 106) rotate(-118)' d='M0 0C10-14 30-16 44-8C32 4 12 8 0 0Z'/%3E%3Cpath transform='translate(106 104) rotate(-30)' d='M0 0C10-14 30-16 44-8C32 4 12 8 0 0Z'/%3E%3Cpath transform='translate(124 80) rotate(-120)' d='M0 0C10-14 30-16 44-8C32 4 12 8 0 0Z'/%3E%3Cpath transform='translate(128 78) rotate(-35)' d='M0 0C10-14 30-16 44-8C32 4 12 8 0 0Z'/%3E%3Cpath transform='translate(146 55) rotate(-122)' d='M0 0C10-14 30-16 44-8C32 4 12 8 0 0Z'/%3E%3Cpath transform='translate(150 52) rotate(-40)' d='M0 0C10-14 30-16 44-8C32 4 12 8 0 0Z'/%3E%3Cpath d='M165 20c4 10 2 20-6 26' fill='none' stroke='black' stroke-width='7.6' stroke-linecap='round'/%3E%3C/svg%3E"); }
+html[data-videz="tabla"] .knjiga[data-znak="ekonomija"] { --znak: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' fill='none' stroke='black' stroke-width='8.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M24 180h156M24 180V24'/%3E%3Crect x='40' y='130' width='22' height='50'/%3E%3Crect x='76' y='104' width='22' height='76'/%3E%3Crect x='112' y='80' width='22' height='100'/%3E%3Crect x='148' y='50' width='22' height='130'/%3E%3Cpath d='M36 112l38-30 34 18 60-62' stroke-width='6.6'/%3E%3Cpath d='M148 36h22v22' stroke-width='6.6'/%3E%3C/svg%3E"); }
+html[data-videz="tabla"] .knjiga[data-znak="filozofija"] { --znak: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' fill='none' stroke='black' stroke-width='9.5' stroke-linecap='round' stroke-linejoin='round'%3E %3Cpath d='M78 74c0-14 10-24 24-24s24 10 24 23c0 12-8 18-16 24-6 4-8 8-8 16v8'/%3E%3Ccircle cx='102' cy='140' r='4' fill='black'/%3E %3Cpath d='M62 176C34 160 22 130 26 98c3-22 14-40 30-52M138 176c28-16 40-46 36-78-3-22-14-40-30-52' stroke-width='6.6'/%3E %3Cg stroke-width='5.7'%3E%3Cpath d='M30 130c-12-2-18-10-18-20 10 2 17 9 18 20zM28 102c-10-5-13-14-11-23 9 5 13 13 11 23zM36 76c-7-7-8-16-4-24 7 7 9 15 4 24zM44 150c-12 2-20-4-24-13 11-2 19 3 24 13zM60 166c-10 6-19 5-26-1 9-6 18-6 26 1z'/%3E %3Cpath d='M170 130c12-2 18-10 18-20-10 2-17 9-18 20zM172 102c10-5 13-14 11-23-9 5-13 13-11 23zM164 76c7-7 8-16 4-24-7 7-9 15-4 24zM156 150c12 2 20-4 24-13-11-2-19 3-24 13zM140 166c10 6 19 5 26-1-9-6-18-6-26 1z'/%3E%3C/g%3E %3Cpath d='M62 176l38 8 38-8' stroke-width='5.7'/%3E%3C/svg%3E"); }
+html[data-videz="tabla"] .knjiga[data-znak="fizika"] { --znak: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' fill='none' stroke='black' stroke-width='8.5' stroke-linecap='round'%3E%3Cellipse cx='100' cy='92' rx='80' ry='28'/%3E%3Cellipse cx='100' cy='92' rx='80' ry='28' transform='rotate(60 100 92)'/%3E%3Cellipse cx='100' cy='92' rx='80' ry='28' transform='rotate(-60 100 92)'/%3E%3Ccircle cx='100' cy='92' r='10' fill='black'/%3E%3Cpath d='M15 182c12-22 24-22 36 0s24 22 36 0 24-22 36 0 24 22 36 0 24-22 36 0' stroke-width='9.5'/%3E%3C/svg%3E"); }
+html[data-videz="tabla"] .knjiga[data-znak="francoscina"] { --znak: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' fill='none' stroke='black' stroke-width='8.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M100 14v18M92 32h16l-2 30h-12z'/%3E%3Cpath d='M94 62c-4 40-16 70-38 98M106 62c4 40 16 70 38 98'/%3E%3Cpath d='M84 96h32M70 128h60'/%3E%3Cpath d='M44 186c6-24 20-38 56-40 36 2 50 16 56 40'/%3E%3Cpath d='M74 186c2-14 12-22 26-22s24 8 26 22'/%3E%3Cpath d='M30 186h140'/%3E%3C/svg%3E"); }
+html[data-videz="tabla"] .knjiga[data-znak="geografija"] { --znak: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' fill='none' stroke='black' stroke-width='7.6' stroke-linejoin='round'%3E%3Ccircle cx='100' cy='100' r='78'/%3E%3Ccircle cx='100' cy='100' r='66' stroke-width='3.8'/%3E%3Cpath d='M100 12l14 74 74 14-74 14-14 74-14-74-74-14 74-14z'/%3E%3Cpath d='M100 12l-14 74 14 14zM188 100l-74-14-14 14zM100 188l14-74-14-14zM12 100l74 14 14-14z' fill='black'/%3E%3Cpath d='M100 46l8 46 46 8-46 8-8 46-8-46-46-8 46-8z' transform='rotate(45 100 100)' stroke-width='4.8'/%3E%3C/svg%3E"); }
+html[data-videz="tabla"] .knjiga[data-znak="glasba"] { --znak: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200'%3E%3Cg fill='none' stroke='black' stroke-width='3.8'%3E%3Cpath d='M10 70h180M10 90h180M10 110h180M10 130h180M10 150h180'/%3E%3C/g%3E%3Cg fill='black'%3E%3Cellipse cx='62' cy='150' rx='15' ry='11' transform='rotate(-20 62 150)'/%3E%3Cellipse cx='132' cy='130' rx='15' ry='11' transform='rotate(-20 132 130)'/%3E%3Crect x='72' y='44' width='5' height='104'/%3E%3Crect x='142' y='24' width='5' height='104'/%3E%3Cpath d='M72 44L147 24v16L72 60z'/%3E%3C/g%3E%3C/svg%3E"); }
+html[data-videz="tabla"] .knjiga[data-znak="informatika"] { --znak: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' fill='none' stroke='black' stroke-width='11.4' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M62 52L22 92l40 40M138 52l40 40-40 40M114 36L86 148'/%3E%3Cpath d='M30 172h40l12-12h36' stroke-width='6.6'/%3E%3Ccircle cx='124' cy='160' r='6' stroke-width='6.6'/%3E%3Cpath d='M150 182h-30' stroke-width='6.6'/%3E%3Ccircle cx='156' cy='182' r='6' stroke-width='6.6'/%3E%3C/svg%3E"); }
+html[data-videz="tabla"] .knjiga[data-znak="italijanscina"] { --znak: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' fill='none' stroke='black' stroke-width='8.5' stroke-linecap='round' stroke-linejoin='round'%3E %3Cpath d='M18 168V70c30-14 60-20 92-20 26 0 50 4 72 12v106'/%3E%3Cpath d='M18 168h164'/%3E %3Cpath d='M18 92c30-12 60-18 92-18 26 0 50 4 72 12M18 126c30-10 60-14 92-14 26 0 50 3 72 10'/%3E %3Cpath d='M30 168v-22a8 8 0 0 1 16 0v22M58 168v-24a8 8 0 0 1 16 0v24M86 168v-25a8 8 0 0 1 16 0v25M114 168v-25a8 8 0 0 1 16 0v25M142 168v-24a8 8 0 0 1 16 0v24M166 168v-22' stroke-width='6.6'/%3E %3Cpath d='M30 124v-18a7 7 0 0 1 14 0v17M58 120v-18a7 7 0 0 1 14 0v18M86 118v-18a7 7 0 0 1 14 0v18M114 117v-18a7 7 0 0 1 14 0v18M142 118v-18a7 7 0 0 1 14 0v19' stroke-width='6.6'/%3E %3Cpath d='M32 86v-6M52 82v-6M72 78v-6M92 76v-6M112 75v-6M132 76v-6M152 78v-6M170 81v-6' stroke-width='6.6'/%3E%3C/svg%3E"); }
+html[data-videz="tabla"] .knjiga[data-znak="kemija"] { --znak: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' fill='none' stroke='black' stroke-width='9.5' stroke-linejoin='round' stroke-linecap='round'%3E%3Cpath d='M62 20l40 23v46l-40 23-40-23V43z'/%3E%3Cpath d='M62 34l28 16v32M34 50l28-16M34 82V50' stroke-width='6.6'/%3E%3Cpath d='M102 43l26-15M62 112v22'/%3E%3Cpath d='M135 95v35l-30 52a8 8 0 0 0 7 12h66a8 8 0 0 0 7-12l-30-52V95'/%3E%3Cpath d='M128 95h44'/%3E%3Cpath d='M117 160h66' stroke-width='6.6'/%3E%3Ccircle cx='140' cy='176' r='4' fill='black'/%3E%3Ccircle cx='160' cy='170' r='3' fill='black'/%3E%3C/svg%3E"); }
+html[data-videz="tabla"] .knjiga[data-znak="matematika"] { --znak: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' fill='none' stroke='black' stroke-width='9.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M20 150H185M60 190V15'/%3E%3Cpath d='M178 143l7 7-7 7M53 22l7-7 7 7'/%3E%3Cpath d='M25 30Q80 250 150 30' stroke-width='11.4'/%3E%3Ccircle cx='87' cy='138' r='6' fill='black'/%3E%3Cpath d='M120 175l40-60 25 60z' stroke-width='7.6'/%3E%3Cpath d='M150 175a12 12 0 0 0-6-10' stroke-width='5.7'/%3E%3C/svg%3E"); }
+html[data-videz="tabla"] .knjiga[data-znak="nemscina"] { --znak: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' fill='black'%3E%3Ccircle cx='72' cy='78' r='46'/%3E%3Crect x='96' y='96' width='80' height='80'/%3E%3Cpath d='M24 186l40-70 40 70z'/%3E%3Crect x='118' y='22' width='12' height='60'/%3E%3C/svg%3E"); }
+html[data-videz="tabla"] .knjiga[data-znak="psihologija"] { --znak: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' fill='none' stroke='black' stroke-width='8.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M128 184v-30c26-8 42-30 42-60 0-44-34-76-76-76S22 46 22 86c0 18 6 30 14 40l-8 22 22 4v14c0 10 8 18 18 18h22'/%3E%3Cpath d='M96 92c0-6 6-10 12-8s8 10 4 16-14 8-22 4-12-14-8-24 18-18 30-14 20 16 16 28'/%3E%3C/svg%3E"); }
+html[data-videz="tabla"] .knjiga[data-znak="slovenscina"] { --znak: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' fill='none' stroke='black' stroke-width='8.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M178 18C120 30 78 78 58 150c30-18 70-40 98-84 10-16 18-32 22-48z'/%3E%3Cpath d='M58 150L40 182'/%3E%3Cpath d='M120 60c-18 22-36 46-50 74' stroke-width='5.7'/%3E%3Cpath d='M150 44l-22 4M140 70l-28 2M122 96l-30 2' stroke-width='5.7'/%3E%3Cpath d='M22 120c0-12 8-18 16-18M22 120c0 6 4 10 10 10M44 120c0-12 8-18 16-18M44 120c0 6 4 10 10 10' stroke-width='9.5'/%3E%3C/svg%3E"); }
+html[data-videz="tabla"] .knjiga[data-znak="sociologija"] { --znak: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' fill='none' stroke='black' stroke-width='8.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='100' cy='52' r='18'/%3E%3Cpath d='M70 110c4-20 16-32 30-32s26 12 30 32'/%3E%3Ccircle cx='40' cy='106' r='14'/%3E%3Cpath d='M16 156c4-16 12-26 24-26s20 10 24 26'/%3E%3Ccircle cx='160' cy='106' r='14'/%3E%3Cpath d='M136 156c4-16 12-26 24-26s20 10 24 26'/%3E%3Cpath d='M58 98l26-24M142 98l-26-24M54 120h92' stroke-width='5.7' stroke-dasharray='6 7'/%3E%3Cpath d='M60 186h80' stroke-width='5.7'/%3E%3C/svg%3E"); }
+html[data-videz="tabla"] .knjiga[data-znak="spanscina"] { --znak: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' fill='none' stroke='black' stroke-width='8.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='100' cy='100' r='34'/%3E%3Ccircle cx='100' cy='100' r='20' stroke-width='5.7'/%3E%3Cpath d='M100 16v28M100 156v28M16 100h28M156 100h28M41 41l20 20M139 139l20 20M41 159l20-20M139 61l20-20'/%3E%3Cpath d='M70 26l8 20M130 26l-8 20M26 70l20 8M26 130l20-8M174 70l-20 8M174 130l-20-8M70 174l8-20M130 174l-8-20' stroke-width='5.7'/%3E%3C/svg%3E"); }
+html[data-videz="tabla"] .knjiga[data-znak="umetnostna_zgodovina"] { --znak: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' fill='none' stroke='black' stroke-width='8.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M100 20v18M60 186l30-60M140 186l-30-60M100 150v36'/%3E%3Crect x='46' y='38' width='108' height='88'/%3E%3Crect x='58' y='50' width='84' height='64' stroke-width='5.7'/%3E%3Cpath d='M62 108l24-26 18 18 12-12 22 20' stroke-width='5.7'/%3E%3Ccircle cx='122' cy='66' r='7' stroke-width='5.7'/%3E%3Cpath d='M40 126h120'/%3E%3C/svg%3E"); }
+html[data-videz="tabla"] .knjiga[data-znak="zgodovina"] { --znak: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' fill='none' stroke='black' stroke-width='8.5' stroke-linejoin='round'%3E%3Cpath d='M50 30h100l-8 14H58z'/%3E%3Cpath d='M60 44c-10 0-14 10-6 14M140 44c10 0 14 10 6 14'/%3E%3Cpath d='M62 58h76v6H62z'/%3E%3Cpath d='M68 64v104M84 64v104M100 64v104M116 64v104M132 64v104'/%3E%3Cpath d='M58 168h84v10H58zM48 178h104v12H48z'/%3E%3C/svg%3E"); }

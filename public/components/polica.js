@@ -29,13 +29,6 @@
     glasba: "#7A1F3D",
     umetnostna_zgodovina: "#9A4317"
   };
-  var KODA = {
-    matematika: "MAT", slovenscina: "SLO", anglescina: "ANG", fizika: "FIZ",
-    kemija: "KEM", biologija: "BIO", informatika: "INF", geografija: "GEO",
-    zgodovina: "ZGO", nemscina: "NEM", francoscina: "FRA", italijanscina: "ITA",
-    spanscina: "ŠPA", psihologija: "PSI", sociologija: "SOC", filozofija: "FIL",
-    ekonomija: "EKO", glasba: "GLA", umetnostna_zgodovina: "UMZ"
-  };
   var OBVEZNI = ["slovenscina", "matematika", "anglescina"];
   var VISINE = [312, 296, 324, 288, 306, 318, 292, 330, 300, 284];
   var SVETLOST = [1, 0.93, 1.06, 0.9, 1.1];
@@ -63,7 +56,7 @@
   }
 
   // Povezavo spremeni v hrbet knjige.
-  // p: {oznaka, naslov, nalepka, barva, opis, svetlost, sirina}
+  // p: {oznaka, naslov, znak, barva, opis, svetlost, sirina}
   function vKnjigo(a, p, i) {
     a.classList.add("knjiga");
     var dolg = p.naslov.length > 22;
@@ -80,7 +73,11 @@
     a.setAttribute("aria-label", p.naslov + (p.opis ? ": " + p.opis : ""));
     a.appendChild(el("span", "knjiga-oznaka", p.oznaka || ""));
     a.appendChild(el("span", "knjiga-naslov", p.naslov));
-    a.appendChild(el("span", "knjiga-nalepka", p.nalepka));
+    // nalepka z znakom predmeta (risba iz glave strani predmeta, glej tabla.css)
+    if (p.znak) a.dataset.znak = p.znak;
+    var nalepka = el("span", "knjiga-nalepka");
+    nalepka.setAttribute("aria-hidden", "true");
+    a.appendChild(nalepka);
     return a;
   }
 
@@ -241,9 +238,9 @@
   function podatkiPoglavja(a, predmet, i) {
     var m = STEVILKA.exec(besedilo(a, "strong"));
     return {
-      oznaka: KODA[predmet] || "",
+      oznaka: m ? m[1] : "",
+      znak: predmet,
       naslov: m ? m[2] : besedilo(a, "strong"),
-      nalepka: m ? m[1] : "•",
       opis: besedilo(a, "small"),
       barva: BARVA[predmet] || "#2F55D4",
       svetlost: SVETLOST[i % SVETLOST.length]
@@ -283,7 +280,7 @@
         predmeti.push(vKnjigo(a, {
           oznaka: obvezni.indexOf(a) >= 0 ? "Obvezni" : "",
           naslov: naslov,
-          nalepka: KODA[slug] || naslov.slice(0, 3).toUpperCase(),
+          znak: slug,
           opis: besedilo(a, "p"),
           barva: BARVA[slug] || "#2F55D4",
           svetlost: jePredmet(a) ? null : SVETLOST[i % SVETLOST.length]
@@ -354,7 +351,7 @@
         predmeti.push(novaKnjiga(a.getAttribute("href"), {
           oznaka: naloge ? "Vaja" : "Matura",
           naslov: naslov.replace(/^Maturitetne naloge po snovi$/, "Naloge po snovi"),
-          nalepka: KODA[predmet] || "",
+          znak: predmet,
           opis: besedilo(a, "small") || besedilo(a.closest(".link-item") || a, "small"),
           barva: BARVA[predmet] || "#2F55D4",
           svetlost: [0.78, 0.86, 0.95, 1.04][i % 4],
