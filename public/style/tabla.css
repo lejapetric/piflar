@@ -221,7 +221,7 @@ html[data-videz="tabla"] .hero {
     overflow: visible;
 }
 html[data-videz="tabla"] .hero-inner {
-    max-width: 1240px;
+    max-width: 1480px;
     grid-template-columns: 1fr;
     padding: 30px 420px 34px 48px;
     min-height: 0;
@@ -720,5 +720,24 @@ html[data-videz="tabla"] .polica-napis-vrsta {
     }
     html[data-videz="tabla"] .hero-inner {
         margin-bottom: 26px;
+    }
+}
+
+/* širša stran: manj praznega prostora ob straneh (pisava ostane enaka) */
+@media (min-width: 821px) {
+    html[data-videz="tabla"] .view-container,
+    html[data-videz="tabla"] .section-inner,
+    html[data-videz="tabla"] .footer-content,
+    html[data-videz="tabla"] .cta-band {
+        max-width: 1480px;
+    }
+    html[data-videz="tabla"] .view-container {
+        padding-left: 32px;
+        padding-right: 32px;
+    }
+    html[data-videz="tabla"] .section,
+    html[data-videz="tabla"] .hero {
+        padding-left: 32px;
+        padding-right: 32px;
     }
 }
