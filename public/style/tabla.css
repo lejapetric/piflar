@@ -190,23 +190,25 @@ html[data-videz="tabla"][data-predmet] .page-header {
     box-shadow: inset 0 0 140px var(--mazilo), 0 16px 0 -2px var(--polica-tabla), 0 40px 50px -30px rgba(0, 0, 0, 0.45);
     margin-bottom: 52px;
 }
-/* polička table s kredo, flomastrom in gobo */
+/* polička table: na beli tabli flomastra in brisalo, na zeleni kreda in rumena gobica */
 html[data-videz="tabla"] .hero-inner::before,
 html[data-videz="tabla"] .page-header::before,
 html[data-videz="tabla"][data-predmet] .page-header::before {
     content: "";
     position: absolute;
-    left: 80px;
-    bottom: -21px;
-    width: 230px;
-    height: 12px;
-    background:
-        linear-gradient(#F6F4EC, #F6F4EC) 0 3px / 46px 8px no-repeat,
-        linear-gradient(#1F3FBF, #1F3FBF) 70px 3px / 72px 8px no-repeat,
-        linear-gradient(#C9A46A, #C9A46A) 160px 0 / 70px 5px no-repeat,
-        linear-gradient(#3A3A3A, #3A3A3A) 160px 5px / 70px 7px no-repeat;
-    border-radius: 3px;
+    left: 70px;
+    bottom: -24px;
+    width: 330px;
+    height: 34px;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 330 34' width='330' height='34'%3E%3Cdefs%3E%3ClinearGradient id='b' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23FFFFFF'/%3E%3Cstop offset='.45' stop-color='%23ECEDEF'/%3E%3Cstop offset='1' stop-color='%23B9BCC2'/%3E%3C/linearGradient%3E%3ClinearGradient id='m' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%234A68E0'/%3E%3Cstop offset='.5' stop-color='%231F3FBF'/%3E%3Cstop offset='1' stop-color='%23132A86'/%3E%3C/linearGradient%3E%3ClinearGradient id='r' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23E9584C'/%3E%3Cstop offset='.5' stop-color='%23C9302A'/%3E%3Cstop offset='1' stop-color='%238E1F1A'/%3E%3C/linearGradient%3E%3ClinearGradient id='h' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%236E7480'/%3E%3Cstop offset='.5' stop-color='%233E434C'/%3E%3Cstop offset='1' stop-color='%23262A30'/%3E%3C/linearGradient%3E%3ClinearGradient id='f' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%238F8A80'/%3E%3Cstop offset='1' stop-color='%235F5A52'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg transform='translate(4 15)'%3E%3Crect x='0' y='1' width='34' height='14' rx='4' fill='url(%23m)'/%3E%3Crect x='30' y='3' width='6' height='10' fill='%23132A86'/%3E%3Crect x='5' y='-1' width='22' height='4' rx='1.5' fill='url(%23m)'/%3E%3Crect x='36' y='2' width='78' height='12' rx='2' fill='url(%23b)'/%3E%3Crect x='50' y='2' width='40' height='12' fill='url(%23m)' opacity='.9'/%3E%3Crect x='54' y='6' width='22' height='1.6' fill='%23fff' opacity='.85'/%3E%3Crect x='54' y='9' width='14' height='1.4' fill='%23fff' opacity='.6'/%3E%3Cpath d='M114 3 h6 q4 0 4 5 q0 5 -4 5 h-6 z' fill='url(%23m)'/%3E%3C/g%3E%3Cg transform='translate(138 18)'%3E%3Cpath d='M0 6 L8 3 L8 11 Z' fill='%23C9302A'/%3E%3Crect x='8' y='2.5' width='8' height='9' fill='%233A3A3A'/%3E%3Crect x='16' y='1' width='72' height='12' rx='2' fill='url(%23b)'/%3E%3Crect x='28' y='1' width='34' height='12' fill='url(%23r)' opacity='.92'/%3E%3Cpath d='M88 2 h5 q4 0 4 5 q0 5 -4 5 h-5 z' fill='url(%23r)'/%3E%3C/g%3E%3Cg transform='translate(244 6)'%3E%3Crect x='0' y='18' width='84' height='8' rx='1.5' fill='url(%23f)'/%3E%3Crect x='0' y='23' width='84' height='3' fill='%234A463F'/%3E%3Cpath d='M2 18 q0 -12 14 -14 h52 q14 2 14 14 z' fill='url(%23h)'/%3E%3Cpath d='M18 9 h48' stroke='%2322252A' stroke-width='2.5' stroke-linecap='round'/%3E%3Cpath d='M18 12.5 h48' stroke='%235A606A' stroke-width='1' stroke-linecap='round'/%3E%3Cpath d='M8 15 q2 -8 10 -9' stroke='%23fff' stroke-opacity='.25' stroke-width='1.5' fill='none' stroke-linecap='round'/%3E%3C/g%3E%3C/svg%3E") no-repeat center / contain;
+    filter: drop-shadow(0 3px 2px rgba(0, 0, 0, 0.25));
     pointer-events: none;
+    z-index: 2;
+}
+html[data-videz="tabla"][data-theme="dark"] .hero-inner::before,
+html[data-videz="tabla"][data-theme="dark"] .page-header::before,
+html[data-videz="tabla"][data-predmet][data-theme="dark"] .page-header::before {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 330 34' width='330' height='34'%3E%3Cdefs%3E%3ClinearGradient id='c' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23FFFFFF'/%3E%3Cstop offset='.55' stop-color='%23F1EEE4'/%3E%3Cstop offset='1' stop-color='%23C9C4B6'/%3E%3C/linearGradient%3E%3ClinearGradient id='s' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%23FFE27A'/%3E%3Cstop offset='.5' stop-color='%23F5C632'/%3E%3Cstop offset='1' stop-color='%23C99A12'/%3E%3C/linearGradient%3E%3C/defs%3E%3Cg transform='translate(8 20)'%3E%3Cpath d='M3 0 h66 l3 2 l-2 3 l3 3 l-3 2 h-67 q-3 0 -3 -5 q0 -5 3 -5 z' fill='url(%23c)'/%3E%3Cpath d='M6 2.5 h58' stroke='%23fff' stroke-width='1' opacity='.8'/%3E%3Cellipse cx='3' cy='5' rx='1.6' ry='4.6' fill='%23E6E2D6'/%3E%3C/g%3E%3Cg transform='translate(92 22) rotate(-6)'%3E%3Crect x='0' y='0' width='30' height='9' rx='4' fill='url(%23c)'/%3E%3Cpath d='M4 2.5 h22' stroke='%23fff' stroke-width='1' opacity='.8'/%3E%3C/g%3E%3Cg fill='%23F4F1E6' opacity='.55'%3E%3Ccircle cx='130' cy='31' r='1'/%3E%3Ccircle cx='136' cy='32' r='.8'/%3E%3Ccircle cx='141' cy='31.5' r='1.1'/%3E%3Ccircle cx='84' cy='32' r='.9'/%3E%3Ccircle cx='20' cy='32.5' r='.8'/%3E%3C/g%3E%3Cg transform='translate(236 5)'%3E%3Cpath d='M4 6 q-4 0 -4 6 v12 q0 5 6 5 h78 q6 0 6 -5 v-12 q0 -6 -5 -6 z' fill='url(%23s)'/%3E%3Cpath d='M6 6 q38 -4 78 0' stroke='%23FFF2B3' stroke-width='1.5' fill='none' opacity='.8'/%3E%3Cg fill='%23B8890F' opacity='.7'%3E%3Ccircle cx='12' cy='13' r='1.6'/%3E%3Ccircle cx='22' cy='19' r='1.2'/%3E%3Ccircle cx='31' cy='12' r='1.4'/%3E%3Ccircle cx='40' cy='22' r='1.7'/%3E%3Ccircle cx='48' cy='15' r='1.1'/%3E%3Ccircle cx='57' cy='20' r='1.5'/%3E%3Ccircle cx='66' cy='12' r='1.3'/%3E%3Ccircle cx='74' cy='21' r='1.6'/%3E%3Ccircle cx='82' cy='15' r='1.2'/%3E%3Ccircle cx='16' cy='24' r='1'/%3E%3Ccircle cx='62' cy='25' r='1.1'/%3E%3Ccircle cx='35' cy='17' r='.9'/%3E%3C/g%3E%3Crect x='0' y='23' width='90' height='6' rx='3' fill='%239A7410' opacity='.35'/%3E%3C/g%3E%3C/svg%3E");
 }
 
 /* ---------- Naslovnica ---------- */
@@ -512,24 +514,17 @@ html[data-videz="tabla"] .polica > .knjiga--dolga .knjiga-naslov {
     letter-spacing: 0.05em;
     max-width: calc(100% - 10px);
 }
-/* knjižnična nalepka z znakom predmeta: papir, dvojna črta v barvi knjige */
+/* znak predmeta, narisan belo naravnost na hrbet */
 html[data-videz="tabla"] .knjiga-nalepka {
-    position: relative;
     flex: none;
-    width: calc(100% - 14px);
-    max-width: 46px;
+    width: calc(100% - 16px);
+    max-width: 40px;
     aspect-ratio: 1 / 1;
-    background: #F5EFDF;
-    border-radius: 3px;
-    box-shadow: inset 0 0 0 2px #F5EFDF, inset 0 0 0 3px var(--barva, #2F55D4), 0 1px 2px rgba(0, 0, 0, 0.35);
-}
-html[data-videz="tabla"] .knjiga-nalepka::before {
-    content: "";
-    position: absolute;
-    inset: 6px;
-    background-color: var(--barva, #2F55D4);
+    background-color: #FFFFFF;
     -webkit-mask: var(--znak, none) no-repeat center / contain;
     mask: var(--znak, none) no-repeat center / contain;
+    filter: drop-shadow(0 1px 1px rgba(0, 0, 0, 0.3));
+    opacity: 0.95;
 }
 html[data-videz="tabla"] .polica > .knjiga > :not(.knjiga-oznaka):not(.knjiga-naslov):not(.knjiga-nalepka) {
     display: none !important;
@@ -542,7 +537,7 @@ html[data-videz="tabla"] .polica > .knjiga--mapa .knjiga-naslov {
     font-size: 20px;
 }
 html[data-videz="tabla"] .polica > .knjiga--mapa .knjiga-nalepka {
-    max-width: 58px;
+    max-width: 52px;
 }
 html[data-videz="tabla"] .polica > .knjiga--mapa .knjiga-oznaka {
     font-size: 12px;
@@ -626,8 +621,12 @@ html[data-videz="tabla"] .subsection.na-polici {
         display: none;
     }
     html[data-videz="tabla"] .hero-inner::before,
-    html[data-videz="tabla"] .page-header::before {
-        left: 40px;
+    html[data-videz="tabla"] .page-header::before,
+    html[data-videz="tabla"][data-predmet] .page-header::before {
+        left: 24px;
+        width: 240px;
+        height: 25px;
+        bottom: -19px;
     }
     html[data-videz="tabla"] .polica {
         padding: 50px 12px 0;
@@ -682,41 +681,28 @@ html[data-videz="tabla"] .knjiga[data-znak="spanscina"] { --znak: url("data:imag
 html[data-videz="tabla"] .knjiga[data-znak="umetnostna_zgodovina"] { --znak: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' fill='none' stroke='black' stroke-width='8.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M100 20v18M60 186l30-60M140 186l-30-60M100 150v36'/%3E%3Crect x='46' y='38' width='108' height='88'/%3E%3Crect x='58' y='50' width='84' height='64' stroke-width='5.7'/%3E%3Cpath d='M62 108l24-26 18 18 12-12 22 20' stroke-width='5.7'/%3E%3Ccircle cx='122' cy='66' r='7' stroke-width='5.7'/%3E%3Cpath d='M40 126h120'/%3E%3C/svg%3E"); }
 html[data-videz="tabla"] .knjiga[data-znak="zgodovina"] { --znak: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' fill='none' stroke='black' stroke-width='8.5' stroke-linejoin='round'%3E%3Cpath d='M50 30h100l-8 14H58z'/%3E%3Cpath d='M60 44c-10 0-14 10-6 14M140 44c10 0 14 10 6 14'/%3E%3Cpath d='M62 58h76v6H62z'/%3E%3Cpath d='M68 64v104M84 64v104M100 64v104M116 64v104M132 64v104'/%3E%3Cpath d='M58 168h84v10H58zM48 178h104v12H48z'/%3E%3C/svg%3E"); }
 
-/* gumb »Odpri« visi pod izbrano knjigo (prava povezava) */
-html[data-videz="tabla"] .polica-odpri {
-    position: absolute;
-    z-index: 4;
-    transform: translate(-50%, -6px) scale(0.85);
-    opacity: 0;
-    pointer-events: none;
-    padding: 0 16px;
-    font: 700 21px/34px var(--font-roka);
-    white-space: nowrap;
-    color: var(--rdeca);
-    background: var(--bg-primary);
+/* gumb »Odpri« v napisu pod polico je prava povezava */
+html[data-videz="tabla"] a.polica-napis-odpri {
+    text-decoration: none;
+    padding: 0 14px;
     border: 2px solid var(--rdeca);
     border-radius: 999px;
-    text-decoration: none;
-    box-shadow: 0 6px 14px -8px rgba(0, 0, 0, 0.45);
-    transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.15s, left 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), background 0.2s, color 0.2s;
+    line-height: 30px;
+    cursor: pointer;
+    transition: background 0.2s, color 0.2s;
 }
-html[data-videz="tabla"] .polica-odpri.viden {
-    opacity: 1;
-    pointer-events: auto;
-    transform: translate(-50%, 0) scale(1);
-}
-html[data-videz="tabla"] .polica-odpri:hover,
-html[data-videz="tabla"] .polica-odpri:focus-visible {
+html[data-videz="tabla"] a.polica-napis-odpri:hover,
+html[data-videz="tabla"] a.polica-napis-odpri:focus-visible {
     background: var(--rdeca);
     color: var(--tabla);
     outline: none;
 }
-/* prostor za gumb med polico in napisom */
-html[data-videz="tabla"] .polica-napis {
-    margin-top: 50px;
+html[data-videz="tabla"] .polica-napis-vrsta {
+    align-items: center;
+    padding-top: 6px;
 }
 
-/* naslovnica: nekoliko nižje knjige, da je tudi gumb »Odpri« viden brez drsenja */
+/* naslovnica: nekoliko nižje knjige, da se vidi tudi napis pod polico */
 @media (min-width: 821px) {
     html[data-videz="tabla"] .polica--predmeti .polica > .knjiga {
         height: calc(var(--visina, 300px) * 0.88);
