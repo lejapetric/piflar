@@ -59,7 +59,7 @@
   // p: {oznaka, naslov, znak, barva, opis, svetlost, sirina}
   function vKnjigo(a, p, i) {
     a.classList.add("knjiga");
-    var dolg = p.naslov.length > 22;
+    var dolg = p.naslov.length > 19;
     if (dolg) a.classList.add("knjiga--dolga");
     var sirina = p.sirina || (dolg ? 66 : i % 3 === 1 ? 64 : 58);
     a.dataset.sirina = sirina;
@@ -109,9 +109,13 @@
       if (!k.classList || !k.classList.contains("knjiga")) return;
       k.addEventListener("pointerenter", function () { izberi(ovoj, k); });
       k.addEventListener("focus", function () { izberi(ovoj, k); });
-      k.addEventListener("blur", function () { izberi(ovoj, null); });
     });
-    ovoj.addEventListener("pointerleave", function () { izberi(ovoj, null); });
+    ovoj.addEventListener("pointerleave", function () {
+      if (!ovoj.contains(document.activeElement)) izberi(ovoj, null);
+    });
+    ovoj.addEventListener("focusout", function (e) {
+      if (!ovoj.contains(e.relatedTarget)) izberi(ovoj, null);
+    });
     return ovoj;
   }
 
@@ -176,10 +180,38 @@
     }
     ovoj._izbrana = knjiga;
     ovoj.classList.toggle("ima-izbiro", !!knjiga);
+    postaviGumb(ovoj, knjiga);
     predmeti.forEach(function (k) {
       if (k.classList && k.classList.contains("knjiga")) k.classList.toggle("izbrana", k === knjiga);
     });
     nastaviNapis(ovoj, knjiga, smer);
+  }
+
+  // Gumb »Odpri« visi pod izbrano knjigo, da se do njega pride naravnost navzdol,
+  // ne da bi šli čez druge knjige. Vodi na isto stran kot knjiga.
+  function postaviGumb(ovoj, knjiga) {
+    var gumb = ovoj._gumb;
+    if (!gumb) {
+      gumb = ovoj._gumb = el("a", "polica-odpri", "Odpri →");
+      ovoj.appendChild(gumb);
+    }
+    if (!knjiga) {
+      gumb.classList.remove("viden");
+      gumb.setAttribute("tabindex", "-1");
+      return;
+    }
+    gumb.href = knjiga.getAttribute("href");
+    gumb.setAttribute("aria-label", "Odpri: " + knjiga.dataset.ime);
+    gumb.removeAttribute("tabindex");
+    var o = ovoj.getBoundingClientRect();
+    var k = knjiga.getBoundingClientRect();
+    var deska = knjiga.parentNode.nextElementSibling;
+    var spodaj = deska ? deska.getBoundingClientRect().bottom : k.bottom;
+    var sredina = k.left + k.width / 2 - o.left;
+    var polovica = 52;
+    gumb.style.left = Math.max(polovica, Math.min(o.width - polovica, sredina)) + "px";
+    gumb.style.top = (spodaj - o.top + 6) + "px";
+    gumb.classList.add("viden");
   }
 
   // Napis pod polico: ime in opis izbrane knjige, ki prideta skozi masko.
@@ -189,7 +221,7 @@
     if (knjiga) {
       nov.appendChild(el("strong", "", knjiga.dataset.ime));
       if (knjiga.dataset.opis) nov.appendChild(el("span", "", knjiga.dataset.opis));
-      nov.appendChild(el("em", "polica-napis-odpri", "Odpri →"));
+
     } else {
       nov.classList.add("je-namig");
       nov.appendChild(el("span", "", ovoj._namig));

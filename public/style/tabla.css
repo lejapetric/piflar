@@ -681,3 +681,50 @@ html[data-videz="tabla"] .knjiga[data-znak="sociologija"] { --znak: url("data:im
 html[data-videz="tabla"] .knjiga[data-znak="spanscina"] { --znak: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' fill='none' stroke='black' stroke-width='8.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Ccircle cx='100' cy='100' r='34'/%3E%3Ccircle cx='100' cy='100' r='20' stroke-width='5.7'/%3E%3Cpath d='M100 16v28M100 156v28M16 100h28M156 100h28M41 41l20 20M139 139l20 20M41 159l20-20M139 61l20-20'/%3E%3Cpath d='M70 26l8 20M130 26l-8 20M26 70l20 8M26 130l20-8M174 70l-20 8M174 130l-20-8M70 174l8-20M130 174l-8-20' stroke-width='5.7'/%3E%3C/svg%3E"); }
 html[data-videz="tabla"] .knjiga[data-znak="umetnostna_zgodovina"] { --znak: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' fill='none' stroke='black' stroke-width='8.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M100 20v18M60 186l30-60M140 186l-30-60M100 150v36'/%3E%3Crect x='46' y='38' width='108' height='88'/%3E%3Crect x='58' y='50' width='84' height='64' stroke-width='5.7'/%3E%3Cpath d='M62 108l24-26 18 18 12-12 22 20' stroke-width='5.7'/%3E%3Ccircle cx='122' cy='66' r='7' stroke-width='5.7'/%3E%3Cpath d='M40 126h120'/%3E%3C/svg%3E"); }
 html[data-videz="tabla"] .knjiga[data-znak="zgodovina"] { --znak: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 200 200' fill='none' stroke='black' stroke-width='8.5' stroke-linejoin='round'%3E%3Cpath d='M50 30h100l-8 14H58z'/%3E%3Cpath d='M60 44c-10 0-14 10-6 14M140 44c10 0 14 10 6 14'/%3E%3Cpath d='M62 58h76v6H62z'/%3E%3Cpath d='M68 64v104M84 64v104M100 64v104M116 64v104M132 64v104'/%3E%3Cpath d='M58 168h84v10H58zM48 178h104v12H48z'/%3E%3C/svg%3E"); }
+
+/* gumb »Odpri« visi pod izbrano knjigo (prava povezava) */
+html[data-videz="tabla"] .polica-odpri {
+    position: absolute;
+    z-index: 4;
+    transform: translate(-50%, -6px) scale(0.85);
+    opacity: 0;
+    pointer-events: none;
+    padding: 0 16px;
+    font: 700 21px/34px var(--font-roka);
+    white-space: nowrap;
+    color: var(--rdeca);
+    background: var(--bg-primary);
+    border: 2px solid var(--rdeca);
+    border-radius: 999px;
+    text-decoration: none;
+    box-shadow: 0 6px 14px -8px rgba(0, 0, 0, 0.45);
+    transition: transform 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), opacity 0.15s, left 0.3s cubic-bezier(0.2, 0.8, 0.2, 1), background 0.2s, color 0.2s;
+}
+html[data-videz="tabla"] .polica-odpri.viden {
+    opacity: 1;
+    pointer-events: auto;
+    transform: translate(-50%, 0) scale(1);
+}
+html[data-videz="tabla"] .polica-odpri:hover,
+html[data-videz="tabla"] .polica-odpri:focus-visible {
+    background: var(--rdeca);
+    color: var(--tabla);
+    outline: none;
+}
+/* prostor za gumb med polico in napisom */
+html[data-videz="tabla"] .polica-napis {
+    margin-top: 50px;
+}
+
+/* naslovnica: nekoliko nižje knjige, da je tudi gumb »Odpri« viden brez drsenja */
+@media (min-width: 821px) {
+    html[data-videz="tabla"] .polica--predmeti .polica > .knjiga {
+        height: calc(var(--visina, 300px) * 0.88);
+    }
+    html[data-videz="tabla"] .polica--predmeti .knjiga-naslov {
+        max-height: calc(var(--visina, 300px) * 0.88 - 110px);
+    }
+    html[data-videz="tabla"] .hero-inner {
+        margin-bottom: 26px;
+    }
+}
