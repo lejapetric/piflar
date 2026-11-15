@@ -196,7 +196,8 @@ html[data-videz="tabla"] .page-header::before,
 html[data-videz="tabla"][data-predmet] .page-header::before {
     content: "";
     position: absolute;
-    left: 70px;
+    left: auto;
+    right: 70px;
     bottom: -24px;
     width: 330px;
     height: 34px;
@@ -624,7 +625,8 @@ html[data-videz="tabla"] .subsection.na-polici {
     html[data-videz="tabla"] .hero-inner::before,
     html[data-videz="tabla"] .page-header::before,
     html[data-videz="tabla"][data-predmet] .page-header::before {
-        left: 24px;
+        left: auto;
+        right: 24px;
         width: 240px;
         height: 25px;
         bottom: -19px;
