@@ -4,7 +4,8 @@
 # Vsak rok je v svoji datoteki r<leto>_<rok>.py. Naloge sledijo uradnim polam RIC (zgradba,
 # tip naloge, točkovanje), podatki in besedila pa so spremenjeni. Do leta 2020 sta bili na
 # osnovni in višji ravni enaki izpitni poli 1 (osnovna 120 minut, višja 90 minut), višja raven
-# je imela še izpitno polo 2 s štirimi strukturiranimi nalogami (dve obvezni, ena izbirna).
+# je imela še izpitno polo 2 s štirimi strukturiranimi nalogami (dve obvezni, ena izbirna);
+# do leta 2011 so bile v poli 2 tri obvezne naloge.
 import glob, importlib.util, json, os
 
 TU = os.path.dirname(os.path.abspath(__file__))
@@ -34,8 +35,12 @@ def pole_roka(r):
     assert sum(n["tocke"] for n in r.POLA1) == 80, (r.LETO, r.ROK)
     assert sum(n["tocke"] for n in r.POLA2[:3]) == 40, (r.LETO, r.ROK)
     nav1 = "{} minut, 12 kratkih nalog, 80 točk. Računalo je dovoljeno, razen pri nalogah, kjer piše drugače."
-    nav2 = ("90 minut, 4 strukturirane naloge, 40 točk. Prvi dve nalogi sta obvezni, med 3. in 4. izberi eno. "
-            "Računalo je dovoljeno, razen pri nalogah, kjer piše drugače.")
+    if len(r.POLA2) == 3:  # do leta 2011: tri obvezne strukturirane naloge
+        nav2 = ("90 minut, 3 strukturirane naloge, 40 točk. Vse naloge so obvezne. "
+                "Računalo je dovoljeno, razen pri nalogah, kjer piše drugače.")
+    else:
+        nav2 = ("90 minut, 4 strukturirane naloge, 40 točk. Prvi dve nalogi sta obvezni, med 3. in 4. izberi eno. "
+                "Računalo je dovoljeno, razen pri nalogah, kjer piše drugače.")
     return [
         pola(r, "osnovna", 1, r.POLA1, nav1.format(120), r.RIC["or1"]),
         pola(r, "visja", 1, json.loads(json.dumps(r.POLA1)), nav1.format(90), r.RIC["vr1"]),
