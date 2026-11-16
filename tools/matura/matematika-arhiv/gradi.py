@@ -5,7 +5,7 @@
 # tip naloge, točkovanje), podatki in besedila pa so spremenjeni. Do leta 2020 sta bili na
 # osnovni in višji ravni enaki izpitni poli 1 (osnovna 120 minut, višja 90 minut), višja raven
 # je imela še izpitno polo 2 s štirimi strukturiranimi nalogami (dve obvezni, ena izbirna);
-# do leta 2011 so bile v poli 2 tri obvezne naloge.
+# do leta 2011 so bile v poli 2 tri obvezne naloge. Za leto 2004 RIC objavlja le polo 1 osnovne in polo 2 višje ravni.
 import glob, importlib.util, json, os
 
 TU = os.path.dirname(os.path.abspath(__file__))
@@ -32,6 +32,14 @@ def pole_roka(r):
     if not hasattr(r, "RIC"):
         with open(os.path.join(TU, "ric.json"), encoding="utf-8") as f:
             r.RIC = json.load(f)[f"{r.LETO}-{r.ROK}"]
+    if r.LETO == 2004:  # 2004: pola 1 osnovne ravni ima 72 točk, objavljena je še pola 2 višje ravni (3 naloge, 72 točk)
+        assert sum(n["tocke"] for n in r.POLA1) == 72 and sum(n["tocke"] for n in r.POLA2) == 72, (r.LETO, r.ROK)
+        return [
+            pola(r, "osnovna", 1, r.POLA1, "120 minut, 12 kratkih nalog, 72 točk. Računalo je dovoljeno, "
+                 "razen pri nalogah, kjer piše drugače.", r.RIC["or1"]),
+            pola(r, "visja", 2, r.POLA2, "90 minut, 3 strukturirane naloge, 72 točk. Vse naloge so obvezne. "
+                 "Računalo je dovoljeno, razen pri nalogah, kjer piše drugače.", r.RIC["vr1"]),
+        ]
     assert sum(n["tocke"] for n in r.POLA1) == 80, (r.LETO, r.ROK)
     assert sum(n["tocke"] for n in r.POLA2[:3]) == 40, (r.LETO, r.ROK)
     nav1 = "{} minut, 12 kratkih nalog, 80 točk. Računalo je dovoljeno, razen pri nalogah, kjer piše drugače."
