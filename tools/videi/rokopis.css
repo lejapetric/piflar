@@ -1,0 +1,235 @@
+.mn-tabela {
+    border-collapse: collapse;
+    margin: var(--space-2) 0 var(--space-3);
+}
+.mn-tabela th,
+.mn-tabela td {
+    border: 1px solid var(--border, currentColor);
+    padding: 0.3rem 0.7rem;
+    text-align: center;
+}
+.mn-tabela th {
+    text-align: left;
+    font-weight: 600;
+}
+/* Rokopis: rešitev, kot bi jo napisal dijak */
+.rokopis {
+    font-family: "Kalam", "Comic Sans MS", cursive;
+    font-size: 21px;
+    line-height: 1.55;
+    color: var(--crnilo, #1D3C9E);
+    padding: 4px 0 0 30px;
+}
+.rokopis p {
+    margin: 0 0 4px;
+}
+/* Korak: rokopis levo, siv komentar desno (na telefonu pod njim) */
+.rokopis .rk-korak {
+    display: grid;
+    grid-template-columns: minmax(0, 1.6fr) minmax(170px, 1fr);
+    gap: 2px 28px;
+    align-items: center;
+    margin-bottom: 8px;
+}
+.rokopis .rk-naslov {
+    grid-template-columns: 1fr;
+    margin-top: 6px;
+}
+.rokopis .rk-kom {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-style: italic;
+    line-height: 1.4;
+    color: var(--kom, #7A7F87);
+}
+.rokopis .rk-sam {
+    margin: 0 0 10px;
+}
+.rokopis .rk-odg {
+    display: inline-block;
+    padding: 0 6px;
+    border-bottom: 3px double currentColor;
+}
+.rokopis .rk-slika {
+    margin: 6px 0 10px;
+    color: var(--crnilo, #1D3C9E);
+}
+.rokopis .rk-slika polyline,
+.rokopis .rk-slika polygon {
+    stroke: currentColor;
+}
+.rokopis .rk-slika circle[fill^="var"] {
+    fill: currentColor;
+    stroke: currentColor;
+}
+.rokopis sup,
+.rokopis sub {
+    font-size: 0.65em;
+}
+.rokopis .ul,
+.pola-besedilo .ul,
+.naloga-besedilo .ul {
+    display: inline-flex;
+    flex-direction: column;
+    vertical-align: middle;
+    text-align: center;
+    line-height: 1.15;
+    margin: 0 0.15em;
+}
+.rokopis .ul > span:first-child,
+.pola-besedilo .ul > span:first-child,
+.naloga-besedilo .ul > span:first-child {
+    border-bottom: 1.5px solid currentColor;
+    padding: 0 0.2em;
+}
+.rokopis .ul.brez > span:first-child,
+.pola-besedilo .ul.brez > span:first-child,
+.naloga-besedilo .ul.brez > span:first-child {
+    border-bottom: 0;
+}
+.rokopis .koren {
+    white-space: nowrap;
+}
+.rokopis .koren .pod {
+    border-top: 1.5px solid currentColor;
+    padding: 0 0.1em;
+}
+.rokopis .kn {
+    margin-right: -0.35em;
+    vertical-align: 0.8em;
+}
+.rokopis .lim {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    vertical-align: middle;
+    line-height: 1;
+}
+.rokopis .lim small {
+    font-size: 0.6em;
+}
+.rokopis .int,
+.rokopis .meja {
+    display: inline-flex;
+    align-items: center;
+}
+.rokopis .int {
+    font-size: 1.3em;
+}
+.rokopis .int .meje,
+.rokopis .meja {
+    flex-direction: column;
+    font-size: 0.55em;
+    line-height: 1.1;
+}
+.rokopis .meja {
+    flex-direction: row;
+    font-size: 1em;
+}
+.rokopis .meja sup,
+.rokopis .meja sub {
+    display: block;
+}
+.rokopis .meja > sup,
+.rokopis .meja > sub {
+    display: inline-flex;
+    flex-direction: column;
+}
+.rokopis .sistem {
+    display: inline-flex;
+    align-items: center;
+    vertical-align: middle;
+}
+.rokopis .zav {
+    font-size: 2.4em;
+    line-height: 1;
+    margin-right: 0.15em;
+}
+.rokopis .vrst {
+    display: inline-flex;
+    flex-direction: column;
+    line-height: 1.3;
+}
+.rokopis .horner {
+    border-collapse: collapse;
+    margin: 4px 0 8px;
+}
+.rokopis .horner td {
+    padding: 0 12px;
+    text-align: right;
+    min-width: 2em;
+}
+.rokopis .horner .hx {
+    border-right: 1.5px solid currentColor;
+}
+.rokopis .horner .hv td {
+    border-top: 1.5px solid currentColor;
+}
+.rokopis .horner .ost {
+    border: 1.5px solid currentColor;
+}
+/* vektor v rokopisu in komentarjih: puščica nad črko */
+.vek {
+    position: relative;
+    display: inline-block;
+}
+.vek::after {
+    content: "→";
+    position: absolute;
+    left: 50%;
+    top: -0.62em;
+    transform: translateX(-50%);
+    font-size: 0.7em;
+    line-height: 1;
+}
+/* pravilo pod sivim komentarjem koraka */
+.rokopis .rk-pravilo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    align-items: center;
+    margin-top: 0.3rem;
+    font-style: normal;
+    font-size: 11.5px;
+    line-height: 1.3;
+}
+.rokopis .rk-pravilo-ime {
+    font-weight: 600;
+    color: var(--kom, #6B7079);
+}
+.rokopis .rk-list {
+    padding: 0.05rem 0.4rem;
+    border-radius: 999px;
+    white-space: nowrap;
+}
+.rokopis .rk-da {
+    background: #E3F4E8;
+    color: #1E6B3A;
+}
+.rokopis .rk-ne {
+    background: #FDEEDC;
+    color: #8A4B0F;
+}
+/* program v rešitvi: rokopis z enakomerno širokimi črkami */
+.rokopis .rk-koda .rk-v {
+    min-width: 0;
+}
+.rokopis pre.koda {
+    margin: 2px 0;
+    padding: 6px 10px;
+    background: transparent;
+    border: 1px dashed currentColor;
+    border-color: color-mix(in srgb, currentColor 35%, transparent);
+    color: var(--crnilo, #1D3C9E);
+    font-size: 14px;
+    line-height: 1.45;
+}
+/* dolge formule in naslovi v rokopisu se prelomijo, namesto da segajo v komentar */
+.rokopis .rk-v {
+    min-width: 0;
+    overflow-wrap: anywhere;
+}
+.rokopis code.k {
+    background: transparent;
+    color: inherit;
+}

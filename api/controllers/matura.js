@@ -16,8 +16,9 @@ const razvrscene = [...matura].sort(poVrsti);
 // Naloga lahko spada v več poglavij: "poglavje": "funkcije" ali ["funkcije", "diferencialni_racun"]
 const poglavjaNaloge = (naloga) => [naloga.poglavje ?? []].flat();
 
-function prikazNaloge({ razlaga, rezultat, ...naloga }, odklenjena) {
-  return odklenjena ? { ...naloga, razlaga, rezultat } : naloga;
+// Video razlaga rešitve (naloga.video) je del rešitve: brez dostopa je ne pošljemo
+function prikazNaloge({ razlaga, rezultat, video, ...naloga }, odklenjena) {
+  return odklenjena ? { ...naloga, razlaga, rezultat, ...(video ? { video } : {}) } : naloga;
 }
 
 function prikazPole(pola, uporabnik, zNalogami) {

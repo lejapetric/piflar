@@ -149,6 +149,24 @@ function nastaviPrikaz(kartica, prikaz) {
   if (gPostopek) gPostopek.textContent = prikaz === "postopek" ? "Skrij postopek" : "Prikaži postopek";
 }
 
+// Video razlaga rešitve: bela tabla v svetlem, zelena v temnem načinu (slog v snov.css)
+function videoResitve(naloga, razred) {
+  if (!naloga.video) return null;
+  const ovoj = el("div", `sklop-video video-resitve ${razred}`);
+  ovoj.append(el("span", "sklop-video-oznaka", "Video razlaga rešitve"));
+  for (const t of ["svetla", "temna"]) {
+    const v = document.createElement("video");
+    v.className = `video-${t}`;
+    v.controls = true;
+    v.preload = "none";
+    v.playsInline = true;
+    v.poster = `${naloga.video}-${t}.jpg`;
+    v.src = `${naloga.video}-${t}.mp4`;
+    ovoj.append(v);
+  }
+  return ovoj;
+}
+
 function zaklenjeno(naloga) {
   if (!naloga.resena) return el("p", "mn-zaklep", "Rešitve za to polo še pripravljamo.");
   const p = el("p", "mn-zaklep", "Rešitve te pole so na voljo s paketom. ");
@@ -404,7 +422,10 @@ function renderNaloga(naloga, { naslov, vir }) {
 
   if (naloga.odklenjena && naloga.rezultat) {
     const postopek = el("div", "naloga-postopek mn-postopek");
-    postopek.append(el("h4", "", "Postopek"), el("div", "", naloga.razlaga ?? ""));
+    postopek.append(el("h4", "", "Postopek"));
+    const vid = videoResitve(naloga, "");
+    if (vid) postopek.append(vid);
+    postopek.append(el("div", "", naloga.razlaga ?? ""));
     const resitev = el("div", "naloga-postopek mn-resitev");
     resitev.append(el("p", "naloga-rezultat", `<strong>Rezultat:</strong> ${naloga.rezultat}`));
     kartica.append(postopek, resitev);
@@ -462,6 +483,8 @@ function renderList(naloga, { pola, stran, skupaj, prviVDelu }) {
       rez.append(el("span", "pola-rezultat-oznaka", "Rešitev:"), el("span", "pola-rezultat-vsebina", naloga.rezultat));
       prostor.append(rez);
     }
+    const vid = videoResitve(naloga, "mn-post");
+    if (vid) prostor.append(vid);
     prostor.append(el("div", "mn-post pola-resitev", naloga.razlaga));
   } else {
     const zaklep = zaklenjeno(naloga);

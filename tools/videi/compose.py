@@ -120,14 +120,25 @@ def pages_for(sk):
         chip = img(f"{sk['id']}-g{gi}-chip")
         head = [El(ozn, X0, 38, 'h', anim=False), El(chip, XMAX - chip.width, 40, 'h', anim=False)]
         pod = img(f"{sk['id']}-g{gi}-pod") if g['naslov'] else None
-        stalni = [img(b['id'], maxh=200) for b in g['stalni']]
+        stalni_polni = [img(b['id'], maxh=YMAX - Y0 - 20) for b in g['stalni']]
+        visoki = sum(im.height for im in stalni_polni) > 190
+        stalni = [] if visoki else [img(b['id'], maxh=200) for b in g['stalni']]
+        if visoki:
+            # dolgo besedilo naloge: najprej samostojna stran z besedilom v polni velikosti
+            st0 = list(head); an0 = []; y0 = Y0
+            for b, im in zip(g['stalni'], stalni_polni):
+                if y0 + im.height > YMAX:
+                    s_ = (YMAX - y0) / im.height
+                    im = im.resize((max(1, int(im.width * s_)), max(1, int(im.height * s_))), Image.LANCZOS)
+                an0.append(El(im, X0, y0, b['kind'], b.get('n', 0))); y0 += im.height + 12
+            pages.append((st0, an0))
         def nova_stran(prva):
             st = list(head); an = []
             y = Y0
             if pod is not None:
                 e = El(pod, X0, y, 'pod', anim=prva)
                 (an if prva else st).append(e); y += pod.height + 10
-            for b, im in zip(g['stalni'], stalni):
+            for b, im in zip(g['stalni'] if stalni else [], stalni):
                 e = El(im, X0, y, b['kind'], b.get('n', 0), anim=prva)
                 (an if prva else st).append(e); y += im.height + 12
             return st, an, y
