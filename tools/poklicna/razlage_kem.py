@@ -9,6 +9,7 @@ import os
 
 from razlage_slo import sklop, tip  # pomožni funkciji za lastne sklope
 import razlage_mat as rm
+import videi_pm
 
 KOREN = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..")
 rm.SM = os.path.join(KOREN, "public", "views", "kemija", "snov")
@@ -449,4 +450,5 @@ if __name__ == "__main__":
     from snovi import SNOVI
     for i, (_, slug, naslov, opis) in enumerate(SNOVI["poklicna_kemija"], 1):
         s, t = rm.zgradi(slug, f"4.{i}", naslov, opis)
+        videi_pm.vstavi(os.path.join(rm.IZHOD, slug, f"{slug}_razlaga.html"), f"poklicna_kemija/{slug}")
         print(f"4.{i} {slug}: {s} sklopov, {t} tipov")
