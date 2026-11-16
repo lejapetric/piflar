@@ -1063,6 +1063,15 @@ if __name__ == "__main__":
     pole = [pola(*p) for p in POLE]
     for p in pole:
         assert sum(n["tocke"] for n in p["naloge"] if n["id"].startswith("A")) == 50, p["id"]
+    # pole iz tools/poklicna/matematika-arhiv (po uradnih polah RIC) ostanejo in imajo prednost pred predlogami
+    idji = {p["id"] for p in pole}
+    if os.path.exists(IZHOD):
+        with open(IZHOD, encoding="utf-8") as f:
+            arhiv = [p for p in json.load(f) if p.get("ocenjevanje") or p["id"] not in idji]
+        aidji = {p["id"] for p in arhiv}
+        pole = [p for p in pole if p["id"] not in aidji] + arhiv
+        red = {"spomladanski": 0, "jesenski": 1, "zimski": 2}
+        pole.sort(key=lambda p: (-p["leto"], red[p["rok"]]))
     with open(IZHOD, "w", encoding="utf-8") as f:
         json.dump(pole, f, ensure_ascii=False, indent=1)
         f.write("\n")

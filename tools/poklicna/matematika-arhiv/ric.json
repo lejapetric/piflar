@@ -1,0 +1,248 @@
+{
+ "2021-jesenski": {
+  "pola": "https://www.ric.si/mma/P212-C101-1-1.pdf/2022040609310437/?m=1649230264",
+  "navodila": "https://www.ric.si/mma/P212-C101-1-3.pdf/2022040609310451/?m=1649230264"
+ },
+ "2021-zimski": {
+  "pola": "https://www.ric.si/mma/P213-C101-1-1.pdf/2022040612531738/?m=1649242397",
+  "navodila": "https://www.ric.si/mma/P213-C101-1-3.pdf/2022040612531718/?m=1649242397"
+ },
+ "2022-spomladanski": {
+  "pola": "https://www.ric.si/mma/P221-C101-1-1.pdf/2022101107541580/?m=1665467655",
+  "navodila": "https://www.ric.si/mma/P221-C101-1-3.pdf/2022101107541441/?m=1665467654"
+ },
+ "2022-jesenski": {
+  "pola": "https://www.ric.si/mma/P222-C101-1-1.pdf/2023040412410803/?m=1680604868",
+  "navodila": "https://www.ric.si/mma/P222-C101-1-3.pdf/2023040414031763/?m=1680609797"
+ },
+ "2022-zimski": {
+  "pola": "https://www.ric.si/mma/P223-C101-1-1.pdf/2023040412413399/?m=1680604893",
+  "navodila": "https://www.ric.si/mma/P223-C101-1-3.pdf/2023040412413456/?m=1680604894"
+ },
+ "2023-spomladanski": {
+  "pola": "https://www.ric.si/mma/P231-C101-1-1.pdf/20231010112520/?m=1696929920",
+  "navodila": "https://www.ric.si/mma/P231-C101-1-3.pdf/20231010112530/?m=1696929930"
+ },
+ "2023-jesenski": {
+  "pola": "https://www.ric.si/mma/P232-C101-1-1.pdf/20240407123113/?m=1712485873",
+  "navodila": "https://www.ric.si/mma/P232-C101-1-3.pdf/20240407123114/?m=1712485873"
+ },
+ "2023-zimski": {
+  "pola": "https://www.ric.si/mma/P233-C101-1-1.pdf/20240407133129/?m=1712489489",
+  "navodila": "https://www.ric.si/mma/P233-C101-1-3.pdf/20240407133130/?m=1712489489"
+ },
+ "2024-spomladanski": {
+  "pola": "https://www.ric.si/mma/P241-C101-1-1.pdf/2024100320272477/?m=1727980044",
+  "navodila": "https://www.ric.si/mma/P241-C101-1-3.pdf/2024100320272516/?m=1727980045"
+ },
+ "2024-jesenski": {
+  "pola": "https://www.ric.si/mma/P242-C101-1-1.pdf/2025040611105136/?m=1743930651",
+  "navodila": "https://www.ric.si/mma/P242-C101-1-3.pdf/2025040611105141/?m=1743930651"
+ },
+ "2024-zimski": {
+  "pola": "https://www.ric.si/mma/P243-C101-1-1.pdf/2025040611133009/?m=1743930810",
+  "navodila": "https://www.ric.si/mma/P243-C101-1-3.pdf/2025040611132912/?m=1743930809"
+ },
+ "2025-spomladanski": {
+  "pola": "https://www.ric.si/mma/P251-C101-1-1.pdf/2025101007152227/?m=1760073322",
+  "navodila": "https://www.ric.si/mma/P251-C101-1-3.pdf/2025101007152274/?m=1760073322"
+ },
+ "2025-jesenski": {
+  "pola": "https://www.ric.si/mma/P252-C101-1-1.pdf/2026040909045294/?m=1775718292",
+  "navodila": "https://www.ric.si/mma/P252-C101-1-3.pdf/2026040909045241/?m=1775718292"
+ },
+ "2025-zimski": {
+  "pola": "https://www.ric.si/mma/P253-C101-1-1.pdf/2026041007492744/?m=1775800167",
+  "navodila": "https://www.ric.si/mma/P253-C101-1-3.pdf/2026041007492723/?m=1775800167"
+ },
+ "2026-spomladanski": {
+  "pola": "https://www.ric.si/mma/P261-C101-1-1.pdf/2026100609045866/?m=1791270298",
+  "k2": "https://www.ric.si/mma/P261-C101-1-2.pdf/2026100609045885/?m=1791270298"
+ },
+ "2004-spomladanski": {
+  "pola": "https://www.ric.si/mma/p041-c101-1-1/2011022723431133/?m=1298846591",
+  "k2": "https://www.ric.si/mma/p041-c101-1-2/2011022723434559/?m=1298846625"
+ },
+ "2004-zimski": {
+  "pola": "https://www.ric.si/mma/p043-c101-1-1/2011022723532183/?m=1298847201",
+  "navodila": "https://www.ric.si/mma/p043-c101-1-3/2011022723535279/?m=1298847232"
+ },
+ "2005-spomladanski": {
+  "pola": "https://www.ric.si/mma/p051-c101-1-1/2007121209315963/?m=1197448319",
+  "navodila": "https://www.ric.si/mma/p051-c101-1-3/2007112309464860/?m=1195807634"
+ },
+ "2005-jesenski": {
+  "pola": "https://www.ric.si/mma/p052-c101-1-1/2007112311155690/?m=1195812957",
+  "navodila": "https://www.ric.si/mma/p052-c101-1-3/2007112311162349/?m=1195812983"
+ },
+ "2005-zimski": {
+  "pola": "https://www.ric.si/mma/p053-c101-1-1/2007112613585212/?m=1196081932",
+  "navodila": "https://www.ric.si/mma/p053-c101-1-3/2007112613592166/?m=1196081961"
+ },
+ "2006-jesenski": {
+  "pola": "https://www.ric.si/mma/p062-c101-1-1/2007121018293370/?m=1197307773",
+  "navodila": "https://www.ric.si/mma/p062-c101-1-3/2007121018301041/?m=1197307810"
+ },
+ "2006-zimski": {
+  "pola": "https://www.ric.si/mma/p063-c101-1-1/2007121018593197/?m=1197309571",
+  "navodila": "https://www.ric.si/mma/p063-c101-1-3/2007121019002620/?m=1197309626"
+ },
+ "2007-spomladanski": {
+  "pola": "https://www.ric.si/mma/p071-c101-1-1/2007121019213849/?m=1197310898",
+  "navodila": "https://www.ric.si/mma/p071-c101-1-3/2007121019220876/?m=1197310928"
+ },
+ "2007-jesenski": {
+  "pola": "https://www.ric.si/mma/p072-c101-1-1/2008101414411138/?m=1223988072",
+  "navodila": "https://www.ric.si/mma/p072-c101-1-3/2008101414420359/?m=1223988123"
+ },
+ "2007-zimski": {
+  "pola": "https://www.ric.si/mma/p073-c101-1-1/2008101511103812/?m=1224061838",
+  "navodila": "https://www.ric.si/mma/p073-c101-1-3/2008101511112255/?m=1224061882"
+ },
+ "2008-spomladanski": {
+  "pola": "https://www.ric.si/mma/p081-c101-1-1/2008102413010996/?m=1224846069",
+  "navodila": "https://www.ric.si/mma/p081-c101-1-3/2008102413013858/?m=1224846636"
+ },
+ "2008-jesenski": {
+  "pola": "https://www.ric.si/mma/p082-c101-1-1/2009102213494936/?m=1256212189",
+  "navodila": "https://www.ric.si/mma/p082-c101-1-3/2009102213502063/?m=1256212220"
+ },
+ "2008-zimski": {
+  "pola": "https://www.ric.si/mma/p083-c101-1-1/2009102214060657/?m=1256213166",
+  "navodila": "https://www.ric.si/mma/p083-c101-1-3/2009102214062599/?m=1256213195"
+ },
+ "2009-spomladanski": {
+  "pola": "https://www.ric.si/mma/p091-c101-1-1/2009102214205330/?m=1256214053",
+  "navodila": "https://www.ric.si/mma/p091-c101-1-3/2009102214211533/?m=1256214075"
+ },
+ "2009-jesenski": {
+  "pola": "https://www.ric.si/mma/p092-c101-1-1/2010101511123658/?m=1287133956",
+  "navodila": "https://www.ric.si/mma/p092-c101-1-3/2010101511121443/?m=1287133934"
+ },
+ "2009-zimski": {
+  "pola": "https://www.ric.si/mma/p093-c101-1-1/2010101511172579/?m=1287134245",
+  "navodila": "https://www.ric.si/mma/p093-c101-1-3/2010101511174902/?m=1287134269"
+ },
+ "2010-spomladanski": {
+  "pola": "https://www.ric.si/mma/p101-c101-1-1/2010101511352986/?m=1287135329",
+  "navodila": "https://www.ric.si/mma/p101-c101-1-3/2010101511355019/?m=1287135350"
+ },
+ "2010-jesenski": {
+  "pola": "https://www.ric.si/mma/p102-c101-1-1/2011101710480899/?m=1318841288",
+  "navodila": "https://www.ric.si/mma/p102-c101-1-3/2011101710483331/?m=1318841313"
+ },
+ "2010-zimski": {
+  "pola": "https://www.ric.si/mma/p103-c101-1-1/2011101711063886/?m=1318842398",
+  "navodila": "https://www.ric.si/mma/p103-c101-1-3/2011101711070112/?m=1318842421"
+ },
+ "2011-spomladanski": {
+  "pola": "https://www.ric.si/mma/p111-c101-1-1/2011101710304546/?m=1318840245",
+  "navodila": "https://www.ric.si/mma/p111-c101-1-3/2011101710310981/?m=1318840269"
+ },
+ "2011-jesenski": {
+  "pola": "https://www.ric.si/mma/p112-c101-1-1/2012101112173237/?m=1349950652",
+  "navodila": "https://www.ric.si/mma/p112-c101-1-3/2012101112173309/?m=1349950653"
+ },
+ "2011-zimski": {
+  "pola": "https://www.ric.si/mma/p113-c101-1-1/2012101112191204/?m=1349950752",
+  "navodila": "https://www.ric.si/mma/p113-c101-1-3/2012101112191314/?m=1349950753"
+ },
+ "2012-spomladanski": {
+  "pola": "https://www.ric.si/mma/p121-c101-1-1/2012101112203437/?m=1349950834",
+  "navodila": "https://www.ric.si/mma/p121-c101-1-3/2012101112203504/?m=1349950835"
+ },
+ "2012-jesenski": {
+  "pola": "https://www.ric.si/mma/p122-c101-1-1/2013100914292362/?m=1381321763",
+  "navodila": "https://www.ric.si/mma/p122-c101-1-3/2013100914292442/?m=1381321764"
+ },
+ "2012-zimski": {
+  "pola": "https://www.ric.si/mma/p123-c101-1-1/2013100914311181/?m=1381321871",
+  "navodila": "https://www.ric.si/mma/p123-c101-1-3/2013100914311215/?m=1381321872"
+ },
+ "2013-spomladanski": {
+  "pola": "https://www.ric.si/mma/p131-c101-1-1/2013100914313501/?m=1381321895",
+  "navodila": "https://www.ric.si/mma/p131-c101-1-3/2013100914313647/?m=1381321896"
+ },
+ "2013-jesenski": {
+  "pola": "https://www.ric.si/mma/p132-c101-1-1/2014100714310857/?m=1412685068"
+ },
+ "2013-zimski": {
+  "pola": "https://www.ric.si/mma/p133-c101-1-1/2014100714323448/?m=1412685154",
+  "navodila": "https://www.ric.si/mma/p133-c101-1-3/2014100714323527/?m=1412685155"
+ },
+ "2014-spomladanski": {
+  "pola": "https://www.ric.si/mma/p141-c101-1-1/2014100714341348/?m=1412685253",
+  "navodila": "https://www.ric.si/mma/p141-c101-1-3/2014100714341431/?m=1412685254"
+ },
+ "2014-jesenski": {
+  "pola": "https://www.ric.si/mma/p142-c101-1-1/2015100813264551/?m=1444303605",
+  "navodila": "https://www.ric.si/mma/p142-c101-1-3/2015100813264719/?m=1444303607"
+ },
+ "2014-zimski": {
+  "pola": "https://www.ric.si/mma/p143-c101-1-1/2015100813270979/?m=1444303629",
+  "navodila": "https://www.ric.si/mma/p143-c101-1-3/2015100813271122/?m=1444303631"
+ },
+ "2015-spomladanski": {
+  "pola": "https://www.ric.si/mma/p151-c101-1-1/2015100813274173/?m=1444303661",
+  "navodila": "https://www.ric.si/mma/p151-c101-1-3/2015100813274411/?m=1444303665"
+ },
+ "2015-jesenski": {
+  "pola": "https://www.ric.si/mma/p152-c101-1-1/2016041509521589/?m=1460706694",
+  "navodila": "https://www.ric.si/mma/p152-c101-1-3/2016041509521617/?m=1460706695"
+ },
+ "2015-zimski": {
+  "pola": "https://www.ric.si/mma/p153-c101-1-1/2016041509523503/?m=1460706714",
+  "navodila": "https://www.ric.si/mma/p153-c101-1-3/2016041509523650/?m=1460706715"
+ },
+ "2016-spomladanski": {
+  "navodila": "https://www.ric.si/mma/p161-c101-1-3/2016101212452701/?m=1495109832"
+ },
+ "2016-jesenski": {
+  "pola": "https://www.ric.si/mma/p162-c101-1-1/2017040714303055/?m=1491568189",
+  "navodila": "https://www.ric.si/mma/p162-c101-1-3/2017040714303269/?m=1491568192"
+ },
+ "2016-zimski": {
+  "pola": "https://www.ric.si/mma/p163-c101-1-1/2017040714305822/?m=1491568218",
+  "navodila": "https://www.ric.si/mma/p163-c101-1-3/2017040714310019/?m=1491568220"
+ },
+ "2017-spomladanski": {
+  "pola": "https://www.ric.si/mma/p171-c101-1-1/2017101013134727/?m=1507634022",
+  "navodila": "https://www.ric.si/mma/p171-c101-1-3/2017101013134985/?m=1507634024"
+ },
+ "2017-jesenski": {
+  "pola": "https://www.ric.si/mma/p172-c101-1-1/2018040611044489/?m=1523005362",
+  "navodila": "https://www.ric.si/mma/p172-c101-1-3/2018040611044614/?m=1523005364"
+ },
+ "2017-zimski": {
+  "pola": "https://www.ric.si/mma/p173-c101-1-1/2018040611040584/?m=1523005323",
+  "navodila": "https://www.ric.si/mma/p173-c101-1-3/2018040611040753/?m=1523005325"
+ },
+ "2018-spomladanski": {
+  "pola": "https://www.ric.si/mma/p181-c101-1-1/2018100410112418/?m=1538640685",
+  "navodila": "https://www.ric.si/mma/p181-c101-1-3/2018100410112659/?m=1538640687"
+ },
+ "2018-jesenski": {
+  "pola": "https://www.ric.si/mma/p182-c101-1-1/2019041007513963/?m=1554875499",
+  "navodila": "https://www.ric.si/mma/p182-c101-1-3/2019041007514119/?m=1554875501"
+ },
+ "2018-zimski": {
+  "pola": "https://www.ric.si/mma/p183-c101-1-1/2019041007520813/?m=1554875528",
+  "navodila": "https://www.ric.si/mma/p183-c101-1-3/2019041007521070/?m=1554875530"
+ },
+ "2019-spomladanski": {
+  "pola": "https://www.ric.si/mma/p191-c101-1-1/2019100912515955/?m=1570618319",
+  "navodila": "https://www.ric.si/mma/p191-c101-1-3/2019100912520179/?m=1570618321"
+ },
+ "2019-jesenski": {
+  "pola": "https://www.ric.si/mma/p192-c101-1-1/2020040112452234/?m=1585737922",
+  "navodila": "https://www.ric.si/mma/p192-c101-1-3/2020040112452351/?m=1585737923"
+ },
+ "2019-zimski": {
+  "pola": "https://www.ric.si/mma/p193-c101-1-1/2020040112445810/?m=1585737898",
+  "navodila": "https://www.ric.si/mma/p193-c101-1-3/2020040112445754/?m=1585737897"
+ },
+ "2020-spomladanski": {
+  "pola": "https://www.ric.si/mma/p201-c101-1-1/2020101314480905/?m=1602593289",
+  "navodila": "https://www.ric.si/mma/p201-c101-1-3/2020101314481162/?m=1602593291"
+ }
+}
