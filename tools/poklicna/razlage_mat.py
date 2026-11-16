@@ -14,6 +14,9 @@ IZHOD = os.path.join(KOREN, "public", "views", "poklicna_matematika", "snov")
 
 from snovi import SNOVI  # noqa: E402
 
+PREDMET, SLUG, IZ = "Matematika", "poklicna_matematika", "iz matematike"
+DODATEK = " Formule iz kataloga so priložene izpitni poli."
+
 VIRI = {
     "SM": "stevilske_mnozice/stevilske_mnozice", "A": "algebrski_izrazi_enacbe_neenacbe/algebrski_izrazi_enacbe_neenacbe",
     "PK": "potence_koreni/potence_koreni", "G": "geometrija_ravnina_prostor/geometrija_ravnina_prostor",
@@ -295,13 +298,17 @@ def sklop_html(kljuc, st):
 
 def kljuc_vrstice(kljuc):
     """{številka tipa: opis iz ključa strani splošne mature}"""
+    if kljuc == "@":
+        return {}
     return {int(n): t for t, n in re.findall(r'<tr><td>(.*?)</td><td><a href="#tip-(\d+)">', vir(kljuc))}
 
 
 def predelaj(slug, stevilka, i, kljuc, st, tip_od):
     """Sklop iz razlage splošne mature prestavi na stran poklicne mature: nove številke sklopa
     in tipov, edinstveni id-ji slik, brez oznak višje ravni."""
-    h = sklop_html(kljuc, st)
+    lasten = kljuc == "@"  # lasten sklop (HTML) namesto sklopa splošne mature
+    h = st if lasten else sklop_html(kljuc, st)
+    oznaka = f"l{i}" if lasten else f"{kljuc.lower()}{st}"
     stari = [int(n) for n in re.findall(r'class="tip-naloge" id="tip-(\d+)"', h)]
     preslikava = {n: tip_od + j for j, n in enumerate(stari)}
     h = re.sub(r'<section class="sklop[^"]*" id="sklop-\d+">', f'<section class="sklop" id="sklop-{i}">', h, count=1)
@@ -319,7 +326,7 @@ def predelaj(slug, stevilka, i, kljuc, st, tip_od):
     for ident in set(re.findall(r'\bid="([^"]+)"', h)):
         if re.fullmatch(r"(sklop|tip)-\d+", ident):
             continue
-        novi = f"{kljuc.lower()}{st}-{ident}"
+        novi = f"{oznaka}-{ident}"
         h = re.sub(rf'(\bid=")({re.escape(ident)})(")', rf"\g<1>{novi}\3", h)
         h = h.replace(f"url(#{ident})", f"url(#{novi})").replace(f'href="#{ident}"', f'href="#{novi}"')
     # povezave na druge sklope in strani splošne mature ostanejo veljavne (absolutne poti)
@@ -349,7 +356,7 @@ def zgradi(slug, stevilka, naslov, opis):
     vrstice = "".join(f'\n                  <tr><td>{t}</td><td><a href="#tip-{n}">Tip {n}</a></td></tr>' for t, n in kljuci)
     telo = f"""
         <header class="page-header">
-          <span class="page-eyebrow">Poklicna matura · Matematika · Snov · {stevilka}</span>
+          <span class="page-eyebrow">Poklicna matura · {PREDMET} · Snov · {stevilka}</span>
           <h1>{naslov}</h1>
           <p>{p["uvod"]} Pod razlago vsakega podpoglavja so vsi tipi nalog z univerzalnim postopkom in primeri.</p>
           <div class="page-meta">
@@ -364,7 +371,7 @@ def zgradi(slug, stevilka, naslov, opis):
           <p>Po predmetnem izpitnem katalogu za poklicno maturo kandidat:</p>
           <ul>{cilji}
           </ul>
-          <p><strong>Na izpitu:</strong> {p["izpit"]} Formule iz kataloga so priložene izpitni poli.</p>
+          <p><strong>Na izpitu:</strong> {p["izpit"]}{DODATEK}</p>
         </div>
 
         <nav class="kazalo" id="kazalo" aria-label="Podpoglavja">
@@ -408,14 +415,14 @@ def zgradi(slug, stevilka, naslov, opis):
             <p>Ko predelaš razlago, preveri znanje z nalogami.</p>
           </div>
           <div class="link-list">
-            <a class="link-item" href="/views/poklicna_matematika/naloge/naloge.html?snov={slug}">
+            <a class="link-item" href="/views/{SLUG}/naloge/naloge.html?snov={slug}">
               <span class="link-item-text">
                 <strong>Naloge za vajo</strong>
                 <small>Naloge iz tega poglavja z rešitvami in postopki</small>
               </span>
               <span class="arrow">→</span>
             </a>
-            <a class="link-item" href="/views/poklicna_matematika/matura/po_snovi/naloge.html?poglavje={slug}">
+            <a class="link-item" href="/views/{SLUG}/matura/po_snovi/naloge.html?poglavje={slug}">
               <span class="link-item-text">
                 <strong>Maturitetne naloge iz te snovi</strong>
                 <small>Naloge iz pol poklicne mature</small>
@@ -425,10 +432,15 @@ def zgradi(slug, stevilka, naslov, opis):
           </div>
         </section>
 """
+    if not kljuci:  # poglavja brez tipov nalog (književnost): brez ključa
+        telo = re.sub(r'\n        <section class="subsection" id="kljuc">.*?</section>\n', "\n", telo, flags=re.S)
+        telo = telo.replace('\n            <li><a href="#kljuc"><span class="kazalo-st">?</span> Ključ: kateri tip naloge je to?</a></li>', "")
+        telo = telo.replace(" Pod razlago vsakega podpoglavja so vsi tipi nalog z univerzalnim postopkom in primeri.", "")
+        telo = telo.replace('\n            <div class="page-meta-item"><strong>0</strong><span>Tipov nalog</span></div>', "")
     pot = os.path.join(IZHOD, slug, f"{slug}_razlaga.html")
     os.makedirs(os.path.dirname(pot), exist_ok=True)
     with open(pot, "w", encoding="utf-8") as f:
-        f.write(GLAVA.format(naslov=naslov, opis=f"{naslov} za poklicno maturo iz matematike: {opis}") + telo + NOGA)
+        f.write(GLAVA.format(naslov=naslov, opis=f"{naslov} za poklicno maturo {IZ}: {opis}") + telo + NOGA)
     return len(sklopi), n_tipov
 
 
