@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Množina snovi in stehiometrija — razlaga za poklicno maturo | Učilnica.com</title>
+  <meta name="description" content="Množina snovi in stehiometrija za poklicno maturo iz kemije: Množina, masa, število delcev, masni delež, prebitek, izkoristek.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
+  <link rel="stylesheet" href="/style/snov.css">
+</head>
+<body>
+  <div id="header"></div>
+
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view">
+
+        <header class="page-header">
+          <span class="page-eyebrow">Poklicna matura · Kemija · Snov · 4.11</span>
+          <h1>Množina snovi in stehiometrija</h1>
+          <p>Kemijsko računstvo: množina, masa, število delcev in masni delež, množinska razmerja iz enačbe, prebitni reaktant in izkoristek ter molska prostornina plinov. Pod razlago vsakega podpoglavja so vsi tipi nalog z univerzalnim postopkom in primeri.</p>
+          <div class="page-meta">
+            <div class="page-meta-item"><strong>3</strong><span>Podpoglavij</span></div>
+            <div class="page-meta-item"><strong>6</strong><span>Tipov nalog</span></div>
+            <div class="page-meta-item"><strong>~15 min</strong><span>Branja</span></div>
+          </div>
+        </header>
+
+        <div class="matura-formule">
+          <h3>Kaj preverja izpitni katalog</h3>
+          <p>Po predmetnem izpitnem katalogu za poklicno maturo kandidat:</p>
+          <ul>
+              <li>s pomočjo definicijskih enačb izračuna množino, maso, število delcev, volumen in masni delež</li>
+              <li>razbere množinska razmerja in izračuna potrebne količine reaktantov in produktov</li>
+              <li>izračuna prebitek reaktantov in izkoristek kemijske reakcije</li>
+          </ul>
+          <p><strong>Na izpitu:</strong> Stehiometrijski račun je del skoraj vsake strukturirane naloge v 2. delu. Zapiši enačbo, razmerje in enote. Na izpitu sta dovoljena periodni sistem in žepno računalo brez grafičnega zaslona.</p>
+        </div>
+
+        <nav class="kazalo" id="kazalo" aria-label="Podpoglavja">
+          <h2>Podpoglavja</h2>
+          <ol>
+            <li><a href="#sklop-1"><span class="kazalo-st">1</span> Relativna molekulska masa, molska masa in masni delež</a></li>
+            <li><a href="#sklop-2"><span class="kazalo-st">2</span> Množina snovi in Avogadrova konstanta</a></li>
+            <li><a href="#sklop-3"><span class="kazalo-st">3</span> Množinska razmerja, prebitni reaktant in izkoristek</a></li>
+            <li><a href="#kljuc"><span class="kazalo-st">?</span> Ključ: kateri tip naloge je to?</a></li>
+          </ol>
+        </nav>
+
+        <!-- SKLOP 1 -->
+        <section class="sklop" id="sklop-1">
+          <header class="sklop-header">
+            <span class="sklop-num">4.11 · 1</span>
+            <h2>Relativna molekulska masa, molska masa in masni delež</h2>
+            <p>Mase molekul in formulskih enot ter sestava spojin.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <p><strong>Relativna molekulska masa</strong> \(M_r\) je vsota relativnih atomskih mas vseh atomov v formuli. Pri ionskih spojinah, ki nimajo molekul, govorimo o relativni masi formulske enote, računamo pa enako. Kot \(A_r\) je tudi \(M_r\) brez enote.</p>
+            <p>\(M_r(\text{H}_2\text{SO}_4) = 2 \cdot 1{,}01 + 32{,}07 + 4 \cdot 16{,}00 = 98{,}09\)</p>
+            <p><strong>Molska masa</strong> \(M\) je masa enega mola snovi. Številsko je enaka \(M_r\), le da ima enoto g/mol: \(M(\text{H}_2\text{SO}_4) = 98{,}09\ \text{g/mol}\).</p>
+            <p><strong>Masni delež</strong> \(w\) pove, kolikšen del mase celote pripada eni sestavini. Je brez enote (ali v odstotkih). Masni delež elementa v spojini izračunamo iz formule: masa vseh atomov tega elementa v formuli, deljena z \(M_r\) spojine. V vodi je \(w(\text{O}) = \dfrac{16{,}00}{18{,}02} = 0{,}888 = 88{,}8\ \%\). Tako lahko izračunamo tudi delež kristalne vode v hidratu, npr. v modri galici <span class="kf">CuSO<sub>4</sub>·5H<sub>2</sub>O</span>.</p>
+            <p><strong>Empirična formula</strong> pove najmanjše celoštevilsko razmerje atomov v spojini, <strong>molekulska formula</strong> dejansko število atomov v molekuli. Glukoza ima molekulsko formulo <span class="kf">C<sub>6</sub>H<sub>12</sub>O<sub>6</sub></span> in empirično <span class="kf">CH<sub>2</sub>O</span>. Iz masnih deležev (rezultat analize) dobimo empirično formulo; za molekulsko potrebujemo še molsko maso.</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-1">
+              <h4>Tip 1: Izračunaj molsko maso ali masni delež elementa</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Izračunaj masni delež vode v modri galici <span class="kf">CuSO<sub>4</sub>·5H<sub>2</sub>O</span>.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> podana je formula, sprašujejo za \(M_r\), \(M\), masni delež elementa ali vode, ali za to, v kateri spojini je delež elementa največji.</p><ul class="kljucne"><li>„molska masa“</li><li>„masni delež elementa“</li><li>„hidrat“, „kristalna voda“</li><li>„največ dušika“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Preštej atome vsakega elementa v formuli (indeks za oklepajem pomnoži vse v oklepaju, koeficient pred · pomnoži celo enoto).</p><div class="na-nalogi"><p>Cu 1, S 1, O \(4 + 5 = 9\), H \(5 \cdot 2 = 10\).</p></div></li>
+              <li><p class="korak">Seštej \(A_r\) pomnožene s številom atomov.</p><div class="na-nalogi"><p>\(M_r = 63{,}55 + 32{,}07 + 9 \cdot 16{,}00 + 10 \cdot 1{,}01 = 249{,}7\)</p></div></li>
+              <li><p class="korak">Izračunaj maso dela, ki te zanima (element ali voda).</p><div class="na-nalogi"><p>\(5 \cdot M_r(\text{H}_2\text{O}) = 5 \cdot 18{,}02 = 90{,}1\)</p></div></li>
+              <li><p class="korak">Deli z \(M_r\) celote in zapiši kot delež ali odstotek.</p><div class="na-nalogi"><p>\(w(\text{H}_2\text{O}) = \dfrac{90{,}1}{249{,}7} = 0{,}361 = 36{,}1\ \%\)</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Kateri gnojilo ima večji masni delež dušika: <span class="kf">NH<sub>4</sub>NO<sub>3</sub></span> ali <span class="kf">(NH<sub>4</sub>)<sub>2</sub>SO<sub>4</sub></span>?</p><p><span class="kf">NH<sub>4</sub>NO<sub>3</sub></span>: \(28{,}0/80{,}0 = 35\ \%\); <span class="kf">(NH<sub>4</sub>)<sub>2</sub>SO<sub>4</sub></span>: \(28{,}0/132{,}1 = 21\ \%\). Več ga ima amonijev nitrat.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Koliko gramov železa je v 1,00 kg <span class="kf">Fe<sub>2</sub>O<sub>3</sub></span>?</p><p>\(w(\text{Fe}) = 111{,}7/159{,}7 = 0{,}699\); \(m = 699\ \text{g}\).</p></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-2">
+              <h4>Tip 2: Iz masnih deležev določi empirično in molekulsko formulo</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Spojina vsebuje 40,0 % ogljika, 6,7 % vodika in 53,3 % kisika. Njena molska masa je 180 g/mol. Določi empirično in molekulsko formulo.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> podani so masni deleži ali mase elementov (ali produktov sežiga), zahtevajo formulo spojine.</p><ul class="kljucne"><li>„empirična formula“</li><li>„molekulska formula“</li><li>„elementna analiza“</li><li>„vsebuje … % “</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Vzemi 100 g spojine: odstotki postanejo grami.</p><div class="na-nalogi"><p>40,0 g C, 6,7 g H, 53,3 g O.</p></div></li>
+              <li><p class="korak">Maso vsakega elementa deli z njegovo \(A_r\): dobiš množine.</p><div class="na-nalogi"><p>C: \(40{,}0/12{,}01 = 3{,}33\); H: \(6{,}7/1{,}01 = 6{,}63\); O: \(53{,}3/16{,}00 = 3{,}33\) mol.</p></div></li>
+              <li><p class="korak">Vse deli z najmanjšo množino in zaokroži na cela števila (pri ,5 pomnoži z 2, pri ,33 s 3).</p><div class="na-nalogi"><p>\(1 : 2 : 1\) → empirična formula <span class="kf">CH<sub>2</sub>O</span>.</p></div></li>
+              <li><p class="korak">Molekulska formula: \(k = \dfrac{M}{M(\text{empirična})}\); vse indekse pomnoži s \(k\).</p><div class="na-nalogi"><p>\(M(\text{CH}_2\text{O}) = 30\); \(k = 180/30 = 6\) → <span class="kf">C<sub>6</sub>H<sub>12</sub>O<sub>6</sub></span>.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> 2,16 g aluminija se poveže z 1,92 g kisika. Formula oksida?</p><p>Al: 0,080 mol, O: 0,120 mol → 1 : 1,5 = 2 : 3 → <span class="kf">Al<sub>2</sub>O<sub>3</sub></span>.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Empirična formula je <span class="kf">CH</span>, molska masa 78 g/mol.</p><p>\(k = 78/13 = 6\) → <span class="kf">C<sub>6</sub>H<sub>6</sub></span> (benzen).</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 2 -->
+        <section class="sklop" id="sklop-2">
+          <header class="sklop-header">
+            <span class="sklop-num">4.11 · 2</span>
+            <h2>Množina snovi in Avogadrova konstanta</h2>
+            <p>Pretvarjanje med maso, množino in številom delcev.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <p><strong>Množina snovi</strong> \(n\) je osnovna fizikalna količina z enoto <strong>mol</strong>. En mol je množina snovi, ki vsebuje \(6{,}02 \cdot 10^{23}\) delcev (atomov, molekul, ionov ali formulskih enot). To število je <strong>Avogadrova konstanta</strong> \(N_A = 6{,}02 \cdot 10^{23}\ \text{mol}^{-1}\). Masa enega mola v gramih je številsko enaka \(M_r\): 1 mol ogljika ima 12,01 g, 1 mol vode 18,02 g.</p>
+            <figure class="slika slika--siroka">
+<svg viewBox="0 0 520 210" role="img" aria-label="Pretvorbe med maso, množino, številom delcev in prostornino" xmlns="http://www.w3.org/2000/svg"><defs><marker id="mnozina_snovi2-d1-k1" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="mnozina_snovi2-d1-k2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="mnozina_snovi2-d1-k3" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="mnozina_snovi2-d1-k4" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="mnozina_snovi2-d1-crn" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs><polyline class="s-crta" fill="none" points="125,52 200,52" marker-end="url(#mnozina_snovi2-d1-crn)"/><text class="s-txt-k1" x="162" y="44" text-anchor="middle">: M</text><polyline class="s-crta" fill="none" points="200,70 125,70" marker-end="url(#mnozina_snovi2-d1-crn)"/><text class="s-txt-k1" x="162" y="88" text-anchor="middle">· M</text><polyline class="s-crta" fill="none" points="320,52 390,52" marker-end="url(#mnozina_snovi2-d1-crn)"/><text class="s-txt-k1" x="355" y="44" text-anchor="middle">· N<tspan dy="3" style="font-size:0.72em">A</tspan><tspan dy="-3"></tspan></text><polyline class="s-crta" fill="none" points="390,70 320,70" marker-end="url(#mnozina_snovi2-d1-crn)"/><text class="s-txt-k1" x="355" y="88" text-anchor="middle">: N<tspan dy="3" style="font-size:0.72em">A</tspan><tspan dy="-3"></tspan></text><polyline class="s-crta" fill="none" points="250,83 250,147" marker-end="url(#mnozina_snovi2-d1-crn)"/><text class="s-txt-k1" x="244" y="120" text-anchor="end">· V<tspan dy="3" style="font-size:0.72em">m</tspan><tspan dy="-3"></tspan></text><polyline class="s-crta" fill="none" points="270,147 270,83" marker-end="url(#mnozina_snovi2-d1-crn)"/><text class="s-txt-k1" x="276" y="120" text-anchor="start">: V<tspan dy="3" style="font-size:0.72em">m</tspan><tspan dy="-3"></tspan></text><rect class="s-lik-2" x="15" y="37" width="110" height="46" rx="4"/><text class="s-txt-b" x="70" y="56.5" text-anchor="middle">masa m</text><text class="s-txt-muted" x="70" y="71.5" text-anchor="middle" style="font-size:12px">(g)</text><rect class="s-lik" x="200" y="37" width="120" height="46" rx="4"/><text class="s-txt-b" x="260" y="56.5" text-anchor="middle">množina n</text><text class="s-txt-muted" x="260" y="71.5" text-anchor="middle" style="font-size:12px">(mol)</text><rect class="s-lik-2" x="390" y="37" width="120" height="46" rx="4"/><text class="s-txt-b" x="450" y="56.5" text-anchor="middle">število delcev N</text><text class="s-txt-muted" x="450" y="71.5" text-anchor="middle" style="font-size:12px"></text><rect class="s-lik-2" x="180" y="147" width="160" height="46" rx="4"/><text class="s-txt-b" x="260" y="166.5" text-anchor="middle">prostornina plina V</text><text class="s-txt-muted" x="260" y="181.5" text-anchor="middle" style="font-size:12px">(L)</text></svg>
+<figcaption>Množina je središče vseh pretvorb: iz mase jo dobimo z deljenjem z molsko maso, iz števila delcev z deljenjem z Avogadrovo konstanto, iz prostornine plina (pri normalnih pogojih) z deljenjem z molsko prostornino.</figcaption>
+</figure>
+            <p>\[ n = \frac{m}{M} \qquad N = n \cdot N_A \]</p>
+            <p>Pozorno preberi, <em>katere</em> delce štejemo. V 1 molu vode je \(6{,}02 \cdot 10^{23}\) molekul, a trikrat toliko atomov (\(3 \cdot N_A\)), ker ima vsaka molekula 3 atome. V 1 molu <span class="kf">CaCl<sub>2</sub></span> je 1 mol ionov <span class="kf">Ca<sup>2+</sup></span> in 2 mola ionov <span class="kf">Cl<sup>−</sup></span>.</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-3">
+              <h4>Tip 3: Pretvori med maso, množino in številom delcev</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Koliko molekul in koliko atomov kisika je v 8,80 g ogljikovega dioksida?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> podana je masa, množina ali število delcev, iskana je druga od teh količin.</p><ul class="kljucne"><li>„koliko molekul“, „koliko atomov“</li><li>„množina“</li><li>„koliko gramov“</li><li>„ionov“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Izračunaj molsko maso snovi.</p><div class="na-nalogi"><p>\(M(\text{CO}_2) = 12{,}01 + 2 \cdot 16{,}00 = 44{,}01\ \text{g/mol}\)</p></div></li>
+              <li><p class="korak">Pretvori v množino (vedno prek \(n\)).</p><div class="na-nalogi"><p>\(n = \dfrac{8{,}80\ \text{g}}{44{,}01\ \text{g/mol}} = 0{,}200\ \text{mol}\)</p></div></li>
+              <li><p class="korak">Pomnoži z \(N_A\) za število molekul (formulskih enot).</p><div class="na-nalogi"><p>\(N = 0{,}200 \cdot 6{,}02 \cdot 10^{23} = 1{,}20 \cdot 10^{23}\) molekul</p></div></li>
+              <li><p class="korak">Če sprašujejo za atome ali ione, pomnoži s številom teh delcev v eni formuli.</p><div class="na-nalogi"><p>Vsaka molekula ima 2 atoma O: \(2{,}41 \cdot 10^{23}\) atomov kisika.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Masa \(3{,}01 \cdot 10^{22}\) atomov železa?</p><p>\(n = 0{,}0500\ \text{mol}\); \(m = 0{,}0500 \cdot 55{,}85 = 2{,}79\ \text{g}\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Koliko molov ionov je v 0,10 mol <span class="kf">Al<sub>2</sub>(SO<sub>4</sub>)<sub>3</sub></span>?</p><p>Vsaka enota ima 5 ionov: 0,50 mol ionov.</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 3 -->
+        <section class="sklop" id="sklop-3">
+          <header class="sklop-header">
+            <span class="sklop-num">4.11 · 3</span>
+            <h2>Množinska razmerja, prebitni reaktant in izkoristek</h2>
+            <p>Stehiometrični računi iz urejene enačbe.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <p><strong>Stehiometrija</strong> je računanje množin in mas snovi, ki sodelujejo v reakciji. Vedno poteka v istih korakih: znano maso pretvorimo v množino, z razmerjem koeficientov izračunamo množino iskane snovi, nato jo pretvorimo v maso (ali prostornino plina, število delcev).</p>
+            <p>\[ m(\text{A}) \xrightarrow{:\,M(\text{A})} n(\text{A}) \xrightarrow{\cdot\, \frac{b}{a}} n(\text{B}) \xrightarrow{\cdot\, M(\text{B})} m(\text{B}) \]</p>
+            <p>Reaktanti pogosto niso v natanko pravem razmerju. Tisti, ki ga zmanjka prvi, je <strong>omejujoči (limitni) reaktant</strong>: le on določa, koliko produkta nastane. Drugega ostane nekaj neporabljenega; to je <strong>prebitni reaktant</strong>. Kateri je omejujoči, ugotovimo tako, da primerjamo dejansko razmerje množin z razmerjem koeficientov.</p>
+            <p>V praksi dobimo manj produkta, kot ga napove račun (stranske reakcije, izgube pri filtriranju, nepopolna reakcija). Razmerje med dejansko in teoretično maso produkta je <strong>izkoristek</strong> reakcije. Če reaktant ni čist, upoštevamo samo njegov čisti del: \(m_{\text{čista}} = w \cdot m_{\text{vzorec}}\).</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-4">
+              <h4>Tip 4: Iz mase ene snovi izračunaj maso druge</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Koliko gramov ogljikovega dioksida nastane pri popolnem gorenju 10,0 g propana? (<span class="ke">C<sub>3</sub>H<sub>8</sub> + 5O<sub>2</sub>&nbsp;→ 3CO<sub>2</sub> + 4H<sub>2</sub>O</span>)</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> podana je masa (množina, prostornina) ene snovi v reakciji, iskana je količina druge snovi.</p><ul class="kljucne"><li>„koliko gramov nastane“</li><li>„koliko je potrebno“</li><li>„zreagira“</li><li>„pri popolni reakciji“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Zapiši urejeno enačbo (Tip 1).</p><div class="na-nalogi"><p><span class="ke">C<sub>3</sub>H<sub>8</sub> + 5O<sub>2</sub>&nbsp;→ 3CO<sub>2</sub> + 4H<sub>2</sub>O</span></p></div></li>
+              <li><p class="korak">Znano snov pretvori v množino.</p><div class="na-nalogi"><p>\(n(\text{C}_3\text{H}_8) = \dfrac{10{,}0}{44{,}1} = 0{,}227\ \text{mol}\)</p></div></li>
+              <li><p class="korak">Z razmerjem koeficientov izračunaj množino iskane snovi.</p><div class="na-nalogi"><p>\(n(\text{CO}_2) = 3 \cdot n(\text{C}_3\text{H}_8) = 0{,}680\ \text{mol}\)</p></div></li>
+              <li><p class="korak">Pretvori v zahtevano količino.</p><div class="na-nalogi"><p>\(m(\text{CO}_2) = 0{,}680 \cdot 44{,}0 = 29{,}9\ \text{g}\)</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Koliko litrov vodika (normalni pogoji) nastane pri reakciji 2,43 g magnezija s klorovodikovo kislino?</p><p><span class="ke">Mg + 2HCl&nbsp;→ MgCl<sub>2</sub> + H<sub>2</sub></span>: \(n(\text{Mg}) = 0{,}100\ \text{mol} = n(\text{H}_2)\); \(V = 2{,}24\ \text{L}\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Koliko gramov 80-odstotnega apnenca potrebujemo za 28,0 g <span class="kf">CaO</span>?</p><p>\(n(\text{CaO}) = 0{,}500\ \text{mol} = n(\text{CaCO}_3)\); 50,0 g čistega, \(50{,}0 / 0{,}80 = 62{,}5\ \text{g}\) apnenca.</p></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-5">
+              <h4>Tip 5: Določi omejujoči reaktant in maso produkta</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>V posodi je 5,00 g vodika in 32,0 g kisika. Plina zreagirata v vodo. Kateri reaktant je v prebitku in koliko ga ostane? Koliko vode nastane?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> podani sta količini <em>dveh</em> reaktantov; sprašujejo, kateri zmanjka, koliko ostane ali koliko produkta nastane.</p><ul class="kljucne"><li>„v prebitku“</li><li>„omejujoči reaktant“</li><li>„koliko ostane“</li><li>podani dve masi reaktantov</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Uredi enačbo in izračunaj množini obeh reaktantov.</p><div class="na-nalogi"><p><span class="ke">2H<sub>2</sub> + O<sub>2</sub>&nbsp;→ 2H<sub>2</sub>O</span>; \(n(\text{H}_2) = 5{,}00/2{,}02 = 2{,}48\ \text{mol}\), \(n(\text{O}_2) = 32{,}0/32{,}0 = 1{,}00\ \text{mol}\).</p></div></li>
+              <li><p class="korak">Izračunaj, koliko drugega reaktanta potrebuješ za prvega, in primerjaj z dejanskim.</p><div class="na-nalogi"><p>Za 1,00 mol <span class="kf">O<sub>2</sub></span> potrebujemo 2,00 mol <span class="kf">H<sub>2</sub></span>; imamo 2,48 mol, vodika je dovolj.</p></div></li>
+              <li><p class="korak">Reaktant, ki ga je premalo, je omejujoči; iz njega računaj produkt.</p><div class="na-nalogi"><p>Omejujoči je kisik: \(n(\text{H}_2\text{O}) = 2 \cdot 1{,}00 = 2{,}00\ \text{mol}\), \(m = 36{,}0\ \text{g}\).</p></div></li>
+              <li><p class="korak">Prebitek: od dejanske množine odštej porabljeno.</p><div class="na-nalogi"><p>\(2{,}48 - 2{,}00 = 0{,}48\ \text{mol}\) <span class="kf">H<sub>2</sub></span>, to je \(0{,}97\ \text{g}\) vodika v prebitku.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> 0,20 mol <span class="kf">N<sub>2</sub></span> in 0,30 mol <span class="kf">H<sub>2</sub></span>: koliko <span class="kf">NH<sub>3</sub></span> lahko nastane?</p><p>Za 0,20 mol <span class="kf">N<sub>2</sub></span> bi rabili 0,60 mol <span class="kf">H<sub>2</sub></span>; omejujoči je vodik: \(n(\text{NH}_3) = \tfrac{2}{3} \cdot 0{,}30 = 0{,}20\ \text{mol}\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Ali lahko omejujoči reaktant določiš s primerjavo mas?</p><p>Ne, primerjati moraš množine glede na koeficiente.</p></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-6">
+              <h4>Tip 6: Izračunaj izkoristek reakcije ali čistost vzorca</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>S segrevanjem 10,0 g kalcijevega karbonata smo dobili 5,04 g kalcijevega oksida. Izračunaj izkoristek reakcije <span class="ke">CaCO<sub>3</sub>&nbsp;→ CaO + CO<sub>2</sub></span>.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> podana je dejansko dobljena masa produkta (ali masa nečistega vzorca), sprašujejo za izkoristek, čistost ali masni delež snovi v vzorcu.</p><ul class="kljucne"><li>„izkoristek“</li><li>„dobili smo“</li><li>„čistost“</li><li>„vzorec vsebuje“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Izračunaj teoretično maso produkta (Tip 2), kot da bi vse zreagiralo.</p><div class="na-nalogi"><p>\(n(\text{CaCO}_3) = 10{,}0/100{,}1 = 0{,}0999\ \text{mol}\); \(m_{\text{teor}}(\text{CaO}) = 0{,}0999 \cdot 56{,}1 = 5{,}60\ \text{g}\).</p></div></li>
+              <li><p class="korak">Deli dejansko maso s teoretično.</p><div class="na-nalogi"><p>\(\eta = \dfrac{5{,}04}{5{,}60} \cdot 100\ \% = 90{,}0\ \%\)</p></div></li>
+              <li><p class="korak">Za čistost obrni račun: iz produkta izračunaj maso čiste snovi in jo deli z maso vzorca.</p><div class="na-nalogi"><p>Če bi bil izkoristek 100 %, bi 5,04 g <span class="kf">CaO</span> pomenilo 9,00 g <span class="kf">CaCO<sub>3</sub></span>, torej 90,0 % čist vzorec.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Teoretično nastane 40 g produkta, izkoristek je 75 %. Koliko ga dobimo?</p><p>\(0{,}75 \cdot 40 = 30\ \text{g}\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> 2,00 g vzorca železa da z kislino 0,0300 mol <span class="kf">H<sub>2</sub></span>. Masni delež Fe?</p><p><span class="ke">Fe + 2HCl&nbsp;→ FeCl<sub>2</sub> + H<sub>2</sub></span>: 0,0300 mol Fe = 1,68 g; \(w = 84\ \%\).</p></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="subsection" id="kljuc">
+          <div class="subsection-head">
+            <h2>Ključ: kateri tip naloge je to?</h2>
+            <p>Poišči besedo iz navodila naloge in skoči na pravi postopek.</p>
+          </div>
+          <div class="info-card">
+            <div class="tabela-wrap">
+              <table class="tabela">
+                <thead><tr><th>V besedilu naloge piše …</th><th>Tip</th></tr></thead>
+                <tbody>
+                  <tr><td>„molska masa“, „masni delež elementa“, „hidrat“</td><td><a href="#tip-1">Tip 1</a></td></tr>
+                  <tr><td>„empirična“, „molekulska formula“, „vsebuje … %“</td><td><a href="#tip-2">Tip 2</a></td></tr>
+                  <tr><td>„koliko molekul, atomov, ionov“, „koliko gramov“</td><td><a href="#tip-3">Tip 3</a></td></tr>
+                  <tr><td>„koliko gramov nastane“, „koliko je potrebno“</td><td><a href="#tip-4">Tip 4</a></td></tr>
+                  <tr><td>dve masi reaktantov, „v prebitku“, „koliko ostane“</td><td><a href="#tip-5">Tip 5</a></td></tr>
+                  <tr><td>„izkoristek“, „čistost“, „dobili smo“</td><td><a href="#tip-6">Tip 6</a></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>Pogoste napake</h2>
+          </div>
+          <div class="info-card">
+            <ul>
+              <li>Računaš z masami namesto z množinami v razmerju iz enačbe.</li>
+              <li>Ne ugotoviš, kateri reaktant je v prebitku.</li>
+              <li>Izkoristek računaš kot teoretično/dejansko namesto dejansko/teoretično.</li>
+              <li>Rezultat zaokrožiš na preveč ali premalo značilnih mest.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>Vadi naprej</h2>
+            <p>Ko predelaš razlago, preveri znanje z nalogami.</p>
+          </div>
+          <div class="link-list">
+            <a class="link-item" href="/views/poklicna_kemija/naloge/naloge.html?snov=mnozina_stehiometrija">
+              <span class="link-item-text">
+                <strong>Naloge za vajo</strong>
+                <small>Naloge iz tega poglavja z rešitvami in postopki</small>
+              </span>
+              <span class="arrow">→</span>
+            </a>
+            <a class="link-item" href="/views/poklicna_kemija/matura/po_snovi/naloge.html?poglavje=mnozina_stehiometrija">
+              <span class="link-item-text">
+                <strong>Maturitetne naloge iz te snovi</strong>
+                <small>Naloge iz pol poklicne mature</small>
+              </span>
+              <span class="arrow">→</span>
+            </a>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+
+  <script src="/components/components.js"></script>
+</body>
+</html>
