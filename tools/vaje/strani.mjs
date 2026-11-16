@@ -22,7 +22,7 @@ for (const s of snovi) {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>${naslov}: naloge za vajo | Piflar.si</title>
+  <title>${naslov}: naloge za vajo | Učilnica.com</title>
   <meta name="description" content="${esc(`${predmet}, ${s.naslov.toLowerCase()}: naloge za vajo od lahkih do zelo težkih, z rezultati in postopki.`)}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

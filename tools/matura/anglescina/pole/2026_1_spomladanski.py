@@ -63,7 +63,7 @@ At dawn a fishing boat came into the bay, and its captain walked up to the house
 
 My father recovered. He did not say much, but the next brown envelope from school contained, along with my maths, a diagram in his handwriting: a girl, a handle and a ship, connected by a long, careful line.
 
-(Vadbeno besedilo Piflar.si)""", [
+(Vadbeno besedilo Učilnica.com)""", [
             ("Why did the father accept the job at the lighthouse?", "To keep the family together. / So they could stay together.", "»the only job he could find that would keep us together« – namen, zato odgovor z to + nedoločnik ali so (that)."),
             ("How did the narrator receive her school lessons?", "By post. / In an envelope (by post).", "»the school sent my lessons by post« – dovolj je način: by post."),
             ("What did the father use to explain things?", "(Pencil-drawn) diagrams. / A pencil and an envelope.", "»most things could be explained with a pencil and the back of an envelope« in »drew diagrams of everything«."),
@@ -94,7 +94,7 @@ Some experts believe that the traditional line will soon disappear. Others are n
 
 Whatever happens, the British are unlikely to give up their reputation without a fight. A recent survey found that nine out of ten adults still feel embarrassed [8]. Perhaps the queue will survive simply because nobody wants to be the first [9].
 
-(Vadbeno besedilo Piflar.si)""", {
+(Vadbeno besedilo Učilnica.com)""", {
             "A": "which allowed them to buy a fixed amount of sugar, butter and meat",
             "B": "but the feeling that someone else is getting an advantage",
             "C": "when they see somebody ignoring the line",
@@ -133,7 +133,7 @@ The new products are more expensive, and some teachers complain that they do not
 
 For Sarah Holt, the debate is about more than craft materials. "If we can't give up something as small as glitter," she asks, "how _14_ we ever give up the bigger things?" The question, she adds, is one that every school _15_ to ask.
 
-(Vadbeno besedilo Piflar.si)""", [
+(Vadbeno besedilo Učilnica.com)""", [
             ("because / as / since", "primer"),
             ("that / which", "Oziralni zaimek za stvar (something that sparkles); pri something je pogostejši that."),
             ("have", "Present perfect v trpniku: microplastics have been found (osebek v množini)."),
@@ -164,7 +164,7 @@ Despite the _9_ (OPPOSE), the number of female cyclists continued to grow. Cycli
 
 Historians now see the bicycle as an important step towards political _12_ (EQUAL). It gave women physical confidence, helped them meet and organise, and made the idea of a woman travelling alone seem _13_ (ORDINARILY) rather than scandalous. As one suffragist wrote, a woman on a bicycle was a picture of _14_ (FREE) that nobody could forget. More than a century later, the image has lost none of its _15_ (SIGNIFY).
 
-(Vadbeno besedilo Piflar.si)""", [
+(Vadbeno besedilo Učilnica.com)""", [
             ("comfortable", "primer"),
             ("enthusiastic", "Pred samostalnikom riders je pridevnik: enthusiasm → enthusiastic (most enthusiastic)."),
             ("severely", "Prislov ob pridevniku/deležniku limited: severe → severely."),
@@ -259,7 +259,7 @@ What happened next surprised everyone, including her. A girl from my school post
 
 The shop is still there. It has a computer now, which Mrs Maddox refuses to touch. "It keeps telling me what I already know," she complains, and goes on writing in her exercise books.
 
-(Vadbeno besedilo Piflar.si)""", [
+(Vadbeno besedilo Učilnica.com)""", [
             ("Why might the date on the sign not be reliable?", "It was painted after a (good) lunch.", "Mrs Maddox šaljivo pove, da je datum napisal ded »after a particularly good lunch«."),
             ("Apart from money, how was the narrator paid?", "(Partly) in books.", "»paid it partly in books«."),
             ("According to Mrs Maddox, what is the advantage of a book over money?", "It stays in your head.", "»A book goes into your head and stays.«"),
@@ -303,7 +303,7 @@ Not _10_ is happy about the return, however. Some farmers complain that beavers 
 
 To reduce conflict, the new rules allow beavers _12_ be relocated if they become a problem, and farmers can apply _13_ financial support. Experts say the key is patience. "We have lived without beavers for so long _14_ we have forgotten how to live with them," says the ecologist. "We will have to learn again." _15_ the challenges, most people seem to agree that the return of the beaver is a rare piece of good news for British nature.
 
-(Vadbeno besedilo Piflar.si)""", [
+(Vadbeno besedilo Učilnica.com)""", [
             ("have", "primer"),
             ("for", "permission for somebody to do something."),
             ("were", "Trpnik v preteklem času, množina: they were killed."),
@@ -336,7 +336,7 @@ These days Rupert is watched more carefully. Before we go out, we check that all
 
 Was buying him a mistake? Not exactly. The floors are cleaner than they _12_ (BE) for years. But if I _13_ (KNOW) how much attention a robot needs, I might have chosen a simple broom instead. At least a broom _14_ (NOT / RUN) away. And by next summer, I suspect, we _15_ (SPEND) more money on repairs than the machine itself cost.
 
-(Vadbeno besedilo Piflar.si)""", [
+(Vadbeno besedilo Učilnica.com)""", [
             ("bought", "primer"),
             ("will do / 'll do", "Napoved v poročanem govoru: »It will do everything« (premi govor v narekovajih)."),
             ("left", "Pretekla ponavljajoča se dejanja v pripovedi: past simple."),

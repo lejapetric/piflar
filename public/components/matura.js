@@ -679,7 +679,7 @@ async function stranPole() {
   SNOVI = Object.fromEntries(snovi.map((s) => [s.slug, s]));
   if (leto) {
     document.querySelector(".page-header h1").textContent = `Matura ${leto}`;
-    document.title = `Matura ${leto}: maturitetne pole | Piflar.si`;
+    document.title = `Matura ${leto}: maturitetne pole | Učilnica.com`;
   }
   if (!pole.length) {
     koren.replaceChildren(el("p", "mn-prazno", "Pole za to leto še pripravljamo."));
@@ -768,7 +768,7 @@ async function stranSnov() {
   else if (poglavje) naslov = `${poglavje.stevilka} ${poglavje.naslov}`;
   else if (sklop) naslov = `${sklop}. ${SKLOPI[sklop]}`;
   document.querySelector(".page-header h1").textContent = naslov;
-  document.title = `${tema?.naslov ?? poglavje?.naslov ?? naslov}: maturitetne naloge | Piflar.si`;
+  document.title = `${tema?.naslov ?? poglavje?.naslov ?? naslov}: maturitetne naloge | Učilnica.com`;
   const opis = document.querySelector(".page-header p");
   if (poglavje && opis) {
     const ime = tema ? `podpoglavje ${tema.naslov.toLowerCase()} (${poglavje.naslov})` : `poglavje ${poglavje.naslov.toLowerCase()}`;

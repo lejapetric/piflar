@@ -32,7 +32,7 @@ for (const predmet of predmeti) {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Naloge: ${esc(ime.toLowerCase())} | Piflar.si</title>
+  <title>Naloge: ${esc(ime.toLowerCase())} | Učilnica.com</title>
   <meta name="description" content="${esc(`${ime}: naloge za vajo po snovi in težavnosti, od čisto osnovnih do zelo zahtevnih, z rezultati in postopki.`)}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>

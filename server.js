@@ -9,6 +9,6 @@ await poveziBazo();
 
 app.listen(port, () => {
   console.log(
-    `Piflar.si started in ${process.env.NODE_ENV || "development"} listening on port ${port}!`
+    `Učilnica.com started in ${process.env.NODE_ENV || "development"} listening on port ${port}!`
   );
 });

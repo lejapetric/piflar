@@ -67,7 +67,7 @@ The night train still has its problems, however. Tickets are often more expensiv
 
 Still, governments are beginning to listen. France has banned short domestic flights where a train journey of less than two and a half hours exists, and several countries have promised money for new sleeper routes. For travellers like Lena, the message is simple: "The journey is part of the holiday."
 
-(Vadbeno besedilo Piflar.si)""", [
+(Vadbeno besedilo Učilnica.com)""", [
             ("What made flying cheaper than night trains twenty years ago?", "Budget airlines.", "»Budget airlines had made it cheaper to fly …«."),
             ("Which company started the revival of night trains?", "Austrian Railways.", "»Austrian Railways took over several routes«."),
             ("What did experts think of the company's decision?", "That it was a mistake.", "»Many experts thought the decision was a mistake«."),
@@ -100,7 +100,7 @@ Of course, failure is never pleasant. [8] But it is often the moment when real l
 
 As one teacher puts it, "If my students never make mistakes, the work is too easy." [9] Perhaps, then, the most useful lesson a school can teach is how to get up again. [10]
 
-(Vadbeno besedilo Piflar.si)""", {
+(Vadbeno besedilo Učilnica.com)""", {
             "A": "Many famous inventors failed many times before they succeeded.",
             "B": "In the long run, this can be more harmful than helpful.",
             "C": "This fear, they say, can stop us from learning.",
@@ -139,7 +139,7 @@ The age of the lighthouse keeper came to an end in 1998, _9_ the last lighthouse
 
 One former keeper, now in his eighties, still misses the life. "People think it was lonely," he says, "but I have never felt as free as I _13_ out there. The sea teaches you patience. You can't hurry a storm – you just wait _14_ it passes." He keeps his old logbook on the kitchen table, and its pages, _15_ are full of notes on wind and waves, still smell of salt.
 
-(Vadbeno besedilo Piflar.si)""", [
+(Vadbeno besedilo Učilnica.com)""", [
             ("whatever", "primer"),
             ("on", "depend on."),
             ("for", "for weeks at a time – trajanje."),
@@ -168,7 +168,7 @@ We met him in the hotel lobby an hour later. While the two of them _11_ (EXCHANG
 
 Since then she _14_ (JOIN) a birdwatching club, and next spring she _15_ (TRAVEL) to Portugal again – this time with binoculars.
 
-(Vadbeno besedilo Piflar.si)""", [
+(Vadbeno besedilo Učilnica.com)""", [
             ("flew", "primer"),
             ("arrived", "Zaporedje dejanj v pripovedi: past simple."),
             ("had been delayed", "Trpnik v predpretekliku: zamuda je bila pred prihodom."),
@@ -254,7 +254,7 @@ In December, Mr Adler fell ill. My mother took him soup and, because he could no
 
 He recovered by the spring, and in April he told us he was leaving. A letter had come from Vienna. On his last evening he played for us in the front room, with the curtains open, and people stopped in the street to listen. The next morning his room was empty, except for an envelope addressed to me. Inside was a ticket for a concert, and a note: "For the girl who listens through walls."
 
-(Vadbeno besedilo Piflar.si)""", [
+(Vadbeno besedilo Učilnica.com)""", [
             ("What did the narrator's mother think when she saw the cello?", "That she should not have written 'quiet' (in the card). / That he would not be quiet.", "»she regretted the word 'quiet'«."),
             ("What suggested that Mr Adler had once had money?", "His (once expensive) coat.", "»a coat that had once been expensive«."),
             ("Where did the mother keep the rent money?", "In the biscuit tin.", "»hid it in the biscuit tin«."),
@@ -287,7 +287,7 @@ Some families have found their own solutions. [8] One woman photographed every o
 
 In the end, perhaps what we keep says less about the objects themselves than about who we are. [9] A drawer of "useless" things may, in fact, be a kind of autobiography. [10]
 
-(Vadbeno besedilo Piflar.si)""", {
+(Vadbeno besedilo Učilnica.com)""", {
             "A": "We are often unwilling to sell something for the price we would pay to buy it.",
             "B": "Each of these objects carries a story.",
             "C": "That approach usually makes the anxiety worse.",
@@ -328,7 +328,7 @@ Scientists have become interested _10_ well. Brain scans show that experienced w
 
 Not everyone is optimistic about the future. Although children learn the language at school, few of them use it in everyday life, _12_ there are fewer and fewer reasons to whistle across a valley. "_13_ a language is not spoken at home, it becomes a museum piece," warns one teacher. Others point out that Silbo has survived _14_ worse moments. As long as there are people willing to learn it, they say, the mountains of La Gomera will not fall silent – _15_ yet.
 
-(Vadbeno besedilo Piflar.si)""", [
+(Vadbeno besedilo Učilnica.com)""", [
             ("without", "primer"),
             ("which / that", "Oziralni zaimek za stvari: a language which consists of."),
             ("on", "on the other hand – stalna zveza."),
@@ -361,7 +361,7 @@ Experts disagree about how serious the problem is. Some see ghosting as a sign o
 
 What most agree on is that a short, honest message is almost always _12_ (PREFER) to silence. It does not need to be long or detailed. A simple "I don't think this is working, but I wish you well" can save the other person weeks of _13_ (CERTAIN). As one psychologist puts it, "Closure is a form of _14_ (KIND). It costs us a few seconds, and it shows that we respect the other person's _15_ (FEEL)."
 
-(Vadbeno besedilo Piflar.si)""", [
+(Vadbeno besedilo Učilnica.com)""", [
             ("suddenly", "primer"),
             ("unpleasant", "Pridevnik pred conversations; smisel: neprijetni pogovori."),
             ("relationships", "our + samostalnik v množini: relation → relationships."),

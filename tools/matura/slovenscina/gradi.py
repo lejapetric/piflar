@@ -251,7 +251,7 @@ def priloga(b, pola_oznaka):
     return '<div class="sl-priloga">' + "".join(deli) + "</div>"
 
 
-VIR = ("Vadbena pola Piflar.si. Zgradba, vrsta nalog in točkovanje sledijo uradni poli splošne mature "
+VIR = ("Vadbena pola Učilnica.com. Zgradba, vrsta nalog in točkovanje sledijo uradni poli splošne mature "
        "({opis}), {nase} pa so naši. Uradne pole izdaja Državni izpitni center (RIC), ki ima nanje vse avtorske pravice.")
 GRADNIKI = {"N": N, "P": P, "B": B, "E": E, "tabela": tabela, "izbire": izbire, "slovar": slovar, "citat": citat, "R": R}
 
@@ -278,7 +278,7 @@ def zgradi(pot):
     izbira = "dveh razpravljalnih tem in interpretativnega eseja" if len(razp) > 1 else "razpravljalnega in interpretativnega eseja"
     pole = [{
         "id": f"slovenscina-{leto}-{rok}-1", **skupno, "datum": ns["DATUM1"], "stevilka": 1,
-        "naslov": f"Slovenščina, {opis_roka}, izpitna pola 1: šolski esej (vadbena pola Piflar.si)",
+        "naslov": f"Slovenščina, {opis_roka}, izpitna pola 1: šolski esej (vadbena pola Učilnica.com)",
         "navodilo": f"120 minut, šolski esej (najmanj {besede} besed), 50 točk. Izberete enega od {izbira}.",
         "vir": VIR.format(opis=f"{opis_roka}, izpitna pola 1", nase="naslovi in navodila esejev ter rešitve")
                + " Izhodiščnih odlomkov ne objavljamo; poiščeš jih v svoji izdaji dela.",
@@ -290,7 +290,7 @@ def zgradi(pot):
     assert vsota == tock2, f"{pot}: pola 2 ima {vsota} točk namesto {tock2}"
     pole.append({
         "id": f"slovenscina-{leto}-{rok}-2", **skupno, "datum": ns["DATUM2"], "stevilka": 2,
-        "naslov": f"Slovenščina, {opis_roka}, izpitna pola 2: razčlemba izhodiščnega besedila (vadbena pola Piflar.si)",
+        "naslov": f"Slovenščina, {opis_roka}, izpitna pola 2: razčlemba izhodiščnega besedila (vadbena pola Učilnica.com)",
         "navodilo": f"90 minut, {len(izdelane)} nalog, {tock2} točk.",
         "vir": VIR.format(opis=f"{opis_roka}, izpitna pola 2", nase="izhodiščno besedilo, naloge in rešitve"),
         "priloga": priloga(ns["PRILOGA"], f"vadbena pola {oznaka}"),

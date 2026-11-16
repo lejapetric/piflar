@@ -46,7 +46,7 @@ def S(naslov, poglavja, uvod, deli, slika=None):
     return g.S(naslov, poglavja, uvod, deli, slika)
 
 
-VIR = ("Vadbena pola Piflar.si. Zgradba, vrsta nalog in točkovanje sledijo uradni poli splošne mature "
+VIR = ("Vadbena pola Učilnica.com. Zgradba, vrsta nalog in točkovanje sledijo uradni poli splošne mature "
        "({opis}), besedila in podatki pa so naši. Uradne pole izdaja Državni izpitni center (RIC), "
        "ki ima nanje vse avtorske pravice.")
 
@@ -66,7 +66,7 @@ def zgradi(pot):
         random.Random(f"biologija-{leto}-{rok}-{izvedba}").shuffle(cilji)
         pole.append({
             "id": f"biologija-{leto}-{rok}{pripona}-1", **skupno, "stevilka": 1,
-            "naslov": f"Biologija, {opis_roka}, izpitna pola 1 (vadbena pola Piflar.si)",
+            "naslov": f"Biologija, {opis_roka}, izpitna pola 1 (vadbena pola Učilnica.com)",
             "navodilo": "90 minut, 40 nalog izbirnega tipa, vsaka je vredna 1 točko (40 točk). Dovoljeno je računalo.",
             "vir": VIR.format(opis=f"{opis_roka}, izpitna pola 1"),
             "naloge": [{"id": str(i + 1), **g.izbirna(n, c)} for i, (n, c) in enumerate(zip(pola1, cilji))],
@@ -80,7 +80,7 @@ def zgradi(pot):
             naloge.append({"id": str(i + 1), **g.strukturirana(i + 1, s)})
         pole.append({
             "id": f"biologija-{leto}-{rok}{pripona}-2", **skupno, "stevilka": 2,
-            "naslov": f"Biologija, {opis_roka}, izpitna pola 2 (vadbena pola Piflar.si)",
+            "naslov": f"Biologija, {opis_roka}, izpitna pola 2 (vadbena pola Učilnica.com)",
             "navodilo": ("90 minut, 7 strukturiranih nalog po 10 točk. V delu A (naloge 1–5) izberi in reši 3, "
                          "v delu B (nalogi 6 in 7) izberi in reši 1 (40 točk). Dovoljeno je računalo."),
             "vir": VIR.format(opis=f"{opis_roka}, izpitna pola 2"),

@@ -62,7 +62,7 @@ At four o'clock, the phone rang. It was Sophie's mother. Her marquee had collaps
 
 That evening, forty teenagers and sixty parents squeezed into the living room, the hall and the kitchen. Someone's grandmother played the piano. The photographs, taken on the stairs, were the best anybody could remember. And Martin, to his own surprise, did not want to leave.
 
-(Vadbeno besedilo Piflar.si)""", [
+(Vadbeno besedilo Učilnica.com)""", [
             ("How did Greg let the family know about the pre-party?", "He announced it at dinner.", "»He simply announced it at dinner«."),
             ("Where were the photographs going to be taken?", "In the garden.", "»Photos in the garden.«"),
             ("How had Martin wanted to arrive at the ball?", "Quietly, with his two best friends.", "»hoping to arrive at the ball quietly with his two best friends«."),
@@ -108,7 +108,7 @@ Some experts suggest that we should choose animals that are well suited _11_ lif
 
 Whatever the answer, most people agree _13_ the way we think about pets is changing. Animals are _14_ longer seen as objects that can be owned, but as individuals with feelings and needs of _15_ own.
 
-(Vadbeno besedilo Piflar.si)""", [
+(Vadbeno besedilo Učilnica.com)""", [
             ("in", "primer"),
             ("although / while / whereas / though", "Nasprotje: v skledi sama, v naravi v skupinah."),
             ("which", "Nedoločni oziralni stavek po vejici za rabbits (živali)."),
@@ -141,7 +141,7 @@ It is also, _10_ (INCREASE), a day for shopping. Big stores open early, and some
 
 Whatever people choose to do, Boxing Day remains a uniquely British _13_ (INSTITUTE). Perhaps its greatest appeal lies in its _14_ (SIMPLE): after the stress of Christmas, it offers a rare chance to do nothing at all – a tradition that most people find _15_ (SURPRISE) easy to keep.
 
-(Vadbeno besedilo Piflar.si)""", [
+(Vadbeno besedilo Učilnica.com)""", [
             ("enjoyment", "primer"),
             ("sporting", "Pridevnik pred activity: sport → sporting."),
             ("tradesmen / traders / tradespeople", "local + oseba v množini."),
@@ -229,7 +229,7 @@ When Irene left, I gave her one of the photographs: two girls on a gate, squinti
 
 A week later a parcel arrived from Canada. Inside was a bundle of letters tied with ribbon, all written in my grandmother's round, careful hand, and all signed "your sister, Nell". There was a note from Irene, too. "These belong in your family now," it said. "She was braver than she ever let you know."
 
-(Vadbeno besedilo Piflar.si)""", [
+(Vadbeno besedilo Učilnica.com)""", [
             ("What was unusual about the visitor's clothing?", "Her coat was too warm (for September).", "»a red coat that was far too warm for September«."),
             ("How did the visitor react to the news of Nell's death?", "She sat down on the doorstep.", "»she sat down on the doorstep as if her legs had been taken away«."),
             ("Why did the narrator make tea?", "Grandmother would have done it.", "»That was what my grandmother would have done.«"),
@@ -262,7 +262,7 @@ Perhaps the healthiest approach is to remember that an online profile is never t
 
 So the next time you are about to post something in anger, wait a moment. [10]
 
-(Vadbeno besedilo Piflar.si)""", {
+(Vadbeno besedilo Učilnica.com)""", {
             "A": "In the European Union, this right has been part of the law since 2018.",
             "B": "Some even admit that they have rejected applicants because of what they found.",
             "C": "What happens on a screen no longer stays on a screen.",
@@ -303,7 +303,7 @@ Tom is now studying aerospace engineering at university. He still visits the roc
 
 His advice to other young inventors is simple: "Don't be afraid _13_ failing. Every explosion taught me something." His mother adds one more piece of advice: "And _14_ sure your parents know what's going on in the shed." Tom laughs. "They found out _15_ the hard way."
 
-(Vadbeno besedilo Piflar.si)""", [
+(Vadbeno besedilo Učilnica.com)""", [
             ("What", "primer"),
             ("of", "attract the attention of."),
             ("by", "by + -ing = s tem, da …"),
@@ -336,7 +336,7 @@ In 2001, the town of Flagstaff in Arizona became the world's first "Internationa
 
 Perhaps the most _14_ (REMARK) thing about light pollution is how easily it could be solved. Unlike most environmental problems, it disappears almost _15_ (INSTANT) when we switch off the lights.
 
-(Vadbeno besedilo Piflar.si)""", [
+(Vadbeno besedilo Učilnica.com)""", [
             ("a hundred / one hundred", "primer"),
             ("consequences", "serious + samostalnik v množini."),
             ("destructive / devastating", "be + pridevnik: destroy → destructive."),

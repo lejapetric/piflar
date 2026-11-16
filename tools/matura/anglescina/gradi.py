@@ -154,7 +154,7 @@ def besedilo_bralno(naslov, besedilo):
             vrstice = vrstice[1:]
     telo = "\n".join(vrstice)
     vir = None
-    m = re.search(r"\n\(([^()\n]*Piflar[^()\n]*)\)\s*$", telo)
+    m = re.search(r"\n\(([^()\n]*(?:Piflar|Učilnica)[^()\n]*)\)\s*$", telo)
     if m:
         vir, telo = m.group(1), telo[: m.start()]
     html_ = odstavki(telo)
@@ -382,7 +382,7 @@ def izdelaj_pisanje(n, raven):
 
 
 RAVNI = {"OR": "osnovna", "VR": "visja"}
-VIR = ("Vadbena pola Piflar.si. Zgradba, vrsta nalog in točkovanje sledijo uradni poli splošne mature "
+VIR = ("Vadbena pola Učilnica.com. Zgradba, vrsta nalog in točkovanje sledijo uradni poli splošne mature "
        "({opis}), {nase} pa so naši. Uradne pole izdaja Državni izpitni center (RIC), ki ima nanje vse avtorske pravice.")
 DELI = {
     1: {"A": "A) BRALNO RAZUMEVANJE", "B": "B) POZNAVANJE IN RABA JEZIKA"},
@@ -432,7 +432,7 @@ def zgradi(pot):
             pole.append({
                 "id": pid, "predmet": "anglescina", "raven": raven, "leto": leto, "rok": rok, "izvedba": izvedba,
                 "pdf": None, "datum": datum, "stevilka": st,
-                "naslov": f"Angleščina, {raven} raven, {rok} rok {leto}, izpitna pola {st}: {NASLOVI_POL[st]} (vadbena pola Piflar.si)",
+                "naslov": f"Angleščina, {raven} raven, {rok} rok {leto}, izpitna pola {st}: {NASLOVI_POL[st]} (vadbena pola Učilnica.com)",
                 "navodilo": f"{cas}. {opis}",
                 "vir": VIR.format(opis=f"{opis_roka}, izpitna pola {st}", nase=nase)
                        + (" Besedila posnetkov so naša, prebere jih bralnik v brskalniku." if st == 2 else ""),
