@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kotne funkcije — razlaga za poklicno maturo | Učilnica.com</title>
+  <meta name="description" content="Kotne funkcije za poklicno maturo iz matematike: Grafi sinusa, kosinusa in tangensa, zveze med kotnimi funkcijami, adicijski izreki.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
+  <link rel="stylesheet" href="/style/snov.css">
+</head>
+<body>
+  <div id="header"></div>
+
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view">
+
+        <header class="page-header">
+          <span class="page-eyebrow">Poklicna matura · Matematika · Snov · 4.13</span>
+          <h1>Kotne funkcije</h1>
+          <p>Kotne funkcije sinus, kosinus in tangens poljubnega kota, njihovi grafi, zveze med njimi in adicijski izreki. Kot med premicama izračunaš iz smernih koeficientov. Pod razlago vsakega podpoglavja so vsi tipi nalog z univerzalnim postopkom in primeri.</p>
+          <div class="page-meta">
+            <div class="page-meta-item"><strong>5</strong><span>Podpoglavij</span></div>
+            <div class="page-meta-item"><strong>9</strong><span>Tipov nalog</span></div>
+            <div class="page-meta-item"><strong>~25 min</strong><span>Branja</span></div>
+          </div>
+        </header>
+
+        <div class="matura-formule">
+          <h3>Kaj preverja izpitni katalog</h3>
+          <p>Po predmetnem izpitnem katalogu za poklicno maturo kandidat:</p>
+          <ul>
+              <li>nariše grafe funkcij sinus, kosinus in tangens ter zapiše ničle in abscise ekstremov</li>
+              <li>uporablja zveze med kotnimi funkcijami istega kota</li>
+              <li>uporablja periodičnost, lihost in sodost ter adicijske izreke</li>
+              <li>izračuna kot med premicama</li>
+          </ul>
+          <p><strong>Na izpitu:</strong> Kratka naloga: iz \(\sin \alpha\) izračunaj ostale kotne funkcije, poenostavi izraz z adicijskim izrekom ali izračunaj kot med premicama. Formule iz kataloga so priložene izpitni poli.</p>
+        </div>
+
+        <nav class="kazalo" id="kazalo" aria-label="Podpoglavja">
+          <h2>Podpoglavja</h2>
+          <ol>
+            <li><a href="#sklop-1"><span class="kazalo-st">1</span> Definicije kotnih funkcij na enotski krožnici</a></li>
+            <li><a href="#sklop-2"><span class="kazalo-st">2</span> Lastnosti in grafi kotnih funkcij</a></li>
+            <li><a href="#sklop-3"><span class="kazalo-st">3</span> Računanje vrednosti krožnih funkcij</a></li>
+            <li><a href="#sklop-4"><span class="kazalo-st">4</span> Adicijski izreki</a></li>
+            <li><a href="#sklop-5"><span class="kazalo-st">5</span> Kot med premicama</a></li>
+            <li><a href="#kljuc"><span class="kazalo-st">?</span> Ključ: kateri tip naloge je to?</a></li>
+          </ol>
+        </nav>
+
+        <!-- SKLOP 1 -->
+        <section class="sklop" id="sklop-1">
+          <header class="sklop-header">
+            <span class="sklop-num">4.13 · 1</span>
+            <h2>Definicije kotnih funkcij na enotski krožnici</h2>
+            <p>Poljubni koti, predznaki, posebne vrednosti in zveze.</p>
+          </header>
+          <div class="sklop-video"><span class="sklop-video-oznaka">Video razlaga</span><video class="video-svetla" controls preload="none" playsinline poster="/videi/matematika/funkcije/kotne/sklop-2-svetla.jpg" src="/videi/matematika/funkcije/kotne/sklop-2-svetla.mp4"></video><video class="video-temna" controls preload="none" playsinline poster="/videi/matematika/funkcije/kotne/sklop-2-temna.jpg" src="/videi/matematika/funkcije/kotne/sklop-2-temna.mp4"></video></div><!-- /sklop-video -->
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <p>Na <strong>enotski krožnici</strong> (polmer 1, središče v izhodišču) kot \(\alpha\) nanesemo od pozitivnega dela osi \(x\) v nasprotni smeri urnega kazalca. Krak seka krožnico v točki \(T\):</p>
+            <figure class="slika slika--ozka">
+<svg viewBox="0 0 340 318" role="img" aria-label="Enotska krožnica" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="k2-g2-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="k2-g2-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="k2-g2-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="k2-g2-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="k2-g2-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="k2-g2-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<line class="s-os" x1="18" y1="164.4" x2="322" y2="164.4"/>
+<line class="s-os" x1="170" y1="300" x2="170" y2="23.4"/>
+<line class="s-crta" x1="170" y1="164.4" x2="86.8" y2="94.7"/>
+<line class="s-k3" x1="86.8" y1="94.7" x2="86.8" y2="164.4"/>
+<line class="s-k2 s-crtkano" x1="86.8" y1="94.7" x2="170" y2="94.7"/>
+<circle class="s-tocka" cx="86.8" cy="94.7" r="4.5"/>
+<text class="s-txt-b" x="80.8" y="84.7" text-anchor="end">T(cos α, sin α)</text>
+<circle class="s-tocka" cx="278.6" cy="164.4" r="4.5"/>
+<text class="s-txt-b" x="284.6" y="178.4" text-anchor="start">1</text>
+<circle class="s-tocka" cx="170" cy="56" r="4.5"/>
+<text class="s-txt-b" x="176" y="50" text-anchor="start">1</text>
+<text class="s-txt-k3" x="65.1" y="129.6" text-anchor="end">sin α</text>
+<text class="s-txt-k2" x="128.4" y="180.7" text-anchor="middle">cos α</text>
+<text class="s-txt-muted" x="246" y="72.2" text-anchor="middle">I: + +</text>
+<text class="s-txt-muted" x="66.9" y="43.4" text-anchor="middle">II: sin +</text>
+<text class="s-txt-muted" x="77.7" y="256.6" text-anchor="middle">III: tan +</text>
+<text class="s-txt-muted" x="262.3" y="256.6" text-anchor="middle">IV: cos +</text>
+<circle class="s-k1" cx="170" cy="164.4" r="108.6"/>
+<path class="s-kot" d="M170,164.4 L192,164.4 A22,22 0 0 0 153.1,150.3 Z"/>
+<text class="s-txt-k4" x="180.3" y="140.2" text-anchor="middle">α</text>
+</svg>
+<figcaption>Na enotski krožnici je \(\cos \alpha\) abscisa, \(\sin \alpha\) ordinata točke \(T\). Tu \(\alpha = 140^\circ\) (II. kvadrant): \(\sin \alpha &gt; 0\), \(\cos \alpha &lt; 0\).</figcaption>
+</figure>
+            <div class="formula-grid">
+              <div class="formula-card">\(T = (\cos \alpha, \sin \alpha)\)</div>
+              <div class="formula-card">\(\tan \alpha = \dfrac{\sin \alpha}{\cos \alpha}\), \(\cos \alpha \ne 0\)</div>
+            </div>
+            <h4>Posebne vrednosti</h4>
+            <div class="tabela-wrap">
+              <table class="tabela">
+                <thead><tr><th>\(\alpha\)</th><th>\(0^\circ\) (0)</th><th>\(30^\circ\) \(\left(\frac{\pi}{6}\right)\)</th><th>\(45^\circ\) \(\left(\frac{\pi}{4}\right)\)</th><th>\(60^\circ\) \(\left(\frac{\pi}{3}\right)\)</th><th>\(90^\circ\) \(\left(\frac{\pi}{2}\right)\)</th></tr></thead>
+                <tbody>
+                  <tr><td>\(\sin\)</td><td>0</td><td>\(\frac{1}{2}\)</td><td>\(\frac{\sqrt{2}}{2}\)</td><td>\(\frac{\sqrt{3}}{2}\)</td><td>1</td></tr>
+                  <tr><td>\(\cos\)</td><td>1</td><td>\(\frac{\sqrt{3}}{2}\)</td><td>\(\frac{\sqrt{2}}{2}\)</td><td>\(\frac{1}{2}\)</td><td>0</td></tr>
+                  <tr><td>\(\tan\)</td><td>0</td><td>\(\frac{\sqrt{3}}{3}\)</td><td>1</td><td>\(\sqrt{3}\)</td><td>ne obstaja</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p>Pomnilo: \(\sin\) za \(0^\circ, 30^\circ, 45^\circ, 60^\circ, 90^\circ\) je \(\frac{\sqrt{0}}{2}, \frac{\sqrt{1}}{2}, \frac{\sqrt{2}}{2}, \frac{\sqrt{3}}{2}, \frac{\sqrt{4}}{2}\); \(\cos\) gre v obratnem vrstnem redu. Vrednosti izpeljemo iz polovice enakostraničnega trikotnika in iz polovice kvadrata.</p>
+            <h4>Poljubni koti (prevedba na ostri kot)</h4>
+            <ul>
+              <li>II. kvadrant: \(\sin(180^\circ - \alpha) = \sin \alpha\), \(\cos(180^\circ - \alpha) = -\cos \alpha\).</li>
+              <li>III. kvadrant: \(\sin(180^\circ + \alpha) = -\sin \alpha\), \(\cos(180^\circ + \alpha) = -\cos \alpha\).</li>
+              <li>IV. kvadrant: \(\sin(360^\circ - \alpha) = -\sin \alpha\), \(\cos(360^\circ - \alpha) = \cos \alpha\).</li>
+              <li>Sodost in lihost: \(\cos(-\alpha) = \cos \alpha\), \(\sin(-\alpha) = -\sin \alpha\), \(\tan(-\alpha) = -\tan \alpha\).</li>
+            </ul>
+            <h4>Zveze med funkcijami istega kota</h4>
+            <div class="formula-grid">
+              <div class="formula-card">\(\sin^2 \alpha + \cos^2 \alpha = 1\)</div>
+              <div class="formula-card">\(1 + \tan^2 \alpha = \dfrac{1}{\cos^2 \alpha}\)</div>
+              <div class="formula-card">\(\tan \alpha \cdot \cot \alpha = 1\)</div>
+            </div>
+            <p>Pri računanju iz ene vrednosti drugih dobimo koren; predznak določimo iz kvadranta.</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-1">
+              <h4>Tip 1: Vrednosti kotnih funkcij za poljubne kote</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Brez računala izračunajte \(\sin 150^\circ + \cos 240^\circ - \tan 315^\circ\).</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> kot, ki je \(30^\circ\), \(45^\circ\) ali \(60^\circ\) „premaknjen“ v drug kvadrant, in zahteva „brez računala“ ali „natančno“.</p><ul class="kljucne"><li>„brez računala“</li><li>„natančna vrednost“</li><li>\(\sin\frac{7\pi}{6}\)</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Za vsak kot določi kvadrant in pripadajoči ostri kot.</p><div class="na-nalogi"><p>\(150^\circ\): II., \(30^\circ\). \(240^\circ\): III., \(60^\circ\). \(315^\circ\): IV., \(45^\circ\).</p></div></li>
+              <li><p class="korak">Določi predznak funkcije v tem kvadrantu.</p><div class="na-nalogi"><p>\(\sin\) v II. \(+\); \(\cos\) v III. \(-\); \(\tan\) v IV. \(-\).</p></div></li>
+              <li><p class="korak">Vstavi vrednost za ostri kot s pravim predznakom.</p><div class="na-nalogi"><p>\(\sin 150^\circ = \frac{1}{2}\), \(\cos 240^\circ = -\frac{1}{2}\), \(\tan 315^\circ = -1\).</p></div></li>
+              <li><p class="korak">Izračunaj.</p><div class="na-nalogi"><p>\(\frac{1}{2} - \frac{1}{2} + 1 = 1\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> \(\cos(-60^\circ)\).</p><p>Kosinus je sod: \(\frac{1}{2}\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> \(\sin \frac{7\pi}{6}\).</p><p>\(210^\circ\), III. kvadrant: \(-\frac{1}{2}\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> \(\tan 120^\circ\).</p><p>II. kvadrant, \(60^\circ\): \(-\sqrt{3}\).</p></div>
+            </div>
+            <div class="tip-naloge" id="tip-2">
+              <h4>Tip 2: Iz ene kotne funkcije izračunaj ostale</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Velja \(\sin \alpha = \frac{3}{5}\) in \(\alpha\) leži v II. kvadrantu. Izračunajte \(\cos \alpha\), \(\tan \alpha\) in \(\cot \alpha\).</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> znana je ena kotna funkcija in kvadrant, iščejo ostale; ali „poenostavite izraz“ s kotnimi funkcijami.</p><ul class="kljucne"><li>„če je \(\sin \alpha = \ldots\) in \(\alpha \in \ldots\)“</li><li>„izračunajte ostale kotne funkcije“</li><li>„poenostavite“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Iz \(\sin^2 \alpha + \cos^2 \alpha = 1\) (ali \(1 + \tan^2 \alpha = \frac{1}{\cos^2 \alpha}\)) izračunaj absolutno vrednost iskane funkcije.</p><div class="na-nalogi"><p>\(\cos^2 \alpha = 1 - \frac{9}{25} = \frac{16}{25}\), \(|\cos \alpha| = \frac{4}{5}\).</p></div></li>
+              <li><p class="korak">Predznak določi iz kvadranta.</p><div class="na-nalogi"><p>V II. kvadrantu je \(\cos &lt; 0\): \(\cos \alpha = -\frac{4}{5}\).</p></div></li>
+              <li><p class="korak">Ostale izračunaj s \(\tan = \frac{\sin}{\cos}\), \(\cot = \frac{1}{\tan}\).</p><div class="na-nalogi"><p>\(\tan \alpha = -\frac{3}{4}\), \(\cot \alpha = -\frac{4}{3}\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> \(\tan \alpha = 2\), \(\alpha\) v III. kvadrantu.</p><p>\(\cos^2 \alpha = \frac{1}{5}\): \(\cos \alpha = -\frac{\sqrt{5}}{5}\), \(\sin \alpha = -\frac{2\sqrt{5}}{5}\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Poenostavite \(\dfrac{1 - \cos^2 x}{\sin x}\).</p><p>\(\frac{\sin^2 x}{\sin x} = \sin x\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Poenostavite \(\sin^4 x - \cos^4 x\).</p><p>\((\sin^2 x - \cos^2 x)(\sin^2 x + \cos^2 x) = \sin^2 x - \cos^2 x\).</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 2 -->
+        <section class="sklop" id="sklop-2">
+          <header class="sklop-header">
+            <span class="sklop-num">4.13 · 2</span>
+            <h2>Lastnosti in grafi kotnih funkcij</h2>
+            <p>Periodičnost, ničle, ekstremi.</p>
+          </header>
+          <div class="sklop-video"><span class="sklop-video-oznaka">Video razlaga</span><video class="video-svetla" controls preload="none" playsinline poster="/videi/matematika/funkcije/kotne/sklop-3-svetla.jpg" src="/videi/matematika/funkcije/kotne/sklop-3-svetla.mp4"></video><video class="video-temna" controls preload="none" playsinline poster="/videi/matematika/funkcije/kotne/sklop-3-temna.jpg" src="/videi/matematika/funkcije/kotne/sklop-3-temna.mp4"></video></div><!-- /sklop-video -->
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <p>Kot merimo v <strong>radianih</strong> (\(180^\circ = \pi\)), da je \(x\) realno število. Kotne funkcije so <strong>periodične</strong>: \(f(x + P) = f(x)\).</p>
+            <figure class="slika slika--siroka">
+<svg viewBox="0 0 520 230" role="img" aria-label="Grafa sinusa in kosinusa" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="k3-g3-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="k3-g3-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="k3-g3-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="k3-g3-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="k3-g3-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="k3-g3-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<path class="s-mreza" d="M42.4,204V26M128.4,204V26M214.3,204V26M300.2,204V26M386.2,204V26M472.1,204V26M26,175.3H494M26,117.9H494M26,60.5H494"/>
+<line class="s-os" x1="26" y1="117.9" x2="502" y2="117.9" marker-end="url(#k3-g3-p)"/>
+<line class="s-os" x1="128.4" y1="204" x2="128.4" y2="18" marker-end="url(#k3-g3-p)"/>
+<text class="s-os-txt" x="496" y="109.9" text-anchor="end">x</text>
+<text class="s-os-txt" x="136.4" y="30">y</text>
+<line class="s-os" x1="42.4" y1="114.9" x2="42.4" y2="120.9"/><text class="s-os-txt" x="42.4" y="132.9" text-anchor="middle">−π/2</text><line class="s-os" x1="214.3" y1="114.9" x2="214.3" y2="120.9"/><text class="s-os-txt" x="214.3" y="132.9" text-anchor="middle">π/2</text><line class="s-os" x1="300.2" y1="114.9" x2="300.2" y2="120.9"/><text class="s-os-txt" x="300.2" y="132.9" text-anchor="middle">π</text><line class="s-os" x1="386.2" y1="114.9" x2="386.2" y2="120.9"/><text class="s-os-txt" x="386.2" y="132.9" text-anchor="middle">3π/2</text><line class="s-os" x1="472.1" y1="114.9" x2="472.1" y2="120.9"/><text class="s-os-txt" x="472.1" y="132.9" text-anchor="middle">2π</text><line class="s-os" x1="125.4" y1="175.3" x2="131.4" y2="175.3"/><text class="s-os-txt" x="122.4" y="179.3" text-anchor="end">-1</text><line class="s-os" x1="125.4" y1="60.5" x2="131.4" y2="60.5"/><text class="s-os-txt" x="122.4" y="64.5" text-anchor="end">1</text><text class="s-os-txt" x="122.4" y="132.9" text-anchor="end">0</text>
+<path class="s-k1" d="M26,172.7L27.2,173.1L28.3,173.4L29.5,173.7L30.7,174L31.8,174.2L33,174.4L34.2,174.6L35.4,174.8L36.5,175L37.7,175.1L38.9,175.2L40,175.2L41.2,175.3L42.4,175.3L43.6,175.3L44.7,175.2L45.9,175.2L47.1,175.1L48.2,175L49.4,174.8L50.6,174.7L51.7,174.5L52.9,174.2L54.1,174L55.3,173.7L56.4,173.4L57.6,173.1L58.8,172.7L59.9,172.4L61.1,172L62.3,171.5L63.4,171.1L64.6,170.6L65.8,170.1L67,169.6L68.1,169.1L69.3,168.5L70.5,167.9L71.6,167.3L72.8,166.7L74,166L75.1,165.3L76.3,164.6L77.5,163.9L78.7,163.1L79.8,162.4L81,161.6L82.2,160.8L83.3,160L84.5,159.1L85.7,158.3L86.8,157.4L88,156.5L89.2,155.6L90.4,154.6L91.5,153.7L92.7,152.7L93.9,151.7L95,150.7L96.2,149.7L97.4,148.7L98.5,147.6L99.7,146.6L100.9,145.5L102.1,144.4L103.2,143.3L104.4,142.2L105.6,141.1L106.7,140L107.9,138.8L109.1,137.7L110.2,136.5L111.4,135.4L112.6,134.2L113.8,133L114.9,131.8L116.1,130.6L117.3,129.4L118.4,128.2L119.6,127L120.8,125.8L121.9,124.6L123.1,123.4L124.3,122.1L125.5,120.9L126.6,119.7L127.8,118.5L129,117.2L130.1,116L131.3,114.8L132.5,113.6L133.6,112.3L134.8,111.1L136,109.9L137.2,108.7L138.3,107.5L139.5,106.3L140.7,105.1L141.8,103.9L143,102.7L144.2,101.5L145.3,100.3L146.5,99.2L147.7,98L148.9,96.9L150,95.7L151.2,94.6L152.4,93.5L153.5,92.4L154.7,91.3L155.9,90.2L157,89.1L158.2,88.1L159.4,87L160.6,86L161.7,85L162.9,84L164.1,83L165.2,82L166.4,81.1L167.6,80.1L168.7,79.2L169.9,78.3L171.1,77.5L172.3,76.6L173.4,75.7L174.6,74.9L175.8,74.1L176.9,73.3L178.1,72.6L179.3,71.8L180.4,71.1L181.6,70.4L182.8,69.7L184,69.1L185.1,68.4L186.3,67.8L187.5,67.2L188.6,66.7L189.8,66.1L191,65.6L192.1,65.1L193.3,64.6L194.5,64.2L195.7,63.8L196.8,63.4L198,63L199.2,62.6L200.3,62.3L201.5,62L202.7,61.7L203.8,61.5L205,61.3L206.2,61.1L207.4,60.9L208.5,60.8L209.7,60.7L210.9,60.6L212,60.5L213.2,60.5L214.4,60.5L215.5,60.5L216.7,60.5L217.9,60.6L219.1,60.7L220.2,60.8L221.4,60.9L222.6,61.1L223.7,61.3L224.9,61.5L226.1,61.8L227.2,62.1L228.4,62.4L229.6,62.7L230.8,63L231.9,63.4L233.1,63.8L234.3,64.2L235.4,64.7L236.6,65.2L237.8,65.7L238.9,66.2L240.1,66.7L241.3,67.3L242.5,67.9L243.6,68.5L244.8,69.1L246,69.8L247.1,70.5L248.3,71.2L249.5,71.9L250.6,72.7L251.8,73.4L253,74.2L254.2,75L255.3,75.9L256.5,76.7L257.7,77.6L258.8,78.4L260,79.3L261.2,80.3L262.3,81.2L263.5,82.2L264.7,83.1L265.9,84.1L267,85.1L268.2,86.1L269.4,87.2L270.5,88.2L271.7,89.3L272.9,90.3L274,91.4L275.2,92.5L276.4,93.6L277.6,94.7L278.7,95.9L279.9,97L281.1,98.2L282.2,99.3L283.4,100.5L284.6,101.7L285.7,102.8L286.9,104L288.1,105.2L289.3,106.4L290.4,107.6L291.6,108.8L292.8,110.1L293.9,111.3L295.1,112.5L296.3,113.7L297.4,114.9L298.6,116.2L299.8,117.4L301,118.6L302.1,119.8L303.3,121.1L304.5,122.3L305.6,123.5L306.8,124.7L308,126L309.1,127.2L310.3,128.4L311.5,129.6L312.7,130.8L313.8,132L315,133.2L316.2,134.3L317.3,135.5L318.5,136.7L319.7,137.8L320.8,139L322,140.1L323.2,141.3L324.3,142.4L325.5,143.5L326.7,144.6L327.9,145.6L329,146.7L330.2,147.8L331.4,148.8L332.5,149.8L333.7,150.9L334.9,151.8L336.1,152.8L337.2,153.8L338.4,154.7L339.6,155.7L340.7,156.6L341.9,157.5L343.1,158.4L344.2,159.2L345.4,160.1L346.6,160.9L347.8,161.7L348.9,162.5L350.1,163.2L351.3,164L352.4,164.7L353.6,165.4L354.8,166.1L355.9,166.7L357.1,167.4L358.3,168L359.5,168.6L360.6,169.1L361.8,169.7L363,170.2L364.1,170.7L365.3,171.2L366.5,171.6L367.6,172L368.8,172.4L370,172.8L371.2,173.1L372.3,173.5L373.5,173.8L374.7,174L375.8,174.3L377,174.5L378.2,174.7L379.3,174.8L380.5,175L381.7,175.1L382.9,175.2L384,175.2L385.2,175.3L386.4,175.3L387.5,175.3L388.7,175.2L389.9,175.2L391,175.1L392.2,174.9L393.4,174.8L394.6,174.6L395.7,174.4L396.9,174.2L398.1,173.9L399.2,173.7L400.4,173.4L401.6,173L402.7,172.7L403.9,172.3L405.1,171.9L406.3,171.5L407.4,171L408.6,170.5L409.8,170L410.9,169.5L412.1,169L413.3,168.4L414.4,167.8L415.6,167.2L416.8,166.5L418,165.9L419.1,165.2L420.3,164.5L421.5,163.8L422.6,163L423.8,162.2L425,161.4L426.1,160.6L427.3,159.8L428.5,159L429.7,158.1L430.8,157.2L432,156.3L433.2,155.4L434.3,154.4L435.5,153.5L436.7,152.5L437.8,151.5L439,150.5L440.2,149.5L441.4,148.5L442.5,147.4L443.7,146.4L444.9,145.3L446,144.2L447.2,143.1L448.4,142L449.5,140.9L450.7,139.8L451.9,138.6L453.1,137.5L454.2,136.3L455.4,135.2L456.6,134L457.7,132.8L458.9,131.6L460.1,130.4L461.2,129.2L462.4,128L463.6,126.8L464.8,125.6L465.9,124.4L467.1,123.1L468.3,121.9L469.4,120.7L470.6,119.5L471.8,118.2L472.9,117L474.1,115.8L475.3,114.6L476.5,113.3L477.6,112.1L478.8,110.9L480,109.7L481.1,108.5L482.3,107.2L483.5,106L484.6,104.8L485.8,103.6L487,102.5L488.2,101.3L489.3,100.1L490.5,98.9L491.7,97.8L492.8,96.6L494,95.5"/>
+<path class="s-k3" d="M26,134.8L27.2,133.7L28.3,132.5L29.5,131.3L30.7,130.1L31.8,128.9L33,127.7L34.2,126.5L35.4,125.3L36.5,124L37.7,122.8L38.9,121.6L40,120.4L41.2,119.1L42.4,117.9L43.6,116.7L44.7,115.5L45.9,114.2L47.1,113L48.2,111.8L49.4,110.6L50.6,109.3L51.7,108.1L52.9,106.9L54.1,105.7L55.3,104.5L56.4,103.3L57.6,102.1L58.8,101L59.9,99.8L61.1,98.6L62.3,97.5L63.4,96.3L64.6,95.2L65.8,94.1L67,93L68.1,91.9L69.3,90.8L70.5,89.7L71.6,88.6L72.8,87.6L74,86.6L75.1,85.5L76.3,84.5L77.5,83.5L78.7,82.6L79.8,81.6L81,80.7L82.2,79.7L83.3,78.8L84.5,77.9L85.7,77.1L86.8,76.2L88,75.4L89.2,74.6L90.4,73.8L91.5,73L92.7,72.2L93.9,71.5L95,70.8L96.2,70.1L97.4,69.4L98.5,68.8L99.7,68.1L100.9,67.5L102.1,67L103.2,66.4L104.4,65.9L105.6,65.4L106.7,64.9L107.9,64.4L109.1,64L110.2,63.6L111.4,63.2L112.6,62.8L113.8,62.5L114.9,62.2L116.1,61.9L117.3,61.6L118.4,61.4L119.6,61.2L120.8,61L121.9,60.8L123.1,60.7L124.3,60.6L125.5,60.5L126.6,60.5L127.8,60.5L129,60.5L130.1,60.5L131.3,60.5L132.5,60.6L133.6,60.7L134.8,60.9L136,61L137.2,61.2L138.3,61.4L139.5,61.6L140.7,61.9L141.8,62.2L143,62.5L144.2,62.8L145.3,63.2L146.5,63.6L147.7,64L148.9,64.4L150,64.9L151.2,65.4L152.4,65.9L153.5,66.4L154.7,67L155.9,67.6L157,68.2L158.2,68.8L159.4,69.4L160.6,70.1L161.7,70.8L162.9,71.5L164.1,72.3L165.2,73L166.4,73.8L167.6,74.6L168.7,75.4L169.9,76.2L171.1,77.1L172.3,78L173.4,78.9L174.6,79.8L175.8,80.7L176.9,81.6L178.1,82.6L179.3,83.6L180.4,84.6L181.6,85.6L182.8,86.6L184,87.6L185.1,88.7L186.3,89.7L187.5,90.8L188.6,91.9L189.8,93L191,94.1L192.1,95.3L193.3,96.4L194.5,97.5L195.7,98.7L196.8,99.8L198,101L199.2,102.2L200.3,103.4L201.5,104.6L202.7,105.8L203.8,107L205,108.2L206.2,109.4L207.4,110.6L208.5,111.8L209.7,113L210.9,114.3L212,115.5L213.2,116.7L214.4,118L215.5,119.2L216.7,120.4L217.9,121.6L219.1,122.9L220.2,124.1L221.4,125.3L222.6,126.5L223.7,127.7L224.9,128.9L226.1,130.1L227.2,131.3L228.4,132.5L229.6,133.7L230.8,134.9L231.9,136.1L233.1,137.2L234.3,138.4L235.4,139.5L236.6,140.6L237.8,141.8L238.9,142.9L240.1,144L241.3,145.1L242.5,146.1L243.6,147.2L244.8,148.2L246,149.3L247.1,150.3L248.3,151.3L249.5,152.3L250.6,153.3L251.8,154.2L253,155.2L254.2,156.1L255.3,157L256.5,157.9L257.7,158.8L258.8,159.6L260,160.5L261.2,161.3L262.3,162.1L263.5,162.8L264.7,163.6L265.9,164.3L267,165L268.2,165.7L269.4,166.4L270.5,167L271.7,167.7L272.9,168.3L274,168.8L275.2,169.4L276.4,169.9L277.6,170.4L278.7,170.9L279.9,171.4L281.1,171.8L282.2,172.2L283.4,172.6L284.6,173L285.7,173.3L286.9,173.6L288.1,173.9L289.3,174.1L290.4,174.4L291.6,174.6L292.8,174.8L293.9,174.9L295.1,175L296.3,175.1L297.4,175.2L298.6,175.3L299.8,175.3L301,175.3L302.1,175.3L303.3,175.2L304.5,175.1L305.6,175L306.8,174.9L308,174.7L309.1,174.5L310.3,174.3L311.5,174.1L312.7,173.8L313.8,173.5L315,173.2L316.2,172.9L317.3,172.5L318.5,172.1L319.7,171.7L320.8,171.3L322,170.8L323.2,170.3L324.3,169.8L325.5,169.3L326.7,168.7L327.9,168.1L329,167.5L330.2,166.9L331.4,166.2L332.5,165.6L333.7,164.9L334.9,164.2L336.1,163.4L337.2,162.7L338.4,161.9L339.6,161.1L340.7,160.3L341.9,159.4L343.1,158.6L344.2,157.7L345.4,156.8L346.6,155.9L347.8,155L348.9,154L350.1,153.1L351.3,152.1L352.4,151.1L353.6,150.1L354.8,149.1L355.9,148L357.1,147L358.3,145.9L359.5,144.8L360.6,143.7L361.8,142.6L363,141.5L364.1,140.4L365.3,139.3L366.5,138.1L367.6,137L368.8,135.8L370,134.6L371.2,133.4L372.3,132.3L373.5,131.1L374.7,129.9L375.8,128.7L377,127.5L378.2,126.2L379.3,125L380.5,123.8L381.7,122.6L382.9,121.4L384,120.1L385.2,118.9L386.4,117.7L387.5,116.4L388.7,115.2L389.9,114L391,112.8L392.2,111.6L393.4,110.3L394.6,109.1L395.7,107.9L396.9,106.7L398.1,105.5L399.2,104.3L400.4,103.1L401.6,101.9L402.7,100.8L403.9,99.6L405.1,98.4L406.3,97.3L407.4,96.1L408.6,95L409.8,93.9L410.9,92.8L412.1,91.7L413.3,90.6L414.4,89.5L415.6,88.4L416.8,87.4L418,86.4L419.1,85.3L420.3,84.3L421.5,83.4L422.6,82.4L423.8,81.4L425,80.5L426.1,79.6L427.3,78.7L428.5,77.8L429.7,76.9L430.8,76L432,75.2L433.2,74.4L434.3,73.6L435.5,72.8L436.7,72.1L437.8,71.4L439,70.6L440.2,70L441.4,69.3L442.5,68.6L443.7,68L444.9,67.4L446,66.9L447.2,66.3L448.4,65.8L449.5,65.3L450.7,64.8L451.9,64.3L453.1,63.9L454.2,63.5L455.4,63.1L456.6,62.8L457.7,62.4L458.9,62.1L460.1,61.8L461.2,61.6L462.4,61.4L463.6,61.1L464.8,61L465.9,60.8L467.1,60.7L468.3,60.6L469.4,60.5L470.6,60.5L471.8,60.5L472.9,60.5L474.1,60.5L475.3,60.5L476.5,60.6L477.6,60.7L478.8,60.9L480,61L481.1,61.2L482.3,61.4L483.5,61.7L484.6,61.9L485.8,62.2L487,62.6L488.2,62.9L489.3,63.3L490.5,63.7L491.7,64.1L492.8,64.5L494,65"/>
+<text class="s-txt-k1" x="214.3" y="43.2" text-anchor="middle">y = sin x</text>
+<text class="s-txt-k3" x="466.6" y="43.2" text-anchor="end">y = cos x</text>
+</svg>
+<figcaption>Sinus in kosinus imata periodo \(2\pi\) in zalogo vrednosti \([-1, 1]\). Graf kosinusa je graf sinusa, premaknjen za \(\frac{\pi}{2}\) v levo.</figcaption>
+</figure>
+            <figure class="slika slika--siroka">
+<svg viewBox="0 0 420 250" role="img" aria-label="Graf tangensa" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="k3-g4-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="k3-g4-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="k3-g4-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="k3-g4-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="k3-g4-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="k3-g4-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<path class="s-mreza" d="M42,224V26M126,224V26M210,224V26M294,224V26M378,224V26M26,217.8H394M26,186.9H394M26,155.9H394M26,125H394M26,94.1H394M26,63.1H394M26,32.2H394"/>
+<line class="s-os" x1="26" y1="125" x2="402" y2="125" marker-end="url(#k3-g4-p)"/>
+<line class="s-os" x1="210" y1="224" x2="210" y2="18" marker-end="url(#k3-g4-p)"/>
+<text class="s-os-txt" x="396" y="117" text-anchor="end">x</text>
+<text class="s-os-txt" x="218" y="30">y</text>
+<line class="s-os" x1="42" y1="122" x2="42" y2="128"/><text class="s-os-txt" x="42" y="140" text-anchor="middle">−π</text><line class="s-os" x1="126" y1="122" x2="126" y2="128"/><text class="s-os-txt" x="126" y="140" text-anchor="middle">−π/2</text><line class="s-os" x1="294" y1="122" x2="294" y2="128"/><text class="s-os-txt" x="294" y="140" text-anchor="middle">π/2</text><line class="s-os" x1="378" y1="122" x2="378" y2="128"/><text class="s-os-txt" x="378" y="140" text-anchor="middle">π</text><line class="s-os" x1="207" y1="217.8" x2="213" y2="217.8"/><text class="s-os-txt" x="204" y="221.8" text-anchor="end">-3</text><line class="s-os" x1="207" y1="186.9" x2="213" y2="186.9"/><text class="s-os-txt" x="204" y="190.9" text-anchor="end">-2</text><line class="s-os" x1="207" y1="155.9" x2="213" y2="155.9"/><text class="s-os-txt" x="204" y="159.9" text-anchor="end">-1</text><line class="s-os" x1="207" y1="94.1" x2="213" y2="94.1"/><text class="s-os-txt" x="204" y="98.1" text-anchor="end">1</text><line class="s-os" x1="207" y1="63.1" x2="213" y2="63.1"/><text class="s-os-txt" x="204" y="67.1" text-anchor="end">2</text><line class="s-os" x1="207" y1="32.2" x2="213" y2="32.2"/><text class="s-os-txt" x="204" y="36.2" text-anchor="end">3</text><text class="s-os-txt" x="204" y="140" text-anchor="end">0</text>
+<line class="s-asim" x1="126" y1="224" x2="126" y2="26"/>
+<line class="s-asim" x1="294" y1="224" x2="294" y2="26"/>
+<path class="s-k1" d="M26,134.6L26.2,134.4L26.5,134.3L26.7,134.1L27,134L27.2,133.8L27.5,133.6L27.7,133.5L28,133.3L28.2,133.2L28.5,133L28.7,132.9L28.9,132.7L29.2,132.6L29.4,132.4L29.7,132.3L29.9,132.1L30.2,132L30.4,131.8L30.7,131.7L30.9,131.5L31.2,131.4L31.4,131.2L31.6,131.1L31.9,130.9L32.1,130.8L32.4,130.7L32.6,130.5L32.9,130.4L33.1,130.2L33.4,130.1L33.6,129.9L33.9,129.8L34.1,129.6L34.3,129.5L34.6,129.3L34.8,129.2L35.1,129.1L35.3,128.9L35.6,128.8L35.8,128.6L36.1,128.5L36.3,128.3L36.5,128.2L36.8,128L37,127.9L37.3,127.8L37.5,127.6L37.8,127.5L38,127.3L38.3,127.2L38.5,127L38.8,126.9L39,126.8L39.2,126.6L39.5,126.5L39.7,126.3L40,126.2L40.2,126L40.5,125.9L40.7,125.8L41,125.6L41.2,125.5L41.5,125.3L41.7,125.2L41.9,125.1L42.2,124.9L42.4,124.8L42.7,124.6L42.9,124.5L43.2,124.3L43.4,124.2L43.7,124.1L43.9,123.9L44.2,123.8L44.4,123.6L44.6,123.5L44.9,123.3L45.1,123.2L45.4,123.1L45.6,122.9L45.9,122.8L46.1,122.6L46.4,122.5L46.6,122.3L46.9,122.2L47.1,122.1L47.3,121.9L47.6,121.8L47.8,121.6L48.1,121.5L48.3,121.3L48.6,121.2L48.8,121.1L49.1,120.9L49.3,120.8L49.6,120.6L49.8,120.5L50,120.3L50.3,120.2L50.5,120L50.8,119.9L51,119.8L51.3,119.6L51.5,119.5L51.8,119.3L52,119.2L52.3,119L52.5,118.9L52.7,118.7L53,118.6L53.2,118.4L53.5,118.3L53.7,118.1L54,118L54.2,117.8L54.5,117.7L54.7,117.5L54.9,117.4L55.2,117.2L55.4,117.1L55.7,116.9L55.9,116.8L56.2,116.6L56.4,116.5L56.7,116.3L56.9,116.2L57.2,116L57.4,115.9L57.6,115.7L57.9,115.5L58.1,115.4L58.4,115.2L58.6,115.1L58.9,114.9L59.1,114.8L59.4,114.6L59.6,114.4L59.9,114.3L60.1,114.1L60.3,114L60.6,113.8L60.8,113.7L61.1,113.5L61.3,113.3L61.6,113.2L61.8,113L62.1,112.8L62.3,112.7L62.6,112.5L62.8,112.3L63,112.2L63.3,112L63.5,111.8L63.8,111.7L64,111.5L64.3,111.3L64.5,111.2L64.8,111L65,110.8L65.3,110.7L65.5,110.5L65.7,110.3L66,110.1L66.2,110L66.5,109.8L66.7,109.6L67,109.4L67.2,109.2L67.5,109.1L67.7,108.9L68,108.7L68.2,108.5L68.4,108.3L68.7,108.2L68.9,108L69.2,107.8L69.4,107.6L69.7,107.4L69.9,107.2L70.2,107L70.4,106.8L70.7,106.7L70.9,106.5L71.1,106.3L71.4,106.1L71.6,105.9L71.9,105.7L72.1,105.5L72.4,105.3L72.6,105.1L72.9,104.9L73.1,104.7L73.3,104.5L73.6,104.3L73.8,104.1L74.1,103.9L74.3,103.7L74.6,103.4L74.8,103.2L75.1,103L75.3,102.8L75.6,102.6L75.8,102.4L76,102.2L76.3,101.9L76.5,101.7L76.8,101.5L77,101.3L77.3,101L77.5,100.8L77.8,100.6L78,100.3L78.3,100.1L78.5,99.9L78.7,99.6L79,99.4L79.2,99.2L79.5,98.9L79.7,98.7L80,98.4L80.2,98.2L80.5,97.9L80.7,97.7L81,97.4L81.2,97.2L81.4,96.9L81.7,96.7L81.9,96.4L82.2,96.1L82.4,95.9L82.7,95.6L82.9,95.3L83.2,95L83.4,94.8L83.7,94.5L83.9,94.2L84.1,93.9L84.4,93.6L84.6,93.4L84.9,93.1L85.1,92.8L85.4,92.5L85.6,92.2L85.9,91.9L86.1,91.6L86.4,91.3L86.6,90.9L86.8,90.6L87.1,90.3L87.3,90L87.6,89.7L87.8,89.3L88.1,89L88.3,88.7L88.6,88.3L88.8,88L89.1,87.6L89.3,87.3L89.5,86.9L89.8,86.6L90,86.2L90.3,85.8L90.5,85.5L90.8,85.1L91,84.7L91.3,84.3L91.5,83.9L91.7,83.5L92,83.1L92.2,82.7L92.5,82.3L92.7,81.9L93,81.5L93.2,81.1L93.5,80.6L93.7,80.2L94,79.7L94.2,79.3L94.4,78.8L94.7,78.4L94.9,77.9L95.2,77.4L95.4,77L95.7,76.5L95.9,76L96.2,75.5L96.4,75L96.7,74.5L96.9,73.9L97.1,73.4L97.4,72.9L97.6,72.3L97.9,71.7L98.1,71.2L98.4,70.6L98.6,70L98.9,69.4L99.1,68.8L99.4,68.2L99.6,67.6L99.8,66.9L100.1,66.3L100.3,65.6L100.6,65L100.8,64.3L101.1,63.6L101.3,62.9L101.6,62.2L101.8,61.4L102.1,60.7L102.3,59.9L102.5,59.1L102.8,58.3L103,57.5L103.3,56.7L103.5,55.9L103.8,55L104,54.1L104.3,53.2L104.5,52.3L104.8,51.4L105,50.4L105.2,49.4L105.5,48.4L105.7,47.4L106,46.4L106.2,45.3L106.5,44.2L106.7,43.1L107,41.9L107.2,40.7L107.5,39.5L107.7,38.3L107.9,37L108.2,35.7L108.4,34.4L108.7,33L108.9,31.6L109.2,30.1L109.4,28.6L109.7,27.1L109.9,25.5L110.1,23.9L110.4,22.2L110.6,20.4L110.9,18.6L111.1,16.8L111.4,14.9L111.6,12.9L111.9,10.9L112.1,8.8L112.4,6.6L112.6,4.3L112.8,2L113.1,-0.5L113.3,-3L113.6,-5.6L113.8,-8.3L114.1,-11.2L114.3,-14.1L114.6,-17.2L114.8,-20.4L115.1,-23.7L115.3,-27.2L115.5,-30.9L115.8,-34.7L116,-38.8L116.3,-43L116.5,-47.4L116.8,-52.1L117,-57L117.3,-62.2L117.5,-67.7M134.4,319.9L134.7,314.3L134.9,308.9L135.2,303.9L135.4,299.2L135.7,294.6L135.9,290.3L136.2,286.2L136.4,282.3L136.6,278.6L136.9,275L137.1,271.6L137.4,268.4L137.6,265.3L137.9,262.3L138.1,259.4L138.4,256.6L138.6,254L138.9,251.4L139.1,248.9L139.3,246.6L139.6,244.3L139.8,242L140.1,239.9L140.3,237.8L140.6,235.8L140.8,233.9L141.1,232L141.3,230.2L141.6,228.5L141.8,226.8L142,225.1L142.3,223.5L142.5,222L142.8,220.4L143,219L143.3,217.5L143.5,216.1L143.8,214.8L144,213.5L144.3,212.2L144.5,210.9L144.7,209.7L145,208.5L145.2,207.4L145.5,206.2L145.7,205.1L146,204L146.2,203L146.5,201.9L146.7,200.9L146.9,199.9L147.2,199L147.4,198L147.7,197.1L147.9,196.2L148.2,195.3L148.4,194.5L148.7,193.6L148.9,192.8L149.2,192L149.4,191.2L149.6,190.4L149.9,189.6L150.1,188.9L150.4,188.1L150.6,187.4L150.9,186.7L151.1,186L151.4,185.3L151.6,184.6L151.9,184L152.1,183.3L152.3,182.7L152.6,182L152.8,181.4L153.1,180.8L153.3,180.2L153.6,179.6L153.8,179L154.1,178.5L154.3,177.9L154.6,177.4L154.8,176.8L155,176.3L155.3,175.7L155.5,175.2L155.8,174.7L156,174.2L156.3,173.7L156.5,173.2L156.8,172.7L157,172.3L157.3,171.8L157.5,171.3L157.7,170.9L158,170.4L158.2,170L158.5,169.5L158.7,169.1L159,168.7L159.2,168.3L159.5,167.8L159.7,167.4L160,167L160.2,166.6L160.4,166.2L160.7,165.8L160.9,165.4L161.2,165.1L161.4,164.7L161.7,164.3L161.9,163.9L162.2,163.6L162.4,163.2L162.7,162.9L162.9,162.5L163.1,162.2L163.4,161.8L163.6,161.5L163.9,161.1L164.1,160.8L164.4,160.5L164.6,160.1L164.9,159.8L165.1,159.5L165.3,159.2L165.6,158.9L165.8,158.6L166.1,158.2L166.3,157.9L166.6,157.6L166.8,157.3L167.1,157L167.3,156.8L167.6,156.5L167.8,156.2L168,155.9L168.3,155.6L168.5,155.3L168.8,155.1L169,154.8L169.3,154.5L169.5,154.2L169.8,154L170,153.7L170.3,153.4L170.5,153.2L170.7,152.9L171,152.7L171.2,152.4L171.5,152.2L171.7,151.9L172,151.7L172.2,151.4L172.5,151.2L172.7,150.9L173,150.7L173.2,150.4L173.4,150.2L173.7,150L173.9,149.7L174.2,149.5L174.4,149.3L174.7,149L174.9,148.8L175.2,148.6L175.4,148.4L175.7,148.2L175.9,147.9L176.1,147.7L176.4,147.5L176.6,147.3L176.9,147.1L177.1,146.8L177.4,146.6L177.6,146.4L177.9,146.2L178.1,146L178.4,145.8L178.6,145.6L178.8,145.4L179.1,145.2L179.3,145L179.6,144.8L179.8,144.6L180.1,144.4L180.3,144.2L180.6,144L180.8,143.8L181.1,143.6L181.3,143.4L181.5,143.2L181.8,143L182,142.8L182.3,142.7L182.5,142.5L182.8,142.3L183,142.1L183.3,141.9L183.5,141.7L183.7,141.5L184,141.4L184.2,141.2L184.5,141L184.7,140.8L185,140.6L185.2,140.5L185.5,140.3L185.7,140.1L186,139.9L186.2,139.8L186.4,139.6L186.7,139.4L186.9,139.2L187.2,139.1L187.4,138.9L187.7,138.7L187.9,138.6L188.2,138.4L188.4,138.2L188.7,138.1L188.9,137.9L189.1,137.7L189.4,137.6L189.6,137.4L189.9,137.2L190.1,137.1L190.4,136.9L190.6,136.7L190.9,136.6L191.1,136.4L191.4,136.2L191.6,136.1L191.8,135.9L192.1,135.8L192.3,135.6L192.6,135.5L192.8,135.3L193.1,135.1L193.3,135L193.6,134.8L193.8,134.7L194.1,134.5L194.3,134.4L194.5,134.2L194.8,134L195,133.9L195.3,133.7L195.5,133.6L195.8,133.4L196,133.3L196.3,133.1L196.5,133L196.8,132.8L197,132.7L197.2,132.5L197.5,132.4L197.7,132.2L198,132.1L198.2,131.9L198.5,131.8L198.7,131.6L199,131.5L199.2,131.3L199.5,131.2L199.7,131L199.9,130.9L200.2,130.7L200.4,130.6L200.7,130.5L200.9,130.3L201.2,130.2L201.4,130L201.7,129.9L201.9,129.7L202.1,129.6L202.4,129.4L202.6,129.3L202.9,129.1L203.1,129L203.4,128.9L203.6,128.7L203.9,128.6L204.1,128.4L204.4,128.3L204.6,128.1L204.8,128L205.1,127.8L205.3,127.7L205.6,127.6L205.8,127.4L206.1,127.3L206.3,127.1L206.6,127L206.8,126.8L207.1,126.7L207.3,126.6L207.5,126.4L207.8,126.3L208,126.1L208.3,126L208.5,125.9L208.8,125.7L209,125.6L209.3,125.4L209.5,125.3L209.8,125.1L210,125L210.2,124.9L210.5,124.7L210.7,124.6L211,124.4L211.2,124.3L211.5,124.1L211.7,124L212,123.9L212.2,123.7L212.5,123.6L212.7,123.4L212.9,123.3L213.2,123.2L213.4,123L213.7,122.9L213.9,122.7L214.2,122.6L214.4,122.4L214.7,122.3L214.9,122.2L215.2,122L215.4,121.9L215.6,121.7L215.9,121.6L216.1,121.4L216.4,121.3L216.6,121.1L216.9,121L217.1,120.9L217.4,120.7L217.6,120.6L217.9,120.4L218.1,120.3L218.3,120.1L218.6,120L218.8,119.8L219.1,119.7L219.3,119.5L219.6,119.4L219.8,119.3L220.1,119.1L220.3,119L220.5,118.8L220.8,118.7L221,118.5L221.3,118.4L221.5,118.2L221.8,118.1L222,117.9L222.3,117.8L222.5,117.6L222.8,117.5L223,117.3L223.2,117.2L223.5,117L223.7,116.9L224,116.7L224.2,116.6L224.5,116.4L224.7,116.3L225,116.1L225.2,116L225.5,115.8L225.7,115.6L225.9,115.5L226.2,115.3L226.4,115.2L226.7,115L226.9,114.9L227.2,114.7L227.4,114.5L227.7,114.4L227.9,114.2L228.2,114.1L228.4,113.9L228.6,113.8L228.9,113.6L229.1,113.4L229.4,113.3L229.6,113.1L229.9,112.9L230.1,112.8L230.4,112.6L230.6,112.4L230.9,112.3L231.1,112.1L231.3,111.9L231.6,111.8L231.8,111.6L232.1,111.4L232.3,111.3L232.6,111.1L232.8,110.9L233.1,110.8L233.3,110.6L233.6,110.4L233.8,110.2L234,110.1L234.3,109.9L234.5,109.7L234.8,109.5L235,109.4L235.3,109.2L235.5,109L235.8,108.8L236,108.6L236.3,108.5L236.5,108.3L236.7,108.1L237,107.9L237.2,107.7L237.5,107.5L237.7,107.3L238,107.2L238.2,107L238.5,106.8L238.7,106.6L238.9,106.4L239.2,106.2L239.4,106L239.7,105.8L239.9,105.6L240.2,105.4L240.4,105.2L240.7,105L240.9,104.8L241.2,104.6L241.4,104.4L241.6,104.2L241.9,104L242.1,103.8L242.4,103.6L242.6,103.4L242.9,103.2L243.1,102.9L243.4,102.7L243.6,102.5L243.9,102.3L244.1,102.1L244.3,101.8L244.6,101.6L244.8,101.4L245.1,101.2L245.3,101L245.6,100.7L245.8,100.5L246.1,100.3L246.3,100L246.6,99.8L246.8,99.6L247,99.3L247.3,99.1L247.5,98.8L247.8,98.6L248,98.3L248.3,98.1L248.5,97.8L248.8,97.6L249,97.3L249.3,97.1L249.5,96.8L249.7,96.6L250,96.3L250.2,96L250.5,95.8L250.7,95.5L251,95.2L251.2,94.9L251.5,94.7L251.7,94.4L252,94.1L252.2,93.8L252.4,93.5L252.7,93.2L252.9,93L253.2,92.7L253.4,92.4L253.7,92.1L253.9,91.8L254.2,91.4L254.4,91.1L254.7,90.8L254.9,90.5L255.1,90.2L255.4,89.9L255.6,89.5L255.9,89.2L256.1,88.9L256.4,88.5L256.6,88.2L256.9,87.8L257.1,87.5L257.3,87.1L257.6,86.8L257.8,86.4L258.1,86.1L258.3,85.7L258.6,85.3L258.8,84.9L259.1,84.6L259.3,84.2L259.6,83.8L259.8,83.4L260,83L260.3,82.6L260.5,82.2L260.8,81.7L261,81.3L261.3,80.9L261.5,80.5L261.8,80L262,79.6L262.3,79.1L262.5,78.7L262.7,78.2L263,77.7L263.2,77.3L263.5,76.8L263.7,76.3L264,75.8L264.2,75.3L264.5,74.8L264.7,74.3L265,73.7L265.2,73.2L265.4,72.6L265.7,72.1L265.9,71.5L266.2,71L266.4,70.4L266.7,69.8L266.9,69.2L267.2,68.6L267.4,68L267.7,67.3L267.9,66.7L268.1,66L268.4,65.4L268.6,64.7L268.9,64L269.1,63.3L269.4,62.6L269.6,61.9L269.9,61.1L270.1,60.4L270.4,59.6L270.6,58.8L270.8,58L271.1,57.2L271.3,56.4L271.6,55.5L271.8,54.7L272.1,53.8L272.3,52.9L272.6,52L272.8,51L273.1,50.1L273.3,49.1L273.5,48.1L273.8,47L274,46L274.3,44.9L274.5,43.8L274.8,42.6L275,41.5L275.3,40.3L275.5,39.1L275.7,37.8L276,36.5L276.2,35.2L276.5,33.9L276.7,32.5L277,31L277.2,29.6L277.5,28L277.7,26.5L278,24.9L278.2,23.2L278.4,21.5L278.7,19.8L278.9,18L279.2,16.1L279.4,14.2L279.7,12.2L279.9,10.1L280.2,8L280.4,5.7L280.7,3.4L280.9,1.1L281.1,-1.4L281.4,-4L281.6,-6.6L281.9,-9.4L282.1,-12.3L282.4,-15.3L282.6,-18.4L282.9,-21.6L283.1,-25L283.4,-28.6L283.6,-32.3L283.8,-36.2L284.1,-40.3L284.3,-44.6L284.6,-49.2L284.8,-53.9L285.1,-58.9L285.3,-64.3L285.6,-69.9M302.5,317.7L302.7,312.2L303,307L303.2,302.1L303.5,297.4L303.7,293L304,288.8L304.2,284.7L304.5,280.9L304.7,277.2L304.9,273.7L305.2,270.4L305.4,267.2L305.7,264.1L305.9,261.2L306.2,258.3L306.4,255.6L306.7,253L306.9,250.5L307.2,248L307.4,245.7L307.6,243.4L307.9,241.2L308.1,239.1L308.4,237.1L308.6,235.1L308.9,233.2L309.1,231.4L309.4,229.6L309.6,227.8L309.9,226.1L310.1,224.5L310.3,222.9L310.6,221.4L310.8,219.9L311.1,218.4L311.3,217L311.6,215.6L311.8,214.3L312.1,213L312.3,211.7L312.5,210.5L312.8,209.3L313,208.1L313.3,206.9L313.5,205.8L313.8,204.7L314,203.6L314.3,202.6L314.5,201.6L314.8,200.6L315,199.6L315.2,198.6L315.5,197.7L315.7,196.8L316,195.9L316.2,195L316.5,194.1L316.7,193.3L317,192.5L317.2,191.7L317.5,190.9L317.7,190.1L317.9,189.3L318.2,188.6L318.4,187.8L318.7,187.1L318.9,186.4L319.2,185.7L319.4,185L319.7,184.4L319.9,183.7L320.2,183.1L320.4,182.4L320.6,181.8L320.9,181.2L321.1,180.6L321.4,180L321.6,179.4L321.9,178.8L322.1,178.3L322.4,177.7L322.6,177.1L322.9,176.6L323.1,176.1L323.3,175.5L323.6,175L323.8,174.5L324.1,174L324.3,173.5L324.6,173L324.8,172.6L325.1,172.1L325.3,171.6L325.6,171.2L325.8,170.7L326,170.3L326.3,169.8L326.5,169.4L326.8,168.9L327,168.5L327.3,168.1L327.5,167.7L327.8,167.3L328,166.9L328.3,166.5L328.5,166.1L328.7,165.7L329,165.3L329.2,164.9L329.5,164.5L329.7,164.2L330,163.8L330.2,163.4L330.5,163.1L330.7,162.7L330.9,162.4L331.2,162L331.4,161.7L331.7,161.3L331.9,161L332.2,160.7L332.4,160.3L332.7,160L332.9,159.7L333.2,159.4L333.4,159.1L333.6,158.7L333.9,158.4L334.1,158.1L334.4,157.8L334.6,157.5L334.9,157.2L335.1,156.9L335.4,156.6L335.6,156.4L335.9,156.1L336.1,155.8L336.3,155.5L336.6,155.2L336.8,155L337.1,154.7L337.3,154.4L337.6,154.1L337.8,153.9L338.1,153.6L338.3,153.3L338.6,153.1L338.8,152.8L339,152.6L339.3,152.3L339.5,152.1L339.8,151.8L340,151.6L340.3,151.3L340.5,151.1L340.8,150.8L341,150.6L341.3,150.4L341.5,150.1L341.7,149.9L342,149.7L342.2,149.4L342.5,149.2L342.7,149L343,148.7L343.2,148.5L343.5,148.3L343.7,148.1L344,147.8L344.2,147.6L344.4,147.4L344.7,147.2L344.9,147L345.2,146.8L345.4,146.6L345.7,146.3L345.9,146.1L346.2,145.9L346.4,145.7L346.7,145.5L346.9,145.3L347.1,145.1L347.4,144.9L347.6,144.7L347.9,144.5L348.1,144.3L348.4,144.1L348.6,143.9L348.9,143.7L349.1,143.5L349.3,143.3L349.6,143.2L349.8,143L350.1,142.8L350.3,142.6L350.6,142.4L350.8,142.2L351.1,142L351.3,141.8L351.6,141.7L351.8,141.5L352,141.3L352.3,141.1L352.5,140.9L352.8,140.8L353,140.6L353.3,140.4L353.5,140.2L353.8,140L354,139.9L354.3,139.7L354.5,139.5L354.7,139.3L355,139.2L355.2,139L355.5,138.8L355.7,138.7L356,138.5L356.2,138.3L356.5,138.2L356.7,138L357,137.8L357.2,137.7L357.4,137.5L357.7,137.3L357.9,137.2L358.2,137L358.4,136.8L358.7,136.7L358.9,136.5L359.2,136.3L359.4,136.2L359.7,136L359.9,135.9L360.1,135.7L360.4,135.6L360.6,135.4L360.9,135.2L361.1,135.1L361.4,134.9L361.6,134.8L361.9,134.6L362.1,134.5L362.4,134.3L362.6,134.1L362.8,134L363.1,133.8L363.3,133.7L363.6,133.5L363.8,133.4L364.1,133.2L364.3,133.1L364.6,132.9L364.8,132.8L365.1,132.6L365.3,132.5L365.5,132.3L365.8,132.2L366,132L366.3,131.9L366.5,131.7L366.8,131.6L367,131.4L367.3,131.3L367.5,131.1L367.7,131L368,130.8L368.2,130.7L368.5,130.5L368.7,130.4L369,130.2L369.2,130.1L369.5,130L369.7,129.8L370,129.7L370.2,129.5L370.4,129.4L370.7,129.2L370.9,129.1L371.2,128.9L371.4,128.8L371.7,128.7L371.9,128.5L372.2,128.4L372.4,128.2L372.7,128.1L372.9,127.9L373.1,127.8L373.4,127.7L373.6,127.5L373.9,127.4L374.1,127.2L374.4,127.1L374.6,126.9L374.9,126.8L375.1,126.7L375.4,126.5L375.6,126.4L375.8,126.2L376.1,126.1L376.3,125.9L376.6,125.8L376.8,125.7L377.1,125.5L377.3,125.4L377.6,125.2L377.8,125.1L378.1,124.9L378.3,124.8L378.5,124.7L378.8,124.5L379,124.4L379.3,124.2L379.5,124.1L379.8,124L380,123.8L380.3,123.7L380.5,123.5L380.8,123.4L381,123.2L381.2,123.1L381.5,123L381.7,122.8L382,122.7L382.2,122.5L382.5,122.4L382.7,122.2L383,122.1L383.2,122L383.5,121.8L383.7,121.7L383.9,121.5L384.2,121.4L384.4,121.2L384.7,121.1L384.9,120.9L385.2,120.8L385.4,120.7L385.7,120.5L385.9,120.4L386.1,120.2L386.4,120.1L386.6,119.9L386.9,119.8L387.1,119.6L387.4,119.5L387.6,119.3L387.9,119.2L388.1,119.1L388.4,118.9L388.6,118.8L388.8,118.6L389.1,118.5L389.3,118.3L389.6,118.2L389.8,118L390.1,117.9L390.3,117.7L390.6,117.6L390.8,117.4L391.1,117.3L391.3,117.1L391.5,117L391.8,116.8L392,116.7L392.3,116.5L392.5,116.4L392.8,116.2L393,116L393.3,115.9L393.5,115.7L393.8,115.6L394,115.4"/>
+<text class="s-txt-k1" x="194" y="38.4" text-anchor="end">y = tan x</text>
+</svg>
+<figcaption>Tangens ima periodo \(\pi\), zalogo vrednosti \(\mathbb{R}\) in navpične asimptote pri \(x = \frac{\pi}{2} + k\pi\).</figcaption>
+</figure>
+            <div class="tabela-wrap">
+              <table class="tabela">
+                <thead><tr><th>Lastnost</th><th>\(\sin x\)</th><th>\(\cos x\)</th><th>\(\tan x\)</th></tr></thead>
+                <tbody>
+                  <tr><td>\(D_f\)</td><td>\(\mathbb{R}\)</td><td>\(\mathbb{R}\)</td><td>\(x \ne \frac{\pi}{2} + k\pi\)</td></tr>
+                  <tr><td>\(Z_f\)</td><td>\([-1, 1]\)</td><td>\([-1, 1]\)</td><td>\(\mathbb{R}\)</td></tr>
+                  <tr><td>perioda</td><td>\(2\pi\)</td><td>\(2\pi\)</td><td>\(\pi\)</td></tr>
+                  <tr><td>ničle</td><td>\(k\pi\)</td><td>\(\frac{\pi}{2} + k\pi\)</td><td>\(k\pi\)</td></tr>
+                  <tr><td>maksimum 1</td><td>\(\frac{\pi}{2} + 2k\pi\)</td><td>\(2k\pi\)</td><td>ni</td></tr>
+                  <tr><td>minimum \(-1\)</td><td>\(\frac{3\pi}{2} + 2k\pi\)</td><td>\(\pi + 2k\pi\)</td><td>ni</td></tr>
+                  <tr><td>simetrija</td><td>liha</td><td>soda</td><td>liha</td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-3">
+              <h4>Tip 3: Lastnosti kotne funkcije</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Zapišite ničle, ekstreme in intervale monotonosti funkcije \(f(x) = \cos x\) na intervalu \([0, 2\pi]\).</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> sprašujejo po periodi, ničlah, ekstremih, zalogi vrednosti ali monotonosti osnovne kotne funkcije (ali preprosto spremenjene).</p><ul class="kljucne"><li>„perioda“</li><li>„ničle na intervalu“</li><li>„zaloga vrednosti“</li><li>„kje narašča“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Nariši (ali predstavljaj) graf na danem intervalu.</p><div class="na-nalogi"><p>Kosinus začne v 1, pada do \(-1\) pri \(\pi\), nato raste do 1 pri \(2\pi\).</p></div></li>
+              <li><p class="korak">Odčitaj ničle (iz tabele) na intervalu.</p><div class="na-nalogi"><p>\(\frac{\pi}{2}\) in \(\frac{3\pi}{2}\).</p></div></li>
+              <li><p class="korak">Odčitaj ekstreme in monotonost.</p><div class="na-nalogi"><p>Maksimum 1 pri \(0\) in \(2\pi\), minimum \(-1\) pri \(\pi\). Pada na \([0, \pi]\), narašča na \([\pi, 2\pi]\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Ničle funkcije \(\tan x\).</p><p>\(x = k\pi\), \(k \in \mathbb{Z}\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Zaloga vrednosti \(f(x) = 3 - 2\cos x\).</p><p>\(\cos x \in [-1, 1]\): \(Z_f = [1, 5]\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Ali je \(f(x) = x\sin x\) soda ali liha?</p><p>\((-x)\sin(-x) = x\sin x\): soda.</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 3 -->
+        <section class="sklop" id="sklop-3">
+          <header class="sklop-header">
+            <span class="sklop-num">4.13 · 3</span>
+            <h2>Računanje vrednosti krožnih funkcij</h2>
+            <p>\(\arcsin\), \(\arccos\), \(\arctan\).</p>
+          </header>
+          <div class="sklop-video"><span class="sklop-video-oznaka">Video razlaga</span><video class="video-svetla" controls preload="none" playsinline poster="/videi/matematika/funkcije/kotne/sklop-8-svetla.jpg" src="/videi/matematika/funkcije/kotne/sklop-8-svetla.mp4"></video><video class="video-temna" controls preload="none" playsinline poster="/videi/matematika/funkcije/kotne/sklop-8-temna.jpg" src="/videi/matematika/funkcije/kotne/sklop-8-temna.mp4"></video></div><!-- /sklop-video -->
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <p><strong>Krožne funkcije</strong> so inverzne funkcije kotnih funkcij, zoženih na interval, kjer so injektivne:</p>
+            <div class="tabela-wrap">
+              <table class="tabela">
+                <thead><tr><th>Funkcija</th><th>Pomen</th><th>\(D\)</th><th>\(Z\)</th></tr></thead>
+                <tbody>
+                  <tr><td>\(\arcsin x\)</td><td>kot v \(\left[-\frac{\pi}{2}, \frac{\pi}{2}\right]\), katerega sinus je \(x\)</td><td>\([-1, 1]\)</td><td>\(\left[-\frac{\pi}{2}, \frac{\pi}{2}\right]\)</td></tr>
+                  <tr><td>\(\arccos x\)</td><td>kot v \([0, \pi]\), katerega kosinus je \(x\)</td><td>\([-1, 1]\)</td><td>\([0, \pi]\)</td></tr>
+                  <tr><td>\(\arctan x\)</td><td>kot v \(\left(-\frac{\pi}{2}, \frac{\pi}{2}\right)\), katerega tangens je \(x\)</td><td>\(\mathbb{R}\)</td><td>\(\left(-\frac{\pi}{2}, \frac{\pi}{2}\right)\)</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p>Na računalu so to tipke \(\sin^{-1}\), \(\cos^{-1}\), \(\tan^{-1}\). Velja \(\sin(\arcsin x) = x\), a \(\arcsin(\sin x) = x\) le za \(x \in \left[-\frac{\pi}{2}, \frac{\pi}{2}\right]\).</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-4">
+              <h4>Tip 4: Vrednosti krožnih funkcij</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Izračunajte \(\arcsin\left(-\frac{1}{2}\right) + \arccos\left(-\frac{\sqrt{2}}{2}\right)\).</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> v nalogi je \(\arcsin\), \(\arccos\) ali \(\arctan\) posebne vrednosti, ali kombinacija s kotno funkcijo.</p><ul class="kljucne"><li>\(\arcsin\), \(\arccos\), \(\arctan\)</li><li>\(\sin(\arccos x)\)</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Za vsak člen poišči kot s to vrednostjo funkcije v zalogi vrednosti krožne funkcije.</p><div class="na-nalogi"><p>\(\arcsin\left(-\frac{1}{2}\right)\): kot v \(\left[-\frac{\pi}{2}, \frac{\pi}{2}\right]\) s sinusom \(-\frac{1}{2}\) je \(-\frac{\pi}{6}\).</p></div></li>
+              <li><p class="korak">Pazi na interval: pri \(\arccos\) je rezultat v \([0, \pi]\).</p><div class="na-nalogi"><p>\(\arccos\left(-\frac{\sqrt{2}}{2}\right) = \frac{3\pi}{4}\).</p></div></li>
+              <li><p class="korak">Izračunaj.</p><div class="na-nalogi"><p>\(-\frac{\pi}{6} + \frac{3\pi}{4} = \frac{7\pi}{12}\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> \(\sin\left(\arccos\frac{3}{5}\right)\).</p><p>Kot v \([0, \pi]\), \(\sin \ge 0\): \(\sqrt{1 - \frac{9}{25}} = \frac{4}{5}\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> \(\arctan 1 + \arctan(-1)\).</p><p>\(\frac{\pi}{4} - \frac{\pi}{4} = 0\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> \(\arccos\left(\cos\frac{5\pi}{3}\right)\).</p><p>\(\cos\frac{5\pi}{3} = \frac{1}{2}\), \(\arccos\frac{1}{2} = \frac{\pi}{3}\) (ne \(\frac{5\pi}{3}\)).</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 4 -->
+        <section class="sklop" id="sklop-4">
+          <header class="sklop-header">
+            <span class="sklop-num">4.13 · 4</span>
+            <h2>Adicijski izreki</h2>
+            <p>Kotne funkcije vsote, razlike, dvojnih in polovičnih kotov.</p>
+          </header>
+          <div class="sklop-video"><span class="sklop-video-oznaka">Video razlaga</span><video class="video-svetla" controls preload="none" playsinline poster="/videi/matematika/funkcije/kotne/sklop-5-svetla.jpg" src="/videi/matematika/funkcije/kotne/sklop-5-svetla.mp4"></video><video class="video-temna" controls preload="none" playsinline poster="/videi/matematika/funkcije/kotne/sklop-5-temna.jpg" src="/videi/matematika/funkcije/kotne/sklop-5-temna.mp4"></video></div><!-- /sklop-video -->
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <div class="formula-grid">
+              <div class="formula-card">\(\sin(x \pm y) = \sin x\cos y \pm \cos x\sin y\)</div>
+              <div class="formula-card">\(\cos(x \pm y) = \cos x\cos y \mp \sin x\sin y\)</div>
+              <div class="formula-card">\(\tan(x \pm y) = \dfrac{\tan x \pm \tan y}{1 \mp \tan x\tan y}\)</div>
+            </div>
+            <h4>Dvojni in polovični koti</h4>
+            <div class="formula-grid">
+              <div class="formula-card">\(\sin 2x = 2\sin x\cos x\)</div>
+              <div class="formula-card">\(\cos 2x = \cos^2 x - \sin^2 x = 1 - 2\sin^2 x = 2\cos^2 x - 1\)</div>
+              <div class="formula-card">\(\sin^2 \frac{x}{2} = \dfrac{1 - \cos x}{2}\), \(\cos^2 \frac{x}{2} = \dfrac{1 + \cos x}{2}\)</div>
+            </div>
+            <p>Z adicijskimi izreki izračunamo natančne vrednosti za kote, ki so vsote ali razlike posebnih kotov (\(75^\circ = 45^\circ + 30^\circ\), \(15^\circ = 45^\circ - 30^\circ\)).</p>
+            <div class="pazi"><strong>Pazi:</strong> \(\sin(x + y) \ne \sin x + \sin y\) in \(\sin 2x \ne 2\sin x\).</div>
+            <h4>Vsota \(a\sin x + b\cos x\) kot ena funkcija</h4>
+            <p>Izraz, v katerem nastopata sinus in kosinus istega kota, lahko z adicijskim izrekom zapišemo kot en sam sinus s premikom:</p>
+            <div class="formula-grid">
+              <div class="formula-card">\(a\sin x + b\cos x = R\sin(x + \varphi)\), \(R = \sqrt{a^2 + b^2}\)</div>
+              <div class="formula-card">\(\cos \varphi = \dfrac{a}{R}\), \(\sin \varphi = \dfrac{b}{R}\)</div>
+            </div>
+            <p>Zakaj velja: \(R\sin(x + \varphi) = R\cos\varphi \sin x + R\sin\varphi \cos x\), zato mora biti \(R\cos\varphi = a\) in \(R\sin\varphi = b\). Tako takoj vidimo amplitudo \(R\), največjo in najmanjšo vrednost (\(\pm R\)) ter premik grafa. Primer: \(\sin x + \cos x = \sqrt{2}\sin\left(x + \frac{\pi}{4}\right)\).</p>
+            <h4>Zasuk točke okoli izhodišča</h4>
+            <p>Točko \(T(x, y)\) zasučemo okoli izhodišča za kot \(\varphi\) (pozitivno je v nasprotni smeri urinega kazalca). Če je \(T\) na razdalji \(r\) pod kotom \(\alpha\), je \(x = r\cos\alpha\), \(y = r\sin\alpha\), zasukana točka pa leži pod kotom \(\alpha + \varphi\). Z adicijskima izrekoma dobimo:</p>
+            <div class="formula-grid">
+              <div class="formula-card">\(x' = x\cos\varphi - y\sin\varphi\)</div>
+              <div class="formula-card">\(y' = x\sin\varphi + y\cos\varphi\)</div>
+            </div>
+            <p>Razdalja do izhodišča se pri zasuku ne spremeni. Pri zasuku za \(90^\circ\) dobimo preprosto \((x, y) \to (-y, x)\).</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-5">
+              <h4>Tip 5: Adicijski izreki</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Natančno izračunajte \(\sin 75^\circ\).</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> kot, ki ni posebni, a je vsota ali razlika posebnih; ali dani \(\sin \alpha\), \(\sin \beta\) in iskani \(\cos(\alpha + \beta)\).</p><ul class="kljucne"><li>„natančno“ za \(15^\circ\), \(75^\circ\), \(105^\circ\)</li><li>„izračunajte \(\cos(\alpha + \beta)\)“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Kot zapiši kot vsoto ali razliko posebnih kotov.</p><div class="na-nalogi"><p>\(75^\circ = 45^\circ + 30^\circ\).</p></div></li>
+              <li><p class="korak">Uporabi ustrezen adicijski izrek.</p><div class="na-nalogi"><p>\(\sin 45^\circ\cos 30^\circ + \cos 45^\circ\sin 30^\circ\).</p></div></li>
+              <li><p class="korak">Vstavi vrednosti in poenostavi.</p><div class="na-nalogi"><p>\(\frac{\sqrt{2}}{2}\cdot\frac{\sqrt{3}}{2} + \frac{\sqrt{2}}{2}\cdot\frac{1}{2} = \frac{\sqrt{6} + \sqrt{2}}{4}\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> \(\cos 15^\circ\).</p><p>\(\cos(45^\circ - 30^\circ) = \frac{\sqrt{6} + \sqrt{2}}{4}\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> \(\tan 105^\circ\).</p><p>\(\tan(60^\circ + 45^\circ) = \frac{\sqrt{3} + 1}{1 - \sqrt{3}} = -2 - \sqrt{3}\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> \(\sin \alpha = \frac{3}{5}\), \(\sin \beta = \frac{5}{13}\), oba ostra. \(\cos(\alpha + \beta)\)?</p><p>\(\cos \alpha = \frac{4}{5}\), \(\cos \beta = \frac{12}{13}\): \(\frac{48}{65} - \frac{15}{65} = \frac{33}{65}\).</p></div>
+            </div>
+            <div class="tip-naloge" id="tip-6">
+              <h4>Tip 6: Dvojni in polovični koti</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Velja \(\sin \alpha = \frac{3}{5}\), \(\alpha\) v II. kvadrantu. Izračunajte \(\sin 2\alpha\) in \(\cos 2\alpha\).</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> v nalogi je \(2\alpha\), \(\frac{\alpha}{2}\), ali izraz kot \(\sin x\cos x\), \(\cos^2 x - \sin^2 x\).</p><ul class="kljucne"><li>„\(\sin 2\alpha\)“</li><li>„poenostavite \(\frac{\sin 2x}{1 + \cos 2x}\)“</li><li>„polovični kot“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Izračunaj manjkajočo funkcijo kota \(\alpha\) (s pravim predznakom).</p><div class="na-nalogi"><p>\(\cos \alpha = -\frac{4}{5}\).</p></div></li>
+              <li><p class="korak">Uporabi formulo za dvojni (ali polovični) kot.</p><div class="na-nalogi"><p>\(\sin 2\alpha = 2\cdot\frac{3}{5}\cdot\left(-\frac{4}{5}\right)\); \(\cos 2\alpha = 1 - 2\sin^2 \alpha\).</p></div></li>
+              <li><p class="korak">Izračunaj.</p><div class="na-nalogi"><p>\(\sin 2\alpha = -\frac{24}{25}\), \(\cos 2\alpha = 1 - \frac{18}{25} = \frac{7}{25}\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Poenostavite \(\dfrac{\sin 2x}{1 + \cos 2x}\).</p><p>\(\frac{2\sin x\cos x}{2\cos^2 x} = \tan x\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Natančno \(\cos 15^\circ\) s polovičnim kotom.</p><p>\(\cos^2 15^\circ = \frac{1 + \cos 30^\circ}{2} = \frac{2 + \sqrt{3}}{4}\): \(\cos 15^\circ = \frac{\sqrt{2 + \sqrt{3}}}{2}\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Če je \(\sin x\cos x = \frac{1}{4}\), koliko je \(\sin 2x\)?</p><p>\(\frac{1}{2}\).</p></div>
+            </div>
+            <div class="tip-naloge" id="tip-7">
+              <h4>Tip 7: Zapiši \(a\sin x + b\cos x\) z eno funkcijo</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Zapišite \(f(x) = \sqrt{3}\sin x + \cos x\) v obliki \(R\sin(x + \varphi)\), določite največjo vrednost funkcije in njene ničle.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> v predpisu ali enačbi sta sinus in kosinus istega kota, oba na prvo potenco.</p><ul class="kljucne"><li>„zapišite v obliki \(R\sin(x + \varphi)\)“</li><li>„največja vrednost“ izraza \(a\sin x + b\cos x\)</li><li>\(\sin x + \cos x = 1\)</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Izračunaj \(R = \sqrt{a^2 + b^2}\).</p><div class="na-nalogi"><p>\(R = \sqrt{3 + 1} = 2\).</p></div></li>
+              <li><p class="korak">Iz \(\cos\varphi = \frac{a}{R}\) in \(\sin\varphi = \frac{b}{R}\) določi \(\varphi\) (pazi na kvadrant).</p><div class="na-nalogi"><p>\(\cos\varphi = \frac{\sqrt{3}}{2}\), \(\sin\varphi = \frac{1}{2}\): \(\varphi = \frac{\pi}{6}\).</p></div></li>
+              <li><p class="korak">Zapiši funkcijo in odčitaj, kar zahteva naloga.</p><div class="na-nalogi"><p>\(f(x) = 2\sin\left(x + \frac{\pi}{6}\right)\). Največja vrednost je 2. Ničle: \(x + \frac{\pi}{6} = k\pi\), \(x = -\frac{\pi}{6} + k\pi\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> \(\sin x - \cos x\).</p><p>\(R = \sqrt{2}\), \(\cos\varphi = \frac{\sqrt{2}}{2}\), \(\sin\varphi = -\frac{\sqrt{2}}{2}\): \(\sqrt{2}\sin\left(x - \frac{\pi}{4}\right)\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Rešite \(\sin x + \cos x = 1\).</p><p>\(\sqrt{2}\sin\left(x + \frac{\pi}{4}\right) = 1\), \(\sin\left(x + \frac{\pi}{4}\right) = \frac{\sqrt{2}}{2}\): \(x = 2k\pi\) ali \(x = \frac{\pi}{2} + 2k\pi\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Največja vrednost \(3\sin x + 4\cos x\).</p><p>\(R = 5\), torej največja vrednost 5, najmanjša \(-5\).</p></div>
+            </div>
+            <div class="tip-naloge" id="tip-8">
+              <h4>Tip 8: Zasuk točke okoli izhodišča</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Točko \(T(4, 2)\) zasučemo okoli izhodišča za \(60^\circ\) v pozitivni smeri. Izračunajte koordinate zasukane točke.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> v nalogi je zasuk (vrtenje) točke ali lika okoli koordinatnega izhodišča za dani kot.</p><ul class="kljucne"><li>„zasučemo za kot \(\varphi\)“</li><li>„zavrtimo okoli izhodišča“</li><li>„v nasprotni smeri urinega kazalca“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Določi kot zasuka s predznakom (v smeri urinega kazalca je negativen).</p><div class="na-nalogi"><p>\(\varphi = 60^\circ\): \(\cos\varphi = \frac{1}{2}\), \(\sin\varphi = \frac{\sqrt{3}}{2}\).</p></div></li>
+              <li><p class="korak">Vstavi v \(x' = x\cos\varphi - y\sin\varphi\), \(y' = x\sin\varphi + y\cos\varphi\).</p><div class="na-nalogi"><p>\(x' = 4\cdot\frac{1}{2} - 2\cdot\frac{\sqrt{3}}{2} = 2 - \sqrt{3}\), \(y' = 4\cdot\frac{\sqrt{3}}{2} + 2\cdot\frac{1}{2} = 2\sqrt{3} + 1\).</p></div></li>
+              <li><p class="korak">Preveri, da se razdalja do izhodišča ni spremenila.</p><div class="na-nalogi"><p>\(|OT|^2 = 20\), \(|OT'|^2 = (2 - \sqrt{3})^2 + (2\sqrt{3} + 1)^2 = 7 - 4\sqrt{3} + 13 + 4\sqrt{3} = 20\). Drži.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> \(T(3, 0)\) zasučemo za \(90^\circ\).</p><p>\((x, y) \to (-y, x)\): \(T'(0, 3)\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> \(T(1, 1)\) zasučemo za \(45^\circ\).</p><p>\(x' = \frac{\sqrt{2}}{2} - \frac{\sqrt{2}}{2} = 0\), \(y' = \sqrt{2}\): \(T'(0, \sqrt{2})\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> \(T(2, 0)\) zasučemo za \(-30^\circ\) (v smeri urinega kazalca).</p><p>\(T'(2\cos 30^\circ, -2\sin 30^\circ) = (\sqrt{3}, -1)\).</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 5 -->
+        <section class="sklop" id="sklop-5">
+          <header class="sklop-header">
+            <span class="sklop-num">4.13 · 5</span>
+            <h2>Kot med premicama</h2>
+            <p>Naklonski kot premice in kot med dvema premicama.</p>
+          </header>
+          <div class="sklop-video"><span class="sklop-video-oznaka">Video razlaga</span><video class="video-svetla" controls preload="none" playsinline poster="/videi/matematika/funkcije/linearna/sklop-3-svetla.jpg" src="/videi/matematika/funkcije/linearna/sklop-3-svetla.mp4"></video><video class="video-temna" controls preload="none" playsinline poster="/videi/matematika/funkcije/linearna/sklop-3-temna.jpg" src="/videi/matematika/funkcije/linearna/sklop-3-temna.mp4"></video></div><!-- /sklop-video -->
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <p><strong>Naklonski kot</strong> \(\alpha\) je kot, ki ga premica oklepa s pozitivnim delom osi \(x\) (merjen v nasprotni smeri urnega kazalca), \(0^\circ \le \alpha &lt; 180^\circ\). Velja \(\tan \alpha = k\). Pri \(k &lt; 0\) je \(\alpha\) top kot.</p>
+            <p><strong>Kot med premicama</strong> \(\varphi\) je manjši od kotov, ki ju premici oklepata, \(0^\circ \le \varphi \le 90^\circ\):</p>
+            <div class="formula-grid">
+              <div class="formula-card">\(\tan \varphi = \left|\dfrac{k_2 - k_1}{1 + k_1 k_2}\right|\)</div>
+              <div class="formula-card">\(\varphi = |\alpha_1 - \alpha_2|\) (ali \(180^\circ - \) to, če je več kot \(90^\circ\))</div>
+            </div>
+            <figure class="slika slika--siroka">
+<svg viewBox="0 0 360 300" role="img" aria-label="Kot med premicama y = 3x − 2 in y = x/2 + 1/2" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="l3-g5-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="l3-g5-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="l3-g5-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="l3-g5-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="l3-g5-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="l3-g5-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<path class="s-mreza" d="M75.3,274V26M136.9,274V26M198.5,274V26M260.1,274V26M321.7,274V26M26,249.2H334M26,199.6H334M26,150H334M26,100.4H334M26,50.8H334"/>
+<line class="s-os" x1="26" y1="199.6" x2="342" y2="199.6" marker-end="url(#l3-g5-p)"/>
+<line class="s-os" x1="136.9" y1="274" x2="136.9" y2="18" marker-end="url(#l3-g5-p)"/>
+<text class="s-os-txt" x="336" y="191.6" text-anchor="end">x</text>
+<text class="s-os-txt" x="144.9" y="30">y</text>
+<line class="s-os" x1="75.3" y1="196.6" x2="75.3" y2="202.6"/><text class="s-os-txt" x="75.3" y="214.6" text-anchor="middle">-1</text><line class="s-os" x1="198.5" y1="196.6" x2="198.5" y2="202.6"/><text class="s-os-txt" x="198.5" y="214.6" text-anchor="middle">1</text><line class="s-os" x1="260.1" y1="196.6" x2="260.1" y2="202.6"/><text class="s-os-txt" x="260.1" y="214.6" text-anchor="middle">2</text><line class="s-os" x1="321.7" y1="196.6" x2="321.7" y2="202.6"/><text class="s-os-txt" x="321.7" y="214.6" text-anchor="middle">3</text><line class="s-os" x1="133.9" y1="249.2" x2="139.9" y2="249.2"/><text class="s-os-txt" x="130.9" y="253.2" text-anchor="end">-1</text><line class="s-os" x1="133.9" y1="150" x2="139.9" y2="150"/><text class="s-os-txt" x="130.9" y="154" text-anchor="end">1</text><line class="s-os" x1="133.9" y1="100.4" x2="139.9" y2="100.4"/><text class="s-os-txt" x="130.9" y="104.4" text-anchor="end">2</text><line class="s-os" x1="133.9" y1="50.8" x2="139.9" y2="50.8"/><text class="s-os-txt" x="130.9" y="54.8" text-anchor="end">3</text><text class="s-os-txt" x="130.9" y="214.6" text-anchor="end">0</text>
+<path class="s-k1" d="M96.1,397.4L96.8,395.5L97.6,393.7L98.4,391.8L99.2,389.9L99.9,388.1L100.7,386.2L101.5,384.4L102.2,382.5L103,380.6L103.8,378.8L104.5,376.9L105.3,375.1L106.1,373.2L106.9,371.3L107.6,369.5L108.4,367.6L109.2,365.8L109.9,363.9L110.7,362L111.5,360.2L112.2,358.3L113,356.5L113.8,354.6L114.6,352.7L115.3,350.9L116.1,349L116.9,347.2L117.6,345.3L118.4,343.4L119.2,341.6L119.9,339.7L120.7,337.9L121.5,336L122.3,334.1L123,332.3L123.8,330.4L124.6,328.6L125.3,326.7L126.1,324.8L126.9,323L127.6,321.1L128.4,319.3L129.2,317.4L130,315.5L130.7,313.7L131.5,311.8L132.3,310L133,308.1L133.8,306.2L134.6,304.4L135.3,302.5L136.1,300.7L136.9,298.8L137.7,296.9L138.4,295.1L139.2,293.2L140,291.4L140.7,289.5L141.5,287.6L142.3,285.8L143,283.9L143.8,282.1L144.6,280.2L145.4,278.3L146.1,276.5L146.9,274.6L147.7,272.8L148.4,270.9L149.2,269L150,267.2L150.7,265.3L151.5,263.5L152.3,261.6L153.1,259.7L153.8,257.9L154.6,256L155.4,254.2L156.1,252.3L156.9,250.4L157.7,248.6L158.4,246.7L159.2,244.9L160,243L160.8,241.1L161.5,239.3L162.3,237.4L163.1,235.6L163.8,233.7L164.6,231.8L165.4,230L166.1,228.1L166.9,226.3L167.7,224.4L168.5,222.5L169.2,220.7L170,218.8L170.8,217L171.5,215.1L172.3,213.2L173.1,211.4L173.8,209.5L174.6,207.7L175.4,205.8L176.2,203.9L176.9,202.1L177.7,200.2L178.5,198.4L179.2,196.5L180,194.6L180.8,192.8L181.5,190.9L182.3,189.1L183.1,187.2L183.9,185.3L184.6,183.5L185.4,181.6L186.2,179.8L186.9,177.9L187.7,176L188.5,174.2L189.2,172.3L190,170.5L190.8,168.6L191.6,166.7L192.3,164.9L193.1,163L193.9,161.2L194.6,159.3L195.4,157.4L196.2,155.6L196.9,153.7L197.7,151.9L198.5,150L199.3,148.1L200,146.3L200.8,144.4L201.6,142.6L202.3,140.7L203.1,138.8L203.9,137L204.6,135.1L205.4,133.3L206.2,131.4L207,129.5L207.7,127.7L208.5,125.8L209.3,124L210,122.1L210.8,120.2L211.6,118.4L212.3,116.5L213.1,114.7L213.9,112.8L214.7,110.9L215.4,109.1L216.2,107.2L217,105.4L217.7,103.5L218.5,101.6L219.3,99.8L220,97.9L220.8,96.1L221.6,94.2L222.4,92.3L223.1,90.5L223.9,88.6L224.7,86.8L225.4,84.9L226.2,83L227,81.2L227.7,79.3L228.5,77.5L229.3,75.6L230.1,73.7L230.8,71.9L231.6,70L232.4,68.2L233.1,66.3L233.9,64.4L234.7,62.6L235.4,60.7L236.2,58.9L237,57L237.8,55.1L238.5,53.3L239.3,51.4L240.1,49.6L240.8,47.7L241.6,45.8L242.4,44L243.1,42.1L243.9,40.3L244.7,38.4L245.5,36.5L246.2,34.7L247,32.8L247.8,31L248.5,29.1L249.3,27.2L250.1,25.4L250.8,23.5L251.6,21.7L252.4,19.8L253.2,17.9L253.9,16.1L254.7,14.2L255.5,12.4L256.2,10.5L257,8.6L257.8,6.8L258.5,4.9L259.3,3.1L260.1,1.2L260.9,-0.7L261.6,-2.5L262.4,-4.4L263.2,-6.2L263.9,-8.1L264.7,-10L265.5,-11.8L266.2,-13.7L267,-15.5L267.8,-17.4L268.6,-19.3L269.3,-21.1L270.1,-23L270.9,-24.8L271.6,-26.7L272.4,-28.6L273.2,-30.4L273.9,-32.3L274.7,-34.1L275.5,-36L276.3,-37.9L277,-39.7L277.8,-41.6L278.6,-43.4L279.3,-45.3L280.1,-47.2L280.9,-49L281.6,-50.9L282.4,-52.7L283.2,-54.6L284,-56.5L284.7,-58.3L285.5,-60.2L286.3,-62L287,-63.9L287.8,-65.8L288.6,-67.6L289.3,-69.5L290.1,-71.3L290.9,-73.2L291.7,-75.1L292.4,-76.9L293.2,-78.8L294,-80.6L294.7,-82.5L295.5,-84.4L296.3,-86.2L297,-88.1L297.8,-89.9L298.6,-91.8L299.4,-93.7L300.1,-95.5L300.9,-97.4"/>
+<path class="s-k3" d="M26,219.4L26.8,219.1L27.5,218.8L28.3,218.5L29.1,218.2L29.9,217.9L30.6,217.6L31.4,217.3L32.2,217L32.9,216.7L33.7,216.3L34.5,216L35.2,215.7L36,215.4L36.8,215.1L37.6,214.8L38.3,214.5L39.1,214.2L39.9,213.9L40.6,213.6L41.4,213.2L42.2,212.9L42.9,212.6L43.7,212.3L44.5,212L45.3,211.7L46,211.4L46.8,211.1L47.6,210.8L48.3,210.5L49.1,210.1L49.9,209.8L50.6,209.5L51.4,209.2L52.2,208.9L53,208.6L53.7,208.3L54.5,208L55.3,207.7L56,207.4L56.8,207L57.6,206.7L58.3,206.4L59.1,206.1L59.9,205.8L60.7,205.5L61.4,205.2L62.2,204.9L63,204.6L63.7,204.3L64.5,203.9L65.3,203.6L66,203.3L66.8,203L67.6,202.7L68.4,202.4L69.1,202.1L69.9,201.8L70.7,201.5L71.4,201.1L72.2,200.8L73,200.5L73.7,200.2L74.5,199.9L75.3,199.6L76.1,199.3L76.8,199L77.6,198.7L78.4,198.4L79.1,198.1L79.9,197.7L80.7,197.4L81.4,197.1L82.2,196.8L83,196.5L83.8,196.2L84.5,195.9L85.3,195.6L86.1,195.3L86.8,195L87.6,194.6L88.4,194.3L89.1,194L89.9,193.7L90.7,193.4L91.5,193.1L92.2,192.8L93,192.5L93.8,192.2L94.5,191.9L95.3,191.5L96.1,191.2L96.8,190.9L97.6,190.6L98.4,190.3L99.2,190L99.9,189.7L100.7,189.4L101.5,189.1L102.2,188.8L103,188.4L103.8,188.1L104.5,187.8L105.3,187.5L106.1,187.2L106.9,186.9L107.6,186.6L108.4,186.3L109.2,186L109.9,185.6L110.7,185.3L111.5,185L112.2,184.7L113,184.4L113.8,184.1L114.6,183.8L115.3,183.5L116.1,183.2L116.9,182.9L117.6,182.6L118.4,182.2L119.2,181.9L119.9,181.6L120.7,181.3L121.5,181L122.3,180.7L123,180.4L123.8,180.1L124.6,179.8L125.3,179.5L126.1,179.1L126.9,178.8L127.6,178.5L128.4,178.2L129.2,177.9L130,177.6L130.7,177.3L131.5,177L132.3,176.7L133,176.4L133.8,176L134.6,175.7L135.3,175.4L136.1,175.1L136.9,174.8L137.7,174.5L138.4,174.2L139.2,173.9L140,173.6L140.7,173.3L141.5,172.9L142.3,172.6L143,172.3L143.8,172L144.6,171.7L145.4,171.4L146.1,171.1L146.9,170.8L147.7,170.5L148.4,170.1L149.2,169.8L150,169.5L150.7,169.2L151.5,168.9L152.3,168.6L153.1,168.3L153.8,168L154.6,167.7L155.4,167.4L156.1,167.1L156.9,166.7L157.7,166.4L158.4,166.1L159.2,165.8L160,165.5L160.8,165.2L161.5,164.9L162.3,164.6L163.1,164.3L163.8,164L164.6,163.6L165.4,163.3L166.1,163L166.9,162.7L167.7,162.4L168.5,162.1L169.2,161.8L170,161.5L170.8,161.2L171.5,160.9L172.3,160.5L173.1,160.2L173.8,159.9L174.6,159.6L175.4,159.3L176.2,159L176.9,158.7L177.7,158.4L178.5,158.1L179.2,157.8L180,157.4L180.8,157.1L181.5,156.8L182.3,156.5L183.1,156.2L183.9,155.9L184.6,155.6L185.4,155.3L186.2,155L186.9,154.6L187.7,154.3L188.5,154L189.2,153.7L190,153.4L190.8,153.1L191.6,152.8L192.3,152.5L193.1,152.2L193.9,151.9L194.6,151.6L195.4,151.2L196.2,150.9L196.9,150.6L197.7,150.3L198.5,150L199.3,149.7L200,149.4L200.8,149.1L201.6,148.8L202.3,148.5L203.1,148.1L203.9,147.8L204.6,147.5L205.4,147.2L206.2,146.9L207,146.6L207.7,146.3L208.5,146L209.3,145.7L210,145.4L210.8,145L211.6,144.7L212.3,144.4L213.1,144.1L213.9,143.8L214.7,143.5L215.4,143.2L216.2,142.9L217,142.6L217.7,142.3L218.5,141.9L219.3,141.6L220,141.3L220.8,141L221.6,140.7L222.4,140.4L223.1,140.1L223.9,139.8L224.7,139.5L225.4,139.2L226.2,138.8L227,138.5L227.7,138.2L228.5,137.9L229.3,137.6L230.1,137.3L230.8,137L231.6,136.7L232.4,136.4L233.1,136L233.9,135.7L234.7,135.4L235.4,135.1L236.2,134.8L237,134.5L237.8,134.2L238.5,133.9L239.3,133.6L240.1,133.3L240.8,133L241.6,132.6L242.4,132.3L243.1,132L243.9,131.7L244.7,131.4L245.5,131.1L246.2,130.8L247,130.5L247.8,130.2L248.5,129.9L249.3,129.5L250.1,129.2L250.8,128.9L251.6,128.6L252.4,128.3L253.2,128L253.9,127.7L254.7,127.4L255.5,127.1L256.2,126.8L257,126.4L257.8,126.1L258.5,125.8L259.3,125.5L260.1,125.2L260.9,124.9L261.6,124.6L262.4,124.3L263.2,124L263.9,123.7L264.7,123.3L265.5,123L266.2,122.7L267,122.4L267.8,122.1L268.6,121.8L269.3,121.5L270.1,121.2L270.9,120.9L271.6,120.5L272.4,120.2L273.2,119.9L273.9,119.6L274.7,119.3L275.5,119L276.3,118.7L277,118.4L277.8,118.1L278.6,117.8L279.3,117.5L280.1,117.1L280.9,116.8L281.6,116.5L282.4,116.2L283.2,115.9L284,115.6L284.7,115.3L285.5,115L286.3,114.7L287,114.4L287.8,114L288.6,113.7L289.3,113.4L290.1,113.1L290.9,112.8L291.7,112.5L292.4,112.2L293.2,111.9L294,111.6L294.7,111.3L295.5,110.9L296.3,110.6L297,110.3L297.8,110L298.6,109.7L299.4,109.4L300.1,109.1L300.9,108.8L301.7,108.5L302.4,108.2L303.2,107.8L304,107.5L304.7,107.2L305.5,106.9L306.3,106.6L307.1,106.3L307.8,106L308.6,105.7L309.4,105.4L310.1,105L310.9,104.7L311.7,104.4L312.4,104.1L313.2,103.8L314,103.5L314.8,103.2L315.5,102.9L316.3,102.6L317.1,102.3L317.8,101.9L318.6,101.6L319.4,101.3L320.1,101L320.9,100.7L321.7,100.4L322.5,100.1L323.2,99.8L324,99.5L324.8,99.2L325.5,98.9L326.3,98.5L327.1,98.2L327.8,97.9L328.6,97.6L329.4,97.3L330.2,97L330.9,96.7L331.7,96.4L332.5,96.1L333.2,95.8L334,95.4"/>
+<circle class="s-tocka" cx="198.5" cy="150" r="4.5"/>
+<text class="s-txt-b" x="208.5" y="166" text-anchor="start">P(1, 1)</text>
+<text class="s-txt-k1" x="250.8" y="40.9" text-anchor="start">k₁ = 3</text>
+<text class="s-txt-k3" x="297" y="127.7" text-anchor="start">k₂ = ½</text>
+<path class="s-kot" d="M198.5,150 L230.0,137.3 A34,34 0 0 0 211.5,118.6 Z"/><text class="s-txt-k4" x="230.7" y="124.1">φ = 45°</text><path class="s-kot-2" d="M75.3,199.6 L105.3,199.6 A30,30 0 0 0 103.1,188.4 Z"/><text class="s-txt-k3" x="109.3" y="196.6">α₂</text>
+</svg>
+<figcaption>Premici \(y = 3x - 2\) in \(y = \frac{1}{2}x + \frac{1}{2}\) se sekata v \(P(1, 1)\). Naklonski kot \(\alpha\) je kot med premico in pozitivnim delom osi \(x\): \(\tan \alpha = k\). Kot med premicama: \(\tan \varphi = \left|\frac{k_2 - k_1}{1 + k_1 k_2}\right| = \left|\frac{0{,}5 - 3}{1 + 1{,}5}\right| = 1\), torej \(\varphi = 45^\circ\).</figcaption>
+</figure>
+            <p>Če je \(1 + k_1 k_2 = 0\), sta premici pravokotni (\(\varphi = 90^\circ\)). Če je \(k_1 = k_2\), sta vzporedni (\(\varphi = 0^\circ\)). Če je ena premica navpična, izračunaj naklonski kot druge in odštej od \(90^\circ\).</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-9">
+              <h4>Tip 9: Kot med premicama in naklonski kot</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Izračunajte kot med premicama \(y = 3x - 2\) in \(x - 2y + 1 = 0\).</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> sprašujejo po kotu med premicama, kotu premice z osjo ali naklonskem kotu.</p><ul class="kljucne"><li>„kot med premicama“</li><li>„naklonski kot“</li><li>„pod kakšnim kotom se sekata“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Obe premici zapiši v eksplicitni obliki in odčitaj \(k_1\), \(k_2\).</p><div class="na-nalogi"><p>\(k_1 = 3\); \(2y = x + 1\), \(y = \frac{1}{2}x + \frac{1}{2}\): \(k_2 = \frac{1}{2}\).</p></div></li>
+              <li><p class="korak">Preveri posebna primera: \(k_1 = k_2\) (vzporedni), \(k_1 k_2 = -1\) (pravokotni).</p><div class="na-nalogi"><p>Ni posebnega primera.</p></div></li>
+              <li><p class="korak">Vstavi v \(\tan \varphi = \left|\frac{k_2 - k_1}{1 + k_1 k_2}\right|\).</p><div class="na-nalogi"><p>\(\tan \varphi = \left|\dfrac{\frac{1}{2} - 3}{1 + \frac{3}{2}}\right| = \left|\dfrac{-\frac{5}{2}}{\frac{5}{2}}\right| = 1\).</p></div></li>
+              <li><p class="korak">Izračunaj kot (računalo v stopinjah).</p><div class="na-nalogi"><p>\(\varphi = 45^\circ\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Naklonski kot premice \(y = -x + 2\).</p><p>\(\tan \alpha = -1\), \(\alpha = 135^\circ\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Kot med \(y = 2x + 1\) in \(y = -\frac{1}{2}x\).</p><p>\(k_1 k_2 = -1\): \(\varphi = 90^\circ\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Kot med \(y = 2x\) in \(y = -x + 1\).</p><p>\(\tan \varphi = \left|\frac{-1 - 2}{1 - 2}\right| = 3\), \(\varphi \approx 71{,}57^\circ\).</p></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="subsection" id="kljuc">
+          <div class="subsection-head">
+            <h2>Ključ: kateri tip naloge je to?</h2>
+            <p>Poišči besedo iz navodila naloge in skoči na pravi postopek.</p>
+          </div>
+          <div class="info-card">
+            <div class="tabela-wrap">
+              <table class="tabela">
+                <thead><tr><th>V besedilu naloge piše …</th><th>Tip</th></tr></thead>
+                <tbody>
+                  <tr><td>„brez računala“, \(\sin 150^\circ\), \(\sin\frac{7\pi}{6}\)</td><td><a href="#tip-1">Tip 1</a></td></tr>
+                  <tr><td>„če je \(\sin \alpha = \ldots\), izračunajte ostale“</td><td><a href="#tip-2">Tip 2</a></td></tr>
+                  <tr><td>„perioda“, „ničle“, „kje narašča“</td><td><a href="#tip-3">Tip 3</a></td></tr>
+                  <tr><td>\(\arcsin\), \(\arccos\), \(\arctan\) vrednosti</td><td><a href="#tip-4">Tip 4</a></td></tr>
+                  <tr><td>\(\sin 75^\circ\), \(\cos(\alpha + \beta)\)</td><td><a href="#tip-5">Tip 5</a></td></tr>
+                  <tr><td>\(\sin 2\alpha\), \(\cos 2\alpha\), polovični kot</td><td><a href="#tip-6">Tip 6</a></td></tr>
+                  <tr><td>\(a\sin x + b\cos x\), „v obliki \(R\sin(x + \varphi)\)“</td><td><a href="#tip-7">Tip 7</a></td></tr>
+                  <tr><td>„zasuk točke okoli izhodišča“</td><td><a href="#tip-8">Tip 8</a></td></tr>
+                  <tr><td>„kot med premicama“, „naklonski kot“</td><td><a href="#tip-9">Tip 9</a></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>Pogoste napake</h2>
+          </div>
+          <div class="info-card">
+            <ul>
+              <li>Pri \(\cos \alpha\) iz \(\sin \alpha\) ne preveriš predznaka v kvadrantu.</li>
+              <li>\(\sin(\alpha + \beta)\) zapišeš kot \(\sin \alpha + \sin \beta\).</li>
+              <li>Ničle sinusa in kosinusa zamenjaš.</li>
+              <li>Kot med premicama izračunaš kot topi kot (vzemi ostrega).</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>Vadi naprej</h2>
+            <p>Ko predelaš razlago, preveri znanje z nalogami.</p>
+          </div>
+          <div class="link-list">
+            <a class="link-item" href="/views/poklicna_matematika/naloge/naloge.html?snov=kotne_funkcije_pm">
+              <span class="link-item-text">
+                <strong>Naloge za vajo</strong>
+                <small>Naloge iz tega poglavja z rešitvami in postopki</small>
+              </span>
+              <span class="arrow">→</span>
+            </a>
+            <a class="link-item" href="/views/poklicna_matematika/matura/po_snovi/naloge.html?poglavje=kotne_funkcije_pm">
+              <span class="link-item-text">
+                <strong>Maturitetne naloge iz te snovi</strong>
+                <small>Naloge iz pol poklicne mature</small>
+              </span>
+              <span class="arrow">→</span>
+            </a>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+
+  <script src="/components/components.js"></script>
+</body>
+</html>
