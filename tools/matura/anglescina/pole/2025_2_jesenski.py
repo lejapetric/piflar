@@ -65,7 +65,7 @@ Of course, not every classic has aged well. Some contain attitudes towards women
 
 Our film nights still involve a certain amount of arguing. But we have a new rule: every second week, the film must be at least thirty years older than the youngest person watching. My daughter keeps a list in a notebook and gives each film a mark out of ten. So far, her highest score has gone to a silent film made a hundred years ago, in which a man climbs the outside of a skyscraper and hangs from the hands of a clock.
 
-(Vadbeno besedilo Piflar.si)""", [
+(Vadbeno besedilo Učilnica.com)""", [
             ("What often happened to the youngest child before a film was chosen?", "He/She fell asleep.", "»the youngest had fallen asleep on the sofa«."),
             ("Why did the family start watching their grandparents' films?", "The internet stopped working.", "»our internet stopped working and we were left with a box of DVDs«."),
             ("What did the son complain about at the beginning of the first film?", "The colours were broken. / It was black and white.", "Sin je črno-beli film opisal kot »broken colours«."),
@@ -94,7 +94,7 @@ In the evening, the old town square filled with people for a winter music festiv
 
 Leaving Tallinn, I realised that I had spent four days being cold, [9]. Winter here is not something to escape from but something to be lived – slowly, warmly and, preferably, in a sauna [10].
 
-(Vadbeno besedilo Piflar.si)""", {
+(Vadbeno besedilo Učilnica.com)""", {
             "A": "which can be used even when the snow is too deep to go outside",
             "B": "which a local chocolate maker has been producing by hand for over a century",
             "C": "and lit by candles that flickered in the frozen air",
@@ -135,7 +135,7 @@ The families _12_ were chosen have mostly stayed. One couple runs a bakery, anot
 
 Life is not easy, Jenny admits, but it has its rewards. "Here, everyone knows _14_ other. If your car breaks down, someone stops within five minutes. And when you look up at night, you see more stars than you _15_ ever imagine."
 
-(Vadbeno besedilo Piflar.si)""", [
+(Vadbeno besedilo Učilnica.com)""", [
             ("is", "primer"),
             ("which", "Nedoločni oziralni stavek po vejici: which lies."),
             ("when / if / whenever", "Časovni ali pogojni odvisnik: when the weather is good enough."),
@@ -166,7 +166,7 @@ Of course, there are risks. Some companies use personality tests in _10_ (EMPLOY
 
 My advice? Take the test with a smile and a pinch of salt. Treat the result as a starting point for discussion, not as a _13_ (SCIENCE) fact. And remember that people are far more _14_ (COMPLICATE) than four colours. After all, my colleague who is supposed to be the calmest person in the office still loses his temper _15_ (REGULAR) when the printer jams.
 
-(Vadbeno besedilo Piflar.si)""", [
+(Vadbeno besedilo Učilnica.com)""", [
             ("official", "primer"),
             ("scepticism", "a great deal of + samostalnik: sceptical → scepticism."),
             ("unscientific", "Negativna ocena (at best … at worst): un- + scientific."),
@@ -257,7 +257,7 @@ He never published anything. As far as I know, he never showed the notebooks to 
 
 I kept the brass key. It sits on my desk now, beside the laptop on which I write my own stories. When I get stuck, I pick it up and ask it where it has been. It always has an answer, though rarely the same one twice.
 
-(Vadbeno besedilo Piflar.si)""", [
+(Vadbeno besedilo Učilnica.com)""", [
             ("What kind of objects did Mr Ferris collect?", ["Valuable antiques.", "Things that were no longer useful.", "Rubbish from the streets.", "Souvenirs from his travels."], "B", "»objects that had lost their purpose« – ne smeti (»Not rubbish, exactly«)."),
             ("Why did the narrator really visit Mr Ferris?", ["To earn money.", "To deliver the newspaper.", "To hear his stories.", "Because her mother asked her to."], "C", "Uradno časopis, neuradno »because he paid me in stories«."),
             ("According to Mr Ferris, why was the train ticket never used?", ["The train was cancelled.", "The woman lost it.", "A man did not come to meet her.", "The woman changed her mind."], "C", "»the man she was meant to meet had changed his mind«."),
@@ -303,7 +303,7 @@ Climate change has made the project more important than ever. Floods are becomin
 
 The idea has spread far beyond Bangladesh. Floating libraries and schools now operate in Nigeria, Cambodia and the Philippines. For the founder, this is the greatest reward. "When I started, people laughed at _13_. They said a boat full of books was a crazy dream. Now they come to ask how they can build one _14_." He smiles. "Sometimes the best ideas are the ones _15_ seem impossible."
 
-(Vadbeno besedilo Piflar.si)""", [
+(Vadbeno besedilo Učilnica.com)""", [
             ("where", "primer"),
             ("to", "decide to + nedoločnik."),
             ("from", "from village to village."),
@@ -334,7 +334,7 @@ Researchers are divided on the best _10_ (SOLVE). Some propose separate categori
 
 What both sides agree on is that services are under enormous pressure. Waiting lists for _13_ (ASSESS) in some areas are now longer than two years, and families often feel _14_ (HELP) while they wait. Whatever the label, they say, what really matters is that every person receives the support they need, as early and as _15_ (APPROPRIATE) as possible.
 
-(Vadbeno besedilo Piflar.si)""", [
+(Vadbeno besedilo Učilnica.com)""", [
             ("debilitating", "primer"),
             ("independent", "Pridevnik pred lives: independence → independent."),
             ("experiences", "a wide range of + samostalnik v množini."),

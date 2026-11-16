@@ -1,4 +1,4 @@
-# Piflar.si
+# Učilnica.com
 
 Spletna stran z razlagami snovi za pripravo na maturo iz predmetov splošne gimnazije: matematika, fizika, kemija, biologija, informatika, geografija, zgodovina, slovenščina, angleščina, nemščina, francoščina, italijanščina, španščina, psihologija, sociologija, filozofija, ekonomija, glasba in umetnostna zgodovina.
 
@@ -242,7 +242,7 @@ Gumba pri vsaki nalogi sta Prikaži rezultat in Prikaži postopek. Odgovor lahko
 Besedila nalog RIC so avtorsko zaščitena: brez dovoljenja RIC pusti `besedilo` prazno in v `pdf`
 povezavo na uradno polo na ric.si. Novo leto dodaš v `matura.json` in kot povezavo v `sidebar.html`.
 
-**Angleščina** (`api/data/matura-anglescina.json`) ima vadbene pole Piflar.si, ki sledijo zgradbi uradnih pol
+**Angleščina** (`api/data/matura-anglescina.json`) ima vadbene pole Učilnica.com, ki sledijo zgradbi uradnih pol
 (osnovna in višja raven, pola 1 bralno razumevanje in raba jezika, pola 2 slušno razumevanje, pola 3 pisno sporočanje),
 besedila pa so naša. Ustvari jih `python3 tools/matura/anglescina/gradi.py` iz datotek v `tools/matura/anglescina/pole/`
 (ena datoteka na izpitni dan). Naloge imajo `oznaka` (»Task 1: Short answers«), pola ima `deli` (imena delov A, B).

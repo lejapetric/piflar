@@ -1,8 +1,8 @@
 {
-  "name": "piflar",
+  "name": "ucilnica",
   "version": "1.0.0",
   "private": true,
-  "description": "Piflar.si — priprava na maturo iz matematike in fizike",
+  "description": "Učilnica.com — priprava na maturo iz matematike in fizike",
   "type": "module",
   "main": "server.js",
   "engines": {

@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Naravna in cela števila, deljivost — razlaga za poklicno maturo | Učilnica.com</title>
+  <meta name="description" content="Naravna in cela števila, deljivost za poklicno maturo iz matematike: Računske operacije, deljivost, praštevila, D in v, osnovni izrek o deljenju.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
+  <link rel="stylesheet" href="/style/snov.css">
+</head>
+<body>
+  <div id="header"></div>
+
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view">
+
+        <header class="page-header">
+          <span class="page-eyebrow">Poklicna matura · Matematika · Snov · 4.1</span>
+          <h1>Naravna in cela števila, deljivost</h1>
+          <p>Računanje z naravnimi in celimi števili je osnova vseh drugih nalog. Na poklicni maturi se pojavi kot kratka naloga v 1. delu pole: razcep na prafaktorje, največji skupni delitelj in najmanjši skupni večkratnik, pravila deljivosti in osnovni izrek o deljenju. Pod razlago vsakega podpoglavja so vsi tipi nalog z univerzalnim postopkom in primeri.</p>
+          <div class="page-meta">
+            <div class="page-meta-item"><strong>8</strong><span>Podpoglavij</span></div>
+            <div class="page-meta-item"><strong>8</strong><span>Tipov nalog</span></div>
+            <div class="page-meta-item"><strong>~40 min</strong><span>Branja</span></div>
+          </div>
+        </header>
+
+        <div class="matura-formule">
+          <h3>Kaj preverja izpitni katalog</h3>
+          <p>Po predmetnem izpitnem katalogu za poklicno maturo kandidat:</p>
+          <ul>
+              <li>računa z naravnimi, celimi, racionalnimi in realnimi števili ter uporablja zakonitosti računskih operacij</li>
+              <li>pozna odnos deljivosti in urejenosti ter ugotovi, ali je število deljivo z 2, 3, 5, 9 in 10</li>
+              <li>pozna praštevila in sestavljena števila ter dano število razcepi v produkt praštevil</li>
+              <li>zapiše večkratnike in delitelje ter izračuna največji skupni delitelj in najmanjši skupni večkratnik</li>
+              <li>pozna in uporablja osnovni izrek o deljenju</li>
+          </ul>
+          <p><strong>Na izpitu:</strong> Tipična naloga za 4 točke: razcepi dve števili, izračunaj D in v ter odgovori na vprašanje iz življenja (npr. po koliko minutah avtobusa spet odpeljeta hkrati). Formule iz kataloga so priložene izpitni poli.</p>
+        </div>
+
+        <nav class="kazalo" id="kazalo" aria-label="Podpoglavja">
+          <h2>Podpoglavja</h2>
+          <ol>
+            <li><a href="#sklop-1"><span class="kazalo-st">1</span> Računske operacije in njihove lastnosti</a></li>
+            <li><a href="#sklop-2"><span class="kazalo-st">2</span> Praštevila in sestavljena števila</a></li>
+            <li><a href="#sklop-3"><span class="kazalo-st">3</span> Desetiški mestni zapis</a></li>
+            <li><a href="#sklop-4"><span class="kazalo-st">4</span> Kriteriji deljivosti z 2, 3, 4, 5, 6, 8, 9 in 10</a></li>
+            <li><a href="#sklop-5"><span class="kazalo-st">5</span> Relacija deljivosti</a></li>
+            <li><a href="#sklop-6"><span class="kazalo-st">6</span> Največji skupni delitelj in najmanjši skupni večkratnik</a></li>
+            <li><a href="#sklop-7"><span class="kazalo-st">7</span> Osnovni izrek o deljenju</a></li>
+            <li><a href="#sklop-8"><span class="kazalo-st">8</span> Desetiški številski sestav</a></li>
+            <li><a href="#kljuc"><span class="kazalo-st">?</span> Ključ: kateri tip naloge je to?</a></li>
+          </ol>
+        </nav>
+
+        <!-- SKLOP 1 -->
+        <section class="sklop" id="sklop-1">
+          <header class="sklop-header">
+            <span class="sklop-num">4.1 · 1</span>
+            <h2>Računske operacije in njihove lastnosti</h2>
+            <p>Seštevanje, odštevanje, množenje in deljenje v \(\mathbb{N}\) in \(\mathbb{Z}\), zakoni računanja, številska premica.</p>
+          </header>
+          <div class="sklop-video"><span class="sklop-video-oznaka">Video razlaga</span><video class="video-svetla" controls preload="none" playsinline poster="/videi/matematika/stevilske_mnozice/sklop-1-svetla.jpg" src="/videi/matematika/stevilske_mnozice/sklop-1-svetla.mp4"></video><video class="video-temna" controls preload="none" playsinline poster="/videi/matematika/stevilske_mnozice/sklop-1-temna.jpg" src="/videi/matematika/stevilske_mnozice/sklop-1-temna.mp4"></video></div><!-- /sklop-video -->
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <h4>Zakaj cela števila</h4>
+            <p>Naravna števila \(\mathbb{N} = \{1, 2, 3, \dots\}\) uporabljamo za štetje. V \(\mathbb{N}\) lahko vedno seštevamo in množimo, ne moremo pa vedno odštevati: \(3 - 5 \notin \mathbb{N}\). Zato vpeljemo ničlo in negativna števila in dobimo cela števila \(\mathbb{Z}\). V \(\mathbb{Z}\) je odštevanje vedno izvedljivo. Primeri uporabe: temperatura pod ničlo, dolg na računu, nadmorska višina pod morjem.</p>
+            <p>Na številski premici so cela števila enakomerno razporejena: pozitivna desno od 0, negativna levo. Število \(-a\) je <strong>nasprotno</strong> število števila \(a\) (zrcalno glede na 0).</p>
+            <figure class="slika slika--siroka">
+<svg viewBox="0 0 560 130" role="img" aria-label="Cela števila na številski premici" xmlns="http://www.w3.org/2000/svg"><defs><marker id="sm1-pr2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker></defs><line class="s-os" x1="14" y1="100" x2="552" y2="100" marker-end="url(#sm1-pr2)"/><line class="s-os" x1="28" y1="95" x2="28" y2="105"/><text class="s-os-txt" x="28" y="119" text-anchor="middle">−5</text><line class="s-os" x1="78.4" y1="95" x2="78.4" y2="105"/><text class="s-os-txt" x="78.4" y="119" text-anchor="middle">−4</text><line class="s-os" x1="128.8" y1="95" x2="128.8" y2="105"/><text class="s-os-txt" x="128.8" y="119" text-anchor="middle">−3</text><line class="s-os" x1="179.2" y1="95" x2="179.2" y2="105"/><text class="s-os-txt" x="179.2" y="119" text-anchor="middle">−2</text><line class="s-os" x1="229.6" y1="95" x2="229.6" y2="105"/><text class="s-os-txt" x="229.6" y="119" text-anchor="middle">−1</text><line class="s-os" x1="280" y1="95" x2="280" y2="105"/><text class="s-os-txt" x="280" y="119" text-anchor="middle">0</text><line class="s-os" x1="330.4" y1="95" x2="330.4" y2="105"/><text class="s-os-txt" x="330.4" y="119" text-anchor="middle">1</text><line class="s-os" x1="380.8" y1="95" x2="380.8" y2="105"/><text class="s-os-txt" x="380.8" y="119" text-anchor="middle">2</text><line class="s-os" x1="431.2" y1="95" x2="431.2" y2="105"/><text class="s-os-txt" x="431.2" y="119" text-anchor="middle">3</text><line class="s-os" x1="481.6" y1="95" x2="481.6" y2="105"/><text class="s-os-txt" x="481.6" y="119" text-anchor="middle">4</text><line class="s-os" x1="532" y1="95" x2="532" y2="105"/><text class="s-os-txt" x="532" y="119" text-anchor="middle">5</text><circle cx="128.8" cy="100" r="5" class="s-tocka-2"/><text class="s-txt-k2" x="128.8" y="88" text-anchor="middle">−a</text><circle cx="431.2" cy="100" r="5" class="s-tocka"/><text class="s-txt-k1" x="431.2" y="88" text-anchor="middle">a</text><path d="M128.8,74 Q280,40 431.2,74" class="s-pom"/><text x="280" y="52" text-anchor="middle" class="s-txt-muted">zrcalno glede na 0</text></svg>
+<figcaption>Nasprotni števili \(a\) in \(-a\) sta enako oddaljeni od 0.</figcaption>
+</figure>
+            <h4>Zakoni računanja</h4>
+            <div class="tabela-wrap">
+              <table class="tabela">
+                <thead><tr><th>Zakon</th><th>Seštevanje</th><th>Množenje</th></tr></thead>
+                <tbody>
+                  <tr><td>zaprtost v \(\mathbb{Z}\)</td><td>\(a + b \in \mathbb{Z}\)</td><td>\(a \cdot b \in \mathbb{Z}\)</td></tr>
+                  <tr><td>komutativnost</td><td>\(a + b = b + a\)</td><td>\(a \cdot b = b \cdot a\)</td></tr>
+                  <tr><td>asociativnost</td><td>\((a + b) + c = a + (b + c)\)</td><td>\((ab)c = a(bc)\)</td></tr>
+                  <tr><td>nevtralni element</td><td>\(a + 0 = a\)</td><td>\(a \cdot 1 = a\)</td></tr>
+                  <tr><td>nasprotni element</td><td>\(a + (-a) = 0\)</td><td>(v \(\mathbb{Z}\) ga ni)</td></tr>
+                  <tr><td>distributivnost</td><td colspan="2">\(a(b + c) = ab + ac\)</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <h4>Pravila za predznake in vrstni red</h4>
+            <ul>
+              <li>\((+) \cdot (+) = +\), \((-) \cdot (-) = +\), \((+) \cdot (-) = -\). Enako za deljenje.</li>
+              <li>\(a - (-b) = a + b\), \(-(a - b) = -a + b\).</li>
+              <li>Vrstni red: oklepaji → potence → množenje in deljenje (od leve proti desni) → seštevanje in odštevanje.</li>
+              <li>\(-3^2 = -9\), toda \((-3)^2 = 9\). Potenca se nanaša samo na tisto, kar je neposredno pod njo.</li>
+            </ul>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-1">
+              <h4>Tip 1: Izračunaj izraz s celimi števili (spretno računanje)</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Brez računala izračunajte \(37 \cdot 64 + 37 \cdot 36 - (-2)^3 \cdot (-5)\).</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> številski izraz z oklepaji, negativnimi števili in potencami, pogosto v izpitni poli 1 (brez računala).</p><ul class="kljucne"><li>„izračunajte brez računala“</li><li>„izračunajte vrednost izraza“</li><li>„spretno izračunajte“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Poišči, ali lahko izpostaviš skupni faktor (distributivnost) ali združiš člene, ki dajo okroglo število.</p><div class="na-nalogi"><p>Prva dva člena imata skupni faktor 37: \(37 \cdot 64 + 37 \cdot 36 = 37 \cdot (64 + 36) = 37 \cdot 100 = 3700\).</p></div></li>
+              <li><p class="korak">Računaj po vrstnem redu: oklepaji, potence, množenje in deljenje, seštevanje in odštevanje.</p><div class="na-nalogi"><p>\((-2)^3 = -8\), nato \((-8) \cdot (-5) = 40\).</p></div></li>
+              <li><p class="korak">Predznake obravnavaj posebej: preštej negativne faktorje (sodo število pomeni \(+\)).</p><div class="na-nalogi"><p>V \((-8)(-5)\) sta dva negativna faktorja, produkt je pozitiven. Skupaj: \(3700 - 40 = 3660\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Izračunajte \(25 \cdot 17 \cdot 4\).</p><p>Združimo \(25 \cdot 4 = 100\): \(100 \cdot 17 = 1700\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Izračunajte \(-3^2 + (-3)^2 - 2 \cdot (-1)^5\).</p><p>\(-9 + 9 - 2 \cdot (-1) = 2\). Pazi: \(-3^2 = -9\), \((-3)^2 = 9\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Izračunajte \(99 \cdot 48 + 48\).</p><p>\(48(99 + 1) = 4800\).</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 2 -->
+        <section class="sklop" id="sklop-2">
+          <header class="sklop-header">
+            <span class="sklop-num">4.1 · 2</span>
+            <h2>Praštevila in sestavljena števila</h2>
+            <p>Kaj je praštevilo, kako ga prepoznamo in razcep na prafaktorje.</p>
+          </header>
+          <div class="sklop-video"><span class="sklop-video-oznaka">Video razlaga</span><video class="video-svetla" controls preload="none" playsinline poster="/videi/matematika/stevilske_mnozice/sklop-2-svetla.jpg" src="/videi/matematika/stevilske_mnozice/sklop-2-svetla.mp4"></video><video class="video-temna" controls preload="none" playsinline poster="/videi/matematika/stevilske_mnozice/sklop-2-temna.jpg" src="/videi/matematika/stevilske_mnozice/sklop-2-temna.mp4"></video></div><!-- /sklop-video -->
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <p><strong>Praštevilo</strong> je naravno število, večje od 1, ki ima natanko dva delitelja: 1 in samega sebe. <strong>Sestavljeno število</strong> je naravno število, večje od 1, ki ima več kot dva delitelja. Število <strong>1 ni ne praštevilo ne sestavljeno število</strong>.</p>
+            <p>Praštevila do 50: \(2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47\). Število 2 je edino sodo praštevilo. Praštevil je neskončno mnogo.</p>
+            <h4>Ali je število praštevilo?</h4>
+            <p>Število \(n\) deli s praštevili \(2, 3, 5, 7, \dots\), dokler je praštevilo \(p \le \sqrt{n}\). Če ga nobeno ne deli, je \(n\) praštevilo. Zakaj samo do \(\sqrt{n}\)? Če bi bil \(n = a \cdot b\) in oba faktorja večja od \(\sqrt{n}\), bi bil produkt večji od \(n\).</p>
+            <p>Primer: \(\sqrt{97} \approx 9{,}8\). Število 97 ni deljivo z 2, 3, 5, 7, zato je praštevilo.</p>
+            <h4>Osnovni izrek aritmetike: razcep na prafaktorje</h4>
+            <p>Vsako naravno število \(n &gt; 1\) lahko zapišemo kot produkt praštevil, in to <strong>na en sam način</strong> (do vrstnega reda natančno). Razcep najlažje dobimo z zaporednim deljenjem z najmanjšim možnim praštevilom:</p>
+            <div class="tabela-wrap">
+              <table class="tabela">
+                <tbody>
+                  <tr><td>360</td><td>2</td></tr>
+                  <tr><td>180</td><td>2</td></tr>
+                  <tr><td>90</td><td>2</td></tr>
+                  <tr><td>45</td><td>3</td></tr>
+                  <tr><td>15</td><td>3</td></tr>
+                  <tr><td>5</td><td>5</td></tr>
+                  <tr><td>1</td><td></td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p>\(360 = 2^3 \cdot 3^2 \cdot 5\).</p>
+            <p>Iz razcepa preberemo tudi <strong>število deliteljev</strong>: če je \(n = p_1^{k_1} p_2^{k_2} \cdots\), ima \(n\) natanko \((k_1 + 1)(k_2 + 1)\cdots\) deliteljev. Število 360 jih ima \(4 \cdot 3 \cdot 2 = 24\).</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-2">
+              <h4>Tip 2: Praštevilo, razcep na prafaktorje, delitelji</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Zapišite vse delitelje števila 84.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> sprašujejo, ali je število praštevilo, zahtevajo razcep ali naštevanje vseh deliteljev.</p><ul class="kljucne"><li>„razcepite na prafaktorje“</li><li>„ali je … praštevilo“</li><li>„zapišite vse delitelje“</li><li>„koliko deliteljev ima“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Razcepi število: deli z 2, dokler gre, nato s 3, 5, 7 … Rezultat zapiši s potencami.</p><div class="na-nalogi"><p>\(84 : 2 = 42\), \(42 : 2 = 21\), \(21 : 3 = 7\). \(84 = 2^2 \cdot 3 \cdot 7\).</p></div></li>
+              <li><p class="korak">Število deliteljev izračunaj s formulo \((k_1 + 1)(k_2 + 1)\cdots\), kjer so \(k_i\) eksponenti v razcepu.</p><div class="na-nalogi"><p>\((2 + 1)(1 + 1)(1 + 1) = 12\) deliteljev.</p></div></li>
+              <li><p class="korak">Delitelje išči v parih \(d \cdot \frac{n}{d} = n\) za \(d = 1, 2, \dots\) do \(\sqrt{n}\).</p><div class="na-nalogi"><p>\(\sqrt{84} \approx 9{,}2\). Pari: \(1 \cdot 84\), \(2 \cdot 42\), \(3 \cdot 28\), \(4 \cdot 21\), \(6 \cdot 14\), \(7 \cdot 12\).</p></div></li>
+              <li><p class="korak">Delitelje uredi po velikosti in preštej.</p><div class="na-nalogi"><p>\(D_{84} = \{1, 2, 3, 4, 6, 7, 12, 14, 21, 28, 42, 84\}\), kar je 12 deliteljev.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Ali je 143 praštevilo?</p><p>\(\sqrt{143} \approx 12\). Preverimo 2, 3, 5, 7, 11: \(143 = 11 \cdot 13\). Ni praštevilo.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Razcepite 360 na prafaktorje.</p><p>\(360 = 2^3 \cdot 3^2 \cdot 5\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Koliko deliteljev ima \(2^3 \cdot 5^2\)?</p><p>\((3 + 1)(2 + 1) = 12\).</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 3 -->
+        <section class="sklop" id="sklop-3">
+          <header class="sklop-header">
+            <span class="sklop-num">4.1 · 3</span>
+            <h2>Desetiški mestni zapis</h2>
+            <p>Vrednost števke je odvisna od njenega mesta.</p>
+          </header>
+          <div class="sklop-video"><span class="sklop-video-oznaka">Video razlaga</span><video class="video-svetla" controls preload="none" playsinline poster="/videi/matematika/stevilske_mnozice/sklop-4-svetla.jpg" src="/videi/matematika/stevilske_mnozice/sklop-4-svetla.mp4"></video><video class="video-temna" controls preload="none" playsinline poster="/videi/matematika/stevilske_mnozice/sklop-4-temna.jpg" src="/videi/matematika/stevilske_mnozice/sklop-4-temna.mp4"></video></div><!-- /sklop-video -->
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <p>V zapisu \(\overline{abc}\) (trimestno število s števkami \(a, b, c\)) ima vsaka števka drugačno vrednost glede na mesto: \(a\) so stotice, \(b\) desetice, \(c\) enice.</p>
+            <div class="formula-card">\(\overline{abc} = 100a + 10b + c, \qquad a \in \{1, \dots, 9\},\ b, c \in \{0, \dots, 9\}\)</div>
+            <p>Črta nad števkami pomeni, da gre za <strong>zapis s števkami</strong>, ne za produkt \(a \cdot b \cdot c\). Prva števka ne sme biti 0.</p>
+            <p>Ta zapis potrebujemo v besedilnih nalogah s števkami: „dvomestno število, ki ima števki zamenjani“, „vsota števk“ ipd. Število z zamenjanima števkama je \(\overline{ba} = 10b + a\).</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-3">
+              <h4>Tip 3: Besedilna naloga s števkami</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Vsota števk dvomestnega števila je 11. Če števki zamenjamo, dobimo število, ki je za 27 večje. Katero je število?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> govori se o števkah števila, o zamenjavi vrstnega reda števk ali o vsoti števk.</p><ul class="kljucne"><li>„dvomestno število“</li><li>„če števki zamenjamo“</li><li>„vsota števk je …“</li><li>„števka desetic“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Neznane števke označi (\(x\) desetice, \(y\) enice), število zapiši kot \(10x + y\).</p><div class="na-nalogi"><p>Število je \(10x + y\), z zamenjanima števkama \(10y + x\).</p></div></li>
+              <li><p class="korak">Vsak stavek naloge prevedi v enačbo.</p><div class="na-nalogi"><p>\(x + y = 11\) in \((10y + x) - (10x + y) = 27\), kar da \(9y - 9x = 27\) oziroma \(y - x = 3\).</p></div></li>
+              <li><p class="korak">Reši sistem.</p><div class="na-nalogi"><p>Seštejemo: \(2y = 14\), \(y = 7\), \(x = 4\).</p></div></li>
+              <li><p class="korak">Preveri, da so rešitve števke (cela števila od 0 do 9, prva ni 0), in preveri pogoje naloge.</p><div class="na-nalogi"><p>Število je 47. Preizkus: \(4 + 7 = 11\), \(74 - 47 = 27\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Števka desetic je za 2 večja od števke enic, vsota števk je 12. Katero je število?</p><p>\(x = y + 2\), \(2y + 2 = 12\), \(y = 5\), \(x = 7\). Število 75.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Dvomestno število je 4-krat večje od vsote svojih števk, števka enic je za 3 večja od števke desetic.</p><p>\(10x + y = 4(x + y)\) da \(6x = 3y\), \(y = 2x\). Z \(y = x + 3\): \(x = 3\), \(y = 6\). Število 36.</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Ali obstaja dvomestno število, ki se po zamenjavi števk poveča za 50?</p><p>Razlika je vedno \(9(y - x)\), torej večkratnik 9. Ker 50 ni deljivo z 9, takega števila ni.</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 4 -->
+        <section class="sklop" id="sklop-4">
+          <header class="sklop-header">
+            <span class="sklop-num">4.1 · 4</span>
+            <h2>Kriteriji deljivosti z 2, 3, 4, 5, 6, 8, 9 in 10</h2>
+            <p>Kako brez deljenja ugotovimo, ali je število deljivo.</p>
+          </header>
+          <div class="sklop-video"><span class="sklop-video-oznaka">Video razlaga</span><video class="video-svetla" controls preload="none" playsinline poster="/videi/matematika/stevilske_mnozice/sklop-5-svetla.jpg" src="/videi/matematika/stevilske_mnozice/sklop-5-svetla.mp4"></video><video class="video-temna" controls preload="none" playsinline poster="/videi/matematika/stevilske_mnozice/sklop-5-temna.jpg" src="/videi/matematika/stevilske_mnozice/sklop-5-temna.mp4"></video></div><!-- /sklop-video -->
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <div class="tabela-wrap">
+              <table class="tabela">
+                <thead><tr><th>Deljivo z</th><th>Pravilo</th><th>Primer</th></tr></thead>
+                <tbody>
+                  <tr><td>2</td><td>zadnja števka je soda (0, 2, 4, 6, 8)</td><td>3 57<strong>4</strong></td></tr>
+                  <tr><td>3</td><td>vsota števk je deljiva s 3</td><td>471: \(4 + 7 + 1 = 12\)</td></tr>
+                  <tr><td>4</td><td>zadnji dve števki tvorita število, deljivo s 4</td><td>3 1<strong>16</strong></td></tr>
+                  <tr><td>5</td><td>zadnja števka je 0 ali 5</td><td>2 34<strong>5</strong></td></tr>
+                  <tr><td>6</td><td>deljivo z 2 <strong>in</strong> s 3</td><td>354</td></tr>
+                  <tr><td>8</td><td>zadnje tri števke tvorijo število, deljivo z 8</td><td>5 <strong>128</strong></td></tr>
+                  <tr><td>9</td><td>vsota števk je deljiva z 9</td><td>738: \(7 + 3 + 8 = 18\)</td></tr>
+                  <tr><td>10</td><td>zadnja števka je 0</td><td>4 72<strong>0</strong></td></tr>
+                </tbody>
+              </table>
+            </div>
+            <h4>Utemeljitev (zakaj pravila delujejo)</h4>
+            <ul>
+              <li><strong>Pravila za 2, 5, 10:</strong> \(\overline{abc} = 10 \cdot \overline{ab} + c\). Ker je \(10\) deljivo z 2, 5 in 10, je deljivost odvisna samo od \(c\).</li>
+              <li><strong>Pravili za 4 in 8:</strong> \(100\) je deljivo s 4, \(1000\) je deljivo z 8.</li>
+              <li><strong>Pravili za 3 in 9:</strong> \(\overline{abc} = 99a + 9b + (a + b + c)\). Prva dva člena sta deljiva z 9 (in s 3), zato je število deljivo s 3 oz. 9 natanko tedaj, ko je deljiva vsota števk.</li>
+              <li><strong>Sestavljeni kriteriji:</strong> deljivost s produktom <strong>tujih</strong> števil preverimo po delih: 6 = 2 · 3, 12 = 3 · 4, 15 = 3 · 5, 18 = 2 · 9. Pazi: deljivosti z 8 ne preverjamo z 2 · 4 (nista tuji).</li>
+            </ul>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-4">
+              <h4>Tip 4: Določi manjkajočo števko, da bo število deljivo</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Določite vse števke \(x\), da bo število \(\overline{7x4}\) deljivo s 6.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> v številu je namesto števke zvezdica ali črka; ali pa preverjaš deljivost več števil hkrati.</p><ul class="kljucne"><li>„določite števko \(x\), da bo število \(\overline{3x52}\) deljivo z …“</li><li>„ali je število deljivo z“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Delitelj razstavi na tuje faktorje.</p><div class="na-nalogi"><p>\(6 = 2 \cdot 3\).</p></div></li>
+              <li><p class="korak">Za vsak faktor zapiši pogoj za neznano števko (zadnje števke ali vsota števk).</p><div class="na-nalogi"><p>Z 2: zadnja števka 4 je soda, pogoj velja za vsak \(x\). S 3: vsota števk \(7 + x + 4 = 11 + x\) mora biti deljiva s 3.</p></div></li>
+              <li><p class="korak">Neznana števka je med 0 in 9. Izpiši vse, ki ustrezajo vsem pogojem hkrati.</p><div class="na-nalogi"><p>\(11 + x \in \{12, 15, 18\}\), torej \(x \in \{1, 4, 7\}\). Števila so 714, 744 in 774.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Za katere \(x\) je \(\overline{52x}\) deljivo z 9?</p><p>\(5 + 2 + x = 7 + x\) mora biti 9, torej \(x = 2\). Število 522.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Za katere \(x\) je \(\overline{3x5}\) deljivo s 15?</p><p>S 5 drži (zadnja 5). S 3: \(8 + x\) deljivo s 3, \(x \in \{1, 4, 7\}\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Za katere \(x\) je \(\overline{1x6}\) deljivo s 4?</p><p>Zadnji dve števki \(\overline{x6}\) morata biti deljivi s 4: \(16, 36, 56, 76, 96\). \(x \in \{1, 3, 5, 7, 9\}\).</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 5 -->
+        <section class="sklop" id="sklop-5">
+          <header class="sklop-header">
+            <span class="sklop-num">4.1 · 5</span>
+            <h2>Relacija deljivosti</h2>
+            <p>Zapis \(a \mid b\) in njegove lastnosti.</p>
+          </header>
+          <div class="sklop-video"><span class="sklop-video-oznaka">Video razlaga</span><video class="video-svetla" controls preload="none" playsinline poster="/videi/matematika/stevilske_mnozice/sklop-6-svetla.jpg" src="/videi/matematika/stevilske_mnozice/sklop-6-svetla.mp4"></video><video class="video-temna" controls preload="none" playsinline poster="/videi/matematika/stevilske_mnozice/sklop-6-temna.jpg" src="/videi/matematika/stevilske_mnozice/sklop-6-temna.mp4"></video></div><!-- /sklop-video -->
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <p>Število \(a \ne 0\) <strong>deli</strong> število \(b\) (pišemo \(a \mid b\)), če obstaja celo število \(k\), da je \(b = k \cdot a\). Pravimo tudi: \(a\) je delitelj \(b\), \(b\) je večkratnik \(a\).</p>
+            <h4>Lastnosti</h4>
+            <ul>
+              <li>\(1 \mid b\) in \(b \mid b\) za vsak \(b\); \(a \mid 0\) za vsak \(a \ne 0\).</li>
+              <li><strong>Refleksivnost:</strong> \(a \mid a\).</li>
+              <li><strong>Tranzitivnost:</strong> če \(a \mid b\) in \(b \mid c\), potem \(a \mid c\).</li>
+              <li><strong>Antisimetričnost (v \(\mathbb{N}\)):</strong> če \(a \mid b\) in \(b \mid a\), potem \(a = b\).</li>
+              <li><strong>Vsota in razlika:</strong> če \(a \mid b\) in \(a \mid c\), potem \(a \mid b + c\) in \(a \mid b - c\).</li>
+              <li><strong>Produkt:</strong> če \(a \mid b\), potem \(a \mid b \cdot c\) za vsak \(c\).</li>
+              <li>Med dvema zaporednima celima številoma je eno sodo; med tremi zaporednimi je eno deljivo s 3. Zato je produkt dveh zaporednih števil deljiv z 2, produkt treh pa s 6.</li>
+            </ul>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-5">
+              <h4>Tip 5: Pokaži, da je izraz deljiv z danim številom</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Pokažite, da je \(n^3 - n\) deljivo s 6 za vsako celo število \(n\).</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> dan je izraz z neznanko \(n\) ali z neznanimi števili, ki so deljiva z nečim; pokazati moraš deljivost brez računanja konkretnih vrednosti.</p><ul class="kljucne"><li>„pokažite, da je … deljivo s …“</li><li>„če \(a \mid b\) in \(a \mid c\), …“</li><li>„za vsako celo število \(n\)“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Izraz razstavi v produkt (izpostavljanje, razlika kvadratov …).</p><div class="na-nalogi"><p>\(n^3 - n = n(n^2 - 1) = (n - 1) \cdot n \cdot (n + 1)\).</p></div></li>
+              <li><p class="korak">V produktu prepoznaj zaporedna števila ali faktor, ki je očitno deljiv.</p><div class="na-nalogi"><p>To je produkt treh zaporednih celih števil.</p></div></li>
+              <li><p class="korak">Uporabi lastnosti: med \(k\) zaporednimi števili je eno deljivo s \(k\); vsota deljivih je deljiva; produkt z deljivim faktorjem je deljiv.</p><div class="na-nalogi"><p>Med tremi zaporednimi je vsaj eno sodo in eno deljivo s 3. Ker sta 2 in 3 tuji, je produkt deljiv z \(2 \cdot 3 = 6\).</p></div></li>
+              <li><p class="korak">Če razcep ne pomaga, uporabi ostanke (<a href="#tip-8">Tip 8</a>) ali indukcijo (<a href="#tip-3">Tip 3</a>).</p><div class="na-nalogi"><p>Tu ni potrebno.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Pokažite, da je \(n^2 + n\) sodo za vsak \(n \in \mathbb{Z}\).</p><p>\(n(n + 1)\) je produkt dveh zaporednih števil, eno je sodo.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> \(a\) in \(b\) sta deljiva s 7. Pokažite, da je \(3a - 2b\) deljivo s 7.</p><p>\(a = 7k\), \(b = 7m\): \(3a - 2b = 7(3k - 2m)\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Pokažite, da je razlika kvadratov dveh zaporednih lihih števil deljiva z 8.</p><p>\((2n + 1)^2 - (2n - 1)^2 = 8n\).</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 6 -->
+        <section class="sklop" id="sklop-6">
+          <header class="sklop-header">
+            <span class="sklop-num">4.1 · 6</span>
+            <h2>Največji skupni delitelj in najmanjši skupni večkratnik</h2>
+            <p>\(D(a, b)\) in \(v(a, b)\) iz razcepa na prafaktorje.</p>
+          </header>
+          <div class="sklop-video"><span class="sklop-video-oznaka">Video razlaga</span><video class="video-svetla" controls preload="none" playsinline poster="/videi/matematika/stevilske_mnozice/sklop-7-svetla.jpg" src="/videi/matematika/stevilske_mnozice/sklop-7-svetla.mp4"></video><video class="video-temna" controls preload="none" playsinline poster="/videi/matematika/stevilske_mnozice/sklop-7-temna.jpg" src="/videi/matematika/stevilske_mnozice/sklop-7-temna.mp4"></video></div><!-- /sklop-video -->
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <div class="concept-list two-col">
+              <div class="concept">
+                <h4>Največji skupni delitelj \(D(a, b)\)</h4>
+                <div class="concept-formula">skupni prafaktorji z <strong>manjšo</strong> potenco</div>
+                <p class="concept-desc">Največje število, ki deli \(a\) in \(b\). Če je \(D(a, b) = 1\), sta števili <strong>tuji</strong>.</p>
+              </div>
+              <div class="concept">
+                <h4>Najmanjši skupni večkratnik \(v(a, b)\)</h4>
+                <div class="concept-formula">vsi prafaktorji z <strong>večjo</strong> potenco</div>
+                <p class="concept-desc">Najmanjše naravno število, ki je deljivo z \(a\) in z \(b\).</p>
+              </div>
+            </div>
+            <p>Primer: \(a = 360 = 2^3 \cdot 3^2 \cdot 5\), \(b = 84 = 2^2 \cdot 3 \cdot 7\).</p>
+            <ul>
+              <li>\(D(360, 84) = 2^2 \cdot 3 = 12\) (skupna sta samo 2 in 3).</li>
+              <li>\(v(360, 84) = 2^3 \cdot 3^2 \cdot 5 \cdot 7 = 2520\).</li>
+            </ul>
+            <p>V besedilnih nalogah: <strong>\(D\)</strong> iščemo, ko nekaj <strong>razdelimo</strong> na enake največje dele (ploščice, šopki, skupine); <strong>\(v\)</strong> iščemo, ko se nekaj <strong>ponavlja</strong> in čakamo, kdaj se spet ujame (avtobusi, utripanje luči, zobniki).</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-6">
+              <h4>Tip 6: Izračun \(D\) in \(v\) ter besedilne naloge</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Avtobus A odpelje s postaje vsakih 12 minut, avtobus B vsakih 18 minut. Ob 8.00 odpeljeta hkrati. Kdaj naslednjič odpeljeta hkrati?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> neposredno (\(D(a, b)\), \(v(a, b)\), „tuji števili“) ali v zgodbi o deljenju in ponavljanju.</p><ul class="kljucne"><li>„največ“ + „enake skupine“ → \(D\)</li><li>„čez koliko časa spet hkrati“ → \(v\)</li><li>„ali sta tuji“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Pri besedilni nalogi se vprašaj: delim na kose (\(D\)) ali čakam na ponovitev (\(v\))?</p><div class="na-nalogi"><p>Čakamo, da se odhoda spet ujemata, zato iščemo \(v(12, 18)\).</p></div></li>
+              <li><p class="korak">Vsa števila razcepi na prafaktorje.</p><div class="na-nalogi"><p>\(12 = 2^2 \cdot 3\), \(18 = 2 \cdot 3^2\).</p></div></li>
+              <li><p class="korak">\(D\): prafaktorji, ki so v vseh razcepih, z najmanjšo potenco. \(v\): vsi prafaktorji z največjo potenco.</p><div class="na-nalogi"><p>\(v = 2^2 \cdot 3^2 = 36\). (Za kontrolo \(D = 2 \cdot 3 = 6\).)</p></div></li>
+              <li><p class="korak">Preveri \(D \cdot v = a \cdot b\) in odgovori na vprašanje.</p><div class="na-nalogi"><p>\(6 \cdot 36 = 216 = 12 \cdot 18\). Naslednjič odpeljeta hkrati ob 8.36.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Imamo 48 rdečih in 36 modrih kroglic. Največ koliko enakih zavitkov lahko naredimo, da porabimo vse?</p><p>\(D(48, 36) = 12\) zavitkov, v vsakem 4 rdeče in 3 modre.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Ali sta 35 in 64 tuji števili?</p><p>\(35 = 5 \cdot 7\), \(64 = 2^6\). Skupnega prafaktorja ni, \(D = 1\), sta tuji.</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Izračunajte \(v(8, 12, 15)\).</p><p>\(2^3 \cdot 3 \cdot 5 = 120\).</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 7 -->
+        <section class="sklop" id="sklop-7">
+          <header class="sklop-header">
+            <span class="sklop-num">4.1 · 7</span>
+            <h2>Osnovni izrek o deljenju</h2>
+            <p>Deljenje z ostankom.</p>
+          </header>
+          <div class="sklop-video"><span class="sklop-video-oznaka">Video razlaga</span><video class="video-svetla" controls preload="none" playsinline poster="/videi/matematika/stevilske_mnozice/sklop-8-svetla.jpg" src="/videi/matematika/stevilske_mnozice/sklop-8-svetla.mp4"></video><video class="video-temna" controls preload="none" playsinline poster="/videi/matematika/stevilske_mnozice/sklop-8-temna.jpg" src="/videi/matematika/stevilske_mnozice/sklop-8-temna.mp4"></video></div><!-- /sklop-video -->
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <p>Za poljubni celi števili \(a\) in \(b &gt; 0\) obstajata natanko eno celo število \(k\) (količnik) in natanko en ostanek \(r\), da velja:</p>
+            <div class="formula-card">\(a = k \cdot b + r, \qquad 0 \le r &lt; b\)</div>
+            <ul>
+              <li>Primer: \(47 = 6 \cdot 7 + 5\): pri deljenju 47 s 7 je količnik 6, ostanek 5.</li>
+              <li>Pri negativnih številih mora biti ostanek še vedno nenegativen: \(-17 = (-4) \cdot 5 + 3\), ostanek je 3 (ne \(-2\)).</li>
+              <li>Vsako celo število je pri deljenju z \(b\) oblike \(bk, bk + 1, \dots, bk + (b - 1)\). Npr. vsako število je oblike \(3k\), \(3k + 1\) ali \(3k + 2\).</li>
+            </ul>
+            <h4>Računanje z ostanki</h4>
+            <p>Ostanek vsote (produkta) je enak ostanku vsote (produkta) ostankov. Če da \(a\) pri deljenju s 7 ostanek 3, da \(5a + 4\) ostanek, ki ga da \(5 \cdot 3 + 4 = 19\), torej \(19 = 2 \cdot 7 + 5\) → ostanek 5.</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-7">
+              <h4>Tip 7: Naloge z ostanki</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Število \(a\) da pri deljenju s 7 ostanek 3. Kakšen ostanek da \(a^2\)?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> v besedilu je „ostanek“, „pri deljenju z … da ostanek“.</p><ul class="kljucne"><li>„pri deljenju s 7 da ostanek 3“</li><li>„kakšen ostanek da …“</li><li>„zapišite v obliki \(a = kb + r\)“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Neznano število zapiši z osnovnim izrekom o deljenju.</p><div class="na-nalogi"><p>\(a = 7k + 3\), \(k \in \mathbb{Z}\).</p></div></li>
+              <li><p class="korak">Vstavi v izraz, ki te zanima, in ga preuredi v obliko \(7 \cdot (\dots) + r\) z \(0 \le r &lt; 7\).</p><div class="na-nalogi"><p>\(a^2 = 49k^2 + 42k + 9 = 7(7k^2 + 6k) + 9\).</p></div></li>
+              <li><p class="korak">Če je „ostanek“ večji ali enak deljitelju, ga še enkrat deli.</p><div class="na-nalogi"><p>\(9 = 7 + 2\): \(a^2 = 7(7k^2 + 6k + 1) + 2\). Ostanek je 2.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> \(a\) da pri deljenju s 5 ostanek 4. Kakšen ostanek da \(3a\)?</p><p>\(3a = 15k + 12 = 5(3k + 2) + 2\). Ostanek 2.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Kakšen ostanek da \(a + b\) pri deljenju s 6, če da \(a\) ostanek 5 in \(b\) ostanek 4?</p><p>\(a + b = 6(k + m) + 9 = 6(k + m + 1) + 3\). Ostanek 3.</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Zapišite \(-17\) v obliki \(5k + r\), \(0 \le r &lt; 5\).</p><p>\(-17 = 5 \cdot (-4) + 3\). Ostanek ne sme biti negativen.</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 8 -->
+        <section class="sklop" id="sklop-8">
+          <header class="sklop-header">
+            <span class="sklop-num">4.1 · 8</span>
+            <h2>Desetiški številski sestav</h2>
+            <p>Zapis števila s potencami števila 10.</p>
+          </header>
+          <div class="sklop-video"><span class="sklop-video-oznaka">Video razlaga</span><video class="video-svetla" controls preload="none" playsinline poster="/videi/matematika/stevilske_mnozice/sklop-10-svetla.jpg" src="/videi/matematika/stevilske_mnozice/sklop-10-svetla.mp4"></video><video class="video-temna" controls preload="none" playsinline poster="/videi/matematika/stevilske_mnozice/sklop-10-temna.jpg" src="/videi/matematika/stevilske_mnozice/sklop-10-temna.mp4"></video></div><!-- /sklop-video -->
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <p>V desetiškem sestavu uporabljamo 10 števk (0–9) in osnovo 10. Vsako mesto je 10-krat vrednejše od mesta desno od njega. <strong>Razviti zapis</strong> števila:</p>
+            <div class="formula-card">\(4\,507 = 4 \cdot 10^3 + 5 \cdot 10^2 + 0 \cdot 10^1 + 7 \cdot 10^0\)</div>
+            <p>Enako velja za decimalke z negativnimi potencami: \(3{,}25 = 3 \cdot 10^0 + 2 \cdot 10^{-1} + 5 \cdot 10^{-2}\).</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-8">
+              <h4>Tip 8: Razviti zapis števila</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Katero število je \(2 \cdot 10^4 + 3 \cdot 10^2 + 6 \cdot 10^{-1}\)?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> število moraš zapisati s potencami števila 10 ali obratno.</p><ul class="kljucne"><li>„zapišite v razviti obliki“</li><li>„s potencami števila 10“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Oštevilči mesta: enice \(10^0\), desetice \(10^1\), …; decimalke \(10^{-1}, 10^{-2}, \dots\)</p><div class="na-nalogi"><p>\(10^4\) so desettisočice, \(10^2\) stotice, \(10^{-1}\) desetinke.</p></div></li>
+              <li><p class="korak">Vsako števko postavi na svoje mesto in prazna mesta zapolni z ničlami.</p><div class="na-nalogi"><p>\(20\,000 + 300 + 0{,}6 = 20\,300{,}6\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Zapišite 4072 v razviti obliki.</p><p>\(4 \cdot 10^3 + 7 \cdot 10^1 + 2 \cdot 10^0\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Zapišite \(3{,}05\) v razviti obliki.</p><p>\(3 \cdot 10^0 + 5 \cdot 10^{-2}\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Zapišite \(\overline{abc}\) v razviti obliki.</p><p>\(100a + 10b + c\).</p></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="subsection" id="kljuc">
+          <div class="subsection-head">
+            <h2>Ključ: kateri tip naloge je to?</h2>
+            <p>Poišči besedo iz navodila naloge in skoči na pravi postopek.</p>
+          </div>
+          <div class="info-card">
+            <div class="tabela-wrap">
+              <table class="tabela">
+                <thead><tr><th>V besedilu naloge piše …</th><th>Tip</th></tr></thead>
+                <tbody>
+                  <tr><td>„izračunajte brez računala“ (cela števila)</td><td><a href="#tip-1">Tip 1</a></td></tr>
+                  <tr><td>„praštevilo“, „razcepite“, „delitelji“</td><td><a href="#tip-2">Tip 2</a></td></tr>
+                  <tr><td>„dvomestno število“, „števki zamenjamo“</td><td><a href="#tip-3">Tip 3</a></td></tr>
+                  <tr><td>„določite števko, da bo deljivo“</td><td><a href="#tip-4">Tip 4</a></td></tr>
+                  <tr><td>„pokažite, da je … deljivo“</td><td><a href="#tip-5">Tip 5</a></td></tr>
+                  <tr><td>\(D\), \(v\), „tuji“, „hkrati spet“, „največje enake skupine“</td><td><a href="#tip-6">Tip 6</a></td></tr>
+                  <tr><td>„ostanek pri deljenju“</td><td><a href="#tip-7">Tip 7</a></td></tr>
+                  <tr><td>„razviti zapis“, „s potencami števila 10“</td><td><a href="#tip-8">Tip 8</a></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>Pogoste napake</h2>
+          </div>
+          <div class="info-card">
+            <ul>
+              <li>Pri D vzameš prafaktorje z najvišjo potenco (to je v), pri v pa z najnižjo.</li>
+              <li>Število 1 šteješ med praštevila.</li>
+              <li>Pri pravilu za deljivost s 3 in 9 gledaš zadnjo števko namesto vsote števk.</li>
+              <li>Pri osnovnem izreku o deljenju dobiš ostanek, ki je večji od delitelja ali negativen.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>Vadi naprej</h2>
+            <p>Ko predelaš razlago, preveri znanje z nalogami.</p>
+          </div>
+          <div class="link-list">
+            <a class="link-item" href="/views/poklicna_matematika/naloge/naloge.html?snov=stevila_deljivost">
+              <span class="link-item-text">
+                <strong>Naloge za vajo</strong>
+                <small>Naloge iz tega poglavja z rešitvami in postopki</small>
+              </span>
+              <span class="arrow">→</span>
+            </a>
+            <a class="link-item" href="/views/poklicna_matematika/matura/po_snovi/naloge.html?poglavje=stevila_deljivost">
+              <span class="link-item-text">
+                <strong>Maturitetne naloge iz te snovi</strong>
+                <small>Naloge iz pol poklicne mature</small>
+              </span>
+              <span class="arrow">→</span>
+            </a>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+
+  <script src="/components/components.js"></script>
+</body>
+</html>

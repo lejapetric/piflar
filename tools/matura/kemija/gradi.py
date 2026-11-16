@@ -112,7 +112,7 @@ g.oblikuj = oblikuj
 g.oznaka_pravila = oznaka_pravila
 g.TOCKE_STRUKTURIRANE = 3
 
-VIR = ("Vadbena pola Piflar.si. Zgradba, vrsta nalog in točkovanje sledijo uradni poli splošne mature "
+VIR = ("Vadbena pola Učilnica.com. Zgradba, vrsta nalog in točkovanje sledijo uradni poli splošne mature "
        "({opis}), besedila in podatki pa so naši. Uradne pole izdaja Državni izpitni center (RIC), "
        "ki ima nanje vse avtorske pravice.")
 PRIPOMOCKI = "Dovoljena sta računalo in priloga s periodnim sistemom."
@@ -132,14 +132,14 @@ def zgradi(pot):
     skupno = {"predmet": "kemija", "raven": "enotna", "leto": leto, "rok": rok, "izvedba": izvedba, "datum": datum, "pdf": None}
     p1 = {
         "id": f"kemija-{leto}-{rok}{pripona}-1", **skupno, "stevilka": 1,
-        "naslov": f"Kemija, {opis_roka}, izpitna pola 1 (vadbena pola Piflar.si)",
+        "naslov": f"Kemija, {opis_roka}, izpitna pola 1 (vadbena pola Učilnica.com)",
         "navodilo": f"90 minut, naloge izbirnega tipa, 35 točk. {PRIPOMOCKI}",
         "vir": VIR.format(opis=f"{opis_roka}, izpitna pola 1"),
         "naloge": [{"id": str(i + 1), **g.izbirna(n, c)} for i, (n, c) in enumerate(zip(pola1, cilji))],
     }
     p2 = {
         "id": f"kemija-{leto}-{rok}{pripona}-2", **skupno, "stevilka": 2,
-        "naslov": f"Kemija, {opis_roka}, izpitna pola 2 (vadbena pola Piflar.si)",
+        "naslov": f"Kemija, {opis_roka}, izpitna pola 2 (vadbena pola Učilnica.com)",
         "navodilo": f"90 minut, 15 strukturiranih nalog po 3 točke (45 točk). {PRIPOMOCKI}",
         "vir": VIR.format(opis=f"{opis_roka}, izpitna pola 2"),
         "naloge": [{"id": str(i + 1), **g.strukturirana(i + 1, s)} for i, s in enumerate(pola2)],

@@ -325,7 +325,7 @@ def strukturirana(st, s):
     }
 
 
-VIR = ("Vadbena pola Piflar.si. Zgradba, vrsta nalog in točkovanje sledijo uradni poli splošne mature "
+VIR = ("Vadbena pola Učilnica.com. Zgradba, vrsta nalog in točkovanje sledijo uradni poli splošne mature "
        "({opis}), besedila in podatki pa so naši. Uradne pole izdaja Državni izpitni center (RIC), "
        "ki ima nanje vse avtorske pravice.")
 
@@ -344,14 +344,14 @@ def zgradi(pot):
     skupno = {"predmet": "fizika", "raven": "enotna", "leto": leto, "rok": rok, "izvedba": izvedba, "datum": datum, "pdf": None}
     p1 = {
         "id": f"fizika-{leto}-{rok}{pripona}-1", **skupno, "stevilka": 1,
-        "naslov": f"Fizika, {opis_roka}, izpitna pola 1 (vadbena pola Piflar.si)",
+        "naslov": f"Fizika, {opis_roka}, izpitna pola 1 (vadbena pola Učilnica.com)",
         "navodilo": "90 minut, naloge izbirnega tipa, 35 točk. Dovoljena sta računalo in priloga s konstantami in enačbami.",
         "vir": VIR.format(opis=f"{opis_roka}, izpitna pola 1"),
         "naloge": [{"id": str(i + 1), **izbirna(n, c)} for i, (n, c) in enumerate(zip(pola1, cilji))],
     }
     p2 = {
         "id": f"fizika-{leto}-{rok}{pripona}-2", **skupno, "stevilka": 2,
-        "naslov": f"Fizika, {opis_roka}, izpitna pola 2 (vadbena pola Piflar.si)",
+        "naslov": f"Fizika, {opis_roka}, izpitna pola 2 (vadbena pola Učilnica.com)",
         "navodilo": "90 minut, strukturirane naloge, izberi in reši 3 (45 točk). Dovoljena sta računalo in priloga s konstantami in enačbami.",
         "vir": VIR.format(opis=f"{opis_roka}, izpitna pola 2"),
         "naloge": [{"id": str(i + 1), **strukturirana(i + 1, s)} for i, s in enumerate(pola2)],

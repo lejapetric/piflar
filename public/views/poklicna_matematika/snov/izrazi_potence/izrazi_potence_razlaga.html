@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Potence in algebrski izrazi — razlaga za poklicno maturo | Učilnica.com</title>
+  <meta name="description" content="Potence in algebrski izrazi za poklicno maturo iz matematike: Potence s celimi eksponenti, kvadrat dvočlenika, razlika kvadratov, Vietovo pravilo, algebrski ulomki.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
+  <link rel="stylesheet" href="/style/snov.css">
+</head>
+<body>
+  <div id="header"></div>
+
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view">
+
+        <header class="page-header">
+          <span class="page-eyebrow">Poklicna matura · Matematika · Snov · 4.2</span>
+          <h1>Potence in algebrski izrazi</h1>
+          <p>Potence in algebrski izrazi so orodje za skoraj vsako nalogo na izpitu. Katalog zahteva računanje s potencami s celimi eksponenti, kvadriranje dvočlenika, razcep razlike kvadratov, Vietovo pravilo ter računanje z algebrskimi ulomki. Pod razlago vsakega podpoglavja so vsi tipi nalog z univerzalnim postopkom in primeri.</p>
+          <div class="page-meta">
+            <div class="page-meta-item"><strong>7</strong><span>Podpoglavij</span></div>
+            <div class="page-meta-item"><strong>12</strong><span>Tipov nalog</span></div>
+            <div class="page-meta-item"><strong>~35 min</strong><span>Branja</span></div>
+          </div>
+        </header>
+
+        <div class="matura-formule">
+          <h3>Kaj preverja izpitni katalog</h3>
+          <p>Po predmetnem izpitnem katalogu za poklicno maturo kandidat:</p>
+          <ul>
+              <li>računa s potencami z naravnimi in celimi eksponenti ter uporablja pravila za računanje z njimi</li>
+              <li>računa z algebrskimi izrazi: potencira dvočlenik, razcepi razliko kvadratov, uporablja Vietovo pravilo</li>
+              <li>računa s številskimi in algebrskimi ulomki</li>
+          </ul>
+          <p><strong>Na izpitu:</strong> Kratka naloga 1. dela: poenostavi izraz s potencami, razstavi izraz ali okrajšaj algebrski ulomek. Razcep pogosto potrebuješ tudi pri enačbah in neenačbah v drugih nalogah. Formule iz kataloga so priložene izpitni poli.</p>
+        </div>
+
+        <nav class="kazalo" id="kazalo" aria-label="Podpoglavja">
+          <h2>Podpoglavja</h2>
+          <ol>
+            <li><a href="#sklop-1"><span class="kazalo-st">1</span> Potence z naravnim eksponentom</a></li>
+            <li><a href="#sklop-2"><span class="kazalo-st">2</span> Potence s celim eksponentom</a></li>
+            <li><a href="#sklop-3"><span class="kazalo-st">3</span> Računske operacije z izrazi</a></li>
+            <li><a href="#sklop-4"><span class="kazalo-st">4</span> Potenciranje izrazov</a></li>
+            <li><a href="#sklop-5"><span class="kazalo-st">5</span> Razstavljanje izrazov</a></li>
+            <li><a href="#sklop-6"><span class="kazalo-st">6</span> Vietovi pravili</a></li>
+            <li><a href="#sklop-7"><span class="kazalo-st">7</span> Računanje z ulomki</a></li>
+            <li><a href="#kljuc"><span class="kazalo-st">?</span> Ključ: kateri tip naloge je to?</a></li>
+          </ol>
+        </nav>
+
+        <!-- SKLOP 1 -->
+        <section class="sklop" id="sklop-1">
+          <header class="sklop-header">
+            <span class="sklop-num">4.2 · 1</span>
+            <h2>Potence z naravnim eksponentom</h2>
+            <p>Kaj pomeni \(a^n\) in pet pravil za računanje.</p>
+          </header>
+          <div class="sklop-video"><span class="sklop-video-oznaka">Video razlaga</span><video class="video-svetla" controls preload="none" playsinline poster="/videi/matematika/potence_koreni/sklop-1-svetla.jpg" src="/videi/matematika/potence_koreni/sklop-1-svetla.mp4"></video><video class="video-temna" controls preload="none" playsinline poster="/videi/matematika/potence_koreni/sklop-1-temna.jpg" src="/videi/matematika/potence_koreni/sklop-1-temna.mp4"></video></div><!-- /sklop-video -->
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <p>Potenca \(a^n\) (\(n \in \mathbb{N}\)) je skrajšan zapis produkta \(n\) enakih faktorjev: \(a^n = \underbrace{a \cdot a \cdots a}_{n}\). Število \(a\) je <strong>osnova</strong>, \(n\) je <strong>eksponent</strong>.</p>
+            <h4>Pravila in utemeljitve</h4>
+            <div class="tabela-wrap">
+              <table class="tabela">
+                <thead><tr><th>Pravilo</th><th>Utemeljitev (primer)</th></tr></thead>
+                <tbody>
+                  <tr><td>\(a^m \cdot a^n = a^{m+n}\)</td><td>\(a^2 \cdot a^3 = (aa)(aaa) = a^5\)</td></tr>
+                  <tr><td>\(a^m : a^n = a^{m-n}\) (\(m &gt; n\), \(a \ne 0\))</td><td>\(\frac{a^5}{a^2} = \frac{aaaaa}{aa} = a^3\)</td></tr>
+                  <tr><td>\((a^m)^n = a^{m \cdot n}\)</td><td>\((a^2)^3 = a^2 a^2 a^2 = a^6\)</td></tr>
+                  <tr><td>\((a b)^n = a^n b^n\)</td><td>\((ab)^2 = abab = a^2 b^2\)</td></tr>
+                  <tr><td>\(\left(\frac{a}{b}\right)^n = \frac{a^n}{b^n}\)</td><td>analogno</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <h4>Predznak potence</h4>
+            <ul>
+              <li>Negativna osnova na <strong>sod</strong> eksponent da pozitivno število: \((-2)^4 = 16\).</li>
+              <li>Negativna osnova na <strong>lih</strong> eksponent da negativno: \((-2)^3 = -8\).</li>
+              <li>\(-2^4 = -16\): eksponent se nanaša samo na 2, minus ostane pred.</li>
+            </ul>
+            <div class="pazi"><strong>Pazi:</strong> pravila veljajo za produkte, <strong>ne</strong> za vsote: \((a + b)^2 \ne a^2 + b^2\), \(a^2 + a^3 \ne a^5\). Potenc z različnimi osnovami ne moremo združiti, razen če imajo enak eksponent: \(2^3 \cdot 5^3 = 10^3\).</div>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-1">
+              <h4>Tip 1: Poenostavi izraz s potencami</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Poenostavite \(\dfrac{(2a^3b)^2 \cdot 4ab^3}{8a^5b^4}\).</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> ulomki in produkti potenc s črkami ali števili.</p><ul class="kljucne"><li>„poenostavite“</li><li>„zapišite kot eno potenco“</li><li>„izračunajte brez računala“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Odpravi oklepaje s potencami: \((a^m b)^n = a^{mn} b^n\).</p><div class="na-nalogi"><p>\((2a^3b)^2 = 4a^6b^2\).</p></div></li>
+              <li><p class="korak">Števila razcepi na prafaktorje, da imaš čim manj osnov.</p><div class="na-nalogi"><p>\(4 = 2^2\), \(8 = 2^3\): \(\dfrac{2^2 a^6 b^2 \cdot 2^2 a b^3}{2^3 a^5 b^4}\).</p></div></li>
+              <li><p class="korak">Za vsako osnovo posebej seštej eksponente v števcu in odštej eksponente v imenovalcu.</p><div class="na-nalogi"><p>\(2^{2 + 2 - 3} = 2\), \(a^{6 + 1 - 5} = a^2\), \(b^{2 + 3 - 4} = b\).</p></div></li>
+              <li><p class="korak">Določi predznak (preštej minuse) in zapiši rezultat.</p><div class="na-nalogi"><p>Minusov ni: \(2a^2b\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Poenostavite \(\dfrac{x^5 \cdot x^3}{x^6}\).</p><p>\(x^{5 + 3 - 6} = x^2\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Zapišite kot eno potenco \(4^3 \cdot 8^2\).</p><p>\(2^6 \cdot 2^6 = 2^{12}\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Poenostavite \((-2x^2y)^3\).</p><p>\(-8x^6y^3\) (lih eksponent ohrani minus).</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 2 -->
+        <section class="sklop" id="sklop-2">
+          <header class="sklop-header">
+            <span class="sklop-num">4.2 · 2</span>
+            <h2>Potence s celim eksponentom</h2>
+            <p>Ničti in negativni eksponent, znanstveni zapis števila.</p>
+          </header>
+          <div class="sklop-video"><span class="sklop-video-oznaka">Video razlaga</span><video class="video-svetla" controls preload="none" playsinline poster="/videi/matematika/potence_koreni/sklop-2-svetla.jpg" src="/videi/matematika/potence_koreni/sklop-2-svetla.mp4"></video><video class="video-temna" controls preload="none" playsinline poster="/videi/matematika/potence_koreni/sklop-2-temna.jpg" src="/videi/matematika/potence_koreni/sklop-2-temna.mp4"></video></div><!-- /sklop-video -->
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <p>Želimo, da pravilo \(a^m : a^n = a^{m-n}\) velja tudi, ko \(m \le n\). Od tod sledi, kako moramo definirati ničti in negativni eksponent (\(a \ne 0\)):</p>
+            <div class="formula-grid">
+              <div class="formula-card">\(a^0 = \dfrac{a^n}{a^n} = 1\)</div>
+              <div class="formula-card">\(a^{-n} = \dfrac{a^0}{a^n} = \dfrac{1}{a^n}\)</div>
+              <div class="formula-card">\(\left(\dfrac{a}{b}\right)^{-n} = \left(\dfrac{b}{a}\right)^n\)</div>
+            </div>
+            <p>\(a^{-1} = \frac{1}{a}\) je <strong>obratna vrednost</strong> števila \(a\). Negativen eksponent torej <strong>ne pomeni negativnega števila</strong>: \(2^{-3} = \frac{1}{8} &gt; 0\). Vsa pravila iz 4.5.1 veljajo nespremenjena za vse cele eksponente. \(0^0\) in \(0^{-n}\) nista definirana.</p>
+            <p>Faktor z negativnim eksponentom lahko „prestavimo“ čez ulomkovo črto in eksponentu spremenimo predznak: \(\dfrac{a^{-2}}{b^{-3}} = \dfrac{b^3}{a^2}\).</p>
+            <h4>Znanstveni zapis</h4>
+            <p>Zelo velika in zelo majhna števila zapišemo kot \(a \cdot 10^n\), \(1 \le a &lt; 10\), \(n \in \mathbb{Z}\):</p>
+            <ul>
+              <li>\(384\,000\) km \(= 3{,}84 \cdot 10^5\) km (vejico premaknemo 5 mest v levo → \(n = 5\)).</li>
+              <li>\(0{,}000\,052 = 5{,}2 \cdot 10^{-5}\) (vejico premaknemo 5 mest v desno → \(n = -5\)).</li>
+              <li>Množenje: \((3 \cdot 10^4)(4 \cdot 10^{-7}) = 12 \cdot 10^{-3} = 1{,}2 \cdot 10^{-2}\) (na koncu popravi, da je \(1 \le a &lt; 10\)).</li>
+            </ul>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-2">
+              <h4>Tip 2: Izraz z negativnimi eksponenti</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Izračunajte \(\left(\frac{2}{3}\right)^{-2} + 4^{-1} \cdot 2^0\).</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> eksponenti so negativni ali 0; rezultat moraš zapisati brez negativnih eksponentov ali izračunati.</p><ul class="kljucne"><li>\(2^{-3}\)</li><li>„zapišite brez negativnih eksponentov“</li><li>\(\left(\frac{2}{3}\right)^{-2}\)</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Ničto potenco zamenjaj z 1, ulomek z negativnim eksponentom obrni: \(\left(\frac{a}{b}\right)^{-n} = \left(\frac{b}{a}\right)^n\).</p><div class="na-nalogi"><p>\(2^0 = 1\), \(\left(\frac{2}{3}\right)^{-2} = \left(\frac{3}{2}\right)^2 = \frac{9}{4}\).</p></div></li>
+              <li><p class="korak">Negativni eksponent prestavi čez ulomkovo črto: \(a^{-n} = \frac{1}{a^n}\).</p><div class="na-nalogi"><p>\(4^{-1} = \frac{1}{4}\).</p></div></li>
+              <li><p class="korak">Izračunaj po vrstnem redu.</p><div class="na-nalogi"><p>\(\frac{9}{4} + \frac{1}{4} \cdot 1 = \frac{10}{4} = \frac{5}{2}\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Zapišite brez negativnih eksponentov \(\dfrac{a^{-2}b}{c^{-3}}\).</p><p>\(\dfrac{b c^3}{a^2}\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Izračunajte \(2^{-3} \cdot 16\).</p><p>\(\frac{16}{8} = 2\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Poenostavite \((x^{-2})^{-3} \cdot x^{-4}\).</p><p>\(x^{6 - 4} = x^2\).</p></div>
+            </div>
+            <div class="tip-naloge" id="tip-3">
+              <h4>Tip 3: Znanstveni zapis</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Svetloba potuje s hitrostjo \(3 \cdot 10^8\) m/s. Koliko časa potrebuje za razdaljo \(1{,}5 \cdot 10^{11}\) m?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> zelo velika ali majhna števila (astronomija, atomi, prebivalstvo), računanje z \(10^n\).</p><ul class="kljucne"><li>„zapišite v obliki \(a \cdot 10^n\)“</li><li>„znanstveni zapis“</li><li>„kolikokrat je … večje“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Zapiši račun.</p><div class="na-nalogi"><p>\(t = \dfrac{s}{v} = \dfrac{1{,}5 \cdot 10^{11}}{3 \cdot 10^8}\).</p></div></li>
+              <li><p class="korak">Posebej deli (množi) števili \(a\) in posebej potence 10.</p><div class="na-nalogi"><p>\(\dfrac{1{,}5}{3} = 0{,}5\), \(\dfrac{10^{11}}{10^8} = 10^3\).</p></div></li>
+              <li><p class="korak">Rezultat popravi na obliko \(1 \le a &lt; 10\): vejica v levo poveča \(n\), v desno ga zmanjša.</p><div class="na-nalogi"><p>\(0{,}5 \cdot 10^3 = 5 \cdot 10^2\) s, torej 500 s.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Zapišite \(0{,}000\,72\) v znanstvenem zapisu.</p><p>Vejico premaknemo 4 mesta v desno: \(7{,}2 \cdot 10^{-4}\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Izračunajte \((4 \cdot 10^5)(3 \cdot 10^{-2})\).</p><p>\(12 \cdot 10^3 = 1{,}2 \cdot 10^4\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Kolikokrat je \(6 \cdot 10^{24}\) večje od \(2 \cdot 10^{22}\)?</p><p>\(3 \cdot 10^2 = 300\)-krat.</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 3 -->
+        <section class="sklop" id="sklop-3">
+          <header class="sklop-header">
+            <span class="sklop-num">4.2 · 3</span>
+            <h2>Računske operacije z izrazi</h2>
+            <p>Izraz, spremenljivka, seštevanje in množenje algebrskih izrazov.</p>
+          </header>
+          <div class="sklop-video"><span class="sklop-video-oznaka">Video razlaga</span><video class="video-svetla" controls preload="none" playsinline poster="/videi/matematika/algebrski_izrazi_enacbe_neenacbe/sklop-1-svetla.jpg" src="/videi/matematika/algebrski_izrazi_enacbe_neenacbe/sklop-1-svetla.mp4"></video><video class="video-temna" controls preload="none" playsinline poster="/videi/matematika/algebrski_izrazi_enacbe_neenacbe/sklop-1-temna.jpg" src="/videi/matematika/algebrski_izrazi_enacbe_neenacbe/sklop-1-temna.mp4"></video></div><!-- /sklop-video -->
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <h4>Izraz ali enačba? Spremenljivka ali neznanka?</h4>
+            <div class="concept-list two-col">
+              <div class="concept">
+                <h4>Izraz</h4>
+                <div class="concept-formula">\(3x^2 - 2x + 5\)</div>
+                <p class="concept-desc">Zapis s števili, črkami in računskimi operacijami, <strong>brez enačaja</strong>. Izraz lahko poenostavimo, razstavimo ali izračunamo njegovo vrednost. Črka v izrazu je <strong>spremenljivka</strong>: zanjo lahko vstavimo poljubno število.</p>
+              </div>
+              <div class="concept">
+                <h4>Enačba</h4>
+                <div class="concept-formula">\(3x^2 - 2x + 5 = 6\)</div>
+                <p class="concept-desc">Dva izraza, povezana z enačajem. Enačbo <strong>rešujemo</strong>: iščemo vrednosti, pri katerih je enakost resnična. Črka v enačbi je <strong>neznanka</strong>.</p>
+              </div>
+            </div>
+            <h4>Členi in podobni členi</h4>
+            <p>Izraz \(4x^2y - 3xy + 7\) ima tri <strong>člene</strong>. Člen \(4x^2y\) ima <strong>koeficient</strong> 4 in <strong>stopnjo</strong> 3 (vsota eksponentov). <strong>Podobni členi</strong> imajo enake spremenljivke z enakimi eksponenti (\(3x^2y\) in \(-5x^2y\)); samo te lahko seštejemo, tako da seštejemo koeficiente: \(3x^2y - 5x^2y = -2x^2y\).</p>
+            <h4>Množenje izrazov</h4>
+            <ul>
+              <li><strong>Enočlenik z enočlenikom:</strong> zmnožimo koeficiente, potence z isto osnovo zmnožimo (eksponente seštejemo): \(3a^2b \cdot (-2ab^3) = -6a^3b^4\).</li>
+              <li><strong>Enočlenik z veččlenikom:</strong> distributivnost, \(2x(x^2 - 3x + 1) = 2x^3 - 6x^2 + 2x\).</li>
+              <li><strong>Veččlenik z veččlenikom:</strong> „vsak z vsakim“, nato seštej podobne člene: \((x + 2)(x^2 - x + 3) = x^3 - x^2 + 3x + 2x^2 - 2x + 6 = x^3 + x^2 + x + 6\).</li>
+              <li><strong>Minus pred oklepajem</strong> spremeni predznak vsem členom v oklepaju: \(-(2x - 3y + 1) = -2x + 3y - 1\).</li>
+            </ul>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-4">
+              <h4>Tip 4: Poenostavi izraz (seštevanje in množenje)</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Poenostavite izraz \((2x - 1)(x + 3) - 2(x - 1)^2\).</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> dolg izraz z oklepaji, ki ga moraš zapisati krajše; ni enačaja.</p><ul class="kljucne"><li>„poenostavite izraz“</li><li>„zmnožite in uredite“</li><li>„zapišite kot polinom“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Najprej izračunaj potence oklepajev (formule iz <a href="#kazalo">4.4.2</a>).</p><div class="na-nalogi"><p>\((x - 1)^2 = x^2 - 2x + 1\).</p></div></li>
+              <li><p class="korak">Odpravi oklepaje z množenjem. Pred minusom rezultat množenja najprej zapiši v oklepaj, nato odpravi minus.</p><div class="na-nalogi"><p>\((2x - 1)(x + 3) = 2x^2 + 6x - x - 3 = 2x^2 + 5x - 3\). \(-2(x^2 - 2x + 1) = -2x^2 + 4x - 2\).</p></div></li>
+              <li><p class="korak">Seštej podobne člene in jih uredi po padajočih potencah.</p><div class="na-nalogi"><p>\(2x^2 - 2x^2 + 5x + 4x - 3 - 2 = 9x - 5\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Poenostavite \(3(a - 2) - (a + 4)\).</p><p>\(3a - 6 - a - 4 = 2a - 10\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Poenostavite \((x + 2)^2 - (x - 2)(x + 2)\).</p><p>\(x^2 + 4x + 4 - (x^2 - 4) = 4x + 8\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Poenostavite \(2x(x - 3) - (x - 1)(2x + 1)\).</p><p>\(2x^2 - 6x - (2x^2 - x - 1) = -5x + 1\).</p></div>
+            </div>
+            <div class="tip-naloge" id="tip-5">
+              <h4>Tip 5: Vrednost izraza</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Izračunajte vrednost izraza \((2x - 1)(x + 3) - 2(x - 1)^2\) za \(x = -\frac{1}{3}\).</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> dan je izraz in vrednosti spremenljivk.</p><ul class="kljucne"><li>„izračunajte vrednost izraza za \(x = -2\)“</li><li>„če je \(a = \frac{1}{2}\)“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Če je izraz dolg, ga najprej poenostavi (<a href="#tip-4">Tip 1</a>), šele nato vstavi.</p><div class="na-nalogi"><p>Izraz je enak \(9x - 5\).</p></div></li>
+              <li><p class="korak">Negativna števila in ulomke vstavljaj v oklepajih.</p><div class="na-nalogi"><p>\(9 \cdot \left(-\frac{1}{3}\right) - 5\).</p></div></li>
+              <li><p class="korak">Izračunaj.</p><div class="na-nalogi"><p>\(-3 - 5 = -8\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Izračunajte \(x^2 - 3x\) za \(x = -2\).</p><p>\((-2)^2 - 3 \cdot (-2) = 4 + 6 = 10\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Izračunajte \(\dfrac{a + b}{a - b}\) za \(a = \frac{1}{2}\), \(b = -\frac{1}{2}\).</p><p>\(\dfrac{0}{1} = 0\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Izračunajte \(-x^2\) za \(x = -3\).</p><p>\(-(-3)^2 = -9\).</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 4 -->
+        <section class="sklop" id="sklop-4">
+          <header class="sklop-header">
+            <span class="sklop-num">4.2 · 4</span>
+            <h2>Potenciranje izrazov</h2>
+            <p>Kvadrat in kub dvočlenika, Pascalov trikotnik, višje potence.</p>
+          </header>
+          <div class="sklop-video"><span class="sklop-video-oznaka">Video razlaga</span><video class="video-svetla" controls preload="none" playsinline poster="/videi/matematika/algebrski_izrazi_enacbe_neenacbe/sklop-2-svetla.jpg" src="/videi/matematika/algebrski_izrazi_enacbe_neenacbe/sklop-2-svetla.mp4"></video><video class="video-temna" controls preload="none" playsinline poster="/videi/matematika/algebrski_izrazi_enacbe_neenacbe/sklop-2-temna.jpg" src="/videi/matematika/algebrski_izrazi_enacbe_neenacbe/sklop-2-temna.mp4"></video></div><!-- /sklop-video -->
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <h4>Kvadrat dvočlenika in njegova utemeljitev</h4>
+            <div class="formula-card">\((a + b)^2 = a^2 + 2ab + b^2 \qquad (a - b)^2 = a^2 - 2ab + b^2\)</div>
+            <p>Algebrsko: \((a + b)^2 = (a + b)(a + b) = a^2 + ab + ba + b^2\). Geometrijsko: kvadrat s stranico \(a + b\) razpade na kvadrat \(a^2\), kvadrat \(b^2\) in dva pravokotnika \(ab\).</p>
+            <figure class="slika slika--ozka">
+<svg viewBox="0 0 300 300" role="img" aria-label="Kvadrat dvočlenika kot ploščina" xmlns="http://www.w3.org/2000/svg">
+<rect x="40" y="30" width="160" height="160" class="s-lik"/>
+<rect x="200" y="30" width="70" height="160" class="s-lik-2"/>
+<rect x="40" y="190" width="160" height="70" class="s-lik-2"/>
+<rect x="200" y="190" width="70" height="70" style="fill:rgba(217,119,6,0.12);stroke:#D97706;stroke-width:2"/>
+<text x="120" y="115" text-anchor="middle" class="s-txt-k1" style="font-size:18px">a²</text>
+<text x="235" y="115" text-anchor="middle" class="s-txt-k3" style="font-size:16px">ab</text>
+<text x="120" y="230" text-anchor="middle" class="s-txt-k3" style="font-size:16px">ab</text>
+<text x="235" y="230" text-anchor="middle" class="s-txt-k4" style="font-size:16px">b²</text>
+<text x="120" y="22" text-anchor="middle" class="s-txt-muted">a</text><text x="235" y="22" text-anchor="middle" class="s-txt-muted">b</text>
+<text x="28" y="115" text-anchor="middle" class="s-txt-muted">a</text><text x="28" y="230" text-anchor="middle" class="s-txt-muted">b</text>
+<text x="155" y="285" text-anchor="middle" class="s-txt-b">(a + b)² = a² + 2ab + b²</text>
+</svg>
+<figcaption>Kvadrat s stranico \(a + b\) je sestavljen iz kvadratov \(a^2\) in \(b^2\) ter dveh pravokotnikov \(ab\).</figcaption>
+</figure>
+            <p>Pomnilo: „kvadrat prvega, dvakratnik produkta, kvadrat drugega“. Najpogostejša napaka je \((a + b)^2 = a^2 + b^2\): manjka srednji člen.</p>
+            <h4>Kvadrat tričlenika</h4>
+            <div class="formula-card">\((a + b + c)^2 = a^2 + b^2 + c^2 + 2ab + 2ac + 2bc\)</div>
+            <h4>Kub dvočlenika</h4>
+            <div class="formula-card">\((a \pm b)^3 = a^3 \pm 3a^2b + 3ab^2 \pm b^3\)</div>
+            <p>Pri \((a - b)^3\) se predznaki izmenjujejo: \(+, -, +, -\).</p>
+            <h4>Pascalov trikotnik in višje potence</h4>
+            <p>Koeficienti v razvoju \((a + b)^n\) so v \(n\)-ti vrstici Pascalovega trikotnika. Vsako število je vsota dveh nad njim.</p>
+            <figure class="slika slika--siroka">
+<svg viewBox="0 0 520 270" role="img" aria-label="Pascalov trikotnik" xmlns="http://www.w3.org/2000/svg"><text x="20" y="33" class="s-txt-muted" style="font-size:12px">n = 0</text><circle cx="280" cy="28" r="15" style="fill:rgba(79,70,229,0.08);stroke:#C7CBF5"/><text x="280" y="33" text-anchor="middle" class="s-txt-b">1</text><text x="20" y="69" class="s-txt-muted" style="font-size:12px">n = 1</text><circle cx="254" cy="64" r="15" style="fill:rgba(79,70,229,0.08);stroke:#C7CBF5"/><text x="254" y="69" text-anchor="middle" class="s-txt-b">1</text><circle cx="306" cy="64" r="15" style="fill:rgba(79,70,229,0.08);stroke:#C7CBF5"/><text x="306" y="69" text-anchor="middle" class="s-txt-b">1</text><text x="20" y="105" class="s-txt-muted" style="font-size:12px">n = 2</text><circle cx="228" cy="100" r="15" style="fill:rgba(79,70,229,0.08);stroke:#C7CBF5"/><text x="228" y="105" text-anchor="middle" class="s-txt-b">1</text><circle cx="280" cy="100" r="15" style="fill:rgba(79,70,229,0.08);stroke:#C7CBF5"/><text x="280" y="105" text-anchor="middle" class="s-txt-b">2</text><circle cx="332" cy="100" r="15" style="fill:rgba(79,70,229,0.08);stroke:#C7CBF5"/><text x="332" y="105" text-anchor="middle" class="s-txt-b">1</text><text x="20" y="141" class="s-txt-muted" style="font-size:12px">n = 3</text><circle cx="202" cy="136" r="15" style="fill:rgba(79,70,229,0.08);stroke:#C7CBF5"/><text x="202" y="141" text-anchor="middle" class="s-txt-b">1</text><circle cx="254" cy="136" r="15" style="fill:rgba(79,70,229,0.08);stroke:#C7CBF5"/><text x="254" y="141" text-anchor="middle" class="s-txt-b">3</text><circle cx="306" cy="136" r="15" style="fill:rgba(79,70,229,0.08);stroke:#C7CBF5"/><text x="306" y="141" text-anchor="middle" class="s-txt-b">3</text><circle cx="358" cy="136" r="15" style="fill:rgba(79,70,229,0.08);stroke:#C7CBF5"/><text x="358" y="141" text-anchor="middle" class="s-txt-b">1</text><text x="20" y="177" class="s-txt-muted" style="font-size:12px">n = 4</text><circle cx="176" cy="172" r="15" style="fill:rgba(79,70,229,0.08);stroke:#C7CBF5"/><text x="176" y="177" text-anchor="middle" class="s-txt-b">1</text><circle cx="228" cy="172" r="15" style="fill:rgba(79,70,229,0.08);stroke:#C7CBF5"/><text x="228" y="177" text-anchor="middle" class="s-txt-b">4</text><circle cx="280" cy="172" r="15" style="fill:rgba(220,38,38,0.12);stroke:#DC2626"/><text x="280" y="177" text-anchor="middle" class="s-txt-k2">6</text><circle cx="332" cy="172" r="15" style="fill:rgba(79,70,229,0.08);stroke:#C7CBF5"/><text x="332" y="177" text-anchor="middle" class="s-txt-b">4</text><circle cx="384" cy="172" r="15" style="fill:rgba(79,70,229,0.08);stroke:#C7CBF5"/><text x="384" y="177" text-anchor="middle" class="s-txt-b">1</text><text x="20" y="213" class="s-txt-muted" style="font-size:12px">n = 5</text><circle cx="150" cy="208" r="15" style="fill:rgba(79,70,229,0.08);stroke:#C7CBF5"/><text x="150" y="213" text-anchor="middle" class="s-txt-b">1</text><circle cx="202" cy="208" r="15" style="fill:rgba(79,70,229,0.08);stroke:#C7CBF5"/><text x="202" y="213" text-anchor="middle" class="s-txt-b">5</text><circle cx="254" cy="208" r="15" style="fill:rgba(79,70,229,0.08);stroke:#C7CBF5"/><text x="254" y="213" text-anchor="middle" class="s-txt-b">10</text><circle cx="306" cy="208" r="15" style="fill:rgba(79,70,229,0.08);stroke:#C7CBF5"/><text x="306" y="213" text-anchor="middle" class="s-txt-b">10</text><circle cx="358" cy="208" r="15" style="fill:rgba(79,70,229,0.08);stroke:#C7CBF5"/><text x="358" y="213" text-anchor="middle" class="s-txt-b">5</text><circle cx="410" cy="208" r="15" style="fill:rgba(79,70,229,0.08);stroke:#C7CBF5"/><text x="410" y="213" text-anchor="middle" class="s-txt-b">1</text><text x="20" y="249" class="s-txt-muted" style="font-size:12px">n = 6</text><circle cx="124" cy="244" r="15" style="fill:rgba(79,70,229,0.08);stroke:#C7CBF5"/><text x="124" y="249" text-anchor="middle" class="s-txt-b">1</text><circle cx="176" cy="244" r="15" style="fill:rgba(79,70,229,0.08);stroke:#C7CBF5"/><text x="176" y="249" text-anchor="middle" class="s-txt-b">6</text><circle cx="228" cy="244" r="15" style="fill:rgba(79,70,229,0.08);stroke:#C7CBF5"/><text x="228" y="249" text-anchor="middle" class="s-txt-b">15</text><circle cx="280" cy="244" r="15" style="fill:rgba(79,70,229,0.08);stroke:#C7CBF5"/><text x="280" y="249" text-anchor="middle" class="s-txt-b">20</text><circle cx="332" cy="244" r="15" style="fill:rgba(79,70,229,0.08);stroke:#C7CBF5"/><text x="332" y="249" text-anchor="middle" class="s-txt-b">15</text><circle cx="384" cy="244" r="15" style="fill:rgba(79,70,229,0.08);stroke:#C7CBF5"/><text x="384" y="249" text-anchor="middle" class="s-txt-b">6</text><circle cx="436" cy="244" r="15" style="fill:rgba(79,70,229,0.08);stroke:#C7CBF5"/><text x="436" y="249" text-anchor="middle" class="s-txt-b">1</text><line x1="254" y1="151" x2="274" y2="158" class="s-k2" style="stroke-width:1.5"/><line x1="306" y1="151" x2="286" y2="158" class="s-k2" style="stroke-width:1.5"/></svg>
+<figcaption>Pascalov trikotnik: vsako število je vsota dveh števil nad njim (rdeče: \(3 + 3 = 6\)). Vrstica \(n\) da koeficiente razvoja \((a + b)^n\).</figcaption>
+</figure>
+            <p>V razvoju \((a + b)^n\) eksponenti pri \(a\) padajo od \(n\) do 0, pri \(b\) naraščajo od 0 do \(n\); vsota eksponentov je v vsakem členu \(n\). Primer:</p>
+            <div class="formula-card">\((a + b)^4 = a^4 + 4a^3b + 6a^2b^2 + 4ab^3 + b^4\)</div>
+            <p>Pri \((a - b)^n\) se predznaki izmenjujejo. Če sta člena sestavljena (npr. \(2x\) in \(-3\)), ju vstavi <strong>z oklepaji</strong>.</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-6">
+              <h4>Tip 6: Kvadriraj ali kubiraj dvočlenik (tričlenik)</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Izračunajte \((2x - 3)^3\).</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> oklepaj na kvadrat ali kub, pogosto znotraj daljšega izraza.</p><ul class="kljucne"><li>\((3x - 2y)^2\)</li><li>„izračunajte“</li><li>„razvijte“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Izberi formulo in določi \(a\) in \(b\) (s predznakom in koeficientom).</p><div class="na-nalogi"><p>\((a - b)^3 = a^3 - 3a^2b + 3ab^2 - b^3\), \(a = 2x\), \(b = 3\).</p></div></li>
+              <li><p class="korak">Vstavi v formulo, vsak del v oklepaju.</p><div class="na-nalogi"><p>\((2x)^3 - 3(2x)^2 \cdot 3 + 3(2x) \cdot 3^2 - 3^3\).</p></div></li>
+              <li><p class="korak">Izračunaj potence in produkte.</p><div class="na-nalogi"><p>\(8x^3 - 36x^2 + 54x - 27\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Izračunajte \((3x - 2y)^2\).</p><p>\(9x^2 - 12xy + 4y^2\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Izračunajte \((a + 2)^3\).</p><p>\(a^3 + 6a^2 + 12a + 8\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Izračunajte \((x + y - 1)^2\).</p><p>\(x^2 + y^2 + 1 + 2xy - 2x - 2y\).</p></div>
+            </div>
+            <div class="tip-naloge" id="tip-7">
+              <h4>Tip 7: Višja potenca dvočlenika (Pascalov trikotnik)</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Določite koeficient pri \(x^3\) v razvoju \((x + 2)^5\).</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> potenca 4 ali več, ali vprašanje po enem samem členu razvoja.</p><ul class="kljucne"><li>„s Pascalovim trikotnikom“</li><li>\((x + 2)^5\)</li><li>„koeficient pri \(x^3\)“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Napiši \(n\)-to vrstico Pascalovega trikotnika.</p><div class="na-nalogi"><p>\(n = 5\): \(1, 5, 10, 10, 5, 1\).</p></div></li>
+              <li><p class="korak">Člen razvoja je koeficient \(\cdot\, a^{n-k} \cdot b^k\) za \(k = 0, 1, \dots, n\).</p><div class="na-nalogi"><p>\(a = x\), \(b = 2\). Člen z \(x^3\) ima \(n - k = 3\), torej \(k = 2\) in koeficient 10.</p></div></li>
+              <li><p class="korak">Izračunaj potence (pazi na predznak, če je \(b\) negativen).</p><div class="na-nalogi"><p>\(10 \cdot x^3 \cdot 2^2 = 40x^3\). Koeficient je 40.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Razvijte \((x - 1)^4\).</p><p>\(x^4 - 4x^3 + 6x^2 - 4x + 1\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Kateri je zadnji člen razvoja \((2x - 1)^6\)?</p><p>\((-1)^6 = 1\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Koeficient pri \(x^4\) v \((x + 3)^6\)?</p><p>\(k = 2\), koeficient \(15\): \(15 \cdot 9 = 135\).</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 5 -->
+        <section class="sklop" id="sklop-5">
+          <header class="sklop-header">
+            <span class="sklop-num">4.2 · 5</span>
+            <h2>Razstavljanje izrazov</h2>
+            <p>Iz vsote v produkt: izpostavljanje, razlika kvadratov, vsota in razlika kubov, Vietovo pravilo, štiričleniki.</p>
+          </header>
+          <div class="sklop-video"><span class="sklop-video-oznaka">Video razlaga</span><video class="video-svetla" controls preload="none" playsinline poster="/videi/matematika/algebrski_izrazi_enacbe_neenacbe/sklop-3-svetla.jpg" src="/videi/matematika/algebrski_izrazi_enacbe_neenacbe/sklop-3-svetla.mp4"></video><video class="video-temna" controls preload="none" playsinline poster="/videi/matematika/algebrski_izrazi_enacbe_neenacbe/sklop-3-temna.jpg" src="/videi/matematika/algebrski_izrazi_enacbe_neenacbe/sklop-3-temna.mp4"></video></div><!-- /sklop-video -->
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <p><strong>Razstaviti</strong> izraz pomeni zapisati ga kot <strong>produkt</strong> faktorjev, ki jih ne moremo več razstaviti. To potrebujemo za krajšanje ulomkov, reševanje razcepnih enačb in iskanje ničel.</p>
+            <h4>Metode</h4>
+            <div class="tabela-wrap">
+              <table class="tabela">
+                <thead><tr><th>Metoda</th><th>Formula</th><th>Primer</th></tr></thead>
+                <tbody>
+                  <tr><td>izpostavljanje</td><td>\(ab + ac = a(b + c)\)</td><td>\(6x^3 - 9x^2 = 3x^2(2x - 3)\)</td></tr>
+                  <tr><td>razlika kvadratov</td><td>\(a^2 - b^2 = (a - b)(a + b)\)</td><td>\(4x^2 - 25 = (2x - 5)(2x + 5)\)</td></tr>
+                  <tr><td>vsota kubov</td><td>\(a^3 + b^3 = (a + b)(a^2 - ab + b^2)\)</td><td>\(x^3 + 8 = (x + 2)(x^2 - 2x + 4)\)</td></tr>
+                  <tr><td>razlika kubov</td><td>\(a^3 - b^3 = (a - b)(a^2 + ab + b^2)\)</td><td>\(27 - y^3 = (3 - y)(9 + 3y + y^2)\)</td></tr>
+                  <tr><td>popolni kvadrat</td><td>\(a^2 \pm 2ab + b^2 = (a \pm b)^2\)</td><td>\(x^2 - 6x + 9 = (x - 3)^2\)</td></tr>
+                  <tr><td>Vietovo pravilo</td><td>\(x^2 + bx + c = (x + p)(x + q)\), \(p + q = b\), \(pq = c\)</td><td>\(x^2 - x - 12 = (x - 4)(x + 3)\)</td></tr>
+                  <tr><td>tričlenik z \(a \ne 1\)</td><td>\(ax^2 + bx + c = a(x - x_1)(x - x_2)\)</td><td>\(2x^2 + 5x - 3 = (2x - 1)(x + 3)\)</td></tr>
+                  <tr><td>štiričlenik (grupiranje)</td><td>\(ac + ad + bc + bd = (a + b)(c + d)\)</td><td>\(x^3 + 2x^2 - 9x - 18 = (x + 2)(x - 3)(x + 3)\)</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p>Vsota kvadratov \(a^2 + b^2\) se v realnih številih <strong>ne da</strong> razstaviti. Prav tako ne drugi faktor pri vsoti/razliki kubov.</p>
+            <figure class="slika slika--siroka">
+<svg viewBox="0 0 520 250" role="img" aria-label="Razlika kvadratov kot ploščina" xmlns="http://www.w3.org/2000/svg">
+<rect x="30" y="30" width="170" height="170" class="s-lik"/>
+<rect x="140" y="140" width="60" height="60" fill="#FFFFFF" stroke="#94A0B8" stroke-dasharray="5 4" stroke-width="1.5"/>
+<line x1="140" y1="30" x2="140" y2="140" class="s-pom"/>
+<text x="85" y="95" text-anchor="middle" class="s-txt-k1">I</text><text x="170" y="95" text-anchor="middle" class="s-txt-k3">II</text><text x="85" y="175" text-anchor="middle" class="s-txt-k1">I</text>
+<text x="115" y="22" text-anchor="middle" class="s-txt-muted">a</text><text x="170" y="175" text-anchor="middle" class="s-txt-muted">b²</text>
+<text x="215" y="175" class="s-txt-muted">b</text>
+<text x="115" y="225" text-anchor="middle" class="s-txt-b">a² − b²</text>
+<text x="260" y="120" class="s-txt-muted" style="font-size:22px">→</text>
+<rect x="300" y="85" width="110" height="115" class="s-lik"/>
+<rect x="410" y="85" width="60" height="115" class="s-lik-2"/>
+<text x="355" y="148" text-anchor="middle" class="s-txt-k1">I</text><text x="440" y="148" text-anchor="middle" class="s-txt-k3">II</text>
+<text x="385" y="77" text-anchor="middle" class="s-txt-muted">a + b</text><text x="290" y="148" text-anchor="end" class="s-txt-muted">a − b</text>
+<text x="385" y="225" text-anchor="middle" class="s-txt-b">(a + b)(a − b)</text>
+</svg>
+<figcaption>Iz kvadrata \(a^2\) izrežemo kvadrat \(b^2\). Pas II prestavimo ob pas I in dobimo pravokotnik s stranicama \(a + b\) in \(a - b\).</figcaption>
+</figure>
+            <h4>Vietovo pravilo — kako najdeš števili</h4>
+            <p>Za \(x^2 + bx + c\) iščeš števili \(p, q\) z <strong>zmnožkom \(c\)</strong> in <strong>vsoto \(b\)</strong>. Začni pri zmnožku (naštej pare deliteljev \(c\)), nato preveri vsoto. Če je \(c &gt; 0\), imata enak predznak (predznak \(b\)); če je \(c &lt; 0\), različna.</p>
+            <h4>Razstavljanje \(a^n \pm b^n\)</h4>
+            <ul>
+              <li>\(a^n - b^n = (a - b)(a^{n-1} + a^{n-2}b + \dots + ab^{n-2} + b^{n-1})\) za vsak \(n\).</li>
+              <li>\(a^n + b^n = (a + b)(a^{n-1} - a^{n-2}b + \dots - ab^{n-2} + b^{n-1})\) samo za <strong>lihe</strong> \(n\).</li>
+              <li>Za sode \(n\) najprej uporabi razliko kvadratov: \(a^4 - b^4 = (a^2 - b^2)(a^2 + b^2) = (a - b)(a + b)(a^2 + b^2)\); \(x^6 - 1 = (x^3 - 1)(x^3 + 1)\).</li>
+            </ul>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-8">
+              <h4>Tip 8: Razstavi izraz</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Razstavite \(2x^4 - 32\).</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> izraz (brez enačaja), ki ga moraš zapisati kot produkt.</p><ul class="kljucne"><li>„razstavite“</li><li>„zapišite kot produkt“</li><li>„faktorizirajte“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Izpostavi skupni faktor. Če je prvi člen negativen, izpostavi tudi minus.</p><div class="na-nalogi"><p>\(2x^4 - 32 = 2(x^4 - 16)\).</p></div></li>
+              <li><p class="korak">Preštej člene v oklepaju. Dva člena: razlika kvadratov ali vsota oziroma razlika kubov. Trije: popolni kvadrat ali Vietovo pravilo. Štirje: grupiranje.</p><div class="na-nalogi"><p>Dva člena, \(x^4 - 16 = (x^2)^2 - 4^2\) je razlika kvadratov: \((x^2 - 4)(x^2 + 4)\).</p></div></li>
+              <li><p class="korak">Preveri vsak faktor: ali ga lahko razstaviš še naprej?</p><div class="na-nalogi"><p>\(x^2 - 4 = (x - 2)(x + 2)\). \(x^2 + 4\) se ne da razstaviti. Rezultat: \(2(x - 2)(x + 2)(x^2 + 4)\).</p></div></li>
+              <li><p class="korak">Kontrola: vstavi preprosto število (npr. \(x = 1\)) v obe obliki.</p><div class="na-nalogi"><p>\(2 - 32 = -30\) in \(2 \cdot (-1) \cdot 3 \cdot 5 = -30\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Razstavite \(x^2 - 5x + 6\).</p><p>Vieta: \(2 \cdot 3 = 6\), \(2 + 3 = 5\): \((x - 2)(x - 3)\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Razstavite \(x^3 - 2x^2 - 9x + 18\).</p><p>Grupiranje: \(x^2(x - 2) - 9(x - 2) = (x - 2)(x - 3)(x + 3)\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Razstavite \(x^2 - y^2 + 6y - 9\).</p><p>Grupiranje 1 + 3: \(x^2 - (y - 3)^2 = (x - y + 3)(x + y - 3)\).</p></div>
+            </div>
+            <div class="tip-naloge" id="tip-9">
+              <h4>Tip 9: Razstavljanje \(a^n \pm b^n\)</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Razstavite \(x^6 - 64\).</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> dvočlenik z eksponentom 4, 5, 6 ali več.</p><ul class="kljucne"><li>\(x^5 - 32\)</li><li>\(x^6 - 64\)</li><li>\(a^4 - 81\)</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Oba člena zapiši kot \(n\)-to potenco.</p><div class="na-nalogi"><p>\(64 = 2^6\): \(x^6 - 2^6\).</p></div></li>
+              <li><p class="korak">Pri sodem eksponentu najprej uporabi razliko kvadratov.</p><div class="na-nalogi"><p>\((x^3)^2 - 8^2 = (x^3 - 8)(x^3 + 8)\).</p></div></li>
+              <li><p class="korak">Nastale faktorje razstavi s formulami za kube (ali za \(a^n \pm b^n\); \(+\) samo pri lihem \(n\)).</p><div class="na-nalogi"><p>\(x^3 - 8 = (x - 2)(x^2 + 2x + 4)\), \(x^3 + 8 = (x + 2)(x^2 - 2x + 4)\). Skupaj \((x - 2)(x + 2)(x^2 + 2x + 4)(x^2 - 2x + 4)\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Razstavite \(x^5 - 32\).</p><p>\((x - 2)(x^4 + 2x^3 + 4x^2 + 8x + 16)\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Razstavite \(a^4 - 81\).</p><p>\((a^2 - 9)(a^2 + 9) = (a - 3)(a + 3)(a^2 + 9)\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Ali lahko razstavimo \(x^4 + 16\) z realnimi linearnimi faktorji?</p><p>Ne, vsota sodih potenc nima realnih ničel.</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 6 -->
+        <section class="sklop" id="sklop-6">
+          <header class="sklop-header">
+            <span class="sklop-num">4.2 · 6</span>
+            <h2>Vietovi pravili</h2>
+            <p>Zveza med rešitvama in koeficienti.</p>
+          </header>
+          <div class="sklop-video"><span class="sklop-video-oznaka">Video razlaga</span><video class="video-svetla" controls preload="none" playsinline poster="/videi/matematika/funkcije/kvadratna/sklop-4-svetla.jpg" src="/videi/matematika/funkcije/kvadratna/sklop-4-svetla.mp4"></video><video class="video-temna" controls preload="none" playsinline poster="/videi/matematika/funkcije/kvadratna/sklop-4-temna.jpg" src="/videi/matematika/funkcije/kvadratna/sklop-4-temna.mp4"></video></div><!-- /sklop-video -->
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <p>Za rešitvi \(x_1, x_2\) enačbe \(ax^2 + bx + c = 0\) velja:</p>
+            <div class="formula-grid">
+              <div class="formula-card">\(x_1 + x_2 = -\dfrac{b}{a}\)</div>
+              <div class="formula-card">\(x_1 \cdot x_2 = \dfrac{c}{a}\)</div>
+            </div>
+            <p>Za \(a = 1\): \(x^2 + px + q = 0\) ima \(x_1 + x_2 = -p\), \(x_1 x_2 = q\). Zato enačbo z znanima rešitvama zapišemo kot \(x^2 - (x_1 + x_2)x + x_1 x_2 = 0\).</p>
+            <p>Uporabni izrazi: \(x_1^2 + x_2^2 = (x_1 + x_2)^2 - 2x_1 x_2\) in \(\dfrac{1}{x_1} + \dfrac{1}{x_2} = \dfrac{x_1 + x_2}{x_1 x_2}\).</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-10">
+              <h4>Tip 10: Uporaba Vietovih pravil</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Brez reševanja enačbe \(x^2 - 5x + 3 = 0\) izračunajte \(x_1^2 + x_2^2\) in \(\dfrac{1}{x_1} + \dfrac{1}{x_2}\).</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> „brez reševanja“, izraz v \(x_1\) in \(x_2\), ali iskanje enačbe z danima rešitvama.</p><ul class="kljucne"><li>„brez reševanja enačbe“</li><li>„zapišite enačbo z rešitvama“</li><li>„ena rešitev je … poiščite drugo“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Zapiši vsoto in produkt rešitev.</p><div class="na-nalogi"><p>\(x_1 + x_2 = 5\), \(x_1 x_2 = 3\).</p></div></li>
+              <li><p class="korak">Iskani izraz preoblikuj tako, da vsebuje le vsoto in produkt.</p><div class="na-nalogi"><p>\(x_1^2 + x_2^2 = (x_1 + x_2)^2 - 2x_1 x_2\); \(\frac{1}{x_1} + \frac{1}{x_2} = \frac{x_1 + x_2}{x_1 x_2}\).</p></div></li>
+              <li><p class="korak">Vstavi.</p><div class="na-nalogi"><p>\(25 - 6 = 19\); \(\frac{5}{3}\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Zapišite kvadratno enačbo z rešitvama \(2\) in \(-5\).</p><p>\(x^2 - (-3)x + (-10) = 0\): \(x^2 + 3x - 10 = 0\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Ena rešitev \(x^2 + px + 12 = 0\) je 3. Določite drugo in \(p\).</p><p>\(x_2 = \frac{12}{3} = 4\), \(p = -(3 + 4) = -7\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Za kateri \(k\) je ena rešitev \(x^2 - kx + 8 = 0\) dvakrat večja od druge?</p><p>\(t \cdot 2t = 8\), \(t = \pm 2\); \(k = 3t = \pm 6\).</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 7 -->
+        <section class="sklop" id="sklop-7">
+          <header class="sklop-header">
+            <span class="sklop-num">4.2 · 7</span>
+            <h2>Računanje z ulomki</h2>
+            <p>Algebrski ulomki: krajšanje, seštevanje, množenje, deljenje, dvojni ulomki.</p>
+          </header>
+          <div class="sklop-video"><span class="sklop-video-oznaka">Video razlaga</span><video class="video-svetla" controls preload="none" playsinline poster="/videi/matematika/algebrski_izrazi_enacbe_neenacbe/sklop-4-svetla.jpg" src="/videi/matematika/algebrski_izrazi_enacbe_neenacbe/sklop-4-svetla.mp4"></video><video class="video-temna" controls preload="none" playsinline poster="/videi/matematika/algebrski_izrazi_enacbe_neenacbe/sklop-4-temna.jpg" src="/videi/matematika/algebrski_izrazi_enacbe_neenacbe/sklop-4-temna.mp4"></video></div><!-- /sklop-video -->
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <p><strong>Algebrski ulomek</strong> je ulomek, ki ima v števcu in imenovalcu izraza, npr. \(\dfrac{x^2 - 4}{x^2 + 2x}\). Računamo z istimi pravili kot s številskimi ulomki, le da namesto števil razcepljamo izraze.</p>
+            <h4>Pogoji (definicijsko območje)</h4>
+            <p>Imenovalec ne sme biti 0. Pred računanjem razstavi imenovalec in zapiši, za katere \(x\) ulomek ni definiran: \(x^2 + 2x = x(x + 2) \ne 0\) → \(x \ne 0\), \(x \ne -2\). Pri deljenju mora biti različen od 0 tudi števec delitelja.</p>
+            <h4>Krajšanje</h4>
+            <p>Krajšamo samo <strong>faktorje</strong> (dele produkta), nikoli posameznih členov vsote:</p>
+            <div class="formula-card">\(\dfrac{x^2 - 4}{x^2 + 2x} = \dfrac{(x - 2)(x + 2)}{x(x + 2)} = \dfrac{x - 2}{x}\) (pravilno) &nbsp;&nbsp;&nbsp; \(\dfrac{x + 2}{x} \ne 2\) (narobe)</div>
+            <h4>Seštevanje in odštevanje</h4>
+            <ol>
+              <li>Razstavi vse imenovalce.</li>
+              <li><strong>Skupni imenovalec</strong> = produkt vseh različnih faktorjev z najvišjo potenco (kot \(v\) pri številih).</li>
+              <li>Vsak ulomek razširi: števec pomnoži s faktorji, ki mu manjkajo do skupnega imenovalca.</li>
+              <li>Seštej števce (pazi na minus pred ulomkom: ves števec v oklepaj!), poenostavi in poskusi okrajšati.</li>
+            </ol>
+            <h4>Množenje, deljenje, dvojni ulomek</h4>
+            <ul>
+              <li>Množenje: števec · števec, imenovalec · imenovalec; pred tem vse razstavi in krajšaj navzkriž.</li>
+              <li>Deljenje: pomnoži z obratno vrednostjo delitelja.</li>
+              <li>Dvojni ulomek: števec in imenovalec posebej zapiši kot en ulomek, nato deli.</li>
+            </ul>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-11">
+              <h4>Tip 11: Okrajšaj algebrski ulomek</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Okrajšajte \(\dfrac{x^3 - 9x}{x^2 - x - 6}\) in zapišite pogoje.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> en sam ulomek z izrazi.</p><ul class="kljucne"><li>„okrajšajte“</li><li>„poenostavite ulomek“</li><li>„zapišite pogoje“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Razstavi števec in imenovalec (<a href="#tip-5">Tip 5</a>).</p><div class="na-nalogi"><p>Števec \(x(x - 3)(x + 3)\), imenovalec \((x - 3)(x + 2)\).</p></div></li>
+              <li><p class="korak">Iz razcepa imenovalca zapiši pogoje.</p><div class="na-nalogi"><p>\(x \ne 3\), \(x \ne -2\).</p></div></li>
+              <li><p class="korak">Okrajšaj enake faktorje. Pozor: \(a - b = -(b - a)\).</p><div class="na-nalogi"><p>\(\dfrac{x(x + 3)}{x + 2}\), \(x \ne 3, -2\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Okrajšajte \(\dfrac{2 - x}{x^2 - 4}\).</p><p>\(\dfrac{-(x - 2)}{(x - 2)(x + 2)} = -\dfrac{1}{x + 2}\), \(x \ne \pm 2\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Okrajšajte \(\dfrac{x^2 + 2x + 1}{x^2 - 1}\).</p><p>\(\dfrac{x + 1}{x - 1}\), \(x \ne \pm 1\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Okrajšajte \(\dfrac{6a^2b}{9ab^3}\).</p><p>\(\dfrac{2a}{3b^2}\), \(a, b \ne 0\).</p></div>
+            </div>
+            <div class="tip-naloge" id="tip-12">
+              <h4>Tip 12: Seštej, odštej, zmnoži ali deli algebrske ulomke</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Izračunajte \(\dfrac{2}{x - 1} - \dfrac{x + 3}{x^2 - 1}\).</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> več ulomkov z izrazi in računske operacije med njimi.</p><ul class="kljucne"><li>„izračunajte in poenostavite“</li><li>„zapišite z enim ulomkom“</li><li>dvojni ulomek</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Razstavi vse števce in imenovalce.</p><div class="na-nalogi"><p>\(x^2 - 1 = (x - 1)(x + 1)\).</p></div></li>
+              <li><p class="korak">Pri seštevanju poišči skupni imenovalec, razširi in seštej števce. Pri množenju krajšaj navzkriž.</p><div class="na-nalogi"><p>Skupni imenovalec \((x - 1)(x + 1)\): \(\dfrac{2(x + 1) - (x + 3)}{(x - 1)(x + 1)}\).</p></div></li>
+              <li><p class="korak">Uredi števec.</p><div class="na-nalogi"><p>\(2x + 2 - x - 3 = x - 1\).</p></div></li>
+              <li><p class="korak">Rezultat razstavi in okrajšaj do konca. Pogoje zapiši iz vseh imenovalcev.</p><div class="na-nalogi"><p>\(\dfrac{x - 1}{(x - 1)(x + 1)} = \dfrac{1}{x + 1}\), \(x \ne \pm 1\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Izračunajte \(\dfrac{x}{x + 2} \cdot \dfrac{x^2 - 4}{x^2}\).</p><p>\(\dfrac{x - 2}{x}\), \(x \ne 0, -2\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Izračunajte \(\dfrac{1}{a} + \dfrac{1}{b}\).</p><p>\(\dfrac{a + b}{ab}\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Izračunajte \(\dfrac{x^2 - 9}{x} : \dfrac{x + 3}{x^2}\).</p><p>\(\dfrac{(x - 3)(x + 3)}{x} \cdot \dfrac{x^2}{x + 3} = x(x - 3)\), \(x \ne 0, -3\).</p></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="subsection" id="kljuc">
+          <div class="subsection-head">
+            <h2>Ključ: kateri tip naloge je to?</h2>
+            <p>Poišči besedo iz navodila naloge in skoči na pravi postopek.</p>
+          </div>
+          <div class="info-card">
+            <div class="tabela-wrap">
+              <table class="tabela">
+                <thead><tr><th>V besedilu naloge piše …</th><th>Tip</th></tr></thead>
+                <tbody>
+                  <tr><td>„poenostavite“ + potence z naravnimi eksponenti</td><td><a href="#tip-1">Tip 1</a></td></tr>
+                  <tr><td>negativni eksponenti, „brez negativnih eksponentov“</td><td><a href="#tip-2">Tip 2</a></td></tr>
+                  <tr><td>„v obliki \(a \cdot 10^n\)“, zelo velika/majhna števila</td><td><a href="#tip-3">Tip 3</a></td></tr>
+                  <tr><td>„poenostavite“, „zmnožite“ (brez enačaja)</td><td><a href="#tip-4">Tip 4</a></td></tr>
+                  <tr><td>„izračunajte vrednost izraza za …“</td><td><a href="#tip-5">Tip 5</a></td></tr>
+                  <tr><td>\((\dots)^2\), \((\dots)^3\)</td><td><a href="#tip-6">Tip 6</a></td></tr>
+                  <tr><td>„Pascalov trikotnik“, „koeficient pri \(x^k\)“</td><td><a href="#tip-7">Tip 7</a></td></tr>
+                  <tr><td>„razstavite“, „zapišite kot produkt“</td><td><a href="#tip-8">Tip 8</a></td></tr>
+                  <tr><td>Razstavljanje \(a^n \pm b^n\)</td><td><a href="#tip-9">Tip 9</a></td></tr>
+                  <tr><td>„brez reševanja enačbe“, \(x_1 + x_2\), \(x_1 x_2\)</td><td><a href="#tip-10">Tip 10</a></td></tr>
+                  <tr><td>„okrajšajte ulomek“</td><td><a href="#tip-11">Tip 11</a></td></tr>
+                  <tr><td>računanje z več algebrskimi ulomki</td><td><a href="#tip-12">Tip 12</a></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>Pogoste napake</h2>
+          </div>
+          <div class="info-card">
+            <ul>
+              <li>\((a + b)^2\) zapišeš kot \(a^2 + b^2\) in pozabiš na \(2ab\).</li>
+              <li>Pri negativnem eksponentu potenco obrneš, predznak pa spremeniš: \(2^{-3} \neq -8\).</li>
+              <li>Ulomek krajšaš s seštevanci namesto s faktorji.</li>
+              <li>Pred krajšanjem ne razstaviš števca in imenovalca.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>Vadi naprej</h2>
+            <p>Ko predelaš razlago, preveri znanje z nalogami.</p>
+          </div>
+          <div class="link-list">
+            <a class="link-item" href="/views/poklicna_matematika/naloge/naloge.html?snov=izrazi_potence">
+              <span class="link-item-text">
+                <strong>Naloge za vajo</strong>
+                <small>Naloge iz tega poglavja z rešitvami in postopki</small>
+              </span>
+              <span class="arrow">→</span>
+            </a>
+            <a class="link-item" href="/views/poklicna_matematika/matura/po_snovi/naloge.html?poglavje=izrazi_potence">
+              <span class="link-item-text">
+                <strong>Maturitetne naloge iz te snovi</strong>
+                <small>Naloge iz pol poklicne mature</small>
+              </span>
+              <span class="arrow">→</span>
+            </a>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+
+  <script src="/components/components.js"></script>
+</body>
+</html>

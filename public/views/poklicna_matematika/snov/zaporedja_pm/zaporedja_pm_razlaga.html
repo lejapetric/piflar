@@ -1,0 +1,477 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zaporedja — razlaga za poklicno maturo | Učilnica.com</title>
+  <meta name="description" content="Zaporedja za poklicno maturo iz matematike: Lastnosti in graf zaporedja, aritmetično in geometrijsko zaporedje, obrestni račun.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
+  <link rel="stylesheet" href="/style/snov.css">
+</head>
+<body>
+  <div id="header"></div>
+
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view">
+
+        <header class="page-header">
+          <span class="page-eyebrow">Poklicna matura · Matematika · Snov · 4.14</span>
+          <h1>Zaporedja</h1>
+          <p>Zaporedje je funkcija na naravnih številih. Katalog zahteva lastnosti in graf zaporedja, aritmetično in geometrijsko zaporedje, vsoto prvih n členov ter modeliranje z geometrijskim zaporedjem (eksponentna rast, obrestno-obrestni račun). Pod razlago vsakega podpoglavja so vsi tipi nalog z univerzalnim postopkom in primeri.</p>
+          <div class="page-meta">
+            <div class="page-meta-item"><strong>6</strong><span>Podpoglavij</span></div>
+            <div class="page-meta-item"><strong>10</strong><span>Tipov nalog</span></div>
+            <div class="page-meta-item"><strong>~30 min</strong><span>Branja</span></div>
+          </div>
+        </header>
+
+        <div class="matura-formule">
+          <h3>Kaj preverja izpitni katalog</h3>
+          <p>Po predmetnem izpitnem katalogu za poklicno maturo kandidat:</p>
+          <ul>
+              <li>opiše lastnosti zaporedja (naraščanje, padanje, omejenost) in nariše graf</li>
+              <li>uporablja definicijo aritmetičnega in geometrijskega zaporedja</li>
+              <li>izračuna vsoto n členov aritmetičnega in geometrijskega zaporedja</li>
+              <li>uporablja geometrijsko zaporedje pri modeliranju (eksponentna rast, obrestno-obrestni račun)</li>
+          </ul>
+          <p><strong>Na izpitu:</strong> Pogosta naloga: iz dveh podatkov izračunaj prvi člen in diferenco ali količnik, nato določen člen ali vsoto. V 2. delu je pogosto obrestovanje ali rast. Formule iz kataloga so priložene izpitni poli.</p>
+        </div>
+
+        <nav class="kazalo" id="kazalo" aria-label="Podpoglavja">
+          <h2>Podpoglavja</h2>
+          <ol>
+            <li><a href="#sklop-1"><span class="kazalo-st">1</span> Definicija zaporedja</a></li>
+            <li><a href="#sklop-2"><span class="kazalo-st">2</span> Lastnosti zaporedij</a></li>
+            <li><a href="#sklop-3"><span class="kazalo-st">3</span> Aritmetično zaporedje</a></li>
+            <li><a href="#sklop-4"><span class="kazalo-st">4</span> Geometrijsko zaporedje</a></li>
+            <li><a href="#sklop-5"><span class="kazalo-st">5</span> Vsota prvih n členov aritmetičnega in geometrijskega zaporedja</a></li>
+            <li><a href="#sklop-6"><span class="kazalo-st">6</span> Obrestni račun</a></li>
+            <li><a href="#kljuc"><span class="kazalo-st">?</span> Ključ: kateri tip naloge je to?</a></li>
+          </ol>
+        </nav>
+
+        <!-- SKLOP 1 -->
+        <section class="sklop" id="sklop-1">
+          <header class="sklop-header">
+            <span class="sklop-num">4.14 · 1</span>
+            <h2>Definicija zaporedja</h2>
+            <p>Splošni člen in rekurzivni zapis.</p>
+          </header>
+          <div class="sklop-video"><span class="sklop-video-oznaka">Video razlaga</span><video class="video-svetla" controls preload="none" playsinline poster="/videi/matematika/zaporedja_vrste/sklop-1-svetla.jpg" src="/videi/matematika/zaporedja_vrste/sklop-1-svetla.mp4"></video><video class="video-temna" controls preload="none" playsinline poster="/videi/matematika/zaporedja_vrste/sklop-1-temna.jpg" src="/videi/matematika/zaporedja_vrste/sklop-1-temna.mp4"></video></div><!-- /sklop-video -->
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <p><strong>Zaporedje</strong> je funkcija, ki vsakemu naravnemu številu \(n\) priredi število \(a_n\). Število \(a_n\) je \(n\)-ti člen, predpis zanj pa <strong>splošni člen</strong>, na primer \(a_n = 2n + 1\): \(3, 5, 7, 9, \ldots\)</p>
+            <p>Zaporedje lahko podamo tudi <strong>rekurzivno</strong>: povemo prvi člen (ali prve člene) in pravilo, kako iz prejšnjih dobimo naslednjega, na primer \(a_1 = 1\), \(a_{n + 1} = 2a_n + 1\): \(1, 3, 7, 15, \ldots\)</p>
+            <p>Graf zaporedja so posamezne točke \((n, a_n)\), ne neprekinjena krivulja.</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-1">
+              <h4>Tip 1: Členi zaporedja iz splošnega člena ali rekurzivne formule</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Zapišite prve štiri člene zaporedja \(a_n = \dfrac{2n - 1}{n + 1}\) in ugotovite, kateri člen je enak \(\frac{5}{3}\).</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> dan je predpis za \(a_n\) ali rekurzivna formula, sprašujejo po členih.</p><ul class="kljucne"><li>„zapišite prve člene“</li><li>„kateri člen je enak“</li><li>„ali je število člen zaporedja“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Za člene vstavi \(n = 1, 2, 3, \ldots\) (pri rekurziji vsakič prejšnji člen).</p><div class="na-nalogi"><p>\(a_1 = \frac{1}{2}\), \(a_2 = 1\), \(a_3 = \frac{5}{4}\), \(a_4 = \frac{7}{5}\).</p></div></li>
+              <li><p class="korak">Za iskani člen postavi enačbo \(a_n = \) dano število.</p><div class="na-nalogi"><p>\(\frac{2n - 1}{n + 1} = \frac{5}{3}\).</p></div></li>
+              <li><p class="korak">Reši enačbo.</p><div class="na-nalogi"><p>\(6n - 3 = 5n + 5\), \(n = 8\).</p></div></li>
+              <li><p class="korak">Preveri, da je \(n\) naravno število (sicer število ni člen).</p><div class="na-nalogi"><p>\(n = 8 \in \mathbb{N}\): \(a_8 = \frac{15}{9} = \frac{5}{3}\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> \(a_1 = 2\), \(a_{n + 1} = 3a_n - 1\)</p><p>\(2, 5, 14, 41\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> \(a_n = (-1)^n \cdot n\)</p><p>\(-1, 2, -3, 4\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Ali je 100 člen zaporedja \(a_n = n^2 + n\)?</p><p>\(n^2 + n - 100 = 0\) nima naravne rešitve (\(n \approx 9{,}5\)), zato ni.</p></div>
+            </div>
+            <div class="tip-naloge" id="tip-2">
+              <h4>Tip 2: Splošni člen iz danih členov</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Zapišite splošni člen zaporedja \(\frac{1}{2}, \frac{2}{5}, \frac{3}{10}, \frac{4}{17}, \ldots\)</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> danih je nekaj členov, iščemo pravilo.</p><ul class="kljucne"><li>„zapišite splošni člen“</li><li>„nadaljujte zaporedje“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Opazuj števce (ali cela števila) posebej.</p><div class="na-nalogi"><p>\(1, 2, 3, 4\): števec je \(n\).</p></div></li>
+              <li><p class="korak">Opazuj imenovalce: razlike, kvadrate, potence.</p><div class="na-nalogi"><p>\(2, 5, 10, 17\) so za 1 večji od \(1, 4, 9, 16\): \(n^2 + 1\).</p></div></li>
+              <li><p class="korak">Preveri menjavanje predznaka (\((-1)^n\) ali \((-1)^{n + 1}\)).</p><div class="na-nalogi"><p>Predznak se ne menja.</p></div></li>
+              <li><p class="korak">Zapiši in preveri na enem členu.</p><div class="na-nalogi"><p>\(a_n = \dfrac{n}{n^2 + 1}\), \(a_3 = \frac{3}{10}\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> \(3, 7, 11, 15, \ldots\)</p><p>\(a_n = 4n - 1\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> \(1, -\frac{1}{2}, \frac{1}{4}, -\frac{1}{8}, \ldots\)</p><p>\(a_n = \left(-\frac{1}{2}\right)^{n - 1}\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> \(2, 6, 12, 20, \ldots\)</p><p>\(a_n = n(n + 1)\).</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 2 -->
+        <section class="sklop" id="sklop-2">
+          <header class="sklop-header">
+            <span class="sklop-num">4.14 · 2</span>
+            <h2>Lastnosti zaporedij</h2>
+            <p>Končno, neskončno, monotonost, omejenost, konvergentnost.</p>
+          </header>
+          <div class="sklop-video"><span class="sklop-video-oznaka">Video razlaga</span><video class="video-svetla" controls preload="none" playsinline poster="/videi/matematika/zaporedja_vrste/sklop-2-svetla.jpg" src="/videi/matematika/zaporedja_vrste/sklop-2-svetla.mp4"></video><video class="video-temna" controls preload="none" playsinline poster="/videi/matematika/zaporedja_vrste/sklop-2-temna.jpg" src="/videi/matematika/zaporedja_vrste/sklop-2-temna.mp4"></video></div><!-- /sklop-video -->
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <ul>
+              <li><strong>Končno</strong> zaporedje ima končno mnogo členov, <strong>neskončno</strong> pa za vsak \(n \in \mathbb{N}\) svoj člen.</li>
+              <li><strong>Naraščajoče</strong>: \(a_{n + 1} \ge a_n\) za vse \(n\), torej \(a_{n + 1} - a_n \ge 0\) (strogo naraščajoče, če \(&gt;\)). <strong>Padajoče</strong>: \(a_{n + 1} - a_n \le 0\). Pri pozitivnih členih lahko primerjamo tudi količnik \(\frac{a_{n + 1}}{a_n}\) z 1.</li>
+              <li><strong>Navzgor omejeno</strong>: obstaja \(M\), da je \(a_n \le M\) za vse \(n\). <strong>Navzdol omejeno</strong>: \(a_n \ge m\). Najmanjša zgornja meja je natančna zgornja meja (supremum).</li>
+              <li><strong>Konvergentno</strong> zaporedje ima limito. Vsako monotono in omejeno zaporedje je konvergentno.</li>
+            </ul>
+            <figure class="slika slika--siroka">
+<svg viewBox="0 0 440 230" role="img" aria-label="Zaporedje (−1)^n / n" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="z2-g1-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="z2-g1-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="z2-g1-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="z2-g1-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="z2-g1-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="z2-g1-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<path class="s-mreza" d="M26,204V26M57,204V26M88.1,204V26M119.1,204V26M150.2,204V26M181.2,204V26M212.2,204V26M243.3,204V26M274.3,204V26M305.4,204V26M336.4,204V26M367.4,204V26M398.5,204V26M26,186.2H414M26,141.7H414M26,97.2H414M26,52.7H414"/>
+<line class="s-os" x1="26" y1="97.2" x2="422" y2="97.2" marker-end="url(#z2-g1-p)"/>
+<line class="s-os" x1="26" y1="204" x2="26" y2="18" marker-end="url(#z2-g1-p)"/>
+<text class="s-os-txt" x="416" y="89.2" text-anchor="end">n</text>
+<text class="s-os-txt" x="34" y="30">aₙ</text>
+<line class="s-os" x1="88.1" y1="94.2" x2="88.1" y2="100.2"/><text class="s-os-txt" x="88.1" y="112.2" text-anchor="middle">2</text><line class="s-os" x1="150.2" y1="94.2" x2="150.2" y2="100.2"/><text class="s-os-txt" x="150.2" y="112.2" text-anchor="middle">4</text><line class="s-os" x1="212.2" y1="94.2" x2="212.2" y2="100.2"/><text class="s-os-txt" x="212.2" y="112.2" text-anchor="middle">6</text><line class="s-os" x1="274.3" y1="94.2" x2="274.3" y2="100.2"/><text class="s-os-txt" x="274.3" y="112.2" text-anchor="middle">8</text><line class="s-os" x1="336.4" y1="94.2" x2="336.4" y2="100.2"/><text class="s-os-txt" x="336.4" y="112.2" text-anchor="middle">10</text><line class="s-os" x1="398.5" y1="94.2" x2="398.5" y2="100.2"/><text class="s-os-txt" x="398.5" y="112.2" text-anchor="middle">12</text><line class="s-os" x1="23" y1="186.2" x2="29" y2="186.2"/><text class="s-os-txt" x="20" y="190.2" text-anchor="end">-1</text><line class="s-os" x1="23" y1="141.7" x2="29" y2="141.7"/><text class="s-os-txt" x="20" y="145.7" text-anchor="end">-0.5</text><line class="s-os" x1="23" y1="52.7" x2="29" y2="52.7"/><text class="s-os-txt" x="20" y="56.7" text-anchor="end">0.5</text><text class="s-os-txt" x="20" y="112.2" text-anchor="end">0</text>
+<circle class="s-tocka" cx="57" cy="186.2" r="4"/>
+<circle class="s-tocka" cx="88.1" cy="52.7" r="4"/>
+<circle class="s-tocka" cx="119.1" cy="126.9" r="4"/>
+<circle class="s-tocka" cx="150.2" cy="75" r="4"/>
+<circle class="s-tocka" cx="181.2" cy="115" r="4"/>
+<circle class="s-tocka" cx="212.2" cy="82.4" r="4"/>
+<circle class="s-tocka" cx="243.3" cy="109.9" r="4"/>
+<circle class="s-tocka" cx="274.3" cy="86.1" r="4"/>
+<circle class="s-tocka" cx="305.4" cy="107.1" r="4"/>
+<circle class="s-tocka" cx="336.4" cy="88.3" r="4"/>
+<circle class="s-tocka" cx="367.4" cy="105.3" r="4"/>
+<circle class="s-tocka" cx="398.5" cy="89.8" r="4"/>
+<text class="s-txt-k1" x="407.8" y="42" text-anchor="end">aₙ = (−1)ⁿ/n</text>
+</svg>
+<figcaption>Zaporedje \(a_n = \frac{(-1)^n}{n}\) ni monotono (členi skačejo okoli 0), je omejeno (\(-1 \le a_n \le \frac{1}{2}\)) in konvergira k 0.</figcaption>
+</figure>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-3">
+              <h4>Tip 3: Monotonost in omejenost zaporedja</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Raziščite monotonost in omejenost zaporedja \(a_n = \dfrac{3n + 1}{n + 2}\).</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> sprašujejo po lastnostih danega zaporedja.</p><ul class="kljucne"><li>„ali je naraščajoče“</li><li>„omejeno“, „spodnja meja“</li><li>„konvergentno“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Izračunaj \(a_{n + 1} - a_n\) in ugotovi predznak.</p><div class="na-nalogi"><p>\(a_{n + 1} - a_n = \frac{3n + 4}{n + 3} - \frac{3n + 1}{n + 2} = \frac{5}{(n + 2)(n + 3)} &gt; 0\): strogo naraščajoče.</p></div></li>
+              <li><p class="korak">Pri naraščajočem je prvi člen spodnja meja (pri padajočem zgornja).</p><div class="na-nalogi"><p>\(a_1 = \frac{4}{3}\), torej \(a_n \ge \frac{4}{3}\).</p></div></li>
+              <li><p class="korak">Drugo mejo poišči tako, da člen zapišeš kot konstanto plus ostanek.</p><div class="na-nalogi"><p>\(a_n = 3 - \frac{5}{n + 2} &lt; 3\).</p></div></li>
+              <li><p class="korak">Zapiši zaključek.</p><div class="na-nalogi"><p>Naraščajoče, \(\frac{4}{3} \le a_n &lt; 3\). Monotono in omejeno, zato konvergentno (limita 3).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> \(a_n = 5 - 2n\)</p><p>Razlika \(-2\): padajoče, navzgor omejeno z \(a_1 = 3\), navzdol neomejeno.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> \(a_n = \frac{(-1)^n}{n}\)</p><p>Ni monotono, \(-1 \le a_n \le \frac{1}{2}\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> \(a_n = \frac{1}{n^2}\)</p><p>Padajoče, \(0 &lt; a_n \le 1\).</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 3 -->
+        <section class="sklop" id="sklop-3">
+          <header class="sklop-header">
+            <span class="sklop-num">4.14 · 3</span>
+            <h2>Aritmetično zaporedje</h2>
+            <p>Stalna razlika med zaporednima členoma.</p>
+          </header>
+          <div class="sklop-video"><span class="sklop-video-oznaka">Video razlaga</span><video class="video-svetla" controls preload="none" playsinline poster="/videi/matematika/zaporedja_vrste/sklop-3-svetla.jpg" src="/videi/matematika/zaporedja_vrste/sklop-3-svetla.mp4"></video><video class="video-temna" controls preload="none" playsinline poster="/videi/matematika/zaporedja_vrste/sklop-3-temna.jpg" src="/videi/matematika/zaporedja_vrste/sklop-3-temna.mp4"></video></div><!-- /sklop-video -->
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <p>Zaporedje je <strong>aritmetično</strong>, če je razlika \(d = a_{n + 1} - a_n\) za vse \(n\) enaka. Tedaj je</p>
+            <p>\[a_n = a_1 + (n - 1)d.\]</p>
+            <p>Pri \(d &gt; 0\) zaporedje narašča, pri \(d &lt; 0\) pada. Vsak člen je aritmetična sredina sosedov: \(a_n = \frac{a_{n - 1} + a_{n + 1}}{2}\). Tri števila \(x, y, z\) so zaporedni členi aritmetičnega zaporedja natanko tedaj, ko je \(2y = x + z\).</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-4">
+              <h4>Tip 4: Aritmetično zaporedje iz dveh podatkov</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>V aritmetičnem zaporedju je \(a_3 = 7\) in \(a_{10} = 28\). Določite \(a_1\), \(d\) in \(a_{20}\).</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> stalna razlika ali besedi „aritmetično zaporedje“.</p><ul class="kljucne"><li>„aritmetično zaporedje“</li><li>„razlika“</li><li>„koliko členov ima“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Vsak podatek zapiši s formulo \(a_n = a_1 + (n - 1)d\).</p><div class="na-nalogi"><p>\(a_1 + 2d = 7\), \(a_1 + 9d = 28\).</p></div></li>
+              <li><p class="korak">Reši sistem (odštej enačbi).</p><div class="na-nalogi"><p>\(7d = 21\), \(d = 3\).</p></div></li>
+              <li><p class="korak">Izračunaj \(a_1\).</p><div class="na-nalogi"><p>\(a_1 = 7 - 6 = 1\).</p></div></li>
+              <li><p class="korak">Izračunaj iskani člen.</p><div class="na-nalogi"><p>\(a_{20} = 1 + 19 \cdot 3 = 58\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> \(a_1 = 5\), \(d = -2\), \(a_{15}\)?</p><p>\(5 - 28 = -23\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Koliko členov ima \(4, 7, \ldots, 100\)?</p><p>\(100 = 4 + (n - 1) \cdot 3\), \(n = 33\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Za kateri \(x\) so \(x + 1\), \(3x\), \(4x + 2\) zaporedni členi aritmetičnega zaporedja?</p><p>\(6x = 5x + 3\), \(x = 3\): \(4, 9, 14\).</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 4 -->
+        <section class="sklop" id="sklop-4">
+          <header class="sklop-header">
+            <span class="sklop-num">4.14 · 4</span>
+            <h2>Geometrijsko zaporedje</h2>
+            <p>Stalen količnik med zaporednima členoma.</p>
+          </header>
+          <div class="sklop-video"><span class="sklop-video-oznaka">Video razlaga</span><video class="video-svetla" controls preload="none" playsinline poster="/videi/matematika/zaporedja_vrste/sklop-4-svetla.jpg" src="/videi/matematika/zaporedja_vrste/sklop-4-svetla.mp4"></video><video class="video-temna" controls preload="none" playsinline poster="/videi/matematika/zaporedja_vrste/sklop-4-temna.jpg" src="/videi/matematika/zaporedja_vrste/sklop-4-temna.mp4"></video></div><!-- /sklop-video -->
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <p>Zaporedje je <strong>geometrijsko</strong>, če je količnik \(q = \frac{a_{n + 1}}{a_n}\) za vse \(n\) enak. Tedaj je</p>
+            <p>\[a_n = a_1 q^{n - 1}.\]</p>
+            <p>Pri \(q &gt; 1\) in \(a_1 &gt; 0\) členi eksponentno rastejo, pri \(0 &lt; q &lt; 1\) padajo proti 0, pri \(q &lt; 0\) se jim predznak menja. Tri števila \(x, y, z\) so zaporedni členi geometrijskega zaporedja, ko je \(y^2 = xz\).</p>
+            <div class="slike-vrsta"><figure class="slika">
+<svg viewBox="0 0 260 230" role="img" aria-label="Aritmetično zaporedje" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="z4-g2-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="z4-g2-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="z4-g2-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="z4-g2-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="z4-g2-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="z4-g2-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<path class="s-mreza" d="M26,204V26M53.7,204V26M81.5,204V26M109.2,204V26M136.9,204V26M164.7,204V26M192.4,204V26M220.1,204V26M26,195.5H234M26,161.6H234M26,127.7H234M26,93.8H234M26,59.9H234M26,26H234"/>
+<line class="s-os" x1="26" y1="195.5" x2="242" y2="195.5" marker-end="url(#z4-g2-p)"/>
+<line class="s-os" x1="26" y1="204" x2="26" y2="18" marker-end="url(#z4-g2-p)"/>
+<text class="s-os-txt" x="236" y="187.5" text-anchor="end">n</text>
+<text class="s-os-txt" x="34" y="30">aₙ</text>
+<line class="s-os" x1="53.7" y1="192.5" x2="53.7" y2="198.5"/><text class="s-os-txt" x="53.7" y="210.5" text-anchor="middle">1</text><line class="s-os" x1="81.5" y1="192.5" x2="81.5" y2="198.5"/><text class="s-os-txt" x="81.5" y="210.5" text-anchor="middle">2</text><line class="s-os" x1="109.2" y1="192.5" x2="109.2" y2="198.5"/><text class="s-os-txt" x="109.2" y="210.5" text-anchor="middle">3</text><line class="s-os" x1="136.9" y1="192.5" x2="136.9" y2="198.5"/><text class="s-os-txt" x="136.9" y="210.5" text-anchor="middle">4</text><line class="s-os" x1="164.7" y1="192.5" x2="164.7" y2="198.5"/><text class="s-os-txt" x="164.7" y="210.5" text-anchor="middle">5</text><line class="s-os" x1="192.4" y1="192.5" x2="192.4" y2="198.5"/><text class="s-os-txt" x="192.4" y="210.5" text-anchor="middle">6</text><line class="s-os" x1="220.1" y1="192.5" x2="220.1" y2="198.5"/><text class="s-os-txt" x="220.1" y="210.5" text-anchor="middle">7</text><line class="s-os" x1="23" y1="161.6" x2="29" y2="161.6"/><text class="s-os-txt" x="20" y="165.6" text-anchor="end">4</text><line class="s-os" x1="23" y1="127.7" x2="29" y2="127.7"/><text class="s-os-txt" x="20" y="131.7" text-anchor="end">8</text><line class="s-os" x1="23" y1="93.8" x2="29" y2="93.8"/><text class="s-os-txt" x="20" y="97.8" text-anchor="end">12</text><line class="s-os" x1="23" y1="59.9" x2="29" y2="59.9"/><text class="s-os-txt" x="20" y="63.9" text-anchor="end">16</text><text class="s-os-txt" x="20" y="210.5" text-anchor="end">0</text>
+<path class="s-pom" d="M53.7,187L54.1,186.7L54.6,186.3L55,185.9L55.4,185.5L55.8,185.1L56.2,184.8L56.6,184.4L57.1,184L57.5,183.6L57.9,183.2L58.3,182.9L58.7,182.5L59.1,182.1L59.6,181.7L60,181.3L60.4,180.9L60.8,180.6L61.2,180.2L61.6,179.8L62.1,179.4L62.5,179L62.9,178.7L63.3,178.3L63.7,177.9L64.1,177.5L64.5,177.1L65,176.7L65.4,176.4L65.8,176L66.2,175.6L66.6,175.2L67,174.8L67.5,174.5L67.9,174.1L68.3,173.7L68.7,173.3L69.1,172.9L69.5,172.6L70,172.2L70.4,171.8L70.8,171.4L71.2,171L71.6,170.6L72,170.3L72.5,169.9L72.9,169.5L73.3,169.1L73.7,168.7L74.1,168.4L74.5,168L74.9,167.6L75.4,167.2L75.8,166.8L76.2,166.5L76.6,166.1L77,165.7L77.4,165.3L77.9,164.9L78.3,164.5L78.7,164.2L79.1,163.8L79.5,163.4L79.9,163L80.4,162.6L80.8,162.3L81.2,161.9L81.6,161.5L82,161.1L82.4,160.7L82.9,160.3L83.3,160L83.7,159.6L84.1,159.2L84.5,158.8L84.9,158.4L85.3,158.1L85.8,157.7L86.2,157.3L86.6,156.9L87,156.5L87.4,156.2L87.8,155.8L88.3,155.4L88.7,155L89.1,154.6L89.5,154.2L89.9,153.9L90.3,153.5L90.8,153.1L91.2,152.7L91.6,152.3L92,152L92.4,151.6L92.8,151.2L93.3,150.8L93.7,150.4L94.1,150L94.5,149.7L94.9,149.3L95.3,148.9L95.7,148.5L96.2,148.1L96.6,147.8L97,147.4L97.4,147L97.8,146.6L98.2,146.2L98.7,145.9L99.1,145.5L99.5,145.1L99.9,144.7L100.3,144.3L100.7,143.9L101.2,143.6L101.6,143.2L102,142.8L102.4,142.4L102.8,142L103.2,141.7L103.7,141.3L104.1,140.9L104.5,140.5L104.9,140.1L105.3,139.8L105.7,139.4L106.1,139L106.6,138.6L107,138.2L107.4,137.8L107.8,137.5L108.2,137.1L108.6,136.7L109.1,136.3L109.5,135.9L109.9,135.6L110.3,135.2L110.7,134.8L111.1,134.4L111.6,134L112,133.6L112.4,133.3L112.8,132.9L113.2,132.5L113.6,132.1L114.1,131.7L114.5,131.4L114.9,131L115.3,130.6L115.7,130.2L116.1,129.8L116.5,129.5L117,129.1L117.4,128.7L117.8,128.3L118.2,127.9L118.6,127.5L119,127.2L119.5,126.8L119.9,126.4L120.3,126L120.7,125.6L121.1,125.3L121.5,124.9L122,124.5L122.4,124.1L122.8,123.7L123.2,123.3L123.6,123L124,122.6L124.5,122.2L124.9,121.8L125.3,121.4L125.7,121.1L126.1,120.7L126.5,120.3L126.9,119.9L127.4,119.5L127.8,119.2L128.2,118.8L128.6,118.4L129,118L129.4,117.6L129.9,117.2L130.3,116.9L130.7,116.5L131.1,116.1L131.5,115.7L131.9,115.3L132.4,115L132.8,114.6L133.2,114.2L133.6,113.8L134,113.4L134.4,113.1L134.9,112.7L135.3,112.3L135.7,111.9L136.1,111.5L136.5,111.1L136.9,110.8L137.3,110.4L137.8,110L138.2,109.6L138.6,109.2L139,108.9L139.4,108.5L139.8,108.1L140.3,107.7L140.7,107.3L141.1,106.9L141.5,106.6L141.9,106.2L142.3,105.8L142.8,105.4L143.2,105L143.6,104.7L144,104.3L144.4,103.9L144.8,103.5L145.3,103.1L145.7,102.8L146.1,102.4L146.5,102L146.9,101.6L147.3,101.2L147.7,100.8L148.2,100.5L148.6,100.1L149,99.7L149.4,99.3L149.8,98.9L150.2,98.6L150.7,98.2L151.1,97.8L151.5,97.4L151.9,97L152.3,96.6L152.7,96.3L153.2,95.9L153.6,95.5L154,95.1L154.4,94.7L154.8,94.4L155.2,94L155.7,93.6L156.1,93.2L156.5,92.8L156.9,92.5L157.3,92.1L157.7,91.7L158.1,91.3L158.6,90.9L159,90.5L159.4,90.2L159.8,89.8L160.2,89.4L160.6,89L161.1,88.6L161.5,88.3L161.9,87.9L162.3,87.5L162.7,87.1L163.1,86.7L163.6,86.4L164,86L164.4,85.6L164.8,85.2L165.2,84.8L165.6,84.4L166.1,84.1L166.5,83.7L166.9,83.3L167.3,82.9L167.7,82.5L168.1,82.2L168.5,81.8L169,81.4L169.4,81L169.8,80.6L170.2,80.2L170.6,79.9L171,79.5L171.5,79.1L171.9,78.7L172.3,78.3L172.7,78L173.1,77.6L173.5,77.2L174,76.8L174.4,76.4L174.8,76.1L175.2,75.7L175.6,75.3L176,74.9L176.5,74.5L176.9,74.1L177.3,73.8L177.7,73.4L178.1,73L178.5,72.6L178.9,72.2L179.4,71.9L179.8,71.5L180.2,71.1L180.6,70.7L181,70.3L181.4,69.9L181.9,69.6L182.3,69.2L182.7,68.8L183.1,68.4L183.5,68L183.9,67.7L184.4,67.3L184.8,66.9L185.2,66.5L185.6,66.1L186,65.8L186.4,65.4L186.9,65L187.3,64.6L187.7,64.2L188.1,63.8L188.5,63.5L188.9,63.1L189.3,62.7L189.8,62.3L190.2,61.9L190.6,61.6L191,61.2L191.4,60.8L191.8,60.4L192.3,60L192.7,59.7L193.1,59.3L193.5,58.9L193.9,58.5L194.3,58.1L194.8,57.7L195.2,57.4L195.6,57L196,56.6L196.4,56.2L196.8,55.8L197.3,55.5L197.7,55.1L198.1,54.7L198.5,54.3L198.9,53.9L199.3,53.5L199.7,53.2L200.2,52.8L200.6,52.4L201,52L201.4,51.6L201.8,51.3L202.2,50.9L202.7,50.5L203.1,50.1L203.5,49.7L203.9,49.4L204.3,49L204.7,48.6L205.2,48.2L205.6,47.8L206,47.4L206.4,47.1L206.8,46.7L207.2,46.3L207.7,45.9L208.1,45.5L208.5,45.2L208.9,44.8L209.3,44.4L209.7,44L210.1,43.6L210.6,43.2L211,42.9L211.4,42.5L211.8,42.1L212.2,41.7L212.6,41.3L213.1,41L213.5,40.6L213.9,40.2L214.3,39.8L214.7,39.4L215.1,39.1L215.6,38.7L216,38.3L216.4,37.9L216.8,37.5L217.2,37.1L217.6,36.8L218.1,36.4L218.5,36L218.9,35.6L219.3,35.2L219.7,34.9L220.1,34.5"/>
+<circle class="s-tocka" cx="53.7" cy="187" r="4"/>
+<circle class="s-tocka" cx="81.5" cy="161.6" r="4"/>
+<circle class="s-tocka" cx="109.2" cy="136.2" r="4"/>
+<circle class="s-tocka" cx="136.9" cy="110.8" r="4"/>
+<circle class="s-tocka" cx="164.7" cy="85.3" r="4"/>
+<circle class="s-tocka" cx="192.4" cy="59.9" r="4"/>
+<circle class="s-tocka" cx="220.1" cy="34.5" r="4"/>
+</svg>
+<figcaption>Aritmetično \(a_n = 3n - 2\): točke ležijo na premici, vsak člen je za \(d = 3\) večji.</figcaption>
+</figure><figure class="slika">
+<svg viewBox="0 0 260 230" role="img" aria-label="Geometrijsko zaporedje" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="z4-g3-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="z4-g3-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="z4-g3-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="z4-g3-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="z4-g3-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="z4-g3-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<path class="s-mreza" d="M26,204V26M53.7,204V26M81.5,204V26M109.2,204V26M136.9,204V26M164.7,204V26M192.4,204V26M220.1,204V26M26,194.1H234M26,154.6H234M26,115H234M26,75.4H234M26,35.9H234"/>
+<line class="s-os" x1="26" y1="194.1" x2="242" y2="194.1" marker-end="url(#z4-g3-p)"/>
+<line class="s-os" x1="26" y1="204" x2="26" y2="18" marker-end="url(#z4-g3-p)"/>
+<text class="s-os-txt" x="236" y="186.1" text-anchor="end">n</text>
+<text class="s-os-txt" x="34" y="30">aₙ</text>
+<line class="s-os" x1="53.7" y1="191.1" x2="53.7" y2="197.1"/><text class="s-os-txt" x="53.7" y="209.1" text-anchor="middle">1</text><line class="s-os" x1="81.5" y1="191.1" x2="81.5" y2="197.1"/><text class="s-os-txt" x="81.5" y="209.1" text-anchor="middle">2</text><line class="s-os" x1="109.2" y1="191.1" x2="109.2" y2="197.1"/><text class="s-os-txt" x="109.2" y="209.1" text-anchor="middle">3</text><line class="s-os" x1="136.9" y1="191.1" x2="136.9" y2="197.1"/><text class="s-os-txt" x="136.9" y="209.1" text-anchor="middle">4</text><line class="s-os" x1="164.7" y1="191.1" x2="164.7" y2="197.1"/><text class="s-os-txt" x="164.7" y="209.1" text-anchor="middle">5</text><line class="s-os" x1="192.4" y1="191.1" x2="192.4" y2="197.1"/><text class="s-os-txt" x="192.4" y="209.1" text-anchor="middle">6</text><line class="s-os" x1="220.1" y1="191.1" x2="220.1" y2="197.1"/><text class="s-os-txt" x="220.1" y="209.1" text-anchor="middle">7</text><line class="s-os" x1="23" y1="154.6" x2="29" y2="154.6"/><text class="s-os-txt" x="20" y="158.6" text-anchor="end">16</text><line class="s-os" x1="23" y1="115" x2="29" y2="115"/><text class="s-os-txt" x="20" y="119" text-anchor="end">32</text><line class="s-os" x1="23" y1="75.4" x2="29" y2="75.4"/><text class="s-os-txt" x="20" y="79.4" text-anchor="end">48</text><line class="s-os" x1="23" y1="35.9" x2="29" y2="35.9"/><text class="s-os-txt" x="20" y="39.9" text-anchor="end">64</text><text class="s-os-txt" x="20" y="209.1" text-anchor="end">0</text>
+<path class="s-pom" d="M53.7,191.6L54.1,191.6L54.6,191.6L55,191.6L55.4,191.5L55.8,191.5L56.2,191.5L56.6,191.5L57.1,191.4L57.5,191.4L57.9,191.4L58.3,191.3L58.7,191.3L59.1,191.3L59.6,191.3L60,191.2L60.4,191.2L60.8,191.2L61.2,191.1L61.6,191.1L62.1,191.1L62.5,191L62.9,191L63.3,191L63.7,190.9L64.1,190.9L64.5,190.9L65,190.8L65.4,190.8L65.8,190.8L66.2,190.7L66.6,190.7L67,190.7L67.5,190.6L67.9,190.6L68.3,190.6L68.7,190.5L69.1,190.5L69.5,190.4L70,190.4L70.4,190.4L70.8,190.3L71.2,190.3L71.6,190.2L72,190.2L72.5,190.2L72.9,190.1L73.3,190.1L73.7,190L74.1,190L74.5,190L74.9,189.9L75.4,189.9L75.8,189.8L76.2,189.8L76.6,189.7L77,189.7L77.4,189.6L77.9,189.6L78.3,189.5L78.7,189.5L79.1,189.4L79.5,189.4L79.9,189.4L80.4,189.3L80.8,189.3L81.2,189.2L81.6,189.1L82,189.1L82.4,189L82.9,189L83.3,188.9L83.7,188.9L84.1,188.8L84.5,188.8L84.9,188.7L85.3,188.7L85.8,188.6L86.2,188.5L86.6,188.5L87,188.4L87.4,188.4L87.8,188.3L88.3,188.3L88.7,188.2L89.1,188.1L89.5,188.1L89.9,188L90.3,187.9L90.8,187.9L91.2,187.8L91.6,187.7L92,187.7L92.4,187.6L92.8,187.5L93.3,187.5L93.7,187.4L94.1,187.3L94.5,187.3L94.9,187.2L95.3,187.1L95.7,187L96.2,187L96.6,186.9L97,186.8L97.4,186.7L97.8,186.7L98.2,186.6L98.7,186.5L99.1,186.4L99.5,186.4L99.9,186.3L100.3,186.2L100.7,186.1L101.2,186L101.6,185.9L102,185.9L102.4,185.8L102.8,185.7L103.2,185.6L103.7,185.5L104.1,185.4L104.5,185.3L104.9,185.2L105.3,185.1L105.7,185L106.1,184.9L106.6,184.9L107,184.8L107.4,184.7L107.8,184.6L108.2,184.5L108.6,184.4L109.1,184.3L109.5,184.2L109.9,184L110.3,183.9L110.7,183.8L111.1,183.7L111.6,183.6L112,183.5L112.4,183.4L112.8,183.3L113.2,183.2L113.6,183.1L114.1,182.9L114.5,182.8L114.9,182.7L115.3,182.6L115.7,182.5L116.1,182.4L116.5,182.2L117,182.1L117.4,182L117.8,181.9L118.2,181.7L118.6,181.6L119,181.5L119.5,181.3L119.9,181.2L120.3,181.1L120.7,180.9L121.1,180.8L121.5,180.6L122,180.5L122.4,180.4L122.8,180.2L123.2,180.1L123.6,179.9L124,179.8L124.5,179.6L124.9,179.5L125.3,179.3L125.7,179.2L126.1,179L126.5,178.9L126.9,178.7L127.4,178.5L127.8,178.4L128.2,178.2L128.6,178L129,177.9L129.4,177.7L129.9,177.5L130.3,177.4L130.7,177.2L131.1,177L131.5,176.8L131.9,176.7L132.4,176.5L132.8,176.3L133.2,176.1L133.6,175.9L134,175.7L134.4,175.5L134.9,175.3L135.3,175.1L135.7,174.9L136.1,174.7L136.5,174.5L136.9,174.3L137.3,174.1L137.8,173.9L138.2,173.7L138.6,173.5L139,173.3L139.4,173.1L139.8,172.8L140.3,172.6L140.7,172.4L141.1,172.2L141.5,171.9L141.9,171.7L142.3,171.5L142.8,171.2L143.2,171L143.6,170.8L144,170.5L144.4,170.3L144.8,170L145.3,169.8L145.7,169.5L146.1,169.3L146.5,169L146.9,168.7L147.3,168.5L147.7,168.2L148.2,167.9L148.6,167.6L149,167.4L149.4,167.1L149.8,166.8L150.2,166.5L150.7,166.2L151.1,165.9L151.5,165.7L151.9,165.4L152.3,165.1L152.7,164.8L153.2,164.4L153.6,164.1L154,163.8L154.4,163.5L154.8,163.2L155.2,162.9L155.7,162.5L156.1,162.2L156.5,161.9L156.9,161.5L157.3,161.2L157.7,160.8L158.1,160.5L158.6,160.2L159,159.8L159.4,159.4L159.8,159.1L160.2,158.7L160.6,158.3L161.1,158L161.5,157.6L161.9,157.2L162.3,156.8L162.7,156.4L163.1,156L163.6,155.6L164,155.2L164.4,154.8L164.8,154.4L165.2,154L165.6,153.6L166.1,153.2L166.5,152.7L166.9,152.3L167.3,151.9L167.7,151.4L168.1,151L168.5,150.5L169,150.1L169.4,149.6L169.8,149.1L170.2,148.7L170.6,148.2L171,147.7L171.5,147.2L171.9,146.7L172.3,146.2L172.7,145.7L173.1,145.2L173.5,144.7L174,144.2L174.4,143.7L174.8,143.2L175.2,142.6L175.6,142.1L176,141.6L176.5,141L176.9,140.4L177.3,139.9L177.7,139.3L178.1,138.7L178.5,138.2L178.9,137.6L179.4,137L179.8,136.4L180.2,135.8L180.6,135.2L181,134.6L181.4,133.9L181.9,133.3L182.3,132.7L182.7,132L183.1,131.4L183.5,130.7L183.9,130.1L184.4,129.4L184.8,128.7L185.2,128L185.6,127.4L186,126.7L186.4,126L186.9,125.2L187.3,124.5L187.7,123.8L188.1,123.1L188.5,122.3L188.9,121.6L189.3,120.8L189.8,120L190.2,119.3L190.6,118.5L191,117.7L191.4,116.9L191.8,116.1L192.3,115.3L192.7,114.4L193.1,113.6L193.5,112.8L193.9,111.9L194.3,111.1L194.8,110.2L195.2,109.3L195.6,108.4L196,107.5L196.4,106.6L196.8,105.7L197.3,104.8L197.7,103.9L198.1,102.9L198.5,102L198.9,101L199.3,100L199.7,99L200.2,98.1L200.6,97.1L201,96L201.4,95L201.8,94L202.2,92.9L202.7,91.9L203.1,90.8L203.5,89.7L203.9,88.6L204.3,87.5L204.7,86.4L205.2,85.3L205.6,84.2L206,83L206.4,81.8L206.8,80.7L207.2,79.5L207.7,78.3L208.1,77.1L208.5,75.9L208.9,74.6L209.3,73.4L209.7,72.1L210.1,70.8L210.6,69.5L211,68.2L211.4,66.9L211.8,65.6L212.2,64.3L212.6,62.9L213.1,61.5L213.5,60.1L213.9,58.7L214.3,57.3L214.7,55.9L215.1,54.4L215.6,53L216,51.5L216.4,50L216.8,48.5L217.2,47L217.6,45.5L218.1,43.9L218.5,42.3L218.9,40.7L219.3,39.1L219.7,37.5L220.1,35.9"/>
+<circle class="s-tocka-2" cx="53.7" cy="191.6" r="4"/>
+<circle class="s-tocka-2" cx="81.5" cy="189.2" r="4"/>
+<circle class="s-tocka-2" cx="109.2" cy="184.2" r="4"/>
+<circle class="s-tocka-2" cx="136.9" cy="174.3" r="4"/>
+<circle class="s-tocka-2" cx="164.7" cy="154.6" r="4"/>
+<circle class="s-tocka-2" cx="192.4" cy="115" r="4"/>
+<circle class="s-tocka-2" cx="220.1" cy="35.9" r="4"/>
+</svg>
+<figcaption>Geometrijsko \(a_n = 2^{n - 1}\): točke ležijo na eksponentni krivulji, vsak člen je \(q = 2\)-krat večji.</figcaption>
+</figure></div>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-5">
+              <h4>Tip 5: Geometrijsko zaporedje iz dveh podatkov</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>V geometrijskem zaporedju je \(a_2 = 6\) in \(a_5 = 162\). Določite \(a_1\), \(q\) in \(a_6\).</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> stalen količnik, „podvoji se“, „vsakič za isti odstotek“.</p><ul class="kljucne"><li>„geometrijsko zaporedje“</li><li>„količnik“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Vsak podatek zapiši s formulo \(a_n = a_1 q^{n - 1}\).</p><div class="na-nalogi"><p>\(a_1 q = 6\), \(a_1 q^4 = 162\).</p></div></li>
+              <li><p class="korak">Enačbi deli, da odpraviš \(a_1\).</p><div class="na-nalogi"><p>\(q^3 = 27\), \(q = 3\).</p></div></li>
+              <li><p class="korak">Izračunaj \(a_1\).</p><div class="na-nalogi"><p>\(a_1 = \frac{6}{3} = 2\).</p></div></li>
+              <li><p class="korak">Izračunaj iskani člen.</p><div class="na-nalogi"><p>\(a_6 = 2 \cdot 3^5 = 486\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> \(3, -6, 12, \ldots\), \(a_8\)?</p><p>\(q = -2\): \(a_8 = 3 \cdot (-2)^7 = -384\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Za kateri \(x\) so \(x\), \(x + 3\), \(x + 9\) zaporedni členi geometrijskega zaporedja?</p><p>\((x + 3)^2 = x(x + 9)\), \(x = 3\): \(3, 6, 12\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Kateri člen zaporedja \(2, 6, 18, \ldots\) je 1458?</p><p>\(3^{n - 1} = 729 = 3^6\), \(n = 7\).</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 5 -->
+        <section class="sklop" id="sklop-5">
+          <header class="sklop-header">
+            <span class="sklop-num">4.14 · 5</span>
+            <h2>Vsota prvih n členov aritmetičnega in geometrijskega zaporedja</h2>
+            <p>\(S_n = a_1 + a_2 + \ldots + a_n\).</p>
+          </header>
+          <div class="sklop-video"><span class="sklop-video-oznaka">Video razlaga</span><video class="video-svetla" controls preload="none" playsinline poster="/videi/matematika/zaporedja_vrste/sklop-5-svetla.jpg" src="/videi/matematika/zaporedja_vrste/sklop-5-svetla.mp4"></video><video class="video-temna" controls preload="none" playsinline poster="/videi/matematika/zaporedja_vrste/sklop-5-temna.jpg" src="/videi/matematika/zaporedja_vrste/sklop-5-temna.mp4"></video></div><!-- /sklop-video -->
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <p>Vsota prvih \(n\) členov <strong>aritmetičnega</strong> zaporedja (prvi in zadnji, drugi in predzadnji ... dajo isto vsoto):</p>
+            <p>\[S_n = \frac{n}{2}(a_1 + a_n) = \frac{n}{2}\big(2a_1 + (n - 1)d\big).\]</p>
+            <p>Vsota prvih \(n\) členov <strong>geometrijskega</strong> zaporedja:</p>
+            <p>\[S_n = a_1\frac{q^n - 1}{q - 1} \quad (q \ne 1), \qquad S_n = n a_1 \quad (q = 1).\]</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-6">
+              <h4>Tip 6: Vsota aritmetičnega zaporedja</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Izračunajte vsoto vseh dvomestnih števil, ki so deljiva s 7.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> seštevamo števila s stalno razliko.</p><ul class="kljucne"><li>„vsota prvih n členov“</li><li>„vsota vseh ... števil, deljivih z“</li><li>„koliko členov je treba sešteti“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Prepoznaj zaporedje: \(a_1\), \(d\), zadnji člen.</p><div class="na-nalogi"><p>\(14, 21, \ldots, 98\): \(a_1 = 14\), \(d = 7\).</p></div></li>
+              <li><p class="korak">Določi število členov \(n\).</p><div class="na-nalogi"><p>\(98 = 14 + (n - 1) \cdot 7\), \(n = 13\).</p></div></li>
+              <li><p class="korak">Uporabi \(S_n = \frac{n}{2}(a_1 + a_n)\).</p><div class="na-nalogi"><p>\(S_{13} = \frac{13}{2}(14 + 98) = 13 \cdot 56\).</p></div></li>
+              <li><p class="korak">Izračunaj.</p><div class="na-nalogi"><p>\(S_{13} = 728\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> \(1 + 2 + \ldots + 100\)</p><p>\(50 \cdot 101 = 5050\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> \(a_1 = 3\), \(d = 4\), \(S_n = 210\). Koliko je \(n\)?</p><p>\(n(2n + 1) = 210\), \(n = 10\).</p></div>
+            </div>
+            <div class="tip-naloge" id="tip-7">
+              <h4>Tip 7: Vsota geometrijskega zaporedja</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Izračunajte vsoto \(3 + 6 + 12 + \ldots + 768\).</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> seštevamo števila s stalnim količnikom.</p><ul class="kljucne"><li>„vsota prvih n členov geometrijskega“</li><li>„najmanj koliko členov, da vsota preseže“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Določi \(a_1\) in \(q\).</p><div class="na-nalogi"><p>\(a_1 = 3\), \(q = 2\).</p></div></li>
+              <li><p class="korak">Določi število členov.</p><div class="na-nalogi"><p>\(3 \cdot 2^{n - 1} = 768\), \(2^{n - 1} = 256\), \(n = 9\).</p></div></li>
+              <li><p class="korak">Uporabi \(S_n = a_1\frac{q^n - 1}{q - 1}\).</p><div class="na-nalogi"><p>\(S_9 = 3 \cdot \frac{2^9 - 1}{2 - 1}\).</p></div></li>
+              <li><p class="korak">Izračunaj.</p><div class="na-nalogi"><p>\(S_9 = 3 \cdot 511 = 1533\).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> \(81 + 27 + 9 + 3 + 1\)</p><p>\(81 \cdot \frac{1 - \frac{1}{243}}{1 - \frac{1}{3}} = 121\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Najmanj koliko členov \(2 + 4 + 8 + \ldots\) da vsoto nad 1000?</p><p>\(2(2^n - 1) &gt; 1000\), \(2^n &gt; 501\), \(n = 9\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Zrna na šahovnici: \(1 + 2 + \ldots + 2^{63}\).</p><p>\(2^{64} - 1\).</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 6 -->
+        <section class="sklop" id="sklop-6">
+          <header class="sklop-header">
+            <span class="sklop-num">4.14 · 6</span>
+            <h2>Obrestni račun</h2>
+            <p>Navadno in obrestno obrestovanje, obrestne mere.</p>
+          </header>
+          <div class="sklop-video"><span class="sklop-video-oznaka">Video razlaga</span><video class="video-svetla" controls preload="none" playsinline poster="/videi/matematika/zaporedja_vrste/sklop-9-svetla.jpg" src="/videi/matematika/zaporedja_vrste/sklop-9-svetla.mp4"></video><video class="video-temna" controls preload="none" playsinline poster="/videi/matematika/zaporedja_vrste/sklop-9-temna.jpg" src="/videi/matematika/zaporedja_vrste/sklop-9-temna.mp4"></video></div><!-- /sklop-video -->
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <p>Glavnica \(G_0\) je naložena po letni obrestni meri \(p\) %.</p>
+            <ul>
+              <li><strong>Navadno obrestovanje</strong>: obresti se računajo le od začetne glavnice, \(o = \frac{G_0 p t}{100}\), \(G = G_0\left(1 + \frac{pt}{100}\right)\). Glavnice tvorijo aritmetično zaporedje.</li>
+              <li><strong>Obrestno obrestovanje</strong>: obresti se pripišejo in naprej obrestujejo, \(G_n = G_0 r^n\), \(r = 1 + \frac{p}{100}\) (obrestovalni faktor). Glavnice tvorijo geometrijsko zaporedje.</li>
+            </ul>
+            <figure class="slika slika--siroka">
+<svg viewBox="0 0 460 260" role="img" aria-label="Navadno in obrestno obrestovanje" xmlns="http://www.w3.org/2000/svg">
+<defs><marker id="z9-g6-p" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5B6178"/></marker><marker id="z9-g6-k1" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#4F46E5"/></marker><marker id="z9-g6-k2" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DC2626"/></marker><marker id="z9-g6-k3" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#16A34A"/></marker><marker id="z9-g6-k4" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#D97706"/></marker><marker id="z9-g6-crn" viewBox="0 0 10 10" refX="8.5" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#171A2E"/></marker></defs>
+<path class="s-mreza" d="M40,220V40M76.2,220V40M112.4,220V40M148.6,220V40M184.8,220V40M221,220V40M257.1,220V40M293.3,220V40M329.5,220V40M365.7,220V40M401.9,220V40M40,220H420M40,196.9H420M40,173.8H420M40,150.8H420M40,127.7H420M40,104.6H420M40,81.5H420M40,58.5H420"/>
+<line class="s-os" x1="40" y1="220" x2="428" y2="220" marker-end="url(#z9-g6-p)"/>
+<line class="s-os" x1="40" y1="220" x2="40" y2="32" marker-end="url(#z9-g6-p)"/>
+<text class="s-os-txt" x="422" y="212" text-anchor="end">leta</text>
+<text class="s-os-txt" x="48" y="44">G (€)</text>
+<line class="s-os" x1="76.2" y1="217" x2="76.2" y2="223"/><text class="s-os-txt" x="76.2" y="235" text-anchor="middle">2</text><line class="s-os" x1="112.4" y1="217" x2="112.4" y2="223"/><text class="s-os-txt" x="112.4" y="235" text-anchor="middle">4</text><line class="s-os" x1="148.6" y1="217" x2="148.6" y2="223"/><text class="s-os-txt" x="148.6" y="235" text-anchor="middle">6</text><line class="s-os" x1="184.8" y1="217" x2="184.8" y2="223"/><text class="s-os-txt" x="184.8" y="235" text-anchor="middle">8</text><line class="s-os" x1="221" y1="217" x2="221" y2="223"/><text class="s-os-txt" x="221" y="235" text-anchor="middle">10</text><line class="s-os" x1="257.1" y1="217" x2="257.1" y2="223"/><text class="s-os-txt" x="257.1" y="235" text-anchor="middle">12</text><line class="s-os" x1="293.3" y1="217" x2="293.3" y2="223"/><text class="s-os-txt" x="293.3" y="235" text-anchor="middle">14</text><line class="s-os" x1="329.5" y1="217" x2="329.5" y2="223"/><text class="s-os-txt" x="329.5" y="235" text-anchor="middle">16</text><line class="s-os" x1="365.7" y1="217" x2="365.7" y2="223"/><text class="s-os-txt" x="365.7" y="235" text-anchor="middle">18</text><line class="s-os" x1="401.9" y1="217" x2="401.9" y2="223"/><text class="s-os-txt" x="401.9" y="235" text-anchor="middle">20</text><line class="s-os" x1="37" y1="196.9" x2="43" y2="196.9"/><text class="s-os-txt" x="34" y="200.9" text-anchor="end">1000</text><line class="s-os" x1="37" y1="173.8" x2="43" y2="173.8"/><text class="s-os-txt" x="34" y="177.8" text-anchor="end">2000</text><line class="s-os" x1="37" y1="150.8" x2="43" y2="150.8"/><text class="s-os-txt" x="34" y="154.8" text-anchor="end">3000</text><line class="s-os" x1="37" y1="127.7" x2="43" y2="127.7"/><text class="s-os-txt" x="34" y="131.7" text-anchor="end">4000</text><line class="s-os" x1="37" y1="104.6" x2="43" y2="104.6"/><text class="s-os-txt" x="34" y="108.6" text-anchor="end">5000</text><line class="s-os" x1="37" y1="81.5" x2="43" y2="81.5"/><text class="s-os-txt" x="34" y="85.5" text-anchor="end">6000</text><line class="s-os" x1="37" y1="58.5" x2="43" y2="58.5"/><text class="s-os-txt" x="34" y="62.5" text-anchor="end">7000</text><text class="s-os-txt" x="34" y="235" text-anchor="end">0</text>
+<path class="s-k3" d="M40,196.9L40.9,196.8L41.8,196.7L42.7,196.6L43.6,196.5L44.5,196.3L45.4,196.2L46.3,196.1L47.2,196L48.1,195.9L49,195.8L50,195.7L50.9,195.5L51.8,195.4L52.7,195.3L53.6,195.2L54.5,195.1L55.4,195L56.3,194.8L57.2,194.7L58.1,194.6L59,194.5L59.9,194.4L60.8,194.3L61.7,194.2L62.6,194L63.5,193.9L64.4,193.8L65.3,193.7L66.2,193.6L67.1,193.5L68,193.3L69,193.2L69.9,193.1L70.8,193L71.7,192.9L72.6,192.8L73.5,192.7L74.4,192.5L75.3,192.4L76.2,192.3L77.1,192.2L78,192.1L78.9,192L79.8,191.8L80.7,191.7L81.6,191.6L82.5,191.5L83.4,191.4L84.3,191.3L85.2,191.2L86.1,191L87,190.9L88,190.8L88.9,190.7L89.8,190.6L90.7,190.5L91.6,190.3L92.5,190.2L93.4,190.1L94.3,190L95.2,189.9L96.1,189.8L97,189.7L97.9,189.5L98.8,189.4L99.7,189.3L100.6,189.2L101.5,189.1L102.4,189L103.3,188.8L104.2,188.7L105.1,188.6L106,188.5L107,188.4L107.9,188.3L108.8,188.2L109.7,188L110.6,187.9L111.5,187.8L112.4,187.7L113.3,187.6L114.2,187.5L115.1,187.3L116,187.2L116.9,187.1L117.8,187L118.7,186.9L119.6,186.8L120.5,186.7L121.4,186.5L122.3,186.4L123.2,186.3L124.1,186.2L125,186.1L126,186L126.9,185.8L127.8,185.7L128.7,185.6L129.6,185.5L130.5,185.4L131.4,185.3L132.3,185.2L133.2,185L134.1,184.9L135,184.8L135.9,184.7L136.8,184.6L137.7,184.5L138.6,184.3L139.5,184.2L140.4,184.1L141.3,184L142.2,183.9L143.1,183.8L144,183.7L145,183.5L145.9,183.4L146.8,183.3L147.7,183.2L148.6,183.1L149.5,183L150.4,182.8L151.3,182.7L152.2,182.6L153.1,182.5L154,182.4L154.9,182.3L155.8,182.2L156.7,182L157.6,181.9L158.5,181.8L159.4,181.7L160.3,181.6L161.2,181.5L162.1,181.3L163,181.2L164,181.1L164.9,181L165.8,180.9L166.7,180.8L167.6,180.7L168.5,180.5L169.4,180.4L170.3,180.3L171.2,180.2L172.1,180.1L173,180L173.9,179.8L174.8,179.7L175.7,179.6L176.6,179.5L177.5,179.4L178.4,179.3L179.3,179.2L180.2,179L181.1,178.9L182,178.8L183,178.7L183.9,178.6L184.8,178.5L185.7,178.3L186.6,178.2L187.5,178.1L188.4,178L189.3,177.9L190.2,177.8L191.1,177.7L192,177.5L192.9,177.4L193.8,177.3L194.7,177.2L195.6,177.1L196.5,177L197.4,176.8L198.3,176.7L199.2,176.6L200.1,176.5L201,176.4L202,176.3L202.9,176.2L203.8,176L204.7,175.9L205.6,175.8L206.5,175.7L207.4,175.6L208.3,175.5L209.2,175.3L210.1,175.2L211,175.1L211.9,175L212.8,174.9L213.7,174.8L214.6,174.7L215.5,174.5L216.4,174.4L217.3,174.3L218.2,174.2L219.1,174.1L220,174L221,173.8L221.9,173.7L222.8,173.6L223.7,173.5L224.6,173.4L225.5,173.3L226.4,173.2L227.3,173L228.2,172.9L229.1,172.8L230,172.7L230.9,172.6L231.8,172.5L232.7,172.3L233.6,172.2L234.5,172.1L235.4,172L236.3,171.9L237.2,171.8L238.1,171.7L239,171.5L240,171.4L240.9,171.3L241.8,171.2L242.7,171.1L243.6,171L244.5,170.8L245.4,170.7L246.3,170.6L247.2,170.5L248.1,170.4L249,170.3L249.9,170.2L250.8,170L251.7,169.9L252.6,169.8L253.5,169.7L254.4,169.6L255.3,169.5L256.2,169.3L257.1,169.2L258,169.1L259,169L259.9,168.9L260.8,168.8L261.7,168.7L262.6,168.5L263.5,168.4L264.4,168.3L265.3,168.2L266.2,168.1L267.1,168L268,167.8L268.9,167.7L269.8,167.6L270.7,167.5L271.6,167.4L272.5,167.3L273.4,167.2L274.3,167L275.2,166.9L276.1,166.8L277,166.7L278,166.6L278.9,166.5L279.8,166.3L280.7,166.2L281.6,166.1L282.5,166L283.4,165.9L284.3,165.8L285.2,165.7L286.1,165.5L287,165.4L287.9,165.3L288.8,165.2L289.7,165.1L290.6,165L291.5,164.8L292.4,164.7L293.3,164.6L294.2,164.5L295.1,164.4L296,164.3L297,164.2L297.9,164L298.8,163.9L299.7,163.8L300.6,163.7L301.5,163.6L302.4,163.5L303.3,163.3L304.2,163.2L305.1,163.1L306,163L306.9,162.9L307.8,162.8L308.7,162.7L309.6,162.5L310.5,162.4L311.4,162.3L312.3,162.2L313.2,162.1L314.1,162L315,161.8L316,161.7L316.9,161.6L317.8,161.5L318.7,161.4L319.6,161.3L320.5,161.2L321.4,161L322.3,160.9L323.2,160.8L324.1,160.7L325,160.6L325.9,160.5L326.8,160.3L327.7,160.2L328.6,160.1L329.5,160L330.4,159.9L331.3,159.8L332.2,159.7L333.1,159.5L334,159.4L335,159.3L335.9,159.2L336.8,159.1L337.7,159L338.6,158.8L339.5,158.7L340.4,158.6L341.3,158.5L342.2,158.4L343.1,158.3L344,158.2L344.9,158L345.8,157.9L346.7,157.8L347.6,157.7L348.5,157.6L349.4,157.5L350.3,157.3L351.2,157.2L352.1,157.1L353,157L354,156.9L354.9,156.8L355.8,156.7L356.7,156.5L357.6,156.4L358.5,156.3L359.4,156.2L360.3,156.1L361.2,156L362.1,155.8L363,155.7L363.9,155.6L364.8,155.5L365.7,155.4L366.6,155.3L367.5,155.2L368.4,155L369.3,154.9L370.2,154.8L371.1,154.7L372,154.6L373,154.5L373.9,154.3L374.8,154.2L375.7,154.1L376.6,154L377.5,153.9L378.4,153.8L379.3,153.7L380.2,153.5L381.1,153.4L382,153.3L382.9,153.2L383.8,153.1L384.7,153L385.6,152.8L386.5,152.7L387.4,152.6L388.3,152.5L389.2,152.4L390.1,152.3L391,152.2L392,152L392.9,151.9L393.8,151.8L394.7,151.7L395.6,151.6L396.5,151.5L397.4,151.3L398.3,151.2L399.2,151.1L400.1,151L401,150.9L401.9,150.8"/>
+<path class="s-k1" d="M40,196.9L40.9,196.8L41.8,196.7L42.7,196.6L43.6,196.5L44.5,196.4L45.4,196.3L46.3,196.1L47.2,196L48.1,195.9L49,195.8L50,195.7L50.9,195.6L51.8,195.4L52.7,195.3L53.6,195.2L54.5,195.1L55.4,195L56.3,194.9L57.2,194.7L58.1,194.6L59,194.5L59.9,194.4L60.8,194.2L61.7,194.1L62.6,194L63.5,193.9L64.4,193.8L65.3,193.6L66.2,193.5L67.1,193.4L68,193.2L69,193.1L69.9,193L70.8,192.9L71.7,192.7L72.6,192.6L73.5,192.5L74.4,192.3L75.3,192.2L76.2,192.1L77.1,191.9L78,191.8L78.9,191.7L79.8,191.5L80.7,191.4L81.6,191.3L82.5,191.1L83.4,191L84.3,190.9L85.2,190.7L86.1,190.6L87,190.4L88,190.3L88.9,190.2L89.8,190L90.7,189.9L91.6,189.7L92.5,189.6L93.4,189.4L94.3,189.3L95.2,189.1L96.1,189L97,188.8L97.9,188.7L98.8,188.5L99.7,188.4L100.6,188.2L101.5,188.1L102.4,187.9L103.3,187.8L104.2,187.6L105.1,187.5L106,187.3L107,187.2L107.9,187L108.8,186.9L109.7,186.7L110.6,186.5L111.5,186.4L112.4,186.2L113.3,186.1L114.2,185.9L115.1,185.7L116,185.6L116.9,185.4L117.8,185.2L118.7,185.1L119.6,184.9L120.5,184.7L121.4,184.6L122.3,184.4L123.2,184.2L124.1,184.1L125,183.9L126,183.7L126.9,183.5L127.8,183.4L128.7,183.2L129.6,183L130.5,182.8L131.4,182.7L132.3,182.5L133.2,182.3L134.1,182.1L135,181.9L135.9,181.8L136.8,181.6L137.7,181.4L138.6,181.2L139.5,181L140.4,180.8L141.3,180.6L142.2,180.5L143.1,180.3L144,180.1L145,179.9L145.9,179.7L146.8,179.5L147.7,179.3L148.6,179.1L149.5,178.9L150.4,178.7L151.3,178.5L152.2,178.3L153.1,178.1L154,177.9L154.9,177.7L155.8,177.5L156.7,177.3L157.6,177.1L158.5,176.9L159.4,176.7L160.3,176.5L161.2,176.3L162.1,176.1L163,175.9L164,175.7L164.9,175.5L165.8,175.2L166.7,175L167.6,174.8L168.5,174.6L169.4,174.4L170.3,174.2L171.2,173.9L172.1,173.7L173,173.5L173.9,173.3L174.8,173.1L175.7,172.8L176.6,172.6L177.5,172.4L178.4,172.2L179.3,171.9L180.2,171.7L181.1,171.5L182,171.2L183,171L183.9,170.8L184.8,170.5L185.7,170.3L186.6,170.1L187.5,169.8L188.4,169.6L189.3,169.3L190.2,169.1L191.1,168.9L192,168.6L192.9,168.4L193.8,168.1L194.7,167.9L195.6,167.6L196.5,167.4L197.4,167.1L198.3,166.9L199.2,166.6L200.1,166.4L201,166.1L202,165.8L202.9,165.6L203.8,165.3L204.7,165.1L205.6,164.8L206.5,164.5L207.4,164.3L208.3,164L209.2,163.7L210.1,163.5L211,163.2L211.9,162.9L212.8,162.7L213.7,162.4L214.6,162.1L215.5,161.8L216.4,161.6L217.3,161.3L218.2,161L219.1,160.7L220,160.4L221,160.1L221.9,159.9L222.8,159.6L223.7,159.3L224.6,159L225.5,158.7L226.4,158.4L227.3,158.1L228.2,157.8L229.1,157.5L230,157.2L230.9,156.9L231.8,156.6L232.7,156.3L233.6,156L234.5,155.7L235.4,155.4L236.3,155.1L237.2,154.8L238.1,154.5L239,154.2L240,153.8L240.9,153.5L241.8,153.2L242.7,152.9L243.6,152.6L244.5,152.2L245.4,151.9L246.3,151.6L247.2,151.3L248.1,150.9L249,150.6L249.9,150.3L250.8,150L251.7,149.6L252.6,149.3L253.5,148.9L254.4,148.6L255.3,148.3L256.2,147.9L257.1,147.6L258,147.2L259,146.9L259.9,146.5L260.8,146.2L261.7,145.8L262.6,145.5L263.5,145.1L264.4,144.8L265.3,144.4L266.2,144L267.1,143.7L268,143.3L268.9,142.9L269.8,142.6L270.7,142.2L271.6,141.8L272.5,141.5L273.4,141.1L274.3,140.7L275.2,140.3L276.1,140L277,139.6L278,139.2L278.9,138.8L279.8,138.4L280.7,138L281.6,137.6L282.5,137.2L283.4,136.8L284.3,136.4L285.2,136L286.1,135.6L287,135.2L287.9,134.8L288.8,134.4L289.7,134L290.6,133.6L291.5,133.2L292.4,132.8L293.3,132.4L294.2,131.9L295.1,131.5L296,131.1L297,130.7L297.9,130.3L298.8,129.8L299.7,129.4L300.6,129L301.5,128.5L302.4,128.1L303.3,127.6L304.2,127.2L305.1,126.8L306,126.3L306.9,125.9L307.8,125.4L308.7,125L309.6,124.5L310.5,124.1L311.4,123.6L312.3,123.1L313.2,122.7L314.1,122.2L315,121.7L316,121.3L316.9,120.8L317.8,120.3L318.7,119.9L319.6,119.4L320.5,118.9L321.4,118.4L322.3,117.9L323.2,117.4L324.1,117L325,116.5L325.9,116L326.8,115.5L327.7,115L328.6,114.5L329.5,114L330.4,113.5L331.3,112.9L332.2,112.4L333.1,111.9L334,111.4L335,110.9L335.9,110.4L336.8,109.8L337.7,109.3L338.6,108.8L339.5,108.3L340.4,107.7L341.3,107.2L342.2,106.6L343.1,106.1L344,105.6L344.9,105L345.8,104.5L346.7,103.9L347.6,103.4L348.5,102.8L349.4,102.2L350.3,101.7L351.2,101.1L352.1,100.5L353,100L354,99.4L354.9,98.8L355.8,98.2L356.7,97.7L357.6,97.1L358.5,96.5L359.4,95.9L360.3,95.3L361.2,94.7L362.1,94.1L363,93.5L363.9,92.9L364.8,92.3L365.7,91.7L366.6,91.1L367.5,90.5L368.4,89.8L369.3,89.2L370.2,88.6L371.1,88L372,87.3L373,86.7L373.9,86.1L374.8,85.4L375.7,84.8L376.6,84.1L377.5,83.5L378.4,82.8L379.3,82.2L380.2,81.5L381.1,80.9L382,80.2L382.9,79.5L383.8,78.9L384.7,78.2L385.6,77.5L386.5,76.8L387.4,76.1L388.3,75.5L389.2,74.8L390.1,74.1L391,73.4L392,72.7L392.9,72L393.8,71.3L394.7,70.6L395.6,69.8L396.5,69.1L397.4,68.4L398.3,67.7L399.2,67L400.1,66.2L401,65.5L401.9,64.8"/>
+<circle class="s-tocka" cx="401.9" cy="150.8" r="4.5"/>
+<text class="s-txt-k3" x="397.9" y="186.8" text-anchor="end">navadno: 3000 €</text>
+<circle class="s-tocka" cx="401.9" cy="64.8" r="4.5"/>
+<text class="s-txt-k1" x="393.9" y="62.8" text-anchor="end">obrestno: 6727,50 €</text>
+</svg>
+<figcaption>Glavnica 1000 € pri 10 % letno: navadno obrestovanje raste linearno, obrestno (obresti se obrestujejo) eksponentno.</figcaption>
+</figure>
+            <h4>Kapitalizacija večkrat na leto</h4>
+            <p>Če obresti pripisujemo \(m\)-krat na leto, potrebujemo obrestno mero za eno obdobje:</p>
+            <ul>
+              <li><strong>relativna</strong> obrestna mera \(\frac{p}{m}\) (daje več kot letna kapitalizacija),</li>
+              <li><strong>konformna</strong> obrestna mera z \(r_k = \sqrt[m]{r}\) (daje enako kot letna kapitalizacija).</li>
+            </ul>
+            <h4>Načelo ekvivalence glavnic</h4>
+            <p>Zneske iz različnih trenutkov lahko primerjamo ali seštevamo šele, ko jih preračunamo na isti trenutek: naprej z množenjem z \(r^n\), nazaj (diskontiranje) z deljenjem z \(r^n\).</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-8">
+              <h4>Tip 8: Navadno in obrestno obrestovanje</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>5000 € vložimo za 4 leta po letni obrestni meri 3 %. Koliko imamo na koncu pri navadnem in koliko pri obrestnem obrestovanju z letno kapitalizacijo?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> glavnica, obrestna mera, čas.</p><ul class="kljucne"><li>„navadno obrestovanje“</li><li>„obrestno obrestovanje“</li><li>„v koliko letih se podvoji“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Zapiši podatke.</p><div class="na-nalogi"><p>\(G_0 = 5000\), \(p = 3\), \(n = 4\), \(r = 1{,}03\).</p></div></li>
+              <li><p class="korak">Navadno: \(G = G_0\left(1 + \frac{pt}{100}\right)\).</p><div class="na-nalogi"><p>\(5000 \cdot 1{,}12 = 5600\) €.</p></div></li>
+              <li><p class="korak">Obrestno: \(G_n = G_0 r^n\).</p><div class="na-nalogi"><p>\(5000 \cdot 1{,}03^4 = 5627{,}54\) €.</p></div></li>
+              <li><p class="korak">Odgovori (in primerjaj).</p><div class="na-nalogi"><p>Obrestno obrestovanje da 27,54 € več.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> V koliko letih se glavnica podvoji pri 5 %?</p><p>\(1{,}05^n = 2\), \(n = \frac{\ln 2}{\ln 1{,}05} \approx 14{,}2\): po 15 letih.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Pri kateri obrestni meri 2000 € v 5 letih naraste na 2500 €?</p><p>\(r = \sqrt[5]{1{,}25} \approx 1{,}0456\): \(p \approx 4{,}56\) %.</p></div>
+            </div>
+            <div class="tip-naloge" id="tip-9">
+              <h4>Tip 9: Relativna in konformna obrestna mera</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>3000 € naložimo za 2 leti po letni obrestni meri 6 % z mesečno kapitalizacijo. Koliko imamo na koncu, če banka uporablja relativno, in koliko, če uporablja konformno obrestno mero?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> obresti se pripisujejo pogosteje kot enkrat na leto.</p><ul class="kljucne"><li>„mesečna“, „četrtletna kapitalizacija“</li><li>„relativna“, „konformna obrestna mera“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Določi število obdobij v letu \(m\) in skupno število obdobij.</p><div class="na-nalogi"><p>\(m = 12\), skupaj \(24\) obdobij.</p></div></li>
+              <li><p class="korak">Relativna: \(r_r = 1 + \frac{p}{100m}\).</p><div class="na-nalogi"><p>\(r_r = 1{,}005\): \(3000 \cdot 1{,}005^{24} = 3381{,}48\) €.</p></div></li>
+              <li><p class="korak">Konformna: \(r_k = \sqrt[m]{r}\).</p><div class="na-nalogi"><p>\(r_k = \sqrt[12]{1{,}06}\): \(3000 \cdot r_k^{24} = 3000 \cdot 1{,}06^2 = 3370{,}80\) €.</p></div></li>
+              <li><p class="korak">Odgovori.</p><div class="na-nalogi"><p>Relativna obrestna mera da 10,68 € več.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Mesečna konformna obrestna mera za letnih 12 %.</p><p>\(\sqrt[12]{1{,}12} \approx 1{,}009489\): približno 0,949 %.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> 1000 € za 3 leta po 4 % s četrtletno relativno kapitalizacijo.</p><p>\(1000 \cdot 1{,}01^{12} = 1126{,}83\) €.</p></div>
+            </div>
+            <div class="tip-naloge" id="tip-10">
+              <h4>Tip 10: Načelo ekvivalence glavnic</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Dolg bi morali poravnati z 2000 € čez eno leto in s 3000 € čez tri leta. Koliko bi plačali danes v enem znesku, če je letna obrestna mera 4 %?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> zneski iz različnih trenutkov, ki jih je treba primerjati ali zamenjati z enim zneskom.</p><ul class="kljucne"><li>„ekvivalentni znesek“</li><li>„koliko je to vredno danes“</li><li>„stanje na računu po vplačilih“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Izberi primerjalni trenutek.</p><div class="na-nalogi"><p>Danes.</p></div></li>
+              <li><p class="korak">Vsak znesek preračunaj na ta trenutek (\(G_0 = \frac{G}{r^n}\)).</p><div class="na-nalogi"><p>\(\frac{2000}{1{,}04} = 1923{,}08\), \(\frac{3000}{1{,}04^3} = 2666{,}99\).</p></div></li>
+              <li><p class="korak">Seštej.</p><div class="na-nalogi"><p>\(1923{,}08 + 2666{,}99 = 4590{,}07\).</p></div></li>
+              <li><p class="korak">Odgovori.</p><div class="na-nalogi"><p>Danes bi plačali 4590,07 €.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Na začetku vsakega od treh let vplačamo 500 € po 3 %. Stanje na koncu 3. leta?</p><p>\(500(1{,}03^3 + 1{,}03^2 + 1{,}03) = 500 \cdot 1{,}03 \cdot \frac{1{,}03^3 - 1}{0{,}03} = 1591{,}82\) €.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Kaj je danes vredno 1000 € čez 2 leti in 1000 € čez 3 leta pri 5 %?</p><p>\(907{,}03 + 863{,}84 = 1770{,}87\) €.</p></div>
+            </div>
+          </div>
+        </section>
+
+        <section class="subsection" id="kljuc">
+          <div class="subsection-head">
+            <h2>Ključ: kateri tip naloge je to?</h2>
+            <p>Poišči besedo iz navodila naloge in skoči na pravi postopek.</p>
+          </div>
+          <div class="info-card">
+            <div class="tabela-wrap">
+              <table class="tabela">
+                <thead><tr><th>V besedilu naloge piše …</th><th>Tip</th></tr></thead>
+                <tbody>
+                  <tr><td>„zapišite prve člene“, „kateri člen je enak“</td><td><a href="#tip-1">Tip 1</a></td></tr>
+                  <tr><td>„zapišite splošni člen“, „nadaljujte zaporedje“</td><td><a href="#tip-2">Tip 2</a></td></tr>
+                  <tr><td>„naraščajoče“, „omejeno“</td><td><a href="#tip-3">Tip 3</a></td></tr>
+                  <tr><td>„aritmetično zaporedje“, „razlika“</td><td><a href="#tip-4">Tip 4</a></td></tr>
+                  <tr><td>„geometrijsko zaporedje“, „količnik“</td><td><a href="#tip-5">Tip 5</a></td></tr>
+                  <tr><td>„vsota prvih n členov“ s stalno razliko</td><td><a href="#tip-6">Tip 6</a></td></tr>
+                  <tr><td>„vsota prvih n členov“ s stalnim količnikom</td><td><a href="#tip-7">Tip 7</a></td></tr>
+                  <tr><td>„navadno“, „obrestno obrestovanje“</td><td><a href="#tip-8">Tip 8</a></td></tr>
+                  <tr><td>„mesečna kapitalizacija“, „konformna“</td><td><a href="#tip-9">Tip 9</a></td></tr>
+                  <tr><td>zneski ob različnih časih, „vrednost danes“</td><td><a href="#tip-10">Tip 10</a></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>Pogoste napake</h2>
+          </div>
+          <div class="info-card">
+            <ul>
+              <li>Splošni člen \(a_n = a_1 + nd\) namesto \(a_1 + (n - 1)d\).</li>
+              <li>Pri obrestovanju vzameš \(q = p\) namesto \(q = 1 + \frac{p}{100}\).</li>
+              <li>Vsoto geometrijskega zaporedja računaš s formulo za aritmetično.</li>
+              <li>Pri omejenosti zaporedja navedeš le eno mejo.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>Vadi naprej</h2>
+            <p>Ko predelaš razlago, preveri znanje z nalogami.</p>
+          </div>
+          <div class="link-list">
+            <a class="link-item" href="/views/poklicna_matematika/naloge/naloge.html?snov=zaporedja_pm">
+              <span class="link-item-text">
+                <strong>Naloge za vajo</strong>
+                <small>Naloge iz tega poglavja z rešitvami in postopki</small>
+              </span>
+              <span class="arrow">→</span>
+            </a>
+            <a class="link-item" href="/views/poklicna_matematika/matura/po_snovi/naloge.html?poglavje=zaporedja_pm">
+              <span class="link-item-text">
+                <strong>Maturitetne naloge iz te snovi</strong>
+                <small>Naloge iz pol poklicne mature</small>
+              </span>
+              <span class="arrow">→</span>
+            </a>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+
+  <script src="/components/components.js"></script>
+</body>
+</html>

@@ -8,8 +8,8 @@ import Napredek from "../models/napredek.js";
 
 const javne = javneResenePole(matura);
 
-// Vrstni red: novejša leta najprej, v letu predmaturitetni preizkus, nato spomladanski in jesenski rok
-const ROKI = ["predmaturitetni", "spomladanski", "jesenski"];
+// Vrstni red: novejša leta najprej, v letu predmaturitetni preizkus, nato spomladanski, jesenski in zimski rok (poklicna matura)
+const ROKI = ["predmaturitetni", "spomladanski", "jesenski", "zimski"];
 const poVrsti = (a, b) => b.leto - a.leto || ROKI.indexOf(a.rok) - ROKI.indexOf(b.rok);
 const razvrscene = [...matura].sort(poVrsti);
 

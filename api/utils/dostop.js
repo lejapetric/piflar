@@ -11,7 +11,7 @@
 
 export const PREDMETI = ["matematika", "fizika", "anglescina", "slovenscina"];
 export const PAKETI = ["brezplacno", "osnovni", "premium"];
-export const PAKET_OSNOVNI = ["matematika", "anglescina", "slovenscina"];
+export const PAKET_OSNOVNI = ["matematika", "anglescina", "slovenscina", "poklicna_matematika", "poklicna_slovenscina"];
 
 function paketVeljaven(uporabnik, zdaj) {
   return !uporabnik.paketVelja || new Date(uporabnik.paketVelja) >= zdaj;
@@ -26,7 +26,7 @@ export function imaPolniDostop(uporabnik, predmet, zdaj = new Date()) {
 }
 
 const jeResena = (pola) => (pola.naloge ?? []).some((n) => n.razlaga);
-const ROK_RED = { predmaturitetni: -1, spomladanski: 0, jesenski: 1 };
+const ROK_RED = { predmaturitetni: -1, spomladanski: 0, jesenski: 1, zimski: 2 };
 const vrstniRed = (pola) => pola.leto * 10 + (ROK_RED[pola.rok] ?? 0);
 
 // Id-ji rešenih pol, ki so javne: najnovejši rešeni rok za vsak predmet + raven

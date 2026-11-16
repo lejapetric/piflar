@@ -483,6 +483,17 @@ mjx-container[display="true"] {
     grid-column: 1 / -1;
 }
 
+/* seznam ciljev iz kataloga (poklicna matura) */
+.matura-formule > ul {
+    margin: 0 0 var(--space-4) 0;
+    padding-left: 1.4em;
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+.matura-formule > ul li + li {
+    margin-top: 4px;
+}
+
 /* Dvostolpčna postavitev */
 .matura-grid {
     display: grid;

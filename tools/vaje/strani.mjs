@@ -14,7 +14,9 @@ for (const s of snovi) {
   if (!imaRazlago && !existsSync(new URL(`tools/vaje/${s.predmet}/${s.slug}.mjs`, koren))) continue;
   const glavna = new URL(`public/views/${s.predmet}/${s.predmet}.html`, koren);
   const html = imaRazlago ? readFileSync(razlaga, "utf8") : "";
-  const predmet = (html.match(/<span class="page-eyebrow">([^·<]+)/)?.[1] ?? (existsSync(glavna) ? readFileSync(glavna, "utf8").match(/<title>([^|<]+)/)?.[1] : null) ?? s.predmet).trim();
+  // poklicna matura: »Poklicna matura · Matematika« (eyebrow razlage ima ime predmeta na drugem mestu)
+  const pm = s.predmet.startsWith("poklicna_") ? html.match(/<span class="page-eyebrow">(Poklicna matura · [^·<]+)/)?.[1] : null;
+  const predmet = (pm ?? html.match(/<span class="page-eyebrow">([^·<]+)/)?.[1] ?? (existsSync(glavna) ? readFileSync(glavna, "utf8").match(/<title>([^|<]+)/)?.[1] : null) ?? s.predmet).trim();
   mkdirSync(new URL(mapa, koren), { recursive: true });
   const naslov = esc(s.naslov);
   const stran = `<!DOCTYPE html>
@@ -22,7 +24,7 @@ for (const s of snovi) {
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>${naslov}: naloge za vajo | Piflar.si</title>
+  <title>${naslov}: naloge za vajo | Učilnica.com</title>
   <meta name="description" content="${esc(`${predmet}, ${s.naslov.toLowerCase()}: naloge za vajo od lahkih do zelo težkih, z rezultati in postopki.`)}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -57,7 +59,7 @@ for (const s of snovi) {
           <p>
             ${imaRazlago ? `<strong>Nasvet:</strong> Najprej predelaj
             <a href="/views/${s.predmet}/snov/${s.slug}/${s.slug}_razlaga.html">razlago snovi</a>,
-            nato rešuj naloge brez pogledovanja v postopek.` : `<strong>Nasvet:</strong> Razlaga te snovi je še v pripravi. Rešuj naloge brez pogledovanja v postopek; ob vsaki napaki preberi postopek in nalogo reši še enkrat.`} Naloge z oznako Višja raven so za višjo raven mature.
+            nato rešuj naloge brez pogledovanja v postopek.` : `<strong>Nasvet:</strong> Razlaga te snovi je še v pripravi. Rešuj naloge brez pogledovanja v postopek; ob vsaki napaki preberi postopek in nalogo reši še enkrat.`}${s.predmet.startsWith("poklicna_") ? "" : " Naloge z oznako Višja raven so za višjo raven mature."}
           </p>
         </div>
 

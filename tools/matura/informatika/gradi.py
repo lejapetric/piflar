@@ -408,7 +408,7 @@ def naloga(st, n):
     }
 
 
-VIR = ("Vadbena pola Piflar.si. Zgradba, vrsta nalog in točkovanje sledijo uradni poli splošne mature "
+VIR = ("Vadbena pola Učilnica.com. Zgradba, vrsta nalog in točkovanje sledijo uradni poli splošne mature "
        "({opis}), besedila, podatki in programi pa so naši. Uradne pole izdaja Državni izpitni center (RIC), "
        "ki ima nanje vse avtorske pravice.")
 PRIPOMOCKI = "Dovoljeno je računalo."
@@ -433,7 +433,7 @@ def zgradi(pot):
         assert vsota == tock, f"{pot}: pola {st} ima {vsota} točk namesto {tock}"
         pole.append({
             "id": f"informatika-{leto}-{rok}{pripona}-{st}", **skupno, "stevilka": st,
-            "naslov": f"Informatika, {opis_roka}, izpitna pola {st} (vadbena pola Piflar.si)",
+            "naslov": f"Informatika, {opis_roka}, izpitna pola {st} (vadbena pola Učilnica.com)",
             "navodilo": f"90 minut, {opis}, {tock} točk. {PRIPOMOCKI}",
             "vir": VIR.format(opis=f"{opis_roka}, izpitna pola {st}"),
             "naloge": izdelane,

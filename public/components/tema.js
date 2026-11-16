@@ -29,6 +29,37 @@
   );
 })();
 
+// Splošna ali poklicna matura: na straneh predmeta velja matura predmeta
+// (poklicna_<predmet>), drugje zadnja izbira (stikalo v meniju, glavi in na
+// naslovnici), privzeto splošna. Predmeti poklicne mature imajo videz
+// osnovnega predmeta (data-predmet), pot pa je /views/poklicna_<predmet>/
+// (data-slug).
+(function () {
+  var html = document.documentElement;
+  var pm = location.pathname.match(/^\/views\/poklicna_([a-z_]+)\//);
+  var matura = null;
+  if (pm) {
+    matura = "poklicna";
+    html.dataset.slug = "poklicna_" + pm[1];
+    if (!html.dataset.predmet) {
+      html.dataset.predmet = pm[1];
+      document.write(
+        '<link rel="stylesheet" href="/style/predmeti/osnova.css">' +
+          '<link rel="stylesheet" href="/style/predmeti/' + pm[1] + '.css">'
+      );
+    }
+  } else if (/^\/views\/[a-z_]+\//.test(location.pathname)) {
+    matura = "splosna";
+  }
+  try {
+    if (matura) localStorage.setItem("ucilnica-matura", matura);
+    else matura = localStorage.getItem("ucilnica-matura");
+  } catch (e) {
+    /* zasebno okno */
+  }
+  html.dataset.matura = matura === "poklicna" ? "poklicna" : "splosna";
+})();
+
 // Videz »Tabla in polica« (preizkus): privzeto vklopljen. Primerjava s
 // starim videzom: ?videz=osnovni (izbira se zapomni), nazaj z ?videz=tabla.
 (function () {

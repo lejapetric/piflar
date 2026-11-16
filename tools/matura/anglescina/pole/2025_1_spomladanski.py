@@ -60,7 +60,7 @@ Then, in August, Mr Lewandowski fell ill a week before the town show, and Granda
 
 Grandad has been gone for four years now. I still rent Plot 47. The shed door still says "Never plant mint in the open ground." Underneath, in my own white paint, I have added: "Turn the compost on Sundays."
 
-(Vadbeno besedilo Piflar.si)""", [
+(Vadbeno besedilo Učilnica.com)""", [
             ("How much did the plot cost per year?", "Twelve pounds.", "»rented from the town council for twelve pounds a year«."),
             ("Who had the plot before the grandfather?", "A retired bus driver.", "»from a retired bus driver«."),
             ("What does mint do if it is planted in the open ground?", "It spreads underground.", "»Mint … spreads underground like a rumour.« Primerjava pomeni, da se nenadzorovano širi."),
@@ -104,7 +104,7 @@ Scientists are still trying to understand why orcas started hunting sharks in th
 
 What is clear is that the ocean's "top predator" is not always the animal we think it is. "We tend to imagine the great white _12_ the king of the sea," says the biologist. "But in nature there is _13_ anything as a permanent king. Even sharks have bad days." Studies like these remind us how _14_ we still know about life under the waves, and how quickly the balance of an ecosystem can change when just one species changes _15_ behaviour.
 
-(Vadbeno besedilo Piflar.si)""", [
+(Vadbeno besedilo Učilnica.com)""", [
             ("the", "primer"),
             ("to", "be desperate to + nedoločnik."),
             ("while / when / by", "while/when + -ing: med sledenjem; by tracking = s sledenjem."),
@@ -139,7 +139,7 @@ Finally, we would love to hear your opinion. After your visit, you will receive 
 
 If you have any further questions, please do not _13_ (HESITATION) to contact us. We look forward to welcoming you and hope that your evening will be truly _14_ (FORGET) – in the best possible sense. With our _15_ (WARM) regards, the team at The Old Mill.
 
-(Vadbeno besedilo Piflar.si)""", [
+(Vadbeno besedilo Učilnica.com)""", [
             ("fully", "primer"),
             ("availability", "the + samostalnik + of: available → availability."),
             ("necessary", "Pridevnik pred arrangements: necessity → necessary."),
@@ -230,7 +230,7 @@ What troubled him most was not that the world had changed, but that it had manag
 "You might have waited," he said to her.
 "I did," said Martha. "For about a week."
 
-(Vadbeno besedilo Piflar.si)""", [
+(Vadbeno besedilo Učilnica.com)""", [
             ("Why did Tobias go into the woods?", "To look for a lost goat.", "»gone into the woods to look for a lost goat«."),
             ("How was Tobias transported home?", "On a door.", "»They carried him home on a door«."),
             ("What treatment did the doctor recommend?", "Fresh air and patience.", "»He prescribed fresh air and patience«."),
@@ -262,7 +262,7 @@ Today, critics often read Victorian novels by women as early feminist texts. [7]
 
 What unites them is perhaps less a political programme than a determination to be taken seriously. [8] It is a demand that still sounds familiar today. And their books, unlike many written by the famous men who reviewed them, are still read in classrooms around the world. [9]
 
-(Vadbeno besedilo Piflar.si)""", {
+(Vadbeno besedilo Učilnica.com)""", {
             "A": "This interpretation is not entirely wrong, but it can be misleading.",
             "B": "In other words, they insisted that a story about a governess could be as important as a story about a general.",
             "C": "Even the best-selling ones were often paid far less than their male colleagues.",
@@ -301,7 +301,7 @@ The museum is now asking members of the public to check their attics. Many album
 
 For Dr Pryce, the project is also about giving credit to people _14_ contributions were ignored. "Every page," he says, "is a small letter from the past. We are only now learning how _15_ read them."
 
-(Vadbeno besedilo Piflar.si)""", [
+(Vadbeno besedilo Učilnica.com)""", [
             ("as", "primer"),
             ("by", "Povzročitelj v trpniku: collected by Victorian women."),
             ("who", "Oziralni zaimek za osebe."),
@@ -334,7 +334,7 @@ Not everyone is convinced. Some scientists warn that the brain _12_ (MAY / NOT /
 
 The team agrees that their work is only a beginning. "By the end of this decade," the lead researcher predicts, "we _14_ (SCAN) dozens of dinosaur skulls, and the idea of the stupid dinosaur _15_ (DISAPPEAR) for good."
 
-(Vadbeno besedilo Piflar.si)""", [
+(Vadbeno besedilo Učilnica.com)""", [
             ("have imagined", "primer"),
             ("thought / had thought", "Primerjava s preteklim mnenjem: than we thought."),
             ("have recently created / recently created", "Nedavno dejanje z učinkom v sedanjosti: present perfect (ali past simple)."),

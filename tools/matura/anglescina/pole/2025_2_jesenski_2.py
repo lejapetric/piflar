@@ -63,7 +63,7 @@ The film does not ask us to feel sorry for the father. He made a terrible mistak
 
 The ending, when the father is finally released, is shown without music. He walks out of the gate, looks at two grown men he hardly recognises, and asks if he can hold the camera. It is one of the most powerful final scenes I have seen in years.
 
-(Vadbeno besedilo Piflar.si)""", [
+(Vadbeno besedilo Učilnica.com)""", [
             ("What was the husband's crime?", "(Taking part in) a robbery.", "»for his part in a robbery«."),
             ("Why did Denise start recording videos?", "So her husband wouldn't miss his sons growing up.", "»so that he would not miss his sons growing up«."),
             ("How many tapes did Denise record?", "More than three hundred.", "»more than three hundred tapes«."),
@@ -91,7 +91,7 @@ The scientists accept that the criticism is fair. But they believe the technique
 
 For the keepers in Kenya, the work is more personal. Every day they walk with Najin and Fatu, feed them carrots and talk to them, [11]. "They are not a scientific project to us," says one of them. "They are family."
 
-(Vadbeno besedilo Piflar.si)""", {
+(Vadbeno besedilo Učilnica.com)""", {
             "A": "where they are guarded day and night by armed rangers",
             "B": "which can live for up to fifty years",
             "C": "although there is no scientific evidence for this",
@@ -132,7 +132,7 @@ Not everyone is convinced. Some experts argue _10_ singling out one fruit is unf
 
 What most people agree on is that consumers should think more about _12_ their food comes from. Buying fruit that is in season and grown closer to home is _13_ of the simplest ways to reduce our impact. "Nobody is saying you can _14_ eat another avocado," says the chef. "Just eat them less often – and enjoy them more _15_ you do."
 
-(Vadbeno besedilo Piflar.si)""", [
+(Vadbeno besedilo Učilnica.com)""", [
             ("as", "primer"),
             ("too", "too + pridevnik: preveč drag za planet."),
             ("most / many / much", "Količinski zaimek: most of the world's avocados."),
@@ -163,7 +163,7 @@ Rising fees are another challenge. If prices _12_ (CONTINUE) to rise at the curr
 
 Will boarding schools survive? Most head teachers are optimistic. "Parents _14_ (ALWAYS / LOOK) for an education that gives their children independence," says one. "If we hadn't changed, we _15_ (DISAPPEAR) long ago. But we have, and that is why we are still here."
 
-(Vadbeno besedilo Piflar.si)""", [
+(Vadbeno besedilo Učilnica.com)""", [
             ("to be taken", "primer"),
             ("were sent", "Trpnik v pretekliku: pupils were sent."),
             ("offer", "Sedanja splošna resnica: present simple, množina."),
@@ -259,7 +259,7 @@ At last she rose and opened the door. There was a feverish triumph in her eyes, 
 
 When the doctors came, they said she had died of heart disease – of joy that kills.
 
-(Vadbeno besedilo Piflar.si, po motivih kratke zgodbe Kate Chopin)""", [
+(Vadbeno besedilo Učilnica.com, po motivih kratke zgodbe Kate Chopin)""", [
             ("The person who broke the news to Mrs Hale was ___.", "her sister (Clara)", "»It was her sister Clara who did it«."),
             ("Robert had learned about the accident at ___.", "the newspaper office", "»He had been at the newspaper office when the telegram arrived«."),
             ("Unlike many women, Mrs Hale reacted to the news by ___.", "weeping at once", "»She wept at once, suddenly and wildly«."),
@@ -291,7 +291,7 @@ Supporters of tighter regulation reply that this is precisely why rules are need
 
 Perhaps the real lesson is that politicians need to understand the platforms they want to control. [8] Until they do, they risk making decisions that a billion users will simply ignore. [9]
 
-(Vadbeno besedilo Piflar.si)""", {
+(Vadbeno besedilo Učilnica.com)""", {
             "A": "Both are serious concerns that deserve attention.",
             "B": "Instead, it shows each user videos it predicts they will enjoy, from anyone at all.",
             "C": "Surveys suggest that they are often more sceptical than their parents.",
@@ -332,7 +332,7 @@ In recent years, a new English translation of the novel _10_ appeared, restoring
 
 Perhaps _13_ is why the story still matters. Behind the cartoon, there is a warning about what happens when one group is hunted by _14_. It is a warning that Salten learned from _15_ own experience.
 
-(Vadbeno besedilo Piflar.si)""", [
+(Vadbeno besedilo Učilnica.com)""", [
             ("that", "primer"),
             ("that / which", "Oziralni zaimek za story."),
             ("who", "Oziralni zaimek za osebe: people who faced persecution."),
@@ -365,7 +365,7 @@ The government, meanwhile, has introduced new rules. Since 2018, most foreign bu
 
 Perhaps the real lesson is about our _13_ (FASCINATE) with escape. Instead of planning how to survive the end of the world, argue the critics, the super-rich would do better to use their wealth to make it less _14_ (LIKE). As one columnist put it: "There is no safe haven from a disaster you helped to create." It is an _15_ (COMFORT) thought, but a necessary one.
 
-(Vadbeno besedilo Piflar.si)""", [
+(Vadbeno besedilo Učilnica.com)""", [
             ("wealthiest", "primer"),
             ("catastrophe", "a global + samostalnik: catastrophic → catastrophe."),
             ("breakdown", "a + samostalnik: break → breakdown (sestavljenka)."),

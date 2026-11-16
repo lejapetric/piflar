@@ -68,7 +68,7 @@ async function prikaziRezultate() {
     return;
   }
   naslov.textContent = `Rezultati za »${q}«`;
-  document.title = `${q} — iskanje | Piflar.si`;
+  document.title = `${q} — iskanje | Učilnica.com`;
 
   try {
     const res = await fetch(`/api/iskanje?q=${encodeURIComponent(q)}`);

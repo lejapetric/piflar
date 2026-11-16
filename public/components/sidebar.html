@@ -1,8 +1,9 @@
 <!-- public/components/sidebar.html -->
 <div class="sidebar-header">
-  <a href="/" class="sidebar-logo">
-    <span class="header-brand-text">Piflar<span class="header-brand-dot">.</span>si</span>
-  </a>
+  <div class="matura-stikalo matura-stikalo--meni" role="radiogroup" aria-label="Vrsta mature">
+    <button type="button" role="radio" data-izberi="splosna" aria-checked="true">Splošna<span class="ms-dolgo"> matura</span></button>
+    <button type="button" role="radio" data-izberi="poklicna" aria-checked="false" tabindex="-1">Poklicna<span class="ms-dolgo"> matura</span></button>
+  </div>
   <button id="closeSidebar" class="close-btn" aria-label="Zapri meni">
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
       <line x1="18" y1="6" x2="6" y2="18"></line>
@@ -12,6 +13,7 @@
 </div>
 
 <nav class="sidebar-nav">
+<div class="nav-matura" data-matura-del="splosna">
 
   <!-- ============================================== -->
   <!-- MATEMATIKA                                      -->
@@ -1944,5 +1946,337 @@
   </div> <!-- /.nav-group (Umetnostna zgodovina) -->
 
   <!-- /NOVI PREDMETI -->
+
+</div> <!-- /splošna matura -->
+
+<div class="nav-matura" data-matura-del="poklicna">
+  <!-- POKLICNA MATURA -->
+
+  <div class="nav-group">
+    <div class="nav-group-header">
+      <a href="/views/poklicna_slovenscina/poklicna_slovenscina.html" class="nav-group-title">
+        <span class="label">Slovenščina</span>
+      </a>
+      <button class="dropdown-toggle" data-target="poklicna_slovenscina-sub" aria-label="Razširi: slovenščina">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      </button>
+    </div>
+
+    <div class="nav-sub" id="poklicna_slovenscina-sub">
+      <div class="nav-sub-group">
+        <div class="nav-sub-header">
+          <a href="/views/poklicna_slovenscina/snov/snov.html" class="label">Snov</a>
+          <button class="dropdown-toggle" data-target="poklicna_slovenscina-snov" aria-label="Razširi snov"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
+        </div>
+        <div class="nav-sub-list" id="poklicna_slovenscina-snov">
+          <a href="/views/poklicna_slovenscina/snov/izpit_pm_slovenscina/izpit_pm_slovenscina_razlaga.html">Izpit iz slovenščine na poklicni maturi</a>
+          <a href="/views/poklicna_slovenscina/snov/razclemba_besedila/razclemba_besedila_razlaga.html">Razčlemba neumetnostnega besedila</a>
+          <a href="/views/poklicna_slovenscina/snov/publicisticna_strokovna/publicisticna_strokovna_razlaga.html">Publicistična in strokovna besedila</a>
+          <a href="/views/poklicna_slovenscina/snov/uradna_javna_besedila/uradna_javna_besedila_razlaga.html">Uradni dopisi in javna besedila</a>
+          <a href="/views/poklicna_slovenscina/snov/tvorba_besedila/tvorba_besedila_razlaga.html">Tvorba krajšega neumetnostnega besedila</a>
+          <a href="/views/poklicna_slovenscina/snov/besedje_pm/besedje_pm_razlaga.html">Besedje in poimenovalna zmožnost</a>
+          <a href="/views/poklicna_slovenscina/snov/skladnja_pm/skladnja_pm_razlaga.html">Skladnja in povedi</a>
+          <a href="/views/poklicna_slovenscina/snov/pravopis_slog_pm/pravopis_slog_pm_razlaga.html">Pravopis, pravorečje in slog</a>
+          <a href="/views/poklicna_slovenscina/snov/jezik_v_druzbi/jezik_v_druzbi_razlaga.html">Slovenščina v družbi in skozi čas</a>
+          <a href="/views/poklicna_slovenscina/snov/interpretacija_pm/interpretacija_pm_razlaga.html">Interpretacija umetnostnega besedila</a>
+          <a href="/views/poklicna_slovenscina/snov/knjizevnost_do_razsvetljenstva/knjizevnost_do_razsvetljenstva_razlaga.html">Od starega Orienta do razsvetljenstva</a>
+          <a href="/views/poklicna_slovenscina/snov/romantika_realizem_pm/romantika_realizem_pm_razlaga.html">Romantika in realizem</a>
+          <a href="/views/poklicna_slovenscina/snov/moderna_pm/moderna_pm_razlaga.html">Moderna</a>
+          <a href="/views/poklicna_slovenscina/snov/knjizevnost_prva_polovica/knjizevnost_prva_polovica_razlaga.html">Prva polovica 20. stoletja</a>
+          <a href="/views/poklicna_slovenscina/snov/knjizevnost_druga_polovica/knjizevnost_druga_polovica_razlaga.html">Druga polovica 20. stoletja in sodobnost</a>
+        </div>
+      </div>
+
+      <div class="nav-sub-group">
+        <div class="nav-sub-header">
+          <a href="/views/poklicna_slovenscina/naloge/naloge.html" class="label">Naloge</a>
+          <button class="dropdown-toggle" data-target="poklicna_slovenscina-naloge" aria-label="Razširi naloge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
+        </div>
+        <div class="nav-sub-list" id="poklicna_slovenscina-naloge">
+          <a href="/views/poklicna_slovenscina/naloge/naloge.html?snov=izpit_pm_slovenscina">Izpit iz slovenščine na poklicni maturi</a>
+          <a href="/views/poklicna_slovenscina/naloge/naloge.html?snov=razclemba_besedila">Razčlemba neumetnostnega besedila</a>
+          <a href="/views/poklicna_slovenscina/naloge/naloge.html?snov=publicisticna_strokovna">Publicistična in strokovna besedila</a>
+          <a href="/views/poklicna_slovenscina/naloge/naloge.html?snov=uradna_javna_besedila">Uradni dopisi in javna besedila</a>
+          <a href="/views/poklicna_slovenscina/naloge/naloge.html?snov=tvorba_besedila">Tvorba krajšega neumetnostnega besedila</a>
+          <a href="/views/poklicna_slovenscina/naloge/naloge.html?snov=besedje_pm">Besedje in poimenovalna zmožnost</a>
+          <a href="/views/poklicna_slovenscina/naloge/naloge.html?snov=skladnja_pm">Skladnja in povedi</a>
+          <a href="/views/poklicna_slovenscina/naloge/naloge.html?snov=pravopis_slog_pm">Pravopis, pravorečje in slog</a>
+          <a href="/views/poklicna_slovenscina/naloge/naloge.html?snov=jezik_v_druzbi">Slovenščina v družbi in skozi čas</a>
+          <a href="/views/poklicna_slovenscina/naloge/naloge.html?snov=interpretacija_pm">Interpretacija umetnostnega besedila</a>
+          <a href="/views/poklicna_slovenscina/naloge/naloge.html?snov=knjizevnost_do_razsvetljenstva">Od starega Orienta do razsvetljenstva</a>
+          <a href="/views/poklicna_slovenscina/naloge/naloge.html?snov=romantika_realizem_pm">Romantika in realizem</a>
+          <a href="/views/poklicna_slovenscina/naloge/naloge.html?snov=moderna_pm">Moderna</a>
+          <a href="/views/poklicna_slovenscina/naloge/naloge.html?snov=knjizevnost_prva_polovica">Prva polovica 20. stoletja</a>
+          <a href="/views/poklicna_slovenscina/naloge/naloge.html?snov=knjizevnost_druga_polovica">Druga polovica 20. stoletja in sodobnost</a>
+        </div>
+      </div>
+
+      <div class="nav-sub-group">
+        <div class="nav-sub-header">
+          <a href="/views/poklicna_slovenscina/matura/matura.html" class="label">Matura</a>
+          <button class="dropdown-toggle" data-target="poklicna_slovenscina-matura" aria-label="Razširi maturo"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
+        </div>
+        <div class="nav-sub" id="poklicna_slovenscina-matura">
+          <div class="nav-sub-sub-group">
+            <div class="nav-sub-sub-header">
+              <a href="/views/poklicna_slovenscina/matura/pole/pole.html" class="label">Maturitetne pole</a>
+              <button class="dropdown-toggle" data-target="poklicna_slovenscina-matura-pole" aria-label="Razširi maturitetne pole"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
+            </div>
+            <div class="nav-sub-sub-list" id="poklicna_slovenscina-matura-pole">
+            </div>
+          </div>
+          <div class="nav-sub-sub-group">
+            <div class="nav-sub-sub-header">
+              <a href="/views/poklicna_slovenscina/matura/po_snovi/po_snovi.html" class="label">Maturitetne naloge po snovi</a>
+              <button class="dropdown-toggle" data-target="poklicna_slovenscina-matura-snov" aria-label="Razširi maturitetne naloge po snovi"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
+            </div>
+            <div class="nav-sub-sub-list" id="poklicna_slovenscina-matura-snov">
+              <a href="/views/poklicna_slovenscina/matura/po_snovi/naloge.html?poglavje=izpit_pm_slovenscina">Izpit iz slovenščine na poklicni maturi</a>
+              <a href="/views/poklicna_slovenscina/matura/po_snovi/naloge.html?poglavje=razclemba_besedila">Razčlemba neumetnostnega besedila</a>
+              <a href="/views/poklicna_slovenscina/matura/po_snovi/naloge.html?poglavje=publicisticna_strokovna">Publicistična in strokovna besedila</a>
+              <a href="/views/poklicna_slovenscina/matura/po_snovi/naloge.html?poglavje=uradna_javna_besedila">Uradni dopisi in javna besedila</a>
+              <a href="/views/poklicna_slovenscina/matura/po_snovi/naloge.html?poglavje=tvorba_besedila">Tvorba krajšega neumetnostnega besedila</a>
+              <a href="/views/poklicna_slovenscina/matura/po_snovi/naloge.html?poglavje=besedje_pm">Besedje in poimenovalna zmožnost</a>
+              <a href="/views/poklicna_slovenscina/matura/po_snovi/naloge.html?poglavje=skladnja_pm">Skladnja in povedi</a>
+              <a href="/views/poklicna_slovenscina/matura/po_snovi/naloge.html?poglavje=pravopis_slog_pm">Pravopis, pravorečje in slog</a>
+              <a href="/views/poklicna_slovenscina/matura/po_snovi/naloge.html?poglavje=jezik_v_druzbi">Slovenščina v družbi in skozi čas</a>
+              <a href="/views/poklicna_slovenscina/matura/po_snovi/naloge.html?poglavje=interpretacija_pm">Interpretacija umetnostnega besedila</a>
+              <a href="/views/poklicna_slovenscina/matura/po_snovi/naloge.html?poglavje=knjizevnost_do_razsvetljenstva">Od starega Orienta do razsvetljenstva</a>
+              <a href="/views/poklicna_slovenscina/matura/po_snovi/naloge.html?poglavje=romantika_realizem_pm">Romantika in realizem</a>
+              <a href="/views/poklicna_slovenscina/matura/po_snovi/naloge.html?poglavje=moderna_pm">Moderna</a>
+              <a href="/views/poklicna_slovenscina/matura/po_snovi/naloge.html?poglavje=knjizevnost_prva_polovica">Prva polovica 20. stoletja</a>
+              <a href="/views/poklicna_slovenscina/matura/po_snovi/naloge.html?poglavje=knjizevnost_druga_polovica">Druga polovica 20. stoletja in sodobnost</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-header">
+      <a href="/views/poklicna_matematika/poklicna_matematika.html" class="nav-group-title">
+        <span class="label">Matematika</span>
+      </a>
+      <button class="dropdown-toggle" data-target="poklicna_matematika-sub" aria-label="Razširi: matematika">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      </button>
+    </div>
+
+    <div class="nav-sub" id="poklicna_matematika-sub">
+      <div class="nav-sub-group">
+        <div class="nav-sub-header">
+          <a href="/views/poklicna_matematika/snov/snov.html" class="label">Snov</a>
+          <button class="dropdown-toggle" data-target="poklicna_matematika-snov" aria-label="Razširi snov"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
+        </div>
+        <div class="nav-sub-list" id="poklicna_matematika-snov">
+          <a href="/views/poklicna_matematika/snov/stevila_deljivost/stevila_deljivost_razlaga.html">Naravna in cela števila, deljivost</a>
+          <a href="/views/poklicna_matematika/snov/izrazi_potence/izrazi_potence_razlaga.html">Potence in algebrski izrazi</a>
+          <a href="/views/poklicna_matematika/snov/ulomki_odstotki/ulomki_odstotki_razlaga.html">Ulomki, razmerja in odstotki</a>
+          <a href="/views/poklicna_matematika/snov/realna_stevila_koreni/realna_stevila_koreni_razlaga.html">Realna števila, koreni in absolutna vrednost</a>
+          <a href="/views/poklicna_matematika/snov/geometrija_ravnine/geometrija_ravnine_razlaga.html">Osnove geometrije v ravnini</a>
+          <a href="/views/poklicna_matematika/snov/trikotnik_kotne/trikotnik_kotne_razlaga.html">Pravokotni trikotnik, sinusni in kosinusni izrek</a>
+          <a href="/views/poklicna_matematika/snov/obsegi_ploscine/obsegi_ploscine_razlaga.html">Obsegi in ploščine likov</a>
+          <a href="/views/poklicna_matematika/snov/povrsine_prostornine/povrsine_prostornine_razlaga.html">Površine in prostornine teles</a>
+          <a href="/views/poklicna_matematika/snov/linearna_funkcija/linearna_funkcija_razlaga.html">Linearna funkcija in linearne enačbe</a>
+          <a href="/views/poklicna_matematika/snov/kvadratna_funkcija/kvadratna_funkcija_razlaga.html">Kvadratna funkcija in kvadratna enačba</a>
+          <a href="/views/poklicna_matematika/snov/polinomi_racionalna/polinomi_racionalna_razlaga.html">Potenčna funkcija, polinomi in racionalna funkcija</a>
+          <a href="/views/poklicna_matematika/snov/eksponentna_logaritemska/eksponentna_logaritemska_razlaga.html">Eksponentna in logaritemska funkcija</a>
+          <a href="/views/poklicna_matematika/snov/kotne_funkcije_pm/kotne_funkcije_pm_razlaga.html">Kotne funkcije</a>
+          <a href="/views/poklicna_matematika/snov/zaporedja_pm/zaporedja_pm_razlaga.html">Zaporedja</a>
+          <a href="/views/poklicna_matematika/snov/statistika_pm/statistika_pm_razlaga.html">Obdelava podatkov</a>
+          <a href="/views/poklicna_matematika/snov/odvod_pm/odvod_pm_razlaga.html">Diferencialni račun</a>
+          <a href="/views/poklicna_matematika/snov/kombinatorika_verjetnost/kombinatorika_verjetnost_razlaga.html">Kombinatorika in verjetnost</a>
+        </div>
+      </div>
+
+      <div class="nav-sub-group">
+        <div class="nav-sub-header">
+          <a href="/views/poklicna_matematika/naloge/naloge.html" class="label">Naloge</a>
+          <button class="dropdown-toggle" data-target="poklicna_matematika-naloge" aria-label="Razširi naloge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
+        </div>
+        <div class="nav-sub-list" id="poklicna_matematika-naloge">
+          <a href="/views/poklicna_matematika/naloge/naloge.html?snov=stevila_deljivost">Naravna in cela števila, deljivost</a>
+          <a href="/views/poklicna_matematika/naloge/naloge.html?snov=izrazi_potence">Potence in algebrski izrazi</a>
+          <a href="/views/poklicna_matematika/naloge/naloge.html?snov=ulomki_odstotki">Ulomki, razmerja in odstotki</a>
+          <a href="/views/poklicna_matematika/naloge/naloge.html?snov=realna_stevila_koreni">Realna števila, koreni in absolutna vrednost</a>
+          <a href="/views/poklicna_matematika/naloge/naloge.html?snov=geometrija_ravnine">Osnove geometrije v ravnini</a>
+          <a href="/views/poklicna_matematika/naloge/naloge.html?snov=trikotnik_kotne">Pravokotni trikotnik, sinusni in kosinusni izrek</a>
+          <a href="/views/poklicna_matematika/naloge/naloge.html?snov=obsegi_ploscine">Obsegi in ploščine likov</a>
+          <a href="/views/poklicna_matematika/naloge/naloge.html?snov=povrsine_prostornine">Površine in prostornine teles</a>
+          <a href="/views/poklicna_matematika/naloge/naloge.html?snov=linearna_funkcija">Linearna funkcija in linearne enačbe</a>
+          <a href="/views/poklicna_matematika/naloge/naloge.html?snov=kvadratna_funkcija">Kvadratna funkcija in kvadratna enačba</a>
+          <a href="/views/poklicna_matematika/naloge/naloge.html?snov=polinomi_racionalna">Potenčna funkcija, polinomi in racionalna funkcija</a>
+          <a href="/views/poklicna_matematika/naloge/naloge.html?snov=eksponentna_logaritemska">Eksponentna in logaritemska funkcija</a>
+          <a href="/views/poklicna_matematika/naloge/naloge.html?snov=kotne_funkcije_pm">Kotne funkcije</a>
+          <a href="/views/poklicna_matematika/naloge/naloge.html?snov=zaporedja_pm">Zaporedja</a>
+          <a href="/views/poklicna_matematika/naloge/naloge.html?snov=statistika_pm">Obdelava podatkov</a>
+          <a href="/views/poklicna_matematika/naloge/naloge.html?snov=odvod_pm">Diferencialni račun</a>
+          <a href="/views/poklicna_matematika/naloge/naloge.html?snov=kombinatorika_verjetnost">Kombinatorika in verjetnost</a>
+        </div>
+      </div>
+
+      <div class="nav-sub-group">
+        <div class="nav-sub-header">
+          <a href="/views/poklicna_matematika/matura/matura.html" class="label">Matura</a>
+          <button class="dropdown-toggle" data-target="poklicna_matematika-matura" aria-label="Razširi maturo"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
+        </div>
+        <div class="nav-sub" id="poklicna_matematika-matura">
+          <div class="nav-sub-sub-group">
+            <div class="nav-sub-sub-header">
+              <a href="/views/poklicna_matematika/matura/pole/pole.html" class="label">Maturitetne pole</a>
+              <button class="dropdown-toggle" data-target="poklicna_matematika-matura-pole" aria-label="Razširi maturitetne pole"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
+            </div>
+            <div class="nav-sub-sub-list" id="poklicna_matematika-matura-pole">
+              <a href="/views/poklicna_matematika/matura/pole/leto.html?leto=2026">Matura 2026</a>
+              <a href="/views/poklicna_matematika/matura/pole/leto.html?leto=2025">Matura 2025</a>
+              <a href="/views/poklicna_matematika/matura/pole/leto.html?leto=2024">Matura 2024</a>
+              <a href="/views/poklicna_matematika/matura/pole/leto.html?leto=2023">Matura 2023</a>
+              <a href="/views/poklicna_matematika/matura/pole/leto.html?leto=2022">Matura 2022</a>
+              <a href="/views/poklicna_matematika/matura/pole/leto.html?leto=2021">Matura 2021</a>
+            </div>
+          </div>
+          <div class="nav-sub-sub-group">
+            <div class="nav-sub-sub-header">
+              <a href="/views/poklicna_matematika/matura/po_snovi/po_snovi.html" class="label">Maturitetne naloge po snovi</a>
+              <button class="dropdown-toggle" data-target="poklicna_matematika-matura-snov" aria-label="Razširi maturitetne naloge po snovi"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
+            </div>
+            <div class="nav-sub-sub-list" id="poklicna_matematika-matura-snov">
+              <a href="/views/poklicna_matematika/matura/po_snovi/naloge.html?poglavje=stevila_deljivost">Naravna in cela števila, deljivost</a>
+              <a href="/views/poklicna_matematika/matura/po_snovi/naloge.html?poglavje=izrazi_potence">Potence in algebrski izrazi</a>
+              <a href="/views/poklicna_matematika/matura/po_snovi/naloge.html?poglavje=ulomki_odstotki">Ulomki, razmerja in odstotki</a>
+              <a href="/views/poklicna_matematika/matura/po_snovi/naloge.html?poglavje=realna_stevila_koreni">Realna števila, koreni in absolutna vrednost</a>
+              <a href="/views/poklicna_matematika/matura/po_snovi/naloge.html?poglavje=geometrija_ravnine">Osnove geometrije v ravnini</a>
+              <a href="/views/poklicna_matematika/matura/po_snovi/naloge.html?poglavje=trikotnik_kotne">Pravokotni trikotnik, sinusni in kosinusni izrek</a>
+              <a href="/views/poklicna_matematika/matura/po_snovi/naloge.html?poglavje=obsegi_ploscine">Obsegi in ploščine likov</a>
+              <a href="/views/poklicna_matematika/matura/po_snovi/naloge.html?poglavje=povrsine_prostornine">Površine in prostornine teles</a>
+              <a href="/views/poklicna_matematika/matura/po_snovi/naloge.html?poglavje=linearna_funkcija">Linearna funkcija in linearne enačbe</a>
+              <a href="/views/poklicna_matematika/matura/po_snovi/naloge.html?poglavje=kvadratna_funkcija">Kvadratna funkcija in kvadratna enačba</a>
+              <a href="/views/poklicna_matematika/matura/po_snovi/naloge.html?poglavje=polinomi_racionalna">Potenčna funkcija, polinomi in racionalna funkcija</a>
+              <a href="/views/poklicna_matematika/matura/po_snovi/naloge.html?poglavje=eksponentna_logaritemska">Eksponentna in logaritemska funkcija</a>
+              <a href="/views/poklicna_matematika/matura/po_snovi/naloge.html?poglavje=kotne_funkcije_pm">Kotne funkcije</a>
+              <a href="/views/poklicna_matematika/matura/po_snovi/naloge.html?poglavje=zaporedja_pm">Zaporedja</a>
+              <a href="/views/poklicna_matematika/matura/po_snovi/naloge.html?poglavje=statistika_pm">Obdelava podatkov</a>
+              <a href="/views/poklicna_matematika/matura/po_snovi/naloge.html?poglavje=odvod_pm">Diferencialni račun</a>
+              <a href="/views/poklicna_matematika/matura/po_snovi/naloge.html?poglavje=kombinatorika_verjetnost">Kombinatorika in verjetnost</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="nav-group">
+    <div class="nav-group-header">
+      <a href="/views/poklicna_kemija/poklicna_kemija.html" class="nav-group-title">
+        <span class="label">Kemija</span>
+      </a>
+      <button class="dropdown-toggle" data-target="poklicna_kemija-sub" aria-label="Razširi: kemija">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg>
+      </button>
+    </div>
+
+    <div class="nav-sub" id="poklicna_kemija-sub">
+      <div class="nav-sub-group">
+        <div class="nav-sub-header">
+          <a href="/views/poklicna_kemija/snov/snov.html" class="label">Snov</a>
+          <button class="dropdown-toggle" data-target="poklicna_kemija-snov" aria-label="Razširi snov"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
+        </div>
+        <div class="nav-sub-list" id="poklicna_kemija-snov">
+          <a href="/views/poklicna_kemija/snov/zmesi_laboratorij/zmesi_laboratorij_razlaga.html">Snovi, zmesi in laboratorijsko delo</a>
+          <a href="/views/poklicna_kemija/snov/atom_periodni_sistem/atom_periodni_sistem_razlaga.html">Zgradba atoma in periodni sistem</a>
+          <a href="/views/poklicna_kemija/snov/vezi_zgradba_molekul/vezi_zgradba_molekul_razlaga.html">Kemijske vezi in zgradba molekul</a>
+          <a href="/views/poklicna_kemija/snov/agregatna_stanja/agregatna_stanja_razlaga.html">Trdne snovi, tekočine in plini</a>
+          <a href="/views/poklicna_kemija/snov/raztopine_pm/raztopine_pm_razlaga.html">Raztopine</a>
+          <a href="/views/poklicna_kemija/snov/anorganska_nomenklatura/anorganska_nomenklatura_razlaga.html">Oksidacijska števila in anorganska nomenklatura</a>
+          <a href="/views/poklicna_kemija/snov/reakcije_energija/reakcije_energija_razlaga.html">Kemijska reakcija in energija</a>
+          <a href="/views/poklicna_kemija/snov/hitrost_ravnotezje/hitrost_ravnotezje_razlaga.html">Hitrost reakcije in kemijsko ravnotežje</a>
+          <a href="/views/poklicna_kemija/snov/kisline_baze_pm/kisline_baze_pm_razlaga.html">Kisline, baze in pH</a>
+          <a href="/views/poklicna_kemija/snov/redoks_elektrokemija/redoks_elektrokemija_razlaga.html">Redoks reakcije in elektrokemija</a>
+          <a href="/views/poklicna_kemija/snov/mnozina_stehiometrija/mnozina_stehiometrija_razlaga.html">Množina snovi in stehiometrija</a>
+          <a href="/views/poklicna_kemija/snov/racunanje_raztopine/racunanje_raztopine_razlaga.html">Računanje z raztopinami in plini</a>
+          <a href="/views/poklicna_kemija/snov/zrak_voda_nekovine/zrak_voda_nekovine_razlaga.html">Zrak, voda in nekovine</a>
+          <a href="/views/poklicna_kemija/snov/kovine_pm/kovine_pm_razlaga.html">Kovine</a>
+          <a href="/views/poklicna_kemija/snov/ogljikovodiki_pm/ogljikovodiki_pm_razlaga.html">Organske spojine in ogljikovodiki</a>
+          <a href="/views/poklicna_kemija/snov/halogenirani_kisikove/halogenirani_kisikove_razlaga.html">Halogenirani ogljikovodiki in kisikove spojine</a>
+          <a href="/views/poklicna_kemija/snov/biomolekule_pm/biomolekule_pm_razlaga.html">Ogljikovi hidrati, lipidi in dušikove spojine</a>
+          <a href="/views/poklicna_kemija/snov/polimeri_pm/polimeri_pm_razlaga.html">Polimeri</a>
+        </div>
+      </div>
+
+      <div class="nav-sub-group">
+        <div class="nav-sub-header">
+          <a href="/views/poklicna_kemija/naloge/naloge.html" class="label">Naloge</a>
+          <button class="dropdown-toggle" data-target="poklicna_kemija-naloge" aria-label="Razširi naloge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
+        </div>
+        <div class="nav-sub-list" id="poklicna_kemija-naloge">
+          <a href="/views/poklicna_kemija/naloge/naloge.html?snov=zmesi_laboratorij">Snovi, zmesi in laboratorijsko delo</a>
+          <a href="/views/poklicna_kemija/naloge/naloge.html?snov=atom_periodni_sistem">Zgradba atoma in periodni sistem</a>
+          <a href="/views/poklicna_kemija/naloge/naloge.html?snov=vezi_zgradba_molekul">Kemijske vezi in zgradba molekul</a>
+          <a href="/views/poklicna_kemija/naloge/naloge.html?snov=agregatna_stanja">Trdne snovi, tekočine in plini</a>
+          <a href="/views/poklicna_kemija/naloge/naloge.html?snov=raztopine_pm">Raztopine</a>
+          <a href="/views/poklicna_kemija/naloge/naloge.html?snov=anorganska_nomenklatura">Oksidacijska števila in anorganska nomenklatura</a>
+          <a href="/views/poklicna_kemija/naloge/naloge.html?snov=reakcije_energija">Kemijska reakcija in energija</a>
+          <a href="/views/poklicna_kemija/naloge/naloge.html?snov=hitrost_ravnotezje">Hitrost reakcije in kemijsko ravnotežje</a>
+          <a href="/views/poklicna_kemija/naloge/naloge.html?snov=kisline_baze_pm">Kisline, baze in pH</a>
+          <a href="/views/poklicna_kemija/naloge/naloge.html?snov=redoks_elektrokemija">Redoks reakcije in elektrokemija</a>
+          <a href="/views/poklicna_kemija/naloge/naloge.html?snov=mnozina_stehiometrija">Množina snovi in stehiometrija</a>
+          <a href="/views/poklicna_kemija/naloge/naloge.html?snov=racunanje_raztopine">Računanje z raztopinami in plini</a>
+          <a href="/views/poklicna_kemija/naloge/naloge.html?snov=zrak_voda_nekovine">Zrak, voda in nekovine</a>
+          <a href="/views/poklicna_kemija/naloge/naloge.html?snov=kovine_pm">Kovine</a>
+          <a href="/views/poklicna_kemija/naloge/naloge.html?snov=ogljikovodiki_pm">Organske spojine in ogljikovodiki</a>
+          <a href="/views/poklicna_kemija/naloge/naloge.html?snov=halogenirani_kisikove">Halogenirani ogljikovodiki in kisikove spojine</a>
+          <a href="/views/poklicna_kemija/naloge/naloge.html?snov=biomolekule_pm">Ogljikovi hidrati, lipidi in dušikove spojine</a>
+          <a href="/views/poklicna_kemija/naloge/naloge.html?snov=polimeri_pm">Polimeri</a>
+        </div>
+      </div>
+
+      <div class="nav-sub-group">
+        <div class="nav-sub-header">
+          <a href="/views/poklicna_kemija/matura/matura.html" class="label">Matura</a>
+          <button class="dropdown-toggle" data-target="poklicna_kemija-matura" aria-label="Razširi maturo"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
+        </div>
+        <div class="nav-sub" id="poklicna_kemija-matura">
+          <div class="nav-sub-sub-group">
+            <div class="nav-sub-sub-header">
+              <a href="/views/poklicna_kemija/matura/pole/pole.html" class="label">Maturitetne pole</a>
+              <button class="dropdown-toggle" data-target="poklicna_kemija-matura-pole" aria-label="Razširi maturitetne pole"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
+            </div>
+            <div class="nav-sub-sub-list" id="poklicna_kemija-matura-pole">
+            </div>
+          </div>
+          <div class="nav-sub-sub-group">
+            <div class="nav-sub-sub-header">
+              <a href="/views/poklicna_kemija/matura/po_snovi/po_snovi.html" class="label">Maturitetne naloge po snovi</a>
+              <button class="dropdown-toggle" data-target="poklicna_kemija-matura-snov" aria-label="Razširi maturitetne naloge po snovi"><svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="9 18 15 12 9 6"></polyline></svg></button>
+            </div>
+            <div class="nav-sub-sub-list" id="poklicna_kemija-matura-snov">
+              <a href="/views/poklicna_kemija/matura/po_snovi/naloge.html?poglavje=zmesi_laboratorij">Snovi, zmesi in laboratorijsko delo</a>
+              <a href="/views/poklicna_kemija/matura/po_snovi/naloge.html?poglavje=atom_periodni_sistem">Zgradba atoma in periodni sistem</a>
+              <a href="/views/poklicna_kemija/matura/po_snovi/naloge.html?poglavje=vezi_zgradba_molekul">Kemijske vezi in zgradba molekul</a>
+              <a href="/views/poklicna_kemija/matura/po_snovi/naloge.html?poglavje=agregatna_stanja">Trdne snovi, tekočine in plini</a>
+              <a href="/views/poklicna_kemija/matura/po_snovi/naloge.html?poglavje=raztopine_pm">Raztopine</a>
+              <a href="/views/poklicna_kemija/matura/po_snovi/naloge.html?poglavje=anorganska_nomenklatura">Oksidacijska števila in anorganska nomenklatura</a>
+              <a href="/views/poklicna_kemija/matura/po_snovi/naloge.html?poglavje=reakcije_energija">Kemijska reakcija in energija</a>
+              <a href="/views/poklicna_kemija/matura/po_snovi/naloge.html?poglavje=hitrost_ravnotezje">Hitrost reakcije in kemijsko ravnotežje</a>
+              <a href="/views/poklicna_kemija/matura/po_snovi/naloge.html?poglavje=kisline_baze_pm">Kisline, baze in pH</a>
+              <a href="/views/poklicna_kemija/matura/po_snovi/naloge.html?poglavje=redoks_elektrokemija">Redoks reakcije in elektrokemija</a>
+              <a href="/views/poklicna_kemija/matura/po_snovi/naloge.html?poglavje=mnozina_stehiometrija">Množina snovi in stehiometrija</a>
+              <a href="/views/poklicna_kemija/matura/po_snovi/naloge.html?poglavje=racunanje_raztopine">Računanje z raztopinami in plini</a>
+              <a href="/views/poklicna_kemija/matura/po_snovi/naloge.html?poglavje=zrak_voda_nekovine">Zrak, voda in nekovine</a>
+              <a href="/views/poklicna_kemija/matura/po_snovi/naloge.html?poglavje=kovine_pm">Kovine</a>
+              <a href="/views/poklicna_kemija/matura/po_snovi/naloge.html?poglavje=ogljikovodiki_pm">Organske spojine in ogljikovodiki</a>
+              <a href="/views/poklicna_kemija/matura/po_snovi/naloge.html?poglavje=halogenirani_kisikove">Halogenirani ogljikovodiki in kisikove spojine</a>
+              <a href="/views/poklicna_kemija/matura/po_snovi/naloge.html?poglavje=biomolekule_pm">Ogljikovi hidrati, lipidi in dušikove spojine</a>
+              <a href="/views/poklicna_kemija/matura/po_snovi/naloge.html?poglavje=polimeri_pm">Polimeri</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- /POKLICNA MATURA -->
+</div> <!-- /poklicna matura -->
 
 </nav>

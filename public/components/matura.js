@@ -46,10 +46,30 @@ const SKLOPI_PREDMETA = {
     2: "Informacijska tehnologija",
     3: "Predstavitev informacije",
     4: "Delo s podatki",
-  },  slovenscina: {
+  },
+  slovenscina: {
     1: "Jezik",
     2: "Književnost",
     3: "Esej",
+  },
+  poklicna_matematika: {
+    1: "Številske množice",
+    2: "Geometrija",
+    3: "Algebrske funkcije in enačbe",
+    4: "Transcendentne funkcije in enačbe",
+    5: "Zaporedja in obdelava podatkov",
+    6: "Diferencialni račun, kombinatorika in verjetnost",
+  },
+  poklicna_slovenscina: {
+    1: "Neumetnostna besedila (izpitna pola 1)",
+    2: "Jezik",
+    3: "Književnost (izpitna pola 2 in ustni izpit)",
+  },
+  poklicna_kemija: {
+    1: "Splošna in anorganska kemija",
+    2: "Kemijsko računstvo",
+    3: "Fizikalna kemija",
+    4: "Organska kemija",
   },
   anglescina: {
     1: "Poznavanje in raba jezika",
@@ -60,9 +80,10 @@ const SKLOPI_PREDMETA = {
 const SKLOPI = SKLOPI_PREDMETA[predmet] ?? {};
 // Fizika, kemija, biologija, informatika in slovenščina imajo eno samo raven ("enotna"): izbire ravni in oznake ravni takrat ne prikažemo
 const RAVNI = { osnovna: "Osnovna raven", visja: "Višja raven", enotna: "Splošna matura" };
-const ENA_RAVEN = ["fizika", "kemija", "biologija", "informatika", "slovenscina"].includes(predmet);
+// Poklicna matura (poklicna_<predmet>) ima eno raven.
+const ENA_RAVEN = ["fizika", "kemija", "biologija", "informatika", "slovenscina"].includes(predmet) || predmet.startsWith("poklicna_");
 const imeRavni = (raven) => (raven === "enotna" ? "" : RAVNI[raven]?.toLowerCase() ?? raven);
-const ROKI = { predmaturitetni: "Predmaturitetni preizkus", spomladanski: "Spomladanski rok", jesenski: "Jesenski rok" };
+const ROKI = { predmaturitetni: "Predmaturitetni preizkus", spomladanski: "Spomladanski rok", jesenski: "Jesenski rok", zimski: "Zimski rok" };
 
 // ------------------------------------------------------------
 // Pomočniki (enaki kot v naloge.js)
@@ -702,7 +723,7 @@ async function stranPole() {
   SNOVI = Object.fromEntries(snovi.map((s) => [s.slug, s]));
   if (leto) {
     document.querySelector(".page-header h1").textContent = `Matura ${leto}`;
-    document.title = `Matura ${leto}: maturitetne pole | Piflar.si`;
+    document.title = `Matura ${leto}: maturitetne pole | Učilnica.com`;
   }
   if (!pole.length) {
     koren.replaceChildren(el("p", "mn-prazno", "Pole za to leto še pripravljamo."));
@@ -791,7 +812,7 @@ async function stranSnov() {
   else if (poglavje) naslov = `${poglavje.stevilka} ${poglavje.naslov}`;
   else if (sklop) naslov = `${sklop}. ${SKLOPI[sklop]}`;
   document.querySelector(".page-header h1").textContent = naslov;
-  document.title = `${tema?.naslov ?? poglavje?.naslov ?? naslov}: maturitetne naloge | Piflar.si`;
+  document.title = `${tema?.naslov ?? poglavje?.naslov ?? naslov}: maturitetne naloge | Učilnica.com`;
   const opis = document.querySelector(".page-header p");
   if (poglavje && opis) {
     const ime = tema ? `podpoglavje ${tema.naslov.toLowerCase()} (${poglavje.naslov})` : `poglavje ${poglavje.naslov.toLowerCase()}`;
