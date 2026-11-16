@@ -29,7 +29,9 @@
     glasba: "#7A1F3D",
     umetnostna_zgodovina: "#9A4317"
   };
-  var OBVEZNI = ["slovenscina", "matematika", "anglescina"];
+  var OBVEZNI = ["slovenscina", "matematika", "anglescina", "poklicna_slovenscina"];
+  // predmeti poklicne mature (poklicna_<predmet>) imajo barvo in znak osnovnega predmeta
+  function osnova(slug) { return (slug || "").replace(/^poklicna_/, ""); }
   var VISINE = [312, 296, 324, 288, 306, 318, 292, 330, 300, 284];
   // Odtenki barve predmeta za knjige poglavij: + primeša belo, - črno (v %).
   // Sosednje knjige se opazno razlikujejo.
@@ -255,16 +257,16 @@
     var m = STEVILKA.exec(besedilo(a, "strong"));
     return {
       oznaka: m ? m[1] : "",
-      znak: predmet,
+      znak: osnova(predmet),
       naslov: m ? m[2] : besedilo(a, "strong"),
       opis: besedilo(a, "small"),
-      barva: odtenek(BARVA[predmet] || "#2F55D4", i)
+      barva: odtenek(BARVA[osnova(predmet)] || "#2F55D4", i)
     };
   }
 
   function postavi() {
     naslovnica();
-    var predmet = document.documentElement.dataset.predmet;
+    var predmet = document.documentElement.dataset.slug || document.documentElement.dataset.predmet;
     if (!predmet) return;
     var korenPredmeta = new RegExp("^/views/" + predmet + "/" + predmet + "\\.html$").test(location.pathname);
     if (korenPredmeta) stranPredmeta(predmet);
@@ -295,9 +297,9 @@
         predmeti.push(vKnjigo(a, {
           oznaka: obvezni.indexOf(a) >= 0 ? "Obvezni" : "",
           naslov: naslov,
-          znak: slug,
+          znak: osnova(slug),
           opis: besedilo(a, "p"),
-          barva: jePredmet(a) ? (BARVA[slug] || "#2F55D4") : odtenek(BARVA[slug] || "#2F55D4", i)
+          barva: jePredmet(a) ? (BARVA[osnova(slug)] || "#2F55D4") : odtenek(BARVA[osnova(slug)] || "#2F55D4", i)
         }, i));
         if (obvezni.length && a === obvezni[obvezni.length - 1]) predmeti.push(el("span", "polica-razmik"));
       });
@@ -365,9 +367,9 @@
         predmeti.push(novaKnjiga(a.getAttribute("href"), {
           oznaka: naloge ? "Vaja" : "Matura",
           naslov: naslov.replace(/^Maturitetne naloge po snovi$/, "Naloge po snovi"),
-          znak: predmet,
+          znak: osnova(predmet),
           opis: besedilo(a, "small") || besedilo(a.closest(".link-item") || a, "small"),
-          barva: odtenek(BARVA[predmet] || "#2F55D4", i + 1),
+          barva: odtenek(BARVA[osnova(predmet)] || "#2F55D4", i + 1),
           sirina: 92,
           visina: [324, 306, 316, 296][i % 4]
         }, i));

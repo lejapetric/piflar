@@ -1,8 +1,9 @@
 <!-- public/components/sidebar.html -->
 <div class="sidebar-header">
-  <a href="/" class="sidebar-logo">
-    <span class="header-brand-text">Piflar<span class="header-brand-dot">.</span>si</span>
-  </a>
+  <div class="matura-stikalo matura-stikalo--meni" role="radiogroup" aria-label="Vrsta mature">
+    <button type="button" role="radio" data-izberi="splosna" aria-checked="true">Splošna<span class="ms-dolgo"> matura</span></button>
+    <button type="button" role="radio" data-izberi="poklicna" aria-checked="false" tabindex="-1">Poklicna<span class="ms-dolgo"> matura</span></button>
+  </div>
   <button id="closeSidebar" class="close-btn" aria-label="Zapri meni">
     <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
       <line x1="18" y1="6" x2="6" y2="18"></line>

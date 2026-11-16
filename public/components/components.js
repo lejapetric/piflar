@@ -896,6 +896,61 @@ async function initNalogePovezava() {
 }
 
 // ============================================================
+// STIKALO SPLOŠNA / POKLICNA MATURA
+// Stikala (.matura-stikalo) so v meniju, v glavi in na naslovnici. Izbira se
+// zapiše v <html data-matura> in localStorage; CSS skrije vsebino druge mature
+// ([data-matura-del]). Na strani predmeta druge mature odpre isti predmet na
+// izbrani maturi (če ga ima) ali naslovnico.
+// ============================================================
+const MATURA_KLJUC = "ucilnica-matura";
+const PM_PREDMETI = ["matematika", "slovenscina", "kemija"];
+
+function nastaviMaturo(matura) {
+  document.documentElement.dataset.matura = matura;
+  try {
+    localStorage.setItem(MATURA_KLJUC, matura);
+  } catch {
+    /* zasebno okno */
+  }
+  document.querySelectorAll(".matura-stikalo [data-izberi]").forEach((b) => {
+    const izbran = b.dataset.izberi === matura;
+    b.setAttribute("aria-checked", String(izbran));
+    b.tabIndex = izbran ? 0 : -1;
+  });
+  window.dispatchEvent(new CustomEvent("ucilnica:matura", { detail: matura }));
+}
+
+function initMaturaStikalo() {
+  nastaviMaturo(document.documentElement.dataset.matura === "poklicna" ? "poklicna" : "splosna");
+  document.addEventListener("click", (e) => {
+    const b = e.target.closest(".matura-stikalo [data-izberi]");
+    if (!b) return;
+    const matura = b.dataset.izberi;
+    if (matura === document.documentElement.dataset.matura) return;
+    nastaviMaturo(matura);
+    const m = location.pathname.match(/^\/views\/(poklicna_)?([a-z_]+)\//);
+    if (!m) return;
+    const naPoklicni = Boolean(m[1]);
+    if (naPoklicni === (matura === "poklicna")) return;
+    const predmet = m[2];
+    if (matura === "poklicna") {
+      location.href = PM_PREDMETI.includes(predmet) ? `/views/poklicna_${predmet}/poklicna_${predmet}.html` : "/#predmeti";
+    } else {
+      location.href = `/views/${predmet}/${predmet}.html`;
+    }
+  });
+  // puščici levo/desno premakneta izbiro (radio skupina)
+  document.addEventListener("keydown", (e) => {
+    const b = e.target.closest?.(".matura-stikalo [data-izberi]");
+    if (!b || !["ArrowLeft", "ArrowRight"].includes(e.key)) return;
+    e.preventDefault();
+    const drugi = b.parentElement.querySelector(`[data-izberi]:not([data-izberi="${b.dataset.izberi}"])`);
+    drugi?.focus();
+    drugi?.click();
+  });
+}
+
+// ============================================================
 // ZAGON
 // ============================================================
 async function init() {
@@ -910,6 +965,7 @@ async function init() {
 
   initHeader();
   initSidebar();
+  initMaturaStikalo();
   initUporabnik();
   initTema();
   initIskanje();
