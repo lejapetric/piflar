@@ -1,7 +1,7 @@
 # python3 tools/poklicna/matematika-arhiv/gradi.py
 # Vadbene pole poklicne mature iz matematike po uradnih polah RIC → api/data/matura-poklicna_matematika.json
 #
-# Vsak rok je v svoji datoteki r<leto>_<rok>.py (NALOGE: A1–A11 in B1–B3). Naloge sledijo uradni poli RIC
+# Vsak rok je v svoji datoteki r<leto>_<rok>.py (NALOGE: A1–An in B1–B3; zgradba se je skozi leta spreminjala). Naloge sledijo uradni poli RIC
 # (zgradba, tip naloge, točkovanje), podatki in besedila pa so spremenjeni. Pole iz pole_mat.py ostanejo, pola
 # istega roka iz tega arhiva pa jo nadomesti.
 import glob, importlib.util, json, os
@@ -18,18 +18,18 @@ def pola(r):
         ric = json.load(f)[f"{r.LETO}-{r.ROK}"]
     a = [n for n in r.NALOGE if n["id"].startswith("A")]
     b = [n for n in r.NALOGE if n["id"].startswith("B")]
-    assert len(a) == 11 and sum(n["tocke"] for n in a) == 50, (r.LETO, r.ROK)
-    assert len(b) == 3 and all(n["tocke"] == 10 for n in b), (r.LETO, r.ROK)
+    ta, tb = sum(n["tocke"] for n in a), b[0]["tocke"]
+    assert len(b) == 3 and all(n["tocke"] == tb for n in b) and ta + 2 * tb == 70, (r.LETO, r.ROK)
     ime = IME_ROKA[r.ROK]
     p = {
         "id": f"{PREDMET}-{r.LETO}-{r.ROK}", "predmet": PREDMET, "raven": "enotna", "leto": r.LETO, "rok": r.ROK,
         "pdf": ric["pola"], "datum": r.DATUM,
         "naslov": f"Matematika, poklicna matura, {ime} {r.LETO} (vadbena pola Učilnica.com)",
-        "navodilo": "120 minut, 70 točk. 1. del: 11 nalog (50 točk). 2. del: izberi in reši 2 od 3 nalog (20 točk). "
+        "navodilo": f"120 minut, 70 točk. 1. del: {len(a)} nalog ({ta} točk). 2. del: izberi in reši 2 od 3 nalog ({2 * tb} točk). "
                     "Dovoljeni so računalo, geometrijsko orodje in priložene formule.",
         "vir": f"Vadbena pola Učilnica.com. Zgradba, vrsta nalog in točkovanje sledijo uradni poli poklicne mature iz matematike "
                f"({ime} {r.LETO}), besedila in podatki pa so naši. Uradne pole izdaja Državni izpitni center (RIC), ki ima nanje vse avtorske pravice.",
-        "deli": {"A": "1. DEL (11 nalog, 50 točk)", "B": "2. DEL (izberi in reši 2 od 3 nalog, 20 točk)"},
+        "deli": {"A": f"1. DEL ({len(a)} nalog, {ta} točk)", "B": f"2. DEL (izberi in reši 2 od 3 nalog, {2 * tb} točk)"},
         "naloge": r.NALOGE,
     }
     if ric.get("navodila"):
