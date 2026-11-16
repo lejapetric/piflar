@@ -3775,3 +3775,33 @@ details.matura-pola[open] .matura-pola-puscica {
 .matura-stanje {
     flex-wrap: wrap;
 }
+
+/* Video razlaga pod glavo sklopa: bela tabla v svetlem, zelena v temnem načinu */
+.sklop-video {
+    margin: 0 0 var(--space-5, 20px);
+    padding: 0 16px;
+    max-width: 792px;
+    box-sizing: border-box;
+}
+.sklop-video-oznaka {
+    display: block;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin-bottom: 6px;
+}
+.sklop-video video {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border-radius: 10px;
+    background: #E6E2D9;
+}
+.sklop-video .video-temna { display: none; background: #0B0D0C; }
+[data-theme="dark"] .sklop-video .video-svetla { display: none; }
+[data-theme="dark"] .sklop-video .video-temna { display: block; }
+@media (max-width: 767px) {
+    .sklop-video { padding: 0; }
+}

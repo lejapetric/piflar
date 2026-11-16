@@ -310,3 +310,20 @@ Prijava se hrani v piškotku `httpOnly` (7 dni), zato je JavaScript na strani ne
 | `GET /api/placila/cenik` | cene paketov iz Stripe |
 | `POST /api/placila/checkout` | `{ paket, obdobje }` → `{ url }` za plačilo |
 | `POST /api/placila/portal` | `{ url }` za upravljanje naročnine |
+
+## Video razlage
+
+Vsak sklop na straneh z razlago ima kratek video (pod glavo sklopa), v dveh različicah:
+`sklop-N-svetla.mp4` (bela tabla, svetli način) in `sklop-N-temna.mp4` (zelena tabla, temni način),
+v mapi `public/videi/<predmet>/<poglavje>/`. Videi so brez zvoka; glas se lahko doda kasneje.
+
+Videe izdela `tools/videi/` iz vsebine strani (razlaga, nato vsak tip naloge po korakih):
+
+```bash
+# enkrat: v delovni mapi npm i katex @fontsource/figtree playwright; pisavi Kalam v fonts/
+bash tools/videi/batch.sh matematika <pot/do/…_razlaga.html> matematika/<poglavje>
+bash tools/videi/posterji.sh                       # naslovne sličice
+python3 tools/videi/vstavi_videe.py <…_razlaga.html> matematika/<poglavje>   # predvajalnik v stran
+```
+
+Ko spremeniš besedilo razlage, za tisto poglavje ponovno poženi vse tri korake.
