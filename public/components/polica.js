@@ -236,6 +236,10 @@
     razporedi(ovoj);
   }
   var cakaj;
+  // stikalo splošna/poklicna matura pokaže skrito polico, ki še nima razporeda
+  window.addEventListener("ucilnica:matura", function () {
+    requestAnimationFrame(function () { ovoji.forEach(razporedi); });
+  });
   window.addEventListener("resize", function () {
     clearTimeout(cakaj);
     cakaj = setTimeout(function () { ovoji.forEach(razporedi); }, 120);
@@ -277,7 +281,7 @@
   function naslovnica() {
     document.querySelectorAll(".chapters").forEach(function (seznam) {
       var karte = Array.prototype.slice.call(seznam.querySelectorAll(":scope > a.chapter-card"));
-      if (karte.length < 4) return;
+      if (karte.length < 3) return;
       function jePredmet(a) {
         var slug = predmetIz(a.getAttribute("href"));
         return slug && new RegExp("^/views/" + slug + "/" + slug + "\\.html$").test(a.getAttribute("href"));

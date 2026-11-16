@@ -3242,6 +3242,8 @@ html[data-matura="poklicna"] .matura-stikalo::before {
 
 /* na naslovnici */
 .matura-stikalo--velika {
+    display: grid;
+    width: max-content;
     margin-bottom: var(--space-5, 20px);
 }
 .matura-stikalo--velika button {
@@ -3251,4 +3253,17 @@ html[data-matura="poklicna"] .matura-stikalo::before {
 @media (max-width: 480px) {
     .matura-stikalo--velika { display: grid; width: 100%; }
     .matura-stikalo--velika button { padding: 10px 8px; font-size: 15px; }
+}
+.ms-kratko { display: none; }
+@media (max-width: 600px) {
+    #headerNarocnina { display: none; }
+}
+@media (max-width: 480px) {
+    .header-brand-tld { display: none; }
+    .matura-stikalo--glava .ms-polno { display: none; }
+    .matura-stikalo--glava .ms-kratko { display: inline; }
+    .matura-stikalo--glava button { padding: 5px 9px; }
+}
+@media (max-width: 380px) {
+    .matura-stikalo--glava { display: none; }
 }

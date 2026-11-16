@@ -9,12 +9,12 @@
     </button>
 
     <a href="/" class="header-brand" aria-label="Učilnica.com — domov">
-        <span class="header-brand-text">Učilnica<span class="header-brand-dot">.</span>com</span>
+        <span class="header-brand-text">Učilnica<span class="header-brand-tld"><span class="header-brand-dot">.</span>com</span></span>
     </a>
 
     <div class="matura-stikalo matura-stikalo--glava" role="radiogroup" aria-label="Vrsta mature">
-        <button type="button" role="radio" data-izberi="splosna" aria-checked="true">Splošna<span class="ms-dolgo"> matura</span></button>
-        <button type="button" role="radio" data-izberi="poklicna" aria-checked="false" tabindex="-1">Poklicna<span class="ms-dolgo"> matura</span></button>
+        <button type="button" role="radio" data-izberi="splosna" aria-checked="true" aria-label="Splošna matura"><span class="ms-polno">Splošna<span class="ms-dolgo"> matura</span></span><span class="ms-kratko" aria-hidden="true">SM</span></button>
+        <button type="button" role="radio" data-izberi="poklicna" aria-checked="false" tabindex="-1" aria-label="Poklicna matura"><span class="ms-polno">Poklicna<span class="ms-dolgo"> matura</span></span><span class="ms-kratko" aria-hidden="true">PM</span></button>
     </div>
 
     <form id="iskalnik" class="iskalnik" action="/iskanje.html" method="get" role="search" autocomplete="off">

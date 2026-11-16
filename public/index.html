@@ -25,7 +25,12 @@
         <section class="hero">
             <div class="hero-inner">
                 <div class="hero-text">
+                    <div class="matura-stikalo matura-stikalo--velika" role="radiogroup" aria-label="Vrsta mature">
+                        <button type="button" role="radio" data-izberi="splosna" aria-checked="true">Splošna matura</button>
+                        <button type="button" role="radio" data-izberi="poklicna" aria-checked="false" tabindex="-1">Poklicna matura</button>
+                    </div>
                     <span class="hero-eyebrow">Priprava na maturo</span>
+                    <div data-matura-del="splosna">
                     <h1>Vse za maturo iz <span class="accent">gimnazijskih predmetov</span> na enem mestu.</h1>
                     <p class="hero-lead">
                         Matematika, fizika, kemija, biologija, informatika, geografija, zgodovina, slovenščina, tuji jeziki,
@@ -35,7 +40,18 @@
                         <a href="#predmeti" class="btn btn-primary">Izberi predmet</a>
                         <a href="/views/matematika/matura/matura.html" class="btn btn-secondary">Poglej mature</a>
                     </div>
-                    <div class="hero-stats">
+                    </div>
+                    <div data-matura-del="poklicna">
+                    <h1>Vse za <span class="accent">poklicno maturo</span> na enem mestu.</h1>
+                    <p class="hero-lead">
+                        Slovenščina, matematika in kemija za poklicno maturo: razlage snovi po predmetnih izpitnih katalogih, tipi nalog z rešitvami po korakih, naloge za vajo in pole z rešitvami.
+                    </p>
+                    <div class="hero-cta">
+                        <a href="#predmeti" class="btn btn-primary">Izberi predmet</a>
+                        <a href="/views/poklicna_matematika/matura/matura.html" class="btn btn-secondary">Poglej mature</a>
+                    </div>
+                    </div>
+                    <div class="hero-stats" data-matura-del="splosna">
                         <div class="hero-stat">
                             <strong>19</strong>
                             <span>Predmetov</span>
@@ -84,6 +100,7 @@
                     <h2>Predmeti</h2>
                     <p>Vsak predmet ima svojo stran s pregledom mature in snov, razdeljeno po maturitetnem katalogu.</p>
                 </div>
+                <div data-matura-del="splosna">
                 <div class="chapters">
                     <a href="/views/matematika/matematika.html" class="chapter-card">
                         <span class="chapter-num">17 poglavij</span>
@@ -205,6 +222,31 @@
                         <p>Pole iz matematike po letih in rokih ter maturitetne naloge, razvrščene po poglavjih snovi. Z rešitvami, postopki in izvozom v PDF.</p>
                         <div class="chapter-meta"><span>Pole + naloge po snovi</span><span class="arrow">→</span></div>
                     </a>
+                </div>
+                </div>
+                <div data-matura-del="poklicna">
+                <div class="chapters">
+                    <!-- POKLICNA MATURA: PREDMETI -->
+                    <a href="/views/poklicna_slovenscina/poklicna_slovenscina.html" class="chapter-card">
+                        <span class="chapter-num">15 poglavij</span>
+                        <h3>Slovenščina</h3>
+                        <p>Razčlemba neumetnostnega besedila, tvorba krajšega besedila, jezik, interpretacija in literarnozgodovinski sklopi.</p>
+                        <div class="chapter-meta"><span>Snov, naloge, matura</span><span class="arrow">→</span></div>
+                    </a>
+                    <a href="/views/poklicna_matematika/poklicna_matematika.html" class="chapter-card">
+                        <span class="chapter-num">17 poglavij</span>
+                        <h3>Matematika</h3>
+                        <p>Števila, geometrija, funkcije, zaporedja, statistika, odvod, kombinatorika in verjetnost po katalogu 2026.</p>
+                        <div class="chapter-meta"><span>Snov, naloge, matura</span><span class="arrow">→</span></div>
+                    </a>
+                    <a href="/views/poklicna_kemija/poklicna_kemija.html" class="chapter-card">
+                        <span class="chapter-num">18 poglavij</span>
+                        <h3>Kemija</h3>
+                        <p>Drugi predmet za kemijske tehnike: splošna, anorganska, fizikalna in organska kemija ter kemijsko računstvo.</p>
+                        <div class="chapter-meta"><span>Snov, naloge, matura</span><span class="arrow">→</span></div>
+                    </a>
+                    <!-- /POKLICNA MATURA: PREDMETI -->
+                </div>
                 </div>
             </div>
         </section>
