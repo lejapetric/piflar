@@ -194,6 +194,10 @@ export default async function (z) {
   for (const [slug, seznam] of Object.entries(POJMI)) pojmovnik(z, slug, seznam, { uvod: "pojem" });
   const uporabljene = new Set();
   const besedila = new Map();
+  for (const n of z.naloge) {
+    if (!besedila.has(n.poglavje)) besedila.set(n.poglavje, new Set());
+    besedila.get(n.poglavje).add(n.besedilo);
+  }
   for (const [slug, poglavje, pravilo] of PRAVILA) {
     for (const n of SM) {
       if (n.poglavje !== poglavje || uporabljene.has(n.id)) continue;
