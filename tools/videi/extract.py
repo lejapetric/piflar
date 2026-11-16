@@ -47,6 +47,9 @@ for sec in soup.select('section.sklop'):
     if teo:
         for ch in teo.find_all(recursive=False):
             if ch.name == 'h3':
+                t3 = ch.get_text(' ', strip=True)
+                if t3.lower() not in ('razlaga', 'teorija'):
+                    cur = nova(t3)
                 continue
             if ch.name == 'h4':
                 cur = nova(ch.get_text(' ', strip=True)); continue
@@ -61,6 +64,12 @@ for sec in soup.select('section.sklop'):
                 cur['bloki'].append(blok('odstavek', inner(ch), n=txtlen(inner(ch))))
             elif ch.name == 'figure' or 'slike-vrsta' in cls:
                 cur['bloki'] += figure_blocks(ch)
+            elif 'pesem' in cls:
+                pn = ch.find(class_='pesem-naslov')
+                if pn:
+                    cur['bloki'].append(blok('html', f'<div class="pesem-naslov">{inner(pn)}</div>', n=10))
+                for k in ch.select('.kitica'):
+                    cur['bloki'].append(blok('html', str(k), n=txtlen(str(k))))
             elif 'concept-list' in cls:
                 for c in ch.select('.concept'):
                     cur['bloki'].append(blok('html', str(c), wrap='concept', n=txtlen(str(c))))

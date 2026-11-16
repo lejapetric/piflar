@@ -67,6 +67,13 @@ table{border-collapse:collapse;font-size:21px;line-height:1.3}
 th{color:${T.blue};text-align:left;font-weight:700;border-bottom:2px solid ${T.line};padding:4px 14px}
 td{border-bottom:1px solid ${T.line};padding:4px 14px;vertical-align:top}
 .kljucne,.prepoznaj ul{display:none}
+dl{display:grid;grid-template-columns:auto 1fr;gap:2px 18px;margin:0;font-size:23px}
+dt{color:${T.blue};font-weight:700}dd{margin:0}
+.pesem-naslov{font-weight:700;color:${T.blue};font-size:27px}
+.kitica{display:grid;grid-template-columns:400px 1fr;gap:28px}
+.kitica-besedilo{white-space:pre-line;border-left:3px solid ${T.line};padding-left:16px;font-size:23px;line-height:1.35}
+.kitica-razclemba{font-size:21px;line-height:1.35}
+.matura-opomba,.opomba{color:${T.sec};font-size:22px}
 .slika{margin:0;display:inline-block;text-align:center}
 .slika figcaption{font-size:19px;color:${T.sec};max-width:520px;margin:4px auto 0;line-height:1.3}
 .slika svg{display:block;margin:0 auto}
