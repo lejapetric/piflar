@@ -28,6 +28,9 @@ def pola(r, raven, stevilka, naloge, navodilo, pdf):
 
 
 def pole_roka(r):
+    if not hasattr(r, "RIC"):
+        with open(os.path.join(TU, "ric.json"), encoding="utf-8") as f:
+            r.RIC = json.load(f)[f"{r.LETO}-{r.ROK}"]
     assert sum(n["tocke"] for n in r.POLA1) == 80, (r.LETO, r.ROK)
     assert sum(n["tocke"] for n in r.POLA2[:3]) == 40, (r.LETO, r.ROK)
     nav1 = "{} minut, 12 kratkih nalog, 80 točk. Računalo je dovoljeno, razen pri nalogah, kjer piše drugače."
