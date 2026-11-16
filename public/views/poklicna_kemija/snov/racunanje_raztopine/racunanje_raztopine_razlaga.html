@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Računanje z raztopinami in plini — razlaga za poklicno maturo | Učilnica.com</title>
+  <meta name="description" content="Računanje z raztopinami in plini za poklicno maturo iz kemije: Sestava raztopin, preračunavanje koncentracij, redčenje, plinski zakoni v računih.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
+  <link rel="stylesheet" href="/style/snov.css">
+</head>
+<body>
+  <div id="header"></div>
+
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view">
+
+        <header class="page-header">
+          <span class="page-eyebrow">Poklicna matura · Kemija · Snov · 4.12</span>
+          <h1>Računanje z raztopinami in plini</h1>
+          <p>Računanje z raztopinami: masni delež, množinska in masna koncentracija, preračunavanje koncentracij, redčenje in mešanje ter priprava raztopin. Pod razlago vsakega podpoglavja so vsi tipi nalog z univerzalnim postopkom in primeri.</p>
+          <div class="page-meta">
+            <div class="page-meta-item"><strong>2</strong><span>Podpoglavij</span></div>
+            <div class="page-meta-item"><strong>8</strong><span>Tipov nalog</span></div>
+            <div class="page-meta-item"><strong>~10 min</strong><span>Branja</span></div>
+          </div>
+        </header>
+
+        <div class="matura-formule">
+          <h3>Kaj preverja izpitni katalog</h3>
+          <p>Po predmetnem izpitnem katalogu za poklicno maturo kandidat:</p>
+          <ul>
+              <li>izračuna sestavo raztopine</li>
+              <li>preračuna koncentracije iz ene v drugo</li>
+              <li>izračuna potrebne količine za pripravo razredčenih in koncentriranih raztopin</li>
+          </ul>
+          <p><strong>Na izpitu:</strong> Račun priprave raztopine (masa trdne snovi ali prostornina koncentrirane raztopine) je skoraj v vsaki poli, pogosto skupaj z opisom pribora. Na izpitu sta dovoljena periodni sistem in žepno računalo brez grafičnega zaslona.</p>
+        </div>
+
+        <nav class="kazalo" id="kazalo" aria-label="Podpoglavja">
+          <h2>Podpoglavja</h2>
+          <ol>
+            <li><a href="#sklop-1"><span class="kazalo-st">1</span> Sestava raztopin in pretvarjanje koncentracij</a></li>
+            <li><a href="#sklop-2"><span class="kazalo-st">2</span> Redčenje, mešanje in priprava raztopin</a></li>
+            <li><a href="#kljuc"><span class="kazalo-st">?</span> Ključ: kateri tip naloge je to?</a></li>
+          </ol>
+        </nav>
+
+        <!-- SKLOP 1 -->
+        <section class="sklop" id="sklop-1">
+          <header class="sklop-header">
+            <span class="sklop-num">4.12 · 1</span>
+            <h2>Sestava raztopin in pretvarjanje koncentracij</h2>
+            <p>Masni delež, množinska in masna koncentracija, redčenje in mešanje.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <p>Sestavo raztopine izrazimo na več načinov:</p>
+            <ul>
+              <li><strong>Masni delež</strong> \(w\): masa topljenca na maso raztopine (brez enote ali v %). 10-odstotna raztopina soli ima v 100 g raztopine 10 g soli in 90 g vode.</li>
+              <li><strong>Množinska koncentracija</strong> \(c\): množina topljenca na prostornino raztopine, v mol/L (pogosto zapisano kot M). To je najpogostejši zapis v laboratoriju, ker iz prostornine takoj dobimo množino za reakcijo.</li>
+              <li><strong>Masna koncentracija</strong> \(\gamma\): masa topljenca na prostornino raztopine, v g/L.</li>
+            </ul>
+            <p>Ker je \(w\) vezan na maso raztopine, \(c\) in \(\gamma\) pa na prostornino, za pretvarjanje potrebujemo <strong>gostoto raztopine</strong>. Najzanesljivejša pot je, da vzamemo 1 L raztopine: iz gostote izračunamo njeno maso, iz \(w\) maso topljenca, iz \(M\) množino.</p>
+            <p>Pri <strong>redčenju</strong> dodamo topilo; množina (in masa) topljenca ostaneta enaki, poveča se le prostornina. Zato velja \(c_1 V_1 = c_2 V_2\). Pri <strong>mešanju</strong> dveh raztopin iste snovi seštejemo mase topljenca in mase raztopin (ali množine in prostornine). Pri <strong>koncentriranju</strong> (izparevanju topila) se masa topljenca ohrani, masa raztopine pa zmanjša.</p>
+            <p><strong>Priprava raztopine</strong> z znano koncentracijo: izračunano maso trdne snovi natančno stehtamo, jo raztopimo v manjši količini vode v čaši, prelijemo v merilno bučko, čašo speremo in vodo dolijemo do oznake, nato premešamo.</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-1">
+              <h4>Tip 1: Izračunaj masni delež ali maso za raztopino z danim masnim deležem</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Koliko gramov sladkorja in koliko vode potrebujemo za 250 g raztopine z masnim deležem sladkorja 12,0 %?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> podatki so v masah ali odstotkih, ni prostornin.</p><ul class="kljucne"><li>„masni delež“</li><li>„odstotna raztopina“</li><li>„g raztopine“</li><li>„koliko vode“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Zapiši \(w = m(\text{topljenec})/m(\text{raztopina})\) in vstavi znane količine.</p><div class="na-nalogi"><p>\(0{,}120 = \dfrac{m(\text{sladkor})}{250\ \text{g}}\)</p></div></li>
+              <li><p class="korak">Izračunaj neznano maso.</p><div class="na-nalogi"><p>\(m(\text{sladkor}) = 0{,}120 \cdot 250 = 30{,}0\ \text{g}\)</p></div></li>
+              <li><p class="korak">Masa topila je razlika med maso raztopine in topljenca.</p><div class="na-nalogi"><p>\(m(\text{voda}) = 250 - 30{,}0 = 220\ \text{g}\)</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> 15 g soli raztopimo v 135 g vode. Masni delež?</p><p>\(w = 15/150 = 0{,}10 = 10\ \%\) (deliš z maso raztopine, ne vode).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Koliko <span class="kf">CuSO<sub>4</sub>·5H<sub>2</sub>O</span> potrebujemo za 100 g raztopine z \(w(\text{CuSO}_4) = 0{,}080\)?</p><p>8,00 g <span class="kf">CuSO<sub>4</sub></span> je 0,0501 mol; enako množino hidrata: \(0{,}0501 \cdot 249{,}7 = 12{,}5\ \text{g}\).</p></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-2">
+              <h4>Tip 2: Izračunaj množinsko koncentracijo ali maso za pripravo raztopine</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Koliko gramov natrijevega hidroksida potrebujemo za pripravo 250 mL raztopine s koncentracijo 0,200 mol/L? Opiši postopek priprave.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> nastopata prostornina raztopine in koncentracija v mol/L (ali g/L).</p><ul class="kljucne"><li>„mol/L“, „M“</li><li>„pripravi … mL raztopine“</li><li>„množinska koncentracija“</li><li>„masna koncentracija“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Prostornino pretvori v litre.</p><div class="na-nalogi"><p>\(V = 0{,}250\ \text{L}\)</p></div></li>
+              <li><p class="korak">Izračunaj množino: \(n = c \cdot V\).</p><div class="na-nalogi"><p>\(n = 0{,}200 \cdot 0{,}250 = 0{,}0500\ \text{mol}\)</p></div></li>
+              <li><p class="korak">Pretvori v maso: \(m = n \cdot M\).</p><div class="na-nalogi"><p>\(m = 0{,}0500 \cdot 40{,}0 = 2{,}00\ \text{g}\) NaOH.</p></div></li>
+              <li><p class="korak">Če sprašujejo za postopek: stehtaj, raztopi, prelij v merilno bučko, dopolni do oznake, premešaj.</p><div class="na-nalogi"><p>2,00 g NaOH raztopimo v čaši, prelijemo v 250-mL merilno bučko, dolijemo vodo do oznake in premešamo.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> 5,85 g <span class="kf">NaCl</span> v 500 mL raztopine. Koncentracija?</p><p>\(n = 0{,}100\ \text{mol}\); \(c = 0{,}200\ \text{mol/L}\); \(\gamma = 11{,}7\ \text{g/L}\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Kolikšna je koncentracija ionov <span class="kf">Cl<sup>−</sup></span> v 0,10 M <span class="kf">CaCl<sub>2</sub></span>?</p><p>Vsaka enota da 2 <span class="kf">Cl<sup>−</sup></span>: 0,20 mol/L.</p></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-3">
+              <h4>Tip 3: Pretvori masni delež v množinsko koncentracijo (z gostoto)</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Koncentrirana žveplova(VI) kislina ima masni delež 96,0 % in gostoto 1,84 g/mL. Izračunaj njeno množinsko koncentracijo.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> podana sta masni delež in gostota (ali koncentracija in gostota), iskana je druga oblika sestave.</p><ul class="kljucne"><li>„gostota raztopine“</li><li>„pretvori“</li><li>„koncentrirana kislina“</li><li>„g/mL“ in „%“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Vzemi 1 L (1000 mL) raztopine in z gostoto izračunaj njeno maso.</p><div class="na-nalogi"><p>\(m(\text{raztopina}) = 1000\ \text{mL} \cdot 1{,}84\ \text{g/mL} = 1840\ \text{g}\)</p></div></li>
+              <li><p class="korak">Z masnim deležem izračunaj maso topljenca.</p><div class="na-nalogi"><p>\(m(\text{H}_2\text{SO}_4) = 0{,}960 \cdot 1840 = 1766\ \text{g}\)</p></div></li>
+              <li><p class="korak">Pretvori v množino; to je koncentracija v mol/L, ker si vzel 1 L.</p><div class="na-nalogi"><p>\(n = 1766 / 98{,}1 = 18{,}0\ \text{mol}\) → \(c = 18{,}0\ \text{mol/L}\)</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> 2,00 M <span class="kf">NaOH</span> z gostoto 1,08 g/mL. Masni delež?</p><p>1 L: 1080 g raztopine, 80,0 g NaOH → \(w = 0{,}0741 = 7{,}41\ \%\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> 37-odstotna <span class="kf">HCl</span>, \(\rho = 1{,}19\ \text{g/mL}\): \(c\)?</p><p>\(c = 0{,}37 \cdot 1190 / 36{,}5 = 12\ \text{mol/L}\).</p></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-4">
+              <h4>Tip 4: Redčenje ali koncentriranje raztopine</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Koliko mililitrov 18,0 M žveplove(VI) kisline potrebujemo za pripravo 500 mL 1,00 M raztopine?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> iz bolj koncentrirane raztopine pripravljamo redkejšo (ali izparevamo topilo); topljenca ne dodajamo.</p><ul class="kljucne"><li>„razredčimo“</li><li>„dolijemo vodo“</li><li>„iz … M pripravimo“</li><li>„izparimo vodo“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Zapiši, kaj se ohrani: množina (pri \(c\)) ali masa topljenca (pri \(w\)).</p><div class="na-nalogi"><p>\(c_1 V_1 = c_2 V_2\)</p></div></li>
+              <li><p class="korak">Vstavi znane vrednosti (prostornini v enakih enotah).</p><div class="na-nalogi"><p>\(18{,}0 \cdot V_1 = 1{,}00 \cdot 500\ \text{mL}\)</p></div></li>
+              <li><p class="korak">Izrazi neznano in izračunaj; po potrebi izračunaj še, koliko vode dodamo.</p><div class="na-nalogi"><p>\(V_1 = 27{,}8\ \text{mL}\) koncentrirane kisline, z vodo do 500 mL (kislino v vodo).</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> Iz 200 g 20-odstotne raztopine izparimo 50 g vode. Nov masni delež?</p><p>Topljenca je 40 g, raztopine 150 g: \(w = 0{,}267\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> 10,0 mL 0,500 M raztopine razredčimo na 250 mL. Nova koncentracija?</p><p>\(c_2 = 0{,}500 \cdot 10{,}0 / 250 = 0{,}0200\ \text{mol/L}\).</p></div>
+            </div>
+
+            <div class="tip-naloge" id="tip-5">
+              <h4>Tip 5: Mešanje dveh raztopin</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Zmešamo 200 g 10,0-odstotne in 300 g 20,0-odstotne raztopine natrijevega klorida. Kolikšen je masni delež soli v nastali raztopini?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> združimo dve raztopini iste snovi z različnima koncentracijama.</p><ul class="kljucne"><li>„zmešamo“</li><li>„združimo raztopini“</li><li>„dodamo … raztopine“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Izračunaj maso (ali množino) topljenca v vsaki raztopini.</p><div class="na-nalogi"><p>\(0{,}100 \cdot 200 = 20{,}0\ \text{g}\) in \(0{,}200 \cdot 300 = 60{,}0\ \text{g}\)</p></div></li>
+              <li><p class="korak">Seštej topljenca in seštej raztopini (pri \(c\): seštej prostornini, če ni drugače podano).</p><div class="na-nalogi"><p>80,0 g soli v 500 g raztopine.</p></div></li>
+              <li><p class="korak">Izračunaj novo sestavo; mora biti med obema začetnima.</p><div class="na-nalogi"><p>\(w = 80{,}0 / 500 = 0{,}160 = 16{,}0\ \%\), res med 10 % in 20 %.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5>
+              <div class="primer"><p><strong>Primer 1:</strong> 100 mL 0,20 M in 300 mL 0,40 M <span class="kf">HCl</span>?</p><p>\(n = 0{,}020 + 0{,}120 = 0{,}140\ \text{mol}\) v 0,400 L: \(c = 0{,}35\ \text{mol/L}\).</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Ali je mogoče z mešanjem 5- in 10-odstotne raztopine dobiti 12-odstotno?</p><p>Ne, mešanica je vedno med začetnima koncentracijama.</p></div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SKLOP 2 -->
+        <section class="sklop" id="sklop-2">
+          <header class="sklop-header">
+            <span class="sklop-num">4.12 · 2</span>
+            <h2>Redčenje, mešanje in priprava raztopin</h2>
+            <p>Kako izračunaš količine za pripravo razredčene ali koncentrirane raztopine.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <p>Pri <strong>redčenju</strong> se množina (ali masa) topljenca ne spremeni, spremeni se le količina topila:</p>
+            <ul>
+              <li>množinska koncentracija: <strong>c<sub>1</sub>V<sub>1</sub> = c<sub>2</sub>V<sub>2</sub></strong>;</li>
+              <li>masni delež: <strong>m<sub>1</sub>w<sub>1</sub> = m<sub>2</sub>w<sub>2</sub></strong>.</li>
+            </ul>
+            <p>Pri <strong>mešanju</strong> dveh raztopin istega topljenca se mase in mase topljenca seštejejo: m<sub>1</sub>w<sub>1</sub> + m<sub>2</sub>w<sub>2</sub> = (m<sub>1</sub> + m<sub>2</sub>) w<sub>3</sub>. Pri raztopinah z danima gostoto in masnim deležem izračunamo množinsko koncentracijo s c = (w · ρ)/M.</p>
+            <h4>Priprava raztopine v laboratoriju</h4>
+            <ol>
+              <li>Izračunaj maso trdne snovi (m = c · V · M) ali prostornino koncentrirane raztopine.</li>
+              <li>Natehtaj snov na tehtnici oziroma odmeri prostornino s pipeto ali merilnim valjem.</li>
+              <li>Raztopi v manjši količini vode, prenesi v <strong>merilno bučko</strong> in dopolni z vodo do oznake.</li>
+              <li>Pri redčenju kislin vedno dodajaš <strong>kislino v vodo</strong>, nikoli obratno.</li>
+            </ol>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+
+            <div class="tip-naloge" id="tip-6">
+              <h4>Tip 6: Izračunaj prostornino za redčenje</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Koliko mL 2,0 M HCl potrebujemo za pripravo 250 mL 0,40 M HCl?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> »pripravi razredčeno raztopino«, »koliko mL koncentrirane«.</p><ul class="kljucne"><li>„redčenje“</li><li>„c1V1 = c2V2“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Zapiši, da je množina topljenca enaka.</p><div class="na-nalogi"><p>c<sub>1</sub>V<sub>1</sub> = c<sub>2</sub>V<sub>2</sub>.</p></div></li>
+              <li><p class="korak">Izrazi in izračunaj.</p><div class="na-nalogi"><p>V<sub>1</sub> = 0,40 · 250 mL / 2,0 = 50 mL.</p></div></li>
+              <li><p class="korak">Opiši postopek.</p><div class="na-nalogi"><p>50 mL 2,0 M HCl odmerimo s pipeto v 250 mL merilno bučko z vodo in dopolnimo do oznake.</p></div></li>
+              </ol>
+            </div>
+
+            <div class="tip-naloge" id="tip-7">
+              <h4>Tip 7: Izračunaj masni delež po mešanju</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Zmešamo 200 g 10 % in 300 g 25 % raztopine NaOH. Kolikšen je masni delež NaOH v nastali raztopini?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> »zmešamo dve raztopini«, »masni delež po mešanju«.</p><ul class="kljucne"><li>„mešanje“</li><li>„masni delež“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Izračunaj maso topljenca v vsaki raztopini.</p><div class="na-nalogi"><p>20 g in 75 g NaOH.</p></div></li>
+              <li><p class="korak">Seštej mase topljenca in raztopin.</p><div class="na-nalogi"><p>95 g NaOH v 500 g raztopine.</p></div></li>
+              <li><p class="korak">Izračunaj delež.</p><div class="na-nalogi"><p>w = 95 g / 500 g = 0,19 = 19 %.</p></div></li>
+              </ol>
+            </div>
+
+            <div class="tip-naloge" id="tip-8">
+              <h4>Tip 8: Pretvori masni delež v množinsko koncentracijo</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Koncentrirana žveplova(VI) kislina ima w = 96 % in ρ = 1,84 g/mL. Izračunaj njeno množinsko koncentracijo.</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> podana gostota in masni delež, iščeš c.</p><ul class="kljucne"><li>„gostota“</li><li>„pretvori koncentracijo“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Vzemi 1 L raztopine in izračunaj njeno maso.</p><div class="na-nalogi"><p>m = 1000 mL · 1,84 g/mL = 1840 g.</p></div></li>
+              <li><p class="korak">Izračunaj maso in množino kisline.</p><div class="na-nalogi"><p>m(H<sub>2</sub>SO<sub>4</sub>) = 0,96 · 1840 g = 1766 g; n = 1766 g / 98,1 g/mol = 18,0 mol.</p></div></li>
+              <li><p class="korak">Zapiši koncentracijo.</p><div class="na-nalogi"><p>c = 18,0 mol/L.</p></div></li>
+              </ol>
+            </div>
+          </div>
+        </section>
+
+        <section class="subsection" id="kljuc">
+          <div class="subsection-head">
+            <h2>Ključ: kateri tip naloge je to?</h2>
+            <p>Poišči besedo iz navodila naloge in skoči na pravi postopek.</p>
+          </div>
+          <div class="info-card">
+            <div class="tabela-wrap">
+              <table class="tabela">
+                <thead><tr><th>V besedilu naloge piše …</th><th>Tip</th></tr></thead>
+                <tbody>
+                  <tr><td>„masni delež“, „odstotna raztopina“</td><td><a href="#tip-1">Tip 1</a></td></tr>
+                  <tr><td>„mol/L“, „pripravi … mL raztopine“</td><td><a href="#tip-2">Tip 2</a></td></tr>
+                  <tr><td>masni delež in gostota</td><td><a href="#tip-3">Tip 3</a></td></tr>
+                  <tr><td>„razredčimo“, „dolijemo vodo“, „izparimo“</td><td><a href="#tip-4">Tip 4</a></td></tr>
+                  <tr><td>„zmešamo“ dve raztopini</td><td><a href="#tip-5">Tip 5</a></td></tr>
+                  <tr><td>Izračunaj prostornino za redčenje</td><td><a href="#tip-6">Tip 6</a></td></tr>
+                  <tr><td>Izračunaj masni delež po mešanju</td><td><a href="#tip-7">Tip 7</a></td></tr>
+                  <tr><td>Pretvori masni delež v množinsko koncentracijo</td><td><a href="#tip-8">Tip 8</a></td></tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </section>
+
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>Pogoste napake</h2>
+          </div>
+          <div class="info-card">
+            <ul>
+              <li>Masi raztopine prišteješ maso topljenca dvakrat.</li>
+              <li>Pri redčenju vzameš prostornino dodane vode namesto končne prostornine.</li>
+              <li>Gostoto zamenjaš z masno koncentracijo.</li>
+              <li>Vodo dodajaš v koncentrirano kislino (nevarno).</li>
+            </ul>
+          </div>
+        </section>
+
+        <section class="subsection">
+          <div class="subsection-head">
+            <h2>Vadi naprej</h2>
+            <p>Ko predelaš razlago, preveri znanje z nalogami.</p>
+          </div>
+          <div class="link-list">
+            <a class="link-item" href="/views/poklicna_kemija/naloge/naloge.html?snov=racunanje_raztopine">
+              <span class="link-item-text">
+                <strong>Naloge za vajo</strong>
+                <small>Naloge iz tega poglavja z rešitvami in postopki</small>
+              </span>
+              <span class="arrow">→</span>
+            </a>
+            <a class="link-item" href="/views/poklicna_kemija/matura/po_snovi/naloge.html?poglavje=racunanje_raztopine">
+              <span class="link-item-text">
+                <strong>Maturitetne naloge iz te snovi</strong>
+                <small>Naloge iz pol poklicne mature</small>
+              </span>
+              <span class="arrow">→</span>
+            </a>
+          </div>
+        </section>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+
+  <script src="/components/components.js"></script>
+</body>
+</html>
