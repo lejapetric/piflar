@@ -3805,3 +3805,9 @@ details.matura-pola[open] .matura-pola-puscica {
 @media (max-width: 767px) {
     .sklop-video { padding: 0; }
 }
+
+/* video razlaga rešitve maturitetne naloge */
+.video-resitve { padding: 0; margin: 8px 0 14px; }
+@media print {
+    .video-resitve { display: none !important; }
+}

@@ -38,6 +38,7 @@ const css = `
 @font-face{font-family:Figtree;src:url(${F}/figtree-latin-ext-800-normal.woff2);font-weight:800;unicode-range:U+0100-024F}
 @font-face{font-family:Figtree;src:url(${F}/figtree-latin-400-normal.woff2);font-weight:400}
 @font-face{font-family:Figtree;src:url(${F}/figtree-latin-ext-400-normal.woff2);font-weight:400;unicode-range:U+0100-024F}
+${fs.existsSync(__dirname + '/rokopis.css') ? fs.readFileSync(__dirname + '/rokopis.css', 'utf8') : ''}
 html,body{margin:0;background:transparent}
 body{font-family:Kalam,cursive;color:${T.text};font-size:25px;line-height:1.42}
 .blk{position:absolute;left:0;top:0;width:${CW}px;padding:4px 6px}
@@ -109,6 +110,17 @@ dt{color:${T.blue};font-weight:700}dd{margin:0}
 .slika .s-pou1{fill:${T.blue};fill-opacity:.3;stroke:${T.blue};stroke-width:.8}
 .slika .s-pou2{fill:${T.green};fill-opacity:.3;stroke:${T.green};stroke-width:.8}
 marker[id$="-k1"] path{fill:${T.blue}}marker[id$="-k2"] path{fill:${T.red}}marker[id$="-k3"] path{fill:${T.green}}marker[id$="-k4"] path{fill:${T.yel}}marker[id$="-p"] path{fill:${T.sec}}marker[id$="-crn"] path{fill:${T.text}}
+/* rešitve maturitetnih nalog */
+.rokopis{font-family:Kalam,cursive;font-size:25px;line-height:1.5;color:${T.text};padding:0;--crnilo:${T.text};--kom:${T.sec}}
+.rokopis .rk-korak{grid-template-columns:minmax(0,1.55fr) minmax(280px,1fr);gap:2px 34px;margin:0}
+.rokopis .rk-kom{font-family:Kalam,cursive;font-size:19px;font-style:normal;color:${T.sec};line-height:1.35}
+.rokopis .rk-odg{color:${T.red};font-weight:700}
+.rokopis .rk-pravilo{font-size:14px}.rokopis .rk-pravilo-ime{color:${T.blue}}
+${tema === 'temna' ? '.rokopis .rk-da{background:rgba(46,160,90,.18);color:#8FD9A8}.rokopis .rk-ne{background:rgba(230,140,40,.18);color:#F2C08A}' : ''}
+.rezultat{display:inline-block;border:2.5px solid ${T.green};border-radius:10px;padding:6px 18px;font-size:25px}
+.rezultat .lbl{font-family:Figtree;font-weight:800;font-size:15px;letter-spacing:.08em;text-transform:uppercase;color:${T.green};display:block}
+.naloga svg{max-width:100%;height:auto;color:${T.text}}
+.naslov-video h1 small{font-size:.5em;color:${T.sec};font-weight:400;letter-spacing:0}
 /* posebni bloki */
 .oznaka{font-family:Kalam;font-weight:700;color:${T.red};font-size:24px;white-space:nowrap;transform:rotate(-1deg)}
 .chip{font-family:Figtree;font-weight:800;font-size:15px;letter-spacing:.06em;text-transform:uppercase;color:${T.tabla};background:${T.text};border-radius:999px;padding:6px 14px;white-space:nowrap}
@@ -154,8 +166,8 @@ marker[id$="-k1"] path{fill:${T.blue}}marker[id$="-k2"] path{fill:${T.red}}marke
   await page.screenshot({ path: path.join(outDir, 'ozadje.png') });
 
   for (const s of S.sklopi) {
-    await shot(s.id + '-naslov', `<div class="naslov-video"><span class="eb">${S.poglavje}</span><h1><span class="st">${s.num}</span> ${tex(s.naslov)}</h1><p>${tex(s.podnaslov)}</p></div>`, { w: 1000 });
-    await shot(s.id + '-oznaka', `<div class="oznaka">${s.num} · ${tex(s.naslov)}</div>`, { w: 0 });
+    await shot(s.id + '-naslov', `<div class="naslov-video"><span class="eb">${s.eyebrow ?? S.poglavje}</span><h1><span class="st">${s.num}</span> ${tex(s.naslov)}</h1><p>${tex(s.podnaslov)}</p></div>`, { w: 1000 });
+    await shot(s.id + '-oznaka', `<div class="oznaka">${s.oznaka ?? s.num + ' · ' + tex(s.naslov)}</div>`, { w: 0 });
     for (const [gi, g] of s.skupine.entries()) {
       await shot(`${s.id}-g${gi}-chip`, `<div class="chip">${g.oznaka}</div>`, { w: 0 });
       if (g.naslov) await shot(`${s.id}-g${gi}-pod`, `<div class="podnaslov">${tex(g.naslov)}</div>`);
@@ -166,6 +178,8 @@ marker[id$="-k1"] path{fill:${T.blue}}marker[id$="-k2"] path{fill:${T.red}}marke
         else if (b.kind === 'prepoznaj') h = `<div class="prepoznaj">${h}</div>`;
         else if (b.kind === 'naloga') h = `<div class="naloga"><span class="lbl">Naloga</span>${h}</div>`;
         else if (b.kind === 'korak') h = `<div class="korak"><span class="st">${b.znak}</span><div>${h}</div></div>`;
+        else if (b.kind === 'rk') h = `<div class="rokopis">${h}</div>`;
+        else if (b.kind === 'rezultat') h = `<div class="rezultat"><span class="lbl">Rezultat</span>${h}</div>`;
         else if (b.kind === 'pazi') h = `<div class="pazi">${h}</div>`;
         else if (b.kind === 'html' && b.wrap === 'concept') h = `<div class="concept-list">${h}</div>`;
         if (b.kind === 'slika') {
