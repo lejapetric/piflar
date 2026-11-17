@@ -43,6 +43,9 @@
   }
   var STEVILKA = /^(\d+(?:\.\d+)*)\.?\s+(.+)$/;
   var PRESKOK = 3; // razmik med knjigami (px), enak kot gap v tabla.css
+  // telefon: knjige so zložene ena na drugo (glej tabla.css)
+  var telefonMq = window.matchMedia ? matchMedia("(max-width: 820px)") : null;
+  function telefon() { return telefonMq ? telefonMq.matches : window.innerWidth <= 820; }
   var mirno = window.matchMedia && matchMedia("(prefers-reduced-motion: reduce)").matches;
 
   // ---------- pomožne ----------
@@ -75,7 +78,10 @@
     a.dataset.ime = p.naslov;
     a.dataset.opis = p.opis || "";
     a.style.setProperty("--barva", p.barva);
-    a.style.setProperty("--visina", (p.visina || VISINE[i % VISINE.length]) + "px");
+    var visina = p.visina || VISINE[i % VISINE.length];
+    a.style.setProperty("--visina", visina + "px");
+    // na telefonu knjige ležijo: dolžina hrbta kot delež širine police
+    a.style.setProperty("--dolzina", (visina / 330).toFixed(3));
     a.style.setProperty("--sirina", sirina + "px");
     if (p.svetlost) a.style.setProperty("--svetlost", p.svetlost);
     if (p.naslov.length > 13 && !dolg) a.style.setProperty("--velikost", "16px");
@@ -114,15 +120,22 @@
     ovoj._namig = nastavitve.namig || "";
     nastaviNapis(ovoj, null, 0);
 
+    // Hover velja samo za miško. Na zaslonu na dotik bi pointerenter ob tapu
+    // knjigo le izbral (iOS potem zahteva še en tap) in pointerleave bi jo
+    // takoj odznačil; tam knjigo izbira drsenje (glej izberiObDrsenju), tap
+    // pa jo odpre kot klik na računalniku.
+    function miska(e) { return !e.pointerType || e.pointerType === "mouse"; }
     predmeti.forEach(function (k) {
       if (!k.classList || !k.classList.contains("knjiga")) return;
-      k.addEventListener("pointerenter", function () { izberi(ovoj, k); });
+      k.addEventListener("pointerenter", function (e) { if (miska(e)) izberi(ovoj, k); });
       k.addEventListener("focus", function () { izberi(ovoj, k); });
     });
-    ovoj.addEventListener("pointerleave", function () {
+    ovoj.addEventListener("pointerleave", function (e) {
+      if (!miska(e) || telefon()) return;
       if (!ovoj.contains(document.activeElement)) izberi(ovoj, null);
     });
     ovoj.addEventListener("focusout", function (e) {
+      if (telefon()) return;
       if (!ovoj.contains(e.relatedTarget)) izberi(ovoj, null);
     });
     return ovoj;
@@ -134,7 +147,7 @@
     if (!sirinaOvoja || sirinaOvoja === ovoj._zadnjaSirina) return;
     ovoj._zadnjaSirina = sirinaOvoja;
     var predmeti = ovoj._predmeti;
-    var telefon = window.innerWidth <= 820;
+    var naTelefonu = telefon();
     var prostor = sirinaOvoja - 2 * 26 - 24; // notranji rob + opornica
 
     function sirina(k) {
@@ -143,7 +156,7 @@
     var skupaj = predmeti.reduce(function (s, k) { return s + sirina(k) + PRESKOK; }, 0);
     // če skoraj gre v eno vrsto, knjige malo stanjšaj
     var faktor = 1;
-    if (!telefon && skupaj > prostor && skupaj * 0.78 <= prostor) faktor = prostor / skupaj;
+    if (!naTelefonu && skupaj > prostor && skupaj * 0.78 <= prostor) faktor = prostor / skupaj;
     predmeti.forEach(function (k) {
       if (k.classList.contains("knjiga")) {
         k.style.setProperty("--sirina", Math.floor(+k.dataset.sirina * faktor) + "px");
@@ -151,7 +164,7 @@
     });
 
     var skupine = [[]];
-    if (!telefon && faktor === 1) {
+    if (!naTelefonu && faktor === 1) {
       var zasedeno = 0;
       predmeti.forEach(function (k) {
         var s = sirina(k) + PRESKOK;
@@ -234,6 +247,7 @@
     else starsev.appendChild(ovoj);
     ovoji.push(ovoj);
     razporedi(ovoj);
+    izberiObDrsenju();
   }
   var cakaj;
   // stikalo splošna/poklicna matura pokaže skrito polico, ki še nima razporeda
@@ -242,8 +256,46 @@
   });
   window.addEventListener("resize", function () {
     clearTimeout(cakaj);
-    cakaj = setTimeout(function () { ovoji.forEach(razporedi); }, 120);
+    cakaj = setTimeout(function () { ovoji.forEach(razporedi); izberiObDrsenju(); }, 120);
   });
+
+  // Telefon: med drsenjem je izbrana knjiga, ki je najbližje sredini zaslona
+  // (namesto hoverja). Ko polica ni več ob sredini, se izbira umakne.
+  function izberiObDrsenju() {
+    if (!telefon()) return;
+    var visina = window.innerHeight || document.documentElement.clientHeight;
+    var sredina = visina / 2;
+    ovoji.forEach(function (ovoj) {
+      var vrste = ovoj.querySelector(".polica-vrste");
+      var r = vrste && vrste.getBoundingClientRect();
+      if (!r || !r.height || r.bottom < sredina - visina * 0.25 || r.top > sredina + visina * 0.25) {
+        if (ovoj._izbrana) izberi(ovoj, null);
+        return;
+      }
+      var najblizja = null, razdalja = Infinity;
+      ovoj._predmeti.forEach(function (k) {
+        if (!k.classList || !k.classList.contains("knjiga")) return;
+        var kr = k.getBoundingClientRect();
+        var d = Math.abs(kr.top + kr.height / 2 - sredina);
+        if (d < razdalja) { razdalja = d; najblizja = k; }
+      });
+      izberi(ovoj, najblizja);
+    });
+  }
+  var drsenje = false;
+  window.addEventListener("scroll", function () {
+    if (drsenje) return;
+    drsenje = true;
+    requestAnimationFrame(function () { drsenje = false; izberiObDrsenju(); });
+  }, { passive: true });
+  if (telefonMq) {
+    var obMenjavi = function () {
+      if (!telefon()) ovoji.forEach(function (o) { izberi(o, null); });
+      else izberiObDrsenju();
+    };
+    if (telefonMq.addEventListener) telefonMq.addEventListener("change", obMenjavi);
+    else if (telefonMq.addListener) telefonMq.addListener(obMenjavi);
+  }
 
   // Oštevilčena poglavja iz seznamov .link-list / .two-col.
   function seznamiPoglavij(koren) {
