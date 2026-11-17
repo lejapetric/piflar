@@ -66,7 +66,7 @@ export const PRAVILA = [
   { ime: "Absolutna vrednost kompleksnega števila", k: /absolutn\w* vrednost(: koren|i? kompleksn)|absolutna vrednost 2/i },
   { ime: "Enačbe z absolutno vrednostjo", k: /absolutna vrednost je \d/i },
   { ime: "Računanje s kompleksnimi števili (i² = −1)", k: /konjugiran|i² = −1/i },
-  { ime: "Potence števila i", k: /potence i/i },
+  { ime: "Potence števila i", k: /potenc\w* (števila )?i\b/i },
   { ime: "Vrednosti kotnih funkcij", k: /enotsk\w* krožnic|kosinus ima vrednost|sinus ima vrednost/i },
   { ime: "Reševanje enačb s kotnimi funkcijami", k: /skupin\w* rešitev/i },
   { ime: "Amplituda in premik kotne funkcije", k: /amplitud|premik grafa|premik navpično/i },

@@ -680,8 +680,9 @@ function renderPola(pola, naslovPdf) {
     });
     desno.append(g);
   }
-  if (pola.pdf) {
-    const a = povezava(pola.pdf, "Uradna pola (RIC)", "btn btn-secondary");
+  for (const [url, ime] of [[pola.pdf, "Uradna pola (RIC)"], [pola.ocenjevanje, "Navodila za ocenjevanje (RIC)"]]) {
+    if (!url) continue;
+    const a = povezava(url, ime, "btn btn-secondary");
     a.target = "_blank";
     a.rel = "noopener";
     a.addEventListener("click", (e) => e.stopPropagation());
