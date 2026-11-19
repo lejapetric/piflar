@@ -3836,3 +3836,10 @@ details.matura-pola[open] .matura-pola-puscica {
 .zv-postopek[open] > summary { margin-bottom: .4rem; }
 .zv-rezultati li { min-width: 0; }
 .zv-naloga mjx-container:not([display="true"]) { display: inline-block; max-width: 100%; overflow-x: auto; overflow-y: hidden; vertical-align: middle; }
+.zv-rezultati li:has(.tabela-wrap) { flex-basis: 100%; }
+.zv-naloga .tabela-wrap { max-width: 100%; overflow-x: auto; margin: .25rem 0 .5rem; }
+.zv-tabela { border-collapse: collapse; font-size: .92rem; }
+.zv-tabela th, .zv-tabela td { border: 1px solid var(--border, #d7dbe0); padding: .3rem .55rem; text-align: center; vertical-align: middle; }
+.zv-tabela th { background: var(--bg-soft, rgba(0,0,0,.04)); font-weight: 600; }
+.zv-tabela td:last-child { text-align: left; }
+.zv-tabela mjx-container { max-width: none !important; overflow: visible !important; }
