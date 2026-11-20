@@ -1,14 +1,17 @@
 // public/components/ustni.js
-// Ustni del mature: vprašanja po snoveh z vzorčnimi odgovori (/api/ustni) in kviz.
+// Ustni del mature: izpitni listki (vprašanja iz uradnega seznama RIC) z našimi odgovori
+// in razlagami (/api/ustni) ter kviz. Dijak izbere osnovno ali višjo raven (?raven=…, zapomni si jo).
 //
 //   <div id="ustni" data-predmet="matematika" data-nacin="pregled" data-math></div>
-//       vsa vprašanja po sklopih in snoveh, odgovor se odpre ob kliku
+//       vsi listki po sklopih in snoveh, odgovor se odpre ob kliku, pri zahtevnejših
+//       vprašanjih je pod odgovorom gumb »Razlaga« s podrobnejšo razlago
 //   <div id="ustni" data-predmet="matematika" data-nacin="kviz" data-math></div>
 //       kviz: izbereš snovi (ali cele sklope), katera vprašanja (vsa, ki jih nisi znal,
 //       pri katerih nisi bil prepričan, še neocenjena) in koliko; po vsakem odgovoru se
 //       sam oceniš: Znal sem / Nisem bil prepričan / Nisem znal.
 //
-// Izbira kviza je v naslovu strani: kviz.html?snov=funkcije,stoznice&stanje=ne_znam,negotovo&st=10&visja=0&zacni=1
+// Izbira kviza je v naslovu strani: kviz.html?raven=visja&snov=funkcije,stoznice&stanje=ne_znam,negotovo&st=10&zacni=1
+// Izpitni listek: kviz.html?raven=osnovna&listek=nakljucen&zacni=1 (ali &listek=42) — vsa vprašanja enega listka po vrsti.
 // Ocene prijavljenega se shranijo na strežnik (POST /api/ustni/:id/ocena), gost jih ima samo v tem brskalniku.
 
 const koren = document.getElementById("ustni");
@@ -30,8 +33,22 @@ const OCENE = {
 const STANJA = { ne_znam: "Ki jih nisem znal", negotovo: "Pri katerih nisem bil prepričan", znam: "Ki sem jih znal", neocenjeno: "Še neocenjena" };
 const STEVILA = [3, 5, 10, 20, 0]; // 0 = vsa
 const KLJUC_GOST = `ucilnica-ustni-${predmet}`;
+const RAVNI = { osnovna: "Osnovna raven", visja: "Višja raven" };
+const KLJUC_RAVEN = `ucilnica-ustni-raven-${predmet}`;
 
-const urlKviza = (parametri = {}) => `/views/${predmet}/ustni/kviz.html${Object.keys(parametri).length ? `?${new URLSearchParams(parametri)}` : ""}`;
+// Raven: iz naslova strani, sicer zadnja izbrana, sicer osnovna
+const raven = (() => {
+  const izUrl = new URLSearchParams(location.search).get("raven");
+  try {
+    if (RAVNI[izUrl]) localStorage.setItem(KLJUC_RAVEN, izUrl);
+    else return RAVNI[localStorage.getItem(KLJUC_RAVEN)] ? localStorage.getItem(KLJUC_RAVEN) : "osnovna";
+  } catch {
+    /* brez shrambe */
+  }
+  return RAVNI[izUrl] ? izUrl : "osnovna";
+})();
+
+const urlKviza = (parametri = {}) => `/views/${predmet}/ustni/kviz.html?${new URLSearchParams({ raven, ...parametri })}`;
 const urlRazlage = (slug) => `/views/${predmet}/snov/${slug}/${slug}_razlaga.html`;
 
 // ------------------------------------------------------------
@@ -69,6 +86,12 @@ async function api(url, options) {
   if (!res.ok) throw Object.assign(new Error(data.message || "Napaka na strežniku."), { status: res.status });
   return data;
 }
+
+const besediloTock = (n) => (n === 1 ? "1 točka" : n === 2 ? "2 točki" : n === 3 || n === 4 ? `${n} točke` : `${n} točk`);
+const besediloListkov = (n) => {
+  const d = n % 100;
+  return d === 1 ? `${n} listek` : d === 2 ? `${n} listka` : d === 3 || d === 4 ? `${n} listki` : `${n} listkov`;
+};
 
 const besediloVpr = (n) => {
   const d = n % 100;
@@ -192,6 +215,55 @@ function gumbiOcene(vprasanje, poOceni, oznaciPrej = true) {
   return vrstica;
 }
 
+// Stikalo osnovna / višja raven (ob menjavi se stran naloži znova z ?raven=…)
+function stikaloRavni() {
+  const s = el("div", "ustni-raven");
+  s.setAttribute("role", "group");
+  s.setAttribute("aria-label", "Raven");
+  for (const [k, ime] of Object.entries(RAVNI)) {
+    const b = gumb(ime, `ustni-raven-gumb${k === raven ? " izbrana" : ""}`);
+    b.setAttribute("aria-pressed", String(k === raven));
+    b.addEventListener("click", () => {
+      if (k === raven) return;
+      try {
+        localStorage.setItem(KLJUC_RAVEN, k);
+      } catch {
+        /* brez shrambe */
+      }
+      const p = new URLSearchParams(location.search);
+      p.set("raven", k);
+      for (const x of ["zacni", "listek"]) p.delete(x);
+      location.search = p;
+    });
+    s.append(b);
+  }
+  return s;
+}
+
+// Vzorčni odgovor; če ima vprašanje podrobnejšo razlago, pod odgovorom gumb »Razlaga«
+function teloOdgovora(v) {
+  const telo = el("div", "ustni-vpr-odgovor");
+  telo.innerHTML = v.odgovor;
+  if (v.razlaga) {
+    const b = gumb("Razlaga", "ustni-razlaga-gumb");
+    b.setAttribute("aria-expanded", "false");
+    const r = el("div", "ustni-razlaga");
+    r.hidden = true;
+    b.addEventListener("click", () => {
+      if (!r.dataset.nalozeno) {
+        r.dataset.nalozeno = "1";
+        r.innerHTML = v.razlaga;
+        r.hidden = false;
+        typeset(r);
+      } else r.hidden = !r.hidden;
+      b.setAttribute("aria-expanded", String(!r.hidden));
+      b.textContent = r.hidden ? "Razlaga" : "Skrij razlago";
+    });
+    telo.append(b, r);
+  }
+  return telo;
+}
+
 function obvestiloGost() {
   if (prijavljen) return null;
   const p = el("p", "ustni-gost");
@@ -221,11 +293,9 @@ function karticaVprasanja(v, st) {
   besedilo.innerHTML = `<span class="ustni-vpr-st">${st}.</span> ${v.vprasanje}`;
   s.append(besedilo);
   const oznake = el("span", "ustni-vpr-oznake");
-  if (v.raven === "visja") oznake.append(el("span", "badge-vr", "VR"));
-  oznake.append(znacka(v.id));
+  oznake.append(el("span", "ustni-tocke", besediloTock(v.tocke)), znacka(v.id));
   s.append(oznake);
-  const telo = el("div", "ustni-vpr-odgovor");
-  telo.innerHTML = v.odgovor;
+  const telo = teloOdgovora(v);
   d.append(s, telo);
   d.addEventListener("toggle", () => {
     if (d.open && !telo.dataset.ocena) {
@@ -244,12 +314,16 @@ function izrisiPregled(vprasanja, snovi) {
   // Zgoraj: kviz in povzetek
   const zgoraj = el("div", "ustni-zgoraj");
   const st = stetje(vprasanja);
-  zgoraj.append(el("h2", "ustni-zgoraj-naslov", "Tvoja priprava"));
+  const glavaZgoraj = el("div", "ustni-zgoraj-glava");
+  glavaZgoraj.append(el("h2", "ustni-zgoraj-naslov", "Tvoja priprava"), stikaloRavni());
+  zgoraj.append(glavaZgoraj);
+  const listkov = new Set(vprasanja.map((v) => v.listek)).size;
+  zgoraj.append(el("p", "ustni-zgoraj-opis", `${RAVNI[raven]}: ${besediloListkov(listkov)}, ${besediloVpr(vprasanja.length)}.`));
   let stevciEl = stevci(st);
   zgoraj.append(stevciEl);
   const akcije = el("div", "ustni-akcije");
   akcije.append(povezava(urlKviza(), "Začni kviz", "btn btn-primary"));
-  akcije.append(povezava(urlKviza({ st: 3, zacni: 1 }), "Izvleci listek (3 vprašanja)", "btn btn-secondary"));
+  akcije.append(povezava(urlKviza({ listek: "nakljucen", zacni: 1 }), "Izvleci listek", "btn btn-secondary"));
   const ponovi = povezava("#", "", "btn btn-secondary");
   const osveziPonovi = () => {
     const n = vprasanja.filter((v) => ["ne_znam", "negotovo"].includes(stanje(v.id))).length;
@@ -304,9 +378,24 @@ function izrisiPregled(vprasanja, snovi) {
       pov.append(povezava(urlRazlage(snov.slug), "Preberi razlago", "ustni-povezava"));
       g.append(pov);
       s.append(g);
-      const seznam = el("div", "ustni-seznam");
-      vpr.forEach((v, i) => seznam.append(karticaVprasanja(v, i + 1)));
-      s.append(seznam);
+      const poListkih = new Map();
+      for (const v of vpr) {
+        if (!poListkih.has(v.listek)) poListkih.set(v.listek, []);
+        poListkih.get(v.listek).push(v);
+      }
+      for (const [stListka, lv] of poListkih) {
+        const blok = el("div", "ustni-listek");
+        blok.id = `listek-${stListka}`;
+        const gl = el("div", "ustni-listek-glava");
+        const h = el("h4", null);
+        h.append(el("span", "ustni-listek-st", `Listek ${stListka}`), ` ${lv[0].listekNaslov}`);
+        const tock = lv.reduce((a, v) => a + v.tocke, 0);
+        gl.append(h, el("span", "ustni-listek-tocke", besediloTock(tock)), povezava(urlKviza({ listek: stListka, zacni: 1 }), "Vadi listek", "ustni-povezava"));
+        const seznam = el("div", "ustni-seznam");
+        lv.forEach((v, i) => seznam.append(karticaVprasanja(v, i + 1)));
+        blok.append(gl, seznam);
+        s.append(blok);
+      }
       sek.append(s);
     }
     koren.append(sek);
@@ -348,7 +437,6 @@ function izrisiKviz(vprasanja, snovi) {
   const izbira = {
     snovi: new Set(seznamIz("snov", slugi)),
     stanja: new Set(seznamIz("stanje", Object.keys(STANJA))),
-    visja: q.get("visja") !== "0",
     st: STEVILA.includes(Number(q.get("st"))) && q.has("st") ? Number(q.get("st")) : 10,
   };
   if (!izbira.snovi.size) slugi.forEach((s) => izbira.snovi.add(s));
@@ -356,14 +444,12 @@ function izrisiKviz(vprasanja, snovi) {
 
   const izbrana = () =>
     vprasanja.filter(
-      (v) => izbira.snovi.has(v.poglavje) && izbira.stanja.has(stanje(v.id)) && (izbira.visja || v.raven !== "visja")
-    );
+(v) => izbira.snovi.has(v.poglavje) && izbira.stanja.has(stanje(v.id)));
 
   function zapisiVNaslov(zacni) {
-    const p = new URLSearchParams();
+    const p = new URLSearchParams({ raven });
     if (izbira.snovi.size < slugi.length) p.set("snov", [...izbira.snovi].join(","));
     if (izbira.stanja.size < Object.keys(STANJA).length) p.set("stanje", [...izbira.stanja].join(","));
-    if (!izbira.visja) p.set("visja", "0");
     p.set("st", izbira.st);
     if (zacni) p.set("zacni", "1");
     history.replaceState(null, "", `${location.pathname}?${p}`);
@@ -372,6 +458,9 @@ function izrisiKviz(vprasanja, snovi) {
   // ---------- Nastavitve kviza ----------
   function nastavitve() {
     koren.innerHTML = "";
+    const vrhNastavitev = el("div", "ustni-nastavitve-vrh");
+    vrhNastavitev.append(stikaloRavni(), el("span", "ustni-zgoraj-opis", `${besediloListkov(new Set(vprasanja.map((v) => v.listek)).size)}, ${besediloVpr(vprasanja.length)}`));
+    koren.append(vrhNastavitev);
     const obrazec = el("form", "ustni-nastavitve");
     obrazec.addEventListener("submit", (e) => e.preventDefault());
 
@@ -481,7 +570,7 @@ function izrisiKviz(vprasanja, snovi) {
     for (const n of STEVILA) {
       const o = el("option");
       o.value = n;
-      o.textContent = n === 0 ? "vsa" : n === 3 ? "3 (kot listek)" : String(n);
+      o.textContent = n === 0 ? "vsa" : String(n);
       o.selected = n === izbira.st;
       sel.append(o);
     }
@@ -490,16 +579,7 @@ function izrisiKviz(vprasanja, snovi) {
       posodobi();
     });
     lSt.append(sel);
-    const lVisja = el("label", "ustni-visja-izbira");
-    const cbV = el("input");
-    cbV.type = "checkbox";
-    cbV.checked = izbira.visja;
-    cbV.addEventListener("change", () => {
-      izbira.visja = cbV.checked;
-      posodobi();
-    });
-    lVisja.append(cbV, " Vključi vprašanja za višjo raven");
-    vrsta.append(lSt, lVisja);
+    vrsta.append(lSt);
     fsOstalo.append(vrsta);
 
     const dno = el("div", "ustni-zacni");
@@ -512,7 +592,12 @@ function izrisiKviz(vprasanja, snovi) {
       zapisiVNaslov(true);
       kviz(vpr);
     });
-    dno.append(info, zacni);
+    const listek = gumb("Izvleci naključni listek", "btn btn-secondary");
+    listek.title = "Vsa vprašanja enega izpitnega listka po vrsti, kot na izpitu";
+    listek.addEventListener("click", () => zacniListek("nakljucen"));
+    const gumbiDno = el("div", "ustni-zacni-gumbi");
+    gumbiDno.append(zacni, listek);
+    dno.append(info, gumbiDno);
 
     obrazec.append(fsSnovi, fsStanja, fsOstalo, dno);
     koren.append(obrazec);
@@ -525,7 +610,7 @@ function izrisiKviz(vprasanja, snovi) {
         cbSklop.checked = izbranih === cbji.length;
         cbSklop.indeterminate = izbranih > 0 && izbranih < cbji.length;
       }
-      const vSnoveh = vprasanja.filter((v) => izbira.snovi.has(v.poglavje) && (izbira.visja || v.raven !== "visja"));
+      const vSnoveh = vprasanja.filter((v) => izbira.snovi.has(v.poglavje));
       const st = stetje(vSnoveh);
       for (const [k, cb] of Object.entries(stanjaCb)) cb.parentElement.querySelector(".ustni-stanje-st").textContent = `(${st[k]})`;
       const n = izbrana().length;
@@ -542,8 +627,17 @@ function izrisiKviz(vprasanja, snovi) {
   }
 
   // ---------- Potek kviza ----------
-  function kviz(izbor) {
-    const vrsta = izmenicnoPoSnoveh(izbor).slice(0, izbira.st || undefined);
+  // Izpitni listek: vsa njegova vprašanja po vrsti (st je številka ali "nakljucen")
+  function zacniListek(st) {
+    const stevilke = [...new Set(vprasanja.map((v) => v.listek))];
+    const n = stevilke.includes(Number(st)) ? Number(st) : stevilke[Math.floor(Math.random() * stevilke.length)];
+    history.replaceState(null, "", `${location.pathname}?${new URLSearchParams({ raven, listek: n, zacni: 1 })}`);
+    kviz(vprasanja.filter((v) => v.listek === n), n);
+  }
+
+  // listek: številka listka, če kviz sledi enemu listku (vrstni red ostane)
+  function kviz(izbor, listek) {
+    const vrsta = listek ? izbor : izmenicnoPoSnoveh(izbor).slice(0, izbira.st || undefined);
     const rezultati = new Map(); // id → ocena
     const imeSnovi = new Map(snovi.map((s) => [s.slug, s.naslov]));
     let i = 0;
@@ -572,7 +666,7 @@ function izrisiKviz(vprasanja, snovi) {
       const v = vrsta[i];
       koren.innerHTML = "";
       const vrh = el("div", "ustni-kviz-vrh");
-      vrh.append(el("span", "ustni-kviz-st", `Vprašanje ${i + 1} / ${vrsta.length}`));
+      vrh.append(el("span", "ustni-kviz-st", `${listek ? `Listek ${listek} · ` : ""}Vprašanje ${i + 1} / ${vrsta.length}`));
       const trak = el("div", "ustni-kviz-trak");
       const polno = el("span");
       polno.style.width = `${(100 * i) / vrsta.length}%`;
@@ -585,8 +679,7 @@ function izrisiKviz(vprasanja, snovi) {
       const oznake = el("div", "ustni-kartica-oznake");
       const snov = el("span", "ustni-kartica-snov");
       snov.textContent = imeSnovi.get(v.poglavje) ?? v.poglavje;
-      oznake.append(snov);
-      if (v.raven === "visja") oznake.append(el("span", "badge-vr", "VR"));
+      oznake.append(snov, el("span", "ustni-kartica-listek", `Listek ${v.listek}: ${v.listekNaslov}`), el("span", "ustni-tocke", besediloTock(v.tocke)));
       if (stanje(v.id) !== "neocenjeno") {
         const prej = znacka(v.id);
         prej.title = "Tvoja zadnja ocena";
@@ -611,9 +704,7 @@ function izrisiKviz(vprasanja, snovi) {
         gumbi.remove();
         const odg = el("div", "ustni-kartica-odgovor");
         odg.append(el("h3", null, "Vzorčni odgovor"));
-        const telo = el("div", "ustni-vpr-odgovor");
-        telo.innerHTML = v.odgovor;
-        odg.append(telo);
+        odg.append(teloOdgovora(v));
         const razlaga = povezava(urlRazlage(v.poglavje), "Preberi razlago snovi →", "ustni-povezava");
         razlaga.target = "_blank";
         odg.append(razlaga);
@@ -669,12 +760,17 @@ function izrisiKviz(vprasanja, snovi) {
         });
         akcije.append(ponovi);
       }
-      const znova = gumb("Nov kviz", slabi.length ? "btn btn-secondary" : "btn btn-primary");
+      if (listek) {
+        const drug = gumb("Izvleci nov listek", slabi.length ? "btn btn-secondary" : "btn btn-primary");
+        drug.addEventListener("click", () => zacniListek("nakljucen"));
+        akcije.append(drug);
+      }
+      const znova = gumb("Nov kviz", slabi.length || listek ? "btn btn-secondary" : "btn btn-primary");
       znova.addEventListener("click", () => {
         zapisiVNaslov(false);
         nastavitve();
       });
-      akcije.append(znova, povezava(`/views/${predmet}/ustni/ustni.html`, "Vsa vprašanja", "btn btn-secondary"));
+      akcije.append(znova, povezava(`/views/${predmet}/ustni/ustni.html?raven=${raven}`, "Vsi listki", "btn btn-secondary"));
       k.append(akcije);
 
       if (ocenjena.length) {
@@ -692,7 +788,8 @@ function izrisiKviz(vprasanja, snovi) {
     prikazi();
   }
 
-  if (q.get("zacni") === "1" && izbrana().length) kviz(izbrana());
+  if (q.get("zacni") === "1" && q.get("listek")) zacniListek(q.get("listek"));
+  else if (q.get("zacni") === "1" && izbrana().length) kviz(izbrana());
   else nastavitve();
 }
 
@@ -703,7 +800,7 @@ async function init() {
   if (!koren) return;
   try {
     const [vprasanja, snovi] = await Promise.all([
-      api(`/api/ustni?${new URLSearchParams({ predmet })}`),
+      api(`/api/ustni?${new URLSearchParams({ predmet, raven })}`),
       api(`/api/snovi?${new URLSearchParams({ predmet })}`),
       naloziOcene(),
     ]);

@@ -191,16 +191,16 @@ test("registracija, potrditev e-naslova, prijava, dostop glede na paket, odjava"
   assert.equal(mz.stanje, "neuspesno");
 
   // Ustni del: samoocena se shrani prijavljenemu, zadnja ocena velja, števci se seštevajo
-  assert.equal((await post("/ustni/mat-u-mnozice-1/ocena", { ocena: "znam" })).status, 401);
-  assert.equal((await post("/ustni/mat-u-mnozice-1/ocena", { ocena: "mogoce" }, piskotek)).status, 400);
+  assert.equal((await post("/ustni/mat-u-or-3-1/ocena", { ocena: "znam" })).status, 401);
+  assert.equal((await post("/ustni/mat-u-or-3-1/ocena", { ocena: "mogoce" }, piskotek)).status, 400);
   assert.equal((await post("/ustni/ne-obstaja/ocena", { ocena: "znam" }, piskotek)).status, 404);
-  assert.equal((await post("/ustni/mat-u-mnozice-1/ocena", { ocena: "ne_znam" }, piskotek)).status, 200);
-  const ocena = await (await post("/ustni/mat-u-mnozice-1/ocena", { ocena: "negotovo" }, piskotek)).json();
+  assert.equal((await post("/ustni/mat-u-or-3-1/ocena", { ocena: "ne_znam" }, piskotek)).status, 200);
+  const ocena = await (await post("/ustni/mat-u-or-3-1/ocena", { ocena: "negotovo" }, piskotek)).json();
   assert.equal(ocena.ocena, "negotovo");
   assert.equal(ocena.ponovitve, 2);
   assert.deepEqual(ocena.stevci, { znam: 0, negotovo: 1, ne_znam: 1 });
   const ustniNapredek = await (await get("/ustni/napredek?predmet=matematika", piskotek)).json();
-  assert.deepEqual(ustniNapredek.map((z) => [z.vprasanje, z.ocena, z.poglavje]), [["mat-u-mnozice-1", "negotovo", "mnozice"]]);
+  assert.deepEqual(ustniNapredek.map((z) => [z.vprasanje, z.ocena, z.poglavje]), [["mat-u-or-3-1", "negotovo", "mnozice"]]);
 
   const odjava = await post("/odjava", {}, piskotek);
   assert.equal(odjava.status, 204);

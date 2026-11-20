@@ -137,39 +137,53 @@ function izrisi(zapisi, snovi) {
   koren.replaceChildren(povzetek, seznam);
 }
 
-// Ustni del mature: koliko vprašanj zna (samoocena v kvizu), po predmetih z vprašanji
+// Ustni del mature: koliko vprašanj zna (samoocena v kvizu), po ravneh (osnovna / višja)
 async function dodajUstni() {
-  const [zapisi, stevilo] = await Promise.all([
-    fetch("/api/ustni/napredek").then((r) => (r.ok ? r.json() : [])),
-    fetch("/api/ustni/stevilo?predmet=matematika").then((r) => (r.ok ? r.json() : { skupaj: 0 })),
-  ]).catch(() => [[], { skupaj: 0 }]);
-  if (!stevilo.skupaj) return;
-  const st = { znam: 0, negotovo: 0, ne_znam: 0 };
-  for (const z of zapisi) if (z.predmet === "matematika" && z.ocena in st) st[z.ocena]++;
+  const RAVNI = [
+    ["osnovna", "Osnovna raven", "-u-or-"],
+    ["visja", "Višja raven", "-u-vr-"],
+  ];
+  const [zapisi, ...stevila] = await Promise.all([
+    fetch("/api/ustni/napredek?predmet=matematika").then((r) => (r.ok ? r.json() : [])),
+    ...RAVNI.map(([raven]) =>
+      fetch(`/api/ustni/stevilo?predmet=matematika&raven=${raven}`).then((r) => (r.ok ? r.json() : { skupaj: 0 }))
+    ),
+  ]).catch(() => [[], { skupaj: 0 }, { skupaj: 0 }]);
+  if (!stevila.some((s) => s.skupaj)) return;
   const kartica = el("section", "racun-kartica napredek-predmet napredek-ustni");
   kartica.id = "ustni";
   kartica.append(el("h2", "", "Ustni del mature · Matematika"));
-  const vrstica = el("div", "napredek-vir");
-  vrstica.append(el("span", "napredek-vir-ime", `${stevilo.skupaj} vprašanj`));
-  const stevci = el("span", "napredek-stevci");
-  const neocenjena = stevilo.skupaj - st.znam - st.negotovo - st.ne_znam;
-  for (const [n, znak, razred, ime] of [
-    [st.znam, "✓", "uspesno", "Znam"],
-    [st.negotovo, "?", "negotovo", "Nisem prepričan"],
-    [st.ne_znam, "✗", "neuspesno", "Ne znam"],
-  ]) {
-    const s = el("span", `napredek-st napredek-st--${razred}`, `${znak} ${n}`);
-    s.title = ime;
-    stevci.append(s);
-  }
-  const gumbi = el("span", "napredek-gumbi");
-  const slabo = st.negotovo + st.ne_znam;
-  if (slabo)
-    gumbi.append(povezava("/views/matematika/ustni/kviz.html?stanje=ne_znam,negotovo&st=0&zacni=1", `Ponovi negotova in neznana (${slabo})`, "btn btn-primary napredek-gumb"));
-  if (neocenjena > 0)
-    gumbi.append(povezava("/views/matematika/ustni/kviz.html?stanje=neocenjeno&st=10&zacni=1", `Nova vprašanja (${neocenjena})`, "btn btn-secondary napredek-gumb"));
-  vrstica.append(stevci, gumbi);
-  kartica.append(vrstica);
+  RAVNI.forEach(([raven, ime, oznaka], i) => {
+    const skupaj = stevila[i].skupaj;
+    if (!skupaj) return;
+    const st = { znam: 0, negotovo: 0, ne_znam: 0 };
+    for (const z of zapisi) if (z.vprasanje.includes(oznaka) && z.ocena in st) st[z.ocena]++;
+    // Raven brez ocen skrijemo, če dijak vadi drugo raven
+    const ocenjenih = st.znam + st.negotovo + st.ne_znam;
+    if (!ocenjenih && zapisi.some((z) => !z.vprasanje.includes(oznaka))) return;
+    const vrstica = el("div", "napredek-vir");
+    vrstica.append(el("span", "napredek-vir-ime", `${ime} · ${skupaj} vprašanj`));
+    const stevci = el("span", "napredek-stevci");
+    const neocenjena = skupaj - st.znam - st.negotovo - st.ne_znam;
+    for (const [n, znak, razred, opis] of [
+      [st.znam, "✓", "uspesno", "Znam"],
+      [st.negotovo, "?", "negotovo", "Nisem prepričan"],
+      [st.ne_znam, "✗", "neuspesno", "Ne znam"],
+    ]) {
+      const s = el("span", `napredek-st napredek-st--${razred}`, `${znak} ${n}`);
+      s.title = opis;
+      stevci.append(s);
+    }
+    const gumbi = el("span", "napredek-gumbi");
+    const kviz = (p) => `/views/matematika/ustni/kviz.html?${new URLSearchParams({ raven, ...p })}`;
+    const slabo = st.negotovo + st.ne_znam;
+    if (slabo)
+      gumbi.append(povezava(kviz({ stanje: "ne_znam,negotovo", st: 0, zacni: 1 }), `Ponovi negotova in neznana (${slabo})`, "btn btn-primary napredek-gumb"));
+    if (neocenjena > 0)
+      gumbi.append(povezava(kviz({ stanje: "neocenjeno", st: 10, zacni: 1 }), `Nova vprašanja (${neocenjena})`, "btn btn-secondary napredek-gumb"));
+    vrstica.append(stevci, gumbi);
+    kartica.append(vrstica);
+  });
   koren.append(kartica);
 }
 

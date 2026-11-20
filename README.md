@@ -251,26 +251,32 @@ Posnetke pole 2 prebere bralnik v brskalniku (gumb `.ang-poslusaj`, Web Speech A
 
 ## Ustni del mature
 
-Matematika ima razdelek Ustni del (`public/views/matematika/ustni/`): 161 vprašanj za ustni izpit iz vseh 17 snovi,
-vsako z vzorčnim odgovorom (vprašanja so naša, v slogu izpitnih listkov; `"visja"` jih označi za višjo raven).
+Matematika ima razdelek Ustni del (`public/views/matematika/ustni/`): vseh 105 izpitnih listkov za osnovno in 105 za višjo raven
+z uradnega seznama RIC (*Vprašanja za ustni izpit iz matematike na splošni maturi 2026*, avtorske pravice za vprašanja ima RIC),
+skupaj 783 vprašanj. Odgovori so naši; pri zahtevnejših vprašanjih (dokazi, izpeljave, postopki) je pod odgovorom gumb **Razlaga**
+s podrobnejšo razlago, pri definicijah in lažjih vprašanjih ga ni.
 
-- **Vprašanja po snoveh** (`ustni.html`): vsa vprašanja po sklopih in snoveh, odgovor se odpre ob kliku, pod njim se dijak oceni.
-  Na vrhu so povzetek ocen, Začni kviz, Izvleci listek (3 vprašanja iz različnih snovi) in Ponovi, kar še ne znaš.
+- Dijak izbere **osnovno ali višjo raven** (stikalo na vrhu, `?raven=osnovna|visja`, zadnjo izbiro si zapomni `localStorage`).
+- **Izpitni listki** (`ustni.html`): listki po sklopih in snoveh (številka, naslov, točke), odgovor se odpre ob kliku, pod njim se dijak oceni.
+  Na vrhu so povzetek ocen, Začni kviz, Izvleci listek (naključni listek, vsa vprašanja po vrsti, kot na izpitu) in Ponovi, kar še ne znaš.
 - **Kviz** (`kviz.html`): izbereš snovi ali cele sklope, katera vprašanja (ki jih nisi znal, pri katerih nisi bil prepričan,
-  ki si jih znal, še neocenjena), število (3 kot listek, 5, 10, 20, vsa) in ali so zraven vprašanja višje ravni.
+  ki si jih znal, še neocenjena) in število (3, 5, 10, 20, vsa), ali izvlečeš naključni listek.
   Po vsakem odgovoru se dijak oceni: Znal sem / Nisem bil prepričan / Nisem znal (tipke 1, 2, 3; preslednica odpre odgovor).
-  Na koncu ponovi samo tista, ki jih ni znal. Izbira je v naslovu: `kviz.html?snov=funkcije,stoznice&stanje=ne_znam,negotovo&st=10&visja=0&zacni=1`.
+  Na koncu ponovi samo tista, ki jih ni znal. Izbira je v naslovu: `kviz.html?raven=visja&snov=funkcije,stoznice&stanje=ne_znam,negotovo&st=10&zacni=1`,
+  listek: `kviz.html?raven=osnovna&listek=nakljucen&zacni=1` (ali `&listek=42`).
 - Prijavljenemu se ocene shranijo v bazo (`api/models/ustni.js`: zadnja ocena, število ponovitev in števci po ocenah),
-  gost jih ima samo v `localStorage`. Povzetek je tudi na strani Moje naloge. Izbris računa izbriše tudi te ocene.
+  gost jih ima samo v `localStorage`. Povzetek po ravneh je tudi na strani Moje naloge. Izbris računa izbriše tudi te ocene.
 
-Vprašanja so v `tools/ustni/<predmet>.mjs` (`[vprašanje, odgovor v HTML z LaTeX-om, "visja"?]` po snoveh), JSON zgradi:
+Listki so v `tools/ustni/matematika/` (`osnovna-0*.mjs`, `visja-0*.mjs`, pomožne funkcije v `lib.mjs`):
+`listek(št., naslov, snov, [q(točke, vprašanje, odgovor, razlaga?)])`; na višji ravni vprašanje, ki je enako vprašanju osnovne ravni,
+zapišemo kot `ref(listek, i, točke?)`. Grafe v odgovorih nariše `graf({...})` kot SVG. JSON zgradi:
 
 ```bash
 node tools/ustni/gradi.mjs    # zapiše api/data/ustni/<predmet>.json
 ```
 
-Id vprašanja je zaporedna številka v snovi (`mat-u-funkcije-5`), zato nova vprašanja dodajaj na konec seznama snovi.
-Za nov predmet dodaj `tools/ustni/<predmet>.mjs`, strani `public/views/<predmet>/ustni/` (`data-predmet`) in sklope v `SKLOPI` v `components/ustni.js`.
+Id vprašanja je `mat-u-or-<listek>-<i>` oz. `mat-u-vr-<listek>-<i>` (nanj so vezane ocene, zato številčenja ne spreminjaj).
+Za nov predmet dodaj mapo `tools/ustni/<predmet>/`, strani `public/views/<predmet>/ustni/` (`data-predmet`) in sklope v `SKLOPI` v `components/ustni.js`.
 
 ## Račun
 
@@ -319,8 +325,8 @@ Prijava se hrani v piškotku `httpOnly` (7 dni), zato je JavaScript na strani ne
 | `POST /api/naloge/:id/odgovor` | preveri odgovor `{ "odgovor": "7" }` → `{ "pravilno": true }` |
 | `GET /api/naloge/:id/postopek` | postopek in rezultat |
 | `GET /api/napredek?poglavje=mnozice` | napredek prijavljenega (poskusi, rešeno, ogledan postopek) |
-| `GET /api/ustni?predmet=matematika&poglavje=funkcije` | vprašanja za ustni del z odgovori (`&raven=osnovna` brez višje ravni) |
-| `GET /api/ustni/stevilo?predmet=matematika` | število vprašanj po snoveh |
+| `GET /api/ustni?predmet=matematika&raven=osnovna&poglavje=funkcije&listek=12` | vprašanja izpitnih listkov z odgovori in razlagami |
+| `GET /api/ustni/stevilo?predmet=matematika&raven=visja` | število vprašanj po snoveh |
 | `GET /api/ustni/napredek?predmet=matematika` | samoocene prijavljenega |
 | `POST /api/ustni/:id/ocena` | `{ "ocena": "znam" \| "negotovo" \| "ne_znam" }` (prijavljeni) |
 | `GET /api/matura?predmet=matematika&raven=osnovna&leto=2026` | seznam pol (`resena`, `odklenjena`), z `&naloge=1` tudi naloge |

@@ -7,26 +7,29 @@ import Ustni, { OCENE } from "../models/ustni.js";
 const poId = new Map(ustni.map((v) => [v.id, v]));
 const seznam = (x) => String(x ?? "").split(",").map((s) => s.trim()).filter(Boolean);
 
-// GET /api/ustni?predmet=matematika&poglavje=funkcije,stoznice&raven=osnovna
+// GET /api/ustni?predmet=matematika&raven=osnovna&poglavje=funkcije,stoznice&listek=12
+// raven: osnovna | visja (izpitni listki ravni); brez nje vsa vprašanja obeh ravni
 const ustniList = (req, res) => {
   const { predmet, raven } = req.query;
   const poglavja = new Set(seznam(req.query.poglavje));
+  const listki = new Set(seznam(req.query.listek).map(Number));
   const rezultat = ustni.filter(
     (v) =>
       (!predmet || v.predmet === predmet) &&
+      (!raven || v.raven === raven) &&
       (!poglavja.size || poglavja.has(v.poglavje)) &&
-      (raven !== "osnovna" || v.raven === "osnovna")
+      (!listki.size || listki.has(v.listek))
   );
   res.status(200).json(rezultat);
 };
 
-// GET /api/ustni/stevilo?predmet=matematika → { skupaj, poglavja: { slug: n } }
+// GET /api/ustni/stevilo?predmet=matematika&raven=osnovna → { skupaj, poglavja: { slug: n } }
 const ustniStevilo = (req, res) => {
-  const { predmet } = req.query;
+  const { predmet, raven } = req.query;
   const poglavja = {};
   let skupaj = 0;
   for (const v of ustni) {
-    if (predmet && v.predmet !== predmet) continue;
+    if ((predmet && v.predmet !== predmet) || (raven && v.raven !== raven)) continue;
     poglavja[v.poglavje] = (poglavja[v.poglavje] ?? 0) + 1;
     skupaj++;
   }
