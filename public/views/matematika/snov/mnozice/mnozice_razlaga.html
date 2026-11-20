@@ -68,6 +68,7 @@
             <li><a href="#sklop-7"><span class="kazalo-st">4.2.7</span> Kartezični produkt množic</a></li>
             <li><a href="#sklop-8"><span class="kazalo-st">4.2.8</span> Moč množice</a></li>
             <li><a href="#sklop-9"><span class="kazalo-st">4.2.9</span> Moč potenčne množice <span class="badge-vr">VR</span></a></li>
+            <li><a href="#sklop-10"><span class="kazalo-st">4.2.10</span> Relacije in njihove lastnosti</a></li>
             <li><a href="#kljuc"><span class="kazalo-st">?</span> Ključ: kateri tip naloge je to?</a></li>
           </ol>
         </nav>
@@ -749,6 +750,67 @@
           </div>
         </section>
 
+        <!-- ============ SKLOP 10 ============ -->
+        <section class="sklop" id="sklop-10">
+          <header class="sklop-header">
+            <span class="sklop-num">4.2.10</span>
+            <h2>Relacije in njihove lastnosti</h2>
+            <p>Relacija kot podmnožica kartezičnega produkta; refleksivnost, simetričnost, antisimetričnost, tranzitivnost, ekvivalenčna relacija.</p>
+          </header>
+          <div class="sklop-teorija">
+            <h3>Razlaga</h3>
+            <p><strong>Relacija</strong> \(R\) v množici \(A\) pove, kateri pari elementov sta v nekem odnosu. Če je \(a\) v relaciji z \(b\), pišemo \(a\,R\,b\). Relacija je torej množica urejenih parov, podmnožica <a href="#sklop-7">kartezičnega produkta</a> \(A \times A\). Znane relacije so \(=\), \(&lt;\), \(\le\), deljivost \(\mid\), vzporednost \(\parallel\), pravokotnost \(\perp\), skladnost \(\cong\) in podobnost \(\sim\).</p>
+            <p>Primer: v \(A = \{1, 2, 3, 4\}\) je relacija „deli“ množica parov \(\{(1,1), (1,2), (1,3), (1,4), (2,2), (2,4), (3,3), (4,4)\}\). Narišemo jo lahko kot <strong>graf</strong> (puščica od \(a\) do \(b\), kadar \(a\,R\,b\); zanka pri \(a\), kadar \(a\,R\,a\)) ali kot točke v mreži kartezičnega produkta.</p>
+            <h4>Lastnosti relacij</h4>
+            <div class="tabela-wrap">
+              <table class="tabela">
+                <thead><tr><th>Lastnost</th><th>Pogoj (za vse elemente iz \(A\))</th><th>Na grafu</th></tr></thead>
+                <tbody>
+                  <tr><td>refleksivnost</td><td>\(a\,R\,a\)</td><td>zanka pri vsakem elementu</td></tr>
+                  <tr><td>simetričnost</td><td>\(a\,R\,b \Rightarrow b\,R\,a\)</td><td>vsaka puščica ima nasprotno puščico</td></tr>
+                  <tr><td>antisimetričnost</td><td>\(a\,R\,b \land b\,R\,a \Rightarrow a = b\)</td><td>med različnima elementoma nikoli puščici v obe smeri</td></tr>
+                  <tr><td>tranzitivnost</td><td>\(a\,R\,b \land b\,R\,c \Rightarrow a\,R\,c\)</td><td>pot \(a \to b \to c\) ima tudi bližnjico \(a \to c\)</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p>Relacija je <strong>ekvivalenčna</strong>, če je refleksivna, simetrična in tranzitivna (enakost, vzporednost premic, skladnost, podobnost). Ekvivalenčna relacija razdeli množico na disjunktne <strong>razrede</strong> med seboj „enakovrednih“ elementov: relacija „imata enak ostanek pri deljenju s 3“ razdeli \(\mathbb{Z}\) na tri razrede (ostanki 0, 1 in 2).</p>
+            <p>Relacija, ki je refleksivna, antisimetrična in tranzitivna, je <strong>relacija delne urejenosti</strong> (na primer \(\le\) in deljivost v \(\mathbb{N}\)).</p>
+            <div class="tabela-wrap">
+              <table class="tabela">
+                <thead><tr><th>Relacija</th><th>R</th><th>S</th><th>A</th><th>T</th><th>Ekvivalenčna</th></tr></thead>
+                <tbody>
+                  <tr><td>\(=\)</td><td>da</td><td>da</td><td>da</td><td>da</td><td>da</td></tr>
+                  <tr><td>\(&lt;\)</td><td>ne</td><td>ne</td><td>da</td><td>da</td><td>ne</td></tr>
+                  <tr><td>\(\le\)</td><td>da</td><td>ne</td><td>da</td><td>da</td><td>ne</td></tr>
+                  <tr><td>\(\mid\) v \(\mathbb{N}\)</td><td>da</td><td>ne</td><td>da</td><td>da</td><td>ne</td></tr>
+                  <tr><td>\(\parallel\) (premica je vzporedna sama sebi)</td><td>da</td><td>da</td><td>ne</td><td>da</td><td>da</td></tr>
+                  <tr><td>\(\perp\)</td><td>ne</td><td>da</td><td>ne</td><td>ne</td><td>ne</td></tr>
+                  <tr><td>\(\cong\), \(\sim\)</td><td>da</td><td>da</td><td>ne</td><td>da</td><td>da</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p>Pazi: \(&lt;\) je antisimetrična, ker pogoj \(a &lt; b \land b &lt; a\) ni nikoli izpolnjen, zato implikacija velja. Simetričnost in antisimetričnost se ne izključujeta (enakost ima obe lastnosti).</p>
+          </div>
+          <div class="sklop-naloge">
+            <h3>Tipi nalog v tem sklopu</h3>
+            <div class="tip-naloge" id="tip-13">
+              <h4>Tip 13: Ugotovi lastnosti relacije</h4>
+              <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>V množici \(A = \{1, 2, 3\}\) je dana relacija \(R = \{(1,1), (2,2), (3,3), (1,2), (2,1), (2,3)\}\). Ali je refleksivna, simetrična, antisimetrična, tranzitivna? Je ekvivalenčna?</p></div>
+              <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> dana je relacija (z naštetimi pari, z grafom ali z opisom), sprašujejo po njenih lastnostih.</p><ul class="kljucne"><li>„ali je relacija refleksivna / simetrična / tranzitivna“</li><li>„ekvivalenčna relacija“</li><li>„dopolnite relacijo, da bo …“</li></ul></div>
+              <h5>Univerzalni postopek</h5><ol class="postopek">
+              <li><p class="korak">Refleksivnost: ali je par \((a, a)\) v relaciji za <strong>vsak</strong> element?</p><div class="na-nalogi"><p>\((1,1), (2,2), (3,3)\) so v \(R\): refleksivna.</p></div></li>
+              <li><p class="korak">Simetričnost: za vsak par \((a, b)\) preveri, ali je v relaciji tudi \((b, a)\).</p><div class="na-nalogi"><p>\((2,3) \in R\), \((3,2) \notin R\): ni simetrična.</p></div></li>
+              <li><p class="korak">Antisimetričnost: poišči par različnih elementov, ki sta v relaciji v obe smeri. Če obstaja, relacija ni antisimetrična.</p><div class="na-nalogi"><p>\((1,2)\) in \((2,1)\) sta v \(R\): ni antisimetrična.</p></div></li>
+              <li><p class="korak">Tranzitivnost: za vsaka para \((a, b)\), \((b, c)\) preveri, ali je v relaciji \((a, c)\). En protiprimer zadošča za „ne“.</p><div class="na-nalogi"><p>\((1,2)\) in \((2,3)\) sta v \(R\), \((1,3)\) pa ne: ni tranzitivna.</p></div></li>
+              <li><p class="korak">Ekvivalenčna je samo, če ima prve dve in četrto lastnost.</p><div class="na-nalogi"><p>Ni simetrična, zato ni ekvivalenčna.</p></div></li>
+              </ol>
+              <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Ali je relacija „\(a\) in \(b\) imata enako število števk“ v \(\mathbb{N}\) ekvivalenčna?</p><p>Da: vsako število ima enako število števk kot samo (R), opis je simetričen (S), če \(a\) in \(b\) ter \(b\) in \(c\) imata enako število števk, ga imata tudi \(a\) in \(c\) (T). Razredi so enomestna, dvomestna, trimestna … števila.</p></div>
+              <div class="primer"><p><strong>Primer 2:</strong> Ali je relacija „\(a\) je deljivo z \(b\)“ v \(\mathbb{Z}\) antisimetrična?</p><p>Ne: \(3\) je deljivo z \(-3\) in \(-3\) je deljivo s \(3\), a \(3 \ne -3\). V \(\mathbb{N}\) pa je antisimetrična.</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Relacijo \(R = \{(1,2), (2,3)\}\) v \(\{1, 2, 3\}\) dopolnite z najmanj pari, da bo tranzitivna.</p><p>Dodati je treba samo \((1,3)\). Nova relacija \(\{(1,2), (2,3), (1,3)\}\) je tranzitivna.</p></div>
+            </div>
+          </div>
+        </section>
+
         <!-- ============ KLJUČ ============ -->
         <section class="subsection" id="kljuc">
           <div class="subsection-head">
@@ -772,6 +834,7 @@
                   <tr><td>dane moči \(m(A)\), \(m(B)\), …</td><td><a href="#tip-10">Tip 10</a></td></tr>
                   <tr><td>anketa, „koliko jih … oboje / nič / samo“</td><td><a href="#tip-11">Tip 11</a></td></tr>
                   <tr><td>„koliko podmnožic“, \(m(\mathcal{P}(A))\)</td><td><a href="#tip-12">Tip 12</a></td></tr>
+                  <tr><td>„relacija“, „refleksivna, simetrična, tranzitivna“, „ekvivalenčna“</td><td><a href="#tip-13">Tip 13</a></td></tr>
                 </tbody>
               </table>
             </div>
@@ -793,6 +856,8 @@
               <li>Pri intervalih zamenjaš odprto in zaprto krajišče, posebno pri razliki in komplementu.</li>
               <li>Pri moči unije pozabiš odšteti presek; v Vennov diagram vpišeš celotno moč namesto „samo“ dela.</li>
               <li>Pri kartezičnem produktu zamenjaš vrstni red komponent.</li>
+              <li>Pri relacijah misliš, da „ni simetrična“ pomeni „je antisimetrična“; to sta različni lastnosti.</li>
+              <li>Pri refleksivnosti preveriš samo nekaj elementov namesto vseh.</li>
             </ul>
           </div>
         </section>
