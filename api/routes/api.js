@@ -8,6 +8,7 @@ import ctrlProfil from "../controllers/profil.js";
 import ctrlPlacila from "../controllers/placila.js";
 import ctrlNapredek from "../controllers/napredek.js";
 import ctrlIskanje from "../controllers/iskanje.js";
+import ctrlPriprava from "../controllers/priprava.js";
 import { naloziUporabnika, zahtevajPrijavo, zahtevajBazo } from "../middleware/uporabnik.js";
 
 const router = Router();
@@ -43,6 +44,13 @@ router.get("/naloge/:id/postopek", ctrlNaloge.nalogaPostopek);
 
 // NAPREDEK (rešene naloge po predmetih in snoveh)
 router.get("/napredek", zahtevajPrijavo, ctrlNapredek.napredekList);
+
+// TEDENSKA PRIPRAVA NA MATURO (načrt snovi po tednih, predelanost razlag)
+router.get("/priprava", zahtevajPrijavo, ctrlPriprava.pripravaGet);
+router.put("/priprava", zahtevajPrijavo, ctrlPriprava.pripravaPut);
+router.post("/priprava/zamenjaj", zahtevajPrijavo, ctrlPriprava.pripravaZamenjaj);
+router.get("/priprava/branje", zahtevajPrijavo, ctrlPriprava.branjeGet);
+router.post("/priprava/branje", zahtevajPrijavo, ctrlPriprava.branjePost);
 
 // ISKANJE PO SNOVI
 router.get("/iskanje", ctrlIskanje.iskanje);

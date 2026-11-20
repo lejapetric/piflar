@@ -11,7 +11,7 @@ for (const pola of matura)
   for (const n of pola.naloge ?? []) maturitetne.set(`${pola.id}-${n.id}`, { pola, naloga: n });
 
 // Predmet in snovi vzamemo iz trenutnih podatkov (stari zapisi jih nimajo shranjenih)
-function opis(z) {
+export function opis(z) {
   const vir = z.vir ?? "vaja";
   if (vir === "matura") {
     const m = maturitetne.get(z.naloga);
