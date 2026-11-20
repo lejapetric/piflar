@@ -1,0 +1,2269 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deljivost, osnove logike, množice: rešitve zbirke za 1. letnik | Učilnica.com</title>
+  <meta name="description" content="Rešitve in postopki nalog iz poglavja Deljivost, osnove logike, množice v zbirki nalog Matematika 1 za gimnazije.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
+  <link rel="stylesheet" href="/style/snov.css">
+</head>
+<body>
+  <div id="header"></div>
+
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view">
+
+        <header class="page-header">
+          <span class="page-eyebrow">Matematika · Rešitve delovnega zvezka · 1. letnik</span>
+          <h1>Deljivost, osnove logike, množice</h1>
+          <p>Rešitve in postopki nalog iz 2. poglavja zbirke <em>Matematika 1, zbirka nalog za 1. letnik gimnazije</em> (strani 2–32). Navodila nalog so v zbirki; tu je pri vsaki nalogi kratek opis, rezultat in postopek.</p>
+        </header>
+
+        <div class="note-band">
+          <p><strong>Vir:</strong> Mateja Škrlec: <em>Matematika 1, zbirka nalog za 1. letnik gimnazije</em> (DZS, ISBN 978-961-02-0999-7). Številke nalog in strani se ujemajo z zbirko. Najprej nalogo reši sam, šele nato odpri postopek.</p>
+        </div>
+
+        <section class="subsection">
+          <div class="subsection-head"><h2>Podpoglavja</h2></div>
+          <ol class="kazalo">
+            <li><a href="#sklop-1"><span class="kazalo-st">1</span> Relacije</a></li>
+            <li><a href="#sklop-2"><span class="kazalo-st">2</span> Osnovni izrek o deljenju in relacija deljivosti v množici N</a></li>
+            <li><a href="#sklop-3"><span class="kazalo-st">3</span> Kriteriji za deljivost</a></li>
+            <li><a href="#sklop-4"><span class="kazalo-st">4</span> Praštevila in sestavljena števila</a></li>
+            <li><a href="#sklop-5"><span class="kazalo-st">5</span> Največji skupni delitelj in najmanjši skupni večkratnik</a></li>
+            <li><a href="#sklop-6"><span class="kazalo-st">6</span> Evklidov algoritem</a></li>
+            <li><a href="#sklop-7"><span class="kazalo-st">7</span> Številski sestavi</a></li>
+            <li><a href="#sklop-8"><span class="kazalo-st">8</span> Osnove logike</a></li>
+            <li><a href="#sklop-9"><span class="kazalo-st">9</span> Množice</a></li>
+          </ol>
+        </section>
+
+        <section class="sklop" id="sklop-1">
+          <header class="sklop-header">
+            <span class="sklop-num">1. letnik · 2.1</span>
+            <h2>Relacije</h2>
+            <p>Strani 2–3 v zbirki. Naloge: 396.a, 396.b, 396.c.</p>
+          </header>
+          <div class="sklop-naloge">
+            <div class="tip-naloge zv-naloga" id="n-396-a">
+              <h3>Naloga 396.a</h3>
+              <p class="zv-opis">Za osem znanih relacij ugotovi, ali so refleksivne (R), simetrične (S), antisimetrične (A), tranzitivne (T) in ekvivalenčne (E).</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><div class="tabela-wrap"><table class="zv-tabela"><thead><tr><th>Relacija</th><th>R</th><th>S</th><th>A</th><th>T</th><th>E</th></tr></thead><tbody><tr><td>\(a = b\)</td><td>da</td><td>da</td><td>da</td><td>da</td><td>da</td></tr><tr><td>\(a &lt; b\)</td><td>ne</td><td>ne</td><td>da</td><td>da</td><td>ne</td></tr><tr><td>\(a \le b\)</td><td>da</td><td>ne</td><td>da</td><td>da</td><td>ne</td></tr><tr><td>\(a \parallel b\)</td><td>da</td><td>da</td><td>ne</td><td>da</td><td>da</td></tr><tr><td>\(a \perp b\)</td><td>ne</td><td>da</td><td>ne</td><td>ne</td><td>ne</td></tr><tr><td>\(A \sim B\)</td><td>da</td><td>da</td><td>ne</td><td>da</td><td>da</td></tr><tr><td>\(A \cong B\)</td><td>da</td><td>da</td><td>ne</td><td>da</td><td>da</td></tr><tr><td>\(a \mid b\) v \(\mathbb{N}\)</td><td>da</td><td>ne</td><td>da</td><td>da</td><td>ne</td></tr></tbody></table></div></li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>Za vsako lastnost preveri definicijo. \(a &lt; b\) ni refleksivna (\(2 &lt; 2\) ne drži), je pa antisimetrična, ker \(a &lt; b\) in \(b &lt; a\) nikoli ne veljata hkrati. Pravokotnost ni tranzitivna: iz \(a \perp b\) in \(b \perp c\) sledi \(a \parallel c\), ne \(a \perp c\). Vzporednost, podobnost in skladnost so ekvivalenčne (premico štejemo za vzporedno sami sebi). Deljivost v \(\mathbb{N}\) ni simetrična (\(2 \mid 4\), \(4 \nmid 2\)), je pa antisimetrična: iz \(a \mid b\) in \(b \mid a\) sledi \(a = b\).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-396-b">
+              <h3>Naloga 396.b</h3>
+              <p class="zv-opis">Graf relacije »je večji ali enak« v \(\mathbb{N}_6\).</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li>zanka pri vsakem številu \(1, \dots, 6\) in puščica \(a \to b\) za vsak par \(a &gt; b\) (15 puščic)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>Ker \(a \ge a\) velja vedno, ima vsako število zanko. Puščice: iz 6 v 5, 4, 3, 2, 1; iz 5 v 4, 3, 2, 1; iz 4 v 3, 2, 1; iz 3 v 2, 1; iz 2 v 1. Skupaj \(5 + 4 + 3 + 2 + 1 = 15\) puščic in 6 zank.</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-396-c">
+              <h3>Naloga 396.c</h3>
+              <p class="zv-opis">Grafa relacij »je večji« in »je manjši ali enak« v \(\mathbb{N}_5\).</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li>»je večji«: 10 puščic \(a \to b\) za \(a &gt; b\), brez zank</li>
+                <li>»je manjši ali enak«: 10 puščic \(a \to b\) za \(a &lt; b\) in zanka pri vsakem od 5 števil</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>»Je večji«: \(5 \to 4, 3, 2, 1\); \(4 \to 3, 2, 1\); \(3 \to 2, 1\); \(2 \to 1\). Relacija ni refleksivna, zato ni zank. »Je manjši ali enak« ima puščice v nasprotni smeri (\(1 \to 2, 3, 4, 5\) itd.) in še zanke, ker je refleksivna.</p>
+              </details>
+            </div>
+          </div>
+        </section>
+        <section class="sklop" id="sklop-2">
+          <header class="sklop-header">
+            <span class="sklop-num">1. letnik · 2.2</span>
+            <h2>Osnovni izrek o deljenju in relacija deljivosti v množici N</h2>
+            <p>Strani 4–7 v zbirki. Naloge: 289.a, 289.b, 289, 289.c, 193, 292, 293, 294, 295, 296, 297, 298, 299, 300, 301, 302, 303, 194, 195, 196, 197, 202, 203, 204, 212, 213, 305, 304, 306, 307, 307.a, 308, 309, 310, 311, 214*, 216*, 218*, 219*, 222*, 223*, 223*.a, V 217, V 220.</p>
+          </header>
+          <div class="sklop-naloge">
+            <div class="tip-naloge zv-naloga" id="n-289-a">
+              <h3>Naloga 289.a</h3>
+              <p class="zv-opis">Prvih pet večkratnikov in vsi delitelji števil 50, 75, 90, 120, 144.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><div class="tabela-wrap"><table class="zv-tabela"><thead><tr><th>Število</th><th>Prvih pet večkratnikov</th><th>Vsi delitelji</th></tr></thead><tbody><tr><td>50</td><td>50, 100, 150, 200, 250</td><td>1, 2, 5, 10, 25, 50</td></tr><tr><td>75</td><td>75, 150, 225, 300, 375</td><td>1, 3, 5, 15, 25, 75</td></tr><tr><td>90</td><td>90, 180, 270, 360, 450</td><td>1, 2, 3, 5, 6, 9, 10, 15, 18, 30, 45, 90</td></tr><tr><td>120</td><td>120, 240, 360, 480, 600</td><td>1, 2, 3, 4, 5, 6, 8, 10, 12, 15, 20, 24, 30, 40, 60, 120</td></tr><tr><td>144</td><td>144, 288, 432, 576, 720</td><td>1, 2, 3, 4, 6, 8, 9, 12, 16, 18, 24, 36, 48, 72, 144</td></tr></tbody></table></div></li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>Večkratniki: število množiš z 1, 2, 3, 4, 5. Delitelje iščeš v parih: \(144 = 1 \cdot 144 = 2 \cdot 72 = 3 \cdot 48 = 4 \cdot 36 = 6 \cdot 24 = 8 \cdot 18 = 9 \cdot 16 = 12 \cdot 12\). Ustaviš se, ko prvi faktor preseže koren števila.</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-289-b">
+              <h3>Naloga 289.b</h3>
+              <p class="zv-opis">Možni ostanki pri deljenju s 6, 3, 8 in \(k\).</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><span class="zv-crka">6)</span> \(0, 1, 2, 3, 4, 5\)</li>
+                <li><span class="zv-crka">3)</span> \(0, 1, 2\)</li>
+                <li><span class="zv-crka">8)</span> \(0, 1, 2, \dots, 7\)</li>
+                <li><span class="zv-crka">k)</span> \(0, 1, 2, \dots, k - 1\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>Ostanek je vedno nenegativen in manjši od delitelja: \(0 \le r &lt; k\).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-289">
+              <h3>Naloga 289</h3>
+              <p class="zv-opis">Osnovni izrek o deljenju za pare 9 in 5, 14 in 4, 7 in 30.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li>\(9 : 5 = 1,\ \text{ost. } 4;\quad 9 = 1 \cdot 5 + 4\)</li>
+                <li>\(14 : 4 = 3,\ \text{ost. } 2;\quad 14 = 3 \cdot 4 + 2\)</li>
+                <li>\(7 : 30 = 0,\ \text{ost. } 7;\quad 7 = 0 \cdot 30 + 7\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>Izrek: \(m = k \cdot n + r\), \(0 \le r &lt; n\). Če je deljenec manjši od delitelja, je količnik 0 in ostanek kar deljenec.</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-289-c">
+              <h3>Naloga 289.c</h3>
+              <p class="zv-opis">Prvih pet ustreznih naravnih števil in algebrski izraz za dane pogoje deljivosti.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><div class="tabela-wrap"><table class="zv-tabela"><thead><tr><th>Pogoj</th><th>Prvih 5 števil</th><th>Izraz</th></tr></thead><tbody><tr><td>deljivo s 5</td><td>5, 10, 15, 20, 25</td><td>\(5k\)</td></tr><tr><td>deljivo z 12</td><td>12, 24, 36, 48, 60</td><td>\(12k\)</td></tr><tr><td>deljivo z 8</td><td>8, 16, 24, 32, 40</td><td>\(8k\)</td></tr><tr><td>ostanek 3 pri deljenju z 8</td><td>3, 11, 19, 27, 35</td><td>\(8k + 3\)</td></tr><tr><td>ostanek 1 pri deljenju s 5</td><td>1, 6, 11, 16, 21</td><td>\(5k + 1\)</td></tr><tr><td>ostanek 5 pri deljenju z 9</td><td>5, 14, 23, 32, 41</td><td>\(9k + 5\)</td></tr></tbody></table></div></li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>Pri izrazih z ostankom vzameš \(k \in \mathbb{N}_0\), da dobiš tudi najmanjše število (npr. \(8 \cdot 0 + 3 = 3\)); pri večkratnikih \(k \in \mathbb{N}\).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-193">
+              <h3>Naloga 193</h3>
+              <p class="zv-opis">Vsi delitelji in prvih pet večkratnikov danih števil.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><span class="zv-crka">a)</span> \(D_{400} = \{1, 2, 4, 5, 8, 10, 16, 20, 25, 40, 50, 80, 100, 200, 400\};\ 400, 800, 1200, 1600, 2000\)</li>
+                <li><span class="zv-crka">b)</span> \(D_{484} = \{1, 2, 4, 11, 22, 44, 121, 242, 484\};\ 484, 968, 1452, 1936, 2420\)</li>
+                <li><span class="zv-crka">c)</span> \(D_{506} = \{1, 2, 11, 22, 23, 46, 253, 506\};\ 506, 1012, 1518, 2024, 2530\)</li>
+                <li><span class="zv-crka">č)</span> \(D_{512} = \{1, 2, 4, 8, 16, 32, 64, 128, 256, 512\};\ 512, 1024, 1536, 2048, 2560\)</li>
+                <li><span class="zv-crka">d)</span> \(D_{550} = \{1, 2, 5, 10, 11, 22, 25, 50, 55, 110, 275, 550\};\ 550, 1100, 1650, 2200, 2750\)</li>
+                <li><span class="zv-crka">e)</span> \(D_{620} = \{1, 2, 4, 5, 10, 20, 31, 62, 124, 155, 310, 620\};\ 620, 1240, 1860, 2480, 3100\)</li>
+                <li><span class="zv-crka">f)</span> \(D_{1161} = \{1, 3, 9, 27, 43, 129, 387, 1161\};\ 1161, 2322, 3483, 4644, 5805\)</li>
+                <li><span class="zv-crka">g)</span> \(D_{2431} = \{1, 11, 13, 17, 143, 187, 221, 2431\};\ 2431, 4862, 7293, 9724, 12155\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>Najprej razcep na prafaktorje, npr. \(400 = 2^4 \cdot 5^2\), \(484 = 2^2 \cdot 11^2\), \(1161 = 3^3 \cdot 43\), \(2431 = 11 \cdot 13 \cdot 17\). Delitelji so vsi produkti prafaktorjev z eksponenti od 0 do največjega; število deliteljev je npr. pri 400 \((4 + 1)(2 + 1) = 15\).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-292">
+              <h3>Naloga 292</h3>
+              <p class="zv-opis">Količnik in ostanek pri deljenju 3635 s 112.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li>\(k = 32,\ r = 51\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>\(32 \cdot 112 = 3584\), \(3635 - 3584 = 51 &lt; 112\). Torej \(3635 = 32 \cdot 112 + 51\).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-293">
+              <h3>Naloga 293</h3>
+              <p class="zv-opis">Količnik in ostanek pri deljenju 2373 s 133.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li>\(k = 17,\ r = 112\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>\(17 \cdot 133 = 2261\), \(2373 - 2261 = 112 &lt; 133\).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-294">
+              <h3>Naloga 294</h3>
+              <p class="zv-opis">Deljenec pri delitelju 123, količniku 7 in ostanku 53.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li>\(x = 914\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>\(x = 7 \cdot 123 + 53 = 861 + 53 = 914\).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-295">
+              <h3>Naloga 295</h3>
+              <p class="zv-opis">Deljenec pri delitelju 59, količniku 13 in ostanku 40.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li>\(807\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>\(13 \cdot 59 + 40 = 767 + 40 = 807\).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-296">
+              <h3>Naloga 296</h3>
+              <p class="zv-opis">Delitelj, če 5613 da količnik 17 in ostanek 292.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li>\(x = 313\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>\(17x + 292 = 5613\), \(17x = 5321\), \(x = 313\). Ostanek 292 je res manjši od 313.</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-297">
+              <h3>Naloga 297</h3>
+              <p class="zv-opis">Delitelj, če 6163 da količnik 55 in ostanek 58.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li>\(111\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>\(55x = 6163 - 58 = 6105\), \(x = 111\); \(58 &lt; 111\).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-298">
+              <h3>Naloga 298</h3>
+              <p class="zv-opis">Deljenje izraza \(10x + 12\) z \(x + 1\) da količnik \(x + 4\) in ostanek 2.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li>\(x = 6\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>\(10x + 12 = (x + 1)(x + 4) + 2 = x^2 + 5x + 6\), torej \(x^2 - 5x - 6 = 0\), \((x - 6)(x + 1) = 0\). Naravna rešitev je \(x = 6\). Preizkus: \(72 = 10 \cdot 7 + 2\).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-299">
+              <h3>Naloga 299</h3>
+              <p class="zv-opis">Deljenje \(40x + 3\) z \(x + 3\) da količnik \(x + 14\) in ostanek \(x + 1\).</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li>\(x = 2 \ \text{ali}\ x = 20\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>\(40x + 3 = (x + 3)(x + 14) + x + 1 = x^2 + 18x + 43\), zato \(x^2 - 22x + 40 = 0\), \((x - 2)(x - 20) = 0\). Obe rešitvi ustrezata: \(83 = 16 \cdot 5 + 3\) in \(803 = 34 \cdot 23 + 21\); ostanek \(x + 1\) je vedno manjši od \(x + 3\).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-300">
+              <h3>Naloga 300</h3>
+              <p class="zv-opis">Največje trimestno število z ostankom 5 pri deljenju s 7.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li>\(999\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>\(999 = 142 \cdot 7 + 5\), torej že največje trimestno število ustreza.</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-301">
+              <h3>Naloga 301</h3>
+              <p class="zv-opis">Najmanjše štirimestno število z ostankom 7 pri deljenju s 13.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li>\(1008\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>\(1000 = 76 \cdot 13 + 12\). Naslednje število z ostankom 7 je \(77 \cdot 13 + 7 = 1001 + 7 = 1008\).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-302">
+              <h3>Naloga 302</h3>
+              <p class="zv-opis">Največje število s količnikom 23 pri deljenju s 35.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li>\(839\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>Največji možni ostanek je 34: \(23 \cdot 35 + 34 = 805 + 34 = 839\).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-303">
+              <h3>Naloga 303</h3>
+              <p class="zv-opis">Najmanjše število s količnikom 7 pri deljenju z 52.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li>\(364\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>Najmanjši ostanek je 0: \(7 \cdot 52 = 364\).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-194">
+              <h3>Naloga 194</h3>
+              <p class="zv-opis">Števila, ki delijo 300 in so večkratniki 15.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li>\(15, 30, 60, 75, 150, 300\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>\(300 = 15 \cdot 20\), zato iščeš \(15d\), kjer \(d \mid 20\): \(d \in \{1, 2, 4, 5, 10, 20\}\).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-195">
+              <h3>Naloga 195</h3>
+              <p class="zv-opis">Večkratniki 60, ki delijo 3600.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li>\(60, 120, 180, 240, 300, 360, 600, 720, 900, 1200, 1800, 3600\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>\(3600 = 60 \cdot 60\), zato iščeš \(60d\), kjer \(d \mid 60\). Ker ima 60 dvanajst deliteljev, je rešitev 12.</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-196">
+              <h3>Naloga 196</h3>
+              <p class="zv-opis">Večkratniki 23 med 100 in 200.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li>\(115, 138, 161, 184\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>\(4 \cdot 23 = 92 &lt; 100\), \(5 \cdot 23 = 115\), …, \(8 \cdot 23 = 184\), \(9 \cdot 23 = 207 &gt; 200\).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-197">
+              <h3>Naloga 197</h3>
+              <p class="zv-opis">Število večkratnikov 13 med 500 in 550.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li>\(4\ (507, 520, 533, 546)\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>\(38 \cdot 13 = 494\), \(39 \cdot 13 = 507\), …, \(42 \cdot 13 = 546\), \(43 \cdot 13 = 559\).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-202">
+              <h3>Naloga 202</h3>
+              <p class="zv-opis">Dokaz deljivosti vsote ali razlike potenc z danim številom.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><span class="zv-crka">a)</span> \(2^{333}(1 + 4 + 16) = 21 \cdot 2^{333}\)</li>
+                <li><span class="zv-crka">b)</span> \(3^{666}(1 + 3 + 27) = 31 \cdot 3^{666}\)</li>
+                <li><span class="zv-crka">c)</span> \(7^{98}(14 - 147 + 4) = -129 \cdot 7^{98} = -3 \cdot 43 \cdot 7^{98}\)</li>
+                <li><span class="zv-crka">č)</span> \(5^{745}(250 - 4) = 246 \cdot 5^{745} = 2 \cdot 123 \cdot 5^{745}\)</li>
+                <li><span class="zv-crka">d)</span> \(7^{92} - 3 \cdot 7^{90} = 7^{90}(49 - 3) = 2 \cdot 23 \cdot 7^{90}\)</li>
+                <li><span class="zv-crka">e)</span> \(6^{140} - 5 \cdot 6^{138} = 6^{138}(36 - 5) = 31 \cdot 6^{138}\)</li>
+                <li><span class="zv-crka">f)</span> \(2^{77} + 3 \cdot 2^{78} - 2^{75} = 2^{75}(4 + 24 - 1) = 27 \cdot 2^{75}\)</li>
+                <li><span class="zv-crka">g)</span> \(3^{147} - 2 \cdot 3^{146} - 5 \cdot 3^{150} = 3^{146}(3 - 2 - 405) = -4 \cdot 101 \cdot 3^{146}\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>Vse potence zapiši z isto osnovo (\(4^{39} = 2^{78}\), \(8^{25} = 2^{75}\), \(9^{73} = 3^{146}\), \(27^{50} = 3^{150}\), \((3^{20} 2^{20})^7 = 6^{140}\)) in izpostavi najmanjšo. V oklepaju ostane število, ki je večkratnik danega delitelja, zato je deljiv cel produkt.</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-203">
+              <h3>Naloga 203</h3>
+              <p class="zv-opis">Dokaz deljivosti izrazov z \(n\) za vsak \(n \in \mathbb{N}\).</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><span class="zv-crka">a)</span> \(n(n + 4)\)</li>
+                <li><span class="zv-crka">b)</span> \(n(n + 3)\)</li>
+                <li><span class="zv-crka">c)</span> \((n + 2)(n + 3)\)</li>
+                <li><span class="zv-crka">č)</span> \((n + 6)(n - 8)\)</li>
+                <li><span class="zv-crka">d)</span> \(2(n + 2)(n^2 - 2n + 4)\)</li>
+                <li><span class="zv-crka">e)</span> \(n(n + 4)(n^2 - 4n + 16)\)</li>
+                <li><span class="zv-crka">f)</span> \((n - 5)(n - 2)(n + 2)\)</li>
+                <li><span class="zv-crka">g)</span> \((n + 5)(n^2 - 8)\)</li>
+                <li><span class="zv-crka">h)</span> \((2n + 5)^2\)</li>
+                <li><span class="zv-crka">i)</span> \((3n + 7)^2\)</li>
+                <li><span class="zv-crka">j)</span> \((n + 1)(n^2 - n + 1)\)</li>
+                <li><span class="zv-crka">k)</span> \((n + 2)(n^2 - 2n + 4)\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>Desni izraz razstavi; če je delitelj eden od faktorjev, deli cel produkt. Zgled f): \(n^3 - 5n^2 - 4n + 20 = n^2(n - 5) - 4(n - 5) = (n - 5)(n^2 - 4)\). Pri d), e), k) uporabiš vsoto kubov, npr. \(n^4 + 64n = n(n^3 + 4^3)\).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-204">
+              <h3>Naloga 204</h3>
+              <p class="zv-opis">Dokaz deljivosti vsot potenc z eksponenti, ki vsebujejo \(n\).</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><span class="zv-crka">a)</span> \(2^{n+1}(2 + 1) = 3 \cdot 2^{n+1}\)</li>
+                <li><span class="zv-crka">b)</span> \(3^{n+3}(1 + 3 + 9) = 13 \cdot 3^{n+3}\)</li>
+                <li><span class="zv-crka">c)</span> \(5^{n+2}(25 - 3) = 22 \cdot 5^{n+2}\)</li>
+                <li><span class="zv-crka">č)</span> \(4^{n+2}(16 + 12 - 5) = 23 \cdot 4^{n+2}\)</li>
+                <li><span class="zv-crka">d)</span> \(2^{20n+5}(1 + 8 + 2) = 11 \cdot 2^{20n+5}\)</li>
+                <li><span class="zv-crka">e)</span> \(3^{12n+4}(9 - 18 + 40) = 31 \cdot 3^{12n+4}\)</li>
+                <li><span class="zv-crka">f)</span> \(5^{12n+8}(25 - 3 + 40) = 2 \cdot 31 \cdot 5^{12n+8}\)</li>
+                <li><span class="zv-crka">g)</span> \(7^{18n+10}(7 + 8 + 49) = 64 \cdot 7^{18n+10}\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>Pretvori na isto osnovo: npr. pri d) \(32^{4n+1} = 2^{20n+5}\), \(16^{5n+2} = 2^{20n+8}\), \(4^{10n+3} = 2^{20n+6}\); pri e) \(9^{6n+3} = 3^{12n+6}\), \(27^{4n+2} = 3^{12n+6}\), \(81^{3n+1} = 3^{12n+4}\); pri g) \(49^{9n+5} = 7^{18n+10}\), \(343^{6n+4} = 7^{18n+12}\). Nato izpostavi najmanjšo potenco.</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-212">
+              <h3>Naloga 212</h3>
+              <p class="zv-opis">Dokazi o sodih in lihih številih (sodo \(2k\), liho \(2k - 1\)).</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><span class="zv-crka">a)</span> \(2k - 2m = 2(k - m)\)</li>
+                <li><span class="zv-crka">b)</span> \(2k + (2k + 2) = 2(2k + 1)\)</li>
+                <li><span class="zv-crka">c)</span> \((2k - 1) + (2m - 1) = 2(k + m - 1)\)</li>
+                <li><span class="zv-crka">č)</span> \((2k - 1) + (2k + 1) + (2k + 3) + (2k + 5) = 2(4k + 4)\)</li>
+                <li><span class="zv-crka">d)</span> \((2k)^2 = 4k^2\)</li>
+                <li><span class="zv-crka">e)</span> \(2k \cdot 2m \cdot 2l = 8klm\)</li>
+                <li><span class="zv-crka">f)</span> \((2k + 2m)^2 = 4(k + m)^2\)</li>
+                <li><span class="zv-crka">g)</span> \((2k - 1)^2 + (2m - 1)^2 + 2 = 4(k^2 - k + m^2 - m + 1)\)</li>
+                <li><span class="zv-crka">h)</span> \((2k - 1)^2 + (2k + 1)^2 + 6 = 8(k^2 + 1)\)</li>
+                <li><span class="zv-crka">i)</span> \((2k - 1)^2 - (2m - 1)^2 = 4(k^2 - k - m^2 + m)\)</li>
+                <li><span class="zv-crka">j)</span> \((2k + 1)^2 - (2k - 1)^2 = 8k\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>Števila zapiši z oznakami iz okvirčka, izraz poenostavi in izpostavi zahtevani delitelj. Npr. h): \(4k^2 - 4k + 1 + 4k^2 + 4k + 1 + 6 = 8k^2 + 8\).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-213">
+              <h3>Naloga 213</h3>
+              <p class="zv-opis">Dokazi o vsotah in zmnožkih potenc z zaporednimi eksponenti.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><span class="zv-crka">a)</span> \(2^n + 2^{n+1} + 2^{n+2} = 7 \cdot 2^n\)</li>
+                <li><span class="zv-crka">b)</span> \(2^{2n} + 2^{2n+2} + 2^{2n+4} = 21 \cdot 2^{2n} = 3 \cdot 7 \cdot 2^{2n}\)</li>
+                <li><span class="zv-crka">c)</span> \(2^{2n-1}(1 + 4 + 16) = 21 \cdot 2^{2n-1}\)</li>
+                <li><span class="zv-crka">č)</span> \(3^n(1 + 3 + 9 + 27) = 40 \cdot 3^n\)</li>
+                <li><span class="zv-crka">d)</span> \(5^{2n-1}(1 + 25 + 625) = 651 \cdot 5^{2n-1} = 7 \cdot 93 \cdot 5^{2n-1}\)</li>
+                <li><span class="zv-crka">e)</span> \(11^n \cdot 11^{n+1} \cdot 11^{n+2} = 11^{3n+3} = (11^{n+1})^3\)</li>
+                <li><span class="zv-crka">f)</span> \(3^{2n-1} \cdot 3^{2n+1} \cdot 3^{2n+3} \cdot 3^{2n+5} = 3^{8n+8} = (3^{2n+2})^4\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>Zaporedna števila: \(n, n + 1, n + 2\); zaporedna soda: \(2n, 2n + 2, 2n + 4\); zaporedna liha: \(2n - 1, 2n + 1, 2n + 3\). Pri vsoti izpostavi najmanjšo potenco, pri zmnožku eksponente seštej.</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-305">
+              <h3>Naloga 305</h3>
+              <p class="zv-opis">Dokazi deljivosti, kjer sta števili podani z ostankom ali kot večkratnika.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><span class="zv-crka">a)</span> \(2a + b = 2(51k + 6) + 34m + 5 = 17(6k + 2m + 1)\)</li>
+                <li><span class="zv-crka">b)</span> \(4a + 3b = 4(15k + 3) + 3(20m + 16) = 60(k + m + 1)\)</li>
+                <li><span class="zv-crka">c)</span> \(5x + 3y = 5 \cdot 6k + 3 \cdot 10m = 30(k + m)\)</li>
+                <li><span class="zv-crka">č)</span> \(a + 2b = 12k + 30m = 6(2k + 5m)\)</li>
+                <li><span class="zv-crka">d)</span> \(6a + 7b = 42k + 84m = 21(2k + 4m)\)</li>
+                <li><span class="zv-crka">e)</span> \(5a + b = 80k + 20m = 20(4k + m)\)</li>
+                <li><span class="zv-crka">f)</span> \(xb + yc = x \cdot ak + y \cdot am = a(xk + ym)\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>Vsako število zapiši po osnovnem izreku o deljenju (npr. \(a = 51k + 6\), \(b = 34m + 5\)) ali kot večkratnik (\(x = 6k\)). Po poenostavitvi izpostavi zahtevani delitelj.</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-304">
+              <h3>Naloga 304</h3>
+              <p class="zv-opis">Ostanki pri vsoti, razliki in zmnožku števil z znanimi ostanki.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><span class="zv-crka">a)</span> \(2\)</li>
+                <li><span class="zv-crka">b)</span> \(4\)</li>
+                <li><span class="zv-crka">c)</span> \(12\)</li>
+                <li><span class="zv-crka">č)</span> \(2\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>a) \(a + b = 13(k + m) + 15 = 13(k + m + 1) + 2\). b) \(x - y = 12(k - m) - 8 = 12(k - m - 1) + 4\). c) \(ab = 18(\dots) + 6 \cdot 11 = 18(\dots) + 66\) in \(66 = 3 \cdot 18 + 12\). č) \(n + (n + 1) + (n + 2) + (n + 3) = 4n + 6 = 4(n + 1) + 2\).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-306">
+              <h3>Naloga 306</h3>
+              <p class="zv-opis">Število da pri deljenju z 28 ostanek 20; ostanek pri deljenju s 14.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li>\(6\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>\(x = 28k + 20 = 14(2k + 1) + 6\).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-307">
+              <h3>Naloga 307</h3>
+              <p class="zv-opis">Število da pri deljenju s 70 ostanek 52; ostanek pri deljenju s 7.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li>\(3\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>\(x = 70k + 52 = 7(10k + 7) + 3\).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-307-a">
+              <h3>Naloga 307.a</h3>
+              <p class="zv-opis">Farmacevt sestavlja komplete iz 213 tablet in neznanega števila vrečk.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><span class="zv-crka">a)</span> 30 kompletov, ostanejo 3 tablete</li>
+                <li><span class="zv-crka">b)</span> 15 kompletov, za naslednjega manjka 11 tablet</li>
+                <li><span class="zv-crka">c)</span> \(130\)</li>
+                <li><span class="zv-crka">č)</span> \(323\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>a) \(213 = 30 \cdot 7 + 3\). b) \(213 = 15 \cdot 14 + 3\), do novega kompleta manjka \(14 - 3 = 11\). c) \(16 \cdot 8 + 2 = 130\). č) Poln je 24 kompletov, v naslednjem manjkata 2 vrečki, torej ima \(13 - 2 = 11\) vrečk: \(24 \cdot 13 + 11 = 323\). (V zbirki piše »za 14. komplet«; razumemo ga kot komplet, ki sledi polnim.)</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-308">
+              <h3>Naloga 308</h3>
+              <p class="zv-opis">Razporejanje 1225 jajc na pladnje.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><span class="zv-crka">a)</span> \(1\)</li>
+                <li><span class="zv-crka">b)</span> \(41\)</li>
+                <li><span class="zv-crka">c)</span> \(23\)</li>
+                <li><span class="zv-crka">č)</span> \(1\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>a) \(68 \cdot 18 = 1224\). b) \(1225 = 40 \cdot 30 + 25\), za ostalih 25 jajc potrebuješ še en pladenj. c) \(1225 = 47 \cdot 26 + 3\): na zadnjem pladnju so 3 jajca, praznih mest je \(26 - 3 = 23\). č) \(1225 = 51 \cdot 24 + 1\).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-309">
+              <h3>Naloga 309</h3>
+              <p class="zv-opis">Dijaki v skupinah po 24 (ostane 15); koliko jih ostane pri klopeh po 6.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li>\(3\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>\(n = 24k + 15 = 6(4k + 2) + 3\).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-310">
+              <h3>Naloga 310</h3>
+              <p class="zv-opis">Dijaki v skupinah po 12 in po 11; koliko je dijakov.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li>\(125\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>\(n = 12k + 5\) in \(n = 11(k + 1) + 4 = 11k + 15\). Iz \(12k + 5 = 11k + 15\) sledi \(k = 10\), \(n = 125\). Preizkus: \(125 = 11 \cdot 11 + 4\).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-311">
+              <h3>Naloga 311</h3>
+              <p class="zv-opis">Delitev denarja med dijake (po 39 € ostane 5 €, po 40 € manjka 9 €).</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li>14 dijakov (vsota 551 €)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>\(39n + 5 = 40n - 9\), zato \(n = 14\) in vsota \(39 \cdot 14 + 5 = 551\) €.</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-214">
+              <h3>Naloga 214*</h3>
+              <p class="zv-opis">Število večkratnikov v danem intervalu.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><span class="zv-crka">a)</span> \(176\)</li>
+                <li><span class="zv-crka">b)</span> \(151\)</li>
+                <li><span class="zv-crka">c)</span> \(309\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>Število večkratnikov \(k\) med \(a\) in \(b\) (brez mej) je \(\lfloor (b - 1)/k \rfloor - \lfloor a/k \rfloor\). a) \(\lfloor 7999/17 \rfloor - \lfloor 5000/17 \rfloor = 470 - 294\). b) \(253 - 102\). c) \(504 - 195\).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-216">
+              <h3>Naloga 216*</h3>
+              <p class="zv-opis">Dokazi deljivosti s pomočjo zaporednih števil.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><span class="zv-crka">a)</span> \(n(n + 1)\)</li>
+                <li><span class="zv-crka">b)</span> \(n(n + 1)(n + 2)\)</li>
+                <li><span class="zv-crka">c)</span> \(5n(n + 1)(n + 2)(n + 3)\)</li>
+                <li><span class="zv-crka">č)</span> \((n - 2)(n - 1)n(n + 1)(n + 2)\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>Med dvema zaporednima številoma je eno sodo, med tremi je eno deljivo s 3, zato je produkt treh zaporednih deljiv s 6. Med štirimi zaporednimi je en večkratnik 4, še eno sodo in en večkratnik 3, torej je produkt deljiv s \(24\); s petico pri c) je to 120. Pri č) je \(n^5 - 5n^3 + 4n = n(n^2 - 1)(n^2 - 4)\) produkt petih zaporednih števil, deljiv z \(8 \cdot 3 \cdot 5 = 120\).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-218">
+              <h3>Naloga 218*</h3>
+              <p class="zv-opis">Število, katerega najmanjša delitelja imata vsoto 12, največja pa 8556.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li>\(7843\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>Najmanjša delitelja sta 1 in 11 (11 je najmanjši prafaktor). Največja sta \(n\) in \(\frac{n}{11}\): \(n + \frac{n}{11} = 8556\), \(n = 7843 = 11 \cdot 23 \cdot 31\).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-219">
+              <h3>Naloga 219*</h3>
+              <p class="zv-opis">Liho število, katerega najmanjši trije delitelji imajo vsoto 9, največji pa 989.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li>\(645\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>Najmanjši delitelji lihega števila so 1, 3, 5 (vsota 9). Največji so \(n, \frac n3, \frac n5\): \(n(1 + \frac13 + \frac15) = \frac{23n}{15} = 989\), \(n = 645 = 3 \cdot 5 \cdot 43\).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-222">
+              <h3>Naloga 222*</h3>
+              <p class="zv-opis">Dokaz, da je \(x^2y + xy^2\) sodo za vsa cela \(x, y\).</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li>\(x^2y + xy^2 = xy(x + y)\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>Če je \(x\) ali \(y\) sod, je sod produkt \(xy\). Če sta oba liha, je soda vsota \(x + y\). V vsakem primeru je produkt sod.</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-223">
+              <h3>Naloga 223*</h3>
+              <p class="zv-opis">Štirimestna števila oblike \(\overline{abba}\) so deljiva z 11.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li>\(\overline{abba} = 1001a + 110b = 11(91a + 10b)\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>\(\overline{abba} = 1000a + 100b + 10b + a\).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-223-a">
+              <h3>Naloga 223*.a</h3>
+              <p class="zv-opis">Pacienti in škatle tablet (28 tablet v škatli, manj kot 15 škatel).</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li>31 pacientov in 10 škatel</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>\(28N = kP + 1\) in \(28(N - 1) = mP + 4\). Odštej: \(28 = (k - m)P - 3\), torej \((k - m)P = 31\). Ker je ostanek 4 manjši od \(P\), je \(P = 31\). Iz \(28N = 31k + 1\) in \(N &lt; 15\) poskušaš: \(N = 10\) da \(280 = 9 \cdot 31 + 1\), preizkus \(252 = 8 \cdot 31 + 4\).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-v-217">
+              <h3>Naloga V 217</h3>
+              <p class="zv-opis">Dokaz deljivosti razlik ali vsot potenc za vsak \(n\).</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><span class="zv-crka">a)</span> \(5 - 2 = 3\)</li>
+                <li><span class="zv-crka">b)</span> \(13 - 6 = 7\)</li>
+                <li><span class="zv-crka">c)</span> \(8^n - 3^n;\ 8 - 3 = 5\)</li>
+                <li><span class="zv-crka">č)</span> \(25^n - 8^n;\ 25 - 8 = 17\)</li>
+                <li><span class="zv-crka">d)</span> \(14 + 6 = 20\)</li>
+                <li><span class="zv-crka">e)</span> \(21 + 5 = 26\)</li>
+                <li><span class="zv-crka">f)</span> \(125^{n+3} - 9^{n+3};\ 125 - 9 = 116\)</li>
+                <li><span class="zv-crka">g)</span> \(36^{n+4} - 32^{n+4};\ 36 - 32 = 4\)</li>
+                <li><span class="zv-crka">h)</span> \(343^{n+5} - 64^{n+5};\ 343 - 64 = 279\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>Uporabi: \(a - b \mid a^n - b^n\) za vsak \(n\), in \(a + b \mid a^n + b^n\) za lih \(n\), ker \(a^n - b^n = (a - b)(a^{n-1} + \dots + b^{n-1})\). Pri d) in e) je eksponent \(2n + 1\) oziroma \(2n + 7\) lih; 20 je deljivo s 5, 26 s 13.</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-v-220">
+              <h3>Naloga V 220</h3>
+              <p class="zv-opis">Dokaz, da je \(1234^{99} + 4321^{99}\) deljivo s 1111.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li>\(1234 + 4321 = 5555 = 5 \cdot 1111\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>Eksponent 99 je lih, zato \(1234 + 4321 \mid 1234^{99} + 4321^{99}\). Ker je \(5555 = 5 \cdot 1111\), je vsota deljiva tudi s 1111.</p>
+              </details>
+            </div>
+          </div>
+        </section>
+        <section class="sklop" id="sklop-3">
+          <header class="sklop-header">
+            <span class="sklop-num">1. letnik · 2.3</span>
+            <h2>Kriteriji za deljivost</h2>
+            <p>Strani 8–9 v zbirki. Naloge: 229, 230, 231, 233, 234, 235, 238, 239, 239.a, 240*, 242*, 243*, V 244, i 241.</p>
+          </header>
+          <div class="sklop-naloge">
+            <div class="tip-naloge zv-naloga" id="n-229">
+              <h3>Naloga 229</h3>
+              <p class="zv-opis">Za osem števil ugotovi deljivost z 2, 3, 4, 5, 6, 8, 9, 10, 100, 25, 15 in 18.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><span class="zv-crka">a)</span> 53630036: 2, 4</li>
+                <li><span class="zv-crka">b)</span> 426028014: 2, 3, 6, 9, 18</li>
+                <li><span class="zv-crka">c)</span> 320303475: 3, 5, 9, 25, 15</li>
+                <li><span class="zv-crka">č)</span> 42502021110: 2, 3, 5, 6, 9, 10, 15, 18</li>
+                <li><span class="zv-crka">d)</span> 10203040503: 3, 9</li>
+                <li><span class="zv-crka">e)</span> 5356303030150: 2, 5, 10, 25</li>
+                <li><span class="zv-crka">f)</span> 6373030361513: z nobenim od naštetih</li>
+                <li><span class="zv-crka">g)</span> 43563935025000: 2, 3, 4, 5, 6, 8, 9, 10, 100, 25, 15, 18</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>Navedeni so delitelji, s katerimi je število deljivo. Najprej poglej zadnje števke (2, 5, 10; 4, 25, 100; 8), nato vsoto števk (3, 9). Sestavljeni kriteriji: 6 = 2 in 3, 15 = 3 in 5, 18 = 2 in 9. Vsote števk: a) 26, b) 27, c) 27, č) 18, d) 18, e) 34, f) 41, g) 45. Zgled a): zadnji dve števki 36 sta deljivi s 4, trimestni konec 036 pa ni deljiv z 8.</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-230">
+              <h3>Naloga 230</h3>
+              <p class="zv-opis">Katere števke lahko nadomestijo \(a\), da je število deljivo z danimi delitelji.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><div class="tabela-wrap"><table class="zv-tabela"><thead><tr><th>Število</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>8</th><th>9</th><th>10</th><th>100</th><th>25</th><th>15</th><th>18</th></tr></thead><tbody><tr><td>a) \(\overline{42352762a}\)</td><td>0, 2, 4, 6, 8</td><td>2, 5, 8</td><td>0, 4, 8</td><td>0, 5</td><td>2, 8</td><td>4</td><td>5</td><td>0</td><td>–</td><td>5</td><td>5</td><td>–</td></tr><tr><td>b) \(\overline{776105a}\)</td><td>0, 2, 4, 6, 8</td><td>1, 4, 7</td><td>2, 6</td><td>0, 5</td><td>4</td><td>6</td><td>1</td><td>0</td><td>–</td><td>0</td><td>–</td><td>–</td></tr><tr><td>c) \(\overline{63816173a0}\)</td><td>vse</td><td>1, 4, 7</td><td>0, 2, 4, 6, 8</td><td>vse</td><td>1, 4, 7</td><td>2, 6</td><td>1</td><td>vse</td><td>0</td><td>0, 5</td><td>1, 4, 7</td><td>1</td></tr><tr><td>č) \(\overline{761371737a5}\)</td><td>–</td><td>1, 4, 7</td><td>–</td><td>vse</td><td>–</td><td>–</td><td>7</td><td>–</td><td>–</td><td>2, 7</td><td>1, 4, 7</td><td>–</td></tr><tr><td>d) \(\overline{26363a24}\)</td><td>vse</td><td>1, 4, 7</td><td>vse</td><td>–</td><td>1, 4, 7</td><td>0, 2, 4, 6, 8</td><td>1</td><td>–</td><td>–</td><td>–</td><td>–</td><td>1</td></tr><tr><td>e) \(\overline{263637a25}\)</td><td>–</td><td>2, 5, 8</td><td>–</td><td>vse</td><td>–</td><td>–</td><td>2</td><td>–</td><td>–</td><td>vse</td><td>2, 5, 8</td><td>–</td></tr><tr><td>f) \(\overline{2a5a5a}\)</td><td>0, 2, 4, 6, 8</td><td>vse</td><td>2, 6</td><td>0, 5</td><td>0, 2, 4, 6, 8</td><td>6</td><td>2, 5, 8</td><td>0</td><td>–</td><td>0</td><td>0, 5</td><td>2, 8</td></tr><tr><td>g) \(\overline{3aa25a}\)</td><td>0, 2, 4, 6, 8</td><td>–</td><td>2, 6</td><td>0, 5</td><td>–</td><td>6</td><td>–</td><td>0</td><td>–</td><td>0</td><td>–</td><td>–</td></tr></tbody></table></div></li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>»vse« pomeni katerokoli števko 0–9, »–« pomeni, da ni nobene. Pri 3 in 9 izračunaj vsoto znanih števk in dopolni do večkratnika; npr. a) vsota znanih števk je 34, zato \(34 + a\) deljivo s 3 da \(a \in \{2, 5, 8\}\), deljivo z 9 pa \(a = 5\). Pri f) je vsota \(7 + 3a\), deljiva s 3 za vsak \(a\), z 9 pa za \(a \in \{2, 5, 8\}\). Pri g) je vsota \(10 + 3a\), ki ni nikoli deljiva s 3.</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-231">
+              <h3>Naloga 231</h3>
+              <p class="zv-opis">Števki \(a\) in \(b\), da je število deljivo z danim številom.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><span class="zv-crka">a)</span> \(a = 0,\ b \in \{0, 9\}\)</li>
+                <li><span class="zv-crka">b)</span> \((a, b) \in \{(0, 0), (2, 5), (5, 0), (7, 5)\}\)</li>
+                <li><span class="zv-crka">c)</span> \(b = 0,\ a \in \{0, 3, 6, 9\}\)</li>
+                <li><span class="zv-crka">č)</span> \((a, b) \in \{(3, 0), (7, 5)\}\)</li>
+                <li><span class="zv-crka">d)</span> \((a, b) \in \{(1, 0), (4, 0), (7, 0), (2, 5), (5, 5), (8, 5)\}\)</li>
+                <li><span class="zv-crka">e)</span> \(b \in \{0, 6\}: a \in \{0, 3, 6, 9\};\ b \in \{2, 8\}: a \in \{1, 4, 7\};\ b = 4: a \in \{2, 5, 8\}\)</li>
+                <li><span class="zv-crka">f)</span> \((a, b) \in \{(0, 4), (4, 0), (6, 4), (1, 6), (7, 6), (2, 8), (5, 2), (8, 8)\}\)</li>
+                <li><span class="zv-crka">g)</span> \((a, b) \in \{(0, 4), (2, 2), (4, 0), (5, 8), (7, 6), (9, 4)\}\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>Delitelj razstavi na tuja faktorja: \(90 = 9 \cdot 10\), \(30 = 3 \cdot 10\), \(45 = 9 \cdot 5\), \(15 = 3 \cdot 5\), \(6 = 2 \cdot 3\), \(12 = 3 \cdot 4\), \(18 = 2 \cdot 9\). Najprej iz zadnjih števk določi \(b\) (ali dvomestni konec \(\overline{ab}\)), nato iz vsote števk še \(a\). Zgled a): na mestu enic je \(a\), zato deljivost z 10 da \(a = 0\); vsota \(18 + b\) je deljiva z 9 za \(b = 0\) ali \(b = 9\). Zgled f): \(\overline{ab}\) deljivo s 4 in \(17 + a + b\) deljivo s 3.</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-233">
+              <h3>Naloga 233</h3>
+              <p class="zv-opis">Število iz 33 petic: deljivost s 5, 3, 55 in 111.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><span class="zv-crka">a)</span> \(\text{da}\)</li>
+                <li><span class="zv-crka">b)</span> \(\text{da}\)</li>
+                <li><span class="zv-crka">c)</span> \(\text{ne}\)</li>
+                <li><span class="zv-crka">č)</span> \(\text{da}\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>a) Zadnja števka je 5. b) Vsota števk \(33 \cdot 5 = 165\) je deljiva s 3. c) \(55 = 5 \cdot 11\); izmenična vsota števk je \(5\) (liho mnogo petic), zato število ni deljivo z 11. č) \(555\dots5 = 5 \cdot 111\dots1\) in 33 enic razdelimo v 11 trojk: \(111\dots1 = 111 \cdot 1001001\dots001\).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-234">
+              <h3>Naloga 234</h3>
+              <p class="zv-opis">Število iz desetih nizov »12«: deljivost s 3, 9, 8, 12.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><span class="zv-crka">a)</span> \(\text{da}\)</li>
+                <li><span class="zv-crka">b)</span> \(\text{ne}\)</li>
+                <li><span class="zv-crka">c)</span> \(\text{ne}\)</li>
+                <li><span class="zv-crka">č)</span> \(\text{da}\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>Vsota števk je \(10 \cdot 3 = 30\): deljivo s 3, ne z 9. Trimestni konec 212 ni deljiv z 8. Za 12 potrebuješ 3 in 4: dvomestni konec 12 je deljiv s 4.</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-235">
+              <h3>Naloga 235</h3>
+              <p class="zv-opis">Število iz desetih nizov »254«: deljivost s 3, 9, 8, 12.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><span class="zv-crka">a)</span> \(\text{ne}\)</li>
+                <li><span class="zv-crka">b)</span> \(\text{ne}\)</li>
+                <li><span class="zv-crka">c)</span> \(\text{ne}\)</li>
+                <li><span class="zv-crka">č)</span> \(\text{ne}\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>Vsota števk je \(10 \cdot 11 = 110\), ni deljiva s 3, zato tudi ne z 9 ali 12. Trimestni konec 254 ni deljiv z 8 (\(254 = 31 \cdot 8 + 6\)).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-238">
+              <h3>Naloga 238</h3>
+              <p class="zv-opis">Razlika dvomestnega števila in števila z obrnjenima števkama je deljiva z 9.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li>\(\overline{ab} - \overline{ba} = 10a + b - 10b - a = 9(a - b)\)</li>
+              </ul>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-239">
+              <h3>Naloga 239</h3>
+              <p class="zv-opis">Razlika trimestnega števila in števila z obrnjenimi števkami je deljiva z 11.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li>\(\overline{abc} - \overline{cba} = 99(a - c) = 11 \cdot 9(a - c)\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>\(100a + 10b + c - (100c + 10b + a) = 99a - 99c\).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-239-a">
+              <h3>Naloga 239.a</h3>
+              <p class="zv-opis">Kompleti prve pomoči: velikosti kompletov, končnica nalepke in koda dostavnice.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><span class="zv-crka">a)</span> \(216, 228, 252\)</li>
+                <li><span class="zv-crka">b)</span> \(N = 144\)</li>
+                <li><span class="zv-crka">c)</span> \((x, y) \in \{(1, 2), (4, 2), (7, 2)\}\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>a) Deljivo z 12 (s 3 in 4) in ne s 5: 234 in 246 nista deljiva s 4 (34 in 46). b) Deljivo z 8 in 9 pomeni z 72; med 100 in 199 je le \(2 \cdot 72 = 144\). c) Trimestni konec \(\overline{35y}\) deljiv z 8 da \(y = 2\) (352). Vsota števk \(7 + x + 3 + 5 + 2 = 17 + x\) deljiva s 3 da \(x \in \{1, 4, 7\}\).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-240">
+              <h3>Naloga 240*</h3>
+              <p class="zv-opis">Dokaz kriterijev za deljivost s 4, 25 in 8.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><span class="zv-crka">a, b)</span> \(n = 100k + \overline{ab}\)</li>
+                <li><span class="zv-crka">c)</span> \(n = 1000k + \overline{abc}\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>Število razdeli na del, ki je večkratnik 100 (oz. 1000), in zadnji dve (tri) števki. Ker \(4 \mid 100\) in \(25 \mid 100\), je \(n\) deljivo s 4 (25) natanko tedaj, ko je deljiv dvomestni konec. Ker je \(1000 = 8 \cdot 125\), velja enako za 8 in trimestni konec.</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-242">
+              <h3>Naloga 242*</h3>
+              <p class="zv-opis">Število \(a_n\) iz \(n\) nizov »1234«.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><span class="zv-crka">a)</span> \(n = 9\)</li>
+                <li><span class="zv-crka">b)</span> \(\text{ne}\)</li>
+                <li><span class="zv-crka">c)</span> \(3\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>Vsota števk \(a_n\) je \(10n\). a) \(9 \mid 10n\) natanko tedaj, ko \(9 \mid n\); najmanjši \(n = 9\). b) 2020 ni deljivo z 9 (vsota števk 4). c) \(555 = 138 \cdot 4 + 3\): po 138 celih nizih je 555. števka tretja v nizu, torej 3.</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-243">
+              <h3>Naloga 243*</h3>
+              <p class="zv-opis">Število \(b_{3n}\) iz \(n\) dvojk, \(n\) petic in \(n\) enic.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><span class="zv-crka">a)</span> \(b_{27}\)</li>
+                <li><span class="zv-crka">b)</span> \(\text{ne}\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>Vsota števk \(b_{3n}\) je \(n(2 + 5 + 1) = 8n\). a) \(9 \mid 8n\) natanko tedaj, ko \(9 \mid n\), torej \(n = 9\) in število ima 27 števk. b) \(1257 = 3 \cdot 419\), vsota števk \(8 \cdot 419 = 3352\) ni deljiva s 3.</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-v-244">
+              <h3>Naloga V 244</h3>
+              <p class="zv-opis">Ali je \(169^{29} - 1\) deljivo s 6?</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li>\(\text{da}\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>\(169 - 1 \mid 169^{29} - 1\) in \(168 = 6 \cdot 28\). Lahko tudi: \(169^{29}\) je liho, zato je \(169^{29} - 1\) sodo; ker \(169 = 3 \cdot 56 + 1\), da \(169^{29}\) pri deljenju s 3 ostanek 1.</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-i-241">
+              <h3>Naloga i 241</h3>
+              <p class="zv-opis">Kriterij za deljivost z 11 in uporaba na dveh številih.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li>Število je deljivo z 11 natanko tedaj, ko je izmenična vsota njegovih števk (od enic naprej) deljiva z 11.</li>
+                <li>3737266: izmenična vsota \(6 - 6 + 2 - 7 + 3 - 7 + 3 = -6\), <strong>ni</strong> deljivo</li>
+                <li>56372514: \(4 - 1 + 5 - 2 + 7 - 3 + 6 - 5 = 11\), <strong>je</strong> deljivo</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>Dokaz: \(10^{2k} - 1 = 99\dots9\) (sodo mnogo devetk) je deljivo z 99, torej z 11; \(10^{2k+1} + 1 = 10 \cdot (10^{2k} - 1) + 11\) je tudi deljivo z 11. Zato je \(n = \sum c_i 10^i\) enak izmenični vsoti \(c_0 - c_1 + c_2 - \dots\) plus večkratnik 11.</p>
+              </details>
+            </div>
+          </div>
+        </section>
+        <section class="sklop" id="sklop-4">
+          <header class="sklop-header">
+            <span class="sklop-num">1. letnik · 2.4</span>
+            <h2>Praštevila in sestavljena števila</h2>
+            <p>Strani 10–11 v zbirki. Naloge: 251, 252, 254, 256, 258, 260, 259, 200, 262, 263, 264, 264.a, 261*, V 265.</p>
+          </header>
+          <div class="sklop-naloge">
+            <div class="tip-naloge zv-naloga" id="n-251">
+              <h3>Naloga 251</h3>
+              <p class="zv-opis">Eratostenovo rešeto za števila od 1 do 100.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li>Nepobarvana ostanejo <strong>praštevila</strong>: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97 (25 praštevil).</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>Vsako sestavljeno število do 100 ima prafaktor, ki je manjši ali enak \(\sqrt{100} = 10\), torej 2, 3, 5 ali 7. Zato so po prečrtanju večkratnikov teh štirih praštevil vsa preostala števila (razen 1) praštevila; 11 in več ni treba preverjati. V Excelu lahko npr. s funkcijo <code>MOD</code> preveriš, ali je število deljivo z 2, 3, 5 ali 7.</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-252">
+              <h3>Naloga 252</h3>
+              <p class="zv-opis">Vsota praštevil, manjših od 40.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li>\(197\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>\(2 + 3 + 5 + 7 + 11 + 13 + 17 + 19 + 23 + 29 + 31 + 37 = 197\).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-254">
+              <h3>Naloga 254</h3>
+              <p class="zv-opis">Praštevilski razcep števil.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><span class="zv-crka">a)</span> \(80 = 2^4 \cdot 5\)</li>
+                <li><span class="zv-crka">b)</span> \(150 = 2 \cdot 3 \cdot 5^2\)</li>
+                <li><span class="zv-crka">c)</span> \(240 = 2^4 \cdot 3 \cdot 5\)</li>
+                <li><span class="zv-crka">č)</span> \(729 = 3^6\)</li>
+                <li><span class="zv-crka">d)</span> \(1215 = 3^5 \cdot 5\)</li>
+                <li><span class="zv-crka">e)</span> \(1352 = 2^3 \cdot 13^2\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>Število deli z najmanjšim praštevilom, dokler gre, nato z naslednjim. Npr. \(1352 : 2 = 676\), \(: 2 = 338\), \(: 2 = 169 = 13^2\).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-256">
+              <h3>Naloga 256</h3>
+              <p class="zv-opis">Ali je število praštevilo?</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><span class="zv-crka">a)</span> \(\text{da}\)</li>
+                <li><span class="zv-crka">b)</span> \(\text{da}\)</li>
+                <li><span class="zv-crka">c)</span> \(\text{ne},\ 147 = 3 \cdot 7^2\)</li>
+                <li><span class="zv-crka">č)</span> \(\text{da}\)</li>
+                <li><span class="zv-crka">d)</span> \(\text{da}\)</li>
+                <li><span class="zv-crka">e)</span> \(\text{ne},\ 559 = 13 \cdot 43\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>Preveri deljivost s praštevili do korena: \(\sqrt{103} \approx 10{,}1\) (2, 3, 5, 7), \(\sqrt{137}, \sqrt{163} &lt; 13\) (do 11), \(\sqrt{197} \approx 14{,}0\) (do 13), \(\sqrt{559} \approx 23{,}6\), kjer najdeš delitelj 13.</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-258">
+              <h3>Naloga 258</h3>
+              <p class="zv-opis">Praštevilski delitelji števila 77 175.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li>\(3,\ 5,\ 7\quad (77\,175 = 3^2 \cdot 5^2 \cdot 7^3)\)</li>
+              </ul>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-260">
+              <h3>Naloga 260</h3>
+              <p class="zv-opis">Ali je število 1 002 003 004 005 006 007 008 009 praštevilo?</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li>\(\text{ne}\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>Vsota števk je \(1 + 2 + \dots + 9 = 45\), zato je število deljivo z 9 (in s 3).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-259">
+              <h3>Naloga 259</h3>
+              <p class="zv-opis">Vsi delitelji števil.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><span class="zv-crka">a)</span> \(1250 = 2 \cdot 5^4:\ 1, 2, 5, 10, 25, 50, 125, 250, 625, 1250\)</li>
+                <li><span class="zv-crka">b)</span> \(1372 = 2^2 \cdot 7^3:\ 1, 2, 4, 7, 14, 28, 49, 98, 196, 343, 686, 1372\)</li>
+                <li><span class="zv-crka">c)</span> \(1369 = 37^2:\ 1, 37, 1369\)</li>
+                <li><span class="zv-crka">č)</span> \(2125 = 5^3 \cdot 17:\ 1, 5, 17, 25, 85, 125, 425, 2125\)</li>
+                <li><span class="zv-crka">d)</span> \(1215 = 3^5 \cdot 5:\ 1, 3, 5, 9, 15, 27, 45, 81, 135, 243, 405, 1215\)</li>
+                <li><span class="zv-crka">e)</span> \(6655 = 5 \cdot 11^3:\ 1, 5, 11, 55, 121, 605, 1331, 6655\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>Iz razcepa sestaviš vse produkte prafaktorjev, urejeno po številu faktorjev (kot v zgledu ob nalogi).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-200">
+              <h3>Naloga 200</h3>
+              <p class="zv-opis">Število deliteljev.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><span class="zv-crka">a)</span> \(800 = 2^5 \cdot 5^2:\ 6 \cdot 3 = 18\)</li>
+                <li><span class="zv-crka">b)</span> \(630 = 2 \cdot 3^2 \cdot 5 \cdot 7:\ 2 \cdot 3 \cdot 2 \cdot 2 = 24\)</li>
+                <li><span class="zv-crka">c)</span> \(1100 = 2^2 \cdot 5^2 \cdot 11:\ 3 \cdot 3 \cdot 2 = 18\)</li>
+                <li><span class="zv-crka">č)</span> \(1250 = 2 \cdot 5^4:\ 2 \cdot 5 = 10\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>Število deliteljev je produkt eksponentov v razcepu, vsak povečan za 1.</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-262">
+              <h3>Naloga 262</h3>
+              <p class="zv-opis">Vsota zaporednih naravnih števil je sestavljeno število.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><span class="zv-crka">a)</span> \(n + (n + 1) + (n + 2) = 3(n + 1)\)</li>
+                <li><span class="zv-crka">b)</span> \(n + (n + 1) + \dots + (n + 6) = 7n + 21 = 7(n + 3)\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>Oba faktorja sta večja od 1 (\(n + 1 \ge 2\), \(n + 3 \ge 4\)), zato vsota ni praštevilo.</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-263">
+              <h3>Naloga 263</h3>
+              <p class="zv-opis">Poenostavljanje in razstavljanje izraza; zakaj je vrednost sestavljeno število.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><span class="zv-crka">a)</span> \(x^3 + x^2 + x + 1 = (x + 1)(x^2 + 1)\)</li>
+                <li><span class="zv-crka">b)</span> za \(x \in \mathbb{N}\) sta oba faktorja vsaj 2</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>\(3x(4 - 12x + 9x^2) = 27x^3 - 36x^2 + 12x\) in \(-(3x^2 + 1)(1 - x) = 3x^3 - 3x^2 + x - 1\). Skupaj z \(-29x^3 + 40x^2 - 12x + 2\) dobiš \(x^3 + x^2 + x + 1 = x^2(x + 1) + (x + 1)\).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-264">
+              <h3>Naloga 264</h3>
+              <p class="zv-opis">Poenostavljanje izraza; kdaj je vrednost praštevilo.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><span class="zv-crka">a)</span> \(x^3 + x^2 = x^2(x + 1)\)</li>
+                <li><span class="zv-crka">b)</span> \(x = 1\ (\text{vrednost } 2)\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>\(-(2x - 1)^3 = -8x^3 + 12x^2 - 6x + 1\), \(-x^2(11 - 9x) = 9x^3 - 11x^2\). Za \(x \ge 2\) sta \(x^2 \ge 4\) in \(x + 1 \ge 3\), zato je produkt sestavljen; pri \(x = 1\) je vrednost \(1 \cdot 2 = 2\).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-264-a">
+              <h3>Naloga 264.a</h3>
+              <p class="zv-opis">Algoritem RSA z \(n = 323\), \(e = 5\), \(d = 173\) in sporočilom \(M = 42\).</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><span class="zv-crka">a)</span> \(p = 17,\ q = 19,\ \phi = 16 \cdot 18 = 288\)</li>
+                <li><span class="zv-crka">b)</span> \(5 \cdot 173 = 865 = 3 \cdot 288 + 1\)</li>
+                <li><span class="zv-crka">c)</span> \(C = 264\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>a) \(323 = 17 \cdot 19\). c) Računaj ostanke postopoma: \(42^2 = 1764 \equiv 149\), \(42^4 \equiv 149^2 = 22201 \equiv 237\), \(42^5 \equiv 237 \cdot 42 = 9954 \equiv 264 \pmod{323}\). Preizkus: \(264^{173}\) da pri deljenju s 323 spet ostanek 42.</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-261">
+              <h3>Naloga 261*</h3>
+              <p class="zv-opis">Najmanjši množitelj, da dobiš kvadrat (i), kub (ii) ali hkrati kvadrat in kub (iii).</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><span class="zv-crka">a)</span> \(50 = 2 \cdot 5^2:\ \text{i) } 2,\ \text{ii) } 20,\ \text{iii) } 2^5 \cdot 5^4 = 20\,000\)</li>
+                <li><span class="zv-crka">b)</span> \(135 = 3^3 \cdot 5:\ \text{i) } 15,\ \text{ii) } 25,\ \text{iii) } 3^3 \cdot 5^5 = 84\,375\)</li>
+                <li><span class="zv-crka">c)</span> \(1485 = 3^3 \cdot 5 \cdot 11:\ \text{i) } 165,\ \text{ii) } 3025,\ \text{iii) } 3^3 \cdot 5^5 \cdot 11^5\)</li>
+                <li><span class="zv-crka">č)</span> \(10\,080 = 2^5 \cdot 3^2 \cdot 5 \cdot 7:\ \text{i) } 70,\ \text{ii) } 7350,\ \text{iii) } 2 \cdot 3^4 \cdot 5^5 \cdot 7^5\)</li>
+                <li><span class="zv-crka">d)</span> \(47\,736 = 2^3 \cdot 3^3 \cdot 13 \cdot 17:\ \text{i) } 1326,\ \text{ii) } 48\,841,\ \text{iii) } 2^3 \cdot 3^3 \cdot 13^5 \cdot 17^5\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>Kvadrat ima v razcepu same sode eksponente, kub eksponente, deljive s 3, oboje hkrati pa eksponente, deljive s 6. Vsak eksponent dopolni do najbližjega takega večkratnika. Npr. \(50 \cdot 20\,000 = 2^6 \cdot 5^6 = 10^6\).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-v-265">
+              <h3>Naloga V 265</h3>
+              <p class="zv-opis">Izraz \((x - 2)^5 - 10x(4x^2 + 8 - x^3 - 8x)\).</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><span class="zv-crka">a)</span> \(x^5 - 32 = (x - 2)(x^4 + 2x^3 + 4x^2 + 8x + 16)\)</li>
+                <li><span class="zv-crka">b)</span> za \(x \ge 4\) je \(x - 2 \ge 2\) in drugi faktor večji od 1</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>\((x - 2)^5 = x^5 - 10x^4 + 40x^3 - 80x^2 + 80x - 32\); \(-10x(\dots) = 10x^4 - 40x^3 + 80x^2 - 80x\). Ostane \(x^5 - 32\), razlika petih potenc.</p>
+              </details>
+            </div>
+          </div>
+        </section>
+        <section class="sklop" id="sklop-5">
+          <header class="sklop-header">
+            <span class="sklop-num">1. letnik · 2.5</span>
+            <h2>Največji skupni delitelj in najmanjši skupni večkratnik</h2>
+            <p>Strani 12–14 v zbirki. Naloge: 275.a, 275.b, 275, 277, 278, 279, 280, 281, 281.a, 285, 285.a, 285.b, 287*, V 323, V 324, V 325, V 326, V 327, V 328.</p>
+          </header>
+          <div class="sklop-naloge">
+            <div class="tip-naloge zv-naloga" id="n-275-a">
+              <h3>Naloga 275.a</h3>
+              <p class="zv-opis">Razcepi števil ter njihov D in v.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><span class="zv-crka">a)</span> \(84 = 2^2 \cdot 3 \cdot 7,\ 175 = 5^2 \cdot 7;\ D = 7,\ v = 2100\)</li>
+                <li><span class="zv-crka">b)</span> \(108 = 2^2 \cdot 3^3,\ 225 = 3^2 \cdot 5^2;\ D = 9,\ v = 2700\)</li>
+                <li><span class="zv-crka">c)</span> \(160 = 2^5 \cdot 5,\ 224 = 2^5 \cdot 7;\ D = 32,\ v = 1120\)</li>
+                <li><span class="zv-crka">č)</span> \(675 = 3^3 \cdot 5^2,\ 315 = 3^2 \cdot 5 \cdot 7;\ D = 45,\ v = 4725\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>D: skupni prafaktorji z najmanjšimi eksponenti. v: vsi prafaktorji z največjimi eksponenti. Preizkus z zvezo \(D \cdot v = ab\), npr. \(7 \cdot 2100 = 84 \cdot 175 = 14\,700\).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-275-b">
+              <h3>Naloga 275.b</h3>
+              <p class="zv-opis">Razcepi treh števil ter njihov D in v.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><span class="zv-crka">a)</span> \(280 = 2^3 \cdot 5 \cdot 7,\ 252 = 2^2 \cdot 3^2 \cdot 7,\ 560 = 2^4 \cdot 5 \cdot 7;\ D = 28,\ v = 5040\)</li>
+                <li><span class="zv-crka">b)</span> \(135 = 3^3 \cdot 5,\ 441 = 3^2 \cdot 7^2,\ 275 = 5^2 \cdot 11;\ D = 1,\ v = 363\,825\)</li>
+                <li><span class="zv-crka">c)</span> \(297 = 3^3 \cdot 11,\ 104 = 2^3 \cdot 13,\ 144 = 2^4 \cdot 3^2;\ D = 1,\ v = 61\,776\)</li>
+                <li><span class="zv-crka">č)</span> \(333 = 3^2 \cdot 37,\ 407 = 11 \cdot 37,\ 370 = 2 \cdot 5 \cdot 37;\ D = 37,\ v = 36\,630\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>Pri treh številih je prafaktor v D le, če nastopa v vseh treh. Npr. b) nobeno praštevilo ne deli vseh treh števil, zato je \(D = 1\); \(v = 3^3 \cdot 5^2 \cdot 7^2 \cdot 11\).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-275">
+              <h3>Naloga 275</h3>
+              <p class="zv-opis">D in v danih števil.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><span class="zv-crka">a)</span> \(3969 = 3^4 7^2,\ 2079 = 3^3 \cdot 7 \cdot 11;\ D = 189,\ v = 43\,659\)</li>
+                <li><span class="zv-crka">b)</span> \(3289 = 11 \cdot 13 \cdot 23,\ 899 = 29 \cdot 31;\ D = 1,\ v = 2\,956\,811\)</li>
+                <li><span class="zv-crka">c)</span> \(2021 = 43 \cdot 47,\ 2279 = 43 \cdot 53;\ D = 43,\ v = 107\,113\)</li>
+                <li><span class="zv-crka">č)</span> \(20\,677 = 23 \cdot 29 \cdot 31,\ 7511 = 7 \cdot 29 \cdot 37;\ D = 29,\ v = 5\,355\,343\)</li>
+                <li><span class="zv-crka">d)</span> \(D = 161,\ v = 45\,080\)</li>
+                <li><span class="zv-crka">e)</span> \(D = 160,\ v = 100\,800\)</li>
+                <li><span class="zv-crka">f)</span> \(D = 125,\ v = 560\,625\)</li>
+                <li><span class="zv-crka">g)</span> \(D = 961,\ v = 148\,955\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>Razcepi: d) \(2254 = 2 \cdot 7^2 \cdot 23\), \(805 = 5 \cdot 7 \cdot 23\), \(1288 = 2^3 \cdot 7 \cdot 23\). e) \(1600 = 2^6 5^2\), \(1120 = 2^5 \cdot 5 \cdot 7\), \(1440 = 2^5 3^2 5\). f) \(1875 = 3 \cdot 5^4\), \(14\,375 = 5^4 \cdot 23\), \(1625 = 5^3 \cdot 13\). g) \(961 = 31^2\), \(29\,791 = 31^3\), \(4805 = 5 \cdot 31^2\). Pri velikih številih lahko D poiščeš tudi z Evklidovim algoritmom, npr. \(2279 - 2021 = 258 = 6 \cdot 43\).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-277">
+              <h3>Naloga 277</h3>
+              <p class="zv-opis">D in v algebrskih izrazov.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><span class="zv-crka">a)</span> \(D = 15xy^2,\ v = 45xy^4\)</li>
+                <li><span class="zv-crka">b)</span> \(D = 15a^5bc^5,\ v = 150a^7b^3c^8\)</li>
+                <li><span class="zv-crka">c)</span> \(D = 32x^{34}y^{40}z^{100},\ v = 896x^{37}y^{44}z^{200}\)</li>
+                <li><span class="zv-crka">č)</span> \(D = 27a^{38}b^{33}c,\ v = 6615a^{39}b^{55}c\)</li>
+                <li><span class="zv-crka">d)</span> \(D = x - 2,\ v = (x - 2)(x + 2)(x - 3)\)</li>
+                <li><span class="zv-crka">e)</span> \(D = x + 7,\ v = x(x + 7)(x - 3)\)</li>
+                <li><span class="zv-crka">f)</span> \(D = (x - 3)(x + 5),\ v = 7(x - 3)(x + 3)(x + 5)\)</li>
+                <li><span class="zv-crka">g)</span> \(D = 1,\ v = x(x - 3)(x + 3)^2(x^2 + 3x + 9)\)</li>
+                <li><span class="zv-crka">h)</span> \(D = x^2 + 4,\ v = (x - 3)(x - 2)(x + 2)(x^2 + 4)\)</li>
+                <li><span class="zv-crka">i)</span> \(D = (x - 1)(x - 3)(x + 3),\ v = (x - 1)(x + 1)(x - 3)(x + 3)\)</li>
+                <li><span class="zv-crka">j)</span> \(D = x^2 - 5,\ v = (x - 4)(x + 4)(x^2 - 5)(x^2 + 4)\)</li>
+                <li><span class="zv-crka">k)</span> \(D = 3x + 2y,\ v = xy^2(3x - 2y)(3x + 2y)^2\)</li>
+                <li><span class="zv-crka">l)</span> \(D = 8x^4y^6,\ v = 960x^{10}y^7z^{11}\)</li>
+                <li><span class="zv-crka">m)</span> \(D = 2a^8b^3c,\ v = 4800a^{12}b^4c^2\)</li>
+                <li><span class="zv-crka">n)</span> \(D = x^2(x + 7),\ v = 4x^4(x + 7)(x - 7)(x - 3)(x^2 + 1)\)</li>
+                <li><span class="zv-crka">o)</span> \(D = x + 2,\ v = 4x(x + 2)^2(x + 9)(x^2 - 2x + 4)\)</li>
+                <li><span class="zv-crka">p)</span> \(D = (x - 3)(x + 2),\ v = 6(x - 3)(x - 2)(x + 2)(x + 3)\)</li>
+                <li><span class="zv-crka">r)</span> \(D = 2(x + 5),\ v = 6x^2(x - 5)(x - 1)(x + 5)^2(x^2 - 5x + 25)\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>Izraze najprej razstavi, nato ravnaj kot s praštevilskim razcepom (vsak nerazcepni faktor je kot praštevilo). Razcepi: f) \((x - 3)(x + 3)(x + 5)\), \(7(x - 3)(x + 5)\); h) \((x - 3)(x^2 + 4)\), \((x - 2)(x + 2)(x^2 + 4)\); i) \((x - 1)(x + 1)(x - 3)(x + 3)\), \((x - 1)(x - 3)(x + 3)\); j) \((x - 4)(x + 4)(x^2 - 5)\), \((x^2 - 5)(x^2 + 4)\); n) \(x^4(x + 7)\), \(-4x^2(x - 3)(x + 7)\), \(x^2(x - 7)(x + 7)(x^2 + 1)\); p) \(2(x - 3)(x - 2)(x + 2)\), \(3(x - 3)(x + 2)(x + 3)\), \(-(x - 3)(x - 2)(x + 2)(x + 3)\); r) \(2(x + 5)^2\), \(2x^2(x + 5)(x^2 - 5x + 25)\), \(-6(x - 5)(x - 1)(x + 5)\). Predznak minus pri D in v izpustimo.</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-278">
+              <h3>Naloga 278</h3>
+              <p class="zv-opis">Števila \(a = 120\), \(b = 180\), \(c = 288\).</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><span class="zv-crka">a)</span> \(2,\ 3,\ 5\)</li>
+                <li><span class="zv-crka">b)</span> \(2, 4, 6, 8, 12, 16, 18, 24, 32, 36, 48, 72, 96, 144, 288\)</li>
+                <li><span class="zv-crka">c)</span> \(v(a, b, c) = 1440\)</li>
+                <li><span class="zv-crka">č)</span> \(8640\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>\(a = 2^3 \cdot 3 \cdot 5\), \(b = 2^2 \cdot 3^2 \cdot 5\), \(c = 2^5 \cdot 3^2\). c) \(v = 2^5 \cdot 3^2 \cdot 5 = 1440\). č) Največji štirimestni večkratnik 1440: \(6 \cdot 1440 = 8640\) (\(7 \cdot 1440 = 10\,080\)).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-279">
+              <h3>Naloga 279</h3>
+              <p class="zv-opis">Števila \(a = 540\), \(b = 567\), \(c = 729\).</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><span class="zv-crka">a)</span> \(2,\ 3,\ 5\)</li>
+                <li><span class="zv-crka">b)</span> \(5103, 5832, 6561, 7290, 8019, 8748, 9477\)</li>
+                <li><span class="zv-crka">c)</span> \(D(a, b, c) = 27\)</li>
+                <li><span class="zv-crka">č)</span> \(1\,020\,600\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>\(a = 2^2 \cdot 3^3 \cdot 5\), \(b = 3^4 \cdot 7\), \(c = 3^6\). b) \(7 \cdot 729 = 5103\) do \(13 \cdot 729 = 9477\). c) \(D = 3^3\). č) \(v = 2^2 \cdot 3^6 \cdot 5 \cdot 7 = 102\,060\); najmanjši sedemmestni večkratnik je \(10 \cdot 102\,060 = 1\,020\,600\).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-280">
+              <h3>Naloga 280</h3>
+              <p class="zv-opis">Izrazi \(I = 4x^5 - 64x\), \(J = x^3 - 8\), \(K = 4x^6 - 16x^5 + 16x^4\).</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><span class="zv-crka">a)</span> \(1,\ x - 2,\ x^2 + 2x + 4,\ x^3 - 8\)</li>
+                <li><span class="zv-crka">b)</span> \(D(I, K) = 4x(x - 2)\)</li>
+                <li><span class="zv-crka">c)</span> \(v = 4x^4(x - 2)^2(x + 2)(x^2 + 4)(x^2 + 2x + 4)\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>\(I = 4x(x - 2)(x + 2)(x^2 + 4)\), \(J = (x - 2)(x^2 + 2x + 4)\), \(K = 4x^4(x - 2)^2\).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-281">
+              <h3>Naloga 281</h3>
+              <p class="zv-opis">Izrazi \(I = x^2 - 4x - 21\), \(J = 3x^2 + 18x + 27\), \(K = 6x^3 + 18x^2 - 24x - 72\).</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><span class="zv-crka">a)</span> \(1,\ 3,\ x + 3,\ 3(x + 3),\ (x + 3)^2,\ 3(x + 3)^2\)</li>
+                <li><span class="zv-crka">b)</span> \(D(I, J) = x + 3\)</li>
+                <li><span class="zv-crka">c)</span> \(v = 6(x - 7)(x - 2)(x + 2)(x + 3)^2\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>\(I = (x - 7)(x + 3)\), \(J = 3(x + 3)^2\), \(K = 6(x^2(x + 3) - 4(x + 3)) = 6(x - 2)(x + 2)(x + 3)\).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-281-a">
+              <h3>Naloga 281.a</h3>
+              <p class="zv-opis">Dva pregleda vsakih 21 in vsakih 9 dni, skupaj 15. aprila.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li>17. junija (čez 63 dni)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>\(v(21, 9) = v(3 \cdot 7, 3^2) = 63\). Od 15. aprila: do 30. aprila 15 dni, maj 31 dni (skupaj 46), nato še 17 dni junija.</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-285">
+              <h3>Naloga 285</h3>
+              <p class="zv-opis">Lučke na prenosniku (vsakih 10 s), tablici (8 s) in telefonu (6 s), ki se izpraznijo po 16, 24 in 8 minutah.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><span class="zv-crka">a)</span> \(96\)</li>
+                <li><span class="zv-crka">b)</span> \(4\)</li>
+                <li><span class="zv-crka">c)</span> \(24\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>Čas štejemo od trenutka, ko so vse tri lučke zasvetile hkrati. a) Prenosnik deluje še \(960\) s, lučka zasveti vsakih 10 s: \(960 : 10 = 96\). b) \(v(10, 8, 6) = 120\) s; vse tri naprave delujejo le, dokler deluje telefon (480 s): \(480 : 120 = 4\). c) \(v(10, 8) = 40\) s, prenosnik deluje 960 s (tablica dlje): \(960 : 40 = 24\). Upoštevali smo tudi utrip točno ob izteku baterije.</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-285-a">
+              <h3>Naloga 285.a</h3>
+              <p class="zv-opis">Kvadratne ploščice brez rezanja na steni 345 cm × 276 cm.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><span class="zv-crka">a)</span> \(\text{da}\)</li>
+                <li><span class="zv-crka">b)</span> \(\text{ne}\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>Stranica ploščice mora deliti obe dimenziji. \(345 = 3 \cdot 5 \cdot 23\), \(276 = 2^2 \cdot 3 \cdot 23\), \(D = 69\). 23 deli 69, torej obe dimenziji (15 × 12 ploščic). 15 ne deli 276.</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-285-b">
+              <h3>Naloga 285.b</h3>
+              <p class="zv-opis">Trije strežniki z intervali 1260 ms, 1575 ms in 2310 ms.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><span class="zv-crka">a)</span> \(1260 = 2^2 3^2 \cdot 5 \cdot 7,\ 1575 = 3^2 5^2 \cdot 7,\ 2310 = 2 \cdot 3 \cdot 5 \cdot 7 \cdot 11\)</li>
+                <li><span class="zv-crka">b)</span> \(v = 2^2 3^2 5^2 \cdot 7 \cdot 11 = 69\,300\ \text{ms} = 69{,}3\ \text{s}\)</li>
+                <li><span class="zv-crka">c)</span> \(t_D = 809\ \text{ms}\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>c) \(t_D\) ne sme biti deljiv z 2, 3, 5, 7 ali 11. Od 801 naprej: 801 (3), 802 (2), 803 (11), 804 (2), 805 (5), 806 (2), 807 (3), 808 (2), 809 ustreza (809 je praštevilo).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-287">
+              <h3>Naloga 287*</h3>
+              <p class="zv-opis">Naravna števila z danim največjim skupnim delitljem.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><span class="zv-crka">a–č)</span> V vzorcu zbirke je pri a)–č) podan le največji skupni delitelj, zato zapišemo splošno rešitev: \(a = Dm\), \(b = Dn\), kjer sta \(m\) in \(n\) tuji naravni števili (npr. a) \(48m, 48n\)).</li>
+                <li><span class="zv-crka">d)</span> \((66, 66, 660), (66, 132, 594), (66, 198, 528), (66, 264, 462), (66, 330, 396), (132, 198, 462), (132, 330, 330), (198, 264, 330)\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>d) \(a = 66p\), \(b = 66q\), \(c = 66r\), \(p + q + r = 792 : 66 = 12\) in \(D(p, q, r) = 1\). Trojke z \(p \le q \le r\): \((1,1,10), (1,2,9), (1,3,8), (1,4,7), (1,5,6), (2,3,7), (2,5,5), (3,4,5)\); \((2,4,6)\) in \((4,4,4)\) izpadeta, ker imata skupni delitelj. Vsako trojko lahko še poljubno premešaš.</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-v-323">
+              <h3>Naloga V 323</h3>
+              <p class="zv-opis">Zmnožek 462 875, D = 115; poišči v.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li>\(v = 4025\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>\(D \cdot v = ab\): \(v = 462\,875 : 115 = 4025\).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-v-324">
+              <h3>Naloga V 324</h3>
+              <p class="zv-opis">Zmnožek 37 200, v = 9300; poišči D.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li>\(D = 4\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>\(D = 37\,200 : 9300 = 4\).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-v-325">
+              <h3>Naloga V 325</h3>
+              <p class="zv-opis">D(2376, x) = 72, v = 147 312; izračunaj x.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li>\(x = 4464\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>\(x = \frac{72 \cdot 147\,312}{2376} = 4464\). Preizkus: \(D(2376, 4464) = 72\).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-v-326">
+              <h3>Naloga V 326</h3>
+              <p class="zv-opis">Števili 6011 in 9001 sta tuji.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li>\(D(6011, 9001) = 1\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>Evklidov algoritem: \(9001 = 1 \cdot 6011 + 2990\), \(6011 = 2 \cdot 2990 + 31\), \(2990 = 96 \cdot 31 + 14\), \(31 = 2 \cdot 14 + 3\), \(14 = 4 \cdot 3 + 2\), \(3 = 1 \cdot 2 + 1\), \(2 = 2 \cdot 1 + 0\).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-v-327">
+              <h3>Naloga V 327</h3>
+              <p class="zv-opis">Pari števil z D = 24 in v = 840.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li>\((24, 840),\ (120, 168)\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>\(a = 24m\), \(b = 24n\), \(m\) in \(n\) tuji, \(v = 24mn = 840\), torej \(mn = 35\): \((1, 35)\) ali \((5, 7)\).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-v-328">
+              <h3>Naloga V 328</h3>
+              <p class="zv-opis">Pari števil z danima D in v.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><span class="zv-crka">a)</span> \((158, 3160),\ (632, 790)\)</li>
+                <li><span class="zv-crka">b)</span> \((844, 30\,384),\ (3376, 7596)\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>a) \(mn = 3160 : 158 = 20\), tuja para \((1, 20)\), \((4, 5)\). b) \(mn = 30\,384 : 844 = 36\), tuja para \((1, 36)\), \((4, 9)\).</p>
+              </details>
+            </div>
+          </div>
+        </section>
+        <section class="sklop" id="sklop-6">
+          <header class="sklop-header">
+            <span class="sklop-num">1. letnik · 2.6</span>
+            <h2>Evklidov algoritem</h2>
+            <p>Strani 15 v zbirki. Naloge: i 322, i 419, i 419.a, i 419.b.</p>
+          </header>
+          <div class="sklop-naloge">
+            <div class="tip-naloge zv-naloga" id="n-i-322">
+              <h3>Naloga i 322</h3>
+              <p class="zv-opis">D z Evklidovim algoritmom in v.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><span class="zv-crka">a)</span> \(D = 2,\ v = 1026\)</li>
+                <li><span class="zv-crka">b)</span> \(D = 3,\ v = 1980\)</li>
+                <li><span class="zv-crka">c)</span> \(D = 4,\ v = 7800\)</li>
+                <li><span class="zv-crka">č)</span> \(D = 24,\ v = 1680\)</li>
+                <li><span class="zv-crka">d)</span> \(D = 4,\ v = 151920\)</li>
+                <li><span class="zv-crka">e)</span> \(D = 39,\ v = 26325\)</li>
+                <li><span class="zv-crka">f)</span> \(D = 409,\ v = 2454\)</li>
+                <li><span class="zv-crka">g)</span> \(D = 4,\ v = 193536\)</li>
+                <li><span class="zv-crka">h)</span> \(D = 1,\ v = 8453250\)</li>
+                <li><span class="zv-crka">i)</span> \(D = 1677,\ v = 50310\)</li>
+                <li><span class="zv-crka">j)</span> \(D = 23,\ v = 1009861\)</li>
+                <li><span class="zv-crka">k)</span> \(D = 133,\ v = 814625\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>Večje število deli z manjšim, nato delitelj z ostankom, dokler ostanek ni 0. Zadnji neničelni ostanek je D, nato \(v = \frac{ab}{D}\).</p><p>a) \(54 = 1 \cdot 38 + 16\), \(38 = 2 \cdot 16 + 6\), \(16 = 2 \cdot 6 + 4\), \(6 = 1 \cdot 4 + 2\), \(4 = 2 \cdot 2 + 0\)</p><p>b) \(99 = 1 \cdot 60 + 39\), \(60 = 1 \cdot 39 + 21\), \(39 = 1 \cdot 21 + 18\), \(21 = 1 \cdot 18 + 3\), \(18 = 6 \cdot 3 + 0\)</p><p>c) \(200 = 1 \cdot 156 + 44\), \(156 = 3 \cdot 44 + 24\), \(44 = 1 \cdot 24 + 20\), \(24 = 1 \cdot 20 + 4\), \(20 = 5 \cdot 4 + 0\)</p><p>č) \(240 = 1 \cdot 168 + 72\), \(168 = 2 \cdot 72 + 24\), \(72 = 3 \cdot 24 + 0\)</p><p>d) \(844 = 1 \cdot 720 + 124\), \(720 = 5 \cdot 124 + 100\), \(124 = 1 \cdot 100 + 24\), \(100 = 4 \cdot 24 + 4\), \(24 = 6 \cdot 4 + 0\)</p><p>e) \(1053 = 1 \cdot 975 + 78\), \(975 = 12 \cdot 78 + 39\), \(78 = 2 \cdot 39 + 0\)</p><p>f) \(1227 = 1 \cdot 818 + 409\), \(818 = 2 \cdot 409 + 0\)</p><p>g) \(1024 = 1 \cdot 756 + 268\), \(756 = 2 \cdot 268 + 220\), \(268 = 1 \cdot 220 + 48\), \(220 = 4 \cdot 48 + 28\), \(48 = 1 \cdot 28 + 20\), \(28 = 1 \cdot 20 + 8\), \(20 = 2 \cdot 8 + 4\), \(8 = 2 \cdot 4 + 0\)</p><p>h) \(3250 = 1 \cdot 2601 + 649\), \(2601 = 4 \cdot 649 + 5\), \(649 = 129 \cdot 5 + 4\), \(5 = 1 \cdot 4 + 1\), \(4 = 4 \cdot 1 + 0\)</p><p>i) \(10062 = 1 \cdot 8385 + 1677\), \(8385 = 5 \cdot 1677 + 0\)</p><p>j) \(12167 = 6 \cdot 1909 + 713\), \(1909 = 2 \cdot 713 + 483\), \(713 = 1 \cdot 483 + 230\), \(483 = 2 \cdot 230 + 23\), \(230 = 10 \cdot 23 + 0\)</p><p>k) \(16625 = 2 \cdot 6517 + 3591\), \(6517 = 1 \cdot 3591 + 2926\), \(3591 = 1 \cdot 2926 + 665\), \(2926 = 4 \cdot 665 + 266\), \(665 = 2 \cdot 266 + 133\), \(266 = 2 \cdot 133 + 0\)</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-i-419">
+              <h3>Naloga i 419</h3>
+              <p class="zv-opis">Krajšanje ulomkov z Evklidovim algoritmom.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><span class="zv-crka">a)</span> \(\frac{594}{168} = \frac{99}{28}\)</li>
+                <li><span class="zv-crka">b)</span> \(\frac{2360}{482} = \frac{1180}{241}\)</li>
+                <li><span class="zv-crka">c)</span> \(\frac{3927}{2373} = \frac{187}{113}\)</li>
+                <li><span class="zv-crka">č)</span> \(\frac{3660}{1548} = \frac{305}{129}\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>Števec in imenovalec deli z D.</p><p>a) \(594 = 3 \cdot 168 + 90\), \(168 = 1 \cdot 90 + 78\), \(90 = 1 \cdot 78 + 12\), \(78 = 6 \cdot 12 + 6\), \(12 = 2 \cdot 6 + 0\); \(D = 6\).</p><p>b) \(2360 = 4 \cdot 482 + 432\), \(482 = 1 \cdot 432 + 50\), \(432 = 8 \cdot 50 + 32\), \(50 = 1 \cdot 32 + 18\), \(32 = 1 \cdot 18 + 14\), \(18 = 1 \cdot 14 + 4\), \(14 = 3 \cdot 4 + 2\), \(4 = 2 \cdot 2 + 0\); \(D = 2\).</p><p>c) \(3927 = 1 \cdot 2373 + 1554\), \(2373 = 1 \cdot 1554 + 819\), \(1554 = 1 \cdot 819 + 735\), \(819 = 1 \cdot 735 + 84\), \(735 = 8 \cdot 84 + 63\), \(84 = 1 \cdot 63 + 21\), \(63 = 3 \cdot 21 + 0\); \(D = 21\).</p><p>č) \(3660 = 2 \cdot 1548 + 564\), \(1548 = 2 \cdot 564 + 420\), \(564 = 1 \cdot 420 + 144\), \(420 = 2 \cdot 144 + 132\), \(144 = 1 \cdot 132 + 12\), \(132 = 11 \cdot 12 + 0\); \(D = 12\).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-i-419-a">
+              <h3>Naloga i 419.a</h3>
+              <p class="zv-opis">Zapis ulomkov kot verižni ulomek.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><span class="zv-crka">a)</span> \(\frac{194}{55} = 3 + \cfrac{1}{1 + \cfrac{1}{1 + \cfrac{1}{8 + \cfrac{1}{1 + \cfrac{1}{2}}}}}\)</li>
+                <li><span class="zv-crka">b)</span> \(\frac{83}{24} = 3 + \cfrac{1}{2 + \cfrac{1}{5 + \cfrac{1}{2}}}\)</li>
+                <li><span class="zv-crka">c)</span> \(\frac{79}{64} = 1 + \cfrac{1}{4 + \cfrac{1}{3 + \cfrac{1}{1 + \cfrac{1}{3}}}}\)</li>
+                <li><span class="zv-crka">č)</span> \(\frac{69}{25} = 2 + \cfrac{1}{1 + \cfrac{1}{3 + \cfrac{1}{6}}}\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>Količniki iz Evklidovega algoritma so po vrsti členi verižnega ulomka, npr. \(\frac{83}{24} = 3 + \frac{11}{24} = 3 + \cfrac{1}{\frac{24}{11}}\) in tako naprej.</p><p>a) \(194 = 3 \cdot 55 + 29\), \(55 = 1 \cdot 29 + 26\), \(29 = 1 \cdot 26 + 3\), \(26 = 8 \cdot 3 + 2\), \(3 = 1 \cdot 2 + 1\), \(2 = 2 \cdot 1 + 0\); količniki \(3, 1, 1, 8, 1, 2\).</p><p>b) \(83 = 3 \cdot 24 + 11\), \(24 = 2 \cdot 11 + 2\), \(11 = 5 \cdot 2 + 1\), \(2 = 2 \cdot 1 + 0\); količniki \(3, 2, 5, 2\).</p><p>c) \(79 = 1 \cdot 64 + 15\), \(64 = 4 \cdot 15 + 4\), \(15 = 3 \cdot 4 + 3\), \(4 = 1 \cdot 3 + 1\), \(3 = 3 \cdot 1 + 0\); količniki \(1, 4, 3, 1, 3\).</p><p>č) \(69 = 2 \cdot 25 + 19\), \(25 = 1 \cdot 19 + 6\), \(19 = 3 \cdot 6 + 1\), \(6 = 6 \cdot 1 + 0\); količniki \(2, 1, 3, 6\).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-i-419-b">
+              <h3>Naloga i 419.b</h3>
+              <p class="zv-opis">Arhivi s 15 466, 3289 in 1463 biti: ključi, interval osvežitve in čas prenosa.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><span class="zv-crka">a)</span> \(D(15\,466, 3289) = 11\)</li>
+                <li><span class="zv-crka">b)</span> \(v(15\,466, 3289) = 4\,624\,334\ \text{ms} \approx 77\ \text{min}\ 4\ \text{s}\)</li>
+                <li><span class="zv-crka">c)</span> univerzalni ključ \(D = 11\); \(11 \mid 132\); prenos traja \(11 \cdot 10 = 110\) s &lt; 120 s, zato Maja uspe</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>a) \(15466 = 4 \cdot 3289 + 2310\), \(3289 = 1 \cdot 2310 + 979\), \(2310 = 2 \cdot 979 + 352\), \(979 = 2 \cdot 352 + 275\), \(352 = 1 \cdot 275 + 77\), \(275 = 3 \cdot 77 + 44\), \(77 = 1 \cdot 44 + 33\), \(44 = 1 \cdot 33 + 11\), \(33 = 3 \cdot 11 + 0\). b) \(v = \frac{15\,466 \cdot 3289}{11}\). c) \(D(11, 1463)\): \(1463 = 133 \cdot 11\), torej \(D(A, B, C) = 11\); \(132 = 12 \cdot 11\).</p>
+              </details>
+            </div>
+          </div>
+        </section>
+        <section class="sklop" id="sklop-7">
+          <header class="sklop-header">
+            <span class="sklop-num">1. letnik · 2.7</span>
+            <h2>Številski sestavi</h2>
+            <p>Strani 16–17 v zbirki. Naloge: i 330, i 331, i 332, i 333, i 334, i 335, i 335.a, i 335.b, i 338, i 339, i 340, i 341.</p>
+          </header>
+          <div class="sklop-naloge">
+            <div class="tip-naloge zv-naloga" id="n-i-330">
+              <h3>Naloga i 330</h3>
+              <p class="zv-opis">Prvih 12 naravnih števil v dvojiškem, trojiškem in petiškem sestavu.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><div class="tabela-wrap"><table class="zv-tabela"><thead><tr><th>Sestav</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th><th>7</th><th>8</th><th>9</th><th>10</th><th>11</th><th>12</th></tr></thead><tbody><tr><td>dvojiški</td><td>1</td><td>10</td><td>11</td><td>100</td><td>101</td><td>110</td><td>111</td><td>1000</td><td>1001</td><td>1010</td><td>1011</td><td>1100</td></tr><tr><td>trojiški</td><td>1</td><td>2</td><td>10</td><td>11</td><td>12</td><td>20</td><td>21</td><td>22</td><td>100</td><td>101</td><td>102</td><td>110</td></tr><tr><td>petiški</td><td>1</td><td>2</td><td>3</td><td>4</td><td>10</td><td>11</td><td>12</td><td>13</td><td>14</td><td>20</td><td>21</td><td>22</td></tr></tbody></table></div></li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>Šteješ kot v desetiškem sestavu, le da prenos nastopi, ko dosežeš osnovo: v petiškem po 4 pride 10, po 14 pride 20.</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-i-331">
+              <h3>Naloga i 331</h3>
+              <p class="zv-opis">Pretvorba v desetiški sestav.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><span class="zv-crka">a)</span> \(10111_{(2)} = 23\)</li>
+                <li><span class="zv-crka">b)</span> \(2034_{(5)} = 269\)</li>
+                <li><span class="zv-crka">c)</span> \(1236_{(9)} = 924\)</li>
+                <li><span class="zv-crka">č)</span> \(1A23_{(16)} = 6691\)</li>
+                <li><span class="zv-crka">d)</span> \(2034_{(6)} = 454\)</li>
+                <li><span class="zv-crka">e)</span> \(10021_{(3)} = 88\)</li>
+                <li><span class="zv-crka">f)</span> \(23023_{(8)} = 9747\)</li>
+                <li><span class="zv-crka">g)</span> \(13012_{(4)} = 454\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>Vsako števko pomnoži s potenco osnove, ki ustreza njenemu mestu. Zgled č): \(3 + 2 \cdot 16 + 10 \cdot 16^2 + 1 \cdot 16^3 = 3 + 32 + 2560 + 4096 = 6691\). Zgled f): \(3 + 2 \cdot 8 + 0 + 3 \cdot 8^3 + 2 \cdot 8^4 = 3 + 16 + 1536 + 8192\).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-i-332">
+              <h3>Naloga i 332</h3>
+              <p class="zv-opis">Pretvorba iz desetiškega sestava.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><span class="zv-crka">a)</span> \(12 = 1100_{(2)}\)</li>
+                <li><span class="zv-crka">b)</span> \(103 = 403_{(5)}\)</li>
+                <li><span class="zv-crka">c)</span> \(187 = 227_{(9)}\)</li>
+                <li><span class="zv-crka">č)</span> \(203 = CB_{(16)}\)</li>
+                <li><span class="zv-crka">d)</span> \(248 = 1052_{(6)}\)</li>
+                <li><span class="zv-crka">e)</span> \(1032 = 1102020_{(3)}\)</li>
+                <li><span class="zv-crka">f)</span> \(2733 = 5255_{(8)}\)</li>
+                <li><span class="zv-crka">g)</span> \(30344 = 13122020_{(4)}\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>Število zaporedoma deli z osnovo in zapisuj ostanke; rezultat bereš od zadnjega ostanka proti prvemu. Zgled f): \(2733 = 341 \cdot 8 + 5\), \(341 = 42 \cdot 8 + 5\), \(42 = 5 \cdot 8 + 2\), \(5 = 0 \cdot 8 + 5\), torej \(5255_{(8)}\).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-i-333">
+              <h3>Naloga i 333</h3>
+              <p class="zv-opis">Pretvorba med dvema nedesetiškima sestavoma.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><span class="zv-crka">a)</span> \(302_{(5)} = 77 = 2212_{(3)}\)</li>
+                <li><span class="zv-crka">b)</span> \(6102_{(7)} = 2109 = 200331_{(4)}\)</li>
+                <li><span class="zv-crka">c)</span> \(321_{(8)} = 209 = 1314_{(5)}\)</li>
+                <li><span class="zv-crka">č)</span> \(111001_{(2)} = 57 = 111_{(7)}\)</li>
+                <li><span class="zv-crka">d)</span> \(781_{(9)} = 640 = 280_{(16)}\)</li>
+                <li><span class="zv-crka">e)</span> \(ABC_{(16)} = 2748 = 20420_{(6)}\)</li>
+                <li><span class="zv-crka">f)</span> \(20152_{(6)} = 2660 = 5144_{(8)}\)</li>
+                <li><span class="zv-crka">g)</span> \(10AB_{(16)} = 4267 = 5761_{(9)}\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>Najprej pretvori v desetiški sestav (kot pri 331), nato v ciljni sestav z zaporednim deljenjem (kot pri 332).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-i-334">
+              <h3>Naloga i 334</h3>
+              <p class="zv-opis">Računanje v različnih sestavih in iskanje osnove.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><span class="zv-crka">a)</span> \(11 + 11 = 22 \to x = 211_{(3)}\)</li>
+                <li><span class="zv-crka">b)</span> \(429 - 79 = 350 \to x = 1342_{(6)}\)</li>
+                <li><span class="zv-crka">c)</span> \((100 + 38) \cdot 13 = 1794 \to x = 2110110_{(3)}\)</li>
+                <li><span class="zv-crka">č)</span> \(\frac{1033 - 376}{73} = 9 \to x = 12_{(7)}\)</li>
+                <li><span class="zv-crka">d)</span> \(267 + 8380 = 8647 \to x = 21C7_{(16)}\)</li>
+                <li><span class="zv-crka">e)</span> \(203 - 175 = 28 \to x = 1C_{(16)}\)</li>
+                <li><span class="zv-crka">f)</span> \(x = 3\)</li>
+                <li><span class="zv-crka">g)</span> \(x = 11\)</li>
+                <li><span class="zv-crka">h)</span> \(x = 4\)</li>
+                <li><span class="zv-crka">i)</span> \(x = 8\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>a)–e) Vse pretvori v desetiški sestav, izračunaj in rezultat pretvori nazaj. f)–i) Zapiši števila kot izraze z \(x\) in reši enačbo; rešitev mora biti večja od največje števke. f) \((x + 2) + (x^2 + 2) = x^2 + 2x + 1\) da \(x = 3\). g) \(3x^2 + 5 + 2x + 7 = 3x^2 + 3x + 1\) da \(x = 11\). h) \(3x^2 + 1 - (x + 2) = 2x^2 + 2x + 3\) da \(x^2 - 3x - 4 = 0\), \(x = 4\) (\(x = -1\) ne ustreza). i) \(2x^2 + 5x + 4 + x^2 + 5x = 4x^2 + 2x + 4\) da \(x^2 = 8x\), \(x = 8\).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-i-335">
+              <h3>Naloga i 335</h3>
+              <p class="zv-opis">Števila z danim številom mest v danem sestavu.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><span class="zv-crka">a)</span> \(10_{(5)}, 11_{(5)}, \dots, 44_{(5)}\ (\text{od } 5 \text{ do } 24)\)</li>
+                <li><span class="zv-crka">b)</span> \(100_{(3)}, 101_{(3)}, \dots, 222_{(3)}\ (\text{od } 9 \text{ do } 26)\)</li>
+                <li><span class="zv-crka">c)</span> \(8888_{(9)} = 6560\)</li>
+                <li><span class="zv-crka">č)</span> \(10000_{(7)} = 2401\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>Najmanjše \(k\)-mestno število v sestavu z osnovo \(n\) je \(10\dots0_{(n)} = n^{k-1}\), največje je \(n^k - 1\), zapisano s samimi števkami \(n - 1\).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-i-335-a">
+              <h3>Naloga i 335.a</h3>
+              <p class="zv-opis">Dekodiranje sporočila iz 8-bitnih kod ASCII.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li>77 97 116 101 109 97 116 105 107 97 32 106 101 32 122 97 107 111 110 33</li>
+                <li><strong>Matematika je zakon!</strong></li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>Npr. \(01001101_{(2)} = 64 + 8 + 4 + 1 = 77\), kar je v tabeli ASCII črka M; 32 je presledek, 33 klicaj.</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-i-335-b">
+              <h3>Naloga i 335.b</h3>
+              <p class="zv-opis">Naslov IP 192.168.1.1 in naslov MAC 00:1A:2B:3C:4D:5E v 8-bitnih registrih.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><span class="zv-crka">IP)</span> 11000000.10101000.00000001.00000001</li>
+                <li><span class="zv-crka">MAC)</span> 00000000:00011010:00101011:00111100:01001101:01011110</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>\(192 = 128 + 64\), \(168 = 128 + 32 + 8\). Vsaka šestnajstiška števka ustreza štirim bitom: \(1A = 0001\,1010\), \(5E = 0101\,1110\).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-i-338">
+              <h3>Naloga i 338</h3>
+              <p class="zv-opis">Vsota največjega štirimestnega števila v petiškem in najmanjšega trimestnega v devetiškem sestavu.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li>\(4444_{(5)} + 100_{(9)} = 624 + 81 = 705\)</li>
+              </ul>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-i-339">
+              <h3>Naloga i 339</h3>
+              <p class="zv-opis">203 stoli v 11 vrstah po 13 stolov: osnova sestava.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li>\(\text{osnova } 4\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>\((x + 1)(x + 3) = 2x^2 + 3\), \(x^2 - 4x = 0\), \(x = 4\). Preizkus: \(5 \cdot 7 = 35 = 203_{(4)}\).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-i-340">
+              <h3>Naloga i 340</h3>
+              <p class="zv-opis">Delitev 320 € na 217 € in 102 €: osnova sestava.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li>\(\text{osnova } 9\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>\(2x^2 + x + 7 + x^2 + 2 = 3x^2 + 2x\), od tod \(x = 9\). Preizkus: \(178 + 83 = 261 = 320_{(9)}\).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-i-341">
+              <h3>Naloga i 341</h3>
+              <p class="zv-opis">Knjigi s 302 in 221 stranmi, razlika 31: osnova sestava.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li>\(\text{osnova } 5\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>\(2x^2 + 2x + 1 + 3x + 1 = 3x^2 + 2\), \(x^2 - 5x = 0\), \(x = 5\). Preizkus: \(61 + 16 = 77 = 302_{(5)}\).</p>
+              </details>
+            </div>
+          </div>
+        </section>
+        <section class="sklop" id="sklop-8">
+          <header class="sklop-header">
+            <span class="sklop-num">1. letnik · 2.8</span>
+            <h2>Osnove logike</h2>
+            <p>Strani 18–23 v zbirki. Naloge: 343, 344, 345, 346, 347, 348, 349, 350, 351, 352, 353, 354, 355, 356, 356.a, V 357, V 358.</p>
+          </header>
+          <div class="sklop-naloge">
+            <div class="tip-naloge zv-naloga" id="n-343">
+              <h3>Naloga 343</h3>
+              <p class="zv-opis">Logične vrednosti dvanajstih izjav o številih in telesih.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><div class="tabela-wrap"><table class="zv-tabela"><thead><tr><th>Izjava</th><th>Vrednost</th><th>Zakaj</th></tr></thead><tbody><tr><td>A</td><td>R</td><td>6 = 2 · 3</td></tr><tr><td>B</td><td>N</td><td>kvadrat je lik, ne telo</td></tr><tr><td>C</td><td>N</td><td>\(0^2 = 0\) ni pozitivno</td></tr><tr><td>Č</td><td>R</td><td>\(x = 0\)</td></tr><tr><td>D</td><td>R</td><td>vsaj eno število ni 0, zato je vsota kvadratov &gt; 0</td></tr><tr><td>E</td><td>N</td><td>\(1^3 = 1 \ne 8\)</td></tr><tr><td>F</td><td>R</td><td>\(n = 2\)</td></tr><tr><td>G</td><td>N</td><td>\(1^3 = 1\), \(2^3 = 8\), 4 ni kub</td></tr><tr><td>H</td><td>R</td><td>\(n^3 \ge 1 &gt; 0{,}2\)</td></tr><tr><td>I</td><td>N</td><td>2 je sodo praštevilo</td></tr><tr><td>J</td><td>R</td><td>2</td></tr><tr><td>K</td><td>N</td><td>1 ni ne praštevilo ne sestavljeno</td></tr></tbody></table></div></li>
+              </ul>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-344">
+              <h3>Naloga 344</h3>
+              <p class="zv-opis">Logične vrednosti sestavljenih izjav in izjav s pogoji.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><div class="tabela-wrap"><table class="zv-tabela"><thead><tr><th>Izjava</th><th>Vrednost</th><th>Zakaj</th></tr></thead><tbody><tr><td>A</td><td>N</td><td>6 ni deljivo z 12</td></tr><tr><td>B</td><td>R</td><td>\(40 = 5 \cdot 8\)</td></tr><tr><td>C</td><td>R</td><td>\(56 = 8 \cdot 7\)</td></tr><tr><td>Č</td><td>N</td><td>\(12\) in \(39 = 3 \cdot 13\) nista praštevili</td></tr><tr><td>D</td><td>N</td><td>\(2 \cdot 3 = 6\) je sodo, 3 pa ne</td></tr><tr><td>E</td><td>R</td><td>kvadrat lihega števila je lih</td></tr><tr><td>F</td><td>R</td><td>liho · liho = liho, sodo · sodo = sodo</td></tr><tr><td>G</td><td>R</td><td>\(n &lt; 30 &lt; 60\)</td></tr><tr><td>H</td><td>R</td><td>\(6^2 = 36 \ge 30\), zato \(n \le 5\)</td></tr><tr><td>I</td><td>N</td><td>protiprimer \(x = 9{,}5\)</td></tr><tr><td>J</td><td>R</td><td>3 in 5 sta tuji</td></tr><tr><td>K</td><td>N</td><td>6 in 2 nista tuji; 6 je deljivo s 6 in 2, ne pa z 12</td></tr><tr><td>L</td><td>N</td><td>16 je deljivo z 8, vsota števk 7 pa ne</td></tr></tbody></table></div></li>
+              </ul>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-345">
+              <h3>Naloga 345</h3>
+              <p class="zv-opis">Negacije izjav.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><div class="tabela-wrap"><table class="zv-tabela"><thead><tr><th>Izjava</th><th></th><th>Negacija</th></tr></thead><tbody><tr><td>A</td><td></td><td>8 ni naravno število.</td></tr><tr><td>B</td><td></td><td>\(x = 2\) ni rešitev enačbe \(x^2 = 25\).</td></tr><tr><td>C</td><td></td><td>\(x \ge 3\)</td></tr><tr><td>Č</td><td></td><td>\(x &lt; 7\)</td></tr><tr><td>D</td><td></td><td>\(5 \nmid 35\)</td></tr><tr><td>E</td><td></td><td>7 deli 70.</td></tr><tr><td>F</td><td></td><td>\(n\) ni deljiv z 2 ali \(n\) ni deljiv s 3.</td></tr><tr><td>G</td><td></td><td>\(n\) ni deljiv z 8 in \(n\) ni deljiv s 5.</td></tr><tr><td>H</td><td></td><td>82 ni naravno število ali 82 ni celo število.</td></tr><tr><td>I</td><td></td><td>\(-8\) ni naravno število in 82 ni celo število.</td></tr><tr><td>J</td><td></td><td>\((x \ge 3) \wedge (x &lt; 7)\)</td></tr><tr><td>K</td><td></td><td>\((3 \nmid n) \wedge (5 \nmid n)\)</td></tr><tr><td>L</td><td></td><td>Za vsak \(x \in \mathbb{R}\) velja \(x^2 \ne 0\).</td></tr><tr><td>M</td><td></td><td>Za vsak \(x \in \mathbb{R}\) velja \(x^3 \ne 8\).</td></tr><tr><td>N</td><td></td><td>Obstaja \(n \in \mathbb{N}\), da je \(n^2 &lt; 1\).</td></tr><tr><td>O</td><td></td><td>Obstaja \(n \in \mathbb{N}\), da \(1 \nmid n\).</td></tr><tr><td>P</td><td></td><td>Obstajata \(x, y \in \mathbb{R}\), da je \((x + y)^2 \ne x^2 + y^2\).</td></tr><tr><td>R</td><td></td><td>Za vse \(x, y \in \mathbb{R}\) je \((x + y)^2 \ne x^2 + y^2\).</td></tr></tbody></table></div></li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>Pravila: \(\neg(A \wedge B) = \neg A \vee \neg B\), \(\neg(A \vee B) = \neg A \wedge \neg B\) (De Morgan); negacija »za vsak« je »obstaja … ne«, negacija »obstaja« je »za vsak … ne«. Negacija \(x &lt; 3\) je \(x \ge 3\) (ne \(x &gt; 3\)).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-346">
+              <h3>Naloga 346</h3>
+              <p class="zv-opis">Logične vrednosti izjav z negacijo, konjunkcijo, disjunkcijo, implikacijo in ekvivalenco.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><div class="tabela-wrap"><table class="zv-tabela"><thead><tr><th>Izjava</th><th>Vrednost</th><th>Zakaj</th></tr></thead><tbody><tr><td>A</td><td>N</td><td>10 je sestavljeno, negacija je N</td></tr><tr><td>B</td><td>R</td><td>najmanjše naravno število je 1, izjava v oklepaju je N</td></tr><tr><td>C</td><td>N</td><td>R ∧ N</td></tr><tr><td>Č</td><td>R</td><td>R ∧ R</td></tr><tr><td>D</td><td>N</td><td>R ∧ N (1 ni praštevilo)</td></tr><tr><td>E</td><td>N</td><td>N ∨ N, ker \(-2^2 = -4\)</td></tr><tr><td>F</td><td>R</td><td>N ∨ R (\(0^2 = 0\), a npr. \(1^2 &gt; 0\))</td></tr><tr><td>G</td><td>N</td><td>\(n = 2\): \(2 \mid 6\), \(2 \nmid 3\)</td></tr><tr><td>H</td><td>R</td><td>\(n = 1\) (ali katerikoli \(n\), ki ne deli 6)</td></tr><tr><td>I</td><td>N</td><td>\(n = 6\): leva stran N, desna R</td></tr><tr><td>J</td><td>R</td><td>\(n = 12\)</td></tr><tr><td>K</td><td>R</td><td>vsota kvadratov neničelnih števil je pozitivna</td></tr><tr><td>L</td><td>N</td><td>\(n = m = 1\): pogoj R, \(nm = 1\) liho</td></tr></tbody></table></div></li>
+              </ul>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-347">
+              <h3>Naloga 347</h3>
+              <p class="zv-opis">Vrednost izjave \(A \vee B \wedge \neg C\).</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li>\(A = R,\ B = R,\ C = R;\quad A \vee (B \wedge \neg C) = R \vee N = R\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>555 555 555 ima vsoto števk 45, zato je deljivo s 3. Konjunkcija ima prednost pred disjunkcijo.</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-348">
+              <h3>Naloga 348</h3>
+              <p class="zv-opis">Vrednost izjave \(\neg(C \wedge (B \vee A))\).</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li>\(A = N,\ B = N,\ C = R;\quad \neg(R \wedge N) = \neg N = R\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>\(D(56, 100) = 4\). B ne velja (npr. \(a = b = 1\)), C velja (npr. \(a = 0\)).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-349">
+              <h3>Naloga 349</h3>
+              <p class="zv-opis">Vrednost izjave \(\neg(A \vee \neg B \wedge C) \vee D\).</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li>\(A = N,\ B = N,\ C = N,\ D = R;\quad \neg(N \vee (R \wedge N)) \vee R = R\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>\(-3^2 = -9\); \(39 = 3 \cdot 13\); vsota praštevil, manjših od 20, je 77, zato je D resnična. Ker je D resnična, je cela disjunkcija resnična.</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-350">
+              <h3>Naloga 350</h3>
+              <p class="zv-opis">Vrednost izjave \(A \wedge \neg(B \wedge C) \vee \neg D\).</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li>\(A = R,\ B = N,\ C = R,\ D = N;\quad (R \wedge \neg N) \vee R = R\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>Trimestni konec 808 je deljiv z 8. \((x^2)^3 = x^6\), zato B ne velja za vse \(x\), C pa velja za \(x = 0\) ali \(x = 1\). \(((x^2)^3)^4 = x^{24}\).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-351">
+              <h3>Naloga 351</h3>
+              <p class="zv-opis">Izjave o zaporedju 2, 3, 5, 7, 11, 12, 13, 17, 19, 20, 21.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><div class="tabela-wrap"><table class="zv-tabela"><thead><tr><th>Izjava</th><th>Vrednost</th><th>Zakaj</th></tr></thead><tbody><tr><td>A</td><td>N</td><td>12 ni praštevilo</td></tr><tr><td>B</td><td>R</td><td>12, 20, 21</td></tr><tr><td>C</td><td>R</td><td>tretje število je 5</td></tr><tr><td>Č</td><td>N</td><td>šesto število 12 je sestavljeno</td></tr><tr><td>D</td><td>R</td><td>2, 3, 5, 7 so praštevila</td></tr><tr><td>E</td><td>R</td><td>edino 20 je deljivo z 10</td></tr><tr><td>F</td><td>N</td><td>5 je deljivo s 5 in 13 je celo, izjava v oklepaju je R</td></tr><tr><td>G</td><td>R</td><td>12 je deljivo z 2, ni pa sodo praštevilo, zato ekvivalenca ne velja</td></tr><tr><td>H</td><td>N</td><td>večkratnika 7 sta 7 &lt; 10 in 21 &gt; 20, implikacija velja</td></tr></tbody></table></div></li>
+              </ul>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-352">
+              <h3>Naloga 352</h3>
+              <p class="zv-opis">Izjave o petih likih na mreži (modra: peterokotnik A, kvadrat B; zelena: trikotnika C in E, kvadrat D).</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><div class="tabela-wrap"><table class="zv-tabela"><thead><tr><th>Izjava</th><th>Vrednost</th><th>Zakaj</th></tr></thead><tbody><tr><td>A</td><td>R</td><td>oboje velja</td></tr><tr><td>B</td><td>R</td><td>B je kvadrat</td></tr><tr><td>C</td><td>N</td><td>modra lika sta nad vsemi zelenimi, izjava v oklepaju je R</td></tr><tr><td>Č</td><td>N</td><td>D je zelen kvadrat</td></tr><tr><td>D</td><td>N</td><td>B je moder, a ni peterokotnik</td></tr><tr><td>E</td><td>N</td><td>oba trikotnika sta zelena, implikacija velja</td></tr><tr><td>F</td><td>R</td><td>D je kvadrat, ni pa moder</td></tr><tr><td>G</td><td>N</td><td>D</td></tr><tr><td>H</td><td>N</td><td>modra lika nista trikotnika</td></tr><tr><td>I</td><td>R</td><td>C ali E</td></tr></tbody></table></div></li>
+              </ul>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-353">
+              <h3>Naloga 353</h3>
+              <p class="zv-opis">Izjave o petih likih na mreži (modra: pravokotnik A, romb B; zelena: trikotnika C in E, pravokotnik D).</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><div class="tabela-wrap"><table class="zv-tabela"><thead><tr><th>Izjava</th><th>Vrednost</th><th>Zakaj</th></tr></thead><tbody><tr><td>A</td><td>R</td><td>A in B sta štirikotnika; C je zelen trikotnik</td></tr><tr><td>B</td><td>N</td><td>D je zelen pravokotnik</td></tr><tr><td>C</td><td>R</td><td>trikotnika sta zelena</td></tr><tr><td>Č</td><td>R</td><td>A in B</td></tr><tr><td>D</td><td>R</td><td>edini romb B je moder</td></tr><tr><td>E</td><td>N</td><td>A je moder, a ni romb</td></tr><tr><td>F</td><td>R</td><td>modrih trikotnikov ni</td></tr><tr><td>G</td><td>R</td><td>C je zelen</td></tr><tr><td>H</td><td>N</td><td>C je zelen, ploščina 1</td></tr><tr><td>I</td><td>R</td><td>npr. A ni trikotnik</td></tr><tr><td>J</td><td>R</td><td>tak je le B, ki je romb</td></tr></tbody></table></div></li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>Ploščine: A 2, C \(\frac{2 \cdot 1}{2} = 1\), D \(4 \cdot 1 = 4\), E \(\frac{4 \cdot 2}{2} = 4\).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-354">
+              <h3>Naloga 354</h3>
+              <p class="zv-opis">Resničnostne preglednice sestavljenih izjav.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><span class="zv-crka">a)</span> <div class="tabela-wrap"><table class="zv-tabela"><thead><tr><th>A</th><th>B</th><th>\(\neg(A \vee B)\)</th></tr></thead><tbody><tr><td>R</td><td>R</td><td>N</td></tr><tr><td>R</td><td>N</td><td>N</td></tr><tr><td>N</td><td>R</td><td>N</td></tr><tr><td>N</td><td>N</td><td>R</td></tr></tbody></table></div></li>
+                <li><span class="zv-crka">b)</span> <div class="tabela-wrap"><table class="zv-tabela"><thead><tr><th>A</th><th>B</th><th>\(A \Leftrightarrow \neg B\)</th></tr></thead><tbody><tr><td>R</td><td>R</td><td>N</td></tr><tr><td>R</td><td>N</td><td>R</td></tr><tr><td>N</td><td>R</td><td>R</td></tr><tr><td>N</td><td>N</td><td>N</td></tr></tbody></table></div></li>
+                <li><span class="zv-crka">c)</span> <div class="tabela-wrap"><table class="zv-tabela"><thead><tr><th>A</th><th>B</th><th>\((A \Rightarrow B) \wedge \neg B\)</th></tr></thead><tbody><tr><td>R</td><td>R</td><td>N</td></tr><tr><td>R</td><td>N</td><td>N</td></tr><tr><td>N</td><td>R</td><td>N</td></tr><tr><td>N</td><td>N</td><td>R</td></tr></tbody></table></div></li>
+                <li><span class="zv-crka">č)</span> <div class="tabela-wrap"><table class="zv-tabela"><thead><tr><th>A</th><th>B</th><th>\(B \Rightarrow B \vee \neg A\)</th></tr></thead><tbody><tr><td>R</td><td>R</td><td>R</td></tr><tr><td>R</td><td>N</td><td>R</td></tr><tr><td>N</td><td>R</td><td>R</td></tr><tr><td>N</td><td>N</td><td>R</td></tr></tbody></table></div></li>
+                <li><span class="zv-crka">d)</span> <div class="tabela-wrap"><table class="zv-tabela"><thead><tr><th>A</th><th>B</th><th>\((A \Leftrightarrow \neg B) \wedge (\neg A \Rightarrow B)\)</th></tr></thead><tbody><tr><td>R</td><td>R</td><td>N</td></tr><tr><td>R</td><td>N</td><td>R</td></tr><tr><td>N</td><td>R</td><td>R</td></tr><tr><td>N</td><td>N</td><td>N</td></tr></tbody></table></div></li>
+                <li><span class="zv-crka">e)</span> <div class="tabela-wrap"><table class="zv-tabela"><thead><tr><th>A</th><th>B</th><th>\(((\neg A \Rightarrow B) \Leftrightarrow B) \wedge \neg B\)</th></tr></thead><tbody><tr><td>R</td><td>R</td><td>N</td></tr><tr><td>R</td><td>N</td><td>N</td></tr><tr><td>N</td><td>R</td><td>N</td></tr><tr><td>N</td><td>N</td><td>R</td></tr></tbody></table></div></li>
+                <li><span class="zv-crka">f)</span> <div class="tabela-wrap"><table class="zv-tabela"><thead><tr><th>A</th><th>B</th><th>C</th><th>\(A \vee \neg B \Leftrightarrow \neg C\)</th></tr></thead><tbody><tr><td>R</td><td>R</td><td>R</td><td>N</td></tr><tr><td>R</td><td>R</td><td>N</td><td>R</td></tr><tr><td>R</td><td>N</td><td>R</td><td>N</td></tr><tr><td>R</td><td>N</td><td>N</td><td>R</td></tr><tr><td>N</td><td>R</td><td>R</td><td>R</td></tr><tr><td>N</td><td>R</td><td>N</td><td>N</td></tr><tr><td>N</td><td>N</td><td>R</td><td>N</td></tr><tr><td>N</td><td>N</td><td>N</td><td>R</td></tr></tbody></table></div></li>
+                <li><span class="zv-crka">g)</span> <div class="tabela-wrap"><table class="zv-tabela"><thead><tr><th>A</th><th>B</th><th>C</th><th>\(\neg(A \Leftrightarrow \neg C) \wedge (B \vee \neg C)\)</th></tr></thead><tbody><tr><td>R</td><td>R</td><td>R</td><td>R</td></tr><tr><td>R</td><td>R</td><td>N</td><td>N</td></tr><tr><td>R</td><td>N</td><td>R</td><td>N</td></tr><tr><td>R</td><td>N</td><td>N</td><td>N</td></tr><tr><td>N</td><td>R</td><td>R</td><td>N</td></tr><tr><td>N</td><td>R</td><td>N</td><td>R</td></tr><tr><td>N</td><td>N</td><td>R</td><td>N</td></tr><tr><td>N</td><td>N</td><td>N</td><td>R</td></tr></tbody></table></div></li>
+                <li><span class="zv-crka">h)</span> <div class="tabela-wrap"><table class="zv-tabela"><thead><tr><th>A</th><th>B</th><th>C</th><th>\(\neg(\neg C \vee B) \wedge A \Rightarrow B\)</th></tr></thead><tbody><tr><td>R</td><td>R</td><td>R</td><td>R</td></tr><tr><td>R</td><td>R</td><td>N</td><td>R</td></tr><tr><td>R</td><td>N</td><td>R</td><td>N</td></tr><tr><td>R</td><td>N</td><td>N</td><td>R</td></tr><tr><td>N</td><td>R</td><td>R</td><td>R</td></tr><tr><td>N</td><td>R</td><td>N</td><td>R</td></tr><tr><td>N</td><td>N</td><td>R</td><td>R</td></tr><tr><td>N</td><td>N</td><td>N</td><td>R</td></tr></tbody></table></div></li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>Vrstni red operacij: \(\neg\), \(\wedge\), \(\vee\), \(\Rightarrow\), \(\Leftrightarrow\). Npr. f) pomeni \((A \vee \neg B) \Leftrightarrow \neg C\), h) pa \((\neg(\neg C \vee B) \wedge A) \Rightarrow B\). Vmesne stolpce (npr. \(\neg B\), \(A \Rightarrow B\)) izračunaj sam, tu je le končni stolpec.</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-355">
+              <h3>Naloga 355</h3>
+              <p class="zv-opis">Ali je izjava tavtologija?</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><span class="zv-crka">a)</span> <strong>tavtologija</strong><div class="tabela-wrap"><table class="zv-tabela"><thead><tr><th>A</th><th>B</th><th>\((A \wedge B) \Rightarrow A\)</th></tr></thead><tbody><tr><td>R</td><td>R</td><td>R</td></tr><tr><td>R</td><td>N</td><td>R</td></tr><tr><td>N</td><td>R</td><td>R</td></tr><tr><td>N</td><td>N</td><td>R</td></tr></tbody></table></div></li>
+                <li><span class="zv-crka">b)</span> <strong>tavtologija</strong><div class="tabela-wrap"><table class="zv-tabela"><thead><tr><th>A</th><th>B</th><th>\(A \Rightarrow A \vee B\)</th></tr></thead><tbody><tr><td>R</td><td>R</td><td>R</td></tr><tr><td>R</td><td>N</td><td>R</td></tr><tr><td>N</td><td>R</td><td>R</td></tr><tr><td>N</td><td>N</td><td>R</td></tr></tbody></table></div></li>
+                <li><span class="zv-crka">c)</span> <strong>ni (protislovje)</strong><div class="tabela-wrap"><table class="zv-tabela"><thead><tr><th>A</th><th>B</th><th>\(A \wedge (\neg A \wedge B)\)</th></tr></thead><tbody><tr><td>R</td><td>R</td><td>N</td></tr><tr><td>R</td><td>N</td><td>N</td></tr><tr><td>N</td><td>R</td><td>N</td></tr><tr><td>N</td><td>N</td><td>N</td></tr></tbody></table></div></li>
+                <li><span class="zv-crka">č)</span> <strong>tavtologija</strong><div class="tabela-wrap"><table class="zv-tabela"><thead><tr><th>A</th><th>B</th><th>\(((A \Rightarrow B) \wedge A) \Rightarrow B\)</th></tr></thead><tbody><tr><td>R</td><td>R</td><td>R</td></tr><tr><td>R</td><td>N</td><td>R</td></tr><tr><td>N</td><td>R</td><td>R</td></tr><tr><td>N</td><td>N</td><td>R</td></tr></tbody></table></div></li>
+                <li><span class="zv-crka">d)</span> <strong>ni</strong><div class="tabela-wrap"><table class="zv-tabela"><thead><tr><th>A</th><th>B</th><th>\((A \wedge \neg B) \wedge (\neg A \Rightarrow B)\)</th></tr></thead><tbody><tr><td>R</td><td>R</td><td>N</td></tr><tr><td>R</td><td>N</td><td>R</td></tr><tr><td>N</td><td>R</td><td>N</td></tr><tr><td>N</td><td>N</td><td>N</td></tr></tbody></table></div></li>
+                <li><span class="zv-crka">e)</span> <strong>ni</strong><div class="tabela-wrap"><table class="zv-tabela"><thead><tr><th>A</th><th>B</th><th>\(((\neg A \vee B) \wedge \neg B) \Leftrightarrow A\)</th></tr></thead><tbody><tr><td>R</td><td>R</td><td>N</td></tr><tr><td>R</td><td>N</td><td>N</td></tr><tr><td>N</td><td>R</td><td>R</td></tr><tr><td>N</td><td>N</td><td>N</td></tr></tbody></table></div></li>
+                <li><span class="zv-crka">f)</span> <strong>ni</strong><div class="tabela-wrap"><table class="zv-tabela"><thead><tr><th>A</th><th>B</th><th>C</th><th>\(\neg(A \Leftrightarrow B) \wedge (B \wedge \neg C)\)</th></tr></thead><tbody><tr><td>R</td><td>R</td><td>R</td><td>N</td></tr><tr><td>R</td><td>R</td><td>N</td><td>N</td></tr><tr><td>R</td><td>N</td><td>R</td><td>N</td></tr><tr><td>R</td><td>N</td><td>N</td><td>N</td></tr><tr><td>N</td><td>R</td><td>R</td><td>N</td></tr><tr><td>N</td><td>R</td><td>N</td><td>R</td></tr><tr><td>N</td><td>N</td><td>R</td><td>N</td></tr><tr><td>N</td><td>N</td><td>N</td><td>N</td></tr></tbody></table></div></li>
+                <li><span class="zv-crka">g)</span> <strong>tavtologija</strong><div class="tabela-wrap"><table class="zv-tabela"><thead><tr><th>A</th><th>B</th><th>C</th><th>\((\neg B \wedge C) \Rightarrow ((A \vee B) \Rightarrow A)\)</th></tr></thead><tbody><tr><td>R</td><td>R</td><td>R</td><td>R</td></tr><tr><td>R</td><td>R</td><td>N</td><td>R</td></tr><tr><td>R</td><td>N</td><td>R</td><td>R</td></tr><tr><td>R</td><td>N</td><td>N</td><td>R</td></tr><tr><td>N</td><td>R</td><td>R</td><td>R</td></tr><tr><td>N</td><td>R</td><td>N</td><td>R</td></tr><tr><td>N</td><td>N</td><td>R</td><td>R</td></tr><tr><td>N</td><td>N</td><td>N</td><td>R</td></tr></tbody></table></div></li>
+                <li><span class="zv-crka">h)</span> <strong>ni</strong><div class="tabela-wrap"><table class="zv-tabela"><thead><tr><th>A</th><th>B</th><th>C</th><th>\((C \wedge \neg B) \vee B \Leftrightarrow A \vee C\)</th></tr></thead><tbody><tr><td>R</td><td>R</td><td>R</td><td>R</td></tr><tr><td>R</td><td>R</td><td>N</td><td>R</td></tr><tr><td>R</td><td>N</td><td>R</td><td>R</td></tr><tr><td>R</td><td>N</td><td>N</td><td>N</td></tr><tr><td>N</td><td>R</td><td>R</td><td>R</td></tr><tr><td>N</td><td>R</td><td>N</td><td>N</td></tr><tr><td>N</td><td>N</td><td>R</td><td>R</td></tr><tr><td>N</td><td>N</td><td>N</td><td>R</td></tr></tbody></table></div></li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>Izjava je tavtologija, če je v zadnjem stolpcu povsod R. Pri g) je pri \(\neg B\) izjava \(A \vee B \Rightarrow A\) enaka \(A \Rightarrow A\), zato je vedno resnična.</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-356">
+              <h3>Naloga 356</h3>
+              <p class="zv-opis">Ali sta izjavi ekvivalentni?</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><span class="zv-crka">a)</span> \(\text{da}\)</li>
+                <li><span class="zv-crka">b)</span> \(\text{da}\)</li>
+                <li><span class="zv-crka">c)</span> \(\text{da (De Morgan)}\)</li>
+                <li><span class="zv-crka">č)</span> \(\text{ne}\)</li>
+                <li><span class="zv-crka">d)</span> \(\text{da}\)</li>
+                <li><span class="zv-crka">e)</span> \(\text{da}\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>Primerjaj stolpca v resničnostni preglednici (vrstice RR, RN, NR, NN): a) obe R N R R; b) obe N R R N; c) obe N R R R; č) \(A \Rightarrow \neg B\): N R R R, \(\neg(A \vee B)\): N N N R; d) in e) obe R R R N.</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-356-a">
+              <h3>Naloga 356.a</h3>
+              <p class="zv-opis">Alarm s senzorji A (gibanje), B (vrata), C (lastnik doma).</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><span class="zv-crka">a)</span> \(X = (A \vee B) \wedge \neg C\)</li>
+                <li><span class="zv-crka">b)</span> X je resnična le, ko lastnika ni doma in je odprt vsaj eden od senzorjev: vrstice (A, B, C) = RRN, RNN, NRN.</li>
+                <li><span class="zv-crka">c)</span> \(Y = B \wedge C \wedge \neg A\); da, alarm bi se sprožil vsakič, ko lastnik pride domov ali odpre vrata, preden se premakne po dnevni sobi.</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>b) Pri C = R je \(X\) vedno N; pri C = N je \(X = A \vee B\). c) Novi sistem je \(X \vee Y\). Ko lastnik odpre vhodna vrata in je že zaznan njegov telefon, gibanja v dnevni sobi pa še ni, se alarm sproži, kar je v vsakdanji rabi moteče.</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-v-357">
+              <h3>Naloga V 357</h3>
+              <p class="zv-opis">Vrednost izjave \(\neg(B \vee C) \wedge (A \vee B)\).</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li>\(A = R,\ B = R,\ C = R;\quad \neg R \wedge R = N\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>A: vsota petih potenc. B: \(xy = D \cdot v = 266\), \(x^2y^2 = 266^2 = 70\,756\). C: člen \(\binom{7}{2}(2x)^5(3y)^2 = 21 \cdot 32 \cdot 9\,x^5y^2 = 6048x^5y^2\).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-v-358">
+              <h3>Naloga V 358</h3>
+              <p class="zv-opis">Vrednost izjave \(\neg A \vee B \wedge C\).</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li>\(A = N,\ B = R,\ C = R;\quad R \vee R = R\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>A: \((x + 1)^7\) ima tudi člena \(21x^5\) in \(35x^4\), \(x^7 + 1\) pa ne. B: \(v = 8\,290\,080 : 12 = 690\,840\). C: deljivost je tranzitivna.</p>
+              </details>
+            </div>
+          </div>
+        </section>
+        <section class="sklop" id="sklop-9">
+          <header class="sklop-header">
+            <span class="sklop-num">1. letnik · 2.9</span>
+            <h2>Množice</h2>
+            <p>Strani 24–32 v zbirki. Naloge: 363, 361, 362, 364, 365, 366, 367, 368, 370, 371, 372, 374, 375, 376, 377, 378, 382, 383, 385, 386, 379, 380, 381, 387, 388, 389, 390, 391, 392*, 393*, 394*, 395*, V 395.a, V 395.b, V 395.c, V 395.č.</p>
+          </header>
+          <div class="sklop-naloge">
+            <div class="tip-naloge zv-naloga" id="n-363">
+              <h3>Naloga 363</h3>
+              <p class="zv-opis">Branje množic iz Vennovih diagramov.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><span class="zv-crka">a)</span> <div class="tabela-wrap"><table class="zv-tabela"><thead><tr><th>Izraz</th><th>Rezultat</th></tr></thead><tbody><tr><td>\(A\)</td><td>\(\{4, 6, 7, 8\}\)</td></tr><tr><td>\(A \cap B\)</td><td>\(\{7, 8\}\)</td></tr><tr><td>\(A \cup B\)</td><td>\(\{4, 5, 6, 7, 8\}\)</td></tr><tr><td>\(B - A\)</td><td>\(\{5\}\)</td></tr><tr><td>\(B^C\)</td><td>\(\{1, 2, 3, 4, 6, 9\}\)</td></tr><tr><td>\(|(A \cup B) - (A \cap B)|\)</td><td>\(3\)</td></tr><tr><td>\(B \times (A \cap B)\)</td><td>\(\{(5, 7), (5, 8), (7, 7), (7, 8), (8, 7), (8, 8)\}\)</td></tr><tr><td>\(P(B)\)</td><td>\(\{\emptyset, \{5\}, \{7\}, \{8\}, \{5, 7\}, \{5, 8\}, \{7, 8\}, \{5, 7, 8\}\}\)</td></tr><tr><td>\((A - B) \cap (B - A)\)</td><td>\(\emptyset\)</td></tr><tr><td>\(|(A \cup B) - U|\)</td><td>\(0\)</td></tr></tbody></table></div></li>
+                <li><span class="zv-crka">b)</span> <div class="tabela-wrap"><table class="zv-tabela"><thead><tr><th>Izraz</th><th>Rezultat</th></tr></thead><tbody><tr><td>\(C - A\)</td><td>\(\{7\}\)</td></tr><tr><td>\((A \cap B) \cup (A \cap C)\)</td><td>\(\{3, 4, 6, 8\}\)</td></tr><tr><td>\((A \cap U)^C\)</td><td>\(\{5, 7, 9\}\)</td></tr><tr><td>\((A \cup B)^C\)</td><td>\(\{5, 7\}\)</td></tr><tr><td>\(A \cap B \cap C\)</td><td>\(\{4, 6\}\)</td></tr><tr><td>\(U - (A \cup B \cup C)\)</td><td>\(\{5\}\)</td></tr><tr><td>\(B - (A \cap C)\)</td><td>\(\{3, 9\}\)</td></tr><tr><td>\(B - (A \cup C)\)</td><td>\(\{9\}\)</td></tr><tr><td>\(P(A \cap C)\)</td><td>\(\{\emptyset, \{4\}, \{6\}, \{8\}, \{4, 6\}, \{4, 8\}, \{6, 8\}, \{4, 6, 8\}\}\)</td></tr><tr><td>\(A^C \times (A - (B \cup C))\)</td><td>\(\{(5, 1), (5, 2), (7, 1), (7, 2), (9, 1), (9, 2)\}\)</td></tr></tbody></table></div></li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>a) \(A = \{4, 6, 7, 8\}\), \(B = \{5, 7, 8\}\), \(U = \{1, \dots, 9\}\). b) \(A = \{1, 2, 3, 4, 6, 8\}\), \(B = \{3, 4, 6, 9\}\), \(C = \{4, 6, 7, 8\}\), \(U = \{1, \dots, 9\}\). Najprej iz diagrama prepiši vse tri množice, nato računaj.</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-361">
+              <h3>Naloga 361</h3>
+              <p class="zv-opis">Operacije z množicami v \(U = \mathbb{N}_8\).</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><div class="tabela-wrap"><table class="zv-tabela"><thead><tr><th>Izraz</th><th>Rezultat</th></tr></thead><tbody><tr><td>\(\{1, 2, 3\} \cup \{2, 4, 6\}\)</td><td>\(\{1, 2, 3, 4, 6\}\)</td></tr><tr><td>\(\{1, 2, 3\} \cap \{2, 4, 6\}\)</td><td>\(\{2\}\)</td></tr><tr><td>\(\{1, 2, 3\} \cup \{2, 3\}\)</td><td>\(\{1, 2, 3\}\)</td></tr><tr><td>\(\{1, 2, 3\} \cap \{2, 3\}\)</td><td>\(\{2, 3\}\)</td></tr><tr><td>\(\{1, 2, 3\} \cup \{5, 6, 7\}\)</td><td>\(\{1, 2, 3, 5, 6, 7\}\)</td></tr><tr><td>\(\{1, 2, 3\} \cap \{5, 6, 7\}\)</td><td>\(\emptyset\)</td></tr><tr><td>\(\{1, 2, 3\}^C\)</td><td>\(\{4, 5, 6, 7, 8\}\)</td></tr><tr><td>\(\{2, 4, 6, 8\}^C\)</td><td>\(\{1, 3, 5, 7\}\)</td></tr><tr><td>\(\{1, \dots, 8\}^C\)</td><td>\(\emptyset\)</td></tr><tr><td>\(\{1, 2, 3\} - \{2, 4, 6\}\)</td><td>\(\{1, 3\}\)</td></tr><tr><td>\(\{2, 4, 6\} - \{1, 2, 3\}\)</td><td>\(\{4, 6\}\)</td></tr><tr><td>\(\{1, 2, 3\} - \{5, 6\}\)</td><td>\(\{1, 2, 3\}\)</td></tr><tr><td>\(|\{2, 4, 6\}|\)</td><td>\(3\)</td></tr><tr><td>\(|\{2, 3, 4, 5, 6\}|\)</td><td>\(5\)</td></tr><tr><td>\(P(\{5\})\)</td><td>\(\{\emptyset, \{5\}\}\)</td></tr><tr><td>\(P(\{5, 6\})\)</td><td>\(\{\emptyset, \{5\}, \{6\}, \{5, 6\}\}\)</td></tr><tr><td>\(P(\{5, 6, 7\})\)</td><td>\(\{\emptyset, \{5\}, \{6\}, \{7\}, \{5, 6\}, \{5, 7\}, \{6, 7\}, \{5, 6, 7\}\}\)</td></tr><tr><td>\(\{5, 6\} \times \{2, 3, 4\}\)</td><td>\(\{(5, 2), (5, 3), (5, 4), (6, 2), (6, 3), (6, 4)\}\)</td></tr><tr><td>\(\{2, 3, 4\} \times \{5, 6\}\)</td><td>\(\{(2, 5), (2, 6), (3, 5), (3, 6), (4, 5), (4, 6)\}\)</td></tr><tr><td>\(|\{2, 4, 5, 6, 7, 8\} \times \{1, 3, 5, 6, 7, 8, 9\}|\)</td><td>\(6 \cdot 7 = 42\)</td></tr></tbody></table></div></li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>Moč potenčne množice je \(2^{|A|}\), moč kartezičnega produkta \(|A| \cdot |B|\). Kartezični produkt ni komutativen: pari se obrnejo.</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-362">
+              <h3>Naloga 362</h3>
+              <p class="zv-opis">Operacije z množicami črk.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><div class="tabela-wrap"><table class="zv-tabela"><thead><tr><th>Izraz</th><th>Rezultat</th></tr></thead><tbody><tr><td>\(A \cap B\)</td><td>\(\{a\}\)</td></tr><tr><td>\(C \cup B\)</td><td>\(\{a, e, f, i\}\)</td></tr><tr><td>\(C - B\)</td><td>\(\{f\}\)</td></tr><tr><td>\(B - A\)</td><td>\(\{e, i\}\)</td></tr><tr><td>\(B^C\)</td><td>\(\{b, c, d, f, g, h\}\)</td></tr><tr><td>\(|A|\)</td><td>\(4\)</td></tr><tr><td>\(P(C)\)</td><td>\(\{\emptyset, \{a\}, \{f\}, \{a, f\}\}\)</td></tr><tr><td>\(C \times C\)</td><td>\(\{(a, a), (a, f), (f, a), (f, f)\}\)</td></tr><tr><td>\((B \cap C)^C\)</td><td>\(\{b, c, d, e, f, g, h, i\}\)</td></tr><tr><td>\((B \cap C) \times (A \cap B)\)</td><td>\(\{(a, a)\}\)</td></tr></tbody></table></div></li>
+              </ul>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-364">
+              <h3>Naloga 364</h3>
+              <p class="zv-opis">Zapis izjav z matematičnimi simboli.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><div class="tabela-wrap"><table class="zv-tabela"><thead><tr><th>Opis</th><th>Zapis</th></tr></thead><tbody><tr><td>8 je celo število.</td><td>\(8 \in \mathbb{Z}\)</td></tr><tr><td>−7 ni naravno število.</td><td>\(-7 \notin \mathbb{N}\)</td></tr><tr><td>{2, 5, 6} je podmnožica N<sub>6</sub>.</td><td>\(\{2, 5, 6\} \subseteq \mathbb{N}_6\)</td></tr><tr><td>{1, 2, 4} ni vsebovana v {1, 2, 5}.</td><td>\(\{1, 2, 4\} \not\subseteq \{1, 2, 5\}\)</td></tr><tr><td>Točka A leži na premici p.</td><td>\(A \in p\)</td></tr><tr><td>Točka B ne leži na ravnini Σ.</td><td>\(B \notin \Sigma\)</td></tr><tr><td>P je presečišče p in q.</td><td>\(p \cap q = \{P\}\)</td></tr><tr><td>Premica p leži v ravnini Σ.</td><td>\(p \subset \Sigma\)</td></tr><tr><td>Premica q ne leži v ravnini Γ.</td><td>\(q \not\subset \Gamma\)</td></tr><tr><td>Premica p je presek ravnin Σ in Γ.</td><td>\(p = \Sigma \cap \Gamma\)</td></tr></tbody></table></div></li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>Točka je element (\(\in\)), premica je množica točk, zato je premica v ravnini podmnožica (\(\subset\)).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-365">
+              <h3>Naloga 365</h3>
+              <p class="zv-opis">Zapis neskončnih množic s simboli.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><span class="zv-crka">A)</span> \(\{2n;\ n \in \mathbb{N}\}\)</li>
+                <li><span class="zv-crka">B)</span> \(\{2n - 1;\ n \in \mathbb{N}\}\)</li>
+                <li><span class="zv-crka">C)</span> \(\{4n;\ n \in \mathbb{N}\}\)</li>
+                <li><span class="zv-crka">C)</span> \(\{12n;\ n \in \mathbb{N}\}\)</li>
+                <li><span class="zv-crka">D)</span> \(\{11n + 5;\ n \in \mathbb{N}_0\}\)</li>
+                <li><span class="zv-crka">E)</span> \(\{23n + 16;\ n \in \mathbb{N}_0\}\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>Pri D in E vzamemo \(n \in \mathbb{N}_0\), da je zraven tudi najmanjše število (5 oz. 16). Enakovredno: \(\{11n - 6;\ n \in \mathbb{N}\}\).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-366">
+              <h3>Naloga 366</h3>
+              <p class="zv-opis">Naštevanje elementov končnih množic.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><span class="zv-crka">A)</span> \(\{1, 2, 3, 4\}\)</li>
+                <li><span class="zv-crka">B)</span> \(\{1, 2, \dots, 7\}\)</li>
+                <li><span class="zv-crka">C)</span> \(\{-2, -1, 0, 1, 2\}\)</li>
+                <li><span class="zv-crka">Č)</span> \(\{1, 2\}\)</li>
+                <li><span class="zv-crka">D)</span> \(\{3, 4, 5, 6, 7\}\)</li>
+                <li><span class="zv-crka">E)</span> \(\{4, 5, 6, 7\}\)</li>
+                <li><span class="zv-crka">F)</span> \(\{2, 4, 6, 8, 10, 12\}\)</li>
+                <li><span class="zv-crka">G)</span> \(\{13, 16, 19\}\)</li>
+                <li><span class="zv-crka">H)</span> \(\{-12, -7, -2, 3, 8\}\)</li>
+                <li><span class="zv-crka">I)</span> \(\{-27, -20, -13, -6, 1, 8, 15, 22, 29\}\)</li>
+                <li><span class="zv-crka">J)</span> \(\{1, 2, 4, 5, 10, 20\}\)</li>
+                <li><span class="zv-crka">K)</span> \(\{20, 40, 60, 80\}\)</li>
+                <li><span class="zv-crka">L)</span> \(\{1, 4, 13, 28\}\)</li>
+                <li><span class="zv-crka">M)</span> \(\{7, 11, 15, 19\}\)</li>
+                <li><span class="zv-crka">N)</span> \(\{2, 3, 5, 7, 11, 13, 17, 19\}\)</li>
+                <li><span class="zv-crka">O)</span> \(\{3, 12, 18, 24, 27\}\)</li>
+                <li><span class="zv-crka">P)</span> \(\{1, 2, 3, 4\}\)</li>
+                <li><span class="zv-crka">R)</span> \(\{2, 4, 8, 16\}\)</li>
+                <li><span class="zv-crka">S)</span> \(\{6\}\)</li>
+                <li><span class="zv-crka">Š)</span> \(\{-2, 2\}\)</li>
+                <li><span class="zv-crka">T)</span> \(\{3\}\)</li>
+                <li><span class="zv-crka">U)</span> \(\{-2, 5\}\)</li>
+                <li><span class="zv-crka">V)</span> \(\{-2, 2, 5\}\)</li>
+                <li><span class="zv-crka">Z)</span> \(\{3\}\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>Najprej poišči vse \(n\), ki ustrezajo pogoju, nato izračunaj izraz. Npr. H: \(n \in \{-2, -1, 0, 1, 2\}\), \(5n - 2\). O: \(n \in \{1, 4, 6, 8, 9\}\) (1 ni praštevilo). Enačbe: S \(x(x - 6) = 0\), naravna rešitev 6; Š \((x - 2)(x + 2)(x^2 + 4) = 0\); T \((x - 3)(x + 2) = 0\); U \((x - 5)(x + 2) = 0\); V \((x - 5)(x - 2)(x + 2) = 0\); Z \(x(x + 7)(x - 3)(x + 3) = 0\), naravna rešitev le 3.</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-367">
+              <h3>Naloga 367</h3>
+              <p class="zv-opis">Označevanje množic na Vennovih diagramih.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><span class="zv-crka">a)</span> obe množici brez skupnega dela (simetrična razlika)</li>
+                <li><span class="zv-crka">b)</span> vse razen skupnega dela A in B</li>
+                <li><span class="zv-crka">c)</span> vse, kar je zunaj B (tudi del A zunaj B)</li>
+                <li><span class="zv-crka">č)</span> skupni del A in B ter cela množica C</li>
+                <li><span class="zv-crka">d)</span> skupni del A in B, ki ni v C</li>
+                <li><span class="zv-crka">e)</span> del A, ki ni ne v B ne v C</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>Vsako operacijo izvedi postopoma: najprej izraz v oklepaju, nato zunanjo operacijo. Npr. d): \(A - C\) je A brez C, presek z B pusti le del, ki je hkrati v A in B in ni v C.</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-368">
+              <h3>Naloga 368</h3>
+              <p class="zv-opis">Zapis pobarvanih množic.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><span class="zv-crka">a)</span> \(A^C\)</li>
+                <li><span class="zv-crka">b)</span> \((A - B)^C = A^C \cup B\)</li>
+                <li><span class="zv-crka">c)</span> \((A \cap B) \cup (A \cup B)^C\)</li>
+                <li><span class="zv-crka">č)</span> \((A \cap B) \cup (A \cup B \cup C)^C\)</li>
+                <li><span class="zv-crka">d)</span> \(\emptyset\)</li>
+                <li><span class="zv-crka">e)</span> \(B \cup (A \cup C)^C\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>Možni so tudi drugi enakovredni zapisi, npr. c) \(((A - B) \cup (B - A))^C\).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-370">
+              <h3>Naloga 370</h3>
+              <p class="zv-opis">\(A = \{n \in \mathbb{N};\ n &lt; 5\}\), \(B\) delitelji 9, \(C\) rešitve \(n^2 - 10n + 9 = 0\), \(U = \mathbb{N}_{10}\).</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><div class="tabela-wrap"><table class="zv-tabela"><thead><tr><th>Izraz</th><th>Rezultat</th></tr></thead><tbody><tr><td>\(A\)</td><td>\(\{1, 2, 3, 4\}\)</td></tr><tr><td>\(B\)</td><td>\(\{1, 3, 9\}\)</td></tr><tr><td>\(C\)</td><td>\(\{1, 9\}\)</td></tr><tr><td>\(A \cap C\)</td><td>\(\{1\}\)</td></tr><tr><td>\(A \cup B\)</td><td>\(\{1, 2, 3, 4, 9\}\)</td></tr><tr><td>\(A - B\)</td><td>\(\{2, 4\}\)</td></tr><tr><td>\(C^C\)</td><td>\(\{2, 3, 4, 5, 6, 7, 8, 10\}\)</td></tr><tr><td>\(B - C\)</td><td>\(\{3\}\)</td></tr><tr><td>\(|C|\)</td><td>\(2\)</td></tr><tr><td>\(P(B)\)</td><td>\(\{\emptyset, \{1\}, \{3\}, \{9\}, \{1, 3\}, \{1, 9\}, \{3, 9\}, \{1, 3, 9\}\}\)</td></tr><tr><td>\(B \times C\)</td><td>\(\{(1, 1), (1, 9), (3, 1), (3, 9), (9, 1), (9, 9)\}\)</td></tr><tr><td>\((B \cap C)^C\)</td><td>\(\{2, 3, 4, 5, 6, 7, 8, 10\}\)</td></tr><tr><td>\((B \cap C) \times (A \cap B)\)</td><td>\(\{(1, 1), (1, 3), (9, 1), (9, 3)\}\)</td></tr><tr><td>\(|U \times B|\)</td><td>\(10 \cdot 3 = 30\)</td></tr></tbody></table></div></li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>\(n^2 - 10n + 9 = (n - 1)(n - 9)\).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-371">
+              <h3>Naloga 371</h3>
+              <p class="zv-opis">\(A\): \(3 &lt; 2n \le 10\), \(B = \{2n;\ n \mid 6\}\), \(C\): \(3^n &lt; 15\), \(U = \mathbb{N}_{12}\).</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><div class="tabela-wrap"><table class="zv-tabela"><thead><tr><th>Izraz</th><th>Rezultat</th></tr></thead><tbody><tr><td>\(A\)</td><td>\(\{2, 3, 4, 5\}\)</td></tr><tr><td>\(B\)</td><td>\(\{2, 4, 6, 12\}\)</td></tr><tr><td>\(C\)</td><td>\(\{1, 2\}\)</td></tr><tr><td>\(B \cap C^C\)</td><td>\(\{4, 6, 12\}\)</td></tr><tr><td>\(A^C \cup B\)</td><td>\(\{1, 2, 4, 6, 7, 8, 9, 10, 11, 12\}\)</td></tr><tr><td>\(A - (A \cap B)\)</td><td>\(\{3, 5\}\)</td></tr><tr><td>\((B - A)^C\)</td><td>\(\{1, 2, 3, 4, 5, 7, 8, 9, 10, 11\}\)</td></tr><tr><td>\((A \cup B) \cap C\)</td><td>\(\{2\}\)</td></tr><tr><td>\(|(A - C) \cup (C - B)|\)</td><td>\(|\{1, 3, 4, 5\}| = 4\)</td></tr><tr><td>\(P(B)\)</td><td>\(16\ \text{podmnožic: } \emptyset, \{2\}, \dots, \{2, 4, 6, 12\}\)</td></tr><tr><td>\(P(C - A)\)</td><td>\(\{\emptyset, \{1\}\}\)</td></tr><tr><td>\(C \times A\)</td><td>\(\{(1, 2), (1, 3), (1, 4), (1, 5), (2, 2), (2, 3), (2, 4), (2, 5)\}\)</td></tr></tbody></table></div></li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>\(3 &lt; 2n \le 10\) da \(n \in \{2, 3, 4, 5\}\); delitelji 6 so 1, 2, 3, 6; \(3^1 = 3\), \(3^2 = 9\), \(3^3 = 27 &gt; 15\).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-372">
+              <h3>Naloga 372</h3>
+              <p class="zv-opis">\(A\) iz rešitev \(x^3 - x^2 - 2x = 0\), \(B\) iz rešitev \(x^2 - 4 = 0\), \(U = \{-5, \dots, 5\}\).</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><div class="tabela-wrap"><table class="zv-tabela"><thead><tr><th>Izraz</th><th>Rezultat</th></tr></thead><tbody><tr><td>\(A\)</td><td>\(\{0, 1, 3\}\)</td></tr><tr><td>\(B\)</td><td>\(\{-5, 3\}\)</td></tr><tr><td>\(U\)</td><td>\(\{-5, -4, \dots, 4, 5\}\)</td></tr><tr><td>\((A \cap B)^C\)</td><td>\(U - \{3\}\)</td></tr><tr><td>\(|A \cup B|\)</td><td>\(4\)</td></tr><tr><td>\(P(A)\)</td><td>\(\{\emptyset, \{0\}, \{1\}, \{3\}, \{0, 1\}, \{0, 3\}, \{1, 3\}, \{0, 1, 3\}\}\)</td></tr><tr><td>\(B \times A\)</td><td>\(\{(-5, 0), (-5, 1), (-5, 3), (3, 0), (3, 1), (3, 3)\}\)</td></tr><tr><td>\(B - A^C\)</td><td>\(B \cap A = \{3\}\)</td></tr><tr><td>\(A \cup B^C\)</td><td>\(U - \{-5\}\)</td></tr></tbody></table></div></li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>\(x(x - 2)(x + 1) = 0\) da \(x \in \{-1, 0, 2\}\) in \(x + 1 \in \{0, 1, 3\}\). \(x = \pm 2\) da \(2x - 1 \in \{-5, 3\}\).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-374">
+              <h3>Naloga 374</h3>
+              <p class="zv-opis">Preseki, unije in razlike pri danih odnosih med množicama.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><span class="zv-crka">a)</span> \(A \cap B = A,\ A \cup B = B\)</li>
+                <li><span class="zv-crka">b)</span> \(A \cap B = \emptyset\)</li>
+                <li><span class="zv-crka">c)</span> \(B - A = \emptyset\ (A = B)\)</li>
+                <li><span class="zv-crka">č)</span> \(A - B = \emptyset,\ A \cap B = A\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>b) Če odvzem B ne spremeni A, A in B nimata skupnih elementov. c) Enaka komplementa pomenita enaki množici. č) \(A \cup B = B\) pomeni \(A \subseteq B\).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-375">
+              <h3>Naloga 375</h3>
+              <p class="zv-opis">28 dijakov: le kolo 12, le rolerji 4, oboje 5.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><span class="zv-crka">a)</span> \(7\)</li>
+                <li><span class="zv-crka">b)</span> \(16\)</li>
+                <li><span class="zv-crka">c)</span> \(21\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>\(12 + 4 + 5 = 21\) ima vsaj eno, \(28 - 21 = 7\) nič.</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-376">
+              <h3>Naloga 376</h3>
+              <p class="zv-opis">128 dijakov: kopalke 45, očala 87, nič od tega 16.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><span class="zv-crka">a)</span> \(20\)</li>
+                <li><span class="zv-crka">b)</span> \(112\)</li>
+                <li><span class="zv-crka">c)</span> \(41\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>\(|K \cup O| = 128 - 16 = 112\), \(|K \cap O| = 45 + 87 - 112 = 20\), brez očal \(128 - 87 = 41\).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-377">
+              <h3>Naloga 377</h3>
+              <p class="zv-opis">88 oseb: le prigrizek 23, le pijača 19, nič 38.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><span class="zv-crka">a)</span> \(8\)</li>
+                <li><span class="zv-crka">b)</span> \(50\)</li>
+                <li><span class="zv-crka">c)</span> \(42\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>\(88 - 38 = 50\) ima vsaj eno, \(50 - 23 - 19 = 8\) oboje.</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-378">
+              <h3>Naloga 378</h3>
+              <p class="zv-opis">26 gob: rjav klobuk 12, rumena trosovnica 20, nič od tega 4.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><span class="zv-crka">a)</span> \(10\)</li>
+                <li><span class="zv-crka">b)</span> \(14\)</li>
+                <li><span class="zv-crka">c)</span> \(22\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>\(26 - 4 = 22\), presek \(12 + 20 - 22 = 10\), brez rjavega klobuka \(26 - 12 = 14\).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-382">
+              <h3>Naloga 382</h3>
+              <p class="zv-opis">173 ljudi v bazenu: modre kopalke, črni lasje, rjave oči.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><span class="zv-crka">a)</span> \(10\)</li>
+                <li><span class="zv-crka">b)</span> \(118\)</li>
+                <li><span class="zv-crka">c)</span> \(21\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>\(173 - 44 = 129 = 51 + 55 + 75 - 14 - 18 - 30 + x\), torej \(x = 10\). b) \(173 - 55\). c) \(51 - 30\).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-383">
+              <h3>Naloga 383</h3>
+              <p class="zv-opis">28 dijakov in tri naloge kontrolne naloge.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><span class="zv-crka">a)</span> \(3\)</li>
+                <li><span class="zv-crka">b)</span> \(13\)</li>
+                <li><span class="zv-crka">c)</span> \(11\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>Naj vse tri reši \(x\). Področja: le 1.: 7, le 3.: 2, 1. in 2. brez 3.: \(8 - x\), 1. in 3. brez 2.: \(3 - x\), 2. in 3. brez 1.: 6, vse tri: \(x\), le 2.: \(15 - (8 - x) - 6 - x = 1\). Vsota z 4, ki niso rešili nič: \(7 + 1 + 2 + 8 - x + 3 - x + 6 + x + 4 = 31 - x = 28\), \(x = 3\). b) \(28 - 15 = 13\). c) \(5 + 0 + 6 = 11\).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-385">
+              <h3>Naloga 385</h3>
+              <p class="zv-opis">52 učiteljev: rjavi lasje, naravoslovci, razredniki.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><span class="zv-crka">a)</span> \(11\)</li>
+                <li><span class="zv-crka">b)</span> \(7\)</li>
+                <li><span class="zv-crka">c)</span> \(10\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>Vsaj eno lastnost ima \(52 - 12 = 40\) učiteljev. \(40 = 21 + 16 + 17 - 6 - 5 - y + 4\), kjer je \(y\) število naravoslovcev z rjavimi lasmi: \(y = 7\). a) \(16 - 5 = 11\). c) \(17 - 6 - 5 + 4 = 10\).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-386">
+              <h3>Naloga 386</h3>
+              <p class="zv-opis">Množice \(A_n = \{n, n + 1, n + 2\}\).</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><span class="zv-crka">a)</span> \(A_7 = \{7, 8, 9\}\)</li>
+                <li><span class="zv-crka">b)</span> \(A_5 \cap A_6 = \{6, 7\}\)</li>
+                <li><span class="zv-crka">c)</span> \(\mathbb{N}_{18} = A_1 \cup A_4 \cup A_7 \cup A_{10} \cup A_{13} \cup A_{16}\)</li>
+                <li><span class="zv-crka">č)</span> \(334\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>č) Vsaka množica pokrije 3 števila, \(1000 = 333 \cdot 3 + 1\), zato potrebujemo 334 množic (npr. \(A_1, A_4, \dots, A_{997}\) in še \(A_{998}\)).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-379">
+              <h3>Naloga 379</h3>
+              <p class="zv-opis">Števila, manjša od 2000, deljiva s 5 in/ali 6.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><span class="zv-crka">a)</span> \(66\)</li>
+                <li><span class="zv-crka">b)</span> \(666\)</li>
+                <li><span class="zv-crka">c)</span> \(333\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>Od 1 do 1999: s 5 jih je 399, s 6 333, s 30 66. b) \(399 + 333 - 66\). c) \(399 - 66\).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-380">
+              <h3>Naloga 380</h3>
+              <p class="zv-opis">Števila pod 4200, deljiva z 11, ne pa s 6.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li>\(318\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>Z 11 jih je \(\lfloor 4199/11 \rfloor = 381\), s 66 jih je 63; \(381 - 63 = 318\).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-381">
+              <h3>Naloga 381</h3>
+              <p class="zv-opis">Števila pod 4600, ki niso deljiva niti s 5 niti s 7.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li>\(3154\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>\(4599 - 919 - 657 + 131 = 3154\) (s 5: 919, s 7: 657, s 35: 131).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-387">
+              <h3>Naloga 387</h3>
+              <p class="zv-opis">Števila pod 5000 in deljivost s 5, 7 in 12.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><span class="zv-crka">a)</span> \(11\)</li>
+                <li><span class="zv-crka">b)</span> \(131\)</li>
+                <li><span class="zv-crka">c)</span> \(1440\)</li>
+                <li><span class="zv-crka">č)</span> \(1856\)</li>
+                <li><span class="zv-crka">d)</span> \(3143\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>Od 1 do 4999: s 5: 999, s 7: 714, z 12: 416, s 35: 142, s 60: 83, z 84: 59, s 420: 11. a) 11. b) \(142 - 11\). c) \((999 + 714 - 142) - (83 + 59 - 11) = 1571 - 131\). č) \(999 + 714 + 416 - 142 - 83 - 59 + 11\). d) \(4999 - 1856\).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-388">
+              <h3>Naloga 388</h3>
+              <p class="zv-opis">Kvadrat s ploščino 16 in krog s premerom, enakim stranici; središče kroga je na stranici kvadrata.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><span class="zv-crka">a)</span> \(2\pi\)</li>
+                <li><span class="zv-crka">b)</span> \(16 + 2\pi\)</li>
+                <li><span class="zv-crka">c)</span> \(2\pi\)</li>
+                <li><span class="zv-crka">č)</span> \(16 - 2\pi\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>Stranica 4, polmer 2, ploščina kroga \(4\pi\). Ker je središče na stranici kvadrata, je v kvadratu natanko polovica kroga.</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-389">
+              <h3>Naloga 389</h3>
+              <p class="zv-opis">Trikotnik s ploščino 6, polkrog s polmerom 1 in kvadrat s stranico 1 (kvadrat pokrije četrtino kroga).</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><span class="zv-crka">a)</span> \(6 - \frac{\pi}{2}\)</li>
+                <li><span class="zv-crka">b)</span> \(\frac{\pi}{4}\)</li>
+                <li><span class="zv-crka">c)</span> \(1 + \frac{\pi}{4}\)</li>
+                <li><span class="zv-crka">č)</span> \(\frac{\pi}{4}\)</li>
+                <li><span class="zv-crka">d)</span> \(1 - \frac{\pi}{4}\)</li>
+                <li><span class="zv-crka">e)</span> \(1 - \frac{\pi}{4}\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>Polkrog ima ploščino \(\frac{\pi}{2}\); kvadrat ima oglišče v središču polkroga, zato je \(P \cap K\) četrtina kroga, \(\frac{\pi}{4}\). e) \((T - P) \cap K = K - P\).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-390">
+              <h3>Naloga 390</h3>
+              <p class="zv-opis">Kvadrat s stranico 4 cm in krog s središčem v oglišču ter polmerom 4 cm.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><span class="zv-crka">a)</span> \(4\pi\ \text{cm}^2\)</li>
+                <li><span class="zv-crka">b)</span> \(16 + 12\pi\ \text{cm}^2\)</li>
+                <li><span class="zv-crka">c)</span> \(16 - 4\pi\ \text{cm}^2\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>Presek je četrtina kroga: \(\frac{16\pi}{4}\). Unija: \(16 + 16\pi - 4\pi\).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-391">
+              <h3>Naloga 391</h3>
+              <p class="zv-opis">Polkrog s polmerom 5 cm in krog s polmerom 2,5 cm s središčem v središču premera.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><span class="zv-crka">a)</span> \(\frac{25\pi}{8}\ \text{cm}^2\)</li>
+                <li><span class="zv-crka">b)</span> \(\frac{125\pi}{8}\ \text{cm}^2\)</li>
+                <li><span class="zv-crka">c)</span> \(\frac{75\pi}{8}\ \text{cm}^2\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>Polkrog: \(\frac{25\pi}{2}\). Manjši krog: \(6{,}25\pi\), v polkrogu leži njegova polovica \(\frac{25\pi}{8}\).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-392">
+              <h3>Naloga 392*</h3>
+              <p class="zv-opis">106 dijakov: odbojka 46, karate 30, nič 50; podatki o fantih in dekletih.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><span class="zv-crka">a)</span> \(20\)</li>
+                <li><span class="zv-crka">b)</span> \(6\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>\(|O \cup K| = 56\), \(|O \cap K| = 46 + 30 - 56 = 20\). Če je v preseku \(f\) fantov, je deklet \(f + 4\): \(2f + 4 = 20\), \(f = 8\). Le karate trenira \(30 - 20 = 10\) dijakov, od tega 4 fantje, torej 6 deklet.</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-393">
+              <h3>Naloga 393*</h3>
+              <p class="zv-opis">Kvadrat prekriva del kroga.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li>\(p_{krog} : p_{kvadrat} = 5 : 14\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>\(\frac{2}{5}p_k = \frac{1}{7}p_q\), zato \(\frac{p_k}{p_q} = \frac{1}{7} \cdot \frac{5}{2} = \frac{5}{14}\).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-394">
+              <h3>Naloga 394*</h3>
+              <p class="zv-opis">Množice \(B_{i,j} = \{i, j, i + j\}\).</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><span class="zv-crka">a)</span> \(B_{3,4} = \{3, 4, 7\}\)</li>
+                <li><span class="zv-crka">b)</span> 11 različnih množic (21 parov \((i, j)\))</li>
+                <li><span class="zv-crka">c)</span> \(k = 29\)</li>
+                <li><span class="zv-crka">č)</span> \(k \in \{2, 7, 11\}\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>b) 5 je \(i\) ali \(j\): \(\{5, j, 5 + j\}\) za \(j = 1, \dots, 9\) (9 množic), ali \(i + j = 5\): \(\{1, 4, 5\}\), \(\{2, 3, 5\}\). Ker je \(B_{i,j} = B_{j,i}\), je različnih množic 11; urejenih parov pa \(9 + 9 - 1 + 4 = 21\). c) Obe množici vsebujeta \(k + 30\); da se ujemata v vseh treh, mora biti \(\{k, 30\} = \{k + 1, 29\}\), torej \(k = 29\). č) Množici morata imeti natanko en skupni element: \(2k = 4\) (\(k = 2\)), \(8k = 7k + 7\) (\(k = 7\)) ali \(8k = 7k + 11\) (\(k = 11\)); ostale enačbe nimajo naravne rešitve.</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-395">
+              <h3>Naloga 395*</h3>
+              <p class="zv-opis">Množice \(C_n = \{n, n + 1, \dots, 2n\}\).</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><span class="zv-crka">a)</span> \(C_5 = \{5, 6, 7, 8, 9, 10\}\)</li>
+                <li><span class="zv-crka">b)</span> \(\{8, 9, 10, 11, 12\}\)</li>
+                <li><span class="zv-crka">c)</span> \(C_6\ \text{in}\ C_{24}\)</li>
+                <li><span class="zv-crka">č)</span> \(C_{76}\)</li>
+                <li><span class="zv-crka">d)</span> \(2^{81}\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>\(|C_n| = n + 1\). c) \(C_{12} = \{12, \dots, 24\}\); en skupni element je 12 (\(2i = 12\)) ali 24 (\(i = 24\)). d) \(|C_{80}| = 81\).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-v-395-a">
+              <h3>Naloga V 395.a</h3>
+              <p class="zv-opis">Moč potenčne množice.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><span class="zv-crka">a)</span> \(2^6 = 64\)</li>
+                <li><span class="zv-crka">b)</span> \(2^{10} = 1024\)</li>
+                <li><span class="zv-crka">c)</span> \(2^9 = 512\)</li>
+                <li><span class="zv-crka">č)</span> \(2^8 = 256\)</li>
+                <li><span class="zv-crka">d)</span> \(2^{199}\)</li>
+                <li><span class="zv-crka">e)</span> \(2^{54}\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>d) \(D\) ima število 1 in pare \(n, \frac1n\) za \(n = 2, \dots, 100\): \(1 + 2 \cdot 99 = 199\) elementov. e) \(E\) so delitelji \(2^5 \cdot 3^8\): \(6 \cdot 9 = 54\).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-v-395-b">
+              <h3>Naloga V 395.b</h3>
+              <p class="zv-opis">Razlika moči potenčnih množic dveh disjunktnih delov.</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li>\(2^7 - 2^4 = 112\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>\(2^{|A|} = 2048\) da \(|A| = 11 = 7 + 4\).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-v-395-c">
+              <h3>Naloga V 395.c</h3>
+              <p class="zv-opis">Preverjanje De Morganovih zakonov na \(A = \{1, 2, 3\}\), \(B = \{2, 4, 6\}\), \(U = \mathbb{N}_{10}\).</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li>\((A \cap B)^C = \{2\}^C = \{1, 3, 4, \dots, 10\} = A^C \cup B^C\)</li>
+                <li>\((A \cup B)^C = \{5, 7, 8, 9, 10\} = A^C \cap B^C\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>\(A^C = \{4, 5, \dots, 10\}\), \(B^C = \{1, 3, 5, 7, 8, 9, 10\}\).</p>
+              </details>
+            </div>
+            <div class="tip-naloge zv-naloga" id="n-v-395-č">
+              <h3>Naloga V 395.č</h3>
+              <p class="zv-opis">Geni v treh skupinah A, B, C (50 genov).</p>
+              <h5>Rešitev</h5>
+              <ul class="zv-rezultati">
+                <li><span class="zv-crka">a)</span> \(|A| = 24,\ |B| = 20,\ |C| = 24\)</li>
+                <li><span class="zv-crka">b)</span> \(2^{10} = 1024\)</li>
+                <li><span class="zv-crka">c)</span> \(2^6 - 1 = 63\)</li>
+                <li><span class="zv-crka">č)</span> \(|X| = 18,\ |Y| = 22,\ |Z| = 28\)</li>
+                <li><span class="zv-crka">d)</span> \(42 = 24 + 20 + 24 - 10 - 9 - 11 + 4\)</li>
+              </ul>
+              <details class="zv-postopek"><summary>Postopek</summary>
+                <p>a) \(|A| = 4 + 5 + 6 + 9\), \(|B| = 4 + 6 + 7 + 3\), \(|C| = 4 + 5 + 7 + 8\). b) \(|A \cap B| = 10\). c) \(|(A \cap B) \setminus C| = 6\), prazno izbiro odštejemo. č) \(X = 5 + 6 + 7\), \(Y = X + 4\), \(Z = 50 - 22\) (vključno z 8 geni zunaj vseh treh). d) Vsak element, ki je v natanko eni množici, šteješ enkrat; v natanko dveh: \(2 - 1 = 1\)-krat; v vseh treh: \(3 - 3 + 1 = 1\)-krat. Zato formula šteje vsak element unije natanko enkrat. Unija ima \(9 + 3 + 8 + 6 + 5 + 7 + 4 = 42\) genov.</p>
+              </details>
+            </div>
+          </div>
+        </section>
+
+        <div class="note-band">
+          <p><a href="/views/matematika/zvezek/zvezek.html">← Vsa poglavja delovnega zvezka</a></p>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+
+  <script src="/components/components.js"></script>
+</body>
+</html>
