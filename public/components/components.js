@@ -220,6 +220,7 @@ function veljavenPaket(u) {
 
 const IKONE_MENIJA = {
   profil: '<path d="M20 21a8 8 0 0 0-16 0"></path><circle cx="12" cy="8" r="4"></circle>',
+  priprava: '<rect x="3" y="4" width="18" height="18" rx="2"></rect><path d="M16 2v4"></path><path d="M8 2v4"></path><path d="M3 10h18"></path><path d="M9 16l2 2 4-4"></path>',
   naloge: '<path d="M9 11l3 3 8-8"></path><path d="M20 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"></path>',
   nastavitve: '<circle cx="12" cy="12" r="3"></circle><path d="M19.4 15a1.7 1.7 0 0 0 .3 1.8l.1.1a2 2 0 1 1-2.8 2.8l-.1-.1a1.7 1.7 0 0 0-1.8-.3 1.7 1.7 0 0 0-1 1.5V21a2 2 0 1 1-4 0v-.1a1.7 1.7 0 0 0-1.1-1.5 1.7 1.7 0 0 0-1.8.3l-.1.1a2 2 0 1 1-2.8-2.8l.1-.1a1.7 1.7 0 0 0 .3-1.8 1.7 1.7 0 0 0-1.5-1H3a2 2 0 1 1 0-4h.1a1.7 1.7 0 0 0 1.5-1.1 1.7 1.7 0 0 0-.3-1.8l-.1-.1a2 2 0 1 1 2.8-2.8l.1.1a1.7 1.7 0 0 0 1.8.3H9a1.7 1.7 0 0 0 1-1.5V3a2 2 0 1 1 4 0v.1a1.7 1.7 0 0 0 1 1.5 1.7 1.7 0 0 0 1.8-.3l.1-.1a2 2 0 1 1 2.8 2.8l-.1.1a1.7 1.7 0 0 0-.3 1.8V9a1.7 1.7 0 0 0 1.5 1H21a2 2 0 1 1 0 4h-.1a1.7 1.7 0 0 0-1.5 1z"></path>',
   narocnina: '<path d="M12 2l3 6.5 7 .9-5.1 4.8 1.3 7L12 17.8 5.8 21.2l1.3-7L2 9.4l7-.9z"></path>',
@@ -291,6 +292,7 @@ function izrisiUporabnika(el, u) {
   const seznam = document.createElement("nav");
   seznam.className = "uporabnik-meni-seznam";
   seznam.innerHTML = `
+    <a href="/priprava.html" class="uporabnik-meni-vrstica" role="menuitem">${ikona("priprava")}Tedenska priprava</a>
     <a href="/napredek.html" class="uporabnik-meni-vrstica" role="menuitem">${ikona("naloge")}Moje naloge</a>
     <a href="/profil.html" class="uporabnik-meni-vrstica" role="menuitem">${ikona("profil")}Uredi podatke</a>
     <a href="/nastavitve.html" class="uporabnik-meni-vrstica" role="menuitem">${ikona("nastavitve")}Nastavitve</a>
@@ -896,6 +898,17 @@ async function initNalogePovezava() {
 }
 
 // ============================================================
+// TEDENSKA PRIPRAVA: merjenje predelane razlage (components/branje.js)
+// ============================================================
+function initBranje() {
+  if (!/^\/views\/[^/]+\/snov\/([^/]+)\/\1_razlaga\.html$/.test(location.pathname)) return;
+  const s = document.createElement("script");
+  s.src = "/components/branje.js";
+  s.defer = true;
+  document.body.appendChild(s);
+}
+
+// ============================================================
 // STIKALO SPLOŠNA / POKLICNA MATURA
 // Stikala (.matura-stikalo) so v meniju, v glavi in na naslovnici. Izbira se
 // zapiše v <html data-matura> in localStorage; CSS skrije vsebino druge mature
@@ -972,6 +985,7 @@ async function init() {
   initKazaloStrani(kazalo);
   initMaturaPovezava();
   initNalogePovezava();
+  initBranje();
   oznaciIskanje();
 }
 

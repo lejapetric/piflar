@@ -10,6 +10,8 @@ process.env.ZAKLEP = "1";
 const { default: app } = await import("../app.js");
 const { default: Uporabnik } = await import("../api/models/uporabnik.js");
 const { default: Napredek } = await import("../api/models/napredek.js");
+const { default: Priprava } = await import("../api/models/priprava.js");
+const { default: Branje } = await import("../api/models/branje.js");
 const eposta = await import("../api/utils/eposta.js");
 
 const baza = [];
@@ -43,6 +45,9 @@ Napredek.deleteMany = async (q) => {
   for (let i = napredek.length - 1; i >= 0; i--)
     if (String(napredek[i].uporabnik) === String(q.uporabnik)) napredek.splice(i, 1);
 };
+const izbrisani = [];
+Priprava.deleteMany = async (q) => void izbrisani.push(["priprava", String(q.uporabnik)]);
+Branje.deleteMany = async (q) => void izbrisani.push(["branje", String(q.uporabnik)]);
 Object.defineProperty(mongoose.connection, "readyState", { get: () => 1, configurable: true });
 
 let server, url;
@@ -211,6 +216,7 @@ test("urejanje profila, nastavitve, sprememba gesla in izbris računa", async ()
   assert.equal((await zahteva("DELETE", "/jaz", { geslo }, piskotek)).status, 400);
   assert.equal((await zahteva("DELETE", "/jaz", { geslo: "Novo12345" }, piskotek)).status, 204);
   assert.equal(baza.some((x) => x.email === "bor@primer.si"), false);
+  assert.deepEqual(izbrisani.map(([zbirka]) => zbirka), ["priprava", "branje"], "izbriše tudi tedensko pripravo");
   assert.equal((await post("/prijava", { email: "bor@primer.si", geslo: "Novo12345" })).status, 401);
 });
 
