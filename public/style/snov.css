@@ -3817,6 +3817,11 @@ details.matura-pola[open] .matura-pola-puscica {
     .sklop-video { padding: 0; }
 }
 
+/* rešitve delovnega zvezka: odgovori v obliki besedila (slovenščina) */
+.zv-rezultati--besedilo { display: block; }
+.zv-rezultati--besedilo > li { margin: 0 0 .4rem; line-height: 1.55; }
+.zv-rezultati--besedilo .tabela-wrap { margin-top: .35rem; }
+
 /* video razlaga rešitve maturitetne naloge */
 .video-resitve { padding: 0; margin: 8px 0 14px; }
 @media print {
