@@ -68,7 +68,7 @@
             <li><a href="#sklop-8"><span class="kazalo-st">8</span> Osnovni izrek o deljenju</a></li>
             <li><a href="#sklop-9"><span class="kazalo-st">9</span> Evklidov algoritem in zveza med D in v <span class="badge-vr">VR</span></a></li>
             <li><a href="#sklop-10"><span class="kazalo-st">10</span> Desetiški številski sestav</a></li>
-            <li><a href="#sklop-11"><span class="kazalo-st">11</span> Dvojiški številski sestav <span class="badge-vr">VR</span></a></li>
+            <li><a href="#sklop-11"><span class="kazalo-st">11</span> Dvojiški in drugi številski sestavi <span class="badge-vr">VR</span></a></li>
             <li class="kazalo-skupina">4.3.2 Racionalna števila</li>
             <li><a href="#sklop-12"><span class="kazalo-st">12</span> Računske operacije in njihove lastnosti</a></li>
             <li><a href="#sklop-13"><span class="kazalo-st">13</span> Desetiški zapis racionalnih števil</a></li>
@@ -161,6 +161,20 @@
               <li>Vrstni red: oklepaji → potence → množenje in deljenje (od leve proti desni) → seštevanje in odštevanje.</li>
               <li>\(-3^2 = -9\), toda \((-3)^2 = 9\). Potenca se nanaša samo na tisto, kar je neposredno pod njo.</li>
             </ul>
+          
+            <h4>Notranje operacije v posameznih množicah</h4>
+            <p>Operacija je v množici <strong>notranja</strong> (množica je za to operacijo <strong>zaprta</strong>), če rezultat za poljubni števili iz množice spet leži v tej množici. Že en sam protiprimer pokaže, da operacija ni notranja.</p>
+            <div class="tabela-wrap">
+              <table class="tabela">
+                <thead><tr><th>Množica</th><th>\(+\)</th><th>\(-\)</th><th>\(\cdot\)</th><th>\(:\) (delitelj \(\ne 0\))</th></tr></thead>
+                <tbody>
+                  <tr><td>\(\mathbb{N}\)</td><td>da</td><td>ne: \(3 - 5 = -2\)</td><td>da</td><td>ne: \(3 : 5 = 0{,}6\)</td></tr>
+                  <tr><td>\(\mathbb{Z}\)</td><td>da</td><td>da</td><td>da</td><td>ne: \(3 : 5 = 0{,}6\)</td></tr>
+                  <tr><td>\(\mathbb{Q}\), \(\mathbb{R}\)</td><td>da</td><td>da</td><td>da</td><td>da</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <p>Zato vsako novo številsko množico vpeljemo takrat, ko neka operacija v stari ni več izvedljiva: odštevanje nas pripelje iz \(\mathbb{N}\) v \(\mathbb{Z}\), deljenje iz \(\mathbb{Z}\) v \(\mathbb{Q}\), korenjenje iz \(\mathbb{Q}\) v \(\mathbb{R}\).</p>
           </div>
           <div class="sklop-naloge">
             <h3>Tipi nalog v tem sklopu</h3>
@@ -212,6 +226,16 @@
             </div>
             <p>\(360 = 2^3 \cdot 3^2 \cdot 5\).</p>
             <p>Iz razcepa preberemo tudi <strong>število deliteljev</strong>: če je \(n = p_1^{k_1} p_2^{k_2} \cdots\), ima \(n\) natanko \((k_1 + 1)(k_2 + 1)\cdots\) deliteljev. Število 360 jih ima \(4 \cdot 3 \cdot 2 = 24\).</p>
+          
+            <h4>Eratostenovo rešeto</h4>
+            <p>Z rešetom poiščemo vsa praštevila do danega števila \(n\), na primer do 100:</p>
+            <ol>
+              <li>Zapiši števila od 2 do 100 (1 prečrtaj, ker ni praštevilo).</li>
+              <li>Prvo neprečrtano število je praštevilo (2). Prečrtaj vse njegove večkratnike, večje od njega: \(4, 6, 8, \dots\)</li>
+              <li>Naslednje neprečrtano število (3) je praštevilo. Prečrtaj \(6, 9, 12, \dots\) Nato enako s 5 in 7.</li>
+              <li>Ustaviš se, ko je naslednje praštevilo večje od \(\sqrt{n}\). Pri \(n = 100\) je \(\sqrt{100} = 10\), zato je dovolj prečrtati večkratnike 2, 3, 5 in 7. Vsa preostala števila so praštevila (do 100 jih je 25).</li>
+            </ol>
+            <p>Zakaj je dovolj priti do \(\sqrt{n}\)? Vsako sestavljeno število \(m \le n\) ima prafaktor, ki ni večji od \(\sqrt{m} \le \sqrt{n}\), zato je bilo prečrtano že prej.</p>
           </div>
           <div class="sklop-naloge">
             <h3>Tipi nalog v tem sklopu</h3>
@@ -510,6 +534,12 @@
             <div class="formula-card">\(D(a, b) \cdot v(a, b) = a \cdot b\)</div>
             <p>Iz nje dobimo \(v\) brez razcepa: \(v(252, 198) = \dfrac{252 \cdot 198}{18} = 2772\). Velja samo za <strong>dve</strong> števili.</p>
             <p>Če je \(D(a, b) = d\), lahko pišemo \(a = d \cdot m\), \(b = d \cdot n\), kjer sta \(m\) in \(n\) tuji števili. Potem je \(v(a, b) = d \cdot m \cdot n\).</p>
+          
+            <h4>Verižni ulomek (dodatno)</h4>
+            <p>Količniki iz Evklidovega algoritma dajo zapis ulomka v obliki <strong>verižnega ulomka</strong>. Za \(\frac{43}{30}\):</p>
+            <p>\(43 = 1 \cdot 30 + 13\), \(30 = 2 \cdot 13 + 4\), \(13 = 3 \cdot 4 + 1\), \(4 = 4 \cdot 1 + 0\). Količniki so \(1, 2, 3, 4\), zato</p>
+            <div class="formula-card">\(\dfrac{43}{30} = 1 + \cfrac{1}{2 + \cfrac{1}{3 + \cfrac{1}{4}}}\)</div>
+            <p>Preizkus računamo od spodaj navzgor: \(3 + \frac14 = \frac{13}{4}\), \(2 + \frac{4}{13} = \frac{30}{13}\), \(1 + \frac{13}{30} = \frac{43}{30}\).</p>
           </div>
           <div class="sklop-naloge">
             <h3>Tipi nalog v tem sklopu</h3>
@@ -566,8 +596,8 @@
         <section class="sklop sklop--visja" id="sklop-11">
           <header class="sklop-header">
             <span class="sklop-num">4.3.1 · 11</span><span class="badge-vr">Višja raven</span>
-            <h2>Dvojiški številski sestav</h2>
-            <p>Zapis števil samo s števkama 0 in 1.</p>
+            <h2>Dvojiški in drugi številski sestavi</h2>
+            <p>Zapis števil samo s števkama 0 in 1 ter v sestavu s poljubno osnovo.</p>
           </header>
           <div class="sklop-video"><span class="sklop-video-oznaka">Video razlaga</span><video class="video-svetla" controls preload="none" playsinline poster="/videi/matematika/stevilske_mnozice/sklop-11-svetla.jpg" src="/videi/matematika/stevilske_mnozice/sklop-11-svetla.mp4"></video><video class="video-temna" controls preload="none" playsinline poster="/videi/matematika/stevilske_mnozice/sklop-11-temna.jpg" src="/videi/matematika/stevilske_mnozice/sklop-11-temna.mp4"></video></div><!-- /sklop-video -->
           <div class="sklop-teorija">
@@ -591,11 +621,21 @@
               </table>
             </div>
             <p>\(45 = 101101_2\).</p>
+          
+            <h4>Številski sestav z osnovo \(b\)</h4>
+            <p>Enako deluje vsak sestav z naravno osnovo \(b \ge 2\). Uporabljamo števke \(0, 1, \dots, b - 1\), mesta imajo vrednosti \(1, b, b^2, b^3, \dots\) Osnovo zapišemo v indeksu: \(243_5\) ali \(243_{(5)}\).</p>
+            <ul>
+              <li><strong>V desetiški sestav:</strong> \(243_5 = 2 \cdot 5^2 + 4 \cdot 5 + 3 = 50 + 20 + 3 = 73\).</li>
+              <li><strong>Iz desetiškega:</strong> zaporedno deli z \(b\) in ostanke preberi od spodaj navzgor. \(73 : 5 = 14\), ost. 3; \(14 : 5 = 2\), ost. 4; \(2 : 5 = 0\), ost. 2, torej \(73 = 243_5\).</li>
+              <li><strong>Med dvema nedesetiškima sestavoma</strong> gremo čez desetiški: \(302_5 = 3 \cdot 25 + 2 = 77\), nato \(77\) zaporedno delimo s 3: ostanki \(2, 1, 2, 2\), od spodaj \(2212_3\).</li>
+              <li>Zapis \(243_3\) nima pomena, ker sestav z osnovo 3 pozna samo števke 0, 1, 2. <strong>Vsaka števka mora biti manjša od osnove.</strong></li>
+            </ul>
+            <p>V <strong>šestnajstiškem</strong> sestavu (osnova 16) za števke 10 do 15 pišemo črke \(A, B, C, D, E, F\): \(1A_{16} = 1 \cdot 16 + 10 = 26\), \(FF_{16} = 15 \cdot 16 + 15 = 255\). Ker je \(16 = 2^4\), ena šestnajstiška števka ustreza natanko štirim dvojiškim: \(1010\,1111_2 = AF_{16}\).</p>
           </div>
           <div class="sklop-naloge">
             <h3>Tipi nalog v tem sklopu</h3>
             <div class="tip-naloge" id="tip-11">
-              <h4>Tip 11: Pretvarjanje med desetiškim in dvojiškim sestavom</h4>
+              <h4>Tip 11: Pretvarjanje med številskimi sestavi</h4>
               <div class="tip-naloga"><span class="tip-naloga-oznaka">Naloga</span><p>Izračunajte \(1101_2 + 111_2\) in rezultat zapišite v dvojiškem sestavu.</p></div>
               <div class="prepoznaj"><p><strong>Kako prepoznaš:</strong> število z indeksom 2 (\(1011_2\)) ali navodilo „v dvojiškem sestavu“.</p><ul class="kljucne"><li>„zapišite v dvojiškem sestavu“</li><li>„\(\dots_2\)“</li><li>„binarno“</li></ul></div>
               <h5>Univerzalni postopek</h5><ol class="postopek">
@@ -607,6 +647,8 @@
               <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Pretvorite \(101101_2\) v desetiški sestav.</p><p>\(32 + 8 + 4 + 1 = 45\).</p></div>
               <div class="primer"><p><strong>Primer 2:</strong> Zapišite 37 v dvojiškem sestavu.</p><p>\(37 = 32 + 4 + 1 = 100101_2\).</p></div>
               <div class="primer"><p><strong>Primer 3:</strong> Koliko je \(11_2 \cdot 101_2\)?</p><p>\(3 \cdot 5 = 15 = 1111_2\).</p></div>
+              <div class="primer"><p><strong>Primer 4:</strong> Pretvorite \(1203_4\) v desetiški sestav in nato v petiški sestav.</p><p>\(1 \cdot 64 + 2 \cdot 16 + 0 \cdot 4 + 3 = 99\). \(99 : 5 = 19\), ost. 4; \(19 : 5 = 3\), ost. 4; \(3 : 5 = 0\), ost. 3. Od spodaj: \(99 = 344_5\).</p></div>
+              <div class="primer"><p><strong>Primer 5:</strong> Za katero osnovo \(b\) velja \(121_b = 49\)?</p><p>\(b^2 + 2b + 1 = (b + 1)^2 = 49\), zato \(b + 1 = 7\) in \(b = 6\). Števke 1, 2 so manjše od 6, rešitev je smiselna.</p></div>
             </div>
           </div>
         </section>
@@ -733,6 +775,15 @@
               </table>
             </div>
             <p>Deleže pogosto prikazujemo s <strong>tortnim diagramom</strong>: delež \(p\) ustreza kotu \(p \cdot 360^\circ\) (25 % → 90°).</p>
+          
+            <h4>Premo in obratno sorazmerje (sklepni račun)</h4>
+            <p>Količini sta <strong>premo sorazmerni</strong>, če se pri večkratniku ene druga poveča enako mnogokrat: \(y = k \cdot x\), količnik \(\frac{y}{x}\) je stalen (cena in število kosov). Sta <strong>obratno sorazmerni</strong>, če se pri večkratniku ene druga enako mnogokrat zmanjša: \(x \cdot y = k\), produkt je stalen (število delavcev in čas dela).</p>
+            <p>Pri sklepnem računu gremo vedno čez „eno enoto“:</p>
+            <ul>
+              <li>Premo: 3 vstopnice stanejo 27 €, 1 vstopnica \(27 : 3 = 9\) €, 5 vstopnic \(5 \cdot 9 = 45\) €.</li>
+              <li>Obratno: 4 slikopleskarji prepleskajo stanovanje v 6 urah, 1 slikopleskar v \(4 \cdot 6 = 24\) urah, 3 slikopleskarji v \(24 : 3 = 8\) urah.</li>
+            </ul>
+            <p>Pri <strong>skupnem delu</strong> seštevamo deleže, ki jih vsak naredi v eni uri. Če prvi opravi delo v 10 urah, drugi v 15 urah, v eni uri skupaj naredita \(\frac{1}{10} + \frac{1}{15} = \frac{1}{6}\) dela, zato delo opravita v 6 urah. Več o tem je pri <a href="/views/matematika/snov/algebrski_izrazi_enacbe_neenacbe/algebrski_izrazi_enacbe_neenacbe_razlaga.html#sklop-6">besedilnih nalogah z linearno enačbo</a>, grafa sorazmerij pa sta pri <a href="/views/matematika/snov/funkcije/linearna_razlaga.html">linearni</a> in <a href="/views/matematika/snov/funkcije/potencna_razlaga.html">potenčni funkciji</a>.</p>
           </div>
           <div class="sklop-naloge">
             <h3>Tipi nalog v tem sklopu</h3>
@@ -778,6 +829,17 @@
             </ul>
             <h4>Odstotne točke</h4>
             <p>Če se obrestna mera dvigne s 4 % na 5 %, se je dvignila za <strong>1 odstotno točko</strong>, relativno pa za \(\frac{1}{4} = 25\,\%\).</p>
+          
+            <h4>Promili</h4>
+            <p>Procent je stotina, <strong>promil</strong> (\(‰\)) je tisočina celote: \(1\,‰ = \frac{1}{1000} = 0{,}1\,\%\). Računamo enako kot s procenti, le da delimo s 1000. Morje s slanostjo \(38\,‰\) ima v 5 kg vode \(\frac{38}{1000} \cdot 5000\ \text{g} = 190\ \text{g}\) soli. Promile srečaš še pri alkoholu v krvi in naklonu cest ali tirov.</p>
+            <h4>Plača: bruto, neto in dohodnina</h4>
+            <ul>
+              <li><strong>Bruto plača</strong> je znesek, dogovorjen v pogodbi.</li>
+              <li><strong>Neto plača</strong> = bruto plača − prispevki delavca za socialno varnost − akontacija dohodnine.</li>
+              <li><strong>Izplačilo</strong> = neto plača + povračila stroškov (prevoz, prehrana).</li>
+              <li><strong>Strošek delodajalca</strong> = bruto plača + prispevki delodajalca (+ povračila stroškov).</li>
+            </ul>
+            <p>Dohodnina je <strong>progresivna</strong>: lestvica je razdeljena na razrede in višja stopnja velja <strong>samo za del osnove nad mejo razreda</strong>, ne za celo osnovo. Stopnje in meje se spreminjajo, v nalogi so vedno podane. Zgled z izmišljeno lestvico (do 10 000 € 16 %, nad tem 26 %): pri osnovi 14 000 € je dohodnina \(0{,}16 \cdot 10\,000 + 0{,}26 \cdot 4000 = 1600 + 1040 = 2640\) €, kar je \(\frac{2640}{14\,000} \approx 18{,}9\,\%\) osnove (in ne 26 %).</p>
           </div>
           <div class="sklop-naloge">
             <h3>Tipi nalog v tem sklopu</h3>
@@ -795,6 +857,8 @@
               <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Cena z 22 % DDV je 61 €. Kolikšna je cena brez DDV?</p><p>\(61 : 1{,}22 = 50\) €.</p></div>
               <div class="primer"><p><strong>Primer 2:</strong> Plača se je s 1200 € povečala na 1290 €. Za koliko odstotkov?</p><p>\(\dfrac{90}{1200} = 0{,}075 = 7{,}5\,\%\).</p></div>
               <div class="primer"><p><strong>Primer 3:</strong> Cena se dvakrat zapored zniža za 20 %. Za koliko odstotkov se je znižala skupaj?</p><p>\(0{,}8^2 = 0{,}64\), znižala se je za 36 % (ne za 40 %).</p></div>
+              <div class="primer"><p><strong>Primer 4:</strong> Bruto plača je 1800 €, prispevki delavca so 22,1 % bruto plače, akontacija dohodnine je 140 €. Kolikšna je neto plača?</p><p>Prispevki: \(0{,}221 \cdot 1800 = 397{,}80\) €. Neto: \(1800 - 397{,}80 - 140 = 1262{,}20\) €.</p></div>
+              <div class="primer"><p><strong>Primer 5:</strong> Delež stranke je zrasel z 8 % na 10 %. Za koliko odstotnih točk in za koliko odstotkov?</p><p>Za \(10 - 8 = 2\) odstotni točki, relativno pa za \(\frac{2}{8} = 25\,\%\).</p></div>
             </div>
           </div>
         </section>
@@ -1434,11 +1498,11 @@
                   <tr><td>„ostanek pri deljenju“</td><td><a href="#tip-8">Tip 8</a></td></tr>
                   <tr><td>„Evklidov algoritem“, dana \(D\) in \(v\)</td><td><a href="#tip-9">Tip 9</a></td></tr>
                   <tr><td>„razviti zapis“, „s potencami števila 10“</td><td><a href="#tip-10">Tip 10</a></td></tr>
-                  <tr><td>„dvojiški sestav“, indeks \(_2\)</td><td><a href="#tip-11">Tip 11</a></td></tr>
+                  <tr><td>„dvojiški sestav“, indeks \(_2\), \(_5\), \(_{16}\), „osnova“</td><td><a href="#tip-11">Tip 11</a></td></tr>
                   <tr><td>izraz z ulomki, „okrajšajte“</td><td><a href="#tip-12">Tip 12</a></td></tr>
                   <tr><td>periodična decimalka, „končen decimalni zapis“</td><td><a href="#tip-13">Tip 13</a></td></tr>
                   <tr><td>„kolikšen delež“, „v odstotkih“</td><td><a href="#tip-14">Tip 14</a></td></tr>
-                  <tr><td>cena, popust, podražitev, DDV, „za koliko %“</td><td><a href="#tip-15">Tip 15</a></td></tr>
+                  <tr><td>cena, popust, podražitev, DDV, plača, promili, „za koliko %“</td><td><a href="#tip-15">Tip 15</a></td></tr>
                   <tr><td>„racionalno ali iracionalno“, „v katero množico“</td><td><a href="#tip-16">Tip 16</a></td></tr>
                   <tr><td>„konstruirajte \(\sqrt{n}\) na številski premici“</td><td><a href="#tip-17">Tip 17</a></td></tr>
                   <tr><td>„zapišite z intervalom“</td><td><a href="#tip-18">Tip 18</a></td></tr>

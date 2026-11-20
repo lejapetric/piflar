@@ -3,6 +3,8 @@
 import Uporabnik, { TIPI_SOL, RAVNI } from "../models/uporabnik.js";
 import Napredek from "../models/napredek.js";
 import Ustni from "../models/ustni.js";
+import Priprava from "../models/priprava.js";
+import Branje from "../models/branje.js";
 import { napakaGesla } from "./avtentikacija.js";
 import { pobrisiPrijavo } from "../utils/zeton.js";
 
@@ -88,6 +90,8 @@ const izbrisi = async (req, res) => {
     return res.status(400).json({ message: "Geslo ni pravilno." });
   await Napredek.deleteMany({ uporabnik: u._id });
   await Ustni.deleteMany({ uporabnik: u._id });
+  await Priprava.deleteMany({ uporabnik: u._id });
+  await Branje.deleteMany({ uporabnik: u._id });
   await Uporabnik.deleteOne({ _id: u._id });
   pobrisiPrijavo(res);
   res.status(204).end();

@@ -40,6 +40,7 @@ public/
   index.html               naslovnica
   404.html                 stran ne obstaja / še v pripravi
   iskanje.html             vsi zadetki iskanja (components/iskanje.js)
+  priprava.html            Tedenska priprava: snovi tega tedna, niz opravljenih tednov (components/priprava.js)
   napredek.html            Moje naloge: uspešne in neuspešne naloge po predmetih in snoveh
                            (components/napredek.js); povezave odprejo naloge s ?stanje=neuspesno|uspesno
   components/              header, sidebar, footer + components.js (naloži jih na vsaki strani)
@@ -93,6 +94,26 @@ Strani besedil imajo sklope po glavnih problemih iz kataloga, strani tem po vseb
 
 Sociologija ima vseh 14 poglavij predmetnega izpitnega kataloga RIC (4.1 do 4.14), vsako na svoji strani.
 Razdelki s posebnim znanjem za seminarsko nalogo imajo `sklop--visja` in oznako `badge-vr` z besedilom »Seminarska«.
+
+## Tedenska priprava
+
+Prijavljeni dijak na strani `priprava.html` (meni računa → Tedenska priprava) izbere predmete, datum mature
+in tempo (1–5 snovi na teden; stran priporoči tempo, pri katerem je vsa snov predelana 3 tedne pred maturo).
+Vsak teden (ponedeljek–nedelja po času v Ljubljani) dobi naslednje neopravljene snovi izbranih predmetov,
+izmenično po predmetih in v vrstnem redu kataloga; neopravljena snov se prenese v naslednji teden, snov lahko zamenja.
+
+Snov je opravljena, ko:
+
+1. **predela razlago**: vsaj 75 % sklopov (`section.sklop`). `components/branje.js` na strani z razlago šteje
+   sekunde, ko je zavihek viden, je dijak v zadnji minuti premaknil miško, drsal ali tipkal in je sklop na sredini
+   zaslona, ter sekunde predvajanega videa sklopa (preskoki ne štejejo). Prirastke pošlje na `POST /api/priprava/branje`.
+   Strežnik prirastke omeji na čas, ki je res minil od zadnjega poročila, in sklop šteje za predelan, ko je bral vsaj
+   `besede / 5` sekund (od 20 s do 3 min, `api/utils/priprava.js`) ali pogledal 80 % videa. Pri matematiki na osnovni
+   ravni sklopi višje ravni ne štejejo.
+2. **reši naloge**: 8 nalog iz snovi prvič pravilno (naloge za vajo in maturitetne, iz zbirke `napredek`).
+
+Teden je opravljen, ko so do nedelje opravljene vse njegove snovi; zaporedni opravljeni tedni so niz.
+Podatki: `api/models/priprava.js` (nastavitve in snovi po tednih), `api/models/branje.js` (čas po sklopih).
 
 ## Temni način in iskanje
 

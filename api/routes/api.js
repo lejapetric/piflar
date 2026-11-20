@@ -9,6 +9,7 @@ import ctrlPlacila from "../controllers/placila.js";
 import ctrlNapredek from "../controllers/napredek.js";
 import ctrlIskanje from "../controllers/iskanje.js";
 import ctrlUstni from "../controllers/ustni.js";
+import ctrlPriprava from "../controllers/priprava.js";
 import { naloziUporabnika, zahtevajPrijavo, zahtevajBazo } from "../middleware/uporabnik.js";
 
 const router = Router();
@@ -50,6 +51,12 @@ router.get("/ustni", ctrlUstni.ustniList);
 router.get("/ustni/stevilo", ctrlUstni.ustniStevilo);
 router.get("/ustni/napredek", zahtevajPrijavo, ctrlUstni.ustniNapredek);
 router.post("/ustni/:id/ocena", zahtevajBazo, zahtevajPrijavo, ctrlUstni.ustniOcena);
+// TEDENSKA PRIPRAVA NA MATURO (načrt snovi po tednih, predelanost razlag)
+router.get("/priprava", zahtevajPrijavo, ctrlPriprava.pripravaGet);
+router.put("/priprava", zahtevajPrijavo, ctrlPriprava.pripravaPut);
+router.post("/priprava/zamenjaj", zahtevajPrijavo, ctrlPriprava.pripravaZamenjaj);
+router.get("/priprava/branje", zahtevajPrijavo, ctrlPriprava.branjeGet);
+router.post("/priprava/branje", zahtevajPrijavo, ctrlPriprava.branjePost);
 
 // ISKANJE PO SNOVI
 router.get("/iskanje", ctrlIskanje.iskanje);
