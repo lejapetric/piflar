@@ -1,6 +1,6 @@
 // api/middleware/uporabnik.js
 import Uporabnik from "../models/uporabnik.js";
-import { bazaPovezana } from "../db.js";
+import { bazaPovezana, razlogBrezBaze } from "../db.js";
 import { preberiZeton } from "../utils/zeton.js";
 
 // Nastavi req.uporabnik (ali null za gosta) na vsaki API zahtevi
@@ -18,7 +18,11 @@ export function zahtevajPrijavo(req, res, next) {
 }
 
 export function zahtevajBazo(req, res, next) {
-  if (!bazaPovezana())
-    return res.status(503).json({ message: "Prijava trenutno ni na voljo." });
+  if (!bazaPovezana()) {
+    // Na lastnem računalniku (razvoj) pokaži tudi razlog, da je jasno, kaj popraviti.
+    const razlog = process.env.NODE_ENV === "production" ? "" : razlogBrezBaze();
+    const message = "Prijava trenutno ni na voljo" + (razlog ? `: ${razlog}` : ".");
+    return res.status(503).json({ message });
+  }
   next();
 }
