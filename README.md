@@ -28,6 +28,7 @@ api/
   controllers/             snovi, naloge, matura, avtentikacija
   models/uporabnik.js      uporabnik v MongoDB (profil, nastavitve, paket, geslo kot bcrypt hash)
   utils/eposta.js          pošiljanje e-pošte (Resend), sporočilo za potrditev e-naslova
+  models/ustni.js          samoocena pri vprašanjih za ustni del (znam / negotovo / ne_znam)
   models/napredek.js       napredek pri nalogah (en zapis na uporabnika in nalogo: vaja ali maturitetna,
                            predmet, snovi, zadnji poskus uspešen/neuspešen); GET /api/napredek
   data/                    snovi.json, naloge.json, matura.json (+ index.js, ki jih prebere ob zagonu)
@@ -248,6 +249,29 @@ besedila pa so naša. Ustvari jih `python3 tools/matura/anglescina/gradi.py` iz 
 (ena datoteka na izpitni dan). Naloge imajo `oznaka` (»Task 1: Short answers«), pola ima `deli` (imena delov A, B).
 Posnetke pole 2 prebere bralnik v brskalniku (gumb `.ang-poslusaj`, Web Speech API), prepis je v `.ang-transkript`.
 
+## Ustni del mature
+
+Matematika ima razdelek Ustni del (`public/views/matematika/ustni/`): 161 vprašanj za ustni izpit iz vseh 17 snovi,
+vsako z vzorčnim odgovorom (vprašanja so naša, v slogu izpitnih listkov; `"visja"` jih označi za višjo raven).
+
+- **Vprašanja po snoveh** (`ustni.html`): vsa vprašanja po sklopih in snoveh, odgovor se odpre ob kliku, pod njim se dijak oceni.
+  Na vrhu so povzetek ocen, Začni kviz, Izvleci listek (3 vprašanja iz različnih snovi) in Ponovi, kar še ne znaš.
+- **Kviz** (`kviz.html`): izbereš snovi ali cele sklope, katera vprašanja (ki jih nisi znal, pri katerih nisi bil prepričan,
+  ki si jih znal, še neocenjena), število (3 kot listek, 5, 10, 20, vsa) in ali so zraven vprašanja višje ravni.
+  Po vsakem odgovoru se dijak oceni: Znal sem / Nisem bil prepričan / Nisem znal (tipke 1, 2, 3; preslednica odpre odgovor).
+  Na koncu ponovi samo tista, ki jih ni znal. Izbira je v naslovu: `kviz.html?snov=funkcije,stoznice&stanje=ne_znam,negotovo&st=10&visja=0&zacni=1`.
+- Prijavljenemu se ocene shranijo v bazo (`api/models/ustni.js`: zadnja ocena, število ponovitev in števci po ocenah),
+  gost jih ima samo v `localStorage`. Povzetek je tudi na strani Moje naloge. Izbris računa izbriše tudi te ocene.
+
+Vprašanja so v `tools/ustni/<predmet>.mjs` (`[vprašanje, odgovor v HTML z LaTeX-om, "visja"?]` po snoveh), JSON zgradi:
+
+```bash
+node tools/ustni/gradi.mjs    # zapiše api/data/ustni/<predmet>.json
+```
+
+Id vprašanja je zaporedna številka v snovi (`mat-u-funkcije-5`), zato nova vprašanja dodajaj na konec seznama snovi.
+Za nov predmet dodaj `tools/ustni/<predmet>.mjs`, strani `public/views/<predmet>/ustni/` (`data-predmet`) in sklope v `SKLOPI` v `components/ustni.js`.
+
 ## Račun
 
 - **Registracija** (`/prijava.html#registracija`): ime, priimek, starost (neobvezno), e-naslov, geslo in potrditev
@@ -295,6 +319,10 @@ Prijava se hrani v piškotku `httpOnly` (7 dni), zato je JavaScript na strani ne
 | `POST /api/naloge/:id/odgovor` | preveri odgovor `{ "odgovor": "7" }` → `{ "pravilno": true }` |
 | `GET /api/naloge/:id/postopek` | postopek in rezultat |
 | `GET /api/napredek?poglavje=mnozice` | napredek prijavljenega (poskusi, rešeno, ogledan postopek) |
+| `GET /api/ustni?predmet=matematika&poglavje=funkcije` | vprašanja za ustni del z odgovori (`&raven=osnovna` brez višje ravni) |
+| `GET /api/ustni/stevilo?predmet=matematika` | število vprašanj po snoveh |
+| `GET /api/ustni/napredek?predmet=matematika` | samoocene prijavljenega |
+| `POST /api/ustni/:id/ocena` | `{ "ocena": "znam" \| "negotovo" \| "ne_znam" }` (prijavljeni) |
 | `GET /api/matura?predmet=matematika&raven=osnovna&leto=2026` | seznam pol (`resena`, `odklenjena`), z `&naloge=1` tudi naloge |
 | `GET /api/matura/naloge?predmet=matematika&poglavje=diferencialni_racun` | naloge iz vseh pol za poglavja (več ločiš z vejico) |
 | `GET /api/matura/:id` | pola z nalogami; rešitve samo, če je `odklenjena` |
