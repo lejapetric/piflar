@@ -1,0 +1,584 @@
+/* ============================================================
+   USTNI DEL MATURE — pregled vprašanj in kviz (components/ustni.js)
+   Barve so spremenljivke iz style.css / predmeti/<predmet>.css, zato
+   temni način in videz predmeta veljata sama.
+   ============================================================ */
+.ustni {
+    --u-znam: var(--success);
+    --u-negotovo: var(--warning);
+    --u-ne-znam: var(--danger);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-6);
+    margin-bottom: var(--space-6);
+}
+
+.ustni-povezava {
+    background: none;
+    border: none;
+    padding: 0;
+    font: inherit;
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: var(--primary);
+    cursor: pointer;
+    text-decoration: none;
+}
+.ustni-povezava:hover { text-decoration: underline; }
+
+.ustni-akcije {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+}
+.ustni-akcije .btn { text-decoration: none; display: inline-flex; align-items: center; }
+.ustni-akcije .btn[hidden] { display: none; }
+
+.ustni-gost {
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+/* Povzetek */
+.ustni-zgoraj {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    padding: var(--space-5);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+}
+.ustni-zgoraj-naslov {
+    font-family: var(--font-display);
+    font-size: var(--text-xl);
+    margin: 0;
+}
+
+.ustni-stevci {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+}
+.ustni-stevec {
+    display: inline-flex;
+    align-items: baseline;
+    gap: 6px;
+    padding: 6px 12px;
+    border-radius: 999px;
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+    background: var(--bg-primary);
+    border: 1px solid var(--border-color);
+}
+.ustni-stevec strong { font-size: var(--text-base); color: var(--text-primary); }
+.ustni-stevec--znam { border-color: color-mix(in srgb, var(--u-znam) 45%, transparent); }
+.ustni-stevec--znam strong { color: var(--u-znam); }
+.ustni-stevec--negotovo { border-color: color-mix(in srgb, var(--u-negotovo) 45%, transparent); }
+.ustni-stevec--negotovo strong { color: var(--u-negotovo); }
+.ustni-stevec--ne_znam { border-color: color-mix(in srgb, var(--u-ne-znam) 45%, transparent); }
+.ustni-stevec--ne_znam strong { color: var(--u-ne-znam); }
+
+/* Značka stanja */
+.ustni-znacka {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 1px 8px;
+    border-radius: 999px;
+    white-space: nowrap;
+    color: var(--text-muted);
+    border: 1px solid var(--border-color);
+}
+.ustni-znacka--znam { color: var(--u-znam); border-color: currentColor; }
+.ustni-znacka--negotovo { color: var(--u-negotovo); border-color: currentColor; }
+.ustni-znacka--ne_znam { color: var(--u-ne-znam); border-color: currentColor; }
+
+/* Sklopi in snovi */
+.ustni-sklop {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
+}
+.ustni-sklop-glava {
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: var(--space-2) var(--space-4);
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: var(--space-2);
+}
+.ustni-sklop-glava h2 {
+    font-family: var(--font-display);
+    font-size: var(--text-2xl);
+    margin: 0;
+}
+
+.ustni-snov {
+    scroll-margin-top: 90px;
+}
+.ustni-snov-glava {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: var(--space-2) var(--space-4);
+    margin-bottom: var(--space-3);
+}
+.ustni-snov-glava h3 {
+    font-family: var(--font-display);
+    font-size: var(--text-lg);
+    margin: 0;
+}
+.ustni-snov-povezave {
+    grid-column: 1 / -1;
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-4);
+}
+.ustni-snov-napredek {
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+    font-size: var(--text-xs);
+    color: var(--text-secondary);
+}
+.ustni-trak {
+    display: flex;
+    width: 90px;
+    height: 6px;
+    border-radius: 999px;
+    overflow: hidden;
+    background: var(--border-color);
+}
+.ustni-trak-del--znam { background: var(--u-znam); }
+.ustni-trak-del--negotovo { background: var(--u-negotovo); }
+.ustni-trak-del--ne_znam { background: var(--u-ne-znam); }
+
+.ustni-seznam {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+
+/* Eno vprašanje (odpre se ob kliku) */
+.ustni-vpr {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    scroll-margin-top: 90px;
+}
+.ustni-vpr[open] { border-color: var(--primary-light); }
+.ustni-vpr-glava {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: var(--space-3);
+    padding: var(--space-3) var(--space-4);
+    cursor: pointer;
+    list-style: none;
+}
+.ustni-vpr-glava::-webkit-details-marker { display: none; }
+.ustni-vpr-glava::before {
+    content: "▸";
+    color: var(--text-muted);
+    flex: none;
+    transition: transform var(--transition);
+}
+.ustni-vpr[open] > .ustni-vpr-glava::before { transform: rotate(90deg); }
+.ustni-vpr-besedilo {
+    flex: 1;
+    font-weight: 600;
+    min-width: 0;
+}
+.ustni-vpr-st {
+    color: var(--text-muted);
+    font-weight: 700;
+    margin-right: 2px;
+}
+.ustni-vpr-oznake {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 6px;
+    flex: none;
+}
+.ustni-vpr > .ustni-vpr-odgovor {
+    padding: 0 var(--space-4) var(--space-4) calc(var(--space-4) + 18px);
+}
+.ustni-vpr-odgovor {
+    line-height: 1.6;
+    overflow-x: auto;
+}
+.ustni-vpr-odgovor p { margin: 0 0 var(--space-2); }
+.ustni-vpr-odgovor ul,
+.ustni-vpr-odgovor ol { margin: 0 0 var(--space-2); padding-left: 1.3em; }
+.ustni-vpr-odgovor li + li { margin-top: 4px; }
+
+/* Samoocena */
+.ustni-ocena {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-2) var(--space-3);
+    margin-top: var(--space-3);
+    padding-top: var(--space-3);
+    border-top: 1px dashed var(--border-color);
+}
+.ustni-ocena-vprasanje {
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: var(--text-secondary);
+}
+.ustni-ocena-gumbi {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+}
+.ustni-ocena-gumb {
+    background: var(--bg-card);
+    border: 1.5px solid var(--border-color);
+    color: var(--text-primary);
+    padding: 8px 14px;
+}
+.ustni-ocena-gumb--znam { border-color: var(--u-znam); }
+.ustni-ocena-gumb--negotovo { border-color: var(--u-negotovo); }
+.ustni-ocena-gumb--ne_znam { border-color: var(--u-ne-znam); }
+.ustni-ocena-gumb:hover,
+.ustni-ocena-gumb:focus-visible { transform: translateY(-1px); box-shadow: var(--shadow-sm); }
+.ustni-ocena-gumb--znam.izbrana { background: var(--u-znam); color: #fff; }
+.ustni-ocena-gumb--negotovo.izbrana { background: var(--u-negotovo); color: #fff; }
+.ustni-ocena-gumb--ne_znam.izbrana { background: var(--u-ne-znam); color: #fff; }
+
+/* Nastavitve kviza */
+.ustni-nastavitve {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-5);
+}
+.ustni-polje {
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius);
+    background: var(--bg-card);
+    padding: var(--space-4) var(--space-5) var(--space-5);
+    margin: 0;
+    min-width: 0;
+}
+.ustni-polje legend {
+    font-family: var(--font-display);
+    font-weight: 700;
+    font-size: var(--text-lg);
+    padding: 0 var(--space-2);
+}
+.ustni-hitro {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-2);
+    margin-bottom: var(--space-4);
+}
+.ustni-cip {
+    font: inherit;
+    font-size: var(--text-sm);
+    font-weight: 600;
+    padding: 5px 12px;
+    border-radius: 999px;
+    border: 1px solid var(--border-color);
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    cursor: pointer;
+}
+.ustni-cip:hover { border-color: var(--primary); color: var(--primary); }
+.ustni-sklopi {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: var(--space-4) var(--space-5);
+}
+.ustni-sklop-izbira {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+.ustni-sklop-izbira-glava {
+    font-weight: 700;
+    margin-bottom: 2px;
+}
+.ustni-snov-izbira,
+.ustni-stanje-izbira,
+.ustni-visja-izbira,
+.ustni-sklop-izbira-glava {
+    display: flex;
+    align-items: baseline;
+    gap: 6px;
+    cursor: pointer;
+    font-size: var(--text-sm);
+}
+.ustni-snov-izbira { padding-left: var(--space-5); }
+.ustni-snov-izbira small,
+.ustni-stanje-st { color: var(--text-muted); }
+.ustni-nastavitve input[type="checkbox"] { accent-color: var(--primary); }
+.ustni-stanja {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: var(--space-2) var(--space-5);
+}
+.ustni-stanje-izbira--ne_znam { color: var(--u-ne-znam); }
+.ustni-stanje-izbira--negotovo { color: var(--u-negotovo); }
+.ustni-stanje-izbira--znam { color: var(--u-znam); }
+.ustni-ostalo {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-3) var(--space-6);
+    font-size: var(--text-sm);
+}
+.ustni-st-izbira select {
+    font: inherit;
+    margin-left: 6px;
+    padding: 6px 10px;
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-color);
+    background: var(--bg-card);
+    color: var(--text-primary);
+}
+.ustni-zacni {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-3);
+}
+.ustni-zacni-info { margin: 0; color: var(--text-secondary); font-size: var(--text-sm); }
+.ustni-zacni .btn:disabled { opacity: 0.5; cursor: not-allowed; transform: none; box-shadow: none; }
+
+/* Potek kviza */
+.ustni-kviz-vrh {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+}
+.ustni-kviz-st { font-weight: 700; white-space: nowrap; }
+.ustni-kviz-trak {
+    flex: 1;
+    height: 6px;
+    border-radius: 999px;
+    background: var(--border-color);
+    overflow: hidden;
+}
+.ustni-kviz-trak span {
+    display: block;
+    height: 100%;
+    background: var(--primary);
+    transition: width var(--transition);
+}
+.ustni-koncaj { white-space: nowrap; }
+
+.ustni-kartica {
+    background: var(--bg-card);
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-lg);
+    padding: var(--space-6);
+    box-shadow: var(--shadow-sm);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+}
+.ustni-kartica-oznake {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: var(--space-2);
+}
+.ustni-kartica-snov {
+    font-size: var(--text-xs);
+    font-weight: 700;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+    color: var(--primary);
+}
+.ustni-kartica-vprasanje {
+    font-family: var(--font-display);
+    font-size: var(--text-xl);
+    line-height: 1.4;
+    margin: 0;
+}
+.ustni-kartica-navodilo {
+    margin: 0;
+    font-size: var(--text-sm);
+    color: var(--text-secondary);
+}
+.ustni-opombe {
+    width: 100%;
+    box-sizing: border-box;
+    font: inherit;
+    font-size: var(--text-sm);
+    padding: var(--space-3);
+    border-radius: var(--radius-sm);
+    border: 1px solid var(--border-color);
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    resize: vertical;
+}
+.ustni-kartica-gumbi {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+}
+.ustni-kartica-odgovor {
+    border-top: 1px solid var(--border-color);
+    padding-top: var(--space-4);
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-2);
+}
+.ustni-kartica-odgovor h3 {
+    font-size: var(--text-sm);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+/* Konec kviza */
+.ustni-konec {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-4);
+}
+.ustni-konec h2 {
+    font-family: var(--font-display);
+    font-size: var(--text-2xl);
+    margin: 0;
+}
+.ustni-konec p { margin: 0; }
+.ustni-konec-podnaslov {
+    font-family: var(--font-display);
+    font-size: var(--text-lg);
+    margin: var(--space-3) 0 0;
+}
+
+/* Izbira ravni (osnovna / višja) */
+.ustni-zgoraj-glava,
+.ustni-nastavitve-vrh {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-3);
+}
+.ustni-zgoraj-opis { margin: 0; color: var(--text-secondary); font-size: var(--text-sm); }
+.ustni-raven {
+    display: inline-flex;
+    padding: 3px;
+    gap: 3px;
+    background: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-radius: 999px;
+}
+.ustni-raven-gumb {
+    border: none;
+    background: none;
+    font: inherit;
+    font-size: var(--text-sm);
+    font-weight: 600;
+    color: var(--text-secondary);
+    padding: 6px 14px;
+    border-radius: 999px;
+    cursor: pointer;
+}
+.ustni-raven-gumb:hover { color: var(--text-primary); }
+.ustni-raven-gumb.izbrana { background: var(--primary); color: #fff; }
+
+/* Izpitni listek znotraj snovi */
+.ustni-listek + .ustni-listek { margin-top: var(--space-4); }
+.ustni-listek-glava {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: baseline;
+    gap: var(--space-1) var(--space-3);
+    margin-bottom: var(--space-2);
+}
+.ustni-listek-glava h4 {
+    margin: 0;
+    font-size: var(--text-base);
+    font-weight: 600;
+    flex: 1 1 auto;
+}
+.ustni-listek-st {
+    display: inline-block;
+    margin-right: 4px;
+    padding: 1px 8px;
+    border-radius: 6px;
+    font-size: var(--text-xs);
+    font-weight: 700;
+    letter-spacing: 0.03em;
+    color: var(--primary);
+    background: color-mix(in srgb, var(--primary) 12%, transparent);
+}
+.ustni-listek-tocke,
+.ustni-tocke {
+    font-size: var(--text-xs);
+    color: var(--text-secondary);
+    white-space: nowrap;
+}
+.ustni-vpr-oznake .ustni-tocke { align-self: center; }
+.ustni-kartica-listek { font-size: var(--text-xs); color: var(--text-secondary); }
+.ustni-zacni-gumbi { display: flex; flex-wrap: wrap; gap: var(--space-3); }
+
+/* Odgovor: tabele, grafi in podrobnejša razlaga */
+.ustni-tabela {
+    border-collapse: collapse;
+    margin: var(--space-2) 0 var(--space-3);
+    font-size: var(--text-sm);
+}
+.ustni-tabela th,
+.ustni-tabela td {
+    border: 1px solid var(--border-color);
+    padding: 4px 12px;
+    text-align: center;
+}
+.ustni-tabela th { background: var(--bg-primary); }
+.ustni-vpr-odgovor .ustni-slika { margin: var(--space-2) 0 var(--space-3); }
+.ustni-vpr-odgovor .ustni-slika svg { max-width: 380px; }
+.ustni-razlaga-gumb {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    margin-top: var(--space-1);
+    padding: 5px 12px;
+    border: 1px solid color-mix(in srgb, var(--primary) 40%, transparent);
+    border-radius: 999px;
+    background: color-mix(in srgb, var(--primary) 8%, transparent);
+    color: var(--primary);
+    font: inherit;
+    font-size: var(--text-sm);
+    font-weight: 600;
+    cursor: pointer;
+}
+.ustni-razlaga-gumb::before { content: "💡"; font-size: 0.95em; }
+.ustni-razlaga-gumb:hover { background: color-mix(in srgb, var(--primary) 15%, transparent); }
+.ustni-razlaga {
+    margin-top: var(--space-2);
+    padding: var(--space-3) var(--space-4);
+    border-left: 3px solid var(--primary);
+    border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+    background: color-mix(in srgb, var(--primary) 6%, transparent);
+}
+.ustni-razlaga > :last-child { margin-bottom: 0; }
+
+@media (max-width: 640px) {
+    .ustni-kartica { padding: var(--space-4); }
+    .ustni-kartica-vprasanje { font-size: var(--text-lg); }
+    .ustni-snov-glava { grid-template-columns: 1fr; }
+    .ustni-vpr-glava { flex-wrap: wrap; }
+    .ustni-vpr-besedilo { flex: 1 1 calc(100% - 30px); }
+    .ustni-vpr-oznake { justify-content: flex-start; padding-left: 18px; }
+    .ustni-vpr > .ustni-vpr-odgovor { padding-left: var(--space-4); }
+    .ustni-kviz-vrh { flex-wrap: wrap; }
+    .ustni-kviz-trak { order: 3; flex-basis: 100%; }
+    .ustni-akcije .btn,
+    .ustni-zacni .btn { width: 100%; justify-content: center; }
+    .ustni-zacni-gumbi { width: 100%; }
+}

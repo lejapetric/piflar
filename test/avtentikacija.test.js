@@ -10,6 +10,7 @@ process.env.ZAKLEP = "1";
 const { default: app } = await import("../app.js");
 const { default: Uporabnik } = await import("../api/models/uporabnik.js");
 const { default: Napredek } = await import("../api/models/napredek.js");
+const { default: Ustni } = await import("../api/models/ustni.js");
 const { default: Priprava } = await import("../api/models/priprava.js");
 const { default: Branje } = await import("../api/models/branje.js");
 const eposta = await import("../api/utils/eposta.js");
@@ -44,6 +45,23 @@ Napredek.find = (filter) => {
 Napredek.deleteMany = async (q) => {
   for (let i = napredek.length - 1; i >= 0; i--)
     if (String(napredek[i].uporabnik) === String(q.uporabnik)) napredek.splice(i, 1);
+};
+const ustniZapisi = [];
+Ustni.findOneAndUpdate = async (filter, posodobitev) => {
+  let z = ustniZapisi.find((n) => String(n.uporabnik) === String(filter.uporabnik) && n.vprasanje === filter.vprasanje);
+  if (!z) ustniZapisi.push((z = { ...filter, ponovitve: 0, stevci: { znam: 0, negotovo: 0, ne_znam: 0 } }));
+  Object.assign(z, posodobitev.$set);
+  z.ponovitve += posodobitev.$inc.ponovitve;
+  for (const [k, v] of Object.entries(posodobitev.$inc)) if (k.startsWith("stevci.")) z.stevci[k.slice(7)] += v;
+  return z;
+};
+Ustni.find = (filter) => {
+  const v = ustniZapisi.filter((n) => String(n.uporabnik) === String(filter.uporabnik) && (!filter.predmet || n.predmet === filter.predmet));
+  return { select: () => ({ lean: async () => v }) };
+};
+Ustni.deleteMany = async (q) => {
+  for (let i = ustniZapisi.length - 1; i >= 0; i--)
+    if (String(ustniZapisi[i].uporabnik) === String(q.uporabnik)) ustniZapisi.splice(i, 1);
 };
 const izbrisani = [];
 Priprava.deleteMany = async (q) => void izbrisani.push(["priprava", String(q.uporabnik)]);
@@ -176,6 +194,18 @@ test("registracija, potrditev e-naslova, prijava, dostop glede na paket, odjava"
   await post("/matura/odgovor", { pola: izbirna.pola.id, naloga: izbirna.id, odgovor: napacna }, piskotek);
   mz = (await (await get(`/napredek?vir=matura&poglavje=${mz.poglavja[0]}`, piskotek)).json()).find((z) => z.naloga === kljuc);
   assert.equal(mz.stanje, "neuspesno");
+
+  // Ustni del: samoocena se shrani prijavljenemu, zadnja ocena velja, števci se seštevajo
+  assert.equal((await post("/ustni/mat-u-or-3-1/ocena", { ocena: "znam" })).status, 401);
+  assert.equal((await post("/ustni/mat-u-or-3-1/ocena", { ocena: "mogoce" }, piskotek)).status, 400);
+  assert.equal((await post("/ustni/ne-obstaja/ocena", { ocena: "znam" }, piskotek)).status, 404);
+  assert.equal((await post("/ustni/mat-u-or-3-1/ocena", { ocena: "ne_znam" }, piskotek)).status, 200);
+  const ocena = await (await post("/ustni/mat-u-or-3-1/ocena", { ocena: "negotovo" }, piskotek)).json();
+  assert.equal(ocena.ocena, "negotovo");
+  assert.equal(ocena.ponovitve, 2);
+  assert.deepEqual(ocena.stevci, { znam: 0, negotovo: 1, ne_znam: 1 });
+  const ustniNapredek = await (await get("/ustni/napredek?predmet=matematika", piskotek)).json();
+  assert.deepEqual(ustniNapredek.map((z) => [z.vprasanje, z.ocena, z.poglavje]), [["mat-u-or-3-1", "negotovo", "mnozice"]]);
 
   const odjava = await post("/odjava", {}, piskotek);
   assert.equal(odjava.status, 204);
