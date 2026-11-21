@@ -95,6 +95,14 @@ Strani besedil imajo sklope po glavnih problemih iz kataloga, strani tem po vseb
 Sociologija ima vseh 14 poglavij predmetnega izpitnega kataloga RIC (4.1 do 4.14), vsako na svoji strani.
 Razdelki s posebnim znanjem za seminarsko nalogo imajo `sklop--visja` in oznako `badge-vr` z besedilom »Seminarska«.
 
+## Police na straneh predmetov
+
+V videzu »tabla« `components/polica.js` poglavja s strani predmeta (ali s `snov/snov.html`) postavi na knjižne police.
+Slovenščina ima dve polici snovi: Jezikoslovje (poglavja 1.x) in Književnost (2.x); razdelitev je v `RAZDELITEV`.
+Strani, ki so samo za izpit (zgradba izpita, esej, pisni sestavki, razumevanje, ustni, seminarska), so na posebni polici
+»Priprava na maturo«: seznam poglavij in dodatnih strani (npr. ustni del pri matematiki) je v `PRIPRAVA`.
+Ob njej je polica »Matura in vaja« (pole, naloge po snovi, naloge za vajo).
+
 ## Tedenska priprava
 
 Prijavljeni dijak na strani `priprava.html` (meni računa → Tedenska priprava) izbere predmete, datum mature
