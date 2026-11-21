@@ -3088,6 +3088,8 @@ mjx-container[jax="CHTML"][display="true"] {
 
 .napredek-st--uspesno { color: var(--success); }
 .napredek-st--neuspesno { color: var(--danger); }
+.napredek-st--negotovo { color: var(--warning); }
+.napredek-ustni { margin-top: var(--space-5); }
 
 .napredek-gumbi {
     display: inline-flex;
