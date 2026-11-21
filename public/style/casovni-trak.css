@@ -1,0 +1,70 @@
+/* Časovni trak s premico in intervali (components/casovni-trak.js).
+   Brez JS: preprost seznam obdobij in dogodkov. */
+.ct {
+  --ct-b0: #6B7280; --ct-b1: #4F46E5; --ct-b2: #16A34A; --ct-b3: #D97706;
+  --ct-b4: #DC2626; --ct-b5: #0284C7; --ct-b6: #9333EA;
+  --ct-crta: #2B3038; --ct-tiho: #6B7280; --ct-pis: var(--text-primary, #1E2430);
+  --ct-rob: max(110px, 9%);
+  position: relative; text-align: left; margin: 4px 0 0;
+}
+[data-theme="dark"] .ct {
+  --ct-b0: #9CA3AF; --ct-b1: #A5B4FC; --ct-b2: #86EFAC; --ct-b3: #FCD34D;
+  --ct-b4: #FCA5A5; --ct-b5: #7DD3FC; --ct-b6: #D8B4FE;
+  --ct-crta: #D5DAE1; --ct-tiho: #A9AFC6;
+}
+.ct ol { list-style: none; margin: 0; padding: 0; }
+
+/* ---------- brez JS ---------- */
+.ct:not(.ct--izrisan) .ct-obdobja { display: flex; flex-wrap: wrap; gap: 6px 14px; margin-bottom: 10px; font-size: 14px; font-weight: 600; }
+.ct:not(.ct--izrisan) .ct-dogodki li { padding: 3px 0; }
+.ct:not(.ct--izrisan) .ct-dogodki time { font-weight: 700; margin-right: 6px; }
+
+/* ---------- premica ---------- */
+.ct--izrisan { --x: 50%; }
+.ct--ena { --x: 58px; }
+.ct-risba { position: absolute; inset: 0; pointer-events: none; }
+.ct-os { position: absolute; left: var(--x); top: calc(var(--ct-vrh) - 14px); height: calc(var(--ct-dno) - var(--ct-vrh) + 30px); width: 2px; margin-left: -1px; background: var(--ct-crta); }
+.ct-os::after { content: ""; position: absolute; left: 50%; bottom: -11px; transform: translateX(-50%); border: 7px solid transparent; border-top: 12px solid var(--ct-crta); border-bottom: 0; }
+.ct-crtica { position: absolute; left: var(--x); width: 12px; height: 2px; background: var(--ct-crta); transform: translate(-50%, -50%); }
+.ct-leto { position: absolute; left: var(--x); transform: translate(-50%, -50%); z-index: 1; font: 600 12px/1 var(--font-body, sans-serif); color: var(--ct-tiho); background: var(--ct-ozadje); padding: 3px 6px; border: 1.5px solid var(--ct-crta); border-radius: 10px; white-space: nowrap; }
+.ct-preskok { position: absolute; left: var(--x); width: 26px; height: 16px; transform: translate(-50%, -50%); background: var(--ct-ozadje); z-index: 1; }
+.ct-preskok::before, .ct-preskok::after { content: ""; position: absolute; left: 3px; right: 3px; height: 2px; background: var(--ct-crta); transform: rotate(-24deg); }
+.ct-preskok::before { top: 4px; } .ct-preskok::after { bottom: 4px; }
+.ct-vodila { position: absolute; left: 0; top: 0; overflow: visible; }
+.ct-vodila line, .ct-vodila path { stroke-width: 1.6; fill: none; }
+.ct-tocka { fill: var(--ct-ozadje); stroke-width: 3; }
+
+/* ---------- dogodki ---------- */
+.ct--izrisan .ct-dogodki li {
+  position: absolute; transform: translateY(-50%); z-index: 1;
+  display: flex; align-items: baseline; gap: 10px; line-height: 1.25;
+  background: color-mix(in srgb, var(--b) 9%, var(--ct-ozadje)); border-radius: 8px; padding: 8px 14px;
+  color: var(--ct-pis);
+}
+.ct--izrisan .ct-dogodki time { flex: none; font: 700 21px/1 var(--font-display, sans-serif); color: var(--b); font-variant-numeric: tabular-nums; }
+.ct--izrisan .ct-dogodki time small { font-size: 12px; font-weight: 600; margin-left: 2px; }
+.ct--izrisan .ct-dogodki span { font-size: 16px; font-weight: 600; }
+.ct--dve .ct-dogodki li { width: calc(44% - var(--ct-rob) - 4px); }
+.ct--dve .ct-dog--D { left: calc(55.5% + 4px); }
+.ct--dve .ct-dog--L { right: calc(55.5% + 4px); flex-direction: row-reverse; text-align: right; }
+.ct--ena .ct-dogodki li { left: 100px; right: 0; padding: 6px 10px; flex-direction: column; gap: 2px; }
+.ct--ena .ct-dogodki time { font-size: 18px; }
+.ct--ena .ct-dogodki span { font-size: 15px; }
+
+/* ---------- obdobja: interval [od, do) ob levem robu ---------- */
+.ct--izrisan .ct-obdobja li { position: absolute; left: 0; width: var(--ct-rob); }
+.ct-obd-crta { position: absolute; left: 8px; top: 0; bottom: 0; width: 4px; background: var(--b); border-radius: 2px; }
+.ct-obd-crta::before, .ct-obd-crta::after { content: ""; position: absolute; left: 50%; width: 12px; height: 12px; margin-left: -6px; border-radius: 50%; border: 3px solid var(--b); box-sizing: border-box; }
+.ct-obd-crta::before { top: -6px; background: var(--b); }               /* [ zaprto krajišče */
+.ct-obd-crta::after { bottom: -6px; background: var(--ct-ozadje); }     /* ) odprto krajišče */
+.ct--dve .ct-obd-ime { position: absolute; left: 22px; right: 0; top: 4px; font-size: 13px; font-weight: 600; line-height: 1.2; color: var(--b); }
+.ct--dve .ct-obd-cas { position: absolute; left: 22px; bottom: 4px; font: 600 11px/1.2 var(--font-body, sans-serif); color: var(--b); opacity: .85; right: 0; }
+.ct--ena .ct-obdobja li { width: 30px; }
+.ct--ena .ct-obd-ime { position: absolute; left: 15px; max-height: 100%; overflow: hidden; top: 4px; writing-mode: vertical-rl; font-size: 11px; font-weight: 700; line-height: 1; color: var(--b); white-space: nowrap; }
+.ct--ena .ct-obd-cas { display: none; }
+
+.slika--trak { padding-left: 18px; padding-right: 18px; }
+/* splošna pravila za slike (.slika svg) ne veljajo za vodila traku */
+.slika .ct-vodila { position: absolute; left: 0; top: 0; width: 100%; max-width: none; height: 100%; margin: 0; display: block; }
+.ct-leto small { display: block; font-size: 9px; font-weight: 600; margin-top: 1px; }
+.ct-leto:has(small) { text-align: center; border-radius: 8px; padding: 3px 5px; }
