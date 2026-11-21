@@ -2,6 +2,7 @@
 // Urejanje profila, nastavitev, sprememba gesla in izbris računa prijavljenega uporabnika.
 import Uporabnik, { TIPI_SOL, RAVNI } from "../models/uporabnik.js";
 import Napredek from "../models/napredek.js";
+import Ustni from "../models/ustni.js";
 import Priprava from "../models/priprava.js";
 import Branje from "../models/branje.js";
 import { napakaGesla } from "./avtentikacija.js";
@@ -88,6 +89,7 @@ const izbrisi = async (req, res) => {
   if (typeof geslo !== "string" || !(await u.preveriGeslo(geslo)))
     return res.status(400).json({ message: "Geslo ni pravilno." });
   await Napredek.deleteMany({ uporabnik: u._id });
+  await Ustni.deleteMany({ uporabnik: u._id });
   await Priprava.deleteMany({ uporabnik: u._id });
   await Branje.deleteMany({ uporabnik: u._id });
   await Uporabnik.deleteOne({ _id: u._id });

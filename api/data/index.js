@@ -35,3 +35,16 @@ export const naloge = [
   ...readJSON("./naloge.json").map((n) => ({ predmet: "matematika", tezavnost: 1, ...n })),
   ...vaje,
 ].sort((a, b) => (a.tezavnost ?? 1) - (b.tezavnost ?? 1));
+
+// Vprašanja za ustni del mature: ustni/<predmet>.json (tools/ustni/gradi.mjs)
+const datotekeUstni = () => {
+  try {
+    return readdirSync(new URL("./ustni/", import.meta.url));
+  } catch {
+    return [];
+  }
+};
+export const ustni = datotekeUstni()
+  .filter((f) => f.endsWith(".json"))
+  .sort()
+  .flatMap((f) => readJSON(`./ustni/${f}`));
