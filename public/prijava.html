@@ -18,68 +18,86 @@
 
   <div id="mainContent" class="main-content">
     <div class="view-container">
-      <div class="view prijava">
+      <div class="view racun-nov">
+        <header class="page-header racun-tabla">
+          <div class="racun-tabla-notranje">
+            <div class="racun-tabla-glavno">
+              <span class="page-eyebrow" id="nadnaslov">Račun</span>
+              <h1 id="naslov">Prijava</h1>
+              <p id="podnaslov" class="racun-tabla-pod">Nadaljuj s pripravo na maturo.</p>
 
-        <header class="page-header">
-          <span class="page-eyebrow">Račun</span>
-          <h1 id="naslov">Prijava</h1>
-          <p>Nerešene pole in zadnja rešena pola so na voljo vsem. Z naročnino odkleneš vse rešitve.</p>
-        </header>
+              <form id="obrazec" class="racun-tabla-obrazec" novalidate>
+                <div class="prijava-polja-vrsta" data-registracija hidden>
+                  <label class="prijava-polje">
+                    <span>Ime</span>
+                    <input name="ime" type="text" autocomplete="given-name" maxlength="100">
+                  </label>
+                  <label class="prijava-polje">
+                    <span>Priimek</span>
+                    <input name="priimek" type="text" autocomplete="family-name" maxlength="100">
+                  </label>
+                </div>
+                <label class="prijava-polje">
+                  <span>E-naslov</span>
+                  <input name="email" type="email" autocomplete="email" required maxlength="254" placeholder="ime@gmail.com">
+                </label>
+                <div class="racun-tabla-gesli">
+                  <label class="prijava-polje">
+                    <span>Geslo</span>
+                    <input name="geslo" type="password" autocomplete="current-password" required minlength="8" maxlength="200">
+                  </label>
+                  <label class="prijava-polje" data-registracija hidden>
+                    <span>Potrdi geslo</span>
+                    <input name="geslo2" type="password" autocomplete="new-password" maxlength="200">
+                  </label>
+                </div>
+                <ul id="pravila" class="prijava-pravila" data-registracija hidden aria-live="polite">
+                  <li data-pravilo="dolzina">Vsaj 8 znakov</li>
+                  <li data-pravilo="velika">Vsaj 1 velika tiskana črka</li>
+                  <li data-pravilo="stevilka">Vsaj 1 številka</li>
+                </ul>
+                <label class="prijava-polje" data-registracija hidden>
+                  <span>Starost <span class="prijava-neobvezno">(neobvezno)</span></span>
+                  <input name="starost" type="number" inputmode="numeric" min="10" max="120" placeholder="npr. 18">
+                </label>
+                <p id="sporocilo" class="prijava-sporocilo" role="alert"></p>
+                <div class="racun-tabla-gumbi">
+                  <button type="submit" id="potrdi" class="btn btn-primary">Prijava</button>
+                  <button type="button" id="ponovno" class="btn btn-secondary" hidden>Pošlji novo povezavo</button>
+                </div>
+                <p class="prijava-preklop">
+                  <span id="preklopBesedilo">Še nimaš računa?</span>
+                  <button type="button" id="preklop" class="header-link">Registriraj se</button>
+                </p>
+              </form>
 
-        <form id="obrazec" class="prijava-obrazec" novalidate>
-          <div class="prijava-polja-vrsta" data-registracija hidden>
-            <label class="prijava-polje">
-              <span>Ime</span>
-              <input name="ime" type="text" autocomplete="given-name" maxlength="100">
-            </label>
-            <label class="prijava-polje">
-              <span>Priimek</span>
-              <input name="priimek" type="text" autocomplete="family-name" maxlength="100">
-            </label>
+              <section id="poslano" class="racun-tabla-poslano" hidden aria-live="polite">
+                <p>Na <strong id="poslanoEmail"></strong> smo poslali povezavo. Klikni gumb <strong>Potrdi e-naslov</strong> v sporočilu in prijavljen(a) boš.</p>
+                <p class="prijava-pravila">Ni sporočila? Poglej v mapo z neželeno pošto ali promocije.</p>
+                <p id="poslanoSporocilo" class="prijava-sporocilo uspeh" role="status"></p>
+                <div class="racun-tabla-gumbi">
+                  <button type="button" id="poslanoPonovno" class="btn btn-secondary">Pošlji znova</button>
+                </div>
+              </section>
+            </div>
+
+            <aside class="racun-tabla-stran" aria-label="Kaj dobiš z računom">
+              <h2>Z računom</h2>
+              <div class="racun-tabla-tocka">
+                <span class="racun-tabla-ikona"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="4" width="18" height="17" rx="2"></rect><path d="M16 2v4M8 2v4M3 10h18"></path></svg></span>
+                <div><strong>Tedenska priprava</strong>Snov tega tedna in niz opravljenih tednov.</div>
+              </div>
+              <div class="racun-tabla-tocka">
+                <span class="racun-tabla-ikona"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 3v18h18"></path><path d="M7 14l4-4 3 3 5-6"></path></svg></span>
+                <div><strong>Moje naloge</strong>Vidiš, katere naloge ti še ne gredo.</div>
+              </div>
+              <div class="racun-tabla-tocka">
+                <span class="racun-tabla-ikona"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="4" y="11" width="16" height="10" rx="2"></rect><path d="M8 11V7a4 4 0 018 0v4"></path></svg></span>
+                <div><strong>Vse rešitve</strong>Nerešene pole in zadnja rešena pola so na voljo vsem. Z naročnino odkleneš vse rešitve.</div>
+              </div>
+            </aside>
           </div>
-          <label class="prijava-polje" data-registracija hidden>
-            <span>Starost <span class="prijava-neobvezno">(neobvezno)</span></span>
-            <input name="starost" type="number" inputmode="numeric" min="10" max="120">
-          </label>
-          <label class="prijava-polje">
-            <span>E-naslov</span>
-            <input name="email" type="email" autocomplete="email" required maxlength="254" placeholder="ime@gmail.com">
-          </label>
-          <label class="prijava-polje">
-            <span>Geslo</span>
-            <input name="geslo" type="password" autocomplete="current-password" required minlength="8" maxlength="200">
-          </label>
-          <label class="prijava-polje" data-registracija hidden>
-            <span>Potrdi geslo</span>
-            <input name="geslo2" type="password" autocomplete="new-password" maxlength="200">
-          </label>
-          <ul id="pravila" class="prijava-pravila" data-registracija hidden aria-live="polite">
-            <li data-pravilo="dolzina">Vsaj 8 znakov</li>
-            <li data-pravilo="velika">Vsaj 1 velika tiskana črka</li>
-            <li data-pravilo="stevilka">Vsaj 1 številka</li>
-          </ul>
-          <p id="sporocilo" class="prijava-sporocilo" role="alert"></p>
-          <button type="button" id="ponovno" class="btn btn-secondary" hidden>Pošlji novo povezavo</button>
-          <button type="submit" id="potrdi" class="btn btn-primary">Prijava</button>
-          <p class="prijava-preklop">
-            <span id="preklopBesedilo">Še nimaš računa?</span>
-            <button type="button" id="preklop" class="header-link">Registriraj se</button>
-          </p>
-        </form>
-
-        <section id="poslano" class="prijava-poslano" hidden aria-live="polite">
-          <span class="prijava-poslano-ikona">
-            <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-              <rect x="3" y="5" width="18" height="14" rx="2"></rect><path d="M3 7l9 6 9-6"></path>
-            </svg>
-          </span>
-          <h2>Preveri e-pošto</h2>
-          <p>Na <strong id="poslanoEmail"></strong> smo poslali povezavo. Klikni gumb <strong>Potrdi e-naslov</strong> v sporočilu in prijavljen(a) boš.</p>
-          <p class="prijava-pravila">Ni sporočila? Poglej v mapo z neželeno pošto ali promocije.</p>
-          <p id="poslanoSporocilo" class="prijava-sporocilo uspeh" role="status"></p>
-          <button type="button" id="poslanoPonovno" class="btn btn-secondary">Pošlji znova</button>
-        </section>
-
+        </header>
       </div>
     </div>
   </div>
@@ -101,6 +119,10 @@
 
       function nastaviNacin() {
         document.getElementById("naslov").textContent = registracija ? "Registracija" : "Prijava";
+        document.getElementById("nadnaslov").textContent = registracija ? "Nov račun" : "Račun";
+        document.getElementById("podnaslov").textContent = registracija
+          ? "Brezplačen račun shrani tvoj napredek pri nalogah in tedensko pripravo."
+          : "Nadaljuj s pripravo na maturo.";
         document.getElementById("potrdi").textContent = registracija ? "Registriraj se" : "Prijava";
         document.querySelectorAll("[data-registracija]").forEach((el) => (el.hidden = !registracija));
         form.geslo.autocomplete = registracija ? "new-password" : "current-password";
@@ -133,7 +155,9 @@
         document.getElementById("poslanoEmail").textContent = email;
         form.hidden = true;
         document.getElementById("poslano").hidden = false;
-        document.getElementById("naslov").textContent = "Skoraj končano";
+        document.getElementById("naslov").textContent = "Preveri e-pošto";
+        document.getElementById("nadnaslov").textContent = "Skoraj končano";
+        document.getElementById("podnaslov").hidden = true;
       }
 
       document.getElementById("poslanoPonovno").addEventListener("click", async (e) => {

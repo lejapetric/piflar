@@ -85,9 +85,27 @@
       (document.getElementById("tipSoleOpomba").hidden = form.tipSole.value !== "srednja_strokovna");
     form.querySelectorAll('[name="tipSole"]').forEach((r) => r.addEventListener("change", opomba));
     opomba();
-    form.ime.addEventListener("input", izrisiSliko);
-    form.priimek.addEventListener("input", izrisiSliko);
+    // Glava na tabli: ime in oznake (šola, letnik, matura) iz shranjenih podatkov
+    const RAVNI = { osnovna: "osnovna", visja: "višja" };
+    const izrisiGlavo = () => {
+      const ime = [form.ime.value.trim(), form.priimek.value.trim()].filter(Boolean).join(" ");
+      document.getElementById("profilIme").textContent = ime || "Uredi podatke";
+      const oznake = [
+        u.sola,
+        u.letnik && `${u.letnik}. letnik`,
+        u.letoMature && `Matura ${u.letoMature}`,
+        RAVNI[u.ravenMatematike] && `Matematika: ${RAVNI[u.ravenMatematike]}`,
+      ].filter(Boolean);
+      document.getElementById("profilOznake").replaceChildren(
+        ...oznake.map((o) => Object.assign(document.createElement("li"), { textContent: o }))
+      );
+    };
+
+    form.ime.addEventListener("input", () => (izrisiSliko(), izrisiGlavo()));
+    form.priimek.addEventListener("input", () => (izrisiSliko(), izrisiGlavo()));
     izrisiSliko();
+    izrisiGlavo();
+    document.getElementById("slikaGumbi").hidden = false;
     form.hidden = false;
 
     document.getElementById("slikaVnos").addEventListener("change", async (e) => {
@@ -125,6 +143,7 @@
       const telo = await res?.json().catch(() => null);
       if (!res?.ok) return sporoci(sporocilo, telo?.message || "Shranjevanje ni uspelo.");
       Object.assign(u, telo);
+      izrisiGlavo();
       obvestiGlavo(telo);
       sporoci(sporocilo, "Shranjeno.", true);
     });

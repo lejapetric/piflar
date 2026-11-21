@@ -3613,3 +3613,342 @@ html[data-matura="poklicna"] .matura-stikalo::before {
 @media (max-width: 380px) {
     .matura-stikalo--glava { display: none; }
 }
+
+/* ============================================================
+   35. RAČUN NA TABLI — prijava, registracija, uredi podatke
+   Obrazec je na tabli (.page-header), polja so čista, brez pisave na roko.
+   ============================================================ */
+.racun-nov {
+    max-width: 1060px;
+    margin: 0 auto;
+}
+
+.racun-nov .page-header.racun-tabla {
+    max-width: none;
+}
+
+html[data-videz="tabla"] .racun-nov .page-header.racun-tabla {
+    padding: 44px 52px 56px;
+    margin-bottom: 64px;
+}
+
+.racun-tabla h1 {
+    font-size: clamp(34px, 4.4vw, 44px);
+    line-height: 1.05;
+    margin: 6px 0 8px;
+}
+
+.racun-nov .page-header .racun-tabla-pod {
+    font-size: 17px;
+    margin: 0 0 30px;
+    max-width: 460px;
+}
+
+.racun-tabla-notranje {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 260px;
+    gap: 52px;
+}
+
+.racun-tabla-obrazec {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.racun-tabla-obrazec[hidden],
+.racun-tabla-poslano[hidden] {
+    display: none;
+}
+
+.racun-tabla-gesli {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 18px 22px;
+}
+
+.racun-tabla-gumbi {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-3);
+}
+
+.racun-nov .prijava-preklop {
+    text-align: left;
+    font-size: 15px;
+}
+
+.racun-tabla-poslano {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+    max-width: 480px;
+}
+
+.racun-nov .page-header .racun-tabla-poslano p {
+    font-size: 16px;
+}
+
+/* stranski seznam »Z računom« */
+.racun-tabla-stran {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+    border-left: 1.5px solid var(--border-color);
+    padding: 70px 0 0 32px;
+}
+
+.racun-nov .page-header .racun-tabla-stran h2 {
+    font: 700 12px/1 var(--font-body);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+.racun-tabla-tocka {
+    display: grid;
+    grid-template-columns: 34px 1fr;
+    gap: 12px;
+    font-size: 14.5px;
+    line-height: 1.55;
+    color: var(--text-secondary);
+}
+
+.racun-tabla-tocka strong {
+    display: block;
+    color: var(--text-primary);
+    font-size: 15px;
+}
+
+.racun-tabla-ikona {
+    width: 34px;
+    height: 34px;
+    border-radius: 10px;
+    display: grid;
+    place-items: center;
+    background: var(--primary-soft);
+    color: var(--primary);
+}
+
+/* polja: oznaka z velikimi črkami, vnos v okvirčku */
+.racun-nov .prijava-polje {
+    gap: 7px;
+    min-width: 0;
+}
+
+.racun-nov .prijava-polje > span:first-child {
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
+}
+
+.racun-nov .prijava-neobvezno {
+    letter-spacing: 0;
+    text-transform: none;
+    font-weight: 500;
+}
+
+.racun-nov .prijava-polje input,
+.racun-nov .prijava-polje select {
+    width: 100%;
+    font-size: 16px;
+    font-weight: 500;
+    padding: 12px 14px;
+    border: 1.5px solid var(--border-color);
+    border-radius: 10px;
+    background: color-mix(in srgb, var(--text-primary) 4%, transparent);
+}
+
+.racun-nov .prijava-polje input:focus,
+.racun-nov .prijava-polje select:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 4px var(--primary-soft);
+}
+
+.racun-nov .prijava-pravila {
+    margin-top: -4px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px 16px;
+}
+
+.racun-nov .prijava-pravila[hidden] {
+    display: none;
+}
+
+/* izbira (vrsta šole, raven): ločeni gumbi, izbrani je temen */
+.racun-nov .racun-izbira {
+    gap: var(--space-2);
+    padding: 0;
+    background: none;
+    border: 0;
+}
+
+.racun-nov .racun-izbira span {
+    padding: 9px 16px;
+    border: 1.5px solid var(--border-color);
+    border-radius: 999px;
+}
+
+.racun-nov .racun-izbira input:checked + span {
+    background: var(--text-primary);
+    border-color: var(--text-primary);
+    color: var(--bg-primary);
+}
+
+/* uredi podatke: glava na tabli */
+.racun-profil-glava {
+    display: flex;
+    gap: 26px;
+    align-items: center;
+}
+
+.racun-profil-glava h1 {
+    margin-bottom: 0;
+}
+
+.racun-profil-slika .avatar {
+    width: 92px;
+    height: 92px;
+    font-size: 32px;
+}
+
+.racun-oznake {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-top: 10px;
+}
+
+.racun-oznake:empty {
+    display: none;
+}
+
+.racun-oznake li {
+    font-size: 13.5px;
+    font-weight: 600;
+    padding: 6px 12px;
+    border-radius: 999px;
+    border: 1px solid var(--border-color);
+    color: var(--text-secondary);
+}
+
+.racun-profil-gumbi {
+    display: flex;
+    gap: 16px;
+    margin-top: 14px;
+}
+
+.racun-profil-gumbi[hidden] {
+    display: none;
+}
+
+.racun-povezava {
+    font: inherit;
+    font-size: 14.5px;
+    font-weight: 700;
+    color: var(--primary);
+    background: none;
+    border: 0;
+    padding: 0;
+    cursor: pointer;
+    text-decoration: underline;
+    text-underline-offset: 3px;
+}
+
+.racun-povezava--tiho {
+    color: var(--text-muted);
+}
+
+.racun-povezava[hidden] {
+    display: none;
+}
+
+.racun-povezava:focus-within {
+    outline: 2px solid var(--primary);
+    outline-offset: 2px;
+}
+
+/* uredi podatke: kartice pod tablo */
+.racun-kartice {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+}
+
+.racun-kartice[hidden] {
+    display: none;
+}
+
+.racun-kartice > * {
+    min-width: 0;
+}
+
+.racun-kartice .racun-kartica {
+    margin-bottom: 0;
+    border-radius: 14px;
+    padding: 26px 28px;
+}
+
+.racun-kartice .racun-kartica h2 {
+    font-family: var(--font-display);
+    font-size: 19px;
+}
+
+.racun-kartica--siroka {
+    grid-column: 1 / -1;
+}
+
+.racun-opomba {
+    font-size: 13.5px;
+    color: var(--text-muted);
+}
+
+.racun-matura {
+    display: grid;
+    grid-template-columns: minmax(0, 220px) 1fr;
+    gap: 22px;
+    align-items: start;
+}
+
+.racun-shrani {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-3);
+}
+
+@media (max-width: 820px) {
+    html[data-videz="tabla"] .racun-nov .page-header.racun-tabla {
+        padding: 28px 22px 46px;
+    }
+
+    .racun-tabla-notranje,
+    .racun-kartice,
+    .racun-matura {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .racun-tabla-notranje {
+        gap: 28px;
+    }
+
+    .racun-tabla-stran {
+        border-left: 0;
+        border-top: 1.5px solid var(--border-color);
+        padding: 22px 0 0;
+    }
+
+    .racun-profil-glava {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+
+    .racun-kartice .racun-kartica {
+        padding: 22px 18px;
+    }
+}
