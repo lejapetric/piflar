@@ -8,6 +8,7 @@ import ctrlProfil from "../controllers/profil.js";
 import ctrlPlacila from "../controllers/placila.js";
 import ctrlNapredek from "../controllers/napredek.js";
 import ctrlIskanje from "../controllers/iskanje.js";
+import ctrlUstni from "../controllers/ustni.js";
 import ctrlPriprava from "../controllers/priprava.js";
 import { naloziUporabnika, zahtevajPrijavo, zahtevajBazo } from "../middleware/uporabnik.js";
 
@@ -45,6 +46,11 @@ router.get("/naloge/:id/postopek", ctrlNaloge.nalogaPostopek);
 // NAPREDEK (rešene naloge po predmetih in snoveh)
 router.get("/napredek", zahtevajPrijavo, ctrlNapredek.napredekList);
 
+// USTNI DEL MATURE (vprašanja po snoveh in samoocena prijavljenega)
+router.get("/ustni", ctrlUstni.ustniList);
+router.get("/ustni/stevilo", ctrlUstni.ustniStevilo);
+router.get("/ustni/napredek", zahtevajPrijavo, ctrlUstni.ustniNapredek);
+router.post("/ustni/:id/ocena", zahtevajBazo, zahtevajPrijavo, ctrlUstni.ustniOcena);
 // TEDENSKA PRIPRAVA NA MATURO (načrt snovi po tednih, predelanost razlag)
 router.get("/priprava", zahtevajPrijavo, ctrlPriprava.pripravaGet);
 router.put("/priprava", zahtevajPrijavo, ctrlPriprava.pripravaPut);
