@@ -3848,3 +3848,62 @@ details.matura-pola[open] .matura-pola-puscica {
 .zv-tabela th { background: var(--bg-soft, rgba(0,0,0,.04)); font-weight: 600; }
 .zv-tabela td:last-child { text-align: left; }
 .zv-tabela mjx-container { max-width: none !important; overflow: visible !important; }
+
+/* ============================================================
+   PISNE NALOGE NA MATURI (slovenščina, angleščina):
+   kontrolni seznam, vodnik, zgledno besedilo, razlaga »Zakaj je tako«
+   ============================================================ */
+.pis-seznam,
+.pis-vodnik,
+.pis-primer,
+.mn-zakaj {
+    margin: 14px 0;
+    padding: 12px 16px;
+    border: 1px solid color-mix(in srgb, currentColor 20%, transparent);
+    border-radius: 8px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    line-height: 1.6;
+    color: var(--text, inherit);
+}
+.pis-seznam h5,
+.pis-vodnik h5,
+.pis-primer h5,
+.mn-zakaj h5 { margin: 4px 0 6px; font-size: 1rem; }
+.pis-seznam p,
+.mn-zakaj p { margin: 0 0 8px; }
+.pis-seznam ol,
+.pis-vodnik ul,
+.mn-zakaj ul { margin: 0 0 8px; padding-left: 1.4rem; }
+.pis-seznam li,
+.pis-vodnik li { margin: 0 0 4px; }
+.pis-seznam li::marker { font-weight: 700; }
+.pis-vodnik > summary { cursor: pointer; font-weight: 700; }
+.pis-vodnik[open] > summary { margin-bottom: 6px; }
+.pis-podnaslov { margin: 18px 0 4px; font-family: Arial, Helvetica, sans-serif; font-size: 1rem; }
+.mn-zakaj { border-left: 4px solid var(--crnilo, #1D3C9E); }
+
+/* Zgledno besedilo: kot čistopis na listu */
+.pis-primer {
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 16px;
+    line-height: 1.7;
+    background: color-mix(in srgb, currentColor 3%, transparent);
+}
+.pis-primer h5 { font-family: Arial, Helvetica, sans-serif; }
+.pis-primer p { margin: 0 0 10px; text-align: justify; hyphens: auto; }
+.pis-primer-naslov { margin: 6px 0 10px; font-size: 1.05rem; text-align: center; text-transform: none; }
+.pis-primer-glava { margin: 0 0 14px; }
+.pis-primer-konec { margin: 10px 0 8px; }
+.pis-primer-opomba {
+    margin-top: 10px !important;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 13px;
+    font-style: italic;
+    color: var(--kom, #7A7F87);
+    text-align: left !important;
+}
+@media print {
+    .pis-vodnik:not([open]) { display: none; }
+    .pis-seznam, .pis-vodnik, .pis-primer, .mn-zakaj { break-inside: auto; }
+}

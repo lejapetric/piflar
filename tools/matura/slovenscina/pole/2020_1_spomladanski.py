@@ -107,7 +107,7 @@ POLA2 = [
     N(["premene", "soglasniki", "glasovi"],
       "V oglate oklepaje napišite izgovor podčrtanih glasov.\n\n"
       "zgle__d__ [  ]    d__r__senje [  ]    poma__nj__kanja [  ]\nra__v__nati [  ]    o__d__ podjetij [  ]    __z__ahtevati [  ]",
-      [P(3, "", [("!zgled [t]; drsenje [ər]; pomanjkanja [jn]; ravnati [u̯]; od podjetij [t]; zahtevati [s]", "Vsak pravilni izgovor ½ točke.")])]),
+      [P(3, "", [("!zgled [t]; drsenje [ər]; pomanjkanja [jn]; ravnati [u̯]; od podjetij [t]; zahtevati [z]", "Pred samoglasnikom z ostane zveneč. Vsak pravilni izgovor ½ točke.")])]),
     N(["nepregibne", "besedne_vrste"],
       "Iz povedi izpišite po en členek, veznik in predlog.\n\nSeveda ne trdim, da je vse v rokah posameznika.",
       [P(3, "", [("!členek: seveda (ne); veznik: da; predlog: v", "Vsak pravilni odgovor 1 točka.")])]),

@@ -402,7 +402,7 @@ Write a report of 150–180 words for the conference organisers, in which you:""
         LIT("Discuss the importance of home and belonging in Nick Hornby's About a Boy and Claire Keegan's Foster.", "Nick Hornby: About a Boy · Claire Keegan: Foster", "250–300", [
             "## Načrt eseja (primerjava dveh del)",
             ("Uvod: teza – both works show that a home is created by care and attention, not by a house or by blood ties.", "Takoj povej, kaj boš dokazoval. Brez življenjepisa avtorjev in obnove zgodbe."),
-            ("Jedro 1 – About a Boy: Marcus feels out of place at home and at school; Will's flat is stylish but empty. Both find belonging in an unusual 'family' at the end.", "Vsako trditev podpri s konkretnim prizorom (Christmas dinner, the school concert)."),
+            ("Jedro 1 – About a Boy: Marcus feels out of place at home and at school; Will's flat is stylish but empty. Both find belonging in an unusual 'family' at the end.", "Vsako trditev podpri s konkretnim prizorom (the afternoons watching Countdown at Will's flat, the trip to Cambridge)."),
             ("Jedro 2 – Foster: the girl experiences neglect in her crowded family home and discovers warmth, routine and attention with the Kinsellas.", "Navedi podrobnosti: washing her, the well, Kinsella's walks and the silence between them."),
             ("Jedro 3 – primerjava: in both works, the child teaches the adult something; the ending of Foster is uncertain, while About a Boy ends with a wider, hopeful network of people.", "Primerjaj neposredno (Whereas …, Similarly …). To je jedro naloge, ne dve ločeni analizi."),
             ("Sklep: home is where one is seen and valued.", "Sklep se vrne k tezi; ni novih podatkov."),
