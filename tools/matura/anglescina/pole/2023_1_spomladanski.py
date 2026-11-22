@@ -195,7 +195,7 @@ Over the next fifty years, she _4_ (VISIT) Hawaii, Japan, China, Korea, Persia a
 
 Isabella wrote long letters to her sister Henrietta, who _7_ (LIVE) quietly in Scotland. These letters later _8_ (PUBLISH) as books, and they made her famous. Readers loved her honest, funny descriptions, and many of them _9_ (NEVER / READ) anything like it before.
 
-Not everyone approved. Some critics complained that a lady should not _10_ (WEAR) trousers and ride like a man. Isabella was so angry about one newspaper report that she _11_ (THREATEN) to take the editor to court.
+Not everyone approved. Some critics complained that a lady should not _10_ (WEAR) trousers and ride like a man. Isabella was so angry about one newspaper report that she _11_ (COMPLAIN) to the editor.
 
 In 1892 she _12_ (BECOME) the first woman to be elected a member of the Royal Geographical Society. By then she _13_ (TRAVEL) for almost forty years. Even in her seventies she was still planning new trips; shortly before her death in 1904, she _14_ (PACK) her bags for another journey to China.
 
@@ -213,7 +213,7 @@ Today Isabella Bird is remembered as one of the great travel writers. If she wer
             ("were published", "Pisma so izdali drugi: trpnik v preteklosti, množina (These letters) → were published."),
             ("had never read", "Pred branjem njenih knjig (dejanje pred drugim preteklim dejanjem + before): past perfect."),
             ("wear", "Za modalnim glagolom should (not) stoji goli nedoločnik."),
-            ("threatened", "Zaključeno dejanje v preteklosti: past simple. Pozor na pravopis: threaten → threatened."),
+            ("complained", "Zaključeno dejanje v preteklosti: past simple pravilnega glagola complain."),
             ("became", "Dogodek v točno določenem letu (In 1892): past simple nepravilnega glagola become."),
             ("had been travelling / had travelled", "»By then … for almost forty years« – trajanje do točke v preteklosti: past perfect continuous (ali past perfect)."),
             ("was packing", "Dejanje v teku tik pred drugim dogodkom (shortly before her death): past continuous."),

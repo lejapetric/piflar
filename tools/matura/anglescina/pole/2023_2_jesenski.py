@@ -239,7 +239,7 @@ Write an e-mail of 120–150 words to Rebecca Smith, in which you:""", [
 VR = {
     1: [
         SA("The ghost ship", """# The Ghost Ship
-On 4 December 1872, the crew of the British ship Dei Gratia noticed a vessel drifting strangely in the Atlantic Ocean, about six hundred kilometres east of the Azores. Her sails were partly torn, and she was moving in a zigzag, as if nobody were steering. Captain David Morehouse recognised her at once: she was the Mary Celeste, an American cargo ship that had left New York a month earlier, a few days before his own.
+On 4 December 1872, the crew of the British ship Dei Gratia noticed a vessel drifting strangely in the Atlantic Ocean, about seven hundred kilometres east of the Azores. Her sails were partly torn, and she was moving in a zigzag, as if nobody were steering. Captain David Morehouse recognised her at once: she was the Mary Celeste, an American cargo ship that had left New York about a week before his own ship.
 
 Morehouse sent three men across in a small boat. What they found has fascinated people ever since. There was nobody on board. The ship was in reasonably good condition, with enough food and water for six months. The cargo – 1,701 barrels of industrial alcohol – was almost untouched. The crew's personal belongings, including their pipes and oilskin coats, were still in their cabins. The only lifeboat, however, was missing, and the ship's last log entry, made nine days earlier, recorded nothing unusual.
 
@@ -255,7 +255,7 @@ Nobody will ever know for certain. The Mary Celeste herself had an unlucky caree
 
 (Vadbeno besedilo Učilnica.com)""", [
             ("What suggested to the Dei Gratia's crew that the ship was not being controlled?", "It was moving in a zigzag.", "»she was moving in a zigzag, as if nobody were steering«. Strgana jadra sama po sebi ne pomenijo, da ladje nihče ne krmari."),
-            ("Why did Captain Morehouse recognise the ship?", "She had left New York shortly before his ship. / He had seen her in New York.", "Ladja je odplula iz New Yorka nekaj dni pred njegovo; zato jo je poznal."),
+            ("Why did Captain Morehouse recognise the ship?", "She had left New York shortly before his ship. / He had seen her in New York.", "Ladja je odplula iz New Yorka približno teden dni pred njegovo; zato jo je poznal."),
             ("How long could the supplies on board have lasted?", "(For) six months.", "»enough food and water for six months«."),
             ("What showed that the crew had left in a hurry?", "Their personal belongings were still there. / They left their pipes and coats.", "Mornarji ne bi pustili pip in oljnatih plaščev, če bi imeli čas; to je implicitni sklep iz besedila."),
             ("What was missing from the ship?", "The (only) lifeboat.", "»The only lifeboat, however, was missing«."),
