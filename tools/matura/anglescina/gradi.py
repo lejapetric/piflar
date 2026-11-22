@@ -258,10 +258,12 @@ def primer_html(besedilo, najmanj, najvec):
     kosi = [k.strip("\n") for k in re.split(r"\n@@\n", besedilo)]
     if len(kosi) == 1:
         glava, telo, konec = "", kosi[0], ""
+    elif len(kosi) == 2:
+        (glava, telo), konec = kosi, ""
     elif len(kosi) == 3:
         glava, telo, konec = kosi
     else:
-        raise ValueError(f"primer ima {len(kosi)} delov (pričakovana 1 ali 3)")
+        raise ValueError(f"primer ima {len(kosi)} delov (pričakovani 1, 2 ali 3)")
     naslov = ""
     if telo.startswith("# "):
         naslov, telo = telo.split("\n", 1)
