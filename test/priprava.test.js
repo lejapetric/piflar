@@ -5,8 +5,9 @@ import assert from "node:assert/strict";
 import {
   zacetekTedna, mejeTedna, pristejDni, zgradbaIzHtml, zgradbaStrani, najmanjCasa, sklopPredelan,
   povzetekBranja, pristejBranje, izmenicno, priporocenTempo, tedniDoMature, casOpravljene, niz,
+  maturaZa, letoMature, danesLj,
 } from "../api/utils/priprava.js";
-import { snovi } from "../api/data/index.js";
+import { snovi, koledarMature } from "../api/data/index.js";
 
 test("teden se začne v ponedeljek ob polnoči po času v Ljubljani", () => {
   assert.equal(zacetekTedna(new Date("2026-11-20T14:00:00Z")), "2026-11-16"); // petek
@@ -118,4 +119,39 @@ test("niz šteje zaporedne opravljene tedne", () => {
   assert.equal(niz([...tedni.slice(0, 3), t("2026-11-16", true)], "2026-11-16"), 4);
   assert.equal(niz([t("2026-10-26", true), t("2026-11-09", true)], "2026-11-16"), 1); // vmesni teden manjka
   assert.equal(niz([], "2026-11-16"), 0);
+});
+
+test("koledar mature: datumi izbranih predmetov iz koledarja RIC", () => {
+  const m = maturaZa(koledarMature, { predmeti: ["matematika", "fizika"], leto: 2027 });
+  assert.equal(m.vrsta, "splosna");
+  assert.equal(m.zacetek, "2027-05-04"); // esej
+  assert.deepEqual(m.izpiti.map((i) => [i.predmet, i.datum]), [["matematika", "2027-06-05"], ["fizika", "2027-06-16"]]);
+  assert.ok(m.vir.startsWith("https://www.ric.si/"));
+  assert.ok(m.mejniki.some((x) => x.vrsta === "rok" && x.datum === "2027-03-30"));
+
+  const jesen = maturaZa(koledarMature, { predmeti: ["matematika", "kemija"], leto: 2027, rok: "jesenski" });
+  assert.equal(jesen.izpiti.find((i) => i.predmet === "matematika").datum, "2027-08-24");
+  assert.deepEqual(jesen.izpiti.find((i) => i.predmet === "kemija").do, "2027-08-31"); // po razporedu šole
+
+  const pm = maturaZa(koledarMature, { predmeti: ["poklicna_matematika"], leto: 2027 });
+  assert.equal(pm.vrsta, "poklicna");
+  assert.equal(pm.izpiti[0].datum, "2027-06-05");
+
+  assert.equal(maturaZa(koledarMature, { predmeti: ["matematika"], leto: 2031 }), null);
+});
+
+test("koledar mature: vsi datumi so veljavni in vsi predmeti splošne mature imajo spomladanski izpit", () => {
+  const datumi = JSON.stringify(koledarMature).match(/\d{4}-\d{2}-\d{2}/g);
+  for (const d of datumi) assert.ok(!Number.isNaN(Date.parse(d)), d);
+  const izpiti = koledarMature[2027].splosna.spomladanski.izpiti;
+  for (const p of ["matematika", "fizika", "kemija", "biologija", "informatika", "slovenscina", "anglescina", "zgodovina", "geografija"])
+    assert.ok(izpiti[p], p);
+});
+
+test("leto mature: iz profila ali konec tekočega šolskega leta", () => {
+  assert.equal(letoMature({ letoMature: 2028 }), 2028);
+  assert.equal(letoMature({}, new Date("2026-11-22T12:00:00Z")), 2027);
+  assert.equal(letoMature({}, new Date("2027-03-01T12:00:00Z")), 2027);
+  assert.equal(letoMature({}, new Date("2027-07-02T12:00:00Z")), 2028);
+  assert.equal(danesLj(new Date("2026-11-22T23:30:00Z")), "2026-11-23");
 });

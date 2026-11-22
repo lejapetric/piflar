@@ -1,0 +1,80 @@
+{
+  "_opis": "Uradni datumi mature po letih. Vir: Državni izpitni center (RIC), koledar splošne in poklicne mature. Ob novem šolskem letu dodaj naslednje leto (tools/ ni potreben, podatke prepiši s strani RIC).",
+  "2027": {
+    "splosna": {
+      "vir": "https://www.ric.si/splosna-matura/koledar-splosne-mature/",
+      "spomladanski": {
+        "prijava": "2027-03-30",
+        "zacetek": "2027-05-04",
+        "zacetekOpis": "Esej (slovenščina, izpitna pola 1)",
+        "izpiti": {
+          "slovenscina": [
+            { "datum": "2027-05-04", "opis": "Slovenščina, esej" },
+            { "datum": "2027-05-31", "opis": "Slovenščina, izpitna pola 2" }
+          ],
+          "anglescina": "2027-05-29",
+          "psihologija": "2027-06-01",
+          "sociologija": "2027-06-02",
+          "geografija": "2027-06-03",
+          "filozofija": "2027-06-04",
+          "matematika": "2027-06-05",
+          "ekonomija": "2027-06-08",
+          "glasba": [
+            { "datum": "2027-05-10", "opis": "Glasba, glasbeni stavek" },
+            { "datum": "2027-06-08", "opis": "Glasba" }
+          ],
+          "umetnostna_zgodovina": "2027-06-09",
+          "zgodovina": "2027-06-10",
+          "nemscina": "2027-06-11",
+          "francoscina": "2027-06-11",
+          "biologija": "2027-06-14",
+          "informatika": "2027-06-15",
+          "italijanscina": "2027-06-15",
+          "fizika": "2027-06-16",
+          "spanscina": "2027-06-17",
+          "kemija": "2027-06-18"
+        },
+        "ustni": { "od": "2027-06-09", "do": "2027-06-23" },
+        "rezultati": "2027-07-13"
+      },
+      "jesenski": {
+        "prijava": "2027-07-14",
+        "zacetek": "2027-08-21",
+        "zacetekOpis": "Začetek jesenskega roka",
+        "izpiti": {
+          "slovenscina": [{ "datum": "2027-08-23", "opis": "Slovenščina, esej in izpitna pola 2" }],
+          "matematika": "2027-08-24",
+          "glasba": [{ "datum": "2027-08-26", "opis": "Glasba, glasbeni stavek" }]
+        },
+        "ostali": { "od": "2027-08-21", "do": "2027-08-31", "opis": "po razporedu, ki ga dobiš na šoli" },
+        "ustni": { "od": "2027-08-21", "do": "2027-09-02" },
+        "rezultati": "2027-09-16"
+      }
+    },
+    "poklicna": {
+      "vir": "https://www.ric.si/poklicna-matura/koledar-poklicne-mature/",
+      "spomladanski": {
+        "zacetek": "2027-05-29",
+        "zacetekOpis": "Začetek poklicne mature (angleščina)",
+        "izpiti": {
+          "poklicna_slovenscina": "2027-05-31",
+          "poklicna_matematika": "2027-06-05",
+          "poklicna_kemija": [{ "datum": "2027-06-07", "opis": "Drugi predmet (kemija)" }]
+        },
+        "ustni": { "od": "2027-06-09", "do": "2027-06-23" },
+        "rezultati": "2027-07-08"
+      },
+      "jesenski": {
+        "zacetek": "2027-08-21",
+        "zacetekOpis": "Začetek jesenskega roka",
+        "izpiti": {
+          "poklicna_slovenscina": "2027-08-23",
+          "poklicna_matematika": "2027-08-24",
+          "poklicna_kemija": [{ "datum": "2027-08-26", "opis": "Drugi predmet (kemija)" }]
+        },
+        "ustni": { "od": "2027-08-21", "do": "2027-09-02" },
+        "rezultati": "2027-09-08"
+      }
+    }
+  }
+}

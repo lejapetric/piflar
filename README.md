@@ -40,7 +40,8 @@ public/
   index.html               naslovnica
   404.html                 stran ne obstaja / še v pripravi
   iskanje.html             vsi zadetki iskanja (components/iskanje.js)
-  priprava.html            Tedenska priprava: snovi tega tedna, niz opravljenih tednov (components/priprava.js)
+  priprava.html            Sprotno učenje: snovi tega tedna, stenski koledar do mature, niz opravljenih tednov
+                           (components/priprava.js)
   napredek.html            Moje naloge: uspešne in neuspešne naloge po predmetih in snoveh
                            (components/napredek.js); povezave odprejo naloge s ?stanje=neuspesno|uspesno
   components/              header, sidebar, footer + components.js (naloži jih na vsaki strani)
@@ -95,10 +96,10 @@ Strani besedil imajo sklope po glavnih problemih iz kataloga, strani tem po vseb
 Sociologija ima vseh 14 poglavij predmetnega izpitnega kataloga RIC (4.1 do 4.14), vsako na svoji strani.
 Razdelki s posebnim znanjem za seminarsko nalogo imajo `sklop--visja` in oznako `badge-vr` z besedilom »Seminarska«.
 
-## Tedenska priprava
+## Sprotno učenje (tedenska priprava)
 
-Prijavljeni dijak na strani `priprava.html` (meni računa → Tedenska priprava) izbere predmete, datum mature
-in tempo (1–5 snovi na teden; stran priporoči tempo, pri katerem je vsa snov predelana 3 tedne pred maturo).
+Prijavljeni dijak na strani `priprava.html` (meni računa → Sprotno učenje) izbere predmete, rok mature
+(spomladanski ali jesenski) in tempo (1–5 snovi na teden; stran priporoči tempo, pri katerem je vsa snov predelana 3 tedne pred maturo).
 Vsak teden (ponedeljek–nedelja po času v Ljubljani) dobi naslednje neopravljene snovi izbranih predmetov,
 izmenično po predmetih in v vrstnem redu kataloga; neopravljena snov se prenese v naslednji teden, snov lahko zamenja.
 
@@ -114,6 +115,13 @@ Snov je opravljena, ko:
 
 Teden je opravljen, ko so do nedelje opravljene vse njegove snovi; zaporedni opravljeni tedni so niz.
 Podatki: `api/models/priprava.js` (nastavitve in snovi po tednih), `api/models/branje.js` (čas po sklopih).
+
+Stran pokaže odštevanje do mature in stenski koledar (mesec za mesecem) z opravljenimi tedni, tedni za
+ponavljanje in datumi izpitov izbranih predmetov. Uradni datumi so v `api/data/koledar-mature.json`, prepisani s
+[koledarja splošne mature](https://www.ric.si/splosna-matura/koledar-splosne-mature/) in
+[koledarja poklicne mature](https://www.ric.si/poklicna-matura/koledar-poklicne-mature/) Državnega izpitnega
+centra (RIC). Leto mature je iz profila (`letoMature`), sicer konec tekočega šolskega leta. **Vsako leto dodaj
+datume za naslednje leto**; dokler jih ni, dijak v nastavitvah vpiše datum mature sam.
 
 ## Temni način in iskanje
 

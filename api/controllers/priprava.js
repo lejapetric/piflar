@@ -4,7 +4,7 @@
 // sklopov, kar meri stran z razlago (components/branje.js), in (2) reši cilj nalog iz te snovi.
 // Teden je opravljen, ko so do nedelje opravljene vse njegove snovi; zaporedni opravljeni
 // tedni so niz.
-import { snovi, naloge, matura } from "../data/index.js";
+import { snovi, naloge, matura, koledarMature } from "../data/index.js";
 import Priprava from "../models/priprava.js";
 import Branje from "../models/branje.js";
 import Napredek from "../models/napredek.js";
@@ -12,6 +12,7 @@ import { opis } from "./napredek.js";
 import {
   CILJ_NALOG, NAJVEC_TEMPO, imaRazlago, zgradbaStrani, povzetekBranja, pristejBranje,
   zacetekTedna, mejeTedna, pristejDni, izmenicno, tedniDoMature, priporocenTempo, casOpravljene, niz,
+  ROKI, letoMature, maturaZa, polnocLj, danesLj,
 } from "../utils/priprava.js";
 
 // Snovi, ki imajo stran z razlago (samo te lahko dijak predela)
@@ -122,13 +123,20 @@ async function odgovor(req, res, priprava, stanje) {
   const trenutni = zacetekTedna(zdaj);
   const izbrani = snoviZRazlago.filter((s) => priprava.predmeti.includes(s.predmet));
   const preostale = izbrani.filter((s) => !stanje(s).opravljenaOb).length;
-  const tedni = tedniDoMature(trenutni, priprava.datumMature);
+  const leto = letoMature(req.uporabnik, zdaj);
+  const maturaUradno = maturaZa(koledarMature, { predmeti: priprava.predmeti, leto, rok: priprava.rok ?? "spomladanski" });
+  // Uradni datum (RIC) ima prednost; ročni datum le, če za to leto podatkov še ni
+  const tedni = tedniDoMature(trenutni, maturaUradno ? polnocLj(maturaUradno.zacetek) : priprava.datumMature);
   const teden = priprava.tedni.find((t) => t.zacetek === trenutni);
   const meje = mejeTedna(trenutni);
   const vsiTedni = priprava.tedni.map((t) => ({ zacetek: t.zacetek, opravljen: tedenOpravljen(t, stanje) }));
 
   res.status(200).json({
-    nastavitve: { predmeti: priprava.predmeti, tempo: priprava.tempo, datumMature: priprava.datumMature ?? null },
+    nastavitve: { predmeti: priprava.predmeti, tempo: priprava.tempo, rok: priprava.rok ?? "spomladanski", datumMature: priprava.datumMature ?? null },
+    danes: danesLj(zdaj),
+    leto,
+    matura: maturaUradno,
+    zacetekNacrta: priprava.tedni.map((t) => t.zacetek).sort()[0] ?? trenutni,
     vsiPredmeti: PREDMETI,
     teden: {
       zacetek: trenutni,
@@ -163,7 +171,9 @@ const pripravaGet = async (req, res) => {
     return res.status(200).json({
       nastavitve: null,
       predmeti: PREDMETI,
-      privzeto: { datumMature: privzetDatumMature(req.uporabnik), predmeti: ["matematika"] },
+      privzeto: { datumMature: privzetDatumMature(req.uporabnik), predmeti: ["matematika"], rok: "spomladanski" },
+      leto: letoMature(req.uporabnik),
+      imaKoledar: Boolean(koledarMature[letoMature(req.uporabnik)]),
     });
   }
   const stanje = await stanjeSnovi(req.uporabnik);
@@ -177,20 +187,24 @@ const pripravaGet = async (req, res) => {
 
 const jeDatum = (v) => typeof v === "string" && /^\d{4}-\d{2}-\d{2}$/.test(v) && !Number.isNaN(Date.parse(v));
 
-// PUT /api/priprava { predmeti: [..], tempo: 1–5, datumMature: "YYYY-MM-DD" }
+// PUT /api/priprava { predmeti: [..], tempo: 1–5, rok: "spomladanski" | "jesenski", datumMature: "YYYY-MM-DD" }
+// datumMature je potreben le, če za leto mature še ni uradnega koledarja (data/koledar-mature.json)
 const pripravaPut = async (req, res) => {
-  const { predmeti, tempo, datumMature } = req.body ?? {};
+  const { predmeti, tempo, datumMature, rok } = req.body ?? {};
   if (!Array.isArray(predmeti) || !predmeti.length || predmeti.some((p) => !PREDMETI.includes(p)))
     return res.status(400).json({ message: "Izberi vsaj en predmet." });
   if (!Number.isInteger(tempo) || tempo < 1 || tempo > NAJVEC_TEMPO)
     return res.status(400).json({ message: `Tempo je od 1 do ${NAJVEC_TEMPO} snovi na teden.` });
   if (datumMature != null && datumMature !== "" && !jeDatum(datumMature))
     return res.status(400).json({ message: "Datum mature ni veljaven." });
+  if (rok != null && !ROKI.includes(rok))
+    return res.status(400).json({ message: "Rok mature je spomladanski ali jesenski." });
 
   const priprava = (await Priprava.findOne({ uporabnik: req.uporabnik._id })) ?? new Priprava({ uporabnik: req.uporabnik._id });
   priprava.predmeti = [...new Set(predmeti)];
   priprava.tempo = tempo;
-  priprava.datumMature = datumMature ? new Date(`${datumMature}T00:00:00Z`) : undefined;
+  if (rok) priprava.rok = rok;
+  if (datumMature !== undefined) priprava.datumMature = datumMature ? new Date(`${datumMature}T00:00:00Z`) : undefined;
 
   // Ta teden sestavi znova: snovi, ki jih je ta teden že opravil ali začel, ostanejo
   const stanje = await stanjeSnovi(req.uporabnik);

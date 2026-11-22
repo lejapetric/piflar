@@ -292,7 +292,7 @@ function izrisiUporabnika(el, u) {
   const seznam = document.createElement("nav");
   seznam.className = "uporabnik-meni-seznam";
   seznam.innerHTML = `
-    <a href="/priprava.html" class="uporabnik-meni-vrstica" role="menuitem">${ikona("priprava")}Tedenska priprava</a>
+    <a href="/priprava.html" class="uporabnik-meni-vrstica" role="menuitem">${ikona("priprava")}Sprotno učenje</a>
     <a href="/napredek.html" class="uporabnik-meni-vrstica" role="menuitem">${ikona("naloge")}Moje naloge</a>
     <a href="/profil.html" class="uporabnik-meni-vrstica" role="menuitem">${ikona("profil")}Uredi podatke</a>
     <a href="/nastavitve.html" class="uporabnik-meni-vrstica" role="menuitem">${ikona("nastavitve")}Nastavitve</a>

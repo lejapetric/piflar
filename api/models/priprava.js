@@ -22,7 +22,8 @@ const pripravaSchema = new mongoose.Schema(
     uporabnik: { type: mongoose.Schema.Types.ObjectId, ref: "Uporabnik", required: true, unique: true },
     predmeti: { type: [String], default: [] },
     tempo: { type: Number, min: 1, max: 5, default: 1 }, // snovi na teden
-    datumMature: Date,
+    rok: { type: String, enum: ["spomladanski", "jesenski"], default: "spomladanski" }, // rok mature (datumi iz koledarja RIC)
+    datumMature: Date, // le, če za leto mature še ni uradnega koledarja
     tedni: { type: [tedenSchema], default: [] },
   },
   { timestamps: true }
