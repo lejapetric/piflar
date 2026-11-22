@@ -71,6 +71,31 @@ REPORT = [
     ]),
 ]
 
+ARTICLE = [
+    ("Članek (article): zgradba", [
+        "**Naslov**: kratek in zanimiv; če navodilo ponuja naslove (headings), izberi enega in ga prepiši natančno.",
+        "**Uvod**: pritegni bralca (vprašanje, presenetljiv podatek, kratka zgodba) in v eni povedi povej, o čem bo članek.",
+        "**Jedro**: vsaka iztočnica v svojem odstavku; vsak odstavek začni s temeljno povedjo in jo podpri s primerom ali podatkom.",
+        "**Sklep**: povzemi svoje stališče ali nagovori bralce (So next time you …, why not …?). Nagovora »Dear …« in pozdrava ni.",
+    ]),
+    ("Slog članka", [
+        "Članek je namenjen **širši javnosti** (bralcem revije, šolskega časopisa, spletne strani), zato je slog **polformalen**: živahen, a ne pogovoren.",
+        "Uporabi **retorična vprašanja** (Have you ever wondered …?), **neposreden nagovor** bralca (you) in konkretne primere iz izkušenj.",
+        "Pri članku z mnenjem (opinion article) jasno povej svoje stališče in ga utemelji, upoštevaj tudi nasprotno mnenje.",
+        "Tudi v polformalnem slogu se izogibaj slengu (gonna, stuff, super cool) in pretiranim klicajem.",
+    ]),
+    ("Uporabne zveze", [
+        "Have you ever thought about …? · Imagine a school where … · According to a recent survey, …",
+        "On the one hand, … On the other hand, … · What is more, … · Not only … but also …",
+        "All in all, … · It is high time we … · The choice is yours.",
+    ]),
+    ("Pogoste napake", [
+        "Članek napisan kot pismo (Dear readers, … Yours sincerely).",
+        "Manjka naslov ali je naslov drugačen od ponujenega.",
+        "Iztočnice so le naštete, niso razvite s primeri in razlogi.",
+    ]),
+]
+
 ESEJ = [
     ("Argumentativni esej: zgradba", [
         "**Uvod** (2–3 povedi): uvedi temo s splošno mislijo, trditev iz naslova povej **s svojimi besedami** in jasno zavzemi stališče (I largely agree that … / I am not convinced that …).",
@@ -118,7 +143,7 @@ LIT = [
     ]),
 ]
 
-VODNIKI_PISANJE = {"E-mail": EMAIL, "Report": REPORT, "esej": ESEJ, "lit": LIT}
+VODNIKI_PISANJE = {"E-mail": EMAIL, "Report": REPORT, "Article": ARTICLE, "esej": ESEJ, "lit": LIT}
 
 # ---------------------------------------------------------------- strategije za naloge pol 1 in 2
 TIPI = {
