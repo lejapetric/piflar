@@ -50,6 +50,12 @@ export function polnocLj(dan) {
   return new Date(t);
 }
 
+// Današnji koledarski dan v Ljubljani kot "YYYY-MM-DD"
+export function danesLj(datum = new Date()) {
+  const p = deliLj(datum);
+  return vNiz(p.y, p.m, p.d);
+}
+
 // Prišteje dneve koledarskemu dnevu "YYYY-MM-DD"
 export function pristejDni(dan, n) {
   const [y, m, d] = dan.split("-").map(Number);
@@ -225,4 +231,40 @@ export function niz(tedni, trenutni) {
   let n = opravljeni.has(trenutni) ? 1 : 0;
   for (let t = pristejDni(trenutni, -7); opravljeni.has(t); t = pristejDni(t, -7)) n++;
   return n;
+}
+
+// ------------------------------------------------------------
+// Koledar mature (uradni datumi RIC iz data/koledar-mature.json)
+// ------------------------------------------------------------
+export const ROKI = ["spomladanski", "jesenski"];
+
+// Leto mature: iz profila, sicer konec tega šolskega leta (od julija naprej naslednje leto)
+export function letoMature(uporabnik, zdaj = new Date()) {
+  if (uporabnik?.letoMature) return uporabnik.letoMature;
+  const { y, m } = deliLj(zdaj);
+  return m >= 7 ? y + 1 : y;
+}
+
+// Datumi mature za izbrane predmete: { vrsta, leto, rok, vir, zacetek, izpiti, mejniki } ali null,
+// če za to leto in rok podatkov še ni. Poklicna matura, če so vsi predmeti poklicni.
+export function maturaZa(koledar, { predmeti = [], leto, rok = "spomladanski" }) {
+  const vrsta = predmeti.length && predmeti.every((p) => p.startsWith("poklicna_")) ? "poklicna" : "splosna";
+  const podatki = koledar?.[leto]?.[vrsta];
+  const k = podatki?.[rok];
+  if (!k) return null;
+  const izpiti = [];
+  for (const predmet of predmeti) {
+    const v = k.izpiti?.[predmet];
+    if (typeof v === "string") izpiti.push({ predmet, datum: v, opis: null });
+    else if (Array.isArray(v)) for (const i of v) izpiti.push({ predmet, datum: i.datum, opis: i.opis ?? null });
+    else if (k.ostali) izpiti.push({ predmet, datum: k.ostali.od, do: k.ostali.do, opis: null, opomba: k.ostali.opis });
+  }
+  izpiti.sort((a, b) => a.datum.localeCompare(b.datum));
+  const mejniki = [];
+  if (k.prijava) mejniki.push({ vrsta: "rok", datum: k.prijava, opis: "Zadnji dan za prijavo na maturo" });
+  if (k.zacetek) mejniki.push({ vrsta: "zacetek", datum: k.zacetek, opis: k.zacetekOpis ?? "Začetek mature" });
+  if (k.ustni) mejniki.push({ vrsta: "ustni", datum: k.ustni.od, do: k.ustni.do, opis: "Ustni izpiti" });
+  if (k.rezultati) mejniki.push({ vrsta: "rezultati", datum: k.rezultati, opis: "Rezultati mature" });
+  const prvi = [k.zacetek, ...izpiti.map((i) => i.datum)].filter(Boolean).sort()[0];
+  return { vrsta, leto, rok, vir: podatki.vir, zacetek: prvi, izpiti, mejniki };
 }

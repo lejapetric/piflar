@@ -48,3 +48,6 @@ export const ustni = datotekeUstni()
   .filter((f) => f.endsWith(".json"))
   .sort()
   .flatMap((f) => readJSON(`./ustni/${f}`));
+
+// Uradni datumi mature po letih (RIC): koledar-mature.json, uporablja ga tedenska priprava
+export const koledarMature = readJSON("./koledar-mature.json");

@@ -131,3 +131,20 @@ test("na osnovni ravni matematike sklopi višje ravni ne štejejo", async () => 
   await ctrl.branjeGet({ uporabnik: osnovna, query: { predmet: "matematika", slug: "../x" } }, res);
   assert.equal(status, 404);
 });
+
+test("načrt vrne uradne datume mature (RIC) in izbrani rok", async () => {
+  const pomlad = await klic(ctrl.pripravaPut, { body: { predmeti: ["matematika", "fizika"], tempo: 2 } });
+  assert.equal(pomlad.status, 200);
+  assert.equal(pomlad.telo.nastavitve.rok, "spomladanski");
+  assert.equal(pomlad.telo.matura.zacetek, "2027-05-04");
+  assert.deepEqual(pomlad.telo.matura.izpiti.map((i) => i.predmet), ["matematika", "fizika"]);
+  assert.match(pomlad.telo.danes, /^\d{4}-\d{2}-\d{2}$/);
+  assert.equal(pomlad.telo.zacetekNacrta, zacetekTedna());
+
+  const jesen = await klic(ctrl.pripravaPut, { body: { predmeti: ["matematika"], tempo: 2, rok: "jesenski" } });
+  assert.equal(jesen.telo.nastavitve.rok, "jesenski");
+  assert.equal(jesen.telo.matura.izpiti[0].datum, "2027-08-24");
+  assert.ok(jesen.telo.tedniDoMature > pomlad.telo.tedniDoMature);
+
+  assert.equal((await klic(ctrl.pripravaPut, { body: { predmeti: ["matematika"], tempo: 2, rok: "zimski" } })).status, 400);
+});

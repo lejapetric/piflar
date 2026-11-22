@@ -128,7 +128,7 @@
     }
     const { predelani, potrebno, skupaj, predelano } = stanje;
     const vrh = el("div", "branje-napredek-vrh");
-    const naslov = el("strong", "", predelano ? "Razlaga je predelana" : "Tedenska priprava: predelaj razlago");
+    const naslov = el("strong", "", predelano ? "Razlaga je predelana" : "Sprotno učenje: predelaj razlago");
     const st = el("span", "branje-napredek-st", `${predelani} od ${skupaj} sklopov`);
     vrh.append(naslov, st);
     const trak = el("div", "branje-trak");
