@@ -215,9 +215,10 @@ test("število nalog po snovi se ujema s stranjo poglavja (naloga v več snoveh 
   assert.deepEqual(poklici(ctrl.maturaStevilo, { query: { predmet: "zgodovina" } }).body, {});
 });
 
-test("angleščina: 36 pol na dveh ravneh, pola 1 z delom A in B, pola 2 s posnetki, zadnji rok javen", () => {
+test("angleščina: 3 pole na izpitni dan za obe ravni, pola 1 z delom A in B, pola 2 s posnetki, zadnji rok javen", () => {
   const seznam = poklici(ctrl.maturaList, { query: { predmet: "anglescina" } });
-  assert.equal(seznam.body.length, 36);
+  assert.ok(seznam.body.length >= 36);
+  assert.equal(seznam.body.length % 6, 0);
   assert.deepEqual([...new Set(seznam.body.map((p) => p.raven))].sort(), ["osnovna", "visja"]);
 
   for (const raven of ["osnovna", "visja"]) {

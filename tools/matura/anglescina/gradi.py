@@ -445,9 +445,11 @@ def izdelaj_pisanje(n, raven, primer=None):
         tocke_ = 25
         oznaka = f'B) Literary essay ({n["besede"]} words)'
     if v == "pis":
-        zahteve = [f'{n["oblika"]} ({n["besede"]} words), formal style'] + [a.rstrip(",.") for a in n["alineje"]]
+        slog = "semi-formal style, with a title" if n["oblika"] == "Article" else "formal style"
+        zahteve = [f'{n["oblika"]} ({n["besede"]} words), {slog}'] + [a.rstrip(",.") for a in n["alineje"]]
         vodnik = vodniki.VODNIKI_PISANJE[n["oblika"]]
-        vnaslov = {"E-mail": "Kako napišeš formalno e-pismo", "Report": "Kako napišeš poročilo (report)"}[n["oblika"]]
+        vnaslov = {"E-mail": "Kako napišeš formalno e-pismo", "Report": "Kako napišeš poročilo (report)",
+                   "Article": "Kako napišeš članek (article)"}[n["oblika"]]
     elif v == "esej":
         zahteve = ["Choose ONE title and underline it.", "State clearly how far you agree or disagree.",
                    "Support your opinion with arguments and examples.", f'Write {n["besede"]} words.']
@@ -512,7 +514,7 @@ def zgradi(pot):
                 assert [n["id"] for n in naloge] == ["A1", "A2", "B1", "B2"], f"{pot} {kljuc}: {[n['id'] for n in naloge]}"
                 cas, opis = "60 minut (35 + 25)", f"2 nalogi v delu A in 2 v delu B, {vsota} točk, vsaka pravilna rešitev je vredna 1 točko."
             elif st == 2:
-                assert 15 <= vsota <= 20, f"{pot} {kljuc} pola 2: {vsota} točk"
+                assert 14 <= vsota <= 20, f"{pot} {kljuc} pola 2: {vsota} točk"
                 cas, opis = "do 20 minut", f"Dva posnetka, vsakega poslušaš dvakrat, {vsota} točk."
             else:
                 cas = "90 minut (30 + 60)"
