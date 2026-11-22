@@ -596,6 +596,18 @@ html[data-videz="tabla"] .polica-napis-odpri {
 /* stran predmeta: police takoj pod tablo */
 html[data-videz="tabla"] .police-predmeta {
     margin: 0 0 12px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-end;
+    column-gap: 28px;
+}
+html[data-videz="tabla"] .police-predmeta > .polica-ovoj {
+    flex: 1 1 100%;
+    min-width: 0;
+}
+/* kratki polici (priprava na maturo, matura in vaja) stojita druga ob drugi */
+html[data-videz="tabla"] .police-predmeta > .polica--ozka {
+    flex: 1 1 320px;
 }
 html[data-videz="tabla"] .subsection.na-polici {
     display: none;

@@ -42,6 +42,99 @@
     return "color-mix(in oklab, " + barva + ", " + (o > 0 ? "white " : "black ") + Math.abs(o) + "%)";
   }
   var STEVILKA = /^(\d+(?:\.\d+)*)\.?\s+(.+)$/;
+
+  // Snov, razdeljena na več polic (po številki poglavja iz kataloga).
+  var RAZDELITEV = {
+    slovenscina: [
+      { ime: "Jezikoslovje", oznaka: /^1\./, namig: "Jezik: od sporazumevanja in glasov do besedila." },
+      { ime: "Književnost", oznaka: /^2\./, namig: "Književnost od antike do druge polovice 20. stoletja." }
+    ]
+  };
+  // Polica »Priprava na maturo«: strani, ki so samo za izpit (zgradba izpita,
+  // esej, ustni, pisni sestavki ...). snov = poglavja (slug), ki se s police
+  // snovi preselijo sem; dodatne = druge strani za izpit.
+  var PRIPRAVA = {
+    slovenscina: {
+      snov: ["esej"],
+      dodatne: [
+        { href: "/views/slovenscina/snov/besedilo/besedilo_razlaga.html#sklop-5", oznaka: "Pola 2",
+          naslov: "Razčlemba in krajše besedilo", opis: "2. izpitna pola: razčlemba izhodiščnega besedila in odprta naloga (prošnja, vabilo, mnenje …)." },
+        { href: "/views/slovenscina/matura/matura.html", oznaka: "Izpit",
+          naslov: "Zgradba izpita", opis: "Izpitni poli, točke, čas in ustni del mature iz slovenščine." }
+      ]
+    },
+    matematika: {
+      dodatne: [
+        { href: "/views/matematika/ustni/ustni.html", oznaka: "Ustni",
+          naslov: "Ustni del mature", opis: "Vsi izpitni listki z odgovori in kviz za ponavljanje." }
+      ]
+    },
+    anglescina: { snov: ["izpit_anglescina", "bralno_razumevanje", "slusno_razumevanje", "krajsi_pisni_sestavek",
+      "daljsi_pisni_sestavek", "pisanje_eseja", "ustni_izpit", "opis_slike", "visja_raven"] },
+    nemscina: { snov: ["izpit_nemscina", "razumevanje_de", "pisno_sporocanje_de", "ustni_izpit_de"] },
+    francoscina: { snov: ["razumevanje_fr", "pisno_sporocanje_fr", "ustni_izpit_fr"] },
+    italijanscina: { snov: ["izpit_italijanscina", "razumevanje_it", "pisno_sporocanje_it", "ustni_izpit_it"] },
+    spanscina: { snov: ["izpit_es", "razumevanje_es", "pisno_sporocanje_es", "ustni_izpit_es"] },
+    filozofija: { snov: ["komentar_besedila", "filozofski_esej", "seminarska_naloga"] },
+    poklicna_slovenscina: { snov: ["izpit_pm_slovenscina", "razclemba_besedila", "tvorba_besedila"] }
+  };
+  function slugPoglavja(href) {
+    var m = /\/snov\/([a-z0-9_]+)\//.exec(pot(href));
+    return m ? m[1] : null;
+  }
+  // Poglavja razdeli na police: [{ime, namig, povezave, priprava?}].
+  // Zadnja je »Priprava na maturo« (poglavja iz PRIPRAVA + dodatne strani).
+  function razdeli(predmet, povezave) {
+    var pr = PRIPRAVA[predmet] || {};
+    var zaMaturo = pr.snov || [];
+    var priprava = [];
+    var ostale = [];
+    povezave.forEach(function (a) {
+      var i = zaMaturo.indexOf(slugPoglavja(a.getAttribute("href")));
+      if (i >= 0) priprava[i] = a;
+      else ostale.push(a);
+    });
+    priprava = priprava.filter(Boolean);
+    var police = [];
+    var deli = RAZDELITEV[predmet];
+    if (deli) {
+      var ostanek = ostale.slice();
+      deli.forEach(function (d) {
+        var tu = ostanek.filter(function (a) { return d.oznaka.test(besedilo(a, "strong")); });
+        ostanek = ostanek.filter(function (a) { return tu.indexOf(a) < 0; });
+        if (tu.length) police.push({ ime: d.ime, namig: d.namig, povezave: tu });
+      });
+      if (ostanek.length) police.push({ ime: "Snov", namig: "Izberi poglavje in začni z razlago.", povezave: ostanek });
+    } else if (ostale.length) {
+      police.push({ ime: "Snov", namig: "Izberi poglavje in začni z razlago.", povezave: ostale });
+    }
+    if (priprava.length || (pr.dodatne && pr.dodatne.length)) {
+      police.push({ ime: "Priprava na maturo", namig: "Strani samo za izpit: kako je sestavljen, esej, pisanje, ustni.",
+        povezave: priprava, dodatne: pr.dodatne || [], priprava: true });
+    }
+    return police;
+  }
+  // Knjige ene police iz razdeli().
+  function knjigePolice(predmet, p, nova) {
+    var knjige = [];
+    p.povezave.forEach(function (a) {
+      var i = knjige.length;
+      var podatki = podatkiPoglavja(a, predmet, p.priprava ? i + 3 : i);
+      knjige.push(nova ? novaKnjiga(a.getAttribute("href"), podatki, i) : vKnjigo(a, podatki, i));
+    });
+    (p.dodatne || []).forEach(function (d) {
+      var i = knjige.length;
+      knjige.push(novaKnjiga(d.href, {
+        oznaka: d.oznaka || "",
+        naslov: d.naslov,
+        opis: d.opis || "",
+        znak: osnova(predmet),
+        barva: odtenek(BARVA[osnova(predmet)] || "#2F55D4", i + 3)
+      }, i));
+    });
+    if (p.priprava) knjige.forEach(function (k) { k.classList.add("knjiga--priprava"); });
+    return knjige;
+  }
   var PRESKOK = 3; // razmik med knjigami (px), enak kot gap v tabla.css
   // telefon: knjige so zložene ena na drugo (glej tabla.css)
   var telefonMq = window.matchMedia ? matchMedia("(max-width: 820px)") : null;
@@ -109,7 +202,7 @@
   function polica(predmeti, nastavitve) {
     nastavitve = nastavitve || {};
     var ovoj = el("div", "polica-ovoj");
-    if (nastavitve.razred) ovoj.classList.add(nastavitve.razred);
+    if (nastavitve.razred) nastavitve.razred.split(" ").forEach(function (r) { ovoj.classList.add(r); });
     var vrste = el("div", "polica-vrste");
     var napis = el("div", "polica-napis");
     napis.setAttribute("aria-live", "polite");
@@ -302,12 +395,14 @@
     var out = [];
     koren.querySelectorAll(".link-list, .two-col").forEach(function (seznam) {
       var povezave = Array.prototype.slice.call(seznam.querySelectorAll(":scope > a.link-item"));
-      if (povezave.length < 4) return;
+      if (!povezave.length) return;
       var stevilcene = povezave.filter(function (a) { return STEVILKA.test(besedilo(a, "strong")); });
       if (stevilcene.length < povezave.length * 0.75) return;
       out.push({ seznam: seznam, povezave: povezave });
     });
-    return out;
+    // kratki seznami (npr. »Izpit« z enim poglavjem) štejejo, če je poglavij skupaj vsaj 4
+    var skupaj = out.reduce(function (n, s) { return n + s.povezave.length; }, 0);
+    return skupaj >= 4 ? out : [];
   }
   function podatkiPoglavja(a, predmet, i) {
     var m = STEVILKA.exec(besedilo(a, "strong"));
@@ -370,10 +465,31 @@
 
   // ---------- Strani, ki niso koren predmeta (npr. pregled snovi) ----------
   function poglavjaNaMestu(predmet) {
-    seznamiPoglavij(document).forEach(function (s) {
-      var predmeti = s.povezave.map(function (a, i) { return vKnjigo(a, podatkiPoglavja(a, predmet, i), i); });
-      vstavi(polica(predmeti, { namig: "Izberi poglavje." }), s.seznam);
-      s.seznam.remove();
+    var seznami = seznamiPoglavij(document);
+    if (!seznami.length) return;
+    // predmeti z lastno razdelitvijo ali polico za maturo: vsa poglavja strani
+    // na skupnih policah; drugi: vsak seznam svoja polica, kot prej
+    var skupaj = RAZDELITEV[predmet] || PRIPRAVA[predmet];
+    var skupine = skupaj ? [seznami] : seznami.map(function (s) { return [s]; });
+    skupine.forEach(function (sk) {
+      var povezave = [];
+      sk.forEach(function (s) { povezave = povezave.concat(s.povezave); });
+      var vecSeznamov = sk.length > 1;
+      var sidro = (vecSeznamov && sk[0].seznam.closest(".subsection")) || sk[0].seznam;
+      var police = skupaj ? razdeli(predmet, povezave) : [{ povezave: povezave }];
+      var vec = police.length > 1;
+      police.forEach(function (p) {
+        vstavi(polica(knjigePolice(predmet, p, false), {
+          ime: vec ? p.ime : "",
+          namig: vec ? p.namig : "Izberi poglavje.",
+          razred: p.priprava ? "polica--ozka" : ""
+        }), sidro);
+      });
+      sk.forEach(function (s) {
+        var sekcija = vecSeznamov && s.seznam.closest(".subsection");
+        if (sekcija) sekcija.classList.add("na-polici");
+        s.seznam.remove();
+      });
     });
   }
 
@@ -385,18 +501,25 @@
     glava.parentNode.insertBefore(mesto, glava.nextSibling);
     var porabljene = {};
 
-    function dodajSnov(seznami, izTeStrani) {
-      var predmeti = [];
-      seznami.forEach(function (s) {
-        s.povezave.forEach(function (a) {
-          var i = predmeti.length;
-          porabljene[pot(a.getAttribute("href"))] = true;
-          predmeti.push(novaKnjiga(a.getAttribute("href"), podatkiPoglavja(a, predmet, i), i));
-        });
+    // police si sledijo v tem vrstnem redu ne glede na to, katera se naloži prej
+    function vMesto(ovoj, red) {
+      ovoj.dataset.red = red;
+      var pred = Array.prototype.filter.call(mesto.children, function (o) { return +o.dataset.red > red; })[0];
+      vstavi(ovoj, pred || null, mesto);
+    }
+
+    function dodajSnov(seznami) {
+      var povezave = [];
+      seznami.forEach(function (s) { povezave = povezave.concat(s.povezave); });
+      if (!povezave.length) return;
+      razdeli(predmet, povezave).forEach(function (p, i) {
+        p.povezave.forEach(function (a) { porabljene[pot(a.getAttribute("href"))] = true; });
+        (p.dodatne || []).forEach(function (d) { porabljene[pot(d.href)] = true; });
+        vMesto(polica(knjigePolice(predmet, p, true), {
+          ime: p.ime, namig: p.namig, razred: p.priprava ? "polica--ozka polica--priprava" : ""
+        }), p.priprava ? 50 : i);
       });
-      if (!predmeti.length) return;
-      vstavi(polica(predmeti, { ime: "Snov", namig: "Izberi poglavje in začni z razlago." }), mesto.firstChild, mesto);
-      if (izTeStrani) skrijPorabljene();
+      skrijPorabljene();
     }
 
     function maturaPovezave(koren) {
@@ -432,7 +555,7 @@
         predmeti[predmeti.length - 1].classList.add("knjiga--mapa");
       });
       if (!predmeti.length) return;
-      vstavi(polica(predmeti, { ime: "Matura in vaja", namig: "Pole, naloge po snovi in vaja.", razred: "polica--ozka" }), null, mesto);
+      vMesto(polica(predmeti, { ime: "Matura in vaja", namig: "Pole, naloge po snovi in vaja.", razred: "polica--ozka" }), 60);
       skrijPorabljene();
     }
 
@@ -449,11 +572,11 @@
 
     // snov: s te strani ali, če je tu ni, s pregleda snovi
     var tu = seznamiPoglavij(document);
-    if (tu.length) dodajSnov(tu, true);
+    if (tu.length) dodajSnov(tu);
     else {
       fetch("/views/" + predmet + "/snov/snov.html").then(function (r) { return r.ok ? r.text() : ""; }).then(function (html) {
         if (!html) return;
-        dodajSnov(seznamiPoglavij(new DOMParser().parseFromString(html, "text/html")), false);
+        dodajSnov(seznamiPoglavij(new DOMParser().parseFromString(html, "text/html")));
       }).catch(function () {});
     }
 
