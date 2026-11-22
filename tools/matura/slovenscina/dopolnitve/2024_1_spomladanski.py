@@ -85,7 +85,7 @@ Odgovor napišeš v **večstavčni povedi**, v kateri dokaza povežeš z vezniki
 – **v pred soglasnikom** za samoglasnikom → [u̯]: gla**v**ni [glau̯ni].
 – **Premena po zvenečnosti**: o**d**šel → [t] (pred nezvenečim š), re**s**da → [z] (pred zvenečim d), o**b**čina → [p] (pred nezvenečim č).
 – **Končni zveneči soglasnik** izgubi zvenečnost: stro**g** → [k].
-– **nj pred soglasnikom** izgovorimo kot navaden n: gore**nj**ski → [n].
+– **nj pred soglasnikom** (in na koncu besede) izgovorimo kot [jn]: gore**nj**ski → [gorejnski], kot konj → [kojn].
 Vsak pravilni izgovor prinese pol točke.""",
     8: """**Frazem** »imeti srce na pravem mestu« ne govori o telesu, ampak o značaju: pomeni biti **dober, sočuten, pošten**.
 

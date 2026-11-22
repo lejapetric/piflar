@@ -193,7 +193,7 @@ POLA2 = [
     N(["pretvorbe", "glagol"],
       "Rešite nalogi.",
       [P(2, "Poved Organizacija združenih narodov je razglasila svetovni dan čebel pretvorite v trpnik.",
-         [("!Svetovni dan čebel je bil razglašen na pobudo Slovenije.", "Tvorni povedek je razglasila → trpni je bil razglašen; predmet postane osebek. Sprejmemo tudi: Svetovni dan čebel se je razglasil …")]),
+         [("!Svetovni dan čebel je bil razglašen (od Organizacije združenih narodov).", "Tvorni povedek je razglasila → trpni je bil razglašen; predmet postane osebek. Sprejmemo tudi: Svetovni dan čebel se je razglasil …")]),
        P(2, "Prilastkov odvisnik v povedi Divje čebele potrebujejo zelenice, ki jih ne pokosimo prezgodaj pretvorite v pridevniški prilastek.",
          [("!Divje čebele potrebujejo pozno pokošene zelenice.", "")]),
       ]),
