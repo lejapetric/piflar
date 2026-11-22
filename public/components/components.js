@@ -898,6 +898,17 @@ async function initNalogePovezava() {
 }
 
 // ============================================================
+// ČASOVNI TRAKOVI (components/casovni-trak.js), samo na straneh z .ct
+// ============================================================
+function initCasovniTrak() {
+  if (!document.querySelector(".ct")) return;
+  const s = document.createElement("script");
+  s.src = "/components/casovni-trak.js";
+  s.defer = true;
+  document.body.appendChild(s);
+}
+
+// ============================================================
 // TEDENSKA PRIPRAVA: merjenje predelane razlage (components/branje.js)
 // ============================================================
 function initBranje() {
@@ -986,6 +997,7 @@ async function init() {
   initMaturaPovezava();
   initNalogePovezava();
   initBranje();
+  initCasovniTrak();
   oznaciIskanje();
 }
 

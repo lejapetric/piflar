@@ -132,8 +132,8 @@ POLA2 = [
       [P(3, "", [
           ("glavni → [u̯]", "v med samoglasnikom in soglasnikom."), ("odšel → [t]", "d pred nezvenečim š."),
           ("resda → [z]", "s pred zvenečim d."), ("strog → [k]", "Končni zveneči g."),
-          ("gorenjski → [n]", "nj pred soglasnikom izgovorimo kot [n]."), ("občina → [p]", "b pred nezvenečim č."),
-          ("![u̯], [t], [z], [k], [n], [p]", "Vsak pravilni izgovor ½ točke."),
+          ("gorenjski → [jn]", "nj pred soglasnikom izgovorimo kot [jn]."), ("občina → [p]", "b pred nezvenečim č."),
+          ("![u̯], [t], [z], [k], [jn], [p]", "Vsak pravilni izgovor ½ točke."),
       ])]),
     N(["frazemi", "publicisticna"],
       "Preberite poved.",

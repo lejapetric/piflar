@@ -18,11 +18,20 @@
 # Korak je (rokopis, komentar). Rokopis z "!" na začetku je končni odgovor (podčrtan), rokopis
 # None pomeni samo komentar, "## …" je vmesni naslov.
 #
+# Dopolnitve (neobvezno) so v tools/matura/slovenscina/dopolnitve/<ime vira>.py:
+#   PRIMERI = {"1": """esej""", "2": """esej""", "odprta": """besedilo"""}   zgledna besedila
+#       (ključ je id eseja: "1", "1a", "1b", "2"; "odprta" je zadnja naloga pole 2).
+#       Prva vrstica "# Naslov" je naslov, prazna vrstica nov odstavek. Pri dopisih vrstica "@@"
+#       loči glavo, osrednji del in konec (pozdrav, podpis); šteje se samo osrednji del.
+#   RAZLAGE = {3: """razlaga""", ...}   podrobna razlaga »Zakaj je tako« za nalogo pole 2 (številka naloge)
+#
 # Oznake v besedilu: **krepko**, __podčrtano__, //ležeče//, [[uokvirjeno]], ^{…} (nadpisano),
 # _{…} (podpisano). Nova vrstica je prelom vrstice, prazna vrstica nov odstavek.
-import glob, html, json, os, re, runpy
+import glob, html, json, os, re, runpy, sys
 
 KOREN = os.path.dirname(os.path.abspath(__file__))
+sys.path.insert(0, KOREN)
+import vodniki  # noqa: E402
 IZHOD = os.path.join(KOREN, "..", "..", "..", "api", "data", "matura-slovenscina.json")
 
 # Podpoglavja snovi (sidrišča #sklop-N na straneh s snovjo); ključi so tudi "teme" v snovi.json
@@ -165,6 +174,71 @@ def rokopis(koraki):
     return deli
 
 
+# ---------------------------------------------------------------- dopolnitve: vodniki, primeri, razlage
+def stej_besede(s):
+    return len(re.findall(r"\w+(?:[-'’]\w+)*", s))
+
+
+def vodnik_html(naslov, odseki, odprt=True):
+    deli = []
+    for n, alineje in odseki:
+        deli.append(f"<h5>{oblikuj(n)}</h5><ul>" + "".join(f"<li>{oblikuj(a)}</li>" for a in alineje) + "</ul>")
+    return (f'<details class="pis-vodnik"{" open" if odprt else ""}><summary>{oblikuj(naslov)}</summary>'
+            + "".join(deli) + "</details>")
+
+
+def kontrolni_seznam(navodilo):
+    """Navodilo razdeli na posamezne zahteve (povedi) in jih izpiše kot seznam za odkljukanje."""
+    povedi = [p.strip() for p in re.split(r"(?<=[.?!])\s+(?=[A-ZČŠŽ»])", " ".join(navodilo.split())) if p.strip()]
+    li = "".join(f"<li>{oblikuj(p)}</li>" for p in povedi)
+    return ('<div class="pis-seznam"><h5>Kaj zahteva navodilo: kontrolni seznam</h5>'
+            '<p>Vsaka vrstica je ena zahteva. Vsaka mora biti v tvojem besedilu jasno vidna; ko jo napišeš, jo odkljukaj.</p>'
+            f"<ol>{li}</ol></div>")
+
+
+def primer_html(besedilo, naslov, najmanj=None, kje=""):
+    """Zgledno besedilo. Vrstica "@@" loči glavo, osrednji del in konec dopisa; šteje se le osrednji del."""
+    besedilo = besedilo.strip("\n")
+    vrstice = besedilo.split("\n")
+    glava_naslov = ""
+    if vrstice[0].startswith("# "):
+        glava_naslov = f'<h6 class="pis-primer-naslov">{oblikuj(vrstice[0][2:])}</h6>'
+        besedilo = "\n".join(vrstice[1:]).strip("\n")
+    kosi = [k.strip("\n") for k in re.split(r"\n@@\n", besedilo)]
+    if len(kosi) == 1:
+        glava, telo, konec = "", kosi[0], ""
+    elif len(kosi) == 3:
+        glava, telo, konec = kosi
+    else:
+        raise ValueError(f"{naslov}: primer ima {len(kosi)} delov (pričakovani 1 ali 3)")
+    stevilo = stej_besede(telo)
+    if najmanj:
+        assert stevilo >= najmanj, f"{naslov}: primer ima {stevilo} besed, zahtevanih je najmanj {najmanj}"
+    deli = [f'<div class="pis-primer"><h5>{oblikuj(naslov)}</h5>']
+    if glava:
+        deli.append(f'<div class="pis-primer-glava">{oblikuj(glava)}</div>')
+    deli.append(glava_naslov)
+    deli.append("".join(f"<p>{oblikuj(o)}</p>" for o in telo.split("\n\n") if o.strip()))
+    if konec:
+        deli.append(f'<div class="pis-primer-konec">{oblikuj(konec)}</div>')
+    opomba = f"Število besed{kje}: {stevilo}"
+    if najmanj:
+        opomba += f" (zahtevanih najmanj {najmanj})"
+    deli.append(f'<p class="pis-primer-opomba">{opomba}. Zgled je eden od mogočih odgovorov; '
+                "tvoje besedilo je lahko drugačno, a mora izpolniti vse zahteve iz navodila.</p></div>")
+    return "".join(deli)
+
+
+def zakaj_html(besedilo):
+    return ('<div class="mn-zakaj"><h5>Zakaj je tako? Razlaga po korakih</h5>'
+            + "".join(f"<p>{oblikuj(o.strip())}</p>" for o in besedilo.strip().split("\n\n") if o.strip()) + "</div>")
+
+
+def najmanj_besed(besedilo):
+    m = re.search(r"(?:najmanj|vsaj) (\d+) besed", besedilo)
+    return int(m.group(1)) if m else None
+
+
 def _rezultat(d, oznaka):
     if d["r"] is not None:
         return oblikuj(d["r"])
@@ -173,7 +247,7 @@ def _rezultat(d, oznaka):
     return "; ".join(oblikuj(o) for o in odg)
 
 
-def naloga(st, n):
+def naloga(st, n, razlaga_dod=None, primer=None):
     besedilo = []
     if n["uvod"]:
         besedilo.append(odstavki(n["uvod"]))
@@ -213,12 +287,24 @@ def naloga(st, n):
         "rezultat": "<br>".join(rezultati),
         "razlaga": '<div class="rokopis">' + "".join(koraki) + "</div>",
     }
+    if "odprta" in n["teme"]:
+        kljuc = vodniki.vrsta_odprte(n["uvod"])
+        ime, odseki = vodniki.ODPRTA[kljuc]
+        najmanj = najmanj_besed(n["uvod"])
+        izid["razlaga"] = (kontrolni_seznam(n["uvod"])
+                           + vodnik_html(f"Kako napišeš besedilno vrsto: {ime.lower()}", odseki + vodniki.ODPRTA_SKUPNO)
+                           + '<h5 class="pis-podnaslov">Načrt rešitve po korakih</h5>' + izid["razlaga"])
+        if primer:
+            kje = " v osrednjem delu (brez glave, pozdrava in podpisa)" if "@@" in primer else ""
+            izid["razlaga"] += primer_html(primer, f"Primer besedila: {ime.lower()}", najmanj, kje)
+    if razlaga_dod:
+        izid["razlaga"] += zakaj_html(razlaga_dod)
     if n["priloga"]:
         izid["priloga"] = True
     return izid
 
 
-def esej(e, leto):
+def esej(e, leto, primer=None):
     ime = "RAZPRAVLJALNI ESEJ" if e["vrsta"] == "razpravljalni" else "RAZLAGALNI/INTERPRETATIVNI ESEJ"
     besedilo = f'<p class="pola-naslov-naloge"><strong>{ime}</strong></p>'
     besedilo += f'<p><strong>{oblikuj(e["naslov"])}</strong></p>'
@@ -235,7 +321,12 @@ def esej(e, leto):
         "tip": "esej",
         "besedilo": besedilo,
         "rezultat": oblikuj(e["rezultat"]),
-        "razlaga": '<div class="rokopis">' + "".join(rokopis(e["koraki"])) + "</div>",
+        "razlaga": (kontrolni_seznam(e["navodilo"])
+                    + vodnik_html(f"Kako napišeš {ime.lower()}: zgradba, merila, nasveti",
+                                  vodniki.ESEJ[e["vrsta"]] + vodniki.ESEJ_SKUPNO)
+                    + '<h5 class="pis-podnaslov">Načrt eseja po odstavkih</h5>'
+                    + '<div class="rokopis">' + "".join(rokopis(e["koraki"])) + "</div>"
+                    + (primer_html(primer, f"Primer eseja ({ime.lower()})", e["besede"]) if primer else "")),
     }
 
 
@@ -258,6 +349,9 @@ GRADNIKI = {"N": N, "P": P, "B": B, "E": E, "tabela": tabela, "izbire": izbire, 
 
 def zgradi(pot):
     ns = runpy.run_path(pot, init_globals=GRADNIKI)
+    dop_pot = os.path.join(KOREN, "dopolnitve", os.path.basename(pot))
+    dop = runpy.run_path(dop_pot) if os.path.exists(dop_pot) else {}
+    primeri, razlage = dop.get("PRIMERI", {}), dop.get("RAZLAGE", {})
     leto, rok = ns["LETO"], ns["ROK"]
     eseji, pola2, tock2 = ns["ESEJI"], ns["POLA2"], ns.get("TOCKE2", 90)
     besede = 700 if leto <= 2020 else 600
@@ -273,7 +367,7 @@ def zgradi(pot):
             st = "1" if len(razp) == 1 else f"1{'ab'[razp.index(e)]}"
         else:
             st = "2"
-        naloge1.append({"id": st, **esej(e, leto)})
+        naloge1.append({"id": st, **esej(e, leto, primeri.get(st))})
     assert any(n["id"] == "2" for n in naloge1), f"{pot}: ni interpretativnega eseja"
     izbira = "dveh razpravljalnih tem in interpretativnega eseja" if len(razp) > 1 else "razpravljalnega in interpretativnega eseja"
     pole = [{
@@ -285,7 +379,10 @@ def zgradi(pot):
         "naloge": naloge1,
     }]
     # pola 2: razčlemba
-    izdelane = [{"id": str(i + 1), **naloga(i + 1, n)} for i, n in enumerate(pola2)]
+    izdelane = [{"id": str(i + 1), **naloga(i + 1, n, razlage.get(i + 1), primeri.get("odprta") if "odprta" in n["teme"] else None)}
+                for i, n in enumerate(pola2)]
+    neznane = set(razlage) - set(range(1, len(pola2) + 1))
+    assert not neznane, f"{pot}: razlage za neobstoječe naloge {sorted(neznane)}"
     vsota = sum(n["tocke"] for n in izdelane)
     assert vsota == tock2, f"{pot}: pola 2 ima {vsota} točk namesto {tock2}"
     pole.append({

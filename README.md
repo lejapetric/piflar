@@ -73,6 +73,20 @@ Na vsaki strani `…/snov/<poglavje>/<…>_razlaga.html` `components.js` samodej
 (na ožjem zaslonu gumb »Kazalo« spodaj desno). Sestavi ga iz naslovov `h2` (poglavja) ter `h3`/`h4` (podpoglavja;
 `h4` pod »Razlaga« so podpoglavja, `h4` pod »Tipi nalog« so tipi). Naslovom brez `id` ga doda samo; ročno urejanje ni potrebno.
 
+Časovni trak je seznam obdobij in dogodkov, ki ga `components/casovni-trak.js` izriše pokončno kot premico
+(na širokem zaslonu dogodki levo in desno, na ozkem desno; dolga obdobja brez dogodkov se stisnejo z znakom //).
+Obdobja so intervali [od, do) ob levem robu, barva `data-barva` 0–6. Leta pred našim štetjem so negativna.
+
+```html
+<figure class="slika slika--siroka slika--trak">
+<div class="ct" role="group" aria-label="Časovni trak: …">
+  <ol class="ct-obdobja"><li data-od="1800" data-do="1821" data-barva="5">otroštvo, šolanje</li></ol>
+  <ol class="ct-dogodki"><li data-leto="1800"><time>1800</time> <span>rojstvo na Vrbi</span></li></ol>
+</div>
+<figcaption>…</figcaption>
+</figure>
+```
+
 Formule pišeš v LaTeX-u med `\( … \)` (v vrstici) ali `\[ … \]` (samostojno). MathJax se naloži samo na straneh s formulami.
 
 Nova stran se sama pojavi v iskalniku: strežnik prebere vse neprazne strani v `public/views/`
@@ -95,6 +109,14 @@ Strani besedil imajo sklope po glavnih problemih iz kataloga, strani tem po vseb
 
 Sociologija ima vseh 14 poglavij predmetnega izpitnega kataloga RIC (4.1 do 4.14), vsako na svoji strani.
 Razdelki s posebnim znanjem za seminarsko nalogo imajo `sklop--visja` in oznako `badge-vr` z besedilom »Seminarska«.
+
+## Police na straneh predmetov
+
+V videzu »tabla« `components/polica.js` poglavja s strani predmeta (ali s `snov/snov.html`) postavi na knjižne police.
+Slovenščina ima dve polici snovi: Jezikoslovje (poglavja 1.x) in Književnost (2.x); razdelitev je v `RAZDELITEV`.
+Strani, ki so samo za izpit (zgradba izpita, esej, pisni sestavki, razumevanje, ustni, seminarska), so na posebni polici
+»Priprava na maturo«: seznam poglavij in dodatnih strani (npr. ustni del pri matematiki) je v `PRIPRAVA`.
+Ob njej je polica »Matura in vaja« (pole, naloge po snovi, naloge za vajo).
 
 ## Sprotno učenje (tedenska priprava)
 
