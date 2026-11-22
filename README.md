@@ -72,6 +72,20 @@ Na vsaki strani `…/snov/<poglavje>/<…>_razlaga.html` `components.js` samodej
 (na ožjem zaslonu gumb »Kazalo« spodaj desno). Sestavi ga iz naslovov `h2` (poglavja) ter `h3`/`h4` (podpoglavja;
 `h4` pod »Razlaga« so podpoglavja, `h4` pod »Tipi nalog« so tipi). Naslovom brez `id` ga doda samo; ročno urejanje ni potrebno.
 
+Časovni trak je seznam obdobij in dogodkov, ki ga `components/casovni-trak.js` izriše pokončno kot premico
+(na širokem zaslonu dogodki levo in desno, na ozkem desno; dolga obdobja brez dogodkov se stisnejo z znakom //).
+Obdobja so intervali [od, do) ob levem robu, barva `data-barva` 0–6. Leta pred našim štetjem so negativna.
+
+```html
+<figure class="slika slika--siroka slika--trak">
+<div class="ct" role="group" aria-label="Časovni trak: …">
+  <ol class="ct-obdobja"><li data-od="1800" data-do="1821" data-barva="5">otroštvo, šolanje</li></ol>
+  <ol class="ct-dogodki"><li data-leto="1800"><time>1800</time> <span>rojstvo na Vrbi</span></li></ol>
+</div>
+<figcaption>…</figcaption>
+</figure>
+```
+
 Formule pišeš v LaTeX-u med `\( … \)` (v vrstici) ali `\[ … \]` (samostojno). MathJax se naloži samo na straneh s formulami.
 
 Nova stran se sama pojavi v iskalniku: strežnik prebere vse neprazne strani v `public/views/`
