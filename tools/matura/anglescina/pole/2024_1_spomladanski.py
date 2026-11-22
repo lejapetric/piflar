@@ -403,7 +403,7 @@ Write a report of 150–180 words in which you:""", [
             ("Uvod: teza – Will changes from a man who avoids all responsibility into someone who accepts that he needs other people.", "Teza."),
             ("Jedro 1 – Will at the beginning: lives on royalties from his father's Christmas song, invents a son to meet single mothers (SPAT).", "Konkreten prizor: izmišljeni sin Ned."),
             ("Jedro 2 – the turning point: Marcus forces his way into Will's life; Will buys him trainers and starts to care.", "Pokaži, kako odnos z Marcusom sproži spremembo."),
-            ("Jedro 3 – the ending: Will falls in love with Rachel, is honest about himself, and supports Marcus at the school concert.", "Razvoj: od laži do iskrenosti."),
+            ("Jedro 3 – the ending: Will falls in love with Rachel, is honest about himself, and stands by Marcus when he and Ellie get into trouble in Cambridge.", "Razvoj: od laži do iskrenosti."),
             ("Sklep: the boy in the title is as much Will as Marcus.", "Pomen naslova kot sklepna misel."),
         ], "Esej o razvoju Willa Freemana: od neodgovornega samotarja (izmišljeni sin, »units of time«) prek odnosa z Marcusom do iskrenosti in povezanosti; 250–300 besed."),
     ],

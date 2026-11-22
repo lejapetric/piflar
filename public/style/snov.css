@@ -3873,7 +3873,8 @@ details.matura-pola[open] .matura-pola-puscica {
 .pis-seznam p,
 .mn-zakaj p { margin: 0 0 8px; }
 .pis-seznam ol,
-.pis-vodnik ul { margin: 0 0 8px; padding-left: 1.4rem; }
+.pis-vodnik ul,
+.mn-zakaj ul { margin: 0 0 8px; padding-left: 1.4rem; }
 .pis-seznam li,
 .pis-vodnik li { margin: 0 0 4px; }
 .pis-seznam li::marker { font-weight: 700; }
