@@ -12,6 +12,7 @@ const javne = javneResenePole(matura);
 const ROKI = ["predmaturitetni", "spomladanski", "jesenski", "zimski"];
 const poVrsti = (a, b) => b.leto - a.leto || ROKI.indexOf(a.rok) - ROKI.indexOf(b.rok);
 const razvrscene = [...matura].sort(poVrsti);
+const polePoId = new Map(matura.map((p) => [p.id, p]));
 
 // Naloga lahko spada v več poglavij: "poglavje": "funkcije" ali ["funkcije", "diferencialni_racun"]
 const poglavjaNaloge = (naloga) => [naloga.poglavje ?? []].flat();
@@ -86,7 +87,7 @@ const maturaStevilo = (req, res) => {
 // vsaj en samodejno preverjen del napačen. Če mora dele primerjati sam, se ne shrani.
 const maturaOdgovor = async (req, res) => {
   const { pola: polaId, naloga: nalogaId, odgovor } = req.body ?? {};
-  const pola = matura.find((p) => p.id === polaId);
+  const pola = polePoId.get(polaId);
   const naloga = pola?.naloge?.find((n) => n.id === String(nalogaId));
   if (!naloga || !naloga.rezultat) return res.status(404).json({ message: "Naloga ne obstaja." });
   if (!lahkoVidiResitve(req.uporabnik, pola, javne))
@@ -106,7 +107,7 @@ const maturaOdgovor = async (req, res) => {
 
 // GET /api/matura/:maturaId
 const maturaReadOne = (req, res) => {
-  const pola = matura.find((p) => p.id === req.params.maturaId);
+  const pola = polePoId.get(req.params.maturaId);
   if (!pola) return res.status(404).json({ message: "Maturitetna pola ne obstaja." });
   res.status(200).json(prikazPole(pola, req.uporabnik, true));
 };

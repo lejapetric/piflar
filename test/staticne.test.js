@@ -20,3 +20,11 @@ test("HTML, JS in CSS brskalnik ob vsakem obisku preveri (no-cache)", async () =
     assert.equal(res.headers.get("cache-control"), "no-cache", pot);
   }
 });
+
+test("besedilo se pošlje stisnjeno (gzip ali brotli)", async () => {
+  for (const pot of ["/components/sidebar.html", "/style/style.css", "/components/components.js"]) {
+    const res = await fetch(url + pot, { headers: { "accept-encoding": "br, gzip" } });
+    assert.equal(res.status, 200, pot);
+    assert.match(res.headers.get("content-encoding") ?? "", /^(br|gzip)$/, pot);
+  }
+});
