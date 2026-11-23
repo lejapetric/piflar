@@ -3907,3 +3907,92 @@ details.matura-pola[open] .matura-pola-puscica {
     .pis-vodnik:not([open]) { display: none; }
     .pis-seznam, .pis-vodnik, .pis-primer, .mn-zakaj { break-inside: auto; }
 }
+
+/* ============================================================
+   KAZALO POL (stran Maturitetne pole): oblika kot kazalo snovi
+   (.stran-kazalo), z roki, polami in nalogami
+   ============================================================ */
+.matura-pole-vrh {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-3);
+    margin-bottom: var(--space-4);
+}
+
+.matura-pole-vrh .matura-ravni,
+.matura-pole-vrh .matura-orodja {
+    margin: 0;
+}
+
+.matura-pole-vrh .matura-orodja {
+    padding: 0;
+    background: transparent;
+    border: 0;
+    box-shadow: none;
+}
+
+.matura-pole-vrh .matura-orodja-skupina:empty {
+    display: none;
+}
+
+.pola-kazalo-kje {
+    margin: 0 0 var(--space-3);
+    padding: 8px 10px;
+    border-radius: 6px;
+    background: var(--primary-soft);
+    color: var(--primary);
+    font-weight: 700;
+    line-height: 1.35;
+}
+
+.pola-kazalo-rok {
+    margin: var(--space-3) 0 4px;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--text-muted);
+}
+
+.stran-kazalo a.pola-kazalo-ime {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--space-2);
+    color: var(--text-primary);
+    font-weight: 600;
+}
+
+.pola-kazalo-pola.trenutna > a.pola-kazalo-ime {
+    color: var(--primary);
+}
+
+.stran-kazalo a small,
+.stran-kazalo a.pola-kazalo-ime small {
+    margin-left: auto;
+    font-weight: 400;
+    color: var(--text-muted);
+    white-space: nowrap;
+}
+
+.stran-kazalo .pola-kazalo-pola .stran-kazalo-nivo2 a {
+    display: flex;
+    gap: var(--space-2);
+}
+
+.pola-kazalo-pola.odprta > .stran-kazalo-nivo2 {
+    display: block;
+}
+
+.pola-kazalo-del {
+    padding: 8px 10px 2px var(--space-3);
+    font-size: 11px;
+    font-weight: 700;
+    color: var(--text-muted);
+}
+
+.pola-kazalo-ikona {
+    font-size: 16px;
+    line-height: 1;
+}

@@ -715,6 +715,165 @@ function renderPola(pola, naslovPdf) {
   return sekcija;
 }
 
+// ------------------------------------------------------------
+// Kazalo pol (desni rob, kot kazalo pri snovi): roki, pole in naloge.
+// Pokaže, na kateri poli in nalogi je dijak; na ozkem zaslonu je predal.
+// ------------------------------------------------------------
+let kazaloPolOdstrani = null;
+
+function kazaloPol(skupine) {
+  kazaloPolOdstrani?.();
+  const vsebnik = document.querySelector(".view")?.parentElement;
+  if (!vsebnik || !skupine.length) return;
+
+  const aside = el("aside", "stran-kazalo pola-kazalo");
+  aside.id = "stranKazalo";
+  aside.setAttribute("aria-label", "Kazalo pol");
+  const glava = el("div", "stran-kazalo-glava");
+  const naslov = povezava("#", "Kazalo pol", "stran-kazalo-naslov");
+  naslov.addEventListener("click", (e) => {
+    e.preventDefault();
+    window.scrollTo({ top: 0 });
+    zapriPredal();
+  });
+  const zapri = gumb("×", "stran-kazalo-zapri");
+  zapri.setAttribute("aria-label", "Zapri kazalo");
+  glava.append(naslov, zapri);
+  const kje = el("p", "pola-kazalo-kje");
+  aside.append(glava, kje);
+
+  const povezave = new Map(); // kartica naloge → <a>
+  const elementi = []; // [kartica, sekcija, zaporedna, vseh, imePole, rok]
+  const pole = []; // [sekcija, blok v kazalu]
+  for (const { rok, vRoku } of skupine) {
+    aside.append(el("p", "pola-kazalo-rok", rok));
+    for (const { pola, sekcija, ime } of vRoku) {
+      const blok = el("div", "pola-kazalo-pola");
+      const a = povezava(`#${pola.id}`, "", "pola-kazalo-ime");
+      a.append(el("span", "", ime), el("small", "", pola.naloge.length ? steviloNalog(pola.naloge.length) : "v pripravi"));
+      a.addEventListener("click", () => (sekcija.open = true));
+      blok.append(a);
+      const seznam = el("ol", "stran-kazalo-nivo2");
+      let prejDel = null;
+      pola.naloge.forEach((naloga, i) => {
+        const del = /^[ABC]\d/.test(naloga.id) ? naloga.id[0] : null;
+        if (del && del !== prejDel) seznam.append(el("li", "pola-kazalo-del", pola.deli?.[del] ?? DELI[del]));
+        prejDel = del;
+        const kartica = sekcija.querySelector(`#${CSS.escape(`${pola.id}-${naloga.id}`)}`);
+        if (!kartica) return;
+        const l = povezava(`#${kartica.id}`, "");
+        l.append(el("span", "", naloga.oznaka ?? `Naloga ${naloga.id}`));
+        if (naloga.tocke) l.append(el("small", "", `${naloga.tocke} t`));
+        l.addEventListener("click", () => (sekcija.open = true));
+        const li = el("li");
+        li.append(l);
+        seznam.append(li);
+        povezave.set(kartica, l);
+        elementi.push([kartica, sekcija, i + 1, pola.naloge.length, ime, rok]);
+      });
+      blok.append(seznam);
+      aside.append(blok);
+      pole.push([sekcija, blok]);
+    }
+  }
+  vsebnik.classList.add("view-container--kazalo");
+  vsebnik.append(aside);
+
+  // Gumb za ozke zaslone: kazalo se odpre kot predal z desne
+  const odpri = gumb("", "stran-kazalo-odpri");
+  odpri.setAttribute("aria-controls", "stranKazalo");
+  odpri.setAttribute("aria-expanded", "false");
+  const odpriBesedilo = el("span", "", "Kazalo");
+  odpri.append(el("span", "pola-kazalo-ikona", "☰"), odpriBesedilo);
+  document.body.append(odpri);
+
+  function zapriPredal() {
+    aside.classList.remove("predal-odprt");
+    odpri.setAttribute("aria-expanded", "false");
+  }
+  odpri.addEventListener("click", () => {
+    const odprt = aside.classList.toggle("predal-odprt");
+    odpri.setAttribute("aria-expanded", String(odprt));
+    if (odprt) aside.querySelector("a.aktivno")?.scrollIntoView({ block: "center" });
+  });
+  zapri.addEventListener("click", zapriPredal);
+  aside.addEventListener("click", (e) => {
+    if (e.target.closest("a")) zapriPredal();
+  });
+  const obTipki = (e) => e.key === "Escape" && zapriPredal();
+  const obKliku = (e) => {
+    if (aside.classList.contains("predal-odprt") && !aside.contains(e.target) && !odpri.contains(e.target)) zapriPredal();
+  };
+  document.addEventListener("keydown", obTipki);
+  document.addEventListener("click", obKliku);
+
+  // Trenutna naloga: zadnja v odprti poli, ki je že nad tretjino zaslona
+  let aktivna = null;
+  function osvezi() {
+    for (const [sekcija, blok] of pole) blok.classList.toggle("odprta", sekcija.open);
+    const meja = window.innerHeight / 3;
+    let trenutni = null;
+    for (const e of elementi) {
+      if (!e[1].open) continue;
+      if (!trenutni || e[0].getBoundingClientRect().top <= meja) trenutni = e;
+      else break;
+    }
+    const kartica = trenutni?.[0] ?? null;
+    if (kartica === aktivna) return;
+    if (aktivna) {
+      povezave.get(aktivna).classList.remove("aktivno");
+      povezave.get(aktivna).removeAttribute("aria-current");
+    }
+    pole.forEach(([, blok]) => blok.classList.remove("trenutna"));
+    aktivna = kartica;
+    if (!trenutni) {
+      kje.textContent = "Odpri polo, da vidiš njene naloge.";
+      odpriBesedilo.textContent = "Kazalo";
+      return;
+    }
+    const [, sekcija, i, vseh, ime, rok] = trenutni;
+    const a = povezave.get(kartica);
+    a.classList.add("aktivno");
+    a.setAttribute("aria-current", "location");
+    pole.find(([s]) => s === sekcija)?.[1].classList.add("trenutna");
+    kje.textContent = `${rok} · ${ime} · naloga ${i} od ${vseh}`;
+    odpriBesedilo.textContent = `${ime} · ${i}/${vseh}`;
+    // Aktivna povezava naj ostane vidna v kazalu (brez premikanja strani)
+    const okvir = aside.getBoundingClientRect();
+    const r = a.getBoundingClientRect();
+    if (r.top < okvir.top + 40 || r.bottom > okvir.bottom - 16) aside.scrollTop += r.top - okvir.top - okvir.height / 3;
+  }
+  let caka = false;
+  const obPomiku = () => {
+    if (caka) return;
+    caka = true;
+    requestAnimationFrame(() => {
+      caka = false;
+      osvezi();
+    });
+  };
+  const obOdpiranju = (e) => {
+    if (e.target.matches?.("details.matura-pola")) {
+      aktivna = aktivna && null;
+      osvezi();
+    }
+  };
+  window.addEventListener("scroll", obPomiku, { passive: true });
+  window.addEventListener("resize", obPomiku, { passive: true });
+  koren.addEventListener("toggle", obOdpiranju, true);
+  osvezi();
+
+  kazaloPolOdstrani = () => {
+    window.removeEventListener("scroll", obPomiku);
+    window.removeEventListener("resize", obPomiku);
+    koren.removeEventListener("toggle", obOdpiranju, true);
+    document.removeEventListener("keydown", obTipki);
+    document.removeEventListener("click", obKliku);
+    aside.remove();
+    odpri.remove();
+  };
+}
+
 async function stranPole() {
   const leto = parametri.get("leto");
   const [pole, snovi] = await Promise.all([
@@ -743,6 +902,7 @@ async function stranPole() {
       [`Matura ${p.leto}`, `${ROKI[p.rok].toLowerCase()}${p.izvedba > 1 ? ` (${p.izvedba}. izpitni dan)` : ""}`, imeRavni(p.raven), `izpitna pola ${p.stevilka ?? ""}`.trim()]
         .filter(Boolean)
         .join(", ");
+    const zaKazalo = [];
     for (const l of leta) {
       if (!leto) vsebina.append(el("h2", "matura-leto", `Matura ${l}`));
       for (const rok of Object.keys(ROKI)) {
@@ -750,11 +910,18 @@ async function stranPole() {
         if (!vRoku.length) continue;
         const skupina = el("section", "matura-rok");
         skupina.append(el("h2", "matura-rok-naslov", ROKI[rok]));
-        vRoku.forEach((p) => skupina.append(renderPola(p, naslovPdf)));
+        const vKazalu = [];
+        vRoku.forEach((p) => {
+          const sekcija = renderPola(p, naslovPdf);
+          skupina.append(sekcija);
+          vKazalu.push({ pola: p, sekcija, ime: sekcija.querySelector(".matura-pola-naslov h3").textContent });
+        });
         vsebina.append(skupina);
+        zaKazalo.push({ rok: leto ? ROKI[rok] : `${ROKI[rok]} ${l}`, vRoku: vKazalu });
       }
     }
     typeset(vsebina);
+    kazaloPol(zaKazalo);
   }
 
   const vrstica = orodja(() => [`Matura${leto ? ` ${leto}` : ""}`, predmet, imeRavni(raven)].filter(Boolean).join(", "), { brezPrikaza: true });
@@ -763,7 +930,10 @@ async function stranPole() {
     raven = r;
     izrisi();
   });
-  koren.replaceChildren(...(ravni.length > 1 ? [izbira] : []), vrstica, vsebina);
+  // Izbira ravni in prenos PDF v eni vrstici nad polami
+  const vrh = el("div", "matura-pole-vrh");
+  vrh.append(...(ravni.length > 1 ? [izbira] : []), vrstica);
+  koren.replaceChildren(vrh, vsebina);
   izrisi();
   await poIzrisu(vsebina);
   // Povezava z naloge po snovi (#<pola>-<naloga>): pola je že odprta, skoči na nalogo

@@ -254,6 +254,9 @@ Strani izriše `components/matura.js`. Na vrhu sta gumba Pokaži vse rešitve in
 pri vsaki nalogi pa Rešitev in Postopek. PDF brez rešitev / z rešitvami odpre tisk brskalnika
 (Shrani kot PDF) v svetli temi brez menija; povezava s `?tisk=brez` ali `?tisk=resitve` odpre tisk sama.
 Rešitve pridejo s strežnika samo, če je pola odklenjena (glej Dostop), zato veljajo tudi v PDF-ju.
+Na strani pol (`pole/leto.html`) je desno kazalo pol (kot kazalo pri snovi): roki, pole in naloge odprte pole,
+zgoraj pa, na kateri poli in nalogi je dijak; na ožjem zaslonu ga odpre gumb spodaj desno. V videzu »tabla«
+je vsaka pola na svoji tabli (`tabla.css`), listi pole pa ostanejo kot na pravi maturi (bel papir, Arial).
 
 Pole so v `api/data/matura.json`. Vsaka naloga ima `poglavje` (slug iz `snovi.json`, lahko seznam),
 zato se sama pojavi na strani poglavja:

@@ -863,3 +863,68 @@ html[data-videz="tabla"] .polica-napis-vrsta {
         font-size: 18px;
     }
 }
+
+/* ---------- Maturitetne pole: vsaka pola na svoji tabli ---------- */
+/* Listi pole ostanejo kot na pravi maturi (bel papir, Arial); okoli njih je tabla. */
+html[data-videz="tabla"] .matura-rok-naslov {
+    font-family: var(--font-roka);
+    font-weight: 700;
+    font-size: 30px;
+    color: var(--rdeca);
+    margin: 30px 0 6px;
+}
+html[data-videz="tabla"] details.matura-pola {
+    background-color: var(--tabla);
+    background-image: radial-gradient(ellipse at 72% 28%, var(--mazilo), transparent 45%);
+    border: 12px solid var(--okvir);
+    border-radius: 6px;
+    box-shadow: inset 0 0 140px var(--mazilo), 0 14px 0 -2px var(--polica-tabla), 0 36px 44px -30px rgba(0, 0, 0, 0.45);
+    margin: 0 0 44px;
+}
+html[data-videz="tabla"] .matura-pola-povzetek {
+    padding: 18px 22px;
+}
+html[data-videz="tabla"] .matura-pola-naslov h3 {
+    font-size: 24px;
+}
+html[data-videz="tabla"] .matura-pola-vsebina {
+    padding: 0 22px 28px;
+}
+html[data-videz="tabla"] .matura-pola-prenosi .btn,
+html[data-videz="tabla"] .pola-vrh .btn {
+    padding: 6px 12px;
+    font-size: 13px;
+}
+html[data-videz="tabla"] .pola-vrh {
+    max-width: 820px;
+    margin-left: auto;
+    margin-right: auto;
+}
+html[data-videz="tabla"] .pola-oznaka {
+    color: var(--text-primary);
+}
+@media (max-width: 600px) {
+    html[data-videz="tabla"] details.matura-pola {
+        border-width: 7px;
+    }
+    html[data-videz="tabla"] .matura-pola-povzetek,
+    html[data-videz="tabla"] .matura-pola-vsebina {
+        padding-left: 12px;
+        padding-right: 12px;
+    }
+}
+@media print {
+    html[data-videz="tabla"] details.matura-pola {
+        background: none;
+        border: 0;
+        box-shadow: none;
+        margin: 0;
+    }
+    html[data-videz="tabla"] .matura-pola-vsebina {
+        padding: 0;
+    }
+}
+/* povezava na celo polo (#<pola>) je ne obrobi: tabla je že dovolj vidna */
+html[data-videz="tabla"] details.matura-pola.mn-izbrana {
+    outline: none;
+}
