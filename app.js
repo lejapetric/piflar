@@ -1,6 +1,7 @@
 // app.js
 // Express aplikacija brez zagona strežnika (zažene jo server.js, testi jo uvozijo).
 import express from "express";
+import compression from "compression";
 import { fileURLToPath } from "node:url";
 
 import apiRouter from "./api/routes/api.js";
@@ -12,6 +13,10 @@ const publicDir = fileURLToPath(new URL("./public", import.meta.url));
 
 const app = express();
 app.disable("x-powered-by");
+
+// Stiskanje odgovorov (gzip/brotli): HTML, CSS, JS in JSON so 4- do 10-krat manjši (meni sidebar.html
+// 174 kB → okoli 15 kB). Slike in videi so že stisnjeni, zato jih filter izpusti.
+app.use(compression());
 
 // Stripe webhook potrebuje surovo telo za preverjanje podpisa, zato je pred express.json()
 app.post("/api/placila/webhook", express.raw({ type: "application/json" }), ctrlPlacila.webhook);

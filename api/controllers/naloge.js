@@ -25,13 +25,20 @@ const nalogeList = (req, res) => {
 };
 
 // GET /api/naloge/stevilo?predmet=fizika → { nihanje: 60, … }
+// Kliče ga vsaka stran z razlago, naloge pa se med delovanjem ne spreminjajo,
+// zato se štetje za vsak predmet izračuna enkrat (namesto pregleda ~19.000 nalog ob vsakem obisku).
+const steviloPoPredmetu = new Map();
 const nalogeStevilo = (req, res) => {
-  const stevilo = {};
-  for (const n of naloge) {
-    if (req.query.predmet && n.predmet !== req.query.predmet) continue;
-    stevilo[n.poglavje] = (stevilo[n.poglavje] ?? 0) + 1;
+  const predmet = String(req.query.predmet ?? "");
+  if (!steviloPoPredmetu.has(predmet)) {
+    const stevilo = {};
+    for (const n of naloge) {
+      if (predmet && n.predmet !== predmet) continue;
+      stevilo[n.poglavje] = (stevilo[n.poglavje] ?? 0) + 1;
+    }
+    steviloPoPredmetu.set(predmet, stevilo);
   }
-  res.status(200).json(stevilo);
+  res.status(200).json(steviloPoPredmetu.get(predmet));
 };
 
 // GET /api/naloge/:id

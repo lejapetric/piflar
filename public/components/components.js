@@ -8,16 +8,8 @@ const HIDE_HEADER_AFTER = 80; // px
 const TEMA_KLJUC = "piflar-tema";
 
 // ============================================================
-// 0. TEMA — nastavi se takoj, da stran ne utripne svetlo
+// 0. TEMA — začetno temo nastavi tema.js v <head> (pred izrisom), tu je samo stikalo
 // ============================================================
-function shranjenaTema() {
-  try {
-    return localStorage.getItem(TEMA_KLJUC);
-  } catch {
-    return null;
-  }
-}
-
 function nastaviTemo(tema) {
   document.documentElement.dataset.theme = tema;
   const gumb = document.getElementById("temaPreklop");
@@ -26,10 +18,6 @@ function nastaviTemo(tema) {
   gumb.setAttribute("aria-pressed", String(temna));
   gumb.setAttribute("aria-label", temna ? "Vklopi svetli način" : "Vklopi temni način");
 }
-
-nastaviTemo(
-  shranjenaTema() ?? (window.matchMedia?.("(prefers-color-scheme: dark)").matches ? "dark" : "light")
-);
 
 function initTema() {
   const gumb = document.getElementById("temaPreklop");
@@ -78,13 +66,21 @@ function loadMathJax() {
 // ============================================================
 // 2. KOMPONENTE (header, sidebar, footer)
 // ============================================================
-async function loadComponent(url, targetId) {
-  const el = document.getElementById(targetId);
+// tema.js v <head> zahteve začne že med branjem strani (window.piflarKomponente)
+async function naloziKomponento(ime) {
+  const zacetna = window.piflarKomponente?.[ime];
+  if (zacetna) return zacetna;
+  const url = `/components/${ime}.html`;
+  const res = await fetch(url);
+  if (!res.ok) throw new Error(`${url} → ${res.status}`);
+  return res.text();
+}
+
+async function loadComponent(ime) {
+  const el = document.getElementById(ime);
   if (!el) return;
   try {
-    const res = await fetch(url);
-    if (!res.ok) throw new Error(`${url} → ${res.status}`);
-    el.innerHTML = await res.text();
+    el.innerHTML = await naloziKomponento(ime);
   } catch (err) {
     console.error("Napaka pri nalaganju komponente:", err);
   }
@@ -898,6 +894,33 @@ async function initNalogePovezava() {
 }
 
 // ============================================================
+// SLIKE VIDEOV (poster) — naložijo se šele, ko je video blizu zaslona
+// ============================================================
+// Vsak sklop ima video za svetli in temni način (data-poster namesto poster), zato bi stran
+// sicer takoj naložila vse slike obeh. Skriti video (druga tema) se ne prikaže na zaslonu,
+// zato se njegova slika naloži šele, ko dijak preklopi temo.
+function initPosterji() {
+  const videi = document.querySelectorAll("video[data-poster]");
+  if (!videi.length) return;
+  const nastavi = (v) => {
+    v.poster = v.dataset.poster;
+    v.removeAttribute("data-poster");
+  };
+  if (!("IntersectionObserver" in window)) return videi.forEach(nastavi);
+  const opazovalec = new IntersectionObserver(
+    (vnosi) => {
+      for (const vnos of vnosi) {
+        if (!vnos.isIntersecting) continue;
+        nastavi(vnos.target);
+        opazovalec.unobserve(vnos.target);
+      }
+    },
+    { rootMargin: "800px 0px" }
+  );
+  videi.forEach((v) => opazovalec.observe(v));
+}
+
+// ============================================================
 // ČASOVNI TRAKOVI (components/casovni-trak.js), samo na straneh z .ct
 // ============================================================
 function initCasovniTrak() {
@@ -980,11 +1003,12 @@ function initMaturaStikalo() {
 async function init() {
   const kazalo = pripraviKazaloStrani();
   loadMathJax();
+  initPosterji();
 
   await Promise.all([
-    loadComponent("/components/header.html", "header"),
-    loadComponent("/components/sidebar.html", "sidebar"),
-    loadComponent("/components/footer.html", "footer"),
+    loadComponent("header"),
+    loadComponent("sidebar"),
+    loadComponent("footer"),
   ]);
 
   initHeader();

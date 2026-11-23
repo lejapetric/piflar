@@ -27,8 +27,8 @@ def vstavi(m):
     url = f'/videi/{pot}/{sid}'
     blok = (f'\n          <div class="sklop-video">'
             f'<span class="sklop-video-oznaka">Video razlaga</span>'
-            f'<video class="video-svetla" controls preload="none" playsinline poster="{url}-svetla.jpg" src="{url}-svetla.mp4"></video>'
-            f'<video class="video-temna" controls preload="none" playsinline poster="{url}-temna.jpg" src="{url}-temna.mp4"></video>'
+            f'<video class="video-svetla" controls preload="none" playsinline data-poster="{url}-svetla.jpg" src="{url}-svetla.mp4"></video>'
+            f'<video class="video-temna" controls preload="none" playsinline data-poster="{url}-temna.jpg" src="{url}-temna.mp4"></video>'
             f'</div><!-- /sklop-video -->')
     return m.group(0) + blok
 
