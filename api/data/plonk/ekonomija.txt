@@ -1,0 +1,15 @@
+// Plonk listki za ekonomijo.
+
+=== povprasevanje_ponudba
+## Povpraševanje in ponudba
+zakon povpraševanja :: višja cena, manjša povpraševana količina :: krivulja pada
+zakon ponudbe :: višja cena, večja ponujena količina :: krivulja narašča
+premik po krivulji / premik krivulje :: sprememba cene / drugih dejavnikov :: dohodek, okus, cene substitutov
+substituti / komplementi :: nadomestki / dopolnjujoči :: maslo–margarina / avto–bencin
+\(E = \frac{\%\Delta Q}{\%\Delta P}\) :: cenovna elastičnost :: \(|E| > 1\) elastično
+## Tržno ravnovesje
+ravnovesna cena :: povpraševanje = ponudba :: presečišče krivulj
+presežek ponudbe :: cena nad ravnovesjem :: zaloge, cena pade
+presežek povpraševanja :: cena pod ravnovesjem :: pomanjkanje, cena raste
+najvišja / najnižja cena :: državni posegi :: najemnine / minimalna plača
+! Sprememba cene premakne točko po krivulji, ne krivulje.

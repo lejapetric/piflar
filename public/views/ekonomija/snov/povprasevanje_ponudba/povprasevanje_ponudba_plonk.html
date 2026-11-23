@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Povpraševanje, ponudba in tržno ravnovesje — plonk listek | Učilnica.com</title>
+  <meta name="description" content="Plonk listek za maturo: Povpraševanje, ponudba in tržno ravnovesje na enem listu A4, vsaka formula ali pojem s kratkim primerom.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Kalam:wght@400;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
+  <link rel="stylesheet" href="/style/snov.css">
+  <link rel="stylesheet" href="/style/plonk.css">
+</head>
+<body>
+  <div id="header"></div>
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view">
+
+        <!-- Ustvari tools/plonk/plonk.mjs iz api/data/plonk/ekonomija.txt; ne urejaj ročno. -->
+        <article class="plonk">
+          <header class="pl-glava">
+            <div>
+              <span class="pl-oznaka">Plonk listek · Ekonomija 2</span>
+              <h1>Povpraševanje, ponudba in tržno ravnovesje</h1>
+            </div>
+            <div class="pl-gumbi">
+              <a class="pl-gumb pl-gumb--tiho" href="povprasevanje_ponudba_razlaga.html">Cela razlaga</a>
+              <button type="button" class="pl-gumb" onclick="window.print()">Natisni</button>
+            </div>
+          </header>
+
+          <div class="pl-vsebina">
+            <section class="pl-sklop">
+              <h2><span class="pl-st">1</span>Povpraševanje in ponudba</h2>
+              <div class="pl-r pl-r--dolga"><div class="pl-f">zakon povpraševanja</div><div class="pl-o">višja cena, manjša povpraševana količina</div><div class="pl-p">krivulja pada</div></div>
+              <div class="pl-r"><div class="pl-f">zakon ponudbe</div><div class="pl-o">višja cena, večja ponujena količina</div><div class="pl-p">krivulja narašča</div></div>
+              <div class="pl-r pl-r--dolga"><div class="pl-f">premik po krivulji / premik krivulje</div><div class="pl-o">sprememba cene / drugih dejavnikov</div><div class="pl-p">dohodek, okus, cene substitutov</div></div>
+              <div class="pl-r"><div class="pl-f">substituti / komplementi</div><div class="pl-o">nadomestki / dopolnjujoči</div><div class="pl-p">maslo–margarina / avto–bencin</div></div>
+              <div class="pl-r"><div class="pl-f">\(E = \frac{\%\Delta Q}{\%\Delta P}\)</div><div class="pl-o">cenovna elastičnost</div><div class="pl-p">\(|E| &gt; 1\) elastično</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">2</span>Tržno ravnovesje</h2>
+              <div class="pl-r"><div class="pl-f">ravnovesna cena</div><div class="pl-o">povpraševanje = ponudba</div><div class="pl-p">presečišče krivulj</div></div>
+              <div class="pl-r"><div class="pl-f">presežek ponudbe</div><div class="pl-o">cena nad ravnovesjem</div><div class="pl-p">zaloge, cena pade</div></div>
+              <div class="pl-r"><div class="pl-f">presežek povpraševanja</div><div class="pl-o">cena pod ravnovesjem</div><div class="pl-p">pomanjkanje, cena raste</div></div>
+              <div class="pl-r"><div class="pl-f">najvišja / najnižja cena</div><div class="pl-o">državni posegi</div><div class="pl-p">najemnine / minimalna plača</div></div>
+            </section>
+
+            <section class="pl-sklop pl-pasti">
+              <h2><span class="pl-st">!</span>Pazi</h2>
+              <ul>
+                <li>Sprememba cene premakne točko po krivulji, ne krivulje.</li>
+              </ul>
+            </section>
+          </div>
+          <footer class="pl-noga">piflar.si · plonk listek · Povpraševanje, ponudba in tržno ravnovesje</footer>
+        </article>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>

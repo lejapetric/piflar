@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Osnove informatike — plonk listek | Učilnica.com</title>
+  <meta name="description" content="Plonk listek za maturo: Osnove informatike na enem listu A4, vsaka formula ali pojem s kratkim primerom.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Kalam:wght@400;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
+  <link rel="stylesheet" href="/style/snov.css">
+  <link rel="stylesheet" href="/style/plonk.css">
+</head>
+<body>
+  <div id="header"></div>
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view">
+
+        <!-- Ustvari tools/plonk/plonk.mjs iz api/data/plonk/informatika.txt; ne urejaj ročno. -->
+        <article class="plonk">
+          <header class="pl-glava">
+            <div>
+              <span class="pl-oznaka">Plonk listek · Informatika 4.1</span>
+              <h1>Osnove informatike</h1>
+            </div>
+            <div class="pl-gumbi">
+              <a class="pl-gumb pl-gumb--tiho" href="osnove_informatike_razlaga.html">Cela razlaga</a>
+              <button type="button" class="pl-gumb" onclick="window.print()">Natisni</button>
+            </div>
+          </header>
+
+          <div class="pl-vsebina">
+            <section class="pl-sklop">
+              <h2><span class="pl-st">1</span>Temeljni pojmi</h2>
+              <div class="pl-r"><div class="pl-f">podatek / informacija / znanje</div><div class="pl-o">zapis / pomen / uporaba</div><div class="pl-p">»37,5« / temperatura bolnika</div></div>
+              <div class="pl-r"><div class="pl-f">informacijski sistem</div><div class="pl-o">ljudje, postopki, podatki, tehnologija</div><div class="pl-p">šolski eAsistent</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">2</span>Družbeni vidiki</h2>
+              <div class="pl-r"><div class="pl-f">avtorske pravice, licence</div><div class="pl-o">intelektualna lastnina</div><div class="pl-p">Creative Commons</div></div>
+              <div class="pl-r"><div class="pl-f">varstvo osebnih podatkov</div><div class="pl-o">GDPR</div><div class="pl-p">privolitev</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">3</span>Komuniciranje</h2>
+              <div class="pl-r"><div class="pl-f">pošiljatelj, kanal, prejemnik, šum</div><div class="pl-o">model komuniciranja</div><div class="pl-p">Shannon</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">4</span>Kode in kodiranje</h2>
+              <div class="pl-r"><div class="pl-f">\(n\) bitov da \(2^n\) kombinacij</div><div class="pl-o">koliko stanj</div><div class="pl-p">8 bitov = 256 znakov</div></div>
+              <div class="pl-r"><div class="pl-f">ASCII (7 bitov), Unicode (UTF-8)</div><div class="pl-o">kodiranje znakov</div><div class="pl-p">»A« = 65</div></div>
+              <div class="pl-r"><div class="pl-f">paritetni bit</div><div class="pl-o">zaznava napake</div><div class="pl-p">sodo število enic</div></div>
+              <div class="pl-r"><div class="pl-f">\(I = \log_2 N\)</div><div class="pl-o">količina informacije (bit)</div><div class="pl-p">8 enako verjetnih izidov: 3 biti</div></div>
+            </section>
+
+            <section class="pl-sklop pl-pasti">
+              <h2><span class="pl-st">!</span>Pazi</h2>
+              <ul>
+                <li>1 B = 8 bitov; 1 KiB = 1024 B.</li>
+              </ul>
+            </section>
+          </div>
+          <footer class="pl-noga">piflar.si · plonk listek · Osnove informatike</footer>
+        </article>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>
