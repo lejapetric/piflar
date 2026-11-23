@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Uradni dopisi in javna besedila — plonk listek | Učilnica.com</title>
+  <meta name="description" content="Plonk listek za maturo: Uradni dopisi in javna besedila na enem listu A4, vsaka formula ali pojem s kratkim primerom.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Kalam:wght@400;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
+  <link rel="stylesheet" href="/style/snov.css">
+  <link rel="stylesheet" href="/style/plonk.css">
+</head>
+<body>
+  <div id="header"></div>
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view">
+
+        <!-- Ustvari tools/plonk/plonk.mjs iz api/data/plonk/poklicna_slovenscina.txt; ne urejaj ročno. -->
+        <article class="plonk">
+          <header class="pl-glava">
+            <div>
+              <span class="pl-oznaka">Plonk listek · Poklicna matura Snov</span>
+              <h1>Uradni dopisi in javna besedila</h1>
+            </div>
+            <div class="pl-gumbi">
+              <a class="pl-gumb pl-gumb--tiho" href="uradna_javna_besedila_razlaga.html">Cela razlaga</a>
+              <button type="button" class="pl-gumb" onclick="window.print()">Natisni</button>
+            </div>
+          </header>
+
+          <div class="pl-vsebina">
+            <section class="pl-sklop">
+              <h2><span class="pl-st">1</span>Uradna besedila</h2>
+              <div class="pl-r"><div class="pl-f">uradni dopis</div><div class="pl-o">glava, zadeva, nagovor, jedro, pozdrav, podpis</div><div class="pl-p">prošnja, opravičilo</div></div>
+              <div class="pl-r"><div class="pl-f">vikanje, knjižni jezik</div><div class="pl-o">slog</div><div class="pl-p">Spoštovani!</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">2</span>Javna besedila, življenjepis, zapisnik</h2>
+              <div class="pl-r"><div class="pl-f">obvestilo, vabilo</div><div class="pl-o">kdo, kaj, kdaj, kje, za koga</div><div class="pl-p">vabilo na prireditev</div></div>
+              <div class="pl-r"><div class="pl-f">življenjepis</div><div class="pl-o">osebni podatki, izobrazba, izkušnje, znanja</div><div class="pl-p">Europass</div></div>
+              <div class="pl-r"><div class="pl-f">zapisnik</div><div class="pl-o">kraj, čas, prisotni, dnevni red, sklepi, podpis</div><div class="pl-p">zapisnik sestanka razreda</div></div>
+            </section>
+
+            <section class="pl-sklop pl-pasti">
+              <h2><span class="pl-st">!</span>Pazi</h2>
+              <ul>
+                <li>Zapisnik povzema sklepe, ne celotnega pogovora.</li>
+              </ul>
+            </section>
+          </div>
+          <footer class="pl-noga">piflar.si · plonk listek · Uradni dopisi in javna besedila</footer>
+        </article>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>

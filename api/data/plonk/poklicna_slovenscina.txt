@@ -1,0 +1,110 @@
+// Plonk listki za poklicno maturo iz slovenščine; sklope prevzame iz slovenščine.
+
+=== izpit_pm_slovenscina
+## Zgradba izpita
+pisni del 70 %, ustni 30 % :: pisni 120 minut, vsaka pola 60 :: samo nalivno pero ali kemični svinčnik
+IP 1 (40 %) :: razčlemba neumetnostnega besedila in tvorba krajšega besedila :: 60 točk, deljeno z 1,5
+IP 2 (30 %) :: vodena ali samostojna interpretacija odlomka :: povezano besedilo, ne točke
+ustni izpit (30 %) :: branje, interpretacija, jezikovna tema, govorni nastop :: do 20 minut + 15 minut priprave
+## Izpitna pola 1
+preberi navodila in besedilo dvakrat :: odgovarjaj v celih povedih :: navedi primer iz besedila
+tvorba :: upoštevaj vse vsebinske točke in obseg :: uradni dopis: vikanje
+## Izpitna pola 2 in ustni izpit
+interpretacija :: uvod, jedro s citati, povezava, sklep :: avtor, naslov, zvrst, umestitev odlomka
++ slovenscina:jezik_sporazumevanje#5
+! Pri vsaki trditvi navedi primer iz besedila.
+
+=== jezik_v_druzbi
++ slovenscina:jezik_sporazumevanje#1,2
++ slovenscina:jezikovne_zvrsti#1,2,3
+## Slovenščina v državi in Evropi
+uradni jezik RS (Ustava, 11. člen) :: in EU od 2004 :: materni jezik: identiteta
+narodnostno mešana območja :: italijanščina (Istra), madžarščina (Prekmurje) :: dvojezični napisi
+zamejstvo :: Italija, Avstrija, Madžarska, Hrvaška :: Trst, Koroška, Porabje
+indoevropski jeziki :: slovanski, germanski, romanski :: slovenščina: južnoslovanski
++ slovenscina:jezikovne_zvrsti#5
+
+=== besedje_pm
++ slovenscina:besedje
+
+=== skladnja_pm
++ slovenscina:oblikoslovje#1
++ slovenscina:skladnja
+
+=== pravopis_slog_pm
++ slovenscina:pravopis
++ slovenscina:glasoslovje_pravorecje#3,4
+
+=== publicisticna_strokovna
++ slovenscina:besedilo#3,4
++ slovenscina:jezikovne_zvrsti#4
+
+=== razclemba_besedila
++ slovenscina:besedilo#1
+## Vrste besedil in razvijanje teme
+razlagalno, utemeljevalno, opisovalno, pripovedno :: vrste glede na razvijanje teme :: navodilo: opis postopka
+pomensko razmerje :: vzročno, posledično, časovno, protivno :: »zato«, »vendar«
++ slovenscina:jezik_sporazumevanje#3,4
++ slovenscina:besedilo#5
+
+=== tvorba_besedila
+## Krajše neumetnostno besedilo
+publicistično :: poročilo, novica, predstavitev osebe, intervju, komentar :: novica: kdo, kaj, kje, kdaj, zakaj
+strokovno :: predstavitev predmeta, postopka, navodilo :: opis postopka v korakih
+uradni dopis :: zahvala, opravičilo, vabilo, prošnja, prijava, pritožba :: glava, zadeva, nagovor, jedro, pozdrav
+javno besedilo :: obvestilo, vabilo :: kdo, kaj, kdaj, kje
+## Faze sporočanja
+načrtovanje :: kdo piše, komu, zakaj, katera vrsta :: obkroži vsebinske zahteve
+zbiranje in urejanje :: načrt v ključnih besedah :: uvod, jedro, zaključek
+ubesedovanje :: knjižni zborni jezik :: vikanje, strokovni izrazi
+pregled :: vsebinske točke, obseg, pravopis :: preštej besede
+## Kontrolni seznam
+vse vsebinske točke :: najpogostejša izguba točk :: »Spoštovani gospod …«
+obseg :: ne prekrátko ne predolgo :: 120–150 besed
+! Navodilo določa naslovnika, okoliščine in obseg: upoštevaj vse.
+
+=== uradna_javna_besedila
++ slovenscina:besedilo#2
+## Javna besedila, življenjepis, zapisnik
+obvestilo, vabilo :: kdo, kaj, kdaj, kje, za koga :: vabilo na prireditev
+življenjepis :: osebni podatki, izobrazba, izkušnje, znanja :: Europass
+zapisnik :: kraj, čas, prisotni, dnevni red, sklepi, podpis :: zapisnik sestanka razreda
+! Zapisnik povzema sklepe, ne celotnega pogovora.
+
+=== interpretacija_pm
++ slovenscina:uvod_knjizevnost
+## Interpretacija na izpitni poli 2
+uvod :: avtor, naslov, zvrst in vrsta, povzetek in umestitev odlomka :: »Odlomek je iz romana …«
+jedro (3–4 odstavki) :: tema, motivi, osebe, prostor, čas, pripovedovalec, slog; vsaka trditev s citatom :: »… kot pravi Francka: …«
+povezava :: primerjava z drugim delom ali življenjem :: aktualizacija
+sklep :: povzetek, presoja, osebno mnenje :: ali je problem aktualen danes
+! Povezano besedilo, ne odgovori po točkah.
+
+=== knjizevnost_do_razsvetljenstva
++ slovenscina:orient#1,3
++ slovenscina:antika#1,2,3
++ slovenscina:srednji_vek#1,4
++ slovenscina:ljudsko_slovstvo
++ slovenscina:renesansa#1,5
++ slovenscina:reformacija_barok#1,2,4,5
++ slovenscina:razsvetljenstvo
+
+=== romantika_realizem_pm
++ slovenscina:evropska_romantika#1,3,5
++ slovenscina:preseren#1,5,6,8
++ slovenscina:realizem#1,3,5,6,8
++ slovenscina:med_romantiko_realizmom#1,2,3,5,7,6,8,4
+
+=== moderna_pm
++ slovenscina:evropska_moderna#1,4
++ slovenscina:slovenska_moderna#1,2,3,4,5,6,7,8,9,10
+
+=== knjizevnost_prva_polovica
++ slovenscina:svet_prva_polovica_20#1,3
++ slovenscina:slovenska_prva_polovica_20#1,2,3,4,6
+
+=== knjizevnost_druga_polovica
++ slovenscina:svet_druga_polovica_20#1,5,6
++ slovenscina:slovensko_pesnistvo_20
++ slovenscina:slovensko_pripovednistvo_20
++ slovenscina:slovenska_dramatika_20
