@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zbiranje in obdelava psiholoških podatkov — plonk listek | Učilnica.com</title>
+  <meta name="description" content="Plonk listek za maturo: Zbiranje in obdelava psiholoških podatkov na enem listu A4, vsaka formula ali pojem s kratkim primerom.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Kalam:wght@400;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
+  <link rel="stylesheet" href="/style/snov.css">
+  <link rel="stylesheet" href="/style/plonk.css">
+</head>
+<body>
+  <div id="header"></div>
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view">
+
+        <!-- Ustvari tools/plonk/plonk.mjs iz api/data/plonk/psihologija.txt; ne urejaj ročno. -->
+        <article class="plonk">
+          <header class="pl-glava">
+            <div>
+              <span class="pl-oznaka">Plonk listek · Psihologija 4.1.4</span>
+              <h1>Zbiranje in obdelava psiholoških podatkov</h1>
+            </div>
+            <div class="pl-gumbi">
+              <a class="pl-gumb pl-gumb--tiho" href="obdelava_podatkov_razlaga.html">Cela razlaga</a>
+              <button type="button" class="pl-gumb" onclick="window.print()">Natisni</button>
+            </div>
+          </header>
+
+          <div class="pl-vsebina">
+            <section class="pl-sklop">
+              <h2><span class="pl-st">1</span>Populacija in vzorec</h2>
+              <div class="pl-r"><div class="pl-f">populacija</div><div class="pl-o">vsi, o katerih sklepamo</div><div class="pl-p">vsi slovenski dijaki</div></div>
+              <div class="pl-r"><div class="pl-f">reprezentativen vzorec</div><div class="pl-o">predstavlja populacijo</div><div class="pl-p">naključni vzorec</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">2</span>Urejanje in prikazi</h2>
+              <div class="pl-r"><div class="pl-f">frekvenčna porazdelitev</div><div class="pl-o">tabela, histogram</div><div class="pl-p">koliko dijakov ima oceno 5</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">3</span>Kvantitativna obdelava</h2>
+              <div class="pl-r"><div class="pl-f">\(\bar x\), \(Me\), \(Mo\)</div><div class="pl-o">srednje vrednosti</div><div class="pl-p">povprečni IQ = 100</div></div>
+              <div class="pl-r"><div class="pl-f">standardni odklon \(\sigma\)</div><div class="pl-o">razpršenost</div><div class="pl-p">IQ: \(\sigma = 15\)</div></div>
+              <div class="pl-r"><div class="pl-f">normalna porazdelitev</div><div class="pl-o">68 % v \(\bar x \pm \sigma\)</div><div class="pl-p">IQ 85–115</div></div>
+              <div class="pl-r"><div class="pl-f">korelacija \(r\)</div><div class="pl-o">od −1 do +1, povezanost</div><div class="pl-p">\(r = 0{,}7\): močna pozitivna</div></div>
+            </section>
+
+            <section class="pl-sklop pl-pasti">
+              <h2><span class="pl-st">!</span>Pazi</h2>
+              <ul>
+                <li>Korelacija ne pomeni vzročnosti.</li>
+              </ul>
+            </section>
+          </div>
+          <footer class="pl-noga">piflar.si · plonk listek · Zbiranje in obdelava psiholoških podatkov</footer>
+        </article>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>

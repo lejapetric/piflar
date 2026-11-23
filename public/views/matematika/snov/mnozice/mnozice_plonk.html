@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Množice — plonk listek | Učilnica.com</title>
+  <meta name="description" content="Plonk listek za maturo: Množice na enem listu A4, vsaka formula ali pojem s kratkim primerom.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Kalam:wght@400;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
+  <link rel="stylesheet" href="/style/snov.css">
+  <link rel="stylesheet" href="/style/plonk.css">
+</head>
+<body>
+  <div id="header"></div>
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view">
+
+        <!-- Ustvari tools/plonk/plonk.mjs iz api/data/plonk/matematika.txt; ne urejaj ročno. -->
+        <article class="plonk">
+          <header class="pl-glava">
+            <div>
+              <span class="pl-oznaka">Plonk listek · Matematika 4.2</span>
+              <h1>Množice</h1>
+            </div>
+            <div class="pl-gumbi">
+              <a class="pl-gumb pl-gumb--tiho" href="mnozice_razlaga.html">Cela razlaga</a>
+              <button type="button" class="pl-gumb" onclick="window.print()">Natisni</button>
+            </div>
+          </header>
+
+          <div class="pl-vsebina">
+            <section class="pl-sklop">
+              <h2><span class="pl-st">1</span>Osnovni pojmi</h2>
+              <div class="pl-r"><div class="pl-f">\(a \in A\)</div><div class="pl-o">element pripada množici</div><div class="pl-p">\(2 \in \{1, 2, 3\}\), \(4 \notin \{1, 2, 3\}\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(A \subseteq B\)</div><div class="pl-o">podmnožica: vsak element \(A\) je v \(B\)</div><div class="pl-p">\(\{1\} \subseteq \{1, 2\}\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(\emptyset\)</div><div class="pl-o">prazna množica, podmnožica vsake</div><div class="pl-p">\(\{x \in \mathbb{N};\ x &lt; 1\} = \emptyset\)</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">2</span>Operacije</h2>
+              <div class="pl-r"><div class="pl-f">\(A \cap B\)</div><div class="pl-o">presek: v obeh</div><div class="pl-p">\(\{1,2,3\} \cap \{2,3,4\} = \{2,3\}\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(A \cup B\)</div><div class="pl-o">unija: v vsaj eni</div><div class="pl-p">\(\{1,2\} \cup \{2,4\} = \{1,2,4\}\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(A \setminus B\)</div><div class="pl-o">razlika: v \(A\), ne v \(B\)</div><div class="pl-p">\(\{1,2,3\} \setminus \{2\} = \{1,3\}\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(A^c\)</div><div class="pl-o">komplement glede na univerzalno \(U\)</div><div class="pl-p">\(U = \{1..5\}\), \(A = \{1,2\}\): \(A^c = \{3,4,5\}\)</div></div>
+              <div class="pl-r"><div class="pl-f">\((A \cup B)^c = A^c \cap B^c\)</div><div class="pl-o">De Morgan za množice</div><div class="pl-p">tudi \((A \cap B)^c = A^c \cup B^c\)</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">3</span>Moč množice</h2>
+              <div class="pl-r"><div class="pl-f">\(m(A \cup B) = m(A) + m(B) - m(A \cap B)\)</div><div class="pl-o">vključitve in izključitve</div><div class="pl-p">20 + 15 − 5 = 30 dijakov</div></div>
+              <div class="pl-r"><div class="pl-f">\(m(\mathcal{P}(A)) = 2^{m(A)}\)</div><div class="pl-o">potenčna množica = vse podmnožice</div><div class="pl-p">\(A = \{a, b\}\): \(\mathcal{P}(A) = \{\emptyset, \{a\}, \{b\}, A\}\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(m(A \times B) = m(A) \cdot m(B)\)</div><div class="pl-o">kartezični produkt: urejeni pari</div><div class="pl-p">\(\{1,2\} \times \{x\} = \{(1,x), (2,x)\}\)</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">4</span>Relacije</h2>
+              <div class="pl-r"><div class="pl-f">refleksivna</div><div class="pl-o">\(a R a\) za vse \(a\)</div><div class="pl-p">»je enako«</div></div>
+              <div class="pl-r"><div class="pl-f">simetrična</div><div class="pl-o">\(a R b \Rightarrow b R a\)</div><div class="pl-p">»je vzporedna z«</div></div>
+              <div class="pl-r"><div class="pl-f">tranzitivna</div><div class="pl-o">\(a R b \wedge b R c \Rightarrow a R c\)</div><div class="pl-p">»je manjše od«</div></div>
+              <div class="pl-r"><div class="pl-f">ekvivalenčna</div><div class="pl-o">refleksivna, simetrična, tranzitivna</div><div class="pl-p">»ima isti ostanek pri deljenju s 3«</div></div>
+            </section>
+
+            <section class="pl-sklop pl-pasti">
+              <h2><span class="pl-st">!</span>Pazi</h2>
+              <ul>
+                <li>\(\emptyset\) in \(\{\emptyset\}\) nista isto: druga ima en element.</li>
+                <li>Pri \(A \times B\) je vrstni red pomemben: \((1, x) \ne (x, 1)\).</li>
+              </ul>
+            </section>
+          </div>
+          <footer class="pl-noga">piflar.si · plonk listek · Množice</footer>
+        </article>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>

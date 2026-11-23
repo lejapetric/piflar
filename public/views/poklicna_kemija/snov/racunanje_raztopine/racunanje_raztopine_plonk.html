@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Računanje z raztopinami in plini — plonk listek | Učilnica.com</title>
+  <meta name="description" content="Plonk listek za maturo: Računanje z raztopinami in plini na enem listu A4, vsaka formula ali pojem s kratkim primerom.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Kalam:wght@400;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
+  <link rel="stylesheet" href="/style/snov.css">
+  <link rel="stylesheet" href="/style/plonk.css">
+</head>
+<body>
+  <div id="header"></div>
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view">
+
+        <!-- Ustvari tools/plonk/plonk.mjs iz api/data/plonk/poklicna_kemija.txt; ne urejaj ročno. -->
+        <article class="plonk">
+          <header class="pl-glava">
+            <div>
+              <span class="pl-oznaka">Plonk listek · Poklicna matura Snov</span>
+              <h1>Računanje z raztopinami in plini</h1>
+            </div>
+            <div class="pl-gumbi">
+              <a class="pl-gumb pl-gumb--tiho" href="racunanje_raztopine_razlaga.html">Cela razlaga</a>
+              <button type="button" class="pl-gumb" onclick="window.print()">Natisni</button>
+            </div>
+          </header>
+
+          <div class="pl-vsebina">
+            <section class="pl-sklop">
+              <h2><span class="pl-st">1</span>Sestava</h2>
+              <div class="pl-r"><div class="pl-f">\(w = \frac{m_{topljenca}}{m_{raztopine}}\)</div><div class="pl-o">masni delež</div><div class="pl-p">10 g soli v 90 g vode: 10 %</div></div>
+              <div class="pl-r"><div class="pl-f">\(c = \frac{n}{V}\)</div><div class="pl-o">množinska koncentracija (mol/l)</div><div class="pl-p">0,2 mol v 0,5 l: 0,4 M</div></div>
+              <div class="pl-r"><div class="pl-f">\(\gamma = \frac{m}{V}\)</div><div class="pl-o">masna koncentracija (g/l)</div><div class="pl-p">\(\gamma = cM\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(c = \frac{w \rho}{M}\)</div><div class="pl-o">pretvarjanje</div><div class="pl-p">36 % HCl, \(\rho = 1{,}18\) g/ml: \(c = 11{,}6\) M</div></div>
+              <div class="pl-r"><div class="pl-f">\(c_1 V_1 = c_2 V_2\)</div><div class="pl-o">redčenje</div><div class="pl-p">100 ml 2 M v 400 ml: 0,5 M</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">2</span>Redčenje in mešanje</h2>
+              <div class="pl-r"><div class="pl-f">\(m_1 w_1 + m_2 w_2 = (m_1 + m_2) w\)</div><div class="pl-o">mešanje raztopin</div><div class="pl-p">100 g 10 % + 100 g 30 %: 20 %</div></div>
+              <div class="pl-r"><div class="pl-f">\(m_{topljenca} = w \cdot m_{raztopine}\)</div><div class="pl-o">priprava raztopine</div><div class="pl-p">250 g 4 % raztopine: 10 g soli</div></div>
+              <div class="pl-r"><div class="pl-f">\(m = c V M\)</div><div class="pl-o">trdna snov za raztopino</div><div class="pl-p">0,5 l 0,1 M NaCl: \(0{,}05 \cdot 58{,}5 = 2{,}9\) g</div></div>
+            </section>
+
+            <section class="pl-sklop pl-pasti">
+              <h2><span class="pl-st">!</span>Pazi</h2>
+              <ul>
+                <li>Pri redčenju se množina topljenca ne spremeni.</li>
+              </ul>
+            </section>
+          </div>
+          <footer class="pl-noga">piflar.si · plonk listek · Računanje z raztopinami in plini</footer>
+        </article>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>

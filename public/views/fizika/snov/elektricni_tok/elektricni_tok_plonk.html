@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Električni tok — plonk listek | Učilnica.com</title>
+  <meta name="description" content="Plonk listek za maturo: Električni tok na enem listu A4, vsaka formula ali pojem s kratkim primerom.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Kalam:wght@400;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
+  <link rel="stylesheet" href="/style/snov.css">
+  <link rel="stylesheet" href="/style/plonk.css">
+</head>
+<body>
+  <div id="header"></div>
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view">
+
+        <!-- Ustvari tools/plonk/plonk.mjs iz api/data/plonk/fizika.txt; ne urejaj ročno. -->
+        <article class="plonk">
+          <header class="pl-glava">
+            <div>
+              <span class="pl-oznaka">Plonk listek · Fizika 4.11</span>
+              <h1>Električni tok</h1>
+            </div>
+            <div class="pl-gumbi">
+              <a class="pl-gumb pl-gumb--tiho" href="elektricni_tok_razlaga.html">Cela razlaga</a>
+              <button type="button" class="pl-gumb" onclick="window.print()">Natisni</button>
+            </div>
+          </header>
+
+          <div class="pl-vsebina">
+            <section class="pl-sklop">
+              <h2><span class="pl-st">1</span>Tok in upor</h2>
+              <div class="pl-r"><div class="pl-f">\(I = \frac{e}{t}\)</div><div class="pl-o">električni tok (A)</div><div class="pl-p">2 As v 4 s: \(0{,}5\ \text{A}\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(U = R I\)</div><div class="pl-o">Ohmov zakon</div><div class="pl-p">\(R = 10\ \Omega, I = 2\ \text{A}\): \(U = 20\ \text{V}\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(R = \zeta \frac{l}{S}\)</div><div class="pl-o">upor žice</div><div class="pl-p">dvakrat daljša: dvakratni upor</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">2</span>Vezave</h2>
+              <div class="pl-r"><div class="pl-f">zaporedno \(R = R_1 + R_2\)</div><div class="pl-o">isti tok</div><div class="pl-p">\(2\ \Omega + 3\ \Omega = 5\ \Omega\)</div></div>
+              <div class="pl-r"><div class="pl-f">vzporedno \(\frac1R = \frac1{R_1} + \frac1{R_2}\)</div><div class="pl-o">ista napetost</div><div class="pl-p">\(6\ \Omega \parallel 3\ \Omega = 2\ \Omega\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(\sum I_{v} = \sum I_{iz}\)</div><div class="pl-o">Kirchhoff: razvejišče</div><div class="pl-p">3 A noter: 1 A + 2 A ven</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">3</span>Delo in moč</h2>
+              <div class="pl-r"><div class="pl-f">\(P = UI = I^2 R = \frac{U^2}{R}\)</div><div class="pl-o">moč</div><div class="pl-p">\(230\ \text{V}, 2\ \text{A}\): \(460\ \text{W}\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(A = Pt\)</div><div class="pl-o">delo (kWh)</div><div class="pl-p">2 kW 3 h: 6 kWh</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">4</span>Vir</h2>
+              <div class="pl-r"><div class="pl-f">\(U = U_g - I R_n\)</div><div class="pl-o">gonilna napetost, notranji upor</div><div class="pl-p">\(U_g = 12, R_n = 1, I = 2\): \(U = 10\ \text{V}\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(I_{kr} = \frac{U_g}{R_n}\)</div><div class="pl-o">kratki stik</div><div class="pl-p">\(12\ \text{A}\)</div></div>
+            </section>
+
+            <section class="pl-sklop pl-pasti">
+              <h2><span class="pl-st">!</span>Pazi</h2>
+              <ul>
+                <li>Ampermeter zaporedno, voltmeter vzporedno.</li>
+              </ul>
+            </section>
+          </div>
+          <footer class="pl-noga">piflar.si · plonk listek · Električni tok</footer>
+        </article>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>

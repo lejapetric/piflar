@@ -1,0 +1,126 @@
+// Plonk listki za geografijo: pojem :: razlaga :: primer.
+
+=== obca_geografija
+## Geografija in zemljevid
+merilo \(1 : M\) :: 1 cm na karti = \(M\) cm v naravi :: 1 : 50 000: 1 cm = 500 m
+geografska širina / dolžina :: od ekvatorja / od Greenwicha :: Ljubljana 46° s. g. š., 14,5° v. g. d.
+časovni pasovi :: 15° = 1 ura :: vzhodno je več ur
+## Zgradba Zemlje
+skorja, plašč, jedro :: zgradba :: litosfera
+tektonika plošč :: razmikanje, podrivanje, zmikanje :: Himalaja, Andi
+## Površje
+endogeni / eksogeni procesi :: notranji / zunanji :: vulkani / erozija
+kras :: raztapljanje apnenca :: vrtače, jame, kraška polja
+## Vreme in podnebje
+vreme / podnebje :: trenutno / dolgoletno povprečje :: klimogram
+podnebni pasovi :: tropski, subtropski, zmerni, polarni :: sredozemsko podnebje
+temperaturni gradient :: 0,6 °C na 100 m :: višje je hladneje
+## Prst
+humus, preperina :: nastanek prsti :: černozjom najrodovitnejša
+## Rastlinstvo
+rastlinski pasovi :: tropski deževni gozd, savana, puščava, tajga, tundra :: tajga: iglavci
+## Vodovje
+vodni krog :: izhlapevanje, padavine, odtok :: rečni režim
+## Prebivalstvo
+naravni prirastek = rodnost − umrljivost :: (‰) :: 10 ‰ − 9 ‰ = 1 ‰
+demografski prehod :: od visoke do nizke rodnosti in umrljivosti :: Evropa v 4. fazi
+starostna piramida :: mlado / staro prebivalstvo :: Niger / Japonska
+## Naselja
+urbanizacija, suburbanizacija :: rast mest, selitev v okolico :: megalopolis
+## Kmetijstvo
+intenzivno / ekstenzivno :: vložek na površino :: rastlinjaki / pašništvo
+## Energetika in industrija
+obnovljivi / neobnovljivi viri :: energija :: sonce / premog
+dejavniki lokacije :: surovine, delovna sila, trg :: tehnološki parki
+## Promet in turizem
+masovni / trajnostni turizem :: posledice :: Benetke
+## Trajnostni razvoj
+okolje, gospodarstvo, družba :: ravnovesje :: Agenda 2030
+! Večje merilo pomeni manjši imenovalec in več podrobnosti.
+
+=== geografija_slovenije
+## Lega
+stik Alp, Dinarskega gorstva, Panonske kotline, Sredozemlja :: 4 makroregije :: 20 273 km²
+## Površje in kamnine
+apnenec in dolomit :: prevladujeta :: kras na skoraj polovici ozemlja
+## Podnebje, prsti, rastlinstvo
+alpsko, zmernocelinsko, sredozemsko :: tri podnebja :: Portorož: blage zime
+gozd pokriva ~58 % :: tretja najbolj gozdnata v EU :: bukev
+## Vodovje in nesreče
+črnomorsko / jadransko povodje :: povodja :: Sava / Soča
+poplave, potresi, plazovi, žled :: naravne nesreče :: poplave 2023
+## Prebivalstvo
+~2,1 milijona, staranje :: nizka rodnost, priseljevanje :: Ljubljana največje mesto
+## Naselja
+razpršena poselitev :: veliko majhnih naselij :: ~6000 naselij
+## Kmetijstvo
+majhne kmetije, hribovit svet :: živinoreja, vinogradništvo :: Goriška brda
+## Energetika
+NEK, TEŠ, hidroelektrarne :: viri električne energije :: Krško
+## Industrija
+avtomobilska, farmacevtska, elektro :: panoge :: Revoz, Krka
+## Promet
+Luka Koper, avtocestni križ :: tranzit :: V. in X. koridor
+## Turizem
+gorski, obmorski, zdraviliški, kraški :: oblike :: Bled, Piran, Postojnska jama
+## Protislovja
+regionalne razlike, onesnaženost zraka :: problemi :: Zasavje
+! Kras je na skoraj polovici Slovenije.
+
+=== slovenske_pokrajine
+## Geografska delitev
+alpske, predalpske, obsredozemske, dinarskokraške, obpanonske :: 5 makroregij :: Perko, Gams
+## Alpske pokrajine
+Julijske Alpe, Karavanke, Kamniško-Savinjske Alpe :: visokogorje, ledeniško preoblikovanje :: Bohinj, Triglav
+## Predalpske pokrajine
+hribovja, kotline :: Ljubljanska kotlina :: Celjska kotlina
+## Obsredozemske
+Primorje, Brda, Vipavska dolina, Istra :: sredozemsko podnebje, burja :: Koper, vinogradništvo
+Jadransko morje :: plitvo, slanost, plimovanje :: Tržaški zaliv
+## Dinarskokraške
+Kras, Notranjska, Kočevsko :: kraški pojavi :: Cerkniško jezero (presihajoče)
+## Obpanonske
+Prekmurje, Pomurje, Slovenske gorice :: ravnine, poljedelstvo :: Murska Sobota
+## Slovenci v zamejstvu
+Italija, Avstrija, Madžarska, Hrvaška :: manjšine :: Trst, Celovec, Porabje
+! Burja piha s kopnega proti morju.
+
+=== regionalna_geografija_evrope
+## Lega in regije
+severna, zahodna, južna, srednja, jugovzhodna, vzhodna :: regije :: Ural meja z Azijo
+## Naravne značilnosti
+Golfski tok :: blago podnebje Z Evrope :: Norveška ima nezamrznjena pristanišča
+## Družbene značilnosti
+staranje, migracije :: prebivalstvo :: priseljevanje iz Afrike in Azije
+## Evropska unija
+27 članic, enotni trg, evro :: povezovanje :: Slovenija od 2004
+## Severna Evropa
+fjordi, nafta, socialna država :: Skandinavija :: Norveška
+## Zahodna Evropa
+industrijska revolucija, finance :: VB, Francija, Benelux :: London, Pariz
+## Južna Evropa
+sredozemsko podnebje, turizem :: Italija, Španija, Grčija :: Mezzogiorno
+## Srednja Evropa
+Nemčija: gospodarska velesila :: Porurje :: Alpe
+## Jugovzhodna Evropa
+Balkan, tranzicija :: Hrvaška, Srbija :: razpad Jugoslavije
+## Vzhodna Evropa
+Rusija, Ukrajina :: črnica, surovine :: Ukrajina: žitnica
+! Golfski tok segreva zahod in sever Evrope.
+
+=== regionalna_geografija_sveta
+## Razvitost sveta
+BDP na prebivalca, HDI :: kazalniki :: sever–jug
+## Azija
+monsun, rižna polja :: največja celina :: Kitajska, Indija
+## Afrika
+Sahara, Sahel, savana :: suša, revščina :: dezertifikacija
+## Latinska Amerika
+Amazonija, Andi :: krčenje gozda :: favele
+## Severna Amerika
+ZDA, Kanada :: prerije, gospodarska moč :: Silicijeva dolina
+## Avstralija in Oceanija
+puščava v notranjosti :: poselitev ob obali :: Veliki koralni greben
+## Polarna območja
+Arktika (morje) / Antarktika (celina) :: led, podnebne spremembe :: taljenje ledu
+! Monsun: poleti z morja (dež), pozimi s kopnega (suho).

@@ -1,0 +1,151 @@
+// Plonk listki za italijanščino.
+
+=== izpit_italijanscina
+## Shema izpita
+1A Comprensione della lettura :: 35 min, 20 % :: vero/falso, izbirni tip
+1B Conoscenza e uso della lingua :: 25 min, 15 % :: glagoli, predlogi, zaimki; VR prevod
+2 Comprensione orale :: do 20 min, 15 % :: dve nalogi
+3A krajši sestavek :: 30 min, 10 %, 15 točk :: pismo, e-sporočilo
+3B daljši sestavek :: 60 min, 20 %, 20 točk :: VR: tema iz književnosti
+ustni :: do 20 min, 20 %, 3 naloge :: igra vlog, pogovor, besedilo
+## Merila za pisna sestavka
+vsebina 5/8, zgradba 2/4, besedišče 4/4, jezik 4/4 :: 3A / 3B :: vse iztočnice razvite
+## Ustni izpit
+igra vlog, vodeni pogovor, interpretacija (VR) :: 3 naloge :: razširjeni odgovori
+! Na VR je v 1B tudi prevod iz slovenščine.
+
+=== presente_it
+## Pravilni glagoli
+-are: -o, -i, -a, -iamo, -ate, -ano :: parlare :: io parlo, noi parliamo
+-ere: -o, -i, -e, -iamo, -ete, -ono :: leggere :: tu leggi, loro leggono
+-ire: dormire / finire (-isc-) :: dve skupini :: dormo / finisco, finisci, finisce
+## Nepravilni glagoli
+essere: sono, sei, è, siamo, siete, sono :: biti :: Siamo stanchi.
+avere: ho, hai, ha, abbiamo, avete, hanno :: imeti :: Ho fame.
+andare, fare, stare, venire, dire, potere, volere, dovere :: pogosti :: vado, faccio, sto, vengo
+## Raba
+dejstva, navade, bližnja prihodnost :: sedanjik :: Domani parto.
+stare + gerundio :: dogajanje zdaj :: Sto mangiando.
+da + sedanjik :: traja od :: Studio l'italiano da tre anni.
+! Ho fame / ho 18 anni: »avere«, ne »essere«.
+
+=== passato_prossimo_it
+## Passato prossimo
+avere / essere + participio :: -ato, -uto, -ito :: ho mangiato, sono andato
+essere :: premikanje, sprememba stanja, povratni :: Maria è partita. Mi sono alzato.
+ujemanje z osebkom pri essere :: -o, -a, -i, -e :: Le ragazze sono arrivate.
+fatto, detto, visto, preso, scritto :: nepravilni deležniki :: Ho fatto i compiti.
+## Imperfetto in passato prossimo
+imperfetto: -avo, -evo, -ivo :: opis, navada, ozadje :: Da bambino giocavo a calcio.
+passato prossimo :: zaključen dogodek :: Ieri ho visto un film.
+skupaj :: ozadje + dogodek :: Leggevo quando è suonato il telefono.
+## Trapassato in passato remoto
+trapassato prossimo :: avevo/ero + participio: pred drugim preteklim :: Quando sono arrivato, il treno era già partito.
+passato remoto :: pisni, oddaljena preteklost :: Dante nacque nel 1265.
+! Z »essere« se deležnik ujema z osebkom.
+
+=== futuro_condizionale_it
+## Tvorba
+futuro: -rò, -rai, -rà, -remo, -rete, -ranno :: -are → -er- :: parlerò, leggerò, dormirò
+condizionale: -rei, -resti, -rebbe, -remmo, -reste, -rebbero :: :: parlerei
+sarò / sarei, avrò / avrei, andrò, farò, verrò, vorrò :: nepravilni :: Verrei volentieri.
+## Raba
+futuro :: prihodnost, domneva :: Saranno le otto. (Verjetno je osem.)
+condizionale :: vljudnost, želja, nasvet :: Vorrei un caffè. Dovresti studiare.
+condizionale passato :: avrei/sarei + participio :: Sarei venuto, ma …
+! »Vorrei«, ne »voglio«, ko vljudno prosiš.
+
+=== congiuntivo_it
+## Tvorba
+presente: -i (are) / -a (ere, ire) :: che io parli, che io legga :: che sia, che abbia
+imperfetto: -assi, -essi, -issi :: che io parlassi :: fossi, avessi
+## Kdaj congiuntivo
+mnenje, želja, dvom, čustvo :: penso che, voglio che, spero che :: Penso che sia vero.
+vezniki :: benché, affinché, prima che, a condizione che :: Benché piova, esco.
+## Periodo ipotetico in come se
+realno: se + presente, presente/futuro :: :: Se piove, resto a casa.
+možno: se + cong. imperfetto, condizionale :: :: Se avessi tempo, viaggerei.
+nemogoče: se + cong. trapassato, cond. passato :: :: Se avessi studiato, avrei superato l'esame.
+come se + cong. imperfetto :: kot da :: Parla come se fosse il capo.
+! Po »se« nikoli condizionale.
+
+=== cleni_predlogi_it
+## Členi
+il / lo / l' / la / i / gli / le :: določni :: il libro, lo studente, l'amico, gli amici
+un / uno / una / un' :: nedoločni :: uno zaino, un'amica
+lo, gli :: pred s + soglasnik, z, gn, ps, x, y :: lo zio, gli zii
+## Členkovani predlogi
+di, a, da, in, su + člen :: del, al, dal, nel, sul :: Vado al cinema. Il libro della ragazza.
+in, a brez člena :: in Italia, a Roma, in treno :: Vado in banca.
+! Pred mesti »a«, pred državami »in«.
+
+=== samostalnik_pridevnik_it
+## Spol in množina
+-o → -i, -a → -e, -e → -i :: množina :: il libro → i libri, la casa → le case
+-ca, -ga → -che, -ghe :: ohrani glas :: amica → amiche
+nespremenljivi :: tujke, naglašeni, skrajšani :: il film → i film, la città → le città
+## Pridevnik
+ujema se s samostalnikom :: spol in število :: le ragazze simpatiche
+bello, buono :: kot člen pred samostalnikom :: un bel ragazzo, un buon amico
+## Stopnjevanje
+più / meno … di / che :: primernik :: Marco è più alto di Luca.
+il più … :: presežnik :: È il più bello.
+buono → migliore, ottimo; cattivo → peggiore :: nepravilni :: Questo è migliore.
+-issimo :: absolutni presežnik :: bellissimo
+! »di« pred samostalnikom ali zaimkom, »che« pred pridevnikom ali glagolom.
+
+=== zaimki_it
+## Nenaglašeni zaimki
+mi, ti, lo, la, ci, vi, li, le :: tožilnik :: Lo vedo.
+mi, ti, gli, le, ci, vi, gli :: dajalnik :: Gli telefono.
+pred glagolom, za nedoločnikom :: lega :: Voglio vederlo.
+## Sestavljeni zaimki, ci, ne
+me lo, te lo, glielo :: dajalnik + tožilnik :: Glielo do.
+ci :: tja, o tem :: Ci vado domani.
+ne :: od tega, količina :: Quante mele? Ne ho tre.
+## Velelnik in oziralni zaimki
+velelnik: parla! parlate! :: tu-oblika -a (are), -i (ere, ire) :: Mangia! Scrivi!
+zanikani tu: non + nedoločnik :: :: Non parlare!
+che, cui, il quale :: oziralni :: Il libro che leggo. La ragazza di cui parlo.
+! Zaimek se pri velelniku pripne: Dimmi!
+
+=== besedisce_it
+## Besedotvorje
+-zione, -mento, -ità :: samostalniki :: organizzare → organizzazione
+-oso, -bile, -ale :: pridevniki :: pericolo → pericoloso
+in-, s-, dis- :: nasprotje :: possibile → impossibile, felice → infelice
+-ino, -etto, -one :: manjšalnice, večalnice :: casetta, librone
+## Nadomeščanje (VR)
+sopomenke, parafraza :: :: iniziare = cominciare
+## Glagoli s predlogi in prevod
+cominciare a, finire di, pensare a / di :: predložne vezave :: Ho deciso di partire.
+prevod :: smisel, ne beseda za besedo :: »Imam prav.« = Ho ragione.
+! Pazi na lažne prijatelje: »camera« je soba.
+
+=== razumevanje_it
+## Tipi nalog
+vero/falso, izbirni tip, povezovanje, dopolnjevanje :: 1A in 2 :: kratki odgovori
+## Branje
+najprej vprašanja, ključne besede :: skimming, scanning :: sopomenke
+## Poslušanje
+dvakrat poslušaš :: prvič odgovori, drugič preveri :: števila, imena
+! Odgovor mora biti podprt z besedilom.
+
+=== pisno_sporocanje_it
+## Krajši sestavek (3A)
+formalno: Gentile Signore/Signora, Distinti saluti :: Lei :: Le scrivo per …
+neformalno: Cara Anna, Un abbraccio :: tu :: Grazie per la tua mail!
+## Daljši sestavek (OR)
+uvod, argumenti, zaključek :: povezovalci :: innanzitutto, inoltre, tuttavia, in conclusione
+## Sestavek o književnem delu (VR)
+teza in argumenti iz dela :: Nel romanzo l'autore mostra che …
+! Vse iztočnice morajo biti razvite.
+
+=== ustni_izpit_it
+## Igra vlog in iztočnica
+vljudne oblike, vprašanja :: Potrebbe …? Vorrei … :: v trgovini, na postaji
+## Vodeni pogovor in povzetek
+razširjeni odgovori, mnenje :: Secondo me … :: Penso che sia …
+## Interpretacija (VR)
+tema, osebe, slog :: Il testo parla di … :: Il protagonista …
+! Odgovarjaj v celih povedih.

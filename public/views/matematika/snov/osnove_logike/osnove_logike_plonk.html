@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Osnove logike — plonk listek | Učilnica.com</title>
+  <meta name="description" content="Plonk listek za maturo: Osnove logike na enem listu A4, vsaka formula ali pojem s kratkim primerom.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Kalam:wght@400;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
+  <link rel="stylesheet" href="/style/snov.css">
+  <link rel="stylesheet" href="/style/plonk.css">
+</head>
+<body>
+  <div id="header"></div>
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view">
+
+        <!-- Ustvari tools/plonk/plonk.mjs iz api/data/plonk/matematika.txt; ne urejaj ročno. -->
+        <article class="plonk">
+          <header class="pl-glava">
+            <div>
+              <span class="pl-oznaka">Plonk listek · Matematika 4.1</span>
+              <h1>Osnove logike</h1>
+            </div>
+            <div class="pl-gumbi">
+              <a class="pl-gumb pl-gumb--tiho" href="osnove_logike_razlaga.html">Cela razlaga</a>
+              <button type="button" class="pl-gumb" onclick="window.print()">Natisni</button>
+            </div>
+          </header>
+
+          <div class="pl-vsebina">
+            <section class="pl-sklop">
+              <h2><span class="pl-st">1</span>Izjave in povezave</h2>
+              <div class="pl-r"><div class="pl-f">\(\neg A\)</div><div class="pl-o">negacija: resnična, ko je \(A\) neresnična</div><div class="pl-p">\(A\): »7 je sodo« (N), \(\neg A\) (R)</div></div>
+              <div class="pl-r"><div class="pl-f">\(A \wedge B\)</div><div class="pl-o">konjunkcija »in«: R samo, ko sta obe R</div><div class="pl-p">\(2 &lt; 3 \wedge 3 &lt; 1\): N</div></div>
+              <div class="pl-r"><div class="pl-f">\(A \vee B\)</div><div class="pl-o">disjunkcija »ali«: N samo, ko sta obe N</div><div class="pl-p">\(2 &lt; 3 \vee 3 &lt; 1\): R</div></div>
+              <div class="pl-r"><div class="pl-f">\(A \Rightarrow B\)</div><div class="pl-o">implikacija: N samo pri R \(\Rightarrow\) N</div><div class="pl-p">\(N \Rightarrow R\) je R</div></div>
+              <div class="pl-r"><div class="pl-f">\(A \Leftrightarrow B\)</div><div class="pl-o">ekvivalenca: R, ko imata enako vrednost</div><div class="pl-p">\(R \Leftrightarrow N\): N</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">2</span>Vrstni red in tabela</h2>
+              <div class="pl-r"><div class="pl-f">\(\neg,\ \wedge,\ \vee,\ \Rightarrow,\ \Leftrightarrow\)</div><div class="pl-o">od najmočnejše do najšibkejše</div><div class="pl-p">\(\neg A \vee B \wedge C = (\neg A) \vee (B \wedge C)\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(2^n\) vrstic</div><div class="pl-o">resničnostna tabela za \(n\) izjav</div><div class="pl-p">3 izjave: 8 vrstic</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">3</span>Tavtologija in enakovrednost</h2>
+              <div class="pl-r"><div class="pl-f">tavtologija</div><div class="pl-o">vedno resnična</div><div class="pl-p">\(A \vee \neg A\)</div></div>
+              <div class="pl-r"><div class="pl-f">protislovje</div><div class="pl-o">vedno neresnična</div><div class="pl-p">\(A \wedge \neg A\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(A \Rightarrow B \sim \neg A \vee B\)</div><div class="pl-o">implikacija brez puščice</div><div class="pl-p">\(\neg(A \Rightarrow B) \sim A \wedge \neg B\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(\neg(A \wedge B) \sim \neg A \vee \neg B\)</div><div class="pl-o">De Morgan (tudi \(\neg(A \vee B) \sim \neg A \wedge \neg B\))</div><div class="pl-p">ni res, da (dežuje in sneži) = ne dežuje ali ne sneži</div></div>
+              <div class="pl-r"><div class="pl-f">\(A \Rightarrow B \sim \neg B \Rightarrow \neg A\)</div><div class="pl-o">obrat s kontrapozicijo</div><div class="pl-p">če je deljivo s 4, je sodo = če ni sodo, ni deljivo s 4</div></div>
+            </section>
+
+            <section class="pl-sklop pl-pasti">
+              <h2><span class="pl-st">!</span>Pazi</h2>
+              <ul>
+                <li>Implikacija z neresnično predpostavko je vedno resnična.</li>
+                <li>Negacija »in« je »ali« (in obratno).</li>
+              </ul>
+            </section>
+          </div>
+          <footer class="pl-noga">piflar.si · plonk listek · Osnove logike</footer>
+        </article>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>

@@ -1,0 +1,14 @@
+// Plonk listki za umetnostno zgodovino.
+
+=== analiza_umetnine
+## Likovne prvine in kompozicija
+točka, linija, ploskev, barva, svetlo-temno, prostor :: likovne prvine :: kontrast toplih in hladnih barv
+simetrična, piramidalna, diagonalna :: kompozicija :: Leonardo: Zadnja večerja (središčna perspektiva)
+linearna / zračna perspektiva :: globina :: zabrisano ozadje
+analiza :: opis, formalna analiza, vsebina, umestitev :: avtor, čas, slog, tehnika
+## Romanika in gotika
+romanika (11.–12. st.) :: polkrožni lok, debeli zidovi, majhna okna :: Stična
+gotika (12.–15. st.) :: šilasti lok, rebrasti obok, oporniki, rozeta :: Notre-Dame, Ptujska Gora
+kiparstvo :: romanika: ploskovito, vezano na arhitekturo / gotika: naturalizem, S-linija :: lepe Madone
+slikarstvo :: freske / vitraji, tabelno slikarstvo :: Janez iz Kastva: Mrtvaški ples v Hrastovljah (1490)
+! Šilasti lok in rebrasti obok sta znak gotike.

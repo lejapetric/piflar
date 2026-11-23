@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Informacijska tehnologija — plonk listek | Učilnica.com</title>
+  <meta name="description" content="Plonk listek za maturo: Informacijska tehnologija na enem listu A4, vsaka formula ali pojem s kratkim primerom.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Kalam:wght@400;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
+  <link rel="stylesheet" href="/style/snov.css">
+  <link rel="stylesheet" href="/style/plonk.css">
+</head>
+<body>
+  <div id="header"></div>
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view">
+
+        <!-- Ustvari tools/plonk/plonk.mjs iz api/data/plonk/informatika.txt; ne urejaj ročno. -->
+        <article class="plonk">
+          <header class="pl-glava">
+            <div>
+              <span class="pl-oznaka">Plonk listek · Informatika 4.2</span>
+              <h1>Informacijska tehnologija</h1>
+            </div>
+            <div class="pl-gumbi">
+              <a class="pl-gumb pl-gumb--tiho" href="informacijska_tehnologija_razlaga.html">Cela razlaga</a>
+              <button type="button" class="pl-gumb" onclick="window.print()">Natisni</button>
+            </div>
+          </header>
+
+          <div class="pl-vsebina">
+            <section class="pl-sklop">
+              <h2><span class="pl-st">1</span>Namen IT</h2>
+              <div class="pl-r pl-r--dolga"><div class="pl-f">zbiranje, obdelava, shranjevanje, prenos</div><div class="pl-o">vloge</div><div class="pl-p">e-bančništvo</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">2</span>Zgradba računalnika</h2>
+              <div class="pl-r"><div class="pl-f">von Neumannova arhitektura</div><div class="pl-o">CPE, pomnilnik, V/I, vodila</div><div class="pl-p">program in podatki v istem pomnilniku</div></div>
+              <div class="pl-r"><div class="pl-f">CPE</div><div class="pl-o">krmilna enota, ALE, registri</div><div class="pl-p">takt v GHz</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">3</span>Strojna oprema</h2>
+              <div class="pl-r"><div class="pl-f">RAM (hlapni) / ROM, SSD (obstojni)</div><div class="pl-o">pomnilniki</div><div class="pl-p">ob izklopu RAM izgubi podatke</div></div>
+              <div class="pl-r"><div class="pl-f">vhodne / izhodne enote</div><div class="pl-o">tipkovnica / zaslon</div><div class="pl-p">zaslon na dotik: obe</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">4</span>Programska oprema</h2>
+              <div class="pl-r"><div class="pl-f">sistemska / uporabniška</div><div class="pl-o">OS, gonilniki / urejevalnik</div><div class="pl-p">Windows / Word</div></div>
+              <div class="pl-r"><div class="pl-f">odprtokodna / lastniška</div><div class="pl-o">licence</div><div class="pl-p">Linux / macOS</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">5</span>Omrežja</h2>
+              <div class="pl-r"><div class="pl-f">LAN, WAN, internet</div><div class="pl-o">velikost</div><div class="pl-p">šolsko omrežje: LAN</div></div>
+              <div class="pl-r"><div class="pl-f">topologije</div><div class="pl-o">zvezda, vodilo, obroč</div><div class="pl-p">stikalo v zvezdi</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">6</span>Naslovi in protokoli</h2>
+              <div class="pl-r"><div class="pl-f">IP naslov, MAC naslov</div><div class="pl-o">logični / fizični</div><div class="pl-p">192.168.1.10</div></div>
+              <div class="pl-r"><div class="pl-f">TCP/IP plasti</div><div class="pl-o">aplikacijska, transportna, omrežna, povezavna</div><div class="pl-p">HTTP, TCP, IP, Ethernet</div></div>
+              <div class="pl-r"><div class="pl-f">DNS</div><div class="pl-o">ime → IP</div><div class="pl-p">www.piflar.si → IP</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">7</span>Varnost</h2>
+              <div class="pl-r"><div class="pl-f">virusi, črvi, trojanci, phishing</div><div class="pl-o">grožnje</div><div class="pl-p">lažna e-pošta banke</div></div>
+              <div class="pl-r pl-r--dolga"><div class="pl-f">šifriranje, požarni zid, varnostne kopije</div><div class="pl-o">zaščita</div><div class="pl-p">HTTPS</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">8</span>Pomnilniška hierarhija in OS</h2>
+              <div class="pl-r pl-r--dolga"><div class="pl-f">registri → predpomnilnik → RAM → disk</div><div class="pl-o">hitrost pada, kapaciteta raste</div><div class="pl-p">cache</div></div>
+              <div class="pl-r"><div class="pl-f">OS</div><div class="pl-o">upravlja procese, pomnilnik, datoteke</div><div class="pl-p">večopravilnost</div></div>
+            </section>
+
+            <section class="pl-sklop pl-pasti">
+              <h2><span class="pl-st">!</span>Pazi</h2>
+              <ul>
+                <li>HTTPS šifrira promet, ne zagotavlja pa, da je stran poštena.</li>
+              </ul>
+            </section>
+          </div>
+          <footer class="pl-noga">piflar.si · plonk listek · Informacijska tehnologija</footer>
+        </article>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>

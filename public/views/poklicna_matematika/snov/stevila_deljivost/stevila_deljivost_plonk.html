@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Naravna in cela števila, deljivost — plonk listek | Učilnica.com</title>
+  <meta name="description" content="Plonk listek za maturo: Naravna in cela števila, deljivost na enem listu A4, vsaka formula ali pojem s kratkim primerom.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Kalam:wght@400;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
+  <link rel="stylesheet" href="/style/snov.css">
+  <link rel="stylesheet" href="/style/plonk.css">
+</head>
+<body>
+  <div id="header"></div>
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view">
+
+        <!-- Ustvari tools/plonk/plonk.mjs iz api/data/plonk/poklicna_matematika.txt; ne urejaj ročno. -->
+        <article class="plonk">
+          <header class="pl-glava">
+            <div>
+              <span class="pl-oznaka">Plonk listek · Poklicna matura Snov</span>
+              <h1>Naravna in cela števila, deljivost</h1>
+            </div>
+            <div class="pl-gumbi">
+              <a class="pl-gumb pl-gumb--tiho" href="stevila_deljivost_razlaga.html">Cela razlaga</a>
+              <button type="button" class="pl-gumb" onclick="window.print()">Natisni</button>
+            </div>
+          </header>
+
+          <div class="pl-vsebina">
+            <section class="pl-sklop">
+              <h2><span class="pl-st">1</span>Deljivost</h2>
+              <div class="pl-r"><div class="pl-f">\(a \mid b\)</div><div class="pl-o">\(a\) deli \(b\): \(b = k a\)</div><div class="pl-p">\(3 \mid 12\)</div></div>
+              <div class="pl-r"><div class="pl-f">deljivost s 3 in 9</div><div class="pl-o">vsota števk deljiva s 3 oz. 9</div><div class="pl-p">4 572: vsota 18, deljivo z 9</div></div>
+              <div class="pl-r"><div class="pl-f">deljivost s 4 in 8</div><div class="pl-o">zadnji dve (tri) števki deljivi s 4 (8)</div><div class="pl-p">1 316: 16 je deljivo s 4</div></div>
+              <div class="pl-r"><div class="pl-f">\(a = k b + r,\ 0 \le r &lt; b\)</div><div class="pl-o">osnovni izrek o deljenju</div><div class="pl-p">\(47 = 5 \cdot 9 + 2\)</div></div>
+              <div class="pl-r pl-r--dolga"><div class="pl-f">\(D(a, b) \cdot v(a, b) = a \cdot b\)</div><div class="pl-o">največji skupni delitelj in najmanjši večkratnik</div><div class="pl-p">\(D(12, 18) = 6\), \(v = \frac{216}{6} = 36\)</div></div>
+              <div class="pl-r"><div class="pl-f">Evklidov algoritem</div><div class="pl-o">deli s ostankom, dokler ostanek ni 0</div><div class="pl-p">\(84 = 1 \cdot 60 + 24,\ 60 = 2 \cdot 24 + 12,\ 24 = 2 \cdot 12\): \(D = 12\)</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">2</span>Številski sestavi</h2>
+              <div class="pl-r"><div class="pl-f">\((a_n \ldots a_0)_b = a_n b^n + \ldots + a_0\)</div><div class="pl-o">zapis v osnovi \(b\)</div><div class="pl-p">\((1011)_2 = 8 + 2 + 1 = 11\)</div></div>
+              <div class="pl-r"><div class="pl-f">deli z \(b\), beri ostanke od spodaj</div><div class="pl-o">iz desetiškega v osnovo \(b\)</div><div class="pl-p">\(13 = (1101)_2\)</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">3</span>Računske lastnosti</h2>
+              <div class="pl-r"><div class="pl-f">\(a + b = b + a,\ ab = ba\)</div><div class="pl-o">zakon o zamenjavi</div><div class="pl-p">\(3 \cdot 7 = 7 \cdot 3\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(a(b + c) = ab + ac\)</div><div class="pl-o">zakon o razčlenjevanju</div><div class="pl-p">\(4 \cdot 26 = 4 \cdot 20 + 4 \cdot 6 = 104\)</div></div>
+              <div class="pl-r"><div class="pl-f">praštevilo</div><div class="pl-o">ima natanko dva delitelja</div><div class="pl-p">\(2, 3, 5, 7, 11, 13\)</div></div>
+              <div class="pl-r"><div class="pl-f">razcep na prafaktorje</div><div class="pl-o">vsako sestavljeno število</div><div class="pl-p">\(360 = 2^3 \cdot 3^2 \cdot 5\)</div></div>
+            </section>
+
+            <section class="pl-sklop pl-pasti">
+              <h2><span class="pl-st">!</span>Pazi</h2>
+              <ul>
+                <li>1 ni praštevilo.</li>
+              </ul>
+            </section>
+          </div>
+          <footer class="pl-noga">piflar.si · plonk listek · Naravna in cela števila, deljivost</footer>
+        </article>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>

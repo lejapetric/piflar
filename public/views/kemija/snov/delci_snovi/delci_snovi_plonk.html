@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delci (gradniki) snovi — plonk listek | Učilnica.com</title>
+  <meta name="description" content="Plonk listek za maturo: Delci (gradniki) snovi na enem listu A4, vsaka formula ali pojem s kratkim primerom.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Kalam:wght@400;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
+  <link rel="stylesheet" href="/style/snov.css">
+  <link rel="stylesheet" href="/style/plonk.css">
+</head>
+<body>
+  <div id="header"></div>
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view">
+
+        <!-- Ustvari tools/plonk/plonk.mjs iz api/data/plonk/kemija.txt; ne urejaj ročno. -->
+        <article class="plonk">
+          <header class="pl-glava">
+            <div>
+              <span class="pl-oznaka">Plonk listek · Kemija 4.2</span>
+              <h1>Delci (gradniki) snovi</h1>
+            </div>
+            <div class="pl-gumbi">
+              <a class="pl-gumb pl-gumb--tiho" href="delci_snovi_razlaga.html">Cela razlaga</a>
+              <button type="button" class="pl-gumb" onclick="window.print()">Natisni</button>
+            </div>
+          </header>
+
+          <div class="pl-vsebina">
+            <section class="pl-sklop">
+              <h2><span class="pl-st">1</span>Atom in ioni</h2>
+              <div class="pl-r"><div class="pl-f">\(^A_Z X\)</div><div class="pl-o">\(Z\) protonov, \(A - Z\) nevtronov</div><div class="pl-p">²³Na: 11 p, 12 n, 11 e⁻</div></div>
+              <div class="pl-r"><div class="pl-f">kation / anion</div><div class="pl-o">odda / sprejme elektrone</div><div class="pl-p">Na⁺ (10 e⁻), Cl⁻ (18 e⁻)</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">2</span>Izotopi</h2>
+              <div class="pl-r"><div class="pl-f">izotopi</div><div class="pl-o">enak \(Z\), različno število nevtronov</div><div class="pl-p">³⁵Cl in ³⁷Cl</div></div>
+              <div class="pl-r"><div class="pl-f">\(A_r = \sum x_i A_i\)</div><div class="pl-o">povprečna relativna atomska masa</div><div class="pl-p">Cl: \(0{,}75 \cdot 35 + 0{,}25 \cdot 37 = 35{,}5\)</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">3</span>Elektronska ovojnica</h2>
+              <div class="pl-r"><div class="pl-f">1s 2s 2p 3s 3p 4s 3d 4p</div><div class="pl-o">vrstni red zapolnjevanja</div><div class="pl-p">Fe: [Ar] 4s² 3d⁶</div></div>
+              <div class="pl-r"><div class="pl-f">s: 2, p: 6, d: 10 e⁻</div><div class="pl-o">največ elektronov v podlupini</div><div class="pl-p">lupina \(n\): \(2n^2\)</div></div>
+              <div class="pl-r"><div class="pl-f">valenčni elektroni</div><div class="pl-o">v zunanji lupini</div><div class="pl-p">O: 2s² 2p⁴, 6 valenčnih</div></div>
+              <div class="pl-r"><div class="pl-f">Hundovo pravilo</div><div class="pl-o">orbitale iste podlupine najprej po en e⁻</div><div class="pl-p">N: 3 nesparjeni</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">4</span>Periodni sistem</h2>
+              <div class="pl-r"><div class="pl-f">skupina</div><div class="pl-o">enako število valenčnih e⁻</div><div class="pl-p">17. skupina: halogeni</div></div>
+              <div class="pl-r"><div class="pl-f">perioda</div><div class="pl-o">število lupin</div><div class="pl-p">Na v 3. periodi</div></div>
+              <div class="pl-r"><div class="pl-f">polmer atoma</div><div class="pl-o">narašča navzdol, pada v desno</div><div class="pl-p">Cs največji</div></div>
+              <div class="pl-r pl-r--dolga"><div class="pl-f">ionizacijska energija, elektronegativnost</div><div class="pl-o">naraščata navzgor in v desno</div><div class="pl-p">F najbolj elektronegativen</div></div>
+            </section>
+
+            <section class="pl-sklop pl-pasti">
+              <h2><span class="pl-st">!</span>Pazi</h2>
+              <ul>
+                <li>Pri ionih prehodnih kovin najprej odvzamemo 4s elektrone.</li>
+              </ul>
+            </section>
+          </div>
+          <footer class="pl-noga">piflar.si · plonk listek · Delci (gradniki) snovi</footer>
+        </article>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>

@@ -1,0 +1,216 @@
+// Plonk listki za sociologijo: pojem :: razlaga :: primer.
+
+=== posameznik_druzba
+## Sociologija kot znanost
+sociologija :: veda o družbi in družbenih odnosih :: sociološka imaginacija (Mills)
+## Klasiki
+Comte :: utemeljitelj, pozitivizem :: ime »sociologija«
+Durkheim :: družbena dejstva, solidarnost, anomija :: študija samomora
+Marx :: razredni boj, kapitalizem :: buržoazija in proletariat
+Weber :: razumevajoča sociologija, birokracija :: Protestantska etika
+## Teoretske perspektive
+funkcionalizem :: družba kot organizem, ravnovesje :: Parsons
+konfliktna teorija :: boj za moč in vire :: Marx
+simbolni interakcionizem :: pomeni v interakciji :: Mead, Goffman
+## Posameznik in družba
+struktura in delovanje :: družba omejuje in omogoča :: Giddens
+## Predmoderne in moderne družbe
+industrializacija, urbanizacija, racionalizacija :: modernizacija :: od vasi do mesta
+mehanska / organska solidarnost :: podobnost / delitev dela :: Durkheim
+! Funkcionalizem išče ravnovesje, konfliktna teorija neenakost.
+
+=== raziskovanje
+## Načela
+objektivnost, preverljivost, etičnost :: načela :: anonimnost anketirancev
+## Metode
+kvantitativne :: anketa, statistika :: SJM (Slovensko javno mnenje)
+kvalitativne :: intervju, opazovanje z udeležbo :: etnografija
+## Posebnosti
+refleksivnost, Hawthornov učinek :: ljudje se odzivajo na raziskovanje :: delavci delajo bolje, ko jih opazujejo
+## Vzorčenje
+naključni, stratificirani, priložnostni :: vrste vzorcev :: reprezentativnost
+## Načrt raziskave
+problem, hipoteze, metoda, analiza, sklep :: seminarska naloga :: viri po pravilih
+! Reprezentativen vzorec omogoča posploševanje.
+
+=== identiteta_kultura
+## Socializacija
+učenje kulture :: postanemo člani družbe :: divji otroci
+## Identiteta in vloge
+osebna / družbena identiteta :: kdo sem / kam spadam :: dijakinja, Slovenka
+## Agensi socializacije
+družina, šola, vrstniki, mediji :: primarna in sekundarna :: vrstniški pritisk
+## Kultura
+kultura :: naučen način življenja :: jezik, običaji
+## Sestavine kulture
+vrednote, norme, simboli, jezik :: sestavine :: rokovanje
+kulturne spremembe :: inovacije, difuzija :: mobilni telefoni
+## Raznolikost in subkulture
+subkultura / kontrakultura :: znotraj / proti dominantni :: punk
+## Etnocentrizem in relativizem
+etnocentrizem :: presojanje drugih po svoji kulturi :: »Njihova hrana je čudna.«
+kulturni relativizem :: razumevanje kulture iz nje same :: običaji drugih
+globalizacija kulture :: homogenizacija / hibridizacija :: McDonald's povsod
+! Kulturni relativizem ne pomeni sprejemanja vsega.
+
+=== druzina
+## Pomen in funkcije
+reprodukcija, socializacija, ekonomska, čustvena :: funkcije :: Murdock
+## Raznolikost družin
+nuklearna, razširjena, enostarševska, rekonstruirana, istospolna :: oblike :: mama, očim in otroci
+monogamija, poligamija :: pravila :: endogamija / eksogamija
+## Vloge in delitev dela
+tradicionalna / egalitarna :: delitev dela :: »dvojna izmena« žensk
+## Spreminjanje družin
+manj porok, več razvez, kasnejše starševstvo :: trendi :: zunajzakonske skupnosti
+individualizacija :: izbira oblike družinskega življenja :: Beck
+! Družina se spreminja, ne izginja.
+
+=== solanje
+## Funkcije in teorije
+socializacija, selekcija, prenos znanja :: funkcije šole :: Durkheim
+reprodukcija neenakosti :: konfliktna teorija :: Bourdieu: kulturni kapital
+## Kurikulum
+uradni / skriti kurikulum :: učni načrt / neformalno učenje :: točnost, ubogljivost
+## Šola in neenakost
+družbeni izvor, spol, etničnost :: vplivajo na uspeh :: otroci izobraženih staršev
+učinek Pigmaliona :: pričakovanja učiteljev :: Rosenthal
+## Izobraževanje v modernih družbah
+meritokracija :: položaj po zaslugah :: diploma
+vseživljenjsko učenje :: družba znanja :: tečaji za odrasle
+! Skriti kurikulum uči vrednote brez učnega načrta.
+
+=== delo_prosti_cas
+## Delo in zaposlitev
+plačano / neplačano delo :: vrste dela :: gospodinjsko delo
+## Brezposelnost in neenakost
+ciklična, strukturna, dolgotrajna :: brezposelnost :: mladi iskalci zaposlitve
+## Fleksibilnost in negotovost
+prekarnost :: negotove zaposlitve :: delo prek s. p.
+## Prosti čas in potrošnja
+potrošniška družba :: identiteta skozi potrošnjo :: blagovne znamke
+## Organizacije
+birokracija (Weber) :: hierarhija, pravila, strokovnost :: javna uprava
+mcdonaldizacija (Ritzer) :: učinkovitost, izračunljivost, predvidljivost, nadzor :: hitra hrana
+! Mcdonaldizacija ima štiri značilnosti.
+
+=== druzbene_neenakosti
+## Statusi
+pripisani / pridobljeni :: rojstvo / dosežek :: spol / poklic
+## Spol
+biološki / družbeni spol :: spol / gender :: spolni stereotipi
+## Slojevitost
+kaste, stanovi, razredi :: vrste :: Indija, fevdalizem, kapitalizem
+## Mobilnost in kapital
+vertikalna / horizontalna, medgeneracijska :: mobilnost :: otrok delavca postane zdravnik
+kulturni, socialni kapital :: Bourdieu :: poznanstva
+## Teorije
+Marx :: razred po lastnini produkcijskih sredstev :: buržoazija
+Weber :: razred, status, stranka :: več razsežnosti
+Davis–Moore :: neenakost je funkcionalna :: plače zdravnikov
+## Revščina
+absolutna / relativna :: preživetje / glede na družbo :: prag tveganja revščine
+socialna izključenost :: izključenost iz družbenega življenja :: brezdomci
+! Relativna revščina se meri glede na povprečje družbe.
+
+=== odlocanje_v_skupnosti
+## Moč in oblast
+moč :: uveljavljanje volje (Weber) :: tudi proti volji drugih
+tradicionalna, karizmatična, legalno-racionalna :: tipi oblasti :: kralj, vodja, vlada
+## Država in demokracija
+delitev oblasti :: zakonodajna, izvršilna, sodna :: DZ, vlada, sodišča
+neposredna / predstavniška demokracija :: oblike :: referendum / volitve
+## Socialna država
+zdravstvo, šolstvo, pokojnine :: socialne pravice :: nadomestilo za brezposelnost
+## Procesi odločanja
+politične stranke, interesne skupine, civilna družba :: subjekti :: sindikati
+## Totalne ustanove
+Goffman :: zapor, bolnišnica, vojašnica :: popoln nadzor življenja
+## Evropska unija
+nadnacionalno odločanje :: spreminjanje nacionalne države :: evro
+## Teorije moči
+pluralizem / elitizem / marksizem :: razlage :: Mills: oblastna elita
+! Oblast je legitimna moč.
+
+=== mediji_komunikacije
+## Mediji in javnost
+množični mediji :: tisk, radio, TV, splet :: javno mnenje
+## Moč in učinki
+nastavljanje agende :: mediji določijo, o čem razmišljamo :: izbor novic
+moralna panika :: pretiran odziv na skupino :: Cohen
+## Avtonomija medijev
+lastništvo, oglaševanje, država :: vplivi :: koncentracija lastništva
+## Reprezentacije
+stereotipi spola, starosti, etnije, razreda :: medijske podobe :: ženske v oglasih
+## Nove tehnologije
+splet, družbena omrežja :: globalizacija medijev :: filtrski mehurčki
+! Mediji ne odslikavajo resničnosti, jo konstruirajo.
+
+=== odklonskost
+## Pojmi
+konformnost / odklonskost :: skladno / v nasprotju z normami :: tatvina
+kriminal :: kršitev zakona :: kriminaliteta belih ovratnikov
+## Societalni dejavniki
+revščina, anomija, urbanizacija :: dejavniki :: Merton
+## Nadzor in kaznovanje
+formalni / neformalni nadzor :: policija / zasmehovanje :: Foucault: Nadzorovanje in kaznovanje
+## Razlage
+anomija (Durkheim, Merton) :: neskladje ciljev in sredstev :: inovacija: kraja za bogastvo
+teorija etiketiranja :: odklonskost je oznaka :: Becker
+diferencialna asociacija :: učenje od skupine :: Sutherland
+! Etiketiranje lahko vodi v sekundarno odklonskost.
+
+=== religija
+## Pojem in sestavine
+verovanja, obredi, skupnost, sveto :: sestavine :: Durkheim: sveto in profano
+svetovne religije :: krščanstvo, islam, judovstvo, hinduizem, budizem :: monoteizem
+## Teorije in funkcije
+Durkheim :: povezovalna funkcija :: skupni obredi
+Marx :: »opij ljudstva« :: ideologija
+Weber :: protestantska etika in kapitalizem :: delavnost
+## Sekularizacija
+upad vpliva religije :: moderne družbe :: manj obiska maše
+revitalizacija :: nova religioznost, fundamentalizem :: novi verski gibanji
+## Religija in država
+ločitev države in verskih skupnosti :: laična država :: Ustava RS
+! Sekularizacija ne pomeni izginotja religije.
+
+=== zdravje_telo
+## Družbena konstrukcija telesa
+ideali lepote :: kulturno pogojeni :: vitkost danes
+## Zdravje in bolezen
+biomedicinski / socialni model :: bolezen / družbeni dejavniki :: stres
+vloga bolnika (Parsons) :: pravice in dolžnosti bolnika :: bolniška
+medikalizacija :: življenjski pojavi postanejo medicinski :: ADHD
+## Neenakosti in zdravje
+družbeni sloj vpliva na zdravje :: revnejši živijo krajše :: dostop do zdravstva
+! Zdravje je tudi družbeno, ne le biološko.
+
+=== znanost_ekologija
+## Moderna znanost
+znanstvena revolucija :: empirija, eksperiment :: Galilei
+## Avtonomija in etika
+etične dileme :: kloniranje, umetna inteligenca :: odgovornost znanstvenikov
+## Znanost in javnost
+družba tveganja (Beck) :: tveganja, ki jih ustvari človek :: Černobil
+## Ekološka kriza
+podnebne spremembe, onesnaževanje, izčrpavanje virov :: problemi :: ogljični odtis
+## Trajnostni razvoj
+zadovoljiti potrebe zdaj, ne da ogrozimo prihodnje generacije :: Brundtlandino poročilo :: obnovljivi viri
+! Trajnostni razvoj ima okoljsko, gospodarsko in družbeno razsežnost.
+
+=== izzivi_sodobnega_sveta
+## Globalizacija
+pojem :: povezovanje sveta (gospodarstvo, kultura, politika) :: multinacionalke
+dejavniki :: tehnologija, trgovina, transport :: internet
+## Protislovja
+koristi in tveganja :: neenakost, homogenizacija :: glokalizacija
+## Ekološki problemi
+globalni :: podnebne spremembe :: Pariški sporazum
+## Demografske spremembe
+staranje prebivalstva, nizka rodnost, migracije :: Evropa in Slovenija :: pokojninski sistem
+## Razviti in nerazviti
+center / periferija (Wallerstein) :: svetovni sistem :: izkoriščanje virov
+## Nove tehnologije
+digitalni razkorak, zasebnost :: dileme :: nadzor na spletu
+! Globalizacija hkrati povezuje in povečuje neenakosti.

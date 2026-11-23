@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Stožnice — plonk listek | Učilnica.com</title>
+  <meta name="description" content="Plonk listek za maturo: Stožnice na enem listu A4, vsaka formula ali pojem s kratkim primerom.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Kalam:wght@400;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
+  <link rel="stylesheet" href="/style/snov.css">
+  <link rel="stylesheet" href="/style/plonk.css">
+</head>
+<body>
+  <div id="header"></div>
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view">
+
+        <!-- Ustvari tools/plonk/plonk.mjs iz api/data/plonk/matematika.txt; ne urejaj ročno. -->
+        <article class="plonk">
+          <header class="pl-glava">
+            <div>
+              <span class="pl-oznaka">Plonk listek · Matematika 4.11</span>
+              <h1>Stožnice</h1>
+            </div>
+            <div class="pl-gumbi">
+              <a class="pl-gumb pl-gumb--tiho" href="stoznice_razlaga.html">Cela razlaga</a>
+              <button type="button" class="pl-gumb" onclick="window.print()">Natisni</button>
+            </div>
+          </header>
+
+          <div class="pl-vsebina">
+            <section class="pl-sklop">
+              <h2><span class="pl-st">1</span>Krožnica</h2>
+              <div class="pl-r"><div class="pl-f">\((x - p)^2 + (y - q)^2 = r^2\)</div><div class="pl-o">središče \(S(p, q)\), polmer \(r\)</div><div class="pl-p">\(x^2 + y^2 - 4x + 2y = 4\): \(S(2, -1), r = 3\)</div></div>
+              <div class="pl-r"><div class="pl-f">dopolni do popolnega kvadrata</div><div class="pl-o">iz splošne oblike</div><div class="pl-p">\(x^2 - 4x = (x - 2)^2 - 4\)</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">2</span>Elipsa</h2>
+              <div class="pl-r"><div class="pl-f">\(\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1\)</div><div class="pl-o">polosi \(a, b\)</div><div class="pl-p">\(\frac{x^2}{25} + \frac{y^2}{9} = 1\): \(a = 5, b = 3\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(e^2 = a^2 - b^2\)</div><div class="pl-o">gorišči \(F(\pm e, 0)\) za \(a &gt; b\)</div><div class="pl-p">\(e = 4\): \(F(\pm 4, 0)\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(\varepsilon = \frac{e}{a}\)</div><div class="pl-o">numerična ekscentričnost (\(&lt; 1\))</div><div class="pl-p">\(\varepsilon = 0{,}8\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(\frac{(x - p)^2}{a^2} + \frac{(y - q)^2}{b^2} = 1\)</div><div class="pl-o">premaknjena</div><div class="pl-p">središče \((p, q)\)</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">3</span>Hiperbola</h2>
+              <div class="pl-r"><div class="pl-f">\(\frac{x^2}{a^2} - \frac{y^2}{b^2} = 1\)</div><div class="pl-o">realna os na \(x\)</div><div class="pl-p">\(\frac{x^2}{16} - \frac{y^2}{9} = 1\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(e^2 = a^2 + b^2\)</div><div class="pl-o">gorišči</div><div class="pl-p">\(e = 5\): \(F(\pm 5, 0)\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(y = \pm\frac{b}{a} x\)</div><div class="pl-o">asimptoti</div><div class="pl-p">\(y = \pm\frac34 x\)</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">4</span>Parabola</h2>
+              <div class="pl-r"><div class="pl-f">\(y^2 = 2px\)</div><div class="pl-o">gorišče \(F\left(\frac{p}{2}, 0\right)\), vodnica \(x = -\frac{p}{2}\)</div><div class="pl-p">\(y^2 = 8x\): \(F(2, 0)\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(x^2 = 2py\)</div><div class="pl-o">odprta navzgor</div><div class="pl-p">\(x^2 = 4y\): \(F(0, 1)\)</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">5</span>Presečišča</h2>
+              <div class="pl-r pl-r--dolga"><div class="pl-f">vstavi premico v stožnico</div><div class="pl-o">\(D\) kvadratne enačbe: 2, 1 (tangenta), 0</div><div class="pl-p">\(x^2 + y^2 = 2,\ y = x\): \((\pm 1, \pm 1)\)</div></div>
+            </section>
+
+            <section class="pl-sklop pl-pasti">
+              <h2><span class="pl-st">!</span>Pazi</h2>
+              <ul>
+                <li>Elipsa: \(e^2 = a^2 - b^2\); hiperbola: \(e^2 = a^2 + b^2\).</li>
+              </ul>
+            </section>
+          </div>
+          <footer class="pl-noga">piflar.si · plonk listek · Stožnice</footer>
+        </article>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>

@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Notranja energija in toplota — plonk listek | Učilnica.com</title>
+  <meta name="description" content="Plonk listek za maturo: Notranja energija in toplota na enem listu A4, vsaka formula ali pojem s kratkim primerom.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Kalam:wght@400;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
+  <link rel="stylesheet" href="/style/snov.css">
+  <link rel="stylesheet" href="/style/plonk.css">
+</head>
+<body>
+  <div id="header"></div>
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view">
+
+        <!-- Ustvari tools/plonk/plonk.mjs iz api/data/plonk/fizika.txt; ne urejaj ročno. -->
+        <article class="plonk">
+          <header class="pl-glava">
+            <div>
+              <span class="pl-oznaka">Plonk listek · Fizika 4.9</span>
+              <h1>Notranja energija in toplota</h1>
+            </div>
+            <div class="pl-gumbi">
+              <a class="pl-gumb pl-gumb--tiho" href="notranja_energija_toplota_razlaga.html">Cela razlaga</a>
+              <button type="button" class="pl-gumb" onclick="window.print()">Natisni</button>
+            </div>
+          </header>
+
+          <div class="pl-vsebina">
+            <section class="pl-sklop">
+              <h2><span class="pl-st">1</span>Energijski zakon</h2>
+              <div class="pl-r"><div class="pl-f">\(\Delta W_n = A + Q\)</div><div class="pl-o">1. zakon termodinamike</div><div class="pl-p">plin prejme 100 J toplote, odda 30 J dela: \(+70\ \text{J}\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(Q = mc\Delta T\)</div><div class="pl-o">segrevanje</div><div class="pl-p">1 kg vode za 10 K: \(42\ \text{kJ}\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(Q = m q_t\)</div><div class="pl-o">taljenje (izparevanje: \(q_i\))</div><div class="pl-p">led \(q_t = 336\ \text{kJ/kg}\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(A = -p\Delta V\)</div><div class="pl-o">delo pri stalnem tlaku</div><div class="pl-p">širjenje: plin oddaja delo</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">2</span>Prevajanje toplote</h2>
+              <div class="pl-r"><div class="pl-f">\(P = \lambda \frac{S\Delta T}{d}\)</div><div class="pl-o">toplotni tok skozi steno</div><div class="pl-p">dvakrat debelejša: pol manj</div></div>
+              <div class="pl-r"><div class="pl-f">sevanje \(j = \sigma T^4\)</div><div class="pl-o">Stefanov zakon</div><div class="pl-p">dvakratna \(T\): 16-krat več</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">3</span>Toplotni stroji</h2>
+              <div class="pl-r"><div class="pl-f">\(\eta = \frac{A}{Q_{dov}}\)</div><div class="pl-o">izkoristek stroja</div><div class="pl-p">300 J dela iz 1000 J: 30 %</div></div>
+              <div class="pl-r"><div class="pl-f">\(\eta_C = 1 - \frac{T_2}{T_1}\)</div><div class="pl-o">največji (Carnot)</div><div class="pl-p">\(600\ \text{K}, 300\ \text{K}\): 50 %</div></div>
+            </section>
+
+            <section class="pl-sklop pl-pasti">
+              <h2><span class="pl-st">!</span>Pazi</h2>
+              <ul>
+                <li>Pri faznem prehodu se temperatura ne spreminja.</li>
+              </ul>
+            </section>
+          </div>
+          <footer class="pl-noga">piflar.si · plonk listek · Notranja energija in toplota</footer>
+        </article>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>

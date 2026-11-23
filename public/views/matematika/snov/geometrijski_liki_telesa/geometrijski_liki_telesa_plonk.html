@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Geometrijski liki in telesa — plonk listek | Učilnica.com</title>
+  <meta name="description" content="Plonk listek za maturo: Geometrijski liki in telesa na enem listu A4, vsaka formula ali pojem s kratkim primerom.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Kalam:wght@400;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
+  <link rel="stylesheet" href="/style/snov.css">
+  <link rel="stylesheet" href="/style/plonk.css">
+</head>
+<body>
+  <div id="header"></div>
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view">
+
+        <!-- Ustvari tools/plonk/plonk.mjs iz api/data/plonk/matematika.txt; ne urejaj ročno. -->
+        <article class="plonk">
+          <header class="pl-glava">
+            <div>
+              <span class="pl-oznaka">Plonk listek · Matematika 4.7</span>
+              <h1>Geometrijski liki in telesa</h1>
+            </div>
+            <div class="pl-gumbi">
+              <a class="pl-gumb pl-gumb--tiho" href="geometrijski_liki_telesa_razlaga.html">Cela razlaga</a>
+              <button type="button" class="pl-gumb" onclick="window.print()">Natisni</button>
+            </div>
+          </header>
+
+          <div class="pl-vsebina">
+            <section class="pl-sklop">
+              <h2><span class="pl-st">1</span>Ploščine likov</h2>
+              <div class="pl-r"><div class="pl-f">\(S = \frac{a v_a}{2} = \frac{ab \sin\gamma}{2}\)</div><div class="pl-o">trikotnik</div><div class="pl-p">\(a = 6, b = 4, \gamma = 30^\circ\): \(S = 6\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(S = \sqrt{s(s-a)(s-b)(s-c)}\)</div><div class="pl-o">Heronova, \(s = \frac{a+b+c}{2}\)</div><div class="pl-p">\(3, 4, 5\): \(s = 6\), \(S = 6\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(S = \frac{a^2\sqrt{3}}{4},\ v = \frac{a\sqrt3}{2}\)</div><div class="pl-o">enakostranični trikotnik</div><div class="pl-p">\(a = 2\): \(S = \sqrt3\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(S = \frac{a + c}{2} v\)</div><div class="pl-o">trapez</div><div class="pl-p">\(a = 8, c = 4, v = 3\): \(S = 18\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(S = \frac{e f}{2}\)</div><div class="pl-o">romb, deltoid</div><div class="pl-p">\(e = 6, f = 8\): \(S = 24\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(S = \pi r^2,\ o = 2\pi r\)</div><div class="pl-o">krog</div><div class="pl-p">\(r = 3\): \(S = 9\pi\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(l = \frac{\pi r \alpha}{180^\circ},\ S = \frac{\pi r^2 \alpha}{360^\circ}\)</div><div class="pl-o">krožni lok, izsek</div><div class="pl-p">\(r = 6, \alpha = 60^\circ\): \(l = 2\pi\)</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">2</span>Včrtani, očrtani krog</h2>
+              <div class="pl-r"><div class="pl-f">\(r = \frac{S}{s}\)</div><div class="pl-o">polmer včrtanega</div><div class="pl-p">\(3, 4, 5\): \(r = 1\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(R = \frac{abc}{4S}\)</div><div class="pl-o">polmer očrtanega</div><div class="pl-p">\(3, 4, 5\): \(R = 2{,}5\)</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">3</span>Telesa</h2>
+              <div class="pl-r"><div class="pl-f">\(P = 2O + S_{pl},\ V = O v\)</div><div class="pl-o">prizma, valj</div><div class="pl-p">valj \(r = 2, v = 5\): \(V = 20\pi\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(P = O + S_{pl},\ V = \frac{O v}{3}\)</div><div class="pl-o">piramida, stožec</div><div class="pl-p">stožec \(r = 3, v = 4\): \(V = 12\pi\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(S_{pl} = \pi r s,\ s^2 = r^2 + v^2\)</div><div class="pl-o">plašč stožca</div><div class="pl-p">\(r = 3, v = 4\): \(s = 5\), \(S_{pl} = 15\pi\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(P = 4\pi r^2,\ V = \frac{4\pi r^3}{3}\)</div><div class="pl-o">krogla</div><div class="pl-p">\(r = 3\): \(V = 36\pi\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(D = a\sqrt3,\ d = a\sqrt2\)</div><div class="pl-o">telesna, ploskovna diagonala kocke</div><div class="pl-p">\(a = 2\): \(D = 2\sqrt3\)</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">4</span>Vrtenine in Cavalieri</h2>
+              <div class="pl-r pl-r--dolga"><div class="pl-f">vrtenje pravokotnika okoli stranice</div><div class="pl-o">valj</div><div class="pl-p">trikotnik okoli katete: stožec</div></div>
+              <div class="pl-r pl-r--dolga"><div class="pl-f">enaki preseki na vseh višinah</div><div class="pl-o">Cavalierijevo pravilo: enaki prostornini</div><div class="pl-p">poševna prizma: \(V = O v\)</div></div>
+            </section>
+
+            <section class="pl-sklop pl-pasti">
+              <h2><span class="pl-st">!</span>Pazi</h2>
+              <ul>
+                <li>Pri piramidi in stožcu ne pozabi \(\frac13\).</li>
+                <li>Višina \(v\) in stranica \(s\) stožca nista isto.</li>
+              </ul>
+            </section>
+          </div>
+          <footer class="pl-noga">piflar.si · plonk listek · Geometrijski liki in telesa</footer>
+        </article>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>

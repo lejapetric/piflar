@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pravokotni trikotnik, sinusni in kosinusni izrek — plonk listek | Učilnica.com</title>
+  <meta name="description" content="Plonk listek za maturo: Pravokotni trikotnik, sinusni in kosinusni izrek na enem listu A4, vsaka formula ali pojem s kratkim primerom.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Kalam:wght@400;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
+  <link rel="stylesheet" href="/style/snov.css">
+  <link rel="stylesheet" href="/style/plonk.css">
+</head>
+<body>
+  <div id="header"></div>
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view">
+
+        <!-- Ustvari tools/plonk/plonk.mjs iz api/data/plonk/poklicna_matematika.txt; ne urejaj ročno. -->
+        <article class="plonk">
+          <header class="pl-glava">
+            <div>
+              <span class="pl-oznaka">Plonk listek · Poklicna matura Snov</span>
+              <h1>Pravokotni trikotnik, sinusni in kosinusni izrek</h1>
+            </div>
+            <div class="pl-gumbi">
+              <a class="pl-gumb pl-gumb--tiho" href="trikotnik_kotne_razlaga.html">Cela razlaga</a>
+              <button type="button" class="pl-gumb" onclick="window.print()">Natisni</button>
+            </div>
+          </header>
+
+          <div class="pl-vsebina">
+            <section class="pl-sklop">
+              <h2><span class="pl-st">1</span>Pravokotni trikotnik</h2>
+              <div class="pl-r"><div class="pl-f">\(a^2 + b^2 = c^2\)</div><div class="pl-o">Pitagorov izrek</div><div class="pl-p">\(3, 4\): \(c = 5\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(a^2 = c\,a_1,\ b^2 = c\,b_1\)</div><div class="pl-o">Evklidov izrek</div><div class="pl-p">\(c = 10, a_1 = 3,6\): \(a = 6\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(v_c^2 = a_1 b_1\)</div><div class="pl-o">višinski izrek</div><div class="pl-p">\(a_1 = 4, b_1 = 9\): \(v_c = 6\)</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">2</span>Pravokotni trikotnik</h2>
+              <div class="pl-r"><div class="pl-f">\(\sin\alpha = \frac{a}{c},\ \cos\alpha = \frac{b}{c},\ \tan\alpha = \frac{a}{b}\)</div><div class="pl-o">nasprotna, priležna, hipotenuza</div><div class="pl-p">\(3, 4, 5\): \(\sin\alpha = 0{,}6\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(30^\circ: \frac12, \frac{\sqrt3}{2}\); \(45^\circ: \frac{\sqrt2}{2}\)</div><div class="pl-o">\(\sin, \cos\) znanih kotov</div><div class="pl-p">\(\sin 60^\circ = \frac{\sqrt3}{2}\)</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">3</span>Splošni trikotnik</h2>
+              <div class="pl-r"><div class="pl-f">\(\frac{a}{\sin\alpha} = \frac{b}{\sin\beta} = 2R\)</div><div class="pl-o">sinusni izrek</div><div class="pl-p">\(a = 5, \alpha = 30^\circ\): \(R = 5\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(c^2 = a^2 + b^2 - 2ab\cos\gamma\)</div><div class="pl-o">kosinusni izrek</div><div class="pl-p">\(a = 3, b = 5, \gamma = 60^\circ\): \(c = \sqrt{19}\)</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">4</span>Ploščina</h2>
+              <div class="pl-r"><div class="pl-f">\(S = \frac{ab\sin\gamma}{2}\)</div><div class="pl-o">iz dveh stranic in vmesnega kota</div><div class="pl-p">\(a = 4, b = 5, \gamma = 30^\circ\): \(S = 5\)</div></div>
+            </section>
+
+            <section class="pl-sklop pl-pasti">
+              <h2><span class="pl-st">!</span>Pazi</h2>
+              <ul>
+                <li>Kalkulator v stopinjah (DEG).</li>
+              </ul>
+            </section>
+          </div>
+          <footer class="pl-noga">piflar.si · plonk listek · Pravokotni trikotnik, sinusni in kosinusni izrek</footer>
+        </article>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>

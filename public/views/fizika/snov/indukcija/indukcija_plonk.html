@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Indukcija — plonk listek | Učilnica.com</title>
+  <meta name="description" content="Plonk listek za maturo: Indukcija na enem listu A4, vsaka formula ali pojem s kratkim primerom.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Kalam:wght@400;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
+  <link rel="stylesheet" href="/style/snov.css">
+  <link rel="stylesheet" href="/style/plonk.css">
+</head>
+<body>
+  <div id="header"></div>
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view">
+
+        <!-- Ustvari tools/plonk/plonk.mjs iz api/data/plonk/fizika.txt; ne urejaj ročno. -->
+        <article class="plonk">
+          <header class="pl-glava">
+            <div>
+              <span class="pl-oznaka">Plonk listek · Fizika 4.13</span>
+              <h1>Indukcija</h1>
+            </div>
+            <div class="pl-gumbi">
+              <a class="pl-gumb pl-gumb--tiho" href="indukcija_razlaga.html">Cela razlaga</a>
+              <button type="button" class="pl-gumb" onclick="window.print()">Natisni</button>
+            </div>
+          </header>
+
+          <div class="pl-vsebina">
+            <section class="pl-sklop">
+              <h2><span class="pl-st">1</span>Indukcija</h2>
+              <div class="pl-r"><div class="pl-f">\(\Phi = B S \cos\varphi\)</div><div class="pl-o">magnetni pretok (Vs)</div><div class="pl-p">\(B = 0{,}2, S = 0{,}01\): \(2\ \text{mVs}\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(U_i = -N\frac{\Delta\Phi}{\Delta t}\)</div><div class="pl-o">indukcijski zakon</div><div class="pl-p">pretok pade za 0,01 Vs v 0,1 s, \(N = 100\): \(10\ \text{V}\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(U_i = l v B\)</div><div class="pl-o">premikajoča palica</div><div class="pl-p">\(l = 0{,}5, v = 4, B = 0{,}1\): \(0{,}2\ \text{V}\)</div></div>
+              <div class="pl-r"><div class="pl-f">Lenzovo pravilo</div><div class="pl-o">inducirani tok nasprotuje spremembi</div><div class="pl-p">magnet v tuljavi je zaviran</div></div>
+              <div class="pl-r"><div class="pl-f">\(U_i = N B S \omega \sin\omega t\)</div><div class="pl-o">generator</div><div class="pl-p">izmenična napetost</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">2</span>Transformator</h2>
+              <div class="pl-r"><div class="pl-f">\(\frac{U_1}{U_2} = \frac{N_1}{N_2}\)</div><div class="pl-o">napetosti kot ovoji</div><div class="pl-p">\(230\ \text{V}\), \(N_1 : N_2 = 20 : 1\): \(11{,}5\ \text{V}\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(U_1 I_1 = U_2 I_2\)</div><div class="pl-o">idealni</div><div class="pl-p">manjša napetost, večji tok</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">3</span>Nihajni krog</h2>
+              <div class="pl-r"><div class="pl-f">\(\nu_0 = \frac{1}{2\pi\sqrt{LC}}\)</div><div class="pl-o">lastna frekvenca</div><div class="pl-p">\(L = 1\ \text{mH}, C = 1\ \text{µF}\): \(\approx 5\ \text{kHz}\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(U_{ef} = \frac{U_0}{\sqrt2}\)</div><div class="pl-o">efektivna vrednost</div><div class="pl-p">\(U_{ef} = 230\ \text{V}\): \(U_0 \approx 325\ \text{V}\)</div></div>
+            </section>
+
+            <section class="pl-sklop pl-pasti">
+              <h2><span class="pl-st">!</span>Pazi</h2>
+              <ul>
+                <li>Inducirana napetost nastane le ob spremembi pretoka.</li>
+              </ul>
+            </section>
+          </div>
+          <footer class="pl-noga">piflar.si · plonk listek · Indukcija</footer>
+        </article>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>

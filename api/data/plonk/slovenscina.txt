@@ -1,0 +1,527 @@
+// Plonk listki za slovenščino: pojem ali delo :: bistvo :: primer.
+// Sklopi sledijo podpoglavjem razlage (poklicna slovenščina jih prevzema po številkah).
+
+=== jezik_sporazumevanje
+## Jezik kot sistem znamenj
+znamenje :: označevalec (oblika) + označenec (pomen) :: beseda »miza«
+ikona, indeks, simbol :: podobnost / vzročnost / dogovor :: piktogram / dim / prometni znak
+## Vloge jezika
+sporazumevalna, spoznavna, družbena, estetska :: vloge jezika :: pesem: estetska vloga
+jezikovna zmožnost :: tvorjenje in razumevanje besedil :: sporazumevalna zmožnost
+## Sporazumevalni dejavniki
+sporočevalec, naslovnik, prenosnik, okoliščine :: dejavniki :: pismo prijatelju
+enosmerno / dvosmerno, neposredno / posredno :: vrste sporazumevanja :: SMS: posredno
+namen :: obvestiti, prepričati, vplivati :: oglas: pozivni namen
+## Faze sporočanja
+načrtovanje, tvorjenje, popravljanje :: faze :: osnutek, besedilo, pregled
+razumljivost, ustreznost, pravilnost :: načela :: knjižni jezik v uradnem dopisu
+## Nebesedno sporazumevanje
+mimika, kretnje, drža, očesni stik :: nebesedna sredstva :: nasmeh
+govorni nastop :: uvod, jedro, sklep; prosto govorjenje :: predstavitev referata
+! Sporočevalec in naslovnik zamenjata vlogi pri dvosmernem sporazumevanju.
+
+=== jezikovne_zvrsti
+## Knjižni jezik
+zborni :: najbolj formalen, javni govor :: novice na radiu
+knjižni pogovorni :: sproščen, a knjižen :: pogovor z učiteljem
+## Neknjižni jezik
+narečja :: 7 narečnih skupin :: gorenjsko, dolenjsko, štajersko, panonsko, koroško, primorsko, rovtarsko
+pokrajinski pogovorni jezik :: med narečjem in knjižnim :: ljubljanski
+## Interesne govorice
+sleng :: mladostniški, čustven :: »fajn«
+žargon :: poklicni pogovorni :: »šraufenciger« pri mehanikih
+argo :: skrivni jezik skupine :: zaporniški
+## Funkcijske zvrsti
+praktičnosporazumevalna, strokovna, publicistična, umetnostna :: glede na namen :: zapisnik, članek, roman
+## Razvoj knjižnega jezika
+Brižinski spomeniki (~1000) :: najstarejši zapis :: latinica
+Trubar (1550) :: prvi knjigi :: Katekizem, Abecednik
+Bohorič, Dalmatin (1584) :: slovnica, prevod Biblije :: bohoričica
+Kopitar, Prešeren, Čop (19. st.) :: gajica, nova črkopisna pravda :: gajica od 1850
+! Narečje ni napaka, je neknjižna zvrst.
+
+=== glasoslovje_pravorecje
+## Samoglasniki
+8 samoglasnikov, 5 črk :: i, e (ozki, široki), a, o (ozki, široki), u, polglasnik :: pes [pəs]
+## Soglasniki
+zvočniki :: m, n, r, l, v, j :: nimajo zvenečega para
+nezvočniki :: zveneči / nezveneči pari :: b–p, d–t, g–k, z–s, ž–š
+## Premene in izreka
+premena po zvenečnosti :: pred nezvenečim nezveneč :: sladko [slatko]
+v pred samoglasnikom [v], drugje [u̯] :: dvoglasniški v :: prav [prau̯]
+l na koncu zloga [u̯] :: v deležniku na -l :: bil [biu̯]
+## Naglas
+dolgi / kratki naglašeni samoglasnik :: kolikost :: miza / pes
+stavčni poudarek, intonacija :: stavčna fonetika :: vprašalna intonacija navzgor
+! Črka e lahko pomeni tri različne glasove.
+
+=== besedje
+## Beseda in pomen
+enopomenka, večpomenka :: en / več pomenov :: »list« (rastline, papirja)
+pomenska sestavina :: delni pomen :: »mladenič«: človek, moški, mlad
+## Pomenska razmerja
+sopomenke :: enak pomen :: lep – čeden
+protipomenke :: nasprotni :: vroč – mrzel
+nadpomenka / podpomenka :: širši / ožji pojem :: sadje / jabolko
+istoglasnice :: enaka oblika, različen izvor :: »kos« (ptica, del)
+## Zaznamovane besede
+starinske, nove, knjižne, neknjižne :: časovna, zvrstna zaznamovanost :: »tovarišica«
+čustveno zaznamovane :: ljubkovalne, slabšalne :: mucka, babnica
+prevzete :: tujke, sposojenke :: »computer« / »šola«
+SSKJ, SP, etimološki slovar :: slovarji :: Fran.si
+## Frazemi
+stalna besedna zveza, preneseni pomen :: frazem :: »iti rakom žvižgat«
+pregovor :: modrost :: »Kdor drugemu jamo koplje …«
+## Besedotvorje
+podstava + obrazilo :: izpeljava :: učitelj = uči- + -telj
+zloženka, sklop, krn :: druge vrste :: vodovod, nebodigatreba, ZDA
+besedotvorni pomen :: vršilec, kraj, manjšalnica :: hiša → hišica
+! Tujka ostane v izvirni obliki, sposojenka je prilagojena.
+
+=== oblikoslovje
+## Besedne vrste
+pregibne :: samostalnik, pridevnik, zaimek, števnik, glagol :: »hiša« se sklanja
+nepregibne :: prislov, predlog, veznik, členek, medmet :: »in«, »včeraj«
+## Samostalnik
+spol, število, sklon :: slovnične kategorije :: hiša: ž. sp., ednina, imenovalnik
+6 sklonov :: imenovalnik, rodilnik, dajalnik, tožilnik, mestnik, orodnik :: kdo, koga, komu, koga, pri kom, s kom
+4 sklanjatve :: ž. 1. (-a), ž. 2. (-Ø), m., sr. :: lipa, perut, stol, mesto
+## Pridevnik, zaimek, števnik
+stopnjevanje :: osnovnik, primernik, presežnik :: lep, lepši, najlepši
+vrste pridevnikov :: lastnostni, vrstni, svojilni :: Janezov
+osebni, svojilni, vprašalni zaimki :: zaimki :: jaz, moj, kdo
+glavni, vrstilni števniki :: števniki :: pet, peti
+## Glagol
+oseba, število, čas, naklon :: kategorije :: bomo brali: 1. os. mn., prihodnjik
+dovršni / nedovršni vid :: končano / trajajoče :: prebrati / brati
+tvornik / trpnik :: kdo dela / kaj se zgodi :: hiša je bila zgrajena
+nedoločnik, namenilnik, deležniki :: nesklonljive oblike :: brati, brat, bral
+## Nepregibne
+predlogi :: s sklonom :: k (dajalnik), brez (rodilnik)
+vezniki :: priredni, podredni :: in, ker
+! Namenilnik (»grem spat«) pri glagolih premikanja, ne nedoločnik.
+
+=== skladnja
+## Stavek in poved
+stavek :: ima osebno glagolsko obliko :: »Sneži.«
+enostavčna / večstavčna poved :: en / več stavkov :: »Pišem, ker moram.«
+vrste povedi :: pripovedna, vprašalna, velelna, želelna :: »Ko bi le prišel!«
+## Stavčni členi
+povedek :: glagolski / imenski :: je učitelj (imenski)
+osebek :: kdo ali kaj? :: Mama kuha.
+predmet :: vprašalnica odvisnih sklonov :: kuha kosilo (tožilnik)
+prislovno določilo :: kraja, časa, načina, vzroka :: v kuhinji
+prilastek :: ujemalni / neujemalni :: rdeča jabolka / jabolka iz vrta
+## Priredje
+vezalno, stopnjevalno, ločno, protivno, posledično, pojasnjevalno :: razmerja :: »Prišel je, toda pozno.« (protivno)
+## Podredje
+osebkov, predmetni, prislovni odvisnik :: vrste odvisnikov :: »Kdor laže, krade.« (osebkov)
+prilastkov :: pojasnjuje samostalnik :: »hiša, ki stoji na hribu«
+vejica :: med glavnim in odvisnim stavkom :: »Vem, da prideš.«
+## Pretvorbe
+priredje ↔ podredje :: pretvorba :: »Deževalo je, zato smo ostali.« → »Ker je deževalo, …«
+besedni red :: znano pred novim, naslonski niz :: »Dal sem mu ga.«
+! Pred »in« vejice ni, razen če gre za vrinjen stavek.
+
+=== pravopis
+## Velika začetnica
+lastna imena :: osebna, zemljepisna, stvarna :: Triglav, Slovenska matica
+pridevniki na -ski iz lastnih imen :: mala začetnica :: ljubljanski
+## Skupaj, narazen
+skupaj :: zloženke, sklopi :: zato, nikamor
+narazen :: predlog + samostalnik :: na primer
+vezaj :: samostalnik + samostalnik, kratica + končnica :: Rogaška Slatina, SAZU-ja
+## Prevzete besede in imena
+domačenje :: pisava po izgovoru :: šofer, džez
+izvirna pisava imen :: osebna imena v latinici :: Shakespeare, Shakespearja
+## Krajšave in števila
+krajšava s piko, kratica brez :: npr., itd. / ZDA :: dr., g.
+vrstilni števnik s piko :: 5. maj :: 1. 1. 2026
+## Ločila
+vejica pred podrednim veznikom :: da, ker, ki, ko :: »Vem, da veš.«
+dvopičje, pomišljaj, narekovaji :: premi govor: »Pridem,« je rekel. :: »Pridi!« je zaklical.
+! Vejica pred »kot« samo, če uvaja stavek.
+
+=== besedilo
+## Besedilna merila
+sovisnost (koherenca), povezanost (kohezija) :: besedilnost :: ponovitev, zaimek, veznik
+namen, tema, okoliščine :: merila besedilnosti :: obvestilo
+## Uradna besedila
+uradni dopis :: glava, zadeva, nagovor, jedro, pozdrav, podpis :: prošnja, opravičilo
+vikanje, knjižni jezik :: slog :: Spoštovani!
+## Publicistična besedila
+vest, poročilo, komentar, intervju, reportaža :: novinarske zvrsti :: vest: kdo, kaj, kje, kdaj
+## Strokovna besedila
+definicija, opis postopka, poročilo :: strokovni jezik, termini :: navodilo
+predstavitev :: uvod, jedro, sklep, viri :: referat
+## Razčlemba izhodiščnega besedila
+tema, namen, sporočevalec, naslovnik :: postopek :: »Avtor želi bralca prepričati, da …«
+odprta naloga :: odgovor v celih povedih :: navedi primer iz besedila
+! Pri razčlembi vedno navedi primer iz besedila.
+
+=== uvod_knjizevnost
+## Zvrsti in vrste
+lirika, epika, dramatika :: književne zvrsti :: pesem, roman, drama
+## Zgradba in pripovedovalec
+uvod, zaplet, vrh, razplet, razsnova :: zgradba :: drama v 5 dejanjih
+prvoosebni / tretjeosebni (vsevedni) pripovedovalec :: vidik :: Skodelica kave: prvoosebni
+notranji monolog, tok zavesti :: prikaz misli :: Joyce
+## Verz in rima
+jamb (u –), trohej (– u), daktil :: stopice :: »Prešeren« je trohej
+rima: zaporedna, prestopna, oklepajoča :: aabb, abab, abba :: sonet: abba abba
+kitica :: dvovrstičnica, tercina, kvartina, stanca :: stanca: 8 verzov
+## Stalne oblike
+sonet :: 14 verzov: 2 kvartini + 2 tercini :: Prešernovi soneti
+gazela, glosa, triolet :: druge oblike :: Prešernove gazele
+## Slogovna sredstva
+metafora :: prenos pomena :: »zlati lasje«
+primera :: z »kot« :: »lica kot rože«
+poosebitev, okrasni pridevek, stopnjevanje :: :: »veter šepeta«
+## Dramatika
+tragedija, komedija, drama :: dramske vrste :: Antigona: tragedija
+dramski trikotnik :: zasnova, zaplet, vrh, razplet, razsnova :: Hamlet
+didaskalije :: odrska navodila :: (odide)
+! Metafora je brez »kot«, primera s »kot«.
+
+=== orient
+## Biblija in stari Orient
+Biblija :: Stara (hebrejska) in Nova zaveza :: prevod Dalmatin 1584
+## Ep o Gilgamešu
+najstarejši ep, Mezopotamija :: iskanje nesmrtnosti :: smrt prijatelja Enkiduja
+## Prilika o izgubljenem sinu
+prilika (parabola) :: odpuščanje, Božja ljubezen :: oče sprejme zapravljivega sina
+## Psalm 130
+psalm (Iz globočine) :: molitev iz stiske, upanje v odpuščanje :: Psalm 130/129
+Visoka pesem :: ljubezenska lirika :: zaročenec in zaročenka
+## Tisoč in ena noč
+okvirna pripoved :: Šeherezada pripoveduje, da preživi :: Aladin, Ali Baba
+! Prilika pove nauk s primerom iz vsakdanjega življenja.
+
+=== antika
+## Antična književnost
+Grčija, Rim :: mitologija, vzor kalokagatije :: ep, tragedija, komedija, lirika
+## Homer: Iliada
+junaški ep, heksameter :: Ahilova jeza, trojanska vojna :: Ahil in Hektor
+Vergil: Eneida :: rimski ep o Eneju :: ustanovitev Rima
+## Sofoklej: Antigona
+tragedija :: spor med božjim in državnim zakonom :: Antigona pokoplje Polinejka, Kreon prepove
+tragična krivda, katarza :: značilnosti tragedije :: Kralj Ojdip: usoda
+## Antična komedija
+Aristofan :: politična satira :: Ptiči
+Plavt :: zabavna komedija zmešnjav :: Dvojčka
+## Antična lirika
+Sapfo :: ljubezenska lirika :: Lezbos
+Katul :: osebna ljubezen do Lezbije :: »Odi et amo«
+Horac :: »carpe diem«, zlata sredina :: ode
+! Antigona ravna po božjem zakonu, Kreon po državnem.
+
+=== srednji_vek
+## Srednji vek
+5.–15. st. :: krščanska, viteška, meščanska književnost :: legende
+## Dante: Božanska komedija
+pekel, vice, nebesa :: alegorija poti duše k Bogu :: Vergil in Beatrice vodita
+tercine :: kitica treh verzov :: 100 spevov
+## Viteška in meščanska književnost
+Tristan in Izolda :: viteški roman, usodna ljubezen :: ljubezenski napoj
+Rudel: Pesem o daljni ljubezni :: trubadurska lirika :: ljubezen do nedosegljive gospe
+Villon :: meščanska lirika, minljivost :: Balada o obešencih
+## Brižinski spomeniki
+~1000, najstarejši zapis v slovenščini :: trije verski spisi :: spovedni obrazec, pridiga
+! Brižinski spomeniki so zapisani v karolinški minuskuli.
+
+=== ljudsko_slovstvo
+## Ljudsko slovstvo
+ustno izročilo, anonimnost, variante :: značilnosti :: Lepa Vida
+pripovedne pesmi :: balade, romance :: Rošlin in Verjanko
+pravljice, pripovedke :: proza :: Kralj Matjaž
+pregovori, uganke :: male oblike :: »Brez muje se še čevelj ne obuje.«
+Lepa Vida :: hrepenenje po boljšem, nesrečna usoda :: zamorec jo odpelje
+zbiralci :: Vodnik, Štrekelj :: Štrekljeva zbirka
+! Ljudska pesem ima več različic.
+
+=== renesansa
+## Renesansa
+14.–16. st., humanizem :: človek v središču, zgled antike :: Italija
+## Petrarca: sonet
+Soneti Lavri :: nedosegljiva ljubezen :: sonet: 2 kvartini + 2 tercini
+Michelangelo :: soneti in kiparstvo :: Mojzes
+## Boccaccio: Dekameron
+okvirna pripoved :: 10 mladih pripoveduje 100 novel :: Sokol
+novela :: kratka zgodba z obratom :: zvesta ljubezen
+## Cervantes: Don Kihot
+parodija viteških romanov :: idealist in realist (Sančo Pansa) :: boj z mlini na veter
+## Shakespeare: Hamlet
+tragedija maščevanja :: Hamlet okleva, »Biti ali ne biti« :: duh očeta
+Romeo in Julija :: ljubezen proti sovraštvu rodbin :: Montegi in Capuleti
+! Dekameron: okvir je kuga v Firencah.
+
+=== reformacija_barok
+## Reformacija
+16. st., Luther :: knjige v ljudskem jeziku :: Trubar
+## Trubar
+Katekizem, Abecednik (1550) :: prvi slovenski knjigi :: nagovor »Vsem Slovencem«
+Proti zidavi romarskih cerkev :: kritika vraževerja :: pridiga
+## Krelj, Dalmatin, Bohorič
+Dalmatin :: prevod Biblije (1584) :: Biblija, tu je vse svetu pismu
+Bohorič :: prva slovnica Zimske urice :: bohoričica
+Krelj :: jezikovne izboljšave :: šumniki
+## Protireformacija in barok
+17. st. :: katoliška obnova, pridige :: Hren
+## Svetokriški
+Sveti priročnik :: baročna pridiga, primere, eksempli :: Na noviga lejta dan
+! Bohoričica je pisava, Zimske urice je slovnica.
+
+=== klasicizem_razsvetljenstvo
+## Klasicizem
+17. st., Francija :: red, razum, pravilo treh enot :: kraj, čas, dejanje
+## Racine: Fedra
+tragedija :: strast proti razumu :: Fedra ljubi pastorka Hipolita
+## Molière: Tartuffe
+komedija značajev :: hinavščina :: Orgon zaupa svetohlincu
+Ljudomrznik :: odkritost proti družbi :: Alceste
+## Razsvetljenstvo
+18. st. :: razum, napredek, izobrazba :: enciklopedisti
+## Voltaire: Kandid
+filozofska povest :: kritika optimizma :: »Vse je najboljše v najboljšem svetu«
+Swift: Gulliverjeva potovanja :: satira družbe :: Liliput
+! Pravilo treh enot: enotnost kraja, časa in dejanja.
+
+=== razsvetljenstvo
+## Razsvetljenstvo na Slovenskem
+Zois :: mecen, krožek :: Pisanice (1779), prvi pesniški almanah
+## Vodnik
+Pesme za pokušino (1806) :: prva posvetna zbirka :: Zadovoljni Kranjc
+Ilirija oživljena :: navdušenje nad Ilirskimi provincami :: Napoleon
+Vodnik :: prvi časnik Lublanske novice :: 1797
+## Linhart: Matiček
+Ta veseli dan ali Matiček se ženi (1790) :: komedija po Beaumarchaisu :: Matiček prelisiči barona Naletela
+Županova Micka :: prva slovenska komedija :: 1789
+! Linhart je tudi zgodovinar.
+
+=== evropska_romantika
+## Romantika
+konec 18. – sredina 19. st. :: čustvo, domišljija, svetobolje :: razklanost
+## Goethe: Werther
+pisemski roman :: nesrečna ljubezen, samomor :: Lotte
+Rousseau :: »nazaj k naravi« :: Nova Heloiza
+## Puškin: Jevgenij Onjegin
+roman v verzih :: odvečni človek :: Tatjana zavrne Onjegina
+Byron :: byronski junak :: Childe Harold
+## Goethe: Faust
+drama :: pogodba s hudičem, iskanje spoznanja :: Mefisto
+## Romantična lirika
+Lermontov, Puškin :: svetobolje, svoboda :: Jadro
+Leopardi :: pesimizem :: Neskončnost
+Heine :: ironija, ljubezen :: Lorelaj
+## Poe in Lermontov
+Poe: Maska rdeče smrti :: novela groze :: smrt pride v dvorec
+Lermontov: Junak našega časa :: roman, odvečni človek :: Pečorin
+! Svetobolje: trpljenje zaradi razkoraka med idealom in resničnostjo.
+
+=== preseren
+## Romantika na Slovenskem
+1830–1848 :: Prešeren, Čop :: Kranjska čbelica
+## Slovo od mladosti
+elegija, 5 stanc :: mladost je bila temna, a pesniku je žal zanjo :: objava v Kranjski čbelici 1830
+## Hčere svet
+romanca :: oče svetuje bogatega ženina :: hči sledi srcu
+## Sonetje nesreče
+6 sonetov :: pesimizem, nesreča :: »O Vrba, srečna, draga vas domača«
+## Sonetni venec
+15 sonetov, magistrale :: ljubezen do Julije, narod :: akrostih PRIMICOVI JULJI
+## Krst pri Savici
+romantična pesnitev :: Uvod (tercine), Krst (stance) :: Črtomir se pokristjani, Bogomila
+## Pevcu in Nezakonska mati
+Pevcu :: trpljenje je pesnikova usoda in vir pesmi :: sonet
+Nezakonska mati :: ljubezen matere do otroka :: »Kaj pa je tebe treba bilo …«
+## Zdravljica
+napitnica, oblika kozarca :: svoboda, mir, sloga :: 7. kitica: himna
+## Neiztrohnjeno srce
+balada :: pesnikovo srce po smrti :: neuslišana ljubezen
+## Sodobniki
+Cigler, Turnograjska, Slomšek :: sodobniki :: Sreča v nesreči (prva povest)
+! Akrostih v Magistrali: PRIMICOVI JULJI.
+
+=== evropska_moderna
+## Evropska moderna
+konec 19. st. :: simbolizem, dekadenca, impresionizem :: »l'art pour l'art«
+## Baudelaire
+Rože zla :: dekadenca, spleen :: Albatros: pesnik ujet med ljudmi
+## Verlaine, Rimbaud, Mallarmé
+Verlaine :: glasbenost :: Jesenska pesem
+Rimbaud :: Pijani čoln :: barvni samoglasniki
+Mallarmé :: hermetičnost :: Favnovo popoldne
+## Čehov: Češnjev vrt
+drama razpoloženja :: propad plemstva :: Lopahin kupi vrt
+Wilde: Saloma :: dekadenca :: Janezova glava
+! Simbolizem: stvari ne opišeš, nakažeš.
+
+=== realizem
+## Realizem in naturalizem
+19. st. :: objektivni prikaz družbe :: naturalizem: dednost, okolje
+## Stendhal: Rdeče in črno
+Julien Sorel :: vzpon in padec ambicioznega mladeniča :: Balzac: Oče Goriot
+## Flaubert: Gospa Bovary
+Ema Bovary :: romantične sanje proti dolgočasni resničnosti :: bovarizem
+## Gogolj in Tolstoj
+Gogolj: Mrtve duše :: satira, Čičikov kupuje mrtve tlačane :: Tolstoj: Ana Karenina
+## Dostojevski: Zločin in kazen
+psihološki roman :: Raskolnikov ubije oderuhinjo, krivda :: Sonja
+## Zola
+Beznica, Germinal :: naturalizem, dednost in okolje :: rudarji
+## Gogolj: Plašč
+novela :: mali človek :: Akakij Akakijevič
+Maupassant: Nakit :: novela s preobratom :: ponarejen nakit
+## Ibsen: Strahovi
+analitična drama :: preteklost se razkriva :: Osvald
+! Naturalizem doda determinizem: dednost in okolje.
+
+=== med_romantiko_realizmom
+## Obdobje
+1848–1899 :: narodna prebuja, čitalnice, tabori :: Levstik, Jurčič
+## Jenko: Obrazi
+pesniški cikel :: narava, minljivost, pesnikov jaz :: Obraz V
+## Gregorčič: Človeka nikar!
+elegija :: pesnik prosi Boga, naj iz njegovega prahu ustvari karkoli, le človeka ne več :: Mahnič ga je napadel, češ da je neverna
+## Aškerc: Mejnik
+balada :: kmetova krivda, prestavljanje mejnika :: socialna tema
+## Jurčič: Deseti brat
+prvi slovenski roman (1866) :: Martinek Spak, deseti brat :: Levstikovo pismo: Popotovanje / literarni program
+Levstik :: literarni program, Martin Krpan :: »Popotovanje iz Litije do Čateža«
+## Kersnik: Jara gospoda
+realistični roman (1893) :: nova trška gospoda, opravljanje :: sodnik Andrej Vrbanoj v Grobljah
+## Jurčič: Telečja pečenka
+humoreska :: kmečka zvitost :: pečenka
+## Tavčar: Visoška kronika
+zgodovinski roman :: krivda očeta, čarovniški proces :: Izidor, Agata
+Cvetje v jeseni :: idila na podeželju :: Meta
+! Prvi slovenski roman je Deseti brat.
+
+=== slovenska_moderna
+## Slovenska moderna
+1899–1918 :: Kette, Murn, Župančič, Cankar :: simbolizem, nova romantika
+## Kette
+soneti, ljubezen, narava :: »Na molu San Carlo« :: Angelina
+## Murn
+impresionizem, kmečki svet, narava :: Pesem o ajdi, Ko dobrave se mrače :: Vlahi, Nebo, nebo
+## Župančič
+Čaša opojnosti, Duma :: domovina, razpetost med domom in svetom :: »Duma«
+## Cankar
+življenje, motivi :: mati, hrepenenje, krivda :: simbolizem, realizem
+## Martin Kačur
+roman :: idealist propade :: »Življenjepis idealista«
+## Na klancu, Hiša Marije Pomočnice
+Na klancu :: mati, hrepenenje, beda :: Francka teče za vozom
+Hiša Marije Pomočnice :: umirajoče deklice :: bolnišnica
+## Črtice
+Skodelica kave :: krivda do matere :: kava
+Gospod stotnik, Sova, Kostanj posebne sorte :: druge črtice :: vojna, otroštvo
+## Hlapci
+drama (1910) :: Jerman, hlapčevstvo :: učitelj proti oblasti
+## Druge drame
+Za narodov blagor, Kralj na Betajnovi, Pohujšanje :: satira, moč, hinavščina :: Kantor
+## Gradnik, I. Cankar, Kraigher, Kvedrova
+Kraigher, Kvedrova :: proza :: Kvedrova: Misterij žene
+! Cankarjev motiv hrepenenja: človek si želi boljšega sveta.
+
+=== svet_prva_polovica_20
+## Modernizem in avantgarda
+1900–1945 :: futurizem, dadaizem, nadrealizem, ekspresionizem :: avantgarda ruši pravila
+## Svetovna poezija
+Rilke, Apollinaire, Lorca, Eliot :: modernistična poezija :: Eliot: Pusta dežela
+## Modernistični roman
+Kafka: Preobrazba :: odtujenost, absurd :: Gregor Samsa postane hrošč
+Joyce, Woolf, Proust :: tok zavesti :: Ulikses
+Bulgakov: Mojster in Margareta :: fantastika, satira :: Woland
+## Drama
+Pirandello :: igra v igri :: Šest oseb išče avtorja
+Brecht :: epsko gledališče, potujitev :: Mati Korajža
+! Tok zavesti zapisuje misli brez urejanja.
+
+=== slovenska_prva_polovica_20
+## 1918–1945
+ekspresionizem, socialni realizem :: med vojnama :: Kosovel, Prežihov
+## Kosovel
+ekspresionizem, konstruktivizem :: Kons, »Ekstaza smrti« :: Integrali
+## Ekspresionistična proza in drama
+Pregelj :: zgodovinska proza :: Matkova Tina
+Grum: Dogodek v mestu Gogi :: ekspresionistična drama :: groteska
+## Socialni realizem
+Prežihov Voranc :: Samorastniki :: Meta in hči
+Kosmač, Kranjec :: kmečki svet :: Kranjec: Povest o dobrih ljudeh
+## Bartol: Alamut
+zgodovinski roman :: oblast, manipulacija :: »Nič ni resnično, vse je dovoljeno«
+## Pesniki tridesetih let in vojne
+Kajuh, Bor, Balantič :: partizanska in vojna poezija :: Kajuh: Bosa pojdiva
+! Samorastniki: rod, ki raste kljub zaničevanju.
+
+=== svet_druga_polovica_20
+## Obdobje in smeri
+po 1945 :: eksistencializem, absurd, postmodernizem :: Sartre, Camus
+## Poezija
+Prévert, Szymborska :: preprosta, ironična :: »Zajtrk«
+## Camus: Tujec
+roman absurda :: Meursault, ravnodušnost :: umor Arabca na plaži
+Hemingway, Faulkner :: ameriški roman :: Starec in morje
+## Magični realizem in postmodernizem
+Márquez: Sto let samote :: čudežno kot vsakdanje :: Macondo
+Eco: Ime rože :: postmodernizem, intertekstualnost :: samostan
+## Beckett: Čakajoč Godota
+absurdna drama :: čakanje brez smisla :: Vladimir in Estragon
+## Sartre, Ionesco, Williams
+Sartre: Zaprta vrata :: »Pekel so drugi« :: eksistencializem
+Ionesco: Plešasta pevka :: absurd jezika :: Smithova
+! Absurd: razkorak med iskanjem smisla in brezsmiselnim svetom.
+
+=== slovensko_pesnistvo_20
+## Obdobja po 1945
+socialistični realizem → intimizem → modernizem → postmodernizem :: zaporedje :: 1953: Pesmi štirih
+## Kocbek in intimizem
+Kocbek: Zemlja, Groza, Poročilo :: meditativna, eksistencialna poezija :: svoboda, vest, krivda
+Pesmi štirih (1953) :: Pavček, Menart, Zlobec, Kovič :: intimizem: osebna čustva
+## Modernizem in naprej
+Zajc: Veliki črni bik :: eksistencialni modernizem, temne podobe :: bik, kamen, kača
+Šalamun: Poker (1966) :: ludizem, reizem, provokacija :: Stvari, Mrk
+Novak, Strniša, Taufer :: modernizem :: Strniša: Odisej
+postmodernizem :: Jesih, Šeligo :: navezava na tradicijo
+! Ludizem: pesem kot igra jezika.
+
+=== slovensko_pripovednistvo_20
+## Obdobje
+po 1945 :: realizem → modernizem → postmodernizem :: vojna, družba, posameznik
+## Proza: Kocbek, Zupan, Kovačič, Šeligo, Lipuš
+Kocbek: Črna orhideja :: vojna, krivda :: novele
+Zupan: Menuet za kitaro :: vojna, spomin :: Berk
+Kovačič: Prišleki :: priseljenci :: avtobiografsko
+Lipuš: Zmote dijaka Tjaža :: koroški Slovenci :: internat
+## Jančar, Lainšček in sodobniki
+Jančar: Galjot :: absurd, zgodovina :: Johannes Ot
+Lainšček: Namesto koga roža cveti :: Romi, ljubezen :: Halgato
+Möderndorfer, Vojnović :: sodobniki :: Čefurji raus!
+## Razčlemba sodobnega besedila
+tema, pripovedovalec, prostor, čas, slog :: postopek :: navedi primer iz odlomka
+! V eseju vedno poveži odlomek s celoto dela.
+
+=== slovenska_dramatika_20
+## Obdobje
+po 1945 :: modernizem, absurd, ritualno gledališče :: Oder 57
+## Smole in drugi
+Smole: Antigona (1960) :: Antigone ni na odru :: Kreon in Ismena
+Kozak: Afera :: oblast in posameznik :: politična drama
+Zajc: Voranc; Strniša: Samorog / Žabe :: ritualna, mitična drama :: Žabe: kupčija z dušo
+Jančar: Veliki briljantni valček :: posameznik v ustanovi :: psihiatrična bolnišnica
+D. Zupančič, Jesih, Jovanović :: Vladimir / Razred; Grenki sadeži pravice; Norci :: obvezna besedila (izbiraš)
+! Smoletova Antigona: glavna junakinja se ne pojavi.
+
+=== esej
+## Šolski esej na maturi
+razpravljalni / razlagalni :: dve vrsti :: izbereš eno temo
+## Razpravljalni esej
+teza, argumenti, sklep :: razpravljanje o temi iz obeh del :: primerjava junakov
+## Razlagalni esej
+interpretacija odlomka :: umestitev, razlaga, vrednotenje :: odlomek iz Hlapcev
+## Jezik in slog
+knjižni jezik, povezanost, citati :: merila :: »Kot pravi Jerman: …«
+## Postopek (120 minut)
+načrt (15 min), pisanje (90 min), pregled (15 min) :: razporeditev časa :: 700 besed
+! Odgovori na vsa vprašanja iz navodila.

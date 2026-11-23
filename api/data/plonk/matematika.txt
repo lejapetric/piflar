@@ -1,0 +1,517 @@
+// Plonk listki za matematiko. Oblika: glej tools/plonk/plonk.mjs.
+
+=== osnove_logike
+## Izjave in povezave
+\(\neg A\) :: negacija: resnična, ko je \(A\) neresnična :: \(A\): »7 je sodo« (N), \(\neg A\) (R)
+\(A \wedge B\) :: konjunkcija »in«: R samo, ko sta obe R :: \(2 < 3 \wedge 3 < 1\): N
+\(A \vee B\) :: disjunkcija »ali«: N samo, ko sta obe N :: \(2 < 3 \vee 3 < 1\): R
+\(A \Rightarrow B\) :: implikacija: N samo pri R \(\Rightarrow\) N :: \(N \Rightarrow R\) je R
+\(A \Leftrightarrow B\) :: ekvivalenca: R, ko imata enako vrednost :: \(R \Leftrightarrow N\): N
+## Vrstni red in tabela
+\(\neg,\ \wedge,\ \vee,\ \Rightarrow,\ \Leftrightarrow\) :: od najmočnejše do najšibkejše :: \(\neg A \vee B \wedge C = (\neg A) \vee (B \wedge C)\)
+\(2^n\) vrstic :: resničnostna tabela za \(n\) izjav :: 3 izjave: 8 vrstic
+## Tavtologija in enakovrednost
+tavtologija :: vedno resnična :: \(A \vee \neg A\)
+protislovje :: vedno neresnična :: \(A \wedge \neg A\)
+\(A \Rightarrow B \sim \neg A \vee B\) :: implikacija brez puščice :: \(\neg(A \Rightarrow B) \sim A \wedge \neg B\)
+\(\neg(A \wedge B) \sim \neg A \vee \neg B\) :: De Morgan (tudi \(\neg(A \vee B) \sim \neg A \wedge \neg B\)) :: ni res, da (dežuje in sneži) = ne dežuje ali ne sneži
+\(A \Rightarrow B \sim \neg B \Rightarrow \neg A\) :: obrat s kontrapozicijo :: če je deljivo s 4, je sodo = če ni sodo, ni deljivo s 4
+! Implikacija z neresnično predpostavko je vedno resnična.
+! Negacija »in« je »ali« (in obratno).
+
+=== mnozice
+## Osnovni pojmi
+\(a \in A\) :: element pripada množici :: \(2 \in \{1, 2, 3\}\), \(4 \notin \{1, 2, 3\}\)
+\(A \subseteq B\) :: podmnožica: vsak element \(A\) je v \(B\) :: \(\{1\} \subseteq \{1, 2\}\)
+\(\emptyset\) :: prazna množica, podmnožica vsake :: \(\{x \in \mathbb{N};\ x < 1\} = \emptyset\)
+## Operacije
+\(A \cap B\) :: presek: v obeh :: \(\{1,2,3\} \cap \{2,3,4\} = \{2,3\}\)
+\(A \cup B\) :: unija: v vsaj eni :: \(\{1,2\} \cup \{2,4\} = \{1,2,4\}\)
+\(A \setminus B\) :: razlika: v \(A\), ne v \(B\) :: \(\{1,2,3\} \setminus \{2\} = \{1,3\}\)
+\(A^c\) :: komplement glede na univerzalno \(U\) :: \(U = \{1..5\}\), \(A = \{1,2\}\): \(A^c = \{3,4,5\}\)
+\((A \cup B)^c = A^c \cap B^c\) :: De Morgan za množice :: tudi \((A \cap B)^c = A^c \cup B^c\)
+## Moč množice
+\(m(A \cup B) = m(A) + m(B) - m(A \cap B)\) :: vključitve in izključitve :: 20 + 15 − 5 = 30 dijakov
+\(m(\mathcal{P}(A)) = 2^{m(A)}\) :: potenčna množica = vse podmnožice :: \(A = \{a, b\}\): \(\mathcal{P}(A) = \{\emptyset, \{a\}, \{b\}, A\}\)
+\(m(A \times B) = m(A) \cdot m(B)\) :: kartezični produkt: urejeni pari :: \(\{1,2\} \times \{x\} = \{(1,x), (2,x)\}\)
+## Relacije
+refleksivna :: \(a R a\) za vse \(a\) :: »je enako«
+simetrična :: \(a R b \Rightarrow b R a\) :: »je vzporedna z«
+tranzitivna :: \(a R b \wedge b R c \Rightarrow a R c\) :: »je manjše od«
+ekvivalenčna :: refleksivna, simetrična, tranzitivna :: »ima isti ostanek pri deljenju s 3«
+! \(\emptyset\) in \(\{\emptyset\}\) nista isto: druga ima en element.
+! Pri \(A \times B\) je vrstni red pomemben: \((1, x) \ne (x, 1)\).
+
+=== stevilske_mnozice
+## Deljivost
+\(a \mid b\) :: \(a\) deli \(b\): \(b = k a\) :: \(3 \mid 12\)
+deljivost s 3 in 9 :: vsota števk deljiva s 3 oz. 9 :: 4 572: vsota 18, deljivo z 9
+deljivost s 4 in 8 :: zadnji dve (tri) števki deljivi s 4 (8) :: 1 316: 16 je deljivo s 4
+\(a = k b + r,\ 0 \le r < b\) :: osnovni izrek o deljenju :: \(47 = 5 \cdot 9 + 2\)
+\(D(a, b) \cdot v(a, b) = a \cdot b\) :: največji skupni delitelj in najmanjši večkratnik :: \(D(12, 18) = 6\), \(v = \frac{216}{6} = 36\)
+Evklidov algoritem :: deli s ostankom, dokler ostanek ni 0 :: \(84 = 1 \cdot 60 + 24,\ 60 = 2 \cdot 24 + 12,\ 24 = 2 \cdot 12\): \(D = 12\)
+## Številski sestavi
+\((a_n \ldots a_0)_b = a_n b^n + \ldots + a_0\) :: zapis v osnovi \(b\) :: \((1011)_2 = 8 + 2 + 1 = 11\)
+deli z \(b\), beri ostanke od spodaj :: iz desetiškega v osnovo \(b\) :: \(13 = (1101)_2\)
+## Ulomki in odstotki
+\(0{,}\overline{ab} = \frac{ab}{99}\) :: periodični decimalni zapis v ulomek :: \(0{,}\overline{27} = \frac{27}{99} = \frac{3}{11}\)
+\(d = \frac{p}{100} \cdot c\) :: delež od celote :: 15 % od 80 = 12
+\(c \cdot \left(1 \pm \frac{p}{100}\right)\) :: povečanje, zmanjšanje :: 80 € − 20 %: \(80 \cdot 0{,}8 = 64\) €
+## Absolutna vrednost
+\(|x| = x\) za \(x \ge 0\), \(-x\) za \(x < 0\) :: razdalja od 0 :: \(|-3| = 3\)
+\(|x - a| < r \iff a - r < x < a + r\) :: neenačba :: \(|x - 2| < 3\): \(x \in (-1, 5)\)
+\(|x - a| = r \Rightarrow x = a \pm r\) :: enačba (\(r \ge 0\)) :: \(|x + 1| = 4\): \(x = 3\) ali \(x = -5\)
+\(\Delta x = |x - x_0|,\ \delta = \frac{\Delta x}{|x|}\) :: absolutna, relativna napaka :: \(\pi \approx 3{,}14\): \(\Delta \approx 0{,}0016\)
+## Kompleksna števila
+\(z = a + bi,\ i^2 = -1\) :: realni in imaginarni del :: \(i^3 = -i,\ i^4 = 1\)
+\(\bar{z} = a - bi,\ |z| = \sqrt{a^2 + b^2}\) :: konjugirano, absolutna vrednost :: \(|3 + 4i| = 5\)
+\(\frac{z_1}{z_2} = \frac{z_1 \bar{z}_2}{|z_2|^2}\) :: deljenje: razširi s konjugiranim :: \(\frac{1}{1 + i} = \frac{1 - i}{2}\)
+\(x^2 + 1 = 0 \Rightarrow x = \pm i\) :: enačbe z \(D < 0\) :: \(x^2 + 2x + 5 = 0\): \(x = -1 \pm 2i\)
+## Indukcija
+1. preveri za \(n = 1\); 2. iz \(n\) dokaži \(n + 1\) :: matematična indukcija :: \(1 + 3 + \ldots + (2n - 1) = n^2\)
+! Ničla ni praštevilo, 1 tudi ne; 2 je edino sodo praštevilo.
+! \(|a + b| \le |a| + |b|\), enakost samo pri istem predznaku.
+
+=== algebrski_izrazi_enacbe_neenacbe
+## Potenciranje izrazov
+\((a \pm b)^2 = a^2 \pm 2ab + b^2\) :: kvadrat dvočlenika :: \((x - 3)^2 = x^2 - 6x + 9\)
+\((a \pm b)^3 = a^3 \pm 3a^2 b + 3ab^2 \pm b^3\) :: kub dvočlenika :: \((x + 1)^3 = x^3 + 3x^2 + 3x + 1\)
+\((a + b + c)^2 = a^2 + b^2 + c^2 + 2ab + 2ac + 2bc\) :: kvadrat tročlenika :: \((x + y + 1)^2\)
+## Razstavljanje
+\(a^2 - b^2 = (a - b)(a + b)\) :: razlika kvadratov :: \(x^2 - 9 = (x - 3)(x + 3)\)
+\(a^3 \pm b^3 = (a \pm b)(a^2 \mp ab + b^2)\) :: vsota, razlika kubov :: \(x^3 - 8 = (x - 2)(x^2 + 2x + 4)\)
+\(x^2 + (a + b)x + ab = (x + a)(x + b)\) :: Vietovo pravilo :: \(x^2 - 5x + 6 = (x - 2)(x - 3)\)
+izpostavljanje, združevanje :: najprej izpostavi skupni faktor :: \(ax + ay + bx + by = (a + b)(x + y)\)
+## Ulomki
+okrajšaj šele po razstavljanju :: krajšamo faktorje, ne členov :: \(\frac{x^2 - 4}{x + 2} = x - 2\), \(x \ne -2\)
+skupni imenovalec = \(v\) imenovalcev :: seštevanje :: \(\frac{1}{x} + \frac{1}{x+1} = \frac{2x + 1}{x(x+1)}\)
+## Enačbe
+\(ax = b\) :: linearna: \(x = \frac{b}{a}\) za \(a \ne 0\) :: \(a = 0, b = 0\): vsak \(x\); \(a = 0, b \ne 0\): ni rešitve
+\(A \cdot B = 0 \iff A = 0 \vee B = 0\) :: razcepna enačba :: \(x(x - 2)(x + 5) = 0\): \(x \in \{0, 2, -5\}\)
+parameter: loči \(a \ne 0\), \(a = 0\) :: linearna enačba s parametrom :: \((a - 1)x = a^2 - 1\): \(x = a + 1\) za \(a \ne 1\)
+## Neenačbe
+množenje z negativnim obrne znak :: linearna neenačba :: \(-2x < 6\): \(x > -3\)
+rešitev zapiši kot interval :: na številski premici :: \(3x - 1 \ge 5\): \(x \in [2, \infty)\)
+! Pri neenačbi z negativnim številom obrni neenačaj.
+! Pri ulomkih zapiši pogoj: imenovalec \(\ne 0\).
+
+=== potence_koreni
+## Potence
+\(a^m a^n = a^{m+n},\ \frac{a^m}{a^n} = a^{m-n}\) :: enaki osnovi :: \(2^3 \cdot 2^4 = 2^7\)
+\((a^m)^n = a^{mn},\ (ab)^n = a^n b^n\) :: potenca potence, produkta :: \((x^2)^3 = x^6\)
+\(a^0 = 1,\ a^{-n} = \frac{1}{a^n}\) :: \(a \ne 0\) :: \(2^{-3} = \frac{1}{8}\)
+\(\left(\frac{a}{b}\right)^{-n} = \left(\frac{b}{a}\right)^n\) :: negativen eksponent obrne ulomek :: \(\left(\frac{2}{3}\right)^{-2} = \frac{9}{4}\)
+## Koreni
+\(\sqrt[n]{a}\,\sqrt[n]{b} = \sqrt[n]{ab}\) :: enaki korenski eksponenti :: \(\sqrt{2}\sqrt{8} = 4\)
+\(\sqrt[n]{a^m} = a^{\frac{m}{n}}\) :: potenca z racionalnim eksponentom :: \(8^{\frac23} = \sqrt[3]{64} = 4\)
+\(\sqrt{a^2} = |a|\) :: sod koren vrne absolutno vrednost :: \(\sqrt{(-3)^2} = 3\)
+\(\sqrt[n]{\sqrt[m]{a}} = \sqrt[nm]{a}\) :: koren korena :: \(\sqrt{\sqrt[3]{x}} = \sqrt[6]{x}\)
+\(\frac{a}{\sqrt{b}} = \frac{a\sqrt{b}}{b}\) :: racionalizacija :: \(\frac{1}{\sqrt{3} - 1} = \frac{\sqrt{3} + 1}{2}\)
+delno korenjenje :: izpostavi popolne kvadrate :: \(\sqrt{50} = 5\sqrt{2}\)
+## Iracionalne enačbe
+izoliraj koren, kvadriraj, preizkus :: kvadriranje doda lažne rešitve :: \(\sqrt{x + 2} = x\): \(x = 2\) (\(x = -1\) odpade)
+\(\sqrt{A} \ge 0\) :: pogoj za sod koren: \(A \ge 0\) :: \(\sqrt{x - 3}\): \(x \ge 3\)
+! Pri iracionalni enačbi vedno naredi preizkus.
+! \((a + b)^2 \ne a^2 + b^2\) in \(\sqrt{a + b} \ne \sqrt{a} + \sqrt{b}\).
+
+=== geometrija_ravnina_prostor
+## Koti
+sokota: \(\alpha + \beta = 180^\circ\) :: sovršna sta enaka :: \(\alpha = 70^\circ\): sokot \(110^\circ\)
+\(\alpha + \beta + \gamma = 180^\circ\) :: vsota kotov v trikotniku :: \(50^\circ, 60^\circ\): \(\gamma = 70^\circ\)
+\((n - 2) \cdot 180^\circ\) :: vsota notranjih kotov \(n\)-kotnika :: šestkotnik: \(720^\circ\)
+\(\frac{n(n - 3)}{2}\) :: število diagonal :: šestkotnik: 9 diagonal
+## Znamenite točke trikotnika
+simetrale stranic :: središče očrtane krožnice :: pri pravokotnem v razpolovišču hipotenuze
+simetrale kotov :: središče včrtane krožnice :: vedno v notranjosti
+težiščnice :: težišče, deli jih v razmerju \(2 : 1\) :: od oglišča do \(T\) sta \(\frac23\) težiščnice
+višine :: višinska točka :: pri topokotnem zunaj trikotnika
+## Krožnica
+obodni kot = \(\frac12\) središčnega :: nad istim lokom :: središčni \(80^\circ\): obodni \(40^\circ\)
+kot v polkrogu je \(90^\circ\) :: Talesov izrek :: premer je hipotenuza
+## Pravokotni trikotnik
+\(a^2 + b^2 = c^2\) :: Pitagorov izrek :: \(3, 4\): \(c = 5\)
+\(a^2 = c\,a_1,\ b^2 = c\,b_1\) :: Evklidov izrek :: \(c = 10, a_1 = 3,6\): \(a = 6\)
+\(v_c^2 = a_1 b_1\) :: višinski izrek :: \(a_1 = 4, b_1 = 9\): \(v_c = 6\)
+## Podobnost
+\(\frac{a'}{a} = k,\ \frac{S'}{S} = k^2\) :: podobna lika, razteg s faktorjem \(k\) :: \(k = 3\): ploščina 9-krat
+## Splošni trikotnik
+\(\frac{a}{\sin\alpha} = \frac{b}{\sin\beta} = 2R\) :: sinusni izrek :: \(a = 5, \alpha = 30^\circ\): \(R = 5\)
+\(c^2 = a^2 + b^2 - 2ab\cos\gamma\) :: kosinusni izrek :: \(a = 3, b = 5, \gamma = 60^\circ\): \(c = \sqrt{19}\)
+## Prostor
+premica \(\perp\) ravnini :: pravokotna na dve nevzporedni premici v ravnini :: rob kocke \(\perp\) osnovni ploskvi
+kot premice z ravnino :: kot med premico in njeno projekcijo :: telesna diagonala kocke: \(\tan\varphi = \frac{1}{\sqrt2}\)
+! Sinusni izrek pri dveh stranicah in kotu nasproti krajše da lahko dve rešitvi.
+! Podobnost: dolžine \(k\), ploščine \(k^2\), prostornine \(k^3\).
+
+=== geometrijski_liki_telesa
+## Ploščine likov
+\(S = \frac{a v_a}{2} = \frac{ab \sin\gamma}{2}\) :: trikotnik :: \(a = 6, b = 4, \gamma = 30^\circ\): \(S = 6\)
+\(S = \sqrt{s(s-a)(s-b)(s-c)}\) :: Heronova, \(s = \frac{a+b+c}{2}\) :: \(3, 4, 5\): \(s = 6\), \(S = 6\)
+\(S = \frac{a^2\sqrt{3}}{4},\ v = \frac{a\sqrt3}{2}\) :: enakostranični trikotnik :: \(a = 2\): \(S = \sqrt3\)
+\(S = \frac{a + c}{2} v\) :: trapez :: \(a = 8, c = 4, v = 3\): \(S = 18\)
+\(S = \frac{e f}{2}\) :: romb, deltoid :: \(e = 6, f = 8\): \(S = 24\)
+\(S = \pi r^2,\ o = 2\pi r\) :: krog :: \(r = 3\): \(S = 9\pi\)
+\(l = \frac{\pi r \alpha}{180^\circ},\ S = \frac{\pi r^2 \alpha}{360^\circ}\) :: krožni lok, izsek :: \(r = 6, \alpha = 60^\circ\): \(l = 2\pi\)
+## Včrtani, očrtani krog
+\(r = \frac{S}{s}\) :: polmer včrtanega :: \(3, 4, 5\): \(r = 1\)
+\(R = \frac{abc}{4S}\) :: polmer očrtanega :: \(3, 4, 5\): \(R = 2{,}5\)
+## Telesa
+\(P = 2O + S_{pl},\ V = O v\) :: prizma, valj :: valj \(r = 2, v = 5\): \(V = 20\pi\)
+\(P = O + S_{pl},\ V = \frac{O v}{3}\) :: piramida, stožec :: stožec \(r = 3, v = 4\): \(V = 12\pi\)
+\(S_{pl} = \pi r s,\ s^2 = r^2 + v^2\) :: plašč stožca :: \(r = 3, v = 4\): \(s = 5\), \(S_{pl} = 15\pi\)
+\(P = 4\pi r^2,\ V = \frac{4\pi r^3}{3}\) :: krogla :: \(r = 3\): \(V = 36\pi\)
+\(D = a\sqrt3,\ d = a\sqrt2\) :: telesna, ploskovna diagonala kocke :: \(a = 2\): \(D = 2\sqrt3\)
+## Vrtenine in Cavalieri
+vrtenje pravokotnika okoli stranice :: valj :: trikotnik okoli katete: stožec
+enaki preseki na vseh višinah :: Cavalierijevo pravilo: enaki prostornini :: poševna prizma: \(V = O v\)
+! Pri piramidi in stožcu ne pozabi \(\frac13\).
+! Višina \(v\) in stranica \(s\) stožca nista isto.
+
+=== vektorji_ravnina_prostor
+## Osnove
+\(\vec{AB} = \vec{r}_B - \vec{r}_A\) :: vektor med točkama :: \(A(1, 2), B(4, 6)\): \(\vec{AB} = (3, 4)\)
+\(|\vec a| = \sqrt{a_1^2 + a_2^2 + a_3^2}\) :: dolžina :: \(|(3, 4)| = 5\)
+\(\vec a \pm \vec b,\ k\vec a\) :: po komponentah :: \(2(1, -1) + (0, 3) = (2, 1)\)
+\(\vec e = \frac{\vec a}{|\vec a|}\) :: enotski vektor :: \((3, 4)\): \(\left(\frac35, \frac45\right)\)
+## Kolinearnost in baza
+\(\vec b = k\vec a\) :: kolinearna vektorja :: \((2, 6) = 2(1, 3)\)
+\(\alpha\vec a + \beta\vec b = \vec 0 \Rightarrow \alpha = \beta = 0\) :: linearno neodvisna :: dva nekolinearna vektorja sta baza ravnine
+\(\vec r_T = \frac{\vec r_A + \vec r_B + \vec r_C}{3}\) :: težišče trikotnika :: \(A(0,0), B(6,0), C(0,3)\): \(T(2, 1)\)
+\(\vec r_S = \frac{\vec r_A + \vec r_B}{2}\) :: razpolovišče :: \(A(1, 1), B(3, 5)\): \(S(2, 3)\)
+## Skalarni produkt
+\(\vec a \cdot \vec b = |\vec a||\vec b|\cos\varphi\) :: definicija :: \(|\vec a| = 2, |\vec b| = 3, \varphi = 60^\circ\): \(3\)
+\(\vec a \cdot \vec b = a_1 b_1 + a_2 b_2 + a_3 b_3\) :: s komponentami :: \((1, 2, 3) \cdot (2, 0, -1) = -1\)
+\(\vec a \perp \vec b \iff \vec a \cdot \vec b = 0\) :: pravokotnost :: \((2, 1) \cdot (-1, 2) = 0\)
+\(\cos\varphi = \frac{\vec a \cdot \vec b}{|\vec a||\vec b|}\) :: kot med vektorjema :: \((1, 0), (1, 1)\): \(\varphi = 45^\circ\)
+\(\vec b_{\vec a} = \frac{\vec a \cdot \vec b}{|\vec a|^2}\vec a\) :: pravokotna projekcija \(\vec b\) na \(\vec a\) :: \((3, 4)\) na \((1, 0)\): \((3, 0)\)
+! Skalarni produkt je število, ne vektor.
+! \(\vec{AB} = B - A\), ne \(A - B\).
+
+=== pravokotni_koordinatni_sistem_ravnina
+## Točke in razdalje
+\(d(A, B) = \sqrt{(x_2 - x_1)^2 + (y_2 - y_1)^2}\) :: razdalja :: \(A(1, 2), B(4, 6)\): \(d = 5\)
+\(S\left(\frac{x_1 + x_2}{2}, \frac{y_1 + y_2}{2}\right)\) :: razpolovišče :: \(A(1, 2), B(5, 4)\): \(S(3, 3)\)
+\(T\left(\frac{x_1 + x_2 + x_3}{3}, \frac{y_1 + y_2 + y_3}{3}\right)\) :: težišče :: \((0,0), (6,0), (0,3)\): \(T(2, 1)\)
+## Ploščina trikotnika
+\(S = \frac12\left|(x_2 - x_1)(y_3 - y_1) - (x_3 - x_1)(y_2 - y_1)\right|\) :: iz koordinat oglišč :: \((0,0), (4,0), (0,3)\): \(S = 6\)
+## Množice točk
+\(x > 0,\ y < 0\) :: IV. kvadrant :: \((2, -1)\)
+\(|x| \le 1\) :: pas med \(x = -1\) in \(x = 1\) :: \(|y| < 2\): vodoraven pas
+\((x - p)^2 + (y - q)^2 \le r^2\) :: krog s središčem \((p, q)\) :: \(x^2 + y^2 \le 4\): krog \(r = 2\)
+! V formuli za ploščino ne pozabi absolutne vrednosti in \(\frac12\).
+
+=== zaporedja_vrste
+## Zaporedje
+\(a_n = f(n),\ n \in \mathbb{N}\) :: splošni člen :: \(a_n = 2n - 1\): \(a_5 = 9\)
+\(a_{n+1} - a_n > 0\) :: narašča (\(< 0\): pada) :: \(a_n = 3n + 1\): razlika \(3 > 0\), narašča
+\(m \le a_n \le M\) :: omejeno :: \(a_n = \frac{1}{n}\): \(0 < a_n \le 1\)
+## Aritmetično zaporedje
+\(a_n = a_1 + (n-1)d\) :: \(d = a_{n+1} - a_n\) :: \(a_1 = 3,\ d = 4\): \(a_{10} = 3 + 9 \cdot 4 = 39\)
+\(S_n = \frac{n}{2}(a_1 + a_n)\) :: vsota prvih \(n\) členov :: \(1 + 3 + \ldots + 19\): \(S_{10} = 5 \cdot 20 = 100\)
+\(a_n = \frac{a_{n-1} + a_{n+1}}{2}\) :: srednji člen :: \(x, 7, 11\): \(x = 2 \cdot 7 - 11 = 3\)
+## Geometrijsko zaporedje
+\(a_n = a_1 q^{n-1}\) :: \(q = \frac{a_{n+1}}{a_n}\) :: \(2, 6, 18, \ldots\): \(a_6 = 2 \cdot 3^5 = 486\)
+\(S_n = a_1 \frac{q^n - 1}{q - 1}\) :: \(q \ne 1\) :: \(1 + 2 + \ldots + 2^9 = \frac{2^{10} - 1}{1} = 1023\)
+\(a_n^2 = a_{n-1} a_{n+1}\) :: srednji člen :: \(4, x, 9\): \(x = \pm 6\)
+## Limita zaporedja
+\(|a_n - a| < \varepsilon\) :: za skoraj vse \(n\) :: \(a_n = \frac{2n+1}{n+3}\), \(\varepsilon = 0{,}01\): \(\frac{5}{n+3} < 0{,}01\), od \(n = 498\)
+\(\lim \frac{1}{n} = 0,\ \lim q^n = 0\) :: \(|q| < 1\) :: \(\lim \frac{2n+1}{n+3} = \lim \frac{2 + \frac1n}{1 + \frac3n} = 2\)
+\(\lim \left(1 + \frac{1}{n}\right)^n = e\) :: na listu formul :: \(e \approx 2{,}718\)
+## Vrste
+\(s = \lim S_n\) :: vsota vrste :: konvergira, če limita obstaja
+\(s = \frac{a_1}{1 - q}\) :: samo za \(|q| < 1\) :: \(8 + 4 + 2 + \ldots = \frac{8}{1 - \frac12} = 16\)
+\(0{,}\overline{3} = \frac{0{,}3}{1 - 0{,}1}\) :: periodično decimalno :: \(= \frac{1}{3}\)
+## Obrestni račun
+\(G = G_0\left(1 + \frac{pt}{100}\right)\) :: navadno obrestovanje :: 5000 €, 3 %, 4 leta: \(5000 \cdot 1{,}12 = 5600\) €
+\(G_n = G_0 r^n,\ r = 1 + \frac{p}{100}\) :: obrestno obrestovanje :: \(5000 \cdot 1{,}03^4 = 5627{,}54\) €
+\(r_r = 1 + \frac{p}{100m},\ r_k = \sqrt[m]{r}\) :: relativna, konformna (\(m\) obdobij) :: 6 % mesečno: \(r_r = 1{,}005\), \(r_k = \sqrt[12]{1{,}06}\)
+\(G_0 = \frac{G_n}{r^n}\) :: diskontiranje (na danes) :: 2000 € čez 1 leto, 4 %: \(\frac{2000}{1{,}04} = 1923{,}08\) €
+## Anuitete in amortizacija
+\(a = D \frac{r^n (r - 1)}{r^n - 1}\) :: iz \(D r^n = a \frac{r^n - 1}{r - 1}\) :: \(D = 10\,000\), 6 %, 5 let: \(a = 2373{,}96\) €
+\(o_k = D_{k-1} \frac{p}{100}\) :: obresti od ostanka dolga :: \(D = 3000\), 5 %: \(o_1 = 150\) €
+\(R_k = a - o_k,\ D_k = D_{k-1} - R_k\) :: razdolžnina, ostanek :: \(a = 1101{,}63\): \(R_1 = 951{,}63\), \(D_1 = 2048{,}37\)
+! V \(a_n\) je \(n - 1\), ne \(n\).
+! Vsota vrste samo pri \(|q| < 1\).
+! Mesečno: leta pretvori v mesece.
+! Obresti od ostanka dolga, ne od začetnega.
+
+=== funkcije
+## Funkcija
+\(f: A \to B\) :: vsakemu \(x \in A\) priredi natanko en \(y\) :: \(f(x) = x^2\), \(f(-2) = 4\)
+\(D_f,\ Z_f\) :: definicijsko območje, zaloga vrednosti :: \(f(x) = \sqrt{x}\): \(D_f = [0, \infty)\)
+\(f(-x) = f(x)\) / \(f(-x) = -f(x)\) :: soda (simetrična na os \(y\)) / liha (na izhodišče) :: \(x^2\) soda, \(x^3\) liha
+\(x_1 < x_2 \Rightarrow f(x_1) < f(x_2)\) :: naraščajoča :: \(f(x) = 2x + 1\)
+## Kompozitum in inverz
+\((g \circ f)(x) = g(f(x))\) :: najprej \(f\), nato \(g\) :: \(f = x + 1,\ g = x^2\): \((g \circ f)(x) = (x + 1)^2\)
+\(f^{-1}\): zamenjaj \(x\) in \(y\), izrazi \(y\) :: inverzna (samo za injektivne) :: \(y = 2x - 4\): \(f^{-1}(x) = \frac{x}{2} + 2\)
+graf \(f^{-1}\) :: zrcaljen čez \(y = x\) :: \(e^x\) in \(\ln x\)
+## Transformacije grafa
+\(f(x) + c\) :: premik za \(c\) gor :: \(x^2 + 1\)
+\(f(x - c)\) :: premik za \(c\) desno :: \((x - 2)^2\)
+\(-f(x)\), \(f(-x)\) :: zrcaljenje čez os \(x\), os \(y\) :: \(-x^2\)
+\(k f(x)\), \(f(kx)\) :: raztezek v smeri \(y\), skrčitev v smeri \(x\) :: \(2\sin x\), \(\sin 2x\)
+## Limita in zveznost
+\(\lim_{x \to a} f(x) = L\) :: vrednost, ki se ji \(f\) bliža :: \(\lim_{x \to 2} \frac{x^2 - 4}{x - 2} = 4\)
+\(\lim_{x \to 0} \frac{\sin x}{x} = 1\) :: posebna limita :: \(\lim_{x \to 0} \frac{\sin 3x}{x} = 3\)
+\(\lim_{x \to a} f(x) = f(a)\) :: zvezna v \(a\) :: polinomi so zvezni povsod
+zvezna na \([a, b]\), \(f(a) f(b) < 0\) :: med \(a\) in \(b\) je ničla (bisekcija) :: \(x^3 + x - 1\) na \([0, 1]\)
+! \(f^{-1}(x) \ne \frac{1}{f(x)}\).
+! \(f(x - 2)\) premakne v desno, ne v levo.
+
+=== funkcije/linearna
+## Linearna funkcija
+\(f(x) = kx + n\) :: \(k\) smerni koeficient, \(n\) začetna vrednost :: \(f(x) = 2x - 4\): ničla \(x = 2\)
+\(k = \frac{y_2 - y_1}{x_2 - x_1}\) :: naklon skozi dve točki :: \((1, 3), (3, 7)\): \(k = 2\)
+\(k = \tan\varphi\) :: kot z osjo \(x\) :: \(k = 1\): \(\varphi = 45^\circ\)
+## Enačbe premice
+\(y - y_1 = k(x - x_1)\) :: skozi točko z naklonom :: skozi \((1, 2)\), \(k = 3\): \(y = 3x - 1\)
+\(ax + by + c = 0\) :: implicitna oblika :: \(2x - y + 3 = 0\)
+\(\frac{x}{m} + \frac{y}{n} = 1\) :: odsekovna: \(m, n\) odseka na oseh :: \(\frac{x}{2} + \frac{y}{4} = 1\)
+\(k_1 = k_2\) / \(k_1 k_2 = -1\) :: vzporedni / pravokotni premici :: \(k = 2\): pravokotna ima \(k = -\frac12\)
+\(\tan\varphi = \left|\frac{k_2 - k_1}{1 + k_1 k_2}\right|\) :: kot med premicama :: \(k_1 = 1, k_2 = 0\): \(45^\circ\)
+\(d = \frac{|a x_0 + b y_0 + c|}{\sqrt{a^2 + b^2}}\) :: razdalja točke od premice :: \((0,0)\) do \(3x + 4y - 10 = 0\): \(d = 2\)
+## Sistemi
+zamenjalni ali nasprotni koeficienti :: dve enačbi, dve neznanki :: \(x + y = 5,\ x - y = 1\): \((3, 2)\)
+\(k_1 = k_2\), \(n_1 \ne n_2\) :: ni rešitve (vzporedni) :: \(n_1 = n_2\): neskončno rešitev
+! Navpična premica \(x = a\) nima smernega koeficienta.
+
+=== funkcije/kvadratna
+## Oblike zapisa
+\(f(x) = ax^2 + bx + c\) :: splošna; \(c\) je začetna vrednost :: \(x^2 - 4x + 3\)
+\(f(x) = a(x - p)^2 + q\) :: temenska, \(T(p, q)\) :: \((x - 2)^2 - 1\): \(T(2, -1)\)
+\(f(x) = a(x - x_1)(x - x_2)\) :: ničelna :: \((x - 1)(x - 3)\)
+\(p = -\frac{b}{2a},\ q = -\frac{D}{4a}\) :: teme :: \(x^2 - 4x + 3\): \(p = 2, q = -1\)
+## Ničle
+\(x_{1,2} = \frac{-b \pm \sqrt{D}}{2a},\ D = b^2 - 4ac\) :: kvadratna enačba :: \(x^2 - 4x + 3\): \(D = 4\), \(x = 1, 3\)
+\(D > 0,\ D = 0,\ D < 0\) :: dve, ena dvojna, nobene realne :: \(x^2 + 1\): \(D = -4\)
+\(x_1 + x_2 = -\frac{b}{a},\ x_1 x_2 = \frac{c}{a}\) :: Vietovi pravili :: \(x^2 - 5x + 6\): vsota 5, produkt 6
+## Graf in presečišča
+\(a > 0\) :: odprta navzgor, \(q\) je minimum :: \(a < 0\): navzdol, \(q\) maksimum
+\(ax^2 + bx + c = kx + n\) :: presečišče s premico: \(D\) da število presečišč :: \(D = 0\): tangenta
+## Kvadratna neenačba
+ničle + skica parabole :: \(f(x) > 0\), kjer je parabola nad osjo :: \(x^2 - 4x + 3 < 0\): \(x \in (1, 3)\)
+! Pri \(a < 0\) se znak neenačbe med ničlama obrne.
+! V \(p = -\frac{b}{2a}\) ne pozabi minusa.
+
+=== funkcije/potencna
+## Naravni eksponent
+\(f(x) = x^n\) :: \(n\) sod: soda, \(Z_f = [0, \infty)\) :: \(x^4\): \(f(-2) = 16\)
+\(n\) lih :: liha funkcija, \(Z_f = \mathbb{R}\) :: \(x^3\): \(f(-2) = -8\)
+vse gredo skozi \((1, 1)\) :: sode tudi skozi \((-1, 1)\) :: lihe skozi \((-1, -1)\)
+## Negativni eksponent
+\(f(x) = x^{-n} = \frac{1}{x^n}\) :: \(D_f = \mathbb{R} \setminus \{0\}\), pol v 0 :: \(x^{-1}\): hiperbola
+asimptoti \(x = 0\), \(y = 0\) :: obe osi :: \(x^{-2}\) je soda, vedno pozitivna
+## Modeliranje
+\(y = k x^n\) :: premo sorazmerje s potenco :: ploščina kvadrata \(S = a^2\)
+\(y = \frac{k}{x}\) :: obratno sorazmerje :: \(v = \frac{s}{t}\) pri stalni poti
+! Pri \(x^{-n}\) je \(x = 0\) izključen.
+
+=== funkcije/korenska
+## Korenska funkcija
+\(f(x) = \sqrt{x}\) :: \(D_f = [0, \infty)\), narašča :: \(\sqrt{9} = 3\)
+\(f(x) = \sqrt[3]{x}\) :: lih koren: \(D_f = \mathbb{R}\) :: \(\sqrt[3]{-8} = -2\)
+inverz \(x^2\) na \([0, \infty)\) :: graf zrcaljen čez \(y = x\) :: \((4, 2)\) leži na \(\sqrt{x}\)
+\(\sqrt{x - a} + b\) :: premik za \(a\) desno, \(b\) gor :: \(\sqrt{x - 1} + 2\): začetek \((1, 2)\)
+\(\sqrt{g(x)}\): \(g(x) \ge 0\) :: definicijsko območje :: \(\sqrt{4 - x^2}\): \(x \in [-2, 2]\)
+! Sod koren je vedno \(\ge 0\).
+
+=== funkcije/eksponentna
+## Funkcija
+\(f(x) = a^x,\ a > 0,\ a \ne 1\) :: \(D_f = \mathbb{R},\ Z_f = (0, \infty)\) :: \(2^3 = 8\)
+\(a > 1\) narašča, \(0 < a < 1\) pada :: graf gre skozi \((0, 1)\) :: \(\left(\frac12\right)^x\) pada
+\(y = 0\) :: vodoravna asimptota :: \(2^x + 3\): asimptota \(y = 3\)
+## Enačbe
+\(a^x = a^y \Rightarrow x = y\) :: enaki osnovi :: \(2^{x+1} = 8\): \(x = 2\)
+\(a^x = b \Rightarrow x = \log_a b\) :: različni osnovi :: \(3^x = 5\): \(x = \frac{\ln 5}{\ln 3} \approx 1{,}46\)
+uvedba nove neznanke :: \(t = a^x > 0\) :: \(4^x - 3 \cdot 2^x + 2 = 0\): \(t^2 - 3t + 2\), \(x = 0, 1\)
+## Rast in razpad
+\(N(t) = N_0 a^{\frac{t}{\tau}}\) :: rast / razpad v času :: podvajanje vsake 3 h: \(N = N_0 2^{\frac{t}{3}}\)
+\(N = N_0 \left(\frac12\right)^{\frac{t}{t_{1/2}}}\) :: razpolovni čas :: po \(2 t_{1/2}\) ostane \(\frac14\)
+! \(a^x\) je vedno pozitivno: \(t = a^x\) ne sme biti negativen.
+
+=== funkcije/logaritemska
+## Logaritem
+\(\log_a b = x \iff a^x = b\) :: \(a > 0, a \ne 1, b > 0\) :: \(\log_2 8 = 3\)
+\(\log_a (xy) = \log_a x + \log_a y\) :: produkt :: \(\log 2 + \log 5 = 1\)
+\(\log_a \frac{x}{y} = \log_a x - \log_a y\) :: kvocient :: \(\log_3 18 - \log_3 2 = 2\)
+\(\log_a x^n = n \log_a x\) :: potenca :: \(\log_2 \sqrt{2} = \frac12\)
+\(\log_a b = \frac{\log_c b}{\log_c a}\) :: prehod na novo osnovo :: \(\log_4 8 = \frac{3}{2}\)
+\(\log x = \log_{10} x,\ \ln x = \log_e x\) :: desetiški, naravni :: \(\ln e^2 = 2\)
+## Funkcija
+\(f(x) = \log_a x\) :: \(D_f = (0, \infty)\), skozi \((1, 0)\) :: \(\log_a(x - 2)\): \(x > 2\)
+inverz \(a^x\) :: navpična asimptota \(x = 0\) :: \(a > 1\) narašča
+## Enačbe
+\(\log_a f(x) = \log_a g(x) \Rightarrow f = g\) :: in preveri \(f, g > 0\) :: \(\log(x + 1) = \log(2x - 3)\): \(x = 4\)
+\(\log_a f(x) = c \Rightarrow f(x) = a^c\) :: po definiciji :: \(\log_2(x - 1) = 3\): \(x = 9\)
+! \(\log(x + y) \ne \log x + \log y\).
+! Na koncu preveri, da so argumenti pozitivni.
+
+=== funkcije/polinomska
+## Polinom
+\(p(x) = a_n x^n + \ldots + a_0\) :: stopnja \(n\), vodilni \(a_n\) :: \(2x^3 - x + 1\): st. 3
+obnašanje v \(\pm\infty\) :: odloča \(a_n x^n\) :: \(-x^3\): levo \(+\infty\), desno \(-\infty\)
+## Deljenje
+\(p(x) = k(x) q(x) + r(x)\) :: osnovni izrek o deljenju :: \(x^2 + 1 = (x - 1)(x + 1) + 2\)
+\(p(a) = r\) pri deljenju z \(x - a\) :: ostanek :: \(p(x) = x^3 - 2\), \(p(2) = 6\)
+Hornerjev algoritem :: hitro računanje \(p(a)\) in deljenje z \(x - a\) :: \(x^3 - 6x^2 + 11x - 6\) pri 1: ostanek 0
+## Ničle
+\(p(a) = 0 \iff (x - a) \mid p(x)\) :: ničla in faktor :: \(x = 1\) je ničla \(x^3 - 1\)
+cele ničle delijo \(a_0\) :: kandidati \(\pm\) delitelji :: \(x^3 - 6x^2 + 11x - 6\): \(1, 2, 3\)
+sode stopnje: graf se dotakne osi :: lihe stopnje: graf jo seka :: \((x - 1)^2(x + 2)\)
+\(p(x) = a_n(x - x_1)\cdots(x - x_n)\) :: osnovni izrek algebre: \(n\) kompleksnih ničel :: \(x^2 + 1 = (x - i)(x + i)\)
+## Neenačbe
+ničle + predznak med njimi :: tabela predznakov ali skica :: \((x - 1)(x + 2) > 0\): \(x < -2\) ali \(x > 1\)
+! Pri dvojni ničli predznak ne zamenja.
+
+=== funkcije/racionalna
+## Racionalna funkcija
+\(f(x) = \frac{p(x)}{q(x)}\) :: \(D_f\): \(q(x) \ne 0\) :: \(\frac{x + 1}{x - 2}\): \(x \ne 2\)
+ničle števca :: ničle funkcije :: \(\frac{x + 1}{x - 2}\): \(x = -1\)
+ničle imenovalca :: poli (navpične asimptote) :: \(x = 2\)
+st \(p\) < st \(q\): \(y = 0\) :: vodoravna asimptota :: \(\frac{1}{x^2 + 1}\)
+st \(p\) = st \(q\): \(y = \frac{a_n}{b_n}\) :: razmerje vodilnih :: \(\frac{2x + 1}{x - 3}\): \(y = 2\)
+st \(p\) = st \(q\) + 1 :: poševna: kvocient deljenja :: \(\frac{x^2 + 1}{x} = x + \frac1x\): \(y = x\)
+## Enačbe
+pomnoži z imenovalcem, preveri pogoj :: racionalna enačba :: \(\frac{2}{x - 1} = 1\): \(x = 3\)
+\(\frac{p}{q} > 0\) :: neenačba: tabela predznakov ničel in polov :: \(\frac{x}{x - 1} < 0\): \(x \in (0, 1)\)
+! Neenačbe ne množi z imenovalcem (neznan predznak).
+
+=== funkcije/kotne
+## Pravokotni trikotnik
+\(\sin\alpha = \frac{a}{c},\ \cos\alpha = \frac{b}{c},\ \tan\alpha = \frac{a}{b}\) :: nasprotna, priležna, hipotenuza :: \(3, 4, 5\): \(\sin\alpha = 0{,}6\)
+\(30^\circ: \frac12, \frac{\sqrt3}{2}\); \(45^\circ: \frac{\sqrt2}{2}\) :: \(\sin, \cos\) znanih kotov :: \(\sin 60^\circ = \frac{\sqrt3}{2}\)
+## Zveze
+\(\sin^2 x + \cos^2 x = 1\) :: osnovna zveza :: \(\sin x = 0{,}6\): \(\cos x = \pm 0{,}8\)
+\(\tan x = \frac{\sin x}{\cos x}\) :: \(1 + \tan^2 x = \frac{1}{\cos^2 x}\) :: \(\tan x = 1\): \(\cos^2 x = \frac12\)
+\(\sin(\pi - x) = \sin x,\ \cos(-x) = \cos x\) :: prehod v I. kvadrant :: \(\sin 150^\circ = \frac12\)
+## Adicijski izreki
+\(\sin(x \pm y) = \sin x \cos y \pm \cos x \sin y\) :: sinus vsote :: \(\sin 75^\circ = \frac{\sqrt6 + \sqrt2}{4}\)
+\(\cos(x \pm y) = \cos x \cos y \mp \sin x \sin y\) :: kosinus vsote :: \(\cos 15^\circ = \frac{\sqrt6 + \sqrt2}{4}\)
+\(\sin 2x = 2\sin x\cos x,\ \cos 2x = \cos^2 x - \sin^2 x\) :: dvojni kot :: \(\sin x = \frac35\) (I. kv.): \(\sin 2x = \frac{24}{25}\)
+## Grafi
+\(f(x) = a\sin(bx + c) + d\) :: amplituda \(|a|\), perioda \(\frac{2\pi}{b}\) :: \(2\sin 3x\): perioda \(\frac{2\pi}{3}\)
+\(\tan x\): perioda \(\pi\) :: poli v \(\frac{\pi}{2} + k\pi\) :: \(\tan\frac{\pi}{4} = 1\)
+\(180^\circ = \pi\) :: stopinje v radiane :: \(60^\circ = \frac{\pi}{3}\)
+## Enačbe
+\(\sin x = a\): \(x = x_0 + 2k\pi,\ \pi - x_0 + 2k\pi\) :: dve družini rešitev :: \(\sin x = \frac12\): \(\frac{\pi}{6}, \frac{5\pi}{6}\)
+\(\cos x = a\): \(x = \pm x_0 + 2k\pi\) :: simetrično :: \(\cos x = 0\): \(\frac{\pi}{2} + k\pi\)
+\(\tan x = a\): \(x = x_0 + k\pi\) :: ena družina :: \(\tan x = 1\): \(\frac{\pi}{4} + k\pi\)
+! Ne pozabi \(+ 2k\pi\) (pri tangensu \(+ k\pi\)).
+! Kalkulator v pravem načinu (DEG / RAD).
+
+=== stoznice
+## Krožnica
+\((x - p)^2 + (y - q)^2 = r^2\) :: središče \(S(p, q)\), polmer \(r\) :: \(x^2 + y^2 - 4x + 2y = 4\): \(S(2, -1), r = 3\)
+dopolni do popolnega kvadrata :: iz splošne oblike :: \(x^2 - 4x = (x - 2)^2 - 4\)
+## Elipsa
+\(\frac{x^2}{a^2} + \frac{y^2}{b^2} = 1\) :: polosi \(a, b\) :: \(\frac{x^2}{25} + \frac{y^2}{9} = 1\): \(a = 5, b = 3\)
+\(e^2 = a^2 - b^2\) :: gorišči \(F(\pm e, 0)\) za \(a > b\) :: \(e = 4\): \(F(\pm 4, 0)\)
+\(\varepsilon = \frac{e}{a}\) :: numerična ekscentričnost (\(< 1\)) :: \(\varepsilon = 0{,}8\)
+\(\frac{(x - p)^2}{a^2} + \frac{(y - q)^2}{b^2} = 1\) :: premaknjena :: središče \((p, q)\)
+## Hiperbola
+\(\frac{x^2}{a^2} - \frac{y^2}{b^2} = 1\) :: realna os na \(x\) :: \(\frac{x^2}{16} - \frac{y^2}{9} = 1\)
+\(e^2 = a^2 + b^2\) :: gorišči :: \(e = 5\): \(F(\pm 5, 0)\)
+\(y = \pm\frac{b}{a} x\) :: asimptoti :: \(y = \pm\frac34 x\)
+## Parabola
+\(y^2 = 2px\) :: gorišče \(F\left(\frac{p}{2}, 0\right)\), vodnica \(x = -\frac{p}{2}\) :: \(y^2 = 8x\): \(F(2, 0)\)
+\(x^2 = 2py\) :: odprta navzgor :: \(x^2 = 4y\): \(F(0, 1)\)
+## Presečišča
+vstavi premico v stožnico :: \(D\) kvadratne enačbe: 2, 1 (tangenta), 0 :: \(x^2 + y^2 = 2,\ y = x\): \((\pm 1, \pm 1)\)
+! Elipsa: \(e^2 = a^2 - b^2\); hiperbola: \(e^2 = a^2 + b^2\).
+
+=== diferencialni_racun
+## Odvod
+\(f'(x) = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h}\) :: limita diferenčnega količnika :: \(f = x^2\): \(f'(x) = 2x\)
+\(k_t = f'(x_0)\) :: smerni koeficient tangente :: \(f = x^2\) v \(x_0 = 1\): \(k = 2\)
+\(y - f(x_0) = f'(x_0)(x - x_0)\) :: enačba tangente :: \(x^2\) v \((1, 1)\): \(y = 2x - 1\)
+\(\tan\varphi = \left|\frac{k_2 - k_1}{1 + k_1k_2}\right|\) :: kot med krivuljama :: kot med tangentama v presečišču
+## Pravila
+\((x^n)' = n x^{n-1}\) :: potenca :: \((\sqrt{x})' = \frac{1}{2\sqrt x}\)
+\((uv)' = u'v + uv'\) :: produkt :: \((x e^x)' = e^x(1 + x)\)
+\(\left(\frac{u}{v}\right)' = \frac{u'v - uv'}{v^2}\) :: kvocient :: \(\left(\frac{1}{x}\right)' = -\frac{1}{x^2}\)
+\((f(g(x)))' = f'(g(x))\,g'(x)\) :: verižno pravilo :: \((\sin 2x)' = 2\cos 2x\)
+\((e^x)' = e^x,\ (\ln x)' = \frac1x\) :: eksponentna, logaritem :: \((a^x)' = a^x \ln a\)
+\((\sin x)' = \cos x,\ (\cos x)' = -\sin x\) :: kotni :: \((\tan x)' = \frac{1}{\cos^2 x}\)
+## Uporaba
+\(f' > 0\) narašča, \(f' < 0\) pada :: monotonost :: \(x^2\): pada za \(x < 0\)
+\(f'(x_0) = 0\) :: stacionarna točka :: \(x^3 - 3x\): \(x = \pm 1\)
+\(f''(x_0) > 0\) min, \(< 0\) max :: vrsta ekstrema (ali menjava predznaka \(f'\)) :: \(x^3 - 3x\): max v \(-1\), min v \(1\)
+## Ekstremalni problem
+1. funkcija ene spremenljivke, 2. \(f' = 0\), 3. preveri :: postopek :: obseg 20, max ploščina: kvadrat \(5 \times 5\)
+! Stacionarna točka ni nujno ekstrem (\(x^3\) v 0).
+! Pri verižnem pravilu ne pozabi notranjega odvoda.
+
+=== integralski_racun
+## Nedoločeni integral
+\(\int f(x)\,dx = F(x) + C,\ F' = f\) :: primitivna funkcija :: \(\int 2x\,dx = x^2 + C\)
+\(\int x^n\,dx = \frac{x^{n+1}}{n+1} + C\) :: \(n \ne -1\) :: \(\int x^3\,dx = \frac{x^4}{4} + C\)
+\(\int \frac{dx}{x} = \ln|x| + C\) :: \(n = -1\) :: \(\int \frac{3}{x}\,dx = 3\ln|x| + C\)
+\(\int e^x\,dx = e^x + C\) :: eksponentna :: \(\int e^{2x}\,dx = \frac{e^{2x}}{2} + C\)
+\(\int \sin x\,dx = -\cos x + C\) :: \(\int \cos x\,dx = \sin x + C\) :: \(\int \cos 3x\,dx = \frac{\sin 3x}{3} + C\)
+\(\int (af + bg) = a\int f + b\int g\) :: linearnost :: \(\int (3x^2 + 1)\,dx = x^3 + x + C\)
+## Določeni integral
+\(\int_a^b f(x)\,dx = F(b) - F(a)\) :: Newton–Leibniz :: \(\int_0^2 x\,dx = 2\)
+\(\int_a^b = -\int_b^a,\ \int_a^c = \int_a^b + \int_b^c\) :: lastnosti :: \(\int_1^1 f = 0\)
+## Uporaba
+\(S = \int_a^b |f(x)|\,dx\) :: ploščina pod krivuljo :: \(\int_0^\pi \sin x\,dx = 2\)
+\(S = \int_a^b (f(x) - g(x))\,dx\) :: med krivuljama, \(f \ge g\) :: \(x\) in \(x^2\) na \([0, 1]\): \(\frac16\)
+\(V = \pi \int_a^b f^2(x)\,dx\) :: vrtenina okoli osi \(x\) :: \(f = \sqrt{x}\) na \([0, 2]\): \(V = 2\pi\)
+! Ploščino pod osjo \(x\) štej pozitivno (razdeli pri ničlah).
+! Pri nedoločenem integralu dopiši \(+ C\).
+
+=== kombinatorika
+## Osnovna pravila
+\(n_1 \cdot n_2 \cdots n_k\) :: pravilo produkta (zaporedne izbire) :: 3 majice, 4 hlače: 12 kombinacij
+\(n_1 + n_2\) :: pravilo vsote (ali, ali) :: 5 knjig ali 3 filmi: 8 možnosti
+## Razporeditve
+\(P_n = n!\) :: permutacije: vrstni red vseh :: 4 osebe v vrsto: \(24\)
+\(P_n^{k_1, k_2, \ldots} = \frac{n!}{k_1!\,k_2!\cdots}\) :: s ponavljanjem :: besedi ANA: \(\frac{3!}{2!} = 3\)
+\(V_n^r = \frac{n!}{(n - r)!}\) :: variacije: izbor \(r\) z vrstnim redom :: 1., 2., 3. mesto med 10: \(720\)
+\(\bar{V}_n^r = n^r\) :: variacije s ponavljanjem :: PIN s 4 števkami: \(10^4\)
+\(C_n^r = \binom{n}{r} = \frac{n!}{r!\,(n - r)!}\) :: kombinacije: brez vrstnega reda :: 3 izmed 10: \(120\)
+## Binomski izrek
+\((a + b)^n = \sum_{k=0}^{n} \binom{n}{k} a^{n-k} b^k\) :: binomski izrek :: \((x + 1)^3 = x^3 + 3x^2 + 3x + 1\)
+\(\binom{n}{k} = \binom{n}{n-k}\) :: simetrija; \(\binom{n}{k} + \binom{n}{k+1} = \binom{n+1}{k+1}\) :: Pascalov trikotnik: \(1, 4, 6, 4, 1\)
+\(\binom{n}{k} a^{n-k} b^k\) :: \((k + 1)\)-ti člen :: 3. člen \((x + 2)^5\): \(\binom52 x^3 \cdot 4 = 40x^3\)
+! Ali je vrstni red pomemben? Da: variacije; ne: kombinacije.
+! \(0! = 1\).
+
+=== verjetnostni_racun
+## Dogodki
+\(A \cup B\), \(A \cap B\), \(\bar{A}\) :: vsota, produkt, nasprotni :: kocka: \(A\) sodo, \(\bar A\) liho
+\(A \cap B = \emptyset\) :: nezdružljiva dogodka :: »pade 1« in »pade 6«
+## Verjetnost
+\(P(A) = \frac{m}{n}\) :: ugodni / vsi enako verjetni :: kocka, praštevilo: \(\frac36 = \frac12\)
+\(P(\bar{A}) = 1 - P(A)\) :: nasprotni dogodek :: vsaj ena šestica v 2 metih: \(1 - \frac{25}{36} = \frac{11}{36}\)
+\(P(A \cup B) = P(A) + P(B) - P(A \cap B)\) :: vsota dogodkov :: karta: srce ali as: \(\frac{13 + 4 - 1}{52}\)
+\(P(A \cap B) = P(A)P(B)\) :: neodvisna dogodka :: dve glavi: \(\frac14\)
+\(P(A \mid B) = \frac{P(A \cap B)}{P(B)}\) :: pogojna :: sodo, če je \(> 3\): \(\frac23\)
+\(\binom{n}{k} p^k (1 - p)^{n-k}\) :: \(k\) uspehov v \(n\) poskusih :: 2 šestici v 3 metih: \(3 \cdot \frac{1}{36} \cdot \frac56\)
+## Normalna porazdelitev
+\(z = \frac{x - \mu}{\sigma}\) :: standardizacija :: \(\mu = 170, \sigma = 10\), \(x = 185\): \(z = 1{,}5\)
+\(P(x < a) = \frac12 + \Phi(z)\) :: tabela \(\Phi\) (na listu) :: \(\Phi(1) \approx 0{,}3413\)
+\(\mu \pm \sigma\): 68 %, \(\mu \pm 2\sigma\): 95 % :: pravilo :: \(\mu \pm 3\sigma\): 99,7 %
+! »Vsaj eden« računaj prek nasprotnega dogodka.
+! Pri vlečenju brez vračanja se verjetnosti spreminjajo.
+
+=== statistika
+## Pojmi
+populacija, vzorec :: celota, izbrani del :: vsi dijaki, 100 anketiranih
+opisni / številski podatki :: kvalitativni, kvantitativni :: barva oči / višina
+\(f_i,\ f_i' = \frac{f_i}{n}\) :: frekvenca, relativna frekvenca :: 6 od 30: 20 %
+## Prikazi
+stolpčni, tortni (\(\alpha = f' \cdot 360^\circ\)), histogram :: grafikoni :: 25 %: \(90^\circ\)
+škatla z brki :: min, \(Q_1\), \(Me\), \(Q_3\), max :: \(1, 3, 5, 7, 9\): \(Me = 5\)
+## Srednje vrednosti
+\(\bar{x} = \frac{x_1 + \ldots + x_n}{n}\) :: aritmetična sredina :: \(2, 4, 9\): \(\bar x = 5\)
+\(\bar{x} = \frac{\sum f_i x_i}{n}\) :: iz frekvenčne tabele :: ocene 3 (×2), 5 (×1): \(\frac{11}{3}\)
+\(Me\) :: srednji podatek urejenih :: \(1, 2, 7, 8\): \(Me = 4{,}5\)
+\(Mo\) :: najpogostejši :: \(2, 3, 3, 5\): \(Mo = 3\)
+## Razpršenost
+\(R = x_{max} - x_{min}\) :: variacijski razmik :: \(2, 4, 9\): \(R = 7\)
+\(\sigma = \sqrt{\frac{\sum (x_i - \bar x)^2}{n}}\) :: standardni odklon :: \(2, 4, 9\): \(\sigma = \sqrt{\frac{26}{3}} \approx 2{,}94\)
+\(Q_3 - Q_1\) :: medčetrtinski razmik :: srednja polovica podatkov
+## Statistična naloga
+vprašanje, zbiranje, obdelava, prikaz, interpretacija :: koraki :: »Koliko spijo dijaki?«
+! Mediana zahteva urejene podatke.
+! Pri sodem \(n\) je mediana povprečje srednjih dveh.

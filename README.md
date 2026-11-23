@@ -73,6 +73,12 @@ Na vsaki strani `…/snov/<poglavje>/<…>_razlaga.html` `components.js` samodej
 (na ožjem zaslonu gumb »Kazalo« spodaj desno). Sestavi ga iz naslovov `h2` (poglavja) ter `h3`/`h4` (podpoglavja;
 `h4` pod »Razlaga« so podpoglavja, `h4` pod »Tipi nalog« so tipi). Naslovom brez `id` ga doda samo; ročno urejanje ni potrebno.
 
+Plonk listek (`<poglavje>_plonk.html`, videz »Karo list«, `style/plonk.css`) je vsa snov poglavja na enem listu A4
+(največ obojestransko): formula ali pojem, kratek pomen in primer. Strani se ne urejajo ročno: vsebina je v
+`api/data/plonk/<predmet>.txt`, strani ustvari `node tools/plonk/plonk.mjs [predmet ...]` (oblika vira je opisana
+na vrhu skripte; poklicna matura z »+ predmet:snov#sklopi« prevzame sklope splošne). Povezavo nanj na strani z razlago
+doda `components.js`, če plonk listek obstaja.
+
 Časovni trak je seznam obdobij in dogodkov, ki ga `components/casovni-trak.js` izriše pokončno kot premico
 (na širokem zaslonu dogodki levo in desno, na ozkem desno; dolga obdobja brez dogodkov se stisnejo z znakom //).
 Obdobja so intervali [od, do) ob levem robu, barva `data-barva` 0–6. Leta pred našim štetjem so negativna.

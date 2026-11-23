@@ -1,0 +1,120 @@
+// Plonk listki za zgodovino: dogodek ali pojem :: bistvo :: letnica ali primer.
+
+=== stari_vek
+## Rodovitni polmesec
+Mezopotamija, Egipt :: prve visoke kulture ob rekah :: klinopis, hieroglifi
+Hamurabijev zakonik :: pisano pravo :: ~1750 pr. n. št.
+## Grki
+egejski svet :: Kreta (minojska), Mikene :: Knosos
+kolonizacija :: grška mesta ob Sredozemlju :: 8.–6. st. pr. n. št.
+polis :: mestna država :: Atene, Šparta
+## Vladavina
+Atene: demokracija (Klejsten, Perikles) :: ljudska skupščina :: 5. st. pr. n. št.
+Šparta: oligarhija, vojaška vzgoja :: dva kralja :: heloti
+## Vojne in Aleksander
+grško-perzijske vojne :: Maraton 490, Salamina 480 pr. n. št. :: zmaga Grkov
+peloponeška vojna :: Atene proti Šparti :: 431–404 pr. n. št.
+Aleksander Veliki :: imperij do Indije, helenizem :: umre 323 pr. n. št.
+## Rim: kraljestvo in republika
+ustanovitev Rima 753 pr. n. št. :: republika 509 pr. n. št. :: konzula, senat
+punske vojne :: proti Kartagini :: Hanibal
+## Rimski imperij
+principat (Avgust, 27 pr. n. št.) :: dominat (Dioklecijan) :: tetrarhija
+propad Zahodnega rimskega cesarstva :: 476 :: Romul Avgustul
+## Antika na Slovenskem
+prazgodovina, Kelti (Noriško kraljestvo) :: Vače: situla :: halštatska kultura
+rimska osvojitev :: 1. st. pr. n. št. :: Emona, Celeia, Poetovio
+## Rimska mesta in podeželje
+Emona (Ljubljana), Celeia (Celje), Poetovio (Ptuj) :: mesta :: Jantarjeva pot
+## Rimsko izročilo
+latinščina, pravo, krščanstvo :: dediščina :: mitrej na Ptuju
+! Pred našim štetjem letnice štejemo nazaj.
+
+=== srednji_in_novi_vek
+## Fevdalna družba
+fevd, vazal, senior :: fevdalizem :: tlaka, desetina
+Karel Veliki :: cesar 800 :: frankovska država
+## Posvetna in cerkvena oblast
+boj za investituro :: papež proti cesarju :: Canossa 1077
+križarske vojne :: 1096–1291 :: Jeruzalem
+## Absolutizem in parlamentarizem
+absolutizem :: Ludvik XIV. »Država sem jaz« :: Versailles
+parlamentarizem :: Anglija, Magna Charta 1215, slavna revolucija 1688 :: Bill of Rights
+## Odkritja
+Kolumb 1492, Vasco da Gama 1498, Magellan 1519–22 :: velika geografska odkritja :: kolonializem
+## Humanizem in renesansa
+človek v središču :: 14.–16. st. :: Leonardo, Michelangelo
+## Reformacija
+Luther 1517 :: 95 tez :: protestantizem
+katoliška obnova :: tridentinski koncil 1545–63 :: jezuiti
+## Gospodarstvo
+manufaktura, merkantilizem :: zgodnji kapitalizem :: tržišča
+## Alpski Slovani
+naselitev 6. st. :: Karantanija, knežji kamen :: ustoličevanje
+pokristjanjevanje :: Salzburg, Oglej :: 8. st.
+## Dežele in rodbine
+Kranjska, Štajerska, Koroška :: zgodovinske dežele :: Celjski grofje
+## Habsburžani in Slovenci
+turški vpadi, kmečki upori :: 15.–16. st. :: 1515 vseslovenski upor
+Marija Terezija, Jožef II. :: reforme: šolstvo, verska strpnost :: obvezna šola 1774
+! Karantanija je prva slovanska državna tvorba v Vzhodnih Alpah.
+
+=== devetnajsto_stoletje
+## Meščanske revolucije
+ameriška :: neodvisnost 1776 :: ustava ZDA
+francoska :: 1789, Deklaracija o pravicah človeka :: padec Bastilje
+## Napoleon
+cesar 1804 :: Ilirske province 1809–13 :: slovenščina v šolah
+dunajski kongres 1815 :: restavracija :: Metternich
+## Liberalizem
+parlamentarizem, ustava :: doba meščanov :: volilna pravica
+## Narodna gibanja
+združitev Italije 1861, Nemčije 1871 :: nacionalne države :: Bismarck
+pomlad narodov 1848 :: revolucije po Evropi :: konec fevdalizma
+## Imperializem
+delitev Afrike :: berlinska konferenca 1884–85 :: kolonije
+## Slovensko narodno gibanje
+Zedinjena Slovenija 1848 :: politični program :: vse Slovence v eno deželo
+tabori 1868–71 :: množična zborovanja :: Ljutomer
+## Modernizacija
+železnica (Južna 1857), industrializacija :: spremembe :: Trst–Dunaj
+staroslovenci in mladoslovenci :: diferenciacija :: katoliški, liberalni tabor
+## Slovenci in drugi narodi
+trializem, jugoslovanska ideja :: povezovanje :: Majniška deklaracija 1917
+! Zedinjena Slovenija je prvi slovenski politični program.
+
+=== dvajseto_stoletje
+## Demokracija
+parlamentarna demokracija :: med vojnama v krizi :: Weimarska republika
+## Totalitarni sistemi
+fašizem, nacizem, stalinizem :: ena stranka, kult vodje, teror :: Mussolini 1922, Hitler 1933
+## Prva svetovna vojna
+1914–1918 :: atentat v Sarajevu :: soška fronta 1915–17
+## Druga svetovna vojna
+1939–1945 :: napad na Poljsko, holokavst :: Stalingrad, D-dan
+## Hladna vojna
+ZDA proti ZSSR :: NATO 1949, Varšavski pakt 1955 :: berlinski zid 1961
+## Po padcu zidu
+1989 :: konec komunizma v Evropi :: razpad ZSSR 1991
+## OZN
+1945 :: ohranjanje miru :: Varnostni svet
+## Gospodarstvo
+velika gospodarska kriza 1929 :: borzni zlom :: New Deal
+## Evropsko povezovanje
+EGS 1957 (Rimske pogodbe) :: EU 1993 (Maastricht) :: Slovenija v EU 2004
+## Tretji svet
+dekolonizacija :: Indija 1947, Afrika 1960 :: neuvrščeni (Beograd 1961)
+## Terorizem
+11. september 2001 :: napad na ZDA :: vojna proti terorizmu
+## Slovenci v prvi Jugoslaviji
+Država SHS 29. 10. 1918 :: Kraljevina SHS 1. 12. 1918 :: rapalska pogodba 1920
+## Slovenci v drugi svetovni vojni
+okupacija 1941 :: Nemci, Italijani, Madžari :: OF 26. 4. 1941
+## Druga Jugoslavija
+socializem, samoupravljanje :: Tito :: Slovenija republika
+## Osamosvojitev
+plebiscit 23. 12. 1990 :: 88,5 % za samostojnost :: razglasitev 25. 6. 1991
+desetdnevna vojna :: junij–julij 1991 :: Brionska deklaracija
+## Meje in manjšine
+Londonski memorandum 1954, Osimski sporazum 1975 :: meja z Italijo :: Cona A in B
+! Plebiscit 23. 12. 1990, osamosvojitev 25. 6. 1991.

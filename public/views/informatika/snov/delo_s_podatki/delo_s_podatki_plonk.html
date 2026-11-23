@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delo s podatki — plonk listek | Učilnica.com</title>
+  <meta name="description" content="Plonk listek za maturo: Delo s podatki na enem listu A4, vsaka formula ali pojem s kratkim primerom.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Kalam:wght@400;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
+  <link rel="stylesheet" href="/style/snov.css">
+  <link rel="stylesheet" href="/style/plonk.css">
+</head>
+<body>
+  <div id="header"></div>
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view">
+
+        <!-- Ustvari tools/plonk/plonk.mjs iz api/data/plonk/informatika.txt; ne urejaj ročno. -->
+        <article class="plonk">
+          <header class="pl-glava">
+            <div>
+              <span class="pl-oznaka">Plonk listek · Informatika 4.4</span>
+              <h1>Delo s podatki</h1>
+            </div>
+            <div class="pl-gumbi">
+              <a class="pl-gumb pl-gumb--tiho" href="delo_s_podatki_razlaga.html">Cela razlaga</a>
+              <button type="button" class="pl-gumb" onclick="window.print()">Natisni</button>
+            </div>
+          </header>
+
+          <div class="pl-vsebina">
+            <section class="pl-sklop">
+              <h2><span class="pl-st">1</span>Obdelava podatkov</h2>
+              <div class="pl-r"><div class="pl-f">vnos, obdelava, izpis</div><div class="pl-o">model</div><div class="pl-p">povprečje ocen</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">2</span>Algoritem</h2>
+              <div class="pl-r"><div class="pl-f">končen, enoličen, natančen</div><div class="pl-o">lastnosti</div><div class="pl-p">recept</div></div>
+              <div class="pl-r"><div class="pl-f">zaporedje, odločitev, ponavljanje</div><div class="pl-o">osnovne strukture</div><div class="pl-p">diagram poteka</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">3</span>Programski jezik</h2>
+              <div class="pl-r"><div class="pl-f">prevajalnik / tolmač</div><div class="pl-o">celoten program / vrstico za vrstico</div><div class="pl-p">C / Python</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">4</span>Programiranje</h2>
+              <div class="pl-r"><div class="pl-f">spremenljivke, tipi</div><div class="pl-o">int, float, str, bool</div><div class="pl-p">x = 5</div></div>
+              <div class="pl-r"><div class="pl-f">if, for, while</div><div class="pl-o">krmilne strukture</div><div class="pl-p">for i in range(5):</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">5</span>Podatkovna baza</h2>
+              <div class="pl-r"><div class="pl-f">tabela, zapis, polje</div><div class="pl-o">relacijska baza</div><div class="pl-p">tabela Dijaki</div></div>
+              <div class="pl-r"><div class="pl-f">primarni / tuji ključ</div><div class="pl-o">enolično / povezava</div><div class="pl-p">EMŠO</div></div>
+              <div class="pl-r"><div class="pl-f">SQL: SELECT … FROM … WHERE</div><div class="pl-o">poizvedba</div><div class="pl-p">SELECT ime FROM dijaki WHERE razred='4.a'</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">6</span>Preglednica</h2>
+              <div class="pl-r"><div class="pl-f">relativni / absolutni sklic</div><div class="pl-o">A1 / $A$1</div><div class="pl-p">ob kopiranju se $A$1 ne spremeni</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">7</span>Tehnologije znanja</h2>
+              <div class="pl-r pl-r--dolga"><div class="pl-f">ekspertni sistem, odločitveno drevo</div><div class="pl-o">odločanje</div><div class="pl-p">DEX</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">8</span>Python</h2>
+              <div class="pl-r"><div class="pl-f">def, return</div><div class="pl-o">funkcije</div><div class="pl-p">def kvadrat(x): return x * x</div></div>
+              <div class="pl-r"><div class="pl-f">seznami, nizi</div><div class="pl-o">indeksi od 0</div><div class="pl-p">s[0], s[-1], len(s)</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">9</span>Diagram E-R</h2>
+              <div class="pl-r"><div class="pl-f">entiteta, atribut, relacija</div><div class="pl-o">1 : 1, 1 : N, M : N</div><div class="pl-p">dijak–predmet: M : N</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">10</span>Funkcije v preglednicah</h2>
+              <div class="pl-r pl-r--dolga"><div class="pl-f">=SUM, =AVERAGE, =IF, =VLOOKUP, =COUNTIF</div><div class="pl-o">pogoste</div><div class="pl-p">=IF(B2&gt;=2;&quot;pozitivno&quot;;&quot;negativno&quot;)</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">11</span>Odločitveno drevo</h2>
+              <div class="pl-r pl-r--dolga"><div class="pl-f">vozlišče = vprašanje, list = odločitev</div><div class="pl-o">pravila če–potem</div><div class="pl-p">če dežuje, vzemi dežnik</div></div>
+            </section>
+
+            <section class="pl-sklop pl-pasti">
+              <h2><span class="pl-st">!</span>Pazi</h2>
+              <ul>
+                <li>Indeksi v Pythonu se začnejo z 0.</li>
+              </ul>
+            </section>
+          </div>
+          <footer class="pl-noga">piflar.si · plonk listek · Delo s podatki</footer>
+        </article>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>

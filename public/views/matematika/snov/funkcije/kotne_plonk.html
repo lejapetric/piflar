@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kotne funkcije — plonk listek | Učilnica.com</title>
+  <meta name="description" content="Plonk listek za maturo: Kotne funkcije na enem listu A4, vsaka formula ali pojem s kratkim primerom.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Kalam:wght@400;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
+  <link rel="stylesheet" href="/style/snov.css">
+  <link rel="stylesheet" href="/style/plonk.css">
+</head>
+<body>
+  <div id="header"></div>
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view">
+
+        <!-- Ustvari tools/plonk/plonk.mjs iz api/data/plonk/matematika.txt; ne urejaj ročno. -->
+        <article class="plonk">
+          <header class="pl-glava">
+            <div>
+              <span class="pl-oznaka">Plonk listek · Matematika 4.10.9</span>
+              <h1>Kotne funkcije</h1>
+            </div>
+            <div class="pl-gumbi">
+              <a class="pl-gumb pl-gumb--tiho" href="kotne_razlaga.html">Cela razlaga</a>
+              <button type="button" class="pl-gumb" onclick="window.print()">Natisni</button>
+            </div>
+          </header>
+
+          <div class="pl-vsebina">
+            <section class="pl-sklop">
+              <h2><span class="pl-st">1</span>Pravokotni trikotnik</h2>
+              <div class="pl-r"><div class="pl-f">\(\sin\alpha = \frac{a}{c},\ \cos\alpha = \frac{b}{c},\ \tan\alpha = \frac{a}{b}\)</div><div class="pl-o">nasprotna, priležna, hipotenuza</div><div class="pl-p">\(3, 4, 5\): \(\sin\alpha = 0{,}6\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(30^\circ: \frac12, \frac{\sqrt3}{2}\); \(45^\circ: \frac{\sqrt2}{2}\)</div><div class="pl-o">\(\sin, \cos\) znanih kotov</div><div class="pl-p">\(\sin 60^\circ = \frac{\sqrt3}{2}\)</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">2</span>Zveze</h2>
+              <div class="pl-r"><div class="pl-f">\(\sin^2 x + \cos^2 x = 1\)</div><div class="pl-o">osnovna zveza</div><div class="pl-p">\(\sin x = 0{,}6\): \(\cos x = \pm 0{,}8\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(\tan x = \frac{\sin x}{\cos x}\)</div><div class="pl-o">\(1 + \tan^2 x = \frac{1}{\cos^2 x}\)</div><div class="pl-p">\(\tan x = 1\): \(\cos^2 x = \frac12\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(\sin(\pi - x) = \sin x,\ \cos(-x) = \cos x\)</div><div class="pl-o">prehod v I. kvadrant</div><div class="pl-p">\(\sin 150^\circ = \frac12\)</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">3</span>Adicijski izreki</h2>
+              <div class="pl-r"><div class="pl-f">\(\sin(x \pm y) = \sin x \cos y \pm \cos x \sin y\)</div><div class="pl-o">sinus vsote</div><div class="pl-p">\(\sin 75^\circ = \frac{\sqrt6 + \sqrt2}{4}\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(\cos(x \pm y) = \cos x \cos y \mp \sin x \sin y\)</div><div class="pl-o">kosinus vsote</div><div class="pl-p">\(\cos 15^\circ = \frac{\sqrt6 + \sqrt2}{4}\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(\sin 2x = 2\sin x\cos x,\ \cos 2x = \cos^2 x - \sin^2 x\)</div><div class="pl-o">dvojni kot</div><div class="pl-p">\(\sin x = \frac35\) (I. kv.): \(\sin 2x = \frac{24}{25}\)</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">4</span>Grafi</h2>
+              <div class="pl-r"><div class="pl-f">\(f(x) = a\sin(bx + c) + d\)</div><div class="pl-o">amplituda \(|a|\), perioda \(\frac{2\pi}{b}\)</div><div class="pl-p">\(2\sin 3x\): perioda \(\frac{2\pi}{3}\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(\tan x\): perioda \(\pi\)</div><div class="pl-o">poli v \(\frac{\pi}{2} + k\pi\)</div><div class="pl-p">\(\tan\frac{\pi}{4} = 1\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(180^\circ = \pi\)</div><div class="pl-o">stopinje v radiane</div><div class="pl-p">\(60^\circ = \frac{\pi}{3}\)</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">5</span>Enačbe</h2>
+              <div class="pl-r"><div class="pl-f">\(\sin x = a\): \(x = x_0 + 2k\pi,\ \pi - x_0 + 2k\pi\)</div><div class="pl-o">dve družini rešitev</div><div class="pl-p">\(\sin x = \frac12\): \(\frac{\pi}{6}, \frac{5\pi}{6}\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(\cos x = a\): \(x = \pm x_0 + 2k\pi\)</div><div class="pl-o">simetrično</div><div class="pl-p">\(\cos x = 0\): \(\frac{\pi}{2} + k\pi\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(\tan x = a\): \(x = x_0 + k\pi\)</div><div class="pl-o">ena družina</div><div class="pl-p">\(\tan x = 1\): \(\frac{\pi}{4} + k\pi\)</div></div>
+            </section>
+
+            <section class="pl-sklop pl-pasti">
+              <h2><span class="pl-st">!</span>Pazi</h2>
+              <ul>
+                <li>Ne pozabi \(+ 2k\pi\) (pri tangensu \(+ k\pi\)).</li>
+                <li>Kalkulator v pravem načinu (DEG / RAD).</li>
+              </ul>
+            </section>
+          </div>
+          <footer class="pl-noga">piflar.si · plonk listek · Kotne funkcije</footer>
+        </article>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>

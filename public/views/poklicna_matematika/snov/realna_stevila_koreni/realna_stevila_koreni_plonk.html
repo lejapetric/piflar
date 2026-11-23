@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Realna števila, koreni in absolutna vrednost — plonk listek | Učilnica.com</title>
+  <meta name="description" content="Plonk listek za maturo: Realna števila, koreni in absolutna vrednost na enem listu A4, vsaka formula ali pojem s kratkim primerom.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Kalam:wght@400;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
+  <link rel="stylesheet" href="/style/snov.css">
+  <link rel="stylesheet" href="/style/plonk.css">
+</head>
+<body>
+  <div id="header"></div>
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view">
+
+        <!-- Ustvari tools/plonk/plonk.mjs iz api/data/plonk/poklicna_matematika.txt; ne urejaj ročno. -->
+        <article class="plonk">
+          <header class="pl-glava">
+            <div>
+              <span class="pl-oznaka">Plonk listek · Poklicna matura Snov</span>
+              <h1>Realna števila, koreni in absolutna vrednost</h1>
+            </div>
+            <div class="pl-gumbi">
+              <a class="pl-gumb pl-gumb--tiho" href="realna_stevila_koreni_razlaga.html">Cela razlaga</a>
+              <button type="button" class="pl-gumb" onclick="window.print()">Natisni</button>
+            </div>
+          </header>
+
+          <div class="pl-vsebina">
+            <section class="pl-sklop">
+              <h2><span class="pl-st">1</span>Realna števila</h2>
+              <div class="pl-r"><div class="pl-f">\(\mathbb{N} \subset \mathbb{Z} \subset \mathbb{Q} \subset \mathbb{R}\)</div><div class="pl-o">številske množice</div><div class="pl-p">\(\sqrt2, \pi\) sta iracionalni</div></div>
+              <div class="pl-r"><div class="pl-f">\([a, b],\ (a, b),\ [a, \infty)\)</div><div class="pl-o">intervali (oglati: z mejo)</div><div class="pl-p">\(-1 \le x &lt; 3\): \([-1, 3)\)</div></div>
+              <div class="pl-r"><div class="pl-f">zaokroževanje</div><div class="pl-o">5 ali več navzgor</div><div class="pl-p">\(3{,}14159 \approx 3{,}142\)</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">2</span>Absolutna vrednost</h2>
+              <div class="pl-r"><div class="pl-f">\(|x| = x\) za \(x \ge 0\), \(-x\) za \(x &lt; 0\)</div><div class="pl-o">razdalja od 0</div><div class="pl-p">\(|-3| = 3\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(|x - a| &lt; r \iff a - r &lt; x &lt; a + r\)</div><div class="pl-o">neenačba</div><div class="pl-p">\(|x - 2| &lt; 3\): \(x \in (-1, 5)\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(|x - a| = r \Rightarrow x = a \pm r\)</div><div class="pl-o">enačba (\(r \ge 0\))</div><div class="pl-p">\(|x + 1| = 4\): \(x = 3\) ali \(x = -5\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(\Delta x = |x - x_0|,\ \delta = \frac{\Delta x}{|x|}\)</div><div class="pl-o">absolutna, relativna napaka</div><div class="pl-p">\(\pi \approx 3{,}14\): \(\Delta \approx 0{,}0016\)</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">3</span>Koreni</h2>
+              <div class="pl-r"><div class="pl-f">\(\sqrt[n]{a}\,\sqrt[n]{b} = \sqrt[n]{ab}\)</div><div class="pl-o">enaki korenski eksponenti</div><div class="pl-p">\(\sqrt{2}\sqrt{8} = 4\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(\sqrt[n]{a^m} = a^{\frac{m}{n}}\)</div><div class="pl-o">potenca z racionalnim eksponentom</div><div class="pl-p">\(8^{\frac23} = \sqrt[3]{64} = 4\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(\sqrt{a^2} = |a|\)</div><div class="pl-o">sod koren vrne absolutno vrednost</div><div class="pl-p">\(\sqrt{(-3)^2} = 3\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(\sqrt[n]{\sqrt[m]{a}} = \sqrt[nm]{a}\)</div><div class="pl-o">koren korena</div><div class="pl-p">\(\sqrt{\sqrt[3]{x}} = \sqrt[6]{x}\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(\frac{a}{\sqrt{b}} = \frac{a\sqrt{b}}{b}\)</div><div class="pl-o">racionalizacija</div><div class="pl-p">\(\frac{1}{\sqrt{3} - 1} = \frac{\sqrt{3} + 1}{2}\)</div></div>
+              <div class="pl-r"><div class="pl-f">delno korenjenje</div><div class="pl-o">izpostavi popolne kvadrate</div><div class="pl-p">\(\sqrt{50} = 5\sqrt{2}\)</div></div>
+            </section>
+
+            <section class="pl-sklop pl-pasti">
+              <h2><span class="pl-st">!</span>Pazi</h2>
+              <ul>
+                <li>\(\sqrt{a^2} = |a|\), ne \(a\).</li>
+              </ul>
+            </section>
+          </div>
+          <footer class="pl-noga">piflar.si · plonk listek · Realna števila, koreni in absolutna vrednost</footer>
+        </article>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>

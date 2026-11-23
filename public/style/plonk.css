@@ -1,0 +1,115 @@
+/* Plonk listek (videz »Karo list«): vsa snov poglavja na enem listu A4,
+   največ obojestransko. Karirast papir, naslovi z rokopisom, formule
+   (ali pojmi) obkrožene, ob vsaki kratek pomen in primer »npr.«.
+   Vrstica: .pl-r > .pl-f (formula/pojem) + .pl-o (pomen) + .pl-p (primer).
+   Strani ustvari tools/plonk.mjs iz api/data/plonk/<predmet>.txt. */
+
+.plonk {
+    --pl-bg: var(--bg-card, #fff);
+    --pl-text: var(--text-primary, #1A1D24);
+    --pl-soft: var(--text-secondary, #474C59);
+    --pl-muted: var(--text-muted, #8A8F9C);
+    --pl-line: var(--border-color, #D9DDE6);
+    --pl-acc: var(--primary, #2F5BD3);
+    --pl-red: var(--rdeca, #D6293E);
+    --pl-mreza: rgba(31, 63, 191, 0.09);
+    --pl-roka: var(--font-roka, "Kalam", cursive);
+    max-width: 1100px;
+    margin: 0 auto 48px;
+    padding: 26px 30px;
+    color: var(--pl-text);
+    font-size: 15px;
+    line-height: 1.45;
+    background: var(--pl-bg);
+    background-image: linear-gradient(var(--pl-mreza) 1px, transparent 1px), linear-gradient(90deg, var(--pl-mreza) 1px, transparent 1px);
+    background-size: 20px 20px;
+    border: 1px solid var(--pl-line);
+    border-radius: 6px;
+    box-shadow: 0 1px 2px rgba(0,0,0,.05), 0 8px 24px rgba(0,0,0,.06);
+}
+html[data-theme="dark"] .plonk { --pl-mreza: rgba(244, 241, 230, 0.06); }
+.plonk mjx-container { font-size: 105% !important; }
+
+.pl-glava {
+    display: flex; align-items: flex-end; justify-content: space-between;
+    gap: 16px; flex-wrap: wrap; margin-bottom: 18px;
+}
+.pl-oznaka {
+    font: 600 12px/1 var(--font-oznake, ui-monospace, monospace);
+    letter-spacing: .06em; text-transform: uppercase; color: var(--pl-muted);
+}
+html .plonk .pl-glava h1 { margin: 6px 0 0; font-family: var(--pl-roka); font-weight: 700; font-size: 40px; line-height: 1.1; }
+.pl-glava h1::after {
+    content: ""; display: block; height: 3px; width: 140px; margin-top: 2px;
+    background: var(--pl-red); border-radius: 3px; transform: rotate(-1deg);
+}
+.pl-gumbi { display: flex; gap: 8px; }
+.pl-gumb {
+    display: inline-flex; align-items: center; height: 38px; padding: 0 16px;
+    border-radius: 8px; border: 1px solid var(--pl-acc); background: var(--pl-acc);
+    color: #fff; font: 600 14px var(--font-body, inherit); cursor: pointer; text-decoration: none;
+}
+.pl-gumb--tiho { background: transparent; color: var(--pl-acc); }
+html[data-theme="dark"] .pl-gumb:not(.pl-gumb--tiho) { color: #0E1013; }
+
+.pl-vsebina { columns: 2 340px; column-gap: 40px; }
+.pl-sklop { break-inside: avoid; margin-bottom: 18px; }
+html .plonk .pl-sklop h2 {
+    margin: 0 0 4px; display: flex; align-items: center; gap: 8px;
+    font-family: var(--pl-roka); font-size: 21px; line-height: 1.25; color: var(--pl-red);
+}
+.pl-st {
+    flex: none; width: 24px; height: 24px; border: 2px solid var(--pl-red); border-radius: 50%;
+    display: inline-grid; place-items: center; font-size: 14px; line-height: 1;
+}
+.pl-r {
+    break-inside: avoid; padding: 5px 0 6px;
+    display: grid; grid-template-columns: auto 1fr; column-gap: 10px; align-items: baseline;
+}
+.pl-f {
+    border: 1.5px solid var(--pl-text); border-radius: 10px 4px 10px 4px; padding: 1px 8px;
+    background: var(--pl-bg); justify-self: start; max-width: 100%;
+}
+.pl-o { font-family: var(--pl-roka); color: var(--pl-soft); font-size: 15px; }
+.pl-r--dolga { grid-template-columns: 1fr; }
+.pl-r--dolga .pl-o { padding-left: 14px; margin-top: 2px; }
+.pl-p { grid-column: 1 / -1; color: var(--pl-acc); padding-left: 14px; margin-top: 3px; }
+.pl-p::before { content: "npr. "; font-family: var(--pl-roka); font-weight: 700; }
+.pl-pasti { border: 2px dashed var(--pl-red); border-radius: 8px; padding: 8px 12px; background: var(--pl-bg); }
+.pl-pasti ul { margin: 0; padding-left: 18px; }
+.pl-pasti li { margin: 2px 0; }
+.pl-noga { margin-top: 14px; font-size: 12px; color: var(--pl-muted); text-align: center; }
+
+@media (max-width: 640px) {
+    .plonk { padding: 18px 16px; }
+    html .plonk .pl-glava h1 { font-size: 30px; }
+    .pl-r { grid-template-columns: 1fr; }
+    .pl-o { padding-left: 14px; margin-top: 2px; }
+}
+
+@media print {
+    @page { size: A4; margin: 9mm 10mm; }
+    html, body { background: #fff !important; height: auto !important; min-height: 0 !important; }
+    body > *:not(#mainContent) { display: none !important; }
+    .main-content, .view-container, .view {
+        margin: 0 !important; padding: 0 !important; max-width: none !important; width: auto !important;
+        min-height: 0 !important; background: none !important;
+    }
+    .pl-gumbi, .kazalo-plavajoce, .kazalo-gumb { display: none !important; }
+    .plonk {
+        --pl-bg: #fff; --pl-text: #111; --pl-soft: #333; --pl-muted: #666; --pl-line: #ccc;
+        --pl-acc: #2F5BD3; --pl-red: #C8202F;
+        max-width: none; margin: 0; padding: 0; border: 0; box-shadow: none !important; background-image: none;
+        font-size: 9.5pt; line-height: 1.32; -webkit-print-color-adjust: exact; print-color-adjust: exact;
+    }
+    .plonk mjx-container { font-size: 100% !important; }
+    .pl-glava { margin-bottom: 8px; }
+    html .plonk .pl-glava h1 { font-size: 22pt; }
+    .pl-vsebina { columns: 2; column-gap: 8mm; }
+    .pl-sklop { margin-bottom: 8px; }
+    html .plonk .pl-sklop h2 { font-size: 13.5pt; }
+    .pl-st { width: 17px; height: 17px; font-size: 9pt; border-width: 1.5px; }
+    .pl-r { padding: 2px 0 3px; }
+    .pl-o { font-size: 9.5pt; }
+    .pl-noga { margin-top: 6px; font-size: 7.5pt; }
+}

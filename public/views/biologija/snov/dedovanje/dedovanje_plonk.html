@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mutacije in načini dedovanja — plonk listek | Učilnica.com</title>
+  <meta name="description" content="Plonk listek za maturo: Mutacije in načini dedovanja na enem listu A4, vsaka formula ali pojem s kratkim primerom.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Kalam:wght@400;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
+  <link rel="stylesheet" href="/style/snov.css">
+  <link rel="stylesheet" href="/style/plonk.css">
+</head>
+<body>
+  <div id="header"></div>
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view">
+
+        <!-- Ustvari tools/plonk/plonk.mjs iz api/data/plonk/biologija.txt; ne urejaj ročno. -->
+        <article class="plonk">
+          <header class="pl-glava">
+            <div>
+              <span class="pl-oznaka">Plonk listek · Biologija 4.3.2</span>
+              <h1>Mutacije in načini dedovanja</h1>
+            </div>
+            <div class="pl-gumbi">
+              <a class="pl-gumb pl-gumb--tiho" href="dedovanje_razlaga.html">Cela razlaga</a>
+              <button type="button" class="pl-gumb" onclick="window.print()">Natisni</button>
+            </div>
+          </header>
+
+          <div class="pl-vsebina">
+            <section class="pl-sklop">
+              <h2><span class="pl-st">1</span>Mutacije</h2>
+              <div class="pl-r"><div class="pl-f">genske</div><div class="pl-o">sprememba zaporedja baz</div><div class="pl-p">srpasta anemija</div></div>
+              <div class="pl-r"><div class="pl-f">kromosomske</div><div class="pl-o">sprememba zgradbe ali števila</div><div class="pl-p">Downov sindrom (trisomija 21)</div></div>
+              <div class="pl-r"><div class="pl-f">mutageni</div><div class="pl-o">UV, rentgen, kemikalije</div><div class="pl-p">kajenje</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">2</span>Osnove</h2>
+              <div class="pl-r"><div class="pl-f">gen, alel</div><div class="pl-o">dominanten (A) / recesiven (a)</div><div class="pl-p">Aa: heterozigot</div></div>
+              <div class="pl-r"><div class="pl-f">genotip / fenotip</div><div class="pl-o">zapis / izražena lastnost</div><div class="pl-p">aa: modre oči</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">3</span>Križanja</h2>
+              <div class="pl-r"><div class="pl-f">Aa × Aa → 1 AA : 2 Aa : 1 aa</div><div class="pl-o">monohibridno (fenotip 3 : 1)</div><div class="pl-p">dva rjavooka starša, modrooki otrok</div></div>
+              <div class="pl-r"><div class="pl-f">AaBb × AaBb → 9 : 3 : 3 : 1</div><div class="pl-o">dihibridno</div><div class="pl-p">Mendlov grah</div></div>
+              <div class="pl-r"><div class="pl-f">testno križanje</div><div class="pl-o">z recesivnim homozigotom</div><div class="pl-p">ugotovimo genotip dominantnega</div></div>
+              <div class="pl-r pl-r--dolga"><div class="pl-f">nepopolna dominanca, kodominanca</div><div class="pl-o">vmesni fenotip / oba se izrazita</div><div class="pl-p">krvna skupina AB</div></div>
+              <div class="pl-r"><div class="pl-f">spolno vezano (X)</div><div class="pl-o">pogosteje pri moških</div><div class="pl-p">barvna slepota, hemofilija</div></div>
+              <div class="pl-r"><div class="pl-f">rodovnik</div><div class="pl-o">krog ženska, kvadrat moški, zapolnjen = bolan</div><div class="pl-p">recesivno: bolan otrok zdravih staršev</div></div>
+            </section>
+
+            <section class="pl-sklop pl-pasti">
+              <h2><span class="pl-st">!</span>Pazi</h2>
+              <ul>
+                <li>Verjetnost za vsakega otroka je neodvisna.</li>
+              </ul>
+            </section>
+          </div>
+          <footer class="pl-noga">piflar.si · plonk listek · Mutacije in načini dedovanja</footer>
+        </article>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>

@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Newtonovi zakoni in gravitacija — plonk listek | Učilnica.com</title>
+  <meta name="description" content="Plonk listek za maturo: Newtonovi zakoni in gravitacija na enem listu A4, vsaka formula ali pojem s kratkim primerom.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Kalam:wght@400;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
+  <link rel="stylesheet" href="/style/snov.css">
+  <link rel="stylesheet" href="/style/plonk.css">
+</head>
+<body>
+  <div id="header"></div>
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view">
+
+        <!-- Ustvari tools/plonk/plonk.mjs iz api/data/plonk/fizika.txt; ne urejaj ročno. -->
+        <article class="plonk">
+          <header class="pl-glava">
+            <div>
+              <span class="pl-oznaka">Plonk listek · Fizika 4.4</span>
+              <h1>Newtonovi zakoni in gravitacija</h1>
+            </div>
+            <div class="pl-gumbi">
+              <a class="pl-gumb pl-gumb--tiho" href="newtonovi_zakoni_gravitacija_razlaga.html">Cela razlaga</a>
+              <button type="button" class="pl-gumb" onclick="window.print()">Natisni</button>
+            </div>
+          </header>
+
+          <div class="pl-vsebina">
+            <section class="pl-sklop">
+              <h2><span class="pl-st">1</span>Newtonovi zakoni</h2>
+              <div class="pl-r"><div class="pl-f">1. zakon</div><div class="pl-o">brez rezultante: miruje ali enakomerno premo</div><div class="pl-p">potnik v avtobusu ob zaviranju</div></div>
+              <div class="pl-r"><div class="pl-f">\(\vec F = m\vec a\)</div><div class="pl-o">2. zakon</div><div class="pl-p">\(F = 10\ \text{N}, m = 2\ \text{kg}\): \(a = 5\ \text{m/s}^2\)</div></div>
+              <div class="pl-r pl-r--dolga"><div class="pl-f">\(\vec F_{12} = -\vec F_{21}\)</div><div class="pl-o">3. zakon: sila in nasprotna sila na različnih telesih</div><div class="pl-p">odriv od stene</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">2</span>Masa, teža, gostota</h2>
+              <div class="pl-r"><div class="pl-f">\(F_g = mg\)</div><div class="pl-o">teža</div><div class="pl-p">\(m = 60\ \text{kg}\): \(F_g \approx 590\ \text{N}\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(\rho = \frac{m}{V}\)</div><div class="pl-o">gostota</div><div class="pl-p">voda \(1000\ \text{kg/m}^3\)</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">3</span>Gravitacija</h2>
+              <div class="pl-r"><div class="pl-f">\(F = G\frac{m_1 m_2}{r^2}\)</div><div class="pl-o">gravitacijski zakon, \(G = 6{,}67 \cdot 10^{-11}\)</div><div class="pl-p">dvakratna razdalja: \(\frac14\) sile</div></div>
+              <div class="pl-r"><div class="pl-f">\(g = \frac{GM}{r^2}\)</div><div class="pl-o">gravitacijski pospešek</div><div class="pl-p">na Zemlji \(9{,}8\ \text{m/s}^2\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(\frac{GMm}{r^2} = \frac{mv^2}{r}\)</div><div class="pl-o">kroženje satelita</div><div class="pl-p">\(v = \sqrt{\frac{GM}{r}}\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(\frac{r^3}{t_0^2} = \frac{GM}{4\pi^2}\)</div><div class="pl-o">3. Keplerjev zakon</div><div class="pl-p">geostacionarni satelit: \(t_0 = 24\ \text{h}\)</div></div>
+            </section>
+
+            <section class="pl-sklop pl-pasti">
+              <h2><span class="pl-st">!</span>Pazi</h2>
+              <ul>
+                <li>Sila in nasprotna sila se ne izničita (delujeta na različni telesi).</li>
+                <li>Masa se ne spreminja, teža se.</li>
+              </ul>
+            </section>
+          </div>
+          <footer class="pl-noga">piflar.si · plonk listek · Newtonovi zakoni in gravitacija</footer>
+        </article>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>

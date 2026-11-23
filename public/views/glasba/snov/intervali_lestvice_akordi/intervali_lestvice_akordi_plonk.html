@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Intervali, lestvice in akordi — plonk listek | Učilnica.com</title>
+  <meta name="description" content="Plonk listek za maturo: Intervali, lestvice in akordi na enem listu A4, vsaka formula ali pojem s kratkim primerom.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Kalam:wght@400;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
+  <link rel="stylesheet" href="/style/snov.css">
+  <link rel="stylesheet" href="/style/plonk.css">
+</head>
+<body>
+  <div id="header"></div>
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view">
+
+        <!-- Ustvari tools/plonk/plonk.mjs iz api/data/plonk/glasba.txt; ne urejaj ročno. -->
+        <article class="plonk">
+          <header class="pl-glava">
+            <div>
+              <span class="pl-oznaka">Plonk listek · Glasba 2</span>
+              <h1>Intervali, lestvice in akordi</h1>
+            </div>
+            <div class="pl-gumbi">
+              <a class="pl-gumb pl-gumb--tiho" href="intervali_lestvice_akordi_razlaga.html">Cela razlaga</a>
+              <button type="button" class="pl-gumb" onclick="window.print()">Natisni</button>
+            </div>
+          </header>
+
+          <div class="pl-vsebina">
+            <section class="pl-sklop">
+              <h2><span class="pl-st">1</span>Intervali</h2>
+              <div class="pl-r pl-r--dolga"><div class="pl-f">prima, sekunda, terca, kvarta, kvinta, seksta, septima, oktava</div><div class="pl-o">velikost intervala</div><div class="pl-p">c–g: kvinta</div></div>
+              <div class="pl-r"><div class="pl-f">čisti: 1, 4, 5, 8</div><div class="pl-o">velike / male: 2, 3, 6, 7</div><div class="pl-p">c–e: velika terca, c–es: mala terca</div></div>
+              <div class="pl-r"><div class="pl-f">zvečan / zmanjšan</div><div class="pl-o">za pol tona več / manj</div><div class="pl-p">c–fis: zvečana kvarta (tritonus)</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">2</span>Lestvice in kvintni krog</h2>
+              <div class="pl-r"><div class="pl-f">durova: c–c'</div><div class="pl-o">cel, cel, pol, cel, cel, cel, pol</div><div class="pl-p">C-dur brez predznakov</div></div>
+              <div class="pl-r"><div class="pl-f">molova (naravna)</div><div class="pl-o">cel, pol, cel, cel, pol, cel, cel</div><div class="pl-p">a-mol</div></div>
+              <div class="pl-r"><div class="pl-f">vzporedna</div><div class="pl-o">enaki predznaki, mala terca niže</div><div class="pl-p">C-dur in a-mol</div></div>
+              <div class="pl-r"><div class="pl-f">kvintni krog</div><div class="pl-o">vsaka kvinta navzgor en # več</div><div class="pl-p">G 1 #, D 2 #, F 1 b</div></div>
+              <div class="pl-r"><div class="pl-f">harmonična / melodična mol</div><div class="pl-o">zvišana 7. / 6. in 7. stopnja</div><div class="pl-p">a-mol: gis</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">3</span>Akordi</h2>
+              <div class="pl-r"><div class="pl-f">durov kvintakord</div><div class="pl-o">velika + mala terca</div><div class="pl-p">c–e–g</div></div>
+              <div class="pl-r"><div class="pl-f">molov kvintakord</div><div class="pl-o">mala + velika terca</div><div class="pl-p">a–c–e</div></div>
+              <div class="pl-r"><div class="pl-f">zmanjšan / zvečan</div><div class="pl-o">dve mali / dve veliki terci</div><div class="pl-p">h–d–f / c–e–gis</div></div>
+              <div class="pl-r"><div class="pl-f">obrata</div><div class="pl-o">sekstakord, kvartsekstakord</div><div class="pl-p">e–g–c</div></div>
+              <div class="pl-r"><div class="pl-f">dominantni septakord</div><div class="pl-o">na 5. stopnji</div><div class="pl-p">g–h–d–f v C-duru</div></div>
+            </section>
+
+            <section class="pl-sklop pl-pasti">
+              <h2><span class="pl-st">!</span>Pazi</h2>
+              <ul>
+                <li>Durova lestvica: poltona med 3.–4. in 7.–8. stopnjo.</li>
+              </ul>
+            </section>
+          </div>
+          <footer class="pl-noga">piflar.si · plonk listek · Intervali, lestvice in akordi</footer>
+        </article>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>

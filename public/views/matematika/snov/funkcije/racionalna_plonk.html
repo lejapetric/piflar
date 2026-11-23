@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Racionalna funkcija — plonk listek | Učilnica.com</title>
+  <meta name="description" content="Plonk listek za maturo: Racionalna funkcija na enem listu A4, vsaka formula ali pojem s kratkim primerom.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Kalam:wght@400;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
+  <link rel="stylesheet" href="/style/snov.css">
+  <link rel="stylesheet" href="/style/plonk.css">
+</head>
+<body>
+  <div id="header"></div>
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view">
+
+        <!-- Ustvari tools/plonk/plonk.mjs iz api/data/plonk/matematika.txt; ne urejaj ročno. -->
+        <article class="plonk">
+          <header class="pl-glava">
+            <div>
+              <span class="pl-oznaka">Plonk listek · Matematika 4.10.8</span>
+              <h1>Racionalna funkcija</h1>
+            </div>
+            <div class="pl-gumbi">
+              <a class="pl-gumb pl-gumb--tiho" href="racionalna_razlaga.html">Cela razlaga</a>
+              <button type="button" class="pl-gumb" onclick="window.print()">Natisni</button>
+            </div>
+          </header>
+
+          <div class="pl-vsebina">
+            <section class="pl-sklop">
+              <h2><span class="pl-st">1</span>Racionalna funkcija</h2>
+              <div class="pl-r"><div class="pl-f">\(f(x) = \frac{p(x)}{q(x)}\)</div><div class="pl-o">\(D_f\): \(q(x) \ne 0\)</div><div class="pl-p">\(\frac{x + 1}{x - 2}\): \(x \ne 2\)</div></div>
+              <div class="pl-r"><div class="pl-f">ničle števca</div><div class="pl-o">ničle funkcije</div><div class="pl-p">\(\frac{x + 1}{x - 2}\): \(x = -1\)</div></div>
+              <div class="pl-r"><div class="pl-f">ničle imenovalca</div><div class="pl-o">poli (navpične asimptote)</div><div class="pl-p">\(x = 2\)</div></div>
+              <div class="pl-r"><div class="pl-f">st \(p\) &lt; st \(q\): \(y = 0\)</div><div class="pl-o">vodoravna asimptota</div><div class="pl-p">\(\frac{1}{x^2 + 1}\)</div></div>
+              <div class="pl-r"><div class="pl-f">st \(p\) = st \(q\): \(y = \frac{a_n}{b_n}\)</div><div class="pl-o">razmerje vodilnih</div><div class="pl-p">\(\frac{2x + 1}{x - 3}\): \(y = 2\)</div></div>
+              <div class="pl-r"><div class="pl-f">st \(p\) = st \(q\) + 1</div><div class="pl-o">poševna: kvocient deljenja</div><div class="pl-p">\(\frac{x^2 + 1}{x} = x + \frac1x\): \(y = x\)</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">2</span>Enačbe</h2>
+              <div class="pl-r pl-r--dolga"><div class="pl-f">pomnoži z imenovalcem, preveri pogoj</div><div class="pl-o">racionalna enačba</div><div class="pl-p">\(\frac{2}{x - 1} = 1\): \(x = 3\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(\frac{p}{q} &gt; 0\)</div><div class="pl-o">neenačba: tabela predznakov ničel in polov</div><div class="pl-p">\(\frac{x}{x - 1} &lt; 0\): \(x \in (0, 1)\)</div></div>
+            </section>
+
+            <section class="pl-sklop pl-pasti">
+              <h2><span class="pl-st">!</span>Pazi</h2>
+              <ul>
+                <li>Neenačbe ne množi z imenovalcem (neznan predznak).</li>
+              </ul>
+            </section>
+          </div>
+          <footer class="pl-noga">piflar.si · plonk listek · Racionalna funkcija</footer>
+        </article>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>

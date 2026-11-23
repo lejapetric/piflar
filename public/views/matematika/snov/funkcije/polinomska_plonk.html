@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Polinomska funkcija — plonk listek | Učilnica.com</title>
+  <meta name="description" content="Plonk listek za maturo: Polinomska funkcija na enem listu A4, vsaka formula ali pojem s kratkim primerom.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Kalam:wght@400;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
+  <link rel="stylesheet" href="/style/snov.css">
+  <link rel="stylesheet" href="/style/plonk.css">
+</head>
+<body>
+  <div id="header"></div>
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view">
+
+        <!-- Ustvari tools/plonk/plonk.mjs iz api/data/plonk/matematika.txt; ne urejaj ročno. -->
+        <article class="plonk">
+          <header class="pl-glava">
+            <div>
+              <span class="pl-oznaka">Plonk listek · Matematika 4.10.7</span>
+              <h1>Polinomska funkcija</h1>
+            </div>
+            <div class="pl-gumbi">
+              <a class="pl-gumb pl-gumb--tiho" href="polinomska_razlaga.html">Cela razlaga</a>
+              <button type="button" class="pl-gumb" onclick="window.print()">Natisni</button>
+            </div>
+          </header>
+
+          <div class="pl-vsebina">
+            <section class="pl-sklop">
+              <h2><span class="pl-st">1</span>Polinom</h2>
+              <div class="pl-r"><div class="pl-f">\(p(x) = a_n x^n + \ldots + a_0\)</div><div class="pl-o">stopnja \(n\), vodilni \(a_n\)</div><div class="pl-p">\(2x^3 - x + 1\): st. 3</div></div>
+              <div class="pl-r"><div class="pl-f">obnašanje v \(\pm\infty\)</div><div class="pl-o">odloča \(a_n x^n\)</div><div class="pl-p">\(-x^3\): levo \(+\infty\), desno \(-\infty\)</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">2</span>Deljenje</h2>
+              <div class="pl-r"><div class="pl-f">\(p(x) = k(x) q(x) + r(x)\)</div><div class="pl-o">osnovni izrek o deljenju</div><div class="pl-p">\(x^2 + 1 = (x - 1)(x + 1) + 2\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(p(a) = r\) pri deljenju z \(x - a\)</div><div class="pl-o">ostanek</div><div class="pl-p">\(p(x) = x^3 - 2\), \(p(2) = 6\)</div></div>
+              <div class="pl-r pl-r--dolga"><div class="pl-f">Hornerjev algoritem</div><div class="pl-o">hitro računanje \(p(a)\) in deljenje z \(x - a\)</div><div class="pl-p">\(x^3 - 6x^2 + 11x - 6\) pri 1: ostanek 0</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">3</span>Ničle</h2>
+              <div class="pl-r"><div class="pl-f">\(p(a) = 0 \iff (x - a) \mid p(x)\)</div><div class="pl-o">ničla in faktor</div><div class="pl-p">\(x = 1\) je ničla \(x^3 - 1\)</div></div>
+              <div class="pl-r"><div class="pl-f">cele ničle delijo \(a_0\)</div><div class="pl-o">kandidati \(\pm\) delitelji</div><div class="pl-p">\(x^3 - 6x^2 + 11x - 6\): \(1, 2, 3\)</div></div>
+              <div class="pl-r pl-r--dolga"><div class="pl-f">sode stopnje: graf se dotakne osi</div><div class="pl-o">lihe stopnje: graf jo seka</div><div class="pl-p">\((x - 1)^2(x + 2)\)</div></div>
+              <div class="pl-r pl-r--dolga"><div class="pl-f">\(p(x) = a_n(x - x_1)\cdots(x - x_n)\)</div><div class="pl-o">osnovni izrek algebre: \(n\) kompleksnih ničel</div><div class="pl-p">\(x^2 + 1 = (x - i)(x + i)\)</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">4</span>Neenačbe</h2>
+              <div class="pl-r"><div class="pl-f">ničle + predznak med njimi</div><div class="pl-o">tabela predznakov ali skica</div><div class="pl-p">\((x - 1)(x + 2) &gt; 0\): \(x &lt; -2\) ali \(x &gt; 1\)</div></div>
+            </section>
+
+            <section class="pl-sklop pl-pasti">
+              <h2><span class="pl-st">!</span>Pazi</h2>
+              <ul>
+                <li>Pri dvojni ničli predznak ne zamenja.</li>
+              </ul>
+            </section>
+          </div>
+          <footer class="pl-noga">piflar.si · plonk listek · Polinomska funkcija</footer>
+        </article>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>

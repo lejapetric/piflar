@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atom — plonk listek | Učilnica.com</title>
+  <meta name="description" content="Plonk listek za maturo: Atom na enem listu A4, vsaka formula ali pojem s kratkim primerom.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Kalam:wght@400;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
+  <link rel="stylesheet" href="/style/snov.css">
+  <link rel="stylesheet" href="/style/plonk.css">
+</head>
+<body>
+  <div id="header"></div>
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view">
+
+        <!-- Ustvari tools/plonk/plonk.mjs iz api/data/plonk/fizika.txt; ne urejaj ročno. -->
+        <article class="plonk">
+          <header class="pl-glava">
+            <div>
+              <span class="pl-oznaka">Plonk listek · Fizika 4.17</span>
+              <h1>Atom</h1>
+            </div>
+            <div class="pl-gumbi">
+              <a class="pl-gumb pl-gumb--tiho" href="atom_razlaga.html">Cela razlaga</a>
+              <button type="button" class="pl-gumb" onclick="window.print()">Natisni</button>
+            </div>
+          </header>
+
+          <div class="pl-vsebina">
+            <section class="pl-sklop">
+              <h2><span class="pl-st">1</span>Foton</h2>
+              <div class="pl-r"><div class="pl-f">\(W_f = h\nu = \frac{hc}{\lambda}\)</div><div class="pl-o">energija fotona, \(h = 6{,}63 \cdot 10^{-34}\ \text{Js}\)</div><div class="pl-p">\(\lambda = 500\ \text{nm}\): \(4 \cdot 10^{-19}\ \text{J} = 2{,}5\ \text{eV}\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(1\ \text{eV} = 1{,}6 \cdot 10^{-19}\ \text{J}\)</div><div class="pl-o">elektronvolt</div><div class="pl-p">\(hc \approx 1240\ \text{eV\,nm}\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(G = \frac{h}{\lambda}\)</div><div class="pl-o">gibalna količina fotona</div><div class="pl-p">tlak svetlobe</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">2</span>Fotoefekt</h2>
+              <div class="pl-r"><div class="pl-f">\(h\nu = A_i + W_k\)</div><div class="pl-o">izstopno delo + kinetična energija</div><div class="pl-p">\(h\nu = 3\ \text{eV}, A_i = 2\ \text{eV}\): \(W_k = 1\ \text{eV}\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(eU_z = W_{k,max}\)</div><div class="pl-o">zaporna napetost</div><div class="pl-p">\(W_k = 1\ \text{eV}\): \(U_z = 1\ \text{V}\)</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">3</span>Atom</h2>
+              <div class="pl-r"><div class="pl-f">\(h\nu = W_n - W_m\)</div><div class="pl-o">prehod med stanji</div><div class="pl-p">vodik: \(W_n = -\frac{13{,}6\ \text{eV}}{n^2}\)</div></div>
+              <div class="pl-r"><div class="pl-f">črtasti spekter</div><div class="pl-o">emisijski / absorpcijski</div><div class="pl-p">vsak element ima svoje črte</div></div>
+              <div class="pl-r"><div class="pl-f">\(\lambda = \frac{h}{mv}\)</div><div class="pl-o">de Brogliejeva valovna dolžina</div><div class="pl-p">uklon elektronov</div></div>
+            </section>
+
+            <section class="pl-sklop pl-pasti">
+              <h2><span class="pl-st">!</span>Pazi</h2>
+              <ul>
+                <li>Večja frekvenca, večja energija fotona; jakost svetlobe pomeni več fotonov.</li>
+              </ul>
+            </section>
+          </div>
+          <footer class="pl-noga">piflar.si · plonk listek · Atom</footer>
+        </article>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>

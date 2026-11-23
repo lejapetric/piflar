@@ -1,0 +1,101 @@
+// Plonk listki za informatiko: pojem :: razlaga :: primer.
+
+=== osnove_informatike
+## Temeljni pojmi
+podatek / informacija / znanje :: zapis / pomen / uporaba :: »37,5« / temperatura bolnika
+informacijski sistem :: ljudje, postopki, podatki, tehnologija :: šolski eAsistent
+## Družbeni vidiki
+avtorske pravice, licence :: intelektualna lastnina :: Creative Commons
+varstvo osebnih podatkov :: GDPR :: privolitev
+## Komuniciranje
+pošiljatelj, kanal, prejemnik, šum :: model komuniciranja :: Shannon
+## Kode in kodiranje
+\(n\) bitov da \(2^n\) kombinacij :: koliko stanj :: 8 bitov = 256 znakov
+ASCII (7 bitov), Unicode (UTF-8) :: kodiranje znakov :: »A« = 65
+paritetni bit :: zaznava napake :: sodo število enic
+\(I = \log_2 N\) :: količina informacije (bit) :: 8 enako verjetnih izidov: 3 biti
+! 1 B = 8 bitov; 1 KiB = 1024 B.
+
+=== informacijska_tehnologija
+## Namen IT
+zbiranje, obdelava, shranjevanje, prenos :: vloge :: e-bančništvo
+## Zgradba računalnika
+von Neumannova arhitektura :: CPE, pomnilnik, V/I, vodila :: program in podatki v istem pomnilniku
+CPE :: krmilna enota, ALE, registri :: takt v GHz
+## Strojna oprema
+RAM (hlapni) / ROM, SSD (obstojni) :: pomnilniki :: ob izklopu RAM izgubi podatke
+vhodne / izhodne enote :: tipkovnica / zaslon :: zaslon na dotik: obe
+## Programska oprema
+sistemska / uporabniška :: OS, gonilniki / urejevalnik :: Windows / Word
+odprtokodna / lastniška :: licence :: Linux / macOS
+## Omrežja
+LAN, WAN, internet :: velikost :: šolsko omrežje: LAN
+topologije :: zvezda, vodilo, obroč :: stikalo v zvezdi
+## Naslovi in protokoli
+IP naslov, MAC naslov :: logični / fizični :: 192.168.1.10
+TCP/IP plasti :: aplikacijska, transportna, omrežna, povezavna :: HTTP, TCP, IP, Ethernet
+DNS :: ime → IP :: www.piflar.si → IP
+## Varnost
+virusi, črvi, trojanci, phishing :: grožnje :: lažna e-pošta banke
+šifriranje, požarni zid, varnostne kopije :: zaščita :: HTTPS
+## Pomnilniška hierarhija in OS
+registri → predpomnilnik → RAM → disk :: hitrost pada, kapaciteta raste :: cache
+OS :: upravlja procese, pomnilnik, datoteke :: večopravilnost
+! HTTPS šifrira promet, ne zagotavlja pa, da je stran poštena.
+
+=== predstavitev_informacije
+## Zapis podatkov
+analogno / digitalno :: zvezno / diskretno :: vinilna plošča / MP3
+## Pisna predstavitev
+pisave, oblikovanje, slogi :: berljivost :: naslovi s slogi
+## Slika
+rastrska / vektorska :: točke / matematični opis :: JPG / SVG
+\(V = š \cdot v \cdot b\) :: velikost bitne slike (bitov) :: 1000 × 1000, 24 bitov: 3 MB
+RGB / CMYK :: zaslon / tisk :: 24-bitna barva: 16,7 milijona
+## Zvok
+vzorčenje (Hz), bitna globina :: digitalizacija :: CD: 44,1 kHz, 16 bitov
+\(V = f \cdot b \cdot t \cdot k\) :: velikost zvoka :: 44 100 · 16 · 60 · 2 ≈ 10,6 MB
+## Gibljiva slika
+sličice na sekundo :: video :: 25 fps
+stiskanje z izgubo / brez :: kompresija :: JPG / PNG, ZIP
+## Prosojnice
+malo besedila, ključne besede :: predstavitev :: pravilo 6 × 6
+## Splet
+HTML (vsebina), CSS (videz), JS (obnašanje) :: tehnologije :: <p>, color
+## Zapis števil
+dvojiški, šestnajstiški :: pretvorbe :: \(13 = (1101)_2 = (D)_{16}\)
+dvojiški komplement :: negativna cela števila :: −1 = 11111111
+## HTML v praksi
+relativne / absolutne poti :: povezave :: ../slike/a.png
+obrazci :: <form>, <input> :: method="post"
+! Vektorske slike se pri povečavi ne pokvarijo.
+
+=== delo_s_podatki
+## Obdelava podatkov
+vnos, obdelava, izpis :: model :: povprečje ocen
+## Algoritem
+končen, enoličen, natančen :: lastnosti :: recept
+zaporedje, odločitev, ponavljanje :: osnovne strukture :: diagram poteka
+## Programski jezik
+prevajalnik / tolmač :: celoten program / vrstico za vrstico :: C / Python
+## Programiranje
+spremenljivke, tipi :: int, float, str, bool :: x = 5
+if, for, while :: krmilne strukture :: for i in range(5):
+## Podatkovna baza
+tabela, zapis, polje :: relacijska baza :: tabela Dijaki
+primarni / tuji ključ :: enolično / povezava :: EMŠO
+SQL: SELECT … FROM … WHERE :: poizvedba :: SELECT ime FROM dijaki WHERE razred='4.a'
+## Preglednica
+relativni / absolutni sklic :: A1 / $A$1 :: ob kopiranju se $A$1 ne spremeni
+## Tehnologije znanja
+ekspertni sistem, odločitveno drevo :: odločanje :: DEX
+## Python
+def, return :: funkcije :: def kvadrat(x): return x * x
+seznami, nizi :: indeksi od 0 :: s[0], s[-1], len(s)
+## Diagram E-R
+entiteta, atribut, relacija :: 1 : 1, 1 : N, M : N :: dijak–predmet: M : N
+## Funkcije v preglednicah
+=SUM, =AVERAGE, =IF, =VLOOKUP, =COUNTIF :: pogoste :: =IF(B2>=2;"pozitivno";"negativno")
+## Odločitveno drevo
+vozlišče = vprašanje, list = odločitev :: pravila če–potem :: če dežuje, vzemi dežnik
+! Indeksi v Pythonu se začnejo z 0.

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Atomsko jedro — plonk listek | Učilnica.com</title>
+  <meta name="description" content="Plonk listek za maturo: Atomsko jedro na enem listu A4, vsaka formula ali pojem s kratkim primerom.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Kalam:wght@400;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
+  <link rel="stylesheet" href="/style/snov.css">
+  <link rel="stylesheet" href="/style/plonk.css">
+</head>
+<body>
+  <div id="header"></div>
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view">
+
+        <!-- Ustvari tools/plonk/plonk.mjs iz api/data/plonk/fizika.txt; ne urejaj ročno. -->
+        <article class="plonk">
+          <header class="pl-glava">
+            <div>
+              <span class="pl-oznaka">Plonk listek · Fizika 4.18</span>
+              <h1>Atomsko jedro</h1>
+            </div>
+            <div class="pl-gumbi">
+              <a class="pl-gumb pl-gumb--tiho" href="atomsko_jedro_razlaga.html">Cela razlaga</a>
+              <button type="button" class="pl-gumb" onclick="window.print()">Natisni</button>
+            </div>
+          </header>
+
+          <div class="pl-vsebina">
+            <section class="pl-sklop">
+              <h2><span class="pl-st">1</span>Jedro</h2>
+              <div class="pl-r"><div class="pl-f">\(^A_Z X\)</div><div class="pl-o">\(Z\) protonov, \(A - Z\) nevtronov</div><div class="pl-p">\(^{14}_{6}\text{C}\): 6 p, 8 n</div></div>
+              <div class="pl-r"><div class="pl-f">izotopi</div><div class="pl-o">enak \(Z\), različen \(A\)</div><div class="pl-p">\(^{12}\text{C}\), \(^{14}\text{C}\)</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">2</span>Vezavna energija</h2>
+              <div class="pl-r"><div class="pl-f">\(W_v = \Delta m\,c^2\)</div><div class="pl-o">masni primanjkljaj</div><div class="pl-p">\(1\ \text{u} \cdot c^2 = 931{,}5\ \text{MeV}\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(\frac{W_v}{A}\)</div><div class="pl-o">največja pri železu</div><div class="pl-p">cepitev težkih, zlivanje lahkih sprošča energijo</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">3</span>Razpadi</h2>
+              <div class="pl-r"><div class="pl-f">α: \(A - 4,\ Z - 2\)</div><div class="pl-o">helijevo jedro</div><div class="pl-p">\(^{238}\text{U} \to {}^{234}\text{Th} + \alpha\)</div></div>
+              <div class="pl-r"><div class="pl-f">β⁻: \(Z + 1\)</div><div class="pl-o">n → p + e⁻ + antinevtrino</div><div class="pl-p">\(^{14}\text{C} \to {}^{14}\text{N}\)</div></div>
+              <div class="pl-r"><div class="pl-f">γ</div><div class="pl-o">foton, \(A\) in \(Z\) ostaneta</div><div class="pl-p">po razpadu α ali β</div></div>
+              <div class="pl-r"><div class="pl-f">\(N = N_0 2^{-\frac{t}{t_{1/2}}}\)</div><div class="pl-o">razpadni zakon</div><div class="pl-p">po 3 razpolovnih časih: \(\frac18\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(A = \lambda N,\ \lambda = \frac{\ln 2}{t_{1/2}}\)</div><div class="pl-o">aktivnost (Bq)</div><div class="pl-p">razpadna konstanta</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">4</span>Reakcije</h2>
+              <div class="pl-r"><div class="pl-f">ohranita se \(A\) in \(Z\)</div><div class="pl-o">jedrska reakcija</div><div class="pl-p">\(^{235}\text{U} + n \to {}^{141}\text{Ba} + {}^{92}\text{Kr} + 3n\)</div></div>
+            </section>
+
+            <section class="pl-sklop pl-pasti">
+              <h2><span class="pl-st">!</span>Pazi</h2>
+              <ul>
+                <li>Pri β⁻ se \(Z\) poveča za 1, \(A\) ostane.</li>
+              </ul>
+            </section>
+          </div>
+          <footer class="pl-noga">piflar.si · plonk listek · Atomsko jedro</footer>
+        </article>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>

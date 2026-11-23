@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kemijska reakcija in energija — plonk listek | Učilnica.com</title>
+  <meta name="description" content="Plonk listek za maturo: Kemijska reakcija in energija na enem listu A4, vsaka formula ali pojem s kratkim primerom.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Kalam:wght@400;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
+  <link rel="stylesheet" href="/style/snov.css">
+  <link rel="stylesheet" href="/style/plonk.css">
+</head>
+<body>
+  <div id="header"></div>
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view">
+
+        <!-- Ustvari tools/plonk/plonk.mjs iz api/data/plonk/poklicna_kemija.txt; ne urejaj ročno. -->
+        <article class="plonk">
+          <header class="pl-glava">
+            <div>
+              <span class="pl-oznaka">Plonk listek · Poklicna matura Snov</span>
+              <h1>Kemijska reakcija in energija</h1>
+            </div>
+            <div class="pl-gumbi">
+              <a class="pl-gumb pl-gumb--tiho" href="reakcije_energija_razlaga.html">Cela razlaga</a>
+              <button type="button" class="pl-gumb" onclick="window.print()">Natisni</button>
+            </div>
+          </header>
+
+          <div class="pl-vsebina">
+            <section class="pl-sklop">
+              <h2><span class="pl-st">1</span>Enačba</h2>
+              <div class="pl-r"><div class="pl-f">reaktanti → produkti</div><div class="pl-o">ohranitev atomov in naboja</div><div class="pl-p">2 H₂ + O₂ → 2 H₂O</div></div>
+              <div class="pl-r"><div class="pl-f">(s), (l), (g), (aq)</div><div class="pl-o">agregatna stanja</div><div class="pl-p">NaCl(aq)</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">2</span>Entalpija</h2>
+              <div class="pl-r"><div class="pl-f">\(\Delta H &lt; 0\)</div><div class="pl-o">eksotermna (sprošča toploto)</div><div class="pl-p">gorenje</div></div>
+              <div class="pl-r"><div class="pl-f">\(\Delta H &gt; 0\)</div><div class="pl-o">endotermna (porablja toploto)</div><div class="pl-p">razpad CaCO₃</div></div>
+              <div class="pl-r"><div class="pl-f">termokemijska enačba</div><div class="pl-o">\(\Delta H\) za zapisane množine</div><div class="pl-p">C + O₂ → CO₂, \(\Delta H = -394\) kJ</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">3</span>Hessov zakon in vezne energije</h2>
+              <div class="pl-r"><div class="pl-f">\(\Delta H_r = \sum \Delta H_{tv}(\text{prod}) - \sum \Delta H_{tv}(\text{reakt})\)</div><div class="pl-o">iz tvornih entalpij</div><div class="pl-p">elementi imajo \(\Delta H_{tv} = 0\)</div></div>
+              <div class="pl-r pl-r--dolga"><div class="pl-f">\(\Delta H_r = \sum E_{vez}(\text{pretrgane}) - \sum E_{vez}(\text{nastale})\)</div><div class="pl-o">iz veznih energij</div><div class="pl-p">H₂ + Cl₂ → 2 HCl: \(436 + 243 - 2 \cdot 432 = -185\) kJ</div></div>
+              <div class="pl-r"><div class="pl-f">Hessov zakon</div><div class="pl-o">\(\Delta H\) ni odvisna od poti</div><div class="pl-p">seštevanje enačb (in njihovih \(\Delta H\))</div></div>
+            </section>
+          </div>
+          <footer class="pl-noga">piflar.si · plonk listek · Kemijska reakcija in energija</footer>
+        </article>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>

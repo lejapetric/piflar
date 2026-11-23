@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Raztopine — plonk listek | Učilnica.com</title>
+  <meta name="description" content="Plonk listek za maturo: Raztopine na enem listu A4, vsaka formula ali pojem s kratkim primerom.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Kalam:wght@400;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
+  <link rel="stylesheet" href="/style/snov.css">
+  <link rel="stylesheet" href="/style/plonk.css">
+</head>
+<body>
+  <div id="header"></div>
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view">
+
+        <!-- Ustvari tools/plonk/plonk.mjs iz api/data/plonk/poklicna_kemija.txt; ne urejaj ročno. -->
+        <article class="plonk">
+          <header class="pl-glava">
+            <div>
+              <span class="pl-oznaka">Plonk listek · Poklicna matura Snov</span>
+              <h1>Raztopine</h1>
+            </div>
+            <div class="pl-gumbi">
+              <a class="pl-gumb pl-gumb--tiho" href="raztopine_pm_razlaga.html">Cela razlaga</a>
+              <button type="button" class="pl-gumb" onclick="window.print()">Natisni</button>
+            </div>
+          </header>
+
+          <div class="pl-vsebina">
+            <section class="pl-sklop">
+              <h2><span class="pl-st">1</span>Topnost</h2>
+              <div class="pl-r"><div class="pl-f">podobno se topi v podobnem</div><div class="pl-o">polarno v polarnem</div><div class="pl-p">NaCl v vodi, olje v bencinu</div></div>
+              <div class="pl-r"><div class="pl-f">topnost (g/100 g vode)</div><div class="pl-o">nasičena raztopina</div><div class="pl-p">krivulja topnosti</div></div>
+              <div class="pl-r"><div class="pl-f">topnost plinov</div><div class="pl-o">pada s temperaturo</div><div class="pl-p">topla gazirana pijača hitro izgubi CO₂</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">2</span>Hidratacija</h2>
+              <div class="pl-r"><div class="pl-f">ioni obdani z vodo</div><div class="pl-o">raztapljanje ionskih snovi</div><div class="pl-p">Na⁺(aq), Cl⁻(aq)</div></div>
+              <div class="pl-r"><div class="pl-f">\(\Delta H_{raz} = \Delta H_{mreže} + \Delta H_{hidr}\)</div><div class="pl-o">toplota raztapljanja</div><div class="pl-p">NH₄NO₃ ohlaja</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">3</span>Koligativne lastnosti</h2>
+              <div class="pl-r"><div class="pl-f">\(\Delta T_v = K_e b,\ \Delta T_t = K_k b\)</div><div class="pl-o">zvišanje vrelišča, znižanje tališča</div><div class="pl-p">sol na cesti: led se tali pod 0 °C</div></div>
+              <div class="pl-r"><div class="pl-f">\(b = \frac{n}{m_{topila}}\)</div><div class="pl-o">molalnost (mol/kg)</div><div class="pl-p">ioni štejejo posebej: NaCl da 2 delca</div></div>
+              <div class="pl-r pl-r--dolga"><div class="pl-f">osmoza</div><div class="pl-o">voda gre skozi polprepustno membrano proti večji koncentraciji</div><div class="pl-p">celica v slani vodi se skrči</div></div>
+            </section>
+          </div>
+          <footer class="pl-noga">piflar.si · plonk listek · Raztopine</footer>
+        </article>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>

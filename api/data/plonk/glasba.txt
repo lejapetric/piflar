@@ -1,0 +1,20 @@
+// Plonk listki za glasbo.
+
+=== intervali_lestvice_akordi
+## Intervali
+prima, sekunda, terca, kvarta, kvinta, seksta, septima, oktava :: velikost intervala :: c–g: kvinta
+čisti: 1, 4, 5, 8 :: velike / male: 2, 3, 6, 7 :: c–e: velika terca, c–es: mala terca
+zvečan / zmanjšan :: za pol tona več / manj :: c–fis: zvečana kvarta (tritonus)
+## Lestvice in kvintni krog
+durova: c–c' :: cel, cel, pol, cel, cel, cel, pol :: C-dur brez predznakov
+molova (naravna) :: cel, pol, cel, cel, pol, cel, cel :: a-mol
+vzporedna :: enaki predznaki, mala terca niže :: C-dur in a-mol
+kvintni krog :: vsaka kvinta navzgor en # več :: G 1 #, D 2 #, F 1 b
+harmonična / melodična mol :: zvišana 7. / 6. in 7. stopnja :: a-mol: gis
+## Akordi
+durov kvintakord :: velika + mala terca :: c–e–g
+molov kvintakord :: mala + velika terca :: a–c–e
+zmanjšan / zvečan :: dve mali / dve veliki terci :: h–d–f / c–e–gis
+obrata :: sekstakord, kvartsekstakord :: e–g–c
+dominantni septakord :: na 5. stopnji :: g–h–d–f v C-duru
+! Durova lestvica: poltona med 3.–4. in 7.–8. stopnjo.

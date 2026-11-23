@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Astronomija — plonk listek | Učilnica.com</title>
+  <meta name="description" content="Plonk listek za maturo: Astronomija na enem listu A4, vsaka formula ali pojem s kratkim primerom.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Kalam:wght@400;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
+  <link rel="stylesheet" href="/style/snov.css">
+  <link rel="stylesheet" href="/style/plonk.css">
+</head>
+<body>
+  <div id="header"></div>
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view">
+
+        <!-- Ustvari tools/plonk/plonk.mjs iz api/data/plonk/fizika.txt; ne urejaj ročno. -->
+        <article class="plonk">
+          <header class="pl-glava">
+            <div>
+              <span class="pl-oznaka">Plonk listek · Fizika 4.19</span>
+              <h1>Astronomija</h1>
+            </div>
+            <div class="pl-gumbi">
+              <a class="pl-gumb pl-gumb--tiho" href="astronomija_razlaga.html">Cela razlaga</a>
+              <button type="button" class="pl-gumb" onclick="window.print()">Natisni</button>
+            </div>
+          </header>
+
+          <div class="pl-vsebina">
+            <section class="pl-sklop">
+              <h2><span class="pl-st">1</span>Osončje</h2>
+              <div class="pl-r"><div class="pl-f">Sonce, 8 planetov</div><div class="pl-o">notranji kamniti, zunanji plinasti</div><div class="pl-p">Merkur, Venera, Zemlja, Mars</div></div>
+              <div class="pl-r"><div class="pl-f">\(\frac{a^3}{t_0^2} = \text{konst.}\)</div><div class="pl-o">3. Keplerjev zakon</div><div class="pl-p">dlje od Sonca: daljše leto</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">2</span>Zvezde</h2>
+              <div class="pl-r"><div class="pl-f">\(\lambda_{max} T = 2{,}9 \cdot 10^{-3}\ \text{m K}\)</div><div class="pl-o">Wienov zakon</div><div class="pl-p">Sonce \(\approx 500\ \text{nm}\): \(5800\ \text{K}\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(P = \sigma S T^4\)</div><div class="pl-o">izsevana moč (svetilnost)</div><div class="pl-p">modre zvezde so vroče</div></div>
+              <div class="pl-r"><div class="pl-f">\(4\,{}^1\text{H} \to {}^4\text{He}\)</div><div class="pl-o">zlivanje v jedru</div><div class="pl-p">vir energije Sonca</div></div>
+              <div class="pl-r"><div class="pl-f">HR-diagram</div><div class="pl-o">svetilnost proti temperaturi</div><div class="pl-p">glavna veja, velikanke, bele pritlikavke</div></div>
+              <div class="pl-r pl-r--dolga"><div class="pl-f">razvoj</div><div class="pl-o">protozvezda, glavna veja, velikanka, pritlikavka / nevtronska zvezda / črna luknja</div><div class="pl-p">masa odloča</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">3</span>Vesolje</h2>
+              <div class="pl-r"><div class="pl-f">\(v = H_0 d\)</div><div class="pl-o">Hubblov zakon (širjenje)</div><div class="pl-p">rdeči premik oddaljenih galaksij</div></div>
+              <div class="pl-r"><div class="pl-f">svetlobno leto</div><div class="pl-o">pot svetlobe v enem letu</div><div class="pl-p">\(\approx 9{,}5 \cdot 10^{15}\ \text{m}\)</div></div>
+            </section>
+
+            <section class="pl-sklop pl-pasti">
+              <h2><span class="pl-st">!</span>Pazi</h2>
+              <ul>
+                <li>Svetlobno leto je enota za razdaljo, ne za čas.</li>
+              </ul>
+            </section>
+          </div>
+          <footer class="pl-noga">piflar.si · plonk listek · Astronomija</footer>
+        </article>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>

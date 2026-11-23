@@ -1,0 +1,297 @@
+// Plonk listki za biologijo: pojem :: kratka razlaga :: primer.
+
+=== zivljenje_na_zemlji
+## Biologija
+ravni organizacije :: molekula, celica, tkivo, organ, organizem, populacija, ekosistem, biosfera :: srčna mišica je tkivo
+znanstvena metoda :: opažanje, hipoteza, poskus, sklep :: hipoteza mora biti preverljiva
+## Lastnosti živega
+celična zgradba :: vsa živa bitja so iz celic :: bakterija je enocelična
+presnova :: pretvarjanje snovi in energije :: dihanje, fotosinteza
+homeostaza :: stalno notranje okolje :: telesna temperatura 37 °C
+rast, razmnoževanje, dednost :: prenos DNA na potomce :: mitoza, mejoza
+odzivnost, evolucija :: odziv na dražljaje, prilagajanje okolju :: rastlina raste proti svetlobi
+! Virusi nimajo celične zgradbe in lastne presnove.
+
+=== celica
+## Celica
+prokariontska :: brez jedra in membranskih organelov :: bakterije
+evkariontska :: jedro in organeli :: rastline, živali, glive, protisti
+rastlinska celica :: celična stena (celuloza), kloroplasti, velika vakuola :: listna celica
+## Kemijska sestava
+voda 70 % :: topilo, polarna :: transport snovi
+ogljikovi hidrati, lipidi, beljakovine, nukleinske kisline :: makromolekule :: glukoza, fosfolipid, encim, DNA
+## Membrane in prehajanje
+fosfolipidni dvosloj :: model tekočega mozaika :: beljakovine plavajo v membrani
+difuzija :: iz večje v manjšo koncentracijo, brez energije :: O₂ v celico
+osmoza :: difuzija vode skozi polprepustno membrano :: eritrocit v destilirani vodi poči
+aktivni transport :: proti koncentracijskemu gradientu, porablja ATP :: Na⁺/K⁺ črpalka
+endocitoza, eksocitoza :: transport z mehurčki :: fagocitoza bakterije
+## Organeli
+jedro :: DNA, nadzor celice :: jedrce: ribosomi
+mitohondrij :: celično dihanje, ATP :: lastna DNA
+kloroplast :: fotosinteza :: tilakoidi, stroma
+ribosom :: sinteza beljakovin :: na ER ali prosti
+ER, Golgijev aparat :: sinteza in predelava, pošiljanje :: hrapavi ER z ribosomi
+lizosom :: razgradnja :: prebava organelov
+! Celična stena ni membrana: je prepustna.
+
+=== encimi_presnova
+## Encimi
+biokatalizator :: zniža aktivacijsko energijo :: amilaza razgradi škrob
+aktivno mesto :: veže substrat (ključ in ključavnica / inducirano prileganje) :: specifičnost
+temperatura, pH :: optimum; previsoka temperatura denaturira :: pepsin deluje pri pH 2
+inhibitorji :: kompetitivni (v aktivno mesto) / nekompetitivni :: zdravila, strupi
+## Beljakovine
+aminokisline, peptidna vez :: 20 vrst aminokislin :: hemoglobin
+primarna do kvartarna zgradba :: zaporedje, vijačnica, 3D oblika, podenote :: oblika določa vlogo
+vloge :: encimi, transport, gibanje, obramba, hormoni :: protitelesa, aktin, inzulin
+## Presnova in ATP
+anabolizem / katabolizem :: gradnja / razgradnja :: sinteza beljakovin / dihanje
+ATP → ADP + P :: sprosti energijo :: krčenje mišic
+## Signalizacija
+receptor → prenos signala → odziv :: celična signalizacija :: inzulin na receptorju jetrne celice
+! Encim se v reakciji ne porabi.
+
+=== dihanje_fotosinteza
+## Glikoliza in vrenje
+glukoza → 2 piruvat :: glikoliza v citoplazmi, 2 ATP :: brez kisika
+mlečnokislinsko vrenje :: piruvat → mlečna kislina :: mišice ob naporu
+alkoholno vrenje :: piruvat → etanol + CO₂ :: kvasovke
+## Celično dihanje
+C₆H₁₂O₆ + 6 O₂ → 6 CO₂ + 6 H₂O :: v mitohondriju, ~30–32 ATP :: Krebsov cikel, dihalna veriga
+Krebsov cikel :: matriks, nastane CO₂, NADH :: acetil-CoA vstopa
+dihalna veriga :: notranja membrana, O₂ sprejme elektrone :: največ ATP
+## Fotosinteza
+6 CO₂ + 6 H₂O → C₆H₁₂O₆ + 6 O₂ :: s svetlobo v kloroplastih :: kisik iz vode
+svetlobne reakcije :: tilakoidi: ATP, NADPH, O₂ :: klorofil absorbira rdečo in modro
+Calvinov cikel :: stroma: veže CO₂ :: rubisko
+## Povezave
+fotosinteza ↔ dihanje :: produkti enega so reaktanti drugega :: tudi rastline dihajo
+! Rastline dihajo ves čas, fotosintetizirajo samo na svetlobi.
+
+=== nukleinske_kisline
+## Zgradba
+nukleotid :: sladkor + fosfat + baza :: DNA: deoksiriboza
+A–T (A–U v RNA), G–C :: komplementarne baze :: 5'-ATG-3' / 3'-TAC-5'
+dvojna vijačnica :: antiparalelni verigi, vodikove vezi :: Watson in Crick
+RNA :: enoverižna, riboza, uracil :: mRNA, tRNA, rRNA
+## Podvajanje
+semikonzervativno :: vsaka nova DNA ima eno staro verigo :: v S-fazi
+DNA-polimeraza :: gradi v smeri 5' → 3' :: vodilna, zaostajajoča veriga
+## Sinteza beljakovin
+prepis (transkripcija) :: DNA → mRNA v jedru :: RNA-polimeraza
+prevajanje (translacija) :: mRNA → beljakovina na ribosomu :: tRNA prinaša aminokisline
+kodon :: trije nukleotidi = ena aminokislina :: AUG start, UAA stop
+genski kod :: univerzalen, izrojen :: več kodonov za isto aminokislino
+! Kodon je na mRNA, antikodon na tRNA.
+
+=== celicni_cikel
+## Celični cikel in mitoza
+interfaza :: G1, S (podvajanje DNA), G2 :: najdaljši del
+mitoza :: profaza, metafaza, anafaza, telofaza :: 2 enaki diploidni celici
+citokineza :: delitev citoplazme :: rastline: celična plošča
+## Mejoza
+2 delitvi, 4 haploidne celice :: nastanek spolnih celic :: 2n = 46 → n = 23
+crossing-over :: izmenjava med homolognimi kromosomi :: v profazi I
+neodvisna razporeditev :: naključna kombinacija kromosomov :: \(2^{23}\) možnosti
+## Gensko uravnavanje
+izražanje genov :: geni se vklapljajo in izklapljajo :: lac operon
+diferenciacija :: celice se specializirajo :: matične celice
+rak :: nenadzorovana delitev, mutacije v regulacijskih genih :: tumor
+! Mitoza ohrani število kromosomov, mejoza ga razpolovi.
+
+=== dedovanje
+## Mutacije
+genske :: sprememba zaporedja baz :: srpasta anemija
+kromosomske :: sprememba zgradbe ali števila :: Downov sindrom (trisomija 21)
+mutageni :: UV, rentgen, kemikalije :: kajenje
+## Osnove
+gen, alel :: dominanten (A) / recesiven (a) :: Aa: heterozigot
+genotip / fenotip :: zapis / izražena lastnost :: aa: modre oči
+## Križanja
+Aa × Aa → 1 AA : 2 Aa : 1 aa :: monohibridno (fenotip 3 : 1) :: dva rjavooka starša, modrooki otrok
+AaBb × AaBb → 9 : 3 : 3 : 1 :: dihibridno :: Mendlov grah
+testno križanje :: z recesivnim homozigotom :: ugotovimo genotip dominantnega
+nepopolna dominanca, kodominanca :: vmesni fenotip / oba se izrazita :: krvna skupina AB
+spolno vezano (X) :: pogosteje pri moških :: barvna slepota, hemofilija
+rodovnik :: krog ženska, kvadrat moški, zapolnjen = bolan :: recesivno: bolan otrok zdravih staršev
+! Verjetnost za vsakega otroka je neodvisna.
+
+=== bakterije_glive
+## Virusi
+dedni material + beljakovinski plašč :: razmnožujejo se le v gostiteljski celici :: gripa, HIV
+litični / lizogeni cikel :: celica poči / DNA se vgradi :: bakteriofag
+cepljenje :: zaščita pred virusnimi boleznimi :: ošpice
+## Bakterije
+prokarionti, krožna DNA, plazmidi :: delitev :: E. coli
+oblike :: koki, bacili, spirili :: streptokoki
+vloge :: razkrojevalci, vezava dušika, bolezni :: jogurt, angina
+antibiotiki :: delujejo na bakterije, ne na viruse :: odpornost bakterij
+## Protisti, glive, lišaji
+protisti :: enocelični evkarionti :: amebe, alge, malarija
+glive :: heterotrofne, hife, hitin :: kvasovke, plesni, gobe
+lišaj :: gliva + alga (simbioza) :: bioindikator čistega zraka
+! Antibiotiki ne pomagajo proti virusom.
+
+=== rastline
+## Tkiva in organi
+tvorna, krovna, prevajalna, osnovna tkiva :: rastlinska tkiva :: ksilem, floem
+korenina, steblo, list :: vegetativni organi :: listne reže
+## Transport
+ksilem :: voda in mineralne snovi navzgor :: transpiracija vleče vodo
+floem :: sladkorji iz listov v vse dele :: sok floema
+listne reže :: izmenjava plinov in izhlapevanje :: zaprte v suši
+## Rast in razmnoževanje
+cvet :: prašnik (♂), pestič (♀) :: oprašitev z žuželkami ali vetrom
+dvojna oploditev :: kritosemenke :: zarodek in endosperm
+nespolno :: potaknjenci, gomolji :: krompir
+## Hormoni in odzivi
+avksin :: rast proti svetlobi (fototropizem) :: rast celic na senčni strani
+giberelin, citokinin, etilen, abscizinska kislina :: rast, delitev, zorenje plodov, zapiranje rež :: etilen zori banane
+! Ksilem vodi navzgor, floem v obe smeri.
+
+=== dihala_prebava_izlocala
+## Dihala
+pljučni mehurčki (alveole) :: izmenjava plinov z difuzijo :: velika površina
+vdih :: prepona se skrči, prsni koš se razširi :: nižji tlak v pljučih
+hemoglobin :: prenaša O₂ :: CO₂ večinoma kot HCO₃⁻
+## Prebava
+usta, želodec, tanko črevo :: mehanska in kemijska prebava :: amilaza v slini
+želodec :: HCl, pepsin (beljakovine) :: pH 2
+tanko črevo :: resice, absorpcija; žolč, trebušna slinavka :: lipaza razgradi maščobe
+debelo črevo :: absorpcija vode :: bakterije, vitamin K
+## Izločala
+nefron :: filtracija, reabsorpcija, sekrecija :: glomerul
+ADH :: več reabsorpcije vode :: manj urina ob žeji
+sečnina :: odpadni dušik pri sesalcih :: nastane v jetrih
+! Žolč ne vsebuje encimov, le emulgira maščobe.
+
+=== kri_imunost
+## Transportni sistemi
+odprt / zaprt krvni obtok :: žuželke / vretenčarji :: deževnik ima zaprt
+## Srce in ožilje
+mali / veliki krvni obtok :: srce–pljuča / srce–telo :: desni prekat → pljučna arterija
+arterije, vene, kapilare :: od srca / k srcu / izmenjava :: vene imajo zaklopke
+sinusni vozel :: srčni spodbujevalnik :: EKG
+## Kri
+eritrociti :: prenos O₂, brez jedra :: hemoglobin
+levkociti :: obramba :: fagociti, limfociti
+trombociti :: strjevanje krvi :: fibrin
+## Imunost
+nespecifična :: koža, fagocitoza, vnetje :: zvišana temperatura
+specifična :: limfociti B (protitelesa), T (celična) :: spominske celice
+aktivna / pasivna imunost :: cepljenje / protitelesa od matere :: serum
+krvne skupine AB0, Rh :: antigeni na eritrocitih :: 0 Rh− univerzalni dajalec
+! Arterije vodijo od srca, ne nujno oksigenirano kri (pljučna arterija).
+
+=== regulacija
+## Homeostaza in hormoni
+negativna povratna zanka :: odziv zmanjša odklon :: uravnavanje glukoze
+inzulin / glukagon :: zniža / zviša krvni sladkor :: trebušna slinavka
+hipofiza :: nadzoruje druge žleze :: TSH, ADH, rastni hormon
+ščitnica, nadledvična žleza :: tiroksin, adrenalin :: adrenalin ob stresu
+## Živčni impulz
+mirovni potencial −70 mV :: Na⁺/K⁺ črpalka :: zunaj več Na⁺
+akcijski potencial :: Na⁺ vstopi, K⁺ izstopi :: vse ali nič
+sinapsa :: živčni prenašalec čez špranjo :: acetilholin
+## Živčevje
+osrednje / obkrajno :: možgani, hrbtenjača / živci :: avtonomno: simpatik, parasimpatik
+refleksni lok :: receptor, senzorični nevron, hrbtenjača, motorični nevron, efektor :: kolenski refleks
+## Čutila
+oko :: mrežnica: čepki (barve), paličice (tema) :: rumena pega
+uho :: polž (sluh), polkrožni kanali (ravnotežje) :: slušne koščice
+! Simpatik pripravi na boj, parasimpatik umiri.
+
+=== gibanje_razmnozevanje
+## Koža in ogrodje
+koža :: povrhnjica, usnjica, podkožje :: zaščita, termoregulacija
+okostje :: opora, gibanje, kri (kostni mozeg) :: Ca in P v kosteh
+sklepi :: kroglični, tečajni :: koleno: tečajni
+## Mišice
+skeletna, gladka, srčna :: vrste mišičnine :: skeletna je voljna
+krčenje :: aktin in miozin, Ca²⁺, ATP :: drsenje filamentov
+antagonista :: mišici z nasprotnim delovanjem :: biceps in triceps
+## Razmnoževanje
+moda, jajčniki :: spolne žleze, spolni hormoni :: testosteron, estrogen
+menstrualni cikel :: FSH, LH, estrogen, progesteron :: ovulacija okoli 14. dne
+oploditev, razvoj :: zigota, blastocista, zarodek, plod :: posteljica
+! Med krčenjem se dolžina filamentov ne spremeni.
+
+=== evolucija
+## Nastanek življenja
+prva celica :: pred ~3,8 milijarde let :: Miller–Ureyev poskus
+endosimbioza :: mitohondriji in kloroplasti iz bakterij :: lastna DNA
+## Naravni izbor
+Darwin :: variabilnost, preživetje prilagojenih, dednost :: odpornost bakterij
+genski sklad :: vsi aleli populacije :: genski zdrs, ozko grlo
+## Vrsta
+biološka vrsta :: osebki, ki se plodno križajo :: konj in osel: mula je neplodna
+alopatrična speciacija :: geografska ločitev :: Darwinovi ščinkavci
+## Dokazi
+fosili, primerjalna anatomija :: homologni organi :: okončine vretenčarjev
+molekularni dokazi :: podobnost DNA :: človek in šimpanz
+analogni organi :: enaka vloga, različen izvor :: krilo ptice in metulja
+! Posameznik se ne razvija, populacija se.
+
+=== sistematika
+## Razvrščanje
+binomsko poimenovanje :: rod + vrsta (Linné) :: Homo sapiens
+taksoni :: domena, kraljestvo, deblo, razred, red, družina, rod, vrsta :: človek: sesalci, primati
+kladogram :: skupni predniki :: sestrski skupini
+## Domene in kraljestva
+bakterije, arheje, evkarionti :: tri domene :: arheje v vročih vrelcih
+rastline, živali, glive, protisti :: kraljestva evkariontov :: glive niso rastline
+## Rastline in živali
+mahovi, praprotnice, golosemenke, kritosemenke :: rastline :: smreka: golosemenka
+nevretenčarji, vretenčarji :: živali :: ribe, dvoživke, plazilci, ptiči, sesalci
+## Evolucija človeka
+Australopithecus, Homo habilis, H. erectus, H. sapiens :: zaporedje :: pokončna hoja pred velikimi možgani
+! Človek ne izhaja iz šimpanza, imata skupnega prednika.
+
+=== populacije
+## Pojmi
+populacija, združba, ekosistem :: ravni ekologije :: srne v gozdu
+abiotski / biotski dejavniki :: neživi / živi :: temperatura / plenilci
+toleranca :: območje preživetja :: optimum
+## Niša in odnosi
+ekološka niša :: vloga vrste v ekosistemu :: tekmovalno izključevanje
+plenilstvo, zajedavstvo :: + / − :: lisica in zajec, klop
+mutualizem :: + / + :: čebela in cvet
+komenzalizem :: + / 0 :: ptič gnezdi na drevesu
+## Rast populacij
+eksponentna rast :: J-krivulja :: bakterije v novem gojišču
+logistična rast :: S-krivulja, nosilnost okolja \(K\) :: ustali se pri \(K\)
+r- in K-strategi :: veliko potomcev / malo z oskrbo :: miš / slon
+! Nosilnost okolja omejuje rast populacije.
+
+=== ekosistemi
+## Pretok energije
+proizvajalci, porabniki, razkrojevalci :: prehranjevalna veriga :: trava → zajec → lisica
+10 % pravilo :: na višji nivo preide ~10 % energije :: zato malo plenilcev
+prehranjevalni splet :: prepletene verige :: več povezav: bolj stabilen
+## Kroženje snovi
+ogljik :: fotosinteza, dihanje, gorenje :: CO₂ v ozračju
+dušik :: vezava, nitrifikacija, denitrifikacija :: bakterije na koreninah metuljnic
+voda :: izhlapevanje, padavine, transpiracija :: hidrološki krog
+## Človek in ekosistemi
+sukcesija :: postopna sprememba združbe :: travnik → gozd
+onesnaževanje, krčenje gozdov :: izguba biotske raznovrstnosti :: tropski gozd
+bioakumulacija :: strupi se kopičijo na višjih nivojih :: DDT pri pticah
+varstvo narave :: zavarovana območja, Natura 2000 :: Triglavski narodni park
+! Energija teče enosmerno, snovi krožijo.
+
+=== raziskovanje
+## Načrtovanje poskusa
+hipoteza :: preverljiva napoved :: »Višja temperatura pospeši kalitev.«
+neodvisna / odvisna spremenljivka :: spreminjamo / merimo :: temperatura / število kalečih semen
+kontrolne spremenljivke :: ostanejo enake :: količina vode
+kontrolna skupina :: brez obravnave :: za primerjavo
+ponovitve :: zanesljivost rezultatov :: vsaj tri ponovitve
+## Podatki
+tabela :: enote v glavi stolpcev :: čas (min)
+graf :: neodvisna na os \(x\) :: točkovni ali stolpčni
+povprečje, odklon :: obdelava :: odstrani osamelce z utemeljitvijo
+## Metode
+mikroskop :: povečava = objektiv × okular :: 40 × 10 = 400
+barvanje, kromatografija, elektroforeza :: laboratorijske metode :: ločevanje barvil listov
+! Sklep se navezuje na hipotezo: jo potrdi ali ovrže.

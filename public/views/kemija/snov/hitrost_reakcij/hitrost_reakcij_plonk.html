@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hitrost kemijskih reakcij — plonk listek | Učilnica.com</title>
+  <meta name="description" content="Plonk listek za maturo: Hitrost kemijskih reakcij na enem listu A4, vsaka formula ali pojem s kratkim primerom.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Kalam:wght@400;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
+  <link rel="stylesheet" href="/style/snov.css">
+  <link rel="stylesheet" href="/style/plonk.css">
+</head>
+<body>
+  <div id="header"></div>
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view">
+
+        <!-- Ustvari tools/plonk/plonk.mjs iz api/data/plonk/kemija.txt; ne urejaj ročno. -->
+        <article class="plonk">
+          <header class="pl-glava">
+            <div>
+              <span class="pl-oznaka">Plonk listek · Kemija 4.7</span>
+              <h1>Hitrost kemijskih reakcij</h1>
+            </div>
+            <div class="pl-gumbi">
+              <a class="pl-gumb pl-gumb--tiho" href="hitrost_reakcij_razlaga.html">Cela razlaga</a>
+              <button type="button" class="pl-gumb" onclick="window.print()">Natisni</button>
+            </div>
+          </header>
+
+          <div class="pl-vsebina">
+            <section class="pl-sklop">
+              <h2><span class="pl-st">1</span>Hitrost</h2>
+              <div class="pl-r"><div class="pl-f">\(v = \frac{\Delta c}{\Delta t}\)</div><div class="pl-o">hitrost reakcije</div><div class="pl-p">koncentracija pade za 0,2 M v 10 s: 0,02 M/s</div></div>
+              <div class="pl-r"><div class="pl-f">merjenje</div><div class="pl-o">masa, prostornina plina, barva, pH</div><div class="pl-p">CaCO₃ + HCl: merimo CO₂</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">2</span>Teorija trkov</h2>
+              <div class="pl-r"><div class="pl-f">uspešni trki</div><div class="pl-o">dovolj energije (\(E_a\)) in prava orientacija</div><div class="pl-p">aktivacijska energija</div></div>
+              <div class="pl-r pl-r--dolga"><div class="pl-f">temperatura, koncentracija, površina</div><div class="pl-o">povečajo hitrost</div><div class="pl-p">prah gori hitreje kot kos</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">3</span>Katalizatorji</h2>
+              <div class="pl-r"><div class="pl-f">znižajo \(E_a\)</div><div class="pl-o">ne porabijo se, ne spremenijo \(\Delta H\)</div><div class="pl-p">MnO₂ pri razpadu H₂O₂</div></div>
+              <div class="pl-r"><div class="pl-f">encimi</div><div class="pl-o">biološki katalizatorji, specifični</div><div class="pl-p">amilaza razgrajuje škrob</div></div>
+            </section>
+
+            <section class="pl-sklop pl-pasti">
+              <h2><span class="pl-st">!</span>Pazi</h2>
+              <ul>
+                <li>Katalizator ne premakne ravnotežja.</li>
+              </ul>
+            </section>
+          </div>
+          <footer class="pl-noga">piflar.si · plonk listek · Hitrost kemijskih reakcij</footer>
+        </article>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>

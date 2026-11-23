@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fizikalne količine in enote — plonk listek | Učilnica.com</title>
+  <meta name="description" content="Plonk listek za maturo: Fizikalne količine in enote na enem listu A4, vsaka formula ali pojem s kratkim primerom.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Kalam:wght@400;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
+  <link rel="stylesheet" href="/style/snov.css">
+  <link rel="stylesheet" href="/style/plonk.css">
+</head>
+<body>
+  <div id="header"></div>
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view">
+
+        <!-- Ustvari tools/plonk/plonk.mjs iz api/data/plonk/fizika.txt; ne urejaj ročno. -->
+        <article class="plonk">
+          <header class="pl-glava">
+            <div>
+              <span class="pl-oznaka">Plonk listek · Fizika 4.1</span>
+              <h1>Fizikalne količine in enote</h1>
+            </div>
+            <div class="pl-gumbi">
+              <a class="pl-gumb pl-gumb--tiho" href="fizikalne_kolicine_enote_razlaga.html">Cela razlaga</a>
+              <button type="button" class="pl-gumb" onclick="window.print()">Natisni</button>
+            </div>
+          </header>
+
+          <div class="pl-vsebina">
+            <section class="pl-sklop">
+              <h2><span class="pl-st">1</span>Enote SI</h2>
+              <div class="pl-r"><div class="pl-f">m, kg, s, A, K, mol, cd</div><div class="pl-o">osnovne enote</div><div class="pl-p">\(1\ \text{N} = 1\ \text{kg\,m/s}^2\)</div></div>
+              <div class="pl-r"><div class="pl-f">k \(10^3\), M \(10^6\), G \(10^9\)</div><div class="pl-o">predpone</div><div class="pl-p">\(5\ \text{MW} = 5 \cdot 10^6\ \text{W}\)</div></div>
+              <div class="pl-r"><div class="pl-f">m \(10^{-3}\), µ \(10^{-6}\), n \(10^{-9}\)</div><div class="pl-o">majhne predpone</div><div class="pl-p">\(400\ \text{nm} = 4 \cdot 10^{-7}\ \text{m}\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(1\ \text{m/s} = 3{,}6\ \text{km/h}\)</div><div class="pl-o">pretvorba hitrosti</div><div class="pl-p">\(72\ \text{km/h} = 20\ \text{m/s}\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(1\ \text{dm}^3 = 1\ \text{l} = 10^{-3}\ \text{m}^3\)</div><div class="pl-o">prostornina</div><div class="pl-p">\(1\ \text{cm}^3 = 10^{-6}\ \text{m}^3\)</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">2</span>Merjenje</h2>
+              <div class="pl-r pl-r--dolga"><div class="pl-f">\(\Delta x\)</div><div class="pl-o">absolutna napaka (polovica najmanjšega razdelka ali raztros)</div><div class="pl-p">\(x = (12{,}4 \pm 0{,}1)\ \text{cm}\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(\delta = \frac{\Delta x}{x}\)</div><div class="pl-o">relativna napaka</div><div class="pl-p">\(\frac{0{,}1}{12{,}4} \approx 0{,}8\ \%\)</div></div>
+              <div class="pl-r pl-r--dolga"><div class="pl-f">vsota, razlika: seštej abs. napake</div><div class="pl-o">produkt, kvocient: seštej rel. napake</div><div class="pl-p">\(S = ab\): \(\delta_S = \delta_a + \delta_b\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(x^n\): \(\delta = n\,\delta_x\)</div><div class="pl-o">potenca</div><div class="pl-p">\(V = a^3\): \(\delta_V = 3\delta_a\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(\bar x = \frac{\sum x_i}{n}\)</div><div class="pl-o">povprečje večkratnih meritev</div><div class="pl-p">napaka: največji odmik od povprečja</div></div>
+            </section>
+
+            <section class="pl-sklop pl-pasti">
+              <h2><span class="pl-st">!</span>Pazi</h2>
+              <ul>
+                <li>Rezultat zaokroži na toliko mest, kot jih dopušča napaka.</li>
+              </ul>
+            </section>
+          </div>
+          <footer class="pl-noga">piflar.si · plonk listek · Fizikalne količine in enote</footer>
+        </article>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>

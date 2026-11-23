@@ -1,0 +1,152 @@
+// Plonk listki za španščino.
+
+=== izpit_es
+## Shema izpita
+1A Comprensión lectora :: 35 min, 20 % :: verdadero/falso, izbirni tip
+1B Uso de la lengua :: 25 min, 15 % :: glagoli, predlogi, zaimki v pravilni obliki
+2 Comprensión auditiva :: do 20 min, 15 % :: dve nalogi
+3A krajši sestavek :: 30 min, 10 %, 15 točk :: noticia, carta, correo, folleto, foro
+3B daljši sestavek :: 60 min, 20 %, 20 točk :: VR: tema iz književnosti
+ustni (Expresión oral) :: do 20 min, 20 %, 3 naloge :: slika, pogovor, besedilo
+## Merila za pisna sestavka
+3A: ustreznost 5, pravilnost 4, besedišče 3, namen in slog 3 :: 15 točk :: vse iztočnice upoštevane
+3B: vsebina 8, zgradba 4, … :: 20 točk :: uvod, jedro, zaključek
+## Ustni izpit
+slikovna, besedilna iztočnica, vodeni pogovor :: 3 naloge :: razširjeni odgovori
+## Tematska področja
+ocio, salud, medio ambiente, trabajo :: teme :: besedišče po temah
+! Tipi in število nalog se lahko spremenijo.
+
+=== presente_es
+## Pravilni glagoli in menjava samoglasnika
+-ar: -o, -as, -a, -amos, -áis, -an :: hablar :: hablo, hablamos
+-er / -ir: -o, -es, -e, -emos/-imos, -éis/-ís, -en :: comer, vivir :: como, vivimos
+e → ie, o → ue, e → i :: menjava (razen nosotros, vosotros) :: quiero, puedo, pido
+## Nepravilni glagoli
+ser: soy, eres, es, somos, sois, son :: biti :: Soy eslovena.
+ir: voy, vas, va, vamos, vais, van :: iti :: Voy a Madrid.
+tener, hacer, poner, salir, decir :: 1. oseba -go :: tengo, hago, pongo, salgo, digo
+## Povratni in estar + gerundio
+me, te, se, nos, os, se :: povratni :: Me levanto a las siete.
+estar + gerundio (-ando, -iendo) :: dogajanje zdaj :: Estoy estudiando.
+! Nosotros in vosotros nimata menjave samoglasnika.
+
+=== ser_estar_es
+## Ser in estar
+ser :: identiteta, poklic, izvor, lastnost, ura :: Es médico. Es de Madrid. Son las tres.
+estar :: lega, stanje, počutje :: Estoy cansado. Madrid está en España.
+sprememba pomena :: ser / estar + pridevnik :: es listo (pameten) / está listo (pripravljen)
+## Hay ali estar
+hay :: obstoj, nedoločeno :: Hay un banco cerca.
+estar :: lega določenega :: El banco está en la plaza.
+! Hay je nespremenljiv: hay un libro, hay libros.
+
+=== pretekli_casi_es
+## Tvorba
+pretérito perfecto: haber + participio :: he hablado, has comido :: -ado, -ido
+indefinido: -é, -aste, -ó, -amos, -asteis, -aron :: hablar :: hablé
+indefinido -er/-ir: -í, -iste, -ió, -imos, -isteis, -ieron :: comer :: comí
+fui, tuve, hice, estuve, pude :: nepravilni :: Ayer fui al cine.
+imperfecto: -aba / -ía :: opis, navada :: Hablaba, comía
+## Perfecto ali indefinido
+perfecto :: hoy, este año, ya, nunca :: Hoy he comido paella.
+indefinido :: ayer, en 2020, el año pasado :: Ayer comí paella.
+## Indefinido ali imperfecto
+indefinido :: zaključen dogodek :: Llegó a las ocho.
+imperfecto :: ozadje, navada :: Cuando era niño, jugaba mucho.
+skupaj :: Leía cuando sonó el teléfono. :: ozadje + dogodek
+! Ser in ir imata v indefinidu enako obliko: fui.
+
+=== futuro_condicional_es
+## Tvorba in raba
+futuro: nedoločnik + -é, -ás, -á, -emos, -éis, -án :: prihodnost, domneva :: Mañana hablaré con él.
+condicional: nedoločnik + -ía, -ías, -ía … :: vljudnost, nasvet :: ¿Podrías ayudarme?
+tendré, haré, diré, podré, saldré :: nepravilna osnova :: Tendría tiempo.
+ir a + nedoločnik :: bližnja prihodnost :: Voy a estudiar.
+## Pogojni stavki s si
+si + presente, futuro :: realno :: Si llueve, me quedaré en casa.
+si + imperfecto de subjuntivo, condicional :: možno :: Si tuviera dinero, viajaría.
+si + pluscuamperfecto subj., condicional compuesto :: nemogoče :: Si hubiera estudiado, habría aprobado.
+! Po »si« ni futuro ne condicional.
+
+=== subjuntivo_es
+## Tvorba
+-ar → -e, -er/-ir → -a :: iz 1. osebe sedanjika :: hablar → hable, tener → tenga
+sea, vaya, haya, sepa, esté, dé :: nepravilni :: Espero que estés bien.
+## Indikativ ali subjuntivo
+želja, čustvo, dvom :: quiero que, me alegra que, no creo que + subj. :: Quiero que vengas.
+creo que, pienso que + indikativ :: trditev :: Creo que tiene razón.
+cuando + subj. :: prihodnost :: Cuando llegues, llámame.
+para que + subj. :: namen :: Te lo digo para que lo sepas.
+## Velelnik
+tú: 3. os. ed. sedanjika :: habla, come :: nepravilni: ven, ten, haz, di, sal, pon
+zanikano: no + subjuntivo :: no hables, no comas :: ¡No lo hagas!
+usted: subjuntivo :: hable, coma :: Pase, por favor.
+## Poročani govor
+pomik časov :: presente → imperfecto :: Dijo que estaba cansado.
+! Zanikani velelnik vedno s subjuntivom.
+
+=== por_para_es
+## Por in para
+por :: vzrok, skozi, zamenjava, trpnik :: Gracias por todo. Paso por el parque.
+para :: namen, cilj, rok, prejemnik :: Es para ti. Estudio para aprobar.
+## Glagolske perifraze
+ir a + nedoločnik :: bližnja prihodnost :: Voy a salir.
+acabar de + nedoločnik :: pravkar :: Acabo de llegar.
+tener que, hay que :: dolžnost :: Tengo que estudiar.
+seguir + gerundio, volver a + nedoločnik :: še vedno, ponovno :: Vuelve a llamar.
+## Časovni in krajevni izrazi
+hace + čas :: pred :: Llegué hace dos días.
+desde hace :: že (traja) :: Vivo aquí desde hace tres años.
+predložne vezave :: pensar en, soñar con, depender de :: Pienso en ti.
+! »Para« za cilj in namen, »por« za vzrok.
+
+=== zaimki_es
+## Samostalnik in člen
+el / la / los / las, un / una :: členi :: el libro, la casa
+-o moški, -a ženski (izjeme) :: spol :: el día, la mano, el problema
+-s / -es :: množina :: la ciudad → las ciudades
+## Pridevnik in stopnjevanje
+ujema se s samostalnikom :: spol, število :: los chicos simpáticos
+más / menos … que, tan … como :: primerjava :: Es más alto que yo.
+mejor, peor, mayor, menor :: nepravilni :: Es el mejor.
+-ísimo :: absolutni presežnik :: guapísimo
+## Osebni zaimki in gustar
+me, te, lo/la, nos, os, los/las :: tožilnik :: Lo veo.
+me, te, le, nos, os, les :: dajalnik :: Le doy el libro.
+le + lo → se lo :: sestavljeni :: Se lo doy.
+gustar :: me gusta + ed. / me gustan + mn. :: Me gustan los perros.
+## Drugi zaimki in števniki
+este, ese, aquel :: kazalni (blizu, srednje, daleč) :: este libro
+mi, tu, su / mío, tuyo :: svojilni :: Es mío.
+algo, nada, alguien, nadie :: nedoločni :: No hay nadie.
+! Pri »gustar« se glagol ujema s tem, kar je všeč.
+
+=== razumevanje_es
+## Tipi nalog in navodila
+verdadero/falso, izbirni tip, povezovanje, dopolnjevanje :: 1A in 2 :: kratki odgovori
+## Strategije
+najprej vprašanja, podčrtaj ključne besede :: branje :: sopomenke v besedilu
+dvakrat poslušaš :: poslušanje :: števila, imena, datumi
+! Odgovor je pogosto parafraziran.
+
+=== pisno_sporocanje_es
+## Pisma in e-sporočila
+formalno: Estimado/a señor/a, Atentamente :: usted :: Le escribo para …
+neformalno: Querida Ana, Un abrazo :: tú :: ¡Gracias por tu correo!
+## Novica, letak, forum
+noticia: kdo, kaj, kje, kdaj :: naslov, povzetek :: folleto: kratke informacije
+foro :: mnenje, odgovor drugim :: En mi opinión …
+## Daljši sestavek in esej
+OR: uvod, argumenti, zaključek :: povezovalci :: además, sin embargo, por lo tanto
+VR: esej o književnem delu :: teza in argumenti iz dela :: En la novela …
+! Vse iztočnice morajo biti razvite.
+
+=== ustni_izpit_es
+## Slikovna in besedilna iztočnica
+opis, domneve, mnenje :: En la foto se ve … :: Al fondo hay …
+## Povzetek slovenskega besedila (VR)
+povzemi bistvo v španščini :: ne prevajaj besede za besedo :: El texto trata de …
+## Vodeni pogovor in interpretacija
+razširjeni odgovori :: Creo que … porque … :: El protagonista …
+! Odgovarjaj v celih povedih.

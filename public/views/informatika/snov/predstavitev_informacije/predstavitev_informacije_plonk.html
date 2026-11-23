@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Predstavitev informacije — plonk listek | Učilnica.com</title>
+  <meta name="description" content="Plonk listek za maturo: Predstavitev informacije na enem listu A4, vsaka formula ali pojem s kratkim primerom.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Kalam:wght@400;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
+  <link rel="stylesheet" href="/style/snov.css">
+  <link rel="stylesheet" href="/style/plonk.css">
+</head>
+<body>
+  <div id="header"></div>
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view">
+
+        <!-- Ustvari tools/plonk/plonk.mjs iz api/data/plonk/informatika.txt; ne urejaj ročno. -->
+        <article class="plonk">
+          <header class="pl-glava">
+            <div>
+              <span class="pl-oznaka">Plonk listek · Informatika 4.3</span>
+              <h1>Predstavitev informacije</h1>
+            </div>
+            <div class="pl-gumbi">
+              <a class="pl-gumb pl-gumb--tiho" href="predstavitev_informacije_razlaga.html">Cela razlaga</a>
+              <button type="button" class="pl-gumb" onclick="window.print()">Natisni</button>
+            </div>
+          </header>
+
+          <div class="pl-vsebina">
+            <section class="pl-sklop">
+              <h2><span class="pl-st">1</span>Zapis podatkov</h2>
+              <div class="pl-r"><div class="pl-f">analogno / digitalno</div><div class="pl-o">zvezno / diskretno</div><div class="pl-p">vinilna plošča / MP3</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">2</span>Pisna predstavitev</h2>
+              <div class="pl-r"><div class="pl-f">pisave, oblikovanje, slogi</div><div class="pl-o">berljivost</div><div class="pl-p">naslovi s slogi</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">3</span>Slika</h2>
+              <div class="pl-r"><div class="pl-f">rastrska / vektorska</div><div class="pl-o">točke / matematični opis</div><div class="pl-p">JPG / SVG</div></div>
+              <div class="pl-r"><div class="pl-f">\(V = š \cdot v \cdot b\)</div><div class="pl-o">velikost bitne slike (bitov)</div><div class="pl-p">1000 × 1000, 24 bitov: 3 MB</div></div>
+              <div class="pl-r"><div class="pl-f">RGB / CMYK</div><div class="pl-o">zaslon / tisk</div><div class="pl-p">24-bitna barva: 16,7 milijona</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">4</span>Zvok</h2>
+              <div class="pl-r"><div class="pl-f">vzorčenje (Hz), bitna globina</div><div class="pl-o">digitalizacija</div><div class="pl-p">CD: 44,1 kHz, 16 bitov</div></div>
+              <div class="pl-r"><div class="pl-f">\(V = f \cdot b \cdot t \cdot k\)</div><div class="pl-o">velikost zvoka</div><div class="pl-p">44 100 · 16 · 60 · 2 ≈ 10,6 MB</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">5</span>Gibljiva slika</h2>
+              <div class="pl-r"><div class="pl-f">sličice na sekundo</div><div class="pl-o">video</div><div class="pl-p">25 fps</div></div>
+              <div class="pl-r"><div class="pl-f">stiskanje z izgubo / brez</div><div class="pl-o">kompresija</div><div class="pl-p">JPG / PNG, ZIP</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">6</span>Prosojnice</h2>
+              <div class="pl-r"><div class="pl-f">malo besedila, ključne besede</div><div class="pl-o">predstavitev</div><div class="pl-p">pravilo 6 × 6</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">7</span>Splet</h2>
+              <div class="pl-r pl-r--dolga"><div class="pl-f">HTML (vsebina), CSS (videz), JS (obnašanje)</div><div class="pl-o">tehnologije</div><div class="pl-p">&lt;p&gt;, color</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">8</span>Zapis števil</h2>
+              <div class="pl-r"><div class="pl-f">dvojiški, šestnajstiški</div><div class="pl-o">pretvorbe</div><div class="pl-p">\(13 = (1101)_2 = (D)_{16}\)</div></div>
+              <div class="pl-r"><div class="pl-f">dvojiški komplement</div><div class="pl-o">negativna cela števila</div><div class="pl-p">−1 = 11111111</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">9</span>HTML v praksi</h2>
+              <div class="pl-r"><div class="pl-f">relativne / absolutne poti</div><div class="pl-o">povezave</div><div class="pl-p">../slike/a.png</div></div>
+              <div class="pl-r"><div class="pl-f">obrazci</div><div class="pl-o">&lt;form&gt;, &lt;input&gt;</div><div class="pl-p">method=&quot;post&quot;</div></div>
+            </section>
+
+            <section class="pl-sklop pl-pasti">
+              <h2><span class="pl-st">!</span>Pazi</h2>
+              <ul>
+                <li>Vektorske slike se pri povečavi ne pokvarijo.</li>
+              </ul>
+            </section>
+          </div>
+          <footer class="pl-noga">piflar.si · plonk listek · Predstavitev informacije</footer>
+        </article>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>

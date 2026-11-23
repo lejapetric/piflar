@@ -1,0 +1,243 @@
+// Plonk listki za psihologijo: pojem :: razlaga :: primer.
+
+=== predmet_razvoj
+## Predmet psihologije
+psihologija :: veda o doživljanju in vedenju :: zaznavanje, učenje, čustva
+duševni procesi in lastnosti :: spoznavni, čustveno-motivacijski, osebnost :: spomin, strah, introvertnost
+## Panoge
+temeljne :: razvojna, socialna, psihologija osebnosti :: kako se razvija mišljenje
+uporabne :: klinična, šolska, organizacijska :: šolski psiholog
+## Smeri razvoja
+Wundt (1879) :: prvi psihološki laboratorij, introspekcija :: Leipzig
+behaviorizem :: proučuje le opazno vedenje :: Watson, Skinner
+psihoanaliza :: nezavedno :: Freud
+geštalt :: celota je več kot vsota delov :: Wertheimer
+humanistična, kognitivna :: samoaktualizacija / procesiranje informacij :: Maslow, Rogers / Neisser
+! Behavioristi ne proučujejo zavesti.
+
+=== metode
+## Znanstvena metoda
+problem, hipoteza, preverjanje, sklep :: koraki :: »Hrup poslabša pomnjenje.«
+veljavnost, zanesljivost, objektivnost :: merske lastnosti :: test meri, kar naj bi meril
+## Opazovanje
+sistematično, z udeležbo ali brez :: opisna metoda :: opazovanje otrok v vrtcu
+pristranskost opazovalca :: napaka :: halo učinek
+## Eksperiment
+neodvisna / odvisna spremenljivka :: vzrok / posledica :: hrup / število zapomnjenih besed
+eksperimentalna in kontrolna skupina :: primerjava :: placebo
+kontrola motečih spremenljivk :: naključna razporeditev :: enake okoliščine
+! Le eksperiment dokazuje vzročnost; korelacija ne.
+
+=== raziskovalne_tehnike
+## Intervju
+strukturiran / nestrukturiran :: vnaprej določena vprašanja ali prosto :: klinični intervju
+## Vprašalnik in lestvice
+zaprta / odprta vprašanja :: hitro zbiranje podatkov :: anketa
+ocenjevalna lestvica :: stopnja strinjanja (Likert) :: 1 = sploh se ne strinjam … 5
+socialno zaželeni odgovori :: napaka :: prikažeš se v boljši luči
+## Psihološki test
+standardiziran, normiran :: primerjava z normo :: test inteligentnosti
+veljavnost, zanesljivost, objektivnost :: lastnosti testa :: ponovljeni rezultati so podobni
+! Test ima norme, vprašalnik jih navadno nima.
+
+=== obdelava_podatkov
+## Populacija in vzorec
+populacija :: vsi, o katerih sklepamo :: vsi slovenski dijaki
+reprezentativen vzorec :: predstavlja populacijo :: naključni vzorec
+## Urejanje in prikazi
+frekvenčna porazdelitev :: tabela, histogram :: koliko dijakov ima oceno 5
+## Kvantitativna obdelava
+\(\bar x\), \(Me\), \(Mo\) :: srednje vrednosti :: povprečni IQ = 100
+standardni odklon \(\sigma\) :: razpršenost :: IQ: \(\sigma = 15\)
+normalna porazdelitev :: 68 % v \(\bar x \pm \sigma\) :: IQ 85–115
+korelacija \(r\) :: od −1 do +1, povezanost :: \(r = 0{,}7\): močna pozitivna
+! Korelacija ne pomeni vzročnosti.
+
+=== zaznavanje
+## Čutne osnove
+dražljaj → receptor → živčni impulz → možgani :: občutek :: svetloba na mrežnici
+absolutni / diferencialni prag :: najmanjši zaznan dražljaj / razlika :: Webrov zakon
+adaptacija :: čutilo se prilagodi :: ne vohamo več parfuma
+## Zaznavna organizacija
+figura in ozadje :: geštalt :: Rubinova vaza
+bližina, podobnost, sklenjenost, kontinuiteta :: zakoni organizacije :: pike v vrsti vidimo kot črto
+konstantnost :: velikost, oblika, barva :: odhajajoč človek se ne »manjša«
+globina :: binokularni in monokularni znaki :: perspektiva
+## Dejavniki zaznav
+pričakovanja, motivacija, izkušnje :: zaznavna pripravljenost :: lačen opazi hrano
+iluzije :: napačna zaznava :: Müller-Lyerjeva iluzija
+## Pozornost
+selektivna, razdeljena :: izbira dražljajev :: učinek koktajl zabave
+! Občutek je surov podatek, zaznava je organiziran pomen.
+
+=== ucenje
+## Klasično pogojevanje
+Pavlov :: nevtralni dražljaj + brezpogojni → pogojni odziv :: zvonec → slinjenje
+generalizacija, diskriminacija, ugašanje :: pojmi :: strah pred vsemi psi
+## Instrumentalno pogojevanje
+Skinner, Thorndike :: posledice vplivajo na vedenje :: podgana pritisne ročico
+pozitivna / negativna okrepitev :: doda prijetno / odvzame neprijetno :: pohvala / izklop alarma
+kazen :: zmanjša vedenje :: odvzem telefona
+## Modelno in besedno učenje
+Bandura :: učenje z opazovanjem modela :: poskus z lutko Bobo
+besedno učenje :: smiselno ali mehanično :: učenje definicij
+## Pomnjenje in pozabljanje
+senzorni, kratkoročni (7 ± 2), dolgoročni spomin :: model spomina :: telefonska številka
+Ebbinghausova krivulja :: največ pozabimo takoj po učenju :: ponavljanje
+interferenca :: proaktivna / retroaktivna :: staro moti novo / novo moti staro
+## Dejavniki učenja
+porazdeljeno učenje, aktivno ponavljanje :: učinkovito :: učenje po delih
+! Negativna okrepitev ni kazen: vedenje okrepi.
+
+=== misljenje
+## Pojem in oblike
+pojmi, sodbe, sklepi :: enote mišljenja :: »ptica« je pojem
+konvergentno / divergentno :: ena rešitev / več rešitev :: test / ustvarjalnost
+## Piaget
+senzomotorično (0–2) :: stalnost predmeta :: skrita igrača
+predoperativno (2–7) :: egocentrizem, ni konzervacije :: več vode v višjem kozarcu
+konkretno operativno (7–11) :: konzervacija, logika s konkretnim :: razvrščanje
+formalno operativno (11+) :: abstraktno, hipotetično :: »Kaj če …«
+## Reševanje problemov
+poskusi in napake, vpogled, algoritem, hevristika :: strategije :: Köhlerjeve opice
+funkcijska fiksiranost :: ovira :: predmet le za običajno rabo
+## Ustvarjalnost
+izvirnost, fluentnost, fleksibilnost :: lastnosti :: »Naštej rabe opeke.«
+priprava, inkubacija, razsvetlitev, preverjanje :: faze :: rešitev pod prho
+! Vpogled je nenadna rešitev, ne postopno poskušanje.
+
+=== inteligentnost
+## Pojem in merjenje
+sposobnost reševanja novih problemov :: inteligentnost :: prilagajanje novim situacijam
+\(IQ = \frac{MS}{KS} \cdot 100\) :: količnik inteligentnosti (Stern) :: MS 12, KS 10: IQ 120
+deviacijski IQ :: povprečje 100, \(\sigma = 15\) :: Wechsler
+## Razlike
+normalna porazdelitev :: večina med 85 in 115 :: nadarjenost > 130
+dednost in okolje :: oba vplivata :: študije dvojčkov
+## Teorije
+Thurstone :: 7 primarnih sposobnosti :: besedna, številska, prostorska …
+Spearman :: faktor g + specifični faktorji :: splošna inteligentnost
+Gardner :: več inteligentnosti :: glasbena, medosebna
+! IQ primerja posameznika z vrstniki.
+
+=== custva
+## Značilnosti in vrste
+doživljanje, telesne spremembe, izražanje :: sestavine čustev :: strah: utrip, beg
+primarna čustva :: veselje, žalost, strah, jeza, gnus, presenečenje :: univerzalni izrazi obraza
+razpoloženje :: dolgotrajno, šibko :: slaba volja
+## Razvoj čustvovanja
+čustvena zrelost :: nadzor in ustrezno izražanje :: odložitev zadovoljitve
+čustvena inteligentnost :: prepoznavanje in uravnavanje čustev :: Goleman
+## Čustva in vedenje
+James–Lange :: telesni odziv → čustvo :: bežim, zato me je strah
+Cannon–Bard :: hkrati :: talamus
+Schachter–Singer :: vzburjenje + interpretacija :: dvofaktorska teorija
+Yerkes–Dodson :: srednje vzburjenje je najboljše :: trema pri izpitu
+! Pretirano vzburjenje poslabša uspešnost.
+
+=== motivacija
+## Motivacijski proces
+potreba → motiv → dejavnost → cilj :: proces :: žeja → pitje
+biološke / psihološke / socialne potrebe :: vrste :: hrana / dosežek / pripadnost
+## Maslow
+fiziološke, varnost, pripadnost, spoštovanje, samoaktualizacija :: hierarhija :: najprej spanje, nato uspeh
+## Motivacija za učenje
+notranja / zunanja :: interes / nagrada :: bereš, ker te zanima
+storilnostna motivacija :: želja po uspehu / strah pred neuspehom :: Atkinson
+## Duševne obremenitve
+frustracija :: ovira na poti do cilja :: zaprta trgovina
+konflikt :: privlačnost–privlačnost, odbojnost–odbojnost, privlačnost–odbojnost :: dve dobri ponudbi
+stres :: alarm, odpor, izčrpanost (Selye) :: izpitni stres
+## Spoprijemanje
+problemsko / čustveno usmerjeno :: načini :: načrt učenja / pogovor s prijateljem
+obrambni mehanizmi :: racionalizacija, projekcija, potlačitev :: »Itak me ni zanimalo.«
+! Pri Maslowu višje potrebe pridejo do izraza, ko so nižje zadovoljene.
+
+=== struktura_osebnosti
+## Osebnost
+psihofizična celota :: edinstven, razmeroma trajen vzorec :: Allport
+## Področja osebnosti
+telesne značilnosti, sposobnosti, temperament, značaj :: področja :: hitrost odzivanja
+temperament :: dedni, čustveni slog :: Hipokrat: kolerik, sangvinik, flegmatik, melanholik
+značaj :: moralne lastnosti :: poštenost
+## Dednost in okolje
+interakcija :: oba vplivata :: dvojčki, posvojeni otroci
+## Tipološko in dimenzionalno
+tipi :: razvrstitev v skupine :: Jung: introvert, ekstravert
+dimenzije :: stopnja lastnosti na kontinuumu :: Big Five
+! Tipologije poenostavljajo, dimenzije merijo stopnjo.
+
+=== teorije_osebnosti
+## Freud
+id, ego, superego :: struktura osebnosti :: id: užitek, superego: vest
+oralna, analna, falična, latentna, genitalna :: psihoseksualne faze :: fiksacija
+obrambni mehanizmi :: ego se brani pred tesnobo :: potlačitev
+## Eysenck
+ekstravertnost, nevroticizem, psihoticizem :: dimenzije :: introvert: miren, zadržan
+## Skinner
+osebnost = naučeno vedenje :: okrepitve :: otrok se nauči vljudnosti zaradi pohval
+## Maslow, Rogers
+samoaktualizacija :: uresničevanje potencialov :: brezpogojno sprejemanje (Rogers)
+## Kognitivne teorije
+Kelly, Bandura :: osebni konstrukti, samoučinkovitost :: »Zmorem to.«
+## Primerjava
+nezavedno / dispozicije / okolje / svobodna volja :: poudarki teorij :: Freud / Eysenck / Skinner / Maslow
+! Freud poudarja nezavedno, humanisti svobodo in rast.
+
+=== razvoj_osebnosti
+## Dejavniki
+dednost, okolje, lastna aktivnost :: dejavniki razvoja :: družina, šola
+zorenje / učenje :: biološko / izkušnje :: hoja / branje
+## Obdobja
+otroštvo, mladostništvo, odraslost, starost :: obdobja :: puberteta
+## Erikson
+8 psihosocialnih kriz :: zaupanje–nezaupanje … integriteta–obup :: mladostnik: identiteta–zmeda vlog
+identiteta :: »Kdo sem?« :: mladostništvo
+## Samopodoba
+predstava o sebi :: telesna, socialna, učna … :: »Dober sem v športu.«
+samospoštovanje :: vrednotenje sebe :: visoko / nizko
+! Pri Eriksonu je mladostništvo kriza identitete.
+
+=== socializacija_skupine
+## Socializacija
+učenje norm, vrednot, vlog :: proces :: otrok se nauči pozdravljati
+primarna / sekundarna :: družina / šola, vrstniki :: mediji
+## Skupine in vloge
+primarna / sekundarna skupina :: tesni / formalni odnosi :: družina / razred
+konformizem :: prilagajanje skupini :: Aschev poskus
+poslušnost avtoriteti :: Milgramov poskus :: elektrošoki
+## Družina in vzgojni stili
+avtoritativni :: topel, z mejami :: najboljši izidi
+avtoritarni, permisivni, zanemarjajoči :: drugi stili :: stroga pravila brez razlage
+## Socialno zaznavanje
+prvi vtis, halo učinek :: napake :: lep = pameten
+atribucija :: notranja / zunanja razlaga vedenja :: temeljna atribucijska napaka
+! Konformizem je pritisk skupine, poslušnost pritisk avtoritete.
+
+=== stalisca_vrednote
+## Stališča
+spoznavna, čustvena, vedenjska sestavina :: stališče :: »Kajenje škodi, ne maram ga, ne kadim.«
+kognitivna disonanca :: neskladje spodbudi spremembo :: Festinger
+## Stereotipi in predsodki
+stereotip :: posplošena predstava o skupini :: »Vsi … so …«
+predsodek :: negativno stališče brez preverjanja :: diskriminacija = vedenje
+zmanjševanje :: stik, sodelovanje pri skupnem cilju :: Sherifov poskus
+## Vrednote in moralni razvoj
+vrednote :: kar je posamezniku pomembno :: svoboda, družina
+Kohlberg :: predkonvencionalna, konvencionalna, postkonvencionalna raven :: Heinzova dilema
+Piaget :: heteronomna → avtonomna morala :: pravila / namen
+! Predsodek je stališče, diskriminacija dejanje.
+
+=== medosebni_odnosi
+## Prosocialno vedenje
+altruizem, pomoč :: brez pričakovanja koristi :: pomoč neznancu
+učinek opazovalca :: več ljudi, manj pomoči :: primer Kitty Genovese
+## Proindividualno vedenje
+skrb zase :: uveljavljanje :: asertivnost
+## Agresivnost
+frustracija–agresija :: frustracija vodi v agresijo :: Dollard
+naučena agresija :: model :: Bandura, lutka Bobo
+## Komunikacija
+besedna / nebesedna :: sporočila :: ton glasu
+aktivno poslušanje, jaz-sporočila :: uspešna komunikacija :: »Jezi me, ko …«
+! Asertivnost ni agresivnost.

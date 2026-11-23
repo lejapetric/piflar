@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Potenčna funkcija — plonk listek | Učilnica.com</title>
+  <meta name="description" content="Plonk listek za maturo: Potenčna funkcija na enem listu A4, vsaka formula ali pojem s kratkim primerom.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Kalam:wght@400;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
+  <link rel="stylesheet" href="/style/snov.css">
+  <link rel="stylesheet" href="/style/plonk.css">
+</head>
+<body>
+  <div id="header"></div>
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view">
+
+        <!-- Ustvari tools/plonk/plonk.mjs iz api/data/plonk/matematika.txt; ne urejaj ročno. -->
+        <article class="plonk">
+          <header class="pl-glava">
+            <div>
+              <span class="pl-oznaka">Plonk listek · Matematika 4.10.2</span>
+              <h1>Potenčna funkcija</h1>
+            </div>
+            <div class="pl-gumbi">
+              <a class="pl-gumb pl-gumb--tiho" href="potencna_razlaga.html">Cela razlaga</a>
+              <button type="button" class="pl-gumb" onclick="window.print()">Natisni</button>
+            </div>
+          </header>
+
+          <div class="pl-vsebina">
+            <section class="pl-sklop">
+              <h2><span class="pl-st">1</span>Naravni eksponent</h2>
+              <div class="pl-r"><div class="pl-f">\(f(x) = x^n\)</div><div class="pl-o">\(n\) sod: soda, \(Z_f = [0, \infty)\)</div><div class="pl-p">\(x^4\): \(f(-2) = 16\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(n\) lih</div><div class="pl-o">liha funkcija, \(Z_f = \mathbb{R}\)</div><div class="pl-p">\(x^3\): \(f(-2) = -8\)</div></div>
+              <div class="pl-r"><div class="pl-f">vse gredo skozi \((1, 1)\)</div><div class="pl-o">sode tudi skozi \((-1, 1)\)</div><div class="pl-p">lihe skozi \((-1, -1)\)</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">2</span>Negativni eksponent</h2>
+              <div class="pl-r"><div class="pl-f">\(f(x) = x^{-n} = \frac{1}{x^n}\)</div><div class="pl-o">\(D_f = \mathbb{R} \setminus \{0\}\), pol v 0</div><div class="pl-p">\(x^{-1}\): hiperbola</div></div>
+              <div class="pl-r"><div class="pl-f">asimptoti \(x = 0\), \(y = 0\)</div><div class="pl-o">obe osi</div><div class="pl-p">\(x^{-2}\) je soda, vedno pozitivna</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">3</span>Modeliranje</h2>
+              <div class="pl-r"><div class="pl-f">\(y = k x^n\)</div><div class="pl-o">premo sorazmerje s potenco</div><div class="pl-p">ploščina kvadrata \(S = a^2\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(y = \frac{k}{x}\)</div><div class="pl-o">obratno sorazmerje</div><div class="pl-p">\(v = \frac{s}{t}\) pri stalni poti</div></div>
+            </section>
+
+            <section class="pl-sklop pl-pasti">
+              <h2><span class="pl-st">!</span>Pazi</h2>
+              <ul>
+                <li>Pri \(x^{-n}\) je \(x = 0\) izključen.</li>
+              </ul>
+            </section>
+          </div>
+          <footer class="pl-noga">piflar.si · plonk listek · Potenčna funkcija</footer>
+        </article>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>

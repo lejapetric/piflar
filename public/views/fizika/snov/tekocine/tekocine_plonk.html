@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Tekočine — plonk listek | Učilnica.com</title>
+  <meta name="description" content="Plonk listek za maturo: Tekočine na enem listu A4, vsaka formula ali pojem s kratkim primerom.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Kalam:wght@400;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
+  <link rel="stylesheet" href="/style/snov.css">
+  <link rel="stylesheet" href="/style/plonk.css">
+</head>
+<body>
+  <div id="header"></div>
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view">
+
+        <!-- Ustvari tools/plonk/plonk.mjs iz api/data/plonk/fizika.txt; ne urejaj ročno. -->
+        <article class="plonk">
+          <header class="pl-glava">
+            <div>
+              <span class="pl-oznaka">Plonk listek · Fizika 4.7</span>
+              <h1>Tekočine</h1>
+            </div>
+            <div class="pl-gumbi">
+              <a class="pl-gumb pl-gumb--tiho" href="tekocine_razlaga.html">Cela razlaga</a>
+              <button type="button" class="pl-gumb" onclick="window.print()">Natisni</button>
+            </div>
+          </header>
+
+          <div class="pl-vsebina">
+            <section class="pl-sklop">
+              <h2><span class="pl-st">1</span>Tlak</h2>
+              <div class="pl-r"><div class="pl-f">\(p = \rho g h\)</div><div class="pl-o">hidrostatični tlak</div><div class="pl-p">10 m vode: \(\approx 10^5\ \text{Pa}\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(p = p_0 + \rho g h\)</div><div class="pl-o">skupni tlak</div><div class="pl-p">\(p_0 \approx 1{,}0 \cdot 10^5\ \text{Pa}\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(\frac{F_1}{S_1} = \frac{F_2}{S_2}\)</div><div class="pl-o">Pascalov zakon (hidravlična stiskalnica)</div><div class="pl-p">\(S_2 = 10 S_1\): 10-krat večja sila</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">2</span>Vzgon</h2>
+              <div class="pl-r"><div class="pl-f">\(F_{vz} = \rho_{tek} g V_{pot}\)</div><div class="pl-o">Arhimedov zakon</div><div class="pl-p">\(1\ \text{dm}^3\) v vodi: \(\approx 9{,}8\ \text{N}\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(\rho_{telo} &lt; \rho_{tek}\)</div><div class="pl-o">telo plava</div><div class="pl-p">\(\frac{V_{pot}}{V} = \frac{\rho_{telo}}{\rho_{tek}}\): led 90 %</div></div>
+            </section>
+
+            <section class="pl-sklop pl-pasti">
+              <h2><span class="pl-st">!</span>Pazi</h2>
+              <ul>
+                <li>Vzgon je odvisen od potopljene prostornine, ne od mase telesa.</li>
+              </ul>
+            </section>
+          </div>
+          <footer class="pl-noga">piflar.si · plonk listek · Tekočine</footer>
+        </article>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>

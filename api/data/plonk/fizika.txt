@@ -1,0 +1,288 @@
+// Plonk listki za fiziko.
+
+=== fizikalne_kolicine_enote
+## Enote SI
+m, kg, s, A, K, mol, cd :: osnovne enote :: \(1\ \text{N} = 1\ \text{kg\,m/s}^2\)
+k \(10^3\), M \(10^6\), G \(10^9\) :: predpone :: \(5\ \text{MW} = 5 \cdot 10^6\ \text{W}\)
+m \(10^{-3}\), µ \(10^{-6}\), n \(10^{-9}\) :: majhne predpone :: \(400\ \text{nm} = 4 \cdot 10^{-7}\ \text{m}\)
+\(1\ \text{m/s} = 3{,}6\ \text{km/h}\) :: pretvorba hitrosti :: \(72\ \text{km/h} = 20\ \text{m/s}\)
+\(1\ \text{dm}^3 = 1\ \text{l} = 10^{-3}\ \text{m}^3\) :: prostornina :: \(1\ \text{cm}^3 = 10^{-6}\ \text{m}^3\)
+## Merjenje
+\(\Delta x\) :: absolutna napaka (polovica najmanjšega razdelka ali raztros) :: \(x = (12{,}4 \pm 0{,}1)\ \text{cm}\)
+\(\delta = \frac{\Delta x}{x}\) :: relativna napaka :: \(\frac{0{,}1}{12{,}4} \approx 0{,}8\ \%\)
+vsota, razlika: seštej abs. napake :: produkt, kvocient: seštej rel. napake :: \(S = ab\): \(\delta_S = \delta_a + \delta_b\)
+\(x^n\): \(\delta = n\,\delta_x\) :: potenca :: \(V = a^3\): \(\delta_V = 3\delta_a\)
+\(\bar x = \frac{\sum x_i}{n}\) :: povprečje večkratnih meritev :: napaka: največji odmik od povprečja
+! Rezultat zaokroži na toliko mest, kot jih dopušča napaka.
+
+=== premo_krivo_gibanje
+## Premo gibanje
+\(v = \frac{\Delta s}{\Delta t}\) :: hitrost :: 100 m v 20 s: \(v = 5\ \text{m/s}\)
+\(a = \frac{\Delta v}{\Delta t}\) :: pospešek :: iz 0 na 20 m/s v 4 s: \(a = 5\ \text{m/s}^2\)
+\(v = v_0 + at\) :: enakomerno pospešeno :: \(v_0 = 0, a = 2, t = 5\): \(v = 10\ \text{m/s}\)
+\(s = v_0 t + \frac{at^2}{2}\) :: pot :: \(a = 2, t = 5\): \(s = 25\ \text{m}\)
+\(v^2 = v_0^2 + 2as\) :: brez časa :: zavira z 20 m/s, \(a = -5\): \(s = 40\ \text{m}\)
+ploščina pod \(v(t)\) = pot :: naklon \(v(t)\) = pospešek :: trikotnik pod \(v(t)\): \(s = \frac{vt}{2}\)
+## Prosti pad in met
+\(v = gt,\ h = \frac{gt^2}{2}\) :: prosti pad, \(g = 9{,}8\ \text{m/s}^2\) :: 2 s: \(h \approx 20\ \text{m}\)
+\(x = v_0 t,\ y = \frac{gt^2}{2}\) :: vodoravni met :: z višine 5 m: \(t = 1\ \text{s}\)
+## Kroženje
+\(v = \frac{2\pi r}{t_0} = \omega r\) :: obodna hitrost :: \(r = 2\ \text{m}, t_0 = 4\ \text{s}\): \(v = \pi\ \text{m/s}\)
+\(\nu = \frac{1}{t_0},\ \omega = 2\pi\nu\) :: frekvenca, kotna hitrost :: \(t_0 = 0{,}5\ \text{s}\): \(\nu = 2\ \text{Hz}\)
+\(a_r = \frac{v^2}{r} = \omega^2 r\) :: radialni pospešek (proti središču) :: \(v = 10, r = 50\): \(a_r = 2\ \text{m/s}^2\)
+! Pospešek pri zaviranju je negativen.
+! Pri kroženju s stalno hitrostjo je pospešek ≠ 0.
+
+=== sila_navor
+## Sila
+\(\vec F_{rez} = \sum \vec F_i\) :: rezultanta (vektorska vsota) :: \(3\ \text{N} \perp 4\ \text{N}\): \(5\ \text{N}\)
+\(\sum \vec F = 0\) :: ravnovesje sil :: telo miruje ali se giblje enakomerno
+## Prožnost in trenje
+\(F = k\,x\) :: Hookov zakon :: \(k = 200\ \text{N/m}, x = 0{,}05\ \text{m}\): \(F = 10\ \text{N}\)
+\(F_{tr} = k_{tr} F_n\) :: trenje (lepenje: \(F_l \le k_l F_n\)) :: \(F_n = 50\ \text{N}, k = 0{,}3\): \(15\ \text{N}\)
+\(F_n = mg\cos\alpha\) :: na klancu :: dolvzporedna \(mg\sin\alpha\)
+\(F_u = \frac12 c_u \rho S v^2\) :: upor sredstva :: dvakratna hitrost: 4-krat večji upor
+## Tlak
+\(p = \frac{F}{S}\) :: tlak, \(1\ \text{Pa} = 1\ \text{N/m}^2\) :: \(100\ \text{N}\) na \(0{,}01\ \text{m}^2\): \(10^4\ \text{Pa}\)
+## Navor
+\(M = r F \sin\varphi = F\,r_\perp\) :: navor (ročica) :: \(F = 20\ \text{N}, r = 0{,}5\ \text{m}\), pravokotno: \(10\ \text{Nm}\)
+\(\sum \vec F = 0,\ \sum M = 0\) :: ravnovesje togega telesa :: gugalnica: \(m_1 r_1 = m_2 r_2\)
+težišče :: prijemališče teže :: palica: na sredini
+! Navor je odvisen od ročice, ne le od sile.
+
+=== newtonovi_zakoni_gravitacija
+## Newtonovi zakoni
+1. zakon :: brez rezultante: miruje ali enakomerno premo :: potnik v avtobusu ob zaviranju
+\(\vec F = m\vec a\) :: 2. zakon :: \(F = 10\ \text{N}, m = 2\ \text{kg}\): \(a = 5\ \text{m/s}^2\)
+\(\vec F_{12} = -\vec F_{21}\) :: 3. zakon: sila in nasprotna sila na različnih telesih :: odriv od stene
+## Masa, teža, gostota
+\(F_g = mg\) :: teža :: \(m = 60\ \text{kg}\): \(F_g \approx 590\ \text{N}\)
+\(\rho = \frac{m}{V}\) :: gostota :: voda \(1000\ \text{kg/m}^3\)
+## Gravitacija
+\(F = G\frac{m_1 m_2}{r^2}\) :: gravitacijski zakon, \(G = 6{,}67 \cdot 10^{-11}\) :: dvakratna razdalja: \(\frac14\) sile
+\(g = \frac{GM}{r^2}\) :: gravitacijski pospešek :: na Zemlji \(9{,}8\ \text{m/s}^2\)
+\(\frac{GMm}{r^2} = \frac{mv^2}{r}\) :: kroženje satelita :: \(v = \sqrt{\frac{GM}{r}}\)
+\(\frac{r^3}{t_0^2} = \frac{GM}{4\pi^2}\) :: 3. Keplerjev zakon :: geostacionarni satelit: \(t_0 = 24\ \text{h}\)
+! Sila in nasprotna sila se ne izničita (delujeta na različni telesi).
+! Masa se ne spreminja, teža se.
+
+=== gibalna_kolicina
+## Gibalna količina
+\(\vec G = m\vec v\) :: gibalna količina :: \(2\ \text{kg}\) pri \(3\ \text{m/s}\): \(6\ \text{kg\,m/s}\)
+\(\vec F \Delta t = \Delta \vec G\) :: sunek sile = sprememba gibalne količine :: žoga \(0{,}5\ \text{kg}\), od 10 na −10 m/s: \(10\ \text{Ns}\)
+## Ohranitev
+\(\sum \vec G = \text{konst.}\) :: izoliran sistem (trki, razpadi) :: \(m_1 v_1 = (m_1 + m_2)v\)
+neprožni trk :: telesi se sprimeta, \(W_k\) se ne ohrani :: \(2\ \text{kg}\) pri 3 m/s + mirujoči 1 kg: \(v = 2\ \text{m/s}\)
+prožni trk :: ohranita se \(G\) in \(W_k\) :: enaki masi: izmenjata hitrosti
+odriv :: \(m_1 v_1 = -m_2 v_2\) :: puška in krogla
+! Gibalna količina je vektor: upoštevaj smer (predznak).
+
+=== delo_energija
+## Delo
+\(A = F s \cos\varphi\) :: delo sile :: \(F = 10\ \text{N}, s = 5\ \text{m}\): \(A = 50\ \text{J}\)
+\(P = \frac{A}{t} = F v\) :: moč :: \(500\ \text{J}\) v \(10\ \text{s}\): \(50\ \text{W}\)
+\(\eta = \frac{P_{kor}}{P_{vlož}}\) :: izkoristek :: 80 W od 100 W: 80 %
+## Energija
+\(W_k = \frac{mv^2}{2}\) :: kinetična :: \(m = 2, v = 3\): \(9\ \text{J}\)
+\(W_p = mgh\) :: potencialna :: \(m = 1, h = 10\): \(\approx 98\ \text{J}\)
+\(W_{pr} = \frac{kx^2}{2}\) :: prožnostna :: \(k = 100, x = 0{,}1\): \(0{,}5\ \text{J}\)
+## Ohranitev
+\(A_{zun} = \Delta W_k + \Delta W_p + \Delta W_{pr}\) :: izrek o mehanski energiji :: brez zunanjih sil: \(W\) stalna
+\(mgh = \frac{mv^2}{2}\) :: pad z višine :: \(h = 5\ \text{m}\): \(v \approx 10\ \text{m/s}\)
+! Delo sile pravokotno na premik je 0.
+! Trenje odvzema mehansko energijo.
+
+=== tekocine
+## Tlak
+\(p = \rho g h\) :: hidrostatični tlak :: 10 m vode: \(\approx 10^5\ \text{Pa}\)
+\(p = p_0 + \rho g h\) :: skupni tlak :: \(p_0 \approx 1{,}0 \cdot 10^5\ \text{Pa}\)
+\(\frac{F_1}{S_1} = \frac{F_2}{S_2}\) :: Pascalov zakon (hidravlična stiskalnica) :: \(S_2 = 10 S_1\): 10-krat večja sila
+## Vzgon
+\(F_{vz} = \rho_{tek} g V_{pot}\) :: Arhimedov zakon :: \(1\ \text{dm}^3\) v vodi: \(\approx 9{,}8\ \text{N}\)
+\(\rho_{telo} < \rho_{tek}\) :: telo plava :: \(\frac{V_{pot}}{V} = \frac{\rho_{telo}}{\rho_{tek}}\): led 90 %
+! Vzgon je odvisen od potopljene prostornine, ne od mase telesa.
+
+=== temperatura
+## Temperatura
+\(T = t + 273\) :: kelvini in stopinje :: \(27\ ^\circ\text{C} = 300\ \text{K}\)
+\(\Delta l = \alpha l \Delta T\) :: dolžinsko raztezanje :: jeklo \(\alpha = 1{,}2 \cdot 10^{-5}\ \text{K}^{-1}\)
+\(\Delta V = \beta V \Delta T,\ \beta \approx 3\alpha\) :: prostorninsko :: voda je najgostejša pri \(4\ ^\circ\text{C}\)
+## Plini
+\(pV = \frac{m}{M}RT\) :: splošna plinska enačba, \(R = 8{,}31\ \text{J/(mol K)}\) :: 1 mol pri 273 K, \(10^5\) Pa: \(22{,}4\ \text{l}\)
+\(\frac{pV}{T} = \text{konst.}\) :: stalna množina plina :: \(T\) podvojimo pri stalnem \(V\): \(p\) se podvoji
+izoterma, izobara, izohora :: \(T\), \(p\), \(V\) stalni :: Boyle: \(p_1V_1 = p_2V_2\)
+\(\bar W_k = \frac32 kT\) :: povprečna kinetična energija molekule :: \(k = 1{,}38 \cdot 10^{-23}\ \text{J/K}\)
+! V plinsko enačbo vedno vstavi kelvine.
+
+=== notranja_energija_toplota
+## Energijski zakon
+\(\Delta W_n = A + Q\) :: 1. zakon termodinamike :: plin prejme 100 J toplote, odda 30 J dela: \(+70\ \text{J}\)
+\(Q = mc\Delta T\) :: segrevanje :: 1 kg vode za 10 K: \(42\ \text{kJ}\)
+\(Q = m q_t\) :: taljenje (izparevanje: \(q_i\)) :: led \(q_t = 336\ \text{kJ/kg}\)
+\(A = -p\Delta V\) :: delo pri stalnem tlaku :: širjenje: plin oddaja delo
+## Prevajanje toplote
+\(P = \lambda \frac{S\Delta T}{d}\) :: toplotni tok skozi steno :: dvakrat debelejša: pol manj
+sevanje \(j = \sigma T^4\) :: Stefanov zakon :: dvakratna \(T\): 16-krat več
+## Toplotni stroji
+\(\eta = \frac{A}{Q_{dov}}\) :: izkoristek stroja :: 300 J dela iz 1000 J: 30 %
+\(\eta_C = 1 - \frac{T_2}{T_1}\) :: največji (Carnot) :: \(600\ \text{K}, 300\ \text{K}\): 50 %
+! Pri faznem prehodu se temperatura ne spreminja.
+
+=== elektricni_naboj_polje
+## Naboj in sila
+\(e_0 = 1{,}6 \cdot 10^{-19}\ \text{As}\) :: osnovni naboj :: \(1\ \text{As} = 6{,}25 \cdot 10^{18}\ e_0\)
+\(F = \frac{e_1 e_2}{4\pi\varepsilon_0 r^2}\) :: Coulombov zakon :: dvakratna razdalja: \(\frac14\) sile
+## Polje
+\(E = \frac{F}{e}\) :: jakost polja (V/m) :: \(F = 2\ \text{mN}, e = 1\ \text{µAs}\): \(2000\ \text{V/m}\)
+\(E = \frac{e}{4\pi\varepsilon_0 r^2}\) :: točkast naboj :: silnice od + proti −
+\(U = E d\) :: napetost v homogenem polju :: \(E = 1000, d = 0{,}01\): \(U = 10\ \text{V}\)
+\(A = e U\) :: delo polja na naboj :: elektron skozi 100 V: \(1{,}6 \cdot 10^{-17}\ \text{J}\)
+## Kondenzator
+\(C = \frac{e}{U}\) :: kapaciteta (F) :: \(10\ \text{µF}\) pri \(10\ \text{V}\): \(100\ \text{µAs}\)
+\(C = \frac{\varepsilon\varepsilon_0 S}{d}\) :: ploščati :: pol manjši razmik: dvakratna \(C\)
+\(W = \frac{CU^2}{2}\) :: energija :: \(C = 2\ \text{µF}, U = 100\ \text{V}\): \(10\ \text{mJ}\)
+vzporedno \(C = C_1 + C_2\), zaporedno \(\frac1C = \frac{1}{C_1} + \frac{1}{C_2}\) :: vezave :: dva po 2 µF zaporedno: 1 µF
+influenca :: prerazporeditev naboja v prevodniku :: elektroskop
+! Kondenzatorji se vežejo »obratno« kot upori.
+
+=== elektricni_tok
+## Tok in upor
+\(I = \frac{e}{t}\) :: električni tok (A) :: 2 As v 4 s: \(0{,}5\ \text{A}\)
+\(U = R I\) :: Ohmov zakon :: \(R = 10\ \Omega, I = 2\ \text{A}\): \(U = 20\ \text{V}\)
+\(R = \zeta \frac{l}{S}\) :: upor žice :: dvakrat daljša: dvakratni upor
+## Vezave
+zaporedno \(R = R_1 + R_2\) :: isti tok :: \(2\ \Omega + 3\ \Omega = 5\ \Omega\)
+vzporedno \(\frac1R = \frac1{R_1} + \frac1{R_2}\) :: ista napetost :: \(6\ \Omega \parallel 3\ \Omega = 2\ \Omega\)
+\(\sum I_{v} = \sum I_{iz}\) :: Kirchhoff: razvejišče :: 3 A noter: 1 A + 2 A ven
+## Delo in moč
+\(P = UI = I^2 R = \frac{U^2}{R}\) :: moč :: \(230\ \text{V}, 2\ \text{A}\): \(460\ \text{W}\)
+\(A = Pt\) :: delo (kWh) :: 2 kW 3 h: 6 kWh
+## Vir
+\(U = U_g - I R_n\) :: gonilna napetost, notranji upor :: \(U_g = 12, R_n = 1, I = 2\): \(U = 10\ \text{V}\)
+\(I_{kr} = \frac{U_g}{R_n}\) :: kratki stik :: \(12\ \text{A}\)
+! Ampermeter zaporedno, voltmeter vzporedno.
+
+=== magnetno_polje
+## Polje
+\(B\) (T) :: gostota magnetnega polja :: Zemlja \(\approx 50\ \text{µT}\)
+\(B = \frac{\mu_0 I}{2\pi r}\) :: ravni vodnik :: \(I = 10\ \text{A}, r = 2\ \text{cm}\): \(100\ \text{µT}\)
+\(B = \frac{\mu_0 N I}{l}\) :: tuljava :: \(\mu_0 = 4\pi \cdot 10^{-7}\ \text{Vs/(Am)}\)
+pravilo desne roke :: palec v smer toka, prsti kažejo silnice :: silnice okoli žice so krožnice
+## Sile
+\(F = I l B \sin\varphi\) :: sila na vodnik :: \(I = 2, l = 0{,}5, B = 0{,}1\): \(0{,}1\ \text{N}\)
+\(F = e v B \sin\varphi\) :: sila na naboj (Lorentz) :: ne opravlja dela
+\(r = \frac{mv}{eB}\) :: kroženje naboja :: večja hitrost: večji polmer
+\(M = N I S B \sin\varphi\) :: navor na zanko :: elektromotor
+! Sila je pravokotna na \(\vec v\) in \(\vec B\).
+
+=== indukcija
+## Indukcija
+\(\Phi = B S \cos\varphi\) :: magnetni pretok (Vs) :: \(B = 0{,}2, S = 0{,}01\): \(2\ \text{mVs}\)
+\(U_i = -N\frac{\Delta\Phi}{\Delta t}\) :: indukcijski zakon :: pretok pade za 0,01 Vs v 0,1 s, \(N = 100\): \(10\ \text{V}\)
+\(U_i = l v B\) :: premikajoča palica :: \(l = 0{,}5, v = 4, B = 0{,}1\): \(0{,}2\ \text{V}\)
+Lenzovo pravilo :: inducirani tok nasprotuje spremembi :: magnet v tuljavi je zaviran
+\(U_i = N B S \omega \sin\omega t\) :: generator :: izmenična napetost
+## Transformator
+\(\frac{U_1}{U_2} = \frac{N_1}{N_2}\) :: napetosti kot ovoji :: \(230\ \text{V}\), \(N_1 : N_2 = 20 : 1\): \(11{,}5\ \text{V}\)
+\(U_1 I_1 = U_2 I_2\) :: idealni :: manjša napetost, večji tok
+## Nihajni krog
+\(\nu_0 = \frac{1}{2\pi\sqrt{LC}}\) :: lastna frekvenca :: \(L = 1\ \text{mH}, C = 1\ \text{µF}\): \(\approx 5\ \text{kHz}\)
+\(U_{ef} = \frac{U_0}{\sqrt2}\) :: efektivna vrednost :: \(U_{ef} = 230\ \text{V}\): \(U_0 \approx 325\ \text{V}\)
+! Inducirana napetost nastane le ob spremembi pretoka.
+
+=== nihanje
+## Opis
+\(x = x_0 \sin\omega t\) :: harmonično nihanje :: amplituda \(x_0\)
+\(\omega = \frac{2\pi}{t_0} = 2\pi\nu\) :: krožna frekvenca :: \(t_0 = 0{,}5\ \text{s}\): \(\omega = 4\pi\ \text{s}^{-1}\)
+\(v_0 = \omega x_0,\ a_0 = \omega^2 x_0\) :: največja hitrost, pospešek :: \(v\) največja v ravnovesju
+## Dinamika
+\(t_0 = 2\pi\sqrt{\frac{m}{k}}\) :: nihalo na vzmeti :: 4-krat večja masa: dvakratni nihajni čas
+\(t_0 = 2\pi\sqrt{\frac{l}{g}}\) :: matematično nihalo :: \(l = 1\ \text{m}\): \(t_0 \approx 2\ \text{s}\)
+## Energija
+\(W = \frac{k x_0^2}{2} = \frac{m v_0^2}{2}\) :: celotna energija :: dvojna amplituda: 4-krat večja energija
+## Dušeno in vsiljeno
+dušeno :: amplituda pada :: blažilnik avtomobila
+resonanca :: vsiljena frekvenca = lastna, največja amplituda :: guganje otroka
+! Nihajni čas matematičnega nihala ni odvisen od mase.
+
+=== valovanje
+## Opis
+\(c = \lambda \nu\) :: hitrost valovanja :: \(\nu = 440\ \text{Hz}, c = 340\ \text{m/s}\): \(\lambda \approx 0{,}77\ \text{m}\)
+\(s = s_0 \sin\left(\omega t - \frac{2\pi x}{\lambda}\right)\) :: sinusno valovanje :: odmik v kraju \(x\) in času \(t\)
+transverzalno / longitudinalno :: odmik pravokoten / vzporeden s smerjo :: vrv / zvok
+\(c = \sqrt{\frac{F}{\mu}}\) :: na vrvi (\(\mu = \frac{m}{l}\)) :: 4-krat večja sila: dvakratna hitrost
+## Interferenca
+\(\Delta = k\lambda\) / \(\Delta = (k + \frac12)\lambda\) :: ojačitev / oslabitev :: razlika poti \(\frac{\lambda}{2}\): tišina
+\(l = k\frac{\lambda}{2}\) :: stoječe valovanje (struna) :: osnovna: \(\lambda = 2l\)
+\(l = (2k - 1)\frac{\lambda}{4}\) :: cev, odprta na enem koncu :: osnovna: \(\lambda = 4l\)
+\(\nu_u = |\nu_1 - \nu_2|\) :: utripanje :: 440 Hz in 444 Hz: 4 Hz
+## Lom in uklon
+\(\frac{\sin\alpha}{\sin\beta} = \frac{c_1}{c_2}\) :: lomni zakon :: frekvenca se ne spremeni
+## Doppler in zvok
+\(\nu' = \nu\frac{c}{c \mp v_i}\) :: izvor se približuje (−) / oddaljuje (+) :: rešilec: višji ton ob približevanju
+\(L = 10\log\frac{j}{j_0}\) dB :: jakost zvoka, \(j_0 = 10^{-12}\ \text{W/m}^2\) :: 10-krat večja \(j\): +10 dB
+! Pri prehodu v drugo snov se spremeni \(\lambda\), ne \(\nu\).
+
+=== svetloba_optika
+## Svetloba
+\(c = 3 \cdot 10^8\ \text{m/s}\) :: v vakuumu :: \(c = \lambda\nu\)
+\(n = \frac{c_0}{c}\) :: lomni količnik :: steklo \(n = 1{,}5\): \(c = 2 \cdot 10^8\ \text{m/s}\)
+## Odboj in lom
+\(\alpha = \alpha'\) :: odbojni zakon :: vpadni = odbojni kot
+\(n_1 \sin\alpha = n_2 \sin\beta\) :: lomni zakon :: iz zraka v vodo pod \(30^\circ\): \(\beta \approx 22^\circ\)
+\(\sin\alpha_m = \frac{n_2}{n_1}\) :: totalni odboj (iz gostejše) :: steklo–zrak: \(42^\circ\)
+## Interferenca
+\(d\sin\alpha = k\lambda\) :: uklonska mrežica, dve reži :: \(d = 2\ \text{µm}, \lambda = 500\ \text{nm}\): 1. red \(14{,}5^\circ\)
+tanka plast :: barve milnih mehurčkov :: ojačitev odvisna od debeline
+## Leče in zrcala
+\(\frac1f = \frac1a + \frac1b\) :: enačba leče :: \(f = 10\ \text{cm}, a = 30\ \text{cm}\): \(b = 15\ \text{cm}\)
+\(\frac{S}{P} = \frac{b}{a}\) :: povečava :: \(\frac{15}{30} = 0{,}5\)
+\(f = \frac{r}{2}\) :: zrcalo :: zbiralna \(f > 0\), razpršilna \(f < 0\)
+\(\omega = \frac{1}{f}\) :: lomnost (dioptrija) :: \(f = 0{,}5\ \text{m}\): 2 D
+! Pri lomu v gostejšo snov se žarek lomi k vpadni pravokotnici.
+
+=== atom
+## Foton
+\(W_f = h\nu = \frac{hc}{\lambda}\) :: energija fotona, \(h = 6{,}63 \cdot 10^{-34}\ \text{Js}\) :: \(\lambda = 500\ \text{nm}\): \(4 \cdot 10^{-19}\ \text{J} = 2{,}5\ \text{eV}\)
+\(1\ \text{eV} = 1{,}6 \cdot 10^{-19}\ \text{J}\) :: elektronvolt :: \(hc \approx 1240\ \text{eV\,nm}\)
+\(G = \frac{h}{\lambda}\) :: gibalna količina fotona :: tlak svetlobe
+## Fotoefekt
+\(h\nu = A_i + W_k\) :: izstopno delo + kinetična energija :: \(h\nu = 3\ \text{eV}, A_i = 2\ \text{eV}\): \(W_k = 1\ \text{eV}\)
+\(eU_z = W_{k,max}\) :: zaporna napetost :: \(W_k = 1\ \text{eV}\): \(U_z = 1\ \text{V}\)
+## Atom
+\(h\nu = W_n - W_m\) :: prehod med stanji :: vodik: \(W_n = -\frac{13{,}6\ \text{eV}}{n^2}\)
+črtasti spekter :: emisijski / absorpcijski :: vsak element ima svoje črte
+\(\lambda = \frac{h}{mv}\) :: de Brogliejeva valovna dolžina :: uklon elektronov
+! Večja frekvenca, večja energija fotona; jakost svetlobe pomeni več fotonov.
+
+=== atomsko_jedro
+## Jedro
+\(^A_Z X\) :: \(Z\) protonov, \(A - Z\) nevtronov :: \(^{14}_{6}\text{C}\): 6 p, 8 n
+izotopi :: enak \(Z\), različen \(A\) :: \(^{12}\text{C}\), \(^{14}\text{C}\)
+## Vezavna energija
+\(W_v = \Delta m\,c^2\) :: masni primanjkljaj :: \(1\ \text{u} \cdot c^2 = 931{,}5\ \text{MeV}\)
+\(\frac{W_v}{A}\) :: največja pri železu :: cepitev težkih, zlivanje lahkih sprošča energijo
+## Razpadi
+α: \(A - 4,\ Z - 2\) :: helijevo jedro :: \(^{238}\text{U} \to {}^{234}\text{Th} + \alpha\)
+β⁻: \(Z + 1\) :: n → p + e⁻ + antinevtrino :: \(^{14}\text{C} \to {}^{14}\text{N}\)
+γ :: foton, \(A\) in \(Z\) ostaneta :: po razpadu α ali β
+\(N = N_0 2^{-\frac{t}{t_{1/2}}}\) :: razpadni zakon :: po 3 razpolovnih časih: \(\frac18\)
+\(A = \lambda N,\ \lambda = \frac{\ln 2}{t_{1/2}}\) :: aktivnost (Bq) :: razpadna konstanta
+## Reakcije
+ohranita se \(A\) in \(Z\) :: jedrska reakcija :: \(^{235}\text{U} + n \to {}^{141}\text{Ba} + {}^{92}\text{Kr} + 3n\)
+! Pri β⁻ se \(Z\) poveča za 1, \(A\) ostane.
+
+=== astronomija
+## Osončje
+Sonce, 8 planetov :: notranji kamniti, zunanji plinasti :: Merkur, Venera, Zemlja, Mars
+\(\frac{a^3}{t_0^2} = \text{konst.}\) :: 3. Keplerjev zakon :: dlje od Sonca: daljše leto
+## Zvezde
+\(\lambda_{max} T = 2{,}9 \cdot 10^{-3}\ \text{m K}\) :: Wienov zakon :: Sonce \(\approx 500\ \text{nm}\): \(5800\ \text{K}\)
+\(P = \sigma S T^4\) :: izsevana moč (svetilnost) :: modre zvezde so vroče
+\(4\,{}^1\text{H} \to {}^4\text{He}\) :: zlivanje v jedru :: vir energije Sonca
+HR-diagram :: svetilnost proti temperaturi :: glavna veja, velikanke, bele pritlikavke
+razvoj :: protozvezda, glavna veja, velikanka, pritlikavka / nevtronska zvezda / črna luknja :: masa odloča
+## Vesolje
+\(v = H_0 d\) :: Hubblov zakon (širjenje) :: rdeči premik oddaljenih galaksij
+svetlobno leto :: pot svetlobe v enem letu :: \(\approx 9{,}5 \cdot 10^{15}\ \text{m}\)
+! Svetlobno leto je enota za razdaljo, ne za čas.

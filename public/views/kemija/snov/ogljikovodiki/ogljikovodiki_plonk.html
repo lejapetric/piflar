@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ogljikovodiki — plonk listek | Učilnica.com</title>
+  <meta name="description" content="Plonk listek za maturo: Ogljikovodiki na enem listu A4, vsaka formula ali pojem s kratkim primerom.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Kalam:wght@400;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
+  <link rel="stylesheet" href="/style/snov.css">
+  <link rel="stylesheet" href="/style/plonk.css">
+</head>
+<body>
+  <div id="header"></div>
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view">
+
+        <!-- Ustvari tools/plonk/plonk.mjs iz api/data/plonk/kemija.txt; ne urejaj ročno. -->
+        <article class="plonk">
+          <header class="pl-glava">
+            <div>
+              <span class="pl-oznaka">Plonk listek · Kemija 4.16</span>
+              <h1>Ogljikovodiki</h1>
+            </div>
+            <div class="pl-gumbi">
+              <a class="pl-gumb pl-gumb--tiho" href="ogljikovodiki_razlaga.html">Cela razlaga</a>
+              <button type="button" class="pl-gumb" onclick="window.print()">Natisni</button>
+            </div>
+          </header>
+
+          <div class="pl-vsebina">
+            <section class="pl-sklop">
+              <h2><span class="pl-st">1</span>Alkani</h2>
+              <div class="pl-r"><div class="pl-f">CₙH₂ₙ₊₂</div><div class="pl-o">nasičeni, enojne vezi</div><div class="pl-p">propan C₃H₈</div></div>
+              <div class="pl-r"><div class="pl-f">substitucija (radikalska)</div><div class="pl-o">s halogeni na svetlobi</div><div class="pl-p">CH₄ + Cl₂ → CH₃Cl + HCl</div></div>
+              <div class="pl-r"><div class="pl-f">vrelišče</div><div class="pl-o">narašča z dolžino verige, razvejanost ga zniža</div><div class="pl-p">pentan &gt; 2,2-dimetilpropan</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">2</span>Alkeni in alkini</h2>
+              <div class="pl-r"><div class="pl-f">CₙH₂ₙ / CₙH₂ₙ₋₂</div><div class="pl-o">dvojna / trojna vez</div><div class="pl-p">eten C₂H₄, etin C₂H₂</div></div>
+              <div class="pl-r"><div class="pl-f">adicija</div><div class="pl-o">H₂, X₂, HX, H₂O</div><div class="pl-p">razbarva bromovico (dokaz nenasičenosti)</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">3</span>Areni</h2>
+              <div class="pl-r"><div class="pl-f">benzen C₆H₆</div><div class="pl-o">delokalizirani elektroni</div><div class="pl-p">substitucija, ne adicija</div></div>
+              <div class="pl-r"><div class="pl-f">nitriranje, halogeniranje</div><div class="pl-o">elektrofilna substitucija</div><div class="pl-p">C₆H₆ + Br₂ → C₆H₅Br + HBr (FeBr₃)</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">4</span>Viri in gorenje</h2>
+              <div class="pl-r"><div class="pl-f">nafta, zemeljski plin</div><div class="pl-o">frakcijska destilacija, kreking</div><div class="pl-p">bencin</div></div>
+              <div class="pl-r"><div class="pl-f">popolno gorenje → CO₂ + H₂O</div><div class="pl-o">nepopolno → CO, saje</div><div class="pl-p">CH₄ + 2 O₂ → CO₂ + 2 H₂O</div></div>
+            </section>
+
+            <section class="pl-sklop pl-pasti">
+              <h2><span class="pl-st">!</span>Pazi</h2>
+              <ul>
+                <li>Benzen ne razbarva bromovice.</li>
+              </ul>
+            </section>
+          </div>
+          <footer class="pl-noga">piflar.si · plonk listek · Ogljikovodiki</footer>
+        </article>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>

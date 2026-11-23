@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ulomki, razmerja in odstotki — plonk listek | Učilnica.com</title>
+  <meta name="description" content="Plonk listek za maturo: Ulomki, razmerja in odstotki na enem listu A4, vsaka formula ali pojem s kratkim primerom.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Kalam:wght@400;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
+  <link rel="stylesheet" href="/style/snov.css">
+  <link rel="stylesheet" href="/style/plonk.css">
+</head>
+<body>
+  <div id="header"></div>
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view">
+
+        <!-- Ustvari tools/plonk/plonk.mjs iz api/data/plonk/poklicna_matematika.txt; ne urejaj ročno. -->
+        <article class="plonk">
+          <header class="pl-glava">
+            <div>
+              <span class="pl-oznaka">Plonk listek · Poklicna matura Snov</span>
+              <h1>Ulomki, razmerja in odstotki</h1>
+            </div>
+            <div class="pl-gumbi">
+              <a class="pl-gumb pl-gumb--tiho" href="ulomki_odstotki_razlaga.html">Cela razlaga</a>
+              <button type="button" class="pl-gumb" onclick="window.print()">Natisni</button>
+            </div>
+          </header>
+
+          <div class="pl-vsebina">
+            <section class="pl-sklop">
+              <h2><span class="pl-st">1</span>Ulomki</h2>
+              <div class="pl-r"><div class="pl-f">\(\frac{a}{b} \pm \frac{c}{d} = \frac{ad \pm bc}{bd}\)</div><div class="pl-o">seštevanje (najmanjši skupni imenovalec)</div><div class="pl-p">\(\frac12 + \frac13 = \frac56\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(\frac{a}{b} \cdot \frac{c}{d} = \frac{ac}{bd}\)</div><div class="pl-o">množenje</div><div class="pl-p">\(\frac23 \cdot \frac34 = \frac12\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(\frac{a}{b} : \frac{c}{d} = \frac{a}{b} \cdot \frac{d}{c}\)</div><div class="pl-o">deljenje: pomnoži z obratno vrednostjo</div><div class="pl-p">\(\frac12 : \frac14 = 2\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(0{,}\overline{ab} = \frac{ab}{99}\)</div><div class="pl-o">periodični decimalni zapis</div><div class="pl-p">\(0{,}\overline{6} = \frac23\)</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">2</span>Razmerja</h2>
+              <div class="pl-r"><div class="pl-f">\(a : b = c : d \iff ad = bc\)</div><div class="pl-o">sorazmerje</div><div class="pl-p">\(3 : x = 6 : 8\): \(x = 4\)</div></div>
+              <div class="pl-r"><div class="pl-f">razdelitev v razmerju \(a : b\)</div><div class="pl-o">deli celote \(\frac{a}{a+b}\), \(\frac{b}{a+b}\)</div><div class="pl-p">60 v \(2 : 3\): 24 in 36</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">3</span>Odstotki</h2>
+              <div class="pl-r"><div class="pl-f">\(d = \frac{p}{100} \cdot c\)</div><div class="pl-o">delež</div><div class="pl-p">15 % od 80 = 12</div></div>
+              <div class="pl-r"><div class="pl-f">\(p = \frac{d}{c} \cdot 100\)</div><div class="pl-o">odstotek</div><div class="pl-p">12 od 48 = 25 %</div></div>
+              <div class="pl-r"><div class="pl-f">\(c = \frac{d \cdot 100}{p}\)</div><div class="pl-o">osnova</div><div class="pl-p">20 % je 30, celota 150</div></div>
+              <div class="pl-r"><div class="pl-f">\(c \cdot \left(1 \pm \frac{p}{100}\right)\)</div><div class="pl-o">podražitev, pocenitev</div><div class="pl-p">80 € + 25 % = 100 €</div></div>
+            </section>
+
+            <section class="pl-sklop pl-pasti">
+              <h2><span class="pl-st">!</span>Pazi</h2>
+              <ul>
+                <li>Po podražitvi za 20 % in pocenitvi za 20 % cena ni enaka začetni.</li>
+              </ul>
+            </section>
+          </div>
+          <footer class="pl-noga">piflar.si · plonk listek · Ulomki, razmerja in odstotki</footer>
+        </article>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>
