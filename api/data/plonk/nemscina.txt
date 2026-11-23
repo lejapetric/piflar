@@ -1,0 +1,180 @@
+// Plonk listki za nemščino: struktura :: raba :: primer.
+
+=== izpit_nemscina
+## Shema izpita
+1A Leseverstehen :: 35 min, 20 %, do 24 točk :: richtig/falsch, izbirni tip
+1B Sprachbausteine :: 25 min, 15 %, do 30 točk :: končnice, predlogi, glagoli
+2 Hörverstehen :: do 20 min, 15 %, do 20 točk :: dve nalogi
+3A krajši sestavek :: 30 min, 10 %, 18 točk :: pismo, e-sporočilo
+3B daljši sestavek :: 60 min, 20 %, OR 19 / VR 21 točk :: VR: esej o književnem delu
+ustni izpit :: do 20 min, 20 %, 20 točk :: 3 naloge
+## Merila za pisna sestavka
+sporočilna ustreznost, vsebina, besedišče, jezik :: 3A :: vse iztočnice razvite in utemeljene
+## Ustni izpit
+slika, vodeni pogovor, besedilo :: 3 naloge :: razširjeni odgovori
+## Tematska področja
+Freizeit, Gesundheit, Umwelt, Medien, Schule und Beruf :: teme :: besedišče po temah
+! V 1B končnico moraš pravilno napisati v sobesedilu.
+
+=== skloni_cleni_de
+## Sklanjatev členov
+der / die / das / die (mn.) :: imenovalnik :: der Mann, die Frau, das Kind
+den / die / das / die :: tožilnik (spremeni se le moški) :: Ich sehe den Mann.
+dem / der / dem / den + -n :: dajalnik :: mit den Kindern
+des / der / des / der :: rodilnik (+ -s/-es pri m. in s.) :: das Auto des Vaters
+## Spol in množina
+-ung, -heit, -keit, -schaft :: ženski spol :: die Zeitung
+-chen, -lein :: srednji spol :: das Mädchen
+-e, -(e)n, -er, -s, umlaut :: množina :: das Buch, die Bücher
+## n-sklanjatev
+moški na -e, -ent, -ist :: -n v vseh sklonih razen imenovalnika ed. :: den Studenten, dem Kollegen
+## Raba člena
+brez člena :: poklici, snovi, množina nedoločno :: Er ist Lehrer.
+nedoločni ein / eine :: prvič omenjeno :: Ich habe einen Hund.
+! Dajalnik množine dobi -n: mit den Freunden.
+
+=== glagolski_casi_de
+## Sedanjik
+-e, -st, -t, -en, -t, -en :: končnice :: ich mache, du machst
+a → ä, e → i/ie :: močni glagoli :: fahren: du fährst; sehen: er sieht
+ločljive predpone :: na konec stavka :: Ich stehe um 7 Uhr auf.
+## Pretekli časi
+Perfekt: haben/sein + Partizip II :: govorjeni preteklik :: Ich habe gegessen. Ich bin gefahren.
+sein :: glagoli premikanja in spremembe stanja :: Er ist eingeschlafen.
+Präteritum :: pisni preteklik; war, hatte, modalni :: Ich war müde.
+Plusquamperfekt :: hatte/war + Partizip II :: Nachdem ich gegessen hatte, …
+## Prihodnjik, velelnik, modalni
+werden + nedoločnik :: Futur I :: Ich werde lernen.
+velelnik :: du: Komm! ihr: Kommt! Sie: Kommen Sie! :: Sei ruhig!
+können, müssen, dürfen, sollen, wollen, mögen :: modalni + nedoločnik na koncu :: Ich muss heute arbeiten.
+! nicht müssen = ni treba, nicht dürfen = ne smeš.
+
+=== besedni_red_de
+## Glavni stavek
+glagol na 2. mestu :: inverzija, če je na 1. mestu drug člen :: Heute gehe ich ins Kino.
+stavčni okvir :: pomožnik 2., deležnik/nedoločnik na koncu :: Ich habe das Buch gelesen.
+## Odvisniki
+dass, weil, wenn, ob, obwohl :: glagol na konec :: …, weil ich krank bin.
+odvisnik na začetku :: glavni stavek začne z glagolom :: Weil ich krank bin, bleibe ich zu Hause.
+## Srednje polje: TeKaMoLo
+Temporal, Kausal, Modal, Lokal :: vrstni red prislovnih določil :: Ich fahre morgen wegen der Arbeit mit dem Zug nach Wien.
+dajalnik pred tožilnikom (samostalnika) :: zaimek tožilnik pred dajalnikom :: Ich gebe dem Kind das Buch. Ich gebe es ihm.
+! Za »denn«, »und«, »aber« je navadni besedni red.
+
+=== predlogi_de
+## Stalni sklon
+aus, bei, mit, nach, seit, von, zu :: dajalnik :: mit dem Bus
+durch, für, gegen, ohne, um :: tožilnik :: für meinen Freund
+wegen, trotz, während, statt :: rodilnik :: wegen des Regens
+## Dvojni predlogi
+an, auf, hinter, in, neben, über, unter, vor, zwischen :: Wo? dajalnik / Wohin? tožilnik :: Ich bin in der Schule. / Ich gehe in die Schule.
+## Glagoli s predlogi
+warten auf + T, sich freuen auf/über + T :: glagoli s predlogom :: Ich warte auf dich.
+denken an + T, Angst haben vor + D :: :: Ich denke an dich.
+darauf, daran, worauf :: zaimenski prislovi (za stvari) :: Worauf wartest du? Ich warte darauf.
+! Wo? = dajalnik (mirovanje), Wohin? = tožilnik (smer).
+
+=== pridevniska_sklanjatev_de
+## Pridevniška sklanjatev
+za določnim členom :: -e (im. ed., tož. ž./s.), sicer -en :: der alte Mann, den alten Mann
+za nedoločnim :: ein alter Mann, ein altes Haus :: kaže spol
+brez člena :: končnice določnega člena :: kalter Kaffee, mit kaltem Wasser
+## Stopnjevanje
+-er / am -sten :: primernik, presežnik :: schnell, schneller, am schnellsten
+gut, besser, am besten; viel, mehr, am meisten :: nepravilni :: gern, lieber, am liebsten
+als / wie :: primerjava :: größer als / so groß wie
+## Zaimki
+ich, mich, mir :: osebni (im., tož., daj.) :: Er hilft mir.
+mein, dein, sein, ihr, unser :: svojilni :: meine Mutter
+## Števniki in prislovi
+vrstilni: der zweite, der dritte :: -te / -ste :: am 3. Mai
+! Pridevnik za določnim členom v množini vedno -en.
+
+=== odvisniki_de
+## Priredje
+und, aber, oder, denn, sondern :: navadni besedni red :: Ich bleibe, denn ich bin krank.
+deshalb, trotzdem, dann :: prislovi: inverzija :: Es regnet, deshalb bleibe ich.
+## Vrste odvisnikov
+weil, da :: vzrok :: weil ich müde bin
+obwohl :: dopustnost :: obwohl es regnet
+wenn / als :: pogoj, ponavljanje / enkratno v preteklosti :: Als ich klein war, …
+damit, um … zu :: namen :: Ich lerne, um die Prüfung zu bestehen.
+## Oziralni odvisniki
+der, die, das (sklanja se) :: spol po samostalniku, sklon po odvisniku :: Der Mann, dem ich helfe, …
+## Posredna vprašanja
+ob :: da/ne vprašanje :: Ich weiß nicht, ob er kommt.
+vprašalnica + glagol na konec :: :: Weißt du, wo er wohnt?
+! »Als« za enkratni dogodek v preteklosti, »wenn« za ponavljanje.
+
+=== konjunktiv_de
+## Oblike
+würde + nedoločnik :: večina glagolov :: Ich würde kommen.
+wäre, hätte, könnte, müsste :: lastne oblike :: Ich hätte Zeit.
+hätte/wäre + Partizip II :: preteklost :: Ich wäre gekommen.
+## Neresnični pogoji
+Wenn ich … wäre, würde ich … :: sedanjost :: Wenn ich reich wäre, würde ich reisen.
+Wenn ich … hätte, hätte ich … :: preteklost :: Wenn ich Zeit gehabt hätte, wäre ich gekommen.
+## Želje, nasveti, vljudnost
+Wenn ich doch … :: želja :: Wenn ich doch mehr Zeit hätte!
+Du solltest … :: nasvet :: Du solltest mehr schlafen.
+Könnten Sie …? :: vljudnost :: Könnten Sie mir helfen?
+als ob + Konjunktiv II :: kot da :: Er tut so, als ob er krank wäre.
+! Po »als ob« je glagol na koncu.
+
+=== trpnik_de
+## Trpnik dogajanja
+werden + Partizip II :: Vorgangspassiv :: Das Haus wird gebaut.
+wurde / ist … worden :: preteklik, perfekt :: Das Haus ist gebaut worden.
+von + D :: vršilec :: Das Buch wurde von Goethe geschrieben.
+## Trpnik stanja in nadomestne oblike
+sein + Partizip II :: stanje :: Die Tür ist geschlossen.
+man :: nadomestna oblika :: Man spricht Deutsch.
+sich lassen + nedoločnik :: možnost :: Das lässt sich machen.
+## Deležniki kot prilastki
+Partizip I (-end) :: dejanje poteka :: das schlafende Kind
+Partizip II :: končano, trpno :: das gekochte Ei
+! V perfektu trpnika je »worden«, ne »geworden«.
+
+=== besedotvorje_de
+## Zloženke
+zadnji del določa spol :: die Haustür (das Haus + die Tür) :: der Schreibtisch
+## Izpeljanke
+-ung, -heit, -keit :: samostalniki :: frei → die Freiheit
+-lich, -ig, -bar, -los :: pridevniki :: Freund → freundlich
+un-, miss- :: nasprotje :: unmöglich, Missverständnis
+## Sprememba besedne vrste
+glagol → samostalnik :: das + nedoločnik :: lesen → das Lesen
+Funktionsverbgefüge :: zveza samostalnik + glagol :: eine Entscheidung treffen
+## Besedišče po temah
+Umwelt :: Klimawandel, Müll trennen :: erneuerbare Energie
+Schule und Beruf :: Ausbildung, sich bewerben :: sich um eine Stelle bewerben
+! Spol zloženke določa zadnja beseda.
+
+=== razumevanje_de
+## Tipi nalog
+richtig/falsch, izbirni tip, povezovanje, dopolnjevanje :: 1A in 2 :: kratki odgovori
+## Branje
+najprej vprašanja, nato besedilo :: ključne besede :: sopomenke v besedilu
+## Poslušanje
+dvakrat poslušaš :: prvič odgovori, drugič preveri :: števila, imena
+! Odgovor je pogosto parafraziran.
+
+=== pisno_sporocanje_de
+## Pismo, e-sporočilo, bralsko pismo
+formalno: Sehr geehrte Damen und Herren, Mit freundlichen Grüßen :: Sie :: Ich schreibe Ihnen, weil …
+neformalno: Liebe Anna, Viele Grüße :: du :: Danke für deine Mail!
+Leserbrief :: mnenje o članku :: Ich habe Ihren Artikel … gelesen.
+## Daljši sestavek (OR)
+uvod, argumenti, zaključek :: povezovalci :: einerseits … andererseits
+## Esej iz književnosti (VR)
+teza, argumenti z dogodki in citati :: Im Roman wird gezeigt, dass …
+! Vse iztočnice morajo biti razvite.
+
+=== ustni_izpit_de
+## Slikovna iztočnica
+opis, domneve, mnenje :: Auf dem Bild sieht man … :: Im Hintergrund …
+## Vodeni pogovor
+razširjeni odgovori :: Meiner Meinung nach … :: Ich finde, dass …
+## Besedilo
+OR: krajše besedilo, VR: umetnostno besedilo :: povzetek, interpretacija :: Der Text handelt von …
+! Odgovarjaj v celih povedih.

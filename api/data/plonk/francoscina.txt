@@ -1,0 +1,18 @@
+// Plonk listki za francoščino.
+
+=== passe_compose_fr
+## Tvorba z avoir
+avoir + participe passé :: večina glagolov :: j'ai mangé, tu as fini
+-er → -é, -ir → -i, -re → -u :: pravilni deležniki :: parler → parlé, finir → fini, vendre → vendu
+être → été, avoir → eu, faire → fait :: nepravilni :: prendre → pris, voir → vu, mettre → mis
+ne … pas okoli pomožnika :: zanikanje :: Je n'ai pas mangé.
+## Tvorba z être in ujemanje
+aller, venir, partir, arriver, naître, mourir … :: glagoli premikanja (DR MRS VANDERTRAMP) :: Elle est partie.
+povratni glagoli :: vedno z être :: Je me suis levé(e).
+ujemanje z osebkom :: -e, -s, -es :: Ils sont arrivés. Elles sont venues.
+z avoir: ujemanje s predmetom pred glagolom :: :: Les pommes que j'ai mangées.
+## Passé composé ali imparfait
+passé composé :: zaključeno dejanje, zaporedje dogodkov :: Hier, j'ai vu Marie.
+imparfait :: opis, navada, ozadje :: Quand j'étais petit, je jouais au foot.
+skupaj :: imparfait = ozadje, PC = dogodek :: Je lisais quand il est arrivé.
+! Z être se deležnik ujema z osebkom.
