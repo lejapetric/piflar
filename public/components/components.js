@@ -64,6 +64,33 @@ function loadMathJax() {
 }
 
 // ============================================================
+// SLIKE VIDEOV (poster) — naložijo se šele, ko je video blizu zaslona
+// ============================================================
+// Vsak sklop ima video za svetli in temni način (data-poster namesto poster), zato bi stran
+// sicer takoj naložila vse slike obeh. Skriti video (druga tema) se ne prikaže na zaslonu,
+// zato se njegova slika naloži šele, ko dijak preklopi temo.
+function initPosterji() {
+  const videi = document.querySelectorAll("video[data-poster]");
+  if (!videi.length) return;
+  const nastavi = (v) => {
+    v.poster = v.dataset.poster;
+    v.removeAttribute("data-poster");
+  };
+  if (!("IntersectionObserver" in window)) return videi.forEach(nastavi);
+  const opazovalec = new IntersectionObserver(
+    (vnosi) => {
+      for (const vnos of vnosi) {
+        if (!vnos.isIntersecting) continue;
+        nastavi(vnos.target);
+        opazovalec.unobserve(vnos.target);
+      }
+    },
+    { rootMargin: "800px 0px" }
+  );
+  videi.forEach((v) => opazovalec.observe(v));
+}
+
+// ============================================================
 // 2. KOMPONENTE (header, sidebar, footer)
 // ============================================================
 // tema.js v <head> zahteve začne že med branjem strani (window.piflarKomponente)
@@ -891,33 +918,6 @@ async function initNalogePovezava() {
   puscica.textContent = "→";
   a.append(besedilo, puscica);
   glava.after(a);
-}
-
-// ============================================================
-// SLIKE VIDEOV (poster) — naložijo se šele, ko je video blizu zaslona
-// ============================================================
-// Vsak sklop ima video za svetli in temni način (data-poster namesto poster), zato bi stran
-// sicer takoj naložila vse slike obeh. Skriti video (druga tema) se ne prikaže na zaslonu,
-// zato se njegova slika naloži šele, ko dijak preklopi temo.
-function initPosterji() {
-  const videi = document.querySelectorAll("video[data-poster]");
-  if (!videi.length) return;
-  const nastavi = (v) => {
-    v.poster = v.dataset.poster;
-    v.removeAttribute("data-poster");
-  };
-  if (!("IntersectionObserver" in window)) return videi.forEach(nastavi);
-  const opazovalec = new IntersectionObserver(
-    (vnosi) => {
-      for (const vnos of vnosi) {
-        if (!vnos.isIntersecting) continue;
-        nastavi(vnos.target);
-        opazovalec.unobserve(vnos.target);
-      }
-    },
-    { rootMargin: "800px 0px" }
-  );
-  videi.forEach((v) => opazovalec.observe(v));
 }
 
 // ============================================================
