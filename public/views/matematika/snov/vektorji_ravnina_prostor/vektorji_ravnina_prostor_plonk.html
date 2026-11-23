@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vektorji v ravnini in prostoru — plonk listek | Učilnica.com</title>
+  <meta name="description" content="Plonk listek za maturo: Vektorji v ravnini in prostoru na enem listu A4, vsaka formula ali pojem s kratkim primerom.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Kalam:wght@400;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
+  <link rel="stylesheet" href="/style/snov.css">
+  <link rel="stylesheet" href="/style/plonk.css">
+</head>
+<body>
+  <div id="header"></div>
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view">
+
+        <!-- Ustvari tools/plonk/plonk.mjs iz api/data/plonk/matematika.txt; ne urejaj ročno. -->
+        <article class="plonk">
+          <header class="pl-glava">
+            <div>
+              <span class="pl-oznaka">Plonk listek · Matematika 4.8</span>
+              <h1>Vektorji v ravnini in prostoru</h1>
+            </div>
+            <div class="pl-gumbi">
+              <a class="pl-gumb pl-gumb--tiho" href="vektorji_ravnina_prostor_razlaga.html">Cela razlaga</a>
+              <button type="button" class="pl-gumb" onclick="window.print()">Natisni</button>
+            </div>
+          </header>
+
+          <div class="pl-vsebina">
+            <section class="pl-sklop">
+              <h2><span class="pl-st">1</span>Osnove</h2>
+              <div class="pl-r"><div class="pl-f">\(\vec{AB} = \vec{r}_B - \vec{r}_A\)</div><div class="pl-o">vektor med točkama</div><div class="pl-p">\(A(1, 2), B(4, 6)\): \(\vec{AB} = (3, 4)\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(|\vec a| = \sqrt{a_1^2 + a_2^2 + a_3^2}\)</div><div class="pl-o">dolžina</div><div class="pl-p">\(|(3, 4)| = 5\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(\vec a \pm \vec b,\ k\vec a\)</div><div class="pl-o">po komponentah</div><div class="pl-p">\(2(1, -1) + (0, 3) = (2, 1)\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(\vec e = \frac{\vec a}{|\vec a|}\)</div><div class="pl-o">enotski vektor</div><div class="pl-p">\((3, 4)\): \(\left(\frac35, \frac45\right)\)</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">2</span>Kolinearnost in baza</h2>
+              <div class="pl-r"><div class="pl-f">\(\vec b = k\vec a\)</div><div class="pl-o">kolinearna vektorja</div><div class="pl-p">\((2, 6) = 2(1, 3)\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(\alpha\vec a + \beta\vec b = \vec 0 \Rightarrow \alpha = \beta = 0\)</div><div class="pl-o">linearno neodvisna</div><div class="pl-p">dva nekolinearna vektorja sta baza ravnine</div></div>
+              <div class="pl-r"><div class="pl-f">\(\vec r_T = \frac{\vec r_A + \vec r_B + \vec r_C}{3}\)</div><div class="pl-o">težišče trikotnika</div><div class="pl-p">\(A(0,0), B(6,0), C(0,3)\): \(T(2, 1)\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(\vec r_S = \frac{\vec r_A + \vec r_B}{2}\)</div><div class="pl-o">razpolovišče</div><div class="pl-p">\(A(1, 1), B(3, 5)\): \(S(2, 3)\)</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">3</span>Skalarni produkt</h2>
+              <div class="pl-r"><div class="pl-f">\(\vec a \cdot \vec b = |\vec a||\vec b|\cos\varphi\)</div><div class="pl-o">definicija</div><div class="pl-p">\(|\vec a| = 2, |\vec b| = 3, \varphi = 60^\circ\): \(3\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(\vec a \cdot \vec b = a_1 b_1 + a_2 b_2 + a_3 b_3\)</div><div class="pl-o">s komponentami</div><div class="pl-p">\((1, 2, 3) \cdot (2, 0, -1) = -1\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(\vec a \perp \vec b \iff \vec a \cdot \vec b = 0\)</div><div class="pl-o">pravokotnost</div><div class="pl-p">\((2, 1) \cdot (-1, 2) = 0\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(\cos\varphi = \frac{\vec a \cdot \vec b}{|\vec a||\vec b|}\)</div><div class="pl-o">kot med vektorjema</div><div class="pl-p">\((1, 0), (1, 1)\): \(\varphi = 45^\circ\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(\vec b_{\vec a} = \frac{\vec a \cdot \vec b}{|\vec a|^2}\vec a\)</div><div class="pl-o">pravokotna projekcija \(\vec b\) na \(\vec a\)</div><div class="pl-p">\((3, 4)\) na \((1, 0)\): \((3, 0)\)</div></div>
+            </section>
+
+            <section class="pl-sklop pl-pasti">
+              <h2><span class="pl-st">!</span>Pazi</h2>
+              <ul>
+                <li>Skalarni produkt je število, ne vektor.</li>
+                <li>\(\vec{AB} = B - A\), ne \(A - B\).</li>
+              </ul>
+            </section>
+          </div>
+          <footer class="pl-noga">piflar.si · plonk listek · Vektorji v ravnini in prostoru</footer>
+        </article>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>

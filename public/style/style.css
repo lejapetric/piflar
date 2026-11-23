@@ -1671,7 +1671,8 @@ input:focus-visible {
 
 /* Povezavi z razlage snovi na maturitetne naloge in na naloge za vajo (components.js) */
 .matura-povezava,
-.naloge-povezava {
+.naloge-povezava,
+.plonk-povezava {
     margin: 0 0 var(--space-6);
     border-left: 4px solid var(--primary);
 }

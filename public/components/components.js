@@ -898,6 +898,39 @@ async function initNalogePovezava() {
 }
 
 // ============================================================
+// POVEZAVA NA PLONK LISTEK
+// ============================================================
+// Na strani z razlago doda povezavo na <slug>_plonk.html (vsa snov na enem listu A4),
+// če plonk listek obstaja (ustvari ga tools/plonk.mjs).
+async function initPlonkPovezava() {
+  const m = location.pathname.match(/^(\/views\/[^/]+\/snov\/[^/]+\/[^/]+)_razlaga\.html$/);
+  const glava = document.querySelector(".view .page-header");
+  if (!m || !glava) return;
+  const href = `${m[1]}_plonk.html`;
+  try {
+    const odg = await fetch(href, { method: "HEAD" });
+    if (!odg.ok) return;
+  } catch {
+    return;
+  }
+  const a = document.createElement("a");
+  a.className = "link-item plonk-povezava";
+  a.href = href;
+  const besedilo = document.createElement("span");
+  besedilo.className = "link-item-text";
+  const krepko = document.createElement("strong");
+  krepko.textContent = "Plonk listek";
+  const opis = document.createElement("small");
+  opis.textContent = "Vsa snov na enem listu A4, s primeri; za tisk ali telefon";
+  besedilo.append(krepko, opis);
+  const puscica = document.createElement("span");
+  puscica.className = "arrow";
+  puscica.textContent = "→";
+  a.append(besedilo, puscica);
+  glava.after(a);
+}
+
+// ============================================================
 // ČASOVNI TRAKOVI (components/casovni-trak.js), samo na straneh z .ct
 // ============================================================
 function initCasovniTrak() {
@@ -996,6 +1029,7 @@ async function init() {
   initKazaloStrani(kazalo);
   initMaturaPovezava();
   initNalogePovezava();
+  initPlonkPovezava();
   initBranje();
   initCasovniTrak();
   oznaciIskanje();

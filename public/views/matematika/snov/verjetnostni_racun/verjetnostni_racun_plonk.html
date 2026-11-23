@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verjetnostni račun — plonk listek | Učilnica.com</title>
+  <meta name="description" content="Plonk listek za maturo: Verjetnostni račun na enem listu A4, vsaka formula ali pojem s kratkim primerom.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Kalam:wght@400;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
+  <link rel="stylesheet" href="/style/snov.css">
+  <link rel="stylesheet" href="/style/plonk.css">
+</head>
+<body>
+  <div id="header"></div>
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view">
+
+        <!-- Ustvari tools/plonk/plonk.mjs iz api/data/plonk/matematika.txt; ne urejaj ročno. -->
+        <article class="plonk">
+          <header class="pl-glava">
+            <div>
+              <span class="pl-oznaka">Plonk listek · Matematika 4.16</span>
+              <h1>Verjetnostni račun</h1>
+            </div>
+            <div class="pl-gumbi">
+              <a class="pl-gumb pl-gumb--tiho" href="verjetnostni_racun_razlaga.html">Cela razlaga</a>
+              <button type="button" class="pl-gumb" onclick="window.print()">Natisni</button>
+            </div>
+          </header>
+
+          <div class="pl-vsebina">
+            <section class="pl-sklop">
+              <h2><span class="pl-st">1</span>Dogodki</h2>
+              <div class="pl-r"><div class="pl-f">\(A \cup B\), \(A \cap B\), \(\bar{A}\)</div><div class="pl-o">vsota, produkt, nasprotni</div><div class="pl-p">kocka: \(A\) sodo, \(\bar A\) liho</div></div>
+              <div class="pl-r"><div class="pl-f">\(A \cap B = \emptyset\)</div><div class="pl-o">nezdružljiva dogodka</div><div class="pl-p">»pade 1« in »pade 6«</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">2</span>Verjetnost</h2>
+              <div class="pl-r"><div class="pl-f">\(P(A) = \frac{m}{n}\)</div><div class="pl-o">ugodni / vsi enako verjetni</div><div class="pl-p">kocka, praštevilo: \(\frac36 = \frac12\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(P(\bar{A}) = 1 - P(A)\)</div><div class="pl-o">nasprotni dogodek</div><div class="pl-p">vsaj ena šestica v 2 metih: \(1 - \frac{25}{36} = \frac{11}{36}\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(P(A \cup B) = P(A) + P(B) - P(A \cap B)\)</div><div class="pl-o">vsota dogodkov</div><div class="pl-p">karta: srce ali as: \(\frac{13 + 4 - 1}{52}\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(P(A \cap B) = P(A)P(B)\)</div><div class="pl-o">neodvisna dogodka</div><div class="pl-p">dve glavi: \(\frac14\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(P(A \mid B) = \frac{P(A \cap B)}{P(B)}\)</div><div class="pl-o">pogojna</div><div class="pl-p">sodo, če je \(&gt; 3\): \(\frac23\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(\binom{n}{k} p^k (1 - p)^{n-k}\)</div><div class="pl-o">\(k\) uspehov v \(n\) poskusih</div><div class="pl-p">2 šestici v 3 metih: \(3 \cdot \frac{1}{36} \cdot \frac56\)</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">3</span>Normalna porazdelitev</h2>
+              <div class="pl-r"><div class="pl-f">\(z = \frac{x - \mu}{\sigma}\)</div><div class="pl-o">standardizacija</div><div class="pl-p">\(\mu = 170, \sigma = 10\), \(x = 185\): \(z = 1{,}5\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(P(x &lt; a) = \frac12 + \Phi(z)\)</div><div class="pl-o">tabela \(\Phi\) (na listu)</div><div class="pl-p">\(\Phi(1) \approx 0{,}3413\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(\mu \pm \sigma\): 68 %, \(\mu \pm 2\sigma\): 95 %</div><div class="pl-o">pravilo</div><div class="pl-p">\(\mu \pm 3\sigma\): 99,7 %</div></div>
+            </section>
+
+            <section class="pl-sklop pl-pasti">
+              <h2><span class="pl-st">!</span>Pazi</h2>
+              <ul>
+                <li>»Vsaj eden« računaj prek nasprotnega dogodka.</li>
+                <li>Pri vlečenju brez vračanja se verjetnosti spreminjajo.</li>
+              </ul>
+            </section>
+          </div>
+          <footer class="pl-noga">piflar.si · plonk listek · Verjetnostni račun</footer>
+        </article>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>

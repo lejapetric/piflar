@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Integralski račun — plonk listek | Učilnica.com</title>
+  <meta name="description" content="Plonk listek za maturo: Integralski račun na enem listu A4, vsaka formula ali pojem s kratkim primerom.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Kalam:wght@400;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
+  <link rel="stylesheet" href="/style/snov.css">
+  <link rel="stylesheet" href="/style/plonk.css">
+</head>
+<body>
+  <div id="header"></div>
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view">
+
+        <!-- Ustvari tools/plonk/plonk.mjs iz api/data/plonk/matematika.txt; ne urejaj ročno. -->
+        <article class="plonk">
+          <header class="pl-glava">
+            <div>
+              <span class="pl-oznaka">Plonk listek · Matematika 4.14</span>
+              <h1>Integralski račun</h1>
+            </div>
+            <div class="pl-gumbi">
+              <a class="pl-gumb pl-gumb--tiho" href="integralski_racun_razlaga.html">Cela razlaga</a>
+              <button type="button" class="pl-gumb" onclick="window.print()">Natisni</button>
+            </div>
+          </header>
+
+          <div class="pl-vsebina">
+            <section class="pl-sklop">
+              <h2><span class="pl-st">1</span>Nedoločeni integral</h2>
+              <div class="pl-r"><div class="pl-f">\(\int f(x)\,dx = F(x) + C,\ F' = f\)</div><div class="pl-o">primitivna funkcija</div><div class="pl-p">\(\int 2x\,dx = x^2 + C\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(\int x^n\,dx = \frac{x^{n+1}}{n+1} + C\)</div><div class="pl-o">\(n \ne -1\)</div><div class="pl-p">\(\int x^3\,dx = \frac{x^4}{4} + C\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(\int \frac{dx}{x} = \ln|x| + C\)</div><div class="pl-o">\(n = -1\)</div><div class="pl-p">\(\int \frac{3}{x}\,dx = 3\ln|x| + C\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(\int e^x\,dx = e^x + C\)</div><div class="pl-o">eksponentna</div><div class="pl-p">\(\int e^{2x}\,dx = \frac{e^{2x}}{2} + C\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(\int \sin x\,dx = -\cos x + C\)</div><div class="pl-o">\(\int \cos x\,dx = \sin x + C\)</div><div class="pl-p">\(\int \cos 3x\,dx = \frac{\sin 3x}{3} + C\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(\int (af + bg) = a\int f + b\int g\)</div><div class="pl-o">linearnost</div><div class="pl-p">\(\int (3x^2 + 1)\,dx = x^3 + x + C\)</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">2</span>Določeni integral</h2>
+              <div class="pl-r"><div class="pl-f">\(\int_a^b f(x)\,dx = F(b) - F(a)\)</div><div class="pl-o">Newton–Leibniz</div><div class="pl-p">\(\int_0^2 x\,dx = 2\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(\int_a^b = -\int_b^a,\ \int_a^c = \int_a^b + \int_b^c\)</div><div class="pl-o">lastnosti</div><div class="pl-p">\(\int_1^1 f = 0\)</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">3</span>Uporaba</h2>
+              <div class="pl-r"><div class="pl-f">\(S = \int_a^b |f(x)|\,dx\)</div><div class="pl-o">ploščina pod krivuljo</div><div class="pl-p">\(\int_0^\pi \sin x\,dx = 2\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(S = \int_a^b (f(x) - g(x))\,dx\)</div><div class="pl-o">med krivuljama, \(f \ge g\)</div><div class="pl-p">\(x\) in \(x^2\) na \([0, 1]\): \(\frac16\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(V = \pi \int_a^b f^2(x)\,dx\)</div><div class="pl-o">vrtenina okoli osi \(x\)</div><div class="pl-p">\(f = \sqrt{x}\) na \([0, 2]\): \(V = 2\pi\)</div></div>
+            </section>
+
+            <section class="pl-sklop pl-pasti">
+              <h2><span class="pl-st">!</span>Pazi</h2>
+              <ul>
+                <li>Ploščino pod osjo \(x\) štej pozitivno (razdeli pri ničlah).</li>
+                <li>Pri nedoločenem integralu dopiši \(+ C\).</li>
+              </ul>
+            </section>
+          </div>
+          <footer class="pl-noga">piflar.si · plonk listek · Integralski račun</footer>
+        </article>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>

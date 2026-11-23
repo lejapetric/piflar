@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kombinatorika — plonk listek | Učilnica.com</title>
+  <meta name="description" content="Plonk listek za maturo: Kombinatorika na enem listu A4, vsaka formula ali pojem s kratkim primerom.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Kalam:wght@400;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
+  <link rel="stylesheet" href="/style/snov.css">
+  <link rel="stylesheet" href="/style/plonk.css">
+</head>
+<body>
+  <div id="header"></div>
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view">
+
+        <!-- Ustvari tools/plonk/plonk.mjs iz api/data/plonk/matematika.txt; ne urejaj ročno. -->
+        <article class="plonk">
+          <header class="pl-glava">
+            <div>
+              <span class="pl-oznaka">Plonk listek · Matematika 4.15</span>
+              <h1>Kombinatorika</h1>
+            </div>
+            <div class="pl-gumbi">
+              <a class="pl-gumb pl-gumb--tiho" href="kombinatorika_razlaga.html">Cela razlaga</a>
+              <button type="button" class="pl-gumb" onclick="window.print()">Natisni</button>
+            </div>
+          </header>
+
+          <div class="pl-vsebina">
+            <section class="pl-sklop">
+              <h2><span class="pl-st">1</span>Osnovna pravila</h2>
+              <div class="pl-r"><div class="pl-f">\(n_1 \cdot n_2 \cdots n_k\)</div><div class="pl-o">pravilo produkta (zaporedne izbire)</div><div class="pl-p">3 majice, 4 hlače: 12 kombinacij</div></div>
+              <div class="pl-r"><div class="pl-f">\(n_1 + n_2\)</div><div class="pl-o">pravilo vsote (ali, ali)</div><div class="pl-p">5 knjig ali 3 filmi: 8 možnosti</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">2</span>Razporeditve</h2>
+              <div class="pl-r"><div class="pl-f">\(P_n = n!\)</div><div class="pl-o">permutacije: vrstni red vseh</div><div class="pl-p">4 osebe v vrsto: \(24\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(P_n^{k_1, k_2, \ldots} = \frac{n!}{k_1!\,k_2!\cdots}\)</div><div class="pl-o">s ponavljanjem</div><div class="pl-p">besedi ANA: \(\frac{3!}{2!} = 3\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(V_n^r = \frac{n!}{(n - r)!}\)</div><div class="pl-o">variacije: izbor \(r\) z vrstnim redom</div><div class="pl-p">1., 2., 3. mesto med 10: \(720\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(\bar{V}_n^r = n^r\)</div><div class="pl-o">variacije s ponavljanjem</div><div class="pl-p">PIN s 4 števkami: \(10^4\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(C_n^r = \binom{n}{r} = \frac{n!}{r!\,(n - r)!}\)</div><div class="pl-o">kombinacije: brez vrstnega reda</div><div class="pl-p">3 izmed 10: \(120\)</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">3</span>Binomski izrek</h2>
+              <div class="pl-r"><div class="pl-f">\((a + b)^n = \sum_{k=0}^{n} \binom{n}{k} a^{n-k} b^k\)</div><div class="pl-o">binomski izrek</div><div class="pl-p">\((x + 1)^3 = x^3 + 3x^2 + 3x + 1\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(\binom{n}{k} = \binom{n}{n-k}\)</div><div class="pl-o">simetrija; \(\binom{n}{k} + \binom{n}{k+1} = \binom{n+1}{k+1}\)</div><div class="pl-p">Pascalov trikotnik: \(1, 4, 6, 4, 1\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(\binom{n}{k} a^{n-k} b^k\)</div><div class="pl-o">\((k + 1)\)-ti člen</div><div class="pl-p">3. člen \((x + 2)^5\): \(\binom52 x^3 \cdot 4 = 40x^3\)</div></div>
+            </section>
+
+            <section class="pl-sklop pl-pasti">
+              <h2><span class="pl-st">!</span>Pazi</h2>
+              <ul>
+                <li>Ali je vrstni red pomemben? Da: variacije; ne: kombinacije.</li>
+                <li>\(0! = 1\).</li>
+              </ul>
+            </section>
+          </div>
+          <footer class="pl-noga">piflar.si · plonk listek · Kombinatorika</footer>
+        </article>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>
