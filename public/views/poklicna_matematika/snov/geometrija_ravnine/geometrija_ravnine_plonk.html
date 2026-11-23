@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Osnove geometrije v ravnini — plonk listek | Učilnica.com</title>
+  <meta name="description" content="Plonk listek za maturo: Osnove geometrije v ravnini na enem listu A4, vsaka formula ali pojem s kratkim primerom.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Kalam:wght@400;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
+  <link rel="stylesheet" href="/style/snov.css">
+  <link rel="stylesheet" href="/style/plonk.css">
+</head>
+<body>
+  <div id="header"></div>
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view">
+
+        <!-- Ustvari tools/plonk/plonk.mjs iz api/data/plonk/poklicna_matematika.txt; ne urejaj ročno. -->
+        <article class="plonk">
+          <header class="pl-glava">
+            <div>
+              <span class="pl-oznaka">Plonk listek · Poklicna matura Snov</span>
+              <h1>Osnove geometrije v ravnini</h1>
+            </div>
+            <div class="pl-gumbi">
+              <a class="pl-gumb pl-gumb--tiho" href="geometrija_ravnine_razlaga.html">Cela razlaga</a>
+              <button type="button" class="pl-gumb" onclick="window.print()">Natisni</button>
+            </div>
+          </header>
+
+          <div class="pl-vsebina">
+            <section class="pl-sklop">
+              <h2><span class="pl-st">1</span>Koti</h2>
+              <div class="pl-r"><div class="pl-f">sokota: \(\alpha + \beta = 180^\circ\)</div><div class="pl-o">sovršna sta enaka</div><div class="pl-p">\(\alpha = 70^\circ\): sokot \(110^\circ\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(\alpha + \beta + \gamma = 180^\circ\)</div><div class="pl-o">vsota kotov v trikotniku</div><div class="pl-p">\(50^\circ, 60^\circ\): \(\gamma = 70^\circ\)</div></div>
+              <div class="pl-r"><div class="pl-f">\((n - 2) \cdot 180^\circ\)</div><div class="pl-o">vsota notranjih kotov \(n\)-kotnika</div><div class="pl-p">šestkotnik: \(720^\circ\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(\frac{n(n - 3)}{2}\)</div><div class="pl-o">število diagonal</div><div class="pl-p">šestkotnik: 9 diagonal</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">2</span>Znamenite točke trikotnika</h2>
+              <div class="pl-r"><div class="pl-f">simetrale stranic</div><div class="pl-o">središče očrtane krožnice</div><div class="pl-p">pri pravokotnem v razpolovišču hipotenuze</div></div>
+              <div class="pl-r"><div class="pl-f">simetrale kotov</div><div class="pl-o">središče včrtane krožnice</div><div class="pl-p">vedno v notranjosti</div></div>
+              <div class="pl-r"><div class="pl-f">težiščnice</div><div class="pl-o">težišče, deli jih v razmerju \(2 : 1\)</div><div class="pl-p">od oglišča do \(T\) sta \(\frac23\) težiščnice</div></div>
+              <div class="pl-r"><div class="pl-f">višine</div><div class="pl-o">višinska točka</div><div class="pl-p">pri topokotnem zunaj trikotnika</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">3</span>Krožnica</h2>
+              <div class="pl-r"><div class="pl-f">obodni kot = \(\frac12\) središčnega</div><div class="pl-o">nad istim lokom</div><div class="pl-p">središčni \(80^\circ\): obodni \(40^\circ\)</div></div>
+              <div class="pl-r"><div class="pl-f">kot v polkrogu je \(90^\circ\)</div><div class="pl-o">Talesov izrek</div><div class="pl-p">premer je hipotenuza</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">4</span>Podobnost</h2>
+              <div class="pl-r"><div class="pl-f">\(\frac{a'}{a} = k,\ \frac{S'}{S} = k^2\)</div><div class="pl-o">podobna lika, razteg s faktorjem \(k\)</div><div class="pl-p">\(k = 3\): ploščina 9-krat</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">5</span>Štirikotniki</h2>
+              <div class="pl-r pl-r--dolga"><div class="pl-f">paralelogram</div><div class="pl-o">nasprotni stranici vzporedni in enaki, diagonali se razpolavljata</div><div class="pl-p">\(\alpha + \beta = 180^\circ\)</div></div>
+              <div class="pl-r"><div class="pl-f">romb</div><div class="pl-o">vse stranice enake, diagonali pravokotni</div><div class="pl-p">\(S = \frac{ef}{2}\)</div></div>
+              <div class="pl-r"><div class="pl-f">trapez</div><div class="pl-o">en par vzporednih stranic</div><div class="pl-p">srednjica \(m = \frac{a + c}{2}\)</div></div>
+            </section>
+
+            <section class="pl-sklop pl-pasti">
+              <h2><span class="pl-st">!</span>Pazi</h2>
+              <ul>
+                <li>Podobnost: dolžine \(k\), ploščine \(k^2\).</li>
+              </ul>
+            </section>
+          </div>
+          <footer class="pl-noga">piflar.si · plonk listek · Osnove geometrije v ravnini</footer>
+        </article>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>

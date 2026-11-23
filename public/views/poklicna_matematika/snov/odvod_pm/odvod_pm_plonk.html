@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diferencialni račun — plonk listek | Učilnica.com</title>
+  <meta name="description" content="Plonk listek za maturo: Diferencialni račun na enem listu A4, vsaka formula ali pojem s kratkim primerom.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Kalam:wght@400;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
+  <link rel="stylesheet" href="/style/snov.css">
+  <link rel="stylesheet" href="/style/plonk.css">
+</head>
+<body>
+  <div id="header"></div>
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view">
+
+        <!-- Ustvari tools/plonk/plonk.mjs iz api/data/plonk/poklicna_matematika.txt; ne urejaj ročno. -->
+        <article class="plonk">
+          <header class="pl-glava">
+            <div>
+              <span class="pl-oznaka">Plonk listek · Poklicna matura Snov</span>
+              <h1>Diferencialni račun</h1>
+            </div>
+            <div class="pl-gumbi">
+              <a class="pl-gumb pl-gumb--tiho" href="odvod_pm_razlaga.html">Cela razlaga</a>
+              <button type="button" class="pl-gumb" onclick="window.print()">Natisni</button>
+            </div>
+          </header>
+
+          <div class="pl-vsebina">
+            <section class="pl-sklop">
+              <h2><span class="pl-st">1</span>Odvod</h2>
+              <div class="pl-r"><div class="pl-f">\(f'(x) = \lim_{h \to 0} \frac{f(x + h) - f(x)}{h}\)</div><div class="pl-o">limita diferenčnega količnika</div><div class="pl-p">\(f = x^2\): \(f'(x) = 2x\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(k_t = f'(x_0)\)</div><div class="pl-o">smerni koeficient tangente</div><div class="pl-p">\(f = x^2\) v \(x_0 = 1\): \(k = 2\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(y - f(x_0) = f'(x_0)(x - x_0)\)</div><div class="pl-o">enačba tangente</div><div class="pl-p">\(x^2\) v \((1, 1)\): \(y = 2x - 1\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(\tan\varphi = \left|\frac{k_2 - k_1}{1 + k_1k_2}\right|\)</div><div class="pl-o">kot med krivuljama</div><div class="pl-p">kot med tangentama v presečišču</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">2</span>Pravila</h2>
+              <div class="pl-r"><div class="pl-f">\((x^n)' = n x^{n-1}\)</div><div class="pl-o">potenca</div><div class="pl-p">\((\sqrt{x})' = \frac{1}{2\sqrt x}\)</div></div>
+              <div class="pl-r"><div class="pl-f">\((uv)' = u'v + uv'\)</div><div class="pl-o">produkt</div><div class="pl-p">\((x e^x)' = e^x(1 + x)\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(\left(\frac{u}{v}\right)' = \frac{u'v - uv'}{v^2}\)</div><div class="pl-o">kvocient</div><div class="pl-p">\(\left(\frac{1}{x}\right)' = -\frac{1}{x^2}\)</div></div>
+              <div class="pl-r"><div class="pl-f">\((f(g(x)))' = f'(g(x))\,g'(x)\)</div><div class="pl-o">verižno pravilo</div><div class="pl-p">\((\sin 2x)' = 2\cos 2x\)</div></div>
+              <div class="pl-r"><div class="pl-f">\((e^x)' = e^x,\ (\ln x)' = \frac1x\)</div><div class="pl-o">eksponentna, logaritem</div><div class="pl-p">\((a^x)' = a^x \ln a\)</div></div>
+              <div class="pl-r"><div class="pl-f">\((\sin x)' = \cos x,\ (\cos x)' = -\sin x\)</div><div class="pl-o">kotni</div><div class="pl-p">\((\tan x)' = \frac{1}{\cos^2 x}\)</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">3</span>Uporaba</h2>
+              <div class="pl-r"><div class="pl-f">\(f' &gt; 0\) narašča, \(f' &lt; 0\) pada</div><div class="pl-o">monotonost</div><div class="pl-p">\(x^2\): pada za \(x &lt; 0\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(f'(x_0) = 0\)</div><div class="pl-o">stacionarna točka</div><div class="pl-p">\(x^3 - 3x\): \(x = \pm 1\)</div></div>
+              <div class="pl-r pl-r--dolga"><div class="pl-f">\(f''(x_0) &gt; 0\) min, \(&lt; 0\) max</div><div class="pl-o">vrsta ekstrema (ali menjava predznaka \(f'\))</div><div class="pl-p">\(x^3 - 3x\): max v \(-1\), min v \(1\)</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">4</span>Ekstremalni problem</h2>
+              <div class="pl-r pl-r--dolga"><div class="pl-f">1. funkcija ene spremenljivke, 2. \(f' = 0\), 3. preveri</div><div class="pl-o">postopek</div><div class="pl-p">obseg 20, max ploščina: kvadrat \(5 \times 5\)</div></div>
+            </section>
+
+            <section class="pl-sklop pl-pasti">
+              <h2><span class="pl-st">!</span>Pazi</h2>
+              <ul>
+                <li>Stacionarna točka ni nujno ekstrem (\(x^3\) v 0).</li>
+                <li>Pri verižnem pravilu ne pozabi notranjega odvoda.</li>
+              </ul>
+            </section>
+          </div>
+          <footer class="pl-noga">piflar.si · plonk listek · Diferencialni račun</footer>
+        </article>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>

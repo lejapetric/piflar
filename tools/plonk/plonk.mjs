@@ -6,6 +6,8 @@
 //   ## Naslov sklopa              nov sklop (oštevilči se sam)
 //   formula :: pomen :: primer    vrstica; pomen in primer sta neobvezna
 //   ! past                        opozorilo v okvirčku »Pazi« na koncu
+//   + <predmet>:<snov>[#1,3]      prevzame sklope (vse ali le naštete, od 1) in pasti
+//                                 druge snovi, npr. + matematika:funkcije/kvadratna#1,2
 // Besedilo se ubeži (<, >, &); **krepko** postane <strong>. Formule v \( … \).
 // Naslov in oznako (Predmet · Snov · 4.12) prebere iz strani z razlago.
 import { readFileSync, writeFileSync, readdirSync, existsSync } from "node:fs";
@@ -37,6 +39,10 @@ function preberi(predmet) {
     } else if (v.startsWith("## ")) {
       sklop = { naslov: v.slice(3).trim(), vrstice: [] };
       snov.sklopi.push(sklop);
+    } else if (v.startsWith("+ ")) {
+      snov.vkljuci = snov.vkljuci ?? [];
+      snov.vkljuci.push({ mesto: snov.sklopi.length, ref: v.slice(2).trim() });
+      sklop = null;
     } else if (v.startsWith("! ")) {
       snov.pasti.push(v.slice(2).trim());
     } else {
@@ -48,7 +54,31 @@ function preberi(predmet) {
   return snovi;
 }
 
+const prebrani = {};
+function poisci(ref) {
+  const [, predmet, slug, izbor] = ref.match(/^([a-z_]+):([^#]+)(?:#(.+))?$/) ?? [];
+  if (!predmet) throw new Error(`napačna vključitev: ${ref}`);
+  prebrani[predmet] ??= preberi(predmet);
+  const snov = prebrani[predmet].find((s) => s.slug === slug);
+  if (!snov) throw new Error(`vključitev ${ref}: ni snovi`);
+  razresi(snov);
+  const sklopi = izbor ? izbor.split(",").map((i) => snov.sklopi[Number(i) - 1]) : snov.sklopi;
+  if (sklopi.some((s) => !s)) throw new Error(`vključitev ${ref}: ni sklopa`);
+  return { sklopi, pasti: izbor ? [] : snov.pasti };
+}
+function razresi(snov) {
+  if (!snov.vkljuci) return;
+  const vkljuci = snov.vkljuci;
+  delete snov.vkljuci;
+  for (const { mesto, ref } of vkljuci.reverse()) {
+    const { sklopi, pasti } = poisci(ref);
+    snov.sklopi.splice(mesto, 0, ...sklopi);
+    snov.pasti.push(...pasti.filter((p) => !snov.pasti.includes(p)));
+  }
+}
+
 function stran(predmet, snov) {
+  razresi(snov);
   // slug je »mapa« ali »mapa/ime« (npr. funkcije/kvadratna: več razlag v eni mapi)
   const [imeMape, ime = imeMape] = snov.slug.split("/");
   const mapa = join(koren, "public", "views", predmet, "snov", imeMape);

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Obdelava podatkov — plonk listek | Učilnica.com</title>
+  <meta name="description" content="Plonk listek za maturo: Obdelava podatkov na enem listu A4, vsaka formula ali pojem s kratkim primerom.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Kalam:wght@400;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
+  <link rel="stylesheet" href="/style/snov.css">
+  <link rel="stylesheet" href="/style/plonk.css">
+</head>
+<body>
+  <div id="header"></div>
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view">
+
+        <!-- Ustvari tools/plonk/plonk.mjs iz api/data/plonk/poklicna_matematika.txt; ne urejaj ročno. -->
+        <article class="plonk">
+          <header class="pl-glava">
+            <div>
+              <span class="pl-oznaka">Plonk listek · Poklicna matura Snov</span>
+              <h1>Obdelava podatkov</h1>
+            </div>
+            <div class="pl-gumbi">
+              <a class="pl-gumb pl-gumb--tiho" href="statistika_pm_razlaga.html">Cela razlaga</a>
+              <button type="button" class="pl-gumb" onclick="window.print()">Natisni</button>
+            </div>
+          </header>
+
+          <div class="pl-vsebina">
+            <section class="pl-sklop">
+              <h2><span class="pl-st">1</span>Pojmi</h2>
+              <div class="pl-r"><div class="pl-f">populacija, vzorec</div><div class="pl-o">celota, izbrani del</div><div class="pl-p">vsi dijaki, 100 anketiranih</div></div>
+              <div class="pl-r"><div class="pl-f">opisni / številski podatki</div><div class="pl-o">kvalitativni, kvantitativni</div><div class="pl-p">barva oči / višina</div></div>
+              <div class="pl-r"><div class="pl-f">\(f_i,\ f_i' = \frac{f_i}{n}\)</div><div class="pl-o">frekvenca, relativna frekvenca</div><div class="pl-p">6 od 30: 20 %</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">2</span>Prikazi</h2>
+              <div class="pl-r pl-r--dolga"><div class="pl-f">stolpčni, tortni (\(\alpha = f' \cdot 360^\circ\)), histogram</div><div class="pl-o">grafikoni</div><div class="pl-p">25 %: \(90^\circ\)</div></div>
+              <div class="pl-r"><div class="pl-f">škatla z brki</div><div class="pl-o">min, \(Q_1\), \(Me\), \(Q_3\), max</div><div class="pl-p">\(1, 3, 5, 7, 9\): \(Me = 5\)</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">3</span>Srednje vrednosti</h2>
+              <div class="pl-r"><div class="pl-f">\(\bar{x} = \frac{x_1 + \ldots + x_n}{n}\)</div><div class="pl-o">aritmetična sredina</div><div class="pl-p">\(2, 4, 9\): \(\bar x = 5\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(\bar{x} = \frac{\sum f_i x_i}{n}\)</div><div class="pl-o">iz frekvenčne tabele</div><div class="pl-p">ocene 3 (×2), 5 (×1): \(\frac{11}{3}\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(Me\)</div><div class="pl-o">srednji podatek urejenih</div><div class="pl-p">\(1, 2, 7, 8\): \(Me = 4{,}5\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(Mo\)</div><div class="pl-o">najpogostejši</div><div class="pl-p">\(2, 3, 3, 5\): \(Mo = 3\)</div></div>
+            </section>
+          </div>
+          <footer class="pl-noga">piflar.si · plonk listek · Obdelava podatkov</footer>
+        </article>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>

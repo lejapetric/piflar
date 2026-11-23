@@ -1,0 +1,115 @@
+// Plonk listki za poklicno maturo iz matematike. Kjer je snov enaka kot na splošni
+// maturi, sklope prevzamemo z »+ matematika:<snov>#…«.
+
+=== stevila_deljivost
++ matematika:stevilske_mnozice#1,2
+## Računske lastnosti
+\(a + b = b + a,\ ab = ba\) :: zakon o zamenjavi :: \(3 \cdot 7 = 7 \cdot 3\)
+\(a(b + c) = ab + ac\) :: zakon o razčlenjevanju :: \(4 \cdot 26 = 4 \cdot 20 + 4 \cdot 6 = 104\)
+praštevilo :: ima natanko dva delitelja :: \(2, 3, 5, 7, 11, 13\)
+razcep na prafaktorje :: vsako sestavljeno število :: \(360 = 2^3 \cdot 3^2 \cdot 5\)
+! 1 ni praštevilo.
+
+=== ulomki_odstotki
+## Ulomki
+\(\frac{a}{b} \pm \frac{c}{d} = \frac{ad \pm bc}{bd}\) :: seštevanje (najmanjši skupni imenovalec) :: \(\frac12 + \frac13 = \frac56\)
+\(\frac{a}{b} \cdot \frac{c}{d} = \frac{ac}{bd}\) :: množenje :: \(\frac23 \cdot \frac34 = \frac12\)
+\(\frac{a}{b} : \frac{c}{d} = \frac{a}{b} \cdot \frac{d}{c}\) :: deljenje: pomnoži z obratno vrednostjo :: \(\frac12 : \frac14 = 2\)
+\(0{,}\overline{ab} = \frac{ab}{99}\) :: periodični decimalni zapis :: \(0{,}\overline{6} = \frac23\)
+## Razmerja
+\(a : b = c : d \iff ad = bc\) :: sorazmerje :: \(3 : x = 6 : 8\): \(x = 4\)
+razdelitev v razmerju \(a : b\) :: deli celote \(\frac{a}{a+b}\), \(\frac{b}{a+b}\) :: 60 v \(2 : 3\): 24 in 36
+## Odstotki
+\(d = \frac{p}{100} \cdot c\) :: delež :: 15 % od 80 = 12
+\(p = \frac{d}{c} \cdot 100\) :: odstotek :: 12 od 48 = 25 %
+\(c = \frac{d \cdot 100}{p}\) :: osnova :: 20 % je 30, celota 150
+\(c \cdot \left(1 \pm \frac{p}{100}\right)\) :: podražitev, pocenitev :: 80 € + 25 % = 100 €
+! Po podražitvi za 20 % in pocenitvi za 20 % cena ni enaka začetni.
+
+=== realna_stevila_koreni
+## Realna števila
+\(\mathbb{N} \subset \mathbb{Z} \subset \mathbb{Q} \subset \mathbb{R}\) :: številske množice :: \(\sqrt2, \pi\) sta iracionalni
+\([a, b],\ (a, b),\ [a, \infty)\) :: intervali (oglati: z mejo) :: \(-1 \le x < 3\): \([-1, 3)\)
+zaokroževanje :: 5 ali več navzgor :: \(3{,}14159 \approx 3{,}142\)
++ matematika:stevilske_mnozice#4
++ matematika:potence_koreni#2
+! \(\sqrt{a^2} = |a|\), ne \(a\).
+
+=== izrazi_potence
++ matematika:potence_koreni#1
++ matematika:algebrski_izrazi_enacbe_neenacbe#1,2,3
+! \((a + b)^2 \ne a^2 + b^2\).
+! Krajšamo faktorje, ne členov.
+
+=== linearna_funkcija
++ matematika:pravokotni_koordinatni_sistem_ravnina#1
++ matematika:funkcije/linearna
+## Enačbe in neenačbe
+\(ax + b = 0 \Rightarrow x = -\frac{b}{a}\) :: linearna enačba :: \(3x - 6 = 0\): \(x = 2\)
+množenje z negativnim obrne znak :: linearna neenačba :: \(-2x < 6\): \(x > -3\)
+
+=== kvadratna_funkcija
++ matematika:funkcije/kvadratna
+
+=== polinomi_racionalna
++ matematika:funkcije/potencna#1,2
++ matematika:funkcije/polinomska
++ matematika:funkcije/racionalna
+! Pri dvojni ničli graf ne seka osi.
+
+=== eksponentna_logaritemska
++ matematika:funkcije/eksponentna
++ matematika:funkcije/logaritemska
+
+=== kotne_funkcije_pm
+## Enotska krožnica
+\(\sin x = y,\ \cos x = x\) :: koordinati točke na enotski krožnici :: \(\sin 90^\circ = 1,\ \cos 180^\circ = -1\)
+I. kv. vse +, II. \(\sin\) +, III. \(\tan\) +, IV. \(\cos\) + :: predznaki po kvadrantih :: \(\cos 120^\circ = -\frac12\)
+\(180^\circ = \pi\) :: stopinje v radiane :: \(45^\circ = \frac{\pi}{4}\)
++ matematika:funkcije/kotne#2,3,4
+## Kot med premicama
+\(\tan\varphi = \left|\frac{k_2 - k_1}{1 + k_1 k_2}\right|\) :: iz smernih koeficientov :: \(k_1 = 1, k_2 = 0\): \(\varphi = 45^\circ\)
+
+=== trikotnik_kotne
++ matematika:geometrija_ravnina_prostor#4
++ matematika:funkcije/kotne#1
++ matematika:geometrija_ravnina_prostor#6
+## Ploščina
+\(S = \frac{ab\sin\gamma}{2}\) :: iz dveh stranic in vmesnega kota :: \(a = 4, b = 5, \gamma = 30^\circ\): \(S = 5\)
+! Kalkulator v stopinjah (DEG).
+
+=== geometrija_ravnine
++ matematika:geometrija_ravnina_prostor#1,2,3,5
+## Štirikotniki
+paralelogram :: nasprotni stranici vzporedni in enaki, diagonali se razpolavljata :: \(\alpha + \beta = 180^\circ\)
+romb :: vse stranice enake, diagonali pravokotni :: \(S = \frac{ef}{2}\)
+trapez :: en par vzporednih stranic :: srednjica \(m = \frac{a + c}{2}\)
+! Podobnost: dolžine \(k\), ploščine \(k^2\).
+
+=== obsegi_ploscine
+## Obsegi
+\(o = a + b + c\) :: trikotnik :: \(3, 4, 5\): \(o = 12\)
+\(o = 2(a + b)\) :: pravokotnik :: \(4 \times 3\): \(o = 14\)
+\(o = 2\pi r\) :: krog :: \(r = 5\): \(o = 10\pi\)
++ matematika:geometrijski_liki_telesa#1,2
+
+=== povrsine_prostornine
++ matematika:geometrijski_liki_telesa#3
+! Pri piramidi in stožcu ne pozabi \(\frac13\).
+! Enote: cm² za površino, cm³ za prostornino (1 dm³ = 1 l).
+
+=== zaporedja_pm
++ matematika:zaporedja_vrste#1,2,3,6
+! V \(a_n\) je \(n - 1\), ne \(n\).
+
+=== odvod_pm
++ matematika:diferencialni_racun
+
+=== kombinatorika_verjetnost
++ matematika:kombinatorika#1,2
++ matematika:verjetnostni_racun#1,2
+! Ali je vrstni red pomemben? Da: variacije; ne: kombinacije.
+! »Vsaj eden« računaj prek nasprotnega dogodka.
+
+=== statistika_pm
++ matematika:statistika#1,2,3

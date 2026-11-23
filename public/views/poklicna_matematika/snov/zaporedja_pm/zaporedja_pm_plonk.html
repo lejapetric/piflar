@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zaporedja — plonk listek | Učilnica.com</title>
+  <meta name="description" content="Plonk listek za maturo: Zaporedja na enem listu A4, vsaka formula ali pojem s kratkim primerom.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Kalam:wght@400;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
+  <link rel="stylesheet" href="/style/snov.css">
+  <link rel="stylesheet" href="/style/plonk.css">
+</head>
+<body>
+  <div id="header"></div>
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view">
+
+        <!-- Ustvari tools/plonk/plonk.mjs iz api/data/plonk/poklicna_matematika.txt; ne urejaj ročno. -->
+        <article class="plonk">
+          <header class="pl-glava">
+            <div>
+              <span class="pl-oznaka">Plonk listek · Poklicna matura Snov</span>
+              <h1>Zaporedja</h1>
+            </div>
+            <div class="pl-gumbi">
+              <a class="pl-gumb pl-gumb--tiho" href="zaporedja_pm_razlaga.html">Cela razlaga</a>
+              <button type="button" class="pl-gumb" onclick="window.print()">Natisni</button>
+            </div>
+          </header>
+
+          <div class="pl-vsebina">
+            <section class="pl-sklop">
+              <h2><span class="pl-st">1</span>Zaporedje</h2>
+              <div class="pl-r"><div class="pl-f">\(a_n = f(n),\ n \in \mathbb{N}\)</div><div class="pl-o">splošni člen</div><div class="pl-p">\(a_n = 2n - 1\): \(a_5 = 9\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(a_{n+1} - a_n &gt; 0\)</div><div class="pl-o">narašča (\(&lt; 0\): pada)</div><div class="pl-p">\(a_n = 3n + 1\): razlika \(3 &gt; 0\), narašča</div></div>
+              <div class="pl-r"><div class="pl-f">\(m \le a_n \le M\)</div><div class="pl-o">omejeno</div><div class="pl-p">\(a_n = \frac{1}{n}\): \(0 &lt; a_n \le 1\)</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">2</span>Aritmetično zaporedje</h2>
+              <div class="pl-r"><div class="pl-f">\(a_n = a_1 + (n-1)d\)</div><div class="pl-o">\(d = a_{n+1} - a_n\)</div><div class="pl-p">\(a_1 = 3,\ d = 4\): \(a_{10} = 3 + 9 \cdot 4 = 39\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(S_n = \frac{n}{2}(a_1 + a_n)\)</div><div class="pl-o">vsota prvih \(n\) členov</div><div class="pl-p">\(1 + 3 + \ldots + 19\): \(S_{10} = 5 \cdot 20 = 100\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(a_n = \frac{a_{n-1} + a_{n+1}}{2}\)</div><div class="pl-o">srednji člen</div><div class="pl-p">\(x, 7, 11\): \(x = 2 \cdot 7 - 11 = 3\)</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">3</span>Geometrijsko zaporedje</h2>
+              <div class="pl-r"><div class="pl-f">\(a_n = a_1 q^{n-1}\)</div><div class="pl-o">\(q = \frac{a_{n+1}}{a_n}\)</div><div class="pl-p">\(2, 6, 18, \ldots\): \(a_6 = 2 \cdot 3^5 = 486\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(S_n = a_1 \frac{q^n - 1}{q - 1}\)</div><div class="pl-o">\(q \ne 1\)</div><div class="pl-p">\(1 + 2 + \ldots + 2^9 = \frac{2^{10} - 1}{1} = 1023\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(a_n^2 = a_{n-1} a_{n+1}\)</div><div class="pl-o">srednji člen</div><div class="pl-p">\(4, x, 9\): \(x = \pm 6\)</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">4</span>Obrestni račun</h2>
+              <div class="pl-r"><div class="pl-f">\(G = G_0\left(1 + \frac{pt}{100}\right)\)</div><div class="pl-o">navadno obrestovanje</div><div class="pl-p">5000 €, 3 %, 4 leta: \(5000 \cdot 1{,}12 = 5600\) €</div></div>
+              <div class="pl-r"><div class="pl-f">\(G_n = G_0 r^n,\ r = 1 + \frac{p}{100}\)</div><div class="pl-o">obrestno obrestovanje</div><div class="pl-p">\(5000 \cdot 1{,}03^4 = 5627{,}54\) €</div></div>
+              <div class="pl-r"><div class="pl-f">\(r_r = 1 + \frac{p}{100m},\ r_k = \sqrt[m]{r}\)</div><div class="pl-o">relativna, konformna (\(m\) obdobij)</div><div class="pl-p">6 % mesečno: \(r_r = 1{,}005\), \(r_k = \sqrt[12]{1{,}06}\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(G_0 = \frac{G_n}{r^n}\)</div><div class="pl-o">diskontiranje (na danes)</div><div class="pl-p">2000 € čez 1 leto, 4 %: \(\frac{2000}{1{,}04} = 1923{,}08\) €</div></div>
+            </section>
+
+            <section class="pl-sklop pl-pasti">
+              <h2><span class="pl-st">!</span>Pazi</h2>
+              <ul>
+                <li>V \(a_n\) je \(n - 1\), ne \(n\).</li>
+              </ul>
+            </section>
+          </div>
+          <footer class="pl-noga">piflar.si · plonk listek · Zaporedja</footer>
+        </article>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>
