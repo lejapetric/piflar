@@ -1,0 +1,227 @@
+// Plonk listki za filozofijo: pojem ali teza :: razlaga :: primer.
+
+=== temeljni_pojmi
+## Kaj je filozofija
+ljubezen do modrosti :: kritično spraševanje o temeljih :: Sokrat: »Vem, da nič ne vem.«
+## Zgradba izpita
+esej + komentar besedila :: pisni del :: izbira naslova eseja
+## Merila
+razumevanje, argumentacija, uporaba pojmov :: ocenjevanje :: jasna teza
+## Temeljni pojmi
+bit, resnica, dobro, svoboda, um :: temeljni pojmi :: metafizika, etika, epistemologija
+## Argument in sklepanje
+premisi → sklep :: argument :: Vsi ljudje so smrtni; Sokrat je človek; Sokrat je smrten.
+dedukcija / indukcija :: nujno / verjetno :: iz primerov k splošnemu
+veljavnost / resničnost :: oblika / vsebina :: veljaven argument z napačno premiso
+zmote :: ad hominem, slamnati mož, krožni sklep :: »Ne verjemi mu, ker je mlad.«
+! Veljaven argument ni nujno resničen.
+
+=== filozofski_esej
+## Izbira naslova
+izberi naslov, ki ga znaš problematizirati :: izbira :: povezava z obravnavanimi deli
+## Analiza pojmov
+razčleni ključne pojme naslova :: definicije :: »svoboda« kot odsotnost prisile / samodoločitev
+## Zgradba
+uvod s problemom, jedro z argumenti in protiargumenti, sklep :: zgradba :: navezava na filozofe
+## Primeri naslovov
+iz kataloga :: navezava na temo :: »Ali je človek svoboden?«
+## Postopek in čas
+načrt, pisanje, pregled :: razporedi čas :: 10 minut za načrt
+! Esej ni obnova: razpravljaj.
+
+=== komentar_besedila
+## Kaj je komentar
+razlaga in kritična presoja odlomka :: komentar :: odlomek iz Države
+## Branje odlomka
+podčrtaj teze in pojme :: navodila natančno :: na katero vprašanje odgovarjaš
+## Zgradba
+umestitev, razlaga tez, kritična presoja :: zgradba :: povezava s celoto dela
+## Primer: Platon, Država
+prispodoba o votlini :: umestitev v delo :: senca, sonce, dobro
+## Postopek in čas
+preberi dvakrat, načrt, piši :: postopek :: citiraj
+! Pojasni pojme z besedami avtorja.
+
+=== platon_drzava
+## Zgradba in pravičnost
+pravičnost :: vsak opravlja svoje delo :: vladarji, varuhi, proizvajalci
+tri dela duše :: razum, srčnost, poželenje :: ustrezajo stanovom
+## Filozofi voditelji
+filozofi morajo vladati :: ker poznajo Dobro :: filozof-kralj
+## Vzgoja
+vzgoja varuhov :: glasba, gimnastika, matematika, dialektika :: dolgotrajna izobrazba
+## Narava filozofije
+dialektika :: pot k idejam :: vzpon od mnenja k vednosti
+## Védenje in mnenje
+dva svetova :: čutni (mnenje) in umni (vednost) :: ideje so večne
+## Ideja Dobrega
+najvišja ideja :: vir resnice in biti :: kot sonce v čutnem svetu
+## Prispodobe
+ladja, sonce, daljica, votlina :: prispodobe :: ujetniki v votlini vidijo sence
+## Filozofija in znanosti
+matematika pripravlja na dialektiko :: hierarhija vednosti :: geometrija
+## Kritike
+totalitarizem (Popper) :: kritika :: odprta družba
+! V prispodobi o votlini sonce ustreza ideji Dobrega.
+
+=== aristotel_nikomahova_etika
+## Delo v celoti
+etika :: praktična filozofija o dobrem življenju :: 10 knjig
+## Sreča
+evdajmonija :: najvišje dobro, cilj sam po sebi :: vse drugo je sredstvo
+## Oblike življenja
+užitkarsko, politično, teoretsko :: tri oblike :: najvišje je teoretsko
+kritika Platonove ideje Dobrega :: dobro ni eno :: dobro v različnih kategorijah
+## Delo človeka in vrlina
+delo človeka :: dejavnost duše po razumu :: vrlina = odličnost
+## Nravstvene vrline
+sredina med skrajnostma :: navada :: pogum: med strahopetnostjo in predrznostjo
+## Hotena dejanja
+odločitev :: premislek o sredstvih :: odgovornost za hotena dejanja
+## Pravičnost
+razdeljevalna / izravnalna :: vrste :: po zaslugah / enako
+## Razumske vrline
+pametnost (phronesis) :: praktična modrost :: prava izbira v okoliščinah
+## Vednost in modrost
+modrost (sophia) :: najvišja razumska vrlina :: teoretska vednost
+## Popolna sreča
+zrenje (teoria) :: najvišja dejavnost :: užitek spremlja dejavnost
+! Sredina ni povprečje, je pravo glede na nas.
+
+=== descartes_meditacije
+## Delo v celoti
+6 meditacij :: iskanje gotovega temelja vednosti :: 1641
+## Metodični dvom
+dvom v čute, sanje, zli duh :: radikalni dvom :: ali sanjam?
+## Metoda
+pravila metode :: jasno in razločno, razčlenitev, red, pregled :: Razprava o metodi
+## Cogito
+»Mislim, torej sem« :: gotov začetek :: jaz kot misleča stvar
+## Zavest, jasno in razločno
+merilo resnice :: jasno in razločno spoznanje :: solipsizem kot nevarnost
+## Bog
+dokaz iz ideje popolnosti :: ideja neskončnega mora imeti neskončni vzrok :: ontološki dokaz
+## Zmota in svobodna volja
+zmota :: volja seže dlje od razuma :: sodimo, preden jasno spoznamo
+## Substanca
+res cogitans / res extensa :: duh in telo :: dualizem
+## Zunanji svet
+Bog ne vara :: materialne stvari obstajajo :: razsežnost
+## Kritike
+krog (kartezijanski krog) :: Bog jamči jasnost, jasnost dokaže Boga :: problem povezave duha in telesa
+! Cogito velja tudi, če me zli duh vara.
+
+=== nietzsche_genealogija_morale
+## Genealoška metoda
+izvor moralnih pojmov :: zgodovina vrednot :: »dobro« ni večno
+## Dobro in zlo
+gosposka morala :: dobro = plemenito, močno :: slabo = navadno
+suženjska morala :: dobro = ponižno, zlo = močni :: upor sužnjev v morali
+## Ressentiment
+zamera šibkih :: ustvarjalna sila suženjske morale :: prevrednotenje vrednot
+## Dolg in krivda
+krivda (Schuld) iz dolga :: upnik in dolžnik :: kazen kot poplačilo
+## Slaba vest
+ponotranjenje nagonov :: človek se obrne proti sebi :: civilizacija
+## Asketski ideali
+duhovnik :: smisel trpljenju :: volja hoče raje nič kot ničesar
+## Volja do moči
+temeljni gon :: rast, premagovanje :: življenje
+## Nihilizem in nadčlovek
+nihilizem :: razvrednotenje najvišjih vrednot :: »Bog je mrtev«
+nadčlovek :: ustvarja nove vrednote :: Tako je govoril Zaratustra
+! Suženjska morala je reakcija, gosposka ustvarjanje.
+
+=== vprasanje_stvarnosti
+## Temelj stvarnosti
+arhe :: pračelo :: Tales: voda
+## Metafizika
+bit in bivajoče :: kaj resnično obstaja :: Platon: ideje
+## Nujnost in svoboda
+determinizem / svobodna volja :: vprašanje :: Spinoza, Sartre
+## Duhovno in materialno
+idealizem / materializem / dualizem :: odnos :: Descartes: dualizem
+## Človek in smisel
+eksistencializem :: »eksistenca je pred esenco« :: Sartre
+## Avtentično življenje
+avtentičnost :: biti zvest sebi :: Heidegger: bit k smrti
+! Determinizem ne izključuje nujno odgovornosti (kompatibilizem).
+
+=== vprasanje_spoznanja
+## Skepticizem
+dvom o možnosti spoznanja :: plodnost in meje :: Descartes, Hume
+## Mnenje in vednost
+vednost = upravičeno resnično prepričanje :: Platon, Theaitetos :: Gettierjev problem
+## Utemeljitev spoznanja
+racionalizem / empirizem :: razum / izkušnja :: Descartes / Locke
+Kant :: sintetične sodbe a priori :: »Vsak dogodek ima vzrok.«
+## Jezik
+jezik kot meja :: Wittgenstein :: »Meje mojega jezika so meje mojega sveta.«
+## Razum in meje
+stvar na sebi :: ni spoznavna (Kant) :: pojavi
+## Znanost
+indukcija, falsifikacija (Popper) :: znanstvena metoda :: »Vsi labodi so beli.«
+! Empiristi: ni prirojenih idej (tabula rasa).
+
+=== vprasanje_morale
+## Moralni relativizem
+ni univerzalnih moralnih resnic :: relativizem :: različni običaji
+## Utemeljitev načel
+Kant :: kategorični imperativ :: »Ravnaj le po maksimi, za katero lahko hočeš, da postane splošni zakon.«
+utilitarizem :: največja sreča za največ ljudi :: Bentham, Mill
+## Svoboda in odgovornost
+svoboda volje :: pogoj odgovornosti :: Sartre: obsojeni na svobodo
+## Vrednote
+moralno vrednotenje :: dobro, prav, dolžnost :: deontologija / konsekvencializem
+## Dobro življenje
+hedonizem / evdajmonizem :: užitek / uresničitev :: Epikur / Aristotel
+## Vrlina in sreča
+etika vrlin :: značaj :: Aristotel
+! Kant presoja namen (dolžnost), utilitarizem posledice.
+
+=== posameznik_skupnost
+## Utemeljitev oblasti
+družbena pogodba :: Hobbes, Locke, Rousseau :: naravno stanje
+Hobbes :: »vojna vseh proti vsem« :: Leviatan
+## Država in skupno dobro
+Aristotel :: človek je politično bitje :: polis
+## Zakon in svoboda
+Locke :: naravne pravice: življenje, svoboda, lastnina :: liberalizem
+Rousseau :: obča volja :: Družbena pogodba
+## Pravičnost in enakost
+Rawls :: tančica nevednosti :: načelo razlike
+## Kazen
+retributivna / utilitaristična :: povračilo / preprečevanje :: zapor
+## Utopija
+Platon, More :: idealna družba :: Utopija
+! Pri Hobbesu ljudje predajo svobodo zaradi varnosti.
+
+=== filozofija_religije
+## Verovanje in razum
+fideizem / racionalizem :: vera brez / z razumom :: Tertulijan / Tomaž Akvinski
+## Dokazi
+ontološki (Anzelm) :: Bog kot največje mislivo :: obstaja tudi v resnici
+kozmološki (Tomaž) :: prvi vzrok, prvi gibalec :: pet poti
+teleološki :: red v naravi :: urarski argument (Paley)
+## Problem zla
+zakaj zlo, če je Bog dober in vsemogočen :: teodiceja :: Leibniz
+## Govor o Bogu
+negativna teologija, analogija :: kako govoriti o Bogu :: Bog ni …
+## Religija in morala
+Evtifronova dilema :: je dobro, ker ga Bog hoče? :: Platon
+## Kritika religije
+Feuerbach, Marx, Nietzsche, Freud :: projekcija, opij, »Bog je mrtev«, iluzija :: kritike
+! Kant zavrne teoretske dokaze, Boga postulira praktični um.
+
+=== seminarska_naloga
+## Tema in problem
+izberi filozofski problem :: opredelitev problema :: vprašanje, ne opis
+## Koraki
+viri, načrt, pisanje, pregled :: postopek :: posvet z mentorjem
+## Obseg in oblika
+uvod, jedro, sklep, literatura :: sestavine :: naslovna stran
+## Navajanje virov
+citat z virom :: enoten slog :: avtor, naslov, leto, stran
+## Kontrolni seznam
+vsi viri navedeni, problem jasen :: pred oddajo :: preveri pravopis
+! Prepisovanje brez navedbe vira je plagiat.
