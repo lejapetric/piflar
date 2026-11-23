@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Svetloba in optika — plonk listek | Učilnica.com</title>
+  <meta name="description" content="Plonk listek za maturo: Svetloba in optika na enem listu A4, vsaka formula ali pojem s kratkim primerom.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Kalam:wght@400;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
+  <link rel="stylesheet" href="/style/snov.css">
+  <link rel="stylesheet" href="/style/plonk.css">
+</head>
+<body>
+  <div id="header"></div>
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view">
+
+        <!-- Ustvari tools/plonk/plonk.mjs iz api/data/plonk/fizika.txt; ne urejaj ročno. -->
+        <article class="plonk">
+          <header class="pl-glava">
+            <div>
+              <span class="pl-oznaka">Plonk listek · Fizika 4.16</span>
+              <h1>Svetloba in optika</h1>
+            </div>
+            <div class="pl-gumbi">
+              <a class="pl-gumb pl-gumb--tiho" href="svetloba_optika_razlaga.html">Cela razlaga</a>
+              <button type="button" class="pl-gumb" onclick="window.print()">Natisni</button>
+            </div>
+          </header>
+
+          <div class="pl-vsebina">
+            <section class="pl-sklop">
+              <h2><span class="pl-st">1</span>Svetloba</h2>
+              <div class="pl-r"><div class="pl-f">\(c = 3 \cdot 10^8\ \text{m/s}\)</div><div class="pl-o">v vakuumu</div><div class="pl-p">\(c = \lambda\nu\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(n = \frac{c_0}{c}\)</div><div class="pl-o">lomni količnik</div><div class="pl-p">steklo \(n = 1{,}5\): \(c = 2 \cdot 10^8\ \text{m/s}\)</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">2</span>Odboj in lom</h2>
+              <div class="pl-r"><div class="pl-f">\(\alpha = \alpha'\)</div><div class="pl-o">odbojni zakon</div><div class="pl-p">vpadni = odbojni kot</div></div>
+              <div class="pl-r"><div class="pl-f">\(n_1 \sin\alpha = n_2 \sin\beta\)</div><div class="pl-o">lomni zakon</div><div class="pl-p">iz zraka v vodo pod \(30^\circ\): \(\beta \approx 22^\circ\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(\sin\alpha_m = \frac{n_2}{n_1}\)</div><div class="pl-o">totalni odboj (iz gostejše)</div><div class="pl-p">steklo–zrak: \(42^\circ\)</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">3</span>Interferenca</h2>
+              <div class="pl-r"><div class="pl-f">\(d\sin\alpha = k\lambda\)</div><div class="pl-o">uklonska mrežica, dve reži</div><div class="pl-p">\(d = 2\ \text{µm}, \lambda = 500\ \text{nm}\): 1. red \(14{,}5^\circ\)</div></div>
+              <div class="pl-r"><div class="pl-f">tanka plast</div><div class="pl-o">barve milnih mehurčkov</div><div class="pl-p">ojačitev odvisna od debeline</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">4</span>Leče in zrcala</h2>
+              <div class="pl-r"><div class="pl-f">\(\frac1f = \frac1a + \frac1b\)</div><div class="pl-o">enačba leče</div><div class="pl-p">\(f = 10\ \text{cm}, a = 30\ \text{cm}\): \(b = 15\ \text{cm}\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(\frac{S}{P} = \frac{b}{a}\)</div><div class="pl-o">povečava</div><div class="pl-p">\(\frac{15}{30} = 0{,}5\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(f = \frac{r}{2}\)</div><div class="pl-o">zrcalo</div><div class="pl-p">zbiralna \(f &gt; 0\), razpršilna \(f &lt; 0\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(\omega = \frac{1}{f}\)</div><div class="pl-o">lomnost (dioptrija)</div><div class="pl-p">\(f = 0{,}5\ \text{m}\): 2 D</div></div>
+            </section>
+
+            <section class="pl-sklop pl-pasti">
+              <h2><span class="pl-st">!</span>Pazi</h2>
+              <ul>
+                <li>Pri lomu v gostejšo snov se žarek lomi k vpadni pravokotnici.</li>
+              </ul>
+            </section>
+          </div>
+          <footer class="pl-noga">piflar.si · plonk listek · Svetloba in optika</footer>
+        </article>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>

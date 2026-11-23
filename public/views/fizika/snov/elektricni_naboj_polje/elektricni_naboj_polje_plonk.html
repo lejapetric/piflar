@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Električni naboj in električno polje — plonk listek | Učilnica.com</title>
+  <meta name="description" content="Plonk listek za maturo: Električni naboj in električno polje na enem listu A4, vsaka formula ali pojem s kratkim primerom.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Kalam:wght@400;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
+  <link rel="stylesheet" href="/style/snov.css">
+  <link rel="stylesheet" href="/style/plonk.css">
+</head>
+<body>
+  <div id="header"></div>
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view">
+
+        <!-- Ustvari tools/plonk/plonk.mjs iz api/data/plonk/fizika.txt; ne urejaj ročno. -->
+        <article class="plonk">
+          <header class="pl-glava">
+            <div>
+              <span class="pl-oznaka">Plonk listek · Fizika 4.10</span>
+              <h1>Električni naboj in električno polje</h1>
+            </div>
+            <div class="pl-gumbi">
+              <a class="pl-gumb pl-gumb--tiho" href="elektricni_naboj_polje_razlaga.html">Cela razlaga</a>
+              <button type="button" class="pl-gumb" onclick="window.print()">Natisni</button>
+            </div>
+          </header>
+
+          <div class="pl-vsebina">
+            <section class="pl-sklop">
+              <h2><span class="pl-st">1</span>Naboj in sila</h2>
+              <div class="pl-r"><div class="pl-f">\(e_0 = 1{,}6 \cdot 10^{-19}\ \text{As}\)</div><div class="pl-o">osnovni naboj</div><div class="pl-p">\(1\ \text{As} = 6{,}25 \cdot 10^{18}\ e_0\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(F = \frac{e_1 e_2}{4\pi\varepsilon_0 r^2}\)</div><div class="pl-o">Coulombov zakon</div><div class="pl-p">dvakratna razdalja: \(\frac14\) sile</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">2</span>Polje</h2>
+              <div class="pl-r"><div class="pl-f">\(E = \frac{F}{e}\)</div><div class="pl-o">jakost polja (V/m)</div><div class="pl-p">\(F = 2\ \text{mN}, e = 1\ \text{µAs}\): \(2000\ \text{V/m}\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(E = \frac{e}{4\pi\varepsilon_0 r^2}\)</div><div class="pl-o">točkast naboj</div><div class="pl-p">silnice od + proti −</div></div>
+              <div class="pl-r"><div class="pl-f">\(U = E d\)</div><div class="pl-o">napetost v homogenem polju</div><div class="pl-p">\(E = 1000, d = 0{,}01\): \(U = 10\ \text{V}\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(A = e U\)</div><div class="pl-o">delo polja na naboj</div><div class="pl-p">elektron skozi 100 V: \(1{,}6 \cdot 10^{-17}\ \text{J}\)</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">3</span>Kondenzator</h2>
+              <div class="pl-r"><div class="pl-f">\(C = \frac{e}{U}\)</div><div class="pl-o">kapaciteta (F)</div><div class="pl-p">\(10\ \text{µF}\) pri \(10\ \text{V}\): \(100\ \text{µAs}\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(C = \frac{\varepsilon\varepsilon_0 S}{d}\)</div><div class="pl-o">ploščati</div><div class="pl-p">pol manjši razmik: dvakratna \(C\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(W = \frac{CU^2}{2}\)</div><div class="pl-o">energija</div><div class="pl-p">\(C = 2\ \text{µF}, U = 100\ \text{V}\): \(10\ \text{mJ}\)</div></div>
+              <div class="pl-r pl-r--dolga"><div class="pl-f">vzporedno \(C = C_1 + C_2\), zaporedno \(\frac1C = \frac{1}{C_1} + \frac{1}{C_2}\)</div><div class="pl-o">vezave</div><div class="pl-p">dva po 2 µF zaporedno: 1 µF</div></div>
+              <div class="pl-r"><div class="pl-f">influenca</div><div class="pl-o">prerazporeditev naboja v prevodniku</div><div class="pl-p">elektroskop</div></div>
+            </section>
+
+            <section class="pl-sklop pl-pasti">
+              <h2><span class="pl-st">!</span>Pazi</h2>
+              <ul>
+                <li>Kondenzatorji se vežejo »obratno« kot upori.</li>
+              </ul>
+            </section>
+          </div>
+          <footer class="pl-noga">piflar.si · plonk listek · Električni naboj in električno polje</footer>
+        </article>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>

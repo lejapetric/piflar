@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sila in navor — plonk listek | Učilnica.com</title>
+  <meta name="description" content="Plonk listek za maturo: Sila in navor na enem listu A4, vsaka formula ali pojem s kratkim primerom.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Kalam:wght@400;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
+  <link rel="stylesheet" href="/style/snov.css">
+  <link rel="stylesheet" href="/style/plonk.css">
+</head>
+<body>
+  <div id="header"></div>
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view">
+
+        <!-- Ustvari tools/plonk/plonk.mjs iz api/data/plonk/fizika.txt; ne urejaj ročno. -->
+        <article class="plonk">
+          <header class="pl-glava">
+            <div>
+              <span class="pl-oznaka">Plonk listek · Fizika 4.3</span>
+              <h1>Sila in navor</h1>
+            </div>
+            <div class="pl-gumbi">
+              <a class="pl-gumb pl-gumb--tiho" href="sila_navor_razlaga.html">Cela razlaga</a>
+              <button type="button" class="pl-gumb" onclick="window.print()">Natisni</button>
+            </div>
+          </header>
+
+          <div class="pl-vsebina">
+            <section class="pl-sklop">
+              <h2><span class="pl-st">1</span>Sila</h2>
+              <div class="pl-r"><div class="pl-f">\(\vec F_{rez} = \sum \vec F_i\)</div><div class="pl-o">rezultanta (vektorska vsota)</div><div class="pl-p">\(3\ \text{N} \perp 4\ \text{N}\): \(5\ \text{N}\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(\sum \vec F = 0\)</div><div class="pl-o">ravnovesje sil</div><div class="pl-p">telo miruje ali se giblje enakomerno</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">2</span>Prožnost in trenje</h2>
+              <div class="pl-r"><div class="pl-f">\(F = k\,x\)</div><div class="pl-o">Hookov zakon</div><div class="pl-p">\(k = 200\ \text{N/m}, x = 0{,}05\ \text{m}\): \(F = 10\ \text{N}\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(F_{tr} = k_{tr} F_n\)</div><div class="pl-o">trenje (lepenje: \(F_l \le k_l F_n\))</div><div class="pl-p">\(F_n = 50\ \text{N}, k = 0{,}3\): \(15\ \text{N}\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(F_n = mg\cos\alpha\)</div><div class="pl-o">na klancu</div><div class="pl-p">dolvzporedna \(mg\sin\alpha\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(F_u = \frac12 c_u \rho S v^2\)</div><div class="pl-o">upor sredstva</div><div class="pl-p">dvakratna hitrost: 4-krat večji upor</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">3</span>Tlak</h2>
+              <div class="pl-r"><div class="pl-f">\(p = \frac{F}{S}\)</div><div class="pl-o">tlak, \(1\ \text{Pa} = 1\ \text{N/m}^2\)</div><div class="pl-p">\(100\ \text{N}\) na \(0{,}01\ \text{m}^2\): \(10^4\ \text{Pa}\)</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">4</span>Navor</h2>
+              <div class="pl-r"><div class="pl-f">\(M = r F \sin\varphi = F\,r_\perp\)</div><div class="pl-o">navor (ročica)</div><div class="pl-p">\(F = 20\ \text{N}, r = 0{,}5\ \text{m}\), pravokotno: \(10\ \text{Nm}\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(\sum \vec F = 0,\ \sum M = 0\)</div><div class="pl-o">ravnovesje togega telesa</div><div class="pl-p">gugalnica: \(m_1 r_1 = m_2 r_2\)</div></div>
+              <div class="pl-r"><div class="pl-f">težišče</div><div class="pl-o">prijemališče teže</div><div class="pl-p">palica: na sredini</div></div>
+            </section>
+
+            <section class="pl-sklop pl-pasti">
+              <h2><span class="pl-st">!</span>Pazi</h2>
+              <ul>
+                <li>Navor je odvisen od ročice, ne le od sile.</li>
+              </ul>
+            </section>
+          </div>
+          <footer class="pl-noga">piflar.si · plonk listek · Sila in navor</footer>
+        </article>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>

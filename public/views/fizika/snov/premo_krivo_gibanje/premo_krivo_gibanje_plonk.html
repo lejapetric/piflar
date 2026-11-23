@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Premo in krivo gibanje — plonk listek | Učilnica.com</title>
+  <meta name="description" content="Plonk listek za maturo: Premo in krivo gibanje na enem listu A4, vsaka formula ali pojem s kratkim primerom.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Kalam:wght@400;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
+  <link rel="stylesheet" href="/style/snov.css">
+  <link rel="stylesheet" href="/style/plonk.css">
+</head>
+<body>
+  <div id="header"></div>
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view">
+
+        <!-- Ustvari tools/plonk/plonk.mjs iz api/data/plonk/fizika.txt; ne urejaj ročno. -->
+        <article class="plonk">
+          <header class="pl-glava">
+            <div>
+              <span class="pl-oznaka">Plonk listek · Fizika 4.2</span>
+              <h1>Premo in krivo gibanje</h1>
+            </div>
+            <div class="pl-gumbi">
+              <a class="pl-gumb pl-gumb--tiho" href="premo_krivo_gibanje_razlaga.html">Cela razlaga</a>
+              <button type="button" class="pl-gumb" onclick="window.print()">Natisni</button>
+            </div>
+          </header>
+
+          <div class="pl-vsebina">
+            <section class="pl-sklop">
+              <h2><span class="pl-st">1</span>Premo gibanje</h2>
+              <div class="pl-r"><div class="pl-f">\(v = \frac{\Delta s}{\Delta t}\)</div><div class="pl-o">hitrost</div><div class="pl-p">100 m v 20 s: \(v = 5\ \text{m/s}\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(a = \frac{\Delta v}{\Delta t}\)</div><div class="pl-o">pospešek</div><div class="pl-p">iz 0 na 20 m/s v 4 s: \(a = 5\ \text{m/s}^2\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(v = v_0 + at\)</div><div class="pl-o">enakomerno pospešeno</div><div class="pl-p">\(v_0 = 0, a = 2, t = 5\): \(v = 10\ \text{m/s}\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(s = v_0 t + \frac{at^2}{2}\)</div><div class="pl-o">pot</div><div class="pl-p">\(a = 2, t = 5\): \(s = 25\ \text{m}\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(v^2 = v_0^2 + 2as\)</div><div class="pl-o">brez časa</div><div class="pl-p">zavira z 20 m/s, \(a = -5\): \(s = 40\ \text{m}\)</div></div>
+              <div class="pl-r"><div class="pl-f">ploščina pod \(v(t)\) = pot</div><div class="pl-o">naklon \(v(t)\) = pospešek</div><div class="pl-p">trikotnik pod \(v(t)\): \(s = \frac{vt}{2}\)</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">2</span>Prosti pad in met</h2>
+              <div class="pl-r"><div class="pl-f">\(v = gt,\ h = \frac{gt^2}{2}\)</div><div class="pl-o">prosti pad, \(g = 9{,}8\ \text{m/s}^2\)</div><div class="pl-p">2 s: \(h \approx 20\ \text{m}\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(x = v_0 t,\ y = \frac{gt^2}{2}\)</div><div class="pl-o">vodoravni met</div><div class="pl-p">z višine 5 m: \(t = 1\ \text{s}\)</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">3</span>Kroženje</h2>
+              <div class="pl-r"><div class="pl-f">\(v = \frac{2\pi r}{t_0} = \omega r\)</div><div class="pl-o">obodna hitrost</div><div class="pl-p">\(r = 2\ \text{m}, t_0 = 4\ \text{s}\): \(v = \pi\ \text{m/s}\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(\nu = \frac{1}{t_0},\ \omega = 2\pi\nu\)</div><div class="pl-o">frekvenca, kotna hitrost</div><div class="pl-p">\(t_0 = 0{,}5\ \text{s}\): \(\nu = 2\ \text{Hz}\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(a_r = \frac{v^2}{r} = \omega^2 r\)</div><div class="pl-o">radialni pospešek (proti središču)</div><div class="pl-p">\(v = 10, r = 50\): \(a_r = 2\ \text{m/s}^2\)</div></div>
+            </section>
+
+            <section class="pl-sklop pl-pasti">
+              <h2><span class="pl-st">!</span>Pazi</h2>
+              <ul>
+                <li>Pospešek pri zaviranju je negativen.</li>
+                <li>Pri kroženju s stalno hitrostjo je pospešek ≠ 0.</li>
+              </ul>
+            </section>
+          </div>
+          <footer class="pl-noga">piflar.si · plonk listek · Premo in krivo gibanje</footer>
+        </article>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>

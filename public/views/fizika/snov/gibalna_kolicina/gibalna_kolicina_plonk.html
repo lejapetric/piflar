@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Izrek o gibalni količini — plonk listek | Učilnica.com</title>
+  <meta name="description" content="Plonk listek za maturo: Izrek o gibalni količini na enem listu A4, vsaka formula ali pojem s kratkim primerom.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Kalam:wght@400;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
+  <link rel="stylesheet" href="/style/snov.css">
+  <link rel="stylesheet" href="/style/plonk.css">
+</head>
+<body>
+  <div id="header"></div>
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view">
+
+        <!-- Ustvari tools/plonk/plonk.mjs iz api/data/plonk/fizika.txt; ne urejaj ročno. -->
+        <article class="plonk">
+          <header class="pl-glava">
+            <div>
+              <span class="pl-oznaka">Plonk listek · Fizika 4.5</span>
+              <h1>Izrek o gibalni količini</h1>
+            </div>
+            <div class="pl-gumbi">
+              <a class="pl-gumb pl-gumb--tiho" href="gibalna_kolicina_razlaga.html">Cela razlaga</a>
+              <button type="button" class="pl-gumb" onclick="window.print()">Natisni</button>
+            </div>
+          </header>
+
+          <div class="pl-vsebina">
+            <section class="pl-sklop">
+              <h2><span class="pl-st">1</span>Gibalna količina</h2>
+              <div class="pl-r"><div class="pl-f">\(\vec G = m\vec v\)</div><div class="pl-o">gibalna količina</div><div class="pl-p">\(2\ \text{kg}\) pri \(3\ \text{m/s}\): \(6\ \text{kg\,m/s}\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(\vec F \Delta t = \Delta \vec G\)</div><div class="pl-o">sunek sile = sprememba gibalne količine</div><div class="pl-p">žoga \(0{,}5\ \text{kg}\), od 10 na −10 m/s: \(10\ \text{Ns}\)</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">2</span>Ohranitev</h2>
+              <div class="pl-r"><div class="pl-f">\(\sum \vec G = \text{konst.}\)</div><div class="pl-o">izoliran sistem (trki, razpadi)</div><div class="pl-p">\(m_1 v_1 = (m_1 + m_2)v\)</div></div>
+              <div class="pl-r"><div class="pl-f">neprožni trk</div><div class="pl-o">telesi se sprimeta, \(W_k\) se ne ohrani</div><div class="pl-p">\(2\ \text{kg}\) pri 3 m/s + mirujoči 1 kg: \(v = 2\ \text{m/s}\)</div></div>
+              <div class="pl-r"><div class="pl-f">prožni trk</div><div class="pl-o">ohranita se \(G\) in \(W_k\)</div><div class="pl-p">enaki masi: izmenjata hitrosti</div></div>
+              <div class="pl-r"><div class="pl-f">odriv</div><div class="pl-o">\(m_1 v_1 = -m_2 v_2\)</div><div class="pl-p">puška in krogla</div></div>
+            </section>
+
+            <section class="pl-sklop pl-pasti">
+              <h2><span class="pl-st">!</span>Pazi</h2>
+              <ul>
+                <li>Gibalna količina je vektor: upoštevaj smer (predznak).</li>
+              </ul>
+            </section>
+          </div>
+          <footer class="pl-noga">piflar.si · plonk listek · Izrek o gibalni količini</footer>
+        </article>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>

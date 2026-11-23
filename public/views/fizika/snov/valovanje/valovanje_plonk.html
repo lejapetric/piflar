@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Valovanje — plonk listek | Učilnica.com</title>
+  <meta name="description" content="Plonk listek za maturo: Valovanje na enem listu A4, vsaka formula ali pojem s kratkim primerom.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Kalam:wght@400;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
+  <link rel="stylesheet" href="/style/snov.css">
+  <link rel="stylesheet" href="/style/plonk.css">
+</head>
+<body>
+  <div id="header"></div>
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view">
+
+        <!-- Ustvari tools/plonk/plonk.mjs iz api/data/plonk/fizika.txt; ne urejaj ročno. -->
+        <article class="plonk">
+          <header class="pl-glava">
+            <div>
+              <span class="pl-oznaka">Plonk listek · Fizika 4.15</span>
+              <h1>Valovanje</h1>
+            </div>
+            <div class="pl-gumbi">
+              <a class="pl-gumb pl-gumb--tiho" href="valovanje_razlaga.html">Cela razlaga</a>
+              <button type="button" class="pl-gumb" onclick="window.print()">Natisni</button>
+            </div>
+          </header>
+
+          <div class="pl-vsebina">
+            <section class="pl-sklop">
+              <h2><span class="pl-st">1</span>Opis</h2>
+              <div class="pl-r"><div class="pl-f">\(c = \lambda \nu\)</div><div class="pl-o">hitrost valovanja</div><div class="pl-p">\(\nu = 440\ \text{Hz}, c = 340\ \text{m/s}\): \(\lambda \approx 0{,}77\ \text{m}\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(s = s_0 \sin\left(\omega t - \frac{2\pi x}{\lambda}\right)\)</div><div class="pl-o">sinusno valovanje</div><div class="pl-p">odmik v kraju \(x\) in času \(t\)</div></div>
+              <div class="pl-r pl-r--dolga"><div class="pl-f">transverzalno / longitudinalno</div><div class="pl-o">odmik pravokoten / vzporeden s smerjo</div><div class="pl-p">vrv / zvok</div></div>
+              <div class="pl-r"><div class="pl-f">\(c = \sqrt{\frac{F}{\mu}}\)</div><div class="pl-o">na vrvi (\(\mu = \frac{m}{l}\))</div><div class="pl-p">4-krat večja sila: dvakratna hitrost</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">2</span>Interferenca</h2>
+              <div class="pl-r"><div class="pl-f">\(\Delta = k\lambda\) / \(\Delta = (k + \frac12)\lambda\)</div><div class="pl-o">ojačitev / oslabitev</div><div class="pl-p">razlika poti \(\frac{\lambda}{2}\): tišina</div></div>
+              <div class="pl-r"><div class="pl-f">\(l = k\frac{\lambda}{2}\)</div><div class="pl-o">stoječe valovanje (struna)</div><div class="pl-p">osnovna: \(\lambda = 2l\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(l = (2k - 1)\frac{\lambda}{4}\)</div><div class="pl-o">cev, odprta na enem koncu</div><div class="pl-p">osnovna: \(\lambda = 4l\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(\nu_u = |\nu_1 - \nu_2|\)</div><div class="pl-o">utripanje</div><div class="pl-p">440 Hz in 444 Hz: 4 Hz</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">3</span>Lom in uklon</h2>
+              <div class="pl-r"><div class="pl-f">\(\frac{\sin\alpha}{\sin\beta} = \frac{c_1}{c_2}\)</div><div class="pl-o">lomni zakon</div><div class="pl-p">frekvenca se ne spremeni</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">4</span>Doppler in zvok</h2>
+              <div class="pl-r"><div class="pl-f">\(\nu' = \nu\frac{c}{c \mp v_i}\)</div><div class="pl-o">izvor se približuje (−) / oddaljuje (+)</div><div class="pl-p">rešilec: višji ton ob približevanju</div></div>
+              <div class="pl-r"><div class="pl-f">\(L = 10\log\frac{j}{j_0}\) dB</div><div class="pl-o">jakost zvoka, \(j_0 = 10^{-12}\ \text{W/m}^2\)</div><div class="pl-p">10-krat večja \(j\): +10 dB</div></div>
+            </section>
+
+            <section class="pl-sklop pl-pasti">
+              <h2><span class="pl-st">!</span>Pazi</h2>
+              <ul>
+                <li>Pri prehodu v drugo snov se spremeni \(\lambda\), ne \(\nu\).</li>
+              </ul>
+            </section>
+          </div>
+          <footer class="pl-noga">piflar.si · plonk listek · Valovanje</footer>
+        </article>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>

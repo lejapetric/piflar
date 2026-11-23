@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Delo in energija — plonk listek | Učilnica.com</title>
+  <meta name="description" content="Plonk listek za maturo: Delo in energija na enem listu A4, vsaka formula ali pojem s kratkim primerom.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Kalam:wght@400;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
+  <link rel="stylesheet" href="/style/snov.css">
+  <link rel="stylesheet" href="/style/plonk.css">
+</head>
+<body>
+  <div id="header"></div>
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view">
+
+        <!-- Ustvari tools/plonk/plonk.mjs iz api/data/plonk/fizika.txt; ne urejaj ročno. -->
+        <article class="plonk">
+          <header class="pl-glava">
+            <div>
+              <span class="pl-oznaka">Plonk listek · Fizika 4.6</span>
+              <h1>Delo in energija</h1>
+            </div>
+            <div class="pl-gumbi">
+              <a class="pl-gumb pl-gumb--tiho" href="delo_energija_razlaga.html">Cela razlaga</a>
+              <button type="button" class="pl-gumb" onclick="window.print()">Natisni</button>
+            </div>
+          </header>
+
+          <div class="pl-vsebina">
+            <section class="pl-sklop">
+              <h2><span class="pl-st">1</span>Delo</h2>
+              <div class="pl-r"><div class="pl-f">\(A = F s \cos\varphi\)</div><div class="pl-o">delo sile</div><div class="pl-p">\(F = 10\ \text{N}, s = 5\ \text{m}\): \(A = 50\ \text{J}\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(P = \frac{A}{t} = F v\)</div><div class="pl-o">moč</div><div class="pl-p">\(500\ \text{J}\) v \(10\ \text{s}\): \(50\ \text{W}\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(\eta = \frac{P_{kor}}{P_{vlož}}\)</div><div class="pl-o">izkoristek</div><div class="pl-p">80 W od 100 W: 80 %</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">2</span>Energija</h2>
+              <div class="pl-r"><div class="pl-f">\(W_k = \frac{mv^2}{2}\)</div><div class="pl-o">kinetična</div><div class="pl-p">\(m = 2, v = 3\): \(9\ \text{J}\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(W_p = mgh\)</div><div class="pl-o">potencialna</div><div class="pl-p">\(m = 1, h = 10\): \(\approx 98\ \text{J}\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(W_{pr} = \frac{kx^2}{2}\)</div><div class="pl-o">prožnostna</div><div class="pl-p">\(k = 100, x = 0{,}1\): \(0{,}5\ \text{J}\)</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">3</span>Ohranitev</h2>
+              <div class="pl-r"><div class="pl-f">\(A_{zun} = \Delta W_k + \Delta W_p + \Delta W_{pr}\)</div><div class="pl-o">izrek o mehanski energiji</div><div class="pl-p">brez zunanjih sil: \(W\) stalna</div></div>
+              <div class="pl-r"><div class="pl-f">\(mgh = \frac{mv^2}{2}\)</div><div class="pl-o">pad z višine</div><div class="pl-p">\(h = 5\ \text{m}\): \(v \approx 10\ \text{m/s}\)</div></div>
+            </section>
+
+            <section class="pl-sklop pl-pasti">
+              <h2><span class="pl-st">!</span>Pazi</h2>
+              <ul>
+                <li>Delo sile pravokotno na premik je 0.</li>
+                <li>Trenje odvzema mehansko energijo.</li>
+              </ul>
+            </section>
+          </div>
+          <footer class="pl-noga">piflar.si · plonk listek · Delo in energija</footer>
+        </article>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Magnetno polje — plonk listek | Učilnica.com</title>
+  <meta name="description" content="Plonk listek za maturo: Magnetno polje na enem listu A4, vsaka formula ali pojem s kratkim primerom.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Kalam:wght@400;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
+  <link rel="stylesheet" href="/style/snov.css">
+  <link rel="stylesheet" href="/style/plonk.css">
+</head>
+<body>
+  <div id="header"></div>
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view">
+
+        <!-- Ustvari tools/plonk/plonk.mjs iz api/data/plonk/fizika.txt; ne urejaj ročno. -->
+        <article class="plonk">
+          <header class="pl-glava">
+            <div>
+              <span class="pl-oznaka">Plonk listek · Fizika 4.12</span>
+              <h1>Magnetno polje</h1>
+            </div>
+            <div class="pl-gumbi">
+              <a class="pl-gumb pl-gumb--tiho" href="magnetno_polje_razlaga.html">Cela razlaga</a>
+              <button type="button" class="pl-gumb" onclick="window.print()">Natisni</button>
+            </div>
+          </header>
+
+          <div class="pl-vsebina">
+            <section class="pl-sklop">
+              <h2><span class="pl-st">1</span>Polje</h2>
+              <div class="pl-r"><div class="pl-f">\(B\) (T)</div><div class="pl-o">gostota magnetnega polja</div><div class="pl-p">Zemlja \(\approx 50\ \text{µT}\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(B = \frac{\mu_0 I}{2\pi r}\)</div><div class="pl-o">ravni vodnik</div><div class="pl-p">\(I = 10\ \text{A}, r = 2\ \text{cm}\): \(100\ \text{µT}\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(B = \frac{\mu_0 N I}{l}\)</div><div class="pl-o">tuljava</div><div class="pl-p">\(\mu_0 = 4\pi \cdot 10^{-7}\ \text{Vs/(Am)}\)</div></div>
+              <div class="pl-r"><div class="pl-f">pravilo desne roke</div><div class="pl-o">palec v smer toka, prsti kažejo silnice</div><div class="pl-p">silnice okoli žice so krožnice</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">2</span>Sile</h2>
+              <div class="pl-r"><div class="pl-f">\(F = I l B \sin\varphi\)</div><div class="pl-o">sila na vodnik</div><div class="pl-p">\(I = 2, l = 0{,}5, B = 0{,}1\): \(0{,}1\ \text{N}\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(F = e v B \sin\varphi\)</div><div class="pl-o">sila na naboj (Lorentz)</div><div class="pl-p">ne opravlja dela</div></div>
+              <div class="pl-r"><div class="pl-f">\(r = \frac{mv}{eB}\)</div><div class="pl-o">kroženje naboja</div><div class="pl-p">večja hitrost: večji polmer</div></div>
+              <div class="pl-r"><div class="pl-f">\(M = N I S B \sin\varphi\)</div><div class="pl-o">navor na zanko</div><div class="pl-p">elektromotor</div></div>
+            </section>
+
+            <section class="pl-sklop pl-pasti">
+              <h2><span class="pl-st">!</span>Pazi</h2>
+              <ul>
+                <li>Sila je pravokotna na \(\vec v\) in \(\vec B\).</li>
+              </ul>
+            </section>
+          </div>
+          <footer class="pl-noga">piflar.si · plonk listek · Magnetno polje</footer>
+        </article>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>
