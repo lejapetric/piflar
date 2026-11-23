@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Zaporedja in vrste — plonk listek | Učilnica.com</title>
+  <meta name="description" content="Plonk listek za maturo: vse formule zaporedij, vrst, obrestnega računa in anuitet na enem listu, vsaka s kratkim primerom.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&family=Kalam:wght@400;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
+  <link rel="stylesheet" href="/style/snov.css">
+  <link rel="stylesheet" href="/style/plonk.css">
+  <script>
+    // Predogled konceptov: ?k=1..4
+    (function () {
+      var k = new URLSearchParams(location.search).get("k");
+      document.documentElement.dataset.plonk = /^[1-4]$/.test(k || "") ? k : "1";
+    })();
+  </script>
+</head>
+<body>
+  <div id="header"></div>
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view">
+
+        <article class="plonk">
+          <header class="pl-glava">
+            <div>
+              <span class="pl-oznaka">Plonk listek · Matematika 4.12</span>
+              <h1>Zaporedja in vrste</h1>
+            </div>
+            <div class="pl-gumbi">
+              <a class="pl-gumb pl-gumb--tiho" href="zaporedja_vrste_razlaga.html">Cela razlaga</a>
+              <button type="button" class="pl-gumb" onclick="window.print()">Natisni</button>
+            </div>
+          </header>
+
+          <div class="pl-vsebina">
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">1</span>Zaporedje</h2>
+              <div class="pl-r">
+                <div class="pl-f">\(a_n = f(n),\ n \in \mathbb{N}\)</div>
+                <div class="pl-o">splošni člen</div>
+                <div class="pl-p">\(a_n = 2n - 1\): \(a_5 = 9\)</div>
+              </div>
+              <div class="pl-r">
+                <div class="pl-f">\(a_{n+1} - a_n &gt; 0\)</div>
+                <div class="pl-o">narašča (\(&lt; 0\): pada)</div>
+                <div class="pl-p">\(a_n = 3n + 1\): razlika \(3 &gt; 0\), narašča</div>
+              </div>
+              <div class="pl-r">
+                <div class="pl-f">\(m \le a_n \le M\)</div>
+                <div class="pl-o">omejeno</div>
+                <div class="pl-p">\(a_n = \frac{1}{n}\): \(0 &lt; a_n \le 1\)</div>
+              </div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">2</span>Aritmetično zaporedje</h2>
+              <div class="pl-r">
+                <div class="pl-f">\(a_n = a_1 + (n-1)d\)</div>
+                <div class="pl-o">\(d = a_{n+1} - a_n\)</div>
+                <div class="pl-p">\(a_1 = 3,\ d = 4\): \(a_{10} = 3 + 9 \cdot 4 = 39\)</div>
+              </div>
+              <div class="pl-r">
+                <div class="pl-f">\(S_n = \frac{n}{2}(a_1 + a_n)\)</div>
+                <div class="pl-o">vsota prvih \(n\) členov</div>
+                <div class="pl-p">\(1 + 3 + \ldots + 19\): \(S_{10} = 5 \cdot 20 = 100\)</div>
+              </div>
+              <div class="pl-r">
+                <div class="pl-f">\(a_n = \frac{a_{n-1} + a_{n+1}}{2}\)</div>
+                <div class="pl-o">srednji člen</div>
+                <div class="pl-p">\(x, 7, 11\): \(x = 2 \cdot 7 - 11 = 3\)</div>
+              </div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">3</span>Geometrijsko zaporedje</h2>
+              <div class="pl-r">
+                <div class="pl-f">\(a_n = a_1 q^{n-1}\)</div>
+                <div class="pl-o">\(q = \frac{a_{n+1}}{a_n}\)</div>
+                <div class="pl-p">\(2, 6, 18, \ldots\): \(a_6 = 2 \cdot 3^5 = 486\)</div>
+              </div>
+              <div class="pl-r">
+                <div class="pl-f">\(S_n = a_1 \frac{q^n - 1}{q - 1}\)</div>
+                <div class="pl-o">\(q \ne 1\)</div>
+                <div class="pl-p">\(1 + 2 + \ldots + 2^9 = \frac{2^{10} - 1}{1} = 1023\)</div>
+              </div>
+              <div class="pl-r">
+                <div class="pl-f">\(a_n^2 = a_{n-1} a_{n+1}\)</div>
+                <div class="pl-o">srednji člen</div>
+                <div class="pl-p">\(4, x, 9\): \(x = \pm 6\)</div>
+              </div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">4</span>Limita zaporedja</h2>
+              <div class="pl-r">
+                <div class="pl-f">\(|a_n - a| &lt; \varepsilon\)</div>
+                <div class="pl-o">za skoraj vse \(n\)</div>
+                <div class="pl-p">\(a_n = \frac{2n+1}{n+3}\), \(\varepsilon = 0{,}01\): \(\frac{5}{n+3} &lt; 0{,}01\), od \(n = 498\)</div>
+              </div>
+              <div class="pl-r">
+                <div class="pl-f">\(\lim \frac{1}{n} = 0,\ \lim q^n = 0\)</div>
+                <div class="pl-o">\(|q| &lt; 1\)</div>
+                <div class="pl-p">\(\lim \frac{2n+1}{n+3} = \lim \frac{2 + \frac1n}{1 + \frac3n} = 2\)</div>
+              </div>
+              <div class="pl-r">
+                <div class="pl-f">\(\lim \left(1 + \frac{1}{n}\right)^n = e\)</div>
+                <div class="pl-o">na listu formul</div>
+                <div class="pl-p">\(e \approx 2{,}718\)</div>
+              </div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">5</span>Vrste</h2>
+              <div class="pl-r">
+                <div class="pl-f">\(s = \lim S_n\)</div>
+                <div class="pl-o">vsota vrste</div>
+                <div class="pl-p">konvergira, če limita obstaja</div>
+              </div>
+              <div class="pl-r">
+                <div class="pl-f">\(s = \frac{a_1}{1 - q}\)</div>
+                <div class="pl-o">samo za \(|q| &lt; 1\)</div>
+                <div class="pl-p">\(8 + 4 + 2 + \ldots = \frac{8}{1 - \frac12} = 16\)</div>
+              </div>
+              <div class="pl-r">
+                <div class="pl-f">\(0{,}\overline{3} = \frac{0{,}3}{1 - 0{,}1}\)</div>
+                <div class="pl-o">periodično decimalno</div>
+                <div class="pl-p">\(= \frac{1}{3}\)</div>
+              </div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">6</span>Obrestni račun</h2>
+              <div class="pl-r">
+                <div class="pl-f">\(G = G_0\left(1 + \frac{pt}{100}\right)\)</div>
+                <div class="pl-o">navadno obrestovanje</div>
+                <div class="pl-p">5000 €, 3 %, 4 leta: \(5000 \cdot 1{,}12 = 5600\) €</div>
+              </div>
+              <div class="pl-r">
+                <div class="pl-f">\(G_n = G_0 r^n,\ r = 1 + \frac{p}{100}\)</div>
+                <div class="pl-o">obrestno obrestovanje</div>
+                <div class="pl-p">\(5000 \cdot 1{,}03^4 = 5627{,}54\) €</div>
+              </div>
+              <div class="pl-r">
+                <div class="pl-f">\(r_r = 1 + \frac{p}{100m},\ r_k = \sqrt[m]{r}\)</div>
+                <div class="pl-o">relativna, konformna (\(m\) obdobij)</div>
+                <div class="pl-p">6 % mesečno: \(r_r = 1{,}005\), \(r_k = \sqrt[12]{1{,}06}\)</div>
+              </div>
+              <div class="pl-r">
+                <div class="pl-f">\(G_0 = \frac{G_n}{r^n}\)</div>
+                <div class="pl-o">diskontiranje (na danes)</div>
+                <div class="pl-p">2000 € čez 1 leto, 4 %: \(\frac{2000}{1{,}04} = 1923{,}08\) €</div>
+              </div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">7</span>Anuitete in amortizacija</h2>
+              <div class="pl-r">
+                <div class="pl-f">\(a = D \frac{r^n (r - 1)}{r^n - 1}\)</div>
+                <div class="pl-o">iz \(D r^n = a \frac{r^n - 1}{r - 1}\)</div>
+                <div class="pl-p">\(D = 10\,000\), 6 %, 5 let: \(a = 2373{,}96\) €</div>
+              </div>
+              <div class="pl-r">
+                <div class="pl-f">\(o_k = D_{k-1} \frac{p}{100}\)</div>
+                <div class="pl-o">obresti od ostanka dolga</div>
+                <div class="pl-p">\(D = 3000\), 5 %: \(o_1 = 150\) €</div>
+              </div>
+              <div class="pl-r">
+                <div class="pl-f">\(R_k = a - o_k,\ D_k = D_{k-1} - R_k\)</div>
+                <div class="pl-o">razdolžnina, ostanek</div>
+                <div class="pl-p">\(a = 1101{,}63\): \(R_1 = 951{,}63\), \(D_1 = 2048{,}37\)</div>
+              </div>
+            </section>
+
+            <section class="pl-sklop pl-pasti">
+              <h2><span class="pl-st">!</span>Pazi</h2>
+              <ul>
+                <li>V \(a_n\) je \(n - 1\), ne \(n\).</li>
+                <li>Vsota vrste samo pri \(|q| &lt; 1\).</li>
+                <li>Mesečno: leta pretvori v mesece.</li>
+                <li>Obresti od ostanka dolga, ne od začetnega.</li>
+              </ul>
+            </section>
+
+          </div>
+          <footer class="pl-noga">piflar.si · plonk listek · Zaporedja in vrste</footer>
+        </article>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>
