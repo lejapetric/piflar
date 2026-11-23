@@ -1,0 +1,320 @@
+// Plonk listki za kemijo. Formule spojin z unicode indeksi (H₂O), brez MathJaxa.
+// Sklopi sledijo podpoglavjem razlage, ker jih poklicna kemija prevzema po številkah.
+
+=== varno_eksperimentalno_delo
+## Pribor in tehnike
+bireta, pipeta, merilna bučka :: natančne prostornine :: titracija: bireta + erlenmajerica
+filtracija, destilacija, kristalizacija :: ločevanje zmesi :: sol iz morske vode: izparevanje
+## Načrtovanje poskusa
+neodvisna spremenljivka :: tisto, kar spreminjamo :: temperatura
+odvisna spremenljivka :: tisto, kar merimo :: hitrost reakcije
+konstante :: vse ostalo enako :: enaka masa in koncentracija
+## Nevarne snovi
+piktogrami GHS :: jedko, vnetljivo, strupeno, okolju nevarno :: koncentrirana H₂SO₄: jedko
+H- in P-stavki :: nevarnost / previdnostni ukrepi :: »Hraniti stran od toplote«
+LD₅₀ :: odmerek, ki ubije polovico osebkov (mg/kg) :: manjši LD₅₀: bolj strupeno
+! Kislino vlivamo v vodo, nikoli obratno.
+
+=== delci_snovi
+## Atom in ioni
+\(^A_Z X\) :: \(Z\) protonov, \(A - Z\) nevtronov :: ²³Na: 11 p, 12 n, 11 e⁻
+kation / anion :: odda / sprejme elektrone :: Na⁺ (10 e⁻), Cl⁻ (18 e⁻)
+## Izotopi
+izotopi :: enak \(Z\), različno število nevtronov :: ³⁵Cl in ³⁷Cl
+\(A_r = \sum x_i A_i\) :: povprečna relativna atomska masa :: Cl: \(0{,}75 \cdot 35 + 0{,}25 \cdot 37 = 35{,}5\)
+## Elektronska ovojnica
+1s 2s 2p 3s 3p 4s 3d 4p :: vrstni red zapolnjevanja :: Fe: [Ar] 4s² 3d⁶
+s: 2, p: 6, d: 10 e⁻ :: največ elektronov v podlupini :: lupina \(n\): \(2n^2\)
+valenčni elektroni :: v zunanji lupini :: O: 2s² 2p⁴, 6 valenčnih
+Hundovo pravilo :: orbitale iste podlupine najprej po en e⁻ :: N: 3 nesparjeni
+## Periodni sistem
+skupina :: enako število valenčnih e⁻ :: 17. skupina: halogeni
+perioda :: število lupin :: Na v 3. periodi
+polmer atoma :: narašča navzdol, pada v desno :: Cs največji
+ionizacijska energija, elektronegativnost :: naraščata navzgor in v desno :: F najbolj elektronegativen
+! Pri ionih prehodnih kovin najprej odvzamemo 4s elektrone.
+
+=== kemijske_vezi
+## Ionska vez
+kovina + nekovina :: prenos elektronov :: NaCl: Na⁺ Cl⁻
+ionski kristal :: visoko tališče, raztopina in talina prevajata :: MgO tali pri 2852 °C
+## Kovalentna vez
+skupni elektronski par :: nekovina + nekovina :: H₂O: dve vezi O–H
+Lewisova formula :: vsi valenčni e⁻, oktet :: CO₂: O=C=O
+\(\Delta EN > 0{,}4\) :: polarna vez :: H–Cl
+## Oblika in polarnost
+VSEPR: 2 linearna, 3 trikotna, 4 tetraedrična :: elektronski pari se odbijajo :: CH₄ tetraeder, 109,5°
+prosti pari stisnejo kot :: NH₃ piramida 107°, H₂O kotna 104,5° :: CO₂ linearna
+polarna molekula :: polarne vezi + nesimetrična oblika :: H₂O polarna, CO₂ nepolarna
+## Imenovanje
+predpone mono, di, tri, tetra :: binarne spojine nekovin :: N₂O₅: didušikov pentoksid
+ion kovine + anion :: ionske spojine :: FeCl₃: železov(III) klorid
+## Medmolekulske sile
+londonske < dipol–dipol < vodikova vez :: moč sil :: H₂O vre pri 100 °C, H₂S pri −60 °C
+vodikova vez :: H na N, O ali F :: med molekulami vode, v DNK
+molekulski, ionski, kovalentni, kovinski kristali :: vrste kristalov :: diamant: kovalentni
+## Več kot štirje pari
+trikotna bipiramida (5), oktaeder (6) :: razširjen oktet :: PCl₅, SF₆
+! Polarne vezi še ne pomenijo polarne molekule.
+
+=== mnozina_snovi
+## Molska masa
+\(M_r = \sum A_r\) :: relativna molekulska masa :: H₂O: \(2 + 16 = 18\)
+\(M\) (g/mol) :: številčno enaka \(M_r\) :: \(M(\text{CO}_2) = 44\) g/mol
+\(w = \frac{m_i}{m}\) :: masni delež :: O v H₂O: \(\frac{16}{18} = 89\ \%\)
+## Množina
+\(n = \frac{m}{M}\) :: množina (mol) :: 36 g vode: 2 mol
+\(N = n N_A\) :: \(N_A = 6{,}02 \cdot 10^{23}\ \text{mol}^{-1}\) :: 2 mol: \(1{,}2 \cdot 10^{24}\) molekul
+empirična formula :: razmerje množin elementov :: 40 % C, 6,7 % H, 53,3 % O: CH₂O
+## Plini
+\(V = n V_m\) :: \(V_m = 22{,}4\) l/mol (0 °C, 101 kPa) :: 2 mol: 44,8 l
+\(pV = nRT\) :: plinska enačba, \(R = 8{,}31\) J/(mol K) :: 1 mol, 300 K, 100 kPa: 24,9 l
+\(M = \frac{\rho RT}{p}\) :: molska masa iz gostote :: večja gostota: večja \(M\)
+! V plinsko enačbo: Pa, m³, K.
+
+=== kemijska_reakcija
+## Enačba
+reaktanti → produkti :: ohranitev atomov in naboja :: 2 H₂ + O₂ → 2 H₂O
+(s), (l), (g), (aq) :: agregatna stanja :: NaCl(aq)
+## Množinska razmerja
+razmerje koeficientov = razmerje množin :: stehiometrija :: 2 mol H₂ da 2 mol H₂O
+prebitni reaktant :: ostane; računaj iz omejujočega :: 4 g H₂ + 16 g O₂: O₂ omejuje
+\(\eta = \frac{m_{dejansko}}{m_{teoretično}}\) :: izkoristek :: 8 g od 10 g: 80 %
+## Entalpija
+\(\Delta H < 0\) :: eksotermna (sprošča toploto) :: gorenje
+\(\Delta H > 0\) :: endotermna (porablja toploto) :: razpad CaCO₃
+termokemijska enačba :: \(\Delta H\) za zapisane množine :: C + O₂ → CO₂, \(\Delta H = -394\) kJ
+## Hessov zakon in vezne energije
+\(\Delta H_r = \sum \Delta H_{tv}(\text{prod}) - \sum \Delta H_{tv}(\text{reakt})\) :: iz tvornih entalpij :: elementi imajo \(\Delta H_{tv} = 0\)
+\(\Delta H_r = \sum E_{vez}(\text{pretrgane}) - \sum E_{vez}(\text{nastale})\) :: iz veznih energij :: H₂ + Cl₂ → 2 HCl: \(436 + 243 - 2 \cdot 432 = -185\) kJ
+Hessov zakon :: \(\Delta H\) ni odvisna od poti :: seštevanje enačb (in njihovih \(\Delta H\))
+! Pri obratni reakciji \(\Delta H\) zamenja predznak.
+
+=== raztopine
+## Topnost
+podobno se topi v podobnem :: polarno v polarnem :: NaCl v vodi, olje v bencinu
+topnost (g/100 g vode) :: nasičena raztopina :: krivulja topnosti
+topnost plinov :: pada s temperaturo :: topla gazirana pijača hitro izgubi CO₂
+## Sestava
+\(w = \frac{m_{topljenca}}{m_{raztopine}}\) :: masni delež :: 10 g soli v 90 g vode: 10 %
+\(c = \frac{n}{V}\) :: množinska koncentracija (mol/l) :: 0,2 mol v 0,5 l: 0,4 M
+\(\gamma = \frac{m}{V}\) :: masna koncentracija (g/l) :: \(\gamma = cM\)
+\(c = \frac{w \rho}{M}\) :: pretvarjanje :: 36 % HCl, \(\rho = 1{,}18\) g/ml: \(c = 11{,}6\) M
+\(c_1 V_1 = c_2 V_2\) :: redčenje :: 100 ml 2 M v 400 ml: 0,5 M
+## Hidratacija
+ioni obdani z vodo :: raztapljanje ionskih snovi :: Na⁺(aq), Cl⁻(aq)
+\(\Delta H_{raz} = \Delta H_{mreže} + \Delta H_{hidr}\) :: toplota raztapljanja :: NH₄NO₃ ohlaja
+! Masa raztopine = topljenec + topilo.
+
+=== hitrost_reakcij
+## Hitrost
+\(v = \frac{\Delta c}{\Delta t}\) :: hitrost reakcije :: koncentracija pade za 0,2 M v 10 s: 0,02 M/s
+merjenje :: masa, prostornina plina, barva, pH :: CaCO₃ + HCl: merimo CO₂
+## Teorija trkov
+uspešni trki :: dovolj energije (\(E_a\)) in prava orientacija :: aktivacijska energija
+temperatura, koncentracija, površina :: povečajo hitrost :: prah gori hitreje kot kos
+## Katalizatorji
+znižajo \(E_a\) :: ne porabijo se, ne spremenijo \(\Delta H\) :: MnO₂ pri razpadu H₂O₂
+encimi :: biološki katalizatorji, specifični :: amilaza razgrajuje škrob
+! Katalizator ne premakne ravnotežja.
+
+=== kemijsko_ravnotezje
+## Ravnotežje
+⇌ :: obe reakciji tečeta enako hitro :: N₂ + 3 H₂ ⇌ 2 NH₃
+## Konstanta
+\(K_c = \frac{[C]^c [D]^d}{[A]^a [B]^b}\) :: produkti / reaktanti :: \(K_c = \frac{[\text{NH}_3]^2}{[\text{N}_2][\text{H}_2]^3}\)
+trdne snovi in voda :: ne nastopajo v \(K_c\) :: CaCO₃(s) ⇌ CaO(s) + CO₂: \(K_c = [\text{CO}_2]\)
+\(K > 1\) :: ravnotežje na strani produktov :: \(K\) je odvisna samo od \(T\)
+## Le Chatelier
+dodamo reaktant :: premik k produktom :: več N₂: več NH₃
+višji tlak :: premik na stran z manj molekul plina :: Haberjev postopek
+segrejemo :: premik v endotermno smer :: eksotermna: manj produktov
+! Spremembe koncentracije in tlaka ne spremenijo \(K\), temperatura jo.
+
+=== ravnotezja_v_vodnih_raztopinah
+## Poimenovanje
+kisline :: HCl klorovodikova, HNO₃ dušikova, H₂SO₄ žveplova :: H₃PO₄ fosforjeva
+soli :: kation + anion kisline :: Na₂SO₄ natrijev sulfat
+## Brønsted
+kislina oddaja H⁺, baza sprejema :: konjugiran par :: NH₃ + H₂O ⇌ NH₄⁺ + OH⁻
+močna kislina :: popolnoma protolizira :: HCl, HNO₃, H₂SO₄
+## pH
+\(K_w = [\text{H}_3\text{O}^+][\text{OH}^-] = 10^{-14}\) :: ionski produkt vode (25 °C) :: \([\text{H}_3\text{O}^+] = 10^{-3}\): \([\text{OH}^-] = 10^{-11}\)
+\(\text{pH} = -\log[\text{H}_3\text{O}^+]\) :: \(\text{pH} + \text{pOH} = 14\) :: 0,01 M HCl: pH 2
+## Titracija
+\(n_{kisline} = n_{baze}\) (enoprotonski) :: ekvivalentna točka :: 20 ml 0,1 M HCl porabi 20 ml 0,1 M NaOH
+indikator :: menja barvo v območju pH :: fenolftalein: brezbarven → roza
+## Ionske reakcije
+nastanek oborine, plina, vode :: ionska enačba brez ionov opazovalcev :: Ag⁺ + Cl⁻ → AgCl(s)
+## Soli
+sol močne kisline + šibke baze :: kisla raztopina :: NH₄Cl
+sol šibke kisline + močne baze :: bazična :: CH₃COONa
+## Šibke kisline
+\(K_a = \frac{[\text{H}_3\text{O}^+][\text{A}^-]}{[\text{HA}]}\) :: \([\text{H}_3\text{O}^+] = \sqrt{K_a c}\) :: 0,1 M, \(K_a = 10^{-5}\): pH 3
+## Pufri
+šibka kislina + njena sol :: ohranja pH :: CH₃COOH + CH₃COONa
+\(\text{pH} = \text{p}K_a + \log\frac{[\text{A}^-]}{[\text{HA}]}\) :: enaki koncentraciji: pH = p\(K_a\) :: kri: pH 7,4
+! Pri razredčitvi močne kisline 10-krat se pH poveča za 1.
+
+=== oksidacija_redukcija
+## Oksidacijska števila
+elementi 0, O −2, H +1, vsota = naboj :: pravila :: H₂SO₄: S je +6
+oksidacija :: oddajanje e⁻, OŠ naraste :: Fe → Fe³⁺ + 3 e⁻
+redukcija :: sprejemanje e⁻, OŠ pade :: Cl₂ + 2 e⁻ → 2 Cl⁻
+oksidant / reducent :: se reducira / se oksidira :: v Zn + Cu²⁺: Zn reducent
+## Urejanje enačb
+izenači oddane in sprejete e⁻ :: polreakcije :: MnO₄⁻ + 8 H⁺ + 5 e⁻ → Mn²⁺ + 4 H₂O
+## Galvanski členi
+redoks vrsta :: bolj negativen \(E^\circ\): močnejši reducent :: Zn izpodrine Cu iz raztopine
+\(E = E^\circ_{katoda} - E^\circ_{anoda}\) :: napetost člena :: Daniell: \(0{,}34 - (-0{,}76) = 1{,}10\) V
+anoda: oksidacija, katoda: redukcija :: velja za vse člene :: korozija: Fe se oksidira
+## Elektroliza
+\(m = \frac{I t M}{z F}\) :: Faradayev zakon, \(F = 96\,500\) As/mol :: 2 A, 965 s, Cu²⁺: 0,64 g
+katoda (−): redukcija kationov :: talina NaCl: Na na katodi, Cl₂ na anodi :: voda: H₂ in O₂
+## Pridobivanje kovin
+redukcija oksidov :: s C, CO ali elektrolizo :: Fe₂O₃ + 3 CO → 2 Fe + 3 CO₂
+! Anoda je vedno mesto oksidacije.
+
+=== alkalijske_kovine_halogeni
+## Alkalijske kovine
+1. skupina, 1 valenčni e⁻ :: zelo reaktivne, ioni M⁺ :: Li, Na, K
+2 M + 2 H₂O → 2 MOH + H₂ :: z vodo :: reaktivnost narašča navzdol
+barva plamena :: Li rdeča, Na rumena, K vijolična :: preverjanje ionov
+## Halogeni
+17. skupina, 7 valenčnih e⁻ :: dvoatomne molekule X₂ :: F₂, Cl₂, Br₂, I₂
+reaktivnost pada navzdol :: močnejši izpodrine šibkejšega :: Cl₂ + 2 Br⁻ → 2 Cl⁻ + Br₂
+AgCl bela, AgBr rumenkasta, AgI rumena :: dokaz halogenidov :: oborine s srebrom
+! Najbolj reaktivna alkalijska kovina je spodaj, najbolj reaktiven halogen zgoraj.
+
+=== periodni_sistem_elementov
+## Področja in oksidi
+s, p, d, f blok :: po zadnji podlupini :: Fe: d-blok
+kovinski oksidi bazični :: Na₂O + H₂O → 2 NaOH :: nekovinski kisli: SO₃ + H₂O → H₂SO₄
+amfoterni :: reagirajo s kislinami in bazami :: Al₂O₃, ZnO
+## Prehodni elementi
+več oksidacijskih stanj :: obarvane spojine :: Fe²⁺ zelen, Fe³⁺ rumenorjav, Cu²⁺ moder
+katalizatorji :: Fe pri Haberju, V₂O₅ pri H₂SO₄ :: Pt v avtomobilih
+## Koordinacijske spojine
+centralni ion + ligandi :: koordinacijsko število :: [Cu(NH₃)₄]²⁺ temno moder
+ligandi :: NH₃, H₂O, Cl⁻, CN⁻ :: heksaakva, tetraamin
+! Kompleksni ion zapiši v oglatem oklepaju.
+
+=== elementi_spojine_tehnologije
+## Aluminij
+pasivacija :: zaščitna plast Al₂O₃ :: ne korodira naprej
+elektroliza boksita :: pridobivanje :: veliko električne energije
+## Kisline
+H₂SO₄ :: kontaktni postopek, dehidrira :: S → SO₂ → SO₃ → H₂SO₄
+HNO₃ :: Ostwaldov postopek, oksidant :: NH₃ → NO → NO₂ → HNO₃
+H₃PO₄ :: gnojila, živila :: kokakola
+HClO, HClO₄ :: klorove kisline :: belilo
+## Biološki elementi in okolje
+C, H, O, N, P, S :: makroelementi v živih bitjih :: Fe v hemoglobinu
+NPK gnojila :: dušik, fosfor, kalij :: evtrofikacija voda
+kisli dež :: SO₂ in NO₂ :: razjeda apnenec
+## Silicij
+SiO₂ :: kremen, steklo :: steklo: SiO₂ + Na₂CO₃ + CaCO₃
+cement :: apnenec + glina, žgano :: beton
+nanotehnologija :: delci 1–100 nm :: grafen, nanocevke
+! Silicij je polprevodnik, SiO₂ izolator.
+
+=== organske_spojine_zgradba
+## Ogljik
+štirivezen :: verige, obroči, večkratne vezi :: sp³, sp², sp hibridizacija
+## Formule
+molekulska, racionalna, skeletna :: zapisi :: C₂H₆O: CH₃CH₂OH
+## Funkcionalne skupine
+–OH alkohol (-ol), –CHO aldehid (-al) :: kisikove skupine :: etanol, etanal
+C=O keton (-on), –COOH kislina (-ojska) :: :: propanon, etanojska kislina
+–COO– ester, –NH₂ amin :: :: metil etanoat, metanamin
+poimenovanje :: najdaljša veriga, najnižji lokanti :: 2-metilbutan
+## Izomerija
+strukturna :: enaka formula, druga veriga ali položaj :: butan in 2-metilpropan
+cis/trans (geometrijska) :: okoli dvojne vezi :: cis-but-2-en
+optična :: kiralni C s štirimi različnimi skupinami :: mlečna kislina
+! Lokante izberi tako, da je vsota najmanjša.
+
+=== organske_reakcije
+## Cepitev vezi
+homolitska :: nastanejo radikali :: Cl₂ → 2 Cl·
+heterolitska :: nastanejo ioni :: nukleofil (bogat z e⁻), elektrofil (reven z e⁻)
+## Vrste reakcij
+adicija :: na dvojno vez :: CH₂=CH₂ + Br₂ → CH₂Br–CH₂Br
+substitucija :: zamenjava atoma :: CH₄ + Cl₂ → CH₃Cl + HCl (svetloba)
+eliminacija :: nastane dvojna vez :: etanol → eten + H₂O
+kondenzacija, hidroliza :: izstop / vstop vode :: ester ⇌ kislina + alkohol
+oksidacija :: alkohol → aldehid → kislina :: etanol → etanal → etanojska kislina
+! Markovnikov: H se veže na C, ki ima več H.
+
+=== ogljikovodiki
+## Alkani
+CₙH₂ₙ₊₂ :: nasičeni, enojne vezi :: propan C₃H₈
+substitucija (radikalska) :: s halogeni na svetlobi :: CH₄ + Cl₂ → CH₃Cl + HCl
+vrelišče :: narašča z dolžino verige, razvejanost ga zniža :: pentan > 2,2-dimetilpropan
+## Alkeni in alkini
+CₙH₂ₙ / CₙH₂ₙ₋₂ :: dvojna / trojna vez :: eten C₂H₄, etin C₂H₂
+adicija :: H₂, X₂, HX, H₂O :: razbarva bromovico (dokaz nenasičenosti)
+## Areni
+benzen C₆H₆ :: delokalizirani elektroni :: substitucija, ne adicija
+nitriranje, halogeniranje :: elektrofilna substitucija :: C₆H₆ + Br₂ → C₆H₅Br + HBr (FeBr₃)
+## Viri in gorenje
+nafta, zemeljski plin :: frakcijska destilacija, kreking :: bencin
+popolno gorenje → CO₂ + H₂O :: nepopolno → CO, saje :: CH₄ + 2 O₂ → CO₂ + 2 H₂O
+! Benzen ne razbarva bromovice.
+
+=== halogenirani_ogljikovodiki
+## Zgradba
+R–X :: halogen na ogljiku :: CH₃Cl klorometan
+polarna vez C–X :: C je delno pozitiven :: napad nukleofila
+## Reakcije
+nukleofilna substitucija :: X zamenja OH⁻ :: CH₃Br + OH⁻ → CH₃OH + Br⁻
+eliminacija :: z bazo v alkoholu nastane alken :: 2-brombutan → but-2-en
+## Okolje
+freoni (CFC) :: tanjšajo ozonski plašč :: prepovedani
+topila, PVC, teflon :: uporaba :: kloroform
+! Substitucija v vodi, eliminacija v alkoholni raztopini baze.
+
+=== kisikove_spojine
+## Alkoholi, fenoli, etri
+R–OH :: primarni, sekundarni, terciarni :: propan-2-ol je sekundarni
+oksidacija primarnih :: → aldehid → karboksilna kislina :: terciarni se ne oksidirajo
+fenol :: OH na benzenu, šibko kisel :: C₆H₅OH
+eter R–O–R :: nizko vrelišče :: dietil eter
+## Aldehidi in ketoni
+R–CHO / R–CO–R :: karbonilna skupina :: etanal / propanon
+Tollensov, Fehlingov reagent :: dokaz aldehidov :: srebrno zrcalo
+## Karboksilne kisline
+R–COOH :: šibke kisline :: etanojska (ocetna) kislina
+kislina + alkohol ⇌ ester + voda :: esterifikacija (H₂SO₄) :: etil etanoat diši po sadju
+amidi, anhidridi, kloridi :: derivati kislin :: R–CONH₂
+## Ogljikovi hidrati
+monosaharidi :: glukoza, fruktoza C₆H₁₂O₆ :: aldoza / ketoza
+disaharidi :: saharoza = glukoza + fruktoza :: glikozidna vez
+polisaharidi :: škrob, glikogen, celuloza :: škrob + jod: modro
+## Lipidi
+maščobe :: ester glicerola in maščobnih kislin :: trigliceridi
+umiljenje :: maščoba + NaOH → milo + glicerol :: milo: hidrofilna glava, hidrofobni rep
+! Terciarni alkoholi se ne oksidirajo.
+
+=== dusikove_spojine
+## Amini
+R–NH₂ :: šibke baze :: metanamin
+## Aminokisline
+H₂N–CHR–COOH :: amino in karboksilna skupina :: glicin (R = H)
+ion dvojček :: H₃N⁺–CHR–COO⁻ :: v vodni raztopini
+## Peptidi in proteini
+peptidna vez –CO–NH– :: kondenzacija aminokislin :: dipeptid + H₂O
+primarna, sekundarna, terciarna, kvaterna :: zgradba proteinov :: α-vijačnica, β-ploskev
+denaturacija :: toplota, kisline, težke kovine :: kuhanje jajca
+biuretna reakcija :: dokaz proteinov (vijolično) :: Cu²⁺ v bazičnem
+! Peptidna vez nastane s kondenzacijo (izstopi voda).
+
+=== polimeri
+## Polimerizacija
+adicijska :: monomeri z dvojno vezjo :: eten → polieten
+kondenzacijska :: izstopi mala molekula (voda) :: najlon, poliester
+## Vrste
+naravni :: škrob, celuloza, proteini, DNK, kavčuk :: celuloza v bombažu
+sintezni :: PE, PVC, PS, PET, najlon :: PET plastenke
+termoplasti / duroplasti :: se mehčajo / se ne :: PE / bakelit
+! Recikliranje termoplastov je lažje.

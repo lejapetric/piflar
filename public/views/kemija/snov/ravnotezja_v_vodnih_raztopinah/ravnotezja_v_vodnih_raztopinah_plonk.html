@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ravnotežja v vodnih raztopinah — plonk listek | Učilnica.com</title>
+  <meta name="description" content="Plonk listek za maturo: Ravnotežja v vodnih raztopinah na enem listu A4, vsaka formula ali pojem s kratkim primerom.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Kalam:wght@400;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
+  <link rel="stylesheet" href="/style/snov.css">
+  <link rel="stylesheet" href="/style/plonk.css">
+</head>
+<body>
+  <div id="header"></div>
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view">
+
+        <!-- Ustvari tools/plonk/plonk.mjs iz api/data/plonk/kemija.txt; ne urejaj ročno. -->
+        <article class="plonk">
+          <header class="pl-glava">
+            <div>
+              <span class="pl-oznaka">Plonk listek · Kemija 4.9</span>
+              <h1>Ravnotežja v vodnih raztopinah</h1>
+            </div>
+            <div class="pl-gumbi">
+              <a class="pl-gumb pl-gumb--tiho" href="ravnotezja_v_vodnih_raztopinah_razlaga.html">Cela razlaga</a>
+              <button type="button" class="pl-gumb" onclick="window.print()">Natisni</button>
+            </div>
+          </header>
+
+          <div class="pl-vsebina">
+            <section class="pl-sklop">
+              <h2><span class="pl-st">1</span>Poimenovanje</h2>
+              <div class="pl-r"><div class="pl-f">kisline</div><div class="pl-o">HCl klorovodikova, HNO₃ dušikova, H₂SO₄ žveplova</div><div class="pl-p">H₃PO₄ fosforjeva</div></div>
+              <div class="pl-r"><div class="pl-f">soli</div><div class="pl-o">kation + anion kisline</div><div class="pl-p">Na₂SO₄ natrijev sulfat</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">2</span>Brønsted</h2>
+              <div class="pl-r"><div class="pl-f">kislina oddaja H⁺, baza sprejema</div><div class="pl-o">konjugiran par</div><div class="pl-p">NH₃ + H₂O ⇌ NH₄⁺ + OH⁻</div></div>
+              <div class="pl-r"><div class="pl-f">močna kislina</div><div class="pl-o">popolnoma protolizira</div><div class="pl-p">HCl, HNO₃, H₂SO₄</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">3</span>pH</h2>
+              <div class="pl-r"><div class="pl-f">\(K_w = [\text{H}_3\text{O}^+][\text{OH}^-] = 10^{-14}\)</div><div class="pl-o">ionski produkt vode (25 °C)</div><div class="pl-p">\([\text{H}_3\text{O}^+] = 10^{-3}\): \([\text{OH}^-] = 10^{-11}\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(\text{pH} = -\log[\text{H}_3\text{O}^+]\)</div><div class="pl-o">\(\text{pH} + \text{pOH} = 14\)</div><div class="pl-p">0,01 M HCl: pH 2</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">4</span>Titracija</h2>
+              <div class="pl-r"><div class="pl-f">\(n_{kisline} = n_{baze}\) (enoprotonski)</div><div class="pl-o">ekvivalentna točka</div><div class="pl-p">20 ml 0,1 M HCl porabi 20 ml 0,1 M NaOH</div></div>
+              <div class="pl-r"><div class="pl-f">indikator</div><div class="pl-o">menja barvo v območju pH</div><div class="pl-p">fenolftalein: brezbarven → roza</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">5</span>Ionske reakcije</h2>
+              <div class="pl-r pl-r--dolga"><div class="pl-f">nastanek oborine, plina, vode</div><div class="pl-o">ionska enačba brez ionov opazovalcev</div><div class="pl-p">Ag⁺ + Cl⁻ → AgCl(s)</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">6</span>Soli</h2>
+              <div class="pl-r"><div class="pl-f">sol močne kisline + šibke baze</div><div class="pl-o">kisla raztopina</div><div class="pl-p">NH₄Cl</div></div>
+              <div class="pl-r"><div class="pl-f">sol šibke kisline + močne baze</div><div class="pl-o">bazična</div><div class="pl-p">CH₃COONa</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">7</span>Šibke kisline</h2>
+              <div class="pl-r"><div class="pl-f">\(K_a = \frac{[\text{H}_3\text{O}^+][\text{A}^-]}{[\text{HA}]}\)</div><div class="pl-o">\([\text{H}_3\text{O}^+] = \sqrt{K_a c}\)</div><div class="pl-p">0,1 M, \(K_a = 10^{-5}\): pH 3</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">8</span>Pufri</h2>
+              <div class="pl-r"><div class="pl-f">šibka kislina + njena sol</div><div class="pl-o">ohranja pH</div><div class="pl-p">CH₃COOH + CH₃COONa</div></div>
+              <div class="pl-r"><div class="pl-f">\(\text{pH} = \text{p}K_a + \log\frac{[\text{A}^-]}{[\text{HA}]}\)</div><div class="pl-o">enaki koncentraciji: pH = p\(K_a\)</div><div class="pl-p">kri: pH 7,4</div></div>
+            </section>
+
+            <section class="pl-sklop pl-pasti">
+              <h2><span class="pl-st">!</span>Pazi</h2>
+              <ul>
+                <li>Pri razredčitvi močne kisline 10-krat se pH poveča za 1.</li>
+              </ul>
+            </section>
+          </div>
+          <footer class="pl-noga">piflar.si · plonk listek · Ravnotežja v vodnih raztopinah</footer>
+        </article>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>

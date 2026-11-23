@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hitrost reakcije in kemijsko ravnotežje — plonk listek | Učilnica.com</title>
+  <meta name="description" content="Plonk listek za maturo: Hitrost reakcije in kemijsko ravnotežje na enem listu A4, vsaka formula ali pojem s kratkim primerom.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Kalam:wght@400;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
+  <link rel="stylesheet" href="/style/snov.css">
+  <link rel="stylesheet" href="/style/plonk.css">
+</head>
+<body>
+  <div id="header"></div>
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view">
+
+        <!-- Ustvari tools/plonk/plonk.mjs iz api/data/plonk/poklicna_kemija.txt; ne urejaj ročno. -->
+        <article class="plonk">
+          <header class="pl-glava">
+            <div>
+              <span class="pl-oznaka">Plonk listek · Poklicna matura Snov</span>
+              <h1>Hitrost reakcije in kemijsko ravnotežje</h1>
+            </div>
+            <div class="pl-gumbi">
+              <a class="pl-gumb pl-gumb--tiho" href="hitrost_ravnotezje_razlaga.html">Cela razlaga</a>
+              <button type="button" class="pl-gumb" onclick="window.print()">Natisni</button>
+            </div>
+          </header>
+
+          <div class="pl-vsebina">
+            <section class="pl-sklop">
+              <h2><span class="pl-st">1</span>Hitrost</h2>
+              <div class="pl-r"><div class="pl-f">\(v = \frac{\Delta c}{\Delta t}\)</div><div class="pl-o">hitrost reakcije</div><div class="pl-p">koncentracija pade za 0,2 M v 10 s: 0,02 M/s</div></div>
+              <div class="pl-r"><div class="pl-f">merjenje</div><div class="pl-o">masa, prostornina plina, barva, pH</div><div class="pl-p">CaCO₃ + HCl: merimo CO₂</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">2</span>Teorija trkov</h2>
+              <div class="pl-r"><div class="pl-f">uspešni trki</div><div class="pl-o">dovolj energije (\(E_a\)) in prava orientacija</div><div class="pl-p">aktivacijska energija</div></div>
+              <div class="pl-r pl-r--dolga"><div class="pl-f">temperatura, koncentracija, površina</div><div class="pl-o">povečajo hitrost</div><div class="pl-p">prah gori hitreje kot kos</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">3</span>Katalizatorji</h2>
+              <div class="pl-r"><div class="pl-f">znižajo \(E_a\)</div><div class="pl-o">ne porabijo se, ne spremenijo \(\Delta H\)</div><div class="pl-p">MnO₂ pri razpadu H₂O₂</div></div>
+              <div class="pl-r"><div class="pl-f">encimi</div><div class="pl-o">biološki katalizatorji, specifični</div><div class="pl-p">amilaza razgrajuje škrob</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">4</span>Ravnotežje</h2>
+              <div class="pl-r"><div class="pl-f">⇌</div><div class="pl-o">obe reakciji tečeta enako hitro</div><div class="pl-p">N₂ + 3 H₂ ⇌ 2 NH₃</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">5</span>Konstanta</h2>
+              <div class="pl-r"><div class="pl-f">\(K_c = \frac{[C]^c [D]^d}{[A]^a [B]^b}\)</div><div class="pl-o">produkti / reaktanti</div><div class="pl-p">\(K_c = \frac{[\text{NH}_3]^2}{[\text{N}_2][\text{H}_2]^3}\)</div></div>
+              <div class="pl-r"><div class="pl-f">trdne snovi in voda</div><div class="pl-o">ne nastopajo v \(K_c\)</div><div class="pl-p">CaCO₃(s) ⇌ CaO(s) + CO₂: \(K_c = [\text{CO}_2]\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(K &gt; 1\)</div><div class="pl-o">ravnotežje na strani produktov</div><div class="pl-p">\(K\) je odvisna samo od \(T\)</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">6</span>Le Chatelier</h2>
+              <div class="pl-r"><div class="pl-f">dodamo reaktant</div><div class="pl-o">premik k produktom</div><div class="pl-p">več N₂: več NH₃</div></div>
+              <div class="pl-r"><div class="pl-f">višji tlak</div><div class="pl-o">premik na stran z manj molekul plina</div><div class="pl-p">Haberjev postopek</div></div>
+              <div class="pl-r"><div class="pl-f">segrejemo</div><div class="pl-o">premik v endotermno smer</div><div class="pl-p">eksotermna: manj produktov</div></div>
+            </section>
+
+            <section class="pl-sklop pl-pasti">
+              <h2><span class="pl-st">!</span>Pazi</h2>
+              <ul>
+                <li>Spremembe koncentracije in tlaka ne spremenijo \(K\), temperatura jo.</li>
+                <li>Katalizator ne premakne ravnotežja.</li>
+              </ul>
+            </section>
+          </div>
+          <footer class="pl-noga">piflar.si · plonk listek · Hitrost reakcije in kemijsko ravnotežje</footer>
+        </article>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>

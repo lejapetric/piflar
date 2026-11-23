@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Snovi, zmesi in laboratorijsko delo — plonk listek | Učilnica.com</title>
+  <meta name="description" content="Plonk listek za maturo: Snovi, zmesi in laboratorijsko delo na enem listu A4, vsaka formula ali pojem s kratkim primerom.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Kalam:wght@400;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
+  <link rel="stylesheet" href="/style/snov.css">
+  <link rel="stylesheet" href="/style/plonk.css">
+</head>
+<body>
+  <div id="header"></div>
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view">
+
+        <!-- Ustvari tools/plonk/plonk.mjs iz api/data/plonk/poklicna_kemija.txt; ne urejaj ročno. -->
+        <article class="plonk">
+          <header class="pl-glava">
+            <div>
+              <span class="pl-oznaka">Plonk listek · Poklicna matura Snov</span>
+              <h1>Snovi, zmesi in laboratorijsko delo</h1>
+            </div>
+            <div class="pl-gumbi">
+              <a class="pl-gumb pl-gumb--tiho" href="zmesi_laboratorij_razlaga.html">Cela razlaga</a>
+              <button type="button" class="pl-gumb" onclick="window.print()">Natisni</button>
+            </div>
+          </header>
+
+          <div class="pl-vsebina">
+            <section class="pl-sklop">
+              <h2><span class="pl-st">1</span>Snovi in zmesi</h2>
+              <div class="pl-r"><div class="pl-f">element, spojina</div><div class="pl-o">čiste snovi</div><div class="pl-p">O₂, H₂O</div></div>
+              <div class="pl-r"><div class="pl-f">homogena / heterogena zmes</div><div class="pl-o">raztopina / suspenzija, emulzija</div><div class="pl-p">slana voda / pesek v vodi</div></div>
+              <div class="pl-r pl-r--dolga"><div class="pl-f">filtracija, destilacija, kromatografija</div><div class="pl-o">ločevanje zmesi</div><div class="pl-p">barvila v flomastru: kromatografija</div></div>
+              <div class="pl-r pl-r--dolga"><div class="pl-f">dekantiranje, centrifugiranje, magnet</div><div class="pl-o">ločevanje</div><div class="pl-p">železo iz žvepla: magnet</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">2</span>Pribor in tehnike</h2>
+              <div class="pl-r"><div class="pl-f">bireta, pipeta, merilna bučka</div><div class="pl-o">natančne prostornine</div><div class="pl-p">titracija: bireta + erlenmajerica</div></div>
+              <div class="pl-r pl-r--dolga"><div class="pl-f">filtracija, destilacija, kristalizacija</div><div class="pl-o">ločevanje zmesi</div><div class="pl-p">sol iz morske vode: izparevanje</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">3</span>Nevarne snovi</h2>
+              <div class="pl-r"><div class="pl-f">piktogrami GHS</div><div class="pl-o">jedko, vnetljivo, strupeno, okolju nevarno</div><div class="pl-p">koncentrirana H₂SO₄: jedko</div></div>
+              <div class="pl-r"><div class="pl-f">H- in P-stavki</div><div class="pl-o">nevarnost / previdnostni ukrepi</div><div class="pl-p">»Hraniti stran od toplote«</div></div>
+              <div class="pl-r"><div class="pl-f">LD₅₀</div><div class="pl-o">odmerek, ki ubije polovico osebkov (mg/kg)</div><div class="pl-p">manjši LD₅₀: bolj strupeno</div></div>
+            </section>
+          </div>
+          <footer class="pl-noga">piflar.si · plonk listek · Snovi, zmesi in laboratorijsko delo</footer>
+        </article>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>

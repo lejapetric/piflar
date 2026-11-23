@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Kovine — plonk listek | Učilnica.com</title>
+  <meta name="description" content="Plonk listek za maturo: Kovine na enem listu A4, vsaka formula ali pojem s kratkim primerom.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Kalam:wght@400;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
+  <link rel="stylesheet" href="/style/snov.css">
+  <link rel="stylesheet" href="/style/plonk.css">
+</head>
+<body>
+  <div id="header"></div>
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view">
+
+        <!-- Ustvari tools/plonk/plonk.mjs iz api/data/plonk/poklicna_kemija.txt; ne urejaj ročno. -->
+        <article class="plonk">
+          <header class="pl-glava">
+            <div>
+              <span class="pl-oznaka">Plonk listek · Poklicna matura Snov</span>
+              <h1>Kovine</h1>
+            </div>
+            <div class="pl-gumbi">
+              <a class="pl-gumb pl-gumb--tiho" href="kovine_pm_razlaga.html">Cela razlaga</a>
+              <button type="button" class="pl-gumb" onclick="window.print()">Natisni</button>
+            </div>
+          </header>
+
+          <div class="pl-vsebina">
+            <section class="pl-sklop">
+              <h2><span class="pl-st">1</span>Alkalijske kovine</h2>
+              <div class="pl-r"><div class="pl-f">1. skupina, 1 valenčni e⁻</div><div class="pl-o">zelo reaktivne, ioni M⁺</div><div class="pl-p">Li, Na, K</div></div>
+              <div class="pl-r"><div class="pl-f">2 M + 2 H₂O → 2 MOH + H₂</div><div class="pl-o">z vodo</div><div class="pl-p">reaktivnost narašča navzdol</div></div>
+              <div class="pl-r"><div class="pl-f">barva plamena</div><div class="pl-o">Li rdeča, Na rumena, K vijolična</div><div class="pl-p">preverjanje ionov</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">2</span>Zemljoalkalijske kovine in kras</h2>
+              <div class="pl-r"><div class="pl-f">2. skupina, ioni M²⁺</div><div class="pl-o">Mg, Ca, Ba</div><div class="pl-p">Ca + 2 H₂O → Ca(OH)₂ + H₂</div></div>
+              <div class="pl-r pl-r--dolga"><div class="pl-f">CaCO₃ + CO₂ + H₂O ⇌ Ca(HCO₃)₂</div><div class="pl-o">nastanek kraških jam in kapnikov</div><div class="pl-p">trda voda</div></div>
+              <div class="pl-r"><div class="pl-f">CaCO₃ → CaO + CO₂</div><div class="pl-o">žganje apnenca</div><div class="pl-p">gašeno apno Ca(OH)₂</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">3</span>Železo</h2>
+              <div class="pl-r"><div class="pl-f">plavž: Fe₂O₃ + 3 CO → 2 Fe + 3 CO₂</div><div class="pl-o">pridobivanje</div><div class="pl-p">grodelj, jeklo</div></div>
+              <div class="pl-r"><div class="pl-f">rjavenje</div><div class="pl-o">Fe + O₂ + H₂O</div><div class="pl-p">zaščita: barva, cink (pocinkanje)</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">4</span>Aluminij</h2>
+              <div class="pl-r"><div class="pl-f">pasivacija</div><div class="pl-o">zaščitna plast Al₂O₃</div><div class="pl-p">ne korodira naprej</div></div>
+              <div class="pl-r"><div class="pl-f">elektroliza boksita</div><div class="pl-o">pridobivanje</div><div class="pl-p">veliko električne energije</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">5</span>Prehodni elementi</h2>
+              <div class="pl-r"><div class="pl-f">več oksidacijskih stanj</div><div class="pl-o">obarvane spojine</div><div class="pl-p">Fe²⁺ zelen, Fe³⁺ rumenorjav, Cu²⁺ moder</div></div>
+              <div class="pl-r"><div class="pl-f">katalizatorji</div><div class="pl-o">Fe pri Haberju, V₂O₅ pri H₂SO₄</div><div class="pl-p">Pt v avtomobilih</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">6</span>Pridobivanje kovin</h2>
+              <div class="pl-r"><div class="pl-f">redukcija oksidov</div><div class="pl-o">s C, CO ali elektrolizo</div><div class="pl-p">Fe₂O₃ + 3 CO → 2 Fe + 3 CO₂</div></div>
+            </section>
+          </div>
+          <footer class="pl-noga">piflar.si · plonk listek · Kovine</footer>
+        </article>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>

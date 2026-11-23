@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Uvod v varno eksperimentalno delo — plonk listek | Učilnica.com</title>
+  <meta name="description" content="Plonk listek za maturo: Uvod v varno eksperimentalno delo na enem listu A4, vsaka formula ali pojem s kratkim primerom.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Kalam:wght@400;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
+  <link rel="stylesheet" href="/style/snov.css">
+  <link rel="stylesheet" href="/style/plonk.css">
+</head>
+<body>
+  <div id="header"></div>
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view">
+
+        <!-- Ustvari tools/plonk/plonk.mjs iz api/data/plonk/kemija.txt; ne urejaj ročno. -->
+        <article class="plonk">
+          <header class="pl-glava">
+            <div>
+              <span class="pl-oznaka">Plonk listek · Kemija 4.1</span>
+              <h1>Uvod v varno eksperimentalno delo</h1>
+            </div>
+            <div class="pl-gumbi">
+              <a class="pl-gumb pl-gumb--tiho" href="varno_eksperimentalno_delo_razlaga.html">Cela razlaga</a>
+              <button type="button" class="pl-gumb" onclick="window.print()">Natisni</button>
+            </div>
+          </header>
+
+          <div class="pl-vsebina">
+            <section class="pl-sklop">
+              <h2><span class="pl-st">1</span>Pribor in tehnike</h2>
+              <div class="pl-r"><div class="pl-f">bireta, pipeta, merilna bučka</div><div class="pl-o">natančne prostornine</div><div class="pl-p">titracija: bireta + erlenmajerica</div></div>
+              <div class="pl-r pl-r--dolga"><div class="pl-f">filtracija, destilacija, kristalizacija</div><div class="pl-o">ločevanje zmesi</div><div class="pl-p">sol iz morske vode: izparevanje</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">2</span>Načrtovanje poskusa</h2>
+              <div class="pl-r"><div class="pl-f">neodvisna spremenljivka</div><div class="pl-o">tisto, kar spreminjamo</div><div class="pl-p">temperatura</div></div>
+              <div class="pl-r"><div class="pl-f">odvisna spremenljivka</div><div class="pl-o">tisto, kar merimo</div><div class="pl-p">hitrost reakcije</div></div>
+              <div class="pl-r"><div class="pl-f">konstante</div><div class="pl-o">vse ostalo enako</div><div class="pl-p">enaka masa in koncentracija</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">3</span>Nevarne snovi</h2>
+              <div class="pl-r"><div class="pl-f">piktogrami GHS</div><div class="pl-o">jedko, vnetljivo, strupeno, okolju nevarno</div><div class="pl-p">koncentrirana H₂SO₄: jedko</div></div>
+              <div class="pl-r"><div class="pl-f">H- in P-stavki</div><div class="pl-o">nevarnost / previdnostni ukrepi</div><div class="pl-p">»Hraniti stran od toplote«</div></div>
+              <div class="pl-r"><div class="pl-f">LD₅₀</div><div class="pl-o">odmerek, ki ubije polovico osebkov (mg/kg)</div><div class="pl-p">manjši LD₅₀: bolj strupeno</div></div>
+            </section>
+
+            <section class="pl-sklop pl-pasti">
+              <h2><span class="pl-st">!</span>Pazi</h2>
+              <ul>
+                <li>Kislino vlivamo v vodo, nikoli obratno.</li>
+              </ul>
+            </section>
+          </div>
+          <footer class="pl-noga">piflar.si · plonk listek · Uvod v varno eksperimentalno delo</footer>
+        </article>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>

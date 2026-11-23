@@ -1,0 +1,110 @@
+// Plonk listki za poklicno maturo iz kemije; večino sklopov prevzame iz kemije.
+
+=== agregatna_stanja
+## Agregatna stanja
+trdno, tekoče, plinasto :: razporeditev in gibanje delcev :: led, voda, para
+taljenje, izparevanje, sublimacija :: prehodi s prejemanjem toplote :: jod sublimira
+vrelišče :: parni tlak = zunanji tlak :: v hribih voda vre pod 100 °C
+fazni diagram vode :: trojna točka, kritična točka :: led se pod tlakom tali
+\(p_1V_1 = p_2V_2\) :: Boylov zakon (stalna \(T\)) :: dvakratni tlak: pol manjša prostornina
+\(\frac{V_1}{T_1} = \frac{V_2}{T_2}\) :: Gay-Lussac (stalen \(p\)) :: \(T\) v kelvinih
++ kemija:mnozina_snovi#3
+! Temperatura vedno v kelvinih.
+
+=== anorganska_nomenklatura
++ kemija:oksidacija_redukcija#1
++ kemija:kemijske_vezi#4
++ kemija:ravnotezja_v_vodnih_raztopinah#1
+## Ioni
+SO₄²⁻ sulfat, SO₃²⁻ sulfit :: -at več kisika, -it manj :: NO₃⁻ nitrat, NO₂⁻ nitrit
+OH⁻ hidroksid, CO₃²⁻ karbonat, PO₄³⁻ fosfat :: pogosti anioni :: Ca(OH)₂ kalcijev hidroksid
+NH₄⁺ amonijev :: edini pogosti večatomni kation :: NH₄Cl amonijev klorid
+
+=== atom_periodni_sistem
++ kemija:delci_snovi
++ kemija:periodni_sistem_elementov#1
+
+=== biomolekule_pm
++ kemija:kisikove_spojine#4,5
++ kemija:dusikove_spojine#2,3
+
+=== halogenirani_kisikove
++ kemija:halogenirani_ogljikovodiki#1,2
++ kemija:kisikove_spojine#1,2,3
++ kemija:dusikove_spojine#1
+! Terciarni alkoholi se ne oksidirajo.
+
+=== hitrost_ravnotezje
++ kemija:hitrost_reakcij
++ kemija:kemijsko_ravnotezje
+
+=== kisline_baze_pm
++ kemija:ravnotezja_v_vodnih_raztopinah#2,3,7,4,5,6,8
+
+=== kovine_pm
++ kemija:alkalijske_kovine_halogeni#1
+## Zemljoalkalijske kovine in kras
+2. skupina, ioni M²⁺ :: Mg, Ca, Ba :: Ca + 2 H₂O → Ca(OH)₂ + H₂
+CaCO₃ + CO₂ + H₂O ⇌ Ca(HCO₃)₂ :: nastanek kraških jam in kapnikov :: trda voda
+CaCO₃ → CaO + CO₂ :: žganje apnenca :: gašeno apno Ca(OH)₂
+## Železo
+plavž: Fe₂O₃ + 3 CO → 2 Fe + 3 CO₂ :: pridobivanje :: grodelj, jeklo
+rjavenje :: Fe + O₂ + H₂O :: zaščita: barva, cink (pocinkanje)
++ kemija:elementi_spojine_tehnologije#1
++ kemija:periodni_sistem_elementov#2
++ kemija:oksidacija_redukcija#5
+
+=== mnozina_stehiometrija
++ kemija:mnozina_snovi#1,2
++ kemija:kemijska_reakcija#2
+! Najprej pretvori v množino, šele nato uporabi razmerje koeficientov.
+
+=== ogljikovodiki_pm
++ kemija:organske_spojine_zgradba#1,3,4
++ kemija:ogljikovodiki
++ kemija:organske_reakcije#2
+
+=== polimeri_pm
++ kemija:polimeri
+
+=== racunanje_raztopine
++ kemija:raztopine#2
+## Redčenje in mešanje
+\(m_1 w_1 + m_2 w_2 = (m_1 + m_2) w\) :: mešanje raztopin :: 100 g 10 % + 100 g 30 %: 20 %
+\(m_{topljenca} = w \cdot m_{raztopine}\) :: priprava raztopine :: 250 g 4 % raztopine: 10 g soli
+\(m = c V M\) :: trdna snov za raztopino :: 0,5 l 0,1 M NaCl: \(0{,}05 \cdot 58{,}5 = 2{,}9\) g
+! Pri redčenju se množina topljenca ne spremeni.
+
+=== raztopine_pm
++ kemija:raztopine#1,3
+## Koligativne lastnosti
+\(\Delta T_v = K_e b,\ \Delta T_t = K_k b\) :: zvišanje vrelišča, znižanje tališča :: sol na cesti: led se tali pod 0 °C
+\(b = \frac{n}{m_{topila}}\) :: molalnost (mol/kg) :: ioni štejejo posebej: NaCl da 2 delca
+osmoza :: voda gre skozi polprepustno membrano proti večji koncentraciji :: celica v slani vodi se skrči
+
+=== reakcije_energija
++ kemija:kemijska_reakcija#1,3,4
+
+=== redoks_elektrokemija
++ kemija:oksidacija_redukcija#2,3,4
+! Anoda je vedno mesto oksidacije.
+
+=== vezi_zgradba_molekul
++ kemija:kemijske_vezi#1,2,3,6,5
+
+=== zmesi_laboratorij
+## Snovi in zmesi
+element, spojina :: čiste snovi :: O₂, H₂O
+homogena / heterogena zmes :: raztopina / suspenzija, emulzija :: slana voda / pesek v vodi
+filtracija, destilacija, kromatografija :: ločevanje zmesi :: barvila v flomastru: kromatografija
+dekantiranje, centrifugiranje, magnet :: ločevanje :: železo iz žvepla: magnet
++ kemija:varno_eksperimentalno_delo#1,3
+
+=== zrak_voda_nekovine
+## Zrak in voda
+N₂ 78 %, O₂ 21 %, Ar 0,9 %, CO₂ 0,04 % :: sestava zraka :: frakcijska destilacija utekočinjenega zraka
+toplogredni plini :: CO₂, CH₄, H₂O :: globalno segrevanje
+H₂O :: polarna, vodikove vezi, gostota največja pri 4 °C :: led plava
+trdota vode :: Ca²⁺ in Mg²⁺ :: vodni kamen
++ kemija:alkalijske_kovine_halogeni#2
++ kemija:elementi_spojine_tehnologije#2,3,4

@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Množina snovi — plonk listek | Učilnica.com</title>
+  <meta name="description" content="Plonk listek za maturo: Množina snovi na enem listu A4, vsaka formula ali pojem s kratkim primerom.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Kalam:wght@400;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
+  <link rel="stylesheet" href="/style/snov.css">
+  <link rel="stylesheet" href="/style/plonk.css">
+</head>
+<body>
+  <div id="header"></div>
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view">
+
+        <!-- Ustvari tools/plonk/plonk.mjs iz api/data/plonk/kemija.txt; ne urejaj ročno. -->
+        <article class="plonk">
+          <header class="pl-glava">
+            <div>
+              <span class="pl-oznaka">Plonk listek · Kemija 4.4</span>
+              <h1>Množina snovi</h1>
+            </div>
+            <div class="pl-gumbi">
+              <a class="pl-gumb pl-gumb--tiho" href="mnozina_snovi_razlaga.html">Cela razlaga</a>
+              <button type="button" class="pl-gumb" onclick="window.print()">Natisni</button>
+            </div>
+          </header>
+
+          <div class="pl-vsebina">
+            <section class="pl-sklop">
+              <h2><span class="pl-st">1</span>Molska masa</h2>
+              <div class="pl-r"><div class="pl-f">\(M_r = \sum A_r\)</div><div class="pl-o">relativna molekulska masa</div><div class="pl-p">H₂O: \(2 + 16 = 18\)</div></div>
+              <div class="pl-r"><div class="pl-f">\(M\) (g/mol)</div><div class="pl-o">številčno enaka \(M_r\)</div><div class="pl-p">\(M(\text{CO}_2) = 44\) g/mol</div></div>
+              <div class="pl-r"><div class="pl-f">\(w = \frac{m_i}{m}\)</div><div class="pl-o">masni delež</div><div class="pl-p">O v H₂O: \(\frac{16}{18} = 89\ \%\)</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">2</span>Množina</h2>
+              <div class="pl-r"><div class="pl-f">\(n = \frac{m}{M}\)</div><div class="pl-o">množina (mol)</div><div class="pl-p">36 g vode: 2 mol</div></div>
+              <div class="pl-r"><div class="pl-f">\(N = n N_A\)</div><div class="pl-o">\(N_A = 6{,}02 \cdot 10^{23}\ \text{mol}^{-1}\)</div><div class="pl-p">2 mol: \(1{,}2 \cdot 10^{24}\) molekul</div></div>
+              <div class="pl-r"><div class="pl-f">empirična formula</div><div class="pl-o">razmerje množin elementov</div><div class="pl-p">40 % C, 6,7 % H, 53,3 % O: CH₂O</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">3</span>Plini</h2>
+              <div class="pl-r"><div class="pl-f">\(V = n V_m\)</div><div class="pl-o">\(V_m = 22{,}4\) l/mol (0 °C, 101 kPa)</div><div class="pl-p">2 mol: 44,8 l</div></div>
+              <div class="pl-r"><div class="pl-f">\(pV = nRT\)</div><div class="pl-o">plinska enačba, \(R = 8{,}31\) J/(mol K)</div><div class="pl-p">1 mol, 300 K, 100 kPa: 24,9 l</div></div>
+              <div class="pl-r"><div class="pl-f">\(M = \frac{\rho RT}{p}\)</div><div class="pl-o">molska masa iz gostote</div><div class="pl-p">večja gostota: večja \(M\)</div></div>
+            </section>
+
+            <section class="pl-sklop pl-pasti">
+              <h2><span class="pl-st">!</span>Pazi</h2>
+              <ul>
+                <li>V plinsko enačbo: Pa, m³, K.</li>
+              </ul>
+            </section>
+          </div>
+          <footer class="pl-noga">piflar.si · plonk listek · Množina snovi</footer>
+        </article>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>
