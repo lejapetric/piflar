@@ -1,0 +1,311 @@
+// Plonk listki za angleščino: struktura ali pojem :: raba :: primer.
+
+=== izpit_anglescina
+## Shema izpita
+1A bralno razumevanje :: 35 min, 20 % :: true/false/not given, izbirni tip
+1B raba jezika :: 25 min, 15 % :: vstavljanje besed v pravilni obliki
+2 slušno razumevanje :: do 20 min, 15 % :: dvakrat poslušaš
+3A krajši sestavek :: 30 min, 10 %, OR 120–150 / VR 150–180 besed :: pismo, e-sporočilo, poročilo, članek
+3B daljši sestavek :: 60 min, 20 %, OR 220–250 / VR 250–300 besed :: OR esej / VR esej o književnem delu
+ustni izpit :: do 20 min, 20 %, 3 naloge :: slika, pogovor o temi, besedilo
+## Merila za 3A
+vsebina, zgradba, besedišče in register, jezik :: merila :: vse iztočnice razvite
+## Merila za 3B
+vsebina, zgradba in vezljivost, besedišče, jezik :: merila :: jasna teza, povezovalci
+## Ustni izpit
+tekočnost, besedišče, pravilnost, izgovarjava :: merila :: odgovori razširjeno
+## Teme
+14 tematskih področij :: prosti čas, zdravje, okolje, mediji, šola in delo … :: besedišče po temah
+! V 1B ni dovolj poznati pravila: uporabiti ga moraš v sobesedilu.
+
+=== glagolski_casi
+## Mreža časov
+present simple :: navade, dejstva :: She works in a bank.
+present continuous :: zdaj, začasno :: I'm reading now.
+past simple :: končano v preteklosti (čas znan) :: I saw him yesterday.
+past continuous :: dogajanje v teku v preteklosti :: I was cooking when he called.
+present perfect :: izkušnja, povezava s sedanjostjo :: I have been to London.
+present perfect continuous :: traja do zdaj :: I've been waiting for an hour.
+past perfect :: pred drugim preteklim dejanjem :: The train had left when we arrived.
+## Present perfect ali past simple
+ever, never, just, already, yet, since, for :: present perfect :: Have you ever met him?
+yesterday, ago, in 2020, last week :: past simple :: I met him two years ago.
+## Prihodnost
+will :: odločitev zdaj, napoved :: I'll help you.
+going to :: namen, napoved z dokazom :: Look at those clouds, it's going to rain.
+present continuous :: dogovor :: I'm meeting Tom at 6.
+future perfect / continuous :: do / ob času v prihodnosti :: By 2030 I will have finished.
+! Stative verbs (know, like, believe) niso v -ing obliki.
+
+=== modalni_glagoli
+## Sposobnost, dovoljenje, dolžnost
+can / could / be able to :: sposobnost :: I could swim at five.
+may / can / be allowed to :: dovoljenje :: You may leave.
+must / have to :: dolžnost (notranja / zunanja) :: I must study. I have to wear a uniform.
+mustn't / don't have to :: prepoved / ni treba :: You mustn't smoke. You don't have to come.
+should / ought to :: nasvet :: You should see a doctor.
+## Verjetnost in sklepanje
+must / can't + infinitive :: gotovo / nemogoče (sedanjost) :: He must be tired.
+must / can't have + V3 :: sklepanje o preteklosti :: She can't have seen us.
+might / could / may (have + V3) :: možnost :: He might have missed the bus.
+should have + V3 :: kritika preteklosti :: You should have told me.
+## -ing ali to + nedoločnik
+enjoy, avoid, mind, suggest + -ing :: glagoli z -ing :: I enjoy reading.
+want, decide, hope, refuse + to :: glagoli z nedoločnikom :: She decided to leave.
+remember / stop / try + -ing / to :: sprememba pomena :: I stopped smoking. / I stopped to smoke.
+! Po modalnem glagolu nedoločnik brez »to«: He can swim.
+
+=== pogojniki
+## Štirje pogojniki
+0: if + present, present :: splošna resnica :: If you heat ice, it melts.
+1: if + present, will :: realna prihodnost :: If it rains, I'll stay home.
+2: if + past, would :: neresnično zdaj :: If I had money, I would travel.
+3: if + past perfect, would have + V3 :: neresnična preteklost :: If I had studied, I would have passed.
+## Mešani in drugi vezniki
+3 + 2 :: pretekli pogoj, sedanja posledica :: If I had taken the job, I would be rich now.
+unless, provided, as long as, in case :: drugi vezniki :: Unless you hurry, you'll be late.
+inverzija (VR) :: brez if :: Had I known, I would have come.
+## Želje
+wish + past :: želja zdaj :: I wish I were taller.
+wish + past perfect :: obžalovanje preteklosti :: I wish I hadn't said that.
+wish + would :: nadležnost, sprememba :: I wish you would stop.
+it's time / would rather + past :: čas je / raje bi :: It's time we left.
+! Za »if« ni »will«: If it rains (ne: will rain).
+
+=== trpnik_porocani_govor
+## Trpnik
+be + V3 :: v vseh časih :: The house was built in 1900.
+present perfect passive :: has/have been + V3 :: The letter has been sent.
+modal passive :: modal + be + V3 :: It must be done today.
+by + vršilec :: le, če je pomemben :: Hamlet was written by Shakespeare.
+## Have something done
+have/get + objekt + V3 :: nekdo drug naredi za nas :: I had my hair cut.
+## Poročani govor
+pomik časov nazaj :: present → past, past → past perfect :: »I'm tired.« → He said he was tired.
+will → would, can → could :: modalni :: She said she would come.
+here → there, today → that day :: pomik izrazov :: tomorrow → the next day
+say / tell somebody :: »tell« zahteva osebo :: He told me that …
+## Vprašanja, ukazi, prošnje
+if / whether + trdilni red :: da/ne vprašanje :: She asked if I was ready.
+vprašalnica + trdilni red :: vprašalnica :: He asked where I lived.
+tell / ask + to :: ukaz, prošnja :: She told me to sit down.
+! V poročanem vprašanju ni pomožnika »do«.
+
+=== odvisni_stavki
+## Časovni stavki
+when, while, as soon as, until, before, after :: za veznikom sedanjik za prihodnost :: I'll call you when I arrive.
+by the time :: do trenutka :: By the time we got there, it had ended.
+## Namen in posledica
+to, in order to, so as to :: namen (nedoločnik) :: I went out to buy bread.
+so that + can/could :: namen (stavek) :: I left early so that I could catch the bus.
+so … that, such … that :: posledica :: It was so cold that we stayed in.
+## Dopustnost in nasprotje
+although, even though + stavek :: čeprav :: Although it rained, we went out.
+despite, in spite of + -ing/samostalnik :: kljub :: Despite the rain, we went out.
+however, nevertheless :: vendar (na začetku povedi, vejica) :: It was late. However, she stayed.
+whereas, while :: nasprotje :: He likes tea, whereas she prefers coffee.
+! Despite brez »of«, in spite of z »of«.
+
+=== cleni_predlogi_odvisniki
+## Členi
+a / an :: prvič omenjeno, ena od :: I saw a dog.
+the :: znano, edinstveno :: The dog was big. The sun.
+brez člena :: splošno, množina, neštevni :: Dogs are loyal. Water is vital.
+## Količinski izrazi
+much / many :: neštevni / števni :: much time, many people
+a little / a few :: nekaj :: a few friends, a little money
+little / few :: malo (negativno) :: Few people came.
+each, every, either, neither :: determinanti :: Neither answer is correct.
+## Predlogi
+at / on / in (čas) :: ura / dan / mesec, leto :: at 5, on Monday, in May
+at / on / in (kraj) :: točka / površina / notranjost :: at the station, on the wall, in the box
+depend on, interested in, good at :: predložne vezave :: She's good at maths.
+## Oziralni odvisniki
+who, which, that, whose, where :: oziralni zaimki :: The man who called is my uncle.
+določilni / nedoločilni (z vejicami) :: nedoločilni brez »that« :: My sister, who lives in Rome, …
+povezovalci :: moreover, therefore, on the other hand :: Therefore, we should act.
+! Nedoločilni odvisnik ima vejice in nikoli »that«.
+
+=== pridevniki_prislovi
+## Primerjava
+-er / -est :: kratki pridevniki :: tall, taller, the tallest
+more / most :: dolgi :: more interesting
+good, better, best; bad, worse, worst :: nepravilni :: far, further, furthest
+as … as / not as … as :: enako / manj :: He's as tall as me.
+the + comp., the + comp. :: čim bolj, tem bolj :: The sooner, the better.
+## Prislovi in vrstni red pridevnikov
+-ly :: prislov načina :: quick → quickly
+mnenje, velikost, starost, oblika, barva, izvor, snov :: vrstni red :: a lovely small old round red Italian wooden table
+hard, fast, late :: enaka oblika :: He works hard. (hardly = komaj)
+## Too, enough, so, such
+too + adj :: preveč :: It's too hot.
+adj + enough :: dovolj :: She's old enough.
+so + adj / such + (a) + samostalnik :: tako :: so nice / such a nice day
+! enough stoji za pridevnikom, pred samostalnikom: enough money.
+
+=== vprasanja_zaimki
+## Tvorba vprašanj
+pomožnik + osebek + glagol :: do/does/did :: Where do you live?
+vprašanje po osebku :: brez »do« :: Who called you?
+## Vprašalni dodatki in posredna vprašanja
+trdilno → nikalni dodatek :: in obratno :: You're coming, aren't you?
+I am → aren't I :: posebnosti :: Let's go, shall we?
+posredna vprašanja :: trdilni besedni red :: Could you tell me where the station is?
+## Zaimki
+povratni :: myself, yourself :: She hurt herself.
+poudarjalni :: sam osebno :: I did it myself.
+each other :: vzajemno :: They love each other.
+some / any / no :: trdilno / vprašalno, nikalno :: Is there any milk?
+! V posrednem vprašanju ni obrnjenega besednega reda.
+
+=== slovnica_pregled
++ anglescina:glagolski_casi#1,2,3
++ anglescina:pogojniki#1
++ anglescina:trpnik_porocani_govor#1,3
++ anglescina:modalni_glagoli#1,3
++ anglescina:pridevniki_prislovi#1
++ anglescina:cleni_predlogi_odvisniki#4
+## Višja raven
+inverzija :: po negativnem prislovu :: Never have I seen such a mess.
+cleft sentences :: poudarek :: What I need is a holiday.
+! Po »if« ni »will«.
+
+=== besedotvorje
+## Pripone
+-tion, -ment, -ness, -ity :: samostalniki :: decide → decision, happy → happiness
+-ful, -less, -ous, -able, -ive :: pridevniki :: care → careful, careless
+-ize, -en, -ify :: glagoli :: wide → widen, simple → simplify
+-ly :: prislovi :: careful → carefully
+## Predpone
+un-, in-, im-, il-, ir-, dis- :: nasprotje :: impossible, illegal, irregular, dishonest
+re-, mis-, over-, under- :: ponovno, napačno, preveč, premalo :: rewrite, misunderstand
+## Frazni glagoli in kolokacije
+look after, give up, put off, turn down :: frazni glagoli :: She gave up smoking.
+make / do :: make a decision, do homework :: make a mistake
+take / have :: take a photo, have a rest :: take part in
+## Besedišče po temah
+okolje :: pollution, climate change, renewable :: reduce emissions
+zdravje :: balanced diet, exercise, stress :: lead a healthy lifestyle
+! V 1B preveri besedno vrsto, ki jo zahteva stavek.
+
+=== besedisce
+## Tematska področja
+14 področij :: prosti čas, mladi, zdravje, družina, družba, okolje, nekoč–danes–jutri, mediji, šola in delo, kultura, znanost, globalizacija, dediščina :: besedišče uporabljaj v 3A, 3B in ustno
+## Prosti čas in mladi
+leisure, hobby, take up, peer pressure :: prosti čas, mladi :: She took up yoga.
+## Zdravje in odnosi
+well-being, addiction, get on with, fall out :: zdravje, odnosi :: I get on well with my sister.
+## Družba in okolje
+inequality, volunteer, sustainable, waste :: družba, okolje :: reduce plastic waste
+## Mediji, šola, delo
+fake news, social media, career, apply for :: mediji, delo :: apply for a job
+## Kultura, znanost, globalizacija
+heritage, innovation, migration, diversity :: kultura in svet :: cultural diversity
+## Uporabne besede za pisanje
+firstly, moreover, however, in conclusion :: povezovalci :: Moreover, it saves time.
+I firmly believe, it could be argued :: mnenje :: It could be argued that …
+! Ne ponavljaj iste besede: uporabi sopomenke.
+
+=== bralno_razumevanje
+## Strategije
+preleti, nato natančno beri :: skimming, scanning :: najprej preberi vprašanja
+## Kratki odgovori in dopolnjevanje
+največ toliko besed, kot je dovoljeno :: pazi na slovnično ujemanje :: »max 4 words«
+## Izbirni tip in true/false/not given
+not given :: informacije v besedilu ni :: ne sklepaj iz lastnega znanja
+## Povezovanje in vstavljanje
+ključne besede, zaimki, povezovalci :: vstavljanje povedi :: »This« se nanaša na prejšnjo poved
+! Odgovor mora biti podprt z besedilom.
+
+=== slusno_razumevanje
+## Pred poslušanjem in med njim
+preberi vprašanja, podčrtaj ključne besede :: napovej odgovore :: števila, imena, datumi
+prvo poslušanje: odgovori, drugo: preveri :: dvakrat poslušaš :: ne obtiči pri enem vprašanju
+## Tipi nalog
+izbirni tip, dopolnjevanje, povezovanje :: tipi :: pazi na pravopis pri dopolnjevanju
+pasti :: sopomenke, popravki govorca :: »Not on Monday, actually on Tuesday«
+## Kako vadiš
+podcasti, novice, filmi s podnapisi :: vsakodnevno :: BBC Learning English
+! Odgovor v besedilu je pogosto izražen s sopomenko.
+
+=== krajsi_pisni_sestavek
+## Formalno in neformalno pismo
+formalno: Dear Sir or Madam, Yours faithfully :: brez okrajšav :: I am writing to complain about …
+formalno z imenom: Dear Mr Smith, Yours sincerely :: :: I look forward to hearing from you.
+neformalno: Hi Tom, Best wishes :: okrajšave, sproščen ton :: Thanks for your email!
+## Članek
+naslov, nagovor bralca, živ slog :: vprašanja, primeri :: Have you ever wondered …?
+## Poročilo
+naslov, namen, podnaslovi, priporočila :: formalno, brezosebno :: The aim of this report is to …
+## Obseg in iztočnice
+OR 120–150, VR 150–180 besed :: vse iztočnice razvij :: ena iztočnica = en odstavek
+! Manjkajoča iztočnica pomeni izgubo točk pri vsebini.
+
+=== daljsi_pisni_sestavek
+## Argumentativni esej (OR)
+uvod s tezo, 2–3 odstavki argumentov, zaključek :: 220–250 besed :: In my opinion, …
+## Esej iz književnosti (VR)
+teza o delu, argumenti s primeri iz dela :: 250–300 besed :: The novel shows that …
+## Zgradba in vezljivost
+topic sentence :: vsak odstavek ena glavna misel :: Firstly, …
+povezovalci :: furthermore, on the other hand, consequently :: To sum up, …
+formalni slog :: brez okrajšav in slenga :: do not namesto don't
+! Ne ponavljaj teme v zaključku dobesedno.
+
+=== pisanje_eseja
+## Kaj ocenjevalci iščejo
+vsebina, zgradba, besedišče, jezik :: merila :: jasna teza
+## Od naslova do idej
+razumi naslov, zapiši ideje za in proti :: načrt 5 minut :: »Technology isolates people«
+## Zgradba
+uvod :: splošno → teza :: Nowadays, … I believe that …
+jedro :: odstavek = argument + razlaga + primer :: For instance, …
+zaključek :: povzetek, mnenje :: In conclusion, …
+## Povezovalci in slog
+dodajanje :: moreover, in addition :: In addition, …
+nasprotje :: however, on the other hand :: However, …
+posledica :: therefore, as a result :: As a result, …
+## Vzorci
+enostranski (strinjanje) :: vsi argumenti za tezo :: I fully agree that …
+uravnotežen (za in proti) :: obe strani, nato mnenje :: On balance, …
+nestrinjanje z naslovom :: argumenti proti :: I strongly disagree …
+esej iz književnosti (VR) :: citati in dogodki iz dela :: when the protagonist …
+! Vsak argument podpri s primerom.
+
+=== opis_slike
+## Kako opišeš sliko
+splošno → podrobnosti → domneve → povezava s temo :: postopek :: In the picture I can see …
+in the foreground / background, on the left :: lega :: In the background there is …
+domneve :: might, may, seem, look as if :: They seem to be enjoying themselves.
+## Kako odgovarjaš izpraševalcu
+razširjeni odgovori, razlogi, primeri :: ne samo »yes/no« :: I think so, because …
+nisem razumel :: prosi za ponovitev :: Could you repeat that, please?
+## Teme
+14 tematskih področij :: pripravi besedišče in mnenje za vsako :: prosti čas, okolje, mediji …
+! Pri opisu slike uporabljaj present continuous.
+
+=== ustni_izpit
+## Pogovor ob sliki ali besedilu
+opis, domneve, mnenje :: 1. naloga :: The photo shows …
+## Vodeni pogovor o temi
+razširjen odgovor, mnenje, primer :: 2. naloga :: In my experience, …
+## Interpretacija besedila
+tema, sporočilo, slog :: 3. naloga (VR: odlomek in pesem) :: The poem deals with …
+! Govori v celih povedih in utemeljuj.
+
+=== visja_raven
+## Kaj je drugače
+zahtevnejše naloge, esej o književnem delu :: VR :: ocena 1–5 + točke 1–8
+## Gapped text
+povezave med odstavki :: zaimki, časovni izrazi :: »This decision …«
+## Odprte vrzeli
+ena beseda: predlog, člen, veznik, zaimek :: raba jezika :: in spite ___ (of)
+## Krajši sestavek VR
+150–180 besed :: zahtevnejša iztočnica :: formalni register
+## Esej iz književnosti
+protagonist, theme, setting, narrator, symbol :: literarni izrazi :: The setting reflects …
+## Ustni izpit
+odlomek in pesem :: interpretacija :: The tone of the poem is melancholic.
+## C1 slovnica
+inverzija, cleft, participle clauses :: zgradbe :: Having finished, she left.
+! Na VR štejejo tudi literarni izrazi.

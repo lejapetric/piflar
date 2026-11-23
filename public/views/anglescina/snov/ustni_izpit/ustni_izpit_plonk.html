@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="sl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ustni izpit — plonk listek | Učilnica.com</title>
+  <meta name="description" content="Plonk listek za maturo: Ustni izpit na enem listu A4, vsaka formula ali pojem s kratkim primerom.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Kalam:wght@400;700&display=swap">
+  <link rel="stylesheet" href="/style/style.css">
+  <script src="/components/tema.js"></script>
+  <link rel="stylesheet" href="/style/snov.css">
+  <link rel="stylesheet" href="/style/plonk.css">
+</head>
+<body>
+  <div id="header"></div>
+  <div id="sidebar"></div>
+
+  <div id="mainContent" class="main-content">
+    <div class="view-container">
+      <div class="view">
+
+        <!-- Ustvari tools/plonk/plonk.mjs iz api/data/plonk/anglescina.txt; ne urejaj ročno. -->
+        <article class="plonk">
+          <header class="pl-glava">
+            <div>
+              <span class="pl-oznaka">Plonk listek · Angleščina 15</span>
+              <h1>Ustni izpit</h1>
+            </div>
+            <div class="pl-gumbi">
+              <a class="pl-gumb pl-gumb--tiho" href="ustni_izpit_razlaga.html">Cela razlaga</a>
+              <button type="button" class="pl-gumb" onclick="window.print()">Natisni</button>
+            </div>
+          </header>
+
+          <div class="pl-vsebina">
+            <section class="pl-sklop">
+              <h2><span class="pl-st">1</span>Pogovor ob sliki ali besedilu</h2>
+              <div class="pl-r"><div class="pl-f">opis, domneve, mnenje</div><div class="pl-o">1. naloga</div><div class="pl-p">The photo shows …</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">2</span>Vodeni pogovor o temi</h2>
+              <div class="pl-r"><div class="pl-f">razširjen odgovor, mnenje, primer</div><div class="pl-o">2. naloga</div><div class="pl-p">In my experience, …</div></div>
+            </section>
+
+            <section class="pl-sklop">
+              <h2><span class="pl-st">3</span>Interpretacija besedila</h2>
+              <div class="pl-r"><div class="pl-f">tema, sporočilo, slog</div><div class="pl-o">3. naloga (VR: odlomek in pesem)</div><div class="pl-p">The poem deals with …</div></div>
+            </section>
+
+            <section class="pl-sklop pl-pasti">
+              <h2><span class="pl-st">!</span>Pazi</h2>
+              <ul>
+                <li>Govori v celih povedih in utemeljuj.</li>
+              </ul>
+            </section>
+          </div>
+          <footer class="pl-noga">piflar.si · plonk listek · Ustni izpit</footer>
+        </article>
+
+      </div>
+    </div>
+  </div>
+
+  <div id="footer"></div>
+  <script src="/components/components.js"></script>
+</body>
+</html>
