@@ -70,7 +70,7 @@
       ]
     },
     anglescina: { snov: ["izpit_anglescina", "bralno_razumevanje", "slusno_razumevanje", "krajsi_pisni_sestavek",
-      "daljsi_pisni_sestavek", "pisanje_eseja", "ustni_izpit", "opis_slike", "visja_raven"] },
+      "daljsi_pisni_sestavek", "pisanje_eseja", "ustni_izpit", "opis_slike", "visja_raven", "knjizevna_dela"] },
     nemscina: { snov: ["izpit_nemscina", "razumevanje_de", "pisno_sporocanje_de", "ustni_izpit_de"] },
     francoscina: { snov: ["razumevanje_fr", "pisno_sporocanje_fr", "ustni_izpit_fr"] },
     italijanscina: { snov: ["izpit_italijanscina", "razumevanje_it", "pisno_sporocanje_it", "ustni_izpit_it"] },
