@@ -296,6 +296,7 @@
             <p>\[S_n = \frac{n}{2}(a_1 + a_n) = \frac{n}{2}\big(2a_1 + (n - 1)d\big).\]</p>
             <p>Vsota prvih \(n\) členov <strong>geometrijskega</strong> zaporedja:</p>
             <p>\[S_n = a_1\frac{q^n - 1}{q - 1} \quad (q \ne 1), \qquad S_n = n a_1 \quad (q = 1).\]</p>
+            <p><strong>Splošni člen iz vsote.</strong> Če je znana vsota prvih \(n\) členov \(S_n\) (za vsak \(n\)), je \(a_1 = S_1\) in \(a_n = S_n - S_{n - 1}\) za \(n \ge 2\). Zaporedje je aritmetično, če je \(a_{n + 1} - a_n\) konstanta (pri aritmetičnem zaporedju je \(S_n\) kvadratna funkcija \(n\) brez prostega člena).</p>
           </div>
           <div class="sklop-naloge">
             <h3>Tipi nalog v tem sklopu</h3>
@@ -311,6 +312,7 @@
               </ol>
               <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> \(1 + 2 + \ldots + 100\)</p><p>\(50 \cdot 101 = 5050\).</p></div>
               <div class="primer"><p><strong>Primer 2:</strong> \(a_1 = 3\), \(d = 4\), \(S_n = 210\). Koliko je \(n\)?</p><p>\(n(2n + 1) = 210\), \(n = 10\).</p></div>
+              <div class="primer"><p><strong>Primer 3:</strong> Vsota prvih \(n\) členov zaporedja je \(S_n = 3n^2 - n\). Zapišite splošni člen in pokažite, da je zaporedje aritmetično.</p><p>\(a_n = S_n - S_{n - 1} = 3n^2 - n - \left(3(n - 1)^2 - (n - 1)\right) = 6n - 4\).</p><p>Preverimo \(a_1 = S_1 = 2 = 6 \cdot 1 - 4\). Ker je \(a_{n + 1} - a_n = 6\), je zaporedje aritmetično z \(d = 6\).</p></div>
             </div>
             <div class="tip-naloge" id="tip-7">
               <h4>Tip 7: Vsota geometrijskega zaporedja</h4>

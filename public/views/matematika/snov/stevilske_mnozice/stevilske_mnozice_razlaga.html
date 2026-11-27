@@ -274,6 +274,7 @@
               <li><strong>Indukcijski korak:</strong> iz predpostavke, da \(T(n)\) drži (indukcijska predpostavka), sledi, da drži tudi \(T(n + 1)\).</li>
             </ol>
             <p>Predstavljaj si vrsto domin: prva pade (baza), in vsaka, ki pade, podre naslednjo (korak). Zato padejo vse.</p>
+            <p><strong>Domneva za \(n\)-ti odvod.</strong> Izračunamo nekaj prvih odvodov, opazimo vzorec (predznak, potenca števila, koeficient ob \(n\)) in zapišemo domnevo \(f^{(n)}(x) = \ldots\). Dokažemo jo z indukcijo: preverimo \(n = 1\), v indukcijskem koraku pa odvajamo izraz za \(f^{(n)}\) in pokažemo, da dobimo izraz za \(f^{(n + 1)}\).</p>
           </div>
           <div class="sklop-naloge">
             <h3>Tipi nalog v tem sklopu</h3>
@@ -291,6 +292,7 @@
               <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Dokažite, da je \(n^3 + 2n\) deljivo s 3 za vsak \(n \in \mathbb{N}\).</p><p>Baza: \(1 + 2 = 3\). Predpostavka: \(3 \mid n^3 + 2n\).</p><p>\((n + 1)^3 + 2(n + 1) = (n^3 + 2n) + 3(n^2 + n + 1)\). Oba dela sta deljiva s 3, zato tudi vsota.</p></div>
               <div class="primer"><p><strong>Primer 2:</strong> Dokažite \(1 + 2 + \dots + n = \frac{n(n + 1)}{2}\).</p><p>Baza: \(1 = \frac{1 \cdot 2}{2}\).</p><p>Korak: \(\frac{n(n + 1)}{2} + (n + 1) = \frac{(n + 1)(n + 2)}{2}\).</p></div>
               <div class="primer"><p><strong>Primer 3:</strong> Dokažite, da je \(5^n - 1\) deljivo s 4.</p><p>Baza: \(5 - 1 = 4\).</p><p>Korak: \(5^{n+1} - 1 = 5 \cdot 5^n - 1 = 5(5^n - 1) + 4\). Oba člena sta deljiva s 4.</p></div>
+              <div class="primer"><p><strong>Primer 4:</strong> (višja raven) Za \(f(x) = x e^{-x}\) postavite domnevo za \(f^{(n)}(x)\) in jo dokažite.</p><p>\(f^{\prime}(x) = e^{-x} - xe^{-x} = -e^{-x}(x - 1)\), \(f^{\prime\prime}(x) = e^{-x}(x - 2)\). Domneva: \(f^{(n)}(x) = (-1)^n e^{-x}(x - n)\).</p><p>\(n = 1\): \(-e^{-x}(x - 1)\) drži.</p><p>Korak: \(\left((-1)^n e^{-x}(x - n)\right)^{\prime} = (-1)^n\left(-e^{-x}(x - n) + e^{-x}\right) = (-1)^{n + 1}e^{-x}(x - (n + 1))\), kar je domneva za \(n + 1\).</p></div>
             </div>
           </div>
         </section>
@@ -417,6 +419,8 @@
               <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Pokažite, da je \(n^2 + n\) sodo za vsak \(n \in \mathbb{Z}\).</p><p>\(n(n + 1)\) je produkt dveh zaporednih števil, eno je sodo.</p></div>
               <div class="primer"><p><strong>Primer 2:</strong> \(a\) in \(b\) sta deljiva s 7. Pokažite, da je \(3a - 2b\) deljivo s 7.</p><p>\(a = 7k\), \(b = 7m\): \(3a - 2b = 7(3k - 2m)\).</p></div>
               <div class="primer"><p><strong>Primer 3:</strong> Pokažite, da je razlika kvadratov dveh zaporednih lihih števil deljiva z 8.</p><p>\((2n + 1)^2 - (2n - 1)^2 = 8n\).</p></div>
+              <div class="primer"><p><strong>Primer 4:</strong> Ali je \(3^{50} + 3^{52}\) deljivo z 10? Ali je \(20!\) deljivo s 7?</p><p>Izpostavimo manjšo potenco: \(3^{50} + 3^{52} = 3^{50}(1 + 9) = 10 \cdot 3^{50}\). Je deljivo z 10.</p><p>\(20! = 1 \cdot 2 \cdots 7 \cdots 20\) ima faktor 7, zato je deljivo s 7 (\(n!\) je deljivo z vsakim naravnim \(k \le n\)).</p></div>
+              <div class="primer"><p><strong>Primer 5:</strong> Pokažite, da je vsota treh zaporednih potenc števila 2 deljiva s 7.</p><p>\(2^n + 2^{n + 1} + 2^{n + 2} = 2^n(1 + 2 + 4) = 7 \cdot 2^n\).</p></div>
             </div>
           </div>
         </section>
@@ -1335,6 +1339,7 @@
             <p>Točka na krožnici \(|z| = r\), ki s pozitivno realno osjo oklepa kot \(\varphi\), je \(z = r\cos\varphi + r\sin\varphi\, i\) (koordinati \(x = r\cos\varphi\), \(y = r\sin\varphi\)). Oglišča pravilnega \(n\)-kotnika s središčem v 0 so na taki krožnici in so med seboj zamaknjena za \(360^\circ/n\). Primer: šestkotnik z \(w_1 = 5i\) (kot \(90^\circ\)) ima oglišča pri kotih \(90^\circ, 150^\circ, 210^\circ, \ldots\):</p>
             <p>\[w_2 = 5\cos 150^\circ + 5\sin 150^\circ\, i = -\tfrac{5\sqrt3}{2} + \tfrac52 i,\quad w_3 = -\tfrac{5\sqrt3}{2} - \tfrac52 i,\quad w_4 = -5i,\ \ldots\]</p>
             <p>Presek dveh množic \(|z - z_1| = r_1\) in \(|z - z_2| = r_2\) iščemo kot presek dveh krožnic: zapišemo \(z = x + yi\), dobimo enačbi krožnic in ju odštejemo, da ostane linearna enačba.</p>
+            <p><strong>Najmanjša in največja \(|z|\) na množici.</strong> \(|z|\) je razdalja točke \(z\) od izhodišča. Za krog \(|z - w_0| \le r\) (izhodišče zunaj kroga) je najmanjša vrednost \(|w_0| - r\), največja \(|w_0| + r\); obe dosežemo na premici skozi 0 in \(w_0\), v točkah \(z = w_0 \cdot \frac{|w_0| \mp r}{|w_0|}\). Pri pravokotniku je največja \(|z|\) v najbolj oddaljenem oglišču. Težišče pravokotnika je presečišče diagonal (razpolovišče diagonale).</p>
           </div>
           <div class="sklop-naloge">
             <h3>Tipi nalog v tem sklopu</h3>
@@ -1351,6 +1356,7 @@
               <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Izračunajte \(|{-4 + 3i}|\).</p><p>\(\sqrt{16 + 9} = 5\).</p></div>
               <div class="primer"><p><strong>Primer 2:</strong> Narišite množico \(\{z;\ |z - 1| \le 2\}\).</p><p>Krog s središčem v točki \((1, 0)\) in polmerom 2, skupaj z robom.</p></div>
               <div class="primer"><p><strong>Primer 3:</strong> Narišite množico \(\{z;\ \operatorname{Re}(z) = 2\}\).</p><p>Navpična premica \(x = 2\).</p></div>
+              <div class="primer"><p><strong>Primer 4:</strong> (višja raven) Za katera števila iz množice \(|z - (3 + 4i)| \le 2\) je \(|z|\) najmanjša oziroma največja?</p><p>Središče \(w_0 = 3 + 4i\), \(|w_0| = 5\), polmer 2.</p><p>Najmanjša \(|z| = 5 - 2 = 3\) pri \(z = \frac{3}{5}(3 + 4i) = \frac{9}{5} + \frac{12}{5}i\).</p><p>Največja \(|z| = 5 + 2 = 7\) pri \(z = \frac{7}{5}(3 + 4i) = \frac{21}{5} + \frac{28}{5}i\).</p></div>
             </div>
           </div>
         </section>

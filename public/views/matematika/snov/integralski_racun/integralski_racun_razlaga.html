@@ -98,6 +98,7 @@
 </svg>
 <figcaption>Funkcija \(f(x) = 2x\) ima neskončno primitivnih funkcij \(x^2 + C\): grafi so med seboj premaknjeni navpično.</figcaption>
 </figure>
+            <p><strong>Primitivna funkcija zlepka.</strong> Če je \(f\) podana po delih, poiščemo primitivno funkcijo na vsakem delu posebej in vsak del dobi svojo konstanto (\(C_1\), \(C_2\)). Konstanti določimo iz danega pogoja (npr. \(F(0) = 0\)) in iz zahteve, da je \(F\) v stičišču zvezna (oba dela dasta v stičišču enako vrednost), ker je odvedljiva funkcija vedno zvezna.</p>
           </div>
           <div class="sklop-naloge">
             <h3>Tipi nalog v tem sklopu</h3>
@@ -114,6 +115,7 @@
               <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Ali je \(F(x) = x\ln x - x\) primitivna funkcija od \(\ln x\)?</p><p>\(F'(x) = \ln x + 1 - 1 = \ln x\): je.</p></div>
               <div class="primer"><p><strong>Primer 2:</strong> \(f(x) = \cos x\), \(F(0) = 3\)</p><p>\(F(x) = \sin x + 3\).</p></div>
               <div class="primer"><p><strong>Primer 3:</strong> Hitrost \(v(t) = 3t^2\), \(s(0) = 2\). Pot \(s(t)\)?</p><p>\(s(t) = t^3 + 2\).</p></div>
+              <div class="primer"><p><strong>Primer 4:</strong> Dana je funkcija \(f(x) = \begin{cases} \cos x, &amp; x \ge 0 \\ -\cos x, &amp; x &lt; 0 \end{cases}\). Zapišite predpis funkcije \(F\), za katero je \(F^{\prime} = f\) in \(F(0) = 2\).</p><p>Na vsakem delu integriramo posebej: \(F(x) = \sin x + C_1\) za \(x \ge 0\) in \(F(x) = -\sin x + C_2\) za \(x &lt; 0\).</p><p>Iz \(F(0) = 2\): \(\sin 0 + C_1 = 2\), torej \(C_1 = 2\).</p><p>Zveznost v \(x = 0\): \(-\sin 0 + C_2 = 2\), torej \(C_2 = 2\).</p><p>\(F(x) = \begin{cases} \sin x + 2, &amp; x \ge 0 \\ -\sin x + 2, &amp; x &lt; 0 \end{cases}\).</p></div>
             </div>
           </div>
         </section>
@@ -146,6 +148,7 @@
               </table>
             </div>
             <p>Tabela je tabela odvodov, prebrana v obratni smeri. Integrala produkta ali kvocienta ne dobimo kot produkt ali kvocient integralov.</p>
+            <p><strong>Integrali s kotnimi funkcijami.</strong> Kadar integranda ni v tabeli, ga najprej preoblikujemo s trigonometrijskimi zvezami: \(\sin^2 x = \frac{1 - \cos 2x}{2}\), \(\cos^2 x = \frac{1 + \cos 2x}{2}\), \(1 = \sin^2 x + \cos^2 x\), \(1 + \cos x = 2\cos^2\frac{x}{2}\), \(1 - \cos^2 x = \sin^2 x\). Uporabimo še \(\int \frac{dx}{\sin^2 x} = -\cot x + C\).</p>
           </div>
           <div class="sklop-naloge">
             <h3>Tipi nalog v tem sklopu</h3>
@@ -163,6 +166,9 @@
               <div class="primer"><p><strong>Primer 2:</strong> \(\int \frac{x^2 - 1}{x}\,dx\)</p><p>\(\frac{x^2}{2} - \ln|x| + C\).</p></div>
               <div class="primer"><p><strong>Primer 3:</strong> \(\int (2\sin x - 3\cos x)\,dx\)</p><p>\(-2\cos x - 3\sin x + C\).</p></div>
               <div class="primer"><p><strong>Primer 4:</strong> \(\int \frac{dx}{x^3}\)</p><p>\(-\frac{1}{2x^2} + C\).</p></div>
+              <div class="primer"><p><strong>Primer 5:</strong> \(\int \sin^2 x\,dx\)</p><p>\(\int \frac{1 - \cos 2x}{2}\,dx = \frac{x}{2} - \frac{\sin 2x}{4} + C\).</p></div>
+              <div class="primer"><p><strong>Primer 6:</strong> \(\int \frac{dx}{\sin^2 x \cos^2 x}\)</p><p>V števec zapišemo \(1 = \sin^2 x + \cos^2 x\) in ulomek razdelimo: \(\frac{1}{\cos^2 x} + \frac{1}{\sin^2 x}\).</p><p>\(\int\left(\frac{1}{\cos^2 x} + \frac{1}{\sin^2 x}\right)dx = \tan x - \cot x + C\).</p></div>
+              <div class="primer"><p><strong>Primer 7:</strong> (višja raven) \(\int \frac{1 - \cos x}{\sin^2 x}\,dx\)</p><p>\(\sin^2 x = 1 - \cos^2 x = (1 - \cos x)(1 + \cos x)\), zato je integrand \(\frac{1}{1 + \cos x} = \frac{1}{2\cos^2\frac{x}{2}}\).</p><p>Ker je \(\left(\tan\frac{x}{2}\right)^{\prime} = \frac{1}{2\cos^2\frac{x}{2}}\), je integral \(\tan\frac{x}{2} + C\).</p></div>
             </div>
           </div>
         </section>
@@ -356,6 +362,8 @@
               <li>\(\int_a^c f\,dx = \int_a^b f\,dx + \int_b^c f\,dx\) (aditivnost),</li>
               <li>liha funkcija: \(\int_{-a}^{a} f\,dx = 0\); soda: \(\int_{-a}^{a} f\,dx = 2\int_0^a f\,dx\).</li>
             </ul>
+            <p><strong>Premik mej.</strong> Pri \(\int_a^b f(x - c)\,dx\) uvedemo \(t = x - c\) (\(dt = dx\)) in premaknemo meje: \(\int_a^b f(x - c)\,dx = \int_{a - c}^{b - c} f(t)\,dt\). Graf se le premakne za \(c\) v desno, ploščina se ne spremeni.</p>
+            <p><strong>Periodična funkcija.</strong> Če ima \(g\) periodo \(T\), je integral čez vsak interval dolžine \(T\) enak, ne glede na začetek: \(\int_a^{a + T} g = \int_0^T g\). Na intervalu dolžine \(kT\) je zato integral \(k\int_0^T g\). Periodična funkcija je soda, če je njen graf na eni periodi, postavljeni simetrično okoli 0, simetričen glede na os \(y\).</p>
           </div>
           <div class="sklop-naloge">
             <h3>Tipi nalog v tem sklopu</h3>
@@ -372,6 +380,8 @@
               <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> \(\int_{-2}^{2} x^3\,dx\)</p><p>0, ker je liha.</p></div>
               <div class="primer"><p><strong>Primer 2:</strong> \(\int_{-1}^{1} x^2\,dx\)</p><p>\(2\int_0^1 x^2\,dx = \frac{2}{3}\).</p></div>
               <div class="primer"><p><strong>Primer 3:</strong> \(\int_2^2 e^x\,dx\)</p><p>0.</p></div>
+              <div class="primer"><p><strong>Primer 4:</strong> Znano je \(\int_0^3 f(x)\,dx = 5\). Izračunajte \(\int_1^4 f(x - 1)\,dx\).</p><p>\(t = x - 1\): meji \(1 \to 0\), \(4 \to 3\).</p><p>\(\int_1^4 f(x - 1)\,dx = \int_0^3 f(t)\,dt = 5\).</p></div>
+              <div class="primer"><p><strong>Primer 5:</strong> (višja raven) Funkcija \(g\) ima periodo \(4\) in \(\int_0^4 g(x)\,dx = 3\). Izračunajte \(\int_{-100}^{100} g(x)\,dx\).</p><p>Interval \([-100, 100]\) je dolg \(200 = 50 \cdot 4\), torej obsega 50 celih period.</p><p>\(\int_{-100}^{100} g(x)\,dx = 50 \cdot 3 = 150\).</p></div>
             </div>
           </div>
         </section>

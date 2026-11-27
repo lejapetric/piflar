@@ -709,6 +709,7 @@
             <p>Enačba je <strong>homogena</strong>, kadar ima vsak člen enako skupno stopnjo v \(\sin x\) in \(\cos x\), npr. \(a\sin^2 x + b\sin x\cos x + c\cos^2 x = 0\). Ker \(\cos x = 0\) ni rešitev (takrat bi moral biti tudi \(\sin x = 0\)), lahko delimo s \(\cos^2 x\) in dobimo kvadratno enačbo za \(\tan x\). Če je na desni konstanta \(d \ne 0\), jo prej zapišemo kot \(d(\sin^2 x + \cos^2 x)\), da postane enačba homogena.</p>
             <h4>Koliko rešitev ima enačba na intervalu</h4>
             <p>Osnovna enačba \(\sin x = a\) ali \(\cos x = a\) ima pri \(|a| &lt; 1\) v eni periodi \(2\pi\) dve rešitvi, pri \(a = \pm 1\) eno, pri \(|a| &gt; 1\) nobene. Enačba \(\tan x = a\) ima v vsaki periodi \(\pi\) natanko eno rešitev. Če je argument \(bx\), je perioda \(b\)-krat krajša, zato je rešitev na istem intervalu \(b\)-krat več. Rešitve na intervalu vedno poiščemo tako, da v splošno rešitev vstavljamo \(k = 0, \pm 1, \pm 2, \ldots\) in obdržimo tiste, ki padejo v interval.</p>
+            <p><strong>Enačba s parametrom.</strong> Kdaj ima enačba rešitve, ugotovimo iz zaloge vrednosti: \(\sin x = k\) in \(\cos x = k\) imata rešitve natanko tedaj, ko je \(-1 \le k \le 1\), \(\tan x = k\) pa za vsak \(k\). Enačbo najprej preoblikujemo v obliko \(\sin x = k(a)\) (ali \(\sin 2x = \ldots\)) in rešimo neenačbo \(|k(a)| \le 1\). Pazi na vrednosti parametra, pri katerih bi delili z 0.</p>
           </div>
           <div class="sklop-naloge">
             <h3>Tipi nalog v tem sklopu</h3>
@@ -737,6 +738,8 @@
               <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> \(2\sin^2 x + 3\cos x = 0\).</p><p>\(2\cos^2 x - 3\cos x - 2 = 0\): \(\cos x = -\frac{1}{2}\) (\(2\) zavržemo), \(x = \pm\frac{2\pi}{3} + 2k\pi\).</p></div>
               <div class="primer"><p><strong>Primer 2:</strong> \(\sin 2x = \cos x\).</p><p>\(\cos x(2\sin x - 1) = 0\): \(x = \frac{\pi}{2} + k\pi\), \(\frac{\pi}{6} + 2k\pi\), \(\frac{5\pi}{6} + 2k\pi\).</p></div>
               <div class="primer"><p><strong>Primer 3:</strong> \(\sin x = \sqrt{3}\cos x\).</p><p>Delimo s \(\cos x\): \(\tan x = \sqrt{3}\), \(x = \frac{\pi}{3} + k\pi\).</p></div>
+              <div class="primer"><p><strong>Primer 4:</strong> (višja raven) Za katere \(a \in \mathbb{R}\) ima enačba \((a - 1)\sin x = a + 1\) realne rešitve?</p><p>Za \(a = 1\) dobimo \(0 = 2\), ni rešitev. Za \(a \ne 1\): \(\sin x = \frac{a + 1}{a - 1}\).</p><p>Pogoj \(\left|\frac{a + 1}{a - 1}\right| \le 1 \iff (a + 1)^2 \le (a - 1)^2 \iff 4a \le 0\).</p><p>Rešitve obstajajo za \(a \le 0\).</p></div>
+              <div class="primer"><p><strong>Primer 5:</strong> (višja raven) Za katere \(m\) ima enačba \(\tan x + \cot x = m\) rešitve?</p><p>\(\tan x + \cot x = \frac{\sin^2 x + \cos^2 x}{\sin x\cos x} = \frac{2}{\sin 2x}\), zato \(\sin 2x = \frac{2}{m}\) (\(m \ne 0\)).</p><p>Pogoj \(\left|\frac{2}{m}\right| \le 1\): \(|m| \ge 2\).</p></div>
             </div>
             <div class="tip-naloge" id="tip-17">
               <h4>Tip 17: Homogena trigonometrijska enačba</h4>
