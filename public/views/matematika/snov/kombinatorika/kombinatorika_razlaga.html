@@ -189,6 +189,7 @@
               <li>Elementi, ki morajo stati skupaj, tvorijo en blok, ki ga nato razvrstimo še znotraj.</li>
               <li>Razvrstitev okoli okrogle mize: \((n - 1)!\), ker zasuk ne da nove razvrstitve.</li>
             </ul>
+            <p><strong>Omejena mesta.</strong> Če mora na določenem mestu (prvem, zadnjem …) stati element iz določene skupine, najprej zapolni omejena mesta, nato preostale elemente razvrsti na preostala mesta in vse možnosti zmnoži (osnovni izrek kombinatorike).</p>
           </div>
           <div class="sklop-naloge">
             <h3>Tipi nalog v tem sklopu</h3>
@@ -205,6 +206,7 @@
               <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> 6 oseb za okroglo mizo</p><p>\((6 - 1)! = 120\).</p></div>
               <div class="primer"><p><strong>Primer 2:</strong> Koliko sodih števil sestavimo iz števk 1, 2, 3, 4 (vsaka enkrat)?</p><p>Zadnja 2 ali 4: \(2 \cdot 3! = 12\).</p></div>
               <div class="primer"><p><strong>Primer 3:</strong> \(\frac{10!}{8!}\)</p><p>\(10 \cdot 9 = 90\).</p></div>
+              <div class="primer"><p><strong>Primer 4:</strong> Nastopilo bo 6 zborov: 4 iz Slovenije in 2 iz Avstrije. Na koliko načinov lahko določimo vrstni red, če morata prvi in zadnji nastopiti slovenska zbora?</p><p>Prvo mesto: 4 slovenski zbori. Zadnje mesto: še 3 slovenski zbori.</p><p>Ostale 4 zbore razvrstimo na 4 srednja mesta: \(4! = 24\).</p><p>Skupaj \(4 \cdot 3 \cdot 24 = 288\) načinov.</p></div>
             </div>
           </div>
         </section>
@@ -295,6 +297,7 @@
             <h3>Razlaga</h3>
             <p>Če na vsako od \(r\) mest lahko postavimo katerega koli od \(n\) elementov (tudi večkrat), je možnosti</p>
             <p>\[\overline{V}_n^r = n^r.\]</p>
+            <p><strong>Število preslikav.</strong> Preslikava iz množice \(A\) z \(m\) elementi v množico \(B\) z \(n\) elementi vsakemu elementu \(A\) priredi enega od \(n\) elementov \(B\) (lahko istega). Vseh preslikav je zato \(n^m\) (variacije s ponavljanjem). Če je \(m = n\), je bijektivnih preslikav \(n!\) (permutacije), injektivnih pri \(m \le n\) pa \(V_n^m = \frac{n!}{(n - m)!}\).</p>
           </div>
           <div class="sklop-naloge">
             <h3>Tipi nalog v tem sklopu</h3>
@@ -311,6 +314,7 @@
               <h5>Še nekaj primerov</h5><div class="primer"><p><strong>Primer 1:</strong> Napoved 13 tekem z izidi 1, X, 2</p><p>\(3^{13} = 1\,594\,323\).</p></div>
               <div class="primer"><p><strong>Primer 2:</strong> Morsejevi znaki (pika, črta) dolžine 1 do 4</p><p>\(2 + 4 + 8 + 16 = 30\).</p></div>
               <div class="primer"><p><strong>Primer 3:</strong> Število podmnožic 5-elementne množice</p><p>\(2^5 = 32\).</p></div>
+              <div class="primer"><p><strong>Primer 4:</strong> Množica \(A = \{1, 3, 5, 7, 9\}\). Koliko je vseh preslikav iz \(A\) v \(A\) in koliko je med njimi bijektivnih?</p><p>Vsak od 5 elementov ima 5 možnih slik: \(5^5 = 3125\) preslikav.</p><p>Bijektivna preslikava je razvrstitev slik brez ponavljanja: \(5! = 120\).</p></div>
             </div>
           </div>
         </section>
