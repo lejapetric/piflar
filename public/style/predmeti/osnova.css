@@ -44,6 +44,8 @@ html[data-predmet] {
     --g2: #DC2626;
     --g3: #16A34A;
     --g4: #D97706;
+    --g5: #0284C7;
+    --g6: #9333EA;
 
     /* opozorila in oznake */
     --pazi-bg: #FFFBEB;
@@ -63,6 +65,8 @@ html[data-predmet][data-theme="dark"] {
     --g2: #F87171;
     --g3: #4ADE80;
     --g4: #FBBF24;
+    --g5: #7DD3FC;
+    --g6: #D8B4FE;
     --pazi-bg: rgba(245, 158, 11, 0.09);
     --pazi-fg: #FDE68A;
     --pazi-border: #F59E0B;
@@ -240,6 +244,163 @@ html[data-predmet] .slika .s-kot { fill: color-mix(in srgb, var(--g4) 16%, trans
 html[data-predmet] .slika .s-kot-2 { fill: color-mix(in srgb, var(--g3) 15%, transparent); stroke: var(--g3); }
 html[data-predmet] .slika .s-kot-3 { fill: color-mix(in srgb, var(--g1) 15%, transparent); stroke: var(--g1); }
 html[data-predmet] .slika .s-kot-4 { fill: color-mix(in srgb, var(--g2) 13%, transparent); stroke: var(--g2); }
+
+/* Zemljevidi, stolpci, deleži in ostale risbe: vse iz barv teme */
+html[data-predmet] .slika .s-pou1 { fill: color-mix(in srgb, var(--g1) 32%, transparent); stroke: var(--g1); }
+html[data-predmet] .slika .s-pou2 { fill: color-mix(in srgb, var(--g3) 32%, transparent); stroke: var(--g3); }
+html[data-predmet] .slika .s-pou3 { fill: color-mix(in srgb, var(--g4) 34%, transparent); stroke: var(--g4); }
+html[data-predmet] .slika .s-pou4 { fill: color-mix(in srgb, var(--g2) 30%, transparent); stroke: var(--g2); }
+html[data-predmet] .slika .s-pou5 { fill: color-mix(in srgb, var(--g5) 32%, transparent); stroke: var(--g5); }
+html[data-predmet] .slika .s-pou6 { fill: color-mix(in srgb, var(--g6) 30%, transparent); stroke: var(--g6); }
+html[data-predmet] .slika .s-stolpec { fill: color-mix(in srgb, var(--g1) 38%, var(--g-bg)); stroke: var(--g1); }
+html[data-predmet] .slika .s-ps { fill: color-mix(in srgb, var(--g-line) 5%, var(--g-bg)); stroke: var(--g-pom); }
+html[data-predmet] .slika .s-par,
+html[data-predmet] .slika .s-klin { fill: var(--g-line); }
+html[data-predmet] .slika .s-morje { fill: color-mix(in srgb, var(--g5) 12%, var(--g-bg)); }
+html[data-predmet] .slika .s-kopno { fill: color-mix(in srgb, var(--g4) 9%, var(--g-bg)); stroke: color-mix(in srgb, var(--g-line) 35%, var(--g-bg)); }
+html[data-predmet] .slika .s-meja { stroke: color-mix(in srgb, var(--g-line) 35%, var(--g-bg)); }
+html[data-predmet] .slika .s-mreza-geo { stroke: color-mix(in srgb, var(--g5) 30%, var(--g-bg)); }
+html[data-predmet] .slika .s-reka { stroke: var(--g5); }
+html[data-predmet] .slika .s-voda { fill: color-mix(in srgb, var(--g5) 28%, var(--g-bg)); stroke: var(--g5); }
+
+/* Slika iz datoteke (list s formulami): v temnem načinu svetle črke na podlagi risb */
+html[data-predmet] .matura-slika { background: var(--g-bg); }
+html[data-predmet] .matura-slika img { mix-blend-mode: multiply; }
+html[data-predmet][data-theme="dark"] .matura-slika img {
+    filter: invert(1) hue-rotate(180deg) brightness(0.92);
+    mix-blend-mode: screen;
+}
+
+/* ---------- Barve, zapisane neposredno v SVG ----------
+   Risbe imajo ponekod barve zapisane kar v atributih (fill="#4F46E5")
+   ali v style. Tu jih preslikamo v barve teme (--g-*), da se risbe v
+   svetlem in temnem načinu ujemajo z ostalo stranjo. Prelivi (stop-color)
+   in risbe z razredom s-prave-barve (prave barve: spekter, RGB, indikatorji)
+   ostanejo nespremenjeni. */
+html[data-predmet] .view svg:not(.s-prave-barve) :is([fill="#171A2E" i], [fill="#111111" i], [fill="#111" i], [fill="#1F2937" i], [fill="#333333" i], [fill="#333" i], [fill="black" i], [fill="#14532D" i], [fill="#1E1B4B" i], [fill="#4C1D95" i], [fill="#92400E" i]) { fill: var(--g-line); }
+html[data-predmet] .view svg:not(.s-prave-barve) :is([style*="fill:#171A2E" i], [style*="fill:#111111" i], [style*="fill:#111" i], [style*="fill:#1F2937" i], [style*="fill:#333333" i], [style*="fill:#333" i], [style*="fill:black" i], [style*="fill:#14532D" i], [style*="fill:#1E1B4B" i], [style*="fill:#4C1D95" i], [style*="fill:#92400E" i]) { fill: var(--g-line) !important; }
+html[data-predmet] .view svg:not(.s-prave-barve) :is([stroke="#171A2E" i], [stroke="#111111" i], [stroke="#111" i], [stroke="#1F2937" i], [stroke="#333333" i], [stroke="#333" i], [stroke="black" i], [stroke="#14532D" i], [stroke="#1E1B4B" i], [stroke="#4C1D95" i], [stroke="#92400E" i]) { stroke: var(--g-line); }
+html[data-predmet] .view svg:not(.s-prave-barve) :is([style*="stroke:#171A2E" i], [style*="stroke:#111111" i], [style*="stroke:#111" i], [style*="stroke:#1F2937" i], [style*="stroke:#333333" i], [style*="stroke:#333" i], [style*="stroke:black" i], [style*="stroke:#14532D" i], [style*="stroke:#1E1B4B" i], [style*="stroke:#4C1D95" i], [style*="stroke:#92400E" i]) { stroke: var(--g-line) !important; }
+html[data-predmet] .view svg:not(.s-prave-barve) :is([fill="#5B6178" i], [fill="#6B7280" i], [fill="#4B5563" i], [fill="#555555" i], [fill="#6E6E6E" i], [fill="#8A8A8A" i], [fill="#888888" i], [fill="#888" i]) { fill: var(--g-axis); }
+html[data-predmet] .view svg:not(.s-prave-barve) :is([style*="fill:#5B6178" i], [style*="fill:#6B7280" i], [style*="fill:#4B5563" i], [style*="fill:#555555" i], [style*="fill:#6E6E6E" i], [style*="fill:#8A8A8A" i], [style*="fill:#888888" i], [style*="fill:#888" i]) { fill: var(--g-axis) !important; }
+html[data-predmet] .view svg:not(.s-prave-barve) :is([stroke="#5B6178" i], [stroke="#6B7280" i], [stroke="#4B5563" i], [stroke="#555555" i], [stroke="#6E6E6E" i], [stroke="#8A8A8A" i], [stroke="#888888" i], [stroke="#888" i]) { stroke: var(--g-axis); }
+html[data-predmet] .view svg:not(.s-prave-barve) :is([style*="stroke:#5B6178" i], [style*="stroke:#6B7280" i], [style*="stroke:#4B5563" i], [style*="stroke:#555555" i], [style*="stroke:#6E6E6E" i], [style*="stroke:#8A8A8A" i], [style*="stroke:#888888" i], [style*="stroke:#888" i]) { stroke: var(--g-axis) !important; }
+html[data-predmet] .view svg:not(.s-prave-barve) :is([fill="#94A0B8" i], [fill="#9AA3B0" i], [fill="#9CA3AF" i], [fill="#BDBDBD" i], [fill="#CBD5E1" i], [fill="#C9CDE0" i]) { fill: var(--g-pom); }
+html[data-predmet] .view svg:not(.s-prave-barve) :is([style*="fill:#94A0B8" i], [style*="fill:#9AA3B0" i], [style*="fill:#9CA3AF" i], [style*="fill:#BDBDBD" i], [style*="fill:#CBD5E1" i], [style*="fill:#C9CDE0" i]) { fill: var(--g-pom) !important; }
+html[data-predmet] .view svg:not(.s-prave-barve) :is([stroke="#94A0B8" i], [stroke="#9AA3B0" i], [stroke="#9CA3AF" i], [stroke="#BDBDBD" i], [stroke="#CBD5E1" i], [stroke="#C9CDE0" i]) { stroke: var(--g-pom); }
+html[data-predmet] .view svg:not(.s-prave-barve) :is([style*="stroke:#94A0B8" i], [style*="stroke:#9AA3B0" i], [style*="stroke:#9CA3AF" i], [style*="stroke:#BDBDBD" i], [style*="stroke:#CBD5E1" i], [style*="stroke:#C9CDE0" i]) { stroke: var(--g-pom) !important; }
+html[data-predmet] .view svg:not(.s-prave-barve) :is([fill="#E5E7EB" i]) { fill: color-mix(in srgb, var(--g-line) 14%, var(--g-bg)); }
+html[data-predmet] .view svg:not(.s-prave-barve) :is([style*="fill:#E5E7EB" i]) { fill: color-mix(in srgb, var(--g-line) 14%, var(--g-bg)) !important; }
+html[data-predmet] .view svg:not(.s-prave-barve) :is([stroke="#E5E7EB" i]) { stroke: color-mix(in srgb, var(--g-line) 14%, var(--g-bg)); }
+html[data-predmet] .view svg:not(.s-prave-barve) :is([style*="stroke:#E5E7EB" i]) { stroke: color-mix(in srgb, var(--g-line) 14%, var(--g-bg)) !important; }
+html[data-predmet] .view svg:not(.s-prave-barve) :is([fill="#FFFFFF" i], [fill="#FFF" i], [fill="white" i], [fill="#FAFAFA" i], [fill="#F7F8FB" i], [fill="#F8FAFC" i]) { fill: var(--g-bg); }
+html[data-predmet] .view svg:not(.s-prave-barve) :is([style*="fill:#FFFFFF" i], [style*="fill:#FFF" i], [style*="fill:white" i], [style*="fill:#FAFAFA" i], [style*="fill:#F7F8FB" i], [style*="fill:#F8FAFC" i]) { fill: var(--g-bg) !important; }
+html[data-predmet] .view svg:not(.s-prave-barve) :is([stroke="#FFFFFF" i], [stroke="#FFF" i], [stroke="white" i], [stroke="#FAFAFA" i], [stroke="#F7F8FB" i], [stroke="#F8FAFC" i]) { stroke: var(--g-bg); }
+html[data-predmet] .view svg:not(.s-prave-barve) :is([style*="stroke:#FFFFFF" i], [style*="stroke:#FFF" i], [style*="stroke:white" i], [style*="stroke:#FAFAFA" i], [style*="stroke:#F7F8FB" i], [style*="stroke:#F8FAFC" i]) { stroke: var(--g-bg) !important; }
+html[data-predmet] .view svg:not(.s-prave-barve) :is([fill="#4F46E5" i], [fill="#2F5BD3" i], [fill="#3B82F6" i], [fill="#6366F1" i], [fill="#1D4ED8" i], [fill="#2563EB" i]) { fill: var(--g1); }
+html[data-predmet] .view svg:not(.s-prave-barve) :is([style*="fill:#4F46E5" i], [style*="fill:#2F5BD3" i], [style*="fill:#3B82F6" i], [style*="fill:#6366F1" i], [style*="fill:#1D4ED8" i], [style*="fill:#2563EB" i]) { fill: var(--g1) !important; }
+html[data-predmet] .view svg:not(.s-prave-barve) :is([stroke="#4F46E5" i], [stroke="#2F5BD3" i], [stroke="#3B82F6" i], [stroke="#6366F1" i], [stroke="#1D4ED8" i], [stroke="#2563EB" i]) { stroke: var(--g1); }
+html[data-predmet] .view svg:not(.s-prave-barve) :is([style*="stroke:#4F46E5" i], [style*="stroke:#2F5BD3" i], [style*="stroke:#3B82F6" i], [style*="stroke:#6366F1" i], [style*="stroke:#1D4ED8" i], [style*="stroke:#2563EB" i]) { stroke: var(--g1) !important; }
+html[data-predmet] .view svg:not(.s-prave-barve) :is([fill="#60A5FA" i]) { fill: color-mix(in srgb, var(--g1) 70%, var(--g-bg)); }
+html[data-predmet] .view svg:not(.s-prave-barve) :is([style*="fill:#60A5FA" i]) { fill: color-mix(in srgb, var(--g1) 70%, var(--g-bg)) !important; }
+html[data-predmet] .view svg:not(.s-prave-barve) :is([stroke="#60A5FA" i]) { stroke: color-mix(in srgb, var(--g1) 70%, var(--g-bg)); }
+html[data-predmet] .view svg:not(.s-prave-barve) :is([style*="stroke:#60A5FA" i]) { stroke: color-mix(in srgb, var(--g1) 70%, var(--g-bg)) !important; }
+html[data-predmet] .view svg:not(.s-prave-barve) :is([fill="#818CF8" i]) { fill: color-mix(in srgb, var(--g1) 55%, var(--g-bg)); }
+html[data-predmet] .view svg:not(.s-prave-barve) :is([style*="fill:#818CF8" i]) { fill: color-mix(in srgb, var(--g1) 55%, var(--g-bg)) !important; }
+html[data-predmet] .view svg:not(.s-prave-barve) :is([stroke="#818CF8" i]) { stroke: color-mix(in srgb, var(--g1) 55%, var(--g-bg)); }
+html[data-predmet] .view svg:not(.s-prave-barve) :is([style*="stroke:#818CF8" i]) { stroke: color-mix(in srgb, var(--g1) 55%, var(--g-bg)) !important; }
+html[data-predmet] .view svg:not(.s-prave-barve) :is([fill="#C7CBF5" i]) { fill: color-mix(in srgb, var(--g1) 30%, var(--g-bg)); }
+html[data-predmet] .view svg:not(.s-prave-barve) :is([style*="fill:#C7CBF5" i]) { fill: color-mix(in srgb, var(--g1) 30%, var(--g-bg)) !important; }
+html[data-predmet] .view svg:not(.s-prave-barve) :is([stroke="#C7CBF5" i]) { stroke: color-mix(in srgb, var(--g1) 30%, var(--g-bg)); }
+html[data-predmet] .view svg:not(.s-prave-barve) :is([style*="stroke:#C7CBF5" i]) { stroke: color-mix(in srgb, var(--g1) 30%, var(--g-bg)) !important; }
+html[data-predmet] .view svg:not(.s-prave-barve) :is([fill="#C7D2FE" i]) { fill: color-mix(in srgb, var(--g1) 25%, var(--g-bg)); }
+html[data-predmet] .view svg:not(.s-prave-barve) :is([style*="fill:#C7D2FE" i]) { fill: color-mix(in srgb, var(--g1) 25%, var(--g-bg)) !important; }
+html[data-predmet] .view svg:not(.s-prave-barve) :is([stroke="#C7D2FE" i]) { stroke: color-mix(in srgb, var(--g1) 25%, var(--g-bg)); }
+html[data-predmet] .view svg:not(.s-prave-barve) :is([style*="stroke:#C7D2FE" i]) { stroke: color-mix(in srgb, var(--g1) 25%, var(--g-bg)) !important; }
+html[data-predmet] .view svg:not(.s-prave-barve) :is([fill="#EEF0FF" i]) { fill: color-mix(in srgb, var(--g1) 10%, var(--g-bg)); }
+html[data-predmet] .view svg:not(.s-prave-barve) :is([style*="fill:#EEF0FF" i]) { fill: color-mix(in srgb, var(--g1) 10%, var(--g-bg)) !important; }
+html[data-predmet] .view svg:not(.s-prave-barve) :is([stroke="#EEF0FF" i]) { stroke: color-mix(in srgb, var(--g1) 10%, var(--g-bg)); }
+html[data-predmet] .view svg:not(.s-prave-barve) :is([style*="stroke:#EEF0FF" i]) { stroke: color-mix(in srgb, var(--g1) 10%, var(--g-bg)) !important; }
+html[data-predmet] .view svg:not(.s-prave-barve) :is([fill="#DC2626" i], [fill="#D6293E" i], [fill="#D02020" i]) { fill: var(--g2); }
+html[data-predmet] .view svg:not(.s-prave-barve) :is([style*="fill:#DC2626" i], [style*="fill:#D6293E" i], [style*="fill:#D02020" i]) { fill: var(--g2) !important; }
+html[data-predmet] .view svg:not(.s-prave-barve) :is([stroke="#DC2626" i], [stroke="#D6293E" i], [stroke="#D02020" i]) { stroke: var(--g2); }
+html[data-predmet] .view svg:not(.s-prave-barve) :is([style*="stroke:#DC2626" i], [style*="stroke:#D6293E" i], [style*="stroke:#D02020" i]) { stroke: var(--g2) !important; }
+html[data-predmet] .view svg:not(.s-prave-barve) :is([fill="#FCA5A5" i]) { fill: color-mix(in srgb, var(--g2) 45%, var(--g-bg)); }
+html[data-predmet] .view svg:not(.s-prave-barve) :is([style*="fill:#FCA5A5" i]) { fill: color-mix(in srgb, var(--g2) 45%, var(--g-bg)) !important; }
+html[data-predmet] .view svg:not(.s-prave-barve) :is([stroke="#FCA5A5" i]) { stroke: color-mix(in srgb, var(--g2) 45%, var(--g-bg)); }
+html[data-predmet] .view svg:not(.s-prave-barve) :is([style*="stroke:#FCA5A5" i]) { stroke: color-mix(in srgb, var(--g2) 45%, var(--g-bg)) !important; }
+html[data-predmet] .view svg:not(.s-prave-barve) :is([fill="#FECACA" i]) { fill: color-mix(in srgb, var(--g2) 25%, var(--g-bg)); }
+html[data-predmet] .view svg:not(.s-prave-barve) :is([style*="fill:#FECACA" i]) { fill: color-mix(in srgb, var(--g2) 25%, var(--g-bg)) !important; }
+html[data-predmet] .view svg:not(.s-prave-barve) :is([stroke="#FECACA" i]) { stroke: color-mix(in srgb, var(--g2) 25%, var(--g-bg)); }
+html[data-predmet] .view svg:not(.s-prave-barve) :is([style*="stroke:#FECACA" i]) { stroke: color-mix(in srgb, var(--g2) 25%, var(--g-bg)) !important; }
+html[data-predmet] .view svg:not(.s-prave-barve) :is([fill="#16A34A" i], [fill="#2A9D4B" i], [fill="#1E9E5A" i], [fill="#22C55E" i], [fill="#2E8B57" i]) { fill: var(--g3); }
+html[data-predmet] .view svg:not(.s-prave-barve) :is([style*="fill:#16A34A" i], [style*="fill:#2A9D4B" i], [style*="fill:#1E9E5A" i], [style*="fill:#22C55E" i], [style*="fill:#2E8B57" i]) { fill: var(--g3) !important; }
+html[data-predmet] .view svg:not(.s-prave-barve) :is([stroke="#16A34A" i], [stroke="#2A9D4B" i], [stroke="#1E9E5A" i], [stroke="#22C55E" i], [stroke="#2E8B57" i]) { stroke: var(--g3); }
+html[data-predmet] .view svg:not(.s-prave-barve) :is([style*="stroke:#16A34A" i], [style*="stroke:#2A9D4B" i], [style*="stroke:#1E9E5A" i], [style*="stroke:#22C55E" i], [style*="stroke:#2E8B57" i]) { stroke: var(--g3) !important; }
+html[data-predmet] .view svg:not(.s-prave-barve) :is([fill="#4ADE80" i]) { fill: color-mix(in srgb, var(--g3) 65%, var(--g-bg)); }
+html[data-predmet] .view svg:not(.s-prave-barve) :is([style*="fill:#4ADE80" i]) { fill: color-mix(in srgb, var(--g3) 65%, var(--g-bg)) !important; }
+html[data-predmet] .view svg:not(.s-prave-barve) :is([stroke="#4ADE80" i]) { stroke: color-mix(in srgb, var(--g3) 65%, var(--g-bg)); }
+html[data-predmet] .view svg:not(.s-prave-barve) :is([style*="stroke:#4ADE80" i]) { stroke: color-mix(in srgb, var(--g3) 65%, var(--g-bg)) !important; }
+html[data-predmet] .view svg:not(.s-prave-barve) :is([fill="#86EFAC" i]) { fill: color-mix(in srgb, var(--g3) 45%, var(--g-bg)); }
+html[data-predmet] .view svg:not(.s-prave-barve) :is([style*="fill:#86EFAC" i]) { fill: color-mix(in srgb, var(--g3) 45%, var(--g-bg)) !important; }
+html[data-predmet] .view svg:not(.s-prave-barve) :is([stroke="#86EFAC" i]) { stroke: color-mix(in srgb, var(--g3) 45%, var(--g-bg)); }
+html[data-predmet] .view svg:not(.s-prave-barve) :is([style*="stroke:#86EFAC" i]) { stroke: color-mix(in srgb, var(--g3) 45%, var(--g-bg)) !important; }
+html[data-predmet] .view svg:not(.s-prave-barve) :is([fill="#BBF7D0" i]) { fill: color-mix(in srgb, var(--g3) 25%, var(--g-bg)); }
+html[data-predmet] .view svg:not(.s-prave-barve) :is([style*="fill:#BBF7D0" i]) { fill: color-mix(in srgb, var(--g3) 25%, var(--g-bg)) !important; }
+html[data-predmet] .view svg:not(.s-prave-barve) :is([stroke="#BBF7D0" i]) { stroke: color-mix(in srgb, var(--g3) 25%, var(--g-bg)); }
+html[data-predmet] .view svg:not(.s-prave-barve) :is([style*="stroke:#BBF7D0" i]) { stroke: color-mix(in srgb, var(--g3) 25%, var(--g-bg)) !important; }
+html[data-predmet] .view svg:not(.s-prave-barve) :is([fill="#D97706" i], [fill="#B45309" i], [fill="#C98A0B" i], [fill="#C9871A" i], [fill="#B8860B" i], [fill="#F59E0B" i], [fill="#B5651D" i]) { fill: var(--g4); }
+html[data-predmet] .view svg:not(.s-prave-barve) :is([style*="fill:#D97706" i], [style*="fill:#B45309" i], [style*="fill:#C98A0B" i], [style*="fill:#C9871A" i], [style*="fill:#B8860B" i], [style*="fill:#F59E0B" i], [style*="fill:#B5651D" i]) { fill: var(--g4) !important; }
+html[data-predmet] .view svg:not(.s-prave-barve) :is([stroke="#D97706" i], [stroke="#B45309" i], [stroke="#C98A0B" i], [stroke="#C9871A" i], [stroke="#B8860B" i], [stroke="#F59E0B" i], [stroke="#B5651D" i]) { stroke: var(--g4); }
+html[data-predmet] .view svg:not(.s-prave-barve) :is([style*="stroke:#D97706" i], [style*="stroke:#B45309" i], [style*="stroke:#C98A0B" i], [style*="stroke:#C9871A" i], [style*="stroke:#B8860B" i], [style*="stroke:#F59E0B" i], [style*="stroke:#B5651D" i]) { stroke: var(--g4) !important; }
+html[data-predmet] .view svg:not(.s-prave-barve) :is([fill="#FDE68A" i]) { fill: color-mix(in srgb, var(--g4) 40%, var(--g-bg)); }
+html[data-predmet] .view svg:not(.s-prave-barve) :is([style*="fill:#FDE68A" i]) { fill: color-mix(in srgb, var(--g4) 40%, var(--g-bg)) !important; }
+html[data-predmet] .view svg:not(.s-prave-barve) :is([stroke="#FDE68A" i]) { stroke: color-mix(in srgb, var(--g4) 40%, var(--g-bg)); }
+html[data-predmet] .view svg:not(.s-prave-barve) :is([style*="stroke:#FDE68A" i]) { stroke: color-mix(in srgb, var(--g4) 40%, var(--g-bg)) !important; }
+html[data-predmet] .view svg:not(.s-prave-barve) :is([fill="#FEF3C7" i], [fill="#FEF9C3" i]) { fill: color-mix(in srgb, var(--g4) 15%, var(--g-bg)); }
+html[data-predmet] .view svg:not(.s-prave-barve) :is([style*="fill:#FEF3C7" i], [style*="fill:#FEF9C3" i]) { fill: color-mix(in srgb, var(--g4) 15%, var(--g-bg)) !important; }
+html[data-predmet] .view svg:not(.s-prave-barve) :is([stroke="#FEF3C7" i], [stroke="#FEF9C3" i]) { stroke: color-mix(in srgb, var(--g4) 15%, var(--g-bg)); }
+html[data-predmet] .view svg:not(.s-prave-barve) :is([style*="stroke:#FEF3C7" i], [style*="stroke:#FEF9C3" i]) { stroke: color-mix(in srgb, var(--g4) 15%, var(--g-bg)) !important; }
+html[data-predmet] .view svg:not(.s-prave-barve) :is([fill="#7E22CE" i], [fill="#7A4FC9" i], [fill="#9333EA" i]) { fill: var(--g6); }
+html[data-predmet] .view svg:not(.s-prave-barve) :is([style*="fill:#7E22CE" i], [style*="fill:#7A4FC9" i], [style*="fill:#9333EA" i]) { fill: var(--g6) !important; }
+html[data-predmet] .view svg:not(.s-prave-barve) :is([stroke="#7E22CE" i], [stroke="#7A4FC9" i], [stroke="#9333EA" i]) { stroke: var(--g6); }
+html[data-predmet] .view svg:not(.s-prave-barve) :is([style*="stroke:#7E22CE" i], [style*="stroke:#7A4FC9" i], [style*="stroke:#9333EA" i]) { stroke: var(--g6) !important; }
+html[data-predmet] .view svg:not(.s-prave-barve) [style*="fill:rgba(79,70,229,0.05)"] { fill: color-mix(in srgb, var(--g1) 5%, transparent) !important; }
+html[data-predmet] .view svg:not(.s-prave-barve) [style*="fill:rgba(79,70,229,0.06)"] { fill: color-mix(in srgb, var(--g1) 6%, transparent) !important; }
+html[data-predmet] .view svg:not(.s-prave-barve) [style*="fill:rgba(79,70,229,0.08)"] { fill: color-mix(in srgb, var(--g1) 8%, transparent) !important; }
+html[data-predmet] .view svg:not(.s-prave-barve) [style*="fill:rgba(79,70,229,0.10)"] { fill: color-mix(in srgb, var(--g1) 10%, transparent) !important; }
+html[data-predmet] .view svg:not(.s-prave-barve) [style*="fill:rgba(79,70,229,0.12)"] { fill: color-mix(in srgb, var(--g1) 12%, transparent) !important; }
+html[data-predmet] .view svg:not(.s-prave-barve) [style*="fill:rgba(79,70,229,.12)"] { fill: color-mix(in srgb, var(--g1) 12%, transparent) !important; }
+html[data-predmet] .view svg:not(.s-prave-barve) [style*="fill:rgba(79,70,229,0.16)"] { fill: color-mix(in srgb, var(--g1) 16%, transparent) !important; }
+html[data-predmet] .view svg:not(.s-prave-barve) [style*="fill:rgba(79,70,229,0.25)"] { fill: color-mix(in srgb, var(--g1) 25%, transparent) !important; }
+html[data-predmet] .view svg:not(.s-prave-barve) [style*="fill:rgba(79,70,229,0.28)"] { fill: color-mix(in srgb, var(--g1) 28%, transparent) !important; }
+html[data-predmet] .view svg:not(.s-prave-barve) [style*="fill:rgba(220,38,38,0.05)"] { fill: color-mix(in srgb, var(--g2) 5%, transparent) !important; }
+html[data-predmet] .view svg:not(.s-prave-barve) [style*="fill:rgba(220,38,38,0.06)"] { fill: color-mix(in srgb, var(--g2) 6%, transparent) !important; }
+html[data-predmet] .view svg:not(.s-prave-barve) [style*="fill:rgba(220,38,38,0.08)"] { fill: color-mix(in srgb, var(--g2) 8%, transparent) !important; }
+html[data-predmet] .view svg:not(.s-prave-barve) [style*="fill:rgba(220,38,38,0.10)"] { fill: color-mix(in srgb, var(--g2) 10%, transparent) !important; }
+html[data-predmet] .view svg:not(.s-prave-barve) [style*="fill:rgba(220,38,38,0.12)"] { fill: color-mix(in srgb, var(--g2) 12%, transparent) !important; }
+html[data-predmet] .view svg:not(.s-prave-barve) [style*="fill:rgba(220,38,38,.12)"] { fill: color-mix(in srgb, var(--g2) 12%, transparent) !important; }
+html[data-predmet] .view svg:not(.s-prave-barve) [style*="fill:rgba(220,38,38,0.16)"] { fill: color-mix(in srgb, var(--g2) 16%, transparent) !important; }
+html[data-predmet] .view svg:not(.s-prave-barve) [style*="fill:rgba(220,38,38,0.25)"] { fill: color-mix(in srgb, var(--g2) 25%, transparent) !important; }
+html[data-predmet] .view svg:not(.s-prave-barve) [style*="fill:rgba(220,38,38,0.28)"] { fill: color-mix(in srgb, var(--g2) 28%, transparent) !important; }
+html[data-predmet] .view svg:not(.s-prave-barve) [style*="fill:rgba(22,163,74,0.05)"] { fill: color-mix(in srgb, var(--g3) 5%, transparent) !important; }
+html[data-predmet] .view svg:not(.s-prave-barve) [style*="fill:rgba(22,163,74,0.06)"] { fill: color-mix(in srgb, var(--g3) 6%, transparent) !important; }
+html[data-predmet] .view svg:not(.s-prave-barve) [style*="fill:rgba(22,163,74,0.08)"] { fill: color-mix(in srgb, var(--g3) 8%, transparent) !important; }
+html[data-predmet] .view svg:not(.s-prave-barve) [style*="fill:rgba(22,163,74,0.10)"] { fill: color-mix(in srgb, var(--g3) 10%, transparent) !important; }
+html[data-predmet] .view svg:not(.s-prave-barve) [style*="fill:rgba(22,163,74,0.12)"] { fill: color-mix(in srgb, var(--g3) 12%, transparent) !important; }
+html[data-predmet] .view svg:not(.s-prave-barve) [style*="fill:rgba(22,163,74,.12)"] { fill: color-mix(in srgb, var(--g3) 12%, transparent) !important; }
+html[data-predmet] .view svg:not(.s-prave-barve) [style*="fill:rgba(22,163,74,0.16)"] { fill: color-mix(in srgb, var(--g3) 16%, transparent) !important; }
+html[data-predmet] .view svg:not(.s-prave-barve) [style*="fill:rgba(22,163,74,0.25)"] { fill: color-mix(in srgb, var(--g3) 25%, transparent) !important; }
+html[data-predmet] .view svg:not(.s-prave-barve) [style*="fill:rgba(22,163,74,0.28)"] { fill: color-mix(in srgb, var(--g3) 28%, transparent) !important; }
+html[data-predmet] .view svg:not(.s-prave-barve) [style*="fill:rgba(217,119,6,0.05)"] { fill: color-mix(in srgb, var(--g4) 5%, transparent) !important; }
+html[data-predmet] .view svg:not(.s-prave-barve) [style*="fill:rgba(217,119,6,0.06)"] { fill: color-mix(in srgb, var(--g4) 6%, transparent) !important; }
+html[data-predmet] .view svg:not(.s-prave-barve) [style*="fill:rgba(217,119,6,0.08)"] { fill: color-mix(in srgb, var(--g4) 8%, transparent) !important; }
+html[data-predmet] .view svg:not(.s-prave-barve) [style*="fill:rgba(217,119,6,0.10)"] { fill: color-mix(in srgb, var(--g4) 10%, transparent) !important; }
+html[data-predmet] .view svg:not(.s-prave-barve) [style*="fill:rgba(217,119,6,0.12)"] { fill: color-mix(in srgb, var(--g4) 12%, transparent) !important; }
+html[data-predmet] .view svg:not(.s-prave-barve) [style*="fill:rgba(217,119,6,.12)"] { fill: color-mix(in srgb, var(--g4) 12%, transparent) !important; }
+html[data-predmet] .view svg:not(.s-prave-barve) [style*="fill:rgba(217,119,6,0.16)"] { fill: color-mix(in srgb, var(--g4) 16%, transparent) !important; }
+html[data-predmet] .view svg:not(.s-prave-barve) [style*="fill:rgba(217,119,6,0.25)"] { fill: color-mix(in srgb, var(--g4) 25%, transparent) !important; }
+html[data-predmet] .view svg:not(.s-prave-barve) [style*="fill:rgba(217,119,6,0.28)"] { fill: color-mix(in srgb, var(--g4) 28%, transparent) !important; }
 
 /* ---------- Ožji zasloni ---------- */
 @media (max-width: 760px) {
