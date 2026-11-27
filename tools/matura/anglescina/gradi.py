@@ -136,6 +136,9 @@ SNOVI = {
     "esej": ("daljsi_pisni_sestavek", 1, "Argumentativni esej"),
     "lit": ("daljsi_pisni_sestavek", 2, "Esej na temo iz književnosti"),
 }
+# Esej iz književnosti vodi na sklop predpisanega dela na strani knjizevna_dela (prvo delo v vrstici "delo")
+DELA_SKLOP = {"An Ideal Husband": 2, "Animal Farm": 3, "Lord of the Flies": 4, "Never Let Me Go": 5,
+              "About a Boy": 6, "Foster": 7}
 # Naloge, ki preverjajo tudi druga poglavja (prikaz na straneh po snovi)
 DODATNA = {
     "gf": ["glagolski_casi", "modalni_glagoli"],
@@ -463,9 +466,16 @@ def izdelaj_pisanje(n, raven, primer=None):
                '<h5 class="pis-podnaslov">Načrt po korakih</h5>', rokopis(n["koraki"])]
     if primer:
         razlaga.append(primer_html(primer, *razpon(n["besede"])))
+    poglavja = [poglavje]
+    if v == "lit":
+        dela = [d for d in DELA_SKLOP if d in n["delo"]]
+        assert dela, f"neznano delo: {n['delo']}"
+        poglavje, snov_naslov = "knjizevna_dela", "Književna dela: " + " in ".join(dela)
+        sklop = 8 if len(dela) > 1 else DELA_SKLOP[dela[0]]
+        poglavja = [poglavje, "daljsi_pisni_sestavek"]
     return {
         "oznaka": oznaka,
-        "poglavje": [poglavje],
+        "poglavje": poglavja,
         "snov": SNOV.format(p=poglavje, s=sklop),
         "snovNaslov": snov_naslov,
         "tocke": tocke_,
