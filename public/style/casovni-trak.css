@@ -12,6 +12,13 @@
   --ct-b4: #FCA5A5; --ct-b5: #7DD3FC; --ct-b6: #D8B4FE;
   --ct-crta: #D5DAE1; --ct-tiho: #A9AFC6;
 }
+/* Na straneh predmetov: barve risb iz teme (--g-*), kot pri ostalih slikah */
+html[data-predmet] .ct,
+html[data-predmet][data-theme="dark"] .ct {
+  --ct-b0: var(--g-axis); --ct-b1: var(--g1); --ct-b2: var(--g3); --ct-b3: var(--g4);
+  --ct-b4: var(--g2); --ct-b5: var(--g5); --ct-b6: var(--g6);
+  --ct-crta: var(--g-line); --ct-tiho: var(--g-axis);
+}
 .ct ol { list-style: none; margin: 0; padding: 0; }
 
 /* ---------- brez JS ---------- */

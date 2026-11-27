@@ -2189,51 +2189,7 @@ input.mn-vnos {
 [data-theme="dark"] .slika .s-voda { fill: #1E3A5F; stroke: #60A5FA; }
 [data-theme="dark"] .slika .s-stolpec { fill: #1E40AF; stroke: #60A5FA; }
 
-/* Barve, zapisane neposredno v SVG na straneh */
-[data-theme="dark"] .view svg [fill="#171A2E"] { fill: #D5D9E8; }
-[data-theme="dark"] .view svg [style*="fill:#171A2E"] { fill: #D5D9E8 !important; }
-[data-theme="dark"] .view svg [stroke="#171A2E"] { stroke: #D5D9E8; }
-[data-theme="dark"] .view svg [style*="stroke:#171A2E"] { stroke: #D5D9E8 !important; }
-[data-theme="dark"] .view svg [fill="#5B6178"] { fill: #A9AFC6; }
-[data-theme="dark"] .view svg [style*="fill:#5B6178"] { fill: #A9AFC6 !important; }
-[data-theme="dark"] .view svg [stroke="#5B6178"] { stroke: #A9AFC6; }
-[data-theme="dark"] .view svg [style*="stroke:#5B6178"] { stroke: #A9AFC6 !important; }
-[data-theme="dark"] .view svg [fill="#DC2626"] { fill: #F87171; }
-[data-theme="dark"] .view svg [style*="fill:#DC2626"] { fill: #F87171 !important; }
-[data-theme="dark"] .view svg [stroke="#DC2626"] { stroke: #F87171; }
-[data-theme="dark"] .view svg [style*="stroke:#DC2626"] { stroke: #F87171 !important; }
-[data-theme="dark"] .view svg [fill="#4F46E5"] { fill: #818CF8; }
-[data-theme="dark"] .view svg [style*="fill:#4F46E5"] { fill: #818CF8 !important; }
-[data-theme="dark"] .view svg [stroke="#4F46E5"] { stroke: #818CF8; }
-[data-theme="dark"] .view svg [style*="stroke:#4F46E5"] { stroke: #818CF8 !important; }
-[data-theme="dark"] .view svg [fill="#D97706"] { fill: #FBBF24; }
-[data-theme="dark"] .view svg [style*="fill:#D97706"] { fill: #FBBF24 !important; }
-[data-theme="dark"] .view svg [stroke="#D97706"] { stroke: #FBBF24; }
-[data-theme="dark"] .view svg [style*="stroke:#D97706"] { stroke: #FBBF24 !important; }
-[data-theme="dark"] .view svg [fill="#16A34A"] { fill: #4ADE80; }
-[data-theme="dark"] .view svg [style*="fill:#16A34A"] { fill: #4ADE80 !important; }
-[data-theme="dark"] .view svg [stroke="#16A34A"] { stroke: #4ADE80; }
-[data-theme="dark"] .view svg [style*="stroke:#16A34A"] { stroke: #4ADE80 !important; }
-[data-theme="dark"] .view svg [fill="#B45309"] { fill: #FBBF24; }
-[data-theme="dark"] .view svg [style*="fill:#B45309"] { fill: #FBBF24 !important; }
-[data-theme="dark"] .view svg [stroke="#B45309"] { stroke: #FBBF24; }
-[data-theme="dark"] .view svg [style*="stroke:#B45309"] { stroke: #FBBF24 !important; }
-[data-theme="dark"] .view svg [fill="#94A0B8"] { fill: #6B7390; }
-[data-theme="dark"] .view svg [style*="fill:#94A0B8"] { fill: #6B7390 !important; }
-[data-theme="dark"] .view svg [stroke="#94A0B8"] { stroke: #6B7390; }
-[data-theme="dark"] .view svg [style*="stroke:#94A0B8"] { stroke: #6B7390 !important; }
-[data-theme="dark"] .view svg [fill="#C7CBF5"] { fill: #3B4170; }
-[data-theme="dark"] .view svg [style*="fill:#C7CBF5"] { fill: #3B4170 !important; }
-[data-theme="dark"] .view svg [stroke="#C7CBF5"] { stroke: #3B4170; }
-[data-theme="dark"] .view svg [style*="stroke:#C7CBF5"] { stroke: #3B4170 !important; }
-[data-theme="dark"] .view svg [fill="#C9CDE0"] { fill: #3A4058; }
-[data-theme="dark"] .view svg [style*="fill:#C9CDE0"] { fill: #3A4058 !important; }
-[data-theme="dark"] .view svg [stroke="#C9CDE0"] { stroke: #3A4058; }
-[data-theme="dark"] .view svg [style*="stroke:#C9CDE0"] { stroke: #3A4058 !important; }
-[data-theme="dark"] .view svg [fill="#FFFFFF"] { fill: #13172A; }
-[data-theme="dark"] .view svg [style*="fill:#FFFFFF"] { fill: #13172A !important; }
-[data-theme="dark"] .view svg [stroke="#FFFFFF"] { stroke: #13172A; }
-[data-theme="dark"] .view svg [style*="stroke:#FFFFFF"] { stroke: #13172A !important; }
+/* Barve, zapisane neposredno v SVG, preslika predmeti/osnova.css v barve teme (--g-*). */
 
 /* ---------- Programska koda in značke (informatika) ---------- */
 pre.koda {
@@ -2531,6 +2487,22 @@ pre.koda code {
     --crnilo: #1D3C9E;
     --kom: #7A7F87;
     margin-top: var(--space-5);
+}
+
+/* Risbe na listu: vedno barve svetlega načina, ker je list bel papir */
+.pola-list {
+    --primary: #1F3FBF;
+    --g-bg: #FFFFFF;
+    --g-grid: #E9EAEC;
+    --g-axis: #6B7078;
+    --g-line: #16181B;
+    --g-pom: #9AA0A8;
+    --g1: #1F3FBF;
+    --g2: #D2382B;
+    --g3: #12805C;
+    --g4: #C27803;
+    --g5: #0E7FA8;
+    --g6: #7A4FC9;
 }
 
 .pola-vrh {

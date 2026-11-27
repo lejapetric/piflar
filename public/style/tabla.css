@@ -49,10 +49,13 @@ html[data-videz="tabla"][data-predmet] {
     --g-grid: #E9EAEC;
     --g-axis: #6B7078;
     --g-line: #16181B;
+    --g-pom: #9AA0A8;
     --g1: #1F3FBF;
     --g2: #D2382B;
     --g3: #12805C;
     --g4: #C27803;
+    --g5: #0E7FA8;
+    --g6: #7A4FC9;
 
     --radius-sm: 8px;
     --radius: 12px;
@@ -100,10 +103,13 @@ html[data-videz="tabla"][data-predmet][data-theme="dark"] {
     --g-grid: rgba(244, 241, 230, 0.10);
     --g-axis: #AEB6AE;
     --g-line: #F4F1E6;
+    --g-pom: #7F8A82;
     --g1: #A9C2FF;
     --g2: #F3B3A2;
     --g3: #9EE0B8;
     --g4: #F5D58A;
+    --g5: #92D8EE;
+    --g6: #D2BCF5;
 
     --sb-bg: #141A17;
     --sb-border: rgba(236, 238, 234, 0.10);
